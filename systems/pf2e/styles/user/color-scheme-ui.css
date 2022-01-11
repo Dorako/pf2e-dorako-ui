@@ -22,7 +22,9 @@
     --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
     --paizo-red: rgb(94, 0, 0);
     --paizo-red-glass: rgba(94, 0, 0,0.5);
+    --paizo-blue-dark: rgba(16, 21, 73);
     --paizo-blue:	rgb(23, 31, 105);
+    --paizo-blue-bright: rgb(30, 41, 137);
     --paizo-blue-glass-inactive:rgba(23, 31, 105,0.2);
     --paizo-blue-glass:rgba(23, 31, 105,0.5);
 
@@ -168,19 +170,21 @@
     margin: 0 0px 0px 15px;
 }
 
+/*
+
 #controls .control-tool.active,
 #controls .scene-control.active {
-    background-color: var(--primary);
+    background-color: var(--paizo-red-gl);
     border: none;
     box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, .25), 0 0 8px var(--tertiary);
     color: var(--tertiary);
     text-shadow: 0 0 0 1px rgba(0, 0, 0, .5);
     position: relative;
-    background-image: var(--img-red);
+    background-image: var(--paizo-red-glass);
     background-size: contain;
 
 }
-
+*/
 #navigation #scene-list .scene.context,
 #navigation #scene-list .scene.view {
     padding: 0;
@@ -207,8 +211,9 @@
 #chat-log .message .message-header .message-sender,
 #chat-log .message .message-header .message-metadata {
     color: var(--header-color);
-    background-color: var(--header-bg);
-    background-image: var(--img-red);
+    background-color: var(--paizo-red);
+    /*background-color: var(--header-bg);
+    background-image: var(--img-red);*/
     background-size: 50px;
 
     text-shadow: 0px 1px 0px rgb(0 0 0 / 50%);
@@ -536,11 +541,11 @@
 /* Navigation (Scene navigation, top)*/
 
 #navigation #scene-list .scene.gm {
-    background-color: rgba(0, 000, 255, 0.5);
+    background-color: var(--paizo-blue);
 }
 
 #navigation #scene-list .scene.active {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: var(--paizo-red);
     backdrop-filter: var(--dorako-vibrancy-active);
     /*box-shadow: var(--gold-and-glow);*/
 }
@@ -578,26 +583,23 @@
 
 
 #controls ol.sub-controls .control-tool.toggle {
-    background-color: var(--paizo-blue-glass);
+    background-color: var(--paizo-blue-dark);
     backdrop-filter: var(--dorako-vibrancy);
 }
 
-
-#controls ol.sub-controls .control-tool.toggle:hover {
+#controls ol.sub-controls .control-tool.toggle:hover,
+#controls ol.sub-controls .control-tool.toggle.active:hover {
     background-color: var(--paizo-blue);
     backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active);
 }
 
-
 #controls ol.sub-controls .control-tool.toggle.active {
-    background-color: var(--paizo-blue);
+    background-color: var(--paizo-blue-bright);
     backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active);
 }
 
 
-#controls ol.sub-controls .control-tool.toggle.active:hover {
-    backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active);
-}
+
 
 #scene-list {
     display: flex;
@@ -820,9 +822,9 @@
 }
 
 #combat li.combatant.active {
-    background: var(--primary);
+    background: var(--paizo-red-glass);
     box-shadow: var(--gold-and-glow);
-    background-image: var(--img-red);
+    /*background-image: var(--img-red);*/
     background-size: 50px;
     border: none;
 }
