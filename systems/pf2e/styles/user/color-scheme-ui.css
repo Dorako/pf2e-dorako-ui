@@ -20,6 +20,11 @@
     --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px);
 
     --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
+    --paizo-red: rgb(94, 0, 0);
+    --paizo-red-glass: rgba(94, 0, 0,0.5);
+    --paizo-blue:	rgb(23, 31, 105);
+    --paizo-blue-glass-inactive:rgba(23, 31, 105,0.2);
+    --paizo-blue-glass:rgba(23, 31, 105,0.5);
 
     --img-parchment: url(/systems/pf2e/assets/sheet/parchment.webp);
     --img-red: url(/systems/pf2e/assets/sheet/nav-item.webp);
@@ -191,15 +196,7 @@
 }
 
 
-#chat-log .message {
-    background: url(../../assets/sheet/background.webp);
-    background-size: cover;
-    border: 1px solid rgba(0, 0, 0, .5);
-    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
-    color: var(--body);
-    margin: 6px;
-    padding: 0;
-}
+
 
 #chat-log .message .message-header {
     display: grid;
@@ -272,6 +269,17 @@
 
 #chat-log .message .message-content {
     padding: var(--body-padding)
+}
+
+#chat-log .message {
+    background-color: white;
+    background: var(--img-parchment);
+    background-size: cover;
+    border: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
+    color: var(--body);
+    margin: 6px;
+    padding: 0;
 }
 
 #chat-log .whisper {
@@ -557,32 +565,33 @@
 
 #controls ol .scene-control.active,
 #controls ol .scene-control:hover {
-    
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: var(--paizo-red);
     backdrop-filter: var(--dorako-vibrancy-active)
 }
 
 #controls ol.sub-controls .control-tool:hover,
 #controls ol.sub-controls .control-tool.active:not(.toggle):hover,
 #controls ol.sub-controls .control-tool.active:not(.toggle) {
-    background-color: rgba(0, 255, 0, 0.5);
+    background-color: var(--paizo-red);
     backdrop-filter: var(--dorako-vibrancy-active);
 }
 
 
 #controls ol.sub-controls .control-tool.toggle {
-    background-color: rgba(0, 0, 200, 0.3);
-    backdrop-filter: var(--dorako-vibrancy-inactive);
+    background-color: var(--paizo-blue-glass);
+    backdrop-filter: var(--dorako-vibrancy);
 }
 
-#controls ol.sub-controls .control-tool.toggle.active {
-    background-color: rgba(0, 0, 200, 0.8);
-    backdrop-filter: var(--dorako-vibrancy-active);
-}
 
 #controls ol.sub-controls .control-tool.toggle:hover {
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: var(--paizo-blue);
     backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active);
+}
+
+
+#controls ol.sub-controls .control-tool.toggle.active {
+    background-color: var(--paizo-blue);
+    backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active);
 }
 
 
@@ -638,14 +647,16 @@
 ::-webkit-scrollbar-thumb {
     outline: none;
     border-radius: 3px;
-    background: var(--color-text-light-highlight);
-    /*border: 1px solid var(--color-border-highlight);*/
+    background: var(--color-text-light-1);
     border: none;
+
 }
 
 ::-webkit-scrollbar-track {
     box-shadow: 0 0 1px #999 inset;
-    border-radius: 4px;
+    border-radius: 3px;
+    padding:0px;
+    margin: 0px;
 }
 
 /* Chat */
@@ -834,14 +845,7 @@
     margin: 0px;
 }
 
-#chat-log .message {
-    background: var(--pf2e-sheets-bg);
-    background-size: cover;
-    background-image: none;
-    background-color: white;
-    background: url(../ui/parchment.jpg) repeat;
 
-}
 
 #chat-form,
 #chat-controls,
