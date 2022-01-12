@@ -15,9 +15,9 @@
     --blind-bg: #A57aA5;
     --whisper-bg: #E3E3FF;
 
-    --dorako-vibrancy: brightness(1.0) contrast(1.0) blur(15px);
-    --dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
-    --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px);
+    --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px);
+    /*--dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
+    --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px);*/
 
     --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
     --paizo-red: rgb(94, 0, 0);
@@ -425,7 +425,8 @@
 #custom-hotbar #custom-macro-list,
 #ui-bottom nav #custom-hotbar,
 #custom-hotbar-page-controls.bar-controls.flexcol,
-#custom-hotbar-directory-controls.bar-controls.flexcol {
+#custom-hotbar-directory-controls.bar-controls.flexcol,
+.window-app .window-header {
     border: none;
     box-shadow: none;
     backdrop-filter: none;
@@ -438,7 +439,6 @@
 #hotbar #hotbar-directory-controls,
 #hotbar #hotbar-page-controls,
 #navigation #nav-toggle,
-.app,
 #controls .app li,
 #controls ol li,
 #hotbar #macro-list,
@@ -466,13 +466,23 @@
 #custom-bar-toggle,
 #custom-hotbar-page-controls,
 #custom-hotbar-page-controls.bar-controls.flexcol,
-#custom-hotbar #custom-macro-list.flexrow {
+#custom-hotbar #custom-macro-list.flexrow,
+.window-app .window-header {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
     backdrop-filter: var(--dorako-vibrancy);
+    /*backdrop-filter: none;*/
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px) !important;
     /*White inset shadow, soft dark dropshadow*/
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2) inset, var(--dorako-box-shadow);
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2) inset, var(--dorako-box-shadow);
+}
+
+.window-app .window-header {
+    border-radius: var(--dorako-radius) var(--dorako-radius) 0px 0px;
+    box-shadow: 0px 0px 6px -2px rgba(255, 255, 255, 0.2) inset, var(--dorako-box-shadow) !important;
+
 }
 
 
@@ -541,6 +551,10 @@
 /* Navigation (Scene navigation, top)*/
 
 #navigation #scene-list .scene.gm {
+    /*background-color: var(--paizo-blue);*/
+}
+
+#navigation #scene-list .scene {
     background-color: var(--paizo-blue);
 }
 
