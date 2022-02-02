@@ -1,0 +1,23 @@
+/* Navigation (Scene navigation, top)*/
+
+#navigation #scene-list .scene.gm {
+    /*background-color: var(--paizo-blue);*/
+}
+
+#navigation #scene-list .scene {
+    background-color: var(--paizo-blue);
+}
+
+#navigation #scene-list .scene.active {
+    background-color: var(--paizo-red);
+    backdrop-filter: var(--dorako-vibrancy-active);
+    /*box-shadow: var(--gold-and-glow);*/
+}
+
+#navigation #scene-list .scene.view {
+    box-shadow: var(--gold-and-glow);
+}
+
+#navigation {
+    text-shadow: var(--dorako-text-shadow);
+}

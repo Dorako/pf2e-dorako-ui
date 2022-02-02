@@ -1,0 +1,181 @@
+/* Chat */
+
+
+#chat-form,
+#chat-controls,
+.dice-tray>*,
+.dice-tray button,
+.dice-tray .dice-tray__stacked,
+#polyglot,
+#dfcp-rt-buttons {
+    margin: 0px;
+    height: unset;
+    line-height: unset;
+}
+
+#chat-controls {
+    padding: 0px;
+}
+
+#chat {
+    margin: 5px;
+    margin-top: 0px;
+    padding: 2px;
+}
+
+#chat-form {
+    height: 50px;
+    flex: 0 0 25px;
+    margin: 10px 10px 10px;
+}
+
+#chat-form textarea {
+    min-height: 50px;
+    height: 50%;
+    background-image: none;
+    border: none;
+    background-color: rgba(200, 200, 200, 0.5);
+    box-shadow: var(--dorako-box-shadow);
+    overflow: visible;
+}
+
+#chat-log .message .message-header .message-metadata,
+#chat-log .message .message-header .message-sender {
+    padding: var(--body-padding);
+}
+
+.sidebar-tab {
+    gap: 5px;
+}
+
+
+#chat-log .message {
+    margin: 0px;
+}
+
+
+/* Combat Tracker */
+
+#combat #combat-round {
+    border-bottom: none;
+}
+
+#combat #combat-controls {
+    border: none;
+}
+
+#combat li.combatant {
+    border: none;
+}
+
+#combat li.combatant.active {
+    background: var(--paizo-red-glass);
+    box-shadow: var(--gold-and-glow);
+    /*background-image: var(--img-red);*/
+    background-size: 50px;
+    border: none;
+}
+
+#combat li.combatant .token-image {
+    margin: 5px;
+}
+
+.small-chat::after {
+    content: '';
+    height: 0px;
+    position: absolute;
+    margin: none;
+    border: none;
+    cursor: row-resize;
+    box-shadow: var(--gold-and-glow);
+}
+
+
+
+.dfce-cm-middle>.message-header>.message-metadata,
+.dfce-cm-bottom>.message-header>.message-metadata {
+    display: none;
+}
+
+#command-menu {
+    display: none;
+}
+
+/*
+#chat-log > .chat-message.message.flexcol :not(.chat-message.message.flexcol.dfce-cm-middle),
+#chat-log > .chat-message.message.flexcol :not(.chat-message.message.flexcol.dfce-cm-bottom){
+	margin-top: 15px !important;
+}
+*/
+
+#chat-log>.chat-message:not(.dfce-cm-middle, .dfce-cm-bottom) {
+    margin-top: 10px;
+}
+
+#chat-log>.message {
+    border: 5px solid red;
+    box-shadow: none;
+    border: none;
+}
+
+.message.dfce-cm-top {
+    border-bottom-style: none !important;
+}
+
+.message.dfce-cm-middle {
+    border-top-style: none !important;
+    border-bottom-style: none !important;
+    border-radius: 0px !important;
+}
+
+.message.dfce-cm-bottom {
+    border-top-style: none !important;
+}
+
+#dfcp-rt-buttons button {
+    color: var(--color-text-light-1);
+}
+
+#dfcp-rt-buttons button.active i {
+    color: var(--color-text-light-1)
+}
+
+#dfcp-rt-buttons>button :hover {
+    color: var(--color-text-light-4);
+}
+
+.directory {
+    overflow: auto;
+}
+
+/* Polyglot */
+
+#polyglot {
+    height: 20px;
+    line-height: unset;
+}
+
+#polyglot label {
+    display: flex;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-shadow: var(--dorako-text-shadow);
+}
+
+/* Dice Tray */
+
+.dice-tray button {
+    padding: 0px;
+}
+
+.dice-tray,
+.dice-tray .flexrow {
+    gap: 5px;
+}
+
+.dice-tray {
+    display: flex;
+    flex-direction: column;
+}

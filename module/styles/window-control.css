@@ -1,0 +1,13 @@
+/* Window Control */
+
+#minimized-bar {
+    display: none !important;
+}
+
+.window-app.minimized .window-header {
+    border: 1px solid transparent;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /* box-shadow: 0 0 3px black; */
+}

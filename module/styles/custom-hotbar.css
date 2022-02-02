@@ -1,0 +1,81 @@
+/* Custom hotbar */
+
+#custom-hotbar {
+    display: flex;
+    align-items: center;
+    /*background: pink !important;*/
+    gap: 8px;
+}
+
+#custom-action-bar {
+    display: flex;
+    flex-direction: row;
+    /*background: purple !important;*/
+    width: 602px;
+}
+
+#custom-hotbar .bar-controls,
+#custom-hotbar #custom-macro-list {
+    gap: 5px;
+    height: unset;
+    margin: 0px;
+}
+
+
+#custom-hotbar .bar-controls {
+    /*background: yellow !important;*/
+    flex: 0 0 22px;
+}
+
+
+#ui-bottom #custom-hotbar {
+    width: 670px !important;
+
+}
+
+#custom-action-bar {
+    flex-wrap: unset;
+    width: 601px;
+    /*background-color: green !important;*/
+    gap: 10px;
+}
+
+#ui-bottom #custom-hotbar,
+#ui-bottom #custom-hotbar #custom-macro-list {
+    flex: unset;
+    flex-wrap: unset;
+    border-radius: 5px;
+    padding: 0px;
+    margin-right: 9px;
+    border: none;
+    background: red !important;
+}
+
+#custom-hotbar #custom-macro-list.flexrow {
+    border: none;
+    /*background-color: yellow !important;*/
+    padding: 5px;
+    flex-wrap: nowrap;
+    flex: 0 0 555px;
+}
+
+#custom-hotbar-page-controls.bar-controls.flexcol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#custom-hotbar.flexrow {
+    width: unset;
+    height: unset;
+    bottom: 75px;
+}
+
+#custom-hotbar {
+    /*background: green;*/
+    gap: 9px;
+}
+
+#custom-hotbar .bar-controls {
+    text-shadow: var(--dorako-text-shadow);
+}

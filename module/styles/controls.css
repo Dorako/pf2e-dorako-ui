@@ -1,0 +1,80 @@
+/* Controls (top left)*/
+
+#controls ol .scene-control,
+#controls ol .control-tool {
+    transition: backdrop-filter 0.15s ease-out;
+    transition: background-color 0.15s ease-out;
+    color: rgba(240, 240, 240, 1);
+    text-shadow: var(--dorako-text-shadow);
+}
+
+#controls ol .scene-control.active,
+#controls ol .scene-control:hover {
+    background-color: var(--paizo-red);
+    backdrop-filter: var(--dorako-vibrancy-active)
+}
+
+#controls ol.sub-controls .control-tool:hover,
+#controls ol.sub-controls .control-tool.active:not(.toggle):hover,
+#controls ol.sub-controls .control-tool.active:not(.toggle) {
+    background-color: var(--paizo-red);
+    backdrop-filter: var(--dorako-vibrancy-active);
+}
+
+#controls ol.sub-controls .control-tool.toggle {
+    background-color: var(--paizo-blue-dark);
+    backdrop-filter: var(--dorako-vibrancy);
+}
+
+#controls ol.sub-controls .control-tool.toggle:hover,
+#controls ol.sub-controls .control-tool.toggle.active:hover {
+    background-color: var(--paizo-blue);
+    backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active);
+}
+
+#controls ol.sub-controls .control-tool.toggle.active {
+    background-color: var(--paizo-blue-bright);
+    backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active);
+}
+
+#scene-list {
+    display: flex;
+    gap: 10px;
+}
+
+#controls .app,
+#navigation {
+    backdrop-filter: none;
+}
+
+#navigation {
+    gap: 10px;
+}
+
+#navigation #nav-toggle,
+#navigation .nav-item {
+    line-height: unset;
+    margin: 0px;
+    border: var(--dorako-radius);
+    flex: 0 0 34px;
+    height: unset;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.scene .nav-item {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#navigation #scene-list .scene {
+    float: none;
+    display: flex;
+    flex-direction: row;
+}

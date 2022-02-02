@@ -1,0 +1,61 @@
+/* Token HUD (right click token) */
+
+#token-hud .attribute {
+    flex: 0 0 40px;
+}
+
+#token-hud .attribute.elevation {
+    position: relative;
+    width: 40px;
+    margin: unset;
+    box-shadow: none;
+}
+
+#token-hud .attribute.bar1 input {
+    border: none;
+    background-color: #7cd00077;
+    /* backdrop-filter: brightness(250%); */
+}
+
+#token-hud .attribute.bar1 input:hover,
+.placeable-hud input[type="text"]:hover {
+    backdrop-filter: var(--dorako-vibrancy-active);
+}
+
+.placeable-hud input[type="text"] {
+    width: 100%;
+    border: unset;
+    color: var(--color-text-light-2);
+    text-shadow: var(--dorako-text-shadow);
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    /* border-radius: var(--dorako-radius); */
+    font-size: var(--font-size-28);
+    font-weight: bold;
+    pointer-events: all;
+}
+
+
+.placeable-hud .control-icon {
+    margin: 0px;
+}
+
+#token-hud .col.right {
+    left: 100px;
+    gap: 10px;
+}
+
+#token-hud .col.left {
+    gap: 10px;
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.placeable-hud .control-icon.active {
+    border: unset;
+    background-color: var(--dorako-orange);
+}
+
+.placeable-hud .control-icon:hover {
+    backdrop-filter: var(--dorako-vibrancy-active);
+}
