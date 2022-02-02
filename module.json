@@ -1,8 +1,8 @@
 {
-    "name": "pf2e-Dorako-UI",
+    "name": "pf2e-dorako-ui",
     "title": "pf2e - Dorako UI",
     "description": "Overhauls the Foundry UI and several modules.",
-    "url": "https://github.com/Dorako/pf2e-Dorako-UI",
+    "url": "https://github.com/Dorako/pf2e-dorako-ui",
     "author": "Dorako",
     "version": "1.0.0",
     "minimumCoreVersion": "9",
@@ -16,4 +16,5 @@
           "name": "lib - color settings",
           "manifest": "https://raw.githubusercontent.com/ardittristan/VTTColorSettings/2.8.2/module.json"
         }
+      ]
   }
