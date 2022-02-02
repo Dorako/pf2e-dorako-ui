@@ -23,10 +23,18 @@
     padding: 2px;
 }
 
+.flavor-text > hr {
+    display: none;
+}
+
+#chat-log {
+    /* overflow-x:visible; */
+    padding-bottom:3px;
+}
+
 #chat-form {
     height: 50px;
     flex: 0 0 25px;
-    margin: 10px 10px 10px;
 }
 
 #chat-form textarea {
@@ -39,10 +47,29 @@
     overflow: visible;
 }
 
-#chat-log .message .message-header .message-metadata,
-#chat-log .message .message-header .message-sender {
-    padding: var(--body-padding);
+
+#chat-log>.chat-message{
+    padding: 5px;
 }
+
+
+#chat-log .message .message-header .message-sender {
+    margin-left: -5px;
+    margin-top: -5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    border-radius: 5px 0px 0px 0px;
+}
+
+#chat-log .message .message-header .message-metadata {
+    margin-right: -5px;
+    margin-top: -5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    border-radius: 0px 5px 0px 0px;
+}
+
+
 
 .sidebar-tab {
     gap: 5px;
@@ -53,8 +80,27 @@
     margin: 0px;
 }
 
+.dice-roll .dice-formula {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+button {
+    margin: 0px;
+}
+
+.message-content .chat-damage-buttons {
+    gap: 3px;
+}
+
 
 /* Combat Tracker */
+
+#combat li.combatant .token-initiative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #combat #combat-round {
     border-bottom: none;
@@ -114,8 +160,32 @@
 
 #chat-log>.message {
     border: 5px solid red;
-    box-shadow: none;
+    box-shadow: var(--gold-and-glow);
     border: none;
+    margin-left:3px;
+    margin-right:3px;
+}
+
+
+/* #chat-log .message .message-header .message-sender {
+    font-size: small;
+    font-weight: 400;
+    grid-area: sender;
+    border-radius: 5px 0px 0px 0px;
+}
+
+#chat-log .message .message-header .message-metadata {
+    grid-area: info;
+    padding: var(--body-padding);
+    border-radius: 0px 5px 0px 0px;
+    margin-left: 0px;
+} */
+
+
+#chat-log .message .message-header .flavor-text,
+#chat-log .message .message-header .whisper-to {
+    grid-area: text;
+    padding: var(--body-padding);
 }
 
 .message.dfce-cm-top {
@@ -156,12 +226,13 @@
 }
 
 #polyglot label {
-    display: flex;
+    /* display: flex;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: left;
-    text-shadow: var(--dorako-text-shadow);
+    text-shadow: var(--dorako-text-shadow); */
+    display: none;
 }
 
 /* Dice Tray */

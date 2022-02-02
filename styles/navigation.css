@@ -1,5 +1,9 @@
 /* Navigation (Scene navigation, top)*/
 
+#navigation {
+    margin-top: 10px;
+}
+
 #navigation #scene-list .scene.gm {
     /*background-color: var(--paizo-blue);*/
 }
@@ -21,3 +25,49 @@
 #navigation {
     text-shadow: var(--dorako-text-shadow);
 }
+
+#navigation {
+    backdrop-filter: none;
+}
+
+#navigation {
+    gap: 10px;
+}
+
+#navigation #nav-toggle,
+#navigation .nav-item {
+    line-height: unset;
+    margin: 0px;
+    border: var(--dorako-radius);
+    flex: 0 0 34px;
+    height: unset;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+#navigation #scene-list .scene {
+    /* float: none; */
+    /* display: flex; */
+    flex-direction: row;
+}
+
+.scene .nav-item {
+    white-space: nowrap;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#navigation #scene-list li {
+    margin-right: 10px;
+}
+
+
+/* #scene-list {
+    display: flex;
+    gap: 10px;
+} */

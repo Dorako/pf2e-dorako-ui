@@ -1,5 +1,9 @@
 /* Token HUD (right click token) */
 
+#token-hud .attribute i.fas {
+    z-index: 1;
+}
+
 #token-hud .attribute {
     flex: 0 0 40px;
 }
@@ -34,6 +38,7 @@
     font-size: var(--font-size-28);
     font-weight: bold;
     pointer-events: all;
+    background: none;
 }
 
 

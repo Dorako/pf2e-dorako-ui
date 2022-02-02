@@ -1,5 +1,10 @@
 /* Controls (top left)*/
 
+#controls {
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
 #controls ol .scene-control,
 #controls ol .control-tool {
     transition: backdrop-filter 0.15s ease-out;
@@ -37,44 +42,51 @@
     backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active);
 }
 
-#scene-list {
-    display: flex;
-    gap: 10px;
-}
 
-#controls .app,
-#navigation {
+#controls .app {
     backdrop-filter: none;
 }
 
-#navigation {
-    gap: 10px;
+
+
+
+#terrainlayer-tools {
+    top: 50px !important;
+    left: 100px !important;
 }
 
-#navigation #nav-toggle,
-#navigation .nav-item {
-    line-height: unset;
-    margin: 0px;
-    border: var(--dorako-radius);
-    flex: 0 0 34px;
+#terrainlayer-tools-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#terrainlayer-tools .control-tool {
+    width: unset;
     height: unset;
+    box-sizing: content-box;
+    font-size: unset;
+    line-height: unset;
+    background: var(--dorako-bg-current);
+    box-shadow: var(--dorako-box-shadow);
+    margin: 0px;
+    color: var(--color-text-light-heading);
+    text-shadow: var(--dorako-text-shadow);
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0;
 }
 
-.scene .nav-item {
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+#terrainlayer-tools .control-tool:hover {
+    color: var(--color-text-light-heading);
+    border: unset;
+    border-bottom: unset;
+    box-shadow: unset;
 }
 
-#navigation #scene-list .scene {
-    float: none;
-    display: flex;
-    flex-direction: row;
+#terrainlayer-tools .control-tools .li {
+    padding: 5px;
 }

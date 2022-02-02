@@ -11,10 +11,5 @@
     "scripts": [
         "scripts/dorako-ui.js"
       ],
-      "dependencies": [
-        {
-          "name": "lib - color settings",
-          "manifest": "https://raw.githubusercontent.com/ardittristan/VTTColorSettings/2.8.2/module.json"
-        }
-      ]
+      "dependencies": [ { "name": "lib-df-hotkeys" }, { "name": "colorsettings" }  ]
   }
