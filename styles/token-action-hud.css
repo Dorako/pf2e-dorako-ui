@@ -138,6 +138,7 @@
     /* box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5); */
     box-shadow:none;
     box-shadow: 0 0 0 1px var(--tertiary);
+    margin-left: -5px;
 }
 
 
@@ -146,17 +147,22 @@
 }
 
 .tah-content {
-    gap: 5px;
+    gap: 0px;
 }
 
 .tah-actions {
-    gap: 5px;
+    gap: 10px;
 }
 
-.tah-actions .shrink {
+.tag-action button span {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .tah-actions .shrink {
     margin: 0px;
     min-width: 20px;
-}
+} */
 
 /* .tah-action button[value^="spell|"] span {
     display: block;
@@ -165,6 +171,14 @@
     overflow: hidden;
 } */
 
-/* .tah-action button[value^="spell|"] .tah-name {
+/* .tah-action button[value^="spell|"] span.tah-name {
     display: none;
 } */
+
+.tah-name {
+    display: inline;
+}
+
+button[value^="spell|"] .tah-name {
+    display:none;
+}

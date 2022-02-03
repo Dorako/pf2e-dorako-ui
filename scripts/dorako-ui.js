@@ -234,7 +234,7 @@ Hooks.on('init', () => {
 
 	game.settings.register('pf2e-dorako-ui', 'skin-custom-hotbar', {
 		name: "Apply skin to Custom Hotbar module?",
-		hint: "",
+		hint: "Suggested offsets of (845px horizontally and 10px vertically) for vertical extension, or (0px horizontally and 75px vertically) for stacked bars.",
 		scope: "world",
 		type: Boolean,
 		default: true,

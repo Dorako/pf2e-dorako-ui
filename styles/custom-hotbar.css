@@ -65,7 +65,6 @@
 
 #ui-bottom #custom-hotbar {
     width: 670px !important;
-
 }
 
 #custom-action-bar {
@@ -103,7 +102,7 @@
 #custom-hotbar.flexrow {
     width: unset;
     height: unset;
-    bottom: 75px;
+    /* bottom: 75px; */
 }
 
 #custom-hotbar {

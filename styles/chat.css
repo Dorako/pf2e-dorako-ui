@@ -9,18 +9,19 @@
 
 }
 
+#chat-log .message .message-header .message-metadata {
+    margin-left: 0px;
+}
+
 #chat-log .message .message-header.flexrow {
-    border-radius: 5px 5px 0px 0px;
+    /* border-radius: 5px 5px 0px 0px;
     margin-left: -5px;
-    margin-right: -5px;
-    margin-top:-5px;
-    padding-top: 5px;
-    padding-right: 5px;
     padding-left: 5px;
-    color: var(--header-color);
-    background-color: var(--paizo-red);
-    text-shadow: 0px 1px 0px rgb(0 0 0 / 50%);
-    border-bottom: 1px solid black;
+    margin-right: -5px;
+    padding-right: 5px; */
+    /* margin-top:-5px;
+    padding-top: 5px; */
+
 }
 
 .message-content .chat-damage-buttons button>i.fas {
@@ -98,8 +99,18 @@
     padding: 2px;
 }
 
+.message-portrait {
+    grid-area: chat portrait;
+    background-color: var(--paizo-red);
+    border-radius: 5px 0px 0px 0px;
+}
+
 #chat-log .message .message-header {
-    grid: "sender info"minmax(min-content, max-content) "text text"minmax(min-content, max-content) /2fr 3fr !important;
+    grid: 
+    /* "chat portrait"minmax(min-content, max-content)  */
+    "sender info"minmax(min-content, max-content) 
+    "text text"minmax(min-content, max-content) 
+    //*1fr*/ 2fr 3fr;
 }
 
 .tags {
@@ -223,18 +234,26 @@
 
 
 #chat-log .message .message-header .message-sender {
-    /* margin-left: -5px;
+    color: var(--header-color);
+    background-color: var(--paizo-red);
+    text-shadow: 0px 1px 0px rgb(0 0 0 / 50%);
+    border-bottom: 1px solid black;
+    margin-left: -5px;
     margin-top: -5px;
     padding-left: 5px;
-    padding-top: 5px; */
+    padding-top: 5px;
     border-radius: 5px 0px 0px 0px;
 }
 
 #chat-log .message .message-header .message-metadata {
-    /* margin-right: -5px;
+    color: var(--header-color);
+    background-color: var(--paizo-red);
+    text-shadow: 0px 1px 0px rgb(0 0 0 / 50%);
+    border-bottom: 1px solid black;
+    margin-right: -5px;
     margin-top: -5px;
     padding-right: 5px;
-    padding-top: 5px; */
+    padding-top: 5px;
     border-radius: 0px 5px 0px 0px;
 }
 
@@ -293,20 +312,29 @@ button {
     margin-right:3px;
 }
 
+.message-content .chat-damage-buttons button>.transparent-half {
+    background: #DCD8D6;
+    left: 50%;
+}
 
-/* #chat-log .message .message-header .message-sender {
-    font-size: small;
-    font-weight: 400;
+.message-content .chat-damage-buttons button .plus {
+    color: #DCD8D6;
+    left: 41%;
+}
+
+
+#chat-log .message .message-header .message-sender {
+    /* font-size: small;
+    font-weight: 400; */
     grid-area: sender;
-    border-radius: 5px 0px 0px 0px;
+    /* border-radius: 5px 0px 0px 0px; */
 }
 
 #chat-log .message .message-header .message-metadata {
     grid-area: info;
-    padding: var(--body-padding);
-    border-radius: 0px 5px 0px 0px;
-    margin-left: 0px;
-} */
+    /* border-radius: 0px 5px 0px 0px;
+    margin-left: 0px; */
+}
 
 
 #chat-log .message .message-header .flavor-text,
