@@ -2,11 +2,13 @@
 
 #token-action-hud {
     border: none;
-    background-color: var(--dorako-bg-current) !important;
-    backdrop-filter: var(--dorako-vibrancy);
-    box-shadow: 0 0 3px black;
-    border-radius: var(--dorako-radius);
+    background-color: unset;
+    box-shadow: var(--glassy);
     padding: 2px;
+    padding: 0px;
+    box-shadow: none;
+    display: flex;
+    gap: 10px;
 }
 
 .tah-subcategory {
@@ -52,11 +54,14 @@
 
 .tah-title-button {
     border: none;
-    /*background-color: rgba(200,200,200, 0.2);*/
-    box-shadow: var(--dorako-box-shadow);
+    background-color: unset;
+    box-shadow: var(--glassy);
     color: var(--color-text-light-highlight);
     backdrop-filter: var(--dorako-vibrancy);
     text-shadow: var(--dorako-text-shadow);
+    margin:0px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .tah-action button {

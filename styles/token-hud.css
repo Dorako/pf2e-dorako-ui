@@ -1,5 +1,7 @@
 /* Token HUD (right click token) */
 
+
+
 #token-hud .attribute i.fas {
     z-index: 1;
 }
@@ -15,10 +17,19 @@
     box-shadow: none;
 }
 
+#token-hud .attribute.bar1 {
+    background-color: none;
+    box-shadow: none;
+}
 #token-hud .attribute.bar1 input {
     border: none;
     background-color: #7cd00077;
+    box-shadow: var(--glassy);
     /* backdrop-filter: brightness(250%); */
+}
+
+.placeable-hud input[type="text"] {
+    border-radius: 3px;
 }
 
 #token-hud .attribute.bar1 input:hover,
@@ -41,9 +52,13 @@
     background: none;
 }
 
-
 .placeable-hud .control-icon {
     margin: 0px;
+}
+
+.placeable-hud .control-icon:not(:nth-child(2)) {
+    margin: 0px;
+    background-color: var(--paizo-blue-dark);
 }
 
 #token-hud .col.right {
@@ -58,9 +73,9 @@
 
 .placeable-hud .control-icon.active {
     border: unset;
-    background-color: var(--dorako-orange);
+    background-color: var(--paizo-blue-bright);
 }
 
 .placeable-hud .control-icon:hover {
-    backdrop-filter: var(--dorako-vibrancy-active);
+    /* backdrop-filter: var(--dorako-vibrancy-active); */
 }

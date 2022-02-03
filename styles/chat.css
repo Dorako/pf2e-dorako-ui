@@ -1,5 +1,9 @@
 /* Chat */
 
+#sidebar-tabs {
+    --sidebar-tab-height: 24px;
+    --sidebar-tab-width: 24px;
+}
 
 #chat-form,
 #chat-controls,
@@ -23,8 +27,37 @@
     padding: 2px;
 }
 
+.pf2e.chat-card {
+    text-rendering: geometricPrecision;
+}
+
+.pf2e.chat-card .card-header {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pf2e.chat-card .card-header img {
+    flex: 0 0 36px;
+    height: 36px;
+    margin-right: 5px;
+    width: 36px;
+    border-radius: 5px;
+    box-shadow: var(--gold-and-glow);
+    border: none;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.pf2e.chat-card .tags {
+    margin: 0px;
+}
+
 .flavor-text > hr {
-    display: none;
+    /* display: none; */
+    margin-top: 0px;
+    margin-bottom: 3px;
+    border: 0px none red;
 }
 
 #chat-log {
@@ -37,13 +70,32 @@
     flex: 0 0 25px;
 }
 
+.message-content .chat-damage-buttons button .label {
+    font-size: 0.5em;
+}
+
+.dice-roll .dice-result .dice-tooltip .damage-type {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.message-content .chat-damage-buttons button {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px #fff inset;
+    border: 1px solid var(--color-border-light-2);
+}
+
+#chat-controls .control-buttons {
+    color:rgba(255, 255, 245, 0.8);
+}
+
 #chat-form textarea {
     min-height: 50px;
     height: 50%;
     background-image: none;
     border: none;
     background-color: rgba(200, 200, 200, 0.5);
-    box-shadow: var(--dorako-box-shadow);
+    box-shadow: var(--glassy);
     overflow: visible;
 }
 
@@ -104,6 +156,17 @@ button {
 
 #combat #combat-round {
     border-bottom: none;
+}
+
+.directory .directory-header,
+#combat #combat-controls a,
+#combat #combat-round {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+#combat #combat-round .encounters h4,
+#combat #combat-round .encounters a {
+    color: unset;
 }
 
 #combat #combat-controls {
@@ -249,4 +312,12 @@ button {
 .dice-tray {
     display: flex;
     flex-direction: column;
+}
+
+#chat-controls .roll-type-select {
+    height: unset;
+}
+
+.pf2e.chat-card .card-buttons .hidden-to-others {
+    border: 1px dotted;
 }

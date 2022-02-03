@@ -17,7 +17,7 @@
     --whisper-bg: #E3E3FF;
 
     /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
-    --dorako-vibrancy: none;
+    --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px);
     /*--dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
     --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px);*/
 
@@ -26,8 +26,11 @@
     --paizo-red: rgb(94, 0, 0);
     --paizo-red-glass: rgba(94, 0, 0,1);
     --paizo-blue-dark: rgba(16, 21, 73);
+    --paizo-blue-dark: hsl(234, 64%, 15%);
     --paizo-blue:	rgb(23, 31, 105);
+    --paizo-blue: hsl(234, 64%, 25%);
     --paizo-blue-bright: rgb(30, 41, 137);
+    --paizo-blue-bright: hsl(234, 64%, 35%);
     --paizo-blue-glass-inactive:rgba(23, 31, 105,0.2);
     --paizo-blue-glass:rgba(23, 31, 105,0.5);
     --color-shadow-highlight: var(--paizo-red);
@@ -46,14 +49,142 @@
 
 }
 
+.tags {
+    margin-bottom: 0px;
+}
+
+.dice-checks .window-content {
+    border-image: none;
+    border-style: none;
+    border-width: 0px;
+}
+
+/* .crb-hover .tooltipster-box {
+    background-color: none;
+    border-image-outset: 0;
+    border-image: none;
+    border-style: none;
+    border-width: 0px;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.crb-hover .tooltipster-box .tooltipster-content .hover-content ul .label {
+    font-family: unset;
+    text-shadow: var(--dorako-text-shadow);
+} */
+
+.editable .crb-style {
+    text-rendering: geometricPrecision;
+}
+
+/*input:not(:disabled),
+input:not([type="radio"])*/
+select,
+button,
+form button {
+    background: rgba(255, 255, 245, 0.8);
+    border: 1px solid var(--color-border-light-tertiary);
+    box-shadow: none;
+}
+
+footer.sheet-footer.flexrow {
+    gap: 10px;
+}
+
+#settings div {
+    /* margin: 0 8px; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#settings button {
+    margin: 0px;
+
+}
+
+#settings {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.window-app .window-header {
+    margin-bottom: 0px;
+}
+
+.effect-panel {
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.effect-panel hr {
+    width: 42px;
+    box-shadow: 0px 0px 5px var(--color-border-light-highlight);
+}
+
+.effect-panel .effect-item {
+    align-items: center;
+    gap: 10px
+}
+
+.effect-panel .effect-item .icon {
+    border-radius: 42px;
+    box-shadow: var(--gold-and-glow);
+}
+
+.effect-panel .effect-item .effect-info {
+    background-color: var(--dorako-bg-glass);
+    margin-right: 0px;
+    padding: 3px;
+    box-shadow: var(--glassy);
+    border-radius: 3px;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.effect-panel .effect-item .icon .linked,
+.effect-panel .effect-item .icon .value {
+    display: contents;
+    background: inherit;
+    text-shadow: 
+    0px 0px 15px black, 
+    0px 0px 14px black, 
+    0px 0px 13px black, 
+    0px 0px 12px black, 
+    0px 0px 11px black, 
+    0px 0px 10px black, 
+    -1px -1px 3px black,
+    -1px  0px 3px black,
+    -1px  1px 3px black,
+     0px -1px 3px black,
+     0px  0px 3px black,
+     0px  1px 3px black,
+     1px -1px 3px black,
+     1px  0px 3px black,
+     1px  1px 3px black;
+    font-size: var(--font-size-24);
+    /* mix-blend-mode: overlay; */
+    color: white;
+}
+
+.effect-panel .effect-item .icon .linked {
+    font-size: var(--font-size-18);
+}
+
 #hotbar .bar-controls a.page-control {
     font-size: var(--font-size-14);
 }
 
-form button {
-    background: var(--bg);
-    border: unset;
-}
+
 
 #client-settings section.content h2.module-header {
     margin: 5em 0 0 0;
@@ -442,12 +573,16 @@ button > i {
 #custom-hotbar-page-controls.bar-controls.flexcol,
 #custom-hotbar-directory-controls.bar-controls.flexcol,
 .window-app .window-header,
-#darkness-adjuster .window-content {
+#darkness-adjuster .window-content,
+.window-app.minimized .window-header
+{
     border: none;
+    border-radius: 0px;
     box-shadow: none;
     backdrop-filter: none;
     background: none;
     background-image: none;
+
 }
 
 /* Glass - Add new styling */
@@ -474,8 +609,7 @@ button > i {
 #navigation #scene-list .scene,
 #navigation #scene-list .scene.gm,
 .placeable-hud .control-icon,
-#token-hud .attribute,
-.placeable-hud input[type="text"],
+#token-hud .attribute:not(.bar1),
 .sidebar-popout.app,
 #dfcp-rt-buttons button,
 .dice-tray button,
@@ -484,8 +618,10 @@ button > i {
 #custom-hotbar-page-controls.bar-controls.flexcol,
 #custom-hotbar #custom-macro-list.flexrow,
 .window-app .window-header,
-#darkness-adjuster .window-content  {
-    border: none;
+#darkness-adjuster .window-content,
+.window-app.minimized .window-header
+{
+    border: none !important;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
     backdrop-filter: var(--dorako-vibrancy);
@@ -493,12 +629,12 @@ button > i {
     /*will-change: backdrop-filter;*/
     transform: translate3d(0px, 0px, 0px) !important;
     /*White inset shadow, soft dark dropshadow*/
-    box-shadow: var(--glassy);
+    box-shadow: var(--glassy) !important;
 }
 
 .window-app .window-header {
     border-radius: var(--dorako-radius) var(--dorako-radius) 0px 0px;
-    box-shadow: 0px 0px 6px -2px rgba(255, 255, 255, 0.2) inset, var(--dorako-box-shadow) !important;
+    box-shadow: var(--glassy);
 }
 
 .window-app .window-content {
@@ -525,7 +661,7 @@ button > i {
     display: none;
 }
 
-:#chat-log:-webkit-scrollbar-track {
+#chat-log:-webkit-scrollbar-track {
     box-shadow: 0 0 1px #999 inset;
     border-radius: 3px;
     padding:0px;
