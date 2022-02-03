@@ -1,0 +1,116 @@
+
+#token-hud .status-effects,
+.status-effects .status-effect-summary {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+
+#token-hud .status-effects,
+.status-effects .status-effect-summary {
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
+.effect-panel {
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.effect-panel hr {
+    width: 42px;
+    box-shadow: 0px 0px 5px var(--color-border-light-highlight);
+}
+
+.effect-panel .effect-item {
+    align-items: center;
+    gap: 10px
+}
+
+.effect-panel .effect-item .icon {
+    border-radius: 42px;
+    box-shadow: var(--gold-and-glow);
+}
+
+.effect-panel .effect-item .effect-info {
+    background-color: var(--dorako-bg-current);
+    margin-right: 0px;
+    padding: 3px;
+    box-shadow: var(--glassy);
+    border-radius: 3px;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.effect-panel .effect-item .icon i.fas.fa-comment-alt {
+    display: none;
+}
+
+.effect-panel .effect-item .icon .expired {
+    bottom: unset;
+}
+
+
+.effect-panel .effect-item .icon .linked,
+.effect-panel .effect-item .icon .value {
+    display: contents;
+    background: inherit;
+    text-shadow: 
+    0px 0px 15px black, 
+    0px 0px 14px black, 
+    0px 0px 13px black, 
+    0px 0px 12px black, 
+    0px 0px 11px black, 
+    0px 0px 10px black, 
+    -1px -1px 3px black,
+    -1px  0px 3px black,
+    -1px  1px 3px black,
+     0px -1px 3px black,
+     0px  0px 3px black,
+     0px  1px 3px black,
+     1px -1px 3px black,
+     1px  0px 3px black,
+     1px  1px 3px black;
+    font-size: var(--font-size-18);
+    /* mix-blend-mode: overlay; */
+    color: white;
+}
+
+.effect-panel .effect-item .icon .linked {
+    font-size: var(--font-size-14);
+}
+
+.status-effects {
+    /* gap: 10px; */
+    padding:10px;
+}
+
+.status-effects .status-effect-summary,
+#token-hud .status-effects {
+    width:auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#token-hud .status-effects .pf2e-effect-control,
+#token-hud .status-effects .effect-control {
+    border-radius:5px;
+    box-shadow: 0px 0px 5px black inset;
+}

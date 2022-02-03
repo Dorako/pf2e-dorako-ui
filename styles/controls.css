@@ -1,9 +1,66 @@
 /* Controls (top left)*/
 
+
+/* Glass - Remove prior styling */
+
+#controls ol .scene-control,
+#controls ol .control-tool,
+#controls ol .control-tool.toggle, #controls ol .control-tool.toggle.active,
+#controls ol .control-tool.active,
+#controls ol .scene-control.active,
+#controls ol .control-tool.toggle:hover,
+#controls ol .control-tool:hover,
+#controls ol .scene-control:hover,
+#darkness-adjuster .window-content
+{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+#controls .app li,
+#controls ol li,
+#controls ol.sub-controls .control-tool,
+#controls ol.sub-controls .control-tool:hover,
+#controls ol .scene-control,
+#controls ol .scene-control:hover,
+#controls ol .scene-control.active,
+#controls ol .control-tool.toggle,
+#controls ol .control-tool.toggle:hover,
+#controls ol .control-tool.toggle.active,
+#controls ol .control-tool.toggle.active:hover,
+#darkness-adjuster .window-content
+{
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
 #controls {
     padding-top: 0px;
     margin-top: 10px;
 }
+
+#controls ol.main-controls {
+    overflow: visible;
+    width: 44px;
+    padding: 0px;
+    margin: 0px 0px 0px 10px;
+}
+
+/* #controls ol .control-tool.toggle,
+#controls ol .control-tool.toggle:hover,
+#controls ol .control-tool.toggle.active {
+    background-image: var(--pf2e-nav-inactive);
+    background-size: contain;
+} */
 
 #controls ol .scene-control,
 #controls ol .control-tool {

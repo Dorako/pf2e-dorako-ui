@@ -112,19 +112,6 @@ Hooks.on('init', () => {
 	// 	}
 	// });
 
-	game.settings.register('pf2e-dorako-ui', 'skin-modules', {
-		name: "Skin popular modules?",
-		hint: "Applies consistent theming to various modules (Disabling can have unintended consequenses)",
-		scope: "world",
-		type: Boolean,
-		default: true,
-		config: true,
-		onChange: () => {
-			location.reload();
-		}
-	});
-
-
 	game.settings.register('pf2e-dorako-ui', 'disable-all-styles', {
 		name: "Disable all styles?",
 		hint: "Ignore all the toggles and removes any effect of the module, without having to disable it.",
@@ -136,6 +123,153 @@ Hooks.on('init', () => {
 			location.reload();
 		}
 	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-chat', {
+		name: "Apply skin to chat?",
+		hint: "Applies theming to chat cards and sidebar content.",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-navigation', {
+		name: "Apply skin to scene navigation?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-hotbar', {
+		name: "Apply skin to the hotbar (macro bar)?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-controls', {
+		name: "Apply skin to scene controls?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-token-hud', {
+		name: "Apply skin to the token HUD?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-effect-panel', {
+		name: "Apply skin to the effect panel?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-sidebar', {
+		name: "Apply skin to the sidebar?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-app-ui', {
+		name: "Apply skin to app UI?",
+		hint: "This includes the player box, window headers, and similar",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-combat-tracker', {
+		name: "Apply skin to the combat tracker?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-custom-hotbar', {
+		name: "Apply skin to Custom Hotbar module?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-token-action-hud', {
+		name: "Apply skin to Token Action HUD?",
+		hint: "Makes TAH more compact and fits in better with the rest of the UI.",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register('pf2e-dorako-ui', 'skin-window-controls', {
+		name: "Apply skin to Window Controls module?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+
+
 
 	// game.settings.register('dorako-ui', 'highlightGmOwnerText', {
 	// 	name: game.i18n.localize('RPGUI.SETTINGS.HIGHLIGHT_GM_OWNER_TEXT'),
@@ -163,16 +297,44 @@ Hooks.on('init', () => {
 
 	if (!game.settings.get('pf2e-dorako-ui', 'disable-all-styles')) {
 		injectBaseCss()
-		skinChat()
-		skinNavigation()
-		skinControls()
-		skinTokenHud()
 
-		if (game.settings.get('pf2e-dorako-ui', 'skin-modules')) {
-			skinCustomHotbar()
-			skinTokenActionHud()
+		if (game.settings.get('pf2e-dorako-ui', 'skin-navigation')) {
+			skinNavigation()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-controls')) {
+			skinControls()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-token-hud')) {
+			skinTokenHud()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-chat')) {
+			skinChat()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-sidebar')) {
+			skinSidebar()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-combat-tracker')) {
+			skinCombatTracker()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-effect-panel')) {
+			skinEffectPanel()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-app-ui')) {
+			skinAppUi()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-hotbar')) {
+			skinHotbar()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-window-controls')) {
 			skinWindowControls()
 		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-token-action-hud')) {
+			skinTokenActionHud()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-custom-hotbar')) {
+			skinCustomHotbar()
+		}
+
 	}
 
 });
@@ -235,6 +397,16 @@ function skinChat() {
 	head.insertBefore(newCss, head.lastChild);
 }
 
+function skinHotbar() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/hotbar.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
 function skinControls() {
 	const head = document.getElementsByTagName("head")[0];
 	const newCss = document.createElement("link");
@@ -255,12 +427,52 @@ function skinNavigation() {
 	head.insertBefore(newCss, head.lastChild);
 }
 
+function skinAppUi() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/app-ui.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
 function skinTokenHud() {
 	const head = document.getElementsByTagName("head")[0];
 	const newCss = document.createElement("link");
 	newCss.setAttribute("rel", "stylesheet")
 	newCss.setAttribute("type", "text/css")
 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/token-hud.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
+function skinEffectPanel() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/effect-panel.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
+function skinSidebar() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/sidebar.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
+function skinCombatTracker() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/combat-tracker.css")
 	newCss.setAttribute("media", "all")
 	head.insertBefore(newCss, head.lastChild);
 }

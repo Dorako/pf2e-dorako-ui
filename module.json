@@ -11,5 +11,6 @@
     "scripts": [
         "scripts/dorako-ui.js"
       ],
-      "dependencies": [ { "name": "lib-df-hotkeys" }, { "name": "colorsettings" }  ]
+      "dependencies": [ { "name": "lib-df-hotkeys" }, { "name": "colorsettings" }  ],
+      "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.0.0.zip"
   }

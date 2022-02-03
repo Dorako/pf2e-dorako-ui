@@ -1,8 +1,57 @@
 /* Navigation (Scene navigation, top)*/
 
+
+/* Glass - Remove prior styling */
+
+#navigation .nav-item
+{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+/* Glass - Add new styling */
+
+#navigation #nav-toggle,
+#navigation #scene-list .scene.view,
+#navigation #nav-toggle:hover,
+#navigation #scene-list .scene,
+#navigation #scene-list .scene.gm
+{
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
 #navigation {
     margin-top: 10px;
 }
+
+#navigation #scene-list .scene li.scene-player {
+    text-shadow: none;
+}
+
+
+#navigation #scene-list .scene.context,
+#navigation #scene-list .scene.view {
+    padding: 0;
+}
+
+.scene-name{
+    padding: 8px;
+}
+
+/* #navigation #scene-list {
+    display: flex !important;
+    flex-wrap: wrap;
+} */
 
 #navigation #scene-list .scene.gm {
     /*background-color: var(--paizo-blue);*/
@@ -32,6 +81,10 @@
 
 #navigation {
     gap: 10px;
+}
+
+#navigation #scene-list .scene li.scene-player {
+    text-shadow: none;
 }
 
 #navigation #nav-toggle,

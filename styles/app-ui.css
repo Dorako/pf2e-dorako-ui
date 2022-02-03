@@ -1,0 +1,92 @@
+ /* App UI */
+
+/* Glass - Remove prior styling */
+
+#players,
+.app,
+.window-app .window-header,
+.window-app.minimized .window-header
+{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+/* Glass - Add new styling */
+
+#players,
+.window-app .window-header,
+.window-app.minimized .window-header
+{
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
+.window-app .window-header {
+    border-radius: var(--dorako-radius) var(--dorako-radius) 0px 0px;
+    box-shadow: var(--glassy);
+}
+
+.window-app .window-content {
+    /* box-shadow: 0px 0px 10px black; */
+    box-shadow: var(--glassy);
+    background: none;
+    background-color: var(--bg);
+    background-image: var(--pf2e-sheets-bg);
+    background-size: cover;
+}
+
+#players,
+.window-app .window-header a,
+.window-app .window-header .window-title {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.editable .crb-style {
+    text-rendering: geometricPrecision;
+}
+
+#compendium-browser>section.window-content>.content-box>nav, #license-viewer>section.window-content>.content-box>nav {
+    box-shadow: none;
+}
+
+#compendium-browser>section.window-content>.content-box>section.content, #license-viewer>section.window-content>.content-box>section.content {
+    height: 100%;
+    margin-top: 5px;
+}
+
+.window-app .window-content {
+    padding: 5px 5px 0px 5px;
+}
+
+.window-app .window-header {
+    margin-bottom: 0px;
+}
+
+.app {
+    color: var(--color-text-light-1);
+}
+
+.window-app .window-resizable-handle {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: none;
+    padding: 2px;
+    border: none;
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.app.sidebar-popout {
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+}

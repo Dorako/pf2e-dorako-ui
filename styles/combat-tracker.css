@@ -1,0 +1,52 @@
+/* Combat Tracker */
+
+#combat li.combatant .token-initiative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#combat #combat-round {
+    border-bottom: none;
+}
+
+.directory .directory-header,
+#combat #combat-controls a,
+#combat #combat-round {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+#combat #combat-round .encounters h4,
+#combat #combat-round .encounters a {
+    color: unset;
+}
+
+#combat #combat-controls {
+    border: none;
+}
+
+#combat li.combatant {
+    border: none;
+}
+
+#combat li.combatant.active {
+    background: var(--paizo-red-glass);
+    box-shadow: var(--gold-and-glow);
+    /*background-image: var(--img-red);*/
+    background-size: 50px;
+    border: none;
+}
+
+#combat li.combatant .token-image {
+    margin: 5px;
+}
+
+.small-chat::after {
+    content: '';
+    height: 0px;
+    position: absolute;
+    margin: none;
+    border: none;
+    cursor: row-resize;
+    box-shadow: var(--gold-and-glow);
+}

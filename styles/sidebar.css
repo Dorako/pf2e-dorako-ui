@@ -1,0 +1,150 @@
+/* Sidebar */
+
+/* Glass - Remove prior styling */
+
+#sidebar,
+#sidebar-tabs
+{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+/* Glass - Add new styling */
+
+#sidebar.app,
+.sidebar-popout.app
+{
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
+#sidebar-tabs {
+    --sidebar-tab-height: 24px;
+    --sidebar-tab-width: 24px;
+    color: var(--color-text-light-highlight);
+    border: 1px solid var(--color-border-highlight-alt);
+    box-shadow: none;
+    border: none;
+    padding: none;
+    margin: none;
+}
+
+#sidebar-tabs>.item.active {
+    box-shadow: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: var(--dorako-text-shadow);
+    border-bottom: none;
+}
+
+#sidebar-tabs>.item:hover {
+    color: var(--dorako-orange);
+}
+
+#sidebar.collapsed #sidebar-tabs>.item,
+#sidebar.collapsed #sidebar-tabs>.item.active {
+    border: none;
+    text-shadow: none;
+}
+
+#sidebar.app {
+    background-image: none;
+    /* max-height: 98%; */
+}
+
+#sidebar-tabs.tabs {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar-tab {
+    gap: 5px;
+}
+
+
+#chat-form {
+    height: 50px;
+    flex: 0 0 25px;
+}
+
+#chat-form textarea {
+    min-height: 50px;
+    height: 50%;
+    background-image: none;
+    border: none;
+    background-color: rgba(200, 200, 200, 0.5);
+    box-shadow: var(--glassy);
+    overflow: visible;
+}
+
+/* Scrollbar */
+
+#chat-log::-webkit-scrollbar {
+    width: unset;
+    height: unset;
+    display: none;
+}
+
+#chat-log::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: var(--color-text-light-1);
+    border: none;
+    display: none;
+}
+
+#chat-log:-webkit-scrollbar-track {
+    box-shadow: 0 0 1px #999 inset;
+    border-radius: 3px;
+    padding:0px;
+    margin: 0px;
+    display: none;
+}
+
+
+
+/* Polyglot */
+
+#polyglot {
+    height: 20px;
+    line-height: unset;
+}
+
+#polyglot label {
+    /* display: flex;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-shadow: var(--dorako-text-shadow); */
+    display: none;
+}
+
+/* Dice Tray */
+
+.dice-tray button {
+    padding: 0px;
+}
+
+.dice-tray,
+.dice-tray .flexrow {
+    gap: 5px;
+}
+
+.dice-tray {
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-controls .roll-type-select {
+    height: unset;
+}

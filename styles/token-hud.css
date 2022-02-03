@@ -11,10 +11,22 @@
 }
 
 #token-hud .attribute.elevation {
+    transition: background-color 0.15s ease-out;
     position: relative;
     width: 40px;
     margin: unset;
     box-shadow: none;
+}
+
+.placeable-hud input[type="text"]:focus {
+    border: none;
+    transition: background-color 0.15s ease-out;
+    box-shadow: var(--glassy);
+}
+
+#token-hud .attribute.elevation:hover {
+    transition: background-color 0.15s ease-out;
+    background-color: rgb(162, 226, 252);
 }
 
 #token-hud .attribute.bar1 {
@@ -22,6 +34,15 @@
     box-shadow: none;
 }
 #token-hud .attribute.bar1 input {
+    transition: background-color 0.15s ease-out;
+    border: none;
+    box-shadow: var(--glassy);
+    background-color: var(--dorako-bg-current);
+    /* backdrop-filter: brightness(250%); */
+}
+
+#token-hud .attribute.bar1 input:hover {
+    transition: background-color 0.15s ease-out;
     border: none;
     background-color: #7cd00077;
     box-shadow: var(--glassy);
@@ -56,10 +77,7 @@
     margin: 0px;
 }
 
-.placeable-hud .control-icon:not(:nth-child(2)) {
-    margin: 0px;
-    background-color: var(--paizo-blue-dark);
-}
+
 
 #token-hud .col.right {
     left: 100px;
@@ -71,11 +89,35 @@
     text-shadow: var(--dorako-text-shadow);
 }
 
+.placeable-hud .control-icon:not(:nth-child(2)) {
+    margin: 0px;
+    background-color: var(--paizo-blue-dark);
+    transition: background-color 0.15s ease-out;
+
+}
+
 .placeable-hud .control-icon.active {
     border: unset;
     background-color: var(--paizo-blue-bright);
+    transition: background-color 0.15s ease-out;
+
 }
 
-.placeable-hud .control-icon:hover {
+.placeable-hud .control-icon:not(:nth-child(2)):hover {
+    transition: background-color 0.15s ease-out;
+    background-color: var(--paizo-blue);
     /* backdrop-filter: var(--dorako-vibrancy-active); */
+}
+
+.placeable-hud .control-icon:nth-child(2):hover {
+    transition: background-color 0.15s ease-out;
+    background-color: var(--paizo-red);
+    /* backdrop-filter: var(--dorako-vibrancy-active); */
+}
+
+.placeable-hud .control-icon,
+.placeable-hud .control-icon img {
+    opacity: 1;
+    color: rgb(240,240,240);
+
 }

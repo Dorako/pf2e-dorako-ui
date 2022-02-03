@@ -1,0 +1,125 @@
+/* Hotbar (Macro bar) */
+
+/* Glass - Remove prior styling */
+
+#hotbar #macro-list,
+#hotbar .bar-controls,
+#hotbar #macro-list,
+#hotbar .macro.inactive
+{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+/* Glass - Add new styling */
+
+#hotbar #hotbar-directory-controls,
+#hotbar #hotbar-page-controls,
+#hotbar #macro-list,
+#hotbar .macro.inactive,
+#hotbar .macro
+{
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
+#hotbar .macro.active:hover {
+    border: unset;
+}
+
+#hotbar .macro:hover {
+    box-shadow: var(--glassy);
+}
+
+#hotbar .macro .macro-icon {
+    height: unset;
+    width: unset;
+}
+
+
+#hotbar .macro.inactive {
+    transition: background 0.15s ease-out;
+    background: var(--dorako-bg-current);
+}
+
+#hotbar .macro.inactive:hover {
+    transition: background 0.15s ease-out;
+    border: none;
+    box-shadow: var(--glassy);
+    background: var(--paizo-blue);
+}
+
+#hotbar .macro.active {
+    transition: background 0.15s ease-out;
+    background-color: var(--paizo-blue-dark);
+}
+
+#hotbar .macro.active:hover {
+    transition: background 0.15s ease-out;
+    background-color: var(--paizo-blue-bright);
+}
+
+
+
+#hotbar {
+    width: auto;
+    gap: 10px;
+}
+
+#hotbar-page-controls .bar-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hotbar .bar-controls span.page-number {
+    font-size: unset;
+    line-height: unset;
+}
+
+#hotbar .fas {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+#hotbar .bar-controls {
+    flex: 0 0 22px;
+    height: auto;
+    margin: 0px;
+}
+
+#hotbar #action-bar {
+    flex: 1;
+    height: 100%;
+    pointer-events: all;
+    gap: 10px
+}
+
+#hotbar #macro-list {
+    background-color: var(--dorako-bg-current);
+    padding: 5px;
+    gap: 5px;
+    margin: 0px;
+    backdrop-filter: var(--dorako-vibrancy);
+    flex: 1;
+}
+
+#hotbar .macrolist {
+    gap: 10px;
+}
+
+.sheet header.sheet-header img {
+    flex: 0 0 50px;
+    height: 50px;
+    margin-right: 0px;
+    box-shadow: var(--glassy);
+    background-color: var(--paizo-blue-dark);
+}
