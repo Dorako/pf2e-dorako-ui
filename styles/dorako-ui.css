@@ -114,19 +114,10 @@ footer.sheet-footer.flexrow {
 
 
 
-#hotbar .bar-controls a.page-control {
-    font-size: var(--font-size-14);
-}
-
 form .form-group label {
     line-height: var(--form-field-height);
     flex: 3;
 }
-
-/* form .form-group > * {
-    flex: 1;
-} */
-
 
 
 #client-settings section.content h2.module-header {
@@ -134,67 +125,10 @@ form .form-group label {
 }
 
 
-
-.message-content .chat-damage-buttons button>i.fas {
-    left: 0px;
-    top: 0px;
-}
-
-
-#ui-top.offset {
-    margin-left: -100px;
-}
-
-#controls ol.sub-controls .control-tool {
-    margin-right: 0px;
-}
-
-#controls {
-    text-shadow: var(--dorako-text-shadow);
-}
-
-#ui-top {
-    margin: 0 10px 0 10px;
-}
-
-
-#sidebar {
-    height: -webkit-fill-available;
-    margin: 10px 10px 10px 0px;
-}
-
 #chat-controls i.fas,
 #sidebar-tabs i.fas {
     text-shadow: var(--dorako-text-shadow);
 }
-
-
-#ui-bottom {
-    margin-left: 9px;
-}
-
-#players {
-    margin: 0px 0px 10px 10px;
-}
-
-#players h3 {
-    border: none;
-}
-
-#hotbar .bar-controls span.page-number {
-    text-shadow: var(--dorako-text-shadow);
-}
-
-
-#context-menu.expand-up {
-    bottom: calc(100% + 2px);
-}
-
-#context-menu.expand-up .expand-down {
-    bottom: calc(100% + 2px);
-}
-
-
 
 
 #logo {
@@ -204,70 +138,6 @@ form .form-group label {
 button > i {
     margin-right: 0px;
 }
-
-#sidebar {
-    --header-color: #fff;
-    --header-bg: var(--primary);
-    /* display: inline-block; */
-}
-
-/*
-#controls .control-tool.active,
-#controls .scene-control.active {
-    background-color: var(--paizo-red-gl);
-    border: none;
-    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, .25), 0 0 8px var(--tertiary);
-    color: var(--tertiary);
-    text-shadow: 0 0 0 1px rgba(0, 0, 0, .5);
-    position: relative;
-    background-image: var(--paizo-red-glass);
-    background-size: contain;
-
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.tags {
-    background-color:var(--alt);
-    border:1px solid #493c31;
-    box-shadow:inset 0 0 0 1px rgba(0,0,0,.5),inset 0 0 0 2px hsla(0,0%,100%,.2),inset 0 0 0 3px hsla(0,0%,100%,.1);
-    padding: 2px;
-   }*/
-
-/*
-   .tags .tag{
-    background-color:var(--dorako-bg-current);
-    border: 1px solid #493c31;
-    padding: 4px;
-    box-shadow:inset 0 0 0 1px rgba(0,0,0,.5),inset 0 0 0 2px hsla(0,0%,100%,.2),inset 0 0 0 3px hsla(0,0%,100%,.1);
-   }
-   */
-
-
-
-#hotbar .macro .macro-key,
-#custom-hotbar .macro .custom-macro-key {
-    background: none;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    text-shadow: var(--dorako-text-shadow);
-    font-size: large;
-}
-
-
-
 
 /* Glass - Remove prior styling */
 
@@ -299,45 +169,6 @@ button > i {
     transform: translate3d(0px, 0px, 0px);
     box-shadow: var(--glassy);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 input[type=range] {

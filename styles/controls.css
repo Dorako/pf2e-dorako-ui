@@ -147,3 +147,11 @@
 #terrainlayer-tools .control-tools .li {
     padding: 5px;
 }
+
+#controls ol.sub-controls .control-tool {
+    margin-right: 0px;
+}
+
+#controls {
+    text-shadow: var(--dorako-text-shadow);
+}

@@ -15,6 +15,8 @@
     background-image: none;
 }
 
+
+
 /* Glass - Add new styling */
 
 #players,
@@ -28,6 +30,28 @@
     /*will-change: backdrop-filter;*/
     transform: translate3d(0px, 0px, 0px);
     box-shadow: var(--glassy);
+}
+
+#ui-top.offset {
+    margin-left: -100px;
+}
+
+
+#ui-top {
+    margin: 0 10px 0 10px;
+}
+
+#ui-bottom {
+    margin-left: 9px;
+}
+
+
+#players {
+    margin: 0px 0px 10px 10px;
+}
+
+#players h3 {
+    border: none;
 }
 
 .window-app .window-header {

@@ -148,3 +148,19 @@
 #chat-controls .roll-type-select {
     height: unset;
 }
+
+.directory .action-buttons button {
+    margin: 0px;
+}
+
+
+
+#sidebar {
+    height: -webkit-fill-available;
+    margin: 10px 10px 10px 0px;
+}
+#sidebar {
+    --header-color: #fff;
+    --header-bg: var(--primary);
+    /* display: inline-block; */
+}

@@ -32,6 +32,31 @@
     box-shadow: var(--glassy);
 }
 
+#hotbar .bar-controls span.page-number {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+#hotbar .macro .macro-key,
+#custom-hotbar .macro .custom-macro-key {
+    background: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: var(--dorako-text-shadow);
+    font-size: large;
+}
+
+#hotbar .bar-controls a.page-control {
+    font-size: var(--font-size-14);
+}
+
+#context-menu.expand-up {
+    bottom: calc(100% + 2px);
+}
+
+#context-menu.expand-up .expand-down {
+    bottom: calc(100% + 2px);
+}
+
 #hotbar .macro.active:hover {
     border: unset;
 }

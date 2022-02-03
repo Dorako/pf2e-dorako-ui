@@ -4,13 +4,13 @@
     "description": "Overhauls the Foundry UI and several modules.",
     "url": "https://github.com/Dorako/pf2e-dorako-ui",
     "author": "Dorako",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "system": ["pf2e"],
     "scripts": [
         "scripts/dorako-ui.js"
       ],
-      "dependencies": [ { "name": "lib-df-hotkeys" }, { "name": "colorsettings" }  ],
-      "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.0.0.zip"
+      "dependencies": [ { "name": "colorsettings" }  ],
+      "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.0.2.zip"
   }
