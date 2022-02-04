@@ -5,7 +5,8 @@
 }
 
 .window-app.minimized .window-header {
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
+    border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
     backdrop-filter: var(--dorako-vibrancy);

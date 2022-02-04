@@ -13,6 +13,14 @@
     background-image: none;
 }
 
+#sidebar {
+    height: -webkit-fill-available;
+    margin: var(--edge-margin) var(--edge-margin) var(--edge-margin) 0px;
+    --header-color: #fff;
+    --header-bg: var(--primary);
+    /* display: inline-block; */
+}
+
 /* Glass - Add new styling */
 
 #sidebar.app,
@@ -47,7 +55,7 @@
 }
 
 #sidebar-tabs>.item:hover {
-    color: var(--dorako-orange);
+    color: white;
 }
 
 #sidebar.collapsed #sidebar-tabs>.item,
@@ -129,38 +137,7 @@
     display: none;
 }
 
-/* Dice Tray */
-
-.dice-tray button {
-    padding: 0px;
-}
-
-.dice-tray,
-.dice-tray .flexrow {
-    gap: 5px;
-}
-
-.dice-tray {
-    display: flex;
-    flex-direction: column;
-}
-
-#chat-controls .roll-type-select {
-    height: unset;
-}
 
 .directory .action-buttons button {
     margin: 0px;
-}
-
-
-
-#sidebar {
-    height: -webkit-fill-available;
-    margin: 10px 10px 10px 0px;
-}
-#sidebar {
-    --header-color: #fff;
-    --header-bg: var(--primary);
-    /* display: inline-block; */
 }

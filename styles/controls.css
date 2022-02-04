@@ -11,7 +11,8 @@
 #controls ol .control-tool.toggle:hover,
 #controls ol .control-tool:hover,
 #controls ol .scene-control:hover,
-#darkness-adjuster .window-content
+#darkness-adjuster .window-content,
+#darkness-adjuster
 {
     border: none;
     border-radius: 0px;
@@ -43,16 +44,20 @@
     box-shadow: var(--glassy);
 }
 
+#darkness-adjuster {
+    height: 36px !important;
+}
+
 #controls {
     padding-top: 0px;
-    margin-top: 10px;
+    margin-top: var(--edge-margin);
 }
 
 #controls ol.main-controls {
     overflow: visible;
     width: 44px;
     padding: 0px;
-    margin: 0px 0px 0px 10px;
+    margin: 0px 0px 0px var(--edge-margin);
 }
 
 /* #controls ol .control-tool.toggle,
@@ -73,30 +78,30 @@
 #controls ol .scene-control.active,
 #controls ol .scene-control:hover {
     background-color: var(--paizo-red);
-    backdrop-filter: var(--dorako-vibrancy-active)
+    /* backdrop-filter: var(--dorako-vibrancy-active) */
 }
 
 #controls ol.sub-controls .control-tool:hover,
 #controls ol.sub-controls .control-tool.active:not(.toggle):hover,
 #controls ol.sub-controls .control-tool.active:not(.toggle) {
     background-color: var(--paizo-red);
-    backdrop-filter: var(--dorako-vibrancy-active);
+    /* backdrop-filter: var(--dorako-vibrancy-active); */
 }
 
 #controls ol.sub-controls .control-tool.toggle {
     background-color: var(--paizo-blue-dark);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
 }
 
 #controls ol.sub-controls .control-tool.toggle:hover,
 #controls ol.sub-controls .control-tool.toggle.active:hover {
     background-color: var(--paizo-blue);
-    backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active);
+    /* backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active); */
 }
 
 #controls ol.sub-controls .control-tool.toggle.active {
     background-color: var(--paizo-blue-bright);
-    backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active);
+    /* backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active); */
 }
 
 

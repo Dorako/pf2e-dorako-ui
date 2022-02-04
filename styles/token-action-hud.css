@@ -13,13 +13,12 @@
 
 .tah-subcategory {
     display: grid;
-    grid-template-columns: 150px auto;
     grid-auto-rows: unset;
     min-height: 22px;
     cursor: default;
-    width: 1200px;
+    width: 1400px;
     margin-top: 10px;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 200px 1200px;
 }
 
 .tah-actions {
@@ -28,7 +27,7 @@
     flex-flow: row wrap;
     align-items: center;
     /* gap: 5px; */
-    width: 600px;
+    width: 1000px;
     row-gap: 2px;
     column-gap: 8px;
     margin-bottom: 0px;
@@ -80,7 +79,7 @@
     padding-left: 5px;
     padding-right: 5px;
     min-width: 20px;
-    height:28px;
+    height:20px;
 }
 
 .tah-action {
@@ -138,7 +137,7 @@
     /* box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5); */
     box-shadow:none;
     box-shadow: 0 0 0 1px var(--tertiary);
-    margin-left: -5px;
+    /* margin-left: -5px; */
 }
 
 
@@ -179,6 +178,69 @@
     display: inline;
 }
 
-button[value^="spell|"] .tah-name {
+.tah-action.stickLeft button {
+    width: auto;
+    min-width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0px;
+    /* margin-left:-11px; */
+}
+
+
+
+.tah-action:not(.stickLeft) button[value^="spell|"]  {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tah-action:not(.stickLeft) button[value^="spell|"]:hover  {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+.tah-action:not(.stickLeft) button[value^="spell|"] .tah-icon,
+.tah-action:not(.stickLeft) button[value^="spell|"] .tah-name,
+.tah-action:not(.stickLeft) button[value^="spell|"] .tah-info1
+{
     display:none;
+}
+
+.tah-action:not(.stickLeft) button[value^="spell|"]:hover .tah-icon,
+.tah-action:not(.stickLeft) button[value^="spell|"]:hover .tah-name,
+.tah-action:not(.stickLeft) button[value^="spell|"]:hover .tah-info1 {
+    display: inline;
+}
+
+.tah-actions .shrink {
+    width: auto;
+    min-width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0px;
+}
+
+tah-actions {
+    gap: 0px;
+}
+
+.tah-actions {
+    grid-column: 2;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    /* gap: 8px; */
+    width: 600px;
+    row-gap: 8px;
+    column-gap: 4px;
+    margin-bottom: 0px;
+    font-size: medium;
 }

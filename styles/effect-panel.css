@@ -44,7 +44,7 @@
 
 .effect-panel .effect-item .icon {
     border-radius: 42px;
-    box-shadow: var(--gold-and-glow);
+    box-shadow: var(--gold-and-glow), var(--glassy);
 }
 
 .effect-panel .effect-item .effect-info {

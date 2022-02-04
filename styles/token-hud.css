@@ -1,5 +1,32 @@
 /* Token HUD (right click token) */
+/* Glass - Remove prior styling */
 
+.placeable-hud,
+#token-hud .attribute,
+.placeable-hud input[type="text"]
+{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    background-image: none;
+}
+
+/* Glass - Add new styling */
+
+.placeable-hud .control-icon,
+#token-hud .attribute:not(.bar1),
+.placeable-hud input[type="text"]
+{
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
 
 
 #token-hud .attribute i.fas {
@@ -80,7 +107,7 @@
 
 
 #token-hud .col.right {
-    left: 100px;
+    /* left: 100px; */
     gap: 10px;
 }
 

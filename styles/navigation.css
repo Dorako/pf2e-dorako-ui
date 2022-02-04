@@ -31,7 +31,18 @@
 }
 
 #navigation {
-    margin-top: 10px;
+    margin-top: var(--edge-margin);
+}
+/* 
+#navigation #scene-list li {
+    margin-right: 10px;
+    margin-bottom:10px
+} */
+
+
+#navigation #scene-list .scene {
+    margin-bottom: 6px;
+    margin-right: 6px;
 }
 
 #navigation #scene-list .scene li.scene-player {
@@ -44,7 +55,12 @@
 }
 
 .scene-name{
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#navigation #scene-list .scene {
+    z-index: -1;
 }
 
 /* #navigation #scene-list {
@@ -52,34 +68,6 @@
     flex-wrap: wrap;
 } */
 
-#navigation #scene-list .scene.gm {
-    transition: background-color 0.15s ease-out;
-    /*background-color: var(--paizo-blue);*/
-    /* Dark gray */
-}
-
-#navigation #scene-list .scene.gm:hover {
-    background-color: var(--paizo-red);
-    transition: background-color 0.15s ease-out;
-    /* Dark gray */
-}
-
-#navigation #scene-list .scene {
-    background-color: var(--paizo-blue-dark);
-    transition: background-color 0.15s ease-out;
-}
-
-#navigation #scene-list .scene:hover {
-    background-color: var(--paizo-blue);
-    transition: background-color 0.15s ease-out;
-}
-
-#navigation #scene-list .scene.active {
-    background-color: var(--paizo-blue-bright);
-    backdrop-filter: var(--dorako-vibrancy-active);
-    transition: background-color 0.15s ease-out;
-    /*box-shadow: var(--gold-and-glow);*/
-}
 
 #navigation #scene-list .scene.view {
     background-color: var(--paizo-red);
@@ -116,6 +104,7 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    margin-bottom: 6px;
 }
 
 #navigation #scene-list .scene {
@@ -132,13 +121,99 @@
     padding: 5px;
 }
 
-#navigation #scene-list li {
-    margin-right: 10px;
-    margin-bottom:10px
-}
 
 
 /* #scene-list {
     display: flex;
     gap: 10px;
 } */
+
+
+
+
+/* Opposite of Core Foundry */
+
+/* #navigation #scene-list .scene.gm {
+    transition: background-color 0.15s ease-out;
+    background-color: var(--paizo-blue);
+}
+
+#navigation #scene-list .scene.gm:hover {
+    background-color: var(--paizo-red);
+    transition: background-color 0.15s ease-out;
+}
+
+#navigation #scene-list .scene {
+    background-color: var(--paizo-blue-dark);
+    transition: background-color 0.15s ease-out;
+}
+
+#navigation #scene-list .scene:hover {
+    background-color: var(--paizo-blue);
+    transition: background-color 0.15s ease-out;
+}
+
+#navigation #scene-list .scene.active {
+    background-color: var(--paizo-blue-bright);
+    backdrop-filter: var(--dorako-vibrancy-active);
+    transition: background-color 0.15s ease-out;
+} */
+
+/* Core Foundry themed */
+
+
+#navigation #scene-list .scene.gm {
+    transition: background-color 0.15s ease-out;
+    background-color: var(--paizo-blue-dark);
+}
+
+#navigation #scene-list .scene.gm:hover {
+    background-color: var(--paizo-blue);
+    transition: background-color 0.15s ease-out;
+}
+
+#navigation #scene-list .scene {
+    transition: background-color 0.15s ease-out;
+}
+
+#navigation #scene-list .scene:hover {
+    background-color: var(--paizo-red);
+    transition: background-color 0.15s ease-out;
+}
+
+#navigation #scene-list .scene.active {
+    transition: background-color 0.15s ease-out;
+    box-shadow: var(--gold-and-glow), var(--glassy);
+}
+
+#navigation #scene-list .scene.view.gm {
+    transition: background-color 0.15s ease-out;
+    background-color: var(--paizo-blue-bright);
+}
+
+
+
+
+
+#navigation #scene-list .scene ul.scene-players {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    margin-left: 5px;
+    top: 22px;
+    position:absolute;
+    /* position:unset;
+    top: 0px; */
+}
+
+#navigation #scene-list .scene li.scene-player {
+    height: 10px;
+    width: 10px;
+    margin: 0px;
+    color: transparent;
+    border: 0px;
+    box-shadow: var(--gold-and-glow);
+    border-radius: 50%;
+}

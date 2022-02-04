@@ -37,8 +37,26 @@
     border: none;
 }
 
-#combat li.combatant .token-image {
+#combat li.combatant > .token-image {
     margin: 5px;
+}
+
+#combat li.combatant .token-name {
+    text-shadow: var(--dorako-text-shadow);
+    justify-content: center;
+}
+
+/* Combat Enhancements */
+
+.combatant .ce-image-wrapper {
+    margin: 5px;
+}
+
+/* Combat Focus */
+
+.small-chat::before {
+    height:1px;
+    cursor: row-resize;
 }
 
 .small-chat::after {

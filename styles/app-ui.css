@@ -38,16 +38,17 @@
 
 
 #ui-top {
-    margin: 0 10px 0 10px;
+    margin: 0 var(--edge-margin) 0 var(--edge-margin);
 }
 
 #ui-bottom {
-    margin-left: 9px;
+    /* margin-left: 9px; */
+    margin-left: calc(50% - 300px);
 }
 
 
 #players {
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px var(--edge-margin) var(--edge-margin);
 }
 
 #players h3 {

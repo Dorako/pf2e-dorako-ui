@@ -1,13 +1,11 @@
-
 :root {
     --border-width: 1px;
     --hotbar-height: 62px;
     --header-color: #fff;
     --header-bg: var(--primary);
     --body-padding: 0.0em 0.0em 0em 0em;
-}
+    --edge-margin: 5px;
 
-:root {
     --dorako-bg-glass: rgba(120, 120, 120, 0.20);
     --dorako-bg-dark: rgba(20, 20, 20, 0.60);
     --dorako-orange: rgba(255, 100, 0, 0.5);
@@ -18,21 +16,30 @@
 
     /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
     --dorako-vibrancy: none;
-    /*--dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
-    --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px);*/
+    /* --dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
+    --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px); */
 
     --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
-    --glassy: 0px 0px 2px rgba(255, 255, 255, 0.4) inset, 0px 0px 6px rgba(255, 255, 255, 0.2) inset, 0px 0px 1px rgba(0, 0, 0, 1), 0px 0px 3px rgba(0, 0, 0, 1), 0px 0px 5px rgba(0, 0, 0, 0.9);
+    --glassy: 
+    0px 0px 2px rgba(255, 255, 255, 0.4) inset, 
+    0px 0px 6px rgba(255, 255, 255, 0.2) inset, 
+     1px  1px 1px rgba(0, 0, 0, 1), 
+     1px -1px 1px rgba(0, 0, 0, 1), 
+    -1px -1px 1px rgba(0, 0, 0, 1), 
+    -1px  1px 1px rgba(0, 0, 0, 1), 
+    0px 0px 3px rgba(0, 0, 0, 1), 
+    0px 0px 4px rgba(0, 0, 0, 0.5);
     --paizo-red: rgb(94, 0, 0);
     --paizo-red-glass: rgba(94, 0, 0,1);
     --paizo-blue-dark: rgba(16, 21, 73);
     --paizo-blue-dark: hsl(234, 64%, 15%);
-    --paizo-blue:	rgb(23, 31, 105);
+    --paizo-blue: 	rgb(23, 31, 105);
     --paizo-blue: hsl(234, 64%, 25%);
     --paizo-blue-bright: rgb(30, 41, 137);
     --paizo-blue-bright: hsl(234, 64%, 35%);
     --paizo-blue-glass-inactive:rgba(23, 31, 105,0.2);
     --paizo-blue-glass:rgba(23, 31, 105,0.5);
+
     --color-shadow-highlight: var(--paizo-red);
     --color-shadow-primary: var(--paizo-blue);
 
@@ -48,6 +55,7 @@
      /*transition: background-color 0.3s ease-out;*/
 
 }
+
 
 
 
@@ -139,37 +147,9 @@ button > i {
     margin-right: 0px;
 }
 
-/* Glass - Remove prior styling */
 
-.placeable-hud,
-#token-hud .attribute,
-.placeable-hud input[type="text"]
-{
-    border: none;
-    border-radius: 0px;
-    box-shadow: none;
-    backdrop-filter: none;
-    background: none;
-    background-image: none;
-}
 
-/* Glass - Add new styling */
-
-.placeable-hud .control-icon,
-#token-hud .attribute:not(.bar1),
-#dfcp-rt-buttons button,
-.dice-tray button,
-.placeable-hud input[type="text"]
-{
-    border: none;
-    border-radius: var(--dorako-radius);
-    background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
-    /*will-change: backdrop-filter;*/
-    transform: translate3d(0px, 0px, 0px);
-    box-shadow: var(--glassy);
-}
-
+/* 
 
 input[type=range] {
     -webkit-appearance: unset;
@@ -260,4 +240,4 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
     box-shadow: none !important;
-  }
+  } */
