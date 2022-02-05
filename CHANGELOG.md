@@ -1,3 +1,6 @@
+# 1.1.1
+Fixes for Token HUD resources, TAH spell buttons, Monk's Little Details round counter.
+Did *a lot* of groundwork for dark/light toggle, and managed to re-introduce the red header to light theme. This version ships with light theme "on".
 # 1.1.0
 Lots of changes to the card styling, the default styling is now a 'dark mode', options for 'light mode' coming later.
 

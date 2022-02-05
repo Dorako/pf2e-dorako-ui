@@ -68,3 +68,13 @@
     cursor: row-resize;
     box-shadow: var(--gold-and-glow);
 }
+
+/* Monk's little details */
+
+.encounter-cr-row {
+    --control-width: 28px;
+    display: flex;
+    gap: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

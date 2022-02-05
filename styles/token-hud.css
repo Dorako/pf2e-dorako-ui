@@ -16,7 +16,7 @@
 /* Glass - Add new styling */
 
 .placeable-hud .control-icon,
-#token-hud .attribute:not(.bar1),
+/* #token-hud .attribute:not(.bar1), */
 .placeable-hud input[type="text"]
 {
     border: none;
@@ -28,6 +28,12 @@
     box-shadow: var(--glassy);
 }
 
+.middle .attribute {
+    display: flex;
+    gap: 10px;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
 
 #token-hud .attribute i.fas {
     z-index: 1;
@@ -56,11 +62,12 @@
     background-color: rgb(162, 226, 252);
 }
 
-#token-hud .attribute.bar1 {
+/* #token-hud .attribute.bar1 {
     background-color: none;
     box-shadow: none;
-}
-#token-hud .attribute.bar1 input {
+} */
+
+#token-hud .attribute input {
     transition: background-color 0.15s ease-out;
     border: none;
     box-shadow: var(--glassy);
@@ -68,13 +75,12 @@
     /* backdrop-filter: brightness(250%); */
 }
 
-#token-hud .attribute.bar1 input:hover {
+/* #token-hud .attribute.bar1:hover {
     transition: background-color 0.15s ease-out;
     border: none;
     background-color: #7cd00077;
     box-shadow: var(--glassy);
-    /* backdrop-filter: brightness(250%); */
-}
+} */
 
 .placeable-hud input[type="text"] {
     border-radius: 3px;
@@ -86,7 +92,8 @@
 }
 
 .placeable-hud input[type="text"] {
-    width: 100%;
+    /* width: 100%; */
+    min-width: 40px;
     border: unset;
     color: var(--color-text-light-2);
     text-shadow: var(--dorako-text-shadow);

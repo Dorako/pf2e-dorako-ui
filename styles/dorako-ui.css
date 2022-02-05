@@ -11,6 +11,7 @@
     --dorako-orange: rgba(255, 100, 0, 0.5);
     /* --dorako-bg-current: var(--dorako-bg-glass); */
     --dorako-bg-current: var(--dorako-bg-dark);
+    /* --dorako-bg-current: hsl(0,0%, 10%); */
 
     --blind-bg: #A57aA5;
     --whisper-bg: #E3E3FF;
@@ -48,6 +49,7 @@
     --img-red: url(/systems/pf2e/assets/sheet/nav-item.webp);
     --pf2e-nav-inactive: url(/systems/pf2e/assets/sheet/nav-item-inactive.webp);
     --pf2e-sheets-bg: url(/systems/pf2e/assets/sheet/background.webp);
+    --bg-light: url(/systems/pf2e/assets/sheet/background.webp);
     --bg-dark: url(/modules/pf2e-dorako-ui/img/background-dark.webp);
 
     --dorako-text-shadow: 0px 0px 3px black;
@@ -56,6 +58,10 @@
      /*transition: backdrop-filter 0.3s ease-out;*/
      /*transition: background-color 0.3s ease-out;*/
 
+}
+
+button:hover, button:focus {
+    box-shadow: 0px 0px 10px rgba(245,222,179,0.2) inset;
 }
 
 body {
@@ -103,7 +109,6 @@ form button {
 
 footer.sheet-footer.flexrow {
     gap: 5px;
-    margin-bottom: 5px;
 }
 
 #settings div {
@@ -131,8 +136,11 @@ form .notes, form .hint,
     text-shadow: 0px 1px white;
 }
 
-form .notes, form .hint {
-    flex: 0 0 100%;
+form .notes,
+form .hint,
+form .form-group span.units,
+form .form-group.slim .form-fields > label {
+    /* flex: 0 0 100%; */
     font-size: var(--font-size-12);
     line-height: var(--line-height-16);
     color: #646464;
@@ -140,7 +148,14 @@ form .notes, form .hint {
 }
 
 
-
+input:disabled {
+    color: gray;
+    text-shadow: 0px 1px white;
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: darkgray;
+    text-shadow: 0px 1px white;
+}
 
 form .form-group label {
     line-height: var(--form-field-height);

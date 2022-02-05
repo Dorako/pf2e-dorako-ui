@@ -195,7 +195,7 @@
 
 .tah-action:not(.stickLeft) button[value^="spell|"]  {
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: 5px;
 }
 
 .tah-action:not(.stickLeft) button[value^="spell|"]:hover  {
@@ -203,7 +203,7 @@
     padding-right: 5px;
 }
 
-.tah-action:not(.stickLeft) button[value^="spell|"] .tah-icon,
+/* .tah-action:not(.stickLeft) button[value^="spell|"] .tah-icon,
 .tah-action:not(.stickLeft) button[value^="spell|"] .tah-name,
 .tah-action:not(.stickLeft) button[value^="spell|"] .tah-info1
 {
@@ -214,7 +214,7 @@
 .tah-action:not(.stickLeft) button[value^="spell|"]:hover .tah-name,
 .tah-action:not(.stickLeft) button[value^="spell|"]:hover .tah-info1 {
     display: inline;
-}
+} */
 
 .tah-actions .shrink {
     width: auto;
