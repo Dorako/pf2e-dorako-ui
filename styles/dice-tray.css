@@ -26,6 +26,7 @@
 .dice-tray {
     display: flex;
     flex-direction: column;
+    padding: 2px;
 }
 
 #chat-controls .roll-type-select {

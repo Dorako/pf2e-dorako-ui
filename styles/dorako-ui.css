@@ -9,6 +9,7 @@
     --dorako-bg-glass: rgba(120, 120, 120, 0.20);
     --dorako-bg-dark: rgba(20, 20, 20, 0.60);
     --dorako-orange: rgba(255, 100, 0, 0.5);
+    /* --dorako-bg-current: var(--dorako-bg-glass); */
     --dorako-bg-current: var(--dorako-bg-dark);
 
     --blind-bg: #A57aA5;
@@ -47,6 +48,7 @@
     --img-red: url(/systems/pf2e/assets/sheet/nav-item.webp);
     --pf2e-nav-inactive: url(/systems/pf2e/assets/sheet/nav-item-inactive.webp);
     --pf2e-sheets-bg: url(/systems/pf2e/assets/sheet/background.webp);
+    --bg-dark: url(/modules/pf2e-dorako-ui/img/background-dark.webp);
 
     --dorako-text-shadow: 0px 0px 3px black;
     --dorako-box-shadow: 0px 0px 3px black;
@@ -54,6 +56,10 @@
      /*transition: backdrop-filter 0.3s ease-out;*/
      /*transition: background-color 0.3s ease-out;*/
 
+}
+
+body {
+    text-rendering: geometricPrecision;
 }
 
 
@@ -118,6 +124,20 @@ footer.sheet-footer.flexrow {
     text-shadow: var(--dorako-text-shadow);
 }
 
+form .form-group label,
+#client-settings section.content h2.module-header,
+form .notes, form .hint,
+#client-settings nav.tabs {
+    text-shadow: 0px 1px white;
+}
+
+form .notes, form .hint {
+    flex: 0 0 100%;
+    font-size: var(--font-size-12);
+    line-height: var(--line-height-16);
+    color: #646464;
+    margin: 0px;
+}
 
 
 
@@ -128,9 +148,9 @@ form .form-group label {
 }
 
 
-#client-settings section.content h2.module-header {
+/* #client-settings section.content h2.module-header {
     margin: 5em 0 0 0;
-}
+} */
 
 
 #chat-controls i.fas,
@@ -241,3 +261,8 @@ input[type=range] {
     background: #367ebd;
     box-shadow: none !important;
   } */
+
+.window-app {
+      box-shadow: var(--glassy) !important;
+      border-radius:5px !important;
+}

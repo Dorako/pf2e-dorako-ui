@@ -46,6 +46,10 @@
     margin: none;
 }
 
+#sidebar-tabs > .item {
+    border: none;
+}
+
 #sidebar-tabs>.item.active {
     box-shadow: none;
     border: none;
@@ -92,6 +96,9 @@
     background-color: rgba(200, 200, 200, 0.5);
     box-shadow: var(--glassy);
     overflow: visible;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: -webkit-fill-available;
 }
 
 /* Scrollbar */

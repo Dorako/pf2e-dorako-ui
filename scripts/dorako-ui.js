@@ -300,6 +300,18 @@ Hooks.on('init', () => {
 		}
 	});
 
+	game.settings.register('pf2e-dorako-ui', 'skin-dice-tray', {
+		name: "Apply skin to Dice Tray module?",
+		hint: "",
+		scope: "world",
+		type: Boolean,
+		default: true,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
 
 
 
@@ -374,6 +386,9 @@ Hooks.on('init', () => {
 		}
 		if (game.settings.get('pf2e-dorako-ui', 'skin-custom-hotbar')) {
 			skinCustomHotbar()
+		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-dice-tray')) {
+			skinDiceTray()
 		}
 
 	}
@@ -547,6 +562,16 @@ function skinWindowControls() {
 	newCss.setAttribute("rel", "stylesheet")
 	newCss.setAttribute("type", "text/css")
 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/window-control.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
+function skinDiceTray() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/dice-tray.css")
 	newCss.setAttribute("media", "all")
 	head.insertBefore(newCss, head.lastChild);
 }
