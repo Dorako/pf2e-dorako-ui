@@ -533,7 +533,7 @@ button {
 /* DARK MODE */
 
 :root {
-    --pf2e-header-text-color: wheat;
+    --pf2e-header-text-color: white;
 
 
     --bg-current: var(--bg-light);
