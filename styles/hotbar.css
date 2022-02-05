@@ -178,18 +178,3 @@
     border-radius: 2px;
     overflow: hidden;
 }
-
-
-#smalltime-app::after {
-    transition: box-shadow 0.5s ease-in-out;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: var(--glassy);
-    border-radius: 2px;
-    overflow: hidden;
-    z-index:1000;
-  }

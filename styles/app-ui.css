@@ -41,9 +41,10 @@
     margin: 0 var(--edge-margin) 0 var(--edge-margin);
 }
 
+/* Hotbar */
 #ui-bottom {
     /* margin-left: 9px; */
-    margin-left: calc(50% - 300px);
+    margin-left: var(--hotbar-margin-left);
 }
 
 

@@ -82,6 +82,7 @@
 
 
 
+
 #chat-form,
 #chat-controls,
 .dice-tray>*,
@@ -112,7 +113,7 @@
     "text text text text"minmax(min-content, max-content) 
     /42px 1.5fr 0fr 2.8fr;
     background-color:var(--paizo-red);
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     border-radius: 5px 5px 0px 0px;
     margin-top: -5px;
     padding-top: 5px;
@@ -120,6 +121,60 @@
     padding-right: 5px;
     margin-left: -5px;
     padding-left: 5px;
+}
+
+.flavor-text {
+    background-size: cover;
+    background-image: var(--img-parchment);
+    background-blend-mode: luminosity;
+    /* background:#E5E1DA; */
+    padding-left:5px;
+    margin-left:-5px;
+    padding-right:5px;
+    margin-right:-5px;
+}
+
+.whisper .flavor-text {
+    background-color:  #EDEDFF;
+    background-color: var(--whisper-bg);
+
+}
+
+.blind .flavor-text {
+    /* background: #FDE4FF; */
+    background-color: var(--blind-bg);
+}
+
+
+.whisper-to {
+    background-size: cover;
+    background-image: var(--img-parchment);
+    background-blend-mode: luminosity;
+    background-color: var(--whisper-bg);
+    margin-right: -5px;
+    padding-right: 5px;
+    margin-left: -5px;
+    padding-left: 5px;
+}
+
+.whisper-to * {
+    background-color: var(--whisper-bg);
+}
+
+.message-content .dice-roll .dice-result .dice-total.statuseffect-message {
+    border: 0px;
+    margin-top: 5px;
+    box-shadow: none;
+    background: none;
+}
+
+.message-content .dice-roll .statuseffect-message ul {
+    padding: 0px;
+}
+
+#chat-log hr {
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 .message-content h3.chat-portrait-text-size-name {
@@ -146,9 +201,10 @@
     border-width: 0px;
 }
 
-.whisper-to * {
-    background-color: var(--whisper-bg);
+.message-delete {
+    margin-left: 5px
 }
+
 
 .chat-mode-indicator {
     background-color: rgba(140, 40, 40, 1);
@@ -179,6 +235,8 @@
     border-image-width: 14px;
     border-style: double;
     padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .pf2e.chat-card .card-content p {
@@ -289,6 +347,8 @@
 
 
 
+
+
 #chat-log .message {
     margin: 0px;
 }
@@ -387,7 +447,7 @@ button {
 #chat-log .message .message-header .flavor-text,
 #chat-log .message .message-header .whisper-to {
     grid-area: text;
-    padding: var(--body-padding);
+    /* padding: var(--body-padding); */
 }
 
 .message.dfce-cm-top {

@@ -112,6 +112,8 @@ Hooks.on('init', () => {
 	// 	}
 	// });
 
+
+
 	game.settings.register('pf2e-dorako-ui', 'disable-all-styles', {
 		name: "Disable all styles?",
 		hint: "Ignore all the toggles and removes any effect of the module, without having to disable it.",
@@ -123,6 +125,36 @@ Hooks.on('init', () => {
 			location.reload();
 		}
 	});
+
+	game.settings.register('pf2e-dorako-ui', 'center-hotbar', {
+		name: "Center hotbar (macrobar)?",
+		hint: "",
+		scope: "client",
+		type: Boolean,
+		default: false,
+		config: true,
+		onChange: () => {
+			location.reload();
+		}
+	});
+
+	game.settings.register("pf2e-dorako-ui", "edge-offset", {
+        name: "Offset from the edge of screen in pixels",
+        hint: "",
+        scope: "client",
+        type: Number,
+        default: 10,
+        range: {
+            min: 5,
+            max: 30,
+            step: 1
+        },
+        config: true,
+		onChange: () => {
+			location.reload();
+		}
+    });
+
 
 	game.settings.register('pf2e-dorako-ui', 'skin-chat', {
 		name: "Apply skin to chat?",
@@ -297,6 +329,15 @@ Hooks.on('init', () => {
 
 	if (!game.settings.get('pf2e-dorako-ui', 'disable-all-styles')) {
 		injectBaseCss()
+
+		const root = document.querySelector(':root').style;
+		if (game.settings.get('pf2e-dorako-ui', 'center-hotbar')) {
+			root.setProperty("--hotbar-margin-left", 'calc(50% - 300px)');
+		} else {
+			root.setProperty("--hotbar-margin-left", '10px');
+		}
+
+		root.setProperty("--edge-margin", game.settings.get('pf2e-dorako-ui', 'edge-offset').toString()+'px');
 
 		if (game.settings.get('pf2e-dorako-ui', 'skin-navigation')) {
 			skinNavigation()
