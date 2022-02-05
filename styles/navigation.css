@@ -50,9 +50,9 @@
 }
 
 
-#navigation #scene-list .scene.context,
+/* #navigation #scene-list .scene.context,
 #navigation #scene-list .scene.view {
-}
+} */
 
 .scene-name{
     padding-top: 5px;

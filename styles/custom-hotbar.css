@@ -113,6 +113,6 @@
     text-shadow: var(--dorako-text-shadow);
 }
 
-#custom-hotbar .macro:hover {
-    /* box-shadow: 0 0 10px var(--color-shadow-highlight) inset; */
-}
+/* #custom-hotbar .macro:hover {
+    box-shadow: 0 0 10px var(--color-shadow-highlight) inset;
+} */
