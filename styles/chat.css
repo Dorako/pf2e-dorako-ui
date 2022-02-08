@@ -6,13 +6,16 @@
 }
 
 #chat-log .message .message-header {
-    display: grid;
-    grid: "sender info"minmax(min-content, max-content) "text text"minmax(min-content, max-content) /2fr 1fr;
-
+    /* display: grid;
+    grid: "sender info"minmax(min-content, max-content) "text text"minmax(min-content, max-content) /2fr 1fr; */
 }
 
 #chat-log .message .message-header .message-metadata {
     margin-left: 0px;
+}
+
+#chat-log .tag {
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 /* #chat-log .message .message-header.flexrow {
@@ -56,29 +59,11 @@
 }
 
 #chat-log .message .message-content {
-    padding: var(--body-padding)
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
 }
 
-#chat-log .message {
-    background-color: white;
-    background: var(--bg-current);
-    background-size: cover;
-    border: 1px solid rgba(0, 0, 0, .5);
-    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
-    color: var(--pf2e-body-primary);
-    margin: 6px;
-    padding: 0;
-}
-
-#chat-log .whisper {
-    background-color: var(--whisper-bg);
-    background-blend-mode: luminosity;
-}
-
-#chat-log .blind {
-    background-color: var(--blind-bg);
-    background-blend-mode: luminosity;
-}
 
 
 
@@ -110,27 +95,14 @@
     margin-top: 0px;
     padding: 2px; */
     margin:2px;
+    padding-bottom:2px;
 }
 
 .message-sender {
     white-space: pre-wrap;
 }
 
-#chat-log .message .message-header {
-    grid: 
-    "portrait sender info"minmax(min-content, max-content)
-    "text text text"minmax(min-content, max-content)
-    /42px 1fr 1.2fr;
-    background-color:var(--paizo-red);
-    /* border-bottom: 1px solid black; */
-    border-radius: 5px 5px 0px 0px;
-    margin-top: -5px;
-    padding-top: 5px;
-    margin-right: -5px;
-    padding-right: 5px;
-    margin-left: -5px;
-    padding-left: 5px;
-}
+
 
 /* .flavor-text {
     background-size: cover;
@@ -208,15 +180,17 @@
     border-width: 0px;
 }
 
-.message-delete {
+/* .message-delete {
     margin-left: 5px
-}
+} */
 
-
-.chat-mode-indicator {
-    /* background-color: rgba(140, 40, 40, 1); */
-    background: rgba(200,200,200,.45);
-    font-size: xx-small;
+.rolltype {
+    background: var(--pf2e-translucent-middle);
+    border-radius: 3px;
+    border: 1px solid;
+    line-height: normal;
+    padding: 2px;
+    text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 
@@ -230,8 +204,8 @@
     line-height: normal;
     font-family: var(--serif);
     font-weight: 500;
-    font-size: x-large;
-    line-height: 17px;
+    font-size: 21px;
+    line-height: unset;
     font-variant: common-ligatures;
     /* margin-top: 4px; */
     text-shadow: var(--pf2e-text-shadow);
@@ -248,7 +222,11 @@
     padding: 5px;
     padding-left: 8px;
     padding-right: 8px;
+    margin-left: 0px;
     font-weight: 500;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .pf2e.chat-card .card-content p {
@@ -260,28 +238,39 @@
 
 .pf2e.chat-card {
     text-rendering: geometricPrecision;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* padding-top: 5px; */
 }
 
 .pf2e.chat-card .card-header {
     padding: 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    /* padding-left:5px;
+    padding-right:5px; */
+    padding-top:5px;
+    gap: 5px;
 }
 
 .pf2e.chat-card .card-header img {
-    flex: 0 0 36px;
-    height: 36px;
-    margin-right: 5px;
-    width: 36px;
+    flex: 0 0 34px;
+    height: 34px;
+    margin-right: 0px;
+    width: 34px;
     border-radius: 0px;
-    box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
+    box-shadow: var(--gold-and-glow);
     border: none;
-    margin-left: 2px;
-    margin-top: 2px;
+    margin: 1px;
+    /* margin-left: 2px;
+    margin-top: 2px; */
 }
 
 .pf2e.chat-card .tags {
     margin: 0px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
 }
 
 
@@ -302,6 +291,16 @@
     gap:8px;
 }
 
+.message-content .flavor-text {
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.message-content .flavor-text hr {
+    display: none;
+}
 
 .message-content .chat-damage-buttons button .label {
     font-size: 0.5em;
@@ -324,18 +323,18 @@
 
 
 
-
+/* 
 #chat-log>.chat-message{
     padding: 5px;
-}
+} */
 
 #chat-log .message .message-header .message-metadata,
 #chat-log .message .message-header .message-sender {
     color: var(--pf2e-header-text-color);
     background-color: var(--paizo-red);
     text-shadow: var(--pf2e-text-shadow-is-dark);
-    margin-top: 7px;
-    margin-bottom: 10px;
+    /* margin-top: 7px;
+    margin-bottom: 10px; */
     /* border-bottom: 1px solid black; */
     /* margin-left: -5px;
     margin-top: -5px;
@@ -371,7 +370,7 @@
 
 .dice-roll .dice-formula {
     margin-bottom: 3px;
-    margin-top: 3px;
+    margin-top: 0px;
 }
 
 button {
@@ -380,6 +379,9 @@ button {
 
 .message-content .chat-damage-buttons {
     gap: 3px;
+    /* padding-left:5px;
+    padding-right:5px; */
+    margin-top:0px;
 }
 
 
@@ -426,17 +428,13 @@ button {
 
 .message-content .chat-damage-buttons button .plus {
     color: #DCD8D6;
-    left: 41%;
 }
 
-.chat-mode-indicator {
-    grid-area: chatmode;
-}
 
 #chat-log .message .message-header img.message-portrait {
     grid-area: portrait;
-    margin-bottom:5px;
-    align-items: center;
+    /* margin-bottom:5px; */
+    align-items: left;
     display:flex;
 }
 
@@ -444,7 +442,7 @@ button {
     /* font-size: small;
     font-weight: 400; */
     grid-area: sender;
-    align-items: center;
+    /* align-items: center; */
     display:flex;
 
     /* border-radius: 5px 0px 0px 0px; */
@@ -533,12 +531,11 @@ button {
 /* DARK MODE */
 
 :root {
-    --pf2e-header-text-color: white;
-
-
+    --pf2e-header-text-color: --pf2e-body-primary;
     --bg-current: var(--bg-light);
+
     --pf2e-body-primary: hsl(0, 0%, 10%);
-    --pf2e-body-secondary: hsl(0, 0%, 40%);
+    --pf2e-body-secondary: hsl(0, 0%, 25%);
     --pf2e-body-inverse: hsl(0, 0%, 100%);
 
     --pf2e-shadow-dynamic: var(--pf2e-half-transparent-light);
@@ -547,7 +544,7 @@ button {
     --pf2e-translucent-very: var(--pf2e-translucent-very-for-light);
     --filter-img: var(--filter-light);
 
-    /*--bg-current: var(--bg-dark);
+    /* --bg-current: var(--bg-dark);
     --pf2e-body-primary: hsl(0, 0%, 100%);
     --pf2e-body-secondary: hsl(0, 0%, 60%);
     --pf2e-body-inverse: hsl(0, 0%, 00%);
@@ -556,7 +553,7 @@ button {
     --pf2e-color-ornament: var(--pf2e-color-ornament-for-dark);
     --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-dark);
     --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark);
-    --filter-img: var(--filter-dark);*/
+    --filter-img: var(--filter-dark); */
 
 
 
@@ -581,13 +578,21 @@ button {
 
 }
 
-.chat-message .message-header {
+/* .chat-message .message-header {
     color: var(--pf2e-body-secondary);
-}
+} */
 
 .pf2e.chat-card .card-footer {
     border-top: none;
     color: var(--pf2e-body-secondary);
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    padding-top: 0px;
+}
+
+.dice-roll {
+    /* padding-left: 5px;
+    padding-right: 5px; */
 }
 
 .message-content .chat-damage-buttons button,
@@ -599,9 +604,13 @@ button {
     text-shadow: var(--pf2e-text-shadow);
 }
 
-.pf2e.chat-card .card-header h3 {
-    color: var(--pf2e-color-ornament);
+.pf2e.chat-card .card-header h4 {
+    margin: 0px;
 }
+
+/* .pf2e.chat-card .card-header h3 {
+    color: var(--pf2e-color-ornament);
+} */
 
 /* DARK LIGHT BUTTON TOGGLE */
 
@@ -612,7 +621,7 @@ button {
 .dice-total:not(.statuseffect-message),
 .message-content .chat-damage-buttons button {
     box-shadow: var(--glassy);
-    background-color: hsla(0, 0%, 0%,0.0); /* The box shadow makes it dark 
+    background-color: hsla(0, 0%, 0%,0.0);
     border: none;
 } */
 
@@ -645,25 +654,46 @@ message-content .chat-damage-buttons button {
 
 
 
-#chat-log .chat-message {
+/* #chat-log .chat-message {
+    background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), rgba(220, 66, 37, .5)), var(--bg-current);
     background-image: var(--bg-current);
-    /* background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), rgba(220, 66, 37, .5)), var(--bg-current); */
     background-size: cover;
     background: linear-gradient(to bottom, rgba(110,0,0,1) 0 49px, #EEE9E6 49px 50px, transparent 40px 100%),var(--bg-current);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-blend-mode: multiply;
-}
+} */
 
+#chat-log .chat-message {
+    background-color: white;
+}
 
 
 #chat-log .message .message-header {
     background: none;
+    padding:5px;
+    gap: 5px;
+    align-items: center;
 }
 
 #chat-log .message .message-header .message-sender,
 #chat-log .message .message-header .message-metadata {
     background: none;
+}
+
+.portrait {
+    background-color: var(--pf2e-color-mono-dark);
+    border-radius: 50%;
+    box-shadow: var(--gold-and-glow);
+    margin: 1px;
+    height:36px;
+    width:auto;
+    transition: transform 0.15s ease-in-out;
+}
+
+.portrait:hover {
+    transition: transform 0.15s ease-in-out;
+    transform: scale(2.5) translate(13px,13px);
 }
 
 .whisper .flavor-text,
@@ -704,8 +734,11 @@ message-content .chat-damage-buttons button {
     left: 50%;
     height: 18px;
     opacity: .6;
-    top: 2px;
     width: 12px;
+}
+
+.message-content .chat-damage-buttons.includes-fumble span.plus {
+    left: unset;
 }
 
 .message-content .chat-damage-buttons button .plus {
@@ -738,18 +771,21 @@ message-content .chat-damage-buttons button {
 [data-visibility=owner]:is(div,em,p,span,strong) {
     /* background: #818181; */
     background: none;
-    background: var(--pf2e-translucent-middle);
-    border: 2px dotted var(--pf2e-body-primary);
+    background: var(--pf2e-translucent-very);
+    border: 1px dashed var(--pf2e-body-primary);
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 0px;
-    padding: 0 3px;
+    padding: 5px;
 }
 
 .whisper-to * {
-        background: var(--pf2e-translucent-middle);
-        color: var(--pf2e-body-primary);
-        border: 1px solid #999;
+    background: var(--pf2e-translucent-middle);
+    border-radius: 3px;
+    border: 1px solid;
+    line-height: normal;
+    padding: 2px;
+    text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 
@@ -759,14 +795,14 @@ message-content .chat-damage-buttons button {
 #chat-log a.entity-link,
 #chat-log a.content-link,
 #chat-log a.inline-roll {
-    text-shadow: var(--pf2e-text-shadow);
+    text-shadow: none;
     color: black;
     border-radius: 3px;
 }
 
 
 #chat-log .pf2e.chat-card .card-buttons button {
-    margin: 2px 0;
+    margin: 0px;
     background: var(--paizo-red);
     color: white;
     text-shadow: var(--pf2e-shadow-is-dark);
@@ -814,6 +850,15 @@ message-content .chat-damage-buttons button {
     cursor: pointer;
 }
 
+.dice-total:hover,
+.dice-roll .dice-formula:hover {
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    color: white;
+    /* box-shadow: 0px 0px 10px rgba(245,222,179,0.2) inset, var(--glassy); */
+    background-color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
 #chat-log button:hover img {
     filter: var(--filter-dark);
 }
@@ -824,6 +869,12 @@ message-content .chat-damage-buttons button {
 
 .pf2e.chat-card .card-buttons {
     display: flex;
+    gap: 5px;
+}
+
+.chat-message .message-content {
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
@@ -856,9 +907,12 @@ message-content .chat-damage-buttons button {
     gap: 3px;
     flex-direction: column;
     margin:0px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
 }
 
-#chat-log hr {
+
+#chat-log .card-content hr {
     margin-top: 2px;
     border: none;
     border-top: none;
@@ -889,17 +943,26 @@ message-content .chat-damage-buttons button {
     background: var(--pf2e-translucent-middle);
     color: var(--pf2e-body-primary);
     text-shadow: var(--pf2e-text-shadow);
-    border: 2px dotted;
+    border: 1px dotted;
     border-radius: 5px;
     cursor: help;
 }
 
+[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+    width: 100%;
+    margin-bottom:0px;
+}
 #chat-log .message .message-header .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong){
     background: var(--pf2e-translucent-middle);
 }
 
 .flavor-text [data-visibility=gm] {
-    margin-top:5px;
+    margin-top:0px;
+}
+
+.flavor-text > strong {
+    text-shadow: var(--pf2e-text-shadow);
+    color: var(--pf2e-body-secondary);
 }
 
 .flavor-text br {
@@ -909,7 +972,6 @@ message-content .chat-damage-buttons button {
 .whisper-to {
     display: flex;
     justify-content: space-around;
-    margin-top: 5px;
 }
 
 /* .whisper-to,
@@ -965,16 +1027,166 @@ message-content .chat-damage-buttons button {
     width: 100px;
 }
 
-
-#chat-message .message-header::after {
-    background-color:red;
-    content: "TEEEST";
+.flavor-text .chat-portrait-image-size-name {
+    display: none;
 }
 
-#chat-log .chat-message .message::before {
-    content: "before";
+.pf2e.chat-card .card-header h3 {
+    display:flex;
+    margin-top: 2px;
+    line-height: 17px;
 }
 
-#chat-log .chat-message .message::after {
-    content: "after";
+/* Chat Attack Buttons */
+.pf2e.action-card .card-buttons {
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    margin:0px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+}
+
+#chat-log .message .message-header .message-metadata {
+    font-size: xx-small;
+    display:flex;
+    gap:5px;
+    flex:none;
+}
+
+/* Red footer */
+/* .pf2e.chat-card .card-footer {
+    border-top: none;
+    color: white;
+    text-shadow: var(--pf2e-text-shadow-is-dark);
+    background-color: var(--paizo-red);
+    margin: -5px;
+    padding: 5px;
+    padding-top: 0px;
+    margin-top: 3px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 1px solid wheat;
+} */
+
+#chat-log .message .message-header {
+    grid: unset;
+    display:flex;
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+    /* background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), var(--paizo-red)), var(--bg-current); */
+    /* box-shadow: 0px 1px 0px rgba(0, 0, 0, .5); */
+        /* border-bottom: 1px solid wheat; */
+
+/* Card background */
+#chat-log .message {
+    background-color: white;
+    background: var(--bg-current);
+    background-size: cover;
+    border: none;
+    box-shadow: var(--gold-and-glow);
+    color: var(--pf2e-body-primary);
+    padding: 0;
+}
+
+#chat-log .whisper {
+    background-color: var(--whisper-bg);
+    background-blend-mode: luminosity;
+}
+
+#chat-log .blind {
+    background-color: var(--blind-bg);
+    background-blend-mode: luminosity;
+}
+
+
+/* HEADER */
+
+
+/* Todo */
+#navigation #scene-list .scene.context {
+    color: unset;
+    border: unset;
+    background: unset;
+    border-bottom: unset;
+    box-shadow: var(--glassy);
+}
+
+.tooltip {
+    background-color: var(--pf2e-color-mono-dark);
+    box-shadow: var(--glassy);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-shadow: var(--pf2e-text-shadow-is-dark);
+}
+
+.chat-message .table-draw .table-description {
+    border-top: none;
+    color: var(--pf2e-body-secondary);
+    font-size: unset;
+    padding: 0px
+}
+
+table.pf2-table td, table.pf2-table th {
+    border: 1px solid gray;
+    padding: 1px;
+    text-align: center;
+}
+
+#dfcp-rt-buttons {
+    gap:3px;
+}
+
+.chat-control-icon {
+    margin-left: 3px;
+}
+
+
+#chat-log .message.dfce-cm-middle,
+#chat-log .message.dfce-cm-bottom  {
+    margin-top:-6px;
+}
+
+#chat-log .message.dfce-cm-middle .message-header,
+#chat-log .message.dfce-cm-bottom .message-header {
+    display: none;
+}
+
+.chat-message .message-header .message-sender {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 5px;
+    /*flex-direction: column; */
+}
+
+.message-metadata {
+    flex:none
+}
+
+div#scrollToBottom {
+    padding: 4px;
+    flex: 0;
+    display: flex;
+    border: none;
+    background-color: var(--paizo-blue);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: var(--glassy);
+    top: 0px;
+    margin: 0px 2px;
+    justify-content: center;
+    transition: background-color 0.15s ease-in-out;
+}
+
+div#scrollToBottom:hover {
+    transition: background-color 0.15s ease-in-out;
+    background-color: var(--paizo-blue-bright);
+}
+
+.chat-damage-buttons button {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }

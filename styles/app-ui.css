@@ -115,9 +115,99 @@
 .app.sidebar-popout {
     border: none;
     border-radius: var(--dorako-radius);
+    /* background-color: var(--dorako-bg-current); */
+}
+
+/* .window-content * {
+    text-shadow: 0px 1px rgb(255 255 255 / 50%);
+} */
+
+.window-content .sidebar-tap * {
+    text-shadow: 0px 1px rgb(0 0 0 / 50%);
+}
+
+#context-menu {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+#context-menu ol.context-items {
+    background: var(--pf2e-color-mono-dark);
+    box-shadow: var(--glassy);
+    border-radius: 3px;
+}
+
+#context-menu li.context-item {
+    cursor: pointer;
+    text-shadow: var(--pf2e-shadow-is-dark);
+}
+
+#context-menu li.context-item:hover {
+    color:wheat;
+}
+
+#hotbar .macro .tooltip {
+    display: block;
+    min-width: 148px;
+    height: 26px;
+    padding: 2px 4px;
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    background: var(--pf2e-color-mono-dark);
+    box-shadow: var(--glassy);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    line-height: 22px;
+    text-align: center;
+    white-space: nowrap;
+    word-break: break-all;
+}
+
+#fps {
+    width: 85px;
+    margin: 0px;
+    align-self: space-evenly;
+    display: none;
+    font-family: var(--font-mono);
+    background: var(--dorako-bg-current);
+    line-height: 24px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--glassy);
+    justify-content: space-between;
+    display: flex !important;
+    flex-direction: row;
+    margin-bottom: var(--edge-margin);
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-shadow: var(--dorako-text-shadow);
+    font-weight: 500;
+}
+
+
+
+.window-app.image-popout .window-content {
+    background: var(--dorako-bg-current);
+    padding: 0px;
+}
+
+.window-app.image-popout .lightbox-image {
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    flex: auto;
+}
+
+.app.sidebar-popout .window-content{
     background-color: var(--dorako-bg-current);
 }
 
-.window-content * {
-    text-shadow: 0px 1px rgb(255 255 255 / 50%);
+.sidebar-popout {
+    overflow: auto;
+    resize: both;
 }

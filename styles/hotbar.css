@@ -81,7 +81,7 @@
     transition: background 0.15s ease-out;
     border: none;
     box-shadow: var(--glassy);
-    background: var(--paizo-blue);
+    background: var(--paizo-red);
 }
 
 #hotbar .macro.active {
@@ -153,7 +153,7 @@
     background-color: var(--paizo-blue-dark);
 } */
 
-#hotbar .macro.active::after {
+#hotbar .macro.active::before {
   transition: box-shadow 0.5s ease-in-out;
   content: '';
   position: absolute;
@@ -164,9 +164,10 @@
   box-shadow: var(--glassy);
   border-radius: 2px;
   overflow: hidden;
+  pointer-events: none;
 }
 
-#hotbar .macro.active:hover::after {
+#hotbar .macro.active:hover::before {
     transition: box-shadow 0.5s ease-in-out;
     content: '';
     position: absolute;
@@ -177,4 +178,16 @@
     box-shadow: 0px 0px 10px rgba(220,200,100,0.5) inset, var(--glassy);
     border-radius: 2px;
     overflow: hidden;
+    pointer-events: none;
+}
+
+/* Thin hotbar */
+
+#hotbar #macro-list {
+    box-shadow: none;
+    background: none;
+    padding: 0px;
+    gap: 2px;
+    margin: 0px;
+    flex: 1;
 }

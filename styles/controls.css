@@ -124,29 +124,37 @@
     flex-direction: column;
 }
 
+#terrainlayer-tools {
+    background: var(--dorako-bg-current);
+    color: var(--color-text-light-heading);
+    text-shadow: var(--dorako-text-shadow);
+    box-shadow: var(--glassy);
+    border-radius: 3px;
+}
+
+
 #terrainlayer-tools .control-tool {
     width: unset;
     height: unset;
     box-sizing: content-box;
     font-size: unset;
     line-height: unset;
-    background: var(--dorako-bg-current);
-    box-shadow: var(--dorako-box-shadow);
+    box-shadow: none;;
     margin: 0px;
-    color: var(--color-text-light-heading);
-    text-shadow: var(--dorako-text-shadow);
     text-align: center;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     padding: 0;
+    background: none;
 }
 
 #terrainlayer-tools .control-tool:hover {
     color: var(--color-text-light-heading);
     border: unset;
     border-bottom: unset;
-    box-shadow: unset;
+    box-shadow: none;
+    background:none;
 }
 
 #terrainlayer-tools .control-tools .li {

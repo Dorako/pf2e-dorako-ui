@@ -1,3 +1,5 @@
+# 1.2.0
+Huge release, :pacman:'d chat portraits and rolltype indicators, and added settings allowing users to customize the chat card theme.
 # 1.1.1
 Fixes for Token HUD resources, TAH spell buttons, Monk's Little Details round counter.
 Did *a lot* of groundwork for dark/light toggle, and managed to re-introduce the red header to light theme. This version ships with light theme "on".

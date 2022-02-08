@@ -278,6 +278,48 @@ input[type=range] {
   } */
 
 .window-app {
-      box-shadow: var(--glassy) !important;
+      /* box-shadow: var(--glassy) !important; */
       border-radius:5px !important;
 }
+
+#hotbar {
+    height: unset;
+}
+
+
+img {
+  border: none;
+  border-radius:0px;
+}
+
+
+
+/* button {
+  transition: transform 0.15s ease-in-out;
+}
+button:hover {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(1.5);
+} */
+
+/* @keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+button {
+  animation: pulse 3s infinite;
+}
+
+button:hover {
+  animation-play-state: paused;
+} */

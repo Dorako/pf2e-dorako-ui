@@ -1,0 +1,34 @@
+<li class="chat-message message flexcol {{cssClass}}" data-message-id="{{message._id}}" style="{{getBorderStyle message borderColor}}">
+    {{#if (and (eq (getCardStyle) "topBar") (showSpeakerImage message))}}
+    <span style="background-color: {{getUserColor message}}; max-height: 6px;">&nbsp;</span>
+    {{/if}}
+    <header class="message-header flexrow" style="{{getHeaderStyle message}}">
+        {{#if (showSpeakerImage message)}}
+        <div class="portrait-and-name" style="display: flex; gap:5px">
+            {{#if (useVideoForSpeakerImage message)}}
+                <video class="portrait" height="32" src="{{getSpeakerImage message}}" autoplay muted loop />
+            {{else}}
+            <img class="portrait" src="{{getSpeakerImage message}}" height="36" />
+            {{/if}}
+        {{/if}}
+        <h4 class="message-sender" style="{{getTitleStyle message}}">{{alias}}</h4>
+        </div>
+        <span class="message-metadata" style="{{getTitleStyle message}}">
+            <time class="message-timestamp">{{timeSince message.timestamp}}</time>
+            {{#if user.isGM}}
+            <a class="button message-delete"><i class="fas fa-trash"></i></a>
+            {{/if}}
+        </span>
+        </header>
+
+        {{#if isWhisper}}
+        <span class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</span>
+        {{/if}}
+
+    <div class="message-content">
+        {{#if message.flavor}}
+        <span class="flavor-text">{{{message.flavor}}}</span>
+        {{/if}}
+        {{{message.content}}}
+    </div>
+</li>

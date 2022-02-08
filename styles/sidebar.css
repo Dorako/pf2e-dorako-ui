@@ -23,8 +23,12 @@
 
 /* Glass - Add new styling */
 
-#sidebar.app,
-.sidebar-popout.app
+/* .window-content .sidebar-tab * {
+    text-shadow: var(--dorako-text-shadow);
+} */
+
+/* .sidebar-popout.app */
+#sidebar.app
 {
     border: none;
     border-radius: var(--dorako-radius);
@@ -147,4 +151,8 @@
 
 .directory .action-buttons button {
     margin: 0px;
+}
+
+#sidebar.app {
+    resize:horizontal;
 }

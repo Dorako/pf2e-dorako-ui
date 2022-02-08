@@ -1,0 +1,9 @@
+#chat-log .message .message-header {
+    --pf2e-header-text-color: white;
+    background-color:var(--paizo-red);
+    background-image: var(--bg-light);
+    background-size: cover;
+    background-blend-mode: multiply;
+    box-shadow: var(--gold-and-glow);
+    margin-bottom: 2px;
+}
