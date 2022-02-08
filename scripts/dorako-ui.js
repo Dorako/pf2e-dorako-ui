@@ -78,6 +78,23 @@ function injectWhisperParticipants(html, messageData) {
 Hooks.once('init', async function () {
     CONFIG.ChatMessage.template = "modules/pf2e-dorako-ui/templates/base-chat-message.html";
 
+    game.settings.register("pf2e-dorako-ui", "displaySetting", {
+        name: "Display setting",
+        hint: "Configure which cards should receive custom styling, and which ones should be left as default. Changing this may require you to refresh your window.",
+        scope: "client",
+        config: true,
+        default: "allCards",
+        type: String,
+        choices: {
+            "allCards": "Affect every message.",
+            "selfAndGM": "Affect own messages and GM messages.",
+            "self": "Only affect own messages.",
+            "gm": "Only affect GM messages.",
+            "player": "Only affect player messages.",
+            "none": "Don't affect any messages."
+        }
+    });
+
     game.settings.register("pf2e-dorako-ui", "theme", {
         name: "Theme",
         hint: "Select between light and dark theme",
@@ -106,10 +123,18 @@ Hooks.once('init', async function () {
         }
     });
 
+    game.settings.register("pf2e-dorako-ui", "borderOverride", {
+        name: "Override border",
+        hint: "Enables border colour override. This will colour the border of the chat card with the player's colour.",
+        scope: "client",
+        config: true,
+        default: true,
+        type: Boolean
+    });
 
-    game.settings.register("pf2e-dorako-ui", "enable-chat-portrait", {
-        name: "Enable chat portrait",
-        hint: "Adds a visual representation of the speaker to the top-left corner of each message",
+    game.settings.register("pf2e-dorako-ui", "insertSpeakerImage", {
+        name: "Insert Speaker Image",
+        hint: "Adds the image of the speaker to the chat card.",
         scope: "client",
         config: true,
         default: true,
@@ -120,7 +145,24 @@ Hooks.once('init', async function () {
 
 Hooks.on('init', () => {
 	function shouldOverrideMessage(message) {
-    return true;
+    const setting = game.settings.get("pf2e-dorako-ui", "displaySetting");
+    if (setting !== "none") {
+        const user = game.users.get(message.user);
+        if (user) {
+            const isSelf = user.data._id === game.user.data._id;
+            const isGM = user.isGM;
+
+            if ((setting === "allCards")
+                || (setting === "self" && isSelf)
+                || (setting === "selfAndGM" && (isSelf || isGM))
+                || (setting === "gm" && isGM)
+                || (setting === "player" && !isGM)
+            ) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 
@@ -147,7 +189,7 @@ Hooks.once("setup", function () {
     });
 
     Handlebars.registerHelper("showSpeakerImage", function (message) {
-        const insertSpeakerImage = game.settings.get("pf2e-dorako-ui", "enable-chat-portrait");
+        const insertSpeakerImage = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
         if (!insertSpeakerImage) {
             return false;
         }
@@ -206,7 +248,7 @@ Hooks.once("setup", function () {
     });
 
     Handlebars.registerHelper("getBorderStyle", function (message, foundryBorder) {
-        const borderOverride = true;
+        const borderOverride = game.settings.get("pf2e-dorako-ui", "borderOverride");
         if (borderOverride && shouldOverrideMessage(message)) {
             const user = game.users.get(message.user);
             return `border-color: ${user.data.color}`;
@@ -259,7 +301,7 @@ Hooks.once("setup", function () {
         return "";
     });
 
-    Handlebars.registerHelper("getHeaderStyle", function () {
+    Handlebars.registerHelper("getheaderStyle", function () {
         const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
         return headerStyle;
     });
@@ -539,9 +581,8 @@ Hooks.once("setup", function () {
         if (theme == "light") {
             // do nothing
         } else if (theme == "dark") {
-			enableDarkTheme();
+			enableDarkTheme()
 		} else if (theme == "rainbow") {
-            enableDarkTheme();
             enableRainbowTheme();
         }
 
@@ -552,7 +593,23 @@ Hooks.once("setup", function () {
 
 function shouldOverrideMessage(message) {
     const setting = game.settings.get("pf2e-dorako-ui", "displaySetting");
-    return true;
+    if (setting !== "none") {
+        const user = game.users.get(message.user);
+        if (user) {
+            const isSelf = user.data._id === game.user.data._id;
+            const isGM = user.isGM;
+
+            if ((setting === "allCards")
+                || (setting === "self" && isSelf)
+                || (setting === "selfAndGM" && (isSelf || isGM))
+                || (setting === "gm" && isGM)
+                || (setting === "player" && !isGM)
+            ) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 

@@ -531,8 +531,7 @@ button {
 /* DARK MODE */
 
 :root {
-    --pf2e-header-text-color: --pf2e-body-primary;
-    --bg-current: var(--bg-light);
+
 
     --pf2e-body-primary: hsl(0, 0%, 10%);
     --pf2e-body-secondary: hsl(0, 0%, 25%);
@@ -543,6 +542,9 @@ button {
     --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-light);
     --pf2e-translucent-very: var(--pf2e-translucent-very-for-light);
     --filter-img: var(--filter-light);
+
+    --pf2e-header-text-color: var(--pf2e-body-primary);
+    --bg-current: var(--bg-light);
 
     /* --bg-current: var(--bg-dark);
     --pf2e-body-primary: hsl(0, 0%, 100%);
