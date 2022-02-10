@@ -51,6 +51,8 @@
 #controls {
     padding-top: 0px;
     margin-top: var(--edge-margin);
+    margin-left: unset;
+    transition: unset;
 }
 
 #controls ol.main-controls {

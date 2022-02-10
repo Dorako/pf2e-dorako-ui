@@ -1,0 +1,6 @@
+.portrait {
+    background-color: var(--pf2e-color-mono-dark);
+    border-radius: 50%;
+    box-shadow: var(--gold-and-glow);
+    margin: 1px;
+}

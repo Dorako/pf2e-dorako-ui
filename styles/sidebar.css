@@ -88,21 +88,22 @@
 
 
 #chat-form {
-    height: 50px;
-    flex: 0 0 25px;
+    flex: 0 0 70px;
 }
 
 #chat-form textarea {
     min-height: 50px;
-    height: 50%;
+    height: 100%;
     background-image: none;
     border: none;
-    background-color: rgba(200, 200, 200, 0.5);
+    background-color: rgba(200, 200, 200, 0.8);
     box-shadow: var(--glassy);
     overflow: visible;
     margin-left: 2px;
     margin-right: 2px;
     width: -webkit-fill-available;
+    font-size: 16px;
+    font-family: var(--font-primary);
 }
 
 /* Scrollbar */
@@ -153,6 +154,11 @@
     margin: 0px;
 }
 
-#sidebar.app {
+/* #sidebar.app {
     resize:horizontal;
+} */
+
+/* CGP */
+#cgmp-typing-notify.hidden {
+    display: none;
 }

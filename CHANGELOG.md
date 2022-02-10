@@ -1,3 +1,6 @@
+# 1.2.2
+Fixed some errors, added support for Monk's hotbar module, partial support for Minimal UI, changed damage card button colors.
+# 1.2.1
 # 1.2.0
 Huge release, :pacman:'d chat portraits and rolltype indicators, and added settings allowing users to customize the chat card theme.
 # 1.1.1

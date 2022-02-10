@@ -34,6 +34,9 @@
 
 #ui-top.offset {
     margin-left: -100px;
+    margin-left: unset;
+    left: -90px;
+    position: relative;
 }
 
 
@@ -136,6 +139,8 @@
     background: var(--pf2e-color-mono-dark);
     box-shadow: var(--glassy);
     border-radius: 3px;
+    position: static;
+    z-index: -1;
 }
 
 #context-menu li.context-item {
@@ -167,7 +172,7 @@
 }
 
 #fps {
-    width: 85px;
+    /* width: 85px; */
     margin: 0px;
     align-self: space-evenly;
     display: none;
@@ -186,7 +191,16 @@
     padding-left: 5px;
     padding-right: 5px;
     text-shadow: var(--dorako-text-shadow);
-    font-weight: 500;
+    font-weight: 900;
+    position:absolute;
+    right:0px;
+    backdrop-filter: var(--dorako-vibrancy);
+    width: 55px;
+    justify-content: center;
+}
+
+#fps label {
+    display: none;
 }
 
 
@@ -205,9 +219,22 @@
 
 .app.sidebar-popout .window-content{
     background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    overflow: hidden;
 }
 
 .sidebar-popout {
     overflow: auto;
     resize: both;
+}
+
+#players {
+    bottom: unset;
+    left: unset;
+    font-size: var(--playerfsize);
+    visibility: var(--playervis);
+    opacity: var(--opacity);
+    box-shadow: var(--glassy);
+    position: unset;
+    border: none;
 }

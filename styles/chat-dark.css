@@ -18,9 +18,13 @@
 .dice-total:not(.statuseffect-message),
 .message-content .chat-damage-buttons button {
     box-shadow: var(--glassy);
-    background-color: hsla(0, 0%, 0%,0.0);
     border: none;
     color: white;
+}
+
+.dice-roll .dice-formula:hover,
+.dice-roll .dice-total:hover {
+    background-color: var(--pf2e-color-mono-dark);
 }
 
 .pf2e.chat-card .card-content {
@@ -34,4 +38,12 @@
 
 .chat-message .table-draw .table-results .table-result img.result-image {
     filter: var(--filter-dark);
+}
+
+.token-link,
+.dmgBtn-container button {
+    box-shadow: var(--glassy);
+    border: none;
+    color: white;
+    background-color: var(--pf2e-color-mono-dark);
 }

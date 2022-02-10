@@ -1,0 +1,9 @@
+#chat-log .whisper {
+    background-color: var(--whisper-bg);
+    background-blend-mode: luminosity;
+}
+
+#chat-log .blind {
+    background-color: var(--blind-bg);
+    background-blend-mode: luminosity;
+}

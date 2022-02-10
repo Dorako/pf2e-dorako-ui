@@ -35,6 +35,11 @@
     box-shadow: var(--glassy);
 }
 
+#custom-hotbar #custom-macro-list.flexrow {
+    background-color: unset;
+    box-shadow: none;
+}
+
 #custom-hotbar {
     display: flex;
     align-items: center;
@@ -51,7 +56,7 @@
 
 #custom-hotbar .bar-controls,
 #custom-hotbar #custom-macro-list {
-    gap: 5px;
+    gap: 3px;
     height: unset;
     margin: 0px;
 }
@@ -89,7 +94,14 @@
     /*background-color: yellow !important;*/
     padding: 5px;
     flex-wrap: nowrap;
-    flex: 0 0 555px;
+    flex: 0 0 545px;
+}
+
+
+
+#custom-hotbar .macro.inactive {
+    box-shadow: var(--glassy);
+    border: none;
 }
 
 #custom-hotbar-page-controls.bar-controls.flexcol {

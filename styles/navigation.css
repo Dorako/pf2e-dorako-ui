@@ -32,6 +32,7 @@
 
 #navigation {
     margin-top: var(--edge-margin);
+    left: 10px;
 }
 /* 
 #navigation #scene-list li {
@@ -174,6 +175,8 @@
 
 #navigation #scene-list .scene {
     transition: background-color 0.15s ease-out;
+    position: static;
+    z-index: 1;
 }
 
 #navigation #scene-list .scene:hover {

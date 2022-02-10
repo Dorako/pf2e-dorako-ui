@@ -5,13 +5,17 @@
     <header class="message-header flexrow" style="{{getHeaderStyle message}}">
         {{#if (showSpeakerImage message)}}
         <div class="portrait-and-name" style="display: flex; gap:5px">
+            <div class="portrait-wrapper">
             {{#if (useVideoForSpeakerImage message)}}
-                <video class="portrait" height="32" src="{{getSpeakerImage message}}" autoplay muted loop />
+                <video class="portrait" src="{{getSpeakerImage message}}" autoplay muted loop />
             {{else}}
-            <img class="portrait" src="{{getSpeakerImage message}}" height="36" />
+            <img class="portrait" src="{{getSpeakerImage message}}" />
             {{/if}}
+        </div>
         {{/if}}
-        <h4 class="message-sender" style="{{getTitleStyle message}}">{{alias}}</h4>
+        <div class="sender-wrapper">
+            <h4 class="message-sender" style="{{getTitleStyle message}}">{{alias}}</h4>
+        </div>
         </div>
         <span class="message-metadata" style="{{getTitleStyle message}}">
             <time class="message-timestamp">{{timeSince message.timestamp}}</time>
@@ -22,7 +26,7 @@
         </header>
 
         {{#if isWhisper}}
-        <span class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</span>
+        <div class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</div>
         {{/if}}
 
     <div class="message-content">

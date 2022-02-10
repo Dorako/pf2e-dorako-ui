@@ -7,6 +7,7 @@
     --edge-margin: 5px;
 
     --dorako-bg-glass: rgba(120, 120, 120, 0.20);
+    --dorako-bg-glass: rgba(120, 120, 120, 0.50);
     --dorako-bg-dark: rgba(20, 20, 20, 0.60);
     --dorako-orange: rgba(255, 100, 0, 0.5);
     /* --dorako-bg-current: var(--dorako-bg-glass); */
@@ -16,8 +17,8 @@
     --blind-bg: #A57aA5;
     --whisper-bg: #E3E3FF;
 
-    /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
     --dorako-vibrancy: none;
+        /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
     /* --dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
     --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px); */
 
@@ -31,16 +32,23 @@
     -1px  1px 1px rgba(0, 0, 0, 1), 
     0px 0px 3px rgba(0, 0, 0, 1), 
     0px 0px 4px rgba(0, 0, 0, 0.5);
-    --paizo-red: rgb(94, 0, 0);
-    --paizo-red-glass: rgba(94, 0, 0,1);
-    --paizo-blue-dark: rgba(16, 21, 73);
-    --paizo-blue-dark: hsl(234, 64%, 15%);
-    --paizo-blue: 	rgb(23, 31, 105);
-    --paizo-blue: hsl(234, 64%, 25%);
-    --paizo-blue-bright: rgb(30, 41, 137);
-    --paizo-blue-bright: hsl(234, 64%, 35%);
-    --paizo-blue-glass-inactive:rgba(23, 31, 105,0.2);
-    --paizo-blue-glass:rgba(23, 31, 105,0.5);
+
+
+    --primary-hue: 0;
+    --primary-sat: 100%;
+    --primary-lvl: 18%;
+
+    --secondary-hue: 234;
+    --secondary-sat: 64%;
+    --secondary-lvl: 25%;
+
+    --paizo-red-dark: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) - 10%));
+    --paizo-red: hsl(var(--primary-hue), var(--primary-sat), var(--primary-lvl));
+    --paizo-red-bright: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) + 10%));
+
+    --paizo-blue-dark: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) - 10%));
+    --paizo-blue: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-lvl));
+    --paizo-blue-bright: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) + 10%));
 
     --color-shadow-highlight: var(--paizo-red);
     --color-shadow-primary: var(--paizo-blue);

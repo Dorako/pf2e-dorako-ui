@@ -191,3 +191,42 @@
     margin: 0px;
     flex: 1;
 }
+
+/* Monk's hotbar */
+.hotbar-page {
+    position: absolute;
+    bottom: 53px;
+    width: 592px;
+    left: -22px;
+    transition: unset;
+    gap: 2px;
+    max-height: 270px;
+    overflow: visible;
+}
+
+.hotbar-page .macro-list {
+    flex: 0 0 518px;
+    height: 100%;
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+    border: none;
+    border-radius: 3px;
+    gap: 2px;
+}
+
+.hotbar-page.opening {
+    overflow: visible;
+}
+
+/* Minimal UI */
+#hotbar:hover {
+    bottom: 0px;
+    margin-bottom: var(--edge-margin);
+}
+
+#hotbar #macro-list:hover {
+    border-top: none;
+    box-shadow: none;
+    transition: unset;
+}
