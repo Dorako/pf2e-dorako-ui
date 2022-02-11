@@ -137,6 +137,7 @@
 #polyglot {
     height: 20px;
     line-height: unset;
+    flex: none;
 }
 
 #polyglot label {

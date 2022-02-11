@@ -30,7 +30,7 @@
 
 
 
-#navigation #scene-list .scene:not(.active),
+#navigation #scene-list .scene:not(.active, .view),
 #navigation #nav-toggle {
   display: none;
 }

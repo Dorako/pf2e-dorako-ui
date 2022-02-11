@@ -108,6 +108,10 @@
     margin-bottom: 6px;
 }
 
+#navigation #context-menu {
+    text-align: left;
+}
+
 #navigation #scene-list .scene {
     /* float: none; */
     /* display: flex; */

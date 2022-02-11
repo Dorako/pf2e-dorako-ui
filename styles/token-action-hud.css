@@ -87,12 +87,12 @@
     margin: 0px;
 }
 
-.tah-action button[value^="toggle"] {
-    background-color: var(--paizo-blue-dark);
+.tah-action button[value*="toggle"]:hover {
+    background-color: var(--paizo-blue);
 }
 
-.tah-action .active,
-.tah-action.active button[value^="toggle"] {
+.tah-action.active,
+.tah-action.active button[value*="toggle"] {
     background-color: var(--paizo-blue-bright);
 }
 

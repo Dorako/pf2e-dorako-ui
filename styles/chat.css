@@ -1307,3 +1307,15 @@ div#scrollToBottom:hover {
 .flavor-text div.degree-of-success .success:not([data-visibility=gm]) {
     color: #8080FF;
 }
+
+/* Monk's little details */
+#chat-log .message.round-marker .message-header {
+    display: none;
+}
+
+#chat-log .message.round-marker .message-content {
+    display:flex;
+    color: white;
+    text-shadow: var(--dorako-text-shadow);
+    border-bottom: 1px solid wheat;
+}

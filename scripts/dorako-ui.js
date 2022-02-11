@@ -1,3 +1,18 @@
+// for ( i=0; i<document.styleSheets.length; i++) {
+//     void(document.styleSheets.item(i).disabled=true);
+// }
+
+$("head").children('link[href="css/style.css"]')[0].disabled = true;
+
+
+const head = document.getElementsByTagName("head")[0];
+const newCss = document.createElement("link");
+newCss.setAttribute("rel", "stylesheet")
+newCss.setAttribute("type", "text/css")
+newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/core-trim.css")
+newCss.setAttribute("media", "all")
+head.insertBefore(newCss, head.lastChild);
+
 Hooks.on("ready", async function () {
     jQuery.fx.off = true;
 });
@@ -284,9 +299,9 @@ Hooks.once("setup", function () {
             // const tokens = actor.getActiveTokens(true, false);
             // const token = tokens.first();
             const token = actor.data.token.img;
-            // if (actor) {
-            //     bHasImage = bHasImage || actor.data.img != null;
-            // }
+            if (actor) {
+                bHasImage = bHasImage || actor.data.img != null;
+            }
             if (token) {
                 if (bHasImage) {
                     return shouldOverrideMessage(message);
@@ -295,7 +310,7 @@ Hooks.once("setup", function () {
         }
 
         if (!bHasImage) {
-            return true;
+            return false;
         }
 
 
