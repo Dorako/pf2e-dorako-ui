@@ -1,23 +1,13 @@
 
-// 	Hooks.on("ready", async function () {
-// 		jQuery.fx.off = true;
-// 	});
-	
+Hooks.on("ready", async function () {
+	jQuery.fx.off = true;
+});
 
 
-// document.addEventListener("DOMContentLoaded", function() { 
+
+// document.addEventListener("DOMContentLoaded", function() {
 // 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
-
-// 	const head = document.getElementsByTagName("head")[0];
-// 	const newCss = document.createElement("link");
-// 	newCss.setAttribute("rel", "stylesheet")
-// 	newCss.setAttribute("type", "text/css")
-// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/core-trim.css")
-// 	newCss.setAttribute("media", "all")
-// 	head.insertBefore(newCss, head.lastChild);
-	
-
-
+// 	injectCSS("core-trim");
 // });
 
 
@@ -42,27 +32,30 @@
 
 // 		}
 // 	  setTimeout(myInject, 10000);
-// 	// your code
 // });
+
 
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     injectMessageTag(html, messageData);
     injectWhisperParticipants(html, messageData);
+	injectPlayerName(html, messageData);
 });
 
-Hooks.on('renderChatMessage', (message, html, speakerInfo) => {
+function injectPlayerName(html, messageData) {
+	if (messageData.author === undefined) return;
 	if (game.settings.get('pf2e-dorako-ui', 'enable-player-tags')) {
 		const messageSenderElem = html.find('.sender-wrapper');
 		// const messageSenderElem = html.find('.message-sender');
-		const playerName = speakerInfo.author.name;
+		const playerName = messageData.author.name;
 		const playerNameElem = document.createElement('span');
 		playerNameElem.appendChild(document.createTextNode(playerName));
 		playerNameElem.classList.add("player-name");
 		playerNameElem.classList.add("header-meta");
 		messageSenderElem.append(playerNameElem);
+		console.log(playerName);
 	}
-  });
+}
 
 function injectMessageTag(html, messageData) {
 	setting = game.settings.get('pf2e-dorako-ui', 'rolltype-indication');
@@ -138,9 +131,164 @@ function injectWhisperParticipants(html, messageData) {
     messageHeader.append(whisperParticipants);
 }
 
-
 Hooks.once('init', async function () {
     CONFIG.ChatMessage.template = "modules/pf2e-dorako-ui/templates/base-chat-message.html";
+
+	Handlebars.registerHelper("getSpeakerImage", function (message) {
+		const speaker = message.speaker;
+		if (speaker) {
+			if (speaker.token) {
+				const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
+				if (token) {
+					return token.data.img;
+				}
+			}
+
+			if (speaker.actor) {
+				const actor = Actors.instance.get(speaker.actor);
+				if (actor) {
+					return actor.data.img;
+				}
+			}
+		}
+
+		return "icons/svg/mystery-man.svg";
+	});
+
+	Handlebars.registerHelper("showSpeakerImage", function (message) {
+		const insertSpeakerImage = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+		if (!insertSpeakerImage) {
+			return false;
+		}
+
+		const speaker = message.speaker;
+		if (!speaker) {
+			return false;
+		}
+
+		let bHasImage = false;
+		if (speaker.token) {
+			const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
+			if (token) {
+				if (bHasImage || token.data.img != null) {
+					return shouldOverrideMessage(message);
+				}
+			}
+		}
+
+		if (speaker.actor) {
+			const actor = Actors.instance.get(speaker.actor);
+			//const actor = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
+			// const tokens = actor.getActiveTokens(true, false);
+			// const token = tokens.first();
+			const token = actor.data.token.img;
+			if (actor) {
+				bHasImage = bHasImage || actor.data.img != null;
+			}
+			if (token) {
+				if (bHasImage) {
+					return shouldOverrideMessage(message);
+				}
+			}
+		}
+
+		if (!bHasImage) {
+			return false;
+		}
+
+
+		return shouldOverrideMessage(message);
+	});
+
+	Handlebars.registerHelper("useVideoForSpeakerImage", function (message) {
+		const speaker = message.speaker;
+		if (!speaker) {
+			return false;
+		} else {
+			let imageName = "";
+			if (speaker.token) {
+				const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
+				if (token) {
+					imageName = token.data.img;
+				}
+			}
+
+			if (!imageName && speaker.actor) {
+				const actor = Actors.instance.get(speaker.actor);
+				if (actor) {
+					imageName = actor.data.img;
+				}
+			}
+
+			return imageName?.endsWith("webm") || imageName?.endsWith("mp4") || imageName?.endsWith("ogg") || false;
+		}
+
+		return false;
+	});
+
+	Handlebars.registerHelper("getBorderStyle", function (message, foundryBorder) {
+		return "border: none";
+		if (foundryBorder) {
+			return `border-color: ${foundryBorder}`;
+		}
+		return "";
+	});
+
+	Handlebars.registerHelper("getHeaderStyle", function (message) {
+		if (shouldOverrideMessage(message)) {
+			const user = game.users.get(message.user);
+
+			const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+			if (headerStyle === "tint") {
+				const hexColor = user.data.color.replace("#", "");
+				var r = parseInt(hexColor.substr(0,2),16);
+				var g = parseInt(hexColor.substr(2,2),16);
+				var b = parseInt(hexColor.substr(4,2),16);
+				var yiq = ((r*299)+(g*587)+(b*114))/1000;
+
+				const root = document.querySelector(':root').style;
+				let textColor;
+				if (yiq >= 128) {
+					root.setProperty("--pf2e-header-text-color", '#333');
+					root.setProperty("--header-text-shadow", "var(--pf2e-shadow-is-dark)");
+				} else {
+					root.setProperty("--pf2e-header-text-color", '#E7E7E7');
+					root.setProperty("--header-text-shadow", "var(--pf2e-shadow-is-light)");
+				}
+
+				return `background-color:${user.data.color}`;
+				return `background-color:${user.data.color}; color: ${textColor};`;
+			}
+		}
+		return "";
+	});
+
+	Handlebars.registerHelper("getTitleStyle", function (message) {
+		if (shouldOverrideMessage(message)) {
+			const user = game.users.get(message.user);
+
+			const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+			if (headerStyle === "none") {
+				return "";
+			} else if (headerStyle === "topBar") {
+				return "";
+			}
+		}
+		return "";
+	});
+
+	Handlebars.registerHelper("getUserColor", function (message) {
+		if (shouldOverrideMessage(message)) {
+			const user = game.users.get(message.user);
+			return user.data.color;
+		}
+		return "";
+	});
+
+	Handlebars.registerHelper("getheaderStyle", function () {
+		const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+		return headerStyle;
+	});
 
     game.settings.register("pf2e-dorako-ui", "theme", {
         name: "Theme",
@@ -278,176 +426,6 @@ Hooks.once('init', async function () {
 
     // html.find(`input[name="${prefix}.monoVisionColor"]`).after(colorInput);
 
-});
-
-
-
-Hooks.on('init', () => {
-	function shouldOverrideMessage(message) {
-    return true;
-}
-
-
-Hooks.once("setup", function () {
-    Handlebars.registerHelper("getSpeakerImage", function (message) {
-        const speaker = message.speaker;
-        if (speaker) {
-            if (speaker.token) {
-                const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-                if (token) {
-                    return token.data.img;
-                }
-            }
-
-            if (speaker.actor) {
-                const actor = Actors.instance.get(speaker.actor);
-                if (actor) {
-                    return actor.data.img;
-                }
-            }
-        }
-
-        return "icons/svg/mystery-man.svg";
-    });
-
-    Handlebars.registerHelper("showSpeakerImage", function (message) {
-        const insertSpeakerImage = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
-        if (!insertSpeakerImage) {
-            return false;
-        }
-
-        const speaker = message.speaker;
-        if (!speaker) {
-            return false;
-        }
-
-        let bHasImage = false;
-        if (speaker.token) {
-            const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-            if (token) {
-                if (bHasImage || token.data.img != null) {
-                    return shouldOverrideMessage(message);
-                }
-            }
-        }
-
-        if (speaker.actor) {
-            const actor = Actors.instance.get(speaker.actor);
-            //const actor = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-            // const tokens = actor.getActiveTokens(true, false);
-            // const token = tokens.first();
-            const token = actor.data.token.img;
-            if (actor) {
-                bHasImage = bHasImage || actor.data.img != null;
-            }
-            if (token) {
-                if (bHasImage) {
-                    return shouldOverrideMessage(message);
-                }
-            }
-        }
-
-        if (!bHasImage) {
-            return false;
-        }
-
-
-        return shouldOverrideMessage(message);
-    });
-
-    Handlebars.registerHelper("useVideoForSpeakerImage", function (message) {
-        const speaker = message.speaker;
-        if (!speaker) {
-            return false;
-        } else {
-            let imageName = "";
-            if (speaker.token) {
-                const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-                if (token) {
-                    imageName = token.data.img;
-                }
-            }
-
-            if (!imageName && speaker.actor) {
-                const actor = Actors.instance.get(speaker.actor);
-                if (actor) {
-                    imageName = actor.data.img;
-                }
-            }
-
-            return imageName?.endsWith("webm") || imageName?.endsWith("mp4") || imageName?.endsWith("ogg") || false;
-        }
-
-        return false;
-    });
-
-    Handlebars.registerHelper("getBorderStyle", function (message, foundryBorder) {
-		return "border: none";
-        if (foundryBorder) {
-            return `border-color: ${foundryBorder}`;
-        }
-        return "";
-    });
-
-    Handlebars.registerHelper("getHeaderStyle", function (message) {
-        if (shouldOverrideMessage(message)) {
-            const user = game.users.get(message.user);
-
-            const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-            if (headerStyle === "tint") {
-                const hexColor = user.data.color.replace("#", "");
-                var r = parseInt(hexColor.substr(0,2),16);
-                var g = parseInt(hexColor.substr(2,2),16);
-                var b = parseInt(hexColor.substr(4,2),16);
-                var yiq = ((r*299)+(g*587)+(b*114))/1000;
-
-				const root = document.querySelector(':root').style;
-				let textColor;
-				if (yiq >= 128) {
-					root.setProperty("--pf2e-header-text-color", '#333');
-					root.setProperty("--header-text-shadow", "var(--pf2e-shadow-is-dark)");
-				} else {
-					root.setProperty("--pf2e-header-text-color", '#E7E7E7');
-					root.setProperty("--header-text-shadow", "var(--pf2e-shadow-is-light)");
-				}
-
-				return `background-color:${user.data.color}`;
-                return `background-color:${user.data.color}; color: ${textColor};`;
-            }
-        }
-        return "";
-    });
-
-    Handlebars.registerHelper("getTitleStyle", function (message) {
-        if (shouldOverrideMessage(message)) {
-            const user = game.users.get(message.user);
-
-            const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-            if (headerStyle === "none") {
-                return "";
-            } else if (headerStyle === "topBar") {
-                return "";
-            }
-        }
-        return "";
-    });
-
-    Handlebars.registerHelper("getUserColor", function (message) {
-        if (shouldOverrideMessage(message)) {
-            const user = game.users.get(message.user);
-            return user.data.color;
-        }
-        return "";
-    });
-
-    Handlebars.registerHelper("getheaderStyle", function () {
-        const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-        return headerStyle;
-    });
-});
-
-
-
 
 	game.settings.register('pf2e-dorako-ui', 'disable-all-styles', {
 		name: "Disable all styles?",
@@ -489,7 +467,6 @@ Hooks.once("setup", function () {
 			location.reload();
 		}
     });
-
 
 	game.settings.register('pf2e-dorako-ui', 'skin-chat', {
 		name: "Theme chat?",
@@ -647,11 +624,8 @@ Hooks.once("setup", function () {
 		}
 	});
 
-
-
-
 	if (!game.settings.get('pf2e-dorako-ui', 'disable-all-styles')) {
-		injectBaseCss()
+		injectCSS("dorako-ui");
 
 		const root = document.querySelector(':root').style;
 		if (game.settings.get('pf2e-dorako-ui', 'center-hotbar')) {
@@ -668,45 +642,19 @@ Hooks.once("setup", function () {
 		root.setProperty("--edge-margin", game.settings.get('pf2e-dorako-ui', 'edge-offset').toString()+'px');
 		root.setProperty("--chat-portrait-size", game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px');
 
-		if (game.settings.get('pf2e-dorako-ui', 'skin-navigation')) {
-			skinNavigation()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-controls')) {
-			skinControls()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-token-hud')) {
-			skinTokenHud()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-chat')) {
-			skinChat()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-sidebar')) {
-			skinSidebar()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-combat-tracker')) {
-			skinCombatTracker()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-effect-panel')) {
-			skinEffectPanel()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-app-ui')) {
-			skinAppUi()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-hotbar')) {
-			skinHotbar()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-window-controls')) {
-			skinWindowControls()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-token-action-hud')) {
-			skinTokenActionHud()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-custom-hotbar')) {
-			skinCustomHotbar()
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'skin-dice-tray')) {
-			skinDiceTray()
-		}
+		if (game.settings.get('pf2e-dorako-ui', 'skin-navigation')) injectCSS("navigation");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-controls')) injectCSS("controls");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-token-hud')) injectCSS("token-hud");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-chat')) injectCSS("chat");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-sidebar')) injectCSS("sidebar");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-combat-tracker')) injectCSS("combat-tracker");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-effect-panel')) injectCSS("effect-panel");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-app-ui')) injectCSS("app-ui");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-hotbar')) injectCSS("hotbar");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-window-controls')) injectCSS("window-control");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-token-action-hud')) injectCSS("token-action-hud");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-custom-hotbar')) injectCSS("custom-hotbar");
+		if (game.settings.get('pf2e-dorako-ui', 'skin-dice-tray')) injectCSS("dice-tray");
         let headerStyle = game.settings.get('pf2e-dorako-ui', 'headerStyle');
         if (headerStyle == "tint" || headerStyle == "red") {
 			enableRedHeader()
@@ -723,19 +671,10 @@ Hooks.once("setup", function () {
 		} else if (theme == "rainbow") {
             enableRainbowTheme();
         }
-		let setting = game.settings.get('pf2e-dorako-ui', 'rolltype-indication');
-        if (setting == "both" || setting == "bg-color") {
-            enableBlindWhisperColors();
-        }
-		if (game.settings.get('pf2e-dorako-ui', 'chat-portrait-border')) {
-			enableChatPortraitBorder();
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'compact-ui')) {
-			enableCompactUI();
-		}
-		if (game.settings.get('pf2e-dorako-ui', 'sheets-dark')) {
-			enableDarkSheets();
-		}
+        if (game.settings.get('pf2e-dorako-ui', 'rolltype-indication') == "both" || setting == "bg-color") injectCSS("chat-blind-whisper")
+		if (game.settings.get('pf2e-dorako-ui', 'chat-portrait-border')) injectCSS("chat-portrait-border");
+		if (game.settings.get('pf2e-dorako-ui', 'compact-ui')) injectCSS("compact-ui");
+		if (game.settings.get('pf2e-dorako-ui', 'sheets-dark')) injectCSS("sheet-dark");
 
 	}
 
@@ -770,6 +709,16 @@ function addClassByQuerySelector(className, selector) {
 }
 
 // Base
+
+function injectCSS(filename) {
+	const head = document.getElementsByTagName("head")[0];
+	const mainCss = document.createElement("link");
+	mainCss.setAttribute("rel", "stylesheet")
+	mainCss.setAttribute("type", "text/css")
+	mainCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/"+filename+".css")
+	mainCss.setAttribute("media", "all")
+	head.insertBefore(mainCss, head.lastChild);
+}
 
 function injectBaseCss() {
 	const head = document.getElementsByTagName("head")[0];
@@ -822,177 +771,177 @@ function enableRainbowTheme() {
 	head.insertBefore(newCss, head.lastChild);
 }
 
-function enableBlindWhisperColors() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-blind-whisper.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function enableBlindWhisperColors() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-blind-whisper.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function enableCompactUI() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/compact-controls.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function enableCompactUI() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/compact-controls.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function enableChatPortraitBorder() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-portrait-border.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function enableChatPortraitBorder() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-portrait-border.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function enableDarkSheets() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/sheet-dark.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function enableDarkSheets() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/sheet-dark.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
 // Core UI
 
-function skinChat() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinChat() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinHotbar() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/hotbar.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinHotbar() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/hotbar.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinControls() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/controls.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinControls() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/controls.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinNavigation() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/navigation.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinNavigation() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/navigation.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinAppUi() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/app-ui.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinAppUi() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/app-ui.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinTokenHud() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/token-hud.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinTokenHud() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/token-hud.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinEffectPanel() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/effect-panel.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinEffectPanel() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/effect-panel.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinSidebar() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/sidebar.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinSidebar() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/sidebar.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinCombatTracker() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/combat-tracker.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinCombatTracker() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/combat-tracker.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
 
 // Modules
 
-function skinCustomHotbar() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/custom-hotbar.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinCustomHotbar() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/custom-hotbar.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinTokenActionHud() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/token-action-hud.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinTokenActionHud() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/token-action-hud.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinWindowControls() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/window-control.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinWindowControls() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/window-control.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }
 
-function skinDiceTray() {
-	const head = document.getElementsByTagName("head")[0];
-	const newCss = document.createElement("link");
-	newCss.setAttribute("rel", "stylesheet")
-	newCss.setAttribute("type", "text/css")
-	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/dice-tray.css")
-	newCss.setAttribute("media", "all")
-	head.insertBefore(newCss, head.lastChild);
-}
+// function skinDiceTray() {
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/dice-tray.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+// }

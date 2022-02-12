@@ -194,9 +194,9 @@ dl {
     justify-content: center;
 }
 
-.player-name {
+/* #players .player-name {
     display: none;
-}
+} */
 
 .crb-style input[type="text"],
 .crb-style input[type="number"],

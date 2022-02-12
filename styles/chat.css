@@ -1150,10 +1150,25 @@ table.pf2-table td, table.pf2-table th {
     margin-left: 3px;
 }
 
+#chat-log .message.dfce-cm-top {
+    border-radius: 5px 5px 0px 0px;
+    clip-path: inset(-10px -10px 1px -10px);
+}
+
+#chat-log .message.dfce-cm-middle {
+    border-radius: 0px;
+    clip-path: inset(1px -10px 1px -10px)
+}
+
+#chat-log .message.dfce-cm-bottom  {
+    border-radius: 0px 0px 5px 5px;
+    clip-path: inset(1px -10px -10px -10px)
+}
+
 
 #chat-log .message.dfce-cm-middle,
 #chat-log .message.dfce-cm-bottom  {
-    margin-top:-6px;
+    margin-top:-11px;
     background-position: left 0px top -100px;
 }
 
