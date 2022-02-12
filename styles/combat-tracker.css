@@ -30,10 +30,10 @@
 }
 
 #combat li.combatant.active {
-    background: var(--paizo-red-glass);
+    background: var(--paizo-red);
     box-shadow: var(--gold-and-glow);
     /*background-image: var(--img-red);*/
-    background-size: 50px;
+    /* background-size: 50px; */
     border: none;
 }
 

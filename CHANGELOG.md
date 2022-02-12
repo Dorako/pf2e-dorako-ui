@@ -1,3 +1,5 @@
+# 1.2.3
+Fixed a mystery man, added toggles for minimal-ui inspired compact controls, and an experimental toggle for dark sheets.
 # 1.2.2
 Fixed some errors, added support for Monk's hotbar module, partial support for Minimal UI, changed damage card button colors.
 # 1.2.1

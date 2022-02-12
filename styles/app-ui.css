@@ -118,6 +118,8 @@
 .app.sidebar-popout {
     border: none;
     border-radius: var(--dorako-radius);
+    min-width: 300px;
+    overflow:hidden;
     /* background-color: var(--dorako-bg-current); */
 }
 

@@ -1319,3 +1319,14 @@ div#scrollToBottom:hover {
     text-shadow: var(--dorako-text-shadow);
     border-bottom: 1px solid wheat;
 }
+
+#chat h2 {
+    border-bottom: 1px solid var(--pf2e-color-ornament);
+}
+
+#chat [data-pf2-action] {
+    background: #ddd;
+    color: black;
+    border: 1px solid #4b4a44;
+    text-shadow: none;
+}

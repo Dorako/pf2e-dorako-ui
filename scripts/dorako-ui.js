@@ -1,21 +1,50 @@
-// for ( i=0; i<document.styleSheets.length; i++) {
-//     void(document.styleSheets.item(i).disabled=true);
-// }
 
-$("head").children('link[href="css/style.css"]')[0].disabled = true;
+// 	Hooks.on("ready", async function () {
+// 		jQuery.fx.off = true;
+// 	});
+	
 
 
-const head = document.getElementsByTagName("head")[0];
-const newCss = document.createElement("link");
-newCss.setAttribute("rel", "stylesheet")
-newCss.setAttribute("type", "text/css")
-newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/core-trim.css")
-newCss.setAttribute("media", "all")
-head.insertBefore(newCss, head.lastChild);
+// document.addEventListener("DOMContentLoaded", function() { 
+// 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
 
-Hooks.on("ready", async function () {
-    jQuery.fx.off = true;
-});
+// 	const head = document.getElementsByTagName("head")[0];
+// 	const newCss = document.createElement("link");
+// 	newCss.setAttribute("rel", "stylesheet")
+// 	newCss.setAttribute("type", "text/css")
+// 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/core-trim.css")
+// 	newCss.setAttribute("media", "all")
+// 	head.insertBefore(newCss, head.lastChild);
+	
+
+
+// });
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+// 	function myInject() {
+// 		// ID add
+// 		document.getElementById("hotbar-directory-controls").classList.add("app");
+// 		document.getElementById("hotbar-page-controls").classList.add("app");
+// 		document.getElementById("fps").classList.add("app");
+// 		// ID remove
+// 		document.getElementById("navigation").classList.remove("app")
+// 		// Class remove
+// 		document.getElementsByClassName("main-controls")[0].classList.remove('app');
+// 		[ ...document.getElementsByClassName("sub-controls") ].forEach( x => x.classList.remove("app"));
+// 		// Class add
+// 		[ ...document.getElementsByClassName("control-tool") ].forEach( x => x.className += ' app control');
+// 		[ ...document.getElementsByClassName("scene-control") ].forEach( x => x.className += ' app control');
+// 		[ ...document.getElementsByClassName("nav-item") ].forEach( x => x.className += ' app');
+// 		[ ...document.getElementsByClassName("control-icon") ].forEach( x => x.className += ' app');
+// 		[ ...document.getElementsByClassName("macro") ].forEach( x => x.className += ' app');
+
+// 		}
+// 	  setTimeout(myInject, 10000);
+// 	// your code
+// });
+
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     injectMessageTag(html, messageData);
@@ -205,6 +234,15 @@ Hooks.once('init', async function () {
 	game.settings.register('pf2e-dorako-ui', 'compact-ui', {
         name: "Use compact UI?",
         hint: "Resizes controls, and hides inactive controls and navigation elements unless hoveded.",
+        scope: "world",
+        config: true,
+		default: false,
+        type: Boolean
+    });
+
+	game.settings.register('pf2e-dorako-ui', 'sheets-dark', {
+        name: "Dark theme for player sheets?",
+        hint: "WARNING: Not quite finished",
         scope: "world",
         config: true,
 		default: false,
@@ -695,6 +733,9 @@ Hooks.once("setup", function () {
 		if (game.settings.get('pf2e-dorako-ui', 'compact-ui')) {
 			enableCompactUI();
 		}
+		if (game.settings.get('pf2e-dorako-ui', 'sheets-dark')) {
+			enableDarkSheets();
+		}
 
 	}
 
@@ -807,6 +848,16 @@ function enableChatPortraitBorder() {
 	newCss.setAttribute("rel", "stylesheet")
 	newCss.setAttribute("type", "text/css")
 	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-portrait-border.css")
+	newCss.setAttribute("media", "all")
+	head.insertBefore(newCss, head.lastChild);
+}
+
+function enableDarkSheets() {
+	const head = document.getElementsByTagName("head")[0];
+	const newCss = document.createElement("link");
+	newCss.setAttribute("rel", "stylesheet")
+	newCss.setAttribute("type", "text/css")
+	newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/sheet-dark.css")
 	newCss.setAttribute("media", "all")
 	head.insertBefore(newCss, head.lastChild);
 }

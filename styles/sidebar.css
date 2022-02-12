@@ -108,7 +108,7 @@
 
 /* Scrollbar */
 
-#chat-log::-webkit-scrollbar {
+/* #chat-log::-webkit-scrollbar {
     width: unset;
     height: unset;
     display: none;
@@ -128,14 +128,14 @@
     padding:0px;
     margin: 0px;
     display: none;
-}
+} */
 
 
 
 /* Polyglot */
 
 #polyglot {
-    height: 20px;
+    /* height: 20px; */
     line-height: unset;
     flex: none;
 }
