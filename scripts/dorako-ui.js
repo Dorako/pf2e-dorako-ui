@@ -56,7 +56,6 @@ function injectPlayerName(html, messageData) {
 		playerNameElem.classList.add("player-name");
 		playerNameElem.classList.add("header-meta");
 		messageSenderElem.append(playerNameElem);
-		console.log(playerName);
 	}
 }
 
@@ -304,7 +303,10 @@ Hooks.once('init', async function () {
             "light": "Light",
             "dark": "Dark",
             "rainbow": "???"
-        }
+        },
+		onChange: () => {
+			location.reload();
+		}
     });
 
     game.settings.register("pf2e-dorako-ui", "headerStyle", {
@@ -319,7 +321,10 @@ Hooks.once('init', async function () {
             "blue": "Blue",
             "tint": "Player Tint",
             "none": "None"
-        }
+        },
+		onChange: () => {
+			location.reload();
+		}
     });
 
     //todo Token, Body, None
@@ -329,7 +334,10 @@ Hooks.once('init', async function () {
         scope: "client",
         config: true,
         default: true,
-        type: Boolean
+        type: Boolean,
+		onChange: () => {
+			location.reload();
+		}
     });
 
 	game.settings.register("pf2e-dorako-ui", "chat-portrait-size", {
@@ -346,6 +354,9 @@ Hooks.once('init', async function () {
         config: true,
 		onChange: () => {
 			location.reload();
+		},
+		onChange: () => {
+			location.reload();
 		}
     });
 
@@ -355,7 +366,10 @@ Hooks.once('init', async function () {
         scope: "client",
         config: true,
         default: true,
-        type: Boolean
+        type: Boolean,
+		onChange: () => {
+			location.reload();
+		}
     });
 
 	game.settings.register("pf2e-dorako-ui", "enable-player-tags", {
@@ -364,7 +378,10 @@ Hooks.once('init', async function () {
         scope: "client",
         config: true,
         default: true,
-        type: Boolean
+        type: Boolean,
+		onChange: () => {
+			location.reload();
+		}
     });
 
 	game.settings.register('pf2e-dorako-ui', 'rolltype-indication', {
@@ -379,25 +396,46 @@ Hooks.once('init', async function () {
             "bg-color": "Background color",
             "both": "Tags and background color",
 			"none": "Nothing"
-        }
+        },
+		onChange: () => {
+			location.reload();
+		}
     });
 
 	game.settings.register('pf2e-dorako-ui', 'compact-ui', {
         name: "Use compact UI?",
-        hint: "Resizes controls, and hides inactive controls and navigation elements unless hoveded.",
+        hint: "Resizes controls, and hides inactive controls and navigation elements unless hovered.",
         scope: "world",
         config: true,
 		default: false,
-        type: Boolean
+        type: Boolean,
+		onChange: () => {
+			location.reload();
+		}
     });
 
-	game.settings.register('pf2e-dorako-ui', 'sheets-dark', {
+	game.settings.register('pf2e-dorako-ui', 'no-logo', {
+        name: "Disable logo?",
+        hint: "Removes the Foundry logo in the top left.",
+        scope: "world",
+        config: true,
+		default: true,
+        type: Boolean,
+		onChange: () => {
+			location.reload();
+		}
+    });
+
+	game.settings.register('pf2e-dorako-ui', 'sheet-dark', {
         name: "Dark theme for player sheets?",
         hint: "WARNING: Not quite finished",
         scope: "world",
         config: true,
 		default: false,
-        type: Boolean
+        type: Boolean,
+		onChange: () => {
+			location.reload();
+		}
     });
 
 	game.settings.register('pf2e-dorako-ui', 'backdrop-filter', {
@@ -677,7 +715,8 @@ Hooks.once('init', async function () {
         if (game.settings.get('pf2e-dorako-ui', 'rolltype-indication') == "both" || setting == "bg-color") injectCSS("chat-blind-whisper")
 		if (game.settings.get('pf2e-dorako-ui', 'chat-portrait-border')) injectCSS("chat-portrait-border");
 		if (game.settings.get('pf2e-dorako-ui', 'compact-ui')) injectCSS("compact-ui");
-		if (game.settings.get('pf2e-dorako-ui', 'sheets-dark')) injectCSS("sheet-dark");
+		if (game.settings.get('pf2e-dorako-ui', 'no-logo')) injectCSS("no-logo");
+		if (game.settings.get('pf2e-dorako-ui', 'sheet-dark')) injectCSS("sheet-dark");
 
 	}
 

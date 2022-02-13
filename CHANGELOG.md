@@ -1,3 +1,5 @@
+# 1.2.6
+Removed an unneccesary log statement, unbroke compact ui, unbroke dark sheet mode, made setting-changes force-refresh.
 # 1.2.5
 Unbroke the new hand buttons
 # 1.2.4

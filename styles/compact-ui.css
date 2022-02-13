@@ -1,4 +1,3 @@
-
 #controls .main-controls .scene-control:not(.active),
 #controls .sub-controls .control-tool:not(.active, .toggle){
   display: none;

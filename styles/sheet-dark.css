@@ -1,5 +1,5 @@
 .crb-style {
-    background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-light);
+    background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
     background-attachment: local;
     background-repeat: repeat-x, no-repeat;
     background-size: auto 89px, cover;
