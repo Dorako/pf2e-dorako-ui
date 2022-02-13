@@ -34,6 +34,10 @@ Hooks.on("ready", async function () {
 // 	  setTimeout(myInject, 10000);
 // });
 
+Hooks.on("renderSettings", (e, a) => {
+	const toInsert = $(`<button type="button" disabled style="cursor: wait" data-action="dorako-ui"><i class="fas fa-eye"></i> Dorako UI </button></div>`);
+	 a.find("#settings-game").append(toInsert)
+});
 
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
@@ -46,7 +50,6 @@ function injectPlayerName(html, messageData) {
 	if (messageData.author === undefined) return;
 	if (game.settings.get('pf2e-dorako-ui', 'enable-player-tags')) {
 		const messageSenderElem = html.find('.sender-wrapper');
-		// const messageSenderElem = html.find('.message-sender');
 		const playerName = messageData.author.name;
 		const playerNameElem = document.createElement('span');
 		playerNameElem.appendChild(document.createTextNode(playerName));

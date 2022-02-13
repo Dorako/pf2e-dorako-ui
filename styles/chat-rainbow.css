@@ -3,7 +3,7 @@
 }
 
 #chat-log .message {
-    background: var(--bg-light);
+    background: var(--sheet-light);
     /* background-image: linear-gradient(to bottom, var(--paizo-red), var(--paizo-blue)), var(--bg-current); */
     /* background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), rgba(220, 66, 37, .5), rgba(136, 30, 71, 0.74)), var(--bg-current); */
     /* background-image: linear-gradient(135deg, orange 60%, cyan), var(--bg-current); */

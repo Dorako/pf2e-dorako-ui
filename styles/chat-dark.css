@@ -1,5 +1,5 @@
 :root {
-    --bg-current: var(--bg-dark);
+    --bg-current: var(--sheet-light);
     --pf2e-body-primary: hsl(0, 0%, 100%);
     --pf2e-body-secondary: hsl(0, 0%, 60%);
     --pf2e-body-inverse: hsl(0, 0%, 00%);

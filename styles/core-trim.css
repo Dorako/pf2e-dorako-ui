@@ -89,7 +89,7 @@
 
     --dorako-bg-glass: rgba(120, 120, 120, 0.20);
     --dorako-bg-glass: rgba(120, 120, 120, 0.50);
-    --dorako-bg-dark: rgba(20, 20, 20, 0.60);
+    --dorako-sheet-light: rgba(20, 20, 20, 0.60);
     --dorako-orange: rgba(255, 100, 0, 0.5);
     /* --dorako-bg-current: var(--dorako-bg-glass); */
     --dorako-bg-current: hsla(0, 50%, 50%, 50%);
@@ -138,8 +138,8 @@
     --img-red: url(/systems/pf2e/assets/sheet/nav-item.webp);
     --pf2e-nav-inactive: url(/systems/pf2e/assets/sheet/nav-item-inactive.webp);
     --pf2e-sheets-bg: url(/systems/pf2e/assets/sheet/background.webp);
-    --bg-light: url(/systems/pf2e/assets/sheet/background.webp);
-    --bg-dark: url(/modules/pf2e-dorako-ui/img/background-dark.webp);
+    --sheet-light: url(/systems/pf2e/assets/sheet/background.webp);
+    --sheet-light: url(/modules/pf2e-dorako-ui/img/background-dark.webp);
 
     --dorako-text-shadow: 0px 0px 3px black;
     --dorako-box-shadow: 0px 0px 3px black;

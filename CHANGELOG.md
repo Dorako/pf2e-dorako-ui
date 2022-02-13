@@ -1,3 +1,6 @@
+# 1.2.5
+Unbroke the new hand buttons
+# 1.2.4
 # 1.2.3
 Fixed a mystery man, added toggles for minimal-ui inspired compact controls, and an experimental toggle for dark sheets.
 # 1.2.2
