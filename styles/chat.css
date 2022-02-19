@@ -1422,7 +1422,7 @@ div#scrollToBottom:hover {
     border: 1px solid hsla(0,0%,30%,40%);
 }
 
-.dice-roll .dice-result .dice-tooltip .damage-type {
+.message.dark-theme .dice-roll .dice-result .dice-tooltip .damage-type {
     mix-blend-mode: screen;
 }
 
