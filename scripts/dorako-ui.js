@@ -1,9 +1,15 @@
 
+// function cleanHTML() {
+// 	document.getElementsByTagName("html")[0].style = null;
+// 	document.getElementById("sidebar").style = null;
+// }
+// setTimeout(cleanHTML, 10000);
+
 Hooks.on("ready", async function () {
 	jQuery.fx.off = true;
 });
 
-
+const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);
 
 // document.addEventListener("DOMContentLoaded", function() {
 // 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
@@ -34,10 +40,10 @@ Hooks.on("ready", async function () {
 // 	  setTimeout(myInject, 10000);
 // });
 
-Hooks.on("renderSettings", (e, a) => {
-	const toInsert = $(`<button type="button" disabled style="cursor: wait" data-action="dorako-ui"><i class="fas fa-eye"></i> Dorako UI </button></div>`);
-	 a.find("#settings-game").append(toInsert)
-});
+// Hooks.on("renderSettings", (e, a) => {
+// 	const toInsert = $(`<button type="button" disabled style="cursor: wait" data-action="dorako-ui"><i class="fas fa-eye"></i> Dorako UI </button></div>`);
+// 	 a.find("#settings-game").append(toInsert)
+// });
 
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
@@ -79,7 +85,7 @@ function injectMessageTag(html, messageData) {
 
 		// Inject tag to the left of the timestamp
 		if (isBlind) {
-			rolltype.text(game.i18n.localize("CHAT.RollBlind"));
+			rolltype.text("Secret");
 			messageMetadata.prepend(rolltype);
 		} else if (isSelf && whisperTargets[0]) {
 			rolltype.text(game.i18n.localize("CHAT.RollSelf"));
@@ -125,7 +131,7 @@ function injectWhisperParticipants(html, messageData) {
 	whisperFrom.addClass("header-meta");
 
     const whisperTo = $("<span>");
-    whisperTo.text(`${game.i18n.localize("CHAT.To")}: ${whisperTargetString}`);
+    whisperTo.text(`$to: ${whisperTargetString}`);
 	whisperTo.addClass("header-meta");
 
     whisperParticipants.append(whisperFrom);
@@ -173,7 +179,7 @@ Hooks.once('init', async function () {
 			const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
 			if (token) {
 				if (bHasImage || token.data.img != null) {
-					return shouldOverrideMessage(message);
+					return true;
 				}
 			}
 		}
@@ -189,7 +195,7 @@ Hooks.once('init', async function () {
 			}
 			if (token) {
 				if (bHasImage) {
-					return shouldOverrideMessage(message);
+					return true;
 				}
 			}
 		}
@@ -199,7 +205,7 @@ Hooks.once('init', async function () {
 		}
 
 
-		return shouldOverrideMessage(message);
+		return true;
 	});
 
 	Handlebars.registerHelper("useVideoForSpeakerImage", function (message) {
@@ -228,20 +234,20 @@ Hooks.once('init', async function () {
 		return false;
 	});
 
-	Handlebars.registerHelper("getBorderStyle", function (message, foundryBorder) {
-		return "border: none";
-		if (foundryBorder) {
-			return `border-color: ${foundryBorder}`;
-		}
-		return "";
-	});
-
 	Handlebars.registerHelper("getHeaderStyle", function (message) {
-		if (shouldOverrideMessage(message)) {
 			const user = game.users.get(message.user);
 
 			const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
 			if (headerStyle === "tint") {
+				return `background-color:${user.data.color}`;
+			}
+		return "";
+	});
+
+	Handlebars.registerHelper("playerId", function (message) {
+			const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+			if (headerStyle === "tint") {
+				const user = game.users.get(message.user);
 				const hexColor = user.data.color.replace("#", "");
 				var r = parseInt(hexColor.substr(0,2),16);
 				var g = parseInt(hexColor.substr(2,2),16);
@@ -251,43 +257,54 @@ Hooks.once('init', async function () {
 				const root = document.querySelector(':root').style;
 				let textColor;
 				if (yiq >= 128) {
-					root.setProperty("--pf2e-header-text-color", '#333');
-					root.setProperty("--header-text-shadow", "var(--pf2e-shadow-is-dark)");
+					return "dark-header-text";
 				} else {
-					root.setProperty("--pf2e-header-text-color", '#E7E7E7');
-					root.setProperty("--header-text-shadow", "var(--pf2e-shadow-is-light)");
+					return "light-header-text";
 				}
-
-				return `background-color:${user.data.color}`;
-				return `background-color:${user.data.color}; color: ${textColor};`;
+			} else if (headerStyle === "blue" || headerStyle === "red") {
+				return "light-header-text";
+			} else if (headerStyle === "none") {
+				const theme = game.settings.get("pf2e-dorako-ui", "theme");
+				if (theme === "light") {
+					return "dark-header-text";
+				} else if (theme === "dark" || theme === "rainbow") {
+					return "light-header-text";
+				} else {
+					return "";
+				}
 			}
-		}
 		return "";
+	});
+
+	Handlebars.registerHelper("baseTheme", function (message) {
+			const theme = game.settings.get("pf2e-dorako-ui", "theme");
+			if (theme === "light") {
+				return "light-theme";
+			} else if (theme === "dark" || theme === "rainbow") {
+				return "dark-theme";
+			} else {
+				return "";
+			}
 	});
 
 	Handlebars.registerHelper("getTitleStyle", function (message) {
-		if (shouldOverrideMessage(message)) {
-			const user = game.users.get(message.user);
-
 			const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-			if (headerStyle === "none") {
-				return "";
-			} else if (headerStyle === "topBar") {
-				return "";
+			if (headerStyle === "tint") {
+				return true;
 			}
-		}
-		return "";
+		return false;
 	});
 
 	Handlebars.registerHelper("getUserColor", function (message) {
-		if (shouldOverrideMessage(message)) {
-			const user = game.users.get(message.user);
-			return user.data.color;
+		const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+		if (headerStyle === "none") {
+			return "transparent";
 		}
-		return "";
+		const user = game.users.get(message.user);
+		return user.data.color;
 	});
 
-	Handlebars.registerHelper("getheaderStyle", function () {
+	Handlebars.registerHelper("getHeaderStyle", function () {
 		const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
 		return headerStyle;
 	});
@@ -305,7 +322,7 @@ Hooks.once('init', async function () {
             "rainbow": "???"
         },
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -319,11 +336,11 @@ Hooks.once('init', async function () {
         choices: {
             "red": "Red",
             "blue": "Blue",
-            "tint": "Player Tint",
+            "tint": "Player Color",
             "none": "None"
         },
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -336,13 +353,13 @@ Hooks.once('init', async function () {
         default: true,
         type: Boolean,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
 	game.settings.register("pf2e-dorako-ui", "chat-portrait-size", {
         name: "Chat portrait size",
-        hint: "Suggested size of 40px.",
+        hint: "Suggested size of 36px.",
         scope: "client",
         type: Number,
         default: 40,
@@ -353,10 +370,7 @@ Hooks.once('init', async function () {
         },
         config: true,
 		onChange: () => {
-			location.reload();
-		},
-		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -368,7 +382,7 @@ Hooks.once('init', async function () {
         default: true,
         type: Boolean,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -380,7 +394,7 @@ Hooks.once('init', async function () {
         default: true,
         type: Boolean,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -398,7 +412,7 @@ Hooks.once('init', async function () {
 			"none": "Nothing"
         },
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -410,7 +424,7 @@ Hooks.once('init', async function () {
 		default: false,
         type: Boolean,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -422,7 +436,7 @@ Hooks.once('init', async function () {
 		default: true,
         type: Boolean,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -434,7 +448,7 @@ Hooks.once('init', async function () {
 		default: false,
         type: Boolean,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -446,7 +460,7 @@ Hooks.once('init', async function () {
 		default: false,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -476,7 +490,7 @@ Hooks.once('init', async function () {
 		default: false,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -488,7 +502,7 @@ Hooks.once('init', async function () {
 		default: false,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -505,7 +519,7 @@ Hooks.once('init', async function () {
         },
         config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
     });
 
@@ -517,7 +531,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -529,7 +543,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -541,7 +555,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -553,7 +567,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -565,7 +579,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -577,7 +591,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -589,7 +603,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -601,7 +615,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debounceReload()
 		}
 	});
 
@@ -613,19 +627,19 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
 	game.settings.register('pf2e-dorako-ui', 'skin-custom-hotbar', {
 		name: "Theme Custom Hotbar module?",
-		hint: "Suggested offsets of (845px horizontally and 10px vertically) for vertical extension, or (0px horizontally and 75px vertically) for stacked bars.",
+		hint: "Set the 'core hotbar' to 1px 1px offset in Custom Hotbar settings.",
 		scope: "client",
 		type: Boolean,
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -637,7 +651,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -649,7 +663,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -661,7 +675,7 @@ Hooks.once('init', async function () {
 		default: true,
 		config: true,
 		onChange: () => {
-			location.reload();
+			debouncedReload();
 		}
 	});
 
@@ -681,7 +695,8 @@ Hooks.once('init', async function () {
 		}
 
 		root.setProperty("--edge-margin", game.settings.get('pf2e-dorako-ui', 'edge-offset').toString()+'px');
-		root.setProperty("--chat-portrait-size", game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px');
+		var sheet = document.styleSheets[0];
+		sheet.insertRule(":root{--chat-portrait-size: "+game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px}');
 
 		if (game.settings.get('pf2e-dorako-ui', 'skin-navigation')) injectCSS("navigation");
 		if (game.settings.get('pf2e-dorako-ui', 'skin-controls')) injectCSS("controls");
@@ -721,28 +736,6 @@ Hooks.once('init', async function () {
 	}
 
 });
-
-
-function shouldOverrideMessage(message) {
-    // const setting = game.settings.get("pf2e-dorako-ui", "displaySetting");
-    // if (setting !== "none") {
-    //     const user = game.users.get(message.user);
-    //     if (user) {
-    //         const isSelf = user.data._id === game.user.data._id;
-    //         const isGM = user.isGM;
-
-    //         if ((setting === "allCards")
-    //             || (setting === "self" && isSelf)
-    //             || (setting === "selfAndGM" && (isSelf || isGM))
-    //             || (setting === "gm" && isGM)
-    //             || (setting === "player" && !isGM)
-    //         ) {
-    //             return true;
-    //         }
-    //     }
-    // }
-    return true;
-}
 
 
 function addClassByQuerySelector(className, selector) {

@@ -101,7 +101,9 @@
     width: auto;
     gap: 10px;
     bottom: 0px;
+    left: 0px;
     margin-bottom: var(--edge-margin);
+    flex-grow: 0;
 }
 
 #hotbar-page-controls .bar-controls{
@@ -195,13 +197,17 @@
 /* Monk's hotbar */
 .hotbar-page {
     position: absolute;
-    bottom: 53px;
+    bottom: 52px;
     width: 592px;
-    left: -22px;
+    left: -32px;
     transition: unset;
     gap: 2px;
     max-height: 270px;
     overflow: visible;
+}
+
+.hotbar-page .action-bar {
+    gap: 10px;
 }
 
 .hotbar-page .macro-list {
@@ -217,6 +223,13 @@
 
 .hotbar-page.opening {
     overflow: visible;
+}
+
+#hotbar .hotbar-page .bar-controls span.page-number,
+#hotbar .hotbar-page .bar-controls i {
+    box-shadow: var(--glassy);
+    background-color: var(--dorako-bg-current);
+    border-radius: 3px;
 }
 
 /* Minimal UI */

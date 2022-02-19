@@ -1,21 +1,16 @@
 /* Chat */
 
 
-#chat-log .message.emote p {
+.message.emote p {
     text-align: center;
 }
 
-#chat-log .message .message-header {
-    /* display: grid;
-    grid: "sender info"minmax(min-content, max-content) "text text"minmax(min-content, max-content) /2fr 1fr; */
-    text-shadow: var(--header-text-shadow);
-}
 
-#chat-log .message .message-header .message-metadata {
+.message .message-header .message-metadata {
     margin-left: 0px;
 }
 
-#chat-log .tag {
+.message .tag {
     border: 1px solid rgba(255,255,255,0.5);
     text-shadow: none;
 }
@@ -35,7 +30,7 @@
     top: 0px;
 }
 
-#chat-log .message .message-header .whisper-to {
+.message .message-header .whisper-to {
     margin-bottom:0px;
 }
 
@@ -55,15 +50,13 @@
     margin-top: 5px;
 }
 
-#chat-log .message {
-    /*padding: 10px;*/
-    margin: 5px 5px 10px 10px;
-}
 
-#chat-log .message .message-content {
-    padding-left: 5px;
+
+.message .message-content {
+    /* padding-left: 5px;
     padding-right: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 5px; */
+    padding: 5px;
 }
 
 
@@ -307,6 +300,9 @@
     background: rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 2px #fff inset;
     border: 1px solid var(--color-border-light-2);
+    /* background: hsla(0,0%,50%,0.5);
+    box-shadow: 0 0 5px black inset;
+    border: none; */
 }
 
 #chat-controls .control-buttons {
@@ -320,9 +316,10 @@
     padding: 5px;
 } */
 
-#chat-log .message .message-header {
-    text-shadow: var(--pf2e-text-shadow-is-dark);
-    color: var(--pf2e-header-text-color);
+.message-header {
+    /* text-shadow: var(--pf2e-text-shadow-is-dark);
+    color: var(--pf2e-header-text-color); */
+    color: var(--pf2e-body-primary);
 }
 
 /* #chat-log .message .message-header .message-metadata {
@@ -413,24 +410,22 @@ button {
 }
 
 
-#chat-log .message .message-header img.message-portrait {
-    grid-area: portrait;
+.message .message-header img.message-portrait {
     /* margin-bottom:5px; */
-    align-items: left;
     display:flex;
 }
 
-#chat-log .message .message-header .message-sender {
+.message .message-header .message-sender {
     /* font-size: small;
     font-weight: 400; */
-    grid-area: sender;
+    grid-: sender;
     /* align-items: center; */
     display:flex;
 
     /* border-radius: 5px 0px 0px 0px; */
 }
 
-#chat-log .message .message-header .message-metadata {
+.message .message-header .message-metadata {
     align-items: center;
     justify-content: flex-end;
     display:flex;
@@ -533,11 +528,10 @@ button {
     --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark);
     --filter-img: var(--filter-dark); */
 
-    --chat-portrait-size: 50px;
+    /* --chat-portrait-size: 40px; */
 
     --filter-dark: invert(100%) drop-shadow(0px 1px 1px black);
     --filter-light: drop-shadow(0px 1px 0px white);
-    --color-text-dark-secondary: rgb(214, 214, 214);
     --pf2e-half-transparent-light: hsla(0, 0%, 100%,0.5);
     --pf2e-half-transparent-dark: hsla(0, 0%, 0%,0.5);
     --pf2e-shadow-is-dark: 0px 1px var(--pf2e-half-transparent-dark);
@@ -647,35 +641,35 @@ message-content .chat-damage-buttons button {
     background-blend-mode: multiply;
 } */
 
-#chat-log .chat-message {
-    background-color: white;
-}
 
-
-#chat-log .message .message-header {
+.message-header {
     background: none;
     padding:5px;
     gap: 5px;
     align-items: center;
 }
 
-#chat-log .message .message-header .message-sender,
-#chat-log .message .message-header .message-metadata {
-    background: none;
+.portrait-wrapper {
+    width: var(--chat-portrait-size);
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
-.portrait {
-    height: var(--chat-portrait-size);
-    width: auto;
-    transition: transform 0.15s ease-in-out;
+.portrait-wrapper:hover  {
+    transition: transform 0.35s ease-in-out, filter 0.35s ease-in-out;
+    transform: scale(4) translate(16px,16px);
+    filter: drop-shadow(0px 0px 10px black);
     z-index: 1;
 }
 
-
-.portrait:hover {
-    transition: transform 0.15s ease-in-out;
-    transform: scale(2.5) translate(13px,13px);
+.portrait {
+    border-radius: 50%;
+    height: var(--chat-portrait-size);
 }
+
 
 /* Adds border around flavor text */
 /* .flavor-text {
@@ -741,21 +735,31 @@ message-content .chat-damage-buttons button {
 }
 
 
+.message [data-pf2-effect-area]:not([data-pf2-show-dc=gm]),
+.message [data-pf2-check]:not([data-pf2-show-dc=gm]) {
+    background-color: var(--pf2e-color-mono-dark);
+    color: white;
+    /* text-shadow: var(--pf2e-text-shadow-is-dark); */
+    box-shadow: var(--pf2e-text-shadow-is-dark);
+}
 
-#chat-log [data-pf2-check],
-#chat-log a.entity-link,
-#chat-log a.content-link,
-#chat-log a.inline-roll {
+.message [data-pf2-effect-area],
+.message [data-pf2-check],
+.message a.entity-link,
+.message a.content-link,
+.message a.inline-roll {
     text-shadow: none;
     color: black;
     border-radius: 3px;
+    text-shadow: none;
+    width: fit-content;
 }
 
-#chat-log button {
+.message button {
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-#chat-log .pf2e.chat-card .card-buttons button {
+.pf2e.chat-card .card-buttons button {
     margin: 0px;
     background-color: var(--paizo-red);
     color: white;
@@ -763,33 +767,27 @@ message-content .chat-damage-buttons button {
     line-height: 20px;
 }
 
-#chat-log .pf2e.chat-card .card-buttons button:hover {
+.pf2e.chat-card .card-buttons button:hover {
     background-color: var(--paizo-red-bright);
 }
 
-#chat-log .pf2e.chat-card [data-visibility=owner] button {
+.pf2e.chat-card [data-visibility=owner] button {
     background-color: var(--pf2e-color-mono-dark);
 }
 
-#chat-log .pf2e.chat-card [data-visibility=owner] button:hover {
+.pf2e.chat-card [data-visibility=owner] button:hover {
     background-color: var(--paizo-red);
     color: white;
     text-shadow: var(--pf2e-shadow-is-dark);
 }
 
-#chat-log [data-pf2-check]:not([data-pf2-show-dc=gm]) {
-    background-color: var(--pf2e-color-mono-dark);
-    color: white;
-    text-shadow: var(--pf2e-text-shadow-is-dark);
-    box-shadow: var(--pf2e-text-shadow-is-dark);
-}
 
-#chat-log .pf2e.chat-card .card-buttons .hidden-to-others {
+.pf2e.chat-card .card-buttons .hidden-to-others {
     border: none;
     background-color: var(--paizo-blue);
 }
 
-#chat-log .pf2e.chat-card .card-buttons .hidden-to-others:hover {
+.pf2e.chat-card .card-buttons .hidden-to-others:hover {
     border: none;
     background-color: var(--paizo-blue-bright);
 }
@@ -797,9 +795,9 @@ message-content .chat-damage-buttons button {
 
 
 
-.dice-total:hover,
+.dice-total:not(.statuseffect-message):hover,
 .dice-roll .dice-formula:hover,
-#chat-log button:hover {
+.message button:hover {
     transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     color: white;
     /* box-shadow: 0px 0px 10px rgba(245,222,179,0.2) inset, var(--glassy); */
@@ -808,7 +806,7 @@ message-content .chat-damage-buttons button {
 }
 
 
-.dice-total:hover,
+.dice-total:not(.statuseffect-message):hover,
 .dice-roll .dice-formula:hover {
     transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     color: white;
@@ -817,7 +815,7 @@ message-content .chat-damage-buttons button {
     cursor: pointer;
 }
 
-#chat-log button:hover img {
+.message button:hover img {
     filter: var(--filter-dark);
 }
 
@@ -849,11 +847,11 @@ button.half-damage .fa-heart-broken::after {
     overflow: hidden;
 }
 
-#chat-log .message-content .chat-damage-buttons button:hover {
+.message .message-content .chat-damage-buttons button:hover {
     text-shadow: var(--pf2e-shadow-is-dark);
 }
 
-#chat-log .message-content .chat-damage-buttons button.shield-block {
+.message .message-content .chat-damage-buttons button.shield-block {
     /* background-color: var(--paizo-blue-dark);
     color: white;
     text-shadow: var(--pf2e-shadow-is-dark); */
@@ -872,41 +870,41 @@ button.half-damage .fa-heart-broken::after {
 } */
 
 
-#chat-log .message-content .chat-damage-buttons button.shield-block .fa-shield-alt {
+.message .message-content .chat-damage-buttons button.shield-block .fa-shield-alt {
     color: #868686;
 }
 
-#chat-log .message-content .chat-damage-buttons button.shield-block.shield-activated .fa-shield-alt,
-#chat-log .message-content .chat-damage-buttons button.shield-block:hover .fa-shield-alt {
+.message .message-content .chat-damage-buttons button.shield-block.shield-activated .fa-shield-alt,
+.message .message-content .chat-damage-buttons button.shield-block:hover .fa-shield-alt {
     color: white;
 }
 
-#chat-log .message-content .chat-damage-buttons button.shield-block:hover {
+.message .message-content .chat-damage-buttons button.shield-block:hover {
     color: white;
     background-color: var(--paizo-blue);
 }
 
-#chat-log .message-content .chat-damage-buttons button.shield-block.shield-activated {
+.message .message-content .chat-damage-buttons button.shield-block.shield-activated {
     color: white;
     background-color: var(--paizo-blue-bright);
 }
 
-#chat-log .message-content .chat-damage-buttons button.shield-block.shield-activated:hover {
+.message .message-content .chat-damage-buttons button.shield-block.shield-activated:hover {
     color: white;
     background-color: var(--paizo-blue);
 }
 
 
-#chat-log .message-content .chat-damage-buttons button.heal-damage .plus {
+.message .message-content .chat-damage-buttons button.heal-damage .plus {
     color: var(--pf2e-body-inverse);
     text-shadow: none;
 }
 
-#chat-log .message-content .chat-damage-buttons button.heal-damage:hover {
+.message .message-content .chat-damage-buttons button.heal-damage:hover {
     color: white;
     background-color: darkgreen;
 }
-#chat-log .message-content .chat-damage-buttons button.heal-damage:hover .plus{
+.message .message-content .chat-damage-buttons button.heal-damage:hover .plus{
     color: darkgreen;
 }
 
@@ -929,7 +927,7 @@ button.half-damage .fa-heart-broken::after {
 }
 
 
-#chat-log .card-content hr {
+.message .card-content hr {
     margin-top: 2px;
     border: none;
     border-top: none;
@@ -962,8 +960,8 @@ button.half-damage .fa-heart-broken::after {
     cursor: help;
 }
 
-.message-content [data-visibility=gm]:is(div,em,h4,p,span,strong) {
-    background: hsla(0,0%,50%,0.5);
+[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+    background: hsla(0,0%,50%,0.25);
     color: var(--pf2e-body-primary);
     text-shadow: var(--pf2e-text-shadow);
 }
@@ -972,8 +970,9 @@ button.half-damage .fa-heart-broken::after {
     width: 100%;
     margin-bottom:0px;
 }
-#chat-log .message .message-header .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong){
-    background: hsla(0,0%,50%,0.5);
+.message .message-header .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong){
+    background: hsla(0,0%,50%,0.25);
+    /* mix-blend-mode: color-dodge; */
 }
 
 .flavor-text [data-visibility=gm] {
@@ -983,8 +982,11 @@ button.half-damage .fa-heart-broken::after {
 
 
 .flavor-text br {
-    display: none;
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 0; /* change this to whatever height you want it */
 }
+
 
 .whisper-to {
     display: flex;
@@ -1020,15 +1022,22 @@ button.half-damage .fa-heart-broken::after {
     z-index: 1;
 }
 
+.chat-message.blind,
+.chat-message.whisper {
+    background: var(--bg-current);
+    background-size: cover;
+}
+
 /* Weird hacks to make hover-popup consistent */
 .message-content .dice-roll .statuseffect-li-text {
-    color: var(--pf2e-body-primary);
-    text-shadow: var(--pf2e-text-shadow);
+    /* color: var(--pf2e-body-primary);
+    text-shadow: var(--pf2e-text-shadow); */
     display: inline-block;
     width: 285px;
     font-size: medium;
     margin-left: -30px;
     padding-left: 35px;
+    font-weight: 500;
     cursor: help;
 }
 
@@ -1055,11 +1064,21 @@ button.half-damage .fa-heart-broken::after {
     margin-right: 5px; */
 }
 
-#chat-log .message .message-header .message-metadata {
+.message .message-header .message-metadata {
     font-size: xx-small;
     display:flex;
     gap:5px;
     /* flex:none; */
+}
+
+.window-app.chat-popout .window-content {
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.window-app.chat-popout .window-header {
+    border-radius: 5px;
 }
 
 /* Red footer */
@@ -1076,7 +1095,7 @@ button.half-damage .fa-heart-broken::after {
     border-top: 1px solid wheat;
 } */
 
-#chat-log .message .message-header {
+.message .message-header {
     grid: unset;
     display:flex;
     border-radius: 5px 5px 0px 0px;
@@ -1088,7 +1107,7 @@ button.half-damage .fa-heart-broken::after {
         /* border-bottom: 1px solid wheat; */
 
 /* Card background */
-#chat-log .message {
+.message {
     background-color: white;
     background: var(--bg-current);
     background-size: cover;
@@ -1243,25 +1262,7 @@ div#scrollToBottom:hover {
     line-height: normal;
 }
 
-.header-meta {
-    background: hsla(0,0%,50%,25%);
-    border-radius: 3px;
-    border: 1px solid hsla(0,0%,50%,50%);
-    padding: 2px;
-    /* text-shadow: var(--pf2e-text-shadow); */
-    font-size: xx-small;
-    align-self: center;
-    text-align: center;
-    /* line-height: normal; */
-  }
 
-.portrait-wrapper {
-    width: var(--chat-portrait-size);
-    display: flex;
-    flex: none;
-    justify-content: center;
-    align-items: center;
-}
 
 #chat-log .message .message-header .message-sender {
     flex: 0 1 auto;
@@ -1339,9 +1340,98 @@ div#scrollToBottom:hover {
     border-bottom: 1px solid var(--pf2e-color-ornament);
 }
 
-#chat [data-pf2-action] {
+.message [data-pf2-action] {
     background: #ddd;
     color: black;
     border: 1px solid #4b4a44;
     text-shadow: none;
+}
+
+.header-meta {
+    border-radius: 3px;
+    padding: 2px;
+    /* text-shadow: var(--pf2e-text-shadow); */
+    font-size: xx-small;
+    align-self: center;
+    text-align: center;
+    text-shadow: none;
+    /* mix-blend-mode: color-dodge; */
+    /* line-height: normal; */
+  }
+
+
+.message .message-header.dark-text {
+    background-blend-mode: luminosity;
+  }
+
+.message .message-header.dark-header-text {
+    color: black;
+    text-shadow: var(--pf2e-shadow-is-light);
+    background-blend-mode: luminosity;
+}
+
+.message .message-header.light-header-text {
+    color: white;
+    text-shadow: var(--pf2e-shadow-is-dark);
+    background-blend-mode: multiply;
+}
+
+.message .message-header {
+    text-shadow: var(--pf2e-shadow-is-light);
+    color: black;
+}
+.message .message-header.dark-header-text .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+    text-shadow: var(--pf2e-shadow-is-light);
+    background-color: hsla(0,0%,50%,50%);
+    /* mix-blend-mode: lighten; */
+}
+
+.message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+    text-shadow: var(--pf2e-shadow-is-dark);
+    background-color: hsla(0,0%,50%,50%);
+    /* mix-blend-mode: lighten; */
+    color: white;
+}
+
+.message-header.light-header-text .header-meta {
+    color: white;
+    background-color: hsla(0,0%,50%,40%);
+    border: 1px solid hsla(0,0%,100%,30%);
+    mix-blend-mode: screen;
+}
+
+.header-meta,
+.message-header.dark-header-text .header-meta {
+    color: hsla(0,0%,20%,100%);
+    background-color: hsla(0,0%,80%,40%);
+    border: 1px solid hsla(0,0%,30%,40%);
+}
+
+.dice-roll .dice-result .dice-tooltip .damage-type {
+    mix-blend-mode: screen;
+}
+
+#chat-log .message.koboldworks .message-header {
+    display:none;
+}
+
+.chat-message.koboldworks.turn-announcer {
+    background-color: wheat;
+    background-blend-mode: overlay;
+}
+
+/* Confetti */
+.confetti-buttons {
+    overflow: hidden;
+    right: 8px;
+    top: calc(100% - 45px);
+    /* z-index: 1000; */
+}
+
+.confetti-buttons:hover {
+    min-width: 340px;
+}
+
+.chat-message .message-header .message-metadata {
+    align-content: center;
 }

@@ -7,6 +7,14 @@
 #controls {
   pointer-events: all;
   gap: 5px;
+  flex-wrap: nowrap;
+  width: 75px;
+  flex-direction: row;
+}
+
+.main-controls {
+  display: flex;
+    flex-direction: column;
 }
 
 #controls:hover .main-controls .scene-control,
@@ -40,4 +48,18 @@
 
 #navigation:hover #scene-list .scene {
   display: flex;
+}
+
+#players,
+#hotbar,
+#custom-hotbar {
+  opacity:0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#players:hover,
+#hotbar:hover,
+#custom-hotbar:hover {
+  transition: opacity 0.25s ease-in-out;
+  opacity:1;
 }

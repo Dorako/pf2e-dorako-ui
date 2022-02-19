@@ -51,25 +51,54 @@
 }
 
 #sidebar-tabs > .item {
+}
+
+#sidebar-tabs > .item {
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    position: relative;
+    flex: 0 0 21px;
+    line-height: 22px;
     border: none;
+    border-radius: 6px;
+    margin: 2px;
 }
 
 #sidebar-tabs>.item.active {
+    color: white;
     box-shadow: none;
     border: none;
     box-shadow: none;
-    text-shadow: var(--dorako-text-shadow);
     border-bottom: none;
+    /* box-shadow: 0 0 10px inset var(--paizo-blue-bright); */
+    background-color: var(--paizo-red-bright);
+    /* border: 1px solid wheat; */
+    margin: 2px;
+    box-shadow: var(--gold-and-glow);
 }
 
-#sidebar-tabs>.item:hover {
+#sidebar-tabs>.item:not(.active):hover {
     color: white;
+    box-shadow: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: none;
+    /* box-shadow: 0 0 10px inset var(--paizo-blue-bright); */
+    background-color: var(--paizo-red);
+    /* border: 1px solid wheat; */
+    border-radius: 6px;
+    margin: 2px;
+    box-shadow: var(--gold-and-glow);
 }
 
 #sidebar.collapsed #sidebar-tabs>.item,
 #sidebar.collapsed #sidebar-tabs>.item.active {
     border: none;
     text-shadow: none;
+}
+
+#sidebar-tabs > .collapse {
+    text-align: center;
+    align-self: center;
 }
 
 #sidebar.app {

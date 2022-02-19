@@ -47,6 +47,9 @@
     gap: 8px;
 }
 
+#custom-hotbar .bar-controls {
+    margin: 0px;
+}
 #custom-action-bar {
     display: flex;
     flex-direction: row;
@@ -54,9 +57,9 @@
     width: 602px;
 }
 
-#custom-hotbar .bar-controls,
+/* #custom-hotbar .bar-controls, */
 #custom-hotbar #custom-macro-list {
-    gap: 3px;
+    gap: 2px;
     height: unset;
     margin: 0px;
 }
@@ -92,9 +95,9 @@
 #custom-hotbar #custom-macro-list.flexrow {
     border: none;
     /*background-color: yellow !important;*/
-    padding: 5px;
+    /* padding: 5px; */
     flex-wrap: nowrap;
-    flex: 0 0 545px;
+    flex: 0 0 520px;
 }
 
 

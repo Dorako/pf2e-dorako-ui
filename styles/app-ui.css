@@ -88,7 +88,7 @@
 }
 
 #compendium-browser>section.window-content>.content-box>section.content, #license-viewer>section.window-content>.content-box>section.content {
-    height: 100%;
+    /* height: calc(100% - 40px); */
     margin-top: 5px;
 }
 
@@ -133,13 +133,13 @@
 
 #context-menu {
     border: none;
-    background: none;
-    box-shadow: none;
+    background: var(--pf2e-color-mono-dark);
+    box-shadow: var(--glassy);
 }
 
 #context-menu ol.context-items {
-    background: var(--pf2e-color-mono-dark);
-    box-shadow: var(--glassy);
+    /* background: var(--pf2e-color-mono-dark);
+    box-shadow: var(--glassy); */
     border-radius: 3px;
     position: static;
     z-index: -1;
@@ -228,6 +228,7 @@
 .sidebar-popout {
     overflow: auto;
     resize: both;
+    box-shadow: var(--glassy);
 }
 
 #players {
@@ -239,4 +240,111 @@
     box-shadow: var(--glassy);
     position: unset;
     border: none;
+}
+
+.confetti-buttons {
+    display: flex;
+}
+
+
+/* Monarch */
+.window-app.monarch .window-content {
+    background-color: transparent;
+    box-shadow: none;
+    transition: box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+
+.window-app.monarch-deck .window-content,
+.window-app.monarch-hand:not(.minimized):hover .window-content,
+.window-app.monarch .window-content:hover {
+    background-color: var(--dorako-bg-current);
+    box-shadow: var(--glassy);
+    transition: box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.app.window-app.monarch.monarch-hand.sheet.hand .window-content {
+    border-radius: 5px;
+
+}
+
+
+.window-app.monarch.pile .window-content {
+    background-color: var(--dorako-bg-current);
+    box-shadow: var(--glassy);
+}
+
+
+.window-app.monarch-deck,
+.window-app.monarch-deck:hover,
+.window-app.monarch-pile:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.monarch button {
+    border-radius: 3px;
+    background-color: hsla(0,0%,20%,50%);
+    box-shadow: var(--glassy);
+}
+
+.window-app.monarch-pile {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.monarch-hand footer.sheet-footer {
+
+    background: none;
+    padding: 0.5em;
+    margin: 0 8px;
+    border-radius: 8px;
+    box-shadow: var(--glassy);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4px;
+    margin-bottom: 5px;
+    background-color: var(--dorako-bg-current);
+    line-height: unset;
+}
+
+.window-app.monarch-hand:not(.minimized):hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.monarch-deck .cards, 
+.monarch-pile .cards {
+    margin: 0px;
+    gap: 10px;
+}
+
+.window-app.monarch-hand .window-header,
+.monarch-hand .tooltip,
+.monarch .card-hud .badge,
+.monarch .card-hud .card-controls {
+    background: none;
+    background-color: var(--dorako-bg-current);
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--glassy);
+}
+
+.window-app.monarch-hand:not(.minimized) .window-header {
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.monarch-deck .card,
+.monarch-pile .card {
+    box-shadow: 0px 0px 10px black;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.monarch-deck .card:hover,
+.monarch-pile .card:hover {
+    box-shadow: 0px 0px 20px black;
+    transform:scale(1.0);
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }

@@ -26,7 +26,7 @@
     background-color: var(--dorako-bg-current);
     backdrop-filter: var(--dorako-vibrancy);
     /*will-change: backdrop-filter;*/
-    transform: translate3d(0px, 0px, 0px);
+    /* transform: translate3d(0px, 0px, 0px); */
     box-shadow: var(--glassy);
 }
 
@@ -58,10 +58,15 @@
 .scene-name{
     padding-top: 5px;
     padding-bottom: 5px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
 }
 
 #navigation #scene-list .scene {
     z-index: -1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* #navigation #scene-list {
@@ -109,13 +114,16 @@
 }
 
 #navigation #context-menu {
+    position: static;
+    z-index: 100;
     text-align: left;
 }
 
 #navigation #scene-list .scene {
     /* float: none; */
     /* display: flex; */
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
 }
 
 .scene .nav-item {
@@ -179,7 +187,7 @@
 
 #navigation #scene-list .scene {
     transition: background-color 0.15s ease-out;
-    position: static;
+    /* position: static; */
     z-index: 1;
 }
 
@@ -204,13 +212,14 @@
 
 #navigation #scene-list .scene ul.scene-players {
     list-style: none;
-    margin: 0;
     padding: 0;
     display: flex;
     gap: 5px;
-    margin-left: 5px;
-    top: 22px;
+    top: unset;
+    left: unset;
     position:absolute;
+    margin: 0px;
+    bottom: -5px;
     /* position:unset;
     top: 0px; */
 }

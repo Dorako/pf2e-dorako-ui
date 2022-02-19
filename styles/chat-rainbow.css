@@ -1,15 +1,21 @@
 :root {
+    --pf2e-body-primary: rgba(255,255,255,0.8);
     --pf2e-body-secondary: rgba(255,255,255,0.6);
 }
 
-#chat-log .message {
+.message {
+    text-shadow: none !important;
+}
+
+ .message {
     background: var(--sheet-light);
     /* background-image: linear-gradient(to bottom, var(--paizo-red), var(--paizo-blue)), var(--bg-current); */
     /* background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), rgba(220, 66, 37, .5), rgba(136, 30, 71, 0.74)), var(--bg-current); */
     /* background-image: linear-gradient(135deg, orange 60%, cyan), var(--bg-current); */
     background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
                       linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-                      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%), var(--bg-current);
+                      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%), var(--sheet-light);
+    background-size: cover;
 }
 
 .pf2e.chat-card .card-content,
@@ -25,14 +31,18 @@
     mix-blend-mode: overlay;
 }
 
-#chat-log [data-pf2-check],
-#chat-log a.entity-link,
-#chat-log a.content-link,
-#chat-log a.inline-roll {
+.message [data-pf2-check],
+.message a.entity-link,
+.message a.content-link,
+.message a.inline-roll {
     mix-blend-mode: luminosity;
 }
 
 .flavor-text > strong,
 .flavor-text > b {
     mix-blend-mode: overlay;
+}
+
+[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+    text-shadow: none !important;
 }
