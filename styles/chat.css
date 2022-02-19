@@ -1031,6 +1031,18 @@ button.half-damage .fa-heart-broken::after {
     border:none;
 }
 
+.message.damage-log.healing {
+    background-image: var(--bg-current);
+    background-color: darkgreen;
+    background-blend-mode: luminosity;
+    background-size: cover;
+}
+
+.message.emote {
+    border: none !important;
+}
+
+
 /* Weird hacks to make hover-popup consistent */
 .message-content .dice-roll .statuseffect-li-text {
     /* color: var(--pf2e-body-primary);
