@@ -726,8 +726,9 @@ Hooks.once('init', async function () {
 			enableDarkTheme()
 		} else if (theme == "rainbow") {
             enableRainbowTheme();
-        }
-        if (game.settings.get('pf2e-dorako-ui', 'rolltype-indication') == "both" || setting == "bg-color") injectCSS("chat-blind-whisper")
+		}
+		setting = game.settings.get('pf2e-dorako-ui', 'rolltype-indication');
+		if (setting == "both" || setting == "bg-color") injectCSS("chat-blind-whisper")
 		if (game.settings.get('pf2e-dorako-ui', 'chat-portrait-border')) injectCSS("chat-portrait-border");
 		if (game.settings.get('pf2e-dorako-ui', 'compact-ui')) injectCSS("compact-ui");
 		if (game.settings.get('pf2e-dorako-ui', 'no-logo')) injectCSS("no-logo");

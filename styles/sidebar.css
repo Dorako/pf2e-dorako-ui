@@ -50,9 +50,6 @@
     margin: none;
 }
 
-#sidebar-tabs > .item {
-}
-
 #sidebar-tabs > .item {
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     position: relative;
@@ -62,6 +59,7 @@
     border-radius: 6px;
     margin: 2px;
 }
+
 
 #sidebar-tabs>.item.active {
     color: white;
@@ -73,9 +71,9 @@
     background-color: var(--paizo-red-bright);
     /* border: 1px solid wheat; */
     margin: 2px;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     box-shadow: var(--gold-and-glow);
 }
-
 #sidebar-tabs>.item:not(.active):hover {
     color: white;
     box-shadow: none;
@@ -87,6 +85,41 @@
     /* border: 1px solid wheat; */
     border-radius: 6px;
     margin: 2px;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-shadow: var(--gold-and-glow);
+}
+
+
+nav.damage-log-nav .item.active {
+    box-shadow: var(--gold-and-glow);
+    background-color: var(--paizo-blue-bright);
+    border: none;
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius:5px;
+}
+nav.damage-log-nav .item {
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 2px;
+    color: white;
+    border-radius:5px;
+    margin:2px;
+    border: none;
+}
+nav.damage-log-nav .item:not(.active):hover {
+    box-shadow: var(--gold-and-glow);
+    background-color: var(--paizo-blue);
+    border: none;   
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-radius:5px;
+}
+nav.damage-log-nav.tabs {
+    flex: 0;
+    margin: 0px;
+    border-bottom: 0px solid wheat;
+    box-shadow: none;
+}
+
+.dfce-cm-top:hover, .dfce-cm-middle:hover, .dfce-cm-bottom:hover {
     box-shadow: var(--gold-and-glow);
 }
 

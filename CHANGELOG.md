@@ -1,3 +1,6 @@
+# 1.3.1
+Added support for Damage Log.
+Fixed display for non-self-roll damage updates.
 # 1.3.0
 Made players box and macro bar fade out in compact mode, fix'd a variable overwriting issue affecting messages.
 Renamed 'Player tint' header to 'Player color'. Made header text color change dynamically depending on player color, when header background is based on that. Made it so that bright colors affect the header more.
