@@ -15,6 +15,7 @@ Works great with:
 - Monk's Little Details
 - Dice Tray
 - Polyglot
+- Damage Log
 
 Works well with:
 - Sidebar, Chat and Windows Resizer
