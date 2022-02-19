@@ -40,8 +40,8 @@
 }
 
 #sidebar-tabs {
-    --sidebar-tab-height: 24px;
-    --sidebar-tab-width: 24px;
+    --sidebar-tab-height: 4px;
+    --sidebar-tab-width: 4px;
     color: var(--color-text-light-highlight);
     border: 1px solid var(--color-border-highlight-alt);
     box-shadow: none;
@@ -57,7 +57,7 @@
     line-height: 22px;
     border: none;
     border-radius: 6px;
-    margin: 2px;
+    margin: 1px;
 }
 
 
@@ -70,7 +70,7 @@
     /* box-shadow: 0 0 10px inset var(--paizo-blue-bright); */
     background-color: var(--paizo-red-bright);
     /* border: 1px solid wheat; */
-    margin: 2px;
+    margin: 1px;
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     box-shadow: var(--gold-and-glow);
 }
@@ -84,11 +84,24 @@
     background-color: var(--paizo-red);
     /* border: 1px solid wheat; */
     border-radius: 6px;
-    margin: 2px;
+    margin: 1px;
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     box-shadow: var(--gold-and-glow);
 }
 
+#chat-popout nav.damage-log-nav.tabs {
+    flex: 0;
+    margin: 0px;
+    box-shadow: var(--glassy);
+    background-color: var(--dorako-bg-current);
+    padding: 3px;
+}
+
+#damage-log {
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
 
 nav.damage-log-nav .item.active {
     box-shadow: var(--gold-and-glow);

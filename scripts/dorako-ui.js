@@ -695,8 +695,10 @@ Hooks.once('init', async function () {
 		}
 
 		root.setProperty("--edge-margin", game.settings.get('pf2e-dorako-ui', 'edge-offset').toString()+'px');
-		var sheet = document.styleSheets[0];
-		sheet.insertRule(":root{--chat-portrait-size: "+game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px}');
+		// var sheet = document.styleSheets[0];
+		// sheet.insertRule(":root{--chat-portrait-size: "+game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px}');
+
+		root.setProperty("--chat-portrait-size", game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px');
 
 		if (game.settings.get('pf2e-dorako-ui', 'skin-navigation')) injectCSS("navigation");
 		if (game.settings.get('pf2e-dorako-ui', 'skin-controls')) injectCSS("controls");
