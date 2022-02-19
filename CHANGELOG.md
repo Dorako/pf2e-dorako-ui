@@ -1,3 +1,5 @@
+# 1.3.2
+Fixed an issue that caused the module to be incompatible with hosting via the Forge.
 # 1.3.1
 Added support for Damage Log.
 Fixed display for non-self-roll damage updates.
