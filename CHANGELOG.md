@@ -1,3 +1,5 @@
+# 1.3.3
+Fixed navbar context menu issue. Fixed Confetti overlap with Dice Tray. Added 'Plain' theme for PC sheets. Fixed secret text in NPC sheets.
 # 1.3.2
 Fixed an issue that caused the module to be incompatible with hosting via the Forge.
 # 1.3.1

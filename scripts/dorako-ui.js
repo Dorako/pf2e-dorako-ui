@@ -440,13 +440,18 @@ Hooks.once('init', async function () {
 		}
     });
 
-	game.settings.register('pf2e-dorako-ui', 'sheet-dark', {
-        name: "Dark theme for player sheets?",
-        hint: "WARNING: Not quite finished",
+	game.settings.register('pf2e-dorako-ui', 'sheet', {
+        name: "Theme used for PC sheets",
+        hint: "",
         scope: "world",
         config: true,
-		default: false,
-        type: Boolean,
+        default: "red",
+        type: String,
+        choices: {
+            "red": "Red (default)",
+			"dark": "Dark",
+            "plain": "Plain"
+        },
 		onChange: () => {
 			debouncedReload();
 		}
@@ -734,7 +739,9 @@ Hooks.once('init', async function () {
 		if (game.settings.get('pf2e-dorako-ui', 'chat-portrait-border')) injectCSS("chat-portrait-border");
 		if (game.settings.get('pf2e-dorako-ui', 'compact-ui')) injectCSS("compact-ui");
 		if (game.settings.get('pf2e-dorako-ui', 'no-logo')) injectCSS("no-logo");
-		if (game.settings.get('pf2e-dorako-ui', 'sheet-dark')) injectCSS("sheet-dark");
+		setting = game.settings.get('pf2e-dorako-ui', 'sheet');
+		if (setting == "dark") injectCSS("sheet-dark");
+		if (setting == "plain") injectCSS("sheet-plain");
 
 	}
 

@@ -642,9 +642,19 @@ message-content .chat-damage-buttons button {
 } */
 
 
+#chat-log .message.emote p.action-content img {
+    float: left;
+    height: unset;
+    margin-right: .5em;
+    width: 36px;
+    /* border-radius: 0px 0px 0px 3px; */
+    margin-left: 2px;
+    box-shadow: var(--gold-and-glow);
+}
+
 .message-header {
     background: none;
-    padding:5px;
+    padding: 5px 5px 0px 5px;
     gap: 5px;
     align-items: center;
 }
@@ -962,8 +972,8 @@ button.half-damage .fa-heart-broken::after {
 
 [data-visibility=gm]:is(div,em,h4,p,span,strong) {
     background: hsla(0,0%,50%,0.25);
-    color: var(--pf2e-body-primary);
-    text-shadow: var(--pf2e-text-shadow);
+    /* color: var(--pf2e-body-primary);
+    text-shadow: var(--pf2e-text-shadow); */
 }
 
 [data-visibility=gm]:is(div,em,h4,p,span,strong) {
@@ -1440,15 +1450,22 @@ div#scrollToBottom:hover {
 }
 
 /* Confetti */
+/* .confetti-buttons {
+    display: flex;
+}
+
 .confetti-buttons {
     overflow: hidden;
     right: 8px;
     top: calc(100% - 45px);
-    /* z-index: 1000; */
 }
 
 .confetti-buttons:hover {
     min-width: 340px;
+} */
+
+#sidebar {
+    overflow: visible;
 }
 
 .chat-message .message-header .message-metadata {

@@ -1,0 +1,86 @@
+.crb-style aside .logo {
+    display: none;
+}
+
+.crb-style header.char-header .char-level .level,
+.crb-style aside .sidebar .armor-class .shield.ac,
+.crb-style aside .sidebar .armor-class .shield.hp,
+.crb-style aside .sidebar .hitpoints .hp-big .container.current-hp,
+.crb-style nav.sheet-navigation,
+.crb-style aside,
+.crb-style aside .sidebar .armor-class .shield-stats ol li .data-value {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.crb-style {
+    background: var(--pf2e-sheets-bg);
+    background-size: cover;
+}
+
+.crb-style aside .sidebar a.roll-icon svg {
+    filter: invert(1) drop-shadow(0px 1px 0px white);
+}
+
+.crb-style aside,
+.crb-style aside .sidebar .data-value h2,
+.crb-style aside .sidebar .roll-data h3,
+.crb-style aside .sidebar_label,
+.crb-style aside .sidebar_title h2,
+.crb-style aside .sidebar a.roll-icon i,
+.crb-style aside .sidebar .hitpoints .hp-small .far,
+.crb-style aside .sidebar .hitpoints .hp-small .fas,
+.crb-style aside input[type=number],
+.crb-style header.char-header .char-details h1.char-name input[type=text],
+.crb-style header.char-header .char-details h1.char-name span.non-editable,
+.crb-style header.char-header,
+.crb-style nav.sheet-navigation .navigation-title,
+.crb-style header.char-header .char-level .level input,
+.crb-style nav.sheet-navigation .manage-tabs,
+.crb-style header.char-header .char-level .exp-data input,
+.crb-style header.char-header .char-details .dots h4,
+.crb-style header.char-header .char-level .level label,
+.crb-style aside .sidebar .armor-class .armor_footer .shield-status {
+    color: black;
+    text-shadow: var(--pf2e-shadow-is-light);
+}
+
+.crb-style aside input[type=number]:read-only {
+    color: rgba(0,0,0,0.5);
+    text-shadow: var(--pf2e-shadow-is-light);
+}
+
+.crb-style aside .sidebar .armor-class .shield-stats ol li .shield-label svg path {
+    fill: black;
+    filter: drop-shadow(0px 1px 0px white);
+}
+
+.crb-style aside .sidebar .armor-class .shield-stats ol li .shield-label svg text {
+    fill: white;
+    text-shadow: none;
+}
+
+.crb-style aside .sidebar_title .modifiers_button, .crb-style aside .sidebar_title h2 {
+    border-bottom: 1px solid black;
+}
+
+.crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+    border: none;
+}
+
+.crb-style aside .modifiers_button,
+.tags .tag.edit-btn {
+    border: 1px solid black;
+}
+
+input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"],
+.crb-style .character .pc h3,
+.crb-style .character .ability-scores .ability .ability-mod {
+    background: none;
+}
+
+.crb-style .classdc-rank .pf-rank, .crb-style .perception-prof .pf-rank, .crb-style .save-prof .pf-rank, .crb-style .skill-prof .pf-rank, .crb-style .spellcasting-prof .pf-rank,
+.crb-style aside .sidebar select {
+    text-shadow: none;
+}

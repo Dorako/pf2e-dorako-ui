@@ -5,4 +5,5 @@
     /* background-blend-mode: multiply; */
     box-shadow: var(--gold-and-glow);
     margin-bottom: 2px;
+    padding: 5px;
 }
