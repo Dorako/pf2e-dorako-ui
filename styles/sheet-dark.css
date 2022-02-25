@@ -119,3 +119,7 @@ crb-style .inventory .encumbrance .encumbrance-light-bulk-overflow {
     color: white;
 
 }
+
+.crb-style .sheet-body .sheet-content .spell-list .item .item-summary {
+    background-color: transparent;
+}

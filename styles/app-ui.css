@@ -346,3 +346,28 @@
     transform:scale(1.0);
     transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
+
+#notifications .notification {
+    border: none;
+    box-shadow: var(--glassy);
+    text-shadow: var(--pf2e-shadow-is-dark);
+    background: none;
+}
+
+#notifications .notification.info {
+    background-color: var(--paizo-blue-bright);
+    background-color: #222C8CDD;
+}
+
+#notifications .notification.error {
+    background-color: var(--paizo-red-bright);
+    background-color: #83180FDD;
+    /* background: hsla(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) + 10%), 80%); */
+}
+
+#notifications .notification.warning,
+#notifications .notification.alert {
+background-color: #ECBF41DD;
+    color: black;
+    text-shadow: var(--pf2e-shadow-is-light);
+}

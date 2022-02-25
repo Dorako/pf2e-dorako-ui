@@ -401,7 +401,7 @@ Hooks.once('init', async function () {
 	game.settings.register('pf2e-dorako-ui', 'rolltype-indication', {
         name: "Indicate rolltype by...",
         hint: "Secret rolls (Blind GM) are tinted pink and whispers are tinted blue.",
-        scope: "world",
+        scope: "client",
         type: String,
         default: "both",
         config: true,
@@ -419,7 +419,7 @@ Hooks.once('init', async function () {
 	game.settings.register('pf2e-dorako-ui', 'compact-ui', {
         name: "Use compact UI?",
         hint: "Resizes controls, and hides inactive controls and navigation elements unless hovered.",
-        scope: "world",
+        scope: "client",
         config: true,
 		default: false,
         type: Boolean,
@@ -431,7 +431,7 @@ Hooks.once('init', async function () {
 	game.settings.register('pf2e-dorako-ui', 'no-logo', {
         name: "Disable logo?",
         hint: "Removes the Foundry logo in the top left.",
-        scope: "world",
+        scope: "client",
         config: true,
 		default: true,
         type: Boolean,
