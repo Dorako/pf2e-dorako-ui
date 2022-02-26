@@ -1,4 +1,4 @@
-.message-header {
+.message .message-header {
     background-color:var(--paizo-red);
     background-image: var(--sheet-light);
     background-size: cover;

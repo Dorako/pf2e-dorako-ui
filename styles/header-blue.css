@@ -1,4 +1,4 @@
-#chat-log .message .message-header {
+.message .message-header {
     background-color:var(--paizo-blue);
     background-image: var(--sheet-light);
     background-size: cover;

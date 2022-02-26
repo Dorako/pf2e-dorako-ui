@@ -25,6 +25,7 @@
     padding-top: 5px;
 } */
 
+
 .message-content .chat-damage-buttons button>i.fas {
     left: 0px;
     top: 0px;
@@ -737,7 +738,7 @@ message-content .chat-damage-buttons button {
     /* background: #818181; */
     background: none;
     background: var(--pf2e-translucent-very);
-    border: 1px dashed var(--pf2e-body-primary);
+    /* border: 1px dashed var(--pf2e-body-primary); */
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 0px;
@@ -964,9 +965,13 @@ button.half-damage .fa-heart-broken::after {
     background-color: var(--pf2e-color-mono-dark);
 }
 
+[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all]) {
+    border-radius: 3px;
+}
+
 [data-visibility=gm]:is(div,em,h4,p,span,strong) {
-    border: 1px dotted;
-    border-radius: 5px;
+    /* border: 1px dotted; */
+    border: none;
     cursor: help;
 }
 
@@ -977,11 +982,51 @@ button.half-damage .fa-heart-broken::after {
 }
 
 [data-visibility=gm]:is(div,em,h4,p,span,strong) {
-    width: 100%;
+    /* width: 100%; */
     margin-bottom:0px;
 }
-.message .message-header .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong){
+
+[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=owner] {
+    background:none;
+    background-color: #1f1fa830;
+    outline: 1px dashed #4646ffa0;
+
+}
+
+[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=gm] {
+    background:none;
+    background-color: hsla(0,0%,50%,0.25);
+    outline: 1px dotted black;
+}
+
+[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=owner] [data-visibility=owner] {
+    background: none;
+    background-color: none;
+}
+
+[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all]) {
+    outline: 1px dashed;
+}
+
+.message-header [data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all]) {
+    outline: 1px dashed var(--pf2e-body-primary);
+}
+
+.message .message-header.dark-header-text [data-visibility=gm]:is(div,em,h4,p,span,strong){
     background: hsla(0,0%,50%,0.25);
+    outline: 1px dashed black;
+    color: black;
+    /* mix-blend-mode: color-dodge; */
+}
+
+.message .result[data-visibility] {
+    padding: 3px;
+    margin-top: 3px;
+}
+
+.message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong){
+    background: hsla(0,0%,50%,0.25);
+    color: white;
     /* mix-blend-mode: color-dodge; */
 }
 

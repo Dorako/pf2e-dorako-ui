@@ -49,6 +49,24 @@
     left: unset;
 }
 
+.tah-category.hover .tah-content {
+    left: -200px;
+}
+
+.tah-content {
+    gap: 0px;
+    padding: 10px !important;
+    margin: -5px;
+}
+
+/* #tah-hudTitle {
+    display: none
+} */
+
+.tah-title-button:hover, .tah-title-button:focus {
+    box-shadow: var(--glassy);
+}
+
 .tah-title-button>.fa {
     display: none;
 }
@@ -141,9 +159,7 @@
 }
 
 
-#tah-hudTitle {
-    display: none
-}
+
 
 .tah-content {
     gap: 0px;

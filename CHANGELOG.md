@@ -1,5 +1,7 @@
 # 1.3.4
 Changed compact mode to client setting. Fixed issue in dark sheets. Themed foundry notifications.
+Fixed styling that broke due to data visibility changes in the newest foundry release
+
 # 1.3.3
 Fixed navbar context menu issue. Fixed Confetti overlap with Dice Tray. Added 'Plain' theme for PC sheets. Fixed secret text in NPC sheets.
 # 1.3.2
