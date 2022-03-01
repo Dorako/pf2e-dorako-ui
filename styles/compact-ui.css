@@ -50,16 +50,15 @@
   display: flex;
 }
 
-#players,
-#hotbar,
-#custom-hotbar {
+#players{
   opacity:0;
   transition: opacity 0.25s ease-in-out;
 }
 
-#players:hover,
-#hotbar:hover,
-#custom-hotbar:hover {
+/* #hotbar:hover,
+#custom-hotbar:hover */
+
+#players:hover {
   transition: opacity 0.25s ease-in-out;
   opacity:1;
 }
