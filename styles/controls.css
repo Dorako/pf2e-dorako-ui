@@ -5,12 +5,19 @@
 
 #controls ol .scene-control,
 #controls ol .control-tool,
-#controls ol .control-tool.toggle, #controls ol .control-tool.toggle.active,
+#controls ol.control-tools > li.active, #controls ol.control-tools > li:hover,
+#controls ol.control-tools > li,
+#controls ol.control-tools > li.toggle,
+#controls ol.control-tools > li.toggle.active,
+#controls ol .control-tool.toggle,
+#controls ol .control-tool.toggle.active,
 #controls ol .control-tool.active,
 #controls ol .scene-control.active,
 #controls ol .control-tool.toggle:hover,
 #controls ol .control-tool:hover,
 #controls ol .scene-control:hover,
+
+#controls ol.control-tools > li.toggle:hover,
 #darkness-adjuster .window-content,
 #darkness-adjuster
 {
@@ -33,6 +40,13 @@
 #controls ol .control-tool.toggle:hover,
 #controls ol .control-tool.toggle.active,
 #controls ol .control-tool.toggle.active:hover,
+#controls ol.control-tools > li,
+#controls ol.control-tools > li.active,
+#controls ol.control-tools > li:hover,
+#controls ol.control-tools > li.active:hover,
+#controls ol.control-tools > li.toggle:hover,
+#controls ol.control-tools > li.toggle.active,
+#controls ol.sub-controls .control-tool.toggle,
 #darkness-adjuster .window-content
 {
     border: none;
@@ -51,8 +65,20 @@
 #controls {
     padding-top: 0px;
     margin-top: var(--edge-margin);
-    margin-left: unset;
+    margin-left: var(--edge-margin);;
     transition: unset;
+    overflow: visible;
+    padding: 0px;
+}
+
+#controls ol.control-tools > li {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+#controls ol.control-tools.main-controls {
+    padding: 0px;
+    margin: 0px;
 }
 
 #controls ol.main-controls {
@@ -77,6 +103,8 @@
     text-shadow: var(--dorako-text-shadow);
 }
 
+#controls ol.control-tools > li.active,
+#controls ol.control-tools > li:hover,
 #controls ol .scene-control.active,
 #controls ol .scene-control:hover {
     background-color: var(--paizo-red);
@@ -101,6 +129,7 @@
     /* backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active); */
 }
 
+#controls ol.control-tools > li.toggle:hover,
 #controls ol.sub-controls .control-tool.toggle.active {
     background-color: var(--paizo-blue-bright);
     /* backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active); */

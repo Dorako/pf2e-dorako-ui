@@ -1,5 +1,7 @@
+# 1.3.6
+Fixed top left controls that broke in recent core foundry patch.
 # 1.3.5
-Fixed dark player sheets that broke in recent patch. Made macro bare never fade in compact mode, as it doesn't re-appear when hovering while dragging a macro.
+Fixed dark player sheets that broke in recent system patch. Made macro bare never fade in compact mode, as it doesn't re-appear when hovering while dragging a macro.
 # 1.3.4
 Changed compact mode to client setting. Fixed issue in dark sheets. Themed foundry notifications.
 Fixed styling that broke due to data visibility changes in the newest foundry release

@@ -6,7 +6,7 @@
 
 #controls {
   pointer-events: all;
-  gap: 5px;
+  /* gap: 5px; */
   flex-wrap: nowrap;
   width: 75px;
   flex-direction: row;

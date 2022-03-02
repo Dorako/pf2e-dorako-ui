@@ -123,6 +123,8 @@ crb-style .inventory .encumbrance .encumbrance-light-bulk-overflow {
     color: #F1DFB890;
 }
 
+.actor.sheet.character .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .skill-score,
+.actor.sheet .crb-style .sheet-body .sheet-content .spell-list .item .item-name h4:hover,
 .actor.sheet.character .tab.inventory .item-controls .item-control,
 .actor.sheet.character .tab.proficiencies .proficiencies-pane h1,
 .actor.sheet.character .tab.biography h3 {
@@ -144,6 +146,7 @@ crb-style .inventory .encumbrance .encumbrance-light-bulk-overflow {
     filter: brightness(1.2);
 }
 
+.actor.sheet .crb-style .sheet-body .sheet-content .spell-list .item.spell-level-header,
 .actor.sheet.character .tab.character h3,
 .actor.sheet.character .tab.character .ability-scores .ability .ability-id,
 .actor.sheet .crb-style .sheet-body .sheet-content,
@@ -157,9 +160,14 @@ crb-style .inventory .encumbrance .encumbrance-light-bulk-overflow {
 .crb-style input[type="date"], 
 .crb-style input[type="time"] {
     color: white;
-
 }
 
+.actor.sheet .crb-style .sheet-body .sheet-content .content-link {
+    color: black;
+}
+
+.actor.sheet .crb-style .sheet-body .sheet-content .spell-list .item .item-summary,
 .crb-style .sheet-body .sheet-content .spell-list .item .item-summary {
+    background:none;
     background-color: transparent;
 }
