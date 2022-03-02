@@ -1,0 +1,223 @@
+:root {
+    --edge-margin: 5px;
+
+    --dorako-bg-glass: rgba(120, 120, 120, 0.20);
+    --dorako-bg-current: hsla(0, 50%, 50%, 50%);
+
+    --blind-bg: #A57aA5;
+    --whisper-bg: #E3E3FF;
+
+    --dorako-vibrancy: none;
+
+    --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
+    /* --glassy:
+    0px 0px 2px rgba(255, 255, 255, 0.4) inset,
+    0px 0px 6px rgba(255, 255, 255, 0.2) inset,
+     1px  1px 1px rgba(0, 0, 0, 1),
+     1px -1px 1px rgba(0, 0, 0, 1),
+    -1px -1px 1px rgba(0, 0, 0, 1),
+    -1px  1px 1px rgba(0, 0, 0, 1),
+    0px 0px 3px rgba(0, 0, 0, 1),
+    0px 0px 4px rgba(0, 0, 0, 0.5); */
+    --glassy: 0px 0px 2px black, 0px 0px 5px black, 0px 0px 2px white inset;
+    --glassy: 0px 0px 2px black, 0px 0px 5px black, 0px 0px 4px hsla(0, 0%, 100%, 50%) inset;
+    --glassy-opaque: 0px 0px 2px black, 0px 0px 5px black;
+
+
+    --primary-hue: 0;
+    --primary-sat: 100%;
+    --primary-lvl: 18%;
+
+    --secondary-hue: 234;
+    --secondary-sat: 64%;
+    --secondary-lvl: 25%;
+
+    --paizo-red-dark: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) - 10%));
+    --paizo-red: hsl(var(--primary-hue), var(--primary-sat), var(--primary-lvl));
+    --paizo-red-bright: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) + 10%));
+
+    --paizo-blue-dark: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) - 10%));
+    --paizo-blue: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-lvl));
+    --paizo-blue-bright: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) + 10%));
+
+    --color-shadow-highlight: var(--paizo-red);
+    --color-shadow-primary: var(--paizo-blue);
+
+    --pf2e-sheets-bg: url(/systems/pf2e/assets/sheet/background.webp);
+    --sheet-light: url(/systems/pf2e/assets/sheet/background.webp);
+    --sheet-light: url(/modules/pf2e-dorako-ui/img/background-dark.webp);
+
+    --dorako-text-shadow: 0px 0px 3px black;
+    --dorako-box-shadow: 0px 0px 3px black;
+}
+
+
+/* Standard Lists */
+ul,
+ol {
+  margin: 0.5em 0;
+  padding: 0 0 0 1.5em;
+}
+/* Definition Lists */
+dl {
+  margin: 0.5em 0;
+}
+
+/* Nuke fake-list stylings */
+
+#macro-list,
+#controls,
+#navigation,
+#navigation > ol {
+    display: flex;
+}
+
+#controls > ol,
+#controls > ol > li,
+#macro-list,
+#macro-list > *,
+#navigation > *,
+#navigation > ol > li
+#players ol,
+#players ol > li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#players {
+    cursor: pointer;
+}
+#players .player {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* #players .player-name {
+    display: none;
+} */
+
+.crb-style input[type="text"],
+.crb-style input[type="number"],
+.crb-style input[type="password"],
+.crb-style input[type="date"],
+.crb-style input[type="time"]{
+    border: none;
+}
+
+.app:not(.control-tools.flexcol, #navigation),
+#controls li,
+#navigation .nav-item,
+#hotbar .bar-controls,
+#hotbar li {
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    background: hsla(0, 0%, 50%, 50%);
+    border-radius: 5px;
+    box-shadow: var(--glassy);
+    color: var(--color-text-light-highlight);
+    text-shadow: 0px 0px 3px black;
+    z-index: var(--z-index-app);
+    pointer-events: all;
+  }
+
+#controls ol {
+  width: 30px;
+}
+
+#controls li {
+  flex: 0 0 30px;
+  box-shadow: var(--glassy);
+}
+
+#controls i {
+  align-items: center;
+  display: flex;
+  font-size: large;
+}
+
+#controls li:hover, #controls li.active, #controls li.toggle {
+    box-shadow: var(--glassy-opaque);
+}
+
+#controls li:hover,
+#controls li.active {
+  background-color: var(--paizo-red);
+}
+
+#controls li.toggle {
+  background-color: var(--paizo-blue-dark);
+}
+
+#controls li.toggle.active,
+#controls li.toggle:hover,
+#controls li.toggle.active:hover {
+  background-color: var(--paizo-blue);
+}
+
+
+#navigation li.active {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+}
+
+#navigation li.view,
+#navigation li:hover {
+  background-color: var(--paizo-red);
+}
+
+#navigation li.gm {
+  background-color: var(--paizo-blue);
+}
+
+#navigation li.gm.view,
+#navigation li.gm:hover {
+  background-color: var(--paizo-blue-bright);
+}
+
+#hotbar li:not(.inactive) {
+  background-color: var(--paizo-blue-dark);
+}
+
+#hotbar li:hover {
+  background-color: var(--paizo-blue);
+}
+
+#hotbar img {
+  border-radius: 5px;
+}
+
+#hotbar li:hover::before {
+  transition: box-shadow 0.5s ease-in-out;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(220,200,100,0.5) inset, var(--glassy);
+  border-radius: 5px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#hotbar .macro .macro-key,
+#custom-hotbar .macro .custom-macro-key {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 1px 3px;
+    color: var(--color-text-light-highlight);
+    font-weight: bold;
+    pointer-events: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: var(--dorako-text-shadow);
+    font-size: large;
+}
+
+textarea,
+.pf2e.sheet form textarea:disabled:hover {
+  box-shadow: 0px 0px 3px black inset;
+}

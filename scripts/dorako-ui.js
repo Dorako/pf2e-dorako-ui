@@ -1,8 +1,12 @@
 
 // function cleanHTML() {
 // 	document.getElementsByTagName("html")[0].style = null;
-// 	document.getElementById("sidebar").style = null;
+// 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
+// 	injectCSS("core-trim");
+// 	injectCSS("dorako-trim");
+// 	// document.getElementById("sidebar").style = null;
 // }
+
 // setTimeout(cleanHTML, 10000);
 
 Hooks.on("ready", async function () {
