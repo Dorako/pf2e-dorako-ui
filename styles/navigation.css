@@ -224,3 +224,12 @@
     box-shadow: var(--gold-and-glow);
     border-radius: 50%;
 }
+
+/* Navigation presets */
+
+li.nav-preset,
+a.create-preset,
+a.scene-presets {
+    border: none;
+    box-shadow: var(--glassy);
+}

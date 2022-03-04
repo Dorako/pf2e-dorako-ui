@@ -1,3 +1,5 @@
+# 1.3.7
+Fixed styling of worn-related buttons and crafting screen on dark mode pc sheets. Added minor support for Navigation Presets module.
 # 1.3.6
 Fixed top left controls that broke in recent core foundry patch.
 # 1.3.5

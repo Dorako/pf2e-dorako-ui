@@ -171,3 +171,17 @@ crb-style .inventory .encumbrance .encumbrance-light-bulk-overflow {
     background:none;
     background-color: transparent;
 }
+
+.actor.sheet.character .tab.actions .actions-list li.item .auxiliary-actions button {
+    color: black;
+}
+
+.actor.sheet.character .tab.crafting .known-formulas .formula-list .formula-level-header.formula-level-header,
+.actor.sheet.character .tab.crafting .crafting-entry .formula-list .formula-level-header.formula-level-header {
+    color: white;
+}
+
+.actor.sheet.character .tab.inventory .inventory-list .item-list .container-capacity {
+    background-color: rgba(0,0,0,.35);
+    box-shadow: inset 0 0 3px #000;
+}
