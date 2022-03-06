@@ -348,7 +348,6 @@ Hooks.once('init', async function () {
 		}
     });
 
-    //todo Token, Body, None
     game.settings.register("pf2e-dorako-ui", "insertSpeakerImage", {
         name: "Add chat portrait?",
         hint: "Adds the image of the speaker to the chat card.",

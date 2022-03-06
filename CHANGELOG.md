@@ -1,3 +1,5 @@
+# 1.3.8
+Added support for the new damage buttons on attack cards. Fixed issue causing multiple elements in chat messages to create newlines.
 # 1.3.7
 Fixed styling of worn-related buttons and crafting screen on dark mode pc sheets. Added minor support for Navigation Presets module.
 # 1.3.6

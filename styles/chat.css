@@ -706,7 +706,11 @@ message-content .chat-damage-buttons button {
     width: 12px;
 }
 
-.message-content .chat-damage-buttons.includes-fumble span.plus {
+.chat-message>.message-content .chat-damage-buttons button>.transparent-half {
+    display: none;
+}
+
+.chat-message>.message-content .chat-damage-buttons.includes-fumble span.plus {
     left: unset;
 }
 
@@ -839,11 +843,11 @@ message-content .chat-damage-buttons button {
     gap: 5px;
 }
 
-.chat-message .message-content {
+/* .chat-message .message-content {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
+} */
 
 button.half-damage .fa-heart-broken::after {
     content:"\f7a9";
@@ -989,14 +993,14 @@ button.half-damage .fa-heart-broken::after {
 [data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=owner] {
     background:none;
     background-color: #1f1fa830;
-    outline: 1px dashed #4646ffa0;
+    outline: 1px dashed #a6a6ffd0;
 
 }
 
 [data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=gm] {
     background:none;
     background-color: hsla(0,0%,50%,0.25);
-    outline: 1px dotted black;
+    /* outline: 1px dotted black; */
 }
 
 [data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=owner] [data-visibility=owner] {
@@ -1515,4 +1519,22 @@ div#scrollToBottom:hover {
 
 .chat-message .message-header .message-metadata {
     align-content: center;
+}
+
+.chat-message>.message-content .message-buttons {
+ gap: 3px;
+}
+
+.message button {
+    line-height: 20px;
+    border: 1px solid var(--alt);
+    background: hsla(0, 0%, 20%,0.1);
+}
+
+.dice-roll .dice-result {
+    margin-top: 5px;
+}
+
+h4 .action {
+    margin: 0px;
 }
