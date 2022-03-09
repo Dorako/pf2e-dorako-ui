@@ -55,12 +55,13 @@
 /* Standard Lists */
 ul,
 ol {
-  margin: 0.5em 0;
-  padding: 0 0 0 1.5em;
+    margin: 0.5em 0;
+    padding: 0 0 0 1.5em;
 }
+
 /* Definition Lists */
 dl {
-  margin: 0.5em 0;
+    margin: 0.5em 0;
 }
 
 /* Nuke fake-list stylings */
@@ -68,18 +69,17 @@ dl {
 #macro-list,
 #controls,
 #navigation,
-#navigation > ol {
+#navigation>ol {
     display: flex;
 }
 
-#controls > ol,
-#controls > ol > li,
+#controls>ol,
+#controls>ol>li,
 #macro-list,
-#macro-list > *,
-#navigation > *,
-#navigation > ol > li
-#players ol,
-#players ol > li {
+#macro-list>*,
+#navigation>*,
+#navigation>ol>li #players ol,
+#players ol>li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -88,6 +88,7 @@ dl {
 #players {
     cursor: pointer;
 }
+
 #players .player {
     align-items: center;
     display: flex;
@@ -104,7 +105,7 @@ dl {
 .crb-style input[type="number"],
 .crb-style input[type="password"],
 .crb-style input[type="date"],
-.crb-style input[type="time"]{
+.crb-style input[type="time"] {
     border: none;
 }
 
@@ -121,21 +122,21 @@ dl {
     text-shadow: 0px 0px 3px black;
     z-index: var(--z-index-app);
     pointer-events: all;
-  }
+}
 
 #controls ol {
-  width: 30px;
+    width: 30px;
 }
 
 #controls li {
-  flex: 0 0 30px;
-  box-shadow: var(--glassy);
+    flex: 0 0 30px;
+    box-shadow: var(--glassy);
 }
 
 #controls i {
-  align-items: center;
-  display: flex;
-  font-size: large;
+    align-items: center;
+    display: flex;
+    font-size: large;
 }
 
 #controls li:hover, #controls li.active, #controls li.toggle {
@@ -144,62 +145,62 @@ dl {
 
 #controls li:hover,
 #controls li.active {
-  background-color: var(--paizo-red);
+    background-color: var(--paizo-red);
 }
 
 #controls li.toggle {
-  background-color: var(--paizo-blue-dark);
+    background-color: var(--paizo-blue-dark);
 }
 
 #controls li.toggle.active,
 #controls li.toggle:hover,
 #controls li.toggle.active:hover {
-  background-color: var(--paizo-blue);
+    background-color: var(--paizo-blue);
 }
 
 
 #navigation li.active {
-  box-shadow: var(--gold-and-glow), var(--glassy);
+    box-shadow: var(--gold-and-glow), var(--glassy);
 }
 
 #navigation li.view,
 #navigation li:hover {
-  background-color: var(--paizo-red);
+    background-color: var(--paizo-red);
 }
 
 #navigation li.gm {
-  background-color: var(--paizo-blue);
+    background-color: var(--paizo-blue);
 }
 
 #navigation li.gm.view,
 #navigation li.gm:hover {
-  background-color: var(--paizo-blue-bright);
+    background-color: var(--paizo-blue-bright);
 }
 
 #hotbar li:not(.inactive) {
-  background-color: var(--paizo-blue-dark);
+    background-color: var(--paizo-blue-dark);
 }
 
 #hotbar li:hover {
-  background-color: var(--paizo-blue);
+    background-color: var(--paizo-blue);
 }
 
 #hotbar img {
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 #hotbar li:hover::before {
-  transition: box-shadow 0.5s ease-in-out;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 10px rgba(220,200,100,0.5) inset, var(--glassy);
-  border-radius: 5px;
-  overflow: hidden;
-  pointer-events: none;
+    transition: box-shadow 0.5s ease-in-out;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+    border-radius: 5px;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 #hotbar .macro .macro-key,
@@ -219,5 +220,5 @@ dl {
 
 textarea,
 .pf2e.sheet form textarea:disabled:hover {
-  box-shadow: 0px 0px 3px black inset;
+    box-shadow: 0px 0px 3px black inset;
 }

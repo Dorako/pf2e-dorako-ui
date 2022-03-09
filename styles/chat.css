@@ -11,7 +11,7 @@
 }
 
 .message .tag {
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     text-shadow: none;
 }
 
@@ -20,7 +20,7 @@
     margin-left: -5px;
     padding-left: 5px;
     margin-right: -5px;
-    padding-right: 5px; 
+    padding-right: 5px;
     margin-top:-5px;
     padding-top: 5px;
 } */
@@ -32,7 +32,7 @@
 }
 
 .message .message-header .whisper-to {
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
 
@@ -90,8 +90,8 @@
     /* margin: 5px;
     margin-top: 0px;
     padding: 2px; */
-    margin:2px;
-    padding-bottom:2px;
+    margin: 2px;
+    padding-bottom: 2px;
 }
 
 .message-sender {
@@ -119,7 +119,7 @@
 }
 
 .blind .flavor-text {
-    background: #FDE4FF; 
+    background: #FDE4FF;
     background-color: var(--blind-bg);
 } */
 
@@ -128,7 +128,7 @@
     background-size: cover;
     background-image: var(--pf2e-sheets-bg);
     background-blend-mode: luminosity;
-    /* background-color: var(--whisper-bg); 
+    /* background-color: var(--whisper-bg);
     margin-right: -5px;
     padding-right: 5px;
     margin-left: -5px;
@@ -160,8 +160,8 @@
     margin: 0px;
 }
 
-#chat-log .message .message-header .flavor-text > img.message-portrait {
-    display:none;
+#chat-log .message .message-header .flavor-text>img.message-portrait {
+    display: none;
 }
 
 .tags {
@@ -236,7 +236,7 @@
     margin-bottom: 5px; */
     /* padding-left:5px;
     padding-right:5px; */
-    padding-top:5px;
+    padding-top: 5px;
     gap: 5px;
 }
 
@@ -260,7 +260,7 @@
 }
 
 
-#chat-log .flavor-text > hr {
+#chat-log .flavor-text>hr {
     /* display: none; */
     margin-top: 0px;
     margin-bottom: 3px;
@@ -273,8 +273,8 @@
 
 #chat-log {
     /* overflow-x:visible; */
-    padding-bottom:3px;
-    gap:8px;
+    padding-bottom: 3px;
+    gap: 8px;
 }
 
 .message-content .flavor-text {
@@ -284,6 +284,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .message-content .flavor-text hr {
     display: none;
 }
@@ -307,12 +308,12 @@
 }
 
 #chat-controls .control-buttons {
-    color:rgba(255, 255, 245, 0.8);
+    color: rgba(255, 255, 245, 0.8);
 }
 
 
 
-/* 
+/*
 #chat-log>.chat-message{
     padding: 5px;
 } */
@@ -328,11 +329,11 @@
     background-color: var(--paizo-red);
     text-shadow: var(--pf2e-text-shadow);
     /* border-bottom: 1px solid black; */
-    /* margin-right: -5px;
+/* margin-right: -5px;
     margin-top: -5px;
     padding-right: 5px;
     padding-top: 5px;
-    border-radius: 0px 5px 0px 0px; 
+    border-radius: 0px 5px 0px 0px;
 } */
 
 
@@ -361,7 +362,7 @@ button {
     gap: 3px;
     /* padding-left:5px;
     padding-right:5px; */
-    margin-top:0px;
+    margin-top: 0px;
 }
 
 
@@ -397,8 +398,8 @@ button {
     border: 5px solid red;
     box-shadow: var(--gold-and-glow);
     border: none;
-    margin-left:3px;
-    margin-right:3px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .message-content .chat-damage-buttons button>.transparent-half {
@@ -413,7 +414,7 @@ button {
 
 .message .message-header img.message-portrait {
     /* margin-bottom:5px; */
-    display:flex;
+    display: flex;
 }
 
 .message .message-header .message-sender {
@@ -421,7 +422,7 @@ button {
     font-weight: 400; */
     grid-: sender;
     /* align-items: center; */
-    display:flex;
+    display: flex;
 
     /* border-radius: 5px 0px 0px 0px; */
 }
@@ -429,7 +430,7 @@ button {
 .message .message-header .message-metadata {
     align-items: center;
     justify-content: flex-end;
-    display:flex;
+    display: flex;
     /* border-radius: 0px 5px 0px 0px;
     margin-left: 0px; */
 }
@@ -533,16 +534,16 @@ button {
 
     --filter-dark: invert(100%) drop-shadow(0px 1px 1px black);
     --filter-light: drop-shadow(0px 1px 0px white);
-    --pf2e-half-transparent-light: hsla(0, 0%, 100%,0.5);
-    --pf2e-half-transparent-dark: hsla(0, 0%, 0%,0.5);
+    --pf2e-half-transparent-light: hsla(0, 0%, 100%, 0.5);
+    --pf2e-half-transparent-dark: hsla(0, 0%, 0%, 0.5);
     --pf2e-shadow-is-dark: 0px 1px var(--pf2e-half-transparent-dark);
     --pf2e-shadow-is-light: 0px 1px var(--pf2e-half-transparent-light);
     --pf2e-text-shadow: 0px 1px var(--pf2e-shadow-dynamic);
-    --pf2e-translucent-middle-for-light: hsla(0, 0%, 80%,0.5);
-    --pf2e-translucent-middle-for-dark: hsla(0, 0%, 80%,0.5);
-    --pf2e-transcluent-very-for-light: hsla(0, 0%, 60%,0.2);
-    --pf2e-transcluent-very-for-dark: hsla(0, 0%, 80%,0.3);
-    --pf2e-color-mono-dark: hsl(0,0%,15%);
+    --pf2e-translucent-middle-for-light: hsla(0, 0%, 80%, 0.5);
+    --pf2e-translucent-middle-for-dark: hsla(0, 0%, 80%, 0.5);
+    --pf2e-transcluent-very-for-light: hsla(0, 0%, 60%, 0.2);
+    --pf2e-transcluent-very-for-dark: hsla(0, 0%, 80%, 0.3);
+    --pf2e-color-mono-dark: hsl(0, 0%, 15%);
     --pf2e-color-ornament-for-dark: wheat;
     --pf2e-color-ornament-for-light: black;
 
@@ -610,7 +611,7 @@ button {
 message-content .chat-damage-buttons button {
     box-shadow: none;
     border: 1px solid var(--alt);
-    background:hsla(0, 0%, 20%,0.1);
+    background: hsla(0, 0%, 20%, 0.1);
 }
 
 /* .dice-roll .dice-formula:hover::after, .dice-roll .dice-total:hover::after,
@@ -669,9 +670,9 @@ message-content .chat-damage-buttons button {
     border-radius: 50%;
 }
 
-.portrait-wrapper:hover  {
+.portrait-wrapper:hover {
     transition: transform 0.35s ease-in-out, filter 0.35s ease-in-out;
-    transform: scale(4) translate(16px,16px);
+    transform: scale(4) translate(16px, 16px);
     filter: drop-shadow(0px 0px 10px black);
     z-index: 1;
 }
@@ -699,7 +700,7 @@ message-content .chat-damage-buttons button {
 
 
 .message-content .chat-damage-buttons button>.transparent-half {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     left: 50%;
     height: 18px;
     opacity: .6;
@@ -728,6 +729,7 @@ message-content .chat-damage-buttons button {
     background: var(--pf2e-translucent-middle);
     color: var(--pf2e-body-primary);
 }
+
 .damage-tag-modifier {
     background: var(--pf2e-translucent-very);
 }
@@ -738,7 +740,7 @@ message-content .chat-damage-buttons button {
     /* transition: box-shadow 0.5s ease-in-out; */
 }
 
-[data-visibility=owner]:is(div,em,p,span,strong) {
+[data-visibility=owner]:is(div, em, p, span, strong) {
     /* background: #818181; */
     background: none;
     background: var(--pf2e-translucent-very);
@@ -850,9 +852,9 @@ message-content .chat-damage-buttons button {
 } */
 
 button.half-damage .fa-heart-broken::after {
-    content:"\f7a9";
+    content: "\f7a9";
     font-family: "Font Awesome 5 Free";
-    color:hsla(0, 0%, 50%, 0.5);
+    color: hsla(0, 0%, 50%, 0.5);
     display: block;
     z-index: 1;
     position: absolute;
@@ -919,7 +921,8 @@ button.half-damage .fa-heart-broken::after {
     color: white;
     background-color: darkgreen;
 }
-.message .message-content .chat-damage-buttons button.heal-damage:hover .plus{
+
+.message .message-content .chat-damage-buttons button.heal-damage:hover .plus {
     color: darkgreen;
 }
 
@@ -936,7 +939,7 @@ button.half-damage .fa-heart-broken::after {
     display: flex;
     gap: 3px;
     flex-direction: column;
-    margin:0px;
+    margin: 0px;
     /* padding-left: 5px;
     padding-right: 5px; */
 }
@@ -969,55 +972,55 @@ button.half-damage .fa-heart-broken::after {
     background-color: var(--pf2e-color-mono-dark);
 }
 
-[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all]) {
+[data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all]) {
     border-radius: 3px;
 }
 
-[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+[data-visibility=gm]:is(div, em, h4, p, span, strong) {
     /* border: 1px dotted; */
     border: none;
     cursor: help;
 }
 
-[data-visibility=gm]:is(div,em,h4,p,span,strong) {
-    background: hsla(0,0%,50%,0.25);
+[data-visibility=gm]:is(div, em, h4, p, span, strong) {
+    background: hsla(0, 0%, 50%, 0.25);
     /* color: var(--pf2e-body-primary);
     text-shadow: var(--pf2e-text-shadow); */
 }
 
-[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+[data-visibility=gm]:is(div, em, h4, p, span, strong) {
     /* width: 100%; */
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
 
-[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=owner] {
-    background:none;
+[data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=owner] {
+    background: none;
     background-color: #1f1fa830;
     outline: 1px dashed #a6a6ffd0;
 
 }
 
-[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=gm] {
-    background:none;
-    background-color: hsla(0,0%,50%,0.25);
+[data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=gm] {
+    background: none;
+    background-color: hsla(0, 0%, 50%, 0.25);
     /* outline: 1px dotted black; */
 }
 
-[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all])[data-visibility=owner] [data-visibility=owner] {
+[data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=owner] [data-visibility=owner] {
     background: none;
     background-color: none;
 }
 
-[data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all]) {
+[data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all]) {
     outline: 1px dashed;
 }
 
-.message-header [data-visibility]:is(div,em,h4,p,span,strong):not([data-visibility=all]) {
+.message-header [data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all]) {
     outline: 1px dashed var(--pf2e-body-primary);
 }
 
-.message .message-header.dark-header-text [data-visibility=gm]:is(div,em,h4,p,span,strong){
-    background: hsla(0,0%,50%,0.25);
+.message .message-header.dark-header-text [data-visibility=gm]:is(div, em, h4, p, span, strong) {
+    background: hsla(0, 0%, 50%, 0.25);
     outline: 1px dashed black;
     color: black;
     /* mix-blend-mode: color-dodge; */
@@ -1028,22 +1031,25 @@ button.half-damage .fa-heart-broken::after {
     margin-top: 3px;
 }
 
-.message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong){
-    background: hsla(0,0%,50%,0.25);
+.message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div, em, h4, p, span, strong) {
+    background: hsla(0, 0%, 50%, 0.25);
     color: white;
     /* mix-blend-mode: color-dodge; */
 }
 
 .flavor-text [data-visibility=gm] {
-    margin-top:0px;
+    margin-top: 0px;
 }
 
 
 
 .flavor-text br {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 0; /* change this to whatever height you want it */
+    display: block;
+    /* makes it have a width */
+    content: "";
+    /* clears default height */
+    margin-top: 0;
+    /* change this to whatever height you want it */
 }
 
 
@@ -1084,17 +1090,27 @@ button.half-damage .fa-heart-broken::after {
 .chat-message.blind,
 .chat-message.whisper,
 .chat-message.emote,
-.message.damage-log.damage {
+.message.damage-log.damage,
+.message.damage-log.healing,
+.message.damage-log.reverted.damage,
+.message.damage-log.reverted.healing {
     background: var(--bg-current);
+    background-image: var(--bg-current);
     background-size: cover;
-    border:none;
+    background-blend-mode: luminosity;
+    border: none;
 }
 
 .message.damage-log.healing {
-    background-image: var(--bg-current);
-    background-color: darkgreen;
-    background-blend-mode: luminosity;
-    background-size: cover;
+    background-color: green;
+}
+
+.message.damage-log.reverted.healing {
+    background-color: #002000;
+}
+
+.message.damage-log.reverted.damage {
+    background-color: #202020;
 }
 
 .message.emote {
@@ -1124,7 +1140,7 @@ button.half-damage .fa-heart-broken::after {
 }
 
 .pf2e.chat-card .card-header h3 {
-    display:flex;
+    display: flex;
     margin-top: 2px;
     line-height: 17px;
 }
@@ -1133,15 +1149,15 @@ button.half-damage .fa-heart-broken::after {
 .pf2e.action-card .card-buttons {
     /* padding-left: 5px;
     padding-right: 5px; */
-    margin:0px;
+    margin: 0px;
     /* margin-left: 5px;
     margin-right: 5px; */
 }
 
 .message .message-header .message-metadata {
     font-size: xx-small;
-    display:flex;
-    gap:5px;
+    display: flex;
+    gap: 5px;
     /* flex:none; */
 }
 
@@ -1171,14 +1187,14 @@ button.half-damage .fa-heart-broken::after {
 
 .message .message-header {
     grid: unset;
-    display:flex;
+    display: flex;
     border-radius: 5px 5px 0px 0px;
 }
 
 
-    /* background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), var(--paizo-red)), var(--bg-current); */
-    /* box-shadow: 0px 1px 0px rgba(0, 0, 0, .5); */
-        /* border-bottom: 1px solid wheat; */
+/* background-image: linear-gradient(to bottom right, rgba(0, 47, 75, .5), var(--paizo-red)), var(--bg-current); */
+/* box-shadow: 0px 1px 0px rgba(0, 0, 0, .5); */
+/* border-bottom: 1px solid wheat; */
 
 /* Card background */
 .message {
@@ -1209,6 +1225,7 @@ button.half-damage .fa-heart-broken::after {
 #navigation #scene-list .scene.context {
     background-color: var(--paizo-red);
 }
+
 #navigation #scene-list .scene.gm.context {
     background-color: var(--paizo-blue-bright);
 }
@@ -1236,7 +1253,7 @@ table.pf2-table td, table.pf2-table th {
 }
 
 #dfcp-rt-buttons {
-    gap:3px;
+    gap: 3px;
 }
 
 .chat-control-icon {
@@ -1253,15 +1270,15 @@ table.pf2-table td, table.pf2-table th {
     clip-path: inset(1px -10px 1px -10px)
 }
 
-#chat-log .message.dfce-cm-bottom  {
+#chat-log .message.dfce-cm-bottom {
     border-radius: 0px 0px 5px 5px;
     clip-path: inset(1px -10px -10px -10px)
 }
 
 
 #chat-log .message.dfce-cm-middle,
-#chat-log .message.dfce-cm-bottom  {
-    margin-top:-11px;
+#chat-log .message.dfce-cm-bottom {
+    margin-top: -11px;
     background-position: left 0px top -100px;
 }
 
@@ -1271,7 +1288,7 @@ table.pf2-table td, table.pf2-table th {
 }
 
 .chat-message .message-header .message-sender {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 5px;
@@ -1279,7 +1296,7 @@ table.pf2-table td, table.pf2-table th {
 }
 
 .message-metadata {
-    flex:none
+    flex: none
 }
 
 div#scrollToBottom {
@@ -1303,7 +1320,7 @@ div#scrollToBottom:hover {
 }
 
 .chat-damage-buttons button {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2px;
@@ -1314,8 +1331,8 @@ div#scrollToBottom:hover {
 }
 
 
-.flavor-text > strong,
-.flavor-text > b {
+.flavor-text>strong,
+.flavor-text>b {
     text-shadow: var(--pf2e-text-shadow);
     color: var(--pf2e-body-primary);
 }
@@ -1367,7 +1384,8 @@ div#scrollToBottom:hover {
 
 .pf2e-pd-card .flat-check-failure {
     text-rendering: optimizeLegibility;
-    background-color: #ff4500;    border-radius: 2px;
+    background-color: #ff4500;
+    border-radius: 2px;
     box-shadow: inset 0 0 0 1px rgb(0 0 0 / 50%);
     color: white;
     font-family: var(--sans-serif);
@@ -1394,8 +1412,40 @@ div#scrollToBottom:hover {
     text-transform: uppercase;
 }
 
-.flavor-text div.degree-of-success .success:not([data-visibility=gm]) {
+
+.chat-message .degree-of-success .criticalFailure,
+.chat-message .degree-of-success .failure {
+    color: red;
+}
+
+.chat-message .degree-of-success .success {
+    color: blue;
+}
+
+.chat-message .degree-of-success .criticalSuccess {
+    color: green;
+}
+
+
+.chat-message .degree-of-success .success:not([data-visibility=gm]) {
     color: #8080FF;
+}
+
+.chat-message .target-dc-result .adjusted-dc.decreased {
+    color: red;
+}
+
+.chat-message .target-dc-result .adjusted-dc.increased {
+    color: green;
+}
+
+.chat-message .target-dc-result .preadjusted-dc {
+    text-decoration: line-through;
+}
+
+.chat-message .result,
+.chat-message .target-dc {
+    width: 100%;
 }
 
 /* Monk's little details */
@@ -1404,7 +1454,7 @@ div#scrollToBottom:hover {
 }
 
 #chat-log .message.round-marker .message-content {
-    display:flex;
+    display: flex;
     color: white;
     text-shadow: var(--dorako-text-shadow);
     border-bottom: 1px solid wheat;
@@ -1431,12 +1481,12 @@ div#scrollToBottom:hover {
     text-shadow: none;
     /* mix-blend-mode: color-dodge; */
     /* line-height: normal; */
-  }
+}
 
 
 .message .message-header.dark-text {
     background-blend-mode: luminosity;
-  }
+}
 
 .message .message-header.dark-header-text {
     color: black;
@@ -1454,31 +1504,32 @@ div#scrollToBottom:hover {
     text-shadow: var(--pf2e-shadow-is-light);
     color: black;
 }
-.message .message-header.dark-header-text .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+
+.message .message-header.dark-header-text .message-sender[data-visibility=gm]:is(div, em, h4, p, span, strong) {
     text-shadow: var(--pf2e-shadow-is-light);
-    background-color: hsla(0,0%,50%,50%);
+    background-color: hsla(0, 0%, 50%, 50%);
     /* mix-blend-mode: lighten; */
 }
 
-.message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div,em,h4,p,span,strong) {
+.message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div, em, h4, p, span, strong) {
     text-shadow: var(--pf2e-shadow-is-dark);
-    background-color: hsla(0,0%,50%,50%);
+    background-color: hsla(0, 0%, 50%, 50%);
     /* mix-blend-mode: lighten; */
     color: white;
 }
 
 .message-header.light-header-text .header-meta {
     color: white;
-    background-color: hsla(0,0%,50%,40%);
-    border: 1px solid hsla(0,0%,100%,30%);
+    background-color: hsla(0, 0%, 50%, 40%);
+    border: 1px solid hsla(0, 0%, 100%, 30%);
     mix-blend-mode: screen;
 }
 
 .header-meta,
 .message-header.dark-header-text .header-meta {
-    color: hsla(0,0%,20%,100%);
-    background-color: hsla(0,0%,80%,40%);
-    border: 1px solid hsla(0,0%,30%,40%);
+    color: hsla(0, 0%, 20%, 100%);
+    background-color: hsla(0, 0%, 80%, 40%);
+    border: 1px solid hsla(0, 0%, 30%, 40%);
 }
 
 .message.dark-theme .dice-roll .dice-result .dice-tooltip .damage-type {
@@ -1486,7 +1537,7 @@ div#scrollToBottom:hover {
 }
 
 #chat-log .message.koboldworks .message-header {
-    display:none;
+    display: none;
 }
 
 .chat-message.koboldworks.turn-announcer {
@@ -1522,19 +1573,19 @@ div#scrollToBottom:hover {
 }
 
 .chat-message>.message-content .message-buttons {
- gap: 3px;
+    gap: 3px;
 }
 
 .message button {
     line-height: 20px;
     border: 1px solid var(--alt);
-    background: hsla(0, 0%, 20%,0.1);
+    background: hsla(0, 0%, 20%, 0.1);
 }
 
 .dice-roll .dice-result {
     margin-top: 5px;
 }
 
-h4 .action {
+.chat-message h4 {
     margin: 0px;
 }
