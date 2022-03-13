@@ -1337,10 +1337,10 @@ div#scrollToBottom:hover {
     color: var(--pf2e-body-primary);
 }
 
-.pf2e.chat-card .card-buttons[data-visibility=owner],
+/* .pf2e.chat-card .card-buttons[data-visibility=owner],
 .pf2e.chat-card .card-buttons .spell-attack-buttons {
     flex-direction: row;
-}
+} */
 
 .pf2e.chat-card .card-buttons-two-column {
     display: flex;

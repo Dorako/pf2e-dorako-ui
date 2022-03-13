@@ -6,8 +6,7 @@
 #hotbar .bar-controls,
 #hotbar #macro-list,
 #hotbar .macro.inactive,
-#hotbar .macro
-{
+#hotbar .macro {
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -22,8 +21,7 @@
 #hotbar #hotbar-page-controls,
 #hotbar #macro-list,
 #hotbar .macro.inactive,
-#hotbar .macro:not(.active)
-{
+#hotbar .macro:not(.active) {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
@@ -106,7 +104,7 @@
     flex-grow: 0;
 }
 
-#hotbar-page-controls .bar-controls{
+#hotbar-page-controls .bar-controls {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,17 +154,17 @@
 } */
 
 #hotbar .macro.active::before {
-  transition: box-shadow 0.5s ease-in-out;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: var(--glassy);
-  border-radius: 2px;
-  overflow: hidden;
-  pointer-events: none;
+    transition: box-shadow 0.5s ease-in-out;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--glassy);
+    border-radius: 2px;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 #hotbar .macro.active:hover::before {
@@ -177,7 +175,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0px 0px 10px rgba(220,200,100,0.5) inset, var(--glassy);
+    box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
     border-radius: 2px;
     overflow: hidden;
     pointer-events: none;
@@ -199,22 +197,30 @@
     position: absolute;
     bottom: 52px;
     width: 592px;
-    left: -32px;
+    /* left: -32px; */
     transition: unset;
     gap: 2px;
     max-height: 270px;
     overflow: visible;
 }
 
+#hotbar .macro-list {
+    margin: 0px;
+}
+
+.hotbar-page-row {
+    gap: 9px
+}
+
 .hotbar-page .action-bar {
-    gap: 10px;
+    display: contents;
 }
 
 .hotbar-page .macro-list {
     flex: 0 0 518px;
     height: 100%;
     list-style: none;
-    margin:0px;
+    margin: 0px;
     padding: 0px;
     border: none;
     border-radius: 3px;

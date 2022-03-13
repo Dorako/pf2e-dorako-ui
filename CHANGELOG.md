@@ -1,5 +1,9 @@
 # 1.3.9
 
+Fixed support for Monk's hotbar. Fixed layout of Strike cards.
+
+# 1.3.9
+
 Fixed issue that caused degree-of-success colors to disappear. Added support for Damage Log's revert functionality. Removed sheet stylings, as the system changes them too frequently.
 
 # 1.3.8
