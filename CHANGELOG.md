@@ -1,4 +1,9 @@
-# 1.3.9
+# 1.3.11
+
+Made chat portraits for blind rolls default to 'mystery man' so that perception checks or initiative rolls don't spoil the visual identity.
+Made chat-portrait-hover into a setting that defaults to off.
+
+# 1.3.10
 
 Fixed support for Monk's hotbar. Fixed layout of Strike cards.
 

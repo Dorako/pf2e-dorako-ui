@@ -153,12 +153,12 @@ Hooks.once("init", async function () {
     "modules/pf2e-dorako-ui/templates/base-chat-message.html";
 
   Handlebars.registerHelper("getSpeakerImage", function (message) {
+    const blind = message.whisper && message.blind;
+    if (blind) return "icons/svg/mystery-man.svg";
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes
-          .get(speaker.scene)
-          ?.tokens?.get(speaker.token);
+        const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
         if (token) {
           return token.data.img;
         }
@@ -400,6 +400,18 @@ Hooks.once("init", async function () {
     scope: "client",
     config: true,
     default: true,
+    type: Boolean,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "chat-portrait-hover", {
+    name: "... and make portraits larger on hover?",
+    hint: "Works best if you mouse-over from the left.",
+    scope: "client",
+    config: true,
+    default: false,
     type: Boolean,
     onChange: () => {
       debouncedReload();
@@ -778,6 +790,8 @@ Hooks.once("init", async function () {
       injectCSS("chat-blind-whisper");
     if (game.settings.get("pf2e-dorako-ui", "chat-portrait-border"))
       injectCSS("chat-portrait-border");
+    if (game.settings.get("pf2e-dorako-ui", "chat-portrait-hover"))
+      injectCSS("chat-portrait-hover");
     if (game.settings.get("pf2e-dorako-ui", "compact-ui"))
       injectCSS("compact-ui");
     if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");

@@ -670,13 +670,6 @@ message-content .chat-damage-buttons button {
     border-radius: 50%;
 }
 
-.portrait-wrapper:hover {
-    transition: transform 0.35s ease-in-out, filter 0.35s ease-in-out;
-    transform: scale(4) translate(16px, 16px);
-    filter: drop-shadow(0px 0px 10px black);
-    z-index: 1;
-}
-
 .portrait {
     border-radius: 50%;
     height: var(--chat-portrait-size);
