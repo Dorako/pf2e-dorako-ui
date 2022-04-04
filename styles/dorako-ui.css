@@ -1,6 +1,5 @@
 :root {
     --border-width: 1px;
-    --hotbar-height: 62px;
     --header-color: #fff;
     --header-bg: var(--primary);
     --body-padding: 0.0em 0.0em 0em 0em;
@@ -18,20 +17,20 @@
     --whisper-bg: #E3E3FF;
 
     --dorako-vibrancy: none;
-        /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
+    /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
     /* --dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
     --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px); */
 
     --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
-    --glassy: 
-    0px 0px 2px rgba(255, 255, 255, 0.4) inset, 
-    0px 0px 6px rgba(255, 255, 255, 0.2) inset, 
-     1px  1px 1px rgba(0, 0, 0, 1), 
-     1px -1px 1px rgba(0, 0, 0, 1), 
-    -1px -1px 1px rgba(0, 0, 0, 1), 
-    -1px  1px 1px rgba(0, 0, 0, 1), 
-    0px 0px 3px rgba(0, 0, 0, 1), 
-    0px 0px 4px rgba(0, 0, 0, 0.5);
+    --glassy:
+        0px 0px 2px rgba(255, 255, 255, 0.4) inset,
+        0px 0px 6px rgba(255, 255, 255, 0.2) inset,
+        1px 1px 1px rgba(0, 0, 0, 1),
+        1px -1px 1px rgba(0, 0, 0, 1),
+        -1px -1px 1px rgba(0, 0, 0, 1),
+        -1px 1px 1px rgba(0, 0, 0, 1),
+        0px 0px 3px rgba(0, 0, 0, 1),
+        0px 0px 4px rgba(0, 0, 0, 0.5);
 
 
     --primary-hue: 0;
@@ -63,13 +62,13 @@
     --dorako-text-shadow: 0px 0px 3px black;
     --dorako-box-shadow: 0px 0px 3px black;
     --dorako-radius: 3px;
-     /*transition: backdrop-filter 0.3s ease-out;*/
-     /*transition: background-color 0.3s ease-out;*/
+    /*transition: backdrop-filter 0.3s ease-out;*/
+    /*transition: background-color 0.3s ease-out;*/
 
 }
 
 button:hover, button:focus {
-    box-shadow: 0px 0px 10px rgba(245,222,179,0.2) inset;
+    box-shadow: 0px 0px 10px rgba(245, 222, 179, 0.2) inset;
 }
 
 body {
@@ -108,12 +107,12 @@ form button {
 }
 
 .sheet header.sheet-header {
-    gap:10px
+    gap: 10px
 }
 
 .sheet header.sheet-header h1 input {
-    margin:0px;
-    width:100%;
+    margin: 0px;
+    width: 100%;
 }
 
 footer.sheet-footer.flexrow {
@@ -150,7 +149,7 @@ form .notes, form .hint,
 form .notes,
 form .hint,
 form .form-group span.units,
-form .form-group.slim .form-fields > label {
+form .form-group.slim .form-fields>label {
     /* flex: 0 0 100%; */
     font-size: var(--font-size-12);
     line-height: var(--line-height-16);
@@ -163,7 +162,9 @@ input:disabled {
     color: gray;
     text-shadow: 0px 1px white;
 }
-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: darkgray;
     text-shadow: 0px 1px white;
 }
@@ -185,14 +186,14 @@ form .form-group label {
 }
 
 
-button > i {
+button>i {
     margin-right: 0px;
 }
 
 
 .window-app {
-      /* box-shadow: var(--glassy) !important; */
-      border-radius:5px !important;
+    /* box-shadow: var(--glassy) !important; */
+    border-radius: 5px !important;
 }
 
 #hotbar {
@@ -201,14 +202,14 @@ button > i {
 
 
 img {
-  border: none;
-  border-radius:0px;
+    border: none;
+    border-radius: 0px;
 }
 
 .crb-style .sheet-body .sheet-content .spell-list .item .spell-controls .spell-create {
-  display: none;
+    display: none;
 }
 
 ::placeholder {
-  text-shadow: none !important;
+    text-shadow: none !important;
 }

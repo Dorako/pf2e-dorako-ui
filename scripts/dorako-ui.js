@@ -703,6 +703,18 @@ Hooks.once("init", async function () {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "skin-combat-carousel", {
+    name: "Theme Combat Carousel?",
+    hint: "",
+    scope: "client",
+    type: Boolean,
+    default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
     name: "Theme Dice Tray module?",
     hint: "",
@@ -777,6 +789,10 @@ Hooks.once("init", async function () {
     } else if (headerStyle == "none") {
       // padding-bottom: 0px;
     }
+
+    if (game.settings.get("pf2e-dorako-ui", "skin-combat-carousel"))
+      injectCSS("combat-carousel");
+
     let theme = game.settings.get("pf2e-dorako-ui", "theme");
     if (theme == "light") {
       // do nothing

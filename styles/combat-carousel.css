@@ -1,0 +1,108 @@
+#combat-carousel .is-active-combatant.card .active-combatant-wrapper {
+    display: none;
+}
+
+#combat-carousel .splide__slide:hover .fa-dice-d20,
+#combat-carousel .fa-dice-d20 {
+    color: var(--paizo-red-bright);
+    text-shadow: var(--dorako-text-shadow);
+}
+
+#combat-carousel .splide__slider {
+    background: none;
+    padding: 5px;
+}
+
+#combat-carousel .combat-carousel-pagination.visible {
+    bottom: 0px;
+}
+
+#combat-carousel .splide__slide:hover .name {
+    top: -25px;
+}
+
+#combat-carousel .initiative input.fa-stack-1x {
+    color: var(--color-text-light-highlight);
+    font-size: large;
+}
+
+#combat-carousel .splide__slide:hover .name,
+/* #combat-carousel .name .button-tray, */
+#combat-carousel:hover .encounter-controls,
+#combat-carousel .encounter-info,
+#combat-carousel .combat-controls a,
+#combat-carousel .card {
+    background: none;
+    background-color: var(--dorako-bg-current);
+    box-shadow: var(--glassy);
+    border-radius: var(--dorako-radius);
+    border: none;
+    transition: background-color 0.15s ease-in-out;
+}
+
+#combat-carousel .splide__slide:hover .name,
+#combat-carousel .card {
+    /* background-color: var(--pf2e-color-mono-dark); */
+}
+
+#combat-carousel .combat-controls a {
+    z-index: 1;
+    background-color: var(--paizo-blue-dark);
+}
+
+#combat-carousel:hover .encounter-controls,
+#combat-carousel .encounter-info {
+    z-index: 1;
+    background-color: var(--pf2e-color-mono-dark);
+}
+
+/* #combat-carousel:hover .encounter-controls:hover,
+#combat-carousel .encounter-info:hover, */
+#combat-carousel .combat-controls a:hover {
+    background-color: var(--paizo-blue-bright);
+    transition: background-color 0.15s ease-in-out;
+}
+
+#combat-carousel .splide__slide:hover meter::after,
+#combat-carousel .drag-handle {
+    color: var(--color-text-light-highlight);
+    text-shadow: var(--dorako-text-shadow);
+    background: none;
+}
+
+#combat-carousel .initiative,
+#combat-carousel .overlay-hud .tracker-indicators,
+#combat-carousel:hover {
+    background: none;
+}
+
+#combat-carousel .card:hover,
+#combat-carousel .card {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+#combat-carousel .is-active.card {
+    background-color: var(--paizo-red);
+}
+
+#combat-carousel .is-active-combatant.card {
+    box-shadow: var(--gold-and-glow);
+    background-color: var(--paizo-blue-dark);
+}
+
+#combat-carousel .is-active.is-active-combatant.card {
+    background-color: var(--paizo-red-bright);
+}
+
+#combat-carousel .card:hover {
+    background-color: var(--paizo-red-bright);
+    transition: background-color 0.15s ease-in-out;
+}
+
+#combat-carousel .splide__slide:hover:not(.combat-round) {
+    margin: 0px;
+    margin-left: 5px;
+    margin-top: 20px;
+    transform: scale(1.0);
+}

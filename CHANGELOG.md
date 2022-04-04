@@ -1,3 +1,7 @@
+# 1.3.12
+
+Added support for Combat Carousel.
+
 # 1.3.11
 
 Made chat portraits for blind rolls default to 'mystery man' so that perception checks or initiative rolls don't spoil the visual identity.
