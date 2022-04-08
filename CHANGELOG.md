@@ -1,3 +1,7 @@
+# 1.3.13
+
+Improvements for Combat Carousel support.
+
 # 1.3.12
 
 Added support for Combat Carousel.

@@ -14,7 +14,7 @@
 }
 
 #combat-carousel .combat-carousel-pagination.visible {
-    bottom: 0px;
+    bottom: 25px;
 }
 
 #combat-carousel .splide__slide:hover .name {
@@ -68,6 +68,11 @@
     color: var(--color-text-light-highlight);
     text-shadow: var(--dorako-text-shadow);
     background: none;
+    top: 70px;
+}
+
+#combat-carousel img.overlay-effect {
+    left: initial;
 }
 
 #combat-carousel .initiative,
@@ -88,7 +93,7 @@
 
 #combat-carousel .is-active-combatant.card {
     box-shadow: var(--gold-and-glow);
-    background-color: var(--paizo-blue-dark);
+    background-color: var(--paizo-red-dark);
 }
 
 #combat-carousel .is-active.is-active-combatant.card {
@@ -105,4 +110,35 @@
     margin-left: 5px;
     margin-top: 20px;
     transform: scale(1.0);
+}
+
+#combat-carousel .splide__track {
+    padding-top: 7px;
+    margin-left: 45px;
+    margin-top: -42px;
+}
+
+#combat-carousel .avatar {
+    box-shadow: var(--gold-and-glow);
+    border-radius: 100%;
+    background-color: var(--pf2e-color-mono-dark);
+    margin-top: 20px;
+}
+
+#combat-carousel .avatar img:not(.overlay-effect) {
+    /* max-height: 70%; */
+}
+
+#combat-carousel .avatar img.overlay-effect {
+    transform: scale(0.7);
+    opacity: 1;
+}
+
+#combat-carousel .avatar .overlay-effect+img {
+    opacity: 0.5;
+}
+
+#combat-carousel .container {
+    display: flex;
+    height: initial;
 }
