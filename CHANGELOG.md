@@ -1,3 +1,7 @@
+# 1.3.14
+
+Comaptible with Combat Carousel using Actor images. Small fix for Monk's TokenBar.
+
 # 1.3.13
 
 Improvements for Combat Carousel support.

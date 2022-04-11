@@ -123,10 +123,14 @@
     border-radius: 100%;
     background-color: var(--pf2e-color-mono-dark);
     margin-top: 20px;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 15px;
 }
 
 #combat-carousel .avatar img:not(.overlay-effect) {
     /* max-height: 70%; */
+    align-self: baseline;
 }
 
 #combat-carousel .avatar img.overlay-effect {
@@ -141,4 +145,9 @@
 #combat-carousel .container {
     display: flex;
     height: initial;
+    justify-content: center;
+}
+
+#combat-carousel .avatar img {
+    max-height: unset;
 }
