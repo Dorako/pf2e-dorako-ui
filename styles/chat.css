@@ -1521,7 +1521,7 @@ div#scrollToBottom:hover {
 .header-meta,
 .message-header.dark-header-text .header-meta {
     color: hsla(0, 0%, 20%, 100%);
-    background-color: hsla(0, 0%, 80%, 40%);
+    background-color: hsla(0, 0%, 90%, 50%);
     border: 1px solid hsla(0, 0%, 30%, 40%);
 }
 

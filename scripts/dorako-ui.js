@@ -160,6 +160,7 @@ Hooks.once("init", async function () {
       if (speaker.token) {
         const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
         if (token) {
+          // return Actors.instance.get(speaker.actor).data.img;
           return token.data.img;
         }
       }
@@ -472,22 +473,21 @@ Hooks.once("init", async function () {
     },
   });
 
-  // game.settings.register('pf2e-dorako-ui', 'sheet', {
-  //     name: "Theme used for PC sheets",
-  //     hint: "",
-  //     scope: "world",
-  //     config: true,
-  //     default: "red",
-  //     type: String,
-  //     choices: {
-  //         "red": "Red (default)",
-  // 		"dark": "Dark",
-  //         "plain": "Plain"
-  //     },
-  // 	onChange: () => {
-  // 		debouncedReload();
-  // 	}
-  // });
+  game.settings.register("pf2e-dorako-ui", "sheet", {
+    name: "Theme used for PC sheets",
+    hint: "",
+    scope: "world",
+    config: true,
+    default: "red",
+    type: String,
+    choices: {
+      red: "Default",
+      dark: "Dark (@Vesselchuck)",
+    },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
 
   game.settings.register("pf2e-dorako-ui", "backdrop-filter", {
     name: "Frosted glass?",
@@ -811,8 +811,8 @@ Hooks.once("init", async function () {
     if (game.settings.get("pf2e-dorako-ui", "compact-ui"))
       injectCSS("compact-ui");
     if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
-    // setting = game.settings.get("pf2e-dorako-ui", "sheet");
-    // if (setting == "dark") injectCSS("sheet-dark");
+    setting = game.settings.get("pf2e-dorako-ui", "sheet");
+    if (setting == "dark") injectCSS("sheet-dark");
     // if (setting == "plain") injectCSS("sheet-plain");
   }
 });

@@ -45,9 +45,9 @@
     --paizo-red: hsl(var(--primary-hue), var(--primary-sat), var(--primary-lvl));
     --paizo-red-bright: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) + 10%));
 
-    --paizo-blue-dark: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) - 10%));
+    --paizo-blue-dark: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) - 15%));
     --paizo-blue: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-lvl));
-    --paizo-blue-bright: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) + 10%));
+    --paizo-blue-bright: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) + 15%));
 
     --color-shadow-highlight: var(--paizo-red);
     --color-shadow-primary: var(--paizo-blue);
@@ -196,9 +196,6 @@ button>i {
     border-radius: 5px !important;
 }
 
-#hotbar {
-    height: unset;
-}
 
 
 img {

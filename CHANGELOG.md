@@ -1,6 +1,10 @@
+# 1.3.15
+
+Dark-themed sheets are back, courtesy of @Vesselchuck. Disabling macrobar styling is better at its job. Fixed issue with centered macro bar being broken when app-ui styling was disabled.
+
 # 1.3.14
 
-Comaptible with Combat Carousel using Actor images. Small fix for Monk's TokenBar.
+Compatible with Combat Carousel using Actor images. Small fix for Monk's TokenBar.
 
 # 1.3.13
 

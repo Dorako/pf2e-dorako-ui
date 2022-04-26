@@ -238,6 +238,16 @@
     border-radius: 3px;
 }
 
+#hotbar {
+    height: unset;
+}
+
+/* Hotbar */
+#ui-bottom {
+    /* margin-left: 9px; */
+    margin-left: var(--hotbar-margin-left);
+}
+
 /* Minimal UI */
 #hotbar:hover {
     bottom: 0px;
