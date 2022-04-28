@@ -1,24 +1,24 @@
 .actor.sheet .crb-style {
-    background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
-    background-repeat: repeat-x, no-repeat;
-    background-size: auto, cover;
+  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
+  background-repeat: repeat-x, no-repeat;
+  background-size: auto, cover;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment {
-    background-color: var(--primary);
-    background-image: none;
-    height: 22px;
-    margin: 13px -13px 0 3px;
-    padding-top: 1px;
-    box-shadow: 0 0 0 1px #918c88,
-        0 0 0 2px #e1d8cf,
-        0 0 0 3px #a98f39,
-        inset 0 0 8px rgba(0, 0, 0, .5),
-        0 0 8px #000;
+  background-color: var(--primary);
+  background-image: none;
+  height: 22px;
+  margin: 13px -13px 0 3px;
+  padding-top: 1px;
+  box-shadow: 0 0 0 1px #918c88,
+    0 0 0 2px #e1d8cf,
+    0 0 0 3px #a98f39,
+    inset 0 0 8px rgba(0,0,0,.5),
+    0 0 8px #000;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment:after {
-    display: none;
+  display: none;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select,
@@ -42,8 +42,9 @@
 .crb-style .tab.spellcasting .spell-range,
 .crb-style .tab.spellcasting .spell-tradition,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .inventory .item .item-controls .item-control.item-toggle-invest,
-.crb-style .tab.pfs .reputations {
-    color: var(--text-light);
+.crb-style .tab.pfs .reputations,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .craftingEntry-list.directory-list.item-list .crafting-entry.item-container .directory-list.item-list.formula-list  .formula-level-header.formula-header .level-name h3 {
+  color: var(--text-light);
 }
 
 .crb-style .details-label,
@@ -53,36 +54,36 @@
 .crb-style .tab.character .pc h3 .fas,
 .actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls,
 .crb-style .tab.actions .item.action .action-options {
-    color: var(--sidebar-label);
+  color: var(--sidebar-label);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-controls .item-control.item-toggle-invest.active,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-controls .item-control.item-carry-type.active,
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4 {
-    color: var(--sidebar-title);
+  color: var(--sidebar-title);
 }
 
 .crb-style .tab.character hr {
-    border-top: 1px solid var(--sidebar-label);
-    border-bottom: 1px solid var(--sidebar-label);
+  border-top: 1px solid var(--sidebar-label);
+  border-bottom: 1px solid var(--sidebar-label);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character h3,
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.biography h3 {
-    border-bottom: 1px solid var(--sidebar-label);
-    color: var(--sidebar-label);
+  border-bottom: 1px solid var(--sidebar-label);
+  color: var(--sidebar-label);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .details-input,
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.biography .biography-content .editor,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 {
-    color: var(--text-light);
-    box-shadow: var(--glassy);
-    border: none;
-    border-radius: .25em;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: 14px;
+  color: var(--text-light);
+  box-shadow: var(--glassy);
+  border: none;
+  border-radius: .25em;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-background .pc_gender .details-input,
@@ -90,37 +91,37 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-background .pc_height .details-input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-background .pc_weight .details-input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-traits .pc_bonus-bulk .details-input {
-    padding-top: 3px;
+  padding-top: 3px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-background .pc_ethnicity .details-input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-background .pc_nationality .details-input {
-    padding-top: 4px;
+  padding-top: 4px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .character-abilities .ability-scores .ability .details-input {
-    border-radius: 0px;
-    box-shadow: var(--gold-and-glow);
+  border-radius: 0px;
+  box-shadow: var(--gold-and-glow);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_gender .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_age .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_height .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_weight .details-label {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_deity .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_ethnicity .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_nationality .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .character-abilities .ability-scores .ability .details-label.ability-name {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_land-speed .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_size .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-traits .pc.pc_key-ability.dropdown .details-label {
-    margin-bottom: -1px;
+  margin-bottom: -1px;
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.character .character-traits .pc.pc_bonus-bulk .details-label,
@@ -128,50 +129,50 @@
 .crb-style .pc_senses .details-label,
 .crb-style .pc_languages .details-label,
 .crb-style .pc_traits .details-label {
-    margin-bottom: -2px;
+  margin-bottom: -2px;
 }
 
 .crb-style .sheet-body .sheet-content .tag_alt,
 .crb-style .item-properties .tag {
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .actor.sheet.character .crb-style .tab.character .character-traits .pc_key-ability select,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.pfs.active .faction select {
-    box-shadow: var(--glassy);
-    border: none;
-    background-color: unset;
-    height: 26px;
-    font-family: var(--body-serif);
-    font-weight: 700;
-    padding-top: 7px;
+  box-shadow: var(--glassy);
+  border: none;
+  background-color: unset;
+  height: 26px;
+  font-family: var(--body-serif);
+  font-weight: 700;
+  padding-top: 7px;
 }
 
 .crb-style .character-abilities {
-    padding-top: 1px;
+  padding-top: 1px;
 }
 
 .crb-style .character-traits .edit-btn {
-    background-color: #fff;
-    color: var(--primary);
+  background-color: #fff;
+  color: var(--primary);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-mod {
-    box-shadow: var(--glassy);
-    border-radius: .25em;
-    font-size: 1.5em;
-    color: var(--sidebar-label);
+  box-shadow: var(--glassy);
+  border-radius: .25em;
+  font-size: 1.5em;
+  color: var(--sidebar-label);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-name input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-name input:hover {
-    color: var(--text-light) !important;
-    box-shadow: var(--glassy);
-    border-radius: .25em;
-    border: none;
-    background-color: unset;
-    padding-left: 4px;
-    padding-right: 4px;
+  color: var(--text-light) !important;
+  box-shadow: var(--glassy);
+  border-radius: .25em;
+  border: none;
+  background-color: unset;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .item.feat-item:nth-child(odd),
@@ -181,39 +182,45 @@
 .actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list li:nth-child(odd),
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-item:nth-child(odd),
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-level-header:nth-child(odd) {
-    background-color: rgba(120, 100, 82, .3);
+  background-color: rgba(120,100,82,.3);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography input {
-    color: var(--text-light);
-    box-shadow: var(--glassy);
-    border-radius: .25em;
-    border: none;
-    background-color: unset;
+  color: var(--text-light);
+  box-shadow: var(--glassy);
+  border-radius: .25em;
+  border: none;
+  background-color: unset;
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .spell-list .item .item-summary,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-item .item-summary {
-    background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
-    background-size: cover;
-    background-image: var(--bg-current);
-    background-color: var(--blind-bg);
-    background-blend-mode: luminosity;
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-entry .formula-list .formula-item .item-summary,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-item .item-summary,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-level-header .item-summary {
+  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
+  background-size: cover;
+  background-image: var(--bg-current);
+  background-color: var(--blind-bg);
+  background-blend-mode: luminosity;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list ol.item-list li.item.temporary-item {
+  background-color: rgba(0,5,255,.2);
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .spell-list .item .item-summary .item-buttons button {
-    border-bottom: none;
-    border-top: none;
-    box-shadow: var(--glassy);
-    border-radius: .25em;
+  border-bottom: none;
+  border-top: none;
+  box-shadow: var(--glassy);
+  border-radius: .25em;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-summary {
-    background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
-    background-size: cover;
-    background-image: var(--bg-current);
-    background-color: var(--blind-bg);
-    background-blend-mode: luminosity;
+  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
+  background-size: cover;
+  background-image: var(--bg-current);
+  background-color: var(--blind-bg);
+  background-blend-mode: luminosity;
 }
 
 .actor.sheet.character .crb-style .perception-prof .pf-rank,
@@ -222,15 +229,15 @@
 .actor.sheet.character .crb-style .spellcasting-prof .pf-rank,
 .actor.sheet .crb-style aside .sidebar .armor-class .shield-stats ol li .data-value,
 .actor.sheet .crb-style aside .sidebar .initiative-select select {
-    border: none;
-    padding-top: 3px;
-    padding-bottom: 2px;
-    border-radius: .25em;
-    box-shadow: var(--glassy);
+  border: none;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  border-radius: .25em;
+  box-shadow: var(--glassy);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .inventory.item-container .encumbrance .encumbrance-light-bulk-overflow {
-    text-shadow: var(--pf2e-shadow-is-dark);
+  text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 .actor.sheet.character .crb-style .actions .actions-tabs-wrapper .actions-panels .actions-panel.active .actions-options.item-list,
@@ -239,7 +246,7 @@
 .actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .skills-list .skill,
 .actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .lores-list .skill,
 .actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .combat-list .skill {
-    border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .actor.sheet.character .crb-style .sheet-content .spell-list .item .item-name h4:hover,
@@ -267,10 +274,10 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.expanded h4,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id,
 .crb-style .tab.spellcasting .directory-list .item.item-container.spellcasting-entry .action-header .skill-name.prepared-toggle .fas:hover {
-    color: var(--sidebar-title);
-    mix-blend-mode: unset;
-    filter: none;
-    text-shadow: var(--pf2e-shadow-is-dark);
+  color: var(--sidebar-title);
+  mix-blend-mode: unset;
+  filter: none;
+  text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 i:hover,
@@ -280,80 +287,80 @@
 .actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls .item-control.toggle-unready-strikes:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control.toggle-hidden-actions:hover,
 .crb-style .tab.actions .item.action .action-options:hover {
-    color: var(--paizo-red-bright);
-    mix-blend-mode: unset;
-    filter: none;
-    text-shadow: var(--pf2e-shadow-is-dark);
+  color: var(--paizo-red-bright);
+  mix-blend-mode: unset;
+  filter: none;
+  text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 .actor.sheet.character .sheet-content .tab.proficiencies.active .overflow-list.proficiencies-pane.stroke-header .skills-list .skill h1:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-score:hover {
-    color: var(--sidebar-label);
-    mix-blend-mode: none;
-    filter: none;
-    text-shadow: var(--pf2e-shadow-is-dark);
+  color: var(--sidebar-label);
+  mix-blend-mode: none;
+  filter: none;
+  text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-nav .tab {
-    box-shadow: var(--glassy);
+  box-shadow: var(--glassy);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike button:not(:disabled),
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-summary .item-buttons button,
 .actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell,
 .actor.sheet.character .crb-style .tags .tag_transparent.tag {
-    box-shadow: var(--glassy);
-    border-radius: .25em;
-    border: none;
+  box-shadow: var(--glassy);
+  border-radius: .25em;
+  border: none;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions button:not(:disabled) {
-    color: var(--text-light);
-    box-shadow: var(--glassy);
-    border-radius: .25em;
-    border: none;
-    height: 20.5px;
-    background-color: var(--alt)
+  color: var(--text-light);
+  box-shadow: var(--glassy);
+  border-radius: .25em;
+  border: none;
+  height: 20.5px;
+  background-color: var(--alt)
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions.weapon-drawn {
-    padding: 6px 0px 0px 5px;
+  padding: 6px 0px 0px 5px;
 }
 
 .actor.sheet.character .crb-style .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.strikes-list .item.action.strike.expandable .auxiliary-actions button:hover,
 .actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell:hover {
-    text-shadow: var(--pf2e-shadow-is-light);
-    box-shadow: none;
+  text-shadow: var(--pf2e-shadow-is-light);
+  box-shadow: none;
 }
 
 [data-pf2-check],
 a.entity-link,
 a.inline-roll {
-    color: black;
+  color: black;
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list .item.action.strike.expandable.ready {
-    padding-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list .item.action.strike.expandable.ready .item-summary {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .encumbrance {
-    padding-top: 8px;
-    padding-left: 2px;
+  padding-top: 8px;
+  padding-left: 2px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography.active .biography-personality .bio .details-label {
-    padding-bottom: 4px;
+  padding-bottom: 4px;
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list li .item-name .item-image {
-    height: 1.75rem;
-    margin: 2px -1px;
-    width: 1.75rem;
+  height: 1.75rem;
+  margin: 2px -1px;
+  width: 1.75rem;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/FreeAction.webp)"],
@@ -365,78 +372,87 @@ a.inline-roll {
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/ThreeActions.webp)"],
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/TwoActions.webp)"],
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/TwoThreeActions.webp)"] {
-    mix-blend-mode: lighten;
-    filter: var(--filter-dark);
-    border: 1px solid #00000000 !important;
-    box-shadow: 0 0 0 1px #00000000, 0 0 0 2px #00000000, inset 0 0 4px #00000000 !important;
+  mix-blend-mode: lighten;
+  filter: var(--filter-dark);
+  border: 1px solid #00000000 !important;
+  box-shadow: 0 0 0 1px #00000000,0 0 0 2px #00000000,inset 0 0 4px #00000000 !important;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .actions-title .button-group.tags .skill-action.tag.variant-strike {
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input {
-    color: var(--text-light);
-    box-shadow: var(--glassy);
-    border-radius: .25em;
-    background-color: unset;
-    margin-left: -10px;
-    margin-right: -25px;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: 14px;
-    font-weight: 700;
-    padding-top: 4px;
+  color: var(--text-light);
+  box-shadow: var(--glassy);
+  border-radius: .25em;
+  background-color: unset;
+  margin-left: -10px;
+  margin-right: -25px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 4px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .action-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .pf-add-item-row a,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-entry .action-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .action-header {
-    border-radius: .25em;
-    box-shadow: var(--glassy);
+  border-radius: .25em;
+  box-shadow: var(--glassy);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting.crafting-pane.active .craftingEntry-list.directory-list.item-list .crafting-entry.item-container.item .daily-crafting {
+  background-color: var(--secondary);
+  border-radius: .25em;
+  box-shadow: var(--glassy);
+  border: none;
+  color: var(--text-light);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control.toggle-hidden-actions {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-summary .item-description [data-pf2-action] {
-    color: black;
+  color: black;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-summary .item-description h2 {
-    color: var(--sidebar-label);
-    border-bottom: 1px solid var(--sidebar-label);
+  color: var(--sidebar-label);
+  border-bottom: 1px solid var(--sidebar-label);
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
-    border-image: linear-gradient(90deg, var(--sidebar-label), var(--sidebar-label)) 1 repeat;
+  border-image: linear-gradient(90deg,var(--sidebar-label),var(--sidebar-label)) 1 repeat;
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover {
-    color: var(--sidebar-title);
-    filter: unset !important;
+  color: var(--sidebar-title);
+  filter: unset !important;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike {
-    border: 1px solid var(--body);
-    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, .5);
-    height: 32px;
-    width: 32px;
+  border: 1px solid var(--body);
+  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
+  height: 32px;
+  width: 32px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list:not(.skill-action-list, .strikes-list) .item.action .item-name.rollable .item-image {
-    mix-blend-mode: lighten;
-    filter: var(--filter-dark);
-    border: 1px solid #00000000 !important;
-    box-shadow: 0 0 0 1px #00000000, 0 0 0 2px #00000000, inset 0 0 4px #00000000 !important;
-    height: 32px;
-    width: 32px;
+  mix-blend-mode: lighten;
+  filter: var(--filter-dark);
+  border: 1px solid #00000000 !important;
+  box-shadow: 0 0 0 1px #00000000,0 0 0 2px #00000000,inset 0 0 4px #00000000 !important;
+  height: 32px;
+  width: 32px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.pfs section.level-bump .toggle:after {
-    color: var(--text-light);
-    content: "OFF";
-    right: 2px;
+  color: var(--text-light);
+  content: "OFF";
+  right: 2px;
 }
