@@ -1,3 +1,7 @@
+# 1.3.16
+
+Update to dark mode, courtesy of @Vesselchuck. Made clickability of system buttons more obvious when hovered.
+
 # 1.3.15
 
 Dark-themed sheets are back, courtesy of @Vesselchuck. Disabling macrobar styling is better at its job. Fixed issue with centered macro bar being broken when app-ui styling was disabled.
