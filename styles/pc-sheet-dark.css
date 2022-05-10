@@ -59,7 +59,8 @@
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-controls .item-control.item-toggle-invest.active,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-controls .item-control.item-carry-type.active,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4 {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover {
   color: var(--tertiary);
 }
 
@@ -363,21 +364,6 @@ a.inline-roll {
   width: 1.75rem;
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/FreeAction.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/OneAction.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/OneThreeActions.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/OneTwoActions.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/Passive.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/Reaction.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/ThreeActions.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/TwoActions.webp)"],
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike[style*="background-image: url(systems/pf2e/icons/actions/TwoThreeActions.webp)"] {
-  mix-blend-mode: lighten;
-  filter: var(--filter-dark);
-  border: 1px solid #00000000 !important;
-  box-shadow: 0 0 0 1px #00000000,0 0 0 2px #00000000,inset 0 0 4px #00000000 !important;
-}
-
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .actions-title .button-group.tags .skill-action.tag.variant-strike {
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
@@ -430,23 +416,9 @@ a.inline-roll {
   border-image: linear-gradient(90deg,var(--tertiary-dark),var(--tertiary-dark)) 1 repeat;
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover {
-  color: var(--tertiary);
-  filter: unset !important;
-}
-
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike {
-  border: 1px solid var(--body);
-  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
-  height: 32px;
-  width: 32px;
-}
-
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list:not(.skill-action-list, .strikes-list) .item.action .item-name.rollable .item-image {
-  mix-blend-mode: lighten;
-  filter: var(--filter-dark);
-  border: 1px solid #00000000 !important;
-  box-shadow: 0 0 0 1px #00000000,0 0 0 2px #00000000,inset 0 0 4px #00000000 !important;
+  box-shadow: var(--gold-and-glow);
   height: 32px;
   width: 32px;
 }
