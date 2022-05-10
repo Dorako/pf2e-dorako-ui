@@ -127,12 +127,15 @@
 .actor.sheet.familiar .familiar-senses .tag {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-/* Speed & Senses tags appearance */
+/* Conditions & Effects image appearance */
 .actor.sheet.familiar .window-content .effects .item-image {
-  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
-  border: 1px solid var(--body);
+  flex: 0 0 32px;
+  height: 32px;
+  width: 32px;
+  box-shadow: var(--gold-and-glow);
   margin-left: 4px;
   margin-right: 8px;
+  background-size: contain;
 }
 /* Conditions & Effects bottom border */
 .actor.sheet.familiar .window-content .effects .list-row {
@@ -151,39 +154,21 @@
   color: var(--text-light);
   font-family: var(--body-serif);
 }
-/* Conditions & Effects item image (action types) appearance */
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/FreeAction.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/OneAction.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/OneThreeActions.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/OneTwoActions.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/Passive.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/Reaction.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/ThreeActions.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/TwoActions.webp)"],
-.actor.sheet.familiar .effects .item-image[style*="background-image: url(systems/pf2e/icons/actions/TwoThreeActions.webp)"] {
-  mix-blend-mode: lighten;
-  filter: var(--filter-dark);
-  border: 1px solid transparent;
-  box-shadow: 0 0 0 1px transparent,0 0 0 2px transparent,inset 0 0 4px transparent;
-  width: 31px;
-  background-size: 31px 31px;
-  height: 31px;
-  margin-right: 9px
-}
-/* Conditions & Effects item image on hover appearance */
+/* Conditions & Effects image on hover appearance */
 .actor.sheet.familiar .window-content .effects .item-image:hover {
   color: var(--tertiary);
-  mix-blend-mode: unset;
-  filter: none;
-  text-shadow: var(--pf2e-shadow-is-dark);
 }
-/* Conditions & Effects comment image appearance */
+/* Conditions & Effects comment icon appearance */
 .actor.sheet.familiar .window-content .effects .item-image i {
   color: var(--tertiary);
-  margin: 6px 6px 6px 6px;
+  margin: 7px;
   font-size: 18px;
 }
 /* Traits appearance */
-/* .actor.sheet.familiar .window-content .familiar-sheet-header .header-row .traits span {
-  background-color: var(--pf2e-color-mono-dark);
-} */
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .traits span {
+  background-color: #522e2c;
+}
+/* Size traits appearance */
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .traits span[title*="Size"] {
+  background-color: #478c42;
+}
