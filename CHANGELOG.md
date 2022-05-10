@@ -1,3 +1,7 @@
+# 1.3.17
+
+New dark mode familiar sheets, courtesy of @Vesselchuck.
+
 # 1.3.16
 
 Update to dark mode, courtesy of @Vesselchuck. Made clickability of system buttons more obvious when hovered.
