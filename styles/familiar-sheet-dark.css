@@ -1,9 +1,8 @@
 /* Dark sheet background */
 .actor.sheet.familiar .window-content {
-  background: /* url(/systems/pf2e/assets/sheet/header.webp), */ var(--sheet-dark);
+  background: var(--sheet-dark);
   background-repeat: repeat-x, no-repeat;
-  background-size: /* 1295px, */ cover;
-  /* background-attachment: local; */
+  background-size: cover;
 }
 /* Text color - White */
 .actor.sheet.familiar .window-content .familiar-sheet-header .header-row .charname .familiar-title,
