@@ -107,6 +107,11 @@
   height: 27px;
   font-size: 14px;
 }
+/* Creature Type field pre-written text appearance */
+.actor.sheet.familiar .window-content .familiar-content input[type=text]::placeholder {
+  color: var(--text-light);
+  filter: brightness(0.8);
+}
 /* Total # Of Familiar Abilities field appearance */
 .actor.sheet.familiar .window-content .detail h4 {
   color: var(--text-light);
