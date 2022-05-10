@@ -489,6 +489,23 @@ Hooks.once("init", async function () {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "familiar-sheet", {
+    name: "Theme used for familiar sheets",
+    hint: "",
+    scope: "world",
+    config: true,
+    default: "red",
+    type: String,
+    choices: {
+      red: "Default",
+      dark: "Dark (@Vesselchuck)",
+      darkRedHeader: "Dark & Red header (@Vesselchuck)",
+    },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "backdrop-filter", {
     name: "Frosted glass?",
     hint: "WARNING: This setting only renders correctly on some browsers, and has a significant performance hit.",
@@ -812,7 +829,10 @@ Hooks.once("init", async function () {
       injectCSS("compact-ui");
     if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
     setting = game.settings.get("pf2e-dorako-ui", "sheet");
-    if (setting == "dark") injectCSS("sheet-dark");
+    if (setting == "dark") injectCSS("pc-sheet-dark");
+    setting = game.settings.get("pf2e-dorako-ui", "familiar-sheet");
+    if (setting == "dark") injectCSS("familiar-sheet-dark");
+    if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
     // if (setting == "plain") injectCSS("sheet-plain");
   }
 });
