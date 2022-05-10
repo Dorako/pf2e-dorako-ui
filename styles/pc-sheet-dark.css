@@ -382,6 +382,11 @@ a.inline-roll {
   padding-top: 4px;
 }
 
+.actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input::placeholder {
+  color: var(--text-light);
+  filter: brightness(0.8)
+}
+
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .action-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .pf-add-item-row a,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-entry .action-header,

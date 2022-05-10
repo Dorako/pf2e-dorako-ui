@@ -88,12 +88,22 @@
 }
 /* Sections border */
 .actor.sheet.familiar .window-content .section-container .section-body {
-  border: 1px solid var(--tertiary);
+  border: 1px solid #8b8fb4;
   border-top: unset;
+  
 }
 /* Sections headers */
 .familiar .window-content .section-container .section-header {
-  border: 1px solid var(--tertiary);
+  border: 1px solid hsla(0,0%,100%,.5);
+  background: url(../../../systems/pf2e/assets/sheet/border-pattern.webp) repeat-x top,url(../../../systems/pf2e/assets/sheet/border-pattern.webp) repeat-x bottom,var(--secondary);
+}
+/* Sections headers text */
+.familiar .window-content .section-container .section-header h4 {
+  font-family: var(--serif);
+  font-size: 1.25em;
+  text-transform: none;
+  margin-top: -6px;
+  margin-bottom: -8px;
 }
 /* Creature Type field appearance */
 .actor.sheet.familiar .window-content .familiar-content input[type=text] {
