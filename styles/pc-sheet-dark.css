@@ -81,7 +81,7 @@
   color: var(--text-light);
   box-shadow: var(--glassy);
   border: none;
-  border-radius: .25em;
+  border-radius: 3px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 14px;
@@ -160,7 +160,7 @@
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-mod {
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
   font-size: 1.5em;
   color: var(--tertiary-dark);
 }
@@ -169,7 +169,7 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-name input:hover {
   color: var(--text-light) !important;
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
   border: none;
   background-color: unset;
   padding-left: 4px;
@@ -189,7 +189,7 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography input {
   color: var(--text-light);
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
   border: none;
   background-color: unset;
 }
@@ -213,7 +213,7 @@
   border-bottom: none;
   border-top: none;
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-summary {
@@ -233,7 +233,7 @@
   border: none;
   padding-top: 3px;
   padding-bottom: 2px;
-  border-radius: .25em;
+  border-radius: 3px;
   box-shadow: var(--glassy);
 }
 
@@ -312,14 +312,14 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell,
 .actor.sheet.character .crb-style .tags .tag_transparent.tag {
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
   border: none;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions button:not(:disabled) {
   color: var(--text-light);
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
   border: none;
   height: 20.5px;
   background-color: var(--alt)
@@ -371,7 +371,7 @@ a.inline-roll {
 .actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input {
   color: var(--text-light);
   box-shadow: var(--glassy);
-  border-radius: .25em;
+  border-radius: 3px;
   background-color: unset;
   margin-left: -10px;
   margin-right: -25px;
@@ -391,13 +391,13 @@ a.inline-roll {
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .pf-add-item-row a,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-entry .action-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .action-header {
-  border-radius: .25em;
+  border-radius: 3px;
   box-shadow: var(--glassy);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting.crafting-pane.active .craftingEntry-list.directory-list.item-list .crafting-entry.item-container.item .daily-crafting {
   background-color: var(--secondary);
-  border-radius: .25em;
+  border-radius: 3px;
   box-shadow: var(--glassy);
   border: none;
   color: var(--text-light);
