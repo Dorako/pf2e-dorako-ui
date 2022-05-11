@@ -196,7 +196,7 @@
 }
 /* Containers position */
 .actor.sheet.familiar .window-content .section-container {
-  margin: 6px 1px 0;
+  margin: 6px 2px 0 1px;
 }
 /* "Familiar", "Conditions", "Effects" containers position */
 .actor.sheet.familiar .window-content .main-section .main-container {
