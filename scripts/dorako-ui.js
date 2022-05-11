@@ -499,7 +499,7 @@ Hooks.once("init", async function () {
     choices: {
       red: "Default",
       dark: "Dark (@Vesselchuck)",
-      darkRedHeader: "Dark & Red header (@Vesselchuck)",
+      darkRedHeader: "Dark + Red Header (@Vesselchuck)",
     },
     onChange: () => {
       debouncedReload();
