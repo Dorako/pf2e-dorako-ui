@@ -3,8 +3,7 @@
 /* Glass - Remove prior styling */
 
 #sidebar,
-#sidebar-tabs
-{
+#sidebar-tabs {
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -28,8 +27,7 @@
 } */
 
 /* .sidebar-popout.app */
-#sidebar.app
-{
+#sidebar.app {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
@@ -50,7 +48,7 @@
     margin: none;
 }
 
-#sidebar-tabs > .item {
+#sidebar-tabs>.item {
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     position: relative;
     flex: 0 0 21px;
@@ -74,6 +72,7 @@
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     box-shadow: var(--gold-and-glow);
 }
+
 #sidebar-tabs>.item:not(.active):hover {
     color: white;
     box-shadow: none;
@@ -108,23 +107,26 @@ nav.damage-log-nav .item.active {
     background-color: var(--paizo-blue-bright);
     border: none;
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    border-radius:5px;
+    border-radius: 5px;
 }
+
 nav.damage-log-nav .item {
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin: 2px;
     color: white;
-    border-radius:5px;
-    margin:2px;
+    border-radius: 5px;
+    margin: 2px;
     border: none;
 }
+
 nav.damage-log-nav .item:not(.active):hover {
     box-shadow: var(--gold-and-glow);
     background-color: var(--paizo-blue);
-    border: none;   
+    border: none;
     transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    border-radius:5px;
+    border-radius: 5px;
 }
+
 nav.damage-log-nav.tabs {
     flex: 0;
     margin: 0px;
@@ -142,7 +144,7 @@ nav.damage-log-nav.tabs {
     text-shadow: none;
 }
 
-#sidebar-tabs > .collapse {
+#sidebar-tabs>.collapse {
     text-align: center;
     align-self: center;
 }
@@ -163,11 +165,11 @@ nav.damage-log-nav.tabs {
 
 
 #chat-form {
-    flex: 0 0 70px;
+    flex: 0 0 var(--chat-input-height);
 }
 
 #chat-form textarea {
-    min-height: 50px;
+    min-height: var(--chat-input-height);
     height: 100%;
     background-image: none;
     border: none;

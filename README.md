@@ -22,8 +22,6 @@ Works great with:
 
 Works well with:
 
-- Sidebar, Chat and Windows Resizer
-- Module Management+
 - Combat Focus
 - Combat Enhancement
 - Bar Brawl

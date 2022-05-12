@@ -1,3 +1,7 @@
+# 1.3.18
+
+Changes to familiar sheets, courtesy of @Vesselchuck. Add setting for increasing the size of the chat box.
+
 # 1.3.17
 
 New dark mode familiar sheets, courtesy of @Vesselchuck.

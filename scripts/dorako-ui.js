@@ -419,6 +419,22 @@ Hooks.once("init", async function () {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "chat-input-height", {
+    name: "Chatbox height",
+    scope: "client",
+    type: Number,
+    default: 50,
+    range: {
+      min: 50,
+      max: 300,
+      step: 5,
+    },
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "enable-player-tags", {
     name: "Add player tags?",
     hint: "Adds a tag containing the name of the player next to the speaker.",
@@ -773,6 +789,11 @@ Hooks.once("init", async function () {
       "--chat-portrait-size",
       game.settings.get("pf2e-dorako-ui", "chat-portrait-size").toString() +
         "px"
+    );
+
+    root.setProperty(
+      "--chat-input-height",
+      game.settings.get("pf2e-dorako-ui", "chat-input-height").toString() + "px"
     );
 
     if (game.settings.get("pf2e-dorako-ui", "skin-navigation"))
