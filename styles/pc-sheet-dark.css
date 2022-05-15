@@ -1,4 +1,4 @@
-.actor.sheet.character .crb-style {
+.actor.sheet.character .window-content .crb-style {
   background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
   background-repeat: repeat-x, no-repeat;
   background-size: auto, cover;
@@ -7,14 +7,10 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment {
   background-color: var(--primary);
   background-image: none;
+  box-shadow: 0 0 0 1px #918c88,0 0 0 2px #e1d8cf,0 0 0 3px #a98f39,inset 0 0 8px rgba(0,0,0,.5),0 0 8px #000;
   height: 22px;
   margin: 13px -13px 0 3px;
   padding-top: 1px;
-  box-shadow: 0 0 0 1px #918c88,
-    0 0 0 2px #e1d8cf,
-    0 0 0 3px #a98f39,
-    inset 0 0 8px rgba(0,0,0,.5),
-    0 0 8px #000;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment:after {
@@ -43,30 +39,49 @@
 .actor.sheet.character .crb-style .tab.spellcasting .spell-tradition,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .inventory .item .item-controls .item-control.item-toggle-invest,
 .actor.sheet.character .crb-style .tab.pfs .reputations,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .craftingEntry-list.directory-list.item-list .crafting-entry.item-container .directory-list.item-list.formula-list  .formula-level-header.formula-header .level-name h3 {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .craftingEntry-list.directory-list.item-list .crafting-entry.item-container .directory-list.item-list.formula-list  .formula-level-header.formula-header .level-name h3,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .item.feat-item .item-name .item-placeholder,
+.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list .spellbook-empty h4,
+.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list .spellbook-empty h4:hover,
+.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list .spellbook-empty a,
+.spellcasting-entry.sheet .sheet-header h1,
+.spellcasting-entry.sheet .window-content .sheet-content .directory-list.item-list.spell-list .item.spell.spellbook-item,
+.spellcasting-entry.sheet ol.spell-list>li.spell-level-header,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4,
+.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls {
   color: var(--text-light);
+}
+
+.actor.sheet.character .action-header .item-controls .item-control.toggle-unready-strikes .fas[style="color: rgba(0, 0, 0, 0.4);"],
+.actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control.toggle-hidden-actions .fas[style="color: rgba(0, 0, 0, 0.4);"],
+.actor.sheet.character .crb-style .tab.actions .item.action .action-options .item-control.item-toggle-equip .fas[style="color: rgba(0, 0, 0, 0.4);"] {
+  color: var(--text-light) !important;
 }
 
 .actor.sheet.character .crb-style .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .item.feat-item .item-name .feat-slot-title,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .skill-score,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1,
-.actor.sheet.character .crb-style .tab.character .pc h3 .fas,
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls,
-.actor.sheet.character .crb-style .tab.actions .item.action .action-options {
+.actor.sheet.character .crb-style .tab.character .pc h3 .fas {
   color: var(--tertiary-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-controls .item-control.item-toggle-invest.active,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-controls .item-control.item-carry-type.active,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover,
+.spellcasting-entry.sheet ol.spell-list>li .item-name h4:hover,
+.spellcasting-entry.sheet .window-content .sheet-content .directory-list.item-list.spell-list .item-controls .item-control:hover,
+.actor.sheet.character .crb-style .tab.actions .item.action .action-options .item-control.item-toggle-equip {
   color: var(--tertiary);
 }
 
+.actor.sheet.character .action-header .item-controls .item-control.toggle-unready-strikes .fas[style="color: rgba(0, 0, 0, 0.4);"]:hover {
+  color: var(--tertiary) !important;
+}
+
 .actor.sheet.character .crb-style .tab.character hr {
-  border-top: 1px solid var(--tertiary-dark);
   border-bottom: 1px solid var(--tertiary);
+  border-top: 1px solid var(--tertiary-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character h3,
@@ -78,13 +93,14 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .details-input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .biography-content .editor,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
-  border: none;
+  background: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+  font-size: 14px;
   padding-left: 4px;
   padding-right: 4px;
-  font-size: 14px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character.active .character-background .pc_gender .details-input,
@@ -102,7 +118,7 @@
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .character-abilities .ability-scores .ability .details-input {
   border-radius: 0px;
-  box-shadow: var(--gold-and-glow);
+  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_gender .details-label,
@@ -140,12 +156,12 @@
 
 .actor.sheet.character .crb-style .tab.character .character-traits .pc_key-ability select,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.pfs.active .faction select {
-  box-shadow: var(--glassy);
+  background-color: hsla(0, 0%, 20%, 0.1);
   border: none;
-  background-color: unset;
-  height: 26px;
+  box-shadow: var(--glassy);
   font-family: var(--body-serif);
   font-weight: 700;
+  height: 26px;
   padding-top: 7px;
 }
 
@@ -159,19 +175,20 @@
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-mod {
-  box-shadow: var(--glassy);
+  background: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
-  font-size: 1.5em;
+  box-shadow: var(--glassy);
   color: var(--tertiary-dark);
+  font-size: 1.5em;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-name input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-name input:hover {
-  color: var(--text-light) !important;
-  box-shadow: var(--glassy);
+  background-color: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
   border: none;
-  background-color: unset;
+  box-shadow: var(--glassy);
+  color: var(--text-light) !important;
   padding-left: 4px;
   padding-right: 4px;
 }
@@ -182,27 +199,30 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list ol.item-list .container-held-items li:nth-of-type(2n),
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li:nth-child(odd),
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-item:nth-child(odd),
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-level-header:nth-child(odd) {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-level-header:nth-child(odd),
+.spellcasting-entry.sheet ol.spell-list>li:nth-child(odd) {
   background-color: rgba(120,100,82,.3);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography input {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
+  background-color: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
   border: none;
-  background-color: unset;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .spell-list .item .item-summary,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-entry .formula-list .formula-item .item-summary,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-item .item-summary,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-level-header .item-summary {
-  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
-  background-size: cover;
-  background-image: var(--sheet-dark);
-  background-color: var(--blind-bg);
+  background: var(--sheet-dark);
   background-blend-mode: luminosity;
+  background-color: var(--whisper-bg);
+  background-size: cover;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .spell-list .item .item-summary {
+  background: none;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list ol.item-list li.item.temporary-item {
@@ -211,30 +231,45 @@
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .spell-list .item .item-summary .item-buttons button {
   border-bottom: none;
+  border-radius: 3px;
   border-top: none;
   box-shadow: var(--glassy);
-  border-radius: 3px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-summary {
-  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
-  background-size: cover;
-  background-image: var(--sheet-dark);
-  background-color: var(--blind-bg);
+  background: var(--sheet-dark);
   background-blend-mode: luminosity;
+  background-color: var(--whisper-bg);
+  background-size: cover;
 }
 
 .actor.sheet.character .crb-style .perception-prof .pf-rank,
 .actor.sheet.character .crb-style .save-prof .pf-rank,
-.actor.sheet.character .crb-style .skill-prof .pf-rank,
 .actor.sheet.character .crb-style .spellcasting-prof .pf-rank,
 .actor.sheet.character .crb-style aside .sidebar .armor-class .shield-stats ol li .data-value,
 .actor.sheet.character .crb-style aside .sidebar .initiative-select select {
-  border: none;
-  padding-top: 3px;
-  padding-bottom: 2px;
+  background-color: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
+  border: none;
   box-shadow: var(--glassy);
+  padding-bottom: 2px;
+  padding-top: 3px;
+}
+
+.actor.sheet.character .crb-style .skill-prof .pf-rank {
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  padding: 3px 2px 2px 3px;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill .button-group h6 {
+  background: var(--alt);
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  margin: 5.5px 0 -0.25px 0;
+  padding: 2px 3px 3px 4px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .inventory.item-container .encumbrance .encumbrance-light-bulk-overflow {
@@ -258,7 +293,6 @@
 .actor.sheet.character .crb-style .actions-panel.active .actions-list.actions-list.item-list.directory-list .item.action .item-name.rollable h4:hover,
 .actor.sheet.character .actions-panel.active .actions-list.actions-list.item-list.directory-list .item.action.expanded .item-name.rollable h4,
 .actor.sheet.character .item-list .item.list-row .item-name.rollable h4:hover,
-.actor.sheet.character .list-row.expanded .item-name.rollable h4,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill .skill-name:hover,
 .actor.sheet.character .list-row .item-quantity a:hover,
 .actor.sheet.character .item-controls a:hover,
@@ -276,21 +310,16 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id,
 .actor.sheet.character .crb-style .tab.spellcasting .directory-list .item.item-container.spellcasting-entry .action-header .skill-name.prepared-toggle .fas:hover {
   color: var(--tertiary);
-  mix-blend-mode: unset;
   filter: none;
+  mix-blend-mode: unset;
   text-shadow: var(--pf2e-shadow-is-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 i:hover,
-.actor.sheet.character .item-controls .toggle-unready-strikes:hover,
-.actor.sheet.character .item-controls .item-create:hover,
-.actor.sheet.character .item-controls .action-browse:hover,
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls .item-control.toggle-unready-strikes:hover,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control.toggle-hidden-actions:hover,
 .actor.sheet.character .crb-style .tab.actions .item.action .action-options:hover {
   color: var(--paizo-red-bright);
-  mix-blend-mode: unset;
   filter: none;
+  mix-blend-mode: unset;
   text-shadow: var(--pf2e-shadow-is-dark);
 }
 
@@ -298,8 +327,8 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-score:hover {
   color: var(--tertiary-dark);
-  mix-blend-mode: none;
   filter: none;
+  mix-blend-mode: none;
   text-shadow: var(--pf2e-shadow-is-dark);
 }
 
@@ -307,32 +336,52 @@
   box-shadow: var(--glassy);
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike button:not(:disabled),
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .item-summary .item-buttons button,
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell,
 .actor.sheet.character .crb-style .tags .tag_transparent.tag {
-  box-shadow: var(--glassy);
   border-radius: 3px;
   border: none;
+  box-shadow: var(--glassy);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike button:not(:disabled),
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions select[name=ammo-used]{
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button {
+  line-height: 14px;
+  margin: 0;
+  padding: 3px 5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions button:not(:disabled) {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
+  background-color: var(--alt);
   border-radius: 3px;
   border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
   height: 20.5px;
-  background-color: var(--alt)
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions.weapon-drawn {
-  padding: 6px 0px 0px 5px;
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions {
+  padding: 4px 0px 0px 5px;
 }
 
 .actor.sheet.character .crb-style .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.strikes-list .item.action.strike.expandable .auxiliary-actions button:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell:hover {
-  text-shadow: var(--pf2e-shadow-is-light);
   box-shadow: none;
+  text-shadow: var(--pf2e-shadow-is-light);
 }
 
 [data-pf2-check],
@@ -350,15 +399,16 @@ a.inline-roll {
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .encumbrance {
-  padding-top: 8px;
   padding-left: 2px;
+  padding-top: 8px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography.active .biography-personality .bio .details-label {
   padding-bottom: 4px;
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li .item-name .item-image {
+.actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li .item-name .item-image,
+.spellcasting-entry.sheet ol.spell-list>li .item-name .item-image {
   height: 1.75rem;
   margin: 2px -1px;
   width: 1.75rem;
@@ -369,22 +419,23 @@ a.inline-roll {
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
+  background-color: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
-  background-color: unset;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 700;
   margin-left: -10px;
   margin-right: -25px;
   padding-left: 4px;
   padding-right: 4px;
-  font-size: 14px;
-  font-weight: 700;
   padding-top: 4px;
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input::placeholder {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input::placeholder,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.pfs>section.organized-play input::placeholder {
   color: var(--text-light);
-  filter: brightness(0.8)
+  filter: brightness(0.8);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .action-header,
@@ -398,8 +449,8 @@ a.inline-roll {
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting.crafting-pane.active .craftingEntry-list.directory-list.item-list .crafting-entry.item-container.item .daily-crafting {
   background-color: var(--secondary);
   border-radius: 3px;
-  box-shadow: var(--glassy);
   border: none;
+  box-shadow: var(--glassy);
   color: var(--text-light);
 }
 
@@ -412,8 +463,8 @@ a.inline-roll {
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-summary .item-description h2 {
-  color: var(--tertiary-dark);
   border-bottom: 1px solid var(--tertiary-dark);
+  color: var(--tertiary-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action,
@@ -423,7 +474,7 @@ a.inline-roll {
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list:not(.skill-action-list, .strikes-list) .item.action .item-name.rollable .item-image {
-  box-shadow: var(--gold-and-glow);
+  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
   height: 32px;
   width: 32px;
 }
@@ -432,4 +483,44 @@ a.inline-roll {
   color: var(--text-light);
   content: "OFF";
   right: 2px;
+}
+
+.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list .spellbook-empty a:hover,
+.actor.sheet.character .item-controls .toggle-unready-strikes:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control.toggle-hidden-actions:hover,
+.actor.sheet.character .crb-style .tab.actions .item.action .action-options .item-control.item-toggle-equip:hover {
+  text-shadow: 0 0 4px var(--tertiary);
+}
+
+.spellcasting-entry.sheet .window-content {
+  background: var(--sheet-dark);
+}
+
+.spellcasting-entry.sheet .window-content .sheet-header .hint {
+  color: var(--text-light);
+  text-shadow: 0 0 4px var(--tertiary);
+}
+
+.spellcasting-entry.sheet ol.spell-list>li .spell-components .tag {
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+}
+
+.spellcasting-entry.sheet ol.spell-list input.toggle-signature-spell[type=checkbox] {
+  height: 13px;
+  margin: 4px 1px 0 0;
+  width: 13px;
+}
+
+.spellcasting-entry.sheet ol.spell-list input.toggle-signature-spell[type=checkbox],
+.actor.sheet.character .tab.actions .actions-options .actions-option label input[type=checkbox],
+.actor.sheet.character .tab.crafting .crafting-options .crafting-option label input[type=checkbox] {
+  accent-color: var(--paizo-blue-bright);
+  filter: none;
+}
+
+.spellcasting-entry.sheet ol.spell-list>li .item-summary {
+  background: none;
 }
