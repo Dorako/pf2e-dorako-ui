@@ -29,8 +29,8 @@
 .actor.sheet.familiar .window-content .skills-content .skills-list .skills-name {
   color: var(--text-light);
   font-family: var(--body-serif);
-  font-weight: 600;
   font-size: var(--font-size-14);
+  font-weight: 600;
 }
 /* Familiar name field appearance */
 .actor.sheet.familiar .window-content .familiar-sheet-header .header-row .charname input {
@@ -44,24 +44,24 @@
 }
 /* "Master Actor" selection appearance */
 .actor.sheet.familiar .window-content .master-section select {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
-  border: none;
-  border-radius: 3px;
-  padding: 0 4px 0;
-  margin: 0 0 6px 7px;
-  font-weight: 700;
-  width: 181px;
   background: hsla(0, 0%, 20%, 0.1);
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+  font-weight: 700;
+  margin: 0 0 6px 7px;
+  padding: 0 4px 0;
+  width: 181px;
 }
 /* Master Spellcasting Ability selection appearance */
 .actor.sheet.familiar .window-content .familiar-content .familiar-modifier select {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
-  border: none;
-  border-radius: 3px;
-  padding: 0 4px 0;
   background: hsla(0, 0%, 20%, 0.1);
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+  padding: 0 4px 0;
 }
 /* Drop-down menus background */
 .actor.sheet.familiar .window-content select option {
@@ -71,8 +71,8 @@
 .actor.sheet.familiar .window-content .familiar-sheet-header .header-row .details-section .hp-section .hp-ac.rollable:hover,
 .actor.sheet.familiar .window-content .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves:hover {
   border-bottom: none;
-  text-shadow: 0 0 4px var(--tertiary);
   margin-bottom: 1px;
+  text-shadow: 0 0 4px var(--tertiary);
 }
 /* Attack Roll hover */
 .familiar .window-content .skills-content .skills-attack:hover {
@@ -80,8 +80,8 @@
 }
 /* Horizontal line (under details section) appearance */
 .actor.sheet.familiar .window-content .editable > hr {
-  border-top: 2px solid var(--tertiary);
   border-bottom: none;
+  border-top: 2px solid var(--tertiary);
   margin: 0 -10px 0;
 }
 /* Skills hover */
@@ -90,37 +90,37 @@
 }
 /* Horizontal line (above Attack Roll) appearance */
 .actor.sheet.familiar .window-content .skills-content hr {
-  border-top: none;
   border-bottom: 2px solid var(--tertiary);
+  border-top: none;
   width: 10em;
 }
 /* Section borders */
 .actor.sheet.familiar .window-content .section-container .section-body {
-  border: 1px solid #8b8fb4;
   border-top: none;
+  border: 1px solid #8b8fb4;
 }
 /* Section headers */
 .actor.sheet.familiar .window-content .section-container .section-header {
-  border: 1px solid hsla(0,0%,100%,.5);
   background: url(../../../systems/pf2e/assets/sheet/border-pattern.webp) repeat-x top,url(../../../systems/pf2e/assets/sheet/border-pattern.webp) repeat-x bottom,var(--secondary);
+  border: 1px solid hsla(0,0%,100%,.5);
 }
 /* Section headers text */
 .actor.sheet.familiar .window-content .section-container .section-header h4 {
   font-family: var(--serif);
   font-size: 1.25em;
-  text-transform: none;
   margin: -6px 0 -8px 3px;
+  text-transform: none;
 }
 /* "Creature Type" field appearance */
 .actor.sheet.familiar .window-content .familiar-content input[type=text] {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
-  border: none;
-  border-radius: 3px;
-  padding: 0 4px 0;
-  height: 27px;
-  font-size: 14px;
   background: hsla(0, 0%, 20%, 0.1);
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+  font-size: 14px;
+  height: 27px;
+  padding: 0 4px 0;
 }
 /* "Creature Type" field pre-written text appearance */
 .actor.sheet.familiar .window-content .familiar-content input[type=text]::placeholder {
@@ -129,13 +129,13 @@
 }
 /* "Total # Of Familiar Abilities" field appearance */
 .actor.sheet.familiar .window-content .detail h4 {
-  color: var(--text-light);
-  box-shadow: var(--glassy);
-  border: none;
-  border-radius: 3px;
-  padding: 2px 4px 0;
-  height: 27px;
   background: hsla(0, 0%, 20%, 0.1);
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  color: var(--text-light);
+  height: 27px;
+  padding: 2px 4px 0;
 }
 /* Speed & Senses tags appearance */
 .actor.sheet.familiar .familiar-senses .tag {
@@ -143,23 +143,23 @@
 }
 /* Conditions & Effects image appearance */
 .actor.sheet.familiar .window-content .effects .item-image {
+  background-size: contain;
+  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
   flex: 0 0 32px;
   height: 32px;
-  width: 32px;
-  box-shadow: var(--gold-and-glow);
   margin: 0 8px 0 4px;
-  background-size: contain;
+  width: 32px;
 }
 /* Conditions & Effects bottom border */
 .actor.sheet.familiar .window-content .effects .list-row {
+  border-bottom: solid 1px transparent;
   border-image: linear-gradient(90deg,var(--tertiary-dark),var(--tertiary-dark)) 1 repeat;
   padding: 1px 0 5px;
-  border-bottom: solid 1px transparent;
 }
 /* Conditions & Effects item summary appearance */
 .actor.sheet.familiar .window-content .effects .list-row.expanded .item-summary {
-  margin-left: 4px;
   font-family: var(--body-serif);
+  margin-left: 4px;
 }
 /* Conditions & Effects item name appearance */
 .actor.sheet.familiar .effects .item-list .item-header .item-name h4 {
@@ -173,8 +173,8 @@
 /* Conditions & Effects comment icon appearance */
 .actor.sheet.familiar .window-content .effects .item-image i {
   color: var(--tertiary);
-  margin: 7px;
   font-size: 18px;
+  margin: 7px;
 }
 /* Traits appearance */
 .actor.sheet.familiar .window-content .familiar-sheet-header .header-row .traits span {
@@ -188,11 +188,11 @@
 .actor.sheet.familiar .window-content .familiar-sheet-header img {
   box-shadow: 0 0 0 1px #918c88,0 0 0 2px #e1d8cf,0 0 0 3px #a98f39,inset 0 0 8px rgba(0,0,0,.5),0 0 8px #000;
   cursor: pointer;
+  margin: 2px -0.5px 10px -1px;
   max-height: 127px;
   object-fit: cover;
   object-position: top;
   width: 100%;
-  margin: 2px -0.5px 10px -1px;
 }
 /* Containers position */
 .actor.sheet.familiar .window-content .section-container {
@@ -217,15 +217,15 @@
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hp-ac .hpac-value,
 .actor.sheet.familiar .window-content .skills-content .skills-attack span {
   color: var(--tertiary-light);
+  font-family: var(--serif);
   font-size: 18px;
   font-weight: 400;
   white-space: nowrap;
-  font-family: var(--serif);
 }
 /* HP, AC, Perception section dimensions */
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section {
+  height: 60px;
   width: 157px;
-  height: 60px
 }
 /* Current HP hover */
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hp-ac .hpac-value input.current-hp:focus,
@@ -240,25 +240,25 @@
 }
 /* Save names appearance */
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves .save-name {
-  font-size: 12px;
-  font-weight: 400;
-  margin-bottom: 2px;
-  text-rendering: optimizeLegibility;
   color: var(--tertiary-dark);
   font-family: var(--sans-serif);
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: .05em;
+  margin-bottom: 2px;
+  text-rendering: optimizeLegibility;
 }
 /* Save values appearance */
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves .save-val {
   color: var(--tertiary-light);
-  font-size: 18px;
   font-family: var(--serif);
+  font-size: 18px;
   margin: -7px 0 -10px;
 }
 /* Save columns appearance */
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves {
-  flex: 1 1 auto;
   border-left: 1px solid rgba(255,239,189,.188);
+  flex: 1 1 auto;
 }
 /* First save column appearance */
 .actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves:first-child {
@@ -266,6 +266,6 @@
 }
 /* Attack Roll section dimensions */
 .familiar .window-content .skills-content .skills-attack {
+  margin-top: -8px;
   max-height: 25px;
-  margin-top: -8px
 }
