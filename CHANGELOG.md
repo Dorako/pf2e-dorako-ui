@@ -1,3 +1,7 @@
+# 1.3.19
+
+Updates to dark themes, courtesy of @Vesselchuck.
+
 # 1.3.18
 
 Changes to familiar sheets, courtesy of @Vesselchuck. Add setting for increasing the size of the chat box.
