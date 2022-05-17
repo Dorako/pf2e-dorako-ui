@@ -1,3 +1,7 @@
+# 1.3.20
+
+Made sheet dark mode compatible with xdy's workbench rarity, courtesy of @Vesselchuck. Fixed that caused familiar sheets to always be dark.
+
 # 1.3.19
 
 Updates to dark themes, courtesy of @Vesselchuck.

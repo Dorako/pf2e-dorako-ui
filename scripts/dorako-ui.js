@@ -852,7 +852,8 @@ Hooks.once("init", async function () {
     setting = game.settings.get("pf2e-dorako-ui", "sheet");
     if (setting == "dark") injectCSS("pc-sheet-dark");
     setting = game.settings.get("pf2e-dorako-ui", "familiar-sheet");
-    if (setting == "dark" || "darkRedHeader") injectCSS("familiar-sheet-dark");
+    if (setting == "dark" || setting == "darkRedHeader")
+      injectCSS("familiar-sheet-dark");
     if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
     // if (setting == "plain") injectCSS("sheet-plain");
   }
