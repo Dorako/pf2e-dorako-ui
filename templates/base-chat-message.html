@@ -7,14 +7,10 @@
         {{#if (showSpeakerImage message)}}
         <div class="portrait-and-name" style="display: flex; gap:5px">
             <div class="portrait-wrapper">
-            {{#if (useVideoForSpeakerImage message)}}
-                <video class="portrait" src="{{getSpeakerImage message}}" autoplay muted loop />
-            {{else}}
-            <img class="portrait" src="{{getSpeakerImage message}}" />
-            {{/if}}
+            <img class="portrait {{determineImageKind message}}" src="{{getSpeakerImage message}}" />
         </div>
         {{/if}}
-        <div class="sender-wrapper">
+        <div class="sender-wrapper {{determineImageKind message}}">
             <h4 class="message-sender">{{alias}}</h4>
         </div>
         </div>

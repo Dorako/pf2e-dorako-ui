@@ -427,7 +427,9 @@ button {
     /* border-radius: 5px 0px 0px 0px; */
 }
 
+
 .message .message-header .message-metadata {
+    flex: 1;
     align-items: center;
     justify-content: flex-end;
     display: flex;
@@ -667,12 +669,19 @@ message-content .chat-damage-buttons button {
     flex: none;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
 }
 
 .portrait {
-    border-radius: 50%;
     height: var(--chat-portrait-size);
+}
+
+.portrait.actor {
+    border-radius: 3px;
+}
+
+.portrait.token,
+.portrait.combatant {
+    border-radius: 50%;
 }
 
 
@@ -1027,14 +1036,22 @@ button.half-damage .fa-heart-broken::after {
 .message .message-header.light-header-text .message-sender[data-visibility=gm]:is(div, em, h4, p, span, strong) {
     background: hsla(0, 0%, 50%, 0.25);
     color: white;
+    outline-color: white;
     /* mix-blend-mode: color-dodge; */
+}
+
+[data-visibility]:is(div, em, h4, p, section, span, strong):not([data-visibility=all]) {
+    /* outline: none; */
+    outline: 1px dashed rgba(75, 74, 68, 0.5);
 }
 
 .flavor-text [data-visibility=gm] {
     margin-top: 0px;
 }
 
-
+.chat-message>.message-content .chat-damage-buttons button>i.fas {
+    left: 0px;
+}
 
 .flavor-text br {
     display: block;
@@ -1362,6 +1379,10 @@ div#scrollToBottom:hover {
     flex-direction: column;
     justify-content: left;
     align-self: center;
+}
+
+.sender-wrapper.no-img {
+    flex-direction: row;
 }
 
 .sender-wrapper .message-sender,

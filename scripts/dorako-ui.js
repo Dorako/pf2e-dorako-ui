@@ -153,107 +153,104 @@ Hooks.once("init", async function () {
     "modules/pf2e-dorako-ui/templates/base-chat-message.html";
 
   Handlebars.registerHelper("getSpeakerImage", function (message) {
-    const blind = message.whisper && message.blind;
-    if (blind) return "icons/svg/mystery-man.svg";
+    // const blind = message.whisper && message.blind;
+    // if (blind) return "icons/svg/mystery-man.svg";
+    let combatantImg;
+    let actorImg;
+    let tokenImg;
+
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
         const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
-        if (token) {
-          // return Actors.instance.get(speaker.actor).data.img;
-          return token.data.img;
-        }
+        tokenImg = token?.data.img;
       }
-
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
-        if (actor) {
-          return actor.data.img;
-        }
+        combatantImg = actor.getFlag("combat-tracker-images", "trackerImage");
+        actorImg = actor?.data.img;
       }
     }
 
-    return "icons/svg/mystery-man.svg";
+    const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+    if (main === "token") {
+      return (
+        combatantImg || tokenImg || actorImg || "icons/svg/mystery-man.svg"
+      );
+    }
+    if (main === "actor") {
+      return (
+        combatantImg || actorImg || tokenImg || "icons/svg/mystery-man.svg"
+      );
+    }
+  });
+
+  Handlebars.registerHelper("determineImageKind", function (message) {
+    let combatantImg;
+    let actorImg;
+    let tokenImg;
+
+    const speaker = message.speaker;
+    if (speaker) {
+      if (speaker.token) {
+        const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
+        tokenImg = token?.data.img;
+      }
+      if (speaker.actor) {
+        const actor = Actors.instance.get(speaker.actor);
+        combatantImg = actor.getFlag("combat-tracker-images", "trackerImage");
+        actorImg = actor?.data.img;
+      }
+    }
+
+    const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+    if (main === "token") {
+      return (
+        (combatantImg ? "combatant" : "") ||
+        (tokenImg ? "token" : "") ||
+        (actorImg ? "actor" : "")
+      );
+    }
+    if (main === "actor") {
+      return (
+        (combatantImg ? "combatant" : "") ||
+        (actorImg ? "actor" : "") ||
+        (tokenImg ? "token" : "")
+      );
+    }
+    return "no-img";
   });
 
   Handlebars.registerHelper("showSpeakerImage", function (message) {
-    const insertSpeakerImage = game.settings.get(
+    const chatPortraitSetting = game.settings.get(
       "pf2e-dorako-ui",
       "insertSpeakerImage"
     );
-    if (!insertSpeakerImage) {
-      return false;
-    }
+
+    if (chatPortraitSetting === "none") return false;
+
+    let combatantImg;
+    let actorImg;
+    let tokenImg;
 
     const speaker = message.speaker;
-    if (!speaker) {
-      return false;
-    }
-
-    let bHasImage = false;
-    if (speaker.token) {
-      const token = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-      if (token) {
-        if (bHasImage || token.data.img != null) {
-          return true;
-        }
-      }
-    }
-
-    if (speaker.actor) {
-      const actor = Actors.instance.get(speaker.actor);
-      //const actor = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-      // const tokens = actor.getActiveTokens(true, false);
-      // const token = tokens.first();
-      const token = actor.data.token.img;
-      if (actor) {
-        bHasImage = bHasImage || actor.data.img != null;
-      }
-      if (token) {
-        if (bHasImage) {
-          return true;
-        }
-      }
-    }
-
-    if (!bHasImage) {
-      return false;
-    }
-
-    return true;
-  });
-
-  Handlebars.registerHelper("useVideoForSpeakerImage", function (message) {
-    const speaker = message.speaker;
-    if (!speaker) {
-      return false;
-    } else {
-      let imageName = "";
+    if (speaker) {
       if (speaker.token) {
-        const token = game.scenes
-          .get(speaker.scene)
-          ?.tokens?.get(speaker.token);
-        if (token) {
-          imageName = token.data.img;
-        }
+        const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
+        tokenImg = token?.data.img;
       }
-
-      if (!imageName && speaker.actor) {
+      if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
-        if (actor) {
-          imageName = actor.data.img;
-        }
+        combatantImg = actor.getFlag("combat-tracker-images", "trackerImage");
+        actorImg = actor?.data.img;
       }
-
-      return (
-        imageName?.endsWith("webm") ||
-        imageName?.endsWith("mp4") ||
-        imageName?.endsWith("ogg") ||
-        false
-      );
     }
 
-    return false;
+    console.log(combatantImg);
+    console.log(actorImg);
+    console.log(tokenImg);
+
+    return combatantImg || actorImg || tokenImg;
   });
 
   Handlebars.registerHelper("getHeaderStyle", function (message) {
@@ -367,12 +364,17 @@ Hooks.once("init", async function () {
   });
 
   game.settings.register("pf2e-dorako-ui", "insertSpeakerImage", {
-    name: "Add chat portrait?",
+    name: "Chat portrait style",
     hint: "Adds the image of the speaker to the chat card.",
     scope: "client",
     config: true,
-    default: true,
-    type: Boolean,
+    default: "token",
+    type: String,
+    choices: {
+      token: "Prefer token image",
+      actor: "Prefer actor image",
+      none: "Disable",
+    },
     onChange: () => {
       debouncedReload();
     },

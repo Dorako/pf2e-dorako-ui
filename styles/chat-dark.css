@@ -47,3 +47,7 @@
     color: white;
     background-color: var(--pf2e-color-mono-dark);
 }
+
+.chat-message.dark-theme a[href] {
+    color: wheat;
+}
