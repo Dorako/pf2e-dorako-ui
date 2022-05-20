@@ -1,6 +1,10 @@
+# 1.3.21
+
+Chat portrait support for Mark Pearce's PF2e Combat Tracker Images. Fixed links in dark mode chat messages.
+
 # 1.3.20
 
-Made sheet dark mode compatible with xdy's workbench rarity, courtesy of @Vesselchuck. Fixed that caused familiar sheets to always be dark.
+Made sheet dark mode compatible with xdy's workbench rarity, courtesy of @Vesselchuck. Fixed bug that caused familiar sheets to always be dark.
 
 # 1.3.19
 
