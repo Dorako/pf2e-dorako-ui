@@ -152,6 +152,8 @@ Hooks.once("init", async function () {
   CONFIG.ChatMessage.template =
     "modules/pf2e-dorako-ui/templates/base-chat-message.html";
 
+  const combatImagesActive = game.modules.get("combat-tracker-images")?.active;
+
   Handlebars.registerHelper("getSpeakerImage", function (message) {
     // const blind = message.whisper && message.blind;
     // if (blind) return "icons/svg/mystery-man.svg";
@@ -167,7 +169,9 @@ Hooks.once("init", async function () {
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
-        combatantImg = actor.getFlag("combat-tracker-images", "trackerImage");
+        combatantImg = combatImagesActive
+          ? actor.getFlag("combat-tracker-images", "trackerImage")
+          : null;
         actorImg = actor?.data.img;
       }
     }
@@ -198,7 +202,9 @@ Hooks.once("init", async function () {
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
-        combatantImg = actor.getFlag("combat-tracker-images", "trackerImage");
+        combatantImg = combatImagesActive
+          ? actor.getFlag("combat-tracker-images", "trackerImage")
+          : null;
         actorImg = actor?.data.img;
       }
     }
@@ -241,7 +247,9 @@ Hooks.once("init", async function () {
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
-        combatantImg = actor.getFlag("combat-tracker-images", "trackerImage");
+        combatantImg = combatImagesActive
+          ? actor.getFlag("combat-tracker-images", "trackerImage")
+          : null;
         actorImg = actor?.data.img;
       }
     }

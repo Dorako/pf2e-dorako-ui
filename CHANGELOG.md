@@ -1,3 +1,7 @@
+# 1.3.22
+
+Fixed chat messages not showing up if PF2e Combat Tracker Images was not present.
+
 # 1.3.21
 
 Chat portrait support for Mark Pearce's PF2e Combat Tracker Images. Fixed links in dark mode chat messages.
