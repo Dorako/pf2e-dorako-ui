@@ -1,3 +1,7 @@
+# 1.3.23
+
+Fixed damage-taken and healing-received messages not showing.
+
 # 1.3.22
 
 Fixed chat messages not showing up if PF2e Combat Tracker Images was not present.

@@ -19,6 +19,7 @@ Works great with:
 - Polyglot
 - Damage Log
 - Combat Carousel
+- PF2E Combat Tracker Images
 
 Works well with:
 

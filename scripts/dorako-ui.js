@@ -164,7 +164,9 @@ Hooks.once("init", async function () {
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
+        const token = game.scenes
+          .get(speaker.scene)
+          ?.tokens?.get(speaker.token);
         tokenImg = token?.data.img;
       }
       if (speaker.actor) {
@@ -197,7 +199,9 @@ Hooks.once("init", async function () {
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
+        const token = game.scenes
+          .get(speaker.scene)
+          ?.tokens?.get(speaker.token);
         tokenImg = token?.data.img;
       }
       if (speaker.actor) {
@@ -242,7 +246,9 @@ Hooks.once("init", async function () {
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes.get(speaker.scene).tokens?.get(speaker.token);
+        const token = game.scenes
+          .get(speaker.scene)
+          ?.tokens?.get(speaker.token);
         tokenImg = token?.data.img;
       }
       if (speaker.actor) {
@@ -259,6 +265,24 @@ Hooks.once("init", async function () {
     console.log(tokenImg);
 
     return combatantImg || actorImg || tokenImg;
+  });
+
+  Handlebars.registerHelper("showHeader", function (message) {
+    const headerStyle = game.settings.get(
+      "pf2e-dorako-ui",
+      "insertSpeakerImage"
+    );
+
+    if (headerStyle === "none") return false;
+
+    const speaker = message.speaker;
+    if (
+      speaker &&
+      speaker.token &&
+      game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
+    ) {
+      return true;
+    }
   });
 
   Handlebars.registerHelper("getHeaderStyle", function (message) {
@@ -314,7 +338,7 @@ Hooks.once("init", async function () {
     }
   });
 
-  Handlebars.registerHelper("getTitleStyle", function (message) {
+  Handlebars.registerHelper("isUsingHeaderTint", function (message) {
     const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
     if (headerStyle === "tint") {
       return true;
