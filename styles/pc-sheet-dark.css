@@ -392,7 +392,9 @@
 
 [data-pf2-check],
 a.entity-link,
-a.inline-roll {
+a.inline-roll,
+[data-pf2-action],
+[data-pf2-effect-area] {
   color: black;
 }
 
@@ -557,4 +559,9 @@ a.inline-roll {
 }
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory.item-container .item-name .xdy-pf2e-workbench-rarity-unique:hover {
   text-shadow: 1px 0 0 var(--nethys-unique), -1px 0 0 var(--nethys-unique), 0 1px 0 var(--nethys-unique), 0 -1px 0 var(--nethys-unique), 1px 1px var(--nethys-unique), -1px -1px 0 var(--nethys-unique), 1px -1px 0 var(--nethys-unique), -1px 1px 0 var(--nethys-unique);
+}
+
+.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-summary .framing, .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-summary .title {
+  color: var(--tertiary-dark);
+  border-bottom: 1px solid var(--tertiary-dark);
 }
