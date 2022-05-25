@@ -1,3 +1,7 @@
+# 1.3.24
+
+Fixed timestamps not updating. Fixed images failing to load on foundry instances with a route prefix. Minor update to dark mode sheets courtesy of @Vesselchuck.
+
 # 1.3.23
 
 Fixed damage-taken and healing-received messages not showing.

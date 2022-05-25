@@ -5,10 +5,10 @@
 
 #controls ol .scene-control,
 #controls ol .control-tool,
-#controls ol.control-tools > li.active, #controls ol.control-tools > li:hover,
-#controls ol.control-tools > li,
-#controls ol.control-tools > li.toggle,
-#controls ol.control-tools > li.toggle.active,
+#controls ol.control-tools>li.active, #controls ol.control-tools>li:hover,
+#controls ol.control-tools>li,
+#controls ol.control-tools>li.toggle,
+#controls ol.control-tools>li.toggle.active,
 #controls ol .control-tool.toggle,
 #controls ol .control-tool.toggle.active,
 #controls ol .control-tool.active,
@@ -17,10 +17,9 @@
 #controls ol .control-tool:hover,
 #controls ol .scene-control:hover,
 
-#controls ol.control-tools > li.toggle:hover,
+#controls ol.control-tools>li.toggle:hover,
 #darkness-adjuster .window-content,
-#darkness-adjuster
-{
+#darkness-adjuster {
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -40,15 +39,14 @@
 #controls ol .control-tool.toggle:hover,
 #controls ol .control-tool.toggle.active,
 #controls ol .control-tool.toggle.active:hover,
-#controls ol.control-tools > li,
-#controls ol.control-tools > li.active,
-#controls ol.control-tools > li:hover,
-#controls ol.control-tools > li.active:hover,
-#controls ol.control-tools > li.toggle:hover,
-#controls ol.control-tools > li.toggle.active,
+#controls ol.control-tools>li,
+#controls ol.control-tools>li.active,
+#controls ol.control-tools>li:hover,
+#controls ol.control-tools>li.active:hover,
+#controls ol.control-tools>li.toggle:hover,
+#controls ol.control-tools>li.toggle.active,
 #controls ol.sub-controls .control-tool.toggle,
-#darkness-adjuster .window-content
-{
+#darkness-adjuster .window-content {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
@@ -65,13 +63,14 @@
 #controls {
     padding-top: 0px;
     margin-top: var(--edge-margin);
-    margin-left: var(--edge-margin);;
+    margin-left: var(--edge-margin);
+    ;
     transition: unset;
     overflow: visible;
     padding: 0px;
 }
 
-#controls ol.control-tools > li {
+#controls ol.control-tools>li {
     margin-bottom: 5px;
     margin-right: 5px;
 }
@@ -88,13 +87,6 @@
     margin: 0px 0px 0px var(--edge-margin);
 }
 
-/* #controls ol .control-tool.toggle,
-#controls ol .control-tool.toggle:hover,
-#controls ol .control-tool.toggle.active {
-    background-image: var(--pf2e-nav-inactive);
-    background-size: contain;
-} */
-
 #controls ol .scene-control,
 #controls ol .control-tool {
     transition: backdrop-filter 0.15s ease-out;
@@ -103,8 +95,8 @@
     text-shadow: var(--dorako-text-shadow);
 }
 
-#controls ol.control-tools > li.active,
-#controls ol.control-tools > li:hover,
+#controls ol.control-tools>li.active,
+#controls ol.control-tools>li:hover,
 #controls ol .scene-control.active,
 #controls ol .scene-control:hover {
     background-color: var(--paizo-red);
@@ -129,7 +121,7 @@
     /* backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active); */
 }
 
-#controls ol.control-tools > li.toggle:hover,
+#controls ol.control-tools>li.toggle:hover,
 #controls ol.sub-controls .control-tool.toggle.active {
     background-color: var(--paizo-blue-bright);
     /* backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active); */
@@ -170,7 +162,8 @@
     box-sizing: content-box;
     font-size: unset;
     line-height: unset;
-    box-shadow: none;;
+    box-shadow: none;
+    ;
     margin: 0px;
     text-align: center;
     border: none;
@@ -185,7 +178,7 @@
     border: unset;
     border-bottom: unset;
     box-shadow: none;
-    background:none;
+    background: none;
 }
 
 #terrainlayer-tools .control-tools .li {

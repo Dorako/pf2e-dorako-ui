@@ -1,5 +1,5 @@
 <li class="chat-message message flexcol {{cssClass}} {{baseTheme}} " data-message-id="{{message._id}}">
-    {{#if (showHeader message)}}
+    {{!-- {{#if (showHeader message)}} --}}
         {{#if (isUsingHeaderTint message)}}
         <header class="message-header flexrow {{playerId message}}" style="background-color: {{getUserColor message}}">
         {{else}}
@@ -11,10 +11,10 @@
             <img class="portrait {{determineImageKind message}}" src="{{getSpeakerImage message}}" />
         </div>
         {{/if}}
-        <div class="sender-wrapper {{determineImageKind message}}">
+        <div class="sender-wrapper">
             <h4 class="message-sender">{{alias}}</h4>
         </div>
-        </div>
+
         <span class="message-metadata">
             <time class="message-timestamp">{{timeSince message.timestamp}}</time>
             {{#if user.isGM}}
@@ -22,7 +22,7 @@
             {{/if}}
         </span>
         </header>
-    {{/if}}
+    {{!-- {{/if}} --}}
 
         {{#if isWhisper}}
         <div class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</div>

@@ -164,10 +164,8 @@ Hooks.once("init", async function () {
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes
-          .get(speaker.scene)
-          ?.tokens?.get(speaker.token);
-        tokenImg = token?.data.img;
+        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
+          ?.data.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
@@ -199,10 +197,8 @@ Hooks.once("init", async function () {
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes
-          .get(speaker.scene)
-          ?.tokens?.get(speaker.token);
-        tokenImg = token?.data.img;
+        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
+          ?.data.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
@@ -246,10 +242,8 @@ Hooks.once("init", async function () {
     const speaker = message.speaker;
     if (speaker) {
       if (speaker.token) {
-        const token = game.scenes
-          .get(speaker.scene)
-          ?.tokens?.get(speaker.token);
-        tokenImg = token?.data.img;
+        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
+          ?.data.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
@@ -260,6 +254,8 @@ Hooks.once("init", async function () {
       }
     }
 
+    console.log({ speaker });
+    console.log(speaker.token);
     console.log(combatantImg);
     console.log(actorImg);
     console.log(tokenImg);
@@ -963,3 +959,7 @@ function enableRainbowTheme() {
   newCss.setAttribute("media", "all");
   head.insertBefore(newCss, head.lastChild);
 }
+
+//const actor = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
+// const tokens = actor.getActiveTokens(true, false);
+// const token = tokens.first();

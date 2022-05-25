@@ -36,17 +36,6 @@
 }
 
 
-/* #chat-log .message .message-header .message-sender,
-#chat-log .message .message-header .message-metadata {
-
-    background-color: var(--header-bg);
-    background-image: var(--img-red);
-    background-size: 50px;
-
-
-} */
-
-
 #chat-controls {
     margin-top: 5px;
 }
@@ -1374,11 +1363,13 @@ div#scrollToBottom:hover {
 .sender-wrapper {
     display: flex;
     gap: 3px;
-    /* align-content: center;
-    flex-wrap: wrap; */
-    flex-direction: column;
+    flex-direction: row;
     justify-content: left;
     align-self: center;
+}
+
+.portrait-wrapper+.sender-wrapper {
+    flex-direction: column;
 }
 
 .sender-wrapper.no-img {
