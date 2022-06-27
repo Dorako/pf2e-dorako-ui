@@ -254,12 +254,6 @@ Hooks.once("init", async function () {
       }
     }
 
-    console.log({ speaker });
-    console.log(speaker.token);
-    console.log(combatantImg);
-    console.log(actorImg);
-    console.log(tokenImg);
-
     return combatantImg || actorImg || tokenImg;
   });
 

@@ -1,3 +1,7 @@
+# 1.3.25
+
+Fixed offset in the new ability score manager.
+
 # 1.3.24
 
 Fixed timestamps not updating. Fixed images failing to load on foundry instances with a route prefix. Minor update to dark mode sheets courtesy of @Vesselchuck.
