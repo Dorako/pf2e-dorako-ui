@@ -213,3 +213,8 @@ img {
 ::placeholder {
     text-shadow: none !important;
 }
+
+.ability-builder-popup .window-content .background-stripes {
+    padding: 0px;
+    padding-left: 6px;
+}

@@ -5,7 +5,7 @@
 }
 
 .actor.sheet.character .window-content .crb-style {
-  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
+  background: url(../img/header.webp), var(--sheet-dark);
   background-repeat: repeat-x, no-repeat;
   background-size: auto, cover;
 }
@@ -13,7 +13,7 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment {
   background-color: var(--secondary);
   background-image: none;
-  box-shadow: 0 0 0 1px #918c88,0 0 0 2px #e1d8cf,0 0 0 3px #a98f39,inset 0 0 8px rgba(0,0,0,.5),0 0 8px #000;
+  box-shadow: 0 0 0 1px #918c88, 0 0 0 2px #e1d8cf, 0 0 0 3px #a98f39, inset 0 0 8px rgba(0, 0, 0, .5), 0 0 8px #000;
   height: 23px;
   margin: 12.5px 21px 0 3px;
   padding-bottom: 1px;
@@ -49,7 +49,7 @@
 .actor.sheet.character .crb-style .tab.spellcasting .spell-tradition,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .inventory .item .item-controls .item-control.item-toggle-invest,
 .actor.sheet.character .crb-style .tab.pfs .reputations,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .craftingEntry-list.directory-list.item-list .crafting-entry.item-container .directory-list.item-list.formula-list  .formula-level-header.formula-header .level-name h3,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .craftingEntry-list.directory-list.item-list .crafting-entry.item-container .directory-list.item-list.formula-list .formula-level-header.formula-header .level-name h3,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .item.feat-item .item-name .item-placeholder,
 .actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list .spellbook-empty h4,
 .actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list .spellbook-empty h4:hover,
@@ -128,7 +128,7 @@
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .character-abilities .ability-scores .ability .details-input {
   border-radius: 0;
-  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, .5);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_gender .details-label,
@@ -220,7 +220,7 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-item:nth-child(odd),
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .known-formulas .formula-list .formula-level-header:nth-child(odd),
 .spellcasting-entry.sheet ol.spell-list>li:nth-child(odd) {
-  background-color: rgba(120,100,82,.3);
+  background-color: rgba(120, 100, 82, .3);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography input {
@@ -245,7 +245,7 @@
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list ol.item-list li.item.temporary-item {
-  background-color: rgba(0,5,255,.2);
+  background-color: rgba(0, 5, 255, .2);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .spell-list .item .item-summary .item-buttons button {
@@ -365,7 +365,7 @@
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike button:not(:disabled),
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions select[name=ammo-used]{
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions select[name=ammo-used] {
   border-radius: 3px;
   border: none;
   box-shadow: var(--glassy);
@@ -491,12 +491,12 @@ a.inline-roll,
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
-  border-image: linear-gradient(90deg,var(--tertiary-dark),var(--tertiary-dark)) 1 repeat;
+  border-image: linear-gradient(90deg, var(--tertiary-dark), var(--tertiary-dark)) 1 repeat;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .item-image.variant-strike,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list:not(.skill-action-list, .strikes-list) .item.action .item-name.rollable .item-image {
-  box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, .5);
   height: 32px;
   width: 32px;
 }
@@ -568,9 +568,11 @@ a.inline-roll,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory.item-container .item-name .xdy-pf2e-workbench-rarity-uncommon:hover {
   text-shadow: 1px 0 0 var(--nethys-uncommon), -1px 0 0 var(--nethys-uncommon), 0 1px 0 var(--nethys-uncommon), 0 -1px 0 var(--nethys-uncommon), 1px 1px var(--nethys-uncommon), -1px -1px 0 var(--nethys-uncommon), 1px -1px 0 var(--nethys-uncommon), -1px 1px 0 var(--nethys-uncommon);
 }
+
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory.item-container .item-name .xdy-pf2e-workbench-rarity-rare:hover {
   text-shadow: 1px 0 0 var(--nethys-rare), -1px 0 0 var(--nethys-rare), 0 1px 0 var(--nethys-rare), 0 -1px 0 var(--nethys-rare), 1px 1px var(--nethys-rare), -1px -1px 0 var(--nethys-rare), 1px -1px 0 var(--nethys-rare), -1px 1px 0 var(--nethys-rare);
 }
+
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory.item-container .item-name .xdy-pf2e-workbench-rarity-unique:hover {
   text-shadow: 1px 0 0 var(--nethys-unique), -1px 0 0 var(--nethys-unique), 0 1px 0 var(--nethys-unique), 0 -1px 0 var(--nethys-unique), 1px 1px var(--nethys-unique), -1px -1px 0 var(--nethys-unique), 1px -1px 0 var(--nethys-unique), -1px 1px 0 var(--nethys-unique);
 }

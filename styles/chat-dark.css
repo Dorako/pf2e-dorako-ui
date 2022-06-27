@@ -36,9 +36,9 @@
     gap: 3px;
 }
 
-.chat-message .table-draw .table-results .table-result img.result-image {
+/* .chat-message .table-draw .table-results .table-result img.result-image {
     filter: var(--filter-dark);
-}
+} */
 
 .token-link,
 .dmgBtn-container button {
