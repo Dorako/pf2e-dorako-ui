@@ -58,7 +58,8 @@
 .spellcasting-entry.sheet .window-content .sheet-content .directory-list.item-list.spell-list .item.spell.spellbook-item,
 .spellcasting-entry.sheet ol.spell-list>li.spell-level-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4,
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls {
+.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score div {
   color: var(--text-light);
 }
 
