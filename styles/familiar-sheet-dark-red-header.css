@@ -1,6 +1,6 @@
 /* Dark sheet background with red header */
 .actor.sheet.familiar .window-content {
-  background: url(/systems/pf2e/assets/sheet/header.webp), var(--sheet-dark);
+  background: url(../img/header.webp), var(--sheet-dark);
   background-attachment: local;
   background-repeat: repeat-x, no-repeat;
   background-size: 1335px, cover;
