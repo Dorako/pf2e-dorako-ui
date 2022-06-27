@@ -11,7 +11,7 @@
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   background-image: none;
   box-shadow: 0 0 0 1px #918c88, 0 0 0 2px #e1d8cf, 0 0 0 3px #a98f39, inset 0 0 8px rgba(0, 0, 0, .5), 0 0 8px #000;
   height: 23px;
@@ -58,7 +58,8 @@
 .spellcasting-entry.sheet .window-content .sheet-content .directory-list.item-list.spell-list .item.spell.spellbook-item,
 .spellcasting-entry.sheet ol.spell-list>li.spell-level-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4,
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls {
+.actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score div {
   color: var(--text-light);
 }
 
@@ -108,7 +109,6 @@
   border: none;
   box-shadow: var(--glassy);
   color: var(--text-light);
-  font-size: 14px;
   padding-left: 4px;
   padding-right: 4px;
 }
@@ -134,15 +134,14 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_gender .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_age .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_height .details-label,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .pc_deity .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_weight .details-label {
   margin-bottom: 2px;
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .pc_deity .details-label,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_ethnicity .details-label,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .pc_nationality .details-label,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .character-abilities .ability-scores .ability .details-label.ability-name {
-  margin-bottom: 3px;
+.actor.sheet.character .crb-style .sheet-body .sheet-content .pc_nationality .details-label {
+  margin-bottom: 1px;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .pc_land-speed .details-label,
@@ -184,12 +183,22 @@
   color: var(--primary);
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-mod {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score {
+  background: hsla(0, 0%, 20%, 0.1);
+  border: none;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score input {
   background: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
   box-shadow: var(--glassy);
-  color: var(--tertiary-dark);
-  font-size: 1.5em;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id i.fas {
+  bottom: 6px;
+  font-size: var(--font-size-12);
+  left: 10px;
+  position: absolute;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-name input,
@@ -291,7 +300,8 @@
 .actor.sheet.character .crb-style .crafting.crafting-pane.active .crafting-options.item-list,
 .actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .skills-list .skill,
 .actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .lores-list .skill,
-.actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .combat-list .skill {
+.actor.sheet.character .crb-style .proficiencies.active .overflow-list.proficiencies-pane.stroke-header .combat-list .skill,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod {
   border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -317,7 +327,6 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item .item-name .item-image:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .directory-list h4:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.expanded h4,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id,
 .actor.sheet.character .crb-style .tab.spellcasting .directory-list .item.item-container.spellcasting-entry .action-header .skill-name.prepared-toggle .fas:hover {
   color: var(--tertiary);
   filter: none;
@@ -327,7 +336,7 @@
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 i:hover,
 .actor.sheet.character .crb-style .tab.actions .item.action .action-options:hover {
-  color: var(--paizo-red-bright);
+  color: var(--paizo-blue-bright);
   filter: none;
   mix-blend-mode: unset;
   text-shadow: var(--pf2e-shadow-is-dark);
@@ -335,7 +344,8 @@
 
 .actor.sheet.character .sheet-content .tab.proficiencies.active .overflow-list.proficiencies-pane.stroke-header .skills-list .skill h1:hover,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1:hover,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-score:hover {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .skill-score:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id {
   color: var(--tertiary-dark);
   filter: none;
   mix-blend-mode: unset;
@@ -570,4 +580,32 @@ a.inline-roll,
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-summary .framing, .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-summary .title {
   color: var(--tertiary-dark);
   border-bottom: 1px solid var(--tertiary-dark);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id, .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
+  color: var(--paizo-blue-bright);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character button[data-action=edit-ability-scores] {
+  border: none;
+  color: var(--tertiary-dark);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character button[data-action=edit-ability-scores] .fas.fa-edit:before {
+  margin-right: 3px;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character button[data-action=edit-ability-scores]:hover {
+  box-shadow: none;
+  color: var(--paizo-blue-bright);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
+  color: white;
+  margin: 0;
+  padding: 2px;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score {
+  margin-top: 2px;
 }
