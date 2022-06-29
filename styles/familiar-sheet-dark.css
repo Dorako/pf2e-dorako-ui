@@ -5,45 +5,42 @@
   background-size: cover;
 }
 /* Text color - White */
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .charname .familiar-title,
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .details-section,
-.actor.sheet.familiar .window-content .effects .item-list .list-row .item-header .item-control .fas,
-.actor.sheet.familiar .window-content .effects .list-row .item-summary,
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hpac-value .current-hp {
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-content .charname .familiar-title,
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-content .details-section,
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value input,
+.familiar .window-content .effects-list .item .item-controls a .fas {
   color: var(--text-light);
 }
 /* Tertiary text color */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .fas,
-.actor.sheet.familiar .window-content .effects .item-list .list-row .item-header .item-control .fas:hover,
-.actor.sheet.familiar .window-content .effects .item-list .item-header .item-name h4:hover,
-.actor.sheet.familiar .window-content .effects .list-row.expanded .item-header .item-name h4,
-.actor.sheet.familiar .window-content .skills-content .skills-attack:hover {
+.familiar .window-content .effects-list .item .item-controls a .fas:hover {
   color: var(--tertiary);
 }
 /* Tertiary dark text color */
-.actor.sheet.familiar .window-content .skills-content .skills-list .skills-score,
-.actor.sheet.familiar .window-content .detail .detail-label {
+.actor.sheet.familiar .window-content .detail .detail-label,
+.familiar .window-content .skills-content .skills-list .skill-name .score {
   color: var(--tertiary-dark);
 }
-/* Skill names appearance */
-.actor.sheet.familiar .window-content .skills-content .skills-list .skills-name {
+/* Skills appearance */
+.familiar .window-content .skills-content .skills-list .skill-name {
   color: var(--text-light);
   font-family: var(--body-serif);
   font-size: var(--font-size-14);
   font-weight: 600;
 }
+/* Skills hover */
+.actor.sheet.familiar .window-content .skills-content .skills-list .skill-name:hover {
+  border: 1px solid var(--tertiary-dark);
+}
 /* Familiar name field appearance */
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .charname input {
-  border-bottom: none;
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-content .charname input {
+  border-bottom: 1px solid transparent;
   color: var(--text-light);
   font-family: var(--serif);
   font-size: 24px;
   font-weight: 500;
-  height: 26px;
-  line-height: calc(1em + 1px);
 }
-/* "Master Actor" selection appearance */
-.actor.sheet.familiar .window-content .master-section select {
+/* Master Actor selection appearance */
+.actor.sheet.familiar .window-content .editable .familiar-sheet-header .header-content .sub-header div > select {
   background: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
   border: none;
@@ -51,8 +48,10 @@
   color: var(--text-light);
   font-weight: 700;
   margin: 0 0 6px 7px;
-  padding: 0 4px 0;
+  padding: 2px 4px 0;
   width: 181px;
+  font-family: var(--body-serif);
+  height: 26px;
 }
 /* Master Spellcasting Ability selection appearance */
 .actor.sheet.familiar .window-content .familiar-content .familiar-modifier select {
@@ -61,32 +60,28 @@
   border: none;
   box-shadow: var(--glassy);
   color: var(--text-light);
-  padding: 0 4px 0;
+  padding: 2px 4px 0;
+  height: 26px;
 }
 /* Drop-down menus background */
 .actor.sheet.familiar .window-content select option {
   background: var(--alt);
 }
-/* Perception & Saves hover */
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .details-section .hp-section .hp-ac.rollable:hover,
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves:hover {
+/* Saves hover */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .save-name:hover {
   border-bottom: none;
   margin-bottom: 1px;
-  text-shadow: 0 0 4px var(--tertiary);
+  text-shadow: 0 0 8px var(--tertiary);
 }
 /* Attack Roll hover */
 .familiar .window-content .skills-content .skills-attack:hover {
-  text-shadow: 0 0 4px var(--tertiary);
+  text-shadow: 0 0 8px var(--tertiary);
 }
 /* Horizontal line (under details section) appearance */
 .actor.sheet.familiar .window-content .editable > hr {
   border-bottom: none;
   border-top: 2px solid var(--tertiary);
   margin: 0 -10px 0;
-}
-/* Skills hover */
-.actor.sheet.familiar .window-content .skills-content .skills-list .skills-item:hover {
-  border: 1px solid var(--tertiary-dark);
 }
 /* Horizontal line (above Attack Roll) appearance */
 .actor.sheet.familiar .window-content .skills-content hr {
@@ -111,31 +106,31 @@
   margin: -6px 0 -8px 3px;
   text-transform: none;
 }
-/* "Creature Type" field appearance */
+/* Creature Type field appearance */
 .actor.sheet.familiar .window-content .familiar-content input[type=text] {
   background: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
   border: none;
   box-shadow: var(--glassy);
   color: var(--text-light);
-  font-size: 14px;
-  height: 27px;
-  padding: 0 4px 0;
+  height: 26px;
+  padding: 2px 4px 0;
 }
-/* "Creature Type" field pre-written text appearance */
+/* Creature Type field pre-written text appearance */
 .actor.sheet.familiar .window-content .familiar-content input[type=text]::placeholder {
   color: var(--text-light);
   filter: brightness(0.8);
 }
-/* "Total # Of Familiar Abilities" field appearance */
+/* Total # Of Familiar Abilities field appearance */
 .actor.sheet.familiar .window-content .detail h4 {
   background: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;
   border: none;
   box-shadow: var(--glassy);
   color: var(--text-light);
-  height: 27px;
-  padding: 2px 4px 0;
+  height: 25.5px;
+  padding: 6px 4px 0;
+  font-family: var(--body-serif);
 }
 /* Speed & Senses tags appearance */
 .actor.sheet.familiar .familiar-senses .tag {
@@ -144,44 +139,44 @@
 /* Conditions & Effects image appearance */
 .actor.sheet.familiar .window-content .effects .item-image {
   background-size: contain;
+  background-color: unset;
   box-shadow: 0 0 0 1px var(--tertiary),0 0 0 2px #9f725b,inset 0 0 4px rgba(0,0,0,.5);
   flex: 0 0 32px;
   height: 32px;
   margin: 0 8px 0 4px;
   width: 32px;
 }
-/* Conditions & Effects bottom border */
-.actor.sheet.familiar .window-content .effects .list-row {
-  border-bottom: solid 1px transparent;
-  border-image: linear-gradient(90deg,var(--tertiary-dark),var(--tertiary-dark)) 1 repeat;
+/* Conditions & Effects item position */
+.familiar .window-content .effects-list .item {
   padding: 1px 0 5px;
 }
 /* Conditions & Effects item summary appearance */
-.actor.sheet.familiar .window-content .effects .list-row.expanded .item-summary {
+.familiar .window-content .effects-list .item-summary {
   font-family: var(--body-serif);
   margin-left: 4px;
+  color: var(--text-light);
+  font-size: var(--font-size-14);
 }
 /* Conditions & Effects item name appearance */
-.actor.sheet.familiar .effects .item-list .item-header .item-name h4 {
+.familiar .window-content .effects-list .item .item-name h4 {
   color: var(--text-light);
   font-family: var(--body-serif);
 }
-/* Conditions & Effects image on hover appearance */
-.actor.sheet.familiar .window-content .effects .item-image:hover {
+/* Conditions & Effects item name hover */
+.familiar .window-content .effects-list .item .item-name h4:hover {
   color: var(--tertiary);
 }
 /* Conditions & Effects comment icon appearance */
-.actor.sheet.familiar .window-content .effects .item-image i {
+.familiar .window-content .effects-list .item .item-name .item-image:hover {
   color: var(--tertiary);
   font-size: 18px;
-  margin: 7px;
 }
 /* Traits appearance */
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .traits span {
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-content .traits span {
   background-color: #522e2c;
 }
 /* Size traits appearance */
-.actor.sheet.familiar .window-content .familiar-sheet-header .header-row .traits span[title*="Size"] {
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-content .traits span[title*="Size"] {
   background-color: #478c42;
 }
 /* Familiar portrait appearance */
@@ -198,13 +193,12 @@
 .actor.sheet.familiar .window-content .section-container {
   margin: 6px 2px 0 1px;
 }
-/* "Familiar", "Conditions", "Effects" containers position */
+/* "Familiar", "Conditions", "Effects" containers positioning */
 .actor.sheet.familiar .window-content .main-section .main-container {
   margin-left: 3px;
 }
-/* HP, AC, Perception & Master Actor text */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hp-ac .hpac-label h4,
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section > div:first-child > label > strong,
+/* Attack Roll & Master text */
+.actor.sheet.familiar .window-content .editable .familiar-sheet-header .header-content .sub-header div > label > strong,
 .actor.sheet.familiar .window-content .skills-content .skills-attack strong {
   color: var(--text-light);
   flex: 1;
@@ -213,59 +207,84 @@
   letter-spacing: .05em;
   line-height: 1;
 }
-/* HP, AC, Perception values */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hp-ac .hpac-value,
+/* HP, Dying, AC & Saves text */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .label h4,
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .ac .name,
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .save-name .name {
+  color: var(--tertiary-dark);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .05em;
+  text-rendering: optimizeLegibility;
+}
+/* Defenses positioning */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section {
+  margin-top: 8px;
+}
+/* Attack Roll value */
 .actor.sheet.familiar .window-content .skills-content .skills-attack span {
   color: var(--tertiary-light);
   font-family: var(--serif);
   font-size: 18px;
-  font-weight: 400;
-  white-space: nowrap;
 }
-/* HP, AC, Perception section dimensions */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section {
-  height: 60px;
-  width: 157px;
+/* HP section positioning */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section {
+  padding-top: 5px;
 }
-/* Current HP hover */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hp-ac .hpac-value input.current-hp:focus,
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .hp-section .hp-ac .hpac-value input.current-hp:hover {
+/* HP value hover */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value input:focus,
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value input:hover {
   border: 1px solid transparent;
+  text-shadow: 0 0 8px var(--tertiary);
   box-shadow: none;
-  text-shadow: 0 0 4px var(--tertiary);
 }
-/* Master Actor section position */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section > div:first-child {
+/* Dying hover */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value.dying-section .fas:hover,
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value.dying-section .dots.dying:hover {
+  text-shadow: 0 0 8px var(--tertiary);
+}
+/* Master Actor section positioning */
+.actor.sheet.familiar .familiar-sheet-header .header-content .details-section .master-section > div:first-child {
   margin-top: -3.5px;
 }
-/* Save names appearance */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves .save-name {
-  color: var(--tertiary-dark);
-  font-family: var(--sans-serif);
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: .05em;
-  margin-bottom: 2px;
-  text-rendering: optimizeLegibility;
-}
 /* Save values appearance */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves .save-val {
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .ac .value,
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .save-name .value {
   color: var(--tertiary-light);
   font-family: var(--serif);
   font-size: 18px;
-  margin: -7px 0 -10px;
+  margin-top: -5px;
 }
-/* Save columns appearance */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves {
-  border-left: 1px solid rgba(255,239,189,.188);
-  flex: 1 1 auto;
+/* AC column appearance */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .ac {
+  border-right: none;
+  padding-right: 0;
 }
-/* First save column appearance */
-.actor.sheet.familiar .familiar-sheet-header .header-row .details-section .master-section .saves-list .saves:first-child {
-  border-left: none;
-}
-/* Attack Roll section dimensions */
+/* Attack Roll section positioning */
 .familiar .window-content .skills-content .skills-attack {
-  margin-top: -8px;
-  max-height: 25px;
+  margin-top: -12px;
+  max-height: 25.5px;
+}
+/* AC value shield icon */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .defenses-section .defenses-list .ac .value i {
+  color: var(--text-light);
+  font-size: var(--font-size-14);
+  margin-right: 5px;
+  vertical-align: 1.5px;
+}
+/* Master & Defenses section positioning */
+.actor.sheet.familiar .window-content .editable .familiar-sheet-header .header-content .sub-header div:nth-child(2){
+  padding-top: 13.5px;
+}
+/* Defenses section positioning */
+.familiar .window-content .familiar-sheet-header .header-content .sub-header {
+  margin-bottom: 0;
+}
+/* Details section positioning */
+.actor.sheet.familiar .window-content .familiar-sheet-header .header-content .details-section {
+  margin-top: -3.5px;
+}
+/* Dying value positioning */
+.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value.dying-section {
+ margin-right: 10px;
 }
