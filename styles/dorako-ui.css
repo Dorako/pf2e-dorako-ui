@@ -218,3 +218,12 @@ img {
     padding: 0px;
     padding-left: 6px;
 }
+
+.tooltip:not(.boost) {
+    background-color: var(--pf2e-color-mono-dark);
+    box-shadow: var(--glassy);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-shadow: var(--pf2e-text-shadow-is-dark);
+}

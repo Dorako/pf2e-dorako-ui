@@ -1,3 +1,7 @@
+# 1.3.26
+
+Fixed styling of voluntary flaw boost buttons. Darkmode PC sheet and familiar sheet maintenance updates from @Vesselchuck.
+
 # 1.3.25
 
 Fixed offset in the new ability score manager.
