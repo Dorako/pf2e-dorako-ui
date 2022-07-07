@@ -2,6 +2,7 @@
   --nethys-uncommon: #c45500;
   --nethys-rare: #0c1466;
   --nethys-unique: #800080;
+  --green-light: #478c42;
 }
 
 .actor.sheet.character .window-content .crb-style {
@@ -11,7 +12,7 @@
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   background-image: none;
   box-shadow: 0 0 0 1px #918c88, 0 0 0 2px #e1d8cf, 0 0 0 3px #a98f39, inset 0 0 8px rgba(0, 0, 0, .5), 0 0 8px #000;
   height: 23px;
@@ -334,9 +335,8 @@
   text-shadow: var(--pf2e-shadow-is-dark);
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 i:hover,
-.actor.sheet.character .crb-style .tab.actions .item.action .action-options:hover {
-  color: var(--paizo-blue-bright);
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 i:hover {
+  color: var(--green-light);
   filter: none;
   mix-blend-mode: unset;
   text-shadow: var(--pf2e-shadow-is-dark);
@@ -530,16 +530,9 @@ a.inline-roll,
   color: var(--text-light);
 }
 
-.spellcasting-entry.sheet ol.spell-list input.toggle-signature-spell[type=checkbox] {
-  height: 13px;
-  margin: 4px 1px 0 0;
-  width: 13px;
-}
-
-.spellcasting-entry.sheet ol.spell-list input.toggle-signature-spell[type=checkbox],
 .actor.sheet.character .tab.actions .actions-options .actions-option label input[type=checkbox],
 .actor.sheet.character .tab.crafting .crafting-options .crafting-option label input[type=checkbox] {
-  accent-color: var(--paizo-blue-bright);
+  accent-color: var(--green-light);
   filter: none;
 }
 
@@ -582,8 +575,9 @@ a.inline-roll,
   border-bottom: 1px solid var(--tertiary-dark);
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id, .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
-  color: var(--paizo-blue-bright);
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
+  color: var(--green-light);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character button[data-action=edit-ability-scores] {
@@ -597,7 +591,7 @@ a.inline-roll,
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character button[data-action=edit-ability-scores]:hover {
   box-shadow: none;
-  color: var(--paizo-blue-bright);
+  color: var(--green-light);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
