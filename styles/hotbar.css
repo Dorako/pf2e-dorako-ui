@@ -200,6 +200,7 @@
     /* left: -32px; */
     transition: unset;
     gap: 2px;
+    z-index: -1;
     max-height: 270px;
     overflow: visible;
 }

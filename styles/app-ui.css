@@ -423,3 +423,10 @@
      transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
      box-shadow: var(--gold-and-glow);
  }
+
+ /* Storyteller module */
+ .window-app.story-sheet .window-content,
+ .window-app.story-sheet .window-header {
+     box-shadow: none;
+     background-color: transparent;
+ }

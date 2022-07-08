@@ -1,3 +1,11 @@
+# 1.3.27
+
+Added a setting for hiding chat portraits for secret GM rolls (default ON).
+Fixed Narrator tools toggle in the controls.
+Fixed a bug where Storyteller Stories could not be opened after being closed.
+Fixed a bug where tooltips/context menus were showing behind Monk's hotbar.
+Updates to PC sheet dark mode by @Vesselchuck.
+
 # 1.3.26
 
 Fixed styling of voluntary flaw boost buttons. Darkmode PC sheet and familiar sheet maintenance updates from @Vesselchuck.

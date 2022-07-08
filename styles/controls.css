@@ -28,6 +28,7 @@
     background-image: none;
 }
 
+#controls ol li.control-tool.toggle,
 #controls .app li,
 #controls ol li,
 #controls ol.sub-controls .control-tool,
@@ -110,18 +111,21 @@
     /* backdrop-filter: var(--dorako-vibrancy-active); */
 }
 
+#controls ol li.control-tool.toggle,
 #controls ol.sub-controls .control-tool.toggle {
     background-color: var(--paizo-blue-dark);
     /* backdrop-filter: var(--dorako-vibrancy); */
 }
 
+#controls ol li.control-tool.toggle:hover,
+#controls ol li.control-tool.toggle.active:hover,
 #controls ol.sub-controls .control-tool.toggle:hover,
 #controls ol.sub-controls .control-tool.toggle.active:hover {
     background-color: var(--paizo-blue);
     /* backdrop-filter: var(--dorako-vibrancy-active) var(--dorako-vibrancy-active); */
 }
 
-#controls ol.control-tools>li.toggle:hover,
+#controls ol li.control-tool.toggle.active,
 #controls ol.sub-controls .control-tool.toggle.active {
     background-color: var(--paizo-blue-bright);
     /* backdrop-filter: brightness(1.5), var(--dorako-vibrancy-active); */

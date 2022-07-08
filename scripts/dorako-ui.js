@@ -8,9 +8,9 @@
 
 // setTimeout(cleanHTML, 10000);
 
-Hooks.on("ready", async function () {
-  jQuery.fx.off = true;
-});
+// Hooks.on("ready", async function () {
+//   jQuery.fx.off = true;
+// });
 
 const debouncedReload = foundry.utils.debounce(
   () => window.location.reload(),
@@ -233,7 +233,26 @@ Hooks.once("init", async function () {
       "insertSpeakerImage"
     );
 
+    const hideGmIconWhenSecret = game.settings.get(
+      "pf2e-dorako-ui",
+      "hideGmIconWhenSecret"
+    );
+
     if (chatPortraitSetting === "none") return false;
+
+    const whisperTargets = message.whisper;
+
+    const isBlind = message.blind || false;
+    const isWhisper = whisperTargets?.length > 0 || false;
+    const isSelf =
+      isWhisper &&
+      whisperTargets.length === 1 &&
+      whisperTargets[0] === message.user;
+
+    const user = game.users.get(message.user);
+    if (hideGmIconWhenSecret && user.isGM && (isBlind || isSelf)) {
+      return false;
+    }
 
     let combatantImg;
     let actorImg;
@@ -397,6 +416,18 @@ Hooks.once("init", async function () {
       actor: "Prefer actor image",
       none: "Disable",
     },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "hideGmIconWhenSecret", {
+    name: "Hide chat portrait when secret?",
+    hint: "Hide the chat portrait whenever GM rolls secret/private rolls.",
+    scope: "world",
+    config: true,
+    default: true,
+    type: Boolean,
     onChange: () => {
       debouncedReload();
     },
