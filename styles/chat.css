@@ -668,11 +668,6 @@ message-content .chat-damage-buttons button {
     border-radius: 3px;
 }
 
-.portrait.token,
-.portrait.combatant {
-    border-radius: 50%;
-}
-
 
 /* Adds border around flavor text */
 /* .flavor-text {
