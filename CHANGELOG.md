@@ -1,3 +1,7 @@
+# 1.3.28
+
+Remove circular cropping of chat portraits, unless outline setting is enabled.
+
 # 1.3.27
 
 Added a setting for hiding chat portraits for secret GM rolls (default ON).
