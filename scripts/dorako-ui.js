@@ -209,19 +209,35 @@ Hooks.once("init", async function () {
       }
     }
 
+    let sizeClass = "";
+    const border = game.settings.get("pf2e-dorako-ui", "chat-portrait-border");
+    const popoutTokenPortraits = game.settings.get(
+      "pf2e-dorako-ui",
+      "popout-token-portraits"
+    );
+    if (!border && popoutTokenPortraits) {
+      const tk = canvas.tokens?.get(message.speaker.token);
+      const scale = tk?.data.scale;
+      if (scale >= 1.5) {
+        sizeClass = "scale-up ";
+      }
+    }
+
     const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
     if (main === "token") {
       return (
-        (combatantImg ? "combatant" : "") ||
-        (tokenImg ? "token" : "") ||
-        (actorImg ? "actor" : "")
+        sizeClass +
+        ((combatantImg ? "combatant" : "") ||
+          (tokenImg ? "token" : "") ||
+          (actorImg ? "actor" : ""))
       );
     }
     if (main === "actor") {
       return (
-        (combatantImg ? "combatant" : "") ||
-        (actorImg ? "actor" : "") ||
-        (tokenImg ? "token" : "")
+        sizeClass +
+        ((combatantImg ? "combatant" : "") ||
+          (actorImg ? "actor" : "") ||
+          (tokenImg ? "token" : ""))
       );
     }
     return "no-img";
@@ -238,7 +254,16 @@ Hooks.once("init", async function () {
       "hideGmIconWhenSecret"
     );
 
+    const hidePortraitWhenHidden = game.settings.get(
+      "pf2e-dorako-ui",
+      "hidePortraitWhenHidden"
+    );
+
     if (chatPortraitSetting === "none") return false;
+
+    const tk = canvas.tokens?.get(message.speaker.token);
+    const isHidden = tk?.data.hidden;
+    if (hidePortraitWhenHidden && isHidden) return false;
 
     const whisperTargets = message.whisper;
 
@@ -423,7 +448,7 @@ Hooks.once("init", async function () {
 
   game.settings.register("pf2e-dorako-ui", "hideGmIconWhenSecret", {
     name: "Hide chat portrait when secret?",
-    hint: "Hide the chat portrait whenever GM rolls secret/private rolls.",
+    hint: "Hides the chat portrait whenever GM rolls secret/private rolls.",
     scope: "world",
     config: true,
     default: true,
@@ -433,9 +458,21 @@ Hooks.once("init", async function () {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "hidePortraitWhenHidden", {
+    name: "Hide chat portrait when token hidden?",
+    hint: "Hides the chat portrait whenever the token of the speaker is hidden",
+    scope: "client",
+    type: Boolean,
+    default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "chat-portrait-size", {
     name: "Chat portrait size",
-    hint: "Suggested size of 36px.",
+    hint: "Suggested size of 40px.",
     scope: "client",
     type: Number,
     default: 40,
@@ -444,6 +481,18 @@ Hooks.once("init", async function () {
       max: 60,
       step: 1,
     },
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "popout-token-portraits", {
+    name: "Chat portrait token popout",
+    hint: "Scales the chat portraits of BB/AV-style tokens to allow for 'pop out'.",
+    scope: "client",
+    type: Boolean,
+    default: true,
     config: true,
     onChange: () => {
       debouncedReload();
@@ -588,23 +637,6 @@ Hooks.once("init", async function () {
       debouncedReload();
     },
   });
-
-  // game.settings.register("pf2e-dorako-ui", "primary-color", {
-  //     name: "Primary color overwrite",
-  //     hint: "Default is Red",
-  //     scope: "client",
-  //     config: true,
-  //     type: String,
-  //     default: "#FF0000",
-  //     onChange: () => refresh()
-  // });
-
-  // const colorInput = window.document.createElement("input");
-  // colorInput.setAttribute("type", "color");
-  // colorInput.setAttribute("value", html.find(`input[name="primary-color"]`).val());
-  // colorInput.setAttribute("data-edit", `${prefix}.monoVisionColor`);
-
-  // html.find(`input[name="${prefix}.monoVisionColor"]`).after(colorInput);
 
   game.settings.register("pf2e-dorako-ui", "disable-all-styles", {
     name: "Disable all styles?",
@@ -837,8 +869,6 @@ Hooks.once("init", async function () {
       "--edge-margin",
       game.settings.get("pf2e-dorako-ui", "edge-offset").toString() + "px"
     );
-    // var sheet = document.styleSheets[0];
-    // sheet.insertRule(":root{--chat-portrait-size: "+game.settings.get('pf2e-dorako-ui', 'chat-portrait-size').toString()+'px}');
 
     root.setProperty(
       "--chat-portrait-size",
@@ -876,11 +906,11 @@ Hooks.once("init", async function () {
       injectCSS("dice-tray");
     let headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
     if (headerStyle == "tint" || headerStyle == "red") {
-      enableRedHeader();
+      injectCSS("header-red");
     } else if (headerStyle == "blue") {
-      enableBlueHeader();
+      injectCSS("header-blue");
     } else if (headerStyle == "none") {
-      // padding-bottom: 0px;
+      // do nothing
     }
 
     if (game.settings.get("pf2e-dorako-ui", "skin-combat-carousel"))
@@ -890,9 +920,9 @@ Hooks.once("init", async function () {
     if (theme == "light") {
       // do nothing
     } else if (theme == "dark") {
-      enableDarkTheme();
+      injectCSS("chat-dark");
     } else if (theme == "rainbow") {
-      enableRainbowTheme();
+      injectCSS("chat-rainbow");
     }
     setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
     if (setting == "both" || setting == "bg-color")
@@ -910,7 +940,6 @@ Hooks.once("init", async function () {
     if (setting == "dark" || setting == "darkRedHeader")
       injectCSS("familiar-sheet-dark");
     if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
-    // if (setting == "plain") injectCSS("sheet-plain");
   }
 });
 
@@ -933,58 +962,3 @@ function injectCSS(filename) {
   mainCss.setAttribute("media", "all");
   head.insertBefore(mainCss, head.lastChild);
 }
-
-function injectBaseCss() {
-  const head = document.getElementsByTagName("head")[0];
-  const mainCss = document.createElement("link");
-  mainCss.setAttribute("rel", "stylesheet");
-  mainCss.setAttribute("type", "text/css");
-  mainCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/dorako-ui.css");
-  mainCss.setAttribute("media", "all");
-  head.insertBefore(mainCss, head.lastChild);
-}
-
-// Chat cards
-function enableRedHeader() {
-  const head = document.getElementsByTagName("head")[0];
-  const newCss = document.createElement("link");
-  newCss.setAttribute("rel", "stylesheet");
-  newCss.setAttribute("type", "text/css");
-  newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/header-red.css");
-  newCss.setAttribute("media", "all");
-  head.insertBefore(newCss, head.lastChild);
-}
-
-function enableBlueHeader() {
-  const head = document.getElementsByTagName("head")[0];
-  const newCss = document.createElement("link");
-  newCss.setAttribute("rel", "stylesheet");
-  newCss.setAttribute("type", "text/css");
-  newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/header-blue.css");
-  newCss.setAttribute("media", "all");
-  head.insertBefore(newCss, head.lastChild);
-}
-
-function enableDarkTheme() {
-  const head = document.getElementsByTagName("head")[0];
-  const newCss = document.createElement("link");
-  newCss.setAttribute("rel", "stylesheet");
-  newCss.setAttribute("type", "text/css");
-  newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-dark.css");
-  newCss.setAttribute("media", "all");
-  head.insertBefore(newCss, head.lastChild);
-}
-
-function enableRainbowTheme() {
-  const head = document.getElementsByTagName("head")[0];
-  const newCss = document.createElement("link");
-  newCss.setAttribute("rel", "stylesheet");
-  newCss.setAttribute("type", "text/css");
-  newCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/chat-rainbow.css");
-  newCss.setAttribute("media", "all");
-  head.insertBefore(newCss, head.lastChild);
-}
-
-//const actor = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token);
-// const tokens = actor.getActiveTokens(true, false);
-// const token = tokens.first();

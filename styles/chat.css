@@ -407,13 +407,7 @@ button {
 }
 
 .message .message-header .message-sender {
-    /* font-size: small;
-    font-weight: 400; */
-    grid-: sender;
-    /* align-items: center; */
     display: flex;
-
-    /* border-radius: 5px 0px 0px 0px; */
 }
 
 
@@ -666,6 +660,10 @@ message-content .chat-damage-buttons button {
 
 .portrait.actor {
     border-radius: 3px;
+}
+
+.portrait.token.scale-up {
+    transform: scale(1.5);
 }
 
 
