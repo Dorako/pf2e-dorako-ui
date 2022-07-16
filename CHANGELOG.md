@@ -1,3 +1,9 @@
+# 1.3.29
+
+Implemented feature that allows for 'pop out' tokens to have 'pop out' chat portraits. Can be disabled in settings.
+Implemented feature to hide chat portraits of speakers where the token is hidden.
+Fixed issue with Lock View module that caused foundry logo to re-appear despite being disabled.
+
 # 1.3.28
 
 Remove circular cropping of chat portraits, unless outline setting is enabled.
