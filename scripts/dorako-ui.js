@@ -189,6 +189,12 @@ Hooks.once("init", async function () {
     }
   });
 
+  Hooks.on("preCreateChatMessage", (message) => {
+    // To quote Polyglot's code
+    // "Since FVTT 0.8, it has to use Document#Update instead of Document#SetFlag because Document#SetFlag can't be called during the preCreate stage."
+    message.data.update({ "flags.pf2eDorakoUi.tokenScale": message?.token?.data?.scale });
+  });
+
   Handlebars.registerHelper("getTokenScale", function (message) {
     const border = game.settings.get("pf2e-dorako-ui", "chat-portrait-border");
     const popoutTokenPortraits = game.settings.get(
@@ -196,8 +202,7 @@ Hooks.once("init", async function () {
       "popout-token-portraits"
     );
     if (!border && popoutTokenPortraits) {
-      const tk = canvas.tokens?.get(message.speaker.token);
-      const scale = tk?.data.scale ?? 1;
+      const scale = message?.flags?.pf2eDorakoUi?.tokenScale ?? 1;
       return scale;
     }
     return 1;
