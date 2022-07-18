@@ -963,8 +963,6 @@ Hooks.once("init", async function () {
       injectCSS("chat-blind-whisper");
     if (game.settings.get("pf2e-dorako-ui", "chat-portrait-border"))
       injectCSS("chat-portrait-border");
-    if (game.settings.get("pf2e-dorako-ui", "chat-portrait-hover"))
-      injectCSS("chat-portrait-hover");
     if (game.settings.get("pf2e-dorako-ui", "compact-ui"))
       injectCSS("compact-ui");
     if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
