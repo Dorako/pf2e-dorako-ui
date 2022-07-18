@@ -662,10 +662,6 @@ message-content .chat-damage-buttons button {
     border-radius: 3px;
 }
 
-.portrait.token.scale-up {
-    transform: scale(1.5);
-}
-
 
 /* Adds border around flavor text */
 /* .flavor-text {
