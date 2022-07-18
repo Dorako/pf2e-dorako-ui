@@ -1,3 +1,10 @@
+# 1.4.0
+
+Made the 'pop out' portrait scaling work for tokens of different scaling factors.
+Added some padding for the 'X is typing' feature from Cautious Gamemaster's Pack, and unbroke the animation.
+
+This patch features a regression as well - the zoom-chat-portraits-on-hover feature lives no more. Better alternatives exist for showing creature art.
+
 # 1.3.29
 
 Implemented feature that allows for 'pop out' tokens to have 'pop out' chat portraits. Can be disabled in settings.

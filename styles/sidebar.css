@@ -237,6 +237,14 @@ nav.damage-log-nav.tabs {
 } */
 
 /* CGP */
+#cgmp-typing-notify {
+    padding: 3px;
+}
+
 #cgmp-typing-notify.hidden {
+    padding: 0px;
+}
+
+#cgmp-typing-notify.hidden>* {
     display: none;
 }

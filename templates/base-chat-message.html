@@ -8,7 +8,11 @@
         {{#if (showSpeakerImage message)}}
         <div class="portrait-and-name" style="display: flex; gap:5px">
             <div class="portrait-wrapper">
-            <img class="portrait {{determineImageKind message}}" src="{{getSpeakerImage message}}" />
+            {{#if (isTokenPortrait message)}}
+            <img class="portrait {{determineImageKind message}}" src="{{getSpeakerImage message}}" style="transform: scale({{getTokenScale message}})"/>
+            {{else}}
+            <img class="portrait {{determineImageKind message}}" src="{{getSpeakerImage message}}"/>
+            {{/if}}
         </div>
         {{/if}}
         <div class="sender-wrapper">

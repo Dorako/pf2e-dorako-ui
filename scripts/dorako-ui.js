@@ -189,6 +189,57 @@ Hooks.once("init", async function () {
     }
   });
 
+  Handlebars.registerHelper("getTokenScale", function (message) {
+    const border = game.settings.get("pf2e-dorako-ui", "chat-portrait-border");
+    const popoutTokenPortraits = game.settings.get(
+      "pf2e-dorako-ui",
+      "popout-token-portraits"
+    );
+    if (!border && popoutTokenPortraits) {
+      const tk = canvas.tokens?.get(message.speaker.token);
+      const scale = tk?.data.scale ?? 1;
+      return scale;
+    }
+    return 1;
+  });
+
+  Handlebars.registerHelper("isTokenPortrait", function (message) {
+    let combatantImg;
+    let actorImg;
+    let tokenImg;
+
+    const speaker = message.speaker;
+    if (speaker) {
+      if (speaker.token) {
+        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
+          ?.data.img;
+      }
+      if (speaker.actor) {
+        const actor = Actors.instance.get(speaker.actor);
+        combatantImg = combatImagesActive
+          ? actor.getFlag("combat-tracker-images", "trackerImage")
+          : null;
+        actorImg = actor?.data.img;
+      }
+    }
+
+    let result = "";
+    const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+    if (main === "token") {
+      result =
+        (combatantImg ? "combatant" : "") ||
+        (tokenImg ? "token" : "") ||
+        (actorImg ? "actor" : "");
+    }
+    if (main === "actor") {
+      result =
+        (combatantImg ? "combatant" : "") ||
+        (actorImg ? "actor" : "") ||
+        (tokenImg ? "token" : "");
+    }
+    return result == "token";
+  });
+
   Handlebars.registerHelper("determineImageKind", function (message) {
     let combatantImg;
     let actorImg;
@@ -218,26 +269,21 @@ Hooks.once("init", async function () {
     if (!border && popoutTokenPortraits) {
       const tk = canvas.tokens?.get(message.speaker.token);
       const scale = tk?.data.scale;
-      if (scale >= game.settings.get("pf2e-dorako-ui", "popout-token-portraits-scale")) {
-        sizeClass = "scale-up ";
-      }
     }
 
     const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
     if (main === "token") {
       return (
-        sizeClass +
-        ((combatantImg ? "combatant" : "") ||
-          (tokenImg ? "token" : "") ||
-          (actorImg ? "actor" : ""))
+        (combatantImg ? "combatant" : "") ||
+        (tokenImg ? "token" : "") ||
+        (actorImg ? "actor" : "")
       );
     }
     if (main === "actor") {
       return (
-        sizeClass +
-        ((combatantImg ? "combatant" : "") ||
-          (actorImg ? "actor" : "") ||
-          (tokenImg ? "token" : ""))
+        (combatantImg ? "combatant" : "") ||
+        (actorImg ? "actor" : "") ||
+        (tokenImg ? "token" : "")
       );
     }
     return "no-img";
@@ -498,23 +544,6 @@ Hooks.once("init", async function () {
       debouncedReload();
     },
   });
-  
-  game.settings.register("pf2e-dorako-ui", "popout-token-portraits-scale", {
-    name: "Chat portrait token popout scale",
-    hint: "Set the minimum threshold for the token scale to be 'popped out' of the chat portraits.",
-    scope: "client",
-    type: Number,
-    default: 1.5,
-    range: {
-      min: 0.2,
-      max: 3,
-      step: 0.1,
-    },
-    config: true,
-    onChange: () => {
-      debouncedReload();
-    },
-  });
 
   game.settings.register("pf2e-dorako-ui", "chat-portrait-border", {
     name: "... and add a border?",
@@ -522,18 +551,6 @@ Hooks.once("init", async function () {
     scope: "client",
     config: true,
     default: true,
-    type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
-  });
-
-  game.settings.register("pf2e-dorako-ui", "chat-portrait-hover", {
-    name: "... and make portraits larger on hover?",
-    hint: "Works best if you mouse-over from the left.",
-    scope: "client",
-    config: true,
-    default: false,
     type: Boolean,
     onChange: () => {
       debouncedReload();
