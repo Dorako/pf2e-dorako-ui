@@ -192,7 +192,10 @@ Hooks.once("init", async function () {
   Hooks.on("preCreateChatMessage", (message) => {
     // To quote Polyglot's code
     // "Since FVTT 0.8, it has to use Document#Update instead of Document#SetFlag because Document#SetFlag can't be called during the preCreate stage."
-    message.data.update({ "flags.pf2eDorakoUi.tokenScale": message?.token?.data?.scale });
+    message.data.update({
+      "flags.pf2eDorakoUi.tokenScale": message?.token?.data?.scale,
+      "flags.pf2eDorakoUi.wasTokenHidden": message?.token?.data?.hidden,
+    });
   });
 
   Handlebars.registerHelper("getTokenScale", function (message) {
@@ -312,8 +315,9 @@ Hooks.once("init", async function () {
 
     if (chatPortraitSetting === "none") return false;
 
-    const tk = canvas.tokens?.get(message.speaker.token);
-    const isHidden = tk?.data.hidden;
+    // const tk = canvas.tokens?.get(message.speaker.token);
+    // const isHidden = tk?.data.hidden;
+    const isHidden = message?.flags?.pf2eDorakoUi?.wasTokenHidden;
     if (hidePortraitWhenHidden && isHidden) return false;
 
     const whisperTargets = message.whisper;

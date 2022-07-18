@@ -1,3 +1,9 @@
+# 1.4.1
+
+Made the breaking change less breaking!
+
+Also introduces persistency to chat portrait scaling and hiding thanks to @MrVauxs!
+
 # 1.4.0
 
 Made the 'pop out' portrait scaling work for tokens of different scaling factors.
