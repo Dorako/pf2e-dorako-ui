@@ -218,7 +218,7 @@ Hooks.once("init", async function () {
     if (!border && popoutTokenPortraits) {
       const tk = canvas.tokens?.get(message.speaker.token);
       const scale = tk?.data.scale;
-      if (scale >= 1.5) {
+      if (scale >= game.settings.get("pf2e-dorako-ui", "popout-token-portraits-scale")) {
         sizeClass = "scale-up ";
       }
     }
@@ -493,6 +493,23 @@ Hooks.once("init", async function () {
     scope: "client",
     type: Boolean,
     default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+  
+  game.settings.register("pf2e-dorako-ui", "popout-token-portraits-scale", {
+    name: "Chat portrait token popout scale",
+    hint: "Set the minimum threshold for the token scale to be 'popped out' of the chat portraits.",
+    scope: "client",
+    type: Number,
+    default: 1.5,
+    range: {
+      min: 0.2,
+      max: 3,
+      step: 0.1,
+    },
     config: true,
     onChange: () => {
       debouncedReload();
