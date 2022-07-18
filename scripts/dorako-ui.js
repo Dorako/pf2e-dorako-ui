@@ -165,14 +165,14 @@ Hooks.once("init", async function () {
     if (speaker) {
       if (speaker.token) {
         tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data.img;
+          ?.data?.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
         combatantImg = combatImagesActive
           ? actor.getFlag("combat-tracker-images", "trackerImage")
           : null;
-        actorImg = actor?.data.img;
+        actorImg = actor?.data?.img;
       }
     }
 
@@ -220,14 +220,14 @@ Hooks.once("init", async function () {
     if (speaker) {
       if (speaker.token) {
         tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data.img;
+          ?.data?.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
         combatantImg = combatImagesActive
           ? actor.getFlag("combat-tracker-images", "trackerImage")
           : null;
-        actorImg = actor?.data.img;
+        actorImg = actor?.data?.img;
       }
     }
 
@@ -257,26 +257,15 @@ Hooks.once("init", async function () {
     if (speaker) {
       if (speaker.token) {
         tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data.img;
+          ?.data?.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
         combatantImg = combatImagesActive
           ? actor.getFlag("combat-tracker-images", "trackerImage")
           : null;
-        actorImg = actor?.data.img;
+        actorImg = actor?.data?.img;
       }
-    }
-
-    let sizeClass = "";
-    const border = game.settings.get("pf2e-dorako-ui", "chat-portrait-border");
-    const popoutTokenPortraits = game.settings.get(
-      "pf2e-dorako-ui",
-      "popout-token-portraits"
-    );
-    if (!border && popoutTokenPortraits) {
-      const tk = canvas.tokens?.get(message.speaker.token);
-      const scale = tk?.data.scale;
     }
 
     const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
@@ -315,8 +304,6 @@ Hooks.once("init", async function () {
 
     if (chatPortraitSetting === "none") return false;
 
-    // const tk = canvas.tokens?.get(message.speaker.token);
-    // const isHidden = tk?.data.hidden;
     const isHidden = message?.flags?.pf2eDorakoUi?.wasTokenHidden;
     if (hidePortraitWhenHidden && isHidden) return false;
 
@@ -330,6 +317,7 @@ Hooks.once("init", async function () {
       whisperTargets[0] === message.user;
 
     const user = game.users.get(message.user);
+    if (!user) return false;
     if (hideGmIconWhenSecret && user.isGM && (isBlind || isSelf)) {
       return false;
     }
@@ -342,14 +330,14 @@ Hooks.once("init", async function () {
     if (speaker) {
       if (speaker.token) {
         tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data.img;
+          ?.data?.img;
       }
       if (speaker.actor) {
         const actor = Actors.instance.get(speaker.actor);
         combatantImg = combatImagesActive
           ? actor.getFlag("combat-tracker-images", "trackerImage")
           : null;
-        actorImg = actor?.data.img;
+        actorImg = actor?.data?.img;
       }
     }
 
@@ -388,7 +376,7 @@ Hooks.once("init", async function () {
     const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
     if (headerStyle === "tint") {
       const user = game.users.get(message.user);
-      const hexColor = user.data.color.replace("#", "");
+      const hexColor = user?.data?.color.replace("#", "");
       var r = parseInt(hexColor.substr(0, 2), 16);
       var g = parseInt(hexColor.substr(2, 2), 16);
       var b = parseInt(hexColor.substr(4, 2), 16);
@@ -441,7 +429,7 @@ Hooks.once("init", async function () {
       return "transparent";
     }
     const user = game.users.get(message.user);
-    return user.data.color;
+    return user?.data?.color;
   });
 
   Handlebars.registerHelper("getHeaderStyle", function () {

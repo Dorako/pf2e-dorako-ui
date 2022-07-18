@@ -1445,6 +1445,10 @@ div#scrollToBottom:hover {
     border-bottom: 1px solid wheat;
 }
 
+#chat-log .message.round-marker {
+    border-bottom: none;
+}
+
 #chat h2 {
     border-bottom: 1px solid var(--pf2e-color-ornament);
 }

@@ -1,3 +1,7 @@
+# 1.4.2
+
+Fixed an issue that caused roundtrackers from Monk's Little Details to now show up.
+
 # 1.4.1
 
 Made the breaking change less breaking!
