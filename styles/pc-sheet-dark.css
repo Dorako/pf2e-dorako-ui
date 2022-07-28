@@ -1,8 +1,12 @@
 :root {
-  --nethys-uncommon: #c45500;
-  --nethys-rare: #0c1466;
-  --nethys-unique: #800080;
+  --alt-bright: hsl(var(--alt-hue), var(--alt-sat), calc(var(--alt-lvl) + 15%));
+  --alt-hue: 28;
+  --alt-lvl: 40%;
+  --alt-sat: 19%;
   --green-light: #478c42;
+  --nethys-rare: #0c1466;
+  --nethys-uncommon: #c45500;
+  --nethys-unique: #800080;
 }
 
 .actor.sheet.character .window-content .crb-style {
@@ -74,7 +78,9 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .item.feat-item .item-name .feat-slot-title,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .skill-score,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1,
-.actor.sheet.character .crb-style .tab.character .pc h3 .fas {
+.actor.sheet.character .crb-style .tab.character .pc h3 .fas,
+.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header,
+.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header button {
   color: var(--tertiary-dark);
 }
 
@@ -398,10 +404,27 @@
   padding: 4px 0 0 5px;
 }
 
-.actor.sheet.character .crb-style .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.strikes-list .item.action.strike.expandable .auxiliary-actions button:hover,
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell:hover {
-  box-shadow: none;
-  text-shadow: var(--pf2e-shadow-is-light);
+.actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li button.cast-spell:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .pf-add-item-row a:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting.crafting-pane.active .craftingEntry-list.directory-list.item-list .crafting-entry.item-container.item .daily-crafting:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled):hover {
+  background-color: var(--paizo-blue-bright);
+  box-shadow: var(--glassy);
+  text-shadow: none;
+}
+
+.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list>li .item-summary .item-buttons button:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled).damage:hover,
+.actor.sheet .inventory .item-summary .item-buttons button:hover {
+  background-color: var(--paizo-red-bright);
+  box-shadow: var(--glassy);
+  text-shadow: none;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions button:not(:disabled):hover {
+  background-color: var(--alt-bright);
+  box-shadow: var(--glassy);
+  text-shadow: none;
 }
 
 [data-pf2-check],
@@ -445,13 +468,11 @@ a.inline-roll,
   border-radius: 3px;
   box-shadow: var(--glassy);
   color: var(--text-light);
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: -10px;
-  margin-right: -25px;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 4px;
+  font: 700 var(--font-size-14) var(--body-serif);
+  margin-left: -48.5px;
+  margin-right: 24.5px;
+  padding: 4px;
+  text-align: left;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .actions .actions-container .actions-tabs-wrapper .actions-panels .actions-list.item-list.directory-list.skill-action-list .action-header.stroke-header .item-controls .item-control input::placeholder,
@@ -571,8 +592,8 @@ a.inline-roll,
 }
 
 .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-summary .framing, .actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-summary .title {
-  color: var(--tertiary-dark);
   border-bottom: 1px solid var(--tertiary-dark);
+  color: var(--tertiary-dark);
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id,
@@ -602,4 +623,47 @@ a.inline-roll,
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score {
   margin-top: 2px;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .skill-container {
+  display: none;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .alt-usage img.alt-usage-icon {
+  filter: invert(1);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .alt-usage {
+  margin-left: calc(3.4em - 2px);
+  margin-top: calc(0.5em - 2px);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content nav:after, .actor.sheet.character .crb-style .sheet-body .sheet-content nav:before {
+  filter: invert(1) brightness(10);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content nav {
+  background-color: unset;
+  border-radius: 3px;
+  border: none;
+  box-shadow: var(--glassy);
+  margin-bottom: -5px;
+  margin-top: 1px;
+  padding: 0 20px 0 20px;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content nav .tab {
+  color: var(--tertiary-dark);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content nav .tab.active {
+  color: var(--green-light);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content nav .tab.active:hover {
+  text-shadow: none;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions select[name=ammo-used]:hover {
+  background-color: var(--alt-bright);
 }
