@@ -814,9 +814,9 @@ message-content .chat-damage-buttons button {
     cursor: pointer;
 }
 
-.message button:hover img {
+/* .message button:hover img {
     filter: var(--filter-dark);
-}
+} */
 
 .pf2e.chat-card .card-footer span {
     border-right: 1px groove #fff;
@@ -899,14 +899,7 @@ button.half-damage .fa-heart-broken::after {
 
 
 
-.pf2e.chat-card .card-buttons {
-    display: flex;
-    gap: 3px;
-    flex-direction: column;
-    margin: 0px;
-    /* padding-left: 5px;
-    padding-right: 5px; */
-}
+
 
 
 .message .card-content hr {
@@ -1626,8 +1619,27 @@ span[data-pf2-check].with-repost {
     padding: .2em;
 }
 
-
-.chat-message .card-buttons {
+.pf2e.chat-card .card-buttons {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    margin: 0px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
     gap: 5px;
     margin-top: 5px;
+}
+
+.pf2e.chat-card .owner-buttons {
+    gap: 3px;
+}
+
+.pf2e.chat-card .card-buttons span {
+    line-height: unset;
+}
+
+.pf2e.chat-card .card-buttons button.with-image img {
+    height: 1.2em;
+    border-radius: 3px;
+    box-shadow: var(--gold-and-glow)
 }

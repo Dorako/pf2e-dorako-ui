@@ -452,12 +452,12 @@ a.inline-roll,
   padding-bottom: 4px;
 }
 
-.actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li .item-name .item-image,
+/* .actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li .item-name .item-image,
 .spellcasting-entry.sheet ol.spell-list>li .item-name .item-image {
   height: 1.75rem;
   margin: 2px -1px;
   width: 1.75rem;
-}
+} */
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions.actions-pane.active .actions-container .actions-tabs-wrapper .actions-panel .actions-list.item-list.directory-list.skill-action-list .item.action.expandable.ready .item-name .actions-title .button-group.tags .skill-action.tag.variant-strike {
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
