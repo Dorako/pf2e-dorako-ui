@@ -12,10 +12,79 @@
 //   jQuery.fx.off = true;
 // });
 
+const rgb2hex = (rgb) =>
+  `#${rgb
+    .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
+    .slice(1)
+    .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
+    .join("")}`;
+
+class Avatar {
+  constructor(name, image) {
+    this.name = name;
+    this.image = image;
+    this.type = "avatar";
+  }
+}
+
+class CombatantAvatar extends Avatar {
+  constructor(name, image) {
+    super(name, image);
+    this.type = "combatant";
+  }
+}
+
+class ActorAvatar extends Avatar {
+  constructor(name, image) {
+    super(name, image);
+    this.type = "actor";
+  }
+}
+
+class TokenAvatar extends Avatar {
+  constructor(name, image, actualScale, renderScale) {
+    super(name, image);
+    this.type = "token";
+    this.scale = actualScale;
+    this.renderScale = renderScale;
+  }
+}
+
 const debouncedReload = foundry.utils.debounce(
   () => window.location.reload(),
   500
 );
+
+function addClassByQuerySelector(className, selector) {
+  let navigation = document.querySelector(selector);
+  navigation.classList.add(className);
+}
+
+function injectCSS(filename) {
+  const head = document.getElementsByTagName("head")[0];
+  const mainCss = document.createElement("link");
+  mainCss.setAttribute("rel", "stylesheet");
+  mainCss.setAttribute("type", "text/css");
+  mainCss.setAttribute(
+    "href",
+    "modules/pf2e-dorako-ui/styles/" + filename + ".css"
+  );
+  mainCss.setAttribute("media", "all");
+  head.insertBefore(mainCss, head.lastChild);
+}
+
+// Timestamp
+// Hooks.once("init", async () => {
+//   let chatTimeStamp = (timestamp) => {
+//     return new Date(timestamp).toLocaleTimeString();
+//   };
+//   let chatDateStamp = (timestamp) => {
+//     return new Date(timestamp).toLocaleDateString();
+//   };
+
+//   Handlebars.registerHelper({ chatTimeStamp: chatTimeStamp });
+//   Handlebars.registerHelper({ chatDateStamp: chatDateStamp });
+// });
 
 // document.addEventListener("DOMContentLoaded", function() {
 // 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
@@ -49,13 +118,102 @@ const debouncedReload = foundry.utils.debounce(
 // 	 a.find("#settings-game").append(toInsert)
 // });
 
+// Hooks
+// Combat Tracker
+Hooks.on("renderCombatTracker", addScalingToCombatTrackerAvatars);
+
+// Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  let html0 = html[0];
+
+  // console.log("renderChatMessage Hook");
+  // console.log("chatMessage");
+  // console.log(chatMessage);
+  // console.log("html");
+  // console.log(html);
+  // console.log("messageData");
+  // console.log(messageData);
+
+  injectSenderWrapper(html, messageData);
   injectMessageTag(html, messageData);
   injectWhisperParticipants(html, messageData);
-  injectPlayerName(html, messageData);
+  injectAuthorName(html, messageData);
+  injectChatPortrait(html, getAvatar(chatMessage));
+  moveFlavorTextToContents(html);
+
+  const theme = game.settings.get("pf2e-dorako-ui", "theme");
+
+  if (theme == "dark") html0.classList.add("dark-theme");
+  if (theme == "light") html0.classList.add("light-theme");
+  if (theme == "factions") {
+    if (chatMessage.user.isGM) {
+      html0.classList.add("dark-theme");
+    } else {
+      html0.classList.add("light-theme");
+    }
+  }
+
+  themeHeader(html, chatMessage);
 });
 
-function injectPlayerName(html, messageData) {
+Hooks.on("preCreateChatMessage", (message) => {
+  addAvatarsToFlags(message); // Really should be adding all of them, so you can change the setting and it will apply retroactively
+
+  message.data.update({
+    "flags.pf2eDorakoUi.tokenScale": message?.token?.data?.scale,
+    "flags.pf2eDorakoUi.wasTokenHidden": message?.token?.data?.hidden,
+  });
+});
+
+function themeHeader(html, message) {
+  let messageHeader = html.find(".message-header")[0];
+
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  if (headerStyle != "none") {
+    let bgCol = getHeaderColor(html, message);
+    messageHeader.setAttribute("style", "background-color: " + bgCol);
+  }
+
+  let textColTheme = calcHeaderTextColor(html, message);
+  messageHeader.classList.add(textColTheme);
+
+  let time = html.find("time")[0];
+  time.classList.add("header-meta");
+}
+
+function moveFlavorTextToContents(html) {
+  let flavor = html.find(".flavor-text")[0];
+  let contents = html.find(".message-content");
+  contents.prepend(flavor);
+}
+
+function injectSenderWrapper(html, messageData) {
+  if (messageData.author === undefined) return;
+  var target = html.find(".message-sender")[0];
+  var wrapper = document.createElement("div");
+  wrapper.classList.add("sender-wrapper");
+  target.parentNode.insertBefore(wrapper, target);
+  wrapper.appendChild(target);
+}
+
+function injectChatPortrait(html, avatar) {
+  if (!avatar) return;
+  let messageHeader = html.find(".message-header")[0];
+  let portraitAndName = document.createElement("div");
+  portraitAndName.classList.add("portrait-and-name");
+  messageHeader.prepend(portraitAndName);
+  let wrapper = document.createElement("div");
+  wrapper.classList.add("portrait-wrapper");
+  let portrait = document.createElement("img");
+  portrait.classList.add("avatar");
+  portrait.classList.add("portrait");
+  wrapper.append(portrait);
+  let senderWrapper = html.find(".sender-wrapper")[0];
+  portraitAndName.append(senderWrapper);
+  portraitAndName.prepend(wrapper);
+}
+
+function injectAuthorName(html, messageData) {
   if (messageData.author === undefined) return;
   if (game.settings.get("pf2e-dorako-ui", "enable-player-tags")) {
     const messageSenderElem = html.find(".sender-wrapper");
@@ -108,15 +266,20 @@ function injectMessageTag(html, messageData) {
 
 function injectWhisperParticipants(html, messageData) {
   const alias = messageData.alias;
+  const author = messageData.author;
   const whisperTargets = messageData.message.whisper;
   const whisperTargetString = messageData.whisperTo;
   const whisperTargetIds = messageData.message.whisper;
   const isWhisper = whisperTargetIds?.length > 0 || false;
   const isRoll = messageData.message.roll !== undefined;
   const isSelf =
-    isWhisper &&
-    whisperTargets.length === 1 &&
-    whisperTargets[0] === messageData.message.user;
+    (isWhisper &&
+      whisperTargets.length === 1 &&
+      whisperTargets[0] === messageData.message.user) ||
+    (isWhisper &&
+      whisperTargets.length === 2 &&
+      whisperTargets[0] === "null" &&
+      whisperTargets[1] === messageData.message.user);
 
   const authorId = messageData.message.user;
   const userId = game.user.data._id;
@@ -140,7 +303,7 @@ function injectWhisperParticipants(html, messageData) {
   whisperFrom.addClass("header-meta");
 
   const whisperTo = $("<span>");
-  whisperTo.text(`$to: ${whisperTargetString}`);
+  whisperTo.text(`to: ${whisperTargetString}`);
   whisperTo.addClass("header-meta");
 
   whisperParticipants.append(whisperFrom);
@@ -148,295 +311,148 @@ function injectWhisperParticipants(html, messageData) {
   messageHeader.append(whisperParticipants);
 }
 
-Hooks.once("init", async function () {
-  CONFIG.ChatMessage.template =
-    "modules/pf2e-dorako-ui/templates/base-chat-message.html";
-
+function addScalingToCombatTrackerAvatars(app, html, data) {
   const combatImagesActive = game.modules.get("combat-tracker-images")?.active;
-
-  Handlebars.registerHelper("getSpeakerImage", function (message) {
-    // const blind = message.whisper && message.blind;
-    // if (blind) return "icons/svg/mystery-man.svg";
-    let combatantImg;
-    let actorImg;
-    let tokenImg;
-
-    const speaker = message.speaker;
-    if (speaker) {
-      if (speaker.token) {
-        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data?.img;
-      }
-      if (speaker.actor) {
-        const actor = Actors.instance.get(speaker.actor);
-        combatantImg = combatImagesActive
-          ? actor.getFlag("combat-tracker-images", "trackerImage")
-          : null;
-        actorImg = actor?.data?.img;
-      }
-    }
-
-    const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
-    if (main === "token") {
-      return (
-        combatantImg || tokenImg || actorImg || "icons/svg/mystery-man.svg"
-      );
-    }
-    if (main === "actor") {
-      return (
-        combatantImg || actorImg || tokenImg || "icons/svg/mystery-man.svg"
-      );
-    }
-  });
-
-  Hooks.on("preCreateChatMessage", (message) => {
-    // To quote Polyglot's code
-    // "Since FVTT 0.8, it has to use Document#Update instead of Document#SetFlag because Document#SetFlag can't be called during the preCreate stage."
-    message.data.update({
-      "flags.pf2eDorakoUi.tokenScale": message?.token?.data?.scale,
-      "flags.pf2eDorakoUi.wasTokenHidden": message?.token?.data?.hidden,
-    });
-  });
-
-  Handlebars.registerHelper("getTokenScale", function (message) {
-    const border = game.settings.get("pf2e-dorako-ui", "chat-portrait-border");
-    const popoutTokenPortraits = game.settings.get(
-      "pf2e-dorako-ui",
-      "popout-token-portraits"
-    );
-    if (!border && popoutTokenPortraits) {
-      const scale = message?.flags?.pf2eDorakoUi?.tokenScale ?? 1;
-      return scale;
-    }
-    return 1;
-  });
-
-  Handlebars.registerHelper("isTokenPortrait", function (message) {
-    let combatantImg;
-    let actorImg;
-    let tokenImg;
-
-    const speaker = message.speaker;
-    if (speaker) {
-      if (speaker.token) {
-        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data?.img;
-      }
-      if (speaker.actor) {
-        const actor = Actors.instance.get(speaker.actor);
-        combatantImg = combatImagesActive
-          ? actor.getFlag("combat-tracker-images", "trackerImage")
-          : null;
-        actorImg = actor?.data?.img;
-      }
-    }
-
-    let result = "";
-    const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
-    if (main === "token") {
-      result =
-        (combatantImg ? "combatant" : "") ||
-        (tokenImg ? "token" : "") ||
-        (actorImg ? "actor" : "");
-    }
-    if (main === "actor") {
-      result =
-        (combatantImg ? "combatant" : "") ||
-        (actorImg ? "actor" : "") ||
-        (tokenImg ? "token" : "");
-    }
-    return result == "token";
-  });
-
-  Handlebars.registerHelper("determineImageKind", function (message) {
-    let combatantImg;
-    let actorImg;
-    let tokenImg;
-
-    const speaker = message.speaker;
-    if (speaker) {
-      if (speaker.token) {
-        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data?.img;
-      }
-      if (speaker.actor) {
-        const actor = Actors.instance.get(speaker.actor);
-        combatantImg = combatImagesActive
-          ? actor.getFlag("combat-tracker-images", "trackerImage")
-          : null;
-        actorImg = actor?.data?.img;
-      }
-    }
-
-    const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
-    if (main === "token") {
-      return (
-        (combatantImg ? "combatant" : "") ||
-        (tokenImg ? "token" : "") ||
-        (actorImg ? "actor" : "")
-      );
-    }
-    if (main === "actor") {
-      return (
-        (combatantImg ? "combatant" : "") ||
-        (actorImg ? "actor" : "") ||
-        (tokenImg ? "token" : "")
-      );
-    }
-    return "no-img";
-  });
-
-  Handlebars.registerHelper("showSpeakerImage", function (message) {
-    const chatPortraitSetting = game.settings.get(
-      "pf2e-dorako-ui",
-      "insertSpeakerImage"
-    );
-
-    const hideGmIconWhenSecret = game.settings.get(
-      "pf2e-dorako-ui",
-      "hideGmIconWhenSecret"
-    );
-
-    const hidePortraitWhenHidden = game.settings.get(
-      "pf2e-dorako-ui",
-      "hidePortraitWhenHidden"
-    );
-
-    if (chatPortraitSetting === "none") return false;
-
-    const isHidden = message?.flags?.pf2eDorakoUi?.wasTokenHidden;
-    if (hidePortraitWhenHidden && isHidden) return false;
-
-    const whisperTargets = message.whisper;
-
-    const isBlind = message.blind || false;
-    const isWhisper = whisperTargets?.length > 0 || false;
-    const isSelf =
-      isWhisper &&
-      whisperTargets.length === 1 &&
-      whisperTargets[0] === message.user;
-
-    const user = game.users.get(message.user);
-    if (!user) return false;
-    if (hideGmIconWhenSecret && user.isGM && (isBlind || isSelf)) {
-      return false;
-    }
-
-    let combatantImg;
-    let actorImg;
-    let tokenImg;
-
-    const speaker = message.speaker;
-    if (speaker) {
-      if (speaker.token) {
-        tokenImg = game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
-          ?.data?.img;
-      }
-      if (speaker.actor) {
-        const actor = Actors.instance.get(speaker.actor);
-        combatantImg = combatImagesActive
-          ? actor.getFlag("combat-tracker-images", "trackerImage")
-          : null;
-        actorImg = actor?.data?.img;
-      }
-    }
-
-    return combatantImg || actorImg || tokenImg;
-  });
-
-  Handlebars.registerHelper("showHeader", function (message) {
-    const headerStyle = game.settings.get(
-      "pf2e-dorako-ui",
-      "insertSpeakerImage"
-    );
-
-    if (headerStyle === "none") return false;
-
-    const speaker = message.speaker;
+  $(".combatant", html).each(function () {
+    let id = this.dataset.combatantId;
+    let combatant = game.combat.data.combatants.get(id);
+    let scale = combatant.token.data.scale;
+    let tokenImageElem = this.getElementsByClassName("token-image")[0];
     if (
-      speaker &&
-      speaker.token &&
-      game.scenes.get(speaker.scene)?.tokens?.get(speaker.token)
+      scale < 1 ||
+      (combatImagesActive &&
+        combatant.actor.getFlag("combat-tracker-images", "trackerImage"))
     ) {
-      return true;
+      scale = 1;
     }
+    tokenImageElem.setAttribute("style", "transform: scale(" + scale + ")");
   });
+}
 
-  Handlebars.registerHelper("getHeaderStyle", function (message) {
-    const user = game.users.get(message.user);
+function getHeaderColor(html, message) {
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  if (headerStyle === "tint") {
+    return message?.user?.color ?? "#DAC0FB";
+  } else if (headerStyle === "blue") {
+    return "#191F65";
+  } else if (headerStyle === "red") {
+    return "#540C06";
+  } else if (headerStyle === "none") {
+    return null;
+  }
+  return "#DAC0FB";
+}
 
-    const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-    if (headerStyle === "tint") {
-      return `background-color:${user.data.color}`;
-    }
-    return "";
-  });
-
-  Handlebars.registerHelper("playerId", function (message) {
-    const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-    if (headerStyle === "tint") {
-      const user = game.users.get(message.user);
-      const hexColor = user?.data?.color.replace("#", "");
-      var r = parseInt(hexColor.substr(0, 2), 16);
-      var g = parseInt(hexColor.substr(2, 2), 16);
-      var b = parseInt(hexColor.substr(4, 2), 16);
-      var yiq = (r * 299 + g * 587 + b * 114) / 1000;
-
-      const root = document.querySelector(":root").style;
-      let textColor;
-      if (yiq >= 128) {
-        return "dark-header-text";
-      } else {
-        return "light-header-text";
-      }
-    } else if (headerStyle === "blue" || headerStyle === "red") {
+function calcHeaderTextColor(html, message) {
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  const messageHeader = html.find(".message-header")[0];
+  if (headerStyle === "none") {
+    if (html[0].classList.contains("dark-theme")) {
       return "light-header-text";
-    } else if (headerStyle === "none") {
-      const theme = game.settings.get("pf2e-dorako-ui", "theme");
-      if (theme === "light") {
-        return "dark-header-text";
-      } else if (theme === "dark" || theme === "rainbow") {
-        return "light-header-text";
-      } else {
-        return "";
-      }
-    }
-    return "";
-  });
-
-  Handlebars.registerHelper("baseTheme", function (message) {
-    const theme = game.settings.get("pf2e-dorako-ui", "theme");
-    if (theme === "light") {
-      return "light-theme";
-    } else if (theme === "dark" || theme === "rainbow") {
-      return "dark-theme";
     } else {
-      return "";
+      return "dark-header-text";
     }
-  });
+  }
 
-  Handlebars.registerHelper("isUsingHeaderTint", function (message) {
-    const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-    if (headerStyle === "tint") {
-      return true;
-    }
-    return false;
-  });
+  let bgCol = messageHeader.style.backgroundColor;
+  bgCol = rgb2hex(bgCol);
+  var r = parseInt(bgCol.substr(1, 2), 16);
+  var g = parseInt(bgCol.substr(3, 2), 16);
+  var b = parseInt(bgCol.substr(5, 2), 16);
+  var yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-  Handlebars.registerHelper("getUserColor", function (message) {
-    const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-    if (headerStyle === "none") {
-      return "transparent";
-    }
-    const user = game.users.get(message.user);
-    return user?.data?.color;
-  });
+  if (yiq >= 128) {
+    return "dark-header-text";
+  } else {
+    return "light-header-text";
+  }
+}
 
-  Handlebars.registerHelper("getHeaderStyle", function () {
-    const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-    return headerStyle;
-  });
+function addAvatarsToFlags(message) {
+  // const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+  let combatantImg =
+    game.modules.get("combat-tracker-images")?.active && message.actor
+      ? message.actor.getFlag("combat-tracker-images", "trackerImage")
+      : null;
+  let actorImg = message.actor?.data?.img;
+  let tokenImg = message.token?.data?.img;
+  let userImg = message.user?.data?.avatar;
 
+  let userAvatar = new Avatar(message.data.speaker.alias, userImg);
+
+  let combatantAvatar = combatantImg
+    ? new CombatantAvatar(message.data.speaker.alias, combatantImg)
+    : null;
+
+  let actorAvatar = actorImg
+    ? new ActorAvatar(message.data.speaker.alias, actorImg)
+    : null;
+
+  let tokenAvatar = tokenImg
+    ? new TokenAvatar(
+        message.data.speaker.alias,
+        tokenImg,
+        message.token.data.scale,
+        message.token.data.scale > 1 ? message.token.data.scale : 1
+      )
+    : null;
+
+  message.data.update({
+    "flags.pf2eDorakoUi.userAvatar": userAvatar,
+    "flags.pf2eDorakoUi.combatantAvatar": combatantAvatar,
+    "flags.pf2eDorakoUi.tokenAvatar": tokenAvatar,
+    "flags.pf2eDorakoUi.actorAvatar": actorAvatar,
+  });
+}
+
+function getAvatar(message) {
+  const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+  let combatantAvatar = message.data.flags?.pf2eDorakoUi?.combatantAvatar?.image
+    ? message.data.flags?.pf2eDorakoUi?.combatantAvatar
+    : null;
+  let tokenAvatar = message.data.flags?.pf2eDorakoUi?.tokenAvatar;
+  let actorAvatar = message.data.flags?.pf2eDorakoUi?.actorAvatar;
+  let userAvatar = message.data.flags?.pf2eDorakoUi?.userAvatar;
+
+  if (combatantAvatar) return combatantAvatar;
+  return main == "token"
+    ? tokenAvatar || actorAvatar || userAvatar
+    : actorAvatar || tokenAvatar || userAvatar;
+}
+
+Hooks.on("renderChatMessage", (message, b) => {
+  let avatar = getAvatar(message);
+  if (!avatar) return;
+  let html = b[0];
+
+  const avatarElem = html.getElementsByClassName("avatar")[0];
+  avatarElem.src = avatar.image;
+
+  if (avatar.type == "token") {
+    avatarElem?.setAttribute(
+      "style",
+      "transform: scale(" + avatar.renderScale + ")"
+    );
+  }
+
+  let degree = message?.roll?.data?.degreeOfSuccess;
+  if (degree == undefined) return;
+  if (degree == 0) {
+    let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
+    wrapper?.setAttribute(
+      "style",
+      "filter: saturate(0.2) drop-shadow(0px 0px 6px black)"
+    );
+  } else if (degree == 3) {
+    let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
+    wrapper?.setAttribute(
+      "style",
+      "filter: drop-shadow(0px 0px 6px lightgreen)"
+    );
+  }
+});
+
+Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "theme", {
     name: "Theme",
     hint: "Theme affects chat messages.",
@@ -447,7 +463,7 @@ Hooks.once("init", async function () {
     choices: {
       light: "Light",
       dark: "Dark",
-      rainbow: "???",
+      factions: "Players light, GM dark",
     },
     onChange: () => {
       debouncedReload();
@@ -533,7 +549,7 @@ Hooks.once("init", async function () {
   game.settings.register("pf2e-dorako-ui", "popout-token-portraits", {
     name: "Chat portrait token popout",
     hint: "Scales the chat portraits of BB/AV-style tokens to allow for 'pop out'.",
-    scope: "client",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -936,25 +952,14 @@ Hooks.once("init", async function () {
     if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray"))
       injectCSS("dice-tray");
     let headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
-    if (headerStyle == "tint" || headerStyle == "red") {
-      injectCSS("header-red");
-    } else if (headerStyle == "blue") {
-      injectCSS("header-blue");
-    } else if (headerStyle == "none") {
-      // do nothing
+    if (headerStyle != "none") {
+      injectCSS("header");
     }
+    injectCSS("chat-dark");
 
     if (game.settings.get("pf2e-dorako-ui", "skin-combat-carousel"))
       injectCSS("combat-carousel");
 
-    let theme = game.settings.get("pf2e-dorako-ui", "theme");
-    if (theme == "light") {
-      // do nothing
-    } else if (theme == "dark") {
-      injectCSS("chat-dark");
-    } else if (theme == "rainbow") {
-      injectCSS("chat-rainbow");
-    }
     setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
     if (setting == "both" || setting == "bg-color")
       injectCSS("chat-blind-whisper");
@@ -971,23 +976,3 @@ Hooks.once("init", async function () {
     if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
   }
 });
-
-function addClassByQuerySelector(className, selector) {
-  let navigation = document.querySelector(selector);
-  navigation.classList.add(className);
-}
-
-// Base
-
-function injectCSS(filename) {
-  const head = document.getElementsByTagName("head")[0];
-  const mainCss = document.createElement("link");
-  mainCss.setAttribute("rel", "stylesheet");
-  mainCss.setAttribute("type", "text/css");
-  mainCss.setAttribute(
-    "href",
-    "modules/pf2e-dorako-ui/styles/" + filename + ".css"
-  );
-  mainCss.setAttribute("media", "all");
-  head.insertBefore(mainCss, head.lastChild);
-}

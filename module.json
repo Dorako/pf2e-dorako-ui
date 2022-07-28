@@ -4,12 +4,12 @@
   "description": "Overhauls the Foundry UI and several modules.",
   "url": "https://github.com/Dorako/pf2e-dorako-ui",
   "author": "Dorako",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "system": ["pf2e"],
   "scripts": ["scripts/dorako-ui.js"],
   "templates": ["templates/*"],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.4.2.zip",
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.5.0.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/raw/main/module.json"
 }

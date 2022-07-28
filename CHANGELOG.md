@@ -1,6 +1,26 @@
+# 1.5.0
+
+Huge refactor - the code is a lot nicer now, and doesn't use template substitution.
+
+New features:
+
+- Messages from gamemaster as a speaker now include a chat portrait (Configure via the menu in the lower left corner of Foundry).
+
+- Tokens in the combat tracker scale the same way as chat portraits, rendering 'pop out' tokens at their expected size.
+
+- New chat theme where Player messages are light, and GM messages are dark.
+
+- Chat portraits now react to critical success and failures.
+
+Other changes:
+
+- General maintenance update of several chat message stylings.
+
+- Update of dark player sheet, courtesy of @Vesselchuck.
+
 # 1.4.2
 
-Fixed an issue that caused roundtrackers from Monk's Little Details to now show up.
+Fixed an issue that caused roundtrackers from Monk's Little Details to not show up.
 
 # 1.4.1
 

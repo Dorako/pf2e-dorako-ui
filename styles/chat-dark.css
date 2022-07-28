@@ -1,37 +1,38 @@
 :root {
-    --bg-current: var(--sheet-dark);
-    --pf2e-body-primary: hsl(0, 0%, 100%);
+    /* --bg-current: var(--sheet-dark); */
+    /* --pf2e-body-primary: hsl(0, 0%, 100%);
     --pf2e-body-secondary: hsl(0, 0%, 60%);
-    --pf2e-body-inverse: hsl(0, 0%, 00%);
+    --pf2e-body-inverse: hsl(0, 0%, 00%); */
 
-    --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark);
+    /* --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark);
     --pf2e-color-ornament: var(--pf2e-color-ornament-for-dark);
     --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-dark);
     --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark);
-    --filter-img: var(--filter-dark);
+    --filter-img: var(--filter-dark); */
 }
 
-#chat-log select,
-#chat-log button,
-#chat-log form button,
-.dice-roll .dice-formula,
-.dice-total:not(.statuseffect-message),
-.message-content .chat-damage-buttons button {
+
+#chat-log .dark-theme select,
+#chat-log .dark-theme button,
+#chat-log .dark-theme form button,
+.dark-theme .dice-roll .dice-formula,
+.dark-theme .dice-total:not(.statuseffect-message),
+.dark-theme .message-content .chat-damage-buttons button {
     box-shadow: var(--glassy);
     border: none;
     color: white;
 }
 
-.dice-roll .dice-formula:hover,
-.dice-roll .dice-total:hover {
+.dark-theme .dice-roll .dice-formula:hover,
+.dark-theme .dice-roll .dice-total:hover {
     background-color: var(--pf2e-color-mono-dark);
 }
 
-.pf2e.chat-card .card-content {
+.dark-theme .pf2e.chat-card .card-content {
     border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.dmgBtn-container {
+.dark-theme .dmgBtn-container {
     display: flex;
     gap: 3px;
 }
@@ -40,14 +41,110 @@
     filter: var(--filter-dark);
 } */
 
-.token-link,
-.dmgBtn-container button {
+/* .dark-theme .dmgBtn-container button,  */
+.dark-theme .token-link {
     box-shadow: var(--glassy);
     border: none;
     color: white;
     background-color: var(--pf2e-color-mono-dark);
 }
 
-.chat-message.dark-theme a[href] {
+.dark-theme.chat-message.dark-theme a[href] {
     color: wheat;
+}
+
+.dark-theme.message {
+    background-color: black;
+    background: var(--sheet-dark);
+    background-size: cover;
+    border: none;
+    box-shadow: var(--gold-and-glow);
+    color: white;
+    padding: 0;
+    text-shadow: var(--pf2e-half-transparent-dark);
+}
+
+.dark-theme.chat-message.blind,
+.dark-theme.chat-message.whisper,
+.dark-theme.chat-message.emote,
+.dark-theme.message.damage-log.damage,
+.dark-theme.message.damage-log.healing,
+.dark-theme.message.damage-log.reverted.damage,
+.dark-theme.message.damage-log.reverted.healing {
+    background: var(--sheet-dark);
+    background-image: var(--sheet-dark);
+    background-size: cover;
+    background-blend-mode: luminosity;
+    border: none;
+}
+
+.dark-theme .flavor-text>strong, .flavor-text>b {
+    text-shadow: var(--pf2e-half-transparent-dark);
+    color: white;
+}
+
+.dark-theme.chat-message .degree-of-success .criticalSuccess {
+    color: #00b100;
+}
+
+.dark-theme .dice-roll .dice-total.failure {
+    color: red;
+}
+
+.dark-theme .dice-roll .dice-total.success {
+    color: #00b100;
+}
+
+.dark-theme.chat-message .table-draw .table-description {
+    border-top: none;
+    color: hsl(0, 0%, 60%);
+    font-size: unset;
+    padding: 0px
+}
+
+.dark-theme.message .card-content hr {
+    border-bottom: 1px solid var(--pf2e-color-ornament-for-dark);
+}
+
+#chat .dark-theme h2 {
+    border-bottom: 1px solid var(--pf2e-color-ornament-for-dark);
+}
+
+.dark-theme .chat-damage-buttons button>img {
+    filter: var(--filter-dark);
+}
+
+.dark-theme .damage-tag-modifier {
+    background: var(--pf2e-translucent-very-for-dark);
+}
+
+.dark-theme [data-visibility=owner]:is(div, em, p, span, strong) {
+    background: var(--pf2e-translucent-very-for-dark);
+}
+
+.dark-theme .damage-tag-base {
+    background: var(--pf2e-translucent-middle);
+    color: var(--pf2e-body-primary);
+}
+
+.dark-theme.message .message-content .chat-damage-buttons button.heal-damage .plus {
+    color: black;
+    text-shadow: none;
+}
+
+.dark-theme .message-content .chat-damage-buttons button,
+.dark-theme .dice-tooltip .dice-rolls .roll,
+.dark-theme .pf2e.chat-card .card-content p,
+.dark-theme .pf2e.chat-card .card-header h3,
+.dark-theme .pf2e.chat-card .card-header h4 {
+    color: white;
+    text-shadow: var(--pf2e-half-transparent-dark);
+}
+
+.dark-theme .pf2e.chat-card .card-footer {
+    color: hsl(0, 0%, 60%)
+}
+
+.dark-theme .vr {
+    border-color: gray;
 }

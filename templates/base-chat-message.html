@@ -1,11 +1,11 @@
 <li class="chat-message message flexcol {{cssClass}} {{baseTheme}} " data-message-id="{{message._id}}">
     {{!-- {{#if (showHeader message)}} --}}
         {{#if (isUsingHeaderTint message)}}
-        <header class="message-header flexrow {{playerId message}}" style="background-color: {{getUserColor message}}">
+        <header class="message-header flexrow {{headerTextColor message}}" style="background-color: {{getUserColor message}}">
         {{else}}
-        <header class="message-header flexrow {{playerId message}}">
+        <header class="message-header flexrow {{headerTextColor message}}">
         {{/if}}
-        {{#if (showSpeakerImage message)}}
+        {{!-- {{#if (showSpeakerImage message)}}
         <div class="portrait-and-name" style="display: flex; gap:5px">
             <div class="portrait-wrapper">
             {{#if (isTokenPortrait message)}}
@@ -14,13 +14,27 @@
             <img class="portrait {{determineImageKind message}}" src="{{getSpeakerImage message}}"/>
             {{/if}}
         </div>
-        {{/if}}
+
         <div class="sender-wrapper">
             <h4 class="message-sender">{{alias}}</h4>
         </div>
+        </div>
+        {{else}}
+        <div class="sender-wrapper">
+            <h4 class="message-sender">{{alias}}</h4>
+        </div>
+        {{/if}} --}}
+
+        {{!-- <div class="sender-wrapper"> --}}
+            <h4 class="message-sender">{{alias}}</h4>
+        {{!-- </div> --}}
 
         <span class="message-metadata">
-            <time class="message-timestamp">{{timeSince message.timestamp}}</time>
+            <span class="hovertext" data-hover={{timeSince message.timestamp}} {{chatDateStamp message.timestamp}}>
+                {{!-- <time class="message-timestamps header-meta">{{chatDateStamp message.timestamp}}</time> --}}
+                <time class="message-timestamps header-meta">{{chatTimeStamp message.timestamp}}</time>
+                <time class="message-timestamp" style="display: none;"></time>
+                </span>
             {{#if user.isGM}}
             <a class="button message-delete"><i class="fas fa-trash"></i></a>
             {{/if}}
