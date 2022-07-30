@@ -70,8 +70,9 @@ button:hover,
 button:focus,
 form button:hover,
 form button:focus {
-    box-shadow: 0px 0px 2px rgb(0 0 0 / 80%) inset, 0px 0px 4px rgb(0 0 0 / 50%) inset;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 50%) inset;
     background-color: rgba(214, 214, 191, 0.8);
+    transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 body {
@@ -107,6 +108,7 @@ form button {
     box-shadow: none;
     margin: 0px;
     cursor: pointer;
+    transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .sheet header.sheet-header {

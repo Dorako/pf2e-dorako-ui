@@ -42,11 +42,11 @@ class ActorAvatar extends Avatar {
 }
 
 class TokenAvatar extends Avatar {
-  constructor(name, image, actualScale, renderScale) {
+  constructor(name, image, scale, isSmall) {
     super(name, image);
     this.type = "token";
-    this.scale = actualScale;
-    this.renderScale = renderScale;
+    this.scale = scale;
+    this.isSmall = isSmall;
   }
 }
 
@@ -388,14 +388,15 @@ function addAvatarsToFlags(message) {
     ? new ActorAvatar(message.data.speaker.alias, actorImg)
     : null;
 
-  let tokenAvatar = tokenImg
-    ? new TokenAvatar(
-        message.data.speaker.alias,
-        tokenImg,
-        message.token.data.scale,
-        message.token.data.scale > 1 ? message.token.data.scale : 1
-      )
-    : null;
+  let tokenAvatar = null;
+  if (tokenImg) {
+    tokenAvatar = new TokenAvatar(
+      message.data.speaker.alias,
+      tokenImg,
+      message.token.data.scale,
+      message.actor.size == "sm"
+    );
+  }
 
   message.data.update({
     "flags.pf2eDorakoUi.userAvatar": userAvatar,
@@ -412,9 +413,12 @@ function getAvatar(message) {
     : null;
   let tokenAvatar = message.data.flags?.pf2eDorakoUi?.tokenAvatar;
   let actorAvatar = message.data.flags?.pf2eDorakoUi?.actorAvatar;
-  let userAvatar = message.data.flags?.pf2eDorakoUi?.userAvatar;
+  let userAvatar = game.settings.get("pf2e-dorako-ui", "use-user-avatar")
+    ? message.data.flags?.pf2eDorakoUi?.userAvatar
+    : null;
 
   if (combatantAvatar) return combatantAvatar;
+
   return main == "token"
     ? tokenAvatar || actorAvatar || userAvatar
     : actorAvatar || tokenAvatar || userAvatar;
@@ -429,26 +433,39 @@ Hooks.on("renderChatMessage", (message, b) => {
   avatarElem.src = avatar.image;
 
   if (avatar.type == "token") {
+    const smallScale = game.settings.get(
+      "pf2e-dorako-ui",
+      "small-creature-token-portrait-size"
+    );
+    let smallCorrection = avatar.isSmall ? 1.25 * smallScale : 1;
+    message.data.flags?.pf2eDorakoUi?.combatantAvatar?.image;
     avatarElem?.setAttribute(
       "style",
-      "transform: scale(" + avatar.renderScale + ")"
+      "transform: scale(" + avatar.scale * smallCorrection + ")"
     );
   }
 
-  let degree = message?.roll?.data?.degreeOfSuccess;
-  if (degree == undefined) return;
-  if (degree == 0) {
-    let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
-    wrapper?.setAttribute(
-      "style",
-      "filter: saturate(0.2) drop-shadow(0px 0px 6px black)"
-    );
-  } else if (degree == 3) {
-    let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
-    wrapper?.setAttribute(
-      "style",
-      "filter: drop-shadow(0px 0px 6px lightgreen)"
-    );
+  const portraitDegreeSetting = game.settings.get(
+    "pf2e-dorako-ui",
+    "portrait-reacts-to-degree-of-success"
+  );
+
+  if (portraitDegreeSetting) {
+    let degree = message?.roll?.data?.degreeOfSuccess;
+    if (degree == undefined) return;
+    if (degree == 0) {
+      let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
+      wrapper?.setAttribute(
+        "style",
+        "filter: saturate(0.2) drop-shadow(0px 0px 6px black)"
+      );
+    } else if (degree == 3) {
+      let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
+      wrapper?.setAttribute(
+        "style",
+        "filter: drop-shadow(0px 0px 6px lightgreen)"
+      );
+    }
   }
 });
 
@@ -549,6 +566,55 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "popout-token-portraits", {
     name: "Chat portrait token popout",
     hint: "Scales the chat portraits of BB/AV-style tokens to allow for 'pop out'.",
+    scope: "world",
+    type: Boolean,
+    default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register(
+    "pf2e-dorako-ui",
+    "portrait-reacts-to-degree-of-success",
+    {
+      name: "Should the portraits react to critical success/failure?",
+      hint: "A critical success will glow green, and a critical failure will become muted and dark.",
+      scope: "world",
+      type: Boolean,
+      default: true,
+      config: true,
+      onChange: () => {
+        debouncedReload();
+      },
+    }
+  );
+
+  game.settings.register(
+    "pf2e-dorako-ui",
+    "small-creature-token-portrait-size",
+    {
+      name: "Chat portrait small creature scale",
+      hint: "Default is 0.8",
+      scope: "world",
+      type: Number,
+      default: 0.8,
+      range: {
+        min: 0.7,
+        max: 1.0,
+        step: 0.1,
+      },
+      config: true,
+      onChange: () => {
+        debouncedReload();
+      },
+    }
+  );
+
+  game.settings.register("pf2e-dorako-ui", "use-user-avatar", {
+    name: "Use user avatar as fallback for chat potraits?",
+    hint: "Configure user avatars by right-clicking users in the lower left area of Foundry.",
     scope: "world",
     type: Boolean,
     default: true,
