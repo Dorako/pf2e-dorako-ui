@@ -1,3 +1,9 @@
+# 1.5.1
+
+Added settings for disabling the portraits-react-to-degree-of-success feature and the use-user-avatar-as-portrait-fallback feature.
+
+Redid the way portrait sizing is stored, so you can now chose what size 'small' sized creature portraits should be rendered at.
+
 # 1.5.0
 
 Huge refactor - the code is a lot nicer now, and doesn't use template substitution.
