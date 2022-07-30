@@ -64,7 +64,9 @@
 .spellcasting-entry.sheet ol.spell-list>li.spell-level-header,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4,
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score div {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score div,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .focus-pool,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .focus-pool h4:hover {
   color: var(--text-light);
 }
 
@@ -80,7 +82,8 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1,
 .actor.sheet.character .crb-style .tab.character .pc h3 .fas,
 .actor.sheet.character .crb-style .sheet-body .sheet-content h3.header,
-.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header button {
+.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header button,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .focus-pool .pips .fas.fa-dot-circle {
   color: var(--tertiary-dark);
 }
 
@@ -616,10 +619,6 @@ a.inline-roll,
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score {
   margin-top: 2px;
-}
-
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .skill-container {
-  display: none;
 }
 
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .alt-usage img.alt-usage-icon {
