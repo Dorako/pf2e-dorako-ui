@@ -66,7 +66,8 @@
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.directory-list .action-header .item-controls,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score div,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .focus-pool,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .focus-pool h4:hover {
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .focus-pool h4:hover,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .item-placeholder {
   color: var(--text-light);
 }
 
@@ -77,7 +78,7 @@
 }
 
 .actor.sheet.character .crb-style .details-label,
-.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .item.feat-item .item-name .feat-slot-title,
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .skills-list .skill-grid .skill-score,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1,
 .actor.sheet.character .crb-style .tab.character .pc h3 .fas,
