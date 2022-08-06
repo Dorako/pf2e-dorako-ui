@@ -1,8 +1,7 @@
 /* Dark sheet background */
 .actor.sheet.familiar .window-content {
-  background: var(--sheet-dark);
-  background-repeat: repeat-x, no-repeat;
-  background-size: cover;
+  background: url("../../../ui/denim.png");
+  box-shadow: 0 0 10vw var(--color-shadow-dark) inset;
 }
 /* Text color - White */
 .actor.sheet.familiar .window-content .familiar-sheet-header .header-content .charname .familiar-title,
@@ -181,6 +180,7 @@
 }
 /* Familiar portrait appearance */
 .actor.sheet.familiar .window-content .familiar-sheet-header img {
+  background: url("../../../ui/denim.png");
   box-shadow: 0 0 0 1px #918c88,0 0 0 2px #e1d8cf,0 0 0 3px #a98f39,inset 0 0 8px rgba(0,0,0,.5),0 0 8px #000;
   cursor: pointer;
   margin: 2px -0.5px 10px -1px;

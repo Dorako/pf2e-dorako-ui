@@ -1,7 +1,7 @@
 /* Dark sheet background with red header */
 .actor.sheet.familiar .window-content {
-  background: url(../img/header.webp), var(--sheet-dark);
-  background-attachment: local;
-  background-repeat: repeat-x, no-repeat;
-  background-size: 1335px, cover;
+  background: url(../img/header.webp), url("../../../ui/denim.png");
+  background-repeat: repeat-x, repeat;
+  background-size: 1335px, auto;
+  box-shadow: 0 0 10vw var(--color-shadow-dark) inset;
 }
