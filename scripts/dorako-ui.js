@@ -124,6 +124,10 @@ Hooks.on("renderCombatTracker", addScalingToCombatTrackerAvatars);
 
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  if (chatMessage.flags["narrator-tools"]) {
+    return;
+  }
+
   let html0 = html[0];
 
   // console.log("renderChatMessage Hook");
@@ -138,7 +142,14 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   injectMessageTag(html, messageData);
   injectWhisperParticipants(html, messageData);
   injectAuthorName(html, messageData);
-  injectChatPortrait(html, getAvatar(chatMessage));
+
+  if (
+    game.settings.get("pf2e-dorako-ui", "hidePortraitWhenHidden") &&
+    chatMessage.getFlag("pf2e-dorako-ui", "wasTokenHidden")
+  ) {
+  } else {
+    injectChatPortrait(html, getAvatar(chatMessage));
+  }
   moveFlavorTextToContents(html);
 
   const theme = game.settings.get("pf2e-dorako-ui", "theme");
@@ -160,8 +171,7 @@ Hooks.on("preCreateChatMessage", (message) => {
   addAvatarsToFlags(message); // Really should be adding all of them, so you can change the setting and it will apply retroactively
 
   message.data.update({
-    "flags.pf2eDorakoUi.tokenScale": message?.token?.data?.scale,
-    "flags.pf2eDorakoUi.wasTokenHidden": message?.token?.data?.hidden,
+    "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.data?.hidden,
   });
 });
 
@@ -247,15 +257,14 @@ function injectMessageTag(html, messageData) {
       whisperTargets[0] === messageData.message.user;
     const isRoll = messageData.message.roll !== undefined;
 
-    // Inject tag to the left of the timestamp
     if (isBlind) {
       rolltype.text("Secret");
       messageMetadata.prepend(rolltype);
     } else if (isSelf && whisperTargets[0]) {
-      rolltype.text(game.i18n.localize("CHAT.RollSelf"));
+      rolltype.text("Self roll");
       messageMetadata.prepend(rolltype);
     } else if (isRoll && isWhisper) {
-      rolltype.text(game.i18n.localize("CHAT.RollPrivate"));
+      rolltype.text("GM only");
       messageMetadata.prepend(rolltype);
     } else if (isWhisper) {
       rolltype.text("Whisper");
@@ -369,7 +378,6 @@ function calcHeaderTextColor(html, message) {
 }
 
 function addAvatarsToFlags(message) {
-  // const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
   let combatantImg =
     game.modules.get("combat-tracker-images")?.active && message.actor
       ? message.actor.getFlag("combat-tracker-images", "trackerImage")
@@ -399,25 +407,31 @@ function addAvatarsToFlags(message) {
   }
 
   message.data.update({
-    "flags.pf2eDorakoUi.userAvatar": userAvatar,
-    "flags.pf2eDorakoUi.combatantAvatar": combatantAvatar,
-    "flags.pf2eDorakoUi.tokenAvatar": tokenAvatar,
-    "flags.pf2eDorakoUi.actorAvatar": actorAvatar,
+    "flags.pf2e-dorako-ui.userAvatar": userAvatar,
+    "flags.pf2e-dorako-ui.combatantAvatar": combatantAvatar,
+    "flags.pf2e-dorako-ui.tokenAvatar": tokenAvatar,
+    "flags.pf2e-dorako-ui.actorAvatar": actorAvatar,
   });
 }
 
 function getAvatar(message) {
   const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
-  let combatantAvatar = message.data.flags?.pf2eDorakoUi?.combatantAvatar?.image
-    ? message.data.flags?.pf2eDorakoUi?.combatantAvatar
-    : null;
-  let tokenAvatar = message.data.flags?.pf2eDorakoUi?.tokenAvatar;
-  let actorAvatar = message.data.flags?.pf2eDorakoUi?.actorAvatar;
+
+  let combatantAvatar = message.getFlag("pf2e-dorako-ui", "combatantAvatar");
+  let tokenAvatar = message.getFlag("pf2e-dorako-ui", "tokenAvatar");
+  let actorAvatar = message.getFlag("pf2e-dorako-ui", "actorAvatar");
   let userAvatar = game.settings.get("pf2e-dorako-ui", "use-user-avatar")
-    ? message.data.flags?.pf2eDorakoUi?.userAvatar
+    ? message.getFlag("pf2e-dorako-ui", "userAvatar")
     : null;
 
   if (combatantAvatar) return combatantAvatar;
+
+  if (
+    game.settings.get("pf2e-dorako-ui", "hidePortraitWhenHidden") &&
+    message.getFlag("pf2e-dorako-ui", "wasTokenHidden")
+  ) {
+    return null;
+  }
 
   return main == "token"
     ? tokenAvatar || actorAvatar || userAvatar
@@ -438,7 +452,6 @@ Hooks.on("renderChatMessage", (message, b) => {
       "small-creature-token-portrait-size"
     );
     let smallCorrection = avatar.isSmall ? 1.25 * smallScale : 1;
-    message.data.flags?.pf2eDorakoUi?.combatantAvatar?.image;
     avatarElem?.setAttribute(
       "style",
       "transform: scale(" + avatar.scale * smallCorrection + ")"
@@ -617,7 +630,7 @@ Hooks.once("init", async () => {
     hint: "Configure user avatars by right-clicking users in the lower left area of Foundry.",
     scope: "world",
     type: Boolean,
-    default: true,
+    default: false,
     config: true,
     onChange: () => {
       debouncedReload();
@@ -629,7 +642,7 @@ Hooks.once("init", async () => {
     hint: "Disable if your token art is fancy.",
     scope: "client",
     config: true,
-    default: true,
+    default: false,
     type: Boolean,
     onChange: () => {
       debouncedReload();
@@ -795,7 +808,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-chat", {
     name: "Theme chat?",
     hint: "Applies theming to chat cards and sidebar content.",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -807,7 +820,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-navigation", {
     name: "Theme scene navigation?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -819,7 +832,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-hotbar", {
     name: "Theme the hotbar (macro bar)?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -831,7 +844,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-controls", {
     name: "Theme scene controls?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -843,7 +856,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-token-hud", {
     name: "Theme the token HUD?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -855,7 +868,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-effect-panel", {
     name: "Theme the effect panel?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -867,7 +880,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-sidebar", {
     name: "Theme the sidebar?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -879,7 +892,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-app-ui", {
     name: "Theme app UI?",
     hint: "This includes the player box, window headers, and similar",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -891,7 +904,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-combat-tracker", {
     name: "Theme the combat tracker?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -903,7 +916,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-custom-hotbar", {
     name: "Theme Custom Hotbar module?",
     hint: "Set the 'core hotbar' to 1px 1px offset in Custom Hotbar settings.",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -915,7 +928,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-token-action-hud", {
     name: "Theme Token Action HUD?",
     hint: "Makes TAH more compact and fits in better with the rest of the UI.",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -927,7 +940,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-window-controls", {
     name: "Theme Window Controls module?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -939,7 +952,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-combat-carousel", {
     name: "Theme Combat Carousel?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,
@@ -951,7 +964,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
     name: "Theme Dice Tray module?",
     hint: "",
-    scope: "client",
+    scope: "World",
     type: Boolean,
     default: true,
     config: true,

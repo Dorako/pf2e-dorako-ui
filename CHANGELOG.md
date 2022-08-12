@@ -1,3 +1,17 @@
+# 1.5.2
+
+Fixed close-button in Outlaws of Alkenstars premium module journals missing.
+
+Fixed hidden tokens showing chat portraits.
+
+Minor fixes to Narrator Tools and CGP compability.
+
+Changed the blending mode for colored chat headers, should look better for bright, saturated colors that people often use.
+
+Changed application header styling - it now reacts to what kind of sheet it is showing.
+
+Updates to dark PC/Familiar sheet, courtesy of @Vesselchuck.
+
 # 1.5.1
 
 Added settings for disabling the portraits-react-to-degree-of-success feature and the use-user-avatar-as-portrait-fallback feature.

@@ -245,6 +245,11 @@ nav.damage-log-nav.tabs {
     padding: 0px;
 }
 
+/* 
 #cgmp-typing-notify.hidden>* {
     display: none;
+} */
+
+#sidebar #chat {
+    overflow: hidden;
 }

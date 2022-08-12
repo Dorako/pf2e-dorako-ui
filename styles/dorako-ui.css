@@ -75,9 +75,9 @@ form button:focus {
     transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-body {
+/* body {
     text-rendering: geometricPrecision;
-}
+} */
 
 
 

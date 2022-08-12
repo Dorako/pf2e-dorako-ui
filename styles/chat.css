@@ -1445,13 +1445,13 @@ div#scrollToBottom:hover {
 }
 
 .message .message-header.dark-text {
-    background-blend-mode: luminosity;
+    background-blend-mode: multiply;
 }
 
 .message .message-header.dark-header-text {
     color: black;
     text-shadow: var(--pf2e-shadow-is-light);
-    background-blend-mode: luminosity;
+    background-blend-mode: multiply;
 }
 
 .message .message-header.light-header-text {
@@ -1614,6 +1614,7 @@ i[data-pf2-repost] {
     font-size: small;
 }
 
+span[data-pf2-effect-area].with-repost,
 span[data-pf2-check].with-repost {
     border-right: 1px solid var(--color-border-dark-tertiary);
     padding: .2em;
@@ -1642,4 +1643,9 @@ span[data-pf2-check].with-repost {
     height: 1.2em;
     border-radius: 3px;
     box-shadow: var(--gold-and-glow)
+}
+
+#chat-log .message.narrator-description,
+#chat-log .message.narrator-narrative {
+    border: none;
 }
