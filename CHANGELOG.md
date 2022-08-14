@@ -1,3 +1,7 @@
+# 1.5.3
+
+Fixed style creeping into combat tracker.
+
 # 1.5.2
 
 Fixed close-button in Outlaws of Alkenstars premium module journals missing.
