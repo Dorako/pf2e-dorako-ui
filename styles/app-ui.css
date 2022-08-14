@@ -471,7 +471,7 @@
      box-shadow: none;
  }
 
- .directory .directory-list .directory-item img {
+ .directory .directory-list .directory-item:not(.combatant) img {
      box-shadow: var(--gold-and-glow), 0px 2px 10px rgba(0, 0, 0, 0.5);
      margin: 3px;
      border-radius: 5px;
