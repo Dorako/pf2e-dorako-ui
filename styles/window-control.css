@@ -7,8 +7,47 @@
 .window-app.minimized .window-header {
     /* border: 1px solid transparent; */
     border: none;
-    border-radius: var(--dorako-radius);
+    border-radius: 5px;
     background-color: var(--dorako-bg-current);
     backdrop-filter: var(--dorako-vibrancy);
     /* box-shadow: 0 0 3px black; */
+}
+
+/* .window-app .window-content {
+     box-shadow: var(--gold-and-glow)
+ } */
+
+.app.window-app {
+    transition: 0.25s;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5),
+        1px 1px 1px rgba(0, 0, 0, 1),
+        1px -1px 1px rgba(0, 0, 0, 1),
+        -1px -1px 1px rgba(0, 0, 0, 1),
+        -1px 1px 1px rgba(0, 0, 0, 1),
+        0px 0px 3px rgba(0, 0, 0, 1),
+        0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.app.window-app .window-header {
+    border-bottom: 2px solid black
+}
+
+.app.window-app.minimized .window-header {
+    border-bottom: none;
+}
+
+.app.window-app.minimized {
+    box-shadow: none;
+}
+
+.app.window-app.minimized.hazard .window-header {
+    background-color: #1C3531
+}
+
+.app.window-app.minimized.character .window-header {
+    background-color: #5D0E08
+}
+
+.app.window-app.minimized.npc .window-header {
+    background-color: #422d01
 }

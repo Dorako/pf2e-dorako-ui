@@ -1649,3 +1649,9 @@ span[data-pf2-check].with-repost {
 #chat-log .message.narrator-narrative {
     border: none;
 }
+
+.dark-theme .monks-tokenbar .sheet .items-list .item .item-name,
+.dark-theme .monks-tokenbar .sheet .items-list,
+.dark-theme .monks-tokenbar.chat-card .card-header h3 {
+    color: white;
+}

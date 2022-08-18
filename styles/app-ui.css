@@ -22,7 +22,7 @@
  .window-app .window-header,
  .window-app.minimized .window-header {
      border: none;
-     border-radius: var(--dorako-radius);
+     border-radius: 5px;
      background-color: var(--dorako-bg-current);
      backdrop-filter: var(--dorako-vibrancy);
      /*will-change: backdrop-filter;*/
@@ -53,7 +53,7 @@
  }
 
  .window-app .window-header {
-     border-radius: var(--dorako-radius) var(--dorako-radius) 0px 0px;
+     border-radius: 5px 5px 0px 0px;
      box-shadow: var(--glassy);
  }
 
@@ -110,7 +110,7 @@
 
  .app.sidebar-popout {
      border: none;
-     border-radius: var(--dorako-radius);
+     border-radius: 5px;
      min-width: 300px;
      overflow: hidden;
      /* background-color: var(--dorako-bg-current); */
@@ -429,51 +429,4 @@
  .window-app.story-sheet .window-header {
      box-shadow: none;
      background-color: transparent;
- }
-
-
- .window-app .window-content {
-     box-shadow: var(--gold-and-glow)
- }
-
- .app.window-app {
-     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5), var(--gold-and-glow);
- }
-
- .app.window-app .window-header {
-     box-shadow: var(--gold-and-glow);
-     transition: border-radius 0.25s;
- }
-
- .app.window-app.hazard .window-header {
-     background-color: #1C3531
- }
-
- .app.window-app.character .window-header {
-     background-color: #5D0E08
- }
-
- .app.window-app.npc .window-header {
-     background-color: #422d01
- }
-
-
- /* .app.window-app.minimized {
-     box-shadow: var(--glassy);
- } */
-
- .app.window-app.minimized .header {
-     box-shadow: none;
-     transition: border-radius 0.25s;
- }
-
- .dice-checks .window-content {
-     box-shadow: none;
- }
-
- .directory .directory-list .directory-item:not(.combatant) img {
-     box-shadow: var(--gold-and-glow), 0px 2px 10px rgba(0, 0, 0, 0.5);
-     margin: 3px;
-     border-radius: 5px;
-     background-color: var(--alt);
  }

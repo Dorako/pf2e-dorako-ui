@@ -1,3 +1,7 @@
+# 1.5.4
+
+Rolled back some recent changes, improved look of certain dark theme chat messages posted by Monk's Tokenbar module.
+
 # 1.5.3
 
 Fixed style creeping into combat tracker.
