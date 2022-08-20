@@ -1,3 +1,7 @@
+# 1.5.5
+
+Fixed a whoopsie causing dragging application windows to act wonky.
+
 # 1.5.4
 
 Rolled back some recent changes, improved look of certain dark theme chat messages posted by Monk's Tokenbar module.
