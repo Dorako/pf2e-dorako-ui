@@ -122,6 +122,21 @@ function injectCSS(filename) {
 // Combat Tracker
 Hooks.on("renderCombatTracker", addScalingToCombatTrackerAvatars);
 
+// // Test
+// Check DF manual rolls for inspiration
+// Hooks.on("renderUserConfig", (user, html, c) => {
+//   console.log(user);
+//   console.log(html);
+//   console.log(c);
+
+//   let group0 = html.find(".form-group")[0];
+//   console.log(group0);
+// });
+
+// Hooks.on("updateUser", (user) => {
+//   console.log(user);
+// });
+
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   if (chatMessage.flags["narrator-tools"]) {
@@ -168,10 +183,10 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 });
 
 Hooks.on("preCreateChatMessage", (message) => {
-  addAvatarsToFlags(message); // Really should be adding all of them, so you can change the setting and it will apply retroactively
+  addAvatarsToFlags(message);
 
-  message.data.update({
-    "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.data?.hidden,
+  message.updateSource({
+    "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.hidden,
   });
 });
 
@@ -208,6 +223,7 @@ function injectSenderWrapper(html, messageData) {
 
 function injectChatPortrait(html, avatar) {
   if (!avatar) return;
+  // if cautious game master is enabled and setting is on, return immediately
   let messageHeader = html.find(".message-header")[0];
   let portraitAndName = document.createElement("div");
   portraitAndName.classList.add("portrait-and-name");
@@ -255,7 +271,7 @@ function injectMessageTag(html, messageData) {
       isWhisper &&
       whisperTargets.length === 1 &&
       whisperTargets[0] === messageData.message.user;
-    const isRoll = messageData.message.roll !== undefined;
+    const isRoll = messageData.message.rolls !== undefined;
 
     if (isBlind) {
       rolltype.text("Secret");
@@ -280,7 +296,7 @@ function injectWhisperParticipants(html, messageData) {
   const whisperTargetString = messageData.whisperTo;
   const whisperTargetIds = messageData.message.whisper;
   const isWhisper = whisperTargetIds?.length > 0 || false;
-  const isRoll = messageData.message.roll !== undefined;
+  const isRoll = messageData.message.rolls !== undefined;
   const isSelf =
     (isWhisper &&
       whisperTargets.length === 1 &&
@@ -291,7 +307,7 @@ function injectWhisperParticipants(html, messageData) {
       whisperTargets[1] === messageData.message.user);
 
   const authorId = messageData.message.user;
-  const userId = game.user.data._id;
+  const userId = game.user.id;
 
   if (!isWhisper) return;
   if (userId !== authorId && !whisperTargetIds.includes(userId)) return;
@@ -324,8 +340,9 @@ function addScalingToCombatTrackerAvatars(app, html, data) {
   const combatImagesActive = game.modules.get("combat-tracker-images")?.active;
   $(".combatant", html).each(function () {
     let id = this.dataset.combatantId;
-    let combatant = game.combat.data.combatants.get(id);
-    let scale = combatant.token.data.scale;
+    let combatant = game.combat.combatants.get(id);
+    console.log(combatant);
+    let scale = combatant.token.texture.scaleX;
     let tokenImageElem = this.getElementsByClassName("token-image")[0];
     if (
       scale < 1 ||
@@ -382,31 +399,35 @@ function addAvatarsToFlags(message) {
     game.modules.get("combat-tracker-images")?.active && message.actor
       ? message.actor.getFlag("combat-tracker-images", "trackerImage")
       : null;
-  let actorImg = message.actor?.data?.img;
-  let tokenImg = message.token?.data?.img;
-  let userImg = message.user?.data?.avatar;
+  let actorImg = message.actor?.img;
+  let tokenImg = message.token?.texture.src;
+  let userImg = message.user?.avatar;
 
-  let userAvatar = new Avatar(message.data.speaker.alias, userImg);
+  console.log(message.token);
+  console.log(message.token.texture);
+  console.log(message.token.texture.src);
+
+  let userAvatar = new Avatar(message.speaker.alias, userImg);
 
   let combatantAvatar = combatantImg
-    ? new CombatantAvatar(message.data.speaker.alias, combatantImg)
+    ? new CombatantAvatar(message.speaker.alias, combatantImg)
     : null;
 
   let actorAvatar = actorImg
-    ? new ActorAvatar(message.data.speaker.alias, actorImg)
+    ? new ActorAvatar(message.speaker.alias, actorImg)
     : null;
 
   let tokenAvatar = null;
   if (tokenImg) {
     tokenAvatar = new TokenAvatar(
-      message.data.speaker.alias,
+      message.speaker.alias,
       tokenImg,
-      message.token.data.scale,
+      message.token.texture.scaleX,
       message.actor.size == "sm"
     );
   }
 
-  message.data.update({
+  message.updateSource({
     "flags.pf2e-dorako-ui.userAvatar": userAvatar,
     "flags.pf2e-dorako-ui.combatantAvatar": combatantAvatar,
     "flags.pf2e-dorako-ui.tokenAvatar": tokenAvatar,
@@ -464,7 +485,7 @@ Hooks.on("renderChatMessage", (message, b) => {
   );
 
   if (portraitDegreeSetting) {
-    let degree = message?.roll?.data?.degreeOfSuccess;
+    let degree = message?.rolls?.degreeOfSuccess;
     if (degree == undefined) return;
     if (degree == 0) {
       let wrapper = html.getElementsByClassName("portrait-wrapper")[0];

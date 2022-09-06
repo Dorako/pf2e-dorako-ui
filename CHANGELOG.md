@@ -1,3 +1,13 @@
+# 1.6.0 v10 compability update.
+
+Added support for v10-style journals.
+
+Reshuffled various things to get rid of deprecation warnings introduced in v10.
+
+Fixed styling of Forgotten Adventures Battlemaps module.
+
+Fixed close-button in Outlaws of Alkenstars premium module journals missing, when the 'Frosted glass' setting was turned on.
+
 # 1.5.5
 
 Fixed a whoopsie causing dragging application windows to act wonky.

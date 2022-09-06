@@ -29,7 +29,7 @@
 }
 
 .app.window-app .window-header {
-    border-bottom: 2px solid black
+    border-bottom: 1px solid black
 }
 
 .app.window-app.minimized .window-header {
@@ -50,4 +50,85 @@
 
 .app.window-app.minimized.npc .window-header {
     background-color: #422d01
+}
+
+.sheet.journal-entry {
+    box-shadow: var(--glassy), 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+}
+
+.sheet.journal-entry .window-content {
+    overflow: visible;
+}
+
+.sheet.journal-entry .journal-entry-content {
+    border: none;
+    border-radius: 10px 0 0 0;
+    margin-right: 2px;
+    margin-left: 2px;
+    height: calc(100% - 2px);
+    box-shadow: var(--gold-and-glow), var(--glassy)
+}
+
+.sheet.window-app:not(.outlaws-wrapper, .minimized).journal-entry .window-header {
+    box-shadow: none;
+    border: none;
+    background-color: unset;
+}
+
+.sheet.journal-entry .journal-entry-content {
+    background: none;
+    background-color: var(--bg);
+    background-image: var(--pf2e-sheets-bg);
+    background-size: cover;
+}
+
+.sheet.journal-entry .journal-sidebar {
+    text-shadow: var(--dorako-text-shadow);
+}
+
+.sheet.journal-entry .pages-list .directory-item.active:last-of-type {
+    border-bottom: 1px solid wheat;
+}
+
+.sheet.journal-entry .pages-list .directory-item.active+ :not(.active),
+.sheet.journal-entry .pages-list .directory-item.active:first-of-type {
+    border-top: 1px solid wheat;
+}
+
+.directory .directory-item.context, .directory .directory-item.active {
+    border-color: wheat;
+}
+
+/* .sheet.journal-entry .journal-entry-page * {
+    text-shadow: 0px 1px 1px white;
+} */
+
+.sheet.journal-entry .journal-sidebar .directory-header .header-search input,
+.sheet.journal-entry .journal-sidebar .action-buttons button.create,
+.sheet.journal-entry .journal-sidebar .action-buttons button.next,
+.sheet.journal-entry .journal-sidebar .action-buttons button.previous {
+    border: none;
+    box-shadow: var(--gold-and-glow);
+}
+
+#tooltip {
+    /* position: absolute;
+    width: max-content;
+    max-width: 320px;
+    padding: 6px 8px; */
+    background: var(--pf2e-color-mono-dark);
+    /* font-family: var(--font-primary);
+    font-size: var(--font-size-16);
+    line-height: var(--font-size-16);
+    color: var(--color-text-light-highlight); */
+    border: none;
+    /* border-radius: 3px; */
+    box-shadow: var(--glassy);
+    /* z-index: var(--z-index-tooltip);
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 500ms, opacity 500ms; */
 }

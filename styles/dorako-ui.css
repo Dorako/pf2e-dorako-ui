@@ -71,7 +71,7 @@ button:focus,
 form button:hover,
 form button:focus {
     box-shadow: 0px 0px 4px rgb(0 0 0 / 50%) inset;
-    background-color: rgba(214, 214, 191, 0.8);
+    background-color: rgba(214, 214, 191, 1);
     transition: background-color 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -103,7 +103,7 @@ input:not([type="radio"])*/
 select,
 button,
 form button {
-    background: rgba(255, 255, 245, 0.8);
+    background: rgba(255, 255, 245, 1);
     border: 1px solid var(--color-border-light-tertiary);
     box-shadow: none;
     margin: 0px;
@@ -228,4 +228,8 @@ img {
     border-radius: 5px;
     color: white;
     text-shadow: var(--pf2e-text-shadow-is-dark);
+}
+
+a.content-link, a.inline-roll {
+    text-shadow: none !important
 }
