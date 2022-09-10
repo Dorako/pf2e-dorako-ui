@@ -665,3 +665,7 @@ a.inline-roll,
 .actor.sheet.character .crb-style .sheet-body .sheet-content ol.spell-list li[data-expended-state=true] button.cast-spell:hover {
   background: var(--color-text-dark-4);
 }
+
+.actor.sheet .crb-style.limited .tab.character .character-bio {
+	color: var(--text-light);
+}
