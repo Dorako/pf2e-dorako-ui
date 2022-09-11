@@ -1,3 +1,9 @@
+# 1.6.1
+
+Updated manifest so it correctly reports v10 compability.
+
+PC Dark mode sheet updated by @Vesselchuck, fixing text-color of bios for limited view sheets.
+
 # 1.6.0 v10 compability update.
 
 Added support for v10-style journals.
