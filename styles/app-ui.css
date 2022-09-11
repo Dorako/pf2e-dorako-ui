@@ -16,15 +16,20 @@
 
  /* Glass - Add new styling */
 
+ #players {
+     background-color: var(--dorako-bg-current);
+     backdrop-filter: var(--dorako-vibrancy);
+ }
+
  #players,
  .window-app:not(.outlaws-wrapper, .journal-entry) .window-header,
  .window-app.minimized .window-header {
      border: none;
-     background-color: var(--dorako-bg-current);
-     backdrop-filter: var(--dorako-vibrancy);
+     /* background-color: var(--dorako-bg-current);
+     backdrop-filter: var(--dorako-vibrancy); */
      /*will-change: backdrop-filter;*/
      /* transform: translate3d(0px, 0px, 0px); */
-     box-shadow: var(--glassy);
+     /* box-shadow: var(--glassy); */
  }
 
  #ui-top.offset {
@@ -51,7 +56,8 @@
 
  .window-app .window-header {
      border-radius: 5px 5px 0px 0px;
-     box-shadow: var(--glassy);
+     /* box-shadow: var(--glassy); */
+     margin-bottom: 0px;
  }
 
  .window-app .window-content {
@@ -66,7 +72,7 @@
  #players,
  .window-app .window-header a,
  .window-app .window-header .window-title {
-     text-shadow: var(--dorako-text-shadow);
+     text-shadow: var(--dorako-text-shadow), var(--dorako-text-shadow);
  }
 
  .editable .crb-style {
@@ -87,9 +93,6 @@
      border-radius: 0px 0px 5px 5px;
  }
 
- .window-app .window-header {
-     margin-bottom: 0px;
- }
 
  .app {
      color: var(--color-text-light-1);
@@ -198,7 +201,7 @@
 
 
  .window-app.image-popout .window-content {
-     background: var(--dorako-bg-current);
+     background: unset;
      padding: 0px;
  }
 
@@ -230,6 +233,7 @@
      box-shadow: var(--glassy);
      position: unset;
      border: none;
+     border-radius: 3px;
  }
 
 

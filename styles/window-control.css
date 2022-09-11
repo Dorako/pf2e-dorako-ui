@@ -7,9 +7,9 @@
 .window-app.minimized .window-header {
     /* border: 1px solid transparent; */
     border: none;
-    border-radius: 5px;
-    background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* border-radius: 5px; */
+    /* background-color: var(--dorako-bg-current); */
+    /* backdrop-filter: var(--dorako-vibrancy); */
     /* box-shadow: 0 0 3px black; */
 }
 
@@ -19,17 +19,14 @@
 
 .app.window-app {
     transition: background-color 0.25s;
+    backdrop-filter: var(--dorako-vibrancy);
+    background-color: var(--dorako-bg-current);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5),
-        1px 1px 1px rgba(0, 0, 0, 1),
-        1px -1px 1px rgba(0, 0, 0, 1),
-        -1px -1px 1px rgba(0, 0, 0, 1),
-        -1px 1px 1px rgba(0, 0, 0, 1),
-        0px 0px 3px rgba(0, 0, 0, 1),
-        0px 0px 4px rgba(0, 0, 0, 0.5);
+        var(--glassy);
 }
 
 .app.window-app .window-header {
-    border-bottom: 1px solid black
+    border-bottom: 1px solid #484848;
 }
 
 .app.window-app.minimized .window-header {
@@ -37,18 +34,18 @@
 }
 
 .app.window-app.minimized {
-    box-shadow: none;
+    /* box-shadow: none; */
 }
 
-.app.window-app.minimized.hazard .window-header {
+.app.window-app.minimized.hazard {
     background-color: #1C3531
 }
 
-.app.window-app.minimized.character .window-header {
+.app.window-app.minimized.character {
     background-color: #5D0E08
 }
 
-.app.window-app.minimized.npc .window-header {
+.app.window-app.minimized.npc {
     background-color: #422d01
 }
 
@@ -92,6 +89,7 @@
     border-bottom: 1px solid wheat;
 }
 
+.sheet.journal-entry .pages-list .directory-item:not(.active)+.active,
 .sheet.journal-entry .pages-list .directory-item.active+ :not(.active),
 .sheet.journal-entry .pages-list .directory-item.active:first-of-type {
     border-top: 1px solid wheat;
@@ -132,3 +130,32 @@
     opacity: 0;
     transition: visibility 0s 500ms, opacity 500ms; */
 }
+
+.app.window-app.image-popout .window-header,
+.app.window-app.journal-sheet .window-header {
+    border-bottom: none;
+}
+
+/* Windows Vista styling */
+/* .window-app .window-content {
+    border-radius: 5px;
+}
+
+.pf2e.actor .window-content,
+.sheet.hazard .window-content,
+section.window-content {
+    margin: 0px 5px 5px 5px;
+    border-radius: 3px;
+    box-shadow: var(--gold-and-glow);
+}
+
+.image-popout section.window-content,
+.journal-sheet section.window-content {
+    margin: unset;
+    box-shadow: unset;
+} 
+
+.app.window-app .window-header {
+    border-bottom: unset;
+}
+*/
