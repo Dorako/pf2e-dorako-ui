@@ -1,3 +1,9 @@
+# 1.6.2
+
+Updated manifest _again_.
+
+Removed some console log spam.
+
 # 1.6.1
 
 Updated manifest so it correctly reports v10 compability.

@@ -341,7 +341,7 @@ function addScalingToCombatTrackerAvatars(app, html, data) {
   $(".combatant", html).each(function () {
     let id = this.dataset.combatantId;
     let combatant = game.combat.combatants.get(id);
-    console.log(combatant);
+    // console.log(combatant);
     let scale = combatant.token.texture.scaleX;
     let tokenImageElem = this.getElementsByClassName("token-image")[0];
     if (
@@ -403,9 +403,9 @@ function addAvatarsToFlags(message) {
   let tokenImg = message.token?.texture.src;
   let userImg = message.user?.avatar;
 
-  console.log(message.token);
-  console.log(message.token?.texture);
-  console.log(message.token?.texture.src);
+  // console.log(message.token);
+  // console.log(message.token?.texture);
+  // console.log(message.token?.texture.src);
 
   let userAvatar = new Avatar(message.speaker.alias, userImg);
 
