@@ -404,8 +404,8 @@ function addAvatarsToFlags(message) {
   let userImg = message.user?.avatar;
 
   console.log(message.token);
-  console.log(message.token.texture);
-  console.log(message.token.texture.src);
+  console.log(message.token?.texture);
+  console.log(message.token?.texture.src);
 
   let userAvatar = new Avatar(message.speaker.alias, userImg);
 
