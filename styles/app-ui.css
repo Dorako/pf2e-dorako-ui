@@ -9,7 +9,6 @@
      border: none;
      border-radius: 0px;
      box-shadow: none;
-     backdrop-filter: none;
      background: none;
      background-image: none;
  }
@@ -18,18 +17,12 @@
 
  #players {
      background-color: var(--dorako-bg-current);
-     backdrop-filter: var(--dorako-vibrancy);
  }
 
  #players,
  .window-app:not(.outlaws-wrapper, .journal-entry) .window-header,
  .window-app.minimized .window-header {
      border: none;
-     /* background-color: var(--dorako-bg-current);
-     backdrop-filter: var(--dorako-vibrancy); */
-     /*will-change: backdrop-filter;*/
-     /* transform: translate3d(0px, 0px, 0px); */
-     /* box-shadow: var(--glassy); */
  }
 
  #ui-top.offset {
@@ -189,7 +182,6 @@
      font-weight: 900;
      position: absolute;
      right: 0px;
-     backdrop-filter: var(--dorako-vibrancy);
      width: 55px;
      justify-content: center;
  }
@@ -214,7 +206,6 @@
 
  .app.sidebar-popout .window-content {
      background-color: var(--dorako-bg-current);
-     backdrop-filter: var(--dorako-vibrancy);
      overflow: hidden;
  }
 

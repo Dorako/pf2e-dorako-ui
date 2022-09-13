@@ -19,7 +19,7 @@
 
 .app.window-app {
     transition: background-color 0.25s;
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     background-color: var(--dorako-bg-current);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5),
         var(--glassy);
@@ -52,7 +52,7 @@
 .sheet.journal-entry {
     box-shadow: var(--glassy), 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
     background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
 }
 
 .sheet.journal-entry .window-content {

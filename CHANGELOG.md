@@ -1,3 +1,9 @@
+# 1.6.3
+
+Fixed an issue causing DF Chat Enhancement context menus to sometimes be inaccesible.
+
+Rejiggered some css - possibly increased performance for low end machines.
+
 # 1.6.2
 
 Updated manifest _again_.

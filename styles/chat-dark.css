@@ -12,9 +12,9 @@
 }
 
 
-#chat-log .dark-theme select,
-#chat-log .dark-theme button,
-#chat-log .dark-theme form button,
+.dark-theme select,
+.dark-theme .pf2e.chat-card .card-buttons button,
+.dark-theme form button,
 .dark-theme .dice-roll .dice-formula,
 .dark-theme .dice-total:not(.statuseffect-message),
 .dark-theme .message-content .chat-damage-buttons button {

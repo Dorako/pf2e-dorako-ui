@@ -3,12 +3,11 @@
 /* Glass - Add new styling */
 
 #dfcp-rt-buttons button,
-.dice-tray button
-{
+.dice-tray button {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     /*will-change: backdrop-filter;*/
     transform: translate3d(0px, 0px, 0px);
     box-shadow: var(--glassy);
@@ -34,5 +33,5 @@
 }
 
 .dice-tray button svg {
-    height:32px;
+    height: 32px;
 }

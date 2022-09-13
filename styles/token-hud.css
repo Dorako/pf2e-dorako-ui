@@ -3,8 +3,7 @@
 
 .placeable-hud,
 #token-hud .attribute,
-.placeable-hud input[type="text"]
-{
+.placeable-hud input[type="text"] {
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -16,13 +15,11 @@
 /* Glass - Add new styling */
 
 .placeable-hud .control-icon,
-/* #token-hud .attribute:not(.bar1), */
-.placeable-hud input[type="text"]
-{
+.placeable-hud input[type="text"] {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     /*will-change: backdrop-filter;*/
     transform: translate3d(0px, 0px, 0px);
     box-shadow: var(--glassy);
@@ -88,8 +85,10 @@
 
 #token-hud .attribute.bar1 input:hover,
 .placeable-hud input[type="text"]:hover {
-    backdrop-filter: var(--dorako-vibrancy-active);
+    /* backdrop-filter: var(--dorako-vibrancy-active); */
 }
+
+
 
 .placeable-hud input[type="text"] {
     /* width: 100%; */
@@ -152,6 +151,6 @@
 .placeable-hud .control-icon,
 .placeable-hud .control-icon img {
     opacity: 1;
-    color: rgb(240,240,240);
+    color: rgb(240, 240, 240);
 
 }

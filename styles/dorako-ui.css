@@ -22,7 +22,7 @@
     --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px); */
 
     --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
-    --glassy:
+    /* --glassy:
         0px 0px 2px rgba(255, 255, 255, 0.4) inset,
         0px 0px 6px rgba(255, 255, 255, 0.2) inset,
         1px 1px 1px rgba(0, 0, 0, 1),
@@ -30,8 +30,11 @@
         -1px -1px 1px rgba(0, 0, 0, 1),
         -1px 1px 1px rgba(0, 0, 0, 1),
         0px 0px 3px rgba(0, 0, 0, 1),
-        0px 0px 4px rgba(0, 0, 0, 0.5);
-
+        0px 0px 4px rgba(0, 0, 0, 0.5); */
+    --glassy:
+        0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset,
+        0px 0px 2px 1px rgba(0, 0, 0, 1),
+        0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 
     --primary-hue: 0;
     --primary-sat: 100%;

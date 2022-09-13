@@ -90,7 +90,7 @@
 
 #controls ol .scene-control,
 #controls ol .control-tool {
-    transition: backdrop-filter 0.15s ease-out;
+    /* transition: backdrop-filter 0.15s ease-out; */
     transition: background-color 0.15s ease-out;
     color: rgba(240, 240, 240, 1);
     text-shadow: var(--dorako-text-shadow);

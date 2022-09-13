@@ -3,8 +3,7 @@
 
 /* Glass - Remove prior styling */
 
-#navigation .nav-item
-{
+#navigation .nav-item {
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -19,12 +18,11 @@
 #navigation #scene-list .scene.view,
 #navigation #nav-toggle:hover,
 #navigation #scene-list .scene,
-#navigation #scene-list .scene.gm
-{
+#navigation #scene-list .scene.gm {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     box-shadow: var(--glassy);
 }
 
@@ -32,6 +30,7 @@
     margin-top: var(--edge-margin);
     left: 10px;
 }
+
 /*
 #navigation #scene-list li {
     margin-right: 10px;
@@ -95,75 +94,6 @@
 #navigation #scene-list .scene li.scene-player {
     text-shadow: none;
 }
-
-/* #navigation #nav-toggle {
-    line-height: unset;
-    margin: 0px;
-    border: var(--dorako-radius);
-    flex: 0 0 34px;
-    height: unset;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    margin-bottom: 6px;
-} */
-
-/* #navigation #context-menu {
-    position: static;
-    z-index: 100;
-    text-align: left;
-} */
-
-/* #navigation #scene-list .scene {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .scene .nav-item {
-    white-space: nowrap;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-} */
-
-
-
-/* #scene-list {
-    display: flex;
-    gap: 10px;
-} */
-
-
-
-
-/* Opposite of Core Foundry */
-
-/* #navigation #scene-list .scene.gm {
-    transition: background-color 0.15s ease-out;
-    background-color: var(--paizo-blue);
-}
-
-#navigation #scene-list .scene.gm:hover {
-    background-color: var(--paizo-red);
-    transition: background-color 0.15s ease-out;
-}
-
-#navigation #scene-list .scene {
-    background-color: var(--paizo-blue-dark);
-    transition: background-color 0.15s ease-out;
-}
-
-#navigation #scene-list .scene:hover {
-    background-color: var(--paizo-blue);
-    transition: background-color 0.15s ease-out;
-}
-
-#navigation #scene-list .scene.active {
-    background-color: var(--paizo-blue-bright);
-    backdrop-filter: var(--dorako-vibrancy-active);
-    transition: background-color 0.15s ease-out;
-} */
 
 /* Core Foundry themed */
 

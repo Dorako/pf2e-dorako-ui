@@ -1655,3 +1655,13 @@ span[data-pf2-check].with-repost {
 .dark-theme .monks-tokenbar.chat-card .card-header h3 {
     color: white;
 }
+
+/* .message #context-menu.expand-down {
+    top: unset;
+} */
+
+.dfce-cm-bottom #context-menu,
+.dfce-cm-middle #context-menu,
+.dfce-cm-top #context-menu {
+    display: contents;
+}

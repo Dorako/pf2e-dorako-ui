@@ -25,7 +25,7 @@
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     /*will-change: backdrop-filter;*/
     transform: translate3d(0px, 0px, 0px);
     box-shadow: var(--glassy);
@@ -138,7 +138,7 @@
     padding: 5px;
     gap: 5px;
     margin: 0px;
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     flex: 1;
 }
 
