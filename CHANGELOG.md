@@ -1,3 +1,7 @@
+# 1.6.4
+
+Fix manifest...
+
 # 1.6.3
 
 Fixed an issue causing DF Chat Enhancement context menus to sometimes be inaccesible.
