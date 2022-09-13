@@ -9,8 +9,7 @@
 #custom-hotbar #custom-macro-list,
 #ui-bottom nav #custom-hotbar,
 #custom-hotbar-page-controls.bar-controls.flexcol,
-#custom-hotbar-directory-controls.bar-controls.flexcol
-{
+#custom-hotbar-directory-controls.bar-controls.flexcol {
     border: none;
     border-radius: 0px;
     box-shadow: none;
@@ -24,12 +23,11 @@
 #custom-bar-toggle,
 #custom-hotbar-page-controls,
 #custom-hotbar-page-controls.bar-controls.flexcol,
-#custom-hotbar #custom-macro-list.flexrow
-{
+#custom-hotbar #custom-macro-list.flexrow {
     border: none;
     border-radius: var(--dorako-radius);
     background-color: var(--dorako-bg-current);
-    backdrop-filter: var(--dorako-vibrancy);
+    /* backdrop-filter: var(--dorako-vibrancy); */
     /*will-change: backdrop-filter;*/
     transform: translate3d(0px, 0px, 0px);
     box-shadow: var(--glassy);
@@ -50,6 +48,7 @@
 #custom-hotbar .bar-controls {
     margin: 0px;
 }
+
 #custom-action-bar {
     display: flex;
     flex-direction: row;
