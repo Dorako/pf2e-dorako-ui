@@ -840,7 +840,8 @@ button.half-damage .fa-heart-broken::after {
     display: block;
     z-index: 1;
     position: absolute;
-    top: -1px;
+    /* top: -1px; */
+    top: 0px;
     left: 0;
     width: 50%;
     overflow: hidden;
@@ -853,6 +854,7 @@ button.half-damage .fa-heart-broken::after {
 
 .message .message-content .chat-damage-buttons button.shield-block .fa-shield-alt {
     color: #868686;
+    transition: color 0.15s;
 }
 
 .message .message-content .chat-damage-buttons button.shield-block.shield-activated .fa-shield-alt,
@@ -862,11 +864,13 @@ button.half-damage .fa-heart-broken::after {
 
 .message .message-content .chat-damage-buttons button.shield-block:hover {
     color: white;
-    background-color: var(--paizo-blue);
+    transition: color 0.15s;
+    background-color: var(--paizo-blue-bright);
 }
 
 .message .message-content .chat-damage-buttons button.shield-block.shield-activated {
     color: white;
+    transition: color 0.15s;
     background-color: var(--paizo-blue-bright);
 }
 
@@ -1664,4 +1668,9 @@ span[data-pf2-check].with-repost {
 .dfce-cm-middle #context-menu,
 .dfce-cm-top #context-menu {
     display: contents;
+}
+
+.chat-message>.message-content .chat-damage-buttons button>i {
+    margin-right: 0px;
+    /* ffs */
 }
