@@ -1,3 +1,7 @@
+# 1.6.5
+
+Fixed damage buttons looking weird in dark mode due to system update.
+
 # 1.6.4
 
 Fix manifest...
