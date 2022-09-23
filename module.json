@@ -11,7 +11,7 @@
       "discord": "Dorako#0657"
     }
   ],
-  "version": "1.6.5",
+  "version": "1.6.6",
   "compatibility": {
     "minimum": "10",
     "verified": "10.285"
@@ -24,13 +24,13 @@
         "manifest": "https://github.com/foundryvtt/pf2e/releases/download/latest/system.json",
         "compatibility": {
           "minimum": "4.0.0",
-          "verified": "4.0.0"
+          "verified": "4.1.2"
         }
       }
     ]
   },
 
   "scripts": ["scripts/dorako-ui.js"],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.6.5.zip",
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.6.6.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/raw/main/module.json"
 }

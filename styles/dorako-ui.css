@@ -234,5 +234,7 @@ img {
 }
 
 a.content-link, a.inline-roll {
-    text-shadow: none !important
+    text-shadow: none !important;
+    color: black;
+    font-family: var(--sans-serif);
 }

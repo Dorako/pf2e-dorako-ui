@@ -874,9 +874,14 @@ button.half-damage .fa-heart-broken::after {
     background-color: var(--paizo-blue-bright);
 }
 
+.chat-message>.message-content .chat-damage-buttons button>i {
+    margin-right: 0px;
+}
+
 .message .message-content .chat-damage-buttons button.shield-block.shield-activated:hover {
     color: white;
     background-color: var(--paizo-blue);
+    left: 0%;
 }
 
 

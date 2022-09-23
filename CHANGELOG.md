@@ -1,3 +1,9 @@
+# 1.6.6
+
+Fixed certain button labels having the wrong color on dark PC sheets.
+
+Fixed horizontal scrollbar appearing on actor tab in sidebar.
+
 # 1.6.5
 
 Fixed damage buttons looking weird in dark mode due to system update.

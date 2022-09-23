@@ -253,3 +253,7 @@ nav.damage-log-nav.tabs {
 #sidebar #chat {
     overflow: hidden;
 }
+
+#sidebar .bestiary-browser-btn {
+    width: calc(100% - 8px);
+}
