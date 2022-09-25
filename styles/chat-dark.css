@@ -4,11 +4,11 @@
     --pf2e-body-secondary: hsl(0, 0%, 60%);
     --pf2e-body-inverse: hsl(0, 0%, 00%); */
 
-    /* --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark);
+    --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark);
     --pf2e-color-ornament: var(--pf2e-color-ornament-for-dark);
     --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-dark);
     --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark);
-    --filter-img: var(--filter-dark); */
+    /* --filter-img: var(--filter-dark); */
 }
 
 
@@ -125,11 +125,13 @@
 }
 
 .dark-theme .damage-tag-modifier {
-    background: var(--pf2e-translucent-very-for-dark);
+    background: hsla(0, 0%, 50%, 0.25);
 }
 
-.dark-theme [data-visibility=owner]:is(div, em, p, span, strong) {
-    background: var(--pf2e-translucent-very-for-dark);
+.dark-theme [data-visibility=gm]:is(div, em, h4, section p, span, strong),
+.dark-theme [data-visibility=owner]:is(div, em, h4, section p, span, strong),
+.dark-theme [data-visibility]:is(div, em, h4, p, section, span, strong):not([data-visibility=all])[data-visibility=gm] {
+    background: hsla(0, 0%, 50%, 0.25);
 }
 
 .dark-theme .damage-tag-base {
@@ -160,4 +162,8 @@
 
 .dark-theme .vr {
     border-color: gray;
+}
+
+#sidebar [data-tab=cards] {
+    display: none;
 }

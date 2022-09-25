@@ -1,3 +1,7 @@
+# 1.6.7
+
+Fixed secret roll-notes being unreadable on dark mode chat messages.
+
 # 1.6.6
 
 Fixed certain button labels having the wrong color on dark PC sheets.
