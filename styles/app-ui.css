@@ -163,7 +163,6 @@
      /* width: 85px; */
      margin: 0px;
      align-self: space-evenly;
-     display: none;
      font-family: var(--font-mono);
      background: var(--dorako-bg-current);
      line-height: 24px;
@@ -172,7 +171,6 @@
      border-radius: 5px;
      box-shadow: var(--glassy);
      justify-content: space-between;
-     display: flex !important;
      flex-direction: row;
      margin-bottom: var(--edge-margin);
      margin-right: 10px;

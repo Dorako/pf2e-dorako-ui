@@ -1,3 +1,11 @@
+# 1.6.8
+
+Fixed artifact from FPS monitor showing even when disabled in core settings.
+
+Changed scope of some settings to client, and others to world.
+
+Fixed an issue where some text looked fuzzy.
+
 # 1.6.7
 
 Fixed secret roll-notes being unreadable on dark mode chat messages.

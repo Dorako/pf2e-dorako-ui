@@ -504,6 +504,39 @@ Hooks.on("renderChatMessage", (message, b) => {
 });
 
 Hooks.once("init", async () => {
+  game.settings.register("pf2e-dorako-ui", "sheet", {
+    name: "Theme used for PC sheets",
+    hint: "",
+    scope: "client",
+    config: true,
+    default: "red",
+    type: String,
+    choices: {
+      red: "Default",
+      dark: "Dark (@Vesselchuck)",
+    },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "familiar-sheet", {
+    name: "Theme used for familiar sheets",
+    hint: "",
+    scope: "client",
+    config: true,
+    default: "red",
+    type: String,
+    choices: {
+      red: "Default",
+      dark: "Dark (@Vesselchuck)",
+      darkRedHeader: "Dark + Red Header (@Vesselchuck)",
+    },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "theme", {
     name: "Theme",
     hint: "Theme affects chat messages.",
@@ -571,7 +604,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "hidePortraitWhenHidden", {
     name: "Hide chat portrait when token hidden?",
     hint: "Hides the chat portrait whenever the token of the speaker is hidden",
-    scope: "client",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -615,7 +648,7 @@ Hooks.once("init", async () => {
     {
       name: "Should the portraits react to critical success/failure?",
       hint: "A critical success will glow green, and a critical failure will become muted and dark.",
-      scope: "world",
+      scope: "client",
       type: Boolean,
       default: true,
       config: true,
@@ -661,7 +694,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "chat-portrait-border", {
     name: "... and add a border?",
     hint: "Disable if your token art is fancy.",
-    scope: "client",
+    scope: "world",
     config: true,
     default: false,
     type: Boolean,
@@ -672,7 +705,7 @@ Hooks.once("init", async () => {
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
     name: "Chatbox height",
-    scope: "client",
+    scope: "world",
     type: Number,
     default: 50,
     range: {
@@ -740,39 +773,6 @@ Hooks.once("init", async () => {
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "sheet", {
-    name: "Theme used for PC sheets",
-    hint: "",
-    scope: "world",
-    config: true,
-    default: "red",
-    type: String,
-    choices: {
-      red: "Default",
-      dark: "Dark (@Vesselchuck)",
-    },
-    onChange: () => {
-      debouncedReload();
-    },
-  });
-
-  game.settings.register("pf2e-dorako-ui", "familiar-sheet", {
-    name: "Theme used for familiar sheets",
-    hint: "",
-    scope: "world",
-    config: true,
-    default: "red",
-    type: String,
-    choices: {
-      red: "Default",
-      dark: "Dark (@Vesselchuck)",
-      darkRedHeader: "Dark + Red Header (@Vesselchuck)",
-    },
-    onChange: () => {
-      debouncedReload();
-    },
-  });
-
   game.settings.register("pf2e-dorako-ui", "backdrop-filter", {
     name: "Frosted glass?",
     hint: "WARNING: This setting only renders correctly on some browsers, and has a significant performance hit.",
@@ -817,7 +817,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-chat", {
     name: "Theme chat?",
     hint: "Applies theming to chat cards and sidebar content.",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -829,7 +829,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-navigation", {
     name: "Theme scene navigation?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -841,7 +841,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-hotbar", {
     name: "Theme the hotbar (macro bar)?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -853,7 +853,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-controls", {
     name: "Theme scene controls?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -865,7 +865,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-token-hud", {
     name: "Theme the token HUD?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -877,7 +877,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-effect-panel", {
     name: "Theme the effect panel?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -889,7 +889,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-sidebar", {
     name: "Theme the sidebar?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -901,7 +901,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-app-ui", {
     name: "Theme app UI?",
     hint: "This includes the player box, window headers, and similar",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -913,7 +913,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-combat-tracker", {
     name: "Theme the combat tracker?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -925,7 +925,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-custom-hotbar", {
     name: "Theme Custom Hotbar module?",
     hint: "Set the 'core hotbar' to 1px 1px offset in Custom Hotbar settings.",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -937,7 +937,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-token-action-hud", {
     name: "Theme Token Action HUD?",
     hint: "Makes TAH more compact and fits in better with the rest of the UI.",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -949,7 +949,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-window-controls", {
     name: "Theme Window Controls module?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -961,7 +961,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-combat-carousel", {
     name: "Theme Combat Carousel?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,
@@ -973,7 +973,7 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
     name: "Theme Dice Tray module?",
     hint: "",
-    scope: "World",
+    scope: "world",
     type: Boolean,
     default: true,
     config: true,

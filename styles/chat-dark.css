@@ -4,10 +4,10 @@
     --pf2e-body-secondary: hsl(0, 0%, 60%);
     --pf2e-body-inverse: hsl(0, 0%, 00%); */
 
-    --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark);
-    --pf2e-color-ornament: var(--pf2e-color-ornament-for-dark);
-    --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-dark);
-    --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark);
+    /* --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark); */
+    /* --pf2e-color-ornament: var(--pf2e-color-ornament-for-dark); */
+    /* --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-dark); */
+    /* --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark); */
     /* --filter-img: var(--filter-dark); */
 }
 
