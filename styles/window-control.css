@@ -81,7 +81,7 @@
     background-size: cover;
 }
 
-.sheet.journal-entry .journal-sidebar {
+.sheet.journal-entry:not(.bloodlords-wrapper) .journal-sidebar {
     text-shadow: var(--dorako-text-shadow);
 }
 

@@ -1,3 +1,15 @@
+# 1.6.9
+
+Fixed a PC dark mode regression caused by a recent system update.
+
+Updated PC dark mode for the system rarity colors.
+
+Changed scope of text-box height back to client.
+
+Fixed 'fuzzy' sidebar text in blood lords premium module.
+
+Fixed 'disabled' setting for chat portraits not working.
+
 # 1.6.8
 
 Fixed artifact from FPS monitor showing even when disabled in core settings.

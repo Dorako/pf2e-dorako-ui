@@ -424,3 +424,9 @@
  .fa-battlemaps.app.window-app .window-content {
      background: #141414;
  }
+
+ /* Ripper's filepicker+ fix, maybe */
+ :root {
+     --filepickerplus-text-color: var(--color-text-dark-primary);
+     --filepickerplus-background-color: var(--bg);
+ }

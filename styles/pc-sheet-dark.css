@@ -667,5 +667,49 @@ a.inline-roll,
 }
 
 .actor.sheet .crb-style.limited .tab.character .character-bio {
-	color: var(--text-light);
+  color: var(--text-light);
+}
+
+/* Dorako's quickfix, feel free to restructure as you want */
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data section {
+  color: var(--text-light);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
+  color: var(--tertiary);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
+  filter: var(--filter-dark);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list .item .item-name h4 {
+  text-shadow: 0px 1px 1px black;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list .item .item-name h4.rarity-common {
+  color: #e1d8cf;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list .item .item-name h4.rarity-uncommon {
+  color: var(--nethys-uncommon);
+  color: var(--nethys-uncommon);
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list .item .item-name h4.rarity-rare {
+  color: var(--nethys-rare);
+  color: #5362ff;
+}
+
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list .item .item-name h4.rarity-unique {
+  color: var(--nethys-unique);
+  color: #e127e1
+}
+
+.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-1, .actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-2 {
+  color: var(--color-text-dark-4)
+}
+
+.actor.sheet .inventory .item-name .item-charges {
+  color: #979797;
 }

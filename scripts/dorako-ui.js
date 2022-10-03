@@ -437,6 +437,9 @@ function addAvatarsToFlags(message) {
 
 function getAvatar(message) {
   const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+  if (main == "none") {
+    return null;
+  }
 
   let combatantAvatar = message.getFlag("pf2e-dorako-ui", "combatantAvatar");
   let tokenAvatar = message.getFlag("pf2e-dorako-ui", "tokenAvatar");
@@ -705,11 +708,11 @@ Hooks.once("init", async () => {
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
     name: "Chatbox height",
-    scope: "world",
+    scope: "client",
     type: Number,
-    default: 50,
+    default: 90,
     range: {
-      min: 50,
+      min: 20,
       max: 300,
       step: 5,
     },
