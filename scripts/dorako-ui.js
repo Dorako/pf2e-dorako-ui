@@ -1,3 +1,48 @@
+function log(message) {
+  message = `${CONSTANTS.MODULE_NAME} | ${message}`;
+  console.log(message.replace("<br>", "\n"));
+  return message;
+}
+
+function notify(message) {
+  message = `${CONSTANTS.MODULE_NAME} | ${message}`;
+  ui.notifications?.notify(message);
+  console.log(message.replace("<br>", "\n"));
+  return message;
+}
+
+function info(info, notify = false) {
+  info = `${CONSTANTS.MODULE_NAME} | ${info}`;
+  if (notify) ui.notifications?.info(info);
+  console.log(info.replace("<br>", "\n"));
+  return info;
+}
+
+function warn(warning, notify = false) {
+  warning = `${CONSTANTS.MODULE_NAME} | ${warning}`;
+  if (notify) ui.notifications?.warn(warning);
+  console.warn(warning.replace("<br>", "\n"));
+  return warning;
+}
+
+function error(error, notify = true) {
+  error = `${CONSTANTS.MODULE_NAME} | ${error}`;
+  if (notify) ui.notifications?.error(error);
+  return new Error(error.replace("<br>", "\n"));
+}
+
+const i18n = (key) => {
+  return game.i18n.localize(key)?.trim();
+};
+
+const i18nFormat = (key, data) => {
+  return game.i18n.format(key, data)?.trim();
+};
+
+function titleCase(string) {
+  return string[0].toUpperCase() + string.slice(1).toLowerCase();
+}
+
 // function cleanHTML() {
 // 	document.getElementsByTagName("html")[0].style = null;
 // 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
@@ -159,15 +204,15 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   injectAuthorName(html, messageData);
 
   if (
-    game.settings.get("pf2e-dorako-ui", "hidePortraitWhenHidden") &&
+    game.settings.get("pf2e-dorako-ui", "hide-avatar-when-hidden") &&
     chatMessage.getFlag("pf2e-dorako-ui", "wasTokenHidden")
   ) {
   } else {
-    injectChatPortrait(html, getAvatar(chatMessage));
+    injectAvatar(html, getAvatar(chatMessage));
   }
   moveFlavorTextToContents(html);
 
-  const theme = game.settings.get("pf2e-dorako-ui", "theme");
+  const theme = game.settings.get("pf2e-dorako-ui", "chat-theme");
 
   if (theme == "dark") html0.classList.add("dark-theme");
   if (theme == "light") html0.classList.add("light-theme");
@@ -193,7 +238,7 @@ Hooks.on("preCreateChatMessage", (message) => {
 function themeHeader(html, message) {
   let messageHeader = html.find(".message-header")[0];
 
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
   if (headerStyle != "none") {
     let bgCol = getHeaderColor(html, message);
     messageHeader.setAttribute("style", "background-color: " + bgCol);
@@ -221,7 +266,7 @@ function injectSenderWrapper(html, messageData) {
   wrapper.appendChild(target);
 }
 
-function injectChatPortrait(html, avatar) {
+function injectAvatar(html, avatar) {
   if (!avatar) return;
   // if cautious game master is enabled and setting is on, return immediately
   let messageHeader = html.find(".message-header")[0];
@@ -265,8 +310,8 @@ function injectMessageTag(html, messageData) {
 
     const whisperTargets = messageData.message.whisper;
 
-    const isBlind = messageData.message.blind || false;
-    const isWhisper = whisperTargets?.length > 0 || false;
+    const isBlind = messageData.message.blind;
+    const isWhisper = whisperTargets?.length > 0;
     const isSelf =
       isWhisper &&
       whisperTargets.length === 1 &&
@@ -274,16 +319,16 @@ function injectMessageTag(html, messageData) {
     const isRoll = messageData.message.rolls !== undefined;
 
     if (isBlind) {
-      rolltype.text("Secret");
+      rolltype.text(i18n("dorako-ui.text.secret"));
       messageMetadata.prepend(rolltype);
     } else if (isSelf && whisperTargets[0]) {
-      rolltype.text("Self roll");
+      rolltype.text(i18n("dorako-ui.text.self-roll"));
       messageMetadata.prepend(rolltype);
     } else if (isRoll && isWhisper) {
-      rolltype.text("GM only");
+      rolltype.text(i18n("dorako-ui.text.gm-only"));
       messageMetadata.prepend(rolltype);
     } else if (isWhisper) {
-      rolltype.text("Whisper");
+      rolltype.text(i18n("dorako-ui.text.whisper"));
       messageMetadata.prepend(rolltype);
     }
   }
@@ -324,11 +369,13 @@ function injectWhisperParticipants(html, messageData) {
   whisperParticipants.addClass("whisper-to");
 
   const whisperFrom = $("<span>");
-  whisperFrom.text(`From: ${alias}`);
+  const fromText = titleCase(i18n("dorako-ui.text.from"));
+  whisperFrom.text(`${fromText}: ${alias}`);
   whisperFrom.addClass("header-meta");
 
   const whisperTo = $("<span>");
-  whisperTo.text(`to: ${whisperTargetString}`);
+  const toText = titleCase(i18n("dorako-ui.text.to")).toLowerCase();
+  whisperTo.text(`${toText}: ${whisperTargetString}`);
   whisperTo.addClass("header-meta");
 
   whisperParticipants.append(whisperFrom);
@@ -356,7 +403,7 @@ function addScalingToCombatTrackerAvatars(app, html, data) {
 }
 
 function getHeaderColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
   if (headerStyle === "tint") {
     return message?.user?.color ?? "#DAC0FB";
   } else if (headerStyle === "blue") {
@@ -370,7 +417,7 @@ function getHeaderColor(html, message) {
 }
 
 function calcHeaderTextColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
   const messageHeader = html.find(".message-header")[0];
   if (headerStyle === "none") {
     if (html[0].classList.contains("dark-theme")) {
@@ -436,7 +483,7 @@ function addAvatarsToFlags(message) {
 }
 
 function getAvatar(message) {
-  const main = game.settings.get("pf2e-dorako-ui", "insertSpeakerImage");
+  const main = game.settings.get("pf2e-dorako-ui", "use-avatars");
   if (main == "none") {
     return null;
   }
@@ -451,7 +498,7 @@ function getAvatar(message) {
   if (combatantAvatar) return combatantAvatar;
 
   if (
-    game.settings.get("pf2e-dorako-ui", "hidePortraitWhenHidden") &&
+    game.settings.get("pf2e-dorako-ui", "hide-avatar-when-hidden") &&
     message.getFlag("pf2e-dorako-ui", "wasTokenHidden")
   ) {
     return null;
@@ -473,7 +520,7 @@ Hooks.on("renderChatMessage", (message, b) => {
   if (avatar.type == "token") {
     const smallScale = game.settings.get(
       "pf2e-dorako-ui",
-      "small-creature-token-portrait-size"
+      "small-creature-token-avatar-size"
     );
     let smallCorrection = avatar.isSmall ? 1.25 * smallScale : 1;
     avatarElem?.setAttribute(
@@ -484,7 +531,7 @@ Hooks.on("renderChatMessage", (message, b) => {
 
   const portraitDegreeSetting = game.settings.get(
     "pf2e-dorako-ui",
-    "portrait-reacts-to-degree-of-success"
+    "avatar-reacts-to-degree-of-success"
   );
 
   if (portraitDegreeSetting) {
@@ -507,94 +554,96 @@ Hooks.on("renderChatMessage", (message, b) => {
 });
 
 Hooks.once("init", async () => {
-  game.settings.register("pf2e-dorako-ui", "sheet", {
-    name: "Theme used for PC sheets",
-    hint: "",
+  game.settings.register("pf2e-dorako-ui", "pc-sheet-theme", {
+    name: i18n("dorako-ui.settings.pc-sheet-theme.name"),
+    hint: i18n("dorako-ui.settings.pc-sheet-theme.hint"),
     scope: "client",
     config: true,
     default: "red",
     type: String,
     choices: {
-      red: "Default",
-      dark: "Dark (@Vesselchuck)",
+      red: i18n("dorako-ui.settings.pc-sheet-theme.choice.red"),
+      dark: i18n("dorako-ui.settings.pc-sheet-theme.choice.dark"),
     },
     onChange: () => {
       debouncedReload();
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "familiar-sheet", {
-    name: "Theme used for familiar sheets",
-    hint: "",
+  game.settings.register("pf2e-dorako-ui", "familiar-sheet-theme", {
+    name: i18n("dorako-ui.settings.familiar-sheet-theme.name"),
+    hint: i18n("dorako-ui.settings.familiar-sheet-theme.hint"),
     scope: "client",
     config: true,
     default: "red",
     type: String,
     choices: {
-      red: "Default",
-      dark: "Dark (@Vesselchuck)",
-      darkRedHeader: "Dark + Red Header (@Vesselchuck)",
+      red: i18n("dorako-ui.settings.familiar-sheet-theme.choice.red"),
+      dark: i18n("dorako-ui.settings.familiar-sheet-theme.choice.dark"),
+      darkRedHeader: i18n(
+        "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header"
+      ),
     },
     onChange: () => {
       debouncedReload();
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "theme", {
-    name: "Theme",
-    hint: "Theme affects chat messages.",
+  game.settings.register("pf2e-dorako-ui", "chat-theme", {
+    name: i18n("dorako-ui.settings.chat-theme.name"),
+    hint: i18n("dorako-ui.settings.chat-theme.hint"),
     scope: "client",
     config: true,
     default: "Light",
     type: String,
     choices: {
-      light: "Light",
-      dark: "Dark",
-      factions: "Players light, GM dark",
+      light: i18n("dorako-ui.settings.chat-theme.choice.light"),
+      dark: i18n("dorako-ui.settings.chat-theme.choice.dark"),
+      factions: i18n("dorako-ui.settings.chat-theme.choice.factions"),
     },
     onChange: () => {
       debouncedReload();
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "headerStyle", {
-    name: "Header style",
-    hint: "Pick between available presets.",
+  game.settings.register("pf2e-dorako-ui", "header-style", {
+    name: i18n("dorako-ui.settings.header-style.name"),
+    hint: i18n("dorako-ui.settings.header-style.hint"),
     scope: "client",
     config: true,
     default: "none",
     type: String,
     choices: {
-      red: "Red",
-      blue: "Blue",
-      tint: "Player Color",
-      none: "None",
+      red: i18n("dorako-ui.settings.header-style.choice.red"),
+      blue: i18n("dorako-ui.settings.header-style.choice.blue"),
+      tint: i18n("dorako-ui.settings.header-style.choice.tint"),
+      none: i18n("dorako-ui.settings.header-style.choice.none"),
     },
     onChange: () => {
       debouncedReload();
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "insertSpeakerImage", {
-    name: "Chat portrait style",
-    hint: "Adds the image of the speaker to the chat card.",
+  game.settings.register("pf2e-dorako-ui", "use-avatars", {
+    name: i18n("dorako-ui.settings.use-avatars.name"),
+    hint: i18n("dorako-ui.settings.use-avatars.hint"),
     scope: "client",
     config: true,
     default: "token",
     type: String,
     choices: {
-      token: "Prefer token image",
-      actor: "Prefer actor image",
-      none: "Disable",
+      token: i18n("dorako-ui.settings.use-avatars.choice.token"),
+      actor: i18n("dorako-ui.settings.use-avatars.choice.actor"),
+      none: i18n("dorako-ui.settings.use-avatars.choice.none"),
     },
     onChange: () => {
       debouncedReload();
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "hideGmIconWhenSecret", {
-    name: "Hide chat portrait when secret?",
-    hint: "Hides the chat portrait whenever GM rolls secret/private rolls.",
+  game.settings.register("pf2e-dorako-ui", "hide-gm-avatar-when-secret", {
+    name: i18n("dorako-ui.settings.hide-gm-avatar-when-secret.name"),
+    hint: i18n("dorako-ui.settings.hide-gm-avatar-when-secret.hint"),
     scope: "world",
     config: true,
     default: true,
@@ -604,9 +653,9 @@ Hooks.once("init", async () => {
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "hidePortraitWhenHidden", {
-    name: "Hide chat portrait when token hidden?",
-    hint: "Hides the chat portrait whenever the token of the speaker is hidden",
+  game.settings.register("pf2e-dorako-ui", "hide-avatar-when-hidden", {
+    name: i18n("dorako-ui.settings.hide-avatar-when-hidden.name"),
+    hint: i18n("dorako-ui.settings.hide-avatar-when-hidden.hint"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -616,9 +665,9 @@ Hooks.once("init", async () => {
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "chat-portrait-size", {
-    name: "Chat portrait size",
-    hint: "Suggested size of 40px.",
+  game.settings.register("pf2e-dorako-ui", "avatar-size", {
+    name: i18n("dorako-ui.settings.avatar-size.name"),
+    hint: i18n("dorako-ui.settings.avatar-size.hint"),
     scope: "client",
     type: Number,
     default: 40,
@@ -633,9 +682,9 @@ Hooks.once("init", async () => {
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "popout-token-portraits", {
-    name: "Chat portrait token popout",
-    hint: "Scales the chat portraits of BB/AV-style tokens to allow for 'pop out'.",
+  game.settings.register("pf2e-dorako-ui", "popout-token-avatars", {
+    name: i18n("dorako-ui.settings.popout-token-avatars.name"),
+    hint: i18n("dorako-ui.settings.popout-token-avatars.hint"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -647,10 +696,10 @@ Hooks.once("init", async () => {
 
   game.settings.register(
     "pf2e-dorako-ui",
-    "portrait-reacts-to-degree-of-success",
+    "avatar-reacts-to-degree-of-success",
     {
-      name: "Should the portraits react to critical success/failure?",
-      hint: "A critical success will glow green, and a critical failure will become muted and dark.",
+      name: i18n("dorako-ui.settings.avatar-reacts-to-degree-of-success.name"),
+      hint: i18n("dorako-ui.settings.avatar-reacts-to-degree-of-success.hint"),
       scope: "client",
       type: Boolean,
       default: true,
@@ -661,30 +710,26 @@ Hooks.once("init", async () => {
     }
   );
 
-  game.settings.register(
-    "pf2e-dorako-ui",
-    "small-creature-token-portrait-size",
-    {
-      name: "Chat portrait small creature scale",
-      hint: "Default is 0.8",
-      scope: "world",
-      type: Number,
-      default: 0.8,
-      range: {
-        min: 0.7,
-        max: 1.0,
-        step: 0.1,
-      },
-      config: true,
-      onChange: () => {
-        debouncedReload();
-      },
-    }
-  );
+  game.settings.register("pf2e-dorako-ui", "small-creature-token-avatar-size", {
+    name: i18n("dorako-ui.settings.small-creature-token-avatar-size.name"),
+    hint: i18n("dorako-ui.settings.small-creature-token-avatar-size.hint"),
+    scope: "world",
+    type: Number,
+    default: 0.8,
+    range: {
+      min: 0.7,
+      max: 1.0,
+      step: 0.1,
+    },
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
 
   game.settings.register("pf2e-dorako-ui", "use-user-avatar", {
-    name: "Use user avatar as fallback for chat potraits?",
-    hint: "Configure user avatars by right-clicking users in the lower left area of Foundry.",
+    name: i18n("dorako-ui.settings.use-user-avatar.name"),
+    hint: i18n("dorako-ui.settings.use-user-avatar.hint"),
     scope: "world",
     type: Boolean,
     default: false,
@@ -694,9 +739,9 @@ Hooks.once("init", async () => {
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "chat-portrait-border", {
-    name: "... and add a border?",
-    hint: "Disable if your token art is fancy.",
+  game.settings.register("pf2e-dorako-ui", "avatar-border", {
+    name: i18n("dorako-ui.settings.avatar-border.name"),
+    hint: i18n("dorako-ui.settings.avatar-border.hint"),
     scope: "world",
     config: true,
     default: false,
@@ -707,7 +752,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
-    name: "Chatbox height",
+    name: i18n("dorako-ui.settings.chat-input-height.name"),
     scope: "client",
     type: Number,
     default: 90,
@@ -723,8 +768,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "enable-player-tags", {
-    name: "Add player tags?",
-    hint: "Adds a tag containing the name of the player next to the speaker.",
+    name: i18n("dorako-ui.settings.enable-player-tags.name"),
+    hint: i18n("dorako-ui.settings.enable-player-tags.hint"),
     scope: "client",
     config: true,
     default: true,
@@ -735,17 +780,19 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "rolltype-indication", {
-    name: "Indicate rolltype by...",
-    hint: "Secret rolls (Blind GM) are tinted pink and whispers are tinted blue.",
+    name: i18n("dorako-ui.settings.rolltype-indication.name"),
+    hint: i18n("dorako-ui.settings.rolltype-indication.hint"),
     scope: "client",
     type: String,
     default: "both",
     config: true,
     choices: {
-      tags: "Tags",
-      "bg-color": "Background color",
-      both: "Tags and background color",
-      none: "Nothing",
+      tags: i18n("dorako-ui.settings.rolltype-indication.choice.tags"),
+      "bg-color": i18n(
+        "dorako-ui.settings.rolltype-indication.choice.bg-color"
+      ),
+      both: i18n("dorako-ui.settings.rolltype-indication.choice.both"),
+      none: i18n("dorako-ui.settings.rolltype-indication.choice.none"),
     },
     onChange: () => {
       debouncedReload();
@@ -753,8 +800,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "compact-ui", {
-    name: "Use compact UI?",
-    hint: "Resizes controls, and hides inactive controls and navigation elements unless hovered.",
+    name: i18n("dorako-ui.settings.compact-ui.name"),
+    hint: i18n("dorako-ui.settings.compact-ui.hint"),
     scope: "client",
     config: true,
     default: false,
@@ -765,8 +812,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "no-logo", {
-    name: "Disable logo?",
-    hint: "Removes the Foundry logo in the top left.",
+    name: i18n("dorako-ui.settings.no-logo.name"),
+    hint: i18n("dorako-ui.settings.no-logo.hint"),
     scope: "client",
     config: true,
     default: true,
@@ -777,8 +824,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "backdrop-filter", {
-    name: "Frosted glass?",
-    hint: "WARNING: This setting only renders correctly on some browsers, and has a significant performance hit.",
+    name: i18n("dorako-ui.settings.backdrop-filter.name"),
+    hint: i18n("dorako-ui.settings.backdrop-filter.hint"),
     scope: "client",
     type: Boolean,
     default: false,
@@ -789,8 +836,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "center-hotbar", {
-    name: "Center hotbar (macrobar)?",
-    hint: "",
+    name: i18n("dorako-ui.settings.center-hotbar.name"),
+    hint: i18n("dorako-ui.settings.center-hotbar.hint"),
     scope: "client",
     type: Boolean,
     default: false,
@@ -801,8 +848,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "edge-offset", {
-    name: "Edge-offset",
-    hint: "Offset from the edge of screen in pixels.",
+    name: i18n("dorako-ui.settings.edge-offset.name"),
+    hint: i18n("dorako-ui.settings.edge-offset.hint"),
     scope: "client",
     type: Number,
     default: 10,
@@ -818,8 +865,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-chat", {
-    name: "Theme chat?",
-    hint: "Applies theming to chat cards and sidebar content.",
+    name: i18n("dorako-ui.settings.skin-chat.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -830,8 +876,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-navigation", {
-    name: "Theme scene navigation?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-navigation.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -842,8 +887,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-hotbar", {
-    name: "Theme the hotbar (macro bar)?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-hotbar.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -854,8 +898,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-controls", {
-    name: "Theme scene controls?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-controls.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -866,8 +909,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-token-hud", {
-    name: "Theme the token HUD?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-token-hud.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -878,8 +920,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-effect-panel", {
-    name: "Theme the effect panel?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-effect-panel.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -890,8 +931,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-sidebar", {
-    name: "Theme the sidebar?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-sidebar.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -902,8 +942,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-app-ui", {
-    name: "Theme app UI?",
-    hint: "This includes the player box, window headers, and similar",
+    name: i18n("dorako-ui.settings.skin-app-ui.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -914,8 +953,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-combat-tracker", {
-    name: "Theme the combat tracker?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-combat-tracker.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -926,8 +964,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-custom-hotbar", {
-    name: "Theme Custom Hotbar module?",
-    hint: "Set the 'core hotbar' to 1px 1px offset in Custom Hotbar settings.",
+    name: i18n("dorako-ui.settings.skin-custom-hotbar.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -938,8 +975,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-token-action-hud", {
-    name: "Theme Token Action HUD?",
-    hint: "Makes TAH more compact and fits in better with the rest of the UI.",
+    name: i18n("dorako-ui.settings.skin-token-action-hud.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -950,8 +986,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-window-controls", {
-    name: "Theme Window Controls module?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-window-controls.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -962,8 +997,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-combat-carousel", {
-    name: "Theme Combat Carousel?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-combat-carousel.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -974,8 +1008,7 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
-    name: "Theme Dice Tray module?",
-    hint: "",
+    name: i18n("dorako-ui.settings.skin-dice-tray.name"),
     scope: "world",
     type: Boolean,
     default: true,
@@ -1009,8 +1042,8 @@ Hooks.once("init", async () => {
   );
 
   root.setProperty(
-    "--chat-portrait-size",
-    game.settings.get("pf2e-dorako-ui", "chat-portrait-size").toString() + "px"
+    "--avatar-size",
+    game.settings.get("pf2e-dorako-ui", "avatar-size").toString() + "px"
   );
 
   root.setProperty(
@@ -1040,7 +1073,7 @@ Hooks.once("init", async () => {
     injectCSS("custom-hotbar");
   if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray"))
     injectCSS("dice-tray");
-  let headerStyle = game.settings.get("pf2e-dorako-ui", "headerStyle");
+  let headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
   if (headerStyle != "none") {
     injectCSS("header");
   }
@@ -1052,14 +1085,14 @@ Hooks.once("init", async () => {
   setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
   if (setting == "both" || setting == "bg-color")
     injectCSS("chat-blind-whisper");
-  if (game.settings.get("pf2e-dorako-ui", "chat-portrait-border"))
+  if (game.settings.get("pf2e-dorako-ui", "avatar-border"))
     injectCSS("chat-portrait-border");
   if (game.settings.get("pf2e-dorako-ui", "compact-ui"))
     injectCSS("compact-ui");
   if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
-  setting = game.settings.get("pf2e-dorako-ui", "sheet");
+  setting = game.settings.get("pf2e-dorako-ui", "pc-sheet-theme");
   if (setting == "dark") injectCSS("pc-sheet-dark");
-  setting = game.settings.get("pf2e-dorako-ui", "familiar-sheet");
+  setting = game.settings.get("pf2e-dorako-ui", "familiar-sheet-theme");
   if (setting == "dark" || setting == "darkRedHeader")
     injectCSS("familiar-sheet-dark");
   if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");

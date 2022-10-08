@@ -391,7 +391,7 @@ button {
     margin-right: 3px;
 }
 
-.message-content .chat-damage-buttons button>.transparent-half {
+.chat-message>.message-content .chat-damage-buttons button.half-damage .transparent-half {
     background: #DCD8D6;
     left: 50%;
 }
@@ -647,7 +647,7 @@ message-content .chat-damage-buttons button {
 }
 
 .portrait-wrapper {
-    width: var(--chat-portrait-size);
+    width: var(--avatar-size);
     display: flex;
     flex: none;
     justify-content: center;
@@ -655,7 +655,7 @@ message-content .chat-damage-buttons button {
 }
 
 .portrait {
-    height: var(--chat-portrait-size);
+    height: var(--avatar-size);
     z-index: 1;
     object-fit: contain;
 }
@@ -681,7 +681,7 @@ message-content .chat-damage-buttons button {
 } */
 
 
-.message-content .chat-damage-buttons button>.transparent-half {
+.chat-message>.message-content .chat-damage-buttons button.half-damage .transparent-half {
     background: rgba(0, 0, 0, 0.5);
     left: 50%;
     height: 18px;
@@ -689,7 +689,7 @@ message-content .chat-damage-buttons button {
     width: 12px;
 }
 
-.chat-message>.message-content .chat-damage-buttons button>.transparent-half {
+.chat-message>.message-content .chat-damage-buttons button.half-damage .transparent-half {
     display: none;
 }
 
@@ -840,10 +840,9 @@ button.half-damage .fa-heart-broken::after {
     display: block;
     z-index: 1;
     position: absolute;
-    /* top: -1px; */
-    top: 0px;
-    left: 0;
-    width: 50%;
+    top: 1px;
+    left: 28%;
+    width: 22%;
     overflow: hidden;
 }
 
@@ -893,6 +892,11 @@ button.half-damage .fa-heart-broken::after {
 .message .message-content .chat-damage-buttons button.heal-damage:hover {
     color: white;
     background-color: darkgreen;
+}
+
+.message .message-content .chat-damage-buttons button.heal-damage:hover .fa-plus {
+    color: darkgreen;
+
 }
 
 .message .message-content .chat-damage-buttons button.heal-damage:hover .plus {
@@ -1281,7 +1285,7 @@ div#scrollToBottom:hover {
     gap: 2px;
 }
 
-.message-content .chat-damage-buttons button>.transparent-half {
+.chat-message>.message-content .chat-damage-buttons button.half-damage .transparent-half {
     display: none;
 }
 

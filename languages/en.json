@@ -1,0 +1,105 @@
+{
+  "dorako-ui.settings.pc-sheet-theme.name": "PC sheet theme",
+  "dorako-ui.settings.pc-sheet-theme.hint": "",
+  "dorako-ui.settings.pc-sheet-theme.choice.red": "Default",
+  "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dark (@Vesselchuck)",
+
+  "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
+  "dorako-ui.settings.familiar-sheet-theme.hint": "",
+  "dorako-ui.settings.familiar-sheet-theme.choice.red": "Red",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Dark (@Vesselchuck)",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dark + Red Header (@Vesselchuck)",
+
+  "dorako-ui.settings.chat-theme.name": "Chat theme",
+  "dorako-ui.settings.chat-theme.hint": "",
+  "dorako-ui.settings.chat-theme.choice.light": "Light",
+  "dorako-ui.settings.chat-theme.choice.dark": "Dark",
+  "dorako-ui.settings.chat-theme.choice.factions": "Players light, GM dark",
+
+  "dorako-ui.settings.header-style.name": "Header style",
+  "dorako-ui.settings.header-style.hint": "",
+  "dorako-ui.settings.header-style.choice.red": "Red",
+  "dorako-ui.settings.header-style.choice.blue": "Blue",
+  "dorako-ui.settings.header-style.choice.tint": "Player color",
+  "dorako-ui.settings.header-style.choice.none": "Disabled",
+
+  "dorako-ui.settings.use-avatars.name": "Avatar style",
+  "dorako-ui.settings.use-avatars.hint": "Adds an avatar to chat messages",
+  "dorako-ui.settings.use-avatars.choice.token": "Prefer token image",
+  "dorako-ui.settings.use-avatars.choice.actor": "Prefer actor image",
+  "dorako-ui.settings.use-avatars.choice.none": "Disabled",
+
+  "dorako-ui.settings.hide-gm-avatar-when-secret.name": "Hide avatar when secret?",
+  "dorako-ui.settings.hide-gm-avatar-when-secret.hint": "Hides avatars whenever GM rolls secret/private rolls",
+
+  "dorako-ui.settings.hide-avatar-when-hidden.name": "Hide avatar when token is hidden?",
+  "dorako-ui.settings.hide-avatar-when-hidden.hint": "Hides avatars when the speaker token is hidden",
+
+  "dorako-ui.settings.avatar-size.name": "Avatar size",
+  "dorako-ui.settings.avatar-size.hint": "Suggested size of 40px",
+
+  "dorako-ui.settings.popout-token-avatars.name": "Enable token avatar popout?",
+  "dorako-ui.settings.popout-token-avatars.hint": "Scales the avatars of BB/AV-style tokens to normalize the size of the token baseplate",
+
+  "dorako-ui.settings.avatar-reacts-to-degree-of-success.name": "Avatar reacts to critical rolls",
+  "dorako-ui.settings.avatar-reacts-to-degree-of-success.hint": "A critical success will glow green, and a critical failure becomes muted and dark",
+
+  "dorako-ui.settings.small-creature-token-avatar-size.name": "Small creature avatar size",
+  "dorako-ui.settings.small-creature-token-avatar-size.hint": "Default is 0.8",
+
+  "dorako-ui.settings.use-user-avatar.name": "Use user avatar as fallback?",
+  "dorako-ui.settings.use-user-avatar.hint": "Configure user avatars by right-clicking users in the lower left area of Foundry",
+
+  "dorako-ui.settings.avatar-border.name": "Enable avatar border",
+  "dorako-ui.settings.avatar-border.hint": "Disable this setting if you are using token avatars that pop out of their token baseplates",
+
+  "dorako-ui.settings.chat-input-height.name": "Chatbox height",
+  "dorako-ui.settings.chat-input-height.hint": "",
+
+  "dorako-ui.settings.enable-player-tags.name": "Enable player tags?",
+  "dorako-ui.settings.enable-player-tags.hint": "Adds a tag containing the name of the player next to the speaker",
+
+  "dorako-ui.settings.rolltype-indication.name": "Rolltype indication mode",
+  "dorako-ui.settings.rolltype-indication.hint": "Secret rolls are tinted pink, and whispers are tinted blue",
+  "dorako-ui.settings.rolltype-indication.choice.tags": "Tags",
+  "dorako-ui.settings.rolltype-indication.choice.bg-color": "Background color ting",
+  "dorako-ui.settings.rolltype-indication.choice.both": "Tags and background color",
+  "dorako-ui.settings.rolltype-indication.choice.none": "Disabled",
+
+  "dorako-ui.settings.compact-ui.name": "Enable Compact UI?",
+  "dorako-ui.settings.compact-ui.hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered",
+
+  "dorako-ui.settings.no-logo.name": "Hide Foundry logo?",
+  "dorako-ui.settings.no-logo.hint": "Removes the Foundry logo in the top left",
+
+  "dorako-ui.settings.backdrop-filter.name": "Use glassy transparency",
+  "dorako-ui.settings.backdrop-filter.hint": "WARNING: Very performance intensive, not suitable for laptops",
+
+  "dorako-ui.settings.center-hotbar.name": "Center hotbar?",
+  "dorako-ui.settings.center-hotbar.hint": "",
+
+  "dorako-ui.settings.edge-offset.name": "Edge-offset",
+  "dorako-ui.settings.edge-offset.hint": "Offset from the edge of screen in pixels",
+
+  "dorako-ui.settings.skin-chat.name": "Theme chat?",
+  "dorako-ui.settings.skin-navigation.name": "Theme scene navigation?",
+  "dorako-ui.settings.skin-hotbar.name": "Theme hotbar?",
+  "dorako-ui.settings.skin-controls.name": "Theme scene controls?",
+  "dorako-ui.settings.skin-token-hud.name": "Theme token HUD?",
+  "dorako-ui.settings.skin-effect-panel.name": "Theme effects panel?",
+  "dorako-ui.settings.skin-sidebar.name": "Theme sidebar?",
+  "dorako-ui.settings.skin-app-ui.name": "Theme app UI?",
+  "dorako-ui.settings.skin-combat-tracker.name": "Theme combat tracker?",
+  "dorako-ui.settings.skin-custom-hotbar.name": "Theme Custom Hotbar module?",
+  "dorako-ui.settings.skin-token-action-hud.name": "Theme Token Action HUD module?",
+  "dorako-ui.settings.skin-window-controls.name": "Theme Window Controls module?",
+  "dorako-ui.settings.skin-combat-carousel.name": "Theme Combat Carousel module?",
+  "dorako-ui.settings.skin-dice-tray.name": "Theme Dice Tray module?",
+
+  "dorako-ui.text.secret": "Secret",
+  "dorako-ui.text.self-roll": "Self roll",
+  "dorako-ui.text.gm-only": "GM only",
+  "dorako-ui.text.whisper": "Whisper",
+  "dorako-ui.text.from": "From",
+  "dorako-ui.text.to": "to"
+}

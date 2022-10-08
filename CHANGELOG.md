@@ -1,3 +1,11 @@
+# 1.7.0
+
+Localized all string, paving the way for translations.
+
+Fixed 'fuzzy' sidebar text in Outlaws of Alkenstars premium module.
+
+Fixed various system regressions to damage buttons.
+
 # 1.6.9
 
 Fixed a PC dark mode regression caused by a recent system update.

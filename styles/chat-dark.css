@@ -139,7 +139,7 @@
     color: var(--pf2e-body-primary);
 }
 
-.dark-theme.message .message-content .chat-damage-buttons button.heal-damage .plus {
+.dark-theme.message .message-content .chat-damage-buttons button.heal-damage .fa-plus {
     color: black;
     text-shadow: none;
 }

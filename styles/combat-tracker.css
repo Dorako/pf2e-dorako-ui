@@ -10,7 +10,7 @@
     border-bottom: none;
 }
 
-.directory .directory-header,
+#combat .directory .directory-header,
 #combat #combat-controls a,
 #combat #combat-round {
     text-shadow: var(--dorako-text-shadow);
