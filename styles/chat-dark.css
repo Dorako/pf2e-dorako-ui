@@ -163,7 +163,3 @@
 .dark-theme .vr {
     border-color: gray;
 }
-
-#sidebar [data-tab=cards] {
-    display: none;
-}

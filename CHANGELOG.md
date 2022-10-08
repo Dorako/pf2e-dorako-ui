@@ -6,6 +6,10 @@ Fixed 'fuzzy' sidebar text in Outlaws of Alkenstars premium module.
 
 Fixed various system regressions to damage buttons.
 
+Fixed accidentally shipping css that removed cards from the sidebar.
+
+Added support for new PF2e Target Damage module.
+
 # 1.6.9
 
 Fixed a PC dark mode regression caused by a recent system update.
