@@ -20,6 +20,7 @@ Works great with:
 - Damage Log
 - Combat Carousel
 - PF2E Combat Tracker Images
+- PF2e Target Damage
 
 Works well with:
 
