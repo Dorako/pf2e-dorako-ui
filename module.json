@@ -11,7 +11,7 @@
       "discord": "Dorako#0657"
     }
   ],
-  "version": "1.7.0",
+  "version": "1.6.9",
   "compatibility": {
     "minimum": "10",
     "verified": "10.286"
@@ -36,6 +36,6 @@
     }
   ],
   "scripts": ["scripts/dorako-ui.js"],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.7.0.zip",
-  "manifest": "https://github.com/Dorako/pf2e-dorako-ui/raw/main/module.json"
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.6.9.zip",
+  "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/download/v1.6.9/module.json"
 }
