@@ -1,3 +1,6 @@
+<a href="https://weblate.foundryvtt-hub.com/engage/pf2e-dorako-ui/">
+<img src="https://weblate.foundryvtt-hub.com/widgets/pf2e-dorako-ui/-/multi-auto.svg" alt="Translation status" />
+
 # PF2e Dorako UI
 
 This is a UI overhaul for the Pathfinder 2nd Edition System for Foundry VTT, building upon the work of mdizo.
