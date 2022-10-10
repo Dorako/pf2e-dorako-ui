@@ -40,6 +40,11 @@
       "lang": "fr",
       "name": "Français",
       "path": "languages/fr.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "languages/de.json"
     }
   ],
   "scripts": [
