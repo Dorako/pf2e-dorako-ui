@@ -45,6 +45,11 @@
       "lang": "de",
       "name": "Deutsch",
       "path": "languages/de.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português",
+      "path": "languages/pt.json"
     }
   ],
   "scripts": [
