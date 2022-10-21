@@ -203,14 +203,14 @@
  }
 
  .app.sidebar-popout .window-content {
-     background-color: var(--dorako-bg-current);
+     /* background-color: var(--dorako-bg-current); */
      overflow: hidden;
  }
 
  .sidebar-popout {
      overflow: auto;
      resize: both;
-     box-shadow: var(--glassy);
+     /* box-shadow: var(--glassy); */
  }
 
  #players {

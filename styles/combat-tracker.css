@@ -1,46 +1,46 @@
 /* Combat Tracker */
 
-#combat li.combatant .token-initiative {
+.combat-sidebar li.combatant .token-initiative {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#combat #combat-round {
+.combat-sidebar #combat-round {
     border-bottom: none;
 }
 
-#combat .directory .directory-header,
-#combat #combat-controls a,
-#combat #combat-round {
+.combat-sidebar .directory .directory-header,
+.combat-sidebar #combat-controls a,
+.combat-sidebar #combat-round {
     text-shadow: var(--dorako-text-shadow);
 }
 
-#combat #combat-round .encounters h4,
-#combat #combat-round .encounters a {
+.combat-sidebar #combat-round .encounters h4,
+.combat-sidebar #combat-round .encounters a {
     color: unset;
 }
 
-#combat #combat-controls {
+.combat-sidebar #combat-controls {
     border: none;
 }
 
-#combat li.combatant {
+.combat-sidebar li.combatant {
     border: none;
 }
 
-#combat li.combatant.active {
+.combat-sidebar li.combatant.active {
     background: var(--paizo-red);
     box-shadow: var(--gold-and-glow);
     /* background-size: 50px; */
     border: none;
 }
 
-#combat li.combatant>.token-image {
+.combat-sidebar li.combatant>.token-image {
     margin: 5px;
 }
 
-#combat li.combatant .token-name {
+.combat-sidebar li.combatant .token-name {
     text-shadow: var(--dorako-text-shadow);
     justify-content: center;
 }

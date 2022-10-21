@@ -1,3 +1,17 @@
+# 1.7.1
+
+Added 'Send to chat' feature.
+
+Added support for @Dalvyn's CRB-styled journals.
+
+Added full French localization by @rectulo.
+
+Added partial support for German localization by @Allalinor ッ.
+
+Added partial support for Portuguese localization by @Samir Sardinha.
+
+Various style fixes to combat tracker in popped-out mode.
+
 # 1.7.0
 
 Localized all string, paving the way for translations.

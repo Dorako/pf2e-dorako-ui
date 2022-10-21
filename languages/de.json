@@ -1,8 +1,8 @@
 {
-  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Dunkel (@Vesselchuck)",
-  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dunkel + Rote Kopfzeile (@Vesselchuck)",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Dunkel",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dunkel + Rote Kopfzeile",
   "dorako-ui.settings.pc-sheet-theme.choice.red": "Standard",
-  "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dunkel (@Vesselchuck)",
+  "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dunkel",
   "dorako-ui.settings.chat-theme.choice.light": "Hell",
   "dorako-ui.settings.chat-theme.choice.dark": "Dunkel",
   "dorako-ui.settings.header-style.name": "Kopfzeilen Stil",

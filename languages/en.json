@@ -1,23 +1,23 @@
 {
   "dorako-ui.settings.pc-sheet-theme.name": "PC sheet theme",
-  "dorako-ui.settings.pc-sheet-theme.hint": "",
+  "dorako-ui.settings.pc-sheet-theme.hint": "Affects player sheets",
   "dorako-ui.settings.pc-sheet-theme.choice.red": "Default",
-  "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dark (@Vesselchuck)",
+  "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dark",
 
   "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
-  "dorako-ui.settings.familiar-sheet-theme.hint": "",
+  "dorako-ui.settings.familiar-sheet-theme.hint": "Affects familiar sheets",
   "dorako-ui.settings.familiar-sheet-theme.choice.red": "Red",
-  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Dark (@Vesselchuck)",
-  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dark + Red Header (@Vesselchuck)",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Dark",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dark + Red Header",
 
   "dorako-ui.settings.chat-theme.name": "Chat theme",
-  "dorako-ui.settings.chat-theme.hint": "",
+  "dorako-ui.settings.chat-theme.hint": "Affects all chat messages",
   "dorako-ui.settings.chat-theme.choice.light": "Light",
   "dorako-ui.settings.chat-theme.choice.dark": "Dark",
   "dorako-ui.settings.chat-theme.choice.factions": "Players light, GM dark",
 
   "dorako-ui.settings.header-style.name": "Header style",
-  "dorako-ui.settings.header-style.hint": "",
+  "dorako-ui.settings.header-style.hint": "Affects all chat messages",
   "dorako-ui.settings.header-style.choice.red": "Red",
   "dorako-ui.settings.header-style.choice.blue": "Blue",
   "dorako-ui.settings.header-style.choice.tint": "Player color",
@@ -54,7 +54,7 @@
   "dorako-ui.settings.avatar-border.hint": "Disable this setting if you are using token avatars that pop out of their token baseplates",
 
   "dorako-ui.settings.chat-input-height.name": "Chatbox height",
-  "dorako-ui.settings.chat-input-height.hint": "",
+  "dorako-ui.settings.chat-input-height.hint": "Foundry default is approx 100px",
 
   "dorako-ui.settings.enable-player-tags.name": "Enable player tags?",
   "dorako-ui.settings.enable-player-tags.hint": "Adds a tag containing the name of the player next to the speaker",
@@ -62,9 +62,12 @@
   "dorako-ui.settings.rolltype-indication.name": "Rolltype indication mode",
   "dorako-ui.settings.rolltype-indication.hint": "Secret rolls are tinted pink, and whispers are tinted blue",
   "dorako-ui.settings.rolltype-indication.choice.tags": "Tags",
-  "dorako-ui.settings.rolltype-indication.choice.bg-color": "Background color ting",
+  "dorako-ui.settings.rolltype-indication.choice.bg-color": "Background color tint",
   "dorako-ui.settings.rolltype-indication.choice.both": "Tags and background color",
   "dorako-ui.settings.rolltype-indication.choice.none": "Disabled",
+
+  "dorako-ui.settings.send-to-chat.name": "Add 'Send' button to window header?",
+  "dorako-ui.settings.send-to-chat.hint": "Sends content to chat as if sent via sheet",
 
   "dorako-ui.settings.compact-ui.name": "Enable Compact UI?",
   "dorako-ui.settings.compact-ui.hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered",
@@ -75,8 +78,8 @@
   "dorako-ui.settings.backdrop-filter.name": "Use glassy transparency",
   "dorako-ui.settings.backdrop-filter.hint": "WARNING: Very performance intensive, not suitable for laptops",
 
-  "dorako-ui.settings.center-hotbar.name": "Center hotbar?",
-  "dorako-ui.settings.center-hotbar.hint": "",
+  "dorako-ui.settings.center-hotbar.name": "Enable centered hotbar?",
+  "dorako-ui.settings.center-hotbar.hint": "Also known as macrobar",
 
   "dorako-ui.settings.edge-offset.name": "Edge-offset",
   "dorako-ui.settings.edge-offset.hint": "Offset from the edge of screen in pixels",
@@ -96,10 +99,14 @@
   "dorako-ui.settings.skin-combat-carousel.name": "Theme Combat Carousel module?",
   "dorako-ui.settings.skin-dice-tray.name": "Theme Dice Tray module?",
 
+  "dorako-ui.settings.skin-crb-journal.name": "Enable CRB styling for journals?",
+  "dorako-ui.settings.skin-crb-journal.hint": "Instructions at www.shorturl.at/mrzN1",
+
   "dorako-ui.text.secret": "Secret",
   "dorako-ui.text.self-roll": "Self roll",
   "dorako-ui.text.gm-only": "GM only",
   "dorako-ui.text.whisper": "Whisper",
   "dorako-ui.text.from": "From",
-  "dorako-ui.text.to": "to"
+  "dorako-ui.text.to": "to",
+  "dorako-ui.text.send-to-chat": "Send"
 }

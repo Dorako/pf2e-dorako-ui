@@ -1630,6 +1630,10 @@ i[data-pf2-repost] {
     font-size: small;
 }
 
+i[data-pf2-repost]:active {
+    border: none;
+}
+
 span[data-pf2-effect-area].with-repost,
 span[data-pf2-check].with-repost {
     border-right: 1px solid var(--color-border-dark-tertiary);

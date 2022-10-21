@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Gelasio-Bold";
+    src: url(../fonts/Gelasio-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-BoldItalic";
+    src: url(../fonts/Gelasio-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-Italic";
+    src: url(../fonts/Gelasio-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-Medium";
+    src: url(../fonts/Gelasio-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-MediumItalic";
+    src: url(../fonts/Gelasio-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-Regular";
+    src: url(../fonts/Gelasio-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-SemiBold";
+    src: url(../fonts/Gelasio-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Gelasio-SemiBoldItalic";
+    src: url(../fonts/Gelasio-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Gin-Regular";
+    src: url(../fonts/Gin-Regular.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Bold";
+    src: url(../fonts/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-BoldItalic";
+    src: url(../fonts/RobotoCondensed-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Italic";
+    src: url(../fonts/RobotoCondensed-Italic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Light";
+    src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-LightItalic";
+    src: url(../fonts/RobotoCondensed-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "RobotoCondensed-Regular";
+    src: url(../fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Taroca Regular";
+    src: url(../fonts/Taroca\ Regular.ttf);
+}
+
+@font-face {
+    font-family: "Tauri-Regular";
+    src: url(../fonts/Tauri-Regular.ttf);
+}
