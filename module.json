@@ -50,10 +50,19 @@
       "lang": "pt-BR",
       "name": "Português",
       "path": "languages/pt.json"
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "languages/ja.json"
     }
   ],
-  "styles": ["styles/fonts.css"],
-  "scripts": ["scripts/dorako-ui.js"],
+  "styles": [
+    "styles/fonts.css"
+  ],
+  "scripts": [
+    "scripts/dorako-ui.js"
+  ],
   "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.7.1.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/download/v1.7.1/module.json"
 }
