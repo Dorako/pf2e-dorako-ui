@@ -1,1 +1,17 @@
-{}
+{
+  "dorako-ui.settings.pc-sheet-theme.choice.red": "ディフォルト",
+  "dorako-ui.settings.familiar-sheet-theme.choice.red": "赤色",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "暗",
+  "dorako-ui.settings.chat-theme.choice.light": "光",
+  "dorako-ui.settings.chat-theme.choice.dark": "暗",
+  "dorako-ui.settings.header-style.name": "ヘッダーのスタイル",
+  "dorako-ui.settings.header-style.choice.blue": "青",
+  "dorako-ui.settings.pc-sheet-theme.name": "PCシートのテーマ",
+  "dorako-ui.settings.familiar-sheet-theme.name": "使い魔シートのテーマ",
+  "dorako-ui.settings.pc-sheet-theme.choice.dark": "暗",
+  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "暗+赤いヘッダー",
+  "dorako-ui.settings.chat-theme.name": "チャットのテーマ",
+  "dorako-ui.settings.chat-theme.choice.factions": "PC光、GM暗",
+  "dorako-ui.settings.header-style.choice.red": "赤色",
+  "dorako-ui.settings.header-style.choice.tint": "プレイヤーの色"
+}
