@@ -1326,13 +1326,14 @@ div#scrollToBottom:hover {
 .sender-wrapper {
     display: flex;
     gap: 3px;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     justify-content: left;
     align-self: center;
 }
 
 .portrait-wrapper+.sender-wrapper {
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .sender-wrapper.no-img {

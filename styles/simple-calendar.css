@@ -1,0 +1,279 @@
+body.game .simple-calendar.classic.window-app.app header.window-header {
+    background: none;
+}
+
+body.game .simple-calendar.classic.window-app.app {
+    transition: background-color 0.25s;
+    /* backdrop-filter: var(--dorako-vibrancy); */
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5), var(--glassy);
+}
+
+body.game .simple-calendar.classic.window-app.app .window-content {
+    background: var(--pf2e-sheets-bg) !important;
+    background-size: cover !important;
+    color: black !important;
+    border: 0;
+    border-top: 1px solid black;
+    border-image: unset;
+    box-shadow: unset;
+}
+
+body.game #fsc-eg.simple-calendar.classic.window-app.app .window-content {
+    background: var(--pf2e-sheets-bg) !important;
+    background-color: #8f8f8f !important;
+    background-size: cover !important;
+    background-blend-mode: multiply;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-lb,
+body.game .simple-calendar.classic.window-app.app .fsc-h {
+    background-color: var(--bg);
+    border: unset;
+    border-radius: 5px;
+    box-shadow: var(--gold-and-glow), 0px 0px 7px black;
+    color: #191813;
+    padding: 0px;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-lb {
+    background-image: url(../img/background-light.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: #ffffff7d;
+}
+
+body.game .fsc-h .fsc-s .fsc-t .fsc-da,
+body.game .fsc-h .fsc-s .fsc-t .fsc-v .fsc-w {
+    margin: 2px 3px;
+}
+
+body.game .fsc-h .fsc-s .fsc-t .fsc-v .fsc-w {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 12px;
+    margin: 2px 3px;
+    border: 0px solid;
+    border-radius: 5px;
+    box-shadow: var(--gold-and-glow);
+    cursor: pointer;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w {
+    /* box-shadow: var(--glassy) !important; */
+    transition: background-color 0.15s ease-out, color 0.15s ease-out, text-shadow 0.15s ease-out, box-shadow 0.15s ease-out;
+    /* background-color: var(--dorako-bg-current); */
+    color: var(--body);
+    text-shadow: var(--pf2e-shadow-is-light);
+    box-shadow: none;
+    border: 1px solid var(--alt);
+    background-color: hsla(0, 0%, 20%, 0.1);
+    font-weight: 500;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w:hover {
+    background-color: var(--paizo-blue-bright);
+    color: var(--color-text-light-highlight);
+    text-shadow: var(--dorako-text-shadow);
+    box-shadow: var(--gold-and-glow);
+}
+
+/* Current date */
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w.fsc-aa {
+    /* box-shadow: inset 0 0 5px #5c5cff; */
+    /* background-color: #d2d2ff; */
+    background-color: var(--paizo-red-bright);
+    box-shadow: var(--gold-and-glow), var(--glassy) !important;
+    color: var(--color-text-light-highlight);
+    text-shadow: var(--dorako-text-shadow);
+    box-shadow: var(--gold-and-glow);
+
+}
+
+/* Hover over current date */
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w.fsc-aa:hover {
+    background-color: var(--paizo-blue-bright);
+    color: var(--color-text-light-highlight);
+    text-shadow: var(--dorako-text-shadow);
+    box-shadow: var(--gold-and-glow);
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w.fsc-x {
+    background-color: var(--paizo-blue);
+    color: var(--color-text-light-highlight);
+    box-shadow: var(--gold-and-glow);
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w.fsc-x:hover {
+    background-color: var(--paizo-blue-dark);
+    color: var(--color-text-light-highlight);
+    text-shadow: var(--dorako-text-shadow);
+    box-shadow: var(--gold-and-glow);
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-cg {
+    background: none;
+    background-color: var(--dorako-bg-current);
+    backdrop-filter: var(--dorako-vibrancy);
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: var(--glassy);
+    border: 0px;
+    margin-top: 1px;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-cg h2 {
+    border-bottom-color: wheat;
+    text-shadow: 0px 0px 3px black;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-v .fsc-w .fsc-ba .fsc-ta {
+    box-shadow: var(--gold-and-glow);
+}
+
+/* Calendar Month header */
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-j {
+    background-color: transparent;
+}
+
+/* Recurring */
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w .fsc-ba .fsc-ta.fsc-ua {
+    background-color: var(--paizo-blue-bright);
+}
+
+/* Base badge */
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s .fsc-t .fsc-w .fsc-ba .fsc-ta {
+    background-color: var(--paizo-red-bright);
+
+}
+
+/* body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-af {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: var(--gold-and-glow);
+} */
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-af {
+    /* margin: 10px; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf {
+    background-color: var(--bg);
+    background-image: url(../img/background-light.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    box-shadow: var(--gold-and-glow), 0px 0px 5px black;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf {
+    border-bottom: 0px solid;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf:not(:last-child) {
+    border-bottom: 1px solid var(--bg-dark);
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf:hover {
+    background-color: #dcd0c6;
+    background-image: url(../img/background-light.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-j {
+    background-color: transparent;
+    box-shadow: var(--gold-and-glow);
+    color: white;
+    text-shadow: var(--pf2e-shadow-is-dark);
+    background-image: url(../img/background-light.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+body.game #fsc-eg.simple-calendar.classic.window-app.app .fsc-h .fsc-j {
+    background-color: transparent;
+    box-shadow: var(--gold-and-glow);
+    background-color: var(--alt);
+    background-image: url(../img/background-light.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-h .fsc-s {
+    padding: 5px;
+    background-image: url(../img/background-light.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+body.game .simple-calendar.window-app.app .window-content button.fsc-yb {
+    border-color: wheat !important;
+    box-shadow: none;
+}
+
+body.game .simple-calendar.window-app.app .fsc-bg.fsc-zf .fsc-di {
+    box-shadow: 0px 0px 5px black;
+}
+
+body.game .simple-calendar.window-app.app .fsc-bg.fsc-zf {
+    justify-content: space-evenly;
+}
+
+body.game .simple-calendar.classic.window-app.app .window-content .fsc-hf .fsc-yb {
+    box-shadow: 0px 0px 5px black;
+}
+
+body.game .simple-calendar.window-app.app .fsc-hf .fsc-si {
+    gap: 3px;
+}
+
+body.game .simple-calendar.window-app.app .fsc-bg button svg {
+    filter: invert(1) drop-shadow(0px 0px 1px black);
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-lj,
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf .fsc-mj .fsc-nj .fsc-lj {
+    border-radius: 3px;
+    box-shadow: var(--gold-and-glow);
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf .fsc-mj .fsc-nj {
+    gap: 3px;
+}
+
+body.game .simple-calendar.classic.window-app.app .fsc-af .fsc-vf .fsc-pj {
+    border: none;
+    box-shadow: none;
+    background: none;
+    color: white;
+    text-shadow: var(--dorako-text-shadow);
+}
+
+body.game .simple-calendar.journal-sheet form .fsc-og {
+    gap: 5px;
+}
+
+body.game .simple-calendar.window-app.app .window-content .fsc-og button.fsc-yb {
+    border: none;
+    box-shadow: var(--gold-and-glow), 0px 0px 5px black !important;
+}
+
+body.game .simple-calendar.classic.window-app .fsc-wf input {
+    border-color: wheat;
+}
+
+body.game .simple-calendar.window-app .fsc-bf .fsc-dg.fsc-b {
+    border: none;
+}
+
+body.game .fsc-af .fsc-vf .fsc-mj .fsc-ah {
+    text-shadow: var(--pf2e-shadow-is-light);
+}

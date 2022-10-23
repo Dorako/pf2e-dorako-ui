@@ -1126,12 +1126,24 @@ Hooks.once("init", async () => {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "skin-simple-calendar", {
+    name: i18n("dorako-ui.settings.skin-simple-calendar.name"),
+    hint: i18n("dorako-ui.settings.skin-simple-calendar.hint"),
+    scope: "world",
+    type: Boolean,
+    default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "skin-crb-journal", {
     name: i18n("dorako-ui.settings.skin-crb-journal.name"),
     hint: i18n("dorako-ui.settings.skin-crb-journal.hint"),
     scope: "world",
     type: Boolean,
-    default: true,
+    default: false,
     config: true,
     onChange: () => {
       debouncedReload();
@@ -1172,6 +1184,7 @@ Hooks.once("init", async () => {
   if (game.settings.get("pf2e-dorako-ui", "skin-token-action-hud")) injectCSS("token-action-hud");
   if (game.settings.get("pf2e-dorako-ui", "skin-custom-hotbar")) injectCSS("custom-hotbar");
   if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) injectCSS("dice-tray");
+  if (game.settings.get("pf2e-dorako-ui", "skin-simple-calendar")) injectCSS("simple-calendar");
   if (game.settings.get("pf2e-dorako-ui", "skin-crb-journal")) {
     injectCSS("crb-journal");
     injectCSS("fonts");

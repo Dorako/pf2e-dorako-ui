@@ -102,6 +102,9 @@
   "dorako-ui.settings.skin-crb-journal.name": "Enable CRB styling for journals?",
   "dorako-ui.settings.skin-crb-journal.hint": "Instructions at www.shorturl.at/mrzN1",
 
+  "dorako-ui.settings.skin-simple-calendar.name": "Theme Simple Calendar module?",
+  "dorako-ui.settings.skin-simple-calendar.hint": "Activate 'Classic' theme in Simple Calendar",
+
   "dorako-ui.text.secret": "Secret",
   "dorako-ui.text.self-roll": "Self roll",
   "dorako-ui.text.gm-only": "GM only",

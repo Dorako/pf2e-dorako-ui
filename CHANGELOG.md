@@ -1,3 +1,7 @@
+# 1.7.2
+
+Added theme override for Simple Calendar - remember to activate the 'Classic' theme in Simple Calendar.
+
 # 1.7.1
 
 Added 'Send to chat' feature.

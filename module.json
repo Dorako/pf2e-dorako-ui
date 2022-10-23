@@ -12,7 +12,7 @@
       "flags": {}
     }
   ],
-  "version": "1.7.1",
+  "version": "1.7.2",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
@@ -57,12 +57,8 @@
       "path": "languages/ja.json"
     }
   ],
-  "styles": [
-    "styles/fonts.css"
-  ],
-  "scripts": [
-    "scripts/dorako-ui.js"
-  ],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.7.1.zip",
-  "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/download/v1.7.1/module.json"
+  "styles": ["styles/fonts.css"],
+  "scripts": ["scripts/dorako-ui.js"],
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.7.2.zip",
+  "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/download/v1.7.2/module.json"
 }
