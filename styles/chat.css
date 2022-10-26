@@ -530,7 +530,7 @@ button {
     --pf2e-transcluent-very-for-dark: hsla(0, 0%, 80%, 0.3);
     --pf2e-color-mono-dark: hsl(0, 0%, 15%);
     --pf2e-color-ornament-for-dark: wheat;
-    --pf2e-color-ornament-for-light: black;
+    --pf2e-color-ornament-for-light: #808080;
 
 
 
@@ -1707,4 +1707,34 @@ span[data-pf2-check].with-repost {
     border: none;
     margin: 0px;
     padding: 0px 5px 5px 5px;
+}
+
+.pf2e.chat-card .card-header h3.pf2-icon {
+    font-family: Pathfinder2eActions;
+    font-size: xxx-large;
+    flex: 0 0 34px;
+}
+
+.pf2e.chat-card .card-content .spell-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: .2em;
+}
+
+.pf2e.chat-card .card-content .spell-info p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.pf2e.chat-card section.card-buttons:empty {
+    display: none;
+}
+
+.pf2e.chat-card .card-header h4 s {
+    color: gray;
+}
+
+.pf2e.chat-card .card-header h4 span.heightened {
+    color: green;
 }

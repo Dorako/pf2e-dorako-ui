@@ -43,6 +43,14 @@ function titleCase(string) {
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
 
+function getActionGlyph(actionCost) {
+  if (actionCost.type == "action") {
+    return actionCost.value;
+  } else if (actionCost.type == "reaction") return "R";
+  else if (actionCost.type == "free") return "F";
+  else return "";
+}
+
 // function cleanHTML() {
 // 	document.getElementsByTagName("html")[0].style = null;
 // 	$("head").children('link[href="css/style.css"]')[0].disabled = true;
@@ -186,8 +194,6 @@ Hooks.on("getItemSheetPF2eHeaderButtons", (sheet, buttons) => {
 // Combat Tracker
 Hooks.on("renderCombatTracker", addScalingToCombatTrackerAvatars);
 
-Hooks.on("preCreateCombatant", console.log("hookd"));
-
 // // Test
 // Check DF manual rolls for inspiration
 // Hooks.on("renderUserConfig", (user, html, c) => {
@@ -218,6 +224,20 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   // console.log(html);
   // console.log("messageData");
   // console.log(messageData);
+
+  if (game.settings.get("pf2e-dorako-ui", "restructure-card-info")) {
+    if (!chatMessage.isRoll) {
+      let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;
+      // console.log(uuid);
+      if (uuid) {
+        let origin = fromUuidSync(uuid);
+        // console.log(origin);
+        let actionCost = origin?.actionCost;
+        if (actionCost) injectActionCost(html, actionCost);
+        if (origin?.type === "spell") injectSpellInfo(html, origin);
+      }
+    }
+  }
 
   injectSenderWrapper(html, messageData);
   injectMessageTag(html, messageData);
@@ -303,6 +323,153 @@ function injectAvatar(html, avatar) {
   let senderWrapper = html.find(".sender-wrapper")[0];
   portraitAndName.append(senderWrapper);
   portraitAndName.prepend(wrapper);
+}
+
+function injectActionCost(html, actionCost) {
+  if (!actionCost) return;
+  const actionGlyph = getActionGlyph(actionCost);
+  if (!actionGlyph) return;
+
+  // console.log("Injecting actionGlyph %s", actionGlyph);
+  let messageHeader = html.find(".card-header")[0];
+  let actionGlyphText = document.createElement("h3");
+  actionGlyphText.classList.add("pf2-icon");
+  actionGlyphText.textContent = actionGlyph;
+  messageHeader.append(actionGlyphText);
+}
+
+function localizeComponent(componentKey) {
+  if (componentKey === "focus") return i18n("PF2E.SpellComponentF");
+  if (componentKey === "material") return i18n("PF2E.SpellComponentM");
+  if (componentKey === "somatic") return i18n("PF2E.SpellComponentS");
+  if (componentKey === "verbal") return i18n("PF2E.SpellComponentV");
+}
+
+function spellComponentsToText(components) {
+  // console.log(components);
+  const asArray = Object.entries(components);
+  // console.log(asArray);
+  const filtered = asArray.filter(([key, value]) => value);
+  // console.log(filtered);
+  const localized = filtered.map(([key, value]) => localizeComponent(key));
+  // console.log(localized);
+  const combined = localized.join(", ");
+  return " " + combined.toLowerCase();
+}
+
+function injectSpellInfo(html, spell) {
+  if (!spell) return;
+  // console.log(spell);
+  let messageHeader = html.find(".card-content")[0];
+  let spellInfo = document.createElement("div");
+  spellInfo.classList.add("spell-info");
+
+  // Cast info
+  let castInfo = document.createElement("p");
+  let castInfoLabel = document.createElement("strong");
+  castInfoLabel.textContent = i18n("PF2E.SpellCostLabel") + " ";
+  let castTime = document.createElement("span");
+  castTime.textContent = spell?.system?.time?.value;
+  if (spell?.system?.time?.value.length == 1) {
+    castTime.classList.add("pf2-icon");
+  }
+  let castComponents = document.createElement("span");
+  castComponents.textContent = spellComponentsToText(spell?.system?.components);
+  castInfo.append(castInfoLabel);
+  castInfo.append(castTime);
+  castInfo.append(castComponents);
+  spellInfo.append(castInfo);
+
+  // Duration info
+  let duration = spell?.system?.duration?.value;
+  if (duration) {
+    // console.log(duration);
+    let durationInfo = document.createElement("p");
+    let durationInfoLabel = document.createElement("strong");
+    durationInfoLabel.textContent = i18n("PF2E.SpellDurationLabel") + " ";
+    let durationValue = document.createElement("span");
+    durationValue.textContent = duration;
+    durationInfo.append(durationInfoLabel);
+    durationInfo.append(durationValue);
+    spellInfo.append(durationInfo);
+  }
+
+  // Target info
+  let target = spell?.system?.target?.value;
+  if (target) {
+    // console.log(target);
+    let targetInfo = document.createElement("p");
+    let targetInfoLabel = document.createElement("strong");
+    targetInfoLabel.textContent = i18n("PF2E.SpellTargetLabel") + " ";
+    let targetValue = document.createElement("span");
+    targetValue.textContent = target;
+    targetInfo.append(targetInfoLabel);
+    targetInfo.append(targetValue);
+    spellInfo.append(targetInfo);
+  }
+
+  // Range info
+  let range = spell?.system?.range?.value;
+  if (range) {
+    // console.log(range);
+    let rangeInfo = document.createElement("p");
+    let rangeInfoLabel = document.createElement("strong");
+    rangeInfoLabel.textContent = i18n("PF2E.SpellRangeLabel") + " ";
+    let rangeValue = document.createElement("span");
+    rangeValue.textContent = range;
+    rangeInfo.append(rangeInfoLabel);
+    rangeInfo.append(rangeValue);
+    spellInfo.append(rangeInfo);
+  }
+
+  // Area info
+  let area = spell?.system?.area?.value;
+  if (area) {
+    // console.log(area);
+    let areaInfo = document.createElement("p");
+    let areaInfoLabel = document.createElement("strong");
+    areaInfoLabel.textContent = i18n("PF2E.AreaLabel") + " ";
+    let areaValue = document.createElement("span");
+    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.areaType;
+    areaInfo.append(areaInfoLabel);
+    areaInfo.append(areaValue);
+    spellInfo.append(areaInfo);
+  }
+
+  let hr = document.createElement("hr");
+
+  // Heightening info
+  let spellRightInfo = html.find(".card-header").find("h4")[0];
+  let originalText = spellRightInfo.textContent;
+  const [_, spellType, parsedLevel] = originalText.split(/(.*) (\d+)/);
+
+  const baseLevel = spell?.baseLevel;
+  const actualLevel = spell?.level;
+  if (baseLevel != parsedLevel) {
+    let heighteningInfo = document.createElement("h4");
+    let spellTypeSpan = document.createElement("span");
+    spellTypeSpan.textContent = spellType + " ";
+
+    let originalLevel = document.createElement("s");
+    originalLevel.textContent = baseLevel;
+
+    let heightenedLevel = document.createElement("span");
+    heightenedLevel.classList.add("heightened");
+    heightenedLevel.textContent = " " + parsedLevel;
+
+    heighteningInfo.append(spellTypeSpan);
+    heighteningInfo.append(originalLevel);
+    heighteningInfo.append(heightenedLevel);
+
+    spellRightInfo.parentNode.replaceChild(heighteningInfo, spellRightInfo);
+  }
+
+  // Footer
+  let footer = html.find(".card-footer")[0];
+  footer.remove();
+
+  messageHeader.prepend(hr);
+  messageHeader.prepend(spellInfo);
 }
 
 function injectAuthorName(html, messageData) {
@@ -902,6 +1069,18 @@ Hooks.once("init", async () => {
     config: true,
     default: true,
     type: Boolean,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "restructure-card-info", {
+    name: i18n("dorako-ui.settings.restructure-card-info.name"),
+    hint: i18n("dorako-ui.settings.restructure-card-info.hint"),
+    scope: "world",
+    type: Boolean,
+    default: true,
+    config: true,
     onChange: () => {
       debouncedReload();
     },

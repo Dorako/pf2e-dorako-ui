@@ -69,6 +69,9 @@
   "dorako-ui.settings.send-to-chat.name": "Add 'Send' button to window header?",
   "dorako-ui.settings.send-to-chat.hint": "Sends content to chat as if sent via sheet",
 
+  "dorako-ui.settings.restructure-card-info.name": "Restructure chat card info?",
+  "dorako-ui.settings.restructure-card-info.hint": "Makes action-cost for features more apparent, and moves spell info out of the footer",
+
   "dorako-ui.settings.compact-ui.name": "Enable Compact UI?",
   "dorako-ui.settings.compact-ui.hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered",
 

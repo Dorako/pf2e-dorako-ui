@@ -1,3 +1,7 @@
+# 1.7.3
+
+Added feature that makes action cost more prominent, and restructures spells to be more easily readable.
+
 # 1.7.2
 
 Added theme override for Simple Calendar - remember to activate the 'Classic' theme in Simple Calendar.
