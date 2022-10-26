@@ -2,6 +2,8 @@
 
 Added feature that makes action cost more prominent, and restructures spells to be more easily readable.
 
+Added partial support for Japanese localization by Ollie2304
+
 # 1.7.2
 
 Added theme override for Simple Calendar - remember to activate the 'Classic' theme in Simple Calendar.
