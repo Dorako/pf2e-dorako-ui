@@ -84,5 +84,7 @@
   "dorako-ui.settings.send-to-chat.name": "Ajouter un bouton 'Envoi' au titre de la fenêtre ?",
   "dorako-ui.settings.skin-crb-journal.name": "Activer le style du LdB dans les journaux ?",
   "dorako-ui.settings.skin-crb-journal.hint": "Instructions ici www.shorturl.at/mrzN1",
-  "dorako-ui.text.send-to-chat": "Envoi"
+  "dorako-ui.text.send-to-chat": "Envoi",
+  "dorako-ui.settings.skin-simple-calendar.name": "Thème du module simple calendar ?",
+  "dorako-ui.settings.skin-simple-calendar.hint": "Activer le thème 'classique\" de Simple Calendar"
 }
