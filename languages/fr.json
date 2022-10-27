@@ -86,5 +86,7 @@
   "dorako-ui.settings.skin-crb-journal.hint": "Instructions ici www.shorturl.at/mrzN1",
   "dorako-ui.text.send-to-chat": "Envoi",
   "dorako-ui.settings.skin-simple-calendar.name": "Thème du module simple calendar ?",
-  "dorako-ui.settings.skin-simple-calendar.hint": "Activer le thème 'classique\" de Simple Calendar"
+  "dorako-ui.settings.skin-simple-calendar.hint": "Activer le thème 'classique\" de Simple Calendar",
+  "dorako-ui.settings.restructure-card-info.name": "Restructurer les infos sur les cartes de conversation ?",
+  "dorako-ui.settings.restructure-card-info.hint": "Rend plus visible le coût des actions pour les capacités et déplace les info des sorts en dehors du pied de la carte"
 }
