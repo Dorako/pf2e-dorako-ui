@@ -1,3 +1,7 @@
+# 1.7.4
+
+Added feature to combine weapon attack rolls with damage rolls visually.
+
 # 1.7.3
 
 Added feature that makes action cost more prominent, and restructures spells to be more easily readable.

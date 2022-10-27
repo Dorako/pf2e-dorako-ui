@@ -44,11 +44,14 @@ function titleCase(string) {
 }
 
 function getActionGlyph(actionCost) {
+  if (actionCost === "1 to 3") return "1 / 2 / 3";
+  if (actionCost === "1 or 2") return "1 / 2";
+  if (actionCost === "2 or 3") return "2 / 3";
   if (actionCost.type == "action") {
     return actionCost.value;
   } else if (actionCost.type == "reaction") return "R";
   else if (actionCost.type == "free") return "F";
-  else return "";
+  else return actionCost;
 }
 
 // function cleanHTML() {
@@ -219,7 +222,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 
   // console.log("renderChatMessage Hook");
   // console.log("chatMessage");
-  // console.log(chatMessage);
+  console.log(chatMessage);
   // console.log("html");
   // console.log(html);
   // console.log("messageData");
@@ -266,6 +269,46 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   }
 
   themeHeader(html, chatMessage);
+});
+
+// Combine attack and damage rolls from same source
+Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
+
+  if (chatMessage.flags["narrator-tools"]) {
+    return;
+  }
+
+  if (chatMessage?.isDamageRoll) {
+    const chatLength = game.messages?.contents.length ?? 0;
+    const mostRecent = game.messages?.contents[chatLength - 2];
+    const isDamageAfterAttack = mostRecent?.flags?.pf2e?.context?.type === "attack-roll";
+    if (isDamageAfterAttack) {
+      const mostRecentSource = mostRecent?.flags?.pf2e?.origin?.uuid ?? "a";
+      const currentSource = chatMessage?.flags?.pf2e?.origin?.uuid ?? "b";
+      const isSameSource = mostRecentSource === currentSource;
+      if (isSameSource) {
+        html[0].classList.add("dorako-damage-roll");
+        let header = html.find(".message-header")[0];
+        header.remove();
+        let tags = html.find(".tags")[1];
+        let flavorText = html.find(".flavor-text")[0];
+        flavorText.innerHTML = tags.outerHTML;
+      }
+    }
+  }
+});
+
+Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
+
+  if (chatMessage.flags["narrator-tools"]) {
+    return;
+  }
+
+  if (chatMessage?.flags?.pf2e?.context?.type === "attack-roll") {
+    html[0].classList.add("dorako-attack-roll");
+  }
 });
 
 Hooks.on("preCreateChatMessage", (message) => {
@@ -359,20 +402,18 @@ function spellComponentsToText(components) {
 
 function injectSpellInfo(html, spell) {
   if (!spell) return;
-  // console.log(spell);
   let messageHeader = html.find(".card-content")[0];
   let spellInfo = document.createElement("div");
   spellInfo.classList.add("spell-info");
+  console.log(spell);
 
   // Cast info
   let castInfo = document.createElement("p");
   let castInfoLabel = document.createElement("strong");
   castInfoLabel.textContent = i18n("PF2E.SpellCostLabel") + " ";
   let castTime = document.createElement("span");
-  castTime.textContent = spell?.system?.time?.value;
-  if (spell?.system?.time?.value.length == 1) {
-    castTime.classList.add("pf2-icon");
-  }
+  castTime.textContent = getActionGlyph(spell?.system?.time?.value);
+  castTime.classList.add("pf2-icon");
   let castComponents = document.createElement("span");
   castComponents.textContent = spellComponentsToText(spell?.system?.components);
   castInfo.append(castInfoLabel);
@@ -1077,6 +1118,18 @@ Hooks.once("init", async () => {
   game.settings.register("pf2e-dorako-ui", "restructure-card-info", {
     name: i18n("dorako-ui.settings.restructure-card-info.name"),
     hint: i18n("dorako-ui.settings.restructure-card-info.hint"),
+    scope: "world",
+    type: Boolean,
+    default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages", {
+    name: i18n("dorako-ui.settings.combine-attack-and-damage-roll-messages.name"),
+    hint: i18n("dorako-ui.settings.combine-attack-and-damage-roll-messages.hint"),
     scope: "world",
     type: Boolean,
     default: true,

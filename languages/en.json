@@ -72,6 +72,9 @@
   "dorako-ui.settings.restructure-card-info.name": "Restructure chat card info?",
   "dorako-ui.settings.restructure-card-info.hint": "Makes action-cost for features more apparent, and moves spell info out of the footer",
 
+  "dorako-ui.settings.combine-attack-and-damage-roll-messages.name": "Combine attack and damage roll messages?",
+  "dorako-ui.settings.combine-attack-and-damage-roll-messages.hint": "Makes damage roll messages take up less space by visually combining them with the attack",
+
   "dorako-ui.settings.compact-ui.name": "Enable Compact UI?",
   "dorako-ui.settings.compact-ui.hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered",
 

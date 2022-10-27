@@ -334,9 +334,6 @@
 
 
 
-#chat-log .message {
-    margin: 0px;
-}
 
 .dice-roll .dice-formula {
     margin-bottom: 3px;
@@ -375,18 +372,15 @@ button {
 }
 */
 
-#chat-log>.chat-message {
-    margin-top: 0px;
-}
 
 /* #chat-log>.chat-message:not(.dfce-cm-middle, .dfce-cm-bottom) {
     margin-top: 10px;
 } */
 
-#chat-log>.message {
-    border: 5px solid red;
+.message {
     box-shadow: var(--gold-and-glow);
     border: none;
+    margin-top: 0px;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -1737,4 +1731,14 @@ span[data-pf2-check].with-repost {
 
 .pf2e.chat-card .card-header h4 span.heightened {
     color: green;
+}
+
+
+.chat-message.dorako-damage-roll .message-content {
+    padding: 2px 5px 5px 5px;
+}
+
+.chat-message.dorako-damage-roll {
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -13px;
 }
