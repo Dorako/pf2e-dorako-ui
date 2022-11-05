@@ -101,6 +101,7 @@
   "dorako-ui.settings.skin-combat-tracker.name": "Theme combat tracker?",
   "dorako-ui.settings.skin-custom-hotbar.name": "Theme Custom Hotbar module?",
   "dorako-ui.settings.skin-token-action-hud.name": "Theme Token Action HUD module?",
+  "dorako-ui.settings.skin-token-action-hud.hint": "Enable the 'Dorako UI' style in TAH.",
   "dorako-ui.settings.skin-window-controls.name": "Theme Window Controls module?",
   "dorako-ui.settings.skin-combat-carousel.name": "Theme Combat Carousel module?",
   "dorako-ui.settings.skin-dice-tray.name": "Theme Dice Tray module?",

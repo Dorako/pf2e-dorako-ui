@@ -1,3 +1,17 @@
+# 1.8.0
+
+Fixed visual styling of Narrator Tools and Alpha Suit modules in the Controls.
+
+Fixed effect tooltip going off-screen when using modules that increase the tooltip size.
+
+Fixed nat 1/20 color support of inline rolls.
+
+Fixed display of action cost for spells with cast time in minutes.
+
+Removed combine-attacks-and-damage-rolls feature, instead improved support for DF Chat Enhancement's chat merge functionality. I recommend setting the combine setting to 'any'.
+
+Removed TAH theme (or rather, made it simply add a gap). Use the 'Dorako UI' style option in TAH.
+
 # 1.7.4
 
 Added feature to combine weapon attack rolls with damage rolls visually.

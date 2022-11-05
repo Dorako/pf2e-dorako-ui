@@ -36,11 +36,6 @@
     box-shadow: 0px 0px 5px var(--color-border-light-highlight);
 }
 
-.effect-panel .effect-item {
-    align-items: center;
-    gap: 10px
-}
-
 .effect-panel .effect-item .icon {
     border-radius: 42px;
     box-shadow: var(--gold-and-glow), var(--glassy);
@@ -48,7 +43,7 @@
 
 .effect-panel .effect-item .effect-info {
     background-color: var(--dorako-bg-current);
-    margin-right: 0px;
+    margin-right: 10px;
     padding: 3px;
     box-shadow: var(--glassy);
     border-radius: 3px;

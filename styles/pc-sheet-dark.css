@@ -426,14 +426,6 @@
   text-shadow: none;
 }
 
-[data-pf2-check],
-a.entity-link,
-a.inline-roll,
-[data-pf2-action],
-[data-pf2-effect-area] {
-  color: black;
-}
-
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list .item.action.strike.expandable.ready {
   padding-bottom: 12px;
 }

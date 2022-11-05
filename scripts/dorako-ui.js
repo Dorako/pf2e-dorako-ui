@@ -43,15 +43,16 @@ function titleCase(string) {
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
 
+// second return value is whether the first value can be styled as pf2e-icon
 function getActionGlyph(actionCost) {
-  if (actionCost === "1 to 3") return "1 / 2 / 3";
-  if (actionCost === "1 or 2") return "1 / 2";
-  if (actionCost === "2 or 3") return "2 / 3";
+  if (actionCost === "1 to 3") return ["1 / 2 / 3", true];
+  if (actionCost === "1 or 2") return ["1 / 2", true];
+  if (actionCost === "2 or 3") return ["2 / 3", true];
   if (actionCost.type == "action") {
-    return actionCost.value;
-  } else if (actionCost.type == "reaction") return "R";
-  else if (actionCost.type == "free") return "F";
-  else return actionCost;
+    return [actionCost.value, true];
+  } else if (actionCost.type == "reaction") return ["R", true];
+  else if (actionCost.type == "free") return ["F", true];
+  else return [actionCost, false];
 }
 
 // function cleanHTML() {
@@ -222,7 +223,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 
   // console.log("renderChatMessage Hook");
   // console.log("chatMessage");
-  console.log(chatMessage);
+  // console.log(chatMessage);
   // console.log("html");
   // console.log(html);
   // console.log("messageData");
@@ -271,45 +272,109 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   themeHeader(html, chatMessage);
 });
 
-// Combine attack and damage rolls from same source
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
+// // Combine attack and damage rolls from same source
+// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+//   if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
 
-  if (chatMessage.flags["narrator-tools"]) {
-    return;
-  }
+//   if (chatMessage.flags["narrator-tools"]) {
+//     return;
+//   }
 
-  if (chatMessage?.isDamageRoll) {
-    const chatLength = game.messages?.contents.length ?? 0;
-    const mostRecent = game.messages?.contents[chatLength - 2];
-    const isDamageAfterAttack = mostRecent?.flags?.pf2e?.context?.type === "attack-roll";
-    if (isDamageAfterAttack) {
-      const mostRecentSource = mostRecent?.flags?.pf2e?.origin?.uuid ?? "a";
-      const currentSource = chatMessage?.flags?.pf2e?.origin?.uuid ?? "b";
-      const isSameSource = mostRecentSource === currentSource;
-      if (isSameSource) {
-        html[0].classList.add("dorako-damage-roll");
-        let header = html.find(".message-header")[0];
-        header.remove();
-        let tags = html.find(".tags")[1];
-        let flavorText = html.find(".flavor-text")[0];
-        flavorText.innerHTML = tags.outerHTML;
-      }
-    }
-  }
-});
+//   const chatLength = game.messages?.contents.length ?? 0;
+//   if (chatLength <= 1) return;
+//   if (chatMessage?.isDamageRoll) {
+//     let recentIndex = -2;
+//     let mostRecent = game.messages?.contents.at(recentIndex);
+//     while (
+//       mostRecent?.flags?.["pf2-flat-check"] ||
+//       mostRecent?.flags?.["pf2e-flat-check"] ||
+//       mostRecent?.flags?.["pf2e-ranged-combat"]
+//     ) {
+//       recentIndex -= 1;
+//       mostRecent = game.messages?.contents.at(recentIndex);
+//     }
+//     const isDamageAfterAttack = mostRecent?.flags?.pf2e?.context?.type === "attack-roll";
+//     if (isDamageAfterAttack) {
+//       const mostRecentSource = mostRecent?.flags?.pf2e?.origin?.uuid ?? "a";
+//       const currentSource = chatMessage?.flags?.pf2e?.origin?.uuid ?? "b";
+//       const isSameSource = mostRecentSource === currentSource;
+//       if (isSameSource) {
+//         html[0].classList.add("dorako-damage-roll");
+//         let header = html.find(".message-header")[0];
+//         if (header) header.classList.add("dorako-display-none");
+//         let tags = html.find(".tags")[0];
+//         if (tags) tags.remove();
 
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
+//         // let flavorText = html.find(".flavor-text")[0];
+//         // flavorText.innerHTML = tags.outerHTML;
+//       }
+//     }
+//   }
+// });
 
-  if (chatMessage.flags["narrator-tools"]) {
-    return;
-  }
+// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+//   if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
 
-  if (chatMessage?.flags?.pf2e?.context?.type === "attack-roll") {
-    html[0].classList.add("dorako-attack-roll");
-  }
-});
+//   if (chatMessage.flags["narrator-tools"]) {
+//     return;
+//   }
+
+//   if (chatMessage?.flags?.pf2e?.context?.type === "attack-roll") {
+//     html[0].classList.add("dorako-attack-roll");
+//   }
+// });
+
+// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+//   if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
+//   if (chatMessage.flags["narrator-tools"]) return;
+
+//   const chatLength = game.messages?.contents.length ?? 0;
+//   if (chatLength <= 2) return;
+//   let mostRecent2 = game.messages?.contents.at(-2); // -1 is newest, -2 should be 'one earlier', not sure why -3 is needed for it to work
+//   let mostRecent3 = game.messages?.contents.at(-3); // -1 is newest, -2 should be 'one earlier', not sure why -3 is needed for it to work
+//   // console.log({ mostRecent2 });
+//   // console.log({ mostRecent3 });
+//   const mostRecentIsAttack =
+//     mostRecent2?.flags?.pf2e?.context?.type === "attack-roll" ||
+//     mostRecent3?.flags?.pf2e?.context?.type === "attack-roll";
+//   // console.log({ mostRecentIsAttack });
+//   const isFlatCheck = chatMessage?.flags?.["pf2-flat-check"] || chatMessage?.flags?.["pf2e-flat-check"];
+//   // console.log({ isFlatCheck });
+
+//   if (isFlatCheck && mostRecentIsAttack) {
+//     html[0].classList.add("dorako-flat-check");
+//     let header = html.find(".message-header")[0];
+//     if (header) header.classList.add("dorako-display-none");
+//   }
+// });
+
+// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+//   if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
+//   if (chatMessage.flags["narrator-tools"]) return;
+
+//   const chatLength = game.messages?.contents.length ?? 0;
+//   if (chatLength <= 4) return;
+//   let mostRecent2 = game.messages?.contents.at(-2); // -1 is newest, -2 should be 'one earlier', not sure why -3 is needed for it to work
+//   let mostRecent3 = game.messages?.contents.at(-3); // -1 is newest, -2 should be 'one earlier', not sure why -3 is needed for it to work
+//   let mostRecent4 = game.messages?.contents.at(-4); // -1 is newest, -2 should be 'one earlier', not sure why -3 is needed for it to work
+
+//   // console.log({ mostRecent2 });
+//   // console.log({ mostRecent3 });
+//   const mostRecentIsAttack =
+//     mostRecent2?.flags?.pf2e?.context?.type === "attack-roll" ||
+//     mostRecent3?.flags?.pf2e?.context?.type === "attack-roll" ||
+//     mostRecent4?.flags?.pf2e?.context?.type === "attack-roll";
+
+//   // console.log({ mostRecentIsAttack });
+//   const isRangedCombat = chatMessage?.flags?.["pf2e-ranged-combat"];
+//   // console.log({ isRangedCombat });
+
+//   if (isRangedCombat && mostRecentIsAttack) {
+//     html[0].classList.add("dorako-ranged-combat");
+//     let header = html.find(".message-header")[0];
+//     if (header) header.classList.add("dorako-display-none");
+//   }
+// });
 
 Hooks.on("preCreateChatMessage", (message) => {
   addAvatarsToFlags(message);
@@ -370,13 +435,13 @@ function injectAvatar(html, avatar) {
 
 function injectActionCost(html, actionCost) {
   if (!actionCost) return;
-  const actionGlyph = getActionGlyph(actionCost);
+  const [actionGlyph, shouldBeStyled] = getActionGlyph(actionCost);
   if (!actionGlyph) return;
 
   // console.log("Injecting actionGlyph %s", actionGlyph);
   let messageHeader = html.find(".card-header")[0];
   let actionGlyphText = document.createElement("h3");
-  actionGlyphText.classList.add("pf2-icon");
+  if (shouldBeStyled) actionGlyphText.classList.add("pf2-icon");
   actionGlyphText.textContent = actionGlyph;
   messageHeader.append(actionGlyphText);
 }
@@ -405,15 +470,16 @@ function injectSpellInfo(html, spell) {
   let messageHeader = html.find(".card-content")[0];
   let spellInfo = document.createElement("div");
   spellInfo.classList.add("spell-info");
-  console.log(spell);
+  // console.log(spell);
 
   // Cast info
   let castInfo = document.createElement("p");
   let castInfoLabel = document.createElement("strong");
   castInfoLabel.textContent = i18n("PF2E.SpellCostLabel") + " ";
   let castTime = document.createElement("span");
-  castTime.textContent = getActionGlyph(spell?.system?.time?.value);
-  castTime.classList.add("pf2-icon");
+  const [cost, shouldBeGlyph] = getActionGlyph(spell?.system?.time?.value);
+  castTime.textContent = cost;
+  if (shouldBeGlyph) castTime.classList.add("pf2-icon");
   let castComponents = document.createElement("span");
   castComponents.textContent = spellComponentsToText(spell?.system?.components);
   castInfo.append(castInfoLabel);
@@ -507,7 +573,7 @@ function injectSpellInfo(html, spell) {
 
   // Footer
   let footer = html.find(".card-footer")[0];
-  footer.remove();
+  if (footer) footer.classList.add("dorako-display-none");
 
   messageHeader.prepend(hr);
   messageHeader.prepend(spellInfo);
@@ -1127,17 +1193,17 @@ Hooks.once("init", async () => {
     },
   });
 
-  game.settings.register("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages", {
-    name: i18n("dorako-ui.settings.combine-attack-and-damage-roll-messages.name"),
-    hint: i18n("dorako-ui.settings.combine-attack-and-damage-roll-messages.hint"),
-    scope: "world",
-    type: Boolean,
-    default: true,
-    config: true,
-    onChange: () => {
-      debouncedReload();
-    },
-  });
+  // game.settings.register("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages", {
+  //   name: i18n("dorako-ui.settings.combine-attack-and-damage-roll-messages.name"),
+  //   hint: i18n("dorako-ui.settings.combine-attack-and-damage-roll-messages.hint"),
+  //   scope: "world",
+  //   type: Boolean,
+  //   default: true,
+  //   config: true,
+  //   onChange: () => {
+  //     debouncedReload();
+  //   },
+  // });
 
   game.settings.register("pf2e-dorako-ui", "compact-ui", {
     name: i18n("dorako-ui.settings.compact-ui.name"),
@@ -1316,6 +1382,7 @@ Hooks.once("init", async () => {
 
   game.settings.register("pf2e-dorako-ui", "skin-token-action-hud", {
     name: i18n("dorako-ui.settings.skin-token-action-hud.name"),
+    hint: i18n("dorako-ui.settings.skin-token-action-hud.hint"),
     scope: "world",
     type: Boolean,
     default: true,

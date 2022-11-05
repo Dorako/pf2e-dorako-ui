@@ -742,7 +742,7 @@ message-content .chat-damage-buttons button {
 .message a.content-link,
 .message a.inline-roll {
     text-shadow: none;
-    color: black;
+    /* color: black; */
     border-radius: 3px;
     text-shadow: none;
     width: fit-content;
@@ -1238,9 +1238,13 @@ table.pf2-table td, table.pf2-table th {
     background-position: left 0px top -100px;
 }
 
-#chat-log .message.dfce-cm-middle .message-header,
-#chat-log .message.dfce-cm-bottom .message-header {
+#chat-log .message.dfce-cm-middle .message-header .portrait-and-name,
+#chat-log .message.dfce-cm-bottom .message-header .portrait-and-name {
     display: none;
+}
+
+.dfce-cm-middle .message-delete, .dfce-cm-bottom .message-delete {
+    top: 5px;
 }
 
 .chat-message .message-header .message-sender {
@@ -1738,7 +1742,22 @@ span[data-pf2-check].with-repost {
     padding: 2px 5px 5px 5px;
 }
 
+.chat-message.dorako-flat-check {
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -13px;
+}
+
+.chat-message.dorako-flat-check .message-content {
+    padding-bottom: 8px;
+}
+
+.chat-message.dorako-ranged-combat,
+.chat-message.dorako-flat-check,
 .chat-message.dorako-damage-roll {
     border-radius: 0px 0px 5px 5px;
     margin-top: -13px;
+}
+
+.chat-message.dorako-ranged-combat p.action-content {
+    margin-top: 0px;
 }
