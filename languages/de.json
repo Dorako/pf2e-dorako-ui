@@ -64,5 +64,6 @@
   "dorako-ui.text.whisper": "Flüstern",
   "dorako-ui.text.from": "von",
   "dorako-ui.text.to": "zu",
-  "dorako-ui.text.send-to-chat": "Senden"
+  "dorako-ui.text.send-to-chat": "Senden",
+  "dorako-ui.settings.use-user-avatar.hint": "Konfigurieren Sie Benutzeravatare, indem Sie mit der rechten Maustaste auf Benutzer im unteren linken Bereich von Foundry klicken."
 }
