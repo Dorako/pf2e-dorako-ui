@@ -1,3 +1,9 @@
+# 1.8.1
+
+Fixed display of combined messages with Avatars disabled.
+
+Fixed flavor-text duplication for Request Roll messages in Monk's TokenBar module.
+
 # 1.8.0
 
 Fixed visual styling of Narrator Tools and Alpha Suit modules in the Controls.

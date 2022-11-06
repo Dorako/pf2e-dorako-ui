@@ -355,7 +355,8 @@ button {
 
 
 
-
+.dfce-cm-middle>.message-header .sender-wrapper,
+.dfce-cm-bottom>.message-header .sender-wrapper,
 .dfce-cm-middle>.message-header>.message-metadata,
 .dfce-cm-bottom>.message-header>.message-metadata {
     display: none;
@@ -414,6 +415,15 @@ button {
     margin-left: 0px; */
 }
 
+.message.dfce-cm-bottom .message-header,
+.message.dfce-cm-middle .message-header {
+    background: transparent;
+    box-shadow: none;
+    text-shadow: 0px 0px 1px white;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 5px;
+}
 
 .message.dfce-cm-top {
     border-bottom-style: none !important;
@@ -1473,6 +1483,12 @@ div#scrollToBottom:hover {
     color: white;
     text-shadow: var(--pf2e-shadow-is-dark);
     background-blend-mode: multiply;
+}
+
+.message.dfce-cm-middle .message-header.light-header-text,
+.message.dfce-cm-bottom .message-header.light-header-text {
+    color: var(--pf2e-body-primary);
+    text-shadow: var(--pf2e-shadow-is-light);
 }
 
 .message .message-header {

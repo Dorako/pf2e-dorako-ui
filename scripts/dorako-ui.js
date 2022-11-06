@@ -402,8 +402,8 @@ function themeHeader(html, message) {
 
 function moveFlavorTextToContents(html) {
   let flavor = html.find(".flavor-text")[0];
-  let contents = html.find(".message-content");
-  contents.prepend(flavor);
+  let contents = html.find(".message-content")[0];
+  if (flavor) contents.prepend(flavor);
 }
 
 function injectSenderWrapper(html, messageData) {
