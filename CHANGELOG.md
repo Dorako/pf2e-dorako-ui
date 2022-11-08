@@ -1,3 +1,11 @@
+# 1.8.2
+
+Fixed display of DFCE 'in world' timestamps in messages.
+
+Added a new option to remove attack information from damage rolls, to get a similar look to 1.7.4's combine-attacks-and-damage-rolls feature, when used with DFCE chat merge.
+
+Fixed bug that caused action costs in restructured spell messages to render as numbers rather than icons.
+
 # 1.8.1
 
 Fixed display of combined messages with Avatars disabled.

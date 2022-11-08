@@ -75,6 +75,9 @@
   "dorako-ui.settings.combine-attack-and-damage-roll-messages.name": "Combine attack and damage roll messages?",
   "dorako-ui.settings.combine-attack-and-damage-roll-messages.hint": "Makes damage roll messages take up less space by visually combining them with the attack",
 
+  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.name": "Remove attack info from damage roll messages?",
+  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with DFCE chat-merge.",
+
   "dorako-ui.settings.compact-ui.name": "Enable Compact UI?",
   "dorako-ui.settings.compact-ui.hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered",
 

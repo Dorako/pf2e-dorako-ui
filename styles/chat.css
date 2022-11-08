@@ -354,7 +354,8 @@ button {
 
 
 
-
+.dfce-cm-middle .dfce-simple-timestamp,
+.dfce-cm-bottom .dfce-simple-timestamp,
 .dfce-cm-middle>.message-header .sender-wrapper,
 .dfce-cm-bottom>.message-header .sender-wrapper,
 .dfce-cm-middle>.message-header>.message-metadata,
@@ -365,6 +366,8 @@ button {
 #command-menu {
     display: none;
 }
+
+
 
 /*
 #chat-log > .chat-message.message.flexcol :not(.chat-message.message.flexcol.dfce-cm-middle),
@@ -1254,7 +1257,7 @@ table.pf2-table td, table.pf2-table th {
 }
 
 .dfce-cm-middle .message-delete, .dfce-cm-bottom .message-delete {
-    top: 5px;
+    top: 12px;
 }
 
 .chat-message .message-header .message-sender {
@@ -1452,6 +1455,7 @@ div#scrollToBottom:hover {
     text-shadow: none;
 }
 
+.dfce-simple-timestamp,
 .header-meta {
     border-radius: 3px;
     padding: 2px;
@@ -1509,6 +1513,7 @@ div#scrollToBottom:hover {
     color: white;
 }
 
+.message-header.light-header-text .dfce-simple-timestamp,
 .message-header.light-header-text .header-meta {
     color: white;
     background-color: hsla(0, 0%, 50%, 40%);
@@ -1517,6 +1522,7 @@ div#scrollToBottom:hover {
 }
 
 .header-meta,
+.dfce-simple-timestamp,
 .message-header.dark-header-text .header-meta {
     color: hsla(0, 0%, 20%, 100%);
     background-color: hsla(0, 0%, 90%, 50%);
@@ -1754,7 +1760,7 @@ span[data-pf2-check].with-repost {
 }
 
 
-.chat-message.dorako-damage-roll .message-content {
+/* .chat-message.dorako-damage-roll .message-content {
     padding: 2px 5px 5px 5px;
 }
 
@@ -1776,4 +1782,8 @@ span[data-pf2-check].with-repost {
 
 .chat-message.dorako-ranged-combat p.action-content {
     margin-top: 0px;
+} */
+
+.dorako-damage-roll .flavor-text>*:nth-child(-n+3) {
+    display: none;
 }

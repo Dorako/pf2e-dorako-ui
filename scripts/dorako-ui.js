@@ -45,13 +45,15 @@ function titleCase(string) {
 
 // second return value is whether the first value can be styled as pf2e-icon
 function getActionGlyph(actionCost) {
+  // console.log(actionCost);
   if (actionCost === "1 to 3") return ["1 / 2 / 3", true];
   if (actionCost === "1 or 2") return ["1 / 2", true];
   if (actionCost === "2 or 3") return ["2 / 3", true];
-  if (actionCost.type == "action") {
+  if (actionCost.type === "action") {
     return [actionCost.value, true];
-  } else if (actionCost.type == "reaction") return ["R", true];
-  else if (actionCost.type == "free") return ["F", true];
+  } else if (actionCost.type === "reaction") return ["R", true];
+  else if (actionCost.type === "free") return ["F", true];
+  else if (actionCost.length === 1) return [actionCost, true];
   else return [actionCost, false];
 }
 
@@ -272,6 +274,18 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   themeHeader(html, chatMessage);
 });
 
+Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  if (!game.settings.get("pf2e-dorako-ui", "remove-attack-info-from-damage-roll-messages")) return;
+
+  if (chatMessage?.isDamageRoll) {
+    html[0].classList.add("dorako-damage-roll");
+    let flavor = html.find(".flavor-text");
+    flavor.each(function () {
+      $(this).contents().eq(1).wrap("<span/>");
+    });
+  }
+});
+
 // // Combine attack and damage rolls from same source
 // Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 //   if (!game.settings.get("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages")) return;
@@ -396,8 +410,15 @@ function themeHeader(html, message) {
   let textColTheme = calcHeaderTextColor(html, message);
   messageHeader.classList.add(textColTheme);
 
+  // some modules add different timestamps and hide the original, like dfce-simple-timestamp
   let time = html.find("time")[0];
-  time.classList.add("header-meta");
+  if (time) {
+    time.classList.add("header-meta");
+  }
+  // let dfceTime = html.find(".dfce-simple-timestamp")[0];
+  // if (dfceTime) {
+  //   dfceTime.classList.add("header-meta");
+  // }
 }
 
 function moveFlavorTextToContents(html) {
@@ -1204,6 +1225,18 @@ Hooks.once("init", async () => {
   //     debouncedReload();
   //   },
   // });
+
+  game.settings.register("pf2e-dorako-ui", "remove-attack-info-from-damage-roll-messages", {
+    name: i18n("dorako-ui.settings.remove-attack-info-from-damage-roll-messages.name"),
+    hint: i18n("dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint"),
+    scope: "world",
+    type: Boolean,
+    default: true,
+    config: true,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
 
   game.settings.register("pf2e-dorako-ui", "compact-ui", {
     name: i18n("dorako-ui.settings.compact-ui.name"),
