@@ -277,7 +277,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   if (!game.settings.get("pf2e-dorako-ui", "remove-attack-info-from-damage-roll-messages")) return;
 
-  if (chatMessage?.isDamageRoll) {
+  if (chatMessage?.isDamageRoll && chatMessage?._strike) {
     html[0].classList.add("dorako-damage-roll");
     let flavor = html.find(".flavor-text");
     flavor.each(function () {
