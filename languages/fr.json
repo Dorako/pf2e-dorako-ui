@@ -91,5 +91,7 @@
   "dorako-ui.settings.restructure-card-info.hint": "Rend plus visible le coût des actions pour les capacités et déplace les info des sorts en dehors du pied de la carte",
   "dorako-ui.settings.combine-attack-and-damage-roll-messages.name": "Combiner les messages de jets d'attaque et de dégât ?",
   "dorako-ui.settings.combine-attack-and-damage-roll-messages.hint": "Les messages de jets de dégâts prennent moins de place en les combinant visuellement à ceux d'attaque",
-  "dorako-ui.settings.skin-token-action-hud.hint": "Activer 'UI Dorako' dans Token Action Hud."
+  "dorako-ui.settings.skin-token-action-hud.hint": "Activer 'UI Dorako' dans Token Action Hud.",
+  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.name": "Retirer les infos de l'attaque des messages de jets de dégâts ?",
+  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint": "Permet aux jets de dégâts de prendre moins de place en retirant les informations redondantes. Conçu pour être utilisé avec la fusion dans la conversation DFCE."
 }
