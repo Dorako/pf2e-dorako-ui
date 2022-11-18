@@ -827,12 +827,13 @@ Hooks.on("renderChatMessage", (message, b) => {
   const portraitDegreeSetting = game.settings.get("pf2e-dorako-ui", "avatar-reacts-to-degree-of-success");
 
   if (portraitDegreeSetting) {
-    let degree = message?.rolls?.degreeOfSuccess;
-    if (degree == undefined) return;
-    if (degree == 0) {
+    // console.log(message);
+    let outcome = message?.flags?.pf2e?.context?.outcome;
+    if (outcome == undefined) return;
+    if (outcome === "criticalFailure") {
       let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
       wrapper?.setAttribute("style", "filter: saturate(0.2) drop-shadow(0px 0px 6px black)");
-    } else if (degree == 3) {
+    } else if (outcome === "criticalSuccess") {
       let wrapper = html.getElementsByClassName("portrait-wrapper")[0];
       wrapper?.setAttribute("style", "filter: drop-shadow(0px 0px 6px lightgreen)");
     }
@@ -1262,6 +1263,18 @@ Hooks.once("init", async () => {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "no-chat-control-icon", {
+    name: i18n("dorako-ui.settings.no-chat-control-icon.name"),
+    hint: i18n("dorako-ui.settings.no-chat-control-icon.hint"),
+    scope: "client",
+    config: true,
+    default: true,
+    type: Boolean,
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "backdrop-filter", {
     name: i18n("dorako-ui.settings.backdrop-filter.name"),
     hint: i18n("dorako-ui.settings.backdrop-filter.hint"),
@@ -1515,7 +1528,10 @@ Hooks.once("init", async () => {
   if (game.settings.get("pf2e-dorako-ui", "skin-window-controls")) injectCSS("window-control");
   if (game.settings.get("pf2e-dorako-ui", "skin-token-action-hud")) injectCSS("token-action-hud");
   if (game.settings.get("pf2e-dorako-ui", "skin-custom-hotbar")) injectCSS("custom-hotbar");
-  if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) injectCSS("dice-tray");
+  if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) {
+    const diceTrayEnabled = game.modules.get("dice-calculator")?.active;
+    if (diceTrayEnabled) injectCSS("dice-tray");
+  }
   if (game.settings.get("pf2e-dorako-ui", "skin-simple-calendar")) injectCSS("simple-calendar");
   if (game.settings.get("pf2e-dorako-ui", "skin-crb-journal")) {
     injectCSS("crb-journal");
@@ -1534,6 +1550,7 @@ Hooks.once("init", async () => {
   if (game.settings.get("pf2e-dorako-ui", "avatar-border")) injectCSS("chat-portrait-border");
   if (game.settings.get("pf2e-dorako-ui", "compact-ui")) injectCSS("compact-ui");
   if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
+  if (game.settings.get("pf2e-dorako-ui", "no-chat-control-icon")) injectCSS("no-chat-control-icon");
   setting = game.settings.get("pf2e-dorako-ui", "pc-sheet-theme");
   if (setting == "dark") injectCSS("pc-sheet-dark");
   setting = game.settings.get("pf2e-dorako-ui", "familiar-sheet-theme");

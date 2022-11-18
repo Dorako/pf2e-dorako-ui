@@ -257,3 +257,20 @@ nav.damage-log-nav.tabs {
 #sidebar .bestiary-browser-btn {
     width: calc(100% - 8px);
 }
+
+.speaking-as--currentSpeaker+#chat-controls {
+    padding: 0px;
+}
+
+.speaking-as--currentSpeaker {
+    padding-left: 5px;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    box-shadow: var(--glassy);
+    margin: 0px 2px;
+}
+
+#chat-controls .undefined>i {
+    margin-right: 1px;
+    margin-left: -1px;
+}

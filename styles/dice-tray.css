@@ -2,7 +2,6 @@
 
 /* Glass - Add new styling */
 
-#dfcp-rt-buttons button,
 .dice-tray button {
     border: none;
     border-radius: var(--dorako-radius);

@@ -24,6 +24,7 @@ Works great with:
 - Combat Carousel
 - PF2E Combat Tracker Images
 - PF2e Target Damage
+- Speaking As
 
 Works well with:
 
@@ -33,6 +34,7 @@ Works well with:
 - SmallTime
 - Window Controls
 - Enhanced Terrain Layer
+- Chat Images
 
 Partial support for:
 

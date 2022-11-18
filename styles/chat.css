@@ -66,6 +66,16 @@
     line-height: unset;
 }
 
+#dfcp-rt-buttons button {
+    border: none;
+    border-radius: var(--dorako-radius);
+    background-color: var(--dorako-bg-current);
+    /* backdrop-filter: var(--dorako-vibrancy); */
+    /*will-change: backdrop-filter;*/
+    transform: translate3d(0px, 0px, 0px);
+    box-shadow: var(--glassy);
+}
+
 #polyglot,
 #chat-controls {
     padding: 0px;

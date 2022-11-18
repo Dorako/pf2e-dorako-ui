@@ -381,10 +381,10 @@
      justify-content: center;
  }
 
- #tokenbar .token:hover .token-icon {
+ /* #tokenbar .token:hover .token-icon {
      box-shadow: var(--gold-and-glow);
      border-radius: 50%;
- }
+ } */
 
  #tokenbar .token .tooltip {
      background: none;

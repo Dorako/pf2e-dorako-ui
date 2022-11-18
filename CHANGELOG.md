@@ -1,3 +1,13 @@
+# 1.8.3
+
+Fixed bug in which 'Avatars react to degree of success' setting did nothing due to roll changes in the system.
+
+Added styling for the Speaking As module.
+
+Added new option to hide the dice next to rollmodes, as it tends to crowd the UI.
+
+Teeny tiny fix to adjust the margins of the button introduced by Chat Images.
+
 # 1.8.2
 
 Fixed display of DFCE 'in world' timestamps in messages.

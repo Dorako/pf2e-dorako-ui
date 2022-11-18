@@ -5,7 +5,8 @@
 
 #controls ol .scene-control,
 #controls ol .control-tool,
-#controls ol.control-tools>li.active, #controls ol.control-tools>li:hover,
+#controls ol.control-tools>li.active,
+#controls ol.control-tools>li:hover,
 #controls ol.control-tools>li,
 #controls ol.control-tools>li.toggle,
 #controls ol.control-tools>li.toggle.active,
@@ -16,8 +17,7 @@
 #controls ol .control-tool.toggle:hover,
 #controls ol .control-tool:hover,
 #controls ol .scene-control:hover,
-
-#controls ol.control-tools>li.toggle:hover,
+/* #controls ol.control-tools>li.toggle:hover, */
 #darkness-adjuster .window-content,
 #darkness-adjuster {
     border: none;
@@ -44,7 +44,7 @@
 #controls ol.control-tools>li,
 #controls ol.control-tools>li.active,
 #controls ol.control-tools>li:hover,
-#controls ol.control-tools>li.active:hover,
+/* #controls ol.control-tools>li.active:hover, */
 #controls ol.control-tools>li.toggle:hover,
 #controls ol.control-tools>li.toggle.active,
 #controls ol.sub-controls .control-tool.toggle,

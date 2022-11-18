@@ -84,6 +84,9 @@
   "dorako-ui.settings.no-logo.name": "Hide Foundry logo?",
   "dorako-ui.settings.no-logo.hint": "Removes the Foundry logo in the top left",
 
+  "dorako-ui.settings.no-chat-control-icon.name": "Hide chat control icon?",
+  "dorako-ui.settings.no-chat-control-icon.hint": "This is the dice icon next to roll options, it tends to crowd the UI.",
+
   "dorako-ui.settings.backdrop-filter.name": "Use glassy transparency",
   "dorako-ui.settings.backdrop-filter.hint": "WARNING: Very performance intensive, not suitable for laptops",
 
