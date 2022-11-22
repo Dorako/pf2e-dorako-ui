@@ -93,5 +93,7 @@
   "dorako-ui.settings.combine-attack-and-damage-roll-messages.hint": "Les messages de jets de dégâts prennent moins de place en les combinant visuellement à ceux d'attaque",
   "dorako-ui.settings.skin-token-action-hud.hint": "Activer 'UI Dorako' dans Token Action Hud.",
   "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.name": "Retirer les infos de l'attaque des messages de jets de dégâts ?",
-  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint": "Permet aux jets de dégâts de prendre moins de place en retirant les informations redondantes. Conçu pour être utilisé avec la fusion dans la conversation DFCE."
+  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint": "Permet aux jets de dégâts de prendre moins de place en retirant les informations redondantes. Conçu pour être utilisé avec la fusion dans la conversation DFCE.",
+  "dorako-ui.settings.no-chat-control-icon.name": "Cacher l'icone de contrôle de la conversation ?",
+  "dorako-ui.settings.no-chat-control-icon.hint": "C'est l'icône de dé à côté des options de lancer qui tend à encombrer l'IU."
 }
