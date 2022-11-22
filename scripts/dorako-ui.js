@@ -390,11 +390,14 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 //   }
 // });
 
-Hooks.on("preCreateChatMessage", (message) => {
-  addAvatarsToFlags(message);
+// "Be last" magic trick. Should ensure that any other modules that modify, say, who spoke the message, have done so before you add the flags.
+Hooks.once('ready', () => {
+  Hooks.on("preCreateChatMessage", (message) => {
+    addAvatarsToFlags(message);
 
-  message.updateSource({
-    "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.hidden,
+    message.updateSource({
+      "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.hidden,
+    });
   });
 });
 
