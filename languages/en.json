@@ -55,6 +55,7 @@
 
   "dorako-ui.settings.chat-input-height.name": "Chatbox height",
   "dorako-ui.settings.chat-input-height.hint": "Foundry default is approx 100px",
+  "dorako-ui.settings.chat-input-height.CGMPnote": " Note that with Cautious Gamemaster's Pack \"Notify Typing\" setting enabled, the notification eats at most 60px to the height of the chatbox.",
 
   "dorako-ui.settings.enable-player-tags.name": "Enable player tags?",
   "dorako-ui.settings.enable-player-tags.hint": "Adds a tag containing the name of the player next to the speaker",
