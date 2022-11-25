@@ -1149,7 +1149,8 @@ Hooks.once("init", async () => {
   });
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
-    name: i18n("dorako-ui.settings.chat-input-height.name"),
+    name: i18n("dorako-ui.settings.chat-input-height.name"),{
+    hint: i18n("dorako-ui.settings.chat-input-height.hint") + game.modules.get("CautiousGamemastersPack") ? game.settings.get("cgmp", "notify-typing-l") ? i18n("dorako-ui.settings.chat-input-height.CGMPnote") : "" : "",
     scope: "client",
     type: Number,
     default: 90,
