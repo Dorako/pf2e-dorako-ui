@@ -394,7 +394,6 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 Hooks.once('ready', () => {
   Hooks.on("preCreateChatMessage", (message) => {
     addAvatarsToFlags(message);
-    console.log("dorako!", message)
     message.updateSource({
       "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.hidden,
     });
