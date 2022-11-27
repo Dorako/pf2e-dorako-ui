@@ -490,7 +490,6 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 Hooks.once("ready", () => {
   Hooks.on("preCreateChatMessage", (message) => {
     addAvatarsToFlags(message);
-
     message.updateSource({
       "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.hidden,
     });
@@ -1280,6 +1279,7 @@ Hooks.once("init", async () => {
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
     name: i18n("dorako-ui.settings.chat-input-height.name"),
+    hint: (game.modules.get("CautiousGamemastersPack")?.active) ? i18n("dorako-ui.settings.chat-input-height.CGMPhint") : i18n("dorako-ui.settings.chat-input-height.hint"),
     scope: "client",
     type: Number,
     default: 90,
