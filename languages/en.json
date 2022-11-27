@@ -4,6 +4,18 @@
   "dorako-ui.settings.pc-sheet-theme.choice.red": "Default",
   "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dark",
 
+  "dorako-ui.settings.npc-sheet-theme.name": "NPC sheet theme",
+  "dorako-ui.settings.npc-sheet-theme.hint": "Affects NPC sheets",
+  "dorako-ui.settings.npc-sheet-theme.choice.default": "Default",
+  "dorako-ui.settings.npc-sheet-theme.choice.light": "Light",
+  "dorako-ui.settings.npc-sheet-theme.choice.dark": "Dark",
+
+  "dorako-ui.settings.loot-sheet-theme.name": "Loot sheet theme",
+  "dorako-ui.settings.loot-sheet-theme.hint": "Affects Loot sheets",
+  "dorako-ui.settings.loot-sheet-theme.choice.default": "Default",
+  "dorako-ui.settings.loot-sheet-theme.choice.light": "Light",
+  "dorako-ui.settings.loot-sheet-theme.choice.dark": "Dark",
+
   "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
   "dorako-ui.settings.familiar-sheet-theme.hint": "Affects familiar sheets",
   "dorako-ui.settings.familiar-sheet-theme.choice.red": "Red",

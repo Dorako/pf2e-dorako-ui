@@ -171,6 +171,102 @@ function injectCSS(filename) {
 // 	 a.find("#settings-game").append(toInsert)
 // });
 
+Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
+  const npcTheme = game.settings.get("pf2e-dorako-ui", "npc-sheet-theme");
+  if (npcTheme === "default") return;
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(npcTheme);
+  // console.log(sheet);
+  const acDetails = sheet.object.attributes.ac.details;
+  const collapseAc = acDetails === "";
+  // console.log({ collapseAc });
+  const hpDetails = sheet.object.attributes.hp.details;
+  const hpTemp = sheet.object.attributes.hp.temp;
+  const collapseHp = hpDetails === "" && hpTemp === 0;
+  // console.log({ collapseHp });
+  const collapseInitiative = sheet.object.attributes.initiative.ability === "perception";
+  // console.log({ collapseInitiative });
+  const collapseToggles = sheet.object.system.toggles.length === 0;
+  // console.log({ collapseToggles });
+  const collapseSaves = sheet.object.system.attributes.allSaves.value === "";
+
+  // console.log(sheet.object.system.traits);
+  const immunities = sheet.object.system.traits.di;
+  const collapseImmunities = immunities.value.length === 0 && immunities.custom === "";
+  const weaknesses = sheet.object.system.traits.dv;
+  const collapseWeaknesses = weaknesses.length === 0;
+  const resistances = sheet.object.system.traits.dr;
+  const collapseResistances = resistances.length === 0;
+
+  // console.log({ immunities });
+  // console.log({ weaknesses });
+  // console.log({ resistances });
+
+  if (collapseAc) {
+    let section = html.find(".armor-section")[0];
+    section.classList.add("collapsed");
+  }
+
+  if (collapseHp) {
+    let section = html.find(".health-section")[0];
+    section.classList.add("collapsed");
+  }
+
+  if (collapseInitiative) {
+    let section = html.find(".initiative")[0];
+    section.classList.add("collapsed");
+  }
+
+  if (collapseToggles) {
+    let section = html.find(".toggles")[0];
+    section.classList.add("dorako-display-none");
+  }
+
+  if (collapseImmunities) {
+    let section = html.find(".immunities")[0];
+    section.classList.add("collapsed");
+  }
+
+  if (collapseWeaknesses) {
+    let section = html.find(".weaknesses")[0];
+    section.classList.add("collapsed");
+  }
+
+  if (collapseResistances) {
+    let section = html.find(".resistances")[0];
+    section.classList.add("collapsed");
+  }
+
+  let saves = html.find(".saves")[0];
+  let saveDetails = html.find(".save-details")[0];
+  // console.log({ saves });
+  // console.log({ saveDetails });
+
+  let initiative = html.find(".initiative")[0];
+  let newSaves = document.createElement("div");
+  newSaves.classList.add("saves-section", "side-bar-section");
+  newSaves.appendChild(saves);
+  newSaves.appendChild(saveDetails);
+  initiative.parentNode.insertBefore(newSaves, initiative.nextSibling);
+
+  if (collapseSaves) {
+    let section = html.find(".saves-section")[0];
+    section.classList.add("collapsed");
+  }
+});
+
+Hooks.on("renderLootSheetPF2e", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "loot-sheet-theme");
+  if (theme === "default") return;
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  // html0.classList.add(npcTheme);
+});
+
+// Hooks.on("renderItemSheetPF2e", (sheet, html) => {
+// });
+
 Hooks.on("getItemSheetPF2eHeaderButtons", (sheet, buttons) => {
   if (!game.settings.get("pf2e-dorako-ui", "send-to-chat")) {
     return;
@@ -391,7 +487,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 // });
 
 // "Be last" magic trick. Should ensure that any other modules that modify, say, who spoke the message, have done so before you add the flags.
-Hooks.once('ready', () => {
+Hooks.once("ready", () => {
   Hooks.on("preCreateChatMessage", (message) => {
     addAvatarsToFlags(message);
 
@@ -973,6 +1069,40 @@ Hooks.once("init", async () => {
     },
   });
 
+  game.settings.register("pf2e-dorako-ui", "npc-sheet-theme", {
+    name: i18n("dorako-ui.settings.npc-sheet-theme.name"),
+    hint: i18n("dorako-ui.settings.npc-sheet-theme.hint"),
+    scope: "client",
+    config: true,
+    default: "light-theme",
+    type: String,
+    choices: {
+      default: i18n("dorako-ui.settings.npc-sheet-theme.choice.default"),
+      "light-theme": i18n("dorako-ui.settings.npc-sheet-theme.choice.light"),
+      "dark-theme": i18n("dorako-ui.settings.npc-sheet-theme.choice.dark"),
+    },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
+  game.settings.register("pf2e-dorako-ui", "loot-sheet-theme", {
+    name: i18n("dorako-ui.settings.loot-sheet-theme.name"),
+    hint: i18n("dorako-ui.settings.loot-sheet-theme.hint"),
+    scope: "client",
+    config: true,
+    default: "light-theme",
+    type: String,
+    choices: {
+      default: i18n("dorako-ui.settings.loot-sheet-theme.choice.default"),
+      "light-theme": i18n("dorako-ui.settings.loot-sheet-theme.choice.light"),
+      // "dark-theme": i18n("dorako-ui.settings.loot-sheet-theme.choice.dark"),
+    },
+    onChange: () => {
+      debouncedReload();
+    },
+  });
+
   game.settings.register("pf2e-dorako-ui", "familiar-sheet-theme", {
     name: i18n("dorako-ui.settings.familiar-sheet-theme.name"),
     hint: i18n("dorako-ui.settings.familiar-sheet-theme.hint"),
@@ -1499,6 +1629,8 @@ Hooks.once("init", async () => {
   });
 
   injectCSS("dorako-ui");
+  injectCSS("npc-sheet");
+  injectCSS("loot-sheet");
 
   const root = document.querySelector(":root").style;
   if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {

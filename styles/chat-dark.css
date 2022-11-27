@@ -12,12 +12,12 @@
 }
 
 
-.dark-theme select,
-.dark-theme button,
-.dark-theme form button,
-.dark-theme .dice-roll .dice-formula,
-.dark-theme .dice-total:not(.statuseffect-message),
-.dark-theme .message-content .chat-damage-buttons button {
+.dark-theme.chat-message select,
+.dark-theme.chat-message button,
+.dark-theme.chat-message form button,
+.dark-theme.chat-message .dice-roll .dice-formula,
+.dark-theme.chat-message .dice-total:not(.statuseffect-message),
+.dark-theme.chat-message .message-content .chat-damage-buttons button {
     box-shadow: var(--glassy);
     border: none;
     color: white;

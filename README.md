@@ -25,6 +25,7 @@ Works great with:
 - PF2E Combat Tracker Images
 - PF2e Target Damage
 - Speaking As
+- pf2E Simple Show Statistics Scale
 
 Works well with:
 

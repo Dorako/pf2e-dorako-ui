@@ -753,10 +753,10 @@ message-content .chat-damage-buttons button {
 
 .message [data-pf2-effect-area]:not([data-pf2-show-dc=gm]),
 .message [data-pf2-check]:not([data-pf2-show-dc=gm]) {
-    background-color: var(--pf2e-color-mono-dark);
-    color: white;
+    /* background-color: var(--pf2e-color-mono-dark);
+    color: white; */
     /* text-shadow: var(--pf2e-text-shadow-is-dark); */
-    box-shadow: var(--pf2e-text-shadow-is-dark);
+    /* box-shadow: var(--pf2e-text-shadow-is-dark); */
 }
 
 .message [data-pf2-effect-area],
@@ -1668,7 +1668,7 @@ i[data-pf2-repost]:active {
 span[data-pf2-effect-area].with-repost,
 span[data-pf2-check].with-repost {
     border-right: 1px solid var(--color-border-dark-tertiary);
-    padding: .2em;
+    /* padding: .2em; */
 }
 
 .pf2e.chat-card .card-buttons {

@@ -1,3 +1,13 @@
+# 1.8.4
+
+Added themes for NPC sheets.
+
+Added a smol theme for Loot sheets.
+
+Bugfix to jittery chatbox with "Show who's typing" turned on, courtesy of @MrVauxs.
+
+Bugfix by @MrVauxs that causes Chat Avatars to be determined after other modules have had a chance to modify the message. This means that Cautious Gamemaster's Pack's settings to limit what actors the GM can 'speak' as will be consistent with the Avatar shown.
+
 # 1.8.3
 
 Fixed bug in which 'Avatars react to degree of success' setting did nothing due to roll changes in the system.
