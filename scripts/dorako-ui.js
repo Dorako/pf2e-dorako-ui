@@ -494,6 +494,9 @@ Hooks.once("ready", () => {
       "flags.pf2e-dorako-ui.wasTokenHidden": message?.token?.hidden,
     });
   });
+  Hooks.on("updateChatMessage", (message) => {
+    addAvatarsToFlags(message);
+  });
 });
 
 function themeHeader(html, message) {
