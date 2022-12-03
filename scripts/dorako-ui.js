@@ -109,8 +109,6 @@ class TokenAvatar extends Avatar {
   }
 }
 
-const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 500);
-
 function addClassByQuerySelector(className, selector) {
   let navigation = document.querySelector(selector);
   navigation.classList.add(className);
@@ -1066,9 +1064,7 @@ Hooks.once("init", async () => {
       red: i18n("dorako-ui.settings.pc-sheet-theme.choice.red"),
       dark: i18n("dorako-ui.settings.pc-sheet-theme.choice.dark"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "npc-sheet-theme", {
@@ -1083,9 +1079,7 @@ Hooks.once("init", async () => {
       "light-theme": i18n("dorako-ui.settings.npc-sheet-theme.choice.light"),
       "dark-theme": i18n("dorako-ui.settings.npc-sheet-theme.choice.dark"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "loot-sheet-theme", {
@@ -1100,9 +1094,7 @@ Hooks.once("init", async () => {
       "light-theme": i18n("dorako-ui.settings.loot-sheet-theme.choice.light"),
       // "dark-theme": i18n("dorako-ui.settings.loot-sheet-theme.choice.dark"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "familiar-sheet-theme", {
@@ -1117,9 +1109,7 @@ Hooks.once("init", async () => {
       dark: i18n("dorako-ui.settings.familiar-sheet-theme.choice.dark"),
       darkRedHeader: i18n("dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "chat-theme", {
@@ -1134,9 +1124,7 @@ Hooks.once("init", async () => {
       dark: i18n("dorako-ui.settings.chat-theme.choice.dark"),
       factions: i18n("dorako-ui.settings.chat-theme.choice.factions"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "header-style", {
@@ -1152,9 +1140,7 @@ Hooks.once("init", async () => {
       tint: i18n("dorako-ui.settings.header-style.choice.tint"),
       none: i18n("dorako-ui.settings.header-style.choice.none"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "use-avatars", {
@@ -1169,9 +1155,7 @@ Hooks.once("init", async () => {
       actor: i18n("dorako-ui.settings.use-avatars.choice.actor"),
       none: i18n("dorako-ui.settings.use-avatars.choice.none"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "hide-gm-avatar-when-secret", {
@@ -1181,9 +1165,7 @@ Hooks.once("init", async () => {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "hide-avatar-when-hidden", {
@@ -1193,9 +1175,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "avatar-size", {
@@ -1210,9 +1190,7 @@ Hooks.once("init", async () => {
       step: 1,
     },
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "popout-token-avatars", {
@@ -1222,9 +1200,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "avatar-reacts-to-degree-of-success", {
@@ -1234,9 +1210,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "small-creature-token-avatar-size", {
@@ -1251,9 +1225,7 @@ Hooks.once("init", async () => {
       step: 0.1,
     },
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "use-user-avatar", {
@@ -1263,9 +1235,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: false,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "avatar-border", {
@@ -1275,9 +1245,7 @@ Hooks.once("init", async () => {
     config: true,
     default: false,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
@@ -1292,9 +1260,7 @@ Hooks.once("init", async () => {
       step: 5,
     },
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "enable-player-tags", {
@@ -1304,9 +1270,7 @@ Hooks.once("init", async () => {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "rolltype-indication", {
@@ -1322,9 +1286,7 @@ Hooks.once("init", async () => {
       both: i18n("dorako-ui.settings.rolltype-indication.choice.both"),
       none: i18n("dorako-ui.settings.rolltype-indication.choice.none"),
     },
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "send-to-chat", {
@@ -1334,9 +1296,7 @@ Hooks.once("init", async () => {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "restructure-card-info", {
@@ -1346,9 +1306,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   // game.settings.register("pf2e-dorako-ui", "combine-attack-and-damage-roll-messages", {
@@ -1358,9 +1316,7 @@ Hooks.once("init", async () => {
   //   type: Boolean,
   //   default: true,
   //   config: true,
-  //   onChange: () => {
-  //     debouncedReload();
-  //   },
+  //   requiresReload: true
   // });
 
   game.settings.register("pf2e-dorako-ui", "remove-attack-info-from-damage-roll-messages", {
@@ -1370,9 +1326,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "compact-ui", {
@@ -1382,9 +1336,7 @@ Hooks.once("init", async () => {
     config: true,
     default: false,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "no-logo", {
@@ -1394,9 +1346,7 @@ Hooks.once("init", async () => {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "no-chat-control-icon", {
@@ -1406,9 +1356,7 @@ Hooks.once("init", async () => {
     config: true,
     default: true,
     type: Boolean,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "backdrop-filter", {
@@ -1418,9 +1366,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: false,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "center-hotbar", {
@@ -1430,9 +1376,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: false,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "edge-offset", {
@@ -1447,9 +1391,7 @@ Hooks.once("init", async () => {
       step: 1,
     },
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-chat", {
@@ -1458,9 +1400,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-navigation", {
@@ -1469,9 +1409,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-hotbar", {
@@ -1480,9 +1418,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-controls", {
@@ -1491,9 +1427,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-token-hud", {
@@ -1502,9 +1436,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-effect-panel", {
@@ -1513,9 +1445,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-sidebar", {
@@ -1524,9 +1454,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-app-ui", {
@@ -1535,9 +1463,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debounceReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-combat-tracker", {
@@ -1546,9 +1472,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-custom-hotbar", {
@@ -1557,9 +1481,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-token-action-hud", {
@@ -1569,9 +1491,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-window-controls", {
@@ -1580,9 +1500,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-combat-carousel", {
@@ -1591,9 +1509,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
@@ -1602,9 +1518,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-simple-calendar", {
@@ -1614,9 +1528,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: true,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   game.settings.register("pf2e-dorako-ui", "skin-crb-journal", {
@@ -1626,9 +1538,7 @@ Hooks.once("init", async () => {
     type: Boolean,
     default: false,
     config: true,
-    onChange: () => {
-      debouncedReload();
-    },
+    requiresReload: true
   });
 
   injectCSS("dorako-ui");
