@@ -1,0 +1,328 @@
+@mixin glass {
+    border: none;
+    border-radius: 3px;
+    background: none;
+    background-color: rgba(20, 20, 20, 0.60);
+    box-shadow: var(--glassy);
+    color: var(--color-text-light-heading);
+}
+
+@mixin quick-transition {
+    $transitionTime: 0.15s;
+    transition: text-shadow $transitionTime ease-in-out, background-color $transitionTime ease-in-out, border $transitionTime ease-in-out, color $transitionTime ease-in-out, box-shadow $transitionTime ease-in-out;
+}
+
+/* ----------------------------------------- */
+/* DF Chat Enhancements                      */
+/* ----------------------------------------- */
+
+.message.chat-message {
+    &.dfce-cm-top {
+        border-bottom-style: none;
+        margin-bottom: 0px;
+        &:hover {
+            box-shadow: var(--gold-and-glow);
+        }
+    }
+
+    &.dfce-cm-middle,
+    &.dfce-cm-bottom {
+        border-top-style: none;
+        border-bottom-style: none;
+        border-radius: 0px;
+
+        &:hover {
+            box-shadow: var(--gold-and-glow);
+        }
+        .message-content {
+            padding-right: 0px;
+        }
+
+        .portrait-and-name {
+            display: none;
+        }
+
+        .message-header {
+            background: transparent;
+            box-shadow: none;
+            text-shadow: 0px 0px 1px white;
+            margin: 0px;
+            padding: 0px;
+            padding-right: 5px;
+            color: var(--color-text-dark-primary);;        
+        }
+        .header-meta {
+            display: none;
+        }
+    }
+
+    &.dfce-cm-middle {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    &.dfce-cm-bottom {
+        margin-top: 0px;
+        border-radius: 0px 0px 5px 5px;
+    }
+}
+
+div#scrollToBottom {
+    @include quick-transition;
+    @include glass;
+    background-color: #ECBF41;
+    color: black;
+    margin-left: 6px;
+    margin-right: 7px;
+    top: -27px;
+    z-index: 1;
+    &:hover {
+        background-color: lighten(#ECBF41, 10);
+    }
+}
+
+#dfcp-rt-buttons {
+    gap: 3px;
+    button {
+        @include glass;
+        @include quick-transition;
+        color: var(--color-text-light-heading);
+
+        &:hover {
+            color: var(--color-text-light-highlight);
+        }
+
+        &.active i {
+            text-shadow: 0 0 4px black;
+            color: var(--color-text-light-highlight);
+        }
+    }
+}
+
+#chat-controls {
+    padding: 0px;
+}
+
+/* ----------------------------------------- */
+/* Polyglot                                  */
+/* ----------------------------------------- */
+
+#polyglot {
+    flex-basis: 20px;
+    label {
+        display: none;
+    }
+}
+
+/* ----------------------------------------- */
+/* Speaking As                               */
+/* ----------------------------------------- */
+
+div.speaking-as--currentSpeaker+#chat-controls {
+    padding: 0px;
+}
+
+.speaking-as--currentSpeaker {
+    @include glass;
+    padding-left: 5px;
+    margin: 0px 6px;
+}
+
+.speaking-as--currentSpeaker--button {
+    cursor: pointer;
+    &:hover {
+        color: var(--color-text-light-highlight);
+    }
+}
+
+
+/* ----------------------------------------- */
+/* Dice Tray                                 */
+/* ----------------------------------------- */
+
+.dice-tray {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    button {
+        @include glass;
+        @include quick-transition;
+    }
+     .flexrow {
+        margin-left: 6px;
+        margin-right: 6px;
+        gap: 5px;
+     }
+     > * {
+        margin: 0px;
+     }
+}
+
+/* ----------------------------------------- */
+/* Damage Log                                */
+/* ----------------------------------------- */
+
+nav.damage-log-nav.tabs {
+    flex: 0;
+    margin: 0px 2px;
+    box-shadow: none;
+    border: none;
+
+    .item {
+        @include quick-transition;
+        margin: 2px;
+        color: white;
+        border-radius: 3px;
+        margin: 2px;
+        border: none;
+    
+        &:hover {
+            box-shadow: var(--gold-and-glow);
+            background-color: var(--secondary);
+            border: none;
+            border-radius: 3px;
+        }
+    
+        &.active {
+            box-shadow: var(--gold-and-glow);
+            background-color: var(--secondary-light);
+            border: none;
+            border-radius: 3px;
+        }
+    }
+}
+
+/* ----------------------------------------- */
+/* Enhanced Terrain Layer                    */
+/* ----------------------------------------- */
+
+#controls ol.control-tools#terrainlayer-tools {
+    margin-top: 44px;
+
+    .control-tool {
+        @include quick-transition;
+        @include glass;
+        &:not(#tl-defaultcost):hover {
+            background-color: rgba(177, 177, 177, 0.5);
+            color: black;
+            button.control-btn {
+                &:hover {
+                    border-radius: 3px;
+                    color: black;
+                    text-shadow: 0 0 4px var(--color-text-light-highlight);
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------- */
+/* Monk's tokenbar                           */
+/* ----------------------------------------- */
+
+#tokenbar {
+    .bar-controls {
+        @include glass;
+        div#tokenbar-move-handle {
+            @include glass;
+            border-radius: 5px 0px 0px 5px;
+            margin-right: 2px;
+        }
+    }
+    .token {
+        @include glass;
+        @include quick-transition;
+        .token-stats {
+            background: none;
+        }
+        &:hover .token-icon {
+            box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+        }
+
+        .token-icon {
+            box-shadow: none;
+            border-radius: 3px;
+        }
+    }
+}
+
+#tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i, 
+#tokenbar[movement="free"] #movement-free:not(.disabled) i, 
+#tokenbar[movement="none"] #movement-none:not(.disabled) i, 
+#tokenbar[movement="combat"] #movement-combat:not(.disabled) i {
+    @include quick-transition;
+    border: none;
+    margin: 2px;
+    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+    border-radius: 3px;
+    text-shadow: none;
+    background-color: var(--primary-light);
+    color: var(--color-text-light-highlight);
+}
+
+#tokenbar:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i,
+#tokenbar[movement="free"]:not(.hidectrl) #movement-free:not(.disabled):hover i,
+#tokenbar[movement="none"]:not(.hidectrl) #movement-none:not(.disabled):hover i,
+#tokenbar[movement="combat"]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
+    color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* Monk's little details                     */
+/* ----------------------------------------- */
+
+#token-hud.placeable-hud.monks-little-details .status-effects {
+    grid-template-columns: 90px 90px 90px 90px !important;
+    background: none;
+
+    .effect-control {
+        border: none;
+        opacity: 1;
+
+        &.active {
+            border: none;
+            opacity: 1;
+        }
+    }
+
+    .effect-name {
+        padding-right: 4px;
+        font-size: var(--font-size-12);
+    }
+}
+
+#hotbar {
+    width: 647px;
+
+    .hotbar-page {
+        overflow: visible;
+        gap: 4px;
+        bottom: 56px;
+
+        .macro-list {
+            gap: 7px;
+            border: none;
+        }
+
+        .action-bar {
+            margin: 0px 5px 0px 3px;
+        }
+    }
+}
+
+/* ----------------------------------------- */
+/* Monk's hotbar expansion                   */
+/* ----------------------------------------- */
+
+#hotbar .action-bar.no-arrows+.bar-controls span.page-number,
+#hotbar .hotbar-page .hotbar-page-row .bar-controls span.page-number,
+#hotbar .hotbar-page .hotbar-page-row .bar-controls i {
+    line-height: 52px;
+    ;
+}
+
+#hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
+    color: var(--tertiary-dark);
+}

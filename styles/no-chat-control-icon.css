@@ -1,7 +1,9 @@
-#sidebar #chat-controls .chat-control-icon {
-    display: none;
+#chat-controls .chat-control-icon {
+  display: none;
 }
 
 #dfcp-rt-buttons {
-    margin-left: 0px !important;
+  margin-left: 0px !important;
 }
+
+/*# sourceMappingURL=no-chat-control-icon.css.map */

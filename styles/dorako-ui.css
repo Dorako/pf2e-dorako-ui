@@ -188,23 +188,11 @@ form .form-group label {
 } */
 
 
-#chat-controls i.fas,
+/* #chat-controls i.fas,
 #sidebar-tabs .fa-solid,
 #sidebar-tabs i.fas {
     text-shadow: var(--dorako-text-shadow);
-}
-
-
-/* button>i {
-    margin-right: 0px;
 } */
-
-
-.window-app {
-    /* box-shadow: var(--glassy) !important; */
-    border-radius: 8px !important;
-}
-
 
 
 img {

@@ -225,21 +225,22 @@ Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
 
   if (collapseImmunities) {
     let section = html.find(".immunities")[0];
-    section.classList.add("collapsed");
+    section.classList.add("collapsed", "empty");
   }
 
   if (collapseWeaknesses) {
     let section = html.find(".weaknesses")[0];
-    section.classList.add("collapsed");
+    section.classList.add("collapsed", "empty");
   }
 
   if (collapseResistances) {
     let section = html.find(".resistances")[0];
-    section.classList.add("collapsed");
+    section.classList.add("collapsed", "empty");
   }
 
   let saves = html.find(".saves")[0];
   let saveDetails = html.find(".save-details")[0];
+  saveDetails.classList.remove("side-bar-section");
   // console.log({ saves });
   // console.log({ saveDetails });
 
@@ -1279,7 +1280,9 @@ Hooks.once("init", async () => {
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
     name: i18n("dorako-ui.settings.chat-input-height.name"),
-    hint: (game.modules.get("CautiousGamemastersPack")?.active) ? i18n("dorako-ui.settings.chat-input-height.CGMPhint") : i18n("dorako-ui.settings.chat-input-height.hint"),
+    hint: game.modules.get("CautiousGamemastersPack")?.active
+      ? i18n("dorako-ui.settings.chat-input-height.CGMPhint")
+      : i18n("dorako-ui.settings.chat-input-height.hint"),
     scope: "client",
     type: Number,
     default: 90,
@@ -1629,8 +1632,12 @@ Hooks.once("init", async () => {
   });
 
   injectCSS("dorako-ui");
+  injectCSS("reset");
   injectCSS("npc-sheet");
   injectCSS("loot-sheet");
+  injectCSS("chat-dark");
+  injectCSS("module-support");
+  injectCSS("new-chat");
 
   const root = document.querySelector(":root").style;
   if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {
@@ -1651,22 +1658,21 @@ Hooks.once("init", async () => {
 
   root.setProperty("--chat-input-height", game.settings.get("pf2e-dorako-ui", "chat-input-height").toString() + "px");
 
-  if (game.settings.get("pf2e-dorako-ui", "skin-navigation")) injectCSS("navigation");
-  if (game.settings.get("pf2e-dorako-ui", "skin-controls")) injectCSS("controls");
-  if (game.settings.get("pf2e-dorako-ui", "skin-token-hud")) injectCSS("token-hud");
-  if (game.settings.get("pf2e-dorako-ui", "skin-chat")) injectCSS("chat");
-  if (game.settings.get("pf2e-dorako-ui", "skin-sidebar")) injectCSS("sidebar");
-  if (game.settings.get("pf2e-dorako-ui", "skin-combat-tracker")) injectCSS("combat-tracker");
-  if (game.settings.get("pf2e-dorako-ui", "skin-effect-panel")) injectCSS("effect-panel");
-  if (game.settings.get("pf2e-dorako-ui", "skin-app-ui")) injectCSS("app-ui");
-  if (game.settings.get("pf2e-dorako-ui", "skin-hotbar")) injectCSS("hotbar");
-  if (game.settings.get("pf2e-dorako-ui", "skin-window-controls")) injectCSS("window-control");
-  if (game.settings.get("pf2e-dorako-ui", "skin-token-action-hud")) injectCSS("token-action-hud");
-  if (game.settings.get("pf2e-dorako-ui", "skin-custom-hotbar")) injectCSS("custom-hotbar");
-  if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) {
-    const diceTrayEnabled = game.modules.get("dice-calculator")?.active;
-    if (diceTrayEnabled) injectCSS("dice-tray");
-  }
+  // if (game.settings.get("pf2e-dorako-ui", "skin-navigation")) injectCSS("navigation");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-controls")) injectCSS("controls");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-token-hud")) injectCSS("token-hud");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-sidebar")) injectCSS("sidebar");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-combat-tracker")) injectCSS("combat-tracker");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-effect-panel")) injectCSS("effect-panel");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-app-ui")) injectCSS("app-ui");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-hotbar")) injectCSS("hotbar");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-window-controls")) injectCSS("window-control");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-token-action-hud")) injectCSS("token-action-hud");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-custom-hotbar")) injectCSS("custom-hotbar");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) {
+  //   const diceTrayEnabled = game.modules.get("dice-calculator")?.active;
+  //   if (diceTrayEnabled) injectCSS("dice-tray");
+  // }
   if (game.settings.get("pf2e-dorako-ui", "skin-simple-calendar")) injectCSS("simple-calendar");
   if (game.settings.get("pf2e-dorako-ui", "skin-crb-journal")) {
     injectCSS("crb-journal");
@@ -1676,14 +1682,13 @@ Hooks.once("init", async () => {
   if (headerStyle != "none") {
     injectCSS("header");
   }
-  injectCSS("chat-dark");
 
-  if (game.settings.get("pf2e-dorako-ui", "skin-combat-carousel")) injectCSS("combat-carousel");
+  // if (game.settings.get("pf2e-dorako-ui", "skin-combat-carousel")) injectCSS("combat-carousel");
 
   setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
   if (setting == "both" || setting == "bg-color") injectCSS("chat-blind-whisper");
-  if (game.settings.get("pf2e-dorako-ui", "avatar-border")) injectCSS("chat-portrait-border");
-  if (game.settings.get("pf2e-dorako-ui", "compact-ui")) injectCSS("compact-ui");
+  // if (game.settings.get("pf2e-dorako-ui", "avatar-border")) injectCSS("chat-portrait-border");
+  // if (game.settings.get("pf2e-dorako-ui", "compact-ui")) injectCSS("compact-ui");
   if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
   if (game.settings.get("pf2e-dorako-ui", "no-chat-control-icon")) injectCSS("no-chat-control-icon");
   setting = game.settings.get("pf2e-dorako-ui", "pc-sheet-theme");
@@ -1692,3 +1697,81 @@ Hooks.once("init", async () => {
   if (setting == "dark" || setting == "darkRedHeader") injectCSS("familiar-sheet-dark");
   if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
 });
+
+/* NEW */
+const MODULENAME = "pf2e-dorako-ui";
+
+import { registerSettings } from "./settings/settings";
+
+// Initialize module
+Hooks.once("init", (_actor) => {
+  console.log(`${MODULENAME} | Initializing ${MODULENAME}`);
+
+  registerSettings();
+
+  registerHandlebarsHelpers();
+
+  // Hooks that always run
+  Hooks.on("renderSettingsMenuAdjusted", (_app, html, _settings) => {
+    toggleMenuSettings(html, _settings);
+  });
+
+  Hooks.on("renderSettingsConfig", (_app, html) => {
+    toggleSettings(html);
+  });
+
+  // Register custom sheets (if any)
+});
+
+// Setup module
+Hooks.once("setup", () => {
+  console.log(`${MODULENAME} | Setting up`);
+  // Do anything after initialization but before ready
+});
+
+// When ready
+Hooks.once("ready", () => {
+  // Do anything once the module is ready
+  console.log(`${MODULENAME} | Ready`);
+
+  Hooks.callAll(`${MODULENAME}.moduleReady`);
+});
+
+function registerHandlebarsHelpers() {
+  Handlebars.registerHelper("includes", function (array, value, options) {
+    if (array.includes(value)) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
+  Handlebars.registerHelper("ifeq", function (v1, v2, options) {
+    if (v1 === v2) return options.fn(this);
+    else return options.inverse();
+  });
+  Handlebars.registerHelper("ifne", function (v1, v2, options) {
+    if (v1 !== v2) return options.fn(this);
+    else return options.inverse();
+  });
+
+  Handlebars.registerHelper("isNaN", function (context, options) {
+    if (isNaN(context) && !(typeof context === "string")) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
+
+  Handlebars.registerHelper("undefined", function () {
+    return undefined;
+  });
+
+  Handlebars.registerHelper("hasKey", function (context, key) {
+    for (const prop of context) {
+      if (Object.getOwnPropertyDescriptor(prop, key)) {
+        return true;
+      }
+    }
+    return false;
+  });
+}
