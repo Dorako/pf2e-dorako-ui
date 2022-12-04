@@ -1,0 +1,65 @@
+name: Module CI/CD
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install
+        run: npm ci
+
+      - name: "Make output folder"
+        run: mkdir dist
+
+      - name: Build
+        run: npm run build
+
+      # create a zip file with all files required by the module to add to the release
+      - name: Zip Files
+        working-directory: ./dist
+        run: zip -r ./module.zip ./*
+
+      # Get the version from 'module.json'
+      - name: Get Version
+        shell: bash
+        id: get-version
+        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
+
+      # Create a release for this specific version
+      - name: Create Release
+        id: create_version_release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true # set this to false if you want to prevent updating existing releases
+          name: ${{ steps.get-version.outputs.version }}
+          body: 'TODO: FILL DETAILS'
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './dist/module.json,./dist/module.zip'
+          tag_name: ${{ steps.get-version.outputs.version }}
+
+      # Update the 'latest' release
+      - name: Create Release
+        id: create_latest_release
+        uses: ncipollo/release-action@v1
+        if: endsWith(github.ref, 'master')
+        with:
+          allowUpdates: true
+          name: Latest
+          draft: false
+          prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: './dist/module.json,./dist/module.zip'
+          tag: latest

@@ -1,0 +1,14 @@
+{
+    "_id": "mh3yl3kgkp8onnom",
+    "actorIds": [],
+    "author": "j8qxwRz5RJ4kkzp9",
+    "command": "PF2EPersistentDamage.processHealing(canvas.tokens.controlled);",
+    "flags": {},
+    "img": "systems/pf2e/icons/spells/regeneration.webp",
+    "name": "Process Healing (Regen / Fast Healing)",
+    "permission": {
+        "default": 1
+    },
+    "scope": "global",
+    "type": "script"
+}

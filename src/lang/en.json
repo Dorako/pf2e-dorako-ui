@@ -1,0 +1,51 @@
+{
+    "PF2E-PD.SETTINGS": {
+        "AutoProcess": {
+            "name": "Auto process at end of turn?",
+            "hint": "If set to true, the persistent damage will be rolled after the token's turn. Otherwise, you must run the macro 'Process Persistent Damage'."
+        },
+        "AutoRecover": {
+            "name": "Auto D20 Recovery Check?",
+            "hint": "Should the D20 flat check for removal be done as part of the message, or separately?",
+            "option1": "Always Auto Recover",
+            "option2": "NPCs only",
+            "option3": "Never"
+        },
+        "AutoResolve": {
+            "name": "Auto resolve?",
+            "hint": "Automatically remove upon successful flat check?"
+        },
+        "HideRolls": {
+            "name": "Hide Persistent Damage Rolls?",
+            "hint": "Should persistent rolls be always shown or always hidden? If hidden, players cannot see their own damage results.",
+            "option1": "Always Show",
+            "option2": "Normal - based on roll mode",
+            "option3": "Always Hide"
+        }
+    },
+
+    "PF2E-PD.Notification": {
+        "Created": "Added persistent {damageType} damage",
+        "MissingActor": "Token(s) must be selected to apply persistent damage",
+        "Overwritten": "Existing persistent damage effect has been overwritten",
+        "NotOverwritten": "Did not apply new persistent damage effect due to being weaker"
+    },
+
+    "PF2E-PD.Dialog": {
+        "Title": "Add Persistent Damage",
+        "Apply": "Apply",
+        "Add": "Add",
+        "Close": "Close"
+    },
+
+    "PF2E-PD.Button.SelectTarget": "Click to select the afflicted token.",
+
+    "PF2E-PD.Migrating": "Applying migration for PF2E Persistent Damage",
+    "PF2E-PD.Migrated": "Applied PF2E Persistent Damage migration up to version {version}",
+    "PF2E-PD.PersistentDamageLabel": "Formula",
+    "PF2E-PD.PersistentDCLabel": "DC",
+
+    "PF2E-PD.FastHealing": "Fast Healing",
+    "PF2E-PD.Regeneration": "Regeneration",
+    "PF2E-PD.HealingProcess": "Received healing ({sources})"
+}

@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "commonjs",
+        "lib": ["esnext", "dom"],
+
+        "esModuleInterop": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+
+        "sourceMap": true,
+        "removeComments": false,
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "@pf2e/*": ["types/src/*"],
+            "@actor": ["types/src/module/actor/index"],
+            "@actor/*": ["types/src/module/actor/*"],
+            "@item": ["types/src/module/item/index"],
+            "@item/*": ["types/src/module/item/*"],
+            "@system/*": ["types/src/module/system/*"],
+            "@module/*": ["types/src/module/*"],
+            "@scripts/*": ["types/src/scripts/*"],
+            // https://github.com/Hypercubed/mini-signals/issues/20
+            "mini-signals": [
+                "node_modules/resource-loader/typings/mini-signals.d.ts"
+            ]
+        },
+        "types": [
+            "jquery",
+            "tooltipster",
+            "node",
+            "handlebars",
+            "socket.io"
+        ],
+        "typeRoots": [
+            "node_modules/@types",
+            "node_modules/handlebars",
+            "types/foundry"
+        ],
+    },
+    "ts-node": {
+        "files": true
+    }
+}

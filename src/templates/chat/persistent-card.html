@@ -1,0 +1,22 @@
+<div class="pf2e chat-card pf2e-pd-card" data-actor-id="{{actor._id}}" data-effect-id="{{effect.id}}" {{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}>
+    <div class="persistent-header">
+        <div>
+            <div>Persistent {{typeName}} damage</div>
+            {{#if autoCheck}}
+            <div>
+                DC {{data.dc}} {{{inlineCheck}}} -
+                {{#if success}}
+                    <span class="flat-check-success">Success</span>
+                {{else}}
+                    <span class="flat-check-failure">Failure</span>
+                {{/if}}
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    {{#unless autoCheck}}
+        <div class="card-buttons">
+            <button data-action="check" data-check="flat" data-dc="{{data.dc}}" data-visibility="owner">Recovery Check DC {{data.dc}}</button>
+        </div>
+    {{/unless}}
+</div>

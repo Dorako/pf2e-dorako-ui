@@ -1,0 +1,26 @@
+<form>
+    <div>
+        <p class="notes title">Persistent Damage Type</p>
+        <div class="types radios">
+            {{#each types}}
+                <div>
+                    <input type="radio" name="Type" id="{{this.damageType}}" value="{{this.damageType}}">
+                    <label for="{{this.damageType}}"><img src="{{this.img}}">{{localize this.name}}</label>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <!------ Persistent Damage Section ------->
+    <div class="damage-entry">
+        <div class="form-group">
+            <!------ Persistent Damage values ------->
+            <div class="form-fields persistent-damage-values">
+                <label>Damage:</label>
+                <input type="text" name="Damage" placeholder="Formula"/>
+                <label>DC</label>
+                <input type="number" name="DC" placeholder="15"/>
+            </div>
+        </div>
+    </div>
+</form>

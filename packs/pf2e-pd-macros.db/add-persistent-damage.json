@@ -1,0 +1,14 @@
+{
+    "_id": "pwyjwfc6dyf73p7f",
+    "actorIds": [],
+    "author": "j8qxwRz5RJ4kkzp9",
+    "command": "PF2EPersistentDamage.showDialog();",
+    "flags": {},
+    "img": "systems/pf2e/icons/features/classes/brutality.webp",
+    "name": "Add Persistent Damage",
+    "permission": {
+        "default": 1
+    },
+    "scope": "global",
+    "type": "script"
+}

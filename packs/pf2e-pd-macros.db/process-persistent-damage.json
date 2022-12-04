@@ -1,0 +1,14 @@
+{
+    "_id": "5q5mzf7s5omgtdsi",
+    "actorIds": [],
+    "author": "j8qxwRz5RJ4kkzp9",
+    "command": "PF2EPersistentDamage.processPersistentDamage(canvas.tokens.controlled);",
+    "flags": {},
+    "img": "systems/pf2e/icons/conditions/persistent-damage.webp",
+    "name": "Process Persistent Damage",
+    "permission": {
+        "default": 1
+    },
+    "scope": "global",
+    "type": "script"
+}

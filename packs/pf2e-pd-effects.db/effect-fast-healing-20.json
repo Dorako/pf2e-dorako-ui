@@ -1,0 +1,64 @@
+{
+    "_id": "Ei5vzfXdFqMUs6Dh",
+    "data": {
+        "description": {
+            "chat": "",
+            "unidentified": "",
+            "value": null
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 1
+        },
+        "rules": [
+            {
+                "key": "FastHealing",
+                "type": "fast-healing",
+                "value": 20
+            }
+        ],
+        "schema": {
+            "lastMigration": {
+                "datetime": "2021-09-04T19:56:31.698-04:00",
+                "version": {
+                    "foundry": "0.8.9",
+                    "schema": 0.662,
+                    "system": "2.13.2"
+                }
+            },
+            "version": 0.664
+        },
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "traits": {
+            "custom": "",
+            "rarity": {
+                "value": "common"
+            },
+            "value": []
+        }
+    },
+    "effects": [],
+    "flags": {
+        "core": {
+            "sourceId": "Compendium.pf2e-persistent-damage.pf2e-persistent-damage-effects.t79b5hdkx6ho4rov"
+        }
+    },
+    "img": "systems/pf2e/icons/spells/heal-companion.webp",
+    "name": "Effect: Fast Healing 20",
+    "permission": {
+        "A7Cmsw43rnggTkpf": 3,
+        "default": 0
+    },
+    "type": "effect"
+}

@@ -1,0 +1,64 @@
+{
+    "_id": "XpxPXSN7UmSUa48b",
+    "data": {
+        "description": {
+            "chat": "",
+            "unidentified": "",
+            "value": "<p>The hydra has regeneration equal to 3 x the number of heads it has.</p>\n<p>Set the level of this effect to the number of heads remaining.</p>"
+        },
+        "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 5
+        },
+        "rules": [
+            {
+                "key": "FastHealing",
+                "type": "regeneration",
+                "value": "3*@item.level"
+            }
+        ],
+        "schema": {
+            "lastMigration": {
+                "datetime": "2021-09-04T20:41:30.517-04:00",
+                "version": {
+                    "foundry": "0.8.9",
+                    "schema": null,
+                    "system": "2.13.2"
+                }
+            },
+            "version": 0.664
+        },
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "traits": {
+            "custom": "",
+            "rarity": {
+                "value": "common"
+            },
+            "value": []
+        }
+    },
+    "effects": [],
+    "flags": {
+        "core": {
+            "sourceId": "Compendium.pf2e-persistent-damage.pf2e-persistent-damage-effects.wzx5fg9qyfzukpbp"
+        }
+    },
+    "img": "systems/pf2e/icons/spells/revival.webp",
+    "name": "Effect: Hydra Regeneration",
+    "permission": {
+        "A7Cmsw43rnggTkpf": 3,
+        "default": 0
+    },
+    "type": "effect"
+}

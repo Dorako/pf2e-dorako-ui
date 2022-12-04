@@ -1,0 +1,63 @@
+{
+    "_id": "urcDDMFTazyP2rUx",
+    "data": {
+        "description": {
+            "chat": "",
+            "unidentified": "",
+            "value": "<p>Granted by @Compendium[pf2e.feats-srd.M2V1vqAziOkWV30B]{Crimson Shroud}.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "level": {
+            "value": 6
+        },
+        "rules": [
+            {
+                "key": "FastHealing",
+                "value": "floor(@actor.level / 2)"
+            }
+        ],
+        "schema": {
+            "lastMigration": {
+                "datetime": "2021-09-04T19:56:01.276-04:00",
+                "version": {
+                    "foundry": "0.8.9",
+                    "schema": 0.662,
+                    "system": "2.13.2"
+                }
+            },
+            "version": 0.664
+        },
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "custom": "",
+            "rarity": {
+                "value": "common"
+            },
+            "value": []
+        }
+    },
+    "effects": [],
+    "flags": {
+        "core": {
+            "sourceId": "Compendium.pf2e-persistent-damage.pf2e-persistent-damage-effects.t79b5hdkx6ho4rov"
+        }
+    },
+    "img": "systems/pf2e/icons/default-icons/feats.webp",
+    "name": "Effect: Crimson Shroud",
+    "permission": {
+        "A7Cmsw43rnggTkpf": 3,
+        "default": 0
+    },
+    "type": "effect"
+}

@@ -1,0 +1,158 @@
+#pf2e-persistent-dialog {
+    width: 450px!important;
+
+    header {
+        border-radius: 0;
+        background: linear-gradient(90deg, var(--secondary) 0%, #202b93 50%, var(--secondary) 100%);
+        border: none;
+        box-shadow: inset 0 0 0 1px #9f725b,inset 0 0 0 2px var(--tertiary),inset 0 0 0 3px #956d58;
+        margin-bottom: 2px;
+        font-size: .75rem;
+    }
+
+    .window-content {
+        border-image: url(../../../systems/pf2e/assets/sheet/corner-box.webp) 9 repeat;
+    }
+
+    form {
+        margin-bottom: 10px;
+    }
+
+    .types {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .button {
+        flex: 1 !important;
+        height: 35px;
+        box-shadow: inset 0 0 0 1px #1111FF,inset 0 0 0 1.5px var(--tertiary),inset 0 0 0 1px #1111FF;
+        font-size: 12px;
+        padding: 0;
+        background: #171f69;
+        color: white;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        box-shadow: 0 0 4px red;
+    }
+
+    .radios input[type="radio"] {
+        opacity: 0;
+        position: fixed;
+        width: 0;
+    }
+
+    .radios label {
+        cursor: pointer;
+        display: flex;
+        flex: 1 !important;
+        margin: 2px 1px ;
+        box-shadow: inset 0 0 0 1px #1111FF,inset 0 0 0 1.5px var(--tertiary),inset 0 0 0 1px #1111FF;
+        height: 35px;
+        width: 100%;
+        border-radius: 1px;
+        font-size: 11px;
+        font-family: "Signika", sans-serif;
+        justify-content: left;
+        align-items: center;
+        background: #171f69;
+        color: white;
+    }
+
+    img {
+        width: 25px;
+        margin: 0 5px;
+        align-items: left;
+    }
+
+    .radios label i {
+        margin-right: 5px;
+        color: white;
+        background: #171f69;
+    }
+
+    .radios label:hover {
+        box-shadow: 0 0 8px red;
+    }
+
+    .radios input[type="radio"]:checked + label {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .dialog-button {
+        height: 50px;
+        background: #171f69;
+        color: white;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .damage-entry {
+        color: black !important;
+        flex: 0 0 100% !important;
+        font-size: 12px !important;
+        line-height: 16px !important;
+        margin: 10px 0 5px 0 !important;
+    }
+
+    .notes.title {
+        border-bottom: 1px solid #f7d488;
+        font-size: 14px !important;
+        font-weight: bold;
+        margin: 10px 0 10px 0 !important;
+    }
+
+    .persistent-damage-values {
+        [name=DC] {
+            flex: 0.5;
+        }
+    }
+}
+
+.pf2e-pd-card {
+    header.card-header {
+        position: relative;
+        padding: 3px 0;
+        border-top: 2px groove #FFF;
+        border-bottom: 2px groove #FFF;
+    }
+
+    header.card-header img {
+        flex: 0 0 36px;
+        margin-right: 5px;
+    }
+
+    header.card-header h3 {
+        flex: 1;
+        margin: 0;
+        line-height: 36px;
+        font-family: "Modesto Condensed", "Palatino Linotype", serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #4b4a44;
+    }
+
+    header.card-header h3:hover {
+        color: #111;
+        text-shadow: 0 0 10px red;
+    }
+
+    .card-content, .persistent-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4px 0;
+    }
+
+    .flat-check-success {
+        color: #005e00;
+    }
+
+    .flat-check-failure {
+        color: #5e0000;
+    }
+}

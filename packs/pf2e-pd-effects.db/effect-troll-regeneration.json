@@ -1,0 +1,52 @@
+{
+    "_id": "wzx5fg9qyfzukpbp",
+    "data": {
+        "description": {
+            "chat": "",
+            "unidentified": "",
+            "value": "<p>Basic Troll regeneration, 20 (acid, fire).</p>"
+        },
+        "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": null
+        },
+        "rules": [
+            {
+                "key": "FastHealing",
+                "type": "regeneration",
+                "value": 20,
+                "deactivatedBy": [
+                    "fire",
+                    "acid"
+                ]
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "custom": "",
+            "rarity": {
+                "value": "common"
+            },
+            "value": []
+        }
+    },
+    "effects": [],
+    "flags": {},
+    "img": "systems/pf2e/icons/spells/revival.webp",
+    "name": "Effect: Troll Regeneration",
+    "permission": {
+        "default": 0
+    },
+    "type": "effect"
+}
