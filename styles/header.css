@@ -1,9 +1,0 @@
-.message .message-header {
-    background-color: var(--paizo-red);
-    background-image: var(--sheet-light);
-    background-size: cover;
-    background-blend-mode: overlay;
-    box-shadow: var(--gold-and-glow);
-    margin-bottom: 2px;
-    padding: 5px;
-}

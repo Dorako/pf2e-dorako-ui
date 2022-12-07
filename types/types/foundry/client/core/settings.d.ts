@@ -15,6 +15,7 @@ declare interface ClientSettingsData {
         : undefined;
     choices?: Record<string, string> | Record<number, string>;
     onChange?: (choice?: string) => void | Promise<void>;
+    requiresReload?: boolean;
 }
 
 declare interface SettingsMenuConstructor {

@@ -1,64 +1,82 @@
 {
     "id": "pf2e-dorako-ui",
     "title": "PF2e Dorako UI",
-    "description": "Overhauls the Foundry UI and several modules.",
-    "url": "https://github.com/Dorako/pf2e-dorako-ui",
+    "description": "Pathfinder UI module",
     "authors": [
         {
-            "name": "Dorako",
-            "url": "https://github.com/Dorako/pf2e-dorako-ui",
-            "email": "dirako@gmail.com",
-            "discord": "Dorako#0657",
-            "flags": {}
+          "name": "Dorako",
+          "url": "https://github.com/Dorako/pf2e-dorako-ui",
+          "email": "dirako@gmail.com",
+          "discord": "Dorako#0657",
+          "flags": {}
         }
-    ],
+      ],
     "version": "2.0.0",
     "compatibility": {
         "minimum": "10",
-        "verified": "10"
+        "verified": "10.290"
     },
+    "type": "module",
     "relationships": {
         "systems": [
-            {
-                "id": "pf2e",
-                "type": "system",
-                "compatibility": {
-                    "minimum": "4.0.0",
-                    "verified": "4.4.0"
-                }
+          {
+            "id": "pf2e",
+            "type": "system",
+            "compatibility": {
+              "minimum": "4.0.0",
+              "verified": "4.4.0"
             }
+          }
         ]
-    },
+      },
+    "esmodules": ["./index.js"],
+    "styles": ["./styles/styles.css"],
     "languages": [
         {
-            "lang": "en",
-            "name": "English",
-            "path": "languages/en.json",
-            "flags": {}
+          "lang": "en",
+          "name": "English",
+          "path": "languages/en.json",
+          "flags": {}
         },
         {
-            "lang": "fr",
-            "name": "Français",
-            "path": "languages/fr.json"
+          "lang": "fr",
+          "name": "Français",
+          "path": "languages/fr.json"
         },
         {
-            "lang": "de",
-            "name": "Deutsch",
-            "path": "languages/de.json"
+          "lang": "de",
+          "name": "Deutsch",
+          "path": "languages/de.json"
         },
         {
-            "lang": "pt-BR",
-            "name": "Português",
-            "path": "languages/pt.json"
+          "lang": "pt-BR",
+          "name": "Português",
+          "path": "languages/pt.json"
         },
         {
-            "lang": "ja",
-            "name": "日本語",
-            "path": "languages/ja.json"
+          "lang": "ja",
+          "name": "日本語",
+          "path": "languages/ja.json"
+        }
+      ],    "packs": [
+        {
+            "name": "pf2e-persistent-damage-macros",
+            "label": "PF2E Persistent Damage Macros",
+            "system": "pf2e",
+            "path": "packs/pf2e-pd-macros.db",
+            "type": "Macro",
+            "module": "pf2e-persistent-damage"
+        },
+        {
+            "name": "pf2e-persistent-damage-effects",
+            "label": "PF2E Persistent Damage Effects",
+            "system": "pf2e",
+            "path": "packs/pf2e-pd-effects.db",
+            "type": "Item",
+            "module": "pf2e-persistent-damage"
         }
     ],
-    "styles": ["styles/fonts.css"],
-    "scripts": ["scripts/dorako-ui.js"],
-    "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v2.0.0.zip",
+    "url": "https://github.com/CarlosFdez/pf2e-persistent-damage",
+    "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.8.4.zip",
     "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json"
-}
+  }

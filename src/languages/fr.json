@@ -95,5 +95,16 @@
   "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.name": "Retirer les infos de l'attaque des messages de jets de dégâts ?",
   "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint": "Permet aux jets de dégâts de prendre moins de place en retirant les informations redondantes. Conçu pour être utilisé avec la fusion dans la conversation DFCE.",
   "dorako-ui.settings.no-chat-control-icon.name": "Cacher l'icone de contrôle de la conversation ?",
-  "dorako-ui.settings.no-chat-control-icon.hint": "C'est l'icône de dé à côté des options de lancer qui tend à encombrer l'IU."
+  "dorako-ui.settings.no-chat-control-icon.hint": "C'est l'icône de dé à côté des options de lancer qui tend à encombrer l'IU.",
+  "dorako-ui.settings.chat-input-height.CGMPhint": "La valeur par défaut de Foundry est d'environ 100px ; Notez qu'avec le paramètre \"Notifier la frappe\" du Cautious Gamemaster's Pack, la notification occupe au maximum 60px de la hauteur de la boîte de dialogue",
+  "dorako-ui.settings.npc-sheet-theme.name": "Thème de la feuille de PNJ",
+  "dorako-ui.settings.npc-sheet-theme.hint": "Affecte les feuille de PNJ",
+  "dorako-ui.settings.npc-sheet-theme.choice.default": "Par défaut",
+  "dorako-ui.settings.npc-sheet-theme.choice.light": "Clair",
+  "dorako-ui.settings.npc-sheet-theme.choice.dark": "Sombre",
+  "dorako-ui.settings.loot-sheet-theme.name": "Thème de la feuille de butin",
+  "dorako-ui.settings.loot-sheet-theme.hint": "Affecte la feuille de butin",
+  "dorako-ui.settings.loot-sheet-theme.choice.default": "Par défaut",
+  "dorako-ui.settings.loot-sheet-theme.choice.light": "Clair",
+  "dorako-ui.settings.loot-sheet-theme.choice.dark": "Sombre"
 }

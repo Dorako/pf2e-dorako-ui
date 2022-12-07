@@ -1,104 +1,29 @@
-//Adapted from https://gitlab.com/hooking/foundry-vtt---pathfinder-2e/-/blob/master/webpack.config.ts
-
-import * as fs from "fs-extra";
-// import * as os from "os";
-import * as path from "path";
-import * as process from "process";
-import glob from "glob";
-import webpack from "webpack";
-import CopyPlugin from "copy-webpack-plugin";
-import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
+import path from "path";
+import fs from "fs-extra";
+import { Configuration, DefinePlugin } from "webpack";
+import copyWebpackPlugin from "copy-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import TerserPlugin from "terser-webpack-plugin";
-import SimpleProgressWebpackPlugin from "simple-progress-webpack-plugin";
-import { Configuration as WebpackDevServerConfiguration, Request } from "webpack-dev-server";
+import WebpackBar from "webpackbar";
 
-const buildMode = process.argv[3] === "production" ? "production" : "development";
+const buildMode = process.argv[3] == "production" ? "production" : "development";
 const isProductionBuild = buildMode === "production";
 
-interface Configuration extends Omit<webpack.Configuration, "devServer"> {
-    devServer?: Omit<WebpackDevServerConfiguration, "proxy"> & {
-        // the types in typescript are wrong for this, so we're doing it live here.
-        proxy?: {
-            context: (pathname: string, _request: Request) => boolean;
-            target: string;
-            ws: boolean | undefined;
-        };
-    };
-}
-
-const allTemplates = (): string => {
-    return glob
-        .sync("**/*.html", { cwd: path.join(__dirname, "static/templates") })
-        .map((file: string) => `"systems/pf2e/templates/${file}"`)
-        .join(", ");
-};
-
-const [outDir, foundryUri] = ((): [string, string] => {
+const pf2eSystemPath = (() => {
     const configPath = path.resolve(process.cwd(), "foundryconfig.json");
-    const config = fs.readJSONSync(configPath, { throws: false });
-    const outDir =
-        config instanceof Object
-            ? path.join(config.dataPath, "Data", "modules", config.systemName ?? "pf2e-dorako-ui")
-            : path.join(__dirname, "dist/");
-    const foundryUri = (config instanceof Object ? String(config.foundryUri) : "") ?? "http://localhost:30000";
-    return [outDir, foundryUri];
+    const configData = fs.existsSync(configPath) ? fs.readJSONSync(configPath) : undefined;
+    return configData !== undefined ? path.join(configData.dataPath, "Data", "modules", configData.moduleName) : null;
 })();
+const outDir = pf2eSystemPath ?? path.join(__dirname, "dist/");
 
-/** Create an empty static files when in dev mode to keep the Foundry server happy */
-class EmptyStaticFilesPlugin {
-    apply(compiler: webpack.Compiler): void {
-        compiler.hooks.afterEmit.tap("EmptyStaticFilesPlugin", (): void => {
-            if (!isProductionBuild) {
-                fs.closeSync(fs.openSync(path.resolve(outDir, "styles/tinymce.css"), "w"));
-                fs.closeSync(fs.openSync(path.resolve(outDir, "vendor.bundle.js"), "w"));
-            }
-        });
-    }
-}
-
-type Optimization = Configuration["optimization"];
-const optimization: Optimization = isProductionBuild
-    ? {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({ terserOptions: { mangle: false, module: true, keep_classnames: true } }),
-            new CssMinimizerPlugin(),
-        ],
-        splitChunks: {
-            chunks: "all",
-            cacheGroups: {
-                default: {
-                    name: "pf2e-dorako-ui",
-                    test: "src/pf2e-dorako-ui.ts",
-                },
-                vendor: {
-                    name: "vendor",
-                    test: /node_modules/,
-                },
-            },
-        },
-    }
-    : undefined;
+console.log(`Destination Folder set to ${outDir}`);
 
 const config: Configuration = {
     context: __dirname,
     mode: buildMode,
-    entry: {
-        main: "./src/pf2e-dorako-ui.ts",
-    },
+    entry: "./src/index.ts",
     module: {
         rules: [
-            !isProductionBuild
-                ? {
-                    test: /\.html$/,
-                    loader: "raw-loader",
-                }
-                : {
-                    test: /\.html$/,
-                    loader: "null-loader",
-                },
             {
                 test: /\.ts$/,
                 use: [
@@ -106,30 +31,17 @@ const config: Configuration = {
                         loader: "ts-loader",
                         options: {
                             configFile: path.resolve(__dirname, "tsconfig.json"),
-                            happyPackMode: true,
                             transpileOnly: true,
+                            happyPackMode: true,
                             compilerOptions: {
                                 noEmit: false,
                             },
                         },
                     },
-                    "webpack-import-glob-loader",
                 ],
             },
             {
-                test: /template-preloader\.ts$/,
-                use: [
-                    {
-                        loader: "string-replace-loader",
-                        options: {
-                            search: '"__ALL_TEMPLATES__"',
-                            replace: allTemplates,
-                        },
-                    },
-                ],
-            },
-            {
-                test: /\.[s]css$/i,
+                test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -139,85 +51,44 @@ const config: Configuration = {
                             sourceMap: true,
                         },
                     },
-                    // {
-                    //     loader: "style-loader",
-                    //     options: { sourceMap: true },
-                    // },
+                    {
+                        loader: "sass-loader",
+                        options: { sourceMap: true },
+                    },
                 ],
             },
-            // {
-            //     loader: "thread-loader",
-            //     options: {
-            //         workers: os.cpus().length + 1,
-            //         poolRespawn: false,
-            //         poolTimeout: isProductionBuild ? 500 : Infinity,
-            //     },
-            // },
         ],
     },
-    optimization: optimization,
+
     devtool: isProductionBuild ? undefined : "inline-source-map",
-    bail: isProductionBuild,
     watch: !isProductionBuild,
-    devServer: {
-        hot: true,
-        devMiddleware: {
-            writeToDisk: true,
-        },
-        proxy: {
-            context: (pathname: string, _request: Request) => {
-                return !pathname.match("^/ws");
-            },
-            target: foundryUri,
-            ws: true,
-        },
-    },
     plugins: [
-        new ForkTsCheckerWebpackPlugin(),
-        new webpack.DefinePlugin({
+        new ForkTsCheckerWebpackPlugin({ typescript: { memoryLimit: 4096 } }),
+        new DefinePlugin({
             BUILD_MODE: JSON.stringify(buildMode),
         }),
-        new CopyPlugin({
+        new copyWebpackPlugin({
             patterns: [
+                { from: "README.md" },
                 { from: "module.json" },
-                {
-                    from: "packs/**",
-                    noErrorOnMissing: true,
-                },
-                //As yet, you have no static files, so I commented this out.
-                // {
-                //     from: "static/",
-                //     transform(content: Buffer, absoluteFrom: string) {
-                //         if (path.basename(absoluteFrom) === "en.json") {
-                //             return JSON.stringify(JSON.parse(content.toString()));
-                //         }
-                //         return content;
-                //     },
-                // },
+                { from: "src/languages", to: "languages" },
+                { from: "src/templates", to: "templates" },
             ],
         }),
-        new MiniCssExtractPlugin({ filename: "styles/[name].css" }),
-        new SimpleProgressWebpackPlugin({ format: "compact" }),
-        new EmptyStaticFilesPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "styles/styles.css",
+            insert: "head",
+        }),
+        new WebpackBar({}),
     ],
     resolve: {
-        alias: {
-            "@actor": path.resolve(__dirname, "types/src/module/actor"),
-            "@item": path.resolve(__dirname, "types/src/module/item"),
-            "@module": path.resolve(__dirname, "types/src/module"),
-            "@scene": path.resolve(__dirname, "types/src/module/scene"),
-            "@scripts": path.resolve(__dirname, "types/src/scripts"),
-            "@system": path.resolve(__dirname, "types/src/module/system"),
-            "@util": path.resolve(__dirname, "types/src/util"),
-        },
-        extensions: [".ts", ".js"],
+        extensions: [".ts"],
     },
     output: {
-        clean: true,
+        clean: { keep: "packs" },
         path: outDir,
-        filename: "pf2e-dorako-ui.bundle.js",
+        filename: "index.js",
     },
 };
 
-// eslint-disable-next-line import/no-default-export
 export default config;

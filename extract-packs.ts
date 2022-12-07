@@ -10,11 +10,12 @@ type PackEntry = {
         schema?: {
             lastMigration: unknown;
             version: unknown;
-        };
+        }
         slug?: unknown;
         source?: { value?: unknown };
         target?: unknown;
-    };
+    }
+
 };
 
 function sluggify(entityName: string) {
