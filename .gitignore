@@ -6,6 +6,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+**/.DS_Store
 
 # Icon must end with two \r
 Icon
@@ -32,3 +33,28 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
 ignore
+
+# From Supe:
+
+# IDE
+.idea/
+.vs/
+icons/\!dox/
+/.vscode
+
+/dist-example
+/node_modules/
+/dist/*
+!/dist/packs
+!/dist/icons
+foundryconfig.json
+package/
+coverage
+packs/temp-data
+static/packs/*
+!static/pack/Spells (SRD) - LICENSE
+foundryconfig.json
+
+dist/
+
+docs/
