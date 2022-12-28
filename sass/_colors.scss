@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
@@ -65,7 +67,11 @@ $adjusted-lower: #cc3311 !default;
 :root {
   /* Global */
   --primary: #{$primary-color};
+  --primary-light: #{color.scale($primary-color, $lightness: +20%)};
+  --primary-dark: #{color.scale($primary-color, $lightness: -20%)};
   --secondary: #{$secondary-color};
+  --secondary-light: #{color.scale($secondary-color, $lightness: +20%)};
+  --secondary-dark: #{color.scale($secondary-color, $lightness: -40%)};
   --tertiary: #{$tertiary-color};
 
   --alt: #{$alt-color};

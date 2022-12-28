@@ -1,9 +1,11 @@
-.sheet.pf2e.actor.npc.dorako-theme ol.spell-list > li .item-name .item-image .item-icon {
+.sheet.pf2e.actor.npc.dorako-theme ol.spell-list>li .item-name .item-image .item-icon {
   border-radius: 3px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .sheet-body .tab {
   padding-top: 2px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet input[type=number]:focus,
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet input[type=number]:hover:not(:disabled),
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet input[type=text]:focus,
@@ -11,17 +13,21 @@
   border: 1px solid var(--tertiary);
   box-shadow: 0 0 10px var(--primary-light);
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet input.adjustable:not(:focus).adjusted-higher,
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet span.adjustable.adjusted-higher {
   color: green !important;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet input.adjustable:not(:focus).adjusted-lower,
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet span.adjustable.adjusted-lower {
   color: red !important;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .top-sections {
   gap: 5px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section {
   box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
@@ -32,30 +38,38 @@
   background-image: var(--sheet-light);
   background-size: cover;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.initiative select {
   width: 98%;
   margin-bottom: 2px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.collapsed {
   max-height: 20px;
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.collapsed .side-bar-section-header {
   border-radius: 3px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.collapsed:not(.empty):hover {
   max-height: 1000px;
   transition: max-height 1s ease-in-out;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.collapsed:not(.empty):hover .side-bar-section-header {
   border-radius: 3px 3px 0px 0px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.collapsed:not(.empty):hover .side-bar-section-content {
   display: block;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar-section.collapsed .side-bar-section-content {
   display: none;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .section-container {
   box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
   padding: 0px;
@@ -67,18 +81,22 @@
   background-image: var(--pf2e-sheets-bg);
   background-size: cover;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .section-container .section-header {
   box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.5);
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .section-container:not(.headerless) .section-body {
   border-top: 1px solid wheat;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .section-container .section-body {
   border: none;
   padding: 0;
   text-shadow: var(--pf2e-shadow-dynamic);
   padding: 5px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .section-container.toggles {
   border-image-repeat: repeat;
   border-image-slice: 11;
@@ -96,26 +114,33 @@
   background: none;
   margin: 5px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar .image-container {
   border: none;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar .saves-section.side-bar-section {
   display: flex;
   flex-direction: column;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar .saves-section.side-bar-section.collapsed {
   max-height: 42px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar .saves-section.side-bar-section.collapsed:hover {
   max-height: 1000px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar .saves {
   margin-top: 0px;
   width: unset;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme form.npc-sheet .side-bar .save-details {
   font-size: 14px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header {
   background: #5e0000;
   border: 1px solid #5e0000;
@@ -125,26 +150,32 @@
   margin-top: 0px;
   height: 20px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header input[type=number],
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header input[type=text] {
   color: #f5efe0;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header a:hover {
   text-shadow: 0px 0px 8px var(--tertiary);
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header .inventory-section .inventory-list .item .item-image {
   border: none;
   margin: 3px 4px 3px 6px;
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, 0.5);
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header .side-bar .image-container,
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header .actions-options .actions-option {
   cursor: pointer;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .side-bar-section-header .actions-options .actions-option:hover {
   text-shadow: 0 0 10px var(--primary-light);
   color: var(--primary);
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .recall-knowledge .section-body button {
   background: var(--secondary);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 2px hsla(0deg, 0%, 100%, 0.2);
@@ -153,6 +184,7 @@
   transition: background 0.15s ease-in-out;
   margin-top: 3px;
 }
+
 .sheet.pf2e.actor.npc.dorako-theme .recall-knowledge .section-body button:hover {
   background: var(--secondary-light);
 }
@@ -169,12 +201,15 @@
 .side-bar-section-header .pf2e-see-simple-scale-statistics-High-color-primary {
   color: #3cff00;
 }
+
 .side-bar-section-header .pf2e-see-simple-scale-statistics-Moderate-color-primary {
   color: #ffff54;
 }
+
 .side-bar-section-header .pf2e-see-simple-scale-statistics-Low-color-primary {
   color: #ff8000;
 }
+
 .side-bar-section-header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
   color: #ff0000;
 }
@@ -193,16 +228,20 @@
 .npc.light-theme .tabs .item {
   color: var(--primary-light);
 }
+
 .npc.light-theme .tabs .item a:hover {
   text-shadow: 0px 0px 10px var(--primary);
 }
+
 .npc.light-theme .tabs .item.disabled {
   color: #ababab;
 }
+
 .npc.light-theme .tabs .item.disabled:hover {
   color: var(--primary-dark);
   text-shadow: 0px 0px 10px var(--primary-dark);
 }
+
 .npc.light-theme .tabs .item.active {
   color: var(--secondary-light);
   text-shadow: 0px 0px 10px var(--secondary-light);
@@ -225,8 +264,9 @@
 .sheet.pf2e.actor.npc.dark-theme .window-content {
   background: none;
   background-color: #111;
-  background: url(../../../ui/denim.png);
-  box-shadow: 0 0 10vw var(--color-shadow-dark) inset;
+  background: var(--sheet-dark);
+  /* background: url(../../../ui/denim.png);
+  box-shadow: 0 0 10vw var(--color-shadow-dark) inset; */
 }
 
 .sheet.pf2e.actor.npc.dark-theme .tags .tag option.tag_transparent,
@@ -241,7 +281,7 @@
 .sheet.pf2e.actor.npc.dark-theme .npc-sheet,
 .actor.pf2e.actor.npc.dark-theme .npc-sheet .entries-list .spellcasting-entry .header h4.name input,
 .sheet.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls,
-.sheet.pf2e.actor.npc.dark-theme ol.spell-list > li.spell-level-header,
+.sheet.pf2e.actor.npc.dark-theme ol.spell-list>li.spell-level-header,
 .sheet.pf2e.actor.npc.dark-theme .npc-sheet .side-bar-section.initiative select,
 .sheet.pf2e.actor.npc.dark-theme .npc-sheet .notes .notes-text {
   color: white;
@@ -259,7 +299,7 @@
 }
 
 .sheet.pf2e.actor.npc.dark-theme .inventory .item-summary,
-.sheet.pf2e.actor.npc.dark-theme ol.spell-list > li .item-summary {
+.sheet.pf2e.actor.npc.dark-theme ol.spell-list>li .item-summary {
   background-color: transparent;
 }
 
@@ -270,7 +310,7 @@
 
 .actor.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls .item-control.item-carry-type.active,
 .actor.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls .item-control.item-toggle-invest.active,
-.actor.pf2e.actor.npc.dark-theme ol.spell-list > li .item-name h4:hover,
+.actor.pf2e.actor.npc.dark-theme ol.spell-list>li .item-name h4:hover,
 .actor.pf2e.actor.npc.dark-theme .inventory .item-name h3:hover,
 .actor.pf2e.actor.npc.dark-theme .inventory .item-name h4:hover {
   color: var(--tertiary);

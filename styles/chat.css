@@ -1152,6 +1152,7 @@ div#scrollToBottom:hover {
     flex-direction: column;
     justify-content: left;
     align-self: center;
+    z-index: 2;
 }
 
 .sender-wrapper .message-sender,

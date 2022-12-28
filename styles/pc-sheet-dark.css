@@ -10,7 +10,8 @@
 }
 
 .actor.sheet.character .window-content .crb-style {
-  background: url(../img/header.webp), url("../../../ui/denim.png");
+  /* background: url(../img/header.webp), url("../../../ui/denim.png"); */
+  background: url(../img/header.webp), var(--sheet-dark);
   background-repeat: repeat-x, repeat;
   box-shadow: 0 0 50vw var(--color-shadow-dark) inset;
 }

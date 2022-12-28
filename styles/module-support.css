@@ -21,7 +21,11 @@
 :root {
   /* Global */
   --primary: #5e0000;
+  --primary-light: #b10000;
+  --primary-dark: #4b0000;
   --secondary: #171f69;
+  --secondary-light: #2532a8;
+  --secondary-dark: #0e133f;
   --tertiary: #E9D7A1;
   --alt: #786452;
   --alt-dark: #443730;

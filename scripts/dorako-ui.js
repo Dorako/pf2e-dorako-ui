@@ -1637,7 +1637,8 @@ Hooks.once("init", async () => {
   injectCSS("loot-sheet");
   injectCSS("chat-dark");
   injectCSS("module-support");
-  injectCSS("new-chat");
+  // injectCSS("new-chat");
+  injectCSS("chat");
 
   const root = document.querySelector(":root").style;
   if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {
@@ -1658,21 +1659,21 @@ Hooks.once("init", async () => {
 
   root.setProperty("--chat-input-height", game.settings.get("pf2e-dorako-ui", "chat-input-height").toString() + "px");
 
-  // if (game.settings.get("pf2e-dorako-ui", "skin-navigation")) injectCSS("navigation");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-controls")) injectCSS("controls");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-token-hud")) injectCSS("token-hud");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-sidebar")) injectCSS("sidebar");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-combat-tracker")) injectCSS("combat-tracker");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-effect-panel")) injectCSS("effect-panel");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-app-ui")) injectCSS("app-ui");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-hotbar")) injectCSS("hotbar");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-window-controls")) injectCSS("window-control");
+  if (game.settings.get("pf2e-dorako-ui", "skin-navigation")) injectCSS("navigation");
+  if (game.settings.get("pf2e-dorako-ui", "skin-controls")) injectCSS("controls");
+  if (game.settings.get("pf2e-dorako-ui", "skin-token-hud")) injectCSS("token-hud");
+  if (game.settings.get("pf2e-dorako-ui", "skin-sidebar")) injectCSS("sidebar");
+  if (game.settings.get("pf2e-dorako-ui", "skin-combat-tracker")) injectCSS("combat-tracker");
+  if (game.settings.get("pf2e-dorako-ui", "skin-effect-panel")) injectCSS("effect-panel");
+  if (game.settings.get("pf2e-dorako-ui", "skin-app-ui")) injectCSS("app-ui");
+  if (game.settings.get("pf2e-dorako-ui", "skin-hotbar")) injectCSS("hotbar");
+  if (game.settings.get("pf2e-dorako-ui", "skin-window-controls")) injectCSS("window-control");
   // if (game.settings.get("pf2e-dorako-ui", "skin-token-action-hud")) injectCSS("token-action-hud");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-custom-hotbar")) injectCSS("custom-hotbar");
-  // if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) {
-  //   const diceTrayEnabled = game.modules.get("dice-calculator")?.active;
-  //   if (diceTrayEnabled) injectCSS("dice-tray");
-  // }
+  if (game.settings.get("pf2e-dorako-ui", "skin-custom-hotbar")) injectCSS("custom-hotbar");
+  if (game.settings.get("pf2e-dorako-ui", "skin-dice-tray")) {
+    const diceTrayEnabled = game.modules.get("dice-calculator")?.active;
+    if (diceTrayEnabled) injectCSS("dice-tray");
+  }
   if (game.settings.get("pf2e-dorako-ui", "skin-simple-calendar")) injectCSS("simple-calendar");
   if (game.settings.get("pf2e-dorako-ui", "skin-crb-journal")) {
     injectCSS("crb-journal");

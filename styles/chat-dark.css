@@ -46,6 +46,7 @@
 
 .dark-theme.message {
     background-color: black;
+    color: white;
     background: var(--sheet-dark);
     background-size: cover;
 }
