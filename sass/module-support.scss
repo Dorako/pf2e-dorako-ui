@@ -1,3 +1,5 @@
+@import "colors";
+
 @mixin glass {
     border: none;
     border-radius: 3px;
@@ -10,6 +12,26 @@
 @mixin quick-transition {
     $transitionTime: 0.15s;
     transition: text-shadow $transitionTime ease-in-out, background-color $transitionTime ease-in-out, border $transitionTime ease-in-out, color $transitionTime ease-in-out, box-shadow $transitionTime ease-in-out;
+}
+
+/* SHOULD NOT BE HERE */
+#hotbar {
+    width: 647px;
+
+    .hotbar-page {
+        overflow: visible;
+        gap: 4px;
+        bottom: 56px;
+
+        .macro-list {
+            gap: 7px;
+            border: none;
+        }
+
+        .action-bar {
+            margin: 0px 5px 0px 3px;
+        }
+    }
 }
 
 /* ----------------------------------------- */
@@ -293,25 +315,6 @@ nav.damage-log-nav.tabs {
     }
 }
 
-#hotbar {
-    width: 647px;
-
-    .hotbar-page {
-        overflow: visible;
-        gap: 4px;
-        bottom: 56px;
-
-        .macro-list {
-            gap: 7px;
-            border: none;
-        }
-
-        .action-bar {
-            margin: 0px 5px 0px 3px;
-        }
-    }
-}
-
 /* ----------------------------------------- */
 /* Monk's hotbar expansion                   */
 /* ----------------------------------------- */
@@ -325,4 +328,71 @@ nav.damage-log-nav.tabs {
 
 #hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
     color: var(--tertiary-dark);
+}
+
+/* ----------------------------------------- */
+/* PF2e Dorako UI                            */
+/* ----------------------------------------- */
+
+.combat-sidebar li.combatant .token-image {
+    z-index: 0;
+}
+
+.combat-sidebar li.combatant .token-name {
+    z-index: 1;
+}
+
+.chat-message {
+    .flavor-text {
+        h4.action {
+            font-weight: 700;
+            line-height: 1.5em;
+            margin: 0;
+        }
+
+        .target-dc-result {
+            line-height: 0.75rem;
+            margin-bottom: 4px;
+
+            .target-dc, .result {
+                display: block;
+                margin: 1px 0;
+                width: fit-content;
+            }
+
+            .unadjusted {
+                text-decoration: line-through;
+            }
+
+            .adjusted {
+                text-decoration: underline dotted;
+                &.increased {
+                    color: $degree-success-critical;
+                }
+                &.decreased {
+                    color: $degree-failure-critical;
+                }
+            }
+
+            .degree-of-success {
+                .criticalSuccess {
+                    color: $degree-success-critical;
+                }
+                .success {
+                    color: $degree-success;
+                }
+                .failure {
+                    color: $degree-failure;
+                }
+                .criticalFailure {
+                    color: $degree-failure-critical;
+                }
+            }
+        }
+    }
+
+> .message-content .message-buttons {
+    display: flex;
+    margin: 0.35em 0 2px;
+}    
 }

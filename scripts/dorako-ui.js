@@ -657,7 +657,7 @@ function injectSpellInfo(html, spell) {
     let areaInfoLabel = document.createElement("strong");
     areaInfoLabel.textContent = i18n("PF2E.AreaLabel") + " ";
     let areaValue = document.createElement("span");
-    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.areaType;
+    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.type;
     areaInfo.append(areaInfoLabel);
     areaInfo.append(areaValue);
     spellInfo.append(areaInfo);
@@ -1697,81 +1697,3 @@ Hooks.once("init", async () => {
   if (setting == "dark" || setting == "darkRedHeader") injectCSS("familiar-sheet-dark");
   if (setting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
 });
-
-/* NEW */
-const MODULENAME = "pf2e-dorako-ui";
-
-import { registerSettings } from "./settings/settings";
-
-// Initialize module
-Hooks.once("init", (_actor) => {
-  console.log(`${MODULENAME} | Initializing ${MODULENAME}`);
-
-  registerSettings();
-
-  registerHandlebarsHelpers();
-
-  // Hooks that always run
-  Hooks.on("renderSettingsMenuAdjusted", (_app, html, _settings) => {
-    toggleMenuSettings(html, _settings);
-  });
-
-  Hooks.on("renderSettingsConfig", (_app, html) => {
-    toggleSettings(html);
-  });
-
-  // Register custom sheets (if any)
-});
-
-// Setup module
-Hooks.once("setup", () => {
-  console.log(`${MODULENAME} | Setting up`);
-  // Do anything after initialization but before ready
-});
-
-// When ready
-Hooks.once("ready", () => {
-  // Do anything once the module is ready
-  console.log(`${MODULENAME} | Ready`);
-
-  Hooks.callAll(`${MODULENAME}.moduleReady`);
-});
-
-function registerHandlebarsHelpers() {
-  Handlebars.registerHelper("includes", function (array, value, options) {
-    if (array.includes(value)) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this);
-    }
-  });
-  Handlebars.registerHelper("ifeq", function (v1, v2, options) {
-    if (v1 === v2) return options.fn(this);
-    else return options.inverse();
-  });
-  Handlebars.registerHelper("ifne", function (v1, v2, options) {
-    if (v1 !== v2) return options.fn(this);
-    else return options.inverse();
-  });
-
-  Handlebars.registerHelper("isNaN", function (context, options) {
-    if (isNaN(context) && !(typeof context === "string")) {
-      return options.fn(this);
-    } else {
-      return options.inverse(this);
-    }
-  });
-
-  Handlebars.registerHelper("undefined", function () {
-    return undefined;
-  });
-
-  Handlebars.registerHelper("hasKey", function (context, key) {
-    for (const prop of context) {
-      if (Object.getOwnPropertyDescriptor(prop, key)) {
-        return true;
-      }
-    }
-    return false;
-  });
-}

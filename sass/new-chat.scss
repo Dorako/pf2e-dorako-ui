@@ -68,6 +68,7 @@
     &.light-header-text {
         background-blend-mode: darken;
         color: white;
+        text-shadow: 0px 1px 1px black;
 
         .header-meta {
             color: white;
@@ -79,6 +80,7 @@
     &.dark-header-text {
         background-blend-mode: luminosity;
         color: black;
+        text-shadow: 0px 1px 1px white;
 
         .header-meta {
             color: hsla(0, 0%, 20%, 100%);
@@ -102,6 +104,7 @@
             .portrait {
                 height: var(--avatar-size);
                 object-fit: contain;
+                z-index: 0;
                 
                 &.actor {
                     border-radius: 3px;
@@ -115,6 +118,7 @@
             flex-direction: column;
             justify-content: left;
             align-self: center;
+            z-index: 1;
 
             .message-sender, .player-name {
                 align-self: flex-start;

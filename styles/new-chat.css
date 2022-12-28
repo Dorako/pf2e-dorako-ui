@@ -44,6 +44,7 @@
 .message-header.light-header-text {
   background-blend-mode: darken;
   color: white;
+  text-shadow: 0px 1px 1px black;
 }
 .message-header.light-header-text .header-meta {
   color: white;
@@ -53,6 +54,7 @@
 .message-header.dark-header-text {
   background-blend-mode: luminosity;
   color: black;
+  text-shadow: 0px 1px 1px white;
 }
 .message-header.dark-header-text .header-meta {
   color: hsl(0deg, 0%, 20%);
@@ -74,6 +76,7 @@
 .message-header .portrait-and-name .portrait-wrapper .portrait {
   height: var(--avatar-size);
   object-fit: contain;
+  z-index: 0;
 }
 .message-header .portrait-and-name .portrait-wrapper .portrait.actor {
   border-radius: 3px;
@@ -84,6 +87,7 @@
   flex-direction: column;
   justify-content: left;
   align-self: center;
+  z-index: 1;
 }
 .message-header .portrait-and-name .sender-wrapper .message-sender, .message-header .portrait-and-name .sender-wrapper .player-name {
   align-self: flex-start;

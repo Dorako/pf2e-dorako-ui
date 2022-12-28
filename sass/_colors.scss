@@ -1,0 +1,108 @@
+/* ----------------------------------------- */
+/* Color definitions                         */
+/* ----------------------------------------- */
+
+/* Colors */
+$white-color: white;
+$black-color: black;
+$gray-color: #808080;
+$light-gray-color: #ababab;
+$dark-gray-color: #545454;
+
+/* Global */
+$primary-color: #5e0000 !default;
+$secondary-color: #171f69 !default; /* used for mini headers, alternate primary color */
+$tertiary-color: #E9D7A1 !default; /* compliments the primary color, usually used in combination */
+
+$alt-color: #786452 !default; /* for all other uses */
+$alt-dark: #443730 !default;
+$background-color: #F8F4F1 !default;
+$background-dark: darken($background-color, 10);
+$sub-color: #605856 !default;
+
+/* Lighter / Darker */
+$light-color: lighten($primary-color, 10) !default;
+$dark-color: darken($primary-color, 10) !default;
+$tertiary-dark-color: darken($tertiary-color, 10) !default;
+$tertiary-light-color: lighten($tertiary-color, 10) !default;
+
+/* Text */
+$text-dark-color: #1C1C1C !default;
+
+
+/* ----------------------------------------- */
+/* Color schemes                             */
+/* ----------------------------------------- */
+
+/* Proficiency ranks */
+$rank-untrained: #424242 !default;
+$rank-trained: #171f69 !default;
+$rank-expert: #3c005e !default;
+$rank-master: #664400 !default;
+$rank-legendary: #5e0000 !default;
+
+/* Rarities */
+$rarity-common: #323232 !default;
+$rarity-uncommon: #98513d !default;
+$rarity-rare: #002664 !default;
+$rarity-unique: #54166e !default;
+
+/* Degrees of success */
+$degree-success-critical: rgb(0, 128, 0) !default;
+$degree-success: rgb(0, 0, 255) !default;
+$degree-failure: rgb(255, 69, 0) !default;
+$degree-failure-critical: rgb(255, 0, 0) !default;
+
+/* Value adjustments (e.g. weak/elite) */
+$adjusted-higher: #009988 !default;
+$adjusted-lower: #cc3311 !default;
+
+
+/* ----------------------------------------- */
+/* CSS Custom Properties                     */
+/* ----------------------------------------- */
+
+:root {
+  /* Global */
+  --primary: #{$primary-color};
+  --secondary: #{$secondary-color};
+  --tertiary: #{$tertiary-color};
+
+  --alt: #{$alt-color};
+  --alt-dark: #{$alt-dark};
+  --bg: #{$background-color};
+  --bg-dark: #{$background-dark};
+  --sub: #{$sub-color};
+  --color-disabled: #{$light-gray-color};
+
+  // Inline links and user visibility
+  --inline-link-bg: #ddd;
+  --inline-repost-bg: #{lighten(#ddd, 5%)};
+  --visibility-gm-bg: #e8e8ef;
+  --visibility-owner-bg: #ddebe1;
+  --blind-roll: #f5eaf5;
+
+  /* Lighter / Darker */
+  --light: #{$light-color};
+  --dark: #{$dark-color};
+  --tertiary-dark: #{$tertiary-dark-color};
+  --tertiary-light: #{$tertiary-light-color};
+
+  /* Text */
+  --body: var(--text-dark);
+  --color-text-trait: #f5efe0;
+  --text-dark: #{$text-dark-color};
+  --text-light: #{$white-color};
+
+  /* Borders */
+  --color-border-trait: #d8c384;
+  --color-border-divider: #baa991;
+
+  /* Headers w/ boxes */
+  --header-color: var(--text-light);
+  --header-bg: var(--secondary);
+
+  /* Sidebar */
+  --sidebar-label: var(--tertiary-dark);
+  --sidebar-title: var(--tertiary);
+}

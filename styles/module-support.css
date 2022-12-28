@@ -1,4 +1,78 @@
 /* ----------------------------------------- */
+/* Color definitions                         */
+/* ----------------------------------------- */
+/* Colors */
+/* Global */
+/* used for mini headers, alternate primary color */
+/* compliments the primary color, usually used in combination */
+/* for all other uses */
+/* Lighter / Darker */
+/* Text */
+/* ----------------------------------------- */
+/* Color schemes                             */
+/* ----------------------------------------- */
+/* Proficiency ranks */
+/* Rarities */
+/* Degrees of success */
+/* Value adjustments (e.g. weak/elite) */
+/* ----------------------------------------- */
+/* CSS Custom Properties                     */
+/* ----------------------------------------- */
+:root {
+  /* Global */
+  --primary: #5e0000;
+  --secondary: #171f69;
+  --tertiary: #E9D7A1;
+  --alt: #786452;
+  --alt-dark: #443730;
+  --bg: #F8F4F1;
+  --bg-dark: #e7d9cf;
+  --sub: #605856;
+  --color-disabled: #ababab;
+  --inline-link-bg: #ddd;
+  --inline-repost-bg: #eaeaea;
+  --visibility-gm-bg: #e8e8ef;
+  --visibility-owner-bg: #ddebe1;
+  --blind-roll: #f5eaf5;
+  /* Lighter / Darker */
+  --light: #910000;
+  --dark: #2b0000;
+  --tertiary-dark: #dfc578;
+  --tertiary-light: #f3e9ca;
+  /* Text */
+  --body: var(--text-dark);
+  --color-text-trait: #f5efe0;
+  --text-dark: #1C1C1C;
+  --text-light: white;
+  /* Borders */
+  --color-border-trait: #d8c384;
+  --color-border-divider: #baa991;
+  /* Headers w/ boxes */
+  --header-color: var(--text-light);
+  --header-bg: var(--secondary);
+  /* Sidebar */
+  --sidebar-label: var(--tertiary-dark);
+  --sidebar-title: var(--tertiary);
+}
+
+/* SHOULD NOT BE HERE */
+#hotbar {
+  width: 647px;
+}
+#hotbar .hotbar-page {
+  overflow: visible;
+  gap: 4px;
+  bottom: 56px;
+}
+#hotbar .hotbar-page .macro-list {
+  gap: 7px;
+  border: none;
+}
+#hotbar .hotbar-page .action-bar {
+  margin: 0px 5px 0px 3px;
+}
+
+/* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
 .message.chat-message.dfce-cm-top {
@@ -286,22 +360,6 @@ nav.damage-log-nav.tabs .item.active {
   font-size: var(--font-size-12);
 }
 
-#hotbar {
-  width: 647px;
-}
-#hotbar .hotbar-page {
-  overflow: visible;
-  gap: 4px;
-  bottom: 56px;
-}
-#hotbar .hotbar-page .macro-list {
-  gap: 7px;
-  border: none;
-}
-#hotbar .hotbar-page .action-bar {
-  margin: 0px 5px 0px 3px;
-}
-
 /* ----------------------------------------- */
 /* Monk's hotbar expansion                   */
 /* ----------------------------------------- */
@@ -313,6 +371,60 @@ nav.damage-log-nav.tabs .item.active {
 
 #hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
   color: var(--tertiary-dark);
+}
+
+/* ----------------------------------------- */
+/* PF2e Dorako UI                            */
+/* ----------------------------------------- */
+.combat-sidebar li.combatant .token-image {
+  z-index: 0;
+}
+
+.combat-sidebar li.combatant .token-name {
+  z-index: 1;
+}
+
+.chat-message .flavor-text h4.action {
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+}
+.chat-message .flavor-text .target-dc-result {
+  line-height: 0.75rem;
+  margin-bottom: 4px;
+}
+.chat-message .flavor-text .target-dc-result .target-dc, .chat-message .flavor-text .target-dc-result .result {
+  display: block;
+  margin: 1px 0;
+  width: fit-content;
+}
+.chat-message .flavor-text .target-dc-result .unadjusted {
+  text-decoration: line-through;
+}
+.chat-message .flavor-text .target-dc-result .adjusted {
+  text-decoration: underline dotted;
+}
+.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: rgb(0, 128, 0);
+}
+.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: rgb(255, 0, 0);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: rgb(0, 128, 0);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: rgb(0, 0, 255);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: rgb(255, 69, 0);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: rgb(255, 0, 0);
+}
+.chat-message > .message-content .message-buttons {
+  display: flex;
+  margin: 0.35em 0 2px;
 }
 
 /*# sourceMappingURL=module-support.css.map */
