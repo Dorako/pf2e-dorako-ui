@@ -223,21 +223,22 @@ Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
 
   if (collapseImmunities) {
     let section = html.find(".immunities")[0];
-    section.classList.add("collapsed");
+    section.classList.add("collapsed", "empty");
   }
 
   if (collapseWeaknesses) {
     let section = html.find(".weaknesses")[0];
-    section.classList.add("collapsed");
+    section.classList.add("collapsed", "empty");
   }
 
   if (collapseResistances) {
     let section = html.find(".resistances")[0];
-    section.classList.add("collapsed");
+    section.classList.add("collapsed", "empty");
   }
 
   let saves = html.find(".saves")[0];
   let saveDetails = html.find(".save-details")[0];
+  saveDetails.classList.remove("side-bar-section");
   // console.log({ saves });
   // console.log({ saveDetails });
 
@@ -657,7 +658,7 @@ function injectSpellInfo(html, spell) {
     let areaInfoLabel = document.createElement("strong");
     areaInfoLabel.textContent = i18n("PF2E.AreaLabel") + " ";
     let areaValue = document.createElement("span");
-    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.areaType;
+    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.type;
     areaInfo.append(areaInfoLabel);
     areaInfo.append(areaValue);
     spellInfo.append(areaInfo);
@@ -1238,19 +1239,21 @@ Hooks.once("init", async () => {
     requiresReload: true
   });
 
-  game.settings.register("pf2e-dorako-ui", "avatar-border", {
-    name: i18n("dorako-ui.settings.avatar-border.name"),
-    hint: i18n("dorako-ui.settings.avatar-border.hint"),
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean,
-    requiresReload: true
-  });
+  // game.settings.register("pf2e-dorako-ui", "avatar-border", {
+  //   name: i18n("dorako-ui.settings.avatar-border.name"),
+  //   hint: i18n("dorako-ui.settings.avatar-border.hint"),
+  //   scope: "world",
+  //   config: true,
+  //   default: false,
+  //   type: Boolean,
+  //   requiresReload: true
+  // });
 
   game.settings.register("pf2e-dorako-ui", "chat-input-height", {
     name: i18n("dorako-ui.settings.chat-input-height.name"),
-    hint: (game.modules.get("CautiousGamemastersPack")?.active) ? i18n("dorako-ui.settings.chat-input-height.CGMPhint") : i18n("dorako-ui.settings.chat-input-height.hint"),
+    hint: game.modules.get("CautiousGamemastersPack")?.active
+      ? i18n("dorako-ui.settings.chat-input-height.CGMPhint")
+      : i18n("dorako-ui.settings.chat-input-height.hint"),
     scope: "client",
     type: Number,
     default: 90,
@@ -1542,8 +1545,13 @@ Hooks.once("init", async () => {
   });
 
   injectCSS("dorako-ui");
+  injectCSS("reset");
   injectCSS("npc-sheet");
   injectCSS("loot-sheet");
+  injectCSS("chat-dark");
+  injectCSS("module-support");
+  // injectCSS("new-chat");
+  // injectCSS("chat");
 
   const root = document.querySelector(":root").style;
   if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {
@@ -1589,13 +1597,12 @@ Hooks.once("init", async () => {
   if (headerStyle != "none") {
     injectCSS("header");
   }
-  injectCSS("chat-dark");
 
   if (game.settings.get("pf2e-dorako-ui", "skin-combat-carousel")) injectCSS("combat-carousel");
 
   setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
   if (setting == "both" || setting == "bg-color") injectCSS("chat-blind-whisper");
-  if (game.settings.get("pf2e-dorako-ui", "avatar-border")) injectCSS("chat-portrait-border");
+  // if (game.settings.get("pf2e-dorako-ui", "avatar-border")) injectCSS("chat-portrait-border");
   if (game.settings.get("pf2e-dorako-ui", "compact-ui")) injectCSS("compact-ui");
   if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
   if (game.settings.get("pf2e-dorako-ui", "no-chat-control-icon")) injectCSS("no-chat-control-icon");

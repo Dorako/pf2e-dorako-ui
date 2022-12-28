@@ -104,7 +104,7 @@
  .app.sidebar-popout {
      border: none;
      border-radius: 5px;
-     min-width: 300px;
+     /* min-width: 300px; */
      overflow: hidden;
      /* background-color: var(--dorako-bg-current); */
  }

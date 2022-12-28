@@ -1,0 +1,225 @@
+@mixin glass {
+    border: none;
+    border-radius: 3px;
+    background: none;
+    background-color: rgba(20, 20, 20, 0.60);
+    box-shadow: var(--glassy);
+    color: var(--color-text-light-heading);
+}
+
+@mixin quick-transition {
+    $transitionTime: 0.15s;
+    transition: text-shadow $transitionTime ease-in-out, background-color $transitionTime ease-in-out, border $transitionTime ease-in-out, color $transitionTime ease-in-out, box-shadow $transitionTime ease-in-out;
+}
+
+
+/* ----------------------------------------- */
+/* Sidebar                                   */
+/* ----------------------------------------- */
+
+#ui-right {
+    #sidebar {
+        height: -webkit-fill-available;
+    }
+}
+
+.chat-sidebar {
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+#chat-form {
+    margin: 0px 6px;
+    flex: 0 0 var(--chat-input-height);
+}
+
+
+
+
+/* ----------------------------------------- */
+/* Emotes                                    */
+/* ----------------------------------------- */
+
+.message.emote p {
+    text-align: center;
+}
+
+/* ----------------------------------------- */
+/* Header                                    */
+/* ----------------------------------------- */
+
+.message-header {
+    background: none;
+    padding: 5px 5px 0px 5px;
+    margin: -5px -5px -0px -5px;
+    border-radius: 5px 5px 0px 0px;
+    gap: 5px;
+    align-items: center;
+
+    .header-meta {
+        border-radius: 3px;
+        padding: 2px;
+        font-size: x-small;
+        align-self: center;
+        text-align: center;
+        text-shadow: none;
+    }
+
+    &.light-header-text {
+        background-blend-mode: darken;
+        color: white;
+        text-shadow: 0px 1px 1px black;
+
+        .header-meta {
+            color: white;
+            background-color: hsla(0, 0%, 50%, 40%);
+            border: 1px solid hsla(0, 0%, 100%, 30%);
+        }
+    }
+
+    &.dark-header-text {
+        background-blend-mode: luminosity;
+        color: black;
+        text-shadow: 0px 1px 1px white;
+
+        .header-meta {
+            color: hsla(0, 0%, 20%, 100%);
+            background-color: hsla(0, 0%, 90%, 50%);
+            border: 1px solid hsla(0, 0%, 30%, 40%);    
+        }
+    }
+
+    .portrait-and-name {
+        flex-grow: 1;
+        display: flex;
+        gap: 5px;
+    
+        .portrait-wrapper {
+            width: var(--avatar-size);
+            display: flex;
+            flex: none;
+            justify-content: center;
+            align-items: center;
+    
+            .portrait {
+                height: var(--avatar-size);
+                object-fit: contain;
+                z-index: 0;
+                
+                &.actor {
+                    border-radius: 3px;
+                }
+            }
+        }
+
+        .sender-wrapper {
+            display: flex;
+            gap: 3px;
+            flex-direction: column;
+            justify-content: left;
+            align-self: center;
+            z-index: 1;
+
+            .message-sender, .player-name {
+                align-self: flex-start;
+            }
+        }    
+    }
+}
+
+
+/* ----------------------------------------- */
+/* Damage buttons                            */
+/* ----------------------------------------- */
+
+.message {
+    .message-content {
+        .chat-damage-buttons {
+            gap: 3px;
+
+            button {
+                &:hover {
+                    box-shadow: none;
+                    color: white;
+                    border: 1px solid #7B322F;
+                    background-color: var(--primary-light);    
+                    img {
+                        filter: invert(1);
+                    }
+                    &.half-damage .fa-heart-broken::after {
+                        content: "\f7a9";
+                        font-family: "Font Awesome 5 Free";
+                        color: hsla(0, 0%, 0%, 0.5);
+                        display: block;
+                        z-index: 1;
+                        position: absolute;
+                        top: 1px;
+                        left: 28%;
+                        width: 22%;
+                        overflow: hidden;
+                    }
+                }
+
+                &.half-damage .fa-heart-broken::after {
+                    content: "\f7a9";
+                    font-family: "Font Awesome 5 Free";
+                    color: hsla(0, 0%, 100%, 0.5);
+                    display: block;
+                    z-index: 1;
+                    position: absolute;
+                    top: 1px;
+                    left: 28%;
+                    width: 22%;
+                    overflow: hidden;
+                }
+
+                &.shield-block {
+                    &:hover {
+                        border: 1px solid #464C83;
+                        background-color: var(--secondary-light);
+                    }
+                    &.shield-activated {
+                        background-color: var(--secondary-light);
+                        &:hover {
+                            background-color: var(--secondary-dark);
+                        }
+                    }
+                }
+
+                &.heal-damage {
+                    &:hover {
+                        background-color: green;
+                        border: 1px solid lightgreen;
+
+                        .fa-plus {
+                            color: green;
+                            text-shadow: none;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ----------------------------------------- */
+/* Chat card                                 */
+/* ----------------------------------------- */
+
+.pf2e.chat-card .card-header {
+    h3.pf2-icon {
+        font-family: Pathfinder2eActions;
+        font-size: xxx-large;
+        flex: 0 0 34px;
+    }
+
+    h4 {
+        s {
+            color: gray;
+        }
+        span.heightened {
+            color: green;
+        }
+    }
+}

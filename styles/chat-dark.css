@@ -1,17 +1,3 @@
-:root {
-    /* --bg-current: var(--sheet-dark); */
-    /* --pf2e-body-primary: hsl(0, 0%, 100%);
-    --pf2e-body-secondary: hsl(0, 0%, 60%);
-    --pf2e-body-inverse: hsl(0, 0%, 00%); */
-
-    /* --pf2e-shadow-dynamic: var(--pf2e-half-transparent-dark); */
-    /* --pf2e-color-ornament: var(--pf2e-color-ornament-for-dark); */
-    /* --pf2e-translucent-middle: var(--pf2e-translucent-middle-for-dark); */
-    /* --pf2e-translucent-very: var(--pf2e-translucent-very-for-dark); */
-    /* --filter-img: var(--filter-dark); */
-}
-
-
 .dark-theme.chat-message select,
 .dark-theme.chat-message button,
 .dark-theme.chat-message form button,
@@ -60,13 +46,9 @@
 
 .dark-theme.message {
     background-color: black;
+    color: white;
     background: var(--sheet-dark);
     background-size: cover;
-    border: none;
-    box-shadow: var(--gold-and-glow);
-    color: white;
-    padding: 0;
-    text-shadow: var(--pf2e-half-transparent-dark);
 }
 
 .dark-theme.chat-message.blind,

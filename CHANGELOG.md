@@ -1,3 +1,16 @@
+# 1.9.0
+
+Reimplemented much of the styling in Sass, which will make it easier to maintain and contribute to the project.
+
+Fix to area styling of spells.
+Fix to checks missing strike-through styling when degree of success is adjusted.
+Fix coloring of adjusted AC/saves in new NPC sheets.
+
+Several updates by @MrVauxs:
+
+Uses v10 API for saving settings.
+Updates to Damage Target module styling.
+
 # 1.8.4
 
 Added themes for NPC sheets.

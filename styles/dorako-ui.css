@@ -57,7 +57,7 @@
 
     --pf2e-sheets-bg: url(../img/background-light.webp);
     --sheet-light: url(../img/background-light.webp);
-    --sheet-dark: url(../img/background-dark.webp);
+    --sheet-dark: url(../img/background-dark3.webp);
 
     --dorako-text-shadow: 0px 0px 3px black;
     --dorako-box-shadow: 0px 0px 3px black;
@@ -188,23 +188,11 @@ form .form-group label {
 } */
 
 
-#chat-controls i.fas,
+/* #chat-controls i.fas,
 #sidebar-tabs .fa-solid,
 #sidebar-tabs i.fas {
     text-shadow: var(--dorako-text-shadow);
-}
-
-
-/* button>i {
-    margin-right: 0px;
 } */
-
-
-.window-app {
-    /* box-shadow: var(--glassy) !important; */
-    border-radius: 8px !important;
-}
-
 
 
 img {
