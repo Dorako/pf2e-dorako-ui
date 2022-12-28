@@ -1510,6 +1510,14 @@ div#scrollToBottom:hover {
     padding: 0px 5px 5px 5px;
 }
 
+.hidden.right #target-damage-hide-button {
+    margin: 2px 0 0 0;
+}
+
+.hidden #target-damage-hide-button {
+    margin: 5px 0 0 0;
+}
+
 .pf2e.chat-card .card-header h3.pf2-icon {
     font-family: Pathfinder2eActions;
     font-size: xxx-large;
