@@ -379,6 +379,25 @@ nav.damage-log-nav.tabs {
     color: var(--tertiary-dark);
 }
 
+#hotbar {
+    width: 647px;
+
+    .hotbar-page {
+        overflow: visible;
+        gap: 4px;
+        bottom: 56px;
+
+        .macro-list {
+            gap: 7px;
+            border: none;
+        }
+
+        .action-bar {
+            margin: 0px 5px 0px 3px;
+        }
+    }
+}
+
 /* ----------------------------------------- */
 /* Token Action HUD                          */
 /* ----------------------------------------- */
