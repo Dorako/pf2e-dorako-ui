@@ -1,0 +1,21 @@
+.combat-sidebar {
+
+    // The gap left by a combatant being dragged to a new position
+    .drag-gap {
+        visibility: hidden;
+    }
+
+    .hidden-name .token-name h4 {
+        color: var(--color-text-light-7);
+    }
+
+    li.combatant {
+        .token-image {
+            margin: 2px;
+        }
+
+        &.active {
+            background: var(--primary);
+        }
+    }
+}

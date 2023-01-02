@@ -1,40 +1,5 @@
-@mixin glass {
-    border: none;
-    border-radius: 3px;
-    background: none;
-    background-color: rgba(20, 20, 20, 0.60);
-    box-shadow: var(--glassy);
-    color: var(--color-text-light-heading);
-}
-
-@mixin quick-transition {
-    $transitionTime: 0.15s;
-    transition: text-shadow $transitionTime ease-in-out, background-color $transitionTime ease-in-out, border $transitionTime ease-in-out, color $transitionTime ease-in-out, box-shadow $transitionTime ease-in-out;
-}
-
-
-/* ----------------------------------------- */
-/* Sidebar                                   */
-/* ----------------------------------------- */
-
-#ui-right {
-    #sidebar {
-        height: -webkit-fill-available;
-    }
-}
-
-.chat-sidebar {
-    gap: 5px;
-    padding-bottom: 5px;
-}
-
-#chat-form {
-    margin: 0px 6px;
-    flex: 0 0 var(--chat-input-height);
-}
-
-
-
+@use "sass:color";
+@import "mixins";
 
 /* ----------------------------------------- */
 /* Emotes                                    */
@@ -122,22 +87,53 @@
 
             .message-sender, .player-name {
                 align-self: flex-start;
+                    line-height: initial;
             }
         }    
     }
 }
 
+/* ----------------------------------------- */
+/* Clutter                                   */
+/* ----------------------------------------- */
+
+.chat-message .message-content .damage-roll .dice-result .dice-total .instances {
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+}
 
 /* ----------------------------------------- */
 /* Damage buttons                            */
 /* ----------------------------------------- */
 
 .message {
-    .message-content {
-        .chat-damage-buttons {
+    .message-content {        
+        .damage-application {
             gap: 3px;
 
             button {
+                &.half-damage  {
+                    .transparent-half {
+                        display: none;
+                    }
+                    .fa-heart-broken {
+                        position: relative;
+
+                        &::after {
+                            content: "\f7a9";
+                            font-family: "Font Awesome 5 Free";
+                            color: hsla(0, 0%, 0%, 0.5);
+                            display: block;
+                            z-index: 1;
+                            position: absolute;
+                            top: 0px;
+                            left: 2px;
+                            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+                            color: gray;
+                        }
+                    }
+                }
+
                 &:hover {
                     box-shadow: none;
                     color: white;
@@ -146,31 +142,11 @@
                     img {
                         filter: invert(1);
                     }
-                    &.half-damage .fa-heart-broken::after {
-                        content: "\f7a9";
-                        font-family: "Font Awesome 5 Free";
-                        color: hsla(0, 0%, 0%, 0.5);
-                        display: block;
-                        z-index: 1;
-                        position: absolute;
-                        top: 1px;
-                        left: 28%;
-                        width: 22%;
-                        overflow: hidden;
-                    }
-                }
 
-                &.half-damage .fa-heart-broken::after {
-                    content: "\f7a9";
-                    font-family: "Font Awesome 5 Free";
-                    color: hsla(0, 0%, 100%, 0.5);
-                    display: block;
-                    z-index: 1;
-                    position: absolute;
-                    top: 1px;
-                    left: 28%;
-                    width: 22%;
-                    overflow: hidden;
+                    &.half-damage .fa-heart-broken::after {
+                        clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+                        color: gray;
+                    }
                 }
 
                 &.shield-block {
@@ -202,24 +178,121 @@
     }
 }
 
-
 /* ----------------------------------------- */
 /* Chat card                                 */
 /* ----------------------------------------- */
 
-.pf2e.chat-card .card-header {
-    h3.pf2-icon {
-        font-family: Pathfinder2eActions;
-        font-size: xxx-large;
-        flex: 0 0 34px;
+
+// Chat messages can be popped out, .message is too general and applies to stuff in modules
+.message.chat-message {
+    @include sheet;
+    margin: 5px 3px 3px 3px;
+
+    &.whisper {
+        background-color: var(--whisper-bg);
+        background-blend-mode: luminosity;
+    }
+    
+    &.blind {
+        background-color: var(--blind-bg);
+        background-blend-mode: luminosity;
     }
 
-    h4 {
-        s {
-            color: gray;
+    .flavor-text {
+        hr {
+            display: none;
         }
-        span.heightened {
-            color: green;
+    }
+    .message-content {  
+        margin-top: 5px;
+        .pf2e-pd-card {
+            hr {
+                display: none;
+            }
+        }
+    }
+
+    [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+        border-radius: 3px;
+        background: #f5eaf5aa; // blind
+        outline: 1px dashed #720073; // blind
+    }
+}
+
+
+.pf2e.chat-card  {
+    .tags {
+        margin: 3px 0px;
+
+        .vr {
+            display: none;
+        }
+    }
+
+    .card-buttons .spell-attack-buttons {
+        gap: 3px;
+    }
+
+    .card-header {
+        border: none;
+
+        img {
+            @include gold-border;
+            flex: 0 0 34px;
+            height: 34px;
+            width: 34px;
+            margin-right: 6px;
+        }
+
+        h3 {
+            display: flex;
+            margin-top: 3px;
+            margin-bottom: -3px;
+            line-height: 0.95em;
+            font-family: var(--serif);
+            font-size: var(--font-size-22);
+            text-rendering: geometricPrecision;
+        }
+
+        h3.pf2-icon {
+            font-family: Pathfinder2eActions;
+            font-size: xxx-large;
+            flex: 0 0 34px;
+        }
+    
+        h4 {
+            s {
+                color: gray;
+            }
+            span.heightened {
+                color: green;
+            }
+        }
+    }
+
+    .card-content {
+        border-image-repeat: repeat;
+        border-image-slice: 11;
+        border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:gray;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        border-image-width: 14px;
+        border-style: double;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-weight: 500;
+        margin: 0px;
+        // border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+         
+        hr {
+            margin: 0px -10px;
+            border-color: gray;
+            border-bottom: none;
+        }
+    }
+    .card-footer {
+        border: none;
+
+        span {
+            border-right: 1px solid gray;
         }
     }
 }

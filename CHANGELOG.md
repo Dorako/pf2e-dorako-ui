@@ -1,3 +1,11 @@
+# 1.9.1
+This is kind of a 1.9.0++ release.
+
+(Maintenance) Update css classes that were changed by the system
+(Maintenance) Update npc sheet styling to use new IWR data locations
+(New) Use modified colors for IWR for dark chat theme
+(Removed) Various settings have been removed due to the refactor. If something you were using is gone, please create an issue for it.
+
 # 1.9.0
 
 Reimplemented much of the styling in Sass, which will make it easier to maintain and contribute to the project.

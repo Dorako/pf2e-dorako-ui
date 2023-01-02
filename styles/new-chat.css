@@ -1,21 +1,4 @@
 /* ----------------------------------------- */
-/* Sidebar                                   */
-/* ----------------------------------------- */
-#ui-right #sidebar {
-  height: -webkit-fill-available;
-}
-
-.chat-sidebar {
-  gap: 5px;
-  padding-bottom: 5px;
-}
-
-#chat-form {
-  margin: 0px 6px;
-  flex: 0 0 var(--chat-input-height);
-}
-
-/* ----------------------------------------- */
 /* Emotes                                    */
 /* ----------------------------------------- */
 .message.emote p {
@@ -91,62 +74,69 @@
 }
 .message-header .portrait-and-name .sender-wrapper .message-sender, .message-header .portrait-and-name .sender-wrapper .player-name {
   align-self: flex-start;
+  line-height: initial;
+}
+
+/* ----------------------------------------- */
+/* Clutter                                   */
+/* ----------------------------------------- */
+.chat-message .message-content .damage-roll .dice-result .dice-total .instances {
+  padding-bottom: 4px;
+  margin-bottom: 0px;
 }
 
 /* ----------------------------------------- */
 /* Damage buttons                            */
 /* ----------------------------------------- */
-.message .message-content .chat-damage-buttons {
+.message .message-content .damage-application {
   gap: 3px;
 }
-.message .message-content .chat-damage-buttons button:hover {
-  box-shadow: none;
-  color: white;
-  border: 1px solid #7B322F;
-  background-color: var(--primary-light);
+.message .message-content .damage-application button.half-damage .transparent-half {
+  display: none;
 }
-.message .message-content .chat-damage-buttons button:hover img {
-  filter: invert(1);
+.message .message-content .damage-application button.half-damage .fa-heart-broken {
+  position: relative;
 }
-.message .message-content .chat-damage-buttons button:hover.half-damage .fa-heart-broken::after {
+.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
   content: "\f7a9";
   font-family: "Font Awesome 5 Free";
   color: hsla(0deg, 0%, 0%, 0.5);
   display: block;
   z-index: 1;
   position: absolute;
-  top: 1px;
-  left: 28%;
-  width: 22%;
-  overflow: hidden;
+  top: 0px;
+  left: 2px;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  color: gray;
 }
-.message .message-content .chat-damage-buttons button.half-damage .fa-heart-broken::after {
-  content: "\f7a9";
-  font-family: "Font Awesome 5 Free";
-  color: hsla(0deg, 0%, 100%, 0.5);
-  display: block;
-  z-index: 1;
-  position: absolute;
-  top: 1px;
-  left: 28%;
-  width: 22%;
-  overflow: hidden;
+.message .message-content .damage-application button:hover {
+  box-shadow: none;
+  color: white;
+  border: 1px solid #7B322F;
+  background-color: var(--primary-light);
 }
-.message .message-content .chat-damage-buttons button.shield-block:hover {
+.message .message-content .damage-application button:hover img {
+  filter: invert(1);
+}
+.message .message-content .damage-application button:hover.half-damage .fa-heart-broken::after {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  color: gray;
+}
+.message .message-content .damage-application button.shield-block:hover {
   border: 1px solid #464C83;
   background-color: var(--secondary-light);
 }
-.message .message-content .chat-damage-buttons button.shield-block.shield-activated {
+.message .message-content .damage-application button.shield-block.shield-activated {
   background-color: var(--secondary-light);
 }
-.message .message-content .chat-damage-buttons button.shield-block.shield-activated:hover {
+.message .message-content .damage-application button.shield-block.shield-activated:hover {
   background-color: var(--secondary-dark);
 }
-.message .message-content .chat-damage-buttons button.heal-damage:hover {
+.message .message-content .damage-application button.heal-damage:hover {
   background-color: green;
   border: 1px solid lightgreen;
 }
-.message .message-content .chat-damage-buttons button.heal-damage:hover .fa-plus {
+.message .message-content .damage-application button.heal-damage:hover .fa-plus {
   color: green;
   text-shadow: none;
 }
@@ -154,6 +144,70 @@
 /* ----------------------------------------- */
 /* Chat card                                 */
 /* ----------------------------------------- */
+.message.chat-message {
+  border: none;
+  background-image: var(--sheet-light);
+  background-size: cover;
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  margin: 5px 3px 3px 3px;
+}
+.message.chat-message.whisper {
+  background-color: var(--whisper-bg);
+  background-blend-mode: luminosity;
+}
+.message.chat-message.blind {
+  background-color: var(--blind-bg);
+  background-blend-mode: luminosity;
+}
+.message.chat-message .flavor-text hr {
+  display: none;
+}
+.message.chat-message .message-content {
+  margin-top: 5px;
+}
+.message.chat-message .message-content .pf2e-pd-card hr {
+  display: none;
+}
+.message.chat-message [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+  border-radius: 3px;
+  background: rgba(245, 234, 245, 0.6666666667);
+  outline: 1px dashed #720073;
+}
+
+.pf2e.chat-card .tags {
+  margin: 3px 0px;
+}
+.pf2e.chat-card .tags .vr {
+  display: none;
+}
+.pf2e.chat-card .card-buttons .spell-attack-buttons {
+  gap: 3px;
+}
+.pf2e.chat-card .card-header {
+  border: none;
+}
+.pf2e.chat-card .card-header img {
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  flex: 0 0 34px;
+  height: 34px;
+  width: 34px;
+  margin-right: 6px;
+}
+.pf2e.chat-card .card-header h3 {
+  display: flex;
+  margin-top: 3px;
+  margin-bottom: -3px;
+  line-height: 0.95em;
+  font-family: var(--serif);
+  font-size: var(--font-size-22);
+  text-rendering: geometricPrecision;
+}
 .pf2e.chat-card .card-header h3.pf2-icon {
   font-family: Pathfinder2eActions;
   font-size: xxx-large;
@@ -164,6 +218,28 @@
 }
 .pf2e.chat-card .card-header h4 span.heightened {
   color: green;
+}
+.pf2e.chat-card .card-content {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:gray;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 500;
+  margin: 0px;
+}
+.pf2e.chat-card .card-content hr {
+  margin: 0px -10px;
+  border-color: gray;
+  border-bottom: none;
+}
+.pf2e.chat-card .card-footer {
+  border: none;
+}
+.pf2e.chat-card .card-footer span {
+  border-right: 1px solid gray;
 }
 
 /*# sourceMappingURL=new-chat.css.map */

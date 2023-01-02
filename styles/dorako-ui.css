@@ -12,6 +12,7 @@
     /* --dorako-bg-current: var(--dorako-bg-glass); */
     --dorako-bg-current: var(--dorako-sheet-light);
     /* --dorako-bg-current: hsl(0,0%, 10%); */
+    --pf2e-color-mono-dark: hsl(0, 0%, 15%);
 
     --blind-bg: #A57aA5;
     --whisper-bg: #E3E3FF;
@@ -57,7 +58,7 @@
 
     --pf2e-sheets-bg: url(../img/background-light.webp);
     --sheet-light: url(../img/background-light.webp);
-    --sheet-dark: url(../img/background-dark3.webp);
+    --sheet-dark: url(../img/background-dark4.webp);
 
     --dorako-text-shadow: 0px 0px 3px black;
     --dorako-box-shadow: 0px 0px 3px black;

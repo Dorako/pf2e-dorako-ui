@@ -1,47 +1,50 @@
+@use "sass:color";
 @import "colors";
-
-@mixin glass {
-    border: none;
-    border-radius: 3px;
-    background: none;
-    background-color: rgba(20, 20, 20, 0.60);
-    box-shadow: var(--glassy);
-    color: var(--color-text-light-heading);
-}
-
-@mixin quick-transition {
-    $transitionTime: 0.15s;
-    transition: text-shadow $transitionTime ease-in-out, background-color $transitionTime ease-in-out, border $transitionTime ease-in-out, color $transitionTime ease-in-out, box-shadow $transitionTime ease-in-out;
-}
+@import "mixins";
 
 /* SHOULD NOT BE HERE */
-#hotbar {
-    width: 647px;
+// #hotbar {
+//     width: 647px;
 
-    .hotbar-page {
-        overflow: visible;
-        gap: 4px;
-        bottom: 56px;
+//     .hotbar-page {
+//         overflow: visible;
+//         gap: 4px;
+//         bottom: 56px;
 
-        .macro-list {
-            gap: 7px;
-            border: none;
-        }
+//         .macro-list {
+//             gap: 7px;
+//             border: none;
+//         }
 
-        .action-bar {
-            margin: 0px 5px 0px 3px;
-        }
-    }
-}
+//         .action-bar {
+//             margin: 0px 5px 0px 3px;
+//         }
+//     }
+// }
 
 /* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
 
+.message.chat-message.dark-theme {
+    &.dfce-cm-middle .message-delete, 
+    &.dfce-cm-bottom .message-delete {
+        color: white;
+        top: 5px;
+        text-shadow: 0px 0px 1px black;
+    }
+}
+
+
 .message.chat-message {
+    .message-delete {
+        z-index: 1;
+    }
+    
     &.dfce-cm-top {
         border-bottom-style: none;
         margin-bottom: 0px;
+        padding-bottom: 5px;
         &:hover {
             box-shadow: var(--gold-and-glow);
         }
@@ -60,6 +63,7 @@
             padding-right: 0px;
         }
 
+        .sender-wrapper,
         .portrait-and-name {
             display: none;
         }
@@ -81,6 +85,8 @@
     &.dfce-cm-middle {
         margin-top: 0px;
         margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 5px;
     }
 
     &.dfce-cm-bottom {
@@ -157,6 +163,49 @@ div.speaking-as--currentSpeaker+#chat-controls {
     }
 }
 
+/* ----------------------------------------- */
+/* PF2e Target Damage                        */
+/* ----------------------------------------- */
+
+.dark-theme #target-damage-target-name {
+    color: var(--color-text-light-heading);
+}
+
+#target-damage-chat-window [data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=gm] {
+    background-color: transparent;
+}
+
+#target-damage-chat-window {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#target-damage-chat-window:empty {
+    display:none;
+}
+
+.hidden #target-damage-hide-button {
+    left: 0px;
+    top: 2px;
+    margin: 0px;
+    padding: 0px;
+    height: 14px;
+    width: 14px;
+}
+
+.damage-application.hidden.right {
+    padding: 0px;
+}
+
+.hidden.right #target-damage-hide-button {
+    left: 0px;
+    top: 2px;
+    margin: 0px;
+    padding: 0px;
+    height: 14px;
+    width: 14px;
+}
 
 /* ----------------------------------------- */
 /* Dice Tray                                 */
@@ -331,8 +380,32 @@ nav.damage-log-nav.tabs {
 }
 
 /* ----------------------------------------- */
+/* Token Action HUD                          */
+/* ----------------------------------------- */
+#tah-categories {
+    gap: 5px;
+}
+
+#token-action-hud {
+    gap: 5px;
+}
+
+/* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
+
+#players h3 {
+    border: none;
+}
+
+.chat-message {
+    .dorako-header {
+        padding-bottom: 5px;
+        box-shadow: var(--gold-and-glow);
+        background: var(--sheet-light);
+        background-size: cover;
+    }
+}
 
 .combat-sidebar li.combatant .token-image {
     z-index: 0;
@@ -391,8 +464,75 @@ nav.damage-log-nav.tabs {
         }
     }
 
-> .message-content .message-buttons {
-    display: flex;
-    margin: 0.35em 0 2px;
-}    
+    > .message-content .message-buttons {
+        display: flex;
+        margin: 0.35em 0 2px;
+        gap: 3px;
+    }
+}
+
+.dark-theme.chat-message {
+    .flavor-text {
+        .target-dc-result {
+            .adjusted {
+                &.increased {
+                    $color: $degree-success-critical;
+                    $adjustment: +12.5%;
+                    color: color.adjust($color, $lightness: $adjustment);
+                }
+                &.decreased {
+                    $color: $degree-failure-critical;
+                    $adjustment: +12.5%;
+                    color: color.adjust($color, $lightness: $adjustment);
+                }
+            }
+
+            .degree-of-success {
+                .criticalSuccess {
+                    $color: $degree-success-critical;
+                    $adjustment: +12.5%;
+                    color: color.adjust($color, $lightness: $adjustment);
+
+                }
+                .success {
+                    $color: $degree-success;
+                    $adjustment: +12.5%;
+                    color: color.adjust($color, $lightness: $adjustment);
+
+                }
+                .failure {
+                    $color: $degree-failure;
+                    $adjustment: +12.5%;
+                    color: color.adjust($color, $lightness: $adjustment);
+
+                }
+                .criticalFailure {
+                    $color: $degree-failure-critical;
+                    $adjustment: +12.5%;
+                    color: color.adjust($color, $lightness: $adjustment);
+                }
+            }
+        }
+    }
+    > .message-content .message-buttons {
+        gap: 5px;
+
+        button {
+            @include glass;
+            @include quick-transition;
+
+            text-shadow: var(--dorako-text-shadow);
+
+            &:hover {
+                background-color: var(--primary);
+                color: var(--color-text-light-highlight);
+            }
+
+            &.critical-success:hover {
+                    background-color: var(--primary-light);
+                    color: white;    
+            }
+
+        }
+    }
 }

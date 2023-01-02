@@ -13,6 +13,7 @@
   /* background: url(../img/header.webp), url("../../../ui/denim.png"); */
   background: url(../img/header.webp), var(--sheet-dark);
   background-repeat: repeat-x, repeat;
+  background-size: auto, cover;
   box-shadow: 0 0 50vw var(--color-shadow-dark) inset;
 }
 
@@ -272,7 +273,7 @@
 .actor.sheet.character .crb-style .perception-prof .pf-rank,
 .actor.sheet.character .crb-style .save-prof .pf-rank,
 .actor.sheet.character .crb-style .spellcasting-prof .pf-rank,
-.actor.sheet.character .crb-style aside .sidebar .armor-class .shield-stats ol li .data-value,
+/* .actor.sheet.character .crb-style aside .sidebar .armor-class .shield-stats ol li .data-value, */
 .actor.sheet.character .crb-style aside .sidebar .initiative-select select {
   background-color: hsla(0, 0%, 20%, 0.1);
   border-radius: 3px;

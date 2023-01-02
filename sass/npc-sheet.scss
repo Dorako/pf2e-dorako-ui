@@ -284,8 +284,9 @@
 .sheet.pf2e.actor.npc.dark-theme .window-content {
     background: none;
     background-color: #111;
-    background: url(../../../ui/denim.png);
-    box-shadow: 0 0 10vw var(--color-shadow-dark) inset;
+    background: var(--sheet-dark);
+    background-size: cover;
+    // box-shadow: 0 0 10vw var(--color-shadow-dark) inset;
 }
 
 .sheet.pf2e.actor.npc.dark-theme .tags .tag option.tag_transparent,
@@ -312,8 +313,8 @@
     color: #c9c9c9;
 }
 
-.actor.pf2e.actor.npc.dark-theme .npc-sheet .disabled.active,
-.actor.pf2e.actor.npc.dark-theme .npc-sheet .disabled:hover {
+.actor.pf2e.actor.npc.dark-theme .npc-sheet .sheet-tabs .disabled.active,
+.actor.pf2e.actor.npc.dark-theme .npc-sheet .sheet-tabs .disabled:hover {
     color: gray;
 }
 

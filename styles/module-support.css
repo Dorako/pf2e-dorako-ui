@@ -31,6 +31,7 @@
   --alt-dark: #443730;
   --bg: #F8F4F1;
   --bg-dark: #e7d9cf;
+  --gold-brown: #956d58;
   --sub: #605856;
   --color-disabled: #ababab;
   --inline-link-bg: #ddd;
@@ -60,28 +61,22 @@
 }
 
 /* SHOULD NOT BE HERE */
-#hotbar {
-  width: 647px;
-}
-#hotbar .hotbar-page {
-  overflow: visible;
-  gap: 4px;
-  bottom: 56px;
-}
-#hotbar .hotbar-page .macro-list {
-  gap: 7px;
-  border: none;
-}
-#hotbar .hotbar-page .action-bar {
-  margin: 0px 5px 0px 3px;
-}
-
 /* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
+.message.chat-message.dark-theme.dfce-cm-middle .message-delete, .message.chat-message.dark-theme.dfce-cm-bottom .message-delete {
+  color: white;
+  top: 5px;
+  text-shadow: 0px 0px 1px black;
+}
+
+.message.chat-message .message-delete {
+  z-index: 1;
+}
 .message.chat-message.dfce-cm-top {
   border-bottom-style: none;
   margin-bottom: 0px;
+  padding-bottom: 5px;
 }
 .message.chat-message.dfce-cm-top:hover {
   box-shadow: var(--gold-and-glow);
@@ -97,7 +92,9 @@
 .message.chat-message.dfce-cm-middle .message-content, .message.chat-message.dfce-cm-bottom .message-content {
   padding-right: 0px;
 }
-.message.chat-message.dfce-cm-middle .portrait-and-name, .message.chat-message.dfce-cm-bottom .portrait-and-name {
+.message.chat-message.dfce-cm-middle .sender-wrapper,
+.message.chat-message.dfce-cm-middle .portrait-and-name, .message.chat-message.dfce-cm-bottom .sender-wrapper,
+.message.chat-message.dfce-cm-bottom .portrait-and-name {
   display: none;
 }
 .message.chat-message.dfce-cm-middle .message-header, .message.chat-message.dfce-cm-bottom .message-header {
@@ -115,6 +112,8 @@
 .message.chat-message.dfce-cm-middle {
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 5px;
 }
 .message.chat-message.dfce-cm-bottom {
   margin-top: 0px;
@@ -198,6 +197,49 @@ div.speaking-as--currentSpeaker + #chat-controls {
 }
 .speaking-as--currentSpeaker--button:hover {
   color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* PF2e Target Damage                        */
+/* ----------------------------------------- */
+.dark-theme #target-damage-target-name {
+  color: var(--color-text-light-heading);
+}
+
+#target-damage-chat-window [data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=gm] {
+  background-color: transparent;
+}
+
+#target-damage-chat-window {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#target-damage-chat-window:empty {
+  display: none;
+}
+
+.hidden #target-damage-hide-button {
+  left: 0px;
+  top: 2px;
+  margin: 0px;
+  padding: 0px;
+  height: 14px;
+  width: 14px;
+}
+
+.damage-application.hidden.right {
+  padding: 0px;
+}
+
+.hidden.right #target-damage-hide-button {
+  left: 0px;
+  top: 2px;
+  margin: 0px;
+  padding: 0px;
+  height: 14px;
+  width: 14px;
 }
 
 /* ----------------------------------------- */
@@ -378,8 +420,30 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 /* ----------------------------------------- */
+/* Token Action HUD                          */
+/* ----------------------------------------- */
+#tah-categories {
+  gap: 5px;
+}
+
+#token-action-hud {
+  gap: 5px;
+}
+
+/* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
+#players h3 {
+  border: none;
+}
+
+.chat-message .dorako-header {
+  padding-bottom: 5px;
+  box-shadow: var(--gold-and-glow);
+  background: var(--sheet-light);
+  background-size: cover;
+}
+
 .combat-sidebar li.combatant .token-image {
   z-index: 0;
 }
@@ -429,6 +493,47 @@ nav.damage-log-nav.tabs .item.active {
 .chat-message > .message-content .message-buttons {
   display: flex;
   margin: 0.35em 0 2px;
+  gap: 3px;
+}
+
+.dark-theme.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: #00c000;
+}
+.dark-theme.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: #ff4040;
+}
+.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: #00c000;
+}
+.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: #4040ff;
+}
+.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: #ff7440;
+}
+.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: #ff4040;
+}
+.dark-theme.chat-message > .message-content .message-buttons {
+  gap: 5px;
+}
+.dark-theme.chat-message > .message-content .message-buttons button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: rgba(20, 20, 20, 0.6);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-shadow: var(--dorako-text-shadow);
+}
+.dark-theme.chat-message > .message-content .message-buttons button:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dark-theme.chat-message > .message-content .message-buttons button.critical-success:hover {
+  background-color: var(--primary-light);
+  color: white;
 }
 
 /*# sourceMappingURL=module-support.css.map */

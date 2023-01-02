@@ -1,0 +1,25 @@
+@import "mixins";
+
+/* ----------------------------------------- */
+/* Notifications                             */
+/* ----------------------------------------- */
+
+#notifications .notification {
+    @include glass;
+    text-shadow: 0 0 4px black;
+
+    &.info {
+        background-color: var(--secondary);
+    }
+
+    &.error {
+        background-color: var(--primary);
+    }
+
+    &.warning,
+    &.alert {
+        background-color: #ECBF41;
+        color: black;
+        text-shadow: none;
+    }
+}

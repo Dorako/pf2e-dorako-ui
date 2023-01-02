@@ -18,6 +18,7 @@ $tertiary-color: #E9D7A1 !default; /* compliments the primary color, usually use
 
 $alt-color: #786452 !default; /* for all other uses */
 $alt-dark: #443730 !default;
+$gold-brown: #956d58 !default;
 $background-color: #F8F4F1 !default;
 $background-dark: darken($background-color, 10);
 $sub-color: #605856 !default;
@@ -78,6 +79,7 @@ $adjusted-lower: #cc3311 !default;
   --alt-dark: #{$alt-dark};
   --bg: #{$background-color};
   --bg-dark: #{$background-dark};
+  --gold-brown: #{$gold-brown};
   --sub: #{$sub-color};
   --color-disabled: #{$light-gray-color};
 

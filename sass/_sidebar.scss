@@ -1,0 +1,61 @@
+/* ----------------------------------------- */
+/* Sidebar                                   */
+/* ----------------------------------------- */
+
+#ui-right {
+    #sidebar {
+        height: -webkit-fill-available;
+    }
+}
+
+.chat-sidebar {
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+#chat-form {
+    margin: 0px 6px;
+    flex: 0 0 var(--chat-input-height);
+}
+
+#chat-log {
+    margin-left: 4px;
+}
+
+#sidebar {
+    border: none;
+    border-radius: 6px 3px 3px 3px;
+
+    &.collapsed {
+        border-radius: 3px;
+
+        #sidebar-tabs .item.active {
+            border: none;
+        }
+    }
+
+    #sidebar-tabs {
+        --sidebar-tab-height: 20px;
+        --sidebar-tab-width: 20px;
+        border: none;
+        box-shadow: none;
+        margin: 0px;
+        margin-top: 1px;
+
+        .item {
+            border: none;
+            margin: 2px;
+
+            &.active {
+                @include gold-border;
+                border-radius: 3px;
+                text-shadow: none;
+                background-color: var(--primary-light);
+            }
+        }
+    }
+
+    #chat-controls i.fas {
+        line-height: 24px; // center-aligns icons
+    }
+}

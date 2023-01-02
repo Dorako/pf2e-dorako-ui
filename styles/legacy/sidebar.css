@@ -176,8 +176,8 @@ nav.damage-log-nav.tabs {
     background-color: rgba(200, 200, 200, 0.8);
     box-shadow: var(--glassy);
     overflow: visible;
-    margin-left: 2px;
-    margin-right: 2px;
+    /* margin-left: 2px;
+    margin-right: 2px; */
     width: -webkit-fill-available;
     font-size: 16px;
     font-family: var(--font-primary);
@@ -258,7 +258,7 @@ nav.damage-log-nav.tabs {
     width: calc(100% - 8px);
 }
 
-.speaking-as--currentSpeaker+#chat-controls {
+/* .speaking-as--currentSpeaker+#chat-controls {
     padding: 0px;
 }
 
@@ -268,7 +268,7 @@ nav.damage-log-nav.tabs {
     background-color: var(--dorako-bg-current);
     box-shadow: var(--glassy);
     margin: 0px 2px;
-}
+} */
 
 #chat-controls .undefined>i {
     margin-right: 1px;
