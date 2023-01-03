@@ -1373,15 +1373,15 @@ Hooks.once("init", async () => {
   //   requiresReload: true
   // });
 
-  // game.settings.register("pf2e-dorako-ui", "center-hotbar", {
-  //   name: i18n("dorako-ui.settings.center-hotbar.name"),
-  //   hint: i18n("dorako-ui.settings.center-hotbar.hint"),
-  //   scope: "client",
-  //   type: Boolean,
-  //   default: false,
-  //   config: true,
-  //   requiresReload: true
-  // });
+  game.settings.register("pf2e-dorako-ui", "center-hotbar", {
+    name: i18n("dorako-ui.settings.center-hotbar.name"),
+    hint: i18n("dorako-ui.settings.center-hotbar.hint"),
+    scope: "client",
+    type: Boolean,
+    default: false,
+    config: true,
+    requiresReload: true
+  });
 
   // game.settings.register("pf2e-dorako-ui", "edge-offset", {
   //   name: i18n("dorako-ui.settings.edge-offset.name"),
@@ -1557,11 +1557,11 @@ Hooks.once("init", async () => {
   // injectCSS("chat");
 
   const root = document.querySelector(":root").style;
-  // if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {
-  //   root.setProperty("--hotbar-margin-left", "calc(50% - 300px)");
-  // } else {
-  //   root.setProperty("--hotbar-margin-left", "10px");
-  // }
+  if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {
+    // document.getElementById("ui-bottom").children[0].classList.add("centered");
+    document.getElementById("ui-bottom").classList.add("centered");
+  } else {
+  }
 
   // if (game.settings.get("pf2e-dorako-ui", "backdrop-filter")) {
   //   injectCSS("backdrop-filter");

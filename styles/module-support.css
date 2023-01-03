@@ -60,7 +60,6 @@
   --sidebar-title: var(--tertiary);
 }
 
-/* SHOULD NOT BE HERE */
 /* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
@@ -446,9 +445,129 @@ nav.damage-log-nav.tabs .item.active {
   gap: 5px;
 }
 
+#tah-expand-hud {
+  width: 32px;
+  height: 32px;
+}
+
+#tah-expand-hud, .tah-title-button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+}
+#tah-expand-hud:hover, .tah-title-button:hover {
+  color: var(--color-text-light-highlight);
+}
+
+.tah-action button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+}
+.tah-action button:hover {
+  color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* Custom Hotbar                             */
+/* ----------------------------------------- */
+:root {
+  --custom-hotbar-chb-macro-size: 52px;
+}
+
+#ui-bottom #hotbars {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#custom-hotbar {
+  position: static;
+  height: auto;
+  margin-bottom: 0px;
+  margin-left: 1px;
+}
+
+@media (max-width: 1120px) {
+  #custom-hotbar {
+    width: 354px;
+  }
+}
+#custom-hotbar #custom-action-bar {
+  margin-left: 3px;
+}
+
+#custom-hotbar #custom-macro-list {
+  gap: 5px;
+  border: none;
+}
+
+#custom-hotbar .bar-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: rgba(20, 20, 20, 0.6);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+}
+
+#custom-hotbar .macro {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: rgba(20, 20, 20, 0.6);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 3px;
+}
+#custom-hotbar .macro.active:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#custom-hotbar .macro:hover {
+  background-color: var(--primary-light);
+}
+#custom-hotbar .macro.inactive {
+  box-shadow: var(--glassy);
+}
+#custom-hotbar .macro.active:hover {
+  box-shadow: var(--glassy);
+  border: none;
+  background-color: var(--primary);
+}
+#custom-hotbar .macro .macro-key {
+  background: none;
+  right: 6px;
+  padding: 0px;
+  font-weight: initial;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+}
+
 /* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
+#fps {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+}
+#fps label {
+  display: none;
+}
+
+#ui-bottom.centered {
+  display: flex;
+  justify-content: center;
+}
+
 #players h3 {
   border: none;
 }

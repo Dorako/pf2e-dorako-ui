@@ -454,7 +454,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
 
 @media (max-width: 1120px) {
   #hotbar {
-    width: calc(var(--hotbar-width) / 2);
+    width: 354px;
     height: 110px;
   }
   #hotbar #macro-list {

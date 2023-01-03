@@ -2,26 +2,6 @@
 @import "colors";
 @import "mixins";
 
-/* SHOULD NOT BE HERE */
-// #hotbar {
-//     width: 647px;
-
-//     .hotbar-page {
-//         overflow: visible;
-//         gap: 4px;
-//         bottom: 56px;
-
-//         .macro-list {
-//             gap: 7px;
-//             border: none;
-//         }
-
-//         .action-bar {
-//             margin: 0px 5px 0px 3px;
-//         }
-//     }
-// }
-
 /* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
@@ -409,9 +389,125 @@ nav.damage-log-nav.tabs {
     gap: 5px;
 }
 
+#tah-expand-hud {
+    width: 32px;
+    height: 32px;
+}
+
+#tah-expand-hud, .tah-title-button {
+    @include quick-transition;
+    color: var(--color-text-light-heading);
+    &:hover {
+        color: var(--color-text-light-highlight);
+    }
+}
+
+.tah-action button {
+    @include quick-transition;
+    color: var(--color-text-light-heading);
+    &:hover {
+        color: var(--color-text-light-highlight);
+    }
+}
+
+/* ----------------------------------------- */
+/* Custom Hotbar                             */
+/* ----------------------------------------- */
+:root {
+    --custom-hotbar-chb-macro-size: 52px;
+}
+
+#ui-bottom #hotbars {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#custom-hotbar {
+    position: static;
+    height: auto;
+    margin-bottom: 0px;
+    margin-left: 1px;
+}
+
+@media (max-width: 1120px) {
+    #custom-hotbar {
+        width: 354px;
+    }
+}
+
+#custom-hotbar #custom-action-bar {
+    margin-left: 3px;
+}
+
+#custom-hotbar #custom-macro-list {
+    gap: 5px;
+    border: none;
+}
+
+#custom-hotbar .bar-controls {
+    @include glass;
+}
+
+#custom-hotbar .macro {
+    @include glass;
+    @include quick-transition;
+    border-radius: 3px;
+
+    &.active:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+        border-radius: 3px;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: var(--primary-light);
+    }
+
+    &.inactive {
+        box-shadow: var(--glassy);
+    }
+
+    &.active:hover {
+        box-shadow: var(--glassy);
+        border: none;
+        background-color: var(--primary);
+    }
+    .macro-key {
+        background: none;
+        right: 6px;
+        padding: 0px;
+        font-weight: initial;
+        text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+    }
+}
+
 /* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
+
+#fps {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+
+    label {
+        display: none;
+    }
+}
+
+#ui-bottom.centered {
+    display: flex;
+    justify-content: center;
+}
 
 #players h3 {
     border: none;

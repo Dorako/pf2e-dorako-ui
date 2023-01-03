@@ -1,3 +1,11 @@
+# 1.9.2
+The hotbar patch!
+
+(Module) Support for Custom Hotbar
+(Module) Improved support for Monk's Hotbar expansion
+(Module) Updated styling for Token Action HUD
+(New) Support for 'centered hotbar' (once again)
+
 # 1.9.1
 This is kind of a 1.9.0++ release.
 
