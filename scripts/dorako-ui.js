@@ -1516,14 +1516,14 @@ Hooks.once("init", async () => {
     requiresReload: true
   });
 
-  game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
-    name: i18n("dorako-ui.settings.skin-dice-tray.name"),
-    scope: "world",
-    type: Boolean,
-    default: true,
-    config: true,
-    requiresReload: true
-  });
+  // game.settings.register("pf2e-dorako-ui", "skin-dice-tray", {
+  //   name: i18n("dorako-ui.settings.skin-dice-tray.name"),
+  //   scope: "world",
+  //   type: Boolean,
+  //   default: true,
+  //   config: true,
+  //   requiresReload: true
+  // });
 
   game.settings.register("pf2e-dorako-ui", "skin-simple-calendar", {
     name: i18n("dorako-ui.settings.skin-simple-calendar.name"),
