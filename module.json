@@ -12,7 +12,7 @@
       "flags": {}
     }
   ],
-  "version": "1.9.1",
+  "version": "1.9.2",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
@@ -59,6 +59,6 @@
   ],
   "styles": ["styles/fonts.css"],
   "scripts": ["scripts/dorako-ui.js"],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.9.1.zip",
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.9.2.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json"
 }
