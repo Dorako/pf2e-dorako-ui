@@ -379,55 +379,27 @@ nav.damage-log-nav.tabs {
 }
 
 /* ----------------------------------------- */
-/* Token Action HUD                          */
-/* ----------------------------------------- */
-#tah-categories {
-    gap: 5px;
-}
-
-#token-action-hud {
-    gap: 5px;
-}
-
-#tah-expand-hud {
-    width: 32px;
-    height: 32px;
-}
-
-#tah-expand-hud, .tah-title-button {
-    @include quick-transition;
-    color: var(--color-text-light-heading);
-    &:hover {
-        color: var(--color-text-light-highlight);
-    }
-}
-
-.tah-action button {
-    @include quick-transition;
-    color: var(--color-text-light-heading);
-    &:hover {
-        color: var(--color-text-light-highlight);
-    }
-}
-
-/* ----------------------------------------- */
 /* Custom Hotbar                             */
 /* ----------------------------------------- */
 :root {
     --custom-hotbar-chb-macro-size: 52px;
 }
 
+// Custom hotbar introduces a 'hotbars' div, and restyles the core hotbar div
 #ui-bottom #hotbars {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
+
+    #hotbar {
+        position: unset;
+    }
 }
 
 #custom-hotbar {
     position: static;
     height: auto;
     margin-bottom: 0px;
-    margin-left: 1px;
 }
 
 @media (max-width: 1120px) {
@@ -447,6 +419,7 @@ nav.damage-log-nav.tabs {
 
 #custom-hotbar .bar-controls {
     @include glass;
+    height: auto;
 }
 
 #custom-hotbar .macro {
@@ -486,6 +459,50 @@ nav.damage-log-nav.tabs {
         padding: 0px;
         font-weight: initial;
         text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+    }
+}
+
+
+/* ----------------------------------------- */
+/* Token Action HUD                          */
+/* ----------------------------------------- */
+#tah-categories {
+    gap: 5px;
+}
+
+#token-action-hud {
+    gap: 5px;
+}
+
+#tah-expand-hud {
+    width: 32px;
+    height: 32px;
+}
+
+#tah-expand-hud, .tah-title-button {
+    @include quick-transition;
+    color: var(--color-text-light-heading);
+    &:hover {
+        color: var(--color-text-light-highlight);
+    }
+}
+
+.tah-subtitle {
+    width: 174px;
+}
+
+.tah-action button {
+    @include quick-transition;
+    color: var(--color-text-light-heading);
+
+    &.toggle {
+        background-color: var(--secondary-dark);
+    }
+    &:hover {
+        color: var(--color-text-light-highlight);
+    }
+    &.active {
+        color: white;
     }
 }
 
@@ -650,4 +667,8 @@ nav.damage-log-nav.tabs {
 
         }
     }
+}
+
+.chat-message>.message-header.dorako-header {
+    margin-bottom: 0px;
 }

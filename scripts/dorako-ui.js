@@ -1293,6 +1293,16 @@ Hooks.once("init", async () => {
     requiresReload: true
   });
 
+  game.settings.register("pf2e-dorako-ui", "center-hotbar", {
+    name: i18n("dorako-ui.settings.center-hotbar.name"),
+    hint: i18n("dorako-ui.settings.center-hotbar.hint"),
+    scope: "client",
+    type: Boolean,
+    default: false,
+    config: true,
+    requiresReload: true
+  });
+
   game.settings.register("pf2e-dorako-ui", "send-to-chat", {
     name: i18n("dorako-ui.settings.send-to-chat.name"),
     hint: i18n("dorako-ui.settings.send-to-chat.hint"),
@@ -1333,15 +1343,15 @@ Hooks.once("init", async () => {
     requiresReload: true
   });
 
-  game.settings.register("pf2e-dorako-ui", "compact-ui", {
-    name: i18n("dorako-ui.settings.compact-ui.name"),
-    hint: i18n("dorako-ui.settings.compact-ui.hint"),
-    scope: "client",
-    config: true,
-    default: false,
-    type: Boolean,
-    requiresReload: true
-  });
+  // game.settings.register("pf2e-dorako-ui", "compact-ui", {
+  //   name: i18n("dorako-ui.settings.compact-ui.name"),
+  //   hint: i18n("dorako-ui.settings.compact-ui.hint"),
+  //   scope: "client",
+  //   config: true,
+  //   default: false,
+  //   type: Boolean,
+  //   requiresReload: true
+  // });
 
   game.settings.register("pf2e-dorako-ui", "no-logo", {
     name: i18n("dorako-ui.settings.no-logo.name"),
@@ -1372,16 +1382,6 @@ Hooks.once("init", async () => {
   //   config: true,
   //   requiresReload: true
   // });
-
-  game.settings.register("pf2e-dorako-ui", "center-hotbar", {
-    name: i18n("dorako-ui.settings.center-hotbar.name"),
-    hint: i18n("dorako-ui.settings.center-hotbar.hint"),
-    scope: "client",
-    type: Boolean,
-    default: false,
-    config: true,
-    requiresReload: true
-  });
 
   // game.settings.register("pf2e-dorako-ui", "edge-offset", {
   //   name: i18n("dorako-ui.settings.edge-offset.name"),
@@ -1470,14 +1470,14 @@ Hooks.once("init", async () => {
   //   requiresReload: true
   // });
 
-  game.settings.register("pf2e-dorako-ui", "skin-combat-tracker", {
-    name: i18n("dorako-ui.settings.skin-combat-tracker.name"),
-    scope: "world",
-    type: Boolean,
-    default: true,
-    config: true,
-    requiresReload: true
-  });
+  // game.settings.register("pf2e-dorako-ui", "skin-combat-tracker", {
+  //   name: i18n("dorako-ui.settings.skin-combat-tracker.name"),
+  //   scope: "world",
+  //   type: Boolean,
+  //   default: true,
+  //   config: true,
+  //   requiresReload: true
+  // });
 
   // game.settings.register("pf2e-dorako-ui", "skin-custom-hotbar", {
   //   name: i18n("dorako-ui.settings.skin-custom-hotbar.name"),
@@ -1498,14 +1498,14 @@ Hooks.once("init", async () => {
   //   requiresReload: true
   // });
 
-  game.settings.register("pf2e-dorako-ui", "skin-window-controls", {
-    name: i18n("dorako-ui.settings.skin-window-controls.name"),
-    scope: "world",
-    type: Boolean,
-    default: true,
-    config: true,
-    requiresReload: true
-  });
+  // game.settings.register("pf2e-dorako-ui", "skin-window-controls", {
+  //   name: i18n("dorako-ui.settings.skin-window-controls.name"),
+  //   scope: "world",
+  //   type: Boolean,
+  //   default: true,
+  //   config: true,
+  //   requiresReload: true
+  // });
 
   game.settings.register("pf2e-dorako-ui", "skin-combat-carousel", {
     name: i18n("dorako-ui.settings.skin-combat-carousel.name"),
@@ -1525,15 +1525,15 @@ Hooks.once("init", async () => {
   //   requiresReload: true
   // });
 
-  game.settings.register("pf2e-dorako-ui", "skin-simple-calendar", {
-    name: i18n("dorako-ui.settings.skin-simple-calendar.name"),
-    hint: i18n("dorako-ui.settings.skin-simple-calendar.hint"),
-    scope: "world",
-    type: Boolean,
-    default: true,
-    config: true,
-    requiresReload: true
-  });
+  // game.settings.register("pf2e-dorako-ui", "skin-simple-calendar", {
+  //   name: i18n("dorako-ui.settings.skin-simple-calendar.name"),
+  //   hint: i18n("dorako-ui.settings.skin-simple-calendar.hint"),
+  //   scope: "world",
+  //   type: Boolean,
+  //   default: true,
+  //   config: true,
+  //   requiresReload: true
+  // });
 
   game.settings.register("pf2e-dorako-ui", "skin-crb-journal", {
     name: i18n("dorako-ui.settings.skin-crb-journal.name"),

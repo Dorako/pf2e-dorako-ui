@@ -1,3 +1,10 @@
+# 1.9.3
+
+(Fix) Custom Hotbar now works without Monk's Hotbar also being enabled
+(Refinement) Scene controls that use images are now tinted a similar color as scene controls that use image-fonts
+(Refinement) Minor updates to TAH style
+(Refinement) Secret inline-rolls are now more saturated in dark theme chat messages
+
 # 1.9.2
 The hotbar patch!
 

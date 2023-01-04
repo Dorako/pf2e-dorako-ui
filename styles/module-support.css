@@ -435,38 +435,6 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 /* ----------------------------------------- */
-/* Token Action HUD                          */
-/* ----------------------------------------- */
-#tah-categories {
-  gap: 5px;
-}
-
-#token-action-hud {
-  gap: 5px;
-}
-
-#tah-expand-hud {
-  width: 32px;
-  height: 32px;
-}
-
-#tah-expand-hud, .tah-title-button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: var(--color-text-light-heading);
-}
-#tah-expand-hud:hover, .tah-title-button:hover {
-  color: var(--color-text-light-highlight);
-}
-
-.tah-action button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: var(--color-text-light-heading);
-}
-.tah-action button:hover {
-  color: var(--color-text-light-highlight);
-}
-
-/* ----------------------------------------- */
 /* Custom Hotbar                             */
 /* ----------------------------------------- */
 :root {
@@ -476,14 +444,16 @@ nav.damage-log-nav.tabs .item.active {
 #ui-bottom #hotbars {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
+}
+#ui-bottom #hotbars #hotbar {
+  position: unset;
 }
 
 #custom-hotbar {
   position: static;
   height: auto;
   margin-bottom: 0px;
-  margin-left: 1px;
 }
 
 @media (max-width: 1120px) {
@@ -507,6 +477,7 @@ nav.damage-log-nav.tabs .item.active {
   background-color: rgba(20, 20, 20, 0.6);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
+  height: auto;
 }
 
 #custom-hotbar .macro {
@@ -548,6 +519,48 @@ nav.damage-log-nav.tabs .item.active {
   padding: 0px;
   font-weight: initial;
   text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+}
+
+/* ----------------------------------------- */
+/* Token Action HUD                          */
+/* ----------------------------------------- */
+#tah-categories {
+  gap: 5px;
+}
+
+#token-action-hud {
+  gap: 5px;
+}
+
+#tah-expand-hud {
+  width: 32px;
+  height: 32px;
+}
+
+#tah-expand-hud, .tah-title-button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+}
+#tah-expand-hud:hover, .tah-title-button:hover {
+  color: var(--color-text-light-highlight);
+}
+
+.tah-subtitle {
+  width: 174px;
+}
+
+.tah-action button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+}
+.tah-action button.toggle {
+  background-color: var(--secondary-dark);
+}
+.tah-action button:hover {
+  color: var(--color-text-light-highlight);
+}
+.tah-action button.active {
+  color: white;
 }
 
 /* ----------------------------------------- */
@@ -669,6 +682,10 @@ nav.damage-log-nav.tabs .item.active {
 .dark-theme.chat-message > .message-content .message-buttons button.critical-success:hover {
   background-color: var(--primary-light);
   color: white;
+}
+
+.chat-message > .message-header.dorako-header {
+  margin-bottom: 0px;
 }
 
 /*# sourceMappingURL=module-support.css.map */

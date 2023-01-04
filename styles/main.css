@@ -238,6 +238,10 @@ nav#controls ol.control-tools li.scene-control {
   border-radius: 3px;
   margin-bottom: 8px;
 }
+nav#controls ol.control-tools li.control-tool img,
+nav#controls ol.control-tools li.scene-control img {
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
 nav#controls ol.control-tools li.control-tool.active, nav#controls ol.control-tools li.control-tool:hover,
 nav#controls ol.control-tools li.scene-control.active,
 nav#controls ol.control-tools li.scene-control:hover {
@@ -249,6 +253,11 @@ nav#controls ol.control-tools li.scene-control:hover {
   color: var(--color-text-light-heading);
   color: var(--color-text-light-highlight);
   background-color: var(--primary);
+}
+nav#controls ol.control-tools li.control-tool.active img, nav#controls ol.control-tools li.control-tool:hover img,
+nav#controls ol.control-tools li.scene-control.active img,
+nav#controls ol.control-tools li.scene-control:hover img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
 }
 nav#controls ol.control-tools li.control-tool.toggle,
 nav#controls ol.control-tools li.scene-control.toggle {
@@ -571,6 +580,10 @@ nav#navigation ol#scene-list li.nav-item.active {
   margin: 0px 6px;
   flex: 0 0 var(--chat-input-height);
 }
+#chat-form textarea {
+  background: rgb(212, 213, 205);
+  border: 1px solid #7a7971;
+}
 
 #chat-log {
   margin-left: 4px;
@@ -743,6 +756,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   opacity: 1;
   height: auto;
   width: auto;
+  border-radius: 3px;
 }
 #token-hud .status-effects .effect-control .badge {
   background: rgba(255, 255, 255, 0.9);

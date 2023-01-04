@@ -218,6 +218,9 @@
 .message.chat-message.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   background: rgba(245, 234, 245, 0.1333333333);
 }
+.message.chat-message.dark-theme span[data-pf2-check][data-pf2-traits*=secret] {
+  background: #f3ddf3;
+}
 .message.chat-message.dark-theme .message-content .pf2e-pd-card .apply-condition {
   margin-top: 5px;
 }

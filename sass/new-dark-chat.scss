@@ -170,6 +170,10 @@
             background: #f5eaf522; // blind
         }
 
+        span[data-pf2-check][data-pf2-traits*=secret] {
+            background: #f3ddf3; // More saturated, since the default pink doesn't look as colorful on a dark background
+        }
+
         .message-content {  
             .pf2e-pd-card {
                 // margin-top: 5px;
