@@ -688,4 +688,8 @@ nav.damage-log-nav.tabs .item.active {
   margin-bottom: 0px;
 }
 
+.dorako-damage-roll .flavor-text > *:nth-child(-n+3) {
+  display: none;
+}
+
 /*# sourceMappingURL=module-support.css.map */

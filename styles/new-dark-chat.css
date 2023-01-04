@@ -221,8 +221,11 @@
 .message.chat-message.dark-theme span[data-pf2-check][data-pf2-traits*=secret] {
   background: #f3ddf3;
 }
-.message.chat-message.dark-theme .message-content .pf2e-pd-card .apply-condition {
+.message.chat-message.dark-theme .message-content .pf2e-pd-card {
   margin-top: 5px;
+}
+.message.chat-message.dark-theme .message-content .pf2e-pd-card .apply-condition {
+  margin-top: 0px;
 }
 .message.chat-message.dark-theme .message-content .pf2e-pd-card button {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

@@ -206,8 +206,15 @@
     .message-content {  
         margin-top: 5px;
         .pf2e-pd-card {
+            margin-top: 3px;
+
             hr {
                 display: none;
+            }
+
+            .apply-condition {
+                margin-top: 0px;
+                // margin-top: 5px;
             }
         }
     }

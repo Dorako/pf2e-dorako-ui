@@ -189,7 +189,7 @@ Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
   // console.log({ collapseToggles });
   const collapseSaves = sheet.object.system.attributes.allSaves.value === "";
 
-  console.log(sheet.object);
+  // console.log(sheet.object);
   const immunities = sheet.object.system.attributes.immunities;
   const collapseImmunities = immunities.length === 0 && immunities.custom === "";
   const weaknesses = sheet.object.system.attributes.weaknesses;
@@ -327,17 +327,17 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   // console.log(messageData);
 
   if (game.settings.get("pf2e-dorako-ui", "restructure-card-info")) {
-    if (!chatMessage.isRoll) {
       let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;
-      // console.log(uuid);
       if (uuid) {
-        let origin = fromUuidSync(uuid);
-        // console.log(origin);
-        let actionCost = origin?.actionCost;
-        if (actionCost) injectActionCost(html, actionCost);
-        if (origin?.type === "spell") injectSpellInfo(html, origin);
+        try {
+          let origin = fromUuidSync(uuid);
+          let actionCost = origin?.actionCost;
+          if (actionCost) injectActionCost(html, actionCost);
+          if (origin?.type === "spell") injectSpellInfo(html, origin);
+        } catch (error) {
+          // An error is thrown if the UUID is a reference to something that is not loaded, like an actor in a compendium.
+        }
       }
-    }
   }
 
   injectSenderWrapper(html, messageData);

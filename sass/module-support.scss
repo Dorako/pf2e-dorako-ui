@@ -672,3 +672,7 @@ nav.damage-log-nav.tabs {
 .chat-message>.message-header.dorako-header {
     margin-bottom: 0px;
 }
+
+.dorako-damage-roll .flavor-text>*:nth-child(-n+3) {
+    display: none;
+}

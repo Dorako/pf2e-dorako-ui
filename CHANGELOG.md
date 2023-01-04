@@ -1,3 +1,8 @@
+# 1.9.4
+
+(Fix) Option for removing redundant information from damage rolls now functional again
+(Refinement) Improve spacing around persistent damage button on chat light theme
+(Fix) Fixed chat functionality breaking when chat messages have origins where the uuid cannot be fetched synchronously (e.g. feats/spells linked from compendium actors)
 # 1.9.3
 
 (Fix) Custom Hotbar now works without Monk's Hotbar also being enabled

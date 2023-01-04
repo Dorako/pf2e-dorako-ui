@@ -168,8 +168,14 @@
 .message.chat-message .message-content {
   margin-top: 5px;
 }
+.message.chat-message .message-content .pf2e-pd-card {
+  margin-top: 3px;
+}
 .message.chat-message .message-content .pf2e-pd-card hr {
   display: none;
+}
+.message.chat-message .message-content .pf2e-pd-card .apply-condition {
+  margin-top: 0px;
 }
 .message.chat-message [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   border-radius: 3px;
