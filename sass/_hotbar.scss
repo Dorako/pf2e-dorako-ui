@@ -6,8 +6,7 @@
     .macro {
         height: calc(var(--macro-size) + 2px);
         width: calc(var(--macro-size) + 2px);
-        border: none;
-        border-radius: 3px;
+        @include glass;
         @include quick-transition;
 
         &.inactive::before,

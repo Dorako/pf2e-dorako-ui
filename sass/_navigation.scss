@@ -17,13 +17,14 @@ nav#navigation {
         li.nav-item {
             @include glass;
             transition: 0.25s;
+            text-shadow: 0px 0px 3px black;
 
             &:hover {
                 background-color: rgb(177 177 177 / 50%);
                 color: black;
 
                 a, a:hover {
-                    text-shadow: 0 0 4px var(--color-text-light-highlight);
+                    text-shadow: 0 0 3px var(--color-text-light-highlight);
                 }
             }
 
@@ -36,7 +37,7 @@ nav#navigation {
                     color: white;
                     background-color: var(--primary-light);
                     a, a:hover {
-                        text-shadow: 0 0 4px black;
+                        text-shadow: 0px 0px 3px black;
                     }
                 }
             }
@@ -50,7 +51,7 @@ nav#navigation {
                     color: var(--color-text-light-highlight);
                     background-color: var(--secondary-light);
                     a, a:hover {
-                        text-shadow: 0 0 4px black;
+                        text-shadow: 0px 0px 3px black;
                     }
                 }
             }

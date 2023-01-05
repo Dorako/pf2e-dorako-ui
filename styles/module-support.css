@@ -22,7 +22,7 @@
   /* Global */
   --primary: #5e0000;
   --primary-light: #b10000;
-  --primary-dark: #4b0000;
+  --primary-dark: #380000;
   --secondary: #171f69;
   --secondary-light: #2532a8;
   --secondary-dark: #0e133f;
@@ -58,6 +58,8 @@
   /* Sidebar */
   --sidebar-label: var(--tertiary-dark);
   --sidebar-title: var(--tertiary);
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.60);
 }
 
 /* ----------------------------------------- */
@@ -124,7 +126,7 @@ div#scrollToBottom {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: #ECBF41;
@@ -145,7 +147,7 @@ div#scrollToBottom:hover {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -155,7 +157,7 @@ div#scrollToBottom:hover {
   color: var(--color-text-light-highlight);
 }
 #dfcp-rt-buttons button.active i {
-  text-shadow: 0 0 4px black;
+  text-shadow: 0px 0px 3px black;
   color: var(--color-text-light-highlight);
 }
 
@@ -174,6 +176,13 @@ div#scrollToBottom:hover {
 }
 
 /* ----------------------------------------- */
+/* Combat Carouse                            */
+/* ----------------------------------------- */
+#controls ol li.scene-control[data-control=combat-carousel] {
+  position: relative;
+}
+
+/* ----------------------------------------- */
 /* Speaking As                               */
 /* ----------------------------------------- */
 div.speaking-as--currentSpeaker + #chat-controls {
@@ -184,7 +193,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   padding-left: 5px;
@@ -253,7 +262,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -308,7 +317,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
@@ -319,7 +328,7 @@ nav.damage-log-nav.tabs .item.active {
 #controls ol.control-tools#terrainlayer-tools .control-tool:not(#tl-defaultcost):hover button.control-btn:hover {
   border-radius: 3px;
   color: black;
-  text-shadow: 0 0 4px var(--color-text-light-highlight);
+  text-shadow: 0 0 3px var(--color-text-light-highlight);
   box-shadow: none;
 }
 
@@ -330,7 +339,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
@@ -338,7 +347,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   border-radius: 5px 0px 0px 5px;
@@ -348,7 +357,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -474,7 +483,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   height: auto;
@@ -484,7 +493,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -669,7 +678,7 @@ nav.damage-log-nav.tabs .item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

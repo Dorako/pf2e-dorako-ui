@@ -177,6 +177,35 @@
 .message.chat-message .message-content .pf2e-pd-card .apply-condition {
   margin-top: 0px;
 }
+.message.chat-message .message-content .dice-roll .dice-result .statuseffect-message {
+  background-color: unset;
+  box-shadow: none;
+  border: none;
+}
+.message.chat-message .message-content .dice-roll .dice-result .statuseffect-message li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.message.chat-message .message-content .dice-roll .dice-result .statuseffect-message img {
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.message.chat-message .message-content .dice-roll .dice-result .statuseffect-rules {
+  border: none;
+  background-image: var(--sheet-light);
+  background-size: cover;
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 20px rgba(0, 0, 0, 0.8);
+}
 .message.chat-message [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   border-radius: 3px;
   background: rgba(245, 234, 245, 0.6666666667);

@@ -69,7 +69,7 @@ $adjusted-lower: #cc3311 !default;
   /* Global */
   --primary: #{$primary-color};
   --primary-light: #{color.scale($primary-color, $lightness: +20%)};
-  --primary-dark: #{color.scale($primary-color, $lightness: -20%)};
+  --primary-dark: #{color.scale($primary-color, $lightness: -40%)};
   --secondary: #{$secondary-color};
   --secondary-light: #{color.scale($secondary-color, $lightness: +20%)};
   --secondary-dark: #{color.scale($secondary-color, $lightness: -40%)};
@@ -113,4 +113,7 @@ $adjusted-lower: #cc3311 !default;
   /* Sidebar */
   --sidebar-label: var(--tertiary-dark);
   --sidebar-title: var(--tertiary);
+
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.60);
 }

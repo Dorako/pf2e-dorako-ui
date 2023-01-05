@@ -1,96 +1,6 @@
 @import "mixins";
 
-#token-hud .effect-control {
-    border: none;
-    margin: 0px;
-    padding: 0px;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-shadow: var(--glassy);
-        border-radius: 3px;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    &.active::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-shadow: var(--gold-and-glow), var(--glassy);
-        border-radius: 3px;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    &:hover::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
-        border-radius: 3px;
-        overflow: hidden;
-        pointer-events: none;
-    }
-
-    &.active:hover::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-shadow: var(--gold-and-glow), var(--glassy);
-        border-radius: 3px;
-        overflow: hidden;
-        pointer-events: none;
-    }
-}
-
-
 #token-hud {
-    input[type="text"] {
-        @include glass;
-    }
-    .control-icon {
-        @include glass;
-        @include quick-transition;
-
-        &:hover {
-            background-color: var(--secondary-light);
-        }
-
-        &.active {
-            color: var(--color-text-light-highlight);
-            background-color: var(--secondary-light);
-            &:hover {
-                background-color: var(--secondary-dark);
-                > img {
-                    filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-                }
-            }
-
-            > img {
-                filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-            }
-        }
-
-        > img {
-            opacity: 1;
-            filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
-        }
-    }
     .status-effects {
         background: none;
         box-shadow: none;
@@ -101,15 +11,65 @@
         gap: 8px;
 
         .effect-control {
-            color: var(--color-text-dark-1);
-            cursor: pointer;
-            height: 40px;
-            opacity: 1;
-            position: relative;
-            width: 40px;
-            background-color: rgba(black, 0.5);
-            filter: brightness(0.75) saturate(0.75);
+            border: none;
+            margin: 0px;
+            padding: 0px;
+            background-color: var(--glass-bg);
+        
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: var(--glassy);
+                    border-radius: 3px;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+        
+                &.active::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: var(--gold-and-glow), var(--glassy);
+                    border-radius: 3px;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+        
+                &:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+                    border-radius: 3px;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+        
+                &.active:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: var(--gold-and-glow), var(--glassy);
+                    border-radius: 3px;
+                    overflow: hidden;
+                    pointer-events: none;
+                }
+            }
 
+        .effect-control {
             &:hover, &.active {
                 filter: none;
                 opacity: 1;
@@ -138,32 +98,6 @@
                 border-radius: 3px;
             }
 
-            .badge {
-                background: rgba(255, 255, 255, 90%);
-                border-radius: 50%;
-                border: 0.1em solid darkred;
-                font-size: var(--font-size-8);
-                height: 0.8rem;
-                line-height: var(--font-size-10);
-                pointer-events: none;
-                position: absolute;
-                right: -3px;
-                text-align: center;
-                top: -3px;
-                width: 0.8rem;
-                z-index: 1;
-            }
-
-            &.overridden > * {
-                filter: saturate(0);
-            }
-
-            &.valued .badge {
-                font-size: var(--font-size-12);
-                font-style: unset;
-                font-weight: 500;
-                line-height: var(--font-size-12);
-            }
         }
 
         .title-bar {
@@ -184,6 +118,89 @@
             &.active {
                 visibility: visible;
             }
+        }
+    }
+    
+}
+
+
+.placeable-hud {
+    input[type="text"] {
+        @include glass;
+    }
+    .control-icon {
+        @include glass;
+        @include quick-transition;
+        text-shadow: 0px 0px 3px black;
+
+        // These can become toggled on with a click, but not toggled off with a click
+        &[data-action=overhead], &[data-action=underfoot] {
+            background-color: var(--primary-dark);
+
+            &:hover, &.active {
+                background-color: var(--primary-light);
+                > img {
+                    filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+                }
+
+                &:hover {
+                    background-color: var(--primary-light);
+                }
+            }
+        }
+
+        // These can be clicked, but do not become active
+        // 'trigger' is from Monk's Active Tiles
+        &[data-action=sort-up], &[data-action=sort-down], &[data-action=config], &[data-action=trigger]  {
+            &:hover {
+                background-color: var(--primary);
+                > img {
+                    filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+                }
+            }
+        }
+
+        // These are toggles, inactive -> active -> inactive
+        // 'active' is from Monk's Active Tiles
+        &[data-action=visibility], &[data-action=effects], &[data-action=combat], &[data-action=locked], &[data-action=target], &[data-action=active] {
+            background-color: var(--secondary-dark);
+
+            &:hover, &.active {
+                background-color: var(--secondary-light);
+                > img {
+                    filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+                }
+            }
+        }
+
+        // Unknown HUD elements from modules etc. are treated as if they potentially could become active
+        // Since it is unknown whether they can de-activate via a click, active buttons should not darken on hover 
+        &:hover {
+            background-color: var(--secondary);
+            color: var(--color-text-light-highlight);
+        }
+
+        &.active {
+            color: var(--color-text-light-highlight);
+            background-color: var(--secondary-light);
+            border: none;
+
+            // &:hover {
+            //     background-color: var(--secondary-dark);
+            //     color: white;
+            //     > img {
+            //         filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+            //     }
+            // }
+
+            > img {
+                filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+            }
+        }
+
+        > img {
+            opacity: 1;
+            filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
         }
     }
 }

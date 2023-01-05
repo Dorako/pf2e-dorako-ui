@@ -101,7 +101,7 @@ div#scrollToBottom {
         }
 
         &.active i {
-            text-shadow: 0 0 4px black;
+            text-shadow: 0px 0px 3px black;
             color: var(--color-text-light-highlight);
         }
     }
@@ -120,6 +120,15 @@ div#scrollToBottom {
     label {
         display: none;
     }
+}
+
+/* ----------------------------------------- */
+/* Combat Carouse                            */
+/* ----------------------------------------- */
+
+// Needs to be marked as relative for the small caret to be positioned correctly when compact UI is enabled.
+#controls ol li.scene-control[data-control="combat-carousel"] {
+    position: relative;
 }
 
 /* ----------------------------------------- */
@@ -261,7 +270,7 @@ nav.damage-log-nav.tabs {
                 &:hover {
                     border-radius: 3px;
                     color: black;
-                    text-shadow: 0 0 4px var(--color-text-light-highlight);
+                    text-shadow: 0 0 3px var(--color-text-light-highlight);
                     box-shadow: none;
                 }
             }

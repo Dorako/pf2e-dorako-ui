@@ -22,7 +22,7 @@
   /* Global */
   --primary: #5e0000;
   --primary-light: #b10000;
-  --primary-dark: #4b0000;
+  --primary-dark: #380000;
   --secondary: #171f69;
   --secondary-light: #2532a8;
   --secondary-dark: #0e133f;
@@ -58,62 +58,68 @@
   /* Sidebar */
   --sidebar-label: var(--tertiary-dark);
   --sidebar-title: var(--tertiary);
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.60);
 }
 
 /* ----------------------------------------- */
 /* Glassy Buttons                            */
 /* ----------------------------------------- */
-.dark-theme.message .dice-roll .dice-formula,
-.dark-theme.message .dice-roll .dice-total {
+.dark-theme.message.chat-message .dice-roll .dice-formula,
+.dark-theme.message.chat-message .dice-roll .dice-total {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons {
+.dark-theme.message.chat-message .dice-roll .dice-result .statuseffect-rules {
+  background: var(--sheet-dark);
+  background-size: cover;
+}
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons {
   margin: 0px;
   margin-top: 5px;
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-button button {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-button button {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   text-shadow: var(--dorako-text-shadow);
   background: var(--primary);
   color: var(--color-text-light-highlight);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-button button:hover {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-button button:hover {
   color: white;
   background: var(--primary-light);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .hidden-to-others {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .hidden-to-others {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   text-shadow: var(--dorako-text-shadow);
   background: var(--secondary);
   color: var(--color-text-light-highlight);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .hidden-to-others:hover {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .hidden-to-others:hover {
   color: white;
   background: var(--secondary-light);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-attack-buttons {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons {
   gap: 5px;
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-attack-buttons button {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -121,15 +127,15 @@
   background: var(--secondary-dark);
   color: var(--color-text-light-highlight);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-attack-buttons button:hover {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:hover {
   color: white;
   background: var(--secondary-light);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-attack-buttons button:first-child {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:first-child {
   background: var(--secondary);
   color: var(--color-text-light-highlight);
 }
-.dark-theme.message .pf2e.chat-card .card-buttons .spell-attack-buttons button:first-child:hover {
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:first-child:hover {
   color: white;
   background: var(--secondary-light);
 }
@@ -146,7 +152,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -232,7 +238,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   text-shadow: var(--dorako-text-shadow);

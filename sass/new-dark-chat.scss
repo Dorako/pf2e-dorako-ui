@@ -5,10 +5,17 @@
 /* ----------------------------------------- */
 /* Glassy Buttons                            */
 /* ----------------------------------------- */
-.dark-theme.message {
+.dark-theme.message.chat-message {
     .dice-roll .dice-formula, 
     .dice-roll .dice-total {
         @include glass;
+    }
+
+    .dice-roll .dice-result {
+        .statuseffect-rules {
+            background: var(--sheet-dark);
+            background-size: cover;
+        }
     }
 
     .pf2e.chat-card .card-buttons {

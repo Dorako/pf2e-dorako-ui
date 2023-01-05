@@ -15,7 +15,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
@@ -27,7 +27,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   border-radius: 5px;
@@ -98,7 +98,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: rgba(0, 0, 0, 0.8);
@@ -122,7 +122,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: rgba(0, 0, 0, 0.8);
@@ -136,7 +136,7 @@
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
@@ -165,7 +165,7 @@
   /* Global */
   --primary: #5e0000;
   --primary-light: #b10000;
-  --primary-dark: #4b0000;
+  --primary-dark: #380000;
   --secondary: #171f69;
   --secondary-light: #2532a8;
   --secondary-dark: #0e133f;
@@ -201,6 +201,8 @@
   /* Sidebar */
   --sidebar-label: var(--tertiary-dark);
   --sidebar-title: var(--tertiary);
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.60);
 }
 
 .combat-sidebar .drag-gap {
@@ -230,7 +232,7 @@ nav#controls ol.control-tools li.scene-control {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -248,7 +250,7 @@ nav#controls ol.control-tools li.scene-control:hover {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   color: var(--color-text-light-highlight);
@@ -264,7 +266,7 @@ nav#controls ol.control-tools li.scene-control.toggle {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: var(--secondary-dark);
@@ -275,7 +277,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   color: white;
@@ -305,7 +307,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   display: none;
@@ -394,6 +396,10 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   width: calc(var(--macro-size) + 2px);
   border: none;
   border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 #hotbar .macro.inactive::before, #hotbar .macro.active::before {
@@ -456,7 +462,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
@@ -480,7 +486,7 @@ nav#navigation #nav-toggle {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: 0.25s;
@@ -491,23 +497,24 @@ nav#navigation ol#scene-list li.nav-item {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: 0.25s;
+  text-shadow: 0px 0px 3px black;
 }
 nav#navigation ol#scene-list li.nav-item:hover {
   background-color: rgba(177, 177, 177, 0.5);
   color: black;
 }
 nav#navigation ol#scene-list li.nav-item:hover a, nav#navigation ol#scene-list li.nav-item:hover a:hover {
-  text-shadow: 0 0 4px var(--color-text-light-highlight);
+  text-shadow: 0 0 3px var(--color-text-light-highlight);
 }
 nav#navigation ol#scene-list li.nav-item.view {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: var(--primary);
@@ -518,13 +525,13 @@ nav#navigation ol#scene-list li.nav-item.view:hover {
   background-color: var(--primary-light);
 }
 nav#navigation ol#scene-list li.nav-item.view:hover a, nav#navigation ol#scene-list li.nav-item.view:hover a:hover {
-  text-shadow: 0 0 4px black;
+  text-shadow: 0px 0px 3px black;
 }
 nav#navigation ol#scene-list li.nav-item.gm {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: var(--secondary-dark);
@@ -534,7 +541,7 @@ nav#navigation ol#scene-list li.nav-item.gm:hover, nav#navigation ol#scene-list 
   background-color: var(--secondary-light);
 }
 nav#navigation ol#scene-list li.nav-item.gm:hover a, nav#navigation ol#scene-list li.nav-item.gm:hover a:hover, nav#navigation ol#scene-list li.nav-item.gm.view a, nav#navigation ol#scene-list li.nav-item.gm.view a:hover {
-  text-shadow: 0 0 4px black;
+  text-shadow: 0px 0px 3px black;
 }
 nav#navigation ol#scene-list li.nav-item.active {
   color: var(--color-text-light-highlight);
@@ -547,10 +554,11 @@ nav#navigation ol#scene-list li.nav-item.active {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  text-shadow: 0 0 4px black;
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-highlight);
 }
 #notifications .notification.info {
   background-color: var(--secondary);
@@ -617,7 +625,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   margin: 2px;
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   border-radius: 3px;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 3px black;
   color: white;
   background-color: var(--primary-light);
 }
@@ -625,12 +633,22 @@ nav#navigation ol#scene-list li.nav-item.active {
   line-height: 24px;
 }
 
-#token-hud .effect-control {
+#token-hud .status-effects {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0px;
+  grid-template-columns: repeat(5, 1fr);
+  width: auto;
+  gap: 8px;
+}
+#token-hud .status-effects .effect-control {
   border: none;
   margin: 0px;
   padding: 0px;
+  background-color: var(--glass-bg);
 }
-#token-hud .effect-control::before {
+#token-hud .status-effects .effect-control::before {
   content: "";
   position: absolute;
   top: 0;
@@ -642,7 +660,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .effect-control.active::before {
+#token-hud .status-effects .effect-control.active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -654,7 +672,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .effect-control:hover::before {
+#token-hud .status-effects .effect-control:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -666,7 +684,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .effect-control.active:hover::before {
+#token-hud .status-effects .effect-control.active:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -677,63 +695,6 @@ nav#navigation ol#scene-list li.nav-item.active {
   border-radius: 3px;
   overflow: hidden;
   pointer-events: none;
-}
-
-#token-hud input[type=text] {
-  border: none;
-  border-radius: 3px;
-  background: none;
-  background-color: rgba(20, 20, 20, 0.6);
-  box-shadow: var(--glassy);
-  color: var(--color-text-light-heading);
-}
-#token-hud .control-icon {
-  border: none;
-  border-radius: 3px;
-  background: none;
-  background-color: rgba(20, 20, 20, 0.6);
-  box-shadow: var(--glassy);
-  color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-#token-hud .control-icon:hover {
-  background-color: var(--secondary-light);
-}
-#token-hud .control-icon.active {
-  color: var(--color-text-light-highlight);
-  background-color: var(--secondary-light);
-}
-#token-hud .control-icon.active:hover {
-  background-color: var(--secondary-dark);
-}
-#token-hud .control-icon.active:hover > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-}
-#token-hud .control-icon.active > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-}
-#token-hud .control-icon > img {
-  opacity: 1;
-  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
-}
-#token-hud .status-effects {
-  background: none;
-  box-shadow: none;
-  border: none;
-  padding: 0px;
-  grid-template-columns: repeat(5, 1fr);
-  width: auto;
-  gap: 8px;
-}
-#token-hud .status-effects .effect-control {
-  color: var(--color-text-dark-1);
-  cursor: pointer;
-  height: 40px;
-  opacity: 1;
-  position: relative;
-  width: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  filter: brightness(0.75) saturate(0.75);
 }
 #token-hud .status-effects .effect-control:hover, #token-hud .status-effects .effect-control.active {
   filter: none;
@@ -759,35 +720,11 @@ nav#navigation ol#scene-list li.nav-item.active {
   width: auto;
   border-radius: 3px;
 }
-#token-hud .status-effects .effect-control .badge {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  border: 0.1em solid darkred;
-  font-size: var(--font-size-8);
-  height: 0.8rem;
-  line-height: var(--font-size-10);
-  pointer-events: none;
-  position: absolute;
-  right: -3px;
-  text-align: center;
-  top: -3px;
-  width: 0.8rem;
-  z-index: 1;
-}
-#token-hud .status-effects .effect-control.overridden > * {
-  filter: saturate(0);
-}
-#token-hud .status-effects .effect-control.valued .badge {
-  font-size: var(--font-size-12);
-  font-style: unset;
-  font-weight: 500;
-  line-height: var(--font-size-12);
-}
 #token-hud .status-effects .title-bar {
   border: none;
   border-radius: 3px;
   background: none;
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   box-sizing: content-box;
@@ -805,6 +742,68 @@ nav#navigation ol#scene-list li.nav-item.active {
 }
 #token-hud .status-effects .title-bar.active {
   visibility: visible;
+}
+
+.placeable-hud input[type=text] {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+}
+.placeable-hud .control-icon {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+}
+.placeable-hud .control-icon[data-action=overhead], .placeable-hud .control-icon[data-action=underfoot] {
+  background-color: var(--primary-dark);
+}
+.placeable-hud .control-icon[data-action=overhead]:hover, .placeable-hud .control-icon[data-action=overhead].active, .placeable-hud .control-icon[data-action=underfoot]:hover, .placeable-hud .control-icon[data-action=underfoot].active {
+  background-color: var(--primary-light);
+}
+.placeable-hud .control-icon[data-action=overhead]:hover > img, .placeable-hud .control-icon[data-action=overhead].active > img, .placeable-hud .control-icon[data-action=underfoot]:hover > img, .placeable-hud .control-icon[data-action=underfoot].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon[data-action=overhead]:hover:hover, .placeable-hud .control-icon[data-action=overhead].active:hover, .placeable-hud .control-icon[data-action=underfoot]:hover:hover, .placeable-hud .control-icon[data-action=underfoot].active:hover {
+  background-color: var(--primary-light);
+}
+.placeable-hud .control-icon[data-action=sort-up]:hover, .placeable-hud .control-icon[data-action=sort-down]:hover, .placeable-hud .control-icon[data-action=config]:hover, .placeable-hud .control-icon[data-action=trigger]:hover {
+  background-color: var(--primary);
+}
+.placeable-hud .control-icon[data-action=sort-up]:hover > img, .placeable-hud .control-icon[data-action=sort-down]:hover > img, .placeable-hud .control-icon[data-action=config]:hover > img, .placeable-hud .control-icon[data-action=trigger]:hover > img {
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon[data-action=visibility], .placeable-hud .control-icon[data-action=effects], .placeable-hud .control-icon[data-action=combat], .placeable-hud .control-icon[data-action=locked], .placeable-hud .control-icon[data-action=target], .placeable-hud .control-icon[data-action=active] {
+  background-color: var(--secondary-dark);
+}
+.placeable-hud .control-icon[data-action=visibility]:hover, .placeable-hud .control-icon[data-action=visibility].active, .placeable-hud .control-icon[data-action=effects]:hover, .placeable-hud .control-icon[data-action=effects].active, .placeable-hud .control-icon[data-action=combat]:hover, .placeable-hud .control-icon[data-action=combat].active, .placeable-hud .control-icon[data-action=locked]:hover, .placeable-hud .control-icon[data-action=locked].active, .placeable-hud .control-icon[data-action=target]:hover, .placeable-hud .control-icon[data-action=target].active, .placeable-hud .control-icon[data-action=active]:hover, .placeable-hud .control-icon[data-action=active].active {
+  background-color: var(--secondary-light);
+}
+.placeable-hud .control-icon[data-action=visibility]:hover > img, .placeable-hud .control-icon[data-action=visibility].active > img, .placeable-hud .control-icon[data-action=effects]:hover > img, .placeable-hud .control-icon[data-action=effects].active > img, .placeable-hud .control-icon[data-action=combat]:hover > img, .placeable-hud .control-icon[data-action=combat].active > img, .placeable-hud .control-icon[data-action=locked]:hover > img, .placeable-hud .control-icon[data-action=locked].active > img, .placeable-hud .control-icon[data-action=target]:hover > img, .placeable-hud .control-icon[data-action=target].active > img, .placeable-hud .control-icon[data-action=active]:hover > img, .placeable-hud .control-icon[data-action=active].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon:hover {
+  background-color: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.placeable-hud .control-icon.active {
+  color: var(--color-text-light-highlight);
+  background-color: var(--secondary-light);
+  border: none;
+}
+.placeable-hud .control-icon.active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon > img {
+  opacity: 1;
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
 
 /*# sourceMappingURL=main.css.map */

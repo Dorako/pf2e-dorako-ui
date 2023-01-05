@@ -1343,15 +1343,15 @@ Hooks.once("init", async () => {
     requiresReload: true
   });
 
-  // game.settings.register("pf2e-dorako-ui", "compact-ui", {
-  //   name: i18n("dorako-ui.settings.compact-ui.name"),
-  //   hint: i18n("dorako-ui.settings.compact-ui.hint"),
-  //   scope: "client",
-  //   config: true,
-  //   default: false,
-  //   type: Boolean,
-  //   requiresReload: true
-  // });
+  game.settings.register("pf2e-dorako-ui", "compact-ui", {
+    name: i18n("dorako-ui.settings.compact-ui.name"),
+    hint: i18n("dorako-ui.settings.compact-ui.hint"),
+    scope: "client",
+    config: true,
+    default: false,
+    type: Boolean,
+    requiresReload: true
+  });
 
   game.settings.register("pf2e-dorako-ui", "no-logo", {
     name: i18n("dorako-ui.settings.no-logo.name"),
@@ -1606,7 +1606,7 @@ Hooks.once("init", async () => {
   // setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
   // if (setting == "both" || setting == "bg-color") injectCSS("chat-blind-whisper");
   // if (game.settings.get("pf2e-dorako-ui", "avatar-border")) injectCSS("chat-portrait-border");
-  // if (game.settings.get("pf2e-dorako-ui", "compact-ui")) injectCSS("compact-ui");
+  if (game.settings.get("pf2e-dorako-ui", "compact-ui")) injectCSS("compact-ui");
   if (game.settings.get("pf2e-dorako-ui", "no-logo")) injectCSS("no-logo");
   if (game.settings.get("pf2e-dorako-ui", "no-chat-control-icon")) injectCSS("no-chat-control-icon");
   setting = game.settings.get("pf2e-dorako-ui", "pc-sheet-theme");

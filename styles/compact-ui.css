@@ -1,4 +1,4 @@
-#controls .main-controls .scene-control:not(.active),
+#controls .main-controls .scene-control:not(.active, .toggle),
 #controls .sub-controls .control-tool:not(.active, .toggle) {
   display: none;
 }
@@ -7,7 +7,7 @@
   pointer-events: all;
   /* gap: 5px; */
   flex-wrap: nowrap;
-  width: 75px;
+  /* width: 75px; */
   flex-direction: row;
 }
 
@@ -21,14 +21,14 @@
   display: block;
 }
 
-#controls ol .scene-control,
+/* #controls ol .scene-control,
 #controls ol .control-tool {
   width: 28px;
   height: 28px;
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 4px;
-}
+} */
 
 #controls ol.main-controls.app.control-tools {
   width: unset;

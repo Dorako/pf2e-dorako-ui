@@ -217,6 +217,29 @@
                 // margin-top: 5px;
             }
         }
+
+        .dice-roll .dice-result {
+            .statuseffect-message {
+                background-color: unset;
+                box-shadow: none;
+                border: none;
+    
+                li:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+        
+                img {
+                    @include gold-border;
+                    border-radius: 50%;
+                    margin-right: 6px;
+                }
+            }
+    
+            .statuseffect-rules {
+                @include sheet;
+                @include gold-border-shadow;
+            }
+        }
     }
 
     [data-visibility]:not([data-visibility=all])[data-visibility=gm] {

@@ -1,3 +1,10 @@
+# 1.9.5
+
+(Refinement) Updated styling for token hud, and extended it to also affect tile hud
+(New) Compact controls setting is back
+(New) Added styling for status-effect messages for both light and dark mode
+(New) The glassy background can now be adjusted via the --glass-bg css variable 
+
 # 1.9.4
 
 (Fix) Option for removing redundant information from damage rolls now functional again

@@ -6,7 +6,8 @@
 
 #notifications .notification {
     @include glass;
-    text-shadow: 0 0 4px black;
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-highlight);
 
     &.info {
         background-color: var(--secondary);
