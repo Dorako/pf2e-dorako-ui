@@ -4,6 +4,8 @@
 :root {
   --color-border-highlight: var(--tertiary);
   --color-border-highlight-alt: var(--tertiary-dark);
+  --color-shadow-primary: var(--tertiary-dark);
+  --color-shadow-highlight: var(--tertiary);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -11,6 +13,13 @@
   border: 1px solid var(--gold-brown);
 }
 
+a:hover {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* ----------------------------------------- */
+/* App UI                                    */
+/* ----------------------------------------- */
 #players {
   border: none;
   border-radius: 3px;
@@ -19,10 +28,14 @@
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
+#players h3 {
+  cursor: pointer;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#players h3:hover {
+  text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+}
 
-/* ----------------------------------------- */
-/* App UI                                    */
-/* ----------------------------------------- */
 .app {
   border: none;
   border-radius: 3px;
@@ -101,7 +114,6 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
 }
 #context-menu.expand-down {
@@ -109,10 +121,6 @@
 }
 #context-menu ol.context-items {
   border: none;
-}
-#context-menu ol.context-items li.context-item:hover {
-  color: var(--color-text-light-highlight);
-  text-shadow: 0 0 4px wheat;
 }
 
 /* ----------------------------------------- */
@@ -125,8 +133,10 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
+  min-height: 34px;
+  font-size: var(--font-size-20);
+  line-height: var(--font-size-20);
 }
 
 /* ----------------------------------------- */
@@ -214,8 +224,17 @@
 .combat-sidebar li.combatant .token-image {
   margin: 2px;
 }
+.combat-sidebar li.combatant .token-name img.token-effect {
+  border-radius: 50%;
+  border: 1px solid var(--tertiary);
+  box-shadow: 1px 1px 4px #222;
+}
+.combat-sidebar li.combatant.defeated img {
+  transform: unset;
+}
 .combat-sidebar li.combatant.active {
   background: var(--primary);
+  color: var(--color-text-light-highlight);
 }
 
 /* ----------------------------------------- */
@@ -292,13 +311,21 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   pointer-events: initial;
   position: absolute;
   top: 5px;
+  top: 0px;
   right: 3px;
+  right: -3px;
+  overflow: hidden scroll;
+  height: calc(100% - 62px);
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 10%;
 }
 .effect-panel .effect-item {
   display: flex;
   justify-content: flex-end;
   height: 46px;
   margin-bottom: 0.2em;
+  margin-right: 3px;
 }
 .effect-panel .effect-item:hover .effect-info {
   display: block;
@@ -312,15 +339,20 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   color: var(--color-text-light-heading);
   display: none;
   height: min-content;
+  margin: 3px;
   margin-right: 0.5em;
-  padding: 0.25em;
-  background-color: rgba(0, 0, 0, 0.8);
+  padding: 4px 8px;
+  backdrop-filter: blur(5px);
+  z-index: var(--z-index-tooltip);
 }
 .effect-panel .effect-item .effect-info h1 {
-  font-size: var(--font-size-12);
-  color: white;
+  font-size: var(--font-size-16);
+  color: var(--color-text-light-highlight);
   text-align: right;
   border: none;
+}
+.effect-panel .effect-item .effect-info p:last-child {
+  margin-bottom: 0px;
 }
 .effect-panel .effect-item .effect-info .tags {
   justify-content: flex-end;
@@ -333,7 +365,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   margin-right: -2px;
 }
 .effect-panel .effect-item .effect-info .instructions {
-  color: white;
+  color: var(--color-text-light-heading);
   font-size: 0.75em;
   text-align: right;
 }
@@ -341,7 +373,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   /* prettier-ignore */
   border: none;
   margin: 2px;
-  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
   border-radius: 50%;
   align-items: center;
   background-repeat: no-repeat;
@@ -352,15 +384,21 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   position: relative;
   height: 42px;
   width: 42px;
+  margin-left: 3px;
 }
 .effect-panel .effect-item .icon .expired {
   position: absolute;
-  left: 0;
+  left: auto;
   bottom: -1px;
-  width: 100%;
-  padding: 2px 1px;
+  width: 80%;
+  width: unset;
+  padding: 2px 2px;
   color: white;
-  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary-light);
+  text-shadow: 0px 0px 3px black;
+  box-shadow: var(--gold-and-glow);
+  border-radius: 2px;
 }
 .effect-panel .effect-item .icon .linked {
   position: absolute;
@@ -369,7 +407,10 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   right: -1px;
   padding: 0px 2px;
   color: white;
+  color: var(--color-text-light-highlight);
   background-color: rgba(0, 0, 0, 0.75);
+  background: none;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
 }
 .effect-panel .effect-item .icon .value {
   position: absolute;
@@ -378,14 +419,22 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   left: -1px;
   padding: 0px 2px;
   color: white;
+  color: var(--color-text-light-highlight);
   background-color: rgba(0, 0, 0, 0.75);
+  background: none;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
 }
 .effect-panel .effect-item .icon.unidentified {
   filter: drop-shadow(0 0 8px var(--visibility-gm-bg));
 }
 .effect-panel hr {
-  margin-right: 0;
+  margin-right: 6;
+  margin-right: 2px;
   width: 36px;
+  width: 42px;
+  border-top: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--gold-brown);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 /* ----------------------------------------- */
@@ -481,6 +530,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
 /* ----------------------------------------- */
 nav#navigation {
   color: var(--color-text-light-heading);
+  width: calc(100% - 46px);
 }
 nav#navigation #nav-toggle {
   border: none;

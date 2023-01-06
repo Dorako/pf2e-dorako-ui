@@ -8,13 +8,21 @@
     pointer-events: initial;
     position: absolute;
     top: 5px;
+    top: 0px;
     right: 3px;
+    right: -3px;
+    overflow: hidden scroll;
+    height: calc(100% - 62px);
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 10%; // Make room so panel can be scrolled up to read popouts without overlapping with UI
 
     .effect-item {
         display: flex;
         justify-content: flex-end;
         height: 46px;
         margin-bottom: 0.2em;
+        margin-right: 3px;
 
         &:hover {
             .effect-info {
@@ -26,15 +34,21 @@
             @include glass;
             display: none;
             height: min-content;
+            margin: 3px; // Make space for box-shadow for overflow
             margin-right: 0.5em;
-            padding: 0.25em;
-            background-color: rgba(black, 0.8);
+            padding: 4px 8px;
+            backdrop-filter: blur(5px);
+            z-index: var(--z-index-tooltip);
 
             h1 {
-                font-size: var(--font-size-12);
-                color: white;
+                font-size: var(--font-size-16);
+                color: var(--color-text-light-highlight);
                 text-align: right;
                 border: none;
+            }
+
+            p:last-child {
+                margin-bottom: 0px;
             }
 
             .tags {
@@ -51,7 +65,7 @@
             }
 
             .instructions {
-                color: white;
+                color: var(--color-text-light-heading);
                 font-size: 0.75em;
                 text-align: right;
             }
@@ -69,15 +83,21 @@
             position: relative;
             height: 42px;
             width: 42px;
+            margin-left: 3px; // Make room for box-shadow overflow for expired tag
 
             .expired {
                 position: absolute;
-                left: 0;
+                left: auto;
                 bottom: -1px;
-                width: 100%;
-                padding: 2px 1px;
+                width: 80%;
+                width: unset;
+                padding: 2px 2px;
                 color: white;
-                background-color: var(--primary);
+                color: var(--color-text-light-highlight);
+                background-color: var(--primary-light);
+                text-shadow: 0px 0px 3px black;
+                box-shadow: var(--gold-and-glow);
+                border-radius: 2px;
             }
             .linked {
                 position: absolute;
@@ -86,7 +106,10 @@
                 right: -1px;
                 padding: 0px 2px;
                 color: white;
+                color: var(--color-text-light-highlight);
                 background-color: rgba(0, 0, 0, 0.75);
+                background: none;
+                text-shadow: 0px 1px 5px black, 0px 1px 5px black;
             }
             .value {
                 position: absolute;
@@ -95,7 +118,10 @@
                 left: -1px;
                 padding: 0px 2px;
                 color: white;
+                color: var(--color-text-light-highlight);
                 background-color: rgba(0, 0, 0, 0.75);
+                background: none;
+                text-shadow: 0px 1px 5px black, 0px 1px 5px black;
             }
 
             &.unidentified {
@@ -105,7 +131,12 @@
     }
 
     hr {
-        margin-right: 0;
+        margin-right: 6;
+        margin-right: 2px;
         width: 36px;
+        width: 42px;
+        border-top: 1px solid var(--tertiary);
+        border-bottom: 1px solid var(--gold-brown);
+        box-shadow: 0 0 20px rgb(0 0 0 / 80%);
     }
 }

@@ -204,7 +204,7 @@
   /* prettier-ignore */
   border: none;
   margin: 2px;
-  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
 }
 .message.chat-message [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   border-radius: 3px;

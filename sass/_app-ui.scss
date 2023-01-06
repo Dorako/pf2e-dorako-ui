@@ -7,6 +7,8 @@
 :root {
     --color-border-highlight: var(--tertiary);
     --color-border-highlight-alt: var(--tertiary-dark);
+    --color-shadow-primary: var(--tertiary-dark);
+    --color-shadow-highlight: var(--tertiary);
  } 
 
 ::-webkit-scrollbar-thumb {
@@ -14,13 +16,26 @@
     border: 1px solid var(--gold-brown);
 }
 
-#players {
-    @include glass;
+a:hover {
+    @include quick-transition;
 }
+
 
 /* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
+
+#players {
+    @include glass;
+    h3 {
+        cursor: pointer;
+        @include quick-transition;
+
+        &:hover {
+            text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+        }
+    }
+}
 
 .app {
     @include glass;
@@ -82,7 +97,6 @@
 
 #context-menu {
     @include glass;
-    background-color:rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
 
     &.expand-down {
@@ -91,11 +105,6 @@
 
     ol.context-items {
         border: none;
-
-        li.context-item:hover {
-            color: var(--color-text-light-highlight);
-            text-shadow: 0 0 4px wheat;
-        }
     }
 }
 
@@ -105,14 +114,15 @@
 
 #tooltip {
     @include glass;
-    background-color:rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
+    min-height: 34px;
+    font-size: var(--font-size-20);
+    line-height: var(--font-size-20);
 }
 
 /* ----------------------------------------- */
 /* FPS display                               */
 /* ----------------------------------------- */
-
 
 #fps {
     @include glass;

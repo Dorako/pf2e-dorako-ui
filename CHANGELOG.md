@@ -1,3 +1,13 @@
+# 1.9.6
+
+(Refinement) Updated styling of status effects in the combat tracker
+(Refinement) Updated the hover-glow for links to be more visible
+(Refinement) Updated styling of effects panel, and ensure navigation doesn't overlap effect panel
+(Refinement) Updated styling of tooltips and context menus
+(Refinement) Added clickability affordances to the Players UI
+(Fix) Possibly fixed style incompatability with Filepicker+
+(New) Effect panel now scrolls vertically if there are too many effects to fit on screen
+
 # 1.9.5
 
 (Refinement) Updated styling for token hud, and extended it to also affect tile hud
