@@ -22,6 +22,24 @@
         margin: 0px;
         margin-top: 5px;
 
+        button.with-image {
+            @include glass;
+            text-shadow: var(--dorako-text-shadow);
+            background: var(--primary);
+            color: var(--color-text-light-highlight);
+
+            &:hover {
+                color: white;
+                background: var(--primary-light);
+            }
+
+            img {
+                @include gold-border;
+                border-radius: 3px;
+                height: 1.2em;
+            }
+        }
+
         .spell-button button {
             @include glass;
             text-shadow: var(--dorako-text-shadow);

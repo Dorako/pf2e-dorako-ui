@@ -82,6 +82,29 @@
   margin: 0px;
   margin-top: 5px;
 }
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  text-shadow: var(--dorako-text-shadow);
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image:hover {
+  color: white;
+  background: var(--primary-light);
+}
+.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image img {
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  height: 1.2em;
+}
 .dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-button button {
   border: none;
   border-radius: 3px;

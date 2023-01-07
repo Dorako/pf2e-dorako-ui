@@ -1,3 +1,8 @@
+# 1.9.7
+
+(Refinement) Extended dark theme styling to affect variable-action cost spell buttons
+(Fix) Fixed poor contrast styling for dark chat messages from Monk's tokenbar
+
 # 1.9.6
 
 (Refinement) Updated styling of status effects in the combat tracker
