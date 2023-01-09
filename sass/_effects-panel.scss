@@ -16,6 +16,9 @@
     height: 100%;
     padding-top: 5px;
     padding-bottom: 10%; // Make room so panel can be scrolled up to read popouts without overlapping with UI
+    &::-webkit-scrollbar-track {
+        box-shadow: none;
+    }
 
     .effect-item {
         display: flex;

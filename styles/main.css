@@ -320,6 +320,9 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   padding-top: 5px;
   padding-bottom: 10%;
 }
+.effect-panel::-webkit-scrollbar-track {
+  box-shadow: none;
+}
 .effect-panel .effect-item {
   display: flex;
   justify-content: flex-end;
@@ -450,6 +453,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: none;
 }
 #hotbar .macro.inactive::before, #hotbar .macro.active::before {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -553,6 +557,9 @@ nav#navigation ol#scene-list li.nav-item {
   transition: 0.25s;
   text-shadow: 0px 0px 3px black;
 }
+nav#navigation ol#scene-list li.nav-item .scene-players {
+  text-shadow: none;
+}
 nav#navigation ol#scene-list li.nav-item:hover {
   background-color: rgba(177, 177, 177, 0.5);
   color: black;
@@ -574,9 +581,6 @@ nav#navigation ol#scene-list li.nav-item.view:hover {
   color: white;
   background-color: var(--primary-light);
 }
-nav#navigation ol#scene-list li.nav-item.view:hover a, nav#navigation ol#scene-list li.nav-item.view:hover a:hover {
-  text-shadow: 0px 0px 3px black;
-}
 nav#navigation ol#scene-list li.nav-item.gm {
   border: none;
   border-radius: 3px;
@@ -589,9 +593,6 @@ nav#navigation ol#scene-list li.nav-item.gm {
 nav#navigation ol#scene-list li.nav-item.gm:hover, nav#navigation ol#scene-list li.nav-item.gm.view {
   color: var(--color-text-light-highlight);
   background-color: var(--secondary-light);
-}
-nav#navigation ol#scene-list li.nav-item.gm:hover a, nav#navigation ol#scene-list li.nav-item.gm:hover a:hover, nav#navigation ol#scene-list li.nav-item.gm.view a, nav#navigation ol#scene-list li.nav-item.gm.view a:hover {
-  text-shadow: 0px 0px 3px black;
 }
 nav#navigation ol#scene-list li.nav-item.active {
   color: var(--color-text-light-highlight);
@@ -627,6 +628,9 @@ nav#navigation ol#scene-list li.nav-item.active {
 /* ----------------------------------------- */
 #ui-right #sidebar {
   height: -webkit-fill-available;
+}
+#ui-right #sidebar.collapsed {
+  height: auto;
 }
 
 .chat-sidebar {

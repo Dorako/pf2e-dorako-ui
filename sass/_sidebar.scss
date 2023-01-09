@@ -5,6 +5,9 @@
 #ui-right {
     #sidebar {
         height: -webkit-fill-available;
+        &.collapsed {
+            height: auto;
+        }
     }
 }
 

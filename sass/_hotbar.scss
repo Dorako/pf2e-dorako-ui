@@ -8,6 +8,7 @@
         width: calc(var(--macro-size) + 2px);
         @include glass;
         @include quick-transition;
+        box-shadow: none;
 
         &.inactive::before,
         &.active::before {

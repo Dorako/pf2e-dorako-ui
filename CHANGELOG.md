@@ -1,3 +1,12 @@
+# 1.9.8
+
+(Refinement) Make scrollbar track for effects panel invisible
+(Fix) Make collapsed sidebar not take up all the vertical height
+(Fix) Ensure module is not styling Monk's Little Details' roundmarker chat messages
+(Refinement) Fix double-shadowing of hotbar
+(Refinement) Improve styling of Monk's Tokenbar
+(Refinement) Minor updates to TAH styling
+
 # 1.9.7
 
 (Refinement) Extended dark theme styling to affect variable-action cost spell buttons

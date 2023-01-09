@@ -345,6 +345,13 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* Monk's tokenbar                           */
 /* ----------------------------------------- */
+#tokenbar {
+  gap: 3px;
+}
+#tokenbar .token-list {
+  gap: 5px;
+  border: none;
+}
 #tokenbar .bar-controls {
   border: none;
   border-radius: 3px;
@@ -374,13 +381,27 @@ nav.damage-log-nav.tabs .item.active {
 }
 #tokenbar .token .token-stats {
   background: none;
+  text-shadow: 0px 0px 3px black;
+}
+#tokenbar .token:hover {
+  background-color: var(--primary);
 }
 #tokenbar .token:hover .token-icon {
-  box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+  box-shadow: none;
+  filter: drop-shadow(0px 0px 5px var(--tertiary));
 }
 #tokenbar .token .token-icon {
   box-shadow: none;
   border-radius: 3px;
+}
+#tokenbar .token .tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
 }
 
 .monks-tokenbar.chat-card .card-header h3:hover {
@@ -396,7 +417,7 @@ nav.damage-log-nav.tabs .item.active {
   margin: 2px;
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   border-radius: 3px;
-  text-shadow: none;
+  text-shadow: 0px 0px 3px black;
   background-color: var(--primary-light);
   color: var(--color-text-light-highlight);
 }
@@ -472,6 +493,20 @@ nav.damage-log-nav.tabs .item.active {
 
 #hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
   color: var(--tertiary-dark);
+}
+
+[data-tooltip="MonksHotbarExpansion.clear-row"] {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+[data-tooltip="MonksHotbarExpansion.clear-row"]:hover i {
+  text-shadow: 0 0 8px var(--color-shadow-primary);
+}
+
+.hotbar-page .page-number {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.hotbar-page .page-number:hover {
+  text-shadow: 0 0 8px var(--color-shadow-primary);
 }
 
 #hotbar {
@@ -596,8 +631,14 @@ nav.damage-log-nav.tabs .item.active {
 #tah-expand-hud, .tah-title-button {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: var(--color-text-light-heading);
+  padding: 3px 5px 3px 5px;
 }
 #tah-expand-hud:hover, .tah-title-button:hover {
+  color: var(--color-text-light-highlight);
+}
+
+.tah-category.hover button.tah-title-button {
+  background-color: var(--primary);
   color: var(--color-text-light-highlight);
 }
 
@@ -740,7 +781,7 @@ nav.damage-log-nav.tabs .item.active {
   color: white;
 }
 
-.chat-message > .message-header.dorako-header {
+.chat-message > .message-header {
   margin-bottom: 0px;
 }
 

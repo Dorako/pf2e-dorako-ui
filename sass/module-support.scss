@@ -293,6 +293,13 @@ nav.damage-log-nav.tabs {
 /* ----------------------------------------- */
 
 #tokenbar {
+    gap: 3px;
+    
+    .token-list {
+        gap: 5px;
+        border: none;
+    }
+
     .bar-controls {
         @include glass;
         div#tokenbar-move-handle {
@@ -306,14 +313,24 @@ nav.damage-log-nav.tabs {
         @include quick-transition;
         .token-stats {
             background: none;
+            text-shadow: 0px 0px 3px black;
         }
-        &:hover .token-icon {
-            box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+        &:hover {
+            background-color: var(--primary);
+            .token-icon {
+                // box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+                box-shadow: none;
+                filter: drop-shadow(0px 0px 5px var(--tertiary));
+            }
         }
 
         .token-icon {
             box-shadow: none;
             border-radius: 3px;
+        }
+        .tooltip {
+            @include glass;
+            backdrop-filter: blur(5px);
         }
     }
 }
@@ -331,7 +348,7 @@ nav.damage-log-nav.tabs {
     margin: 2px;
     box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
     border-radius: 3px;
-    text-shadow: none;
+    text-shadow: 0px 0px 3px black;
     background-color: var(--primary-light);
     color: var(--color-text-light-highlight);
 }
@@ -408,13 +425,27 @@ nav.damage-log-nav.tabs {
 #hotbar .hotbar-page .hotbar-page-row .bar-controls span.page-number,
 #hotbar .hotbar-page .hotbar-page-row .bar-controls i {
     line-height: 52px;
-    ;
 }
 
 #hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
     color: var(--tertiary-dark);
 }
 
+[data-tooltip="MonksHotbarExpansion.clear-row"] {
+    @include quick-transition;
+    &:hover {
+        i {
+            text-shadow: 0 0 8px var(--color-shadow-primary);
+        }
+    }
+}
+
+.hotbar-page .page-number{
+    @include quick-transition;
+    &:hover {
+        text-shadow: 0 0 8px var(--color-shadow-primary);
+    }
+}
 #hotbar {
     width: 647px;
 
@@ -538,7 +569,15 @@ nav.damage-log-nav.tabs {
 #tah-expand-hud, .tah-title-button {
     @include quick-transition;
     color: var(--color-text-light-heading);
+    padding: 3px 5px 3px 5px;
     &:hover {
+        color: var(--color-text-light-highlight);
+    }
+}
+
+.tah-category.hover {
+    button.tah-title-button {
+        background-color: var(--primary);
         color: var(--color-text-light-highlight);
     }
 }
@@ -725,7 +764,12 @@ nav.damage-log-nav.tabs {
     }
 }
 
-.chat-message>.message-header.dorako-header {
+// This actually looks better just gone, regardles of dorako-header
+// .chat-message>.message-header.dorako-header {
+//     margin-bottom: 0px;
+// }
+
+.chat-message>.message-header {
     margin-bottom: 0px;
 }
 

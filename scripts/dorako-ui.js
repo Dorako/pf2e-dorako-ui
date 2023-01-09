@@ -312,7 +312,9 @@ Hooks.on("renderCombatTracker", addScalingToCombatTrackerAvatars);
 
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  if (chatMessage.flags["narrator-tools"]) {
+  isNarratorToolsMessage = chatMessage.flags["narrator-tools"];
+  isRoundMarker = chatMessage.flags["monks-little-details"]?.roundmarker;
+  if (isNarratorToolsMessage || isRoundMarker) {
     return;
   }
 
