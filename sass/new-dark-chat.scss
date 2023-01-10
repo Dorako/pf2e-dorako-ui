@@ -18,6 +18,21 @@
         }
     }
 
+    .table-draw {
+        .table-description {
+            color: var(--color-text-light-highlight);
+            border-top: 1px solid var(--tertiary);
+        }
+        .table-results .table-result img.result-image {
+            @include sheet;
+            object-fit: contain;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+    }
+
+    .chat-message .table-draw 
+
     .pf2e.chat-card .card-buttons {
         margin: 0px;
         margin-top: 5px;

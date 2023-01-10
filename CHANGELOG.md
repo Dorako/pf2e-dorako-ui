@@ -1,3 +1,13 @@
+# 1.9.9
+
+(New) Added styling for the Monarch module
+(Fix) Fixed numerator of frequency skills being illegible on dark mode pc sheets
+(Fix) Fixed description of rolltable messages being illegible on dark mode chat messages
+(Refinement) Added a light background to rolltable images on dark mode chat message, to ensure good contrast
+(Refinement) Update sidebar tab styling to leave more room for modules that add buttons
+(New) Setting for dark-theme styling of Filepicker and Token Config
+(Fix) Style incompatability with Filepicker+ now actually fixed
+
 # 1.9.8
 
 (Refinement) Make scrollbar track for effects panel invisible

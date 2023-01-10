@@ -3,6 +3,63 @@
 @import "mixins";
 
 /* ----------------------------------------- */
+/* Monarch                                   */
+/* ----------------------------------------- */
+
+.window-app.monarch .window-content {
+    box-shadow: none;
+    background: none;
+}
+
+.window-app.monarch-hand:not(.minimized).no-fade.trans,
+.window-app.monarch-hand:not(.minimized):hover.trans {
+    @include glass;
+    backdrop-filter: blur(5px);
+}
+
+.window-app.monarch-hand .window-header,
+.monarch-hand footer.sheet-footer {
+    @include glass;
+}
+
+.monarch .card-hud .controls a i {
+    color: var(--color-text-light-heading);
+}
+
+.monarch input[type=text], .monarch input[type=number], .monarch input[type=password], .monarch input[type=date], .monarch input[type=time] {
+    border: none;
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    color: var(--color-text-light-heading);
+}
+
+.monarch-hand footer.sheet-footer {
+    margin: 2px 10px;
+
+    button {
+        @include glass;
+        @include quick-transition;
+        color: var(--color-text-light-heading);
+        text-shadow: 0px 0px 3px black;
+
+        &:hover {
+            color: var(--color-text-light-highlight);
+            background-color: var(--primary);
+        }
+    }
+}
+
+.monarch .card-hud .badge,
+.monarch .card-hud .card-controls {
+    @include glass;
+}
+
+.monarch-hand .tooltip {
+    @include glass;
+    backdrop-filter: blur(5px);
+}
+
+/* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
 
@@ -125,9 +182,11 @@ div#scrollToBottom {
 /* ----------------------------------------- */
 /* Ripper's Filepicker+                      */
 /* ----------------------------------------- */
-:root {
-    --filepickerplus-text-color: var(--color-text-dark-primary);
-    --filepickerplus-background-color: var(--bg);
+
+.filepicker-plus-tooltip {
+    @include glass; 
+    border: none;
+    backdrop-filter: blur(5px);
 }
 
 /* ----------------------------------------- */

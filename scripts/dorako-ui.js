@@ -169,6 +169,32 @@ function injectCSS(filename) {
 // 	 a.find("#settings-game").append(toInsert)
 // });
 
+Hooks.on("renderFilePicker", (sheet, html) => {
+  let html0 = html[0];
+  const filepickerPlusActive = game.modules.get("filepicker-plus")?.active;
+
+  if (filepickerPlusActive) { // filepicker-plus uses a dark theme always
+    html0.classList.add("dorako-theme");
+    html0.classList.add("dark-theme");
+    return;
+  }
+
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderTokenConfigPF2e", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
 Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
   const npcTheme = game.settings.get("pf2e-dorako-ui", "npc-sheet-theme");
   if (npcTheme === "default") return;
@@ -1101,6 +1127,21 @@ Hooks.once("init", async () => {
     requiresReload: true
   });
 
+  game.settings.register("pf2e-dorako-ui", "app-sheet-theme", {
+    name: i18n("dorako-ui.settings.app-sheet-theme.name"),
+    hint: i18n("dorako-ui.settings.app-sheet-theme.hint"),
+    scope: "client",
+    config: true,
+    default: "light-theme",
+    type: String,
+    choices: {
+      default: i18n("dorako-ui.settings.app-sheet-theme.choice.default"),
+      // "light-theme": i18n("dorako-ui.settings.app-sheet-theme.choice.light"),
+      "dark-theme": i18n("dorako-ui.settings.app-sheet-theme.choice.dark"),
+    },
+    requiresReload: true
+  });
+
   game.settings.register("pf2e-dorako-ui", "familiar-sheet-theme", {
     name: i18n("dorako-ui.settings.familiar-sheet-theme.name"),
     hint: i18n("dorako-ui.settings.familiar-sheet-theme.hint"),
@@ -1549,6 +1590,7 @@ Hooks.once("init", async () => {
 
   injectCSS("dorako-ui");
   injectCSS("reset");
+  injectCSS("dark-theme");
   injectCSS("npc-sheet");
   injectCSS("loot-sheet");
   // injectCSS("chat-dark");

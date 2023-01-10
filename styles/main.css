@@ -1,23 +1,4 @@
 /* ----------------------------------------- */
-/* Overwrite Foundry colors                  */
-/* ----------------------------------------- */
-:root {
-  --color-border-highlight: var(--tertiary);
-  --color-border-highlight-alt: var(--tertiary-dark);
-  --color-shadow-primary: var(--tertiary-dark);
-  --color-shadow-highlight: var(--tertiary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--tertiary);
-  border: 1px solid var(--gold-brown);
-}
-
-a:hover {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-/* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
 #players {
@@ -30,7 +11,7 @@ a:hover {
 }
 #players h3 {
   cursor: pointer;
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
 }
 #players h3:hover {
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
@@ -254,7 +235,7 @@ nav#controls ol.control-tools li.scene-control {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: 0px 0px 3px black;
   border-radius: 3px;
   margin-bottom: 8px;
@@ -452,11 +433,11 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   box-shadow: none;
 }
 #hotbar .macro.inactive::before, #hotbar .macro.active::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   content: "";
   position: absolute;
   top: 0;
@@ -469,7 +450,7 @@ nav#controls ol.control-tools li.scene-control.toggle:hover {
   pointer-events: none;
 }
 #hotbar .macro.active:hover::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   content: "";
   position: absolute;
   top: 0;
@@ -669,15 +650,20 @@ nav#navigation ol#scene-list li.nav-item.active {
   margin: 0px;
   margin-top: 1px;
 }
+#sidebar #sidebar-tabs > .collapse {
+  --sidebar-tab-width: 12px;
+  position: relative;
+}
 #sidebar #sidebar-tabs .item {
   border: none;
-  margin: 2px;
+  margin: 2px 0px;
 }
 #sidebar #sidebar-tabs .item.active {
   /* prettier-ignore */
   border: none;
   margin: 2px;
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  margin: 2px 0px;
   border-radius: 3px;
   text-shadow: 0px 0px 3px black;
   color: white;
@@ -813,7 +799,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: 0px 0px 3px black;
 }
 .placeable-hud .control-icon[data-action=overhead], .placeable-hud .control-icon[data-action=underfoot] {

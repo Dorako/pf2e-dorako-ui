@@ -63,6 +63,85 @@
 }
 
 /* ----------------------------------------- */
+/* Monarch                                   */
+/* ----------------------------------------- */
+.window-app.monarch .window-content {
+  box-shadow: none;
+  background: none;
+}
+
+.window-app.monarch-hand:not(.minimized).no-fade.trans,
+.window-app.monarch-hand:not(.minimized):hover.trans {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
+}
+
+.window-app.monarch-hand .window-header,
+.monarch-hand footer.sheet-footer {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+}
+
+.monarch .card-hud .controls a i {
+  color: var(--color-text-light-heading);
+}
+
+.monarch input[type=text], .monarch input[type=number], .monarch input[type=password], .monarch input[type=date], .monarch input[type=time] {
+  border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  color: var(--color-text-light-heading);
+}
+
+.monarch-hand footer.sheet-footer {
+  margin: 2px 10px;
+}
+.monarch-hand footer.sheet-footer button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.monarch-hand footer.sheet-footer button:hover {
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
+}
+
+.monarch .card-hud .badge,
+.monarch .card-hud .card-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+}
+
+.monarch-hand .tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
+}
+
+/* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
 .message.chat-message.dark-theme.dfce-cm-middle .message-delete, .message.chat-message.dark-theme.dfce-cm-bottom .message-delete {
@@ -122,7 +201,7 @@
 }
 
 div#scrollToBottom {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   border: none;
   border-radius: 3px;
   background: none;
@@ -150,7 +229,7 @@ div#scrollToBottom:hover {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
 }
 #dfcp-rt-buttons button:hover {
@@ -178,9 +257,15 @@ div#scrollToBottom:hover {
 /* ----------------------------------------- */
 /* Ripper's Filepicker+                      */
 /* ----------------------------------------- */
-:root {
-  --filepickerplus-text-color: var(--color-text-dark-primary);
-  --filepickerplus-background-color: var(--bg);
+.filepicker-plus-tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  border: none;
+  backdrop-filter: blur(5px);
 }
 
 /* ----------------------------------------- */
@@ -273,7 +358,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
 }
 .dice-tray .flexrow {
   margin-left: 6px;
@@ -294,7 +379,7 @@ nav.damage-log-nav.tabs {
   border: none;
 }
 nav.damage-log-nav.tabs .item {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   margin: 2px;
   color: white;
   border-radius: 3px;
@@ -323,7 +408,7 @@ nav.damage-log-nav.tabs .item.active {
   margin-top: 44px;
 }
 #controls ol.control-tools#terrainlayer-tools .control-tool {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   border: none;
   border-radius: 3px;
   background: none;
@@ -377,7 +462,7 @@ nav.damage-log-nav.tabs .item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
 }
 #tokenbar .token .token-stats {
   background: none;
@@ -412,7 +497,7 @@ nav.damage-log-nav.tabs .item.active {
 #tokenbar[movement=free] #movement-free:not(.disabled) i,
 #tokenbar[movement=none] #movement-none:not(.disabled) i,
 #tokenbar[movement=combat] #movement-combat:not(.disabled) i {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   border: none;
   margin: 2px;
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
@@ -453,7 +538,7 @@ nav.damage-log-nav.tabs .item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
 }
@@ -496,14 +581,14 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 [data-tooltip="MonksHotbarExpansion.clear-row"] {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
 }
 [data-tooltip="MonksHotbarExpansion.clear-row"]:hover i {
   text-shadow: 0 0 8px var(--color-shadow-primary);
 }
 
 .hotbar-page .page-number {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
 }
 .hotbar-page .page-number:hover {
   text-shadow: 0 0 8px var(--color-shadow-primary);
@@ -578,7 +663,7 @@ nav.damage-log-nav.tabs .item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   border-radius: 3px;
 }
 #custom-hotbar .macro.active:hover::before {
@@ -629,7 +714,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 #tah-expand-hud, .tah-title-button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
   padding: 3px 5px 3px 5px;
 }
@@ -647,7 +732,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 .tah-action button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
 }
 .tah-action button.toggle {
@@ -769,7 +854,7 @@ nav.damage-log-nav.tabs .item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: var(--dorako-text-shadow);
 }
 .dark-theme.chat-message > .message-content .message-buttons button:hover {

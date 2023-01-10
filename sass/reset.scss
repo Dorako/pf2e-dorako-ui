@@ -1,7 +1,68 @@
+@import "mixins";
+
 h3 {
     border-bottom: none;
 }
 
 button > i {
     margin-right: 0;
+}
+
+img {
+    border: none;
+    border-radius: 0px;
+}
+
+// form .form-group .form-fields button {
+//     height: calc(var(--form-field-height) + 2px);
+// }
+
+// dialog .dialog-buttons button.default {
+//     @include quick-transition;
+//     background: var(--secondary-dark);
+//     box-shadow: var(--gold-and-glow);
+//     border: none;
+
+//     &:hover {
+//         background: var(--secondary-light);
+//     }
+// }
+
+// button {
+//     background: rgba(255, 255, 255, 0.8);
+
+//     &:active {
+//         box-shadow: 0 0 5px var(--color-shadow-highlight);
+//     }
+  
+//     &:disabled {
+//         background: rgb(213 213 213 / 80%);
+//         border: 1px solid var(--color-border-dark-tertiary);
+//     }
+
+//     form & {
+//         border: unset;
+//         background: rgba(255, 255, 255, 0.8);
+//         border: 1px solid var(--color-border-light-primary);
+//     }
+// }
+
+/* ----------------------------------------- */
+/* Overwrite Foundry colors                  */
+/* ----------------------------------------- */
+
+:root {
+--color-border-highlight: var(--tertiary);
+--color-border-highlight-alt: var(--tertiary-dark);
+--color-shadow-primary: var(--tertiary-dark);
+--color-shadow-highlight: var(--tertiary);
+} 
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: 1px solid var(--gold-brown);
+}
+
+a:hover {
+    @include quick-transition;
 }

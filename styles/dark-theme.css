@@ -1,0 +1,124 @@
+.window-app.dark-theme .window-content {
+  border: none;
+  background-image: var(--sheet-light);
+  background-size: cover;
+  /* prettier-ignore */
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet-dark);
+  color: var(--color-text-light-heading);
+}
+.window-app.dark-theme#module-management .package-list .package-title, .window-app.dark-theme#module-management .package-list .package-metadata, .window-app.dark-theme#module-management .package-list .package-description {
+  color: var(--color-text-light-highlight);
+}
+.window-app.dark-theme button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0 0 3px black;
+}
+.window-app.dark-theme button:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.window-app.dark-theme button.privacy {
+  background-color: #2e0587;
+}
+.window-app.dark-theme button.privacy:hover {
+  color: var(--color-text-light-heading);
+  background-color: #440eb9;
+}
+.window-app.dark-theme .private button.privacy {
+  color: var(--color-text-light-highlight);
+  background-color: #440eb9;
+}
+.window-app.dark-theme input[type=text],
+.window-app.dark-theme input[type=number] {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  padding-left: 5px;
+}
+.window-app.dark-theme input[type=text]:disabled,
+.window-app.dark-theme input[type=number]:disabled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.window-app.dark-theme.token-sheet .form-group.children-disabled .range-value,
+.window-app.dark-theme input[type=range] + .range-value {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text-light-heading);
+}
+.window-app.dark-theme input[type=text], .window-app.dark-theme input[type=number], .window-app.dark-theme input[type=password], .window-app.dark-theme input[type=date], .window-app.dark-theme input[type=time], .window-app.dark-theme input[type=search], .window-app.dark-theme input[type=checkbox], .window-app.dark-theme input[type=radio] {
+  color: var(--color-text-light-highlight);
+  accent-color: var(--tertiary);
+}
+.window-app.dark-theme input[type=text]:checked, .window-app.dark-theme input[type=number]:checked, .window-app.dark-theme input[type=password]:checked, .window-app.dark-theme input[type=date]:checked, .window-app.dark-theme input[type=time]:checked, .window-app.dark-theme input[type=search]:checked, .window-app.dark-theme input[type=checkbox]:checked, .window-app.dark-theme input[type=radio]:checked {
+  accent-color: var(--tertiary);
+  filter: none;
+}
+.window-app.dark-theme select {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  color: var(--color-text-light-highlight);
+}
+.window-app.dark-theme input[type=color][data-edit] {
+  border: none;
+}
+.window-app.dark-theme.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
+  color: var(--color-text-light-highlight);
+}
+.window-app.dark-theme.app.token-sheet .tab.active[data-tab=appearance] fieldset {
+  border: 1px solid var(--tertiary);
+  border-radius: 5px;
+}
+.window-app.dark-theme.sheet nav.sheet-tabs {
+  border-top: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--tertiary);
+}
+.window-app.dark-theme form .form-group.slim .form-fields > label,
+.window-app.dark-theme form .form-group span.units,
+.window-app.dark-theme form .notes, .window-app.dark-theme form .hint {
+  color: var(--color-text-dark-6);
+}
+.window-app.dark-theme.filepicker .private .directory, .window-app.dark-theme.filepicker .public .private.dir {
+  background: rgba(115, 49, 255, 0.15);
+}
+.window-app.dark-theme.filepicker .display-modes a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  color: var(--color-text-light-highlight);
+  text-shadow: 0 0 3px black;
+}
+.window-app.dark-theme.filepicker .display-modes a:hover {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.window-app.dark-theme.filepicker .display-modes a.active {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+  text-shadow: 0 0 3px black;
+}
+
+/*# sourceMappingURL=dark-theme.css.map */

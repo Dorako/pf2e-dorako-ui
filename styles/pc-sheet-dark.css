@@ -29,6 +29,7 @@
   display: none;
 }
 
+.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .action-tracking input,
 .actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select,
 .actor.sheet.character .crb-style .tab.actions .actions-panels,
 .actor.sheet.character .crb-style .tab.crafting .crafting-option label,

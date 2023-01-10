@@ -6,4 +6,28 @@ button > i {
   margin-right: 0;
 }
 
+img {
+  border: none;
+  border-radius: 0px;
+}
+
+/* ----------------------------------------- */
+/* Overwrite Foundry colors                  */
+/* ----------------------------------------- */
+:root {
+  --color-border-highlight: var(--tertiary);
+  --color-border-highlight-alt: var(--tertiary-dark);
+  --color-shadow-primary: var(--tertiary-dark);
+  --color-shadow-highlight: var(--tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border: 1px solid var(--gold-brown);
+}
+
+a:hover {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+}
+
 /*# sourceMappingURL=reset.css.map */

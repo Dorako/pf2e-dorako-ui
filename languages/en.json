@@ -16,6 +16,13 @@
   "dorako-ui.settings.loot-sheet-theme.choice.light": "Light",
   "dorako-ui.settings.loot-sheet-theme.choice.dark": "Dark",
 
+  "dorako-ui.settings.app-sheet-theme.name": "App sheet theme",
+  "dorako-ui.settings.app-sheet-theme.hint": "Affects various misc. sheets like Filepicker and Token Config",
+  "dorako-ui.settings.app-sheet-theme.choice.default": "Default",
+  "dorako-ui.settings.app-sheet-theme.choice.light": "Light",
+  "dorako-ui.settings.app-sheet-theme.choice.dark": "Dark",
+
+
   "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
   "dorako-ui.settings.familiar-sheet-theme.hint": "Affects familiar sheets",
   "dorako-ui.settings.familiar-sheet-theme.choice.red": "Red",
