@@ -1,44 +1,26 @@
 {
   "dorako-ui.settings.pc-sheet-theme.name": "PC sheet theme",
   "dorako-ui.settings.pc-sheet-theme.hint": "Affects player sheets",
-  "dorako-ui.settings.pc-sheet-theme.choice.red": "Default",
-  "dorako-ui.settings.pc-sheet-theme.choice.dark": "Dark",
 
   "dorako-ui.settings.npc-sheet-theme.name": "NPC sheet theme",
   "dorako-ui.settings.npc-sheet-theme.hint": "Affects NPC sheets",
-  "dorako-ui.settings.npc-sheet-theme.choice.default": "Default",
-  "dorako-ui.settings.npc-sheet-theme.choice.light": "Light",
-  "dorako-ui.settings.npc-sheet-theme.choice.dark": "Dark",
 
   "dorako-ui.settings.loot-sheet-theme.name": "Loot sheet theme",
   "dorako-ui.settings.loot-sheet-theme.hint": "Affects Loot sheets",
-  "dorako-ui.settings.loot-sheet-theme.choice.default": "Default",
-  "dorako-ui.settings.loot-sheet-theme.choice.light": "Light",
-  "dorako-ui.settings.loot-sheet-theme.choice.dark": "Dark",
 
   "dorako-ui.settings.app-sheet-theme.name": "App sheet theme",
   "dorako-ui.settings.app-sheet-theme.hint": "Affects various misc. sheets like Filepicker and Token Config",
-  "dorako-ui.settings.app-sheet-theme.choice.default": "Default",
-  "dorako-ui.settings.app-sheet-theme.choice.light": "Light",
-  "dorako-ui.settings.app-sheet-theme.choice.dark": "Dark",
 
   "dorako-ui.settings.dialog-sheet-theme.name": "Dialog sheet theme",
   "dorako-ui.settings.dialog-sheet-theme.hint": "Affects *all* Dialogs, including potentially unsupported ones",
-  "dorako-ui.settings.dialog-sheet-theme.choice.default": "Default",
-  "dorako-ui.settings.dialog-sheet-theme.choice.light": "Light",
-  "dorako-ui.settings.dialog-sheet-theme.choice.dark": "Dark",
-
 
   "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
   "dorako-ui.settings.familiar-sheet-theme.hint": "Affects familiar sheets",
   "dorako-ui.settings.familiar-sheet-theme.choice.red": "Red",
-  "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Dark",
   "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dark + Red Header",
 
   "dorako-ui.settings.chat-theme.name": "Chat theme",
   "dorako-ui.settings.chat-theme.hint": "Affects all chat messages",
-  "dorako-ui.settings.chat-theme.choice.light": "Light",
-  "dorako-ui.settings.chat-theme.choice.dark": "Dark",
   "dorako-ui.settings.chat-theme.choice.factions": "Players light, GM dark",
 
   "dorako-ui.settings.header-style.name": "Header style",
@@ -150,5 +132,7 @@
   "dorako-ui.text.whisper": "Whisper",
   "dorako-ui.text.from": "From",
   "dorako-ui.text.to": "to",
-  "dorako-ui.text.send-to-chat": "Send"
+  "dorako-ui.text.default": "Default",
+  "dorako-ui.text.dark": "Dark",
+  "dorako-ui.text.light": "Light"
 }
