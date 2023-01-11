@@ -71,7 +71,9 @@
     }
 
     input[type="text"],
-    input[type="number"] {
+    input[type="number"],
+    input[type="search"]
+     {
         @include glass;
         padding-left: 5px;
 
@@ -109,6 +111,7 @@
         color: var(--color-text-light-highlight); 
     }
 
+    fieldset,
     &.app.token-sheet .tab.active[data-tab=appearance] fieldset {
         border: 1px solid var(--tertiary);
         border-radius: 5px;

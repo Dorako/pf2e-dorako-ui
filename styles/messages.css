@@ -1,11 +1,4 @@
 /* ----------------------------------------- */
-/* Emotes                                    */
-/* ----------------------------------------- */
-.message.emote p {
-  text-align: center;
-}
-
-/* ----------------------------------------- */
 /* Header                                    */
 /* ----------------------------------------- */
 .message-header {
@@ -277,4 +270,4 @@
   border-right: 1px solid gray;
 }
 
-/*# sourceMappingURL=new-chat.css.map */
+/*# sourceMappingURL=messages.css.map */

@@ -31,14 +31,13 @@
         }
     }
 
-    .chat-message .table-draw 
-
     .pf2e.chat-card .card-buttons {
         margin: 0px;
         margin-top: 5px;
 
         button.with-image {
             @include glass;
+            @include quick-transition;
             text-shadow: var(--dorako-text-shadow);
             background: var(--primary);
             color: var(--color-text-light-highlight);
@@ -55,8 +54,9 @@
             }
         }
 
-        .spell-button button {
+        button {
             @include glass;
+            @include quick-transition;
             text-shadow: var(--dorako-text-shadow);
             background: var(--primary);
             color: var(--color-text-light-highlight);
@@ -68,6 +68,7 @@
         }
         .hidden-to-others {
             @include glass;
+            @include quick-transition;
             text-shadow: var(--dorako-text-shadow);
             background: var(--secondary);
             color: var(--color-text-light-highlight);

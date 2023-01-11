@@ -59,7 +59,8 @@
   background-color: #440eb9;
 }
 .window-app.dark-theme input[type=text],
-.window-app.dark-theme input[type=number] {
+.window-app.dark-theme input[type=number],
+.window-app.dark-theme input[type=search] {
   border: none;
   border-radius: 3px;
   background: none;
@@ -69,7 +70,8 @@
   padding-left: 5px;
 }
 .window-app.dark-theme input[type=text]:disabled,
-.window-app.dark-theme input[type=number]:disabled {
+.window-app.dark-theme input[type=number]:disabled,
+.window-app.dark-theme input[type=search]:disabled {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .window-app.dark-theme.token-sheet .form-group.children-disabled .range-value,
@@ -106,7 +108,7 @@
 .window-app.dark-theme.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
   color: var(--color-text-light-highlight);
 }
-.window-app.dark-theme.app.token-sheet .tab.active[data-tab=appearance] fieldset {
+.window-app.dark-theme fieldset, .window-app.dark-theme.app.token-sheet .tab.active[data-tab=appearance] fieldset {
   border: 1px solid var(--tertiary);
   border-radius: 5px;
 }

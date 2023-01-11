@@ -591,20 +591,52 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* Monk's little details                     */
 /* ----------------------------------------- */
+#darkness-progress > div > div {
+  background-color: var(--primary-light);
+}
+
+#token-hud.monks-little-details .status-effects .effect-control,
+#token-hud.monks-little-details .status-effects .pf2e-effect-control {
+  border-radius: unset;
+}
+
 #token-hud.placeable-hud.monks-little-details .status-effects {
   grid-template-columns: 90px 90px 90px 90px !important;
   background: none;
 }
 #token-hud.placeable-hud.monks-little-details .status-effects .effect-control {
   border: none;
-  opacity: 1;
+  opacity: unset;
 }
 #token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active {
   border: none;
   opacity: 1;
+  background-color: var(--secondary-light);
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active .effect-name {
+  color: white;
+  opacity: unset;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control img {
+  border-radius: 4px 0px 0px 4px;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control img::before {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 1px var(--tertiary);
+  border-radius: 4px 0px 0px 4px;
+  overflow: hidden;
+  pointer-events: none;
 }
 #token-hud.placeable-hud.monks-little-details .status-effects .effect-name {
+  opacity: unset;
   padding-right: 4px;
+  color: var(--color-text-light-heading);
   font-size: var(--font-size-12);
 }
 
@@ -739,7 +771,23 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 /* ----------------------------------------- */
-/* Token Action HUD                          */
+/* Cautious Gamemaster's Pack (CGMP)         */
+/* ----------------------------------------- */
+#chat-log .message.emote .message-content {
+  text-align: unset;
+  color: unset;
+  font-style: unset;
+}
+
+/* ----------------------------------------- */
+/* Macros                                    */
+/* ----------------------------------------- */
+.window-app .window-content .dialog-content .cond-cont {
+  background: none;
+}
+
+/* ----------------------------------------- */
+/* Token Action HUD (TAH)                    */
 /* ----------------------------------------- */
 #tah-categories {
   gap: 5px;

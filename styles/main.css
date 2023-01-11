@@ -585,7 +585,7 @@ nav#navigation ol#scene-list li.nav-item.active {
 /* ----------------------------------------- */
 /* Notifications                             */
 /* ----------------------------------------- */
-#notifications .notification {
+.notification {
   border: none;
   border-radius: 3px;
   background: none;
@@ -595,13 +595,13 @@ nav#navigation ol#scene-list li.nav-item.active {
   text-shadow: 0px 0px 3px black;
   color: var(--color-text-light-highlight);
 }
-#notifications .notification.info {
+.notification.info {
   background-color: var(--secondary);
 }
-#notifications .notification.error {
+.notification.error {
   background-color: var(--primary);
 }
-#notifications .notification.warning, #notifications .notification.alert {
+.notification.warning, .notification.alert {
   background-color: #ECBF41;
   color: black;
   text-shadow: none;
@@ -773,6 +773,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
   box-sizing: content-box;
   font-size: var(--font-size-20);
   font-weight: normal;
@@ -807,6 +808,9 @@ nav#navigation ol#scene-list li.nav-item.active {
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: 0px 0px 3px black;
+}
+.placeable-hud .control-icon .badge {
+  text-shadow: none;
 }
 .placeable-hud .control-icon[data-action=overhead], .placeable-hud .control-icon[data-action=underfoot] {
   background-color: var(--primary-dark);

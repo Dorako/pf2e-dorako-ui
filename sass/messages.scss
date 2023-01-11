@@ -2,14 +2,6 @@
 @import "mixins";
 
 /* ----------------------------------------- */
-/* Emotes                                    */
-/* ----------------------------------------- */
-
-.message.emote p {
-    text-align: center;
-}
-
-/* ----------------------------------------- */
 /* Header                                    */
 /* ----------------------------------------- */
 
@@ -182,7 +174,6 @@
 /* Chat card                                 */
 /* ----------------------------------------- */
 
-
 // Chat messages can be popped out, .message is too general and applies to stuff in modules
 .message.chat-message {
     @include sheet;
@@ -244,8 +235,8 @@
 
     [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
         border-radius: 3px;
-        background: #f5eaf5aa; // blind
-        outline: 1px dashed #720073; // blind
+        background: #f5eaf5aa;
+        outline: 1px dashed #720073;
     }
 }
 

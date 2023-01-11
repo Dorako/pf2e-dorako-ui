@@ -58,7 +58,11 @@
     }
   ],
   "styles": ["styles/fonts.css"],
-  "scripts": ["scripts/dorako-ui.js"],
+  "esmodules": [
+    "modules/dorako-ui.js",
+    "modules/settings.js",
+    "modules/dark-theme-hooks.js"
+  ],
   "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.9.10.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json"
 }

@@ -1,3 +1,11 @@
+# 1.9.11
+
+- (Module) Added compatibility with Forgotten Adventures Battlemaps module
+- (Refinement) Updated styling of conditions with Monk's Little Details enabled
+- (Fix) Fixed an issue where certain chat messages were illegible for dark chat messages with Cautious Gamemaster's Pack is enabled
+- (Refinement) Further expanded the scope of dark theme for app sheets
+- (Refactor) Massive refactor of the code, increasing maintainability
+
 # 1.9.10
 
 - (Refinement) Massively expanded scope of dark theme for app-sheets

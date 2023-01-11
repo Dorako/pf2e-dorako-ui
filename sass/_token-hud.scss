@@ -102,6 +102,7 @@
 
         .title-bar {
             @include glass;
+            backdrop-filter: blur(5px);
             box-sizing: content-box;
             font-size: var(--font-size-20);
             font-weight: normal;
@@ -132,6 +133,10 @@
         @include glass;
         @include quick-transition;
         text-shadow: 0px 0px 3px black;
+
+        .badge {
+            text-shadow: none;
+        }
 
         // These can become toggled on with a click, but not toggled off with a click
         &[data-action=overhead], &[data-action=underfoot] {
