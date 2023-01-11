@@ -17,6 +17,33 @@
         }
     }
 
+    &.sheet header.sheet-header img {
+        box-shadow: var(--gold-and-glow);
+        border-radius: 5px;
+    }
+
+    textarea {
+        color: white;
+        border: 1px solid var(--tertiary);
+    }
+
+    a[href] {
+        color: var(--tertiary-dark);
+    }
+
+    hr {
+        border-top: 1px solid var(--tertiary);
+        border-bottom: 1px solid var(--tertiary);
+    }
+
+    &.sheet footer.sheet-footer {
+        gap: 5px;
+    }
+
+    .compendium.directory .directory-list .directory-item {
+        border: none;
+    }
+
     button {
         @include glass;
         @include quick-transition;

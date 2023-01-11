@@ -350,7 +350,6 @@ nav.damage-log-nav.tabs {
 /* ----------------------------------------- */
 /* Monk's tokenbar                           */
 /* ----------------------------------------- */
-
 #tokenbar {
     gap: 3px;
     
@@ -398,6 +397,10 @@ nav.damage-log-nav.tabs {
     text-shadow: unset;
 }
 
+.monks-tokenbar .sheet .items-list .items-header {
+    border: none;
+}
+
 #tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i, 
 #tokenbar[movement="free"] #movement-free:not(.disabled) i, 
 #tokenbar[movement="none"] #movement-none:not(.disabled) i, 
@@ -428,6 +431,44 @@ nav.damage-log-nav.tabs {
 }
 
 .dark-theme {
+
+    &#requestsavingthrow .request-grid {
+        gap: 5px;
+        margin: 5px 10px;
+        text-align: center;
+        &.dice-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        > div {
+            @include glass;
+            @include quick-transition;
+            color: var(--color-text-light-heading);
+            text-shadow: 0px 0px 3px black;
+            padding: 2px 6px;
+    
+            background-color: var(--secondary-dark);
+            &:hover {
+                background-color: var(--secondary-light);
+                color: white;
+            }
+            &.selected {
+                background-color: var(--secondary-light);
+                color: white;
+            }
+        }
+    }
+
+    .monks-tokenbar .sheet .items-list .item {
+        border: none;
+        margin-bottom: 2px;
+    }
+
+    .monks-tokenbar .dialog-buttons {
+        gap: 5px;
+    }
+
     .monks-tokenbar.chat-card {
         .card-header {
             border: none;

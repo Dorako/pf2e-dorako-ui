@@ -541,6 +541,9 @@ nav#navigation ol#scene-list li.nav-item {
 nav#navigation ol#scene-list li.nav-item .scene-players {
   text-shadow: none;
 }
+nav#navigation ol#scene-list li.nav-item a:hover {
+  text-shadow: unset;
+}
 nav#navigation ol#scene-list li.nav-item:hover {
   background-color: rgba(177, 177, 177, 0.5);
   color: black;
@@ -671,6 +674,9 @@ nav#navigation ol#scene-list li.nav-item.active {
 }
 #sidebar #chat-controls i.fas {
   line-height: 24px;
+}
+#sidebar #chat-controls .roll-type-select {
+  margin-left: 0px;
 }
 
 #token-hud .status-effects {

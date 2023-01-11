@@ -195,6 +195,233 @@ Hooks.on("renderTokenConfigPF2e", (sheet, html) => {
   html0.classList.add(theme);
 });
 
+Hooks.on("renderRollPrompt", (sheet, html) => { // DF Manual Rolls
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderSavingThrowApp", (sheet, html) => { // Monk's Tokenbar
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderAssignXPApp", (sheet, html) => { // Monk's Tokenbar
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderContestedRollApp", (sheet, html) => { // Monk's Tokenbar
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderActiveTileConfig", (sheet, html) => { // Monk's active tile triggers
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderDFChatEditor", (sheet, html) => { // DF Chat Enhancements
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderSettingsConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderFolderConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderRollTableConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderPlaylistConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderCombatantConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderMeasuredTemplateConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderDocumentOwnershipConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderSceneConfigPF2e", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderDocumentSheetConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+
+
+Hooks.on("renderModuleManagement", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderMacroConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderCompendium", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderCardsConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderWallConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderAmbientLightConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderAmbientSoundConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderTileConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderDrawingConfig", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
+Hooks.on("renderDialog", (sheet, html) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "dialog-sheet-theme");
+  if (theme === "default") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add(theme);
+});
+
 Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
   const npcTheme = game.settings.get("pf2e-dorako-ui", "npc-sheet-theme");
   if (npcTheme === "default") return;
@@ -1132,12 +1359,27 @@ Hooks.once("init", async () => {
     hint: i18n("dorako-ui.settings.app-sheet-theme.hint"),
     scope: "client",
     config: true,
-    default: "light-theme",
+    default: "default",
     type: String,
     choices: {
       default: i18n("dorako-ui.settings.app-sheet-theme.choice.default"),
       // "light-theme": i18n("dorako-ui.settings.app-sheet-theme.choice.light"),
       "dark-theme": i18n("dorako-ui.settings.app-sheet-theme.choice.dark"),
+    },
+    requiresReload: true
+  });
+
+  game.settings.register("pf2e-dorako-ui", "dialog-sheet-theme", {
+    name: i18n("dorako-ui.settings.dialog-sheet-theme.name"),
+    hint: i18n("dorako-ui.settings.dialog-sheet-theme.hint"),
+    scope: "client",
+    config: true,
+    default: "default",
+    type: String,
+    choices: {
+      default: i18n("dorako-ui.settings.dialog-sheet-theme.choice.default"),
+      // "light-theme": i18n("dorako-ui.settings.dialog-sheet-theme.choice.light"),
+      "dark-theme": i18n("dorako-ui.settings.dialog-sheet-theme.choice.dark"),
     },
     requiresReload: true
   });

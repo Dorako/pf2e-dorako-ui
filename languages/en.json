@@ -22,6 +22,12 @@
   "dorako-ui.settings.app-sheet-theme.choice.light": "Light",
   "dorako-ui.settings.app-sheet-theme.choice.dark": "Dark",
 
+  "dorako-ui.settings.dialog-sheet-theme.name": "Dialog sheet theme",
+  "dorako-ui.settings.dialog-sheet-theme.hint": "Affects *all* Dialogs, including potentially unsupported ones",
+  "dorako-ui.settings.dialog-sheet-theme.choice.default": "Default",
+  "dorako-ui.settings.dialog-sheet-theme.choice.light": "Light",
+  "dorako-ui.settings.dialog-sheet-theme.choice.dark": "Dark",
+
 
   "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
   "dorako-ui.settings.familiar-sheet-theme.hint": "Affects familiar sheets",

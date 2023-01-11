@@ -493,6 +493,10 @@ nav.damage-log-nav.tabs .item.active {
   text-shadow: unset;
 }
 
+.monks-tokenbar .sheet .items-list .items-header {
+  border: none;
+}
+
 #tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i,
 #tokenbar[movement=free] #movement-free:not(.disabled) i,
 #tokenbar[movement=none] #movement-none:not(.disabled) i,
@@ -522,6 +526,43 @@ nav.damage-log-nav.tabs .item.active {
   font-family: unset;
 }
 
+.dark-theme#requestsavingthrow .request-grid {
+  gap: 5px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.dark-theme#requestsavingthrow .request-grid.dice-group {
+  display: flex;
+  justify-content: space-between;
+}
+.dark-theme#requestsavingthrow .request-grid > div {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+  padding: 2px 6px;
+  background-color: var(--secondary-dark);
+}
+.dark-theme#requestsavingthrow .request-grid > div:hover {
+  background-color: var(--secondary-light);
+  color: white;
+}
+.dark-theme#requestsavingthrow .request-grid > div.selected {
+  background-color: var(--secondary-light);
+  color: white;
+}
+.dark-theme .monks-tokenbar .sheet .items-list .item {
+  border: none;
+  margin-bottom: 2px;
+}
+.dark-theme .monks-tokenbar .dialog-buttons {
+  gap: 5px;
+}
 .dark-theme .monks-tokenbar.chat-card .card-header {
   border: none;
 }

@@ -12,6 +12,27 @@
 .window-app.dark-theme#module-management .package-list .package-title, .window-app.dark-theme#module-management .package-list .package-metadata, .window-app.dark-theme#module-management .package-list .package-description {
   color: var(--color-text-light-highlight);
 }
+.window-app.dark-theme.sheet header.sheet-header img {
+  box-shadow: var(--gold-and-glow);
+  border-radius: 5px;
+}
+.window-app.dark-theme textarea {
+  color: white;
+  border: 1px solid var(--tertiary);
+}
+.window-app.dark-theme a[href] {
+  color: var(--tertiary-dark);
+}
+.window-app.dark-theme hr {
+  border-top: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--tertiary);
+}
+.window-app.dark-theme.sheet footer.sheet-footer {
+  gap: 5px;
+}
+.window-app.dark-theme .compendium.directory .directory-list .directory-item {
+  border: none;
+}
 .window-app.dark-theme button {
   border: none;
   border-radius: 3px;

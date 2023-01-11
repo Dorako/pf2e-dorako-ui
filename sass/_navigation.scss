@@ -24,6 +24,10 @@ nav#navigation {
                 text-shadow: none;
             }
 
+            a:hover {
+                text-shadow: unset;
+            }
+
             &:hover {
                 background-color: rgb(177 177 177 / 50%);
                 color: black;

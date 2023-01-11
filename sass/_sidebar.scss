@@ -69,7 +69,13 @@
         }
     }
 
-    #chat-controls i.fas {
-        line-height: 24px; // center-aligns icons
+    #chat-controls {
+        i.fas {
+            line-height: 24px; // center-aligns icons
+        }
+        
+        .roll-type-select {
+            margin-left: 0px;
+        }
     }
 }

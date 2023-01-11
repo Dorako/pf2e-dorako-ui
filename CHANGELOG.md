@@ -1,63 +1,69 @@
+# 1.9.10
+
+- (Refinement) Massively expanded scope of dark theme for app-sheets
+- (New) Added a new setting for theming all Dialog sheets
+- (Refinement) Improved changelog with proper linebreaks!
+
 # 1.9.9
 
-(New) Added styling for the Monarch module
-(Fix) Fixed numerator of frequency skills being illegible on dark mode pc sheets
-(Fix) Fixed description of rolltable messages being illegible on dark mode chat messages
-(Refinement) Added a light background to rolltable images on dark mode chat message, to ensure good contrast
-(Refinement) Update sidebar tab styling to leave more room for modules that add buttons
-(New) Setting for dark-theme styling of Filepicker and Token Config
-(Fix) Style incompatability with Filepicker+ now actually fixed
+- (New) Added styling for the Monarch module
+- (Fix) Fixed numerator of frequency skills being illegible on dark mode pc sheets
+- (Fix) Fixed description of rolltable messages being illegible on dark mode chat messages
+- (Refinement) Added a light background to rolltable images on dark mode chat message, to ensure good contrast
+- (Refinement) Update sidebar tab styling to leave more room for modules that add buttons
+- (New) Setting for dark-theme styling of Filepicker and Token Config
+- (Fix) Style incompatability with Filepicker+ now actually fixed
 
 # 1.9.8
 
-(Refinement) Make scrollbar track for effects panel invisible
-(Fix) Make collapsed sidebar not take up all the vertical height
-(Fix) Ensure module is not styling Monk's Little Details' roundmarker chat messages
-(Refinement) Fix double-shadowing of hotbar
-(Refinement) Improve styling of Monk's Tokenbar
-(Refinement) Minor updates to TAH styling
+- (Refinement) Make scrollbar track for effects panel invisible
+- (Fix) Make collapsed sidebar not take up all the vertical height
+- (Fix) Ensure module is not styling Monk's Little Details' roundmarker chat messages
+- (Refinement) Fix double-shadowing of hotbar
+- (Refinement) Improve styling of Monk's Tokenbar
+- (Refinement) Minor updates to TAH styling
 
 # 1.9.7
 
-(Refinement) Extended dark theme styling to affect variable-action cost spell buttons
-(Fix) Fixed poor contrast styling for dark chat messages from Monk's tokenbar
+- (Refinement) Extended dark theme styling to affect variable-action cost spell buttons
+- (Fix) Fixed poor contrast styling for dark chat messages from Monk's tokenbar
 
 # 1.9.6
 
-(Refinement) Updated styling of status effects in the combat tracker
-(Refinement) Updated the hover-glow for links to be more visible
-(Refinement) Updated styling of effects panel, and ensure navigation doesn't overlap effect panel
-(Refinement) Updated styling of tooltips and context menus
-(Refinement) Added clickability affordances to the Players UI
-(Fix) Possibly fixed style incompatability with Filepicker+
-(New) Effect panel now scrolls vertically if there are too many effects to fit on screen
+- (Refinement) Updated styling of status effects in the combat tracker
+- (Refinement) Updated the hover-glow for links to be more visible
+- (Refinement) Updated styling of effects panel, and ensure navigation doesn't overlap effect panel
+- (Refinement) Updated styling of tooltips and context menus
+- (Refinement) Added clickability affordances to the Players UI
+- (Fix) Possibly fixed style incompatability with Filepicker+
+- (New) Effect panel now scrolls vertically if there are too many effects to fit on screen
 
 # 1.9.5
 
-(Refinement) Updated styling for token hud, and extended it to also affect tile hud
-(New) Compact controls setting is back
-(New) Added styling for status-effect messages for both light and dark mode
-(New) The glassy background can now be adjusted via the --glass-bg css variable 
+- (Refinement) Updated styling for token hud, and extended it to also affect tile hud
+- (New) Compact controls setting is back
+- (New) Added styling for status-effect messages for both light and dark mode
+- (New) The glassy background can now be adjusted via the --glass-bg css variable 
 
 # 1.9.4
 
-(Fix) Option for removing redundant information from damage rolls now functional again
-(Refinement) Improve spacing around persistent damage button on chat light theme
-(Fix) Fixed chat functionality breaking when chat messages have origins where the uuid cannot be fetched synchronously (e.g. feats/spells linked from compendium actors)
+- (Fix) Option for removing redundant information from damage rolls now functional again
+- (Refinement) Improve spacing around persistent damage button on chat light theme
+- (Fix) Fixed chat functionality breaking when chat messages have origins where the uuid cannot be fetched synchronously (e.g. feats/spells linked from compendium actors)
 # 1.9.3
 
-(Fix) Custom Hotbar now works without Monk's Hotbar also being enabled
-(Refinement) Scene controls that use images are now tinted a similar color as scene controls that use image-fonts
-(Refinement) Minor updates to TAH style
-(Refinement) Secret inline-rolls are now more saturated in dark theme chat messages
+- (Fix) Custom Hotbar now works without Monk's Hotbar also being enabled
+- (Refinement) Scene controls that use images are now tinted a similar color as scene controls that use image-fonts
+- (Refinement) Minor updates to TAH style
+- (Refinement) Secret inline-rolls are now more saturated in dark theme chat messages
 
 # 1.9.2
 The hotbar patch!
 
-(Module) Support for Custom Hotbar
-(Module) Improved support for Monk's Hotbar expansion
-(Module) Updated styling for Token Action HUD
-(New) Support for 'centered hotbar' (once again)
+- (Module) Support for Custom Hotbar
+- (Module) Improved support for Monk's Hotbar expansion
+- (Module) Updated styling for Token Action HUD
+- (New) Support for 'centered hotbar' (once again)
 
 # 1.9.1
 This is kind of a 1.9.0++ release.
