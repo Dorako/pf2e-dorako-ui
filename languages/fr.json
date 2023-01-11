@@ -1,10 +1,10 @@
 {
   "dorako-ui.settings.pc-sheet-theme.choice.red": "Défaut",
-  "dorako-ui.settings.familiar-sheet-theme.name": "Thème feuille de familier",
+  "dorako-ui.settings.familiar-sheet-theme.name": "Thème de la feuille de familier",
   "dorako-ui.settings.familiar-sheet-theme.choice.red": "Rouge",
   "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Sombre",
   "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Sombre + Titre rouge",
-  "dorako-ui.settings.chat-theme.name": "Thème conversation",
+  "dorako-ui.settings.chat-theme.name": "Thème de la conversation",
   "dorako-ui.settings.chat-theme.choice.light": "Lumineux",
   "dorako-ui.settings.chat-theme.choice.dark": "Sombre",
   "dorako-ui.settings.chat-theme.choice.factions": "Joueurs lumineux, MJ sombre",
@@ -106,5 +106,15 @@
   "dorako-ui.settings.loot-sheet-theme.hint": "Affecte la feuille de butin",
   "dorako-ui.settings.loot-sheet-theme.choice.default": "Par défaut",
   "dorako-ui.settings.loot-sheet-theme.choice.light": "Clair",
-  "dorako-ui.settings.loot-sheet-theme.choice.dark": "Sombre"
+  "dorako-ui.settings.loot-sheet-theme.choice.dark": "Sombre",
+  "dorako-ui.settings.app-sheet-theme.name": "Thème de la feuille de l'appli",
+  "dorako-ui.settings.app-sheet-theme.hint": "Affecte divers aspects de la feuille comme Filepicker et Tokenconfig",
+  "dorako-ui.settings.app-sheet-theme.choice.default": "Par défaut",
+  "dorako-ui.settings.app-sheet-theme.choice.light": "Clair",
+  "dorako-ui.settings.app-sheet-theme.choice.dark": "Sombre",
+  "dorako-ui.settings.dialog-sheet-theme.hint": "Affecte *tous* les dialogues, incluant éventuellement ceux qui ne sont pas supportés",
+  "dorako-ui.settings.dialog-sheet-theme.choice.light": "Clair",
+  "dorako-ui.settings.dialog-sheet-theme.choice.default": "Par défaut",
+  "dorako-ui.settings.dialog-sheet-theme.choice.dark": "Sombre",
+  "dorako-ui.settings.dialog-sheet-theme.name": "thème du dialogue de la feuille"
 }
