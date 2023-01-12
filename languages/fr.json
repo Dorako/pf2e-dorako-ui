@@ -116,5 +116,7 @@
   "dorako-ui.settings.dialog-sheet-theme.choice.light": "Clair",
   "dorako-ui.settings.dialog-sheet-theme.choice.default": "Par défaut",
   "dorako-ui.settings.dialog-sheet-theme.choice.dark": "Sombre",
-  "dorako-ui.settings.dialog-sheet-theme.name": "thème du dialogue de la feuille"
+  "dorako-ui.settings.dialog-sheet-theme.name": "thème du dialogue de la feuille",
+  "dorako-ui.text.default": "Par défaut",
+  "dorako-ui.text.dark": "Noir"
 }
