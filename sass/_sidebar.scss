@@ -57,12 +57,12 @@
         .item {
             border: none;
             margin: 2px 0px;
+            text-shadow: 0px 0px 3px black;
 
             &.active {
                 @include gold-border;
                 margin: 2px 0px;
                 border-radius: 3px;
-                text-shadow: 0px 0px 3px black;
                 color: white;
                 background-color: var(--primary-light);
             }
@@ -73,7 +73,7 @@
         i.fas {
             line-height: 24px; // center-aligns icons
         }
-        
+
         .roll-type-select {
             margin-left: 0px;
         }

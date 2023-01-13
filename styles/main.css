@@ -194,6 +194,8 @@
   --sidebar-title: var(--tertiary);
   /* App UI */
   --glass-bg: rgba(20, 20, 20, 0.60);
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-bg-dark: rgba(0, 0, 0, 0.70);
 }
 
 .combat-sidebar .drag-gap {
@@ -538,18 +540,15 @@ nav#navigation ol#scene-list li.nav-item {
   transition: 0.25s;
   text-shadow: 0px 0px 3px black;
 }
+nav#navigation ol#scene-list li.nav-item > a:hover {
+  text-shadow: unset;
+}
 nav#navigation ol#scene-list li.nav-item .scene-players {
   text-shadow: none;
 }
-nav#navigation ol#scene-list li.nav-item a:hover {
-  text-shadow: unset;
-}
 nav#navigation ol#scene-list li.nav-item:hover {
-  background-color: rgba(177, 177, 177, 0.5);
-  color: black;
-}
-nav#navigation ol#scene-list li.nav-item:hover a, nav#navigation ol#scene-list li.nav-item:hover a:hover {
-  text-shadow: 0 0 3px var(--color-text-light-highlight);
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
 }
 nav#navigation ol#scene-list li.nav-item.view {
   border: none;
@@ -578,8 +577,12 @@ nav#navigation ol#scene-list li.nav-item.gm:hover, nav#navigation ol#scene-list 
   color: var(--color-text-light-highlight);
   background-color: var(--secondary-light);
 }
+nav#navigation ol#scene-list li.nav-item.context {
+  box-shadow: var(--glassy);
+  border: none;
+}
 nav#navigation ol#scene-list li.nav-item.active {
-  color: var(--color-text-light-highlight);
+  box-shadow: var(--gold-and-glow), var(--glassy);
 }
 
 /* ----------------------------------------- */
@@ -597,14 +600,17 @@ nav#navigation ol#scene-list li.nav-item.active {
 }
 .notification.info {
   background-color: var(--secondary);
+  border: none;
 }
 .notification.error {
   background-color: var(--primary);
+  border: none;
 }
 .notification.warning, .notification.alert {
   background-color: #ECBF41;
   color: black;
   text-shadow: none;
+  border: none;
 }
 
 /* ----------------------------------------- */
@@ -660,6 +666,7 @@ nav#navigation ol#scene-list li.nav-item.active {
 #sidebar #sidebar-tabs .item {
   border: none;
   margin: 2px 0px;
+  text-shadow: 0px 0px 3px black;
 }
 #sidebar #sidebar-tabs .item.active {
   /* prettier-ignore */
@@ -668,7 +675,6 @@ nav#navigation ol#scene-list li.nav-item.active {
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   margin: 2px 0px;
   border-radius: 3px;
-  text-shadow: 0px 0px 3px black;
   color: white;
   background-color: var(--primary-light);
 }
@@ -799,6 +805,10 @@ nav#navigation ol#scene-list li.nav-item.active {
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
+.placeable-hud input[type=text]:focus {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  border: none;
+}
 .placeable-hud .control-icon {
   border: none;
   border-radius: 3px;
@@ -830,13 +840,13 @@ nav#navigation ol#scene-list li.nav-item.active {
 .placeable-hud .control-icon[data-action=sort-up]:hover > img, .placeable-hud .control-icon[data-action=sort-down]:hover > img, .placeable-hud .control-icon[data-action=config]:hover > img, .placeable-hud .control-icon[data-action=trigger]:hover > img {
   filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
-.placeable-hud .control-icon[data-action=visibility], .placeable-hud .control-icon[data-action=effects], .placeable-hud .control-icon[data-action=combat], .placeable-hud .control-icon[data-action=locked], .placeable-hud .control-icon[data-action=target], .placeable-hud .control-icon[data-action=active] {
+.placeable-hud .control-icon[data-action=visibility], .placeable-hud .control-icon[data-action=effects], .placeable-hud .control-icon[data-action=combat], .placeable-hud .control-icon[data-action=locked], .placeable-hud .control-icon[data-action=target], .placeable-hud .control-icon[data-action=active], .placeable-hud .control-icon[data-action=mystify] {
   background-color: var(--secondary-dark);
 }
-.placeable-hud .control-icon[data-action=visibility]:hover, .placeable-hud .control-icon[data-action=visibility].active, .placeable-hud .control-icon[data-action=effects]:hover, .placeable-hud .control-icon[data-action=effects].active, .placeable-hud .control-icon[data-action=combat]:hover, .placeable-hud .control-icon[data-action=combat].active, .placeable-hud .control-icon[data-action=locked]:hover, .placeable-hud .control-icon[data-action=locked].active, .placeable-hud .control-icon[data-action=target]:hover, .placeable-hud .control-icon[data-action=target].active, .placeable-hud .control-icon[data-action=active]:hover, .placeable-hud .control-icon[data-action=active].active {
+.placeable-hud .control-icon[data-action=visibility]:hover, .placeable-hud .control-icon[data-action=visibility].active, .placeable-hud .control-icon[data-action=effects]:hover, .placeable-hud .control-icon[data-action=effects].active, .placeable-hud .control-icon[data-action=combat]:hover, .placeable-hud .control-icon[data-action=combat].active, .placeable-hud .control-icon[data-action=locked]:hover, .placeable-hud .control-icon[data-action=locked].active, .placeable-hud .control-icon[data-action=target]:hover, .placeable-hud .control-icon[data-action=target].active, .placeable-hud .control-icon[data-action=active]:hover, .placeable-hud .control-icon[data-action=active].active, .placeable-hud .control-icon[data-action=mystify]:hover, .placeable-hud .control-icon[data-action=mystify].active {
   background-color: var(--secondary-light);
 }
-.placeable-hud .control-icon[data-action=visibility]:hover > img, .placeable-hud .control-icon[data-action=visibility].active > img, .placeable-hud .control-icon[data-action=effects]:hover > img, .placeable-hud .control-icon[data-action=effects].active > img, .placeable-hud .control-icon[data-action=combat]:hover > img, .placeable-hud .control-icon[data-action=combat].active > img, .placeable-hud .control-icon[data-action=locked]:hover > img, .placeable-hud .control-icon[data-action=locked].active > img, .placeable-hud .control-icon[data-action=target]:hover > img, .placeable-hud .control-icon[data-action=target].active > img, .placeable-hud .control-icon[data-action=active]:hover > img, .placeable-hud .control-icon[data-action=active].active > img {
+.placeable-hud .control-icon[data-action=visibility]:hover > img, .placeable-hud .control-icon[data-action=visibility].active > img, .placeable-hud .control-icon[data-action=effects]:hover > img, .placeable-hud .control-icon[data-action=effects].active > img, .placeable-hud .control-icon[data-action=combat]:hover > img, .placeable-hud .control-icon[data-action=combat].active > img, .placeable-hud .control-icon[data-action=locked]:hover > img, .placeable-hud .control-icon[data-action=locked].active > img, .placeable-hud .control-icon[data-action=target]:hover > img, .placeable-hud .control-icon[data-action=target].active > img, .placeable-hud .control-icon[data-action=active]:hover > img, .placeable-hud .control-icon[data-action=active].active > img, .placeable-hud .control-icon[data-action=mystify]:hover > img, .placeable-hud .control-icon[data-action=mystify].active > img {
   filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
 }
 .placeable-hud .control-icon:hover {

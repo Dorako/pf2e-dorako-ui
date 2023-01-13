@@ -128,7 +128,12 @@
 .placeable-hud {
     input[type="text"] {
         @include glass;
+        &:focus {
+            box-shadow: var(--gold-and-glow), var(--glassy);
+            border: none;    
+        }
     }
+
     .control-icon {
         @include glass;
         @include quick-transition;
@@ -167,7 +172,8 @@
 
         // These are toggles, inactive -> active -> inactive
         // 'active' is from Monk's Active Tiles
-        &[data-action=visibility], &[data-action=effects], &[data-action=combat], &[data-action=locked], &[data-action=target], &[data-action=active] {
+        // 'mystify' is from Workbench
+        &[data-action=visibility], &[data-action=effects], &[data-action=combat], &[data-action=locked], &[data-action=target], &[data-action=active], &[data-action=mystify] {
             background-color: var(--secondary-dark);
 
             &:hover, &.active {

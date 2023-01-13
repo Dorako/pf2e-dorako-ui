@@ -7,21 +7,12 @@ function injectSheetTheme(sheet, html) {
   html0.classList.add(theme);
 }
 
-const foundryHooks = ["renderFilePicker", "renderSettingsConfig", "renderPermissionConfig", "renderAVConfig", "renderDefaultTokenConfig", "renderFontConfig", "renderFolderConfig", "renderRollTableConfig", "renderPlaylistConfig", "renderCombatantConfig", "renderMeasuredTemplateConfig", "renderDocumentOwnershipConfig", "renderDocumentSheetConfig", "renderModuleManagement", "renderMacroConfig", "renderCompendium", "renderCardsConfig", "renderWallConfig", "renderAmbientLightConfig", "renderAmbientSoundConfig", "renderTileConfig", "renderDrawingConfig"];
-const pf2eHooks    = ["renderTokenConfigPF2e", "renderHomebrewElements", "renderVariantRulesSettings", "renderAutomationSettings", "renderMetagameSettings", "renderWorldClockSettings", "renderPersistentDamageDialog", "renderSceneConfigPF2e"];
-const moduleHooks  = ["renderRollPrompt", "renderSavingThrowApp", "renderAssignXPApp", "renderContestedRollApp", "renderActiveTileConfig", "renderDFChatEditor"];
+const foundryDocuments = ["InvitationLinks","SupportDetails","ToursManagement","WorldConfig","KeybindingsConfig", "FilePicker", "SettingsConfig", "PermissionConfig", "AVConfig", "DefaultTokenConfig", "FontConfig", "FolderConfig", "RollTableConfig", "PlaylistConfig", "CombatantConfig", "MeasuredTemplateConfig", "DocumentOwnershipConfig", "DocumentSheetConfig", "ModuleManagement", "MacroConfig", "Compendium", "CardsConfig", "WallConfig", "AmbientLightConfig", "AmbientSoundConfig", "TileConfig", "DrawingConfig"];
+const pf2eDocuments    = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
+const moduleDocuments  = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
 
-for (const hookName of foundryHooks) {
-  console.log("HI");
-  Hooks.on(hookName, injectSheetTheme)
-}
-
-for (const hookName of pf2eHooks) {
-  Hooks.on(hookName, injectSheetTheme)
-}
-
-for (const hookName of moduleHooks) {
-  Hooks.on(hookName, injectSheetTheme)
+for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments]) {
+  Hooks.on("render"+document, injectSheetTheme)
 }
 
 // filepicker-plus natively uses dark mode
@@ -54,3 +45,54 @@ Hooks.on("renderDialog", (sheet, html) => {
   html0.classList.add("dorako-theme");
   html0.classList.add(theme);
 });
+
+// function initialize(html){
+//   let openBtn = $(`<a class="dark-mode-toggle" title="Toggle theme"><i class="fas fa-sun"></i>Theme</a>`);
+//   openBtn.click(ev => {
+//       if(localStorage.getItem('dark-mode') == 'true'){
+//           localStorage.setItem('dark-mode', 'false');
+//           $('body').removeClass('dark-theme');
+//           $('a.dark-mode-toggle>i.far.fa-sun').removeClass('far').addClass('fas');
+//       } else {
+//           localStorage.setItem('dark-mode', 'true');
+//           $('body').addClass('dark-theme');
+//           $('a.dark-mode-toggle>i.fas.fa-sun').removeClass('fas').addClass('far');
+//       }
+//   });
+//   html.closest('.app').find('.dark-mode-toggle').remove();
+//   let titleElement = html.closest('.app').find('.window-title');
+//   openBtn.insertAfter(titleElement);
+// }
+
+// Hooks.on('renderDialog', (app, html, data) => {
+//   initialize(html);
+// });
+
+// Hooks.on('init', () => {
+//   if(localStorage.getItem('dark-mode') == 'true'){
+//       $('body').addClass('dark-theme');
+//   } else {
+//       $('body').removeClass('dark-theme');
+//   }
+// });
+
+// function createThemeButton(control, html, data) {
+//     const name = 'theme';
+//     const title = 'theme';
+//     const icon = (localStorage.getItem('dark-mode') === 'true') ? 'far fa-sun' : 'far fa-moon';
+//     const active = false; // localStorage.getItem('dark-mode') === 'true';
+//     const btn = $(`<li class="scene-control toggle ${active ? 'active' : ''}" title="${title}" data-tool="${name}"><i class="${icon}"></i></li>`);
+//     btn.on('click', () => {
+//       if(localStorage.getItem('dark-mode') == 'true'){
+//           localStorage.setItem('dark-mode', 'false');
+//           $('body').removeClass('dark-theme');
+//           $('li.scene-control.toggle>i.far.fa-moon').removeClass('fa-moon').addClass('fa-sun');
+//       } else {
+//           localStorage.setItem('dark-mode', 'true');
+//           $('body').addClass('dark-theme');
+//           $('li.scene-control.toggle>i.far.fa-sun').removeClass('fa-sun').addClass('fa-moon');
+//       }});
+//     html.find('.main-controls').append(btn);
+// }
+
+// Hooks.on('renderSceneControls', createThemeButton);

@@ -60,6 +60,8 @@
   --sidebar-title: var(--tertiary);
   /* App UI */
   --glass-bg: rgba(20, 20, 20, 0.60);
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-bg-dark: rgba(0, 0, 0, 0.70);
 }
 
 /* ----------------------------------------- */
@@ -199,14 +201,20 @@
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: var(--dorako-text-shadow);
+  margin: 0px;
 }
 .dark-theme.message .message-content .damage-application button img {
   filter: invert(1) brightness(0.8) sepia(1) grayscale(0.8) drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
 }
 .dark-theme.message .message-content .damage-application button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
   color: white;
   background-color: var(--primary-light);
-  border: none;
 }
 .dark-theme.message .message-content .damage-application button:hover img {
   filter: invert(1) drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));

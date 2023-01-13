@@ -1,6 +1,30 @@
 @import "mixins";
 
-.window-app.dark-theme {
+.dark-theme #sidebar .settings-sidebar {
+    button {
+        @include glass;
+        @include quick-transition;
+        text-shadow: 0 0 3px black;
+        background-color: var(--glass-bg-light);
+
+        &:hover {
+            background-color: var(--glass-bg);
+            color: var(--color-text-light-highlight);
+        }
+    }
+}
+
+.dark-theme.dialog .dialog-buttons button.default {
+    background-color: var(--secondary);
+    border: none;
+
+    &:hover {
+        background-color: var(--secondary-light);
+    }
+
+}
+
+.dark-theme.window-app {
     // ::placeholder {
     //     color: var(--color-text-light-heading);
     // }
@@ -52,6 +76,7 @@
         &:hover {
             background-color: var(--primary);
             color: var(--color-text-light-highlight);
+            box-shadow: var(--glassy); // Overrides prosemirror, possibly other stuff
         }
 
         &.privacy {
@@ -59,6 +84,27 @@
             &:hover {
                 color: var(--color-text-light-heading);
                 background-color: #440eb9;
+            }
+        }
+
+        &.pm-dropdown {
+            ul {
+                @include glass;
+                backdrop-filter: blur(5px);
+            }
+
+            li {
+                &:hover {
+                    background: rgba(0,0,0,0.5);
+                }
+            }
+
+            i {
+                color: var(--color-text-light-heading);
+            }
+
+            &:hover i {
+                color: var(--color-text-light-highlight);
             }
         }
     }
@@ -72,8 +118,10 @@
 
     input[type="text"],
     input[type="number"],
-    input[type="search"]
-     {
+    input[type="search"],
+    input[type="date"],
+    input[type="time"]
+        {
         @include glass;
         padding-left: 5px;
 
@@ -147,6 +195,37 @@
             background: var(--primary);
             color: var(--color-text-light-highlight);
             text-shadow: 0 0 3px black;
+        }
+    }
+
+    &#keybindings .binding .key {
+        @include glass;
+        @include quick-transition;
+        color: var(--color-text-light-heading);
+        text-shadow: 0 0 3px black;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--color-text-light-highlight);
+        }
+        &.uneditable {
+            background-color: rgba(0,0,0, 0.8);
+            &:hover {
+                color: var(--color-text-light-heading);
+                background-color: rgba(0,0,0, 0.8);
+            }
+        }
+    }
+
+    &#invitation-links .connection {
+        &.closed {
+            color: rgb(255 0 19 / 60%);
+        }
+        &.open {
+            color: green;
+        }
+        &.unknown {
+            color: rgba(250, 219, 60, 0.814);
         }
     }
 }

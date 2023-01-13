@@ -11,10 +11,12 @@
 
     &.info {
         background-color: var(--secondary);
+        border: none;
     }
 
     &.error {
         background-color: var(--primary);
+        border: none;
     }
 
     &.warning,
@@ -22,5 +24,6 @@
         background-color: #ECBF41;
         color: black;
         text-shadow: none;
+        border: none;
     }
 }

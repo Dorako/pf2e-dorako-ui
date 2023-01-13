@@ -148,10 +148,12 @@ div#scrollToBottom {
 
 #dfcp-rt-buttons {
     gap: 3px;
+
     button {
         @include glass;
         @include quick-transition;
         color: var(--color-text-light-heading);
+        background-color: var(--glass-bg-light);
 
         &:hover {
             color: var(--color-text-light-highlight);
@@ -208,8 +210,10 @@ div.speaking-as--currentSpeaker+#chat-controls {
 
 .speaking-as--currentSpeaker {
     @include glass;
+    background-color: var(--glass-bg-light);
     padding-left: 5px;
     margin: 0px 6px;
+    text-shadow: 0px 0px 3px black;
 }
 
 .speaking-as--currentSpeaker--button {
@@ -223,9 +227,54 @@ div.speaking-as--currentSpeaker+#chat-controls {
 /* PF2e Target Damage                        */
 /* ----------------------------------------- */
 
-.dark-theme #target-damage-target-name {
+.chat-message .message-content .pf2e-td.damage-application button .label {
+    font-size: var(--font-size-8);
+}
+
+.dark-theme.chat-message #target-damage-target-name {
     color: var(--color-text-light-heading);
 }
+
+.dark-theme.chat-message {
+    hr.pf2e-td {
+        display: none !important; // inline style overwrite
+    }
+
+    button.small-button.pf2e-td {
+        @include glass;
+        @include quick-transition;
+        background-color: var(--glass-bg-light);
+        color: var(--color-text-light-heading);
+        text-shadow: 0px 0px 3px black;
+
+        margin: 2px;
+        width: 20px;
+        height: calc(100% - 4px);
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--color-text-light-highlight);
+        }
+    }
+
+    .pf2e-td.damage-application {
+        gap: 3px;
+
+        .pf2e-td.name {
+            color: var(--color-text-light-heading);
+
+            &:hover {
+                color: var(--color-text-light-highlight);
+            }
+        }
+    }
+
+    .message-content .pf2e-td.damage-application button .label {
+        font-size: var(--font-size-8);
+    }
+}
+
+// Legacy <2.0 styling
 
 #target-damage-chat-window [data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=gm] {
     background-color: transparent;
@@ -791,6 +840,10 @@ nav.damage-log-nav.tabs {
 
 .combat-sidebar li.combatant .token-name {
     z-index: 1;
+}
+
+.chat-message .message-content .damage-roll:not(:first-child) {
+    margin-top: 5px;
 }
 
 .chat-message {

@@ -82,7 +82,7 @@
 /* Damage buttons                            */
 /* ----------------------------------------- */
 .message .message-content .damage-application {
-  gap: 3px;
+  gap: 2px;
 }
 .message .message-content .damage-application button.half-damage .transparent-half {
   display: none;

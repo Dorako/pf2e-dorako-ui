@@ -124,16 +124,16 @@
                 @include glass;
                 @include quick-transition;
                 text-shadow: var(--dorako-text-shadow);
+                margin: 0px;
 
                 img {
                     filter: invert(1) brightness(0.8) sepia(1) grayscale(0.8) drop-shadow(0px 0px 3px rgba(0,0,0,0.5));
                 }
 
-
                 &:hover {
+                    @include glass;
                     color: white;
                     background-color: var(--primary-light);   
-                    border: none; 
                     img {
                         filter: invert(1) drop-shadow(0px 0px 3px rgba(0,0,0,0.5));
                     }

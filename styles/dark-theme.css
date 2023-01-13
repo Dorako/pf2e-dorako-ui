@@ -1,4 +1,28 @@
-.window-app.dark-theme .window-content {
+.dark-theme #sidebar .settings-sidebar button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0 0 3px black;
+  background-color: var(--glass-bg-light);
+}
+.dark-theme #sidebar .settings-sidebar button:hover {
+  background-color: var(--glass-bg);
+  color: var(--color-text-light-highlight);
+}
+
+.dark-theme.dialog .dialog-buttons button.default {
+  background-color: var(--secondary);
+  border: none;
+}
+.dark-theme.dialog .dialog-buttons button.default:hover {
+  background-color: var(--secondary-light);
+}
+
+.dark-theme.window-app .window-content {
   border: none;
   background-image: var(--sheet-light);
   background-size: cover;
@@ -9,31 +33,31 @@
   background-image: var(--sheet-dark);
   color: var(--color-text-light-heading);
 }
-.window-app.dark-theme#module-management .package-list .package-title, .window-app.dark-theme#module-management .package-list .package-metadata, .window-app.dark-theme#module-management .package-list .package-description {
+.dark-theme.window-app#module-management .package-list .package-title, .dark-theme.window-app#module-management .package-list .package-metadata, .dark-theme.window-app#module-management .package-list .package-description {
   color: var(--color-text-light-highlight);
 }
-.window-app.dark-theme.sheet header.sheet-header img {
+.dark-theme.window-app.sheet header.sheet-header img {
   box-shadow: var(--gold-and-glow);
   border-radius: 5px;
 }
-.window-app.dark-theme textarea {
+.dark-theme.window-app textarea {
   color: white;
   border: 1px solid var(--tertiary);
 }
-.window-app.dark-theme a[href] {
+.dark-theme.window-app a[href] {
   color: var(--tertiary-dark);
 }
-.window-app.dark-theme hr {
+.dark-theme.window-app hr {
   border-top: 1px solid var(--tertiary);
   border-bottom: 1px solid var(--tertiary);
 }
-.window-app.dark-theme.sheet footer.sheet-footer {
+.dark-theme.window-app.sheet footer.sheet-footer {
   gap: 5px;
 }
-.window-app.dark-theme .compendium.directory .directory-list .directory-item {
+.dark-theme.window-app .compendium.directory .directory-list .directory-item {
   border: none;
 }
-.window-app.dark-theme button {
+.dark-theme.window-app button {
   border: none;
   border-radius: 3px;
   background: none;
@@ -43,24 +67,45 @@
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: 0 0 3px black;
 }
-.window-app.dark-theme button:hover {
+.dark-theme.window-app button:hover {
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
+  box-shadow: var(--glassy);
 }
-.window-app.dark-theme button.privacy {
+.dark-theme.window-app button.privacy {
   background-color: #2e0587;
 }
-.window-app.dark-theme button.privacy:hover {
+.dark-theme.window-app button.privacy:hover {
   color: var(--color-text-light-heading);
   background-color: #440eb9;
 }
-.window-app.dark-theme .private button.privacy {
+.dark-theme.window-app button.pm-dropdown ul {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
+}
+.dark-theme.window-app button.pm-dropdown li:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dark-theme.window-app button.pm-dropdown i {
+  color: var(--color-text-light-heading);
+}
+.dark-theme.window-app button.pm-dropdown:hover i {
+  color: var(--color-text-light-highlight);
+}
+.dark-theme.window-app .private button.privacy {
   color: var(--color-text-light-highlight);
   background-color: #440eb9;
 }
-.window-app.dark-theme input[type=text],
-.window-app.dark-theme input[type=number],
-.window-app.dark-theme input[type=search] {
+.dark-theme.window-app input[type=text],
+.dark-theme.window-app input[type=number],
+.dark-theme.window-app input[type=search],
+.dark-theme.window-app input[type=date],
+.dark-theme.window-app input[type=time] {
   border: none;
   border-radius: 3px;
   background: none;
@@ -69,13 +114,15 @@
   color: var(--color-text-light-heading);
   padding-left: 5px;
 }
-.window-app.dark-theme input[type=text]:disabled,
-.window-app.dark-theme input[type=number]:disabled,
-.window-app.dark-theme input[type=search]:disabled {
+.dark-theme.window-app input[type=text]:disabled,
+.dark-theme.window-app input[type=number]:disabled,
+.dark-theme.window-app input[type=search]:disabled,
+.dark-theme.window-app input[type=date]:disabled,
+.dark-theme.window-app input[type=time]:disabled {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.window-app.dark-theme.token-sheet .form-group.children-disabled .range-value,
-.window-app.dark-theme input[type=range] + .range-value {
+.dark-theme.window-app.token-sheet .form-group.children-disabled .range-value,
+.dark-theme.window-app input[type=range] + .range-value {
   border: none;
   border-radius: 3px;
   background: none;
@@ -85,15 +132,15 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--color-text-light-heading);
 }
-.window-app.dark-theme input[type=text], .window-app.dark-theme input[type=number], .window-app.dark-theme input[type=password], .window-app.dark-theme input[type=date], .window-app.dark-theme input[type=time], .window-app.dark-theme input[type=search], .window-app.dark-theme input[type=checkbox], .window-app.dark-theme input[type=radio] {
+.dark-theme.window-app input[type=text], .dark-theme.window-app input[type=number], .dark-theme.window-app input[type=password], .dark-theme.window-app input[type=date], .dark-theme.window-app input[type=time], .dark-theme.window-app input[type=search], .dark-theme.window-app input[type=checkbox], .dark-theme.window-app input[type=radio] {
   color: var(--color-text-light-highlight);
   accent-color: var(--tertiary);
 }
-.window-app.dark-theme input[type=text]:checked, .window-app.dark-theme input[type=number]:checked, .window-app.dark-theme input[type=password]:checked, .window-app.dark-theme input[type=date]:checked, .window-app.dark-theme input[type=time]:checked, .window-app.dark-theme input[type=search]:checked, .window-app.dark-theme input[type=checkbox]:checked, .window-app.dark-theme input[type=radio]:checked {
+.dark-theme.window-app input[type=text]:checked, .dark-theme.window-app input[type=number]:checked, .dark-theme.window-app input[type=password]:checked, .dark-theme.window-app input[type=date]:checked, .dark-theme.window-app input[type=time]:checked, .dark-theme.window-app input[type=search]:checked, .dark-theme.window-app input[type=checkbox]:checked, .dark-theme.window-app input[type=radio]:checked {
   accent-color: var(--tertiary);
   filter: none;
 }
-.window-app.dark-theme select {
+.dark-theme.window-app select {
   border: none;
   border-radius: 3px;
   background: none;
@@ -102,29 +149,29 @@
   color: var(--color-text-light-heading);
   color: var(--color-text-light-highlight);
 }
-.window-app.dark-theme input[type=color][data-edit] {
+.dark-theme.window-app input[type=color][data-edit] {
   border: none;
 }
-.window-app.dark-theme.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
+.dark-theme.window-app.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
   color: var(--color-text-light-highlight);
 }
-.window-app.dark-theme fieldset, .window-app.dark-theme.app.token-sheet .tab.active[data-tab=appearance] fieldset {
+.dark-theme.window-app fieldset, .dark-theme.window-app.app.token-sheet .tab.active[data-tab=appearance] fieldset {
   border: 1px solid var(--tertiary);
   border-radius: 5px;
 }
-.window-app.dark-theme.sheet nav.sheet-tabs {
+.dark-theme.window-app.sheet nav.sheet-tabs {
   border-top: 1px solid var(--tertiary);
   border-bottom: 1px solid var(--tertiary);
 }
-.window-app.dark-theme form .form-group.slim .form-fields > label,
-.window-app.dark-theme form .form-group span.units,
-.window-app.dark-theme form .notes, .window-app.dark-theme form .hint {
+.dark-theme.window-app form .form-group.slim .form-fields > label,
+.dark-theme.window-app form .form-group span.units,
+.dark-theme.window-app form .notes, .dark-theme.window-app form .hint {
   color: var(--color-text-dark-6);
 }
-.window-app.dark-theme.filepicker .private .directory, .window-app.dark-theme.filepicker .public .private.dir {
+.dark-theme.window-app.filepicker .private .directory, .dark-theme.window-app.filepicker .public .private.dir {
   background: rgba(115, 49, 255, 0.15);
 }
-.window-app.dark-theme.filepicker .display-modes a {
+.dark-theme.window-app.filepicker .display-modes a {
   border: none;
   border-radius: 3px;
   background: none;
@@ -134,14 +181,45 @@
   color: var(--color-text-light-highlight);
   text-shadow: 0 0 3px black;
 }
-.window-app.dark-theme.filepicker .display-modes a:hover {
+.dark-theme.window-app.filepicker .display-modes a:hover {
   background: var(--primary);
   color: var(--color-text-light-highlight);
 }
-.window-app.dark-theme.filepicker .display-modes a.active {
+.dark-theme.window-app.filepicker .display-modes a.active {
   background: var(--primary);
   color: var(--color-text-light-highlight);
   text-shadow: 0 0 3px black;
+}
+.dark-theme.window-app#keybindings .binding .key {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0 0 3px black;
+}
+.dark-theme.window-app#keybindings .binding .key:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dark-theme.window-app#keybindings .binding .key.uneditable {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dark-theme.window-app#keybindings .binding .key.uneditable:hover {
+  color: var(--color-text-light-heading);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dark-theme.window-app#invitation-links .connection.closed {
+  color: rgba(255, 0, 19, 0.6);
+}
+.dark-theme.window-app#invitation-links .connection.open {
+  color: green;
+}
+.dark-theme.window-app#invitation-links .connection.unknown {
+  color: rgba(250, 219, 60, 0.814);
 }
 
 /*# sourceMappingURL=dark-theme.css.map */
