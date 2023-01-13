@@ -3,6 +3,7 @@
 - (Refinement) Further expanded the scope of dark theme for app sheets
 - (Refinement) Updated Token HUD and Navigation styling
 - (Maintenance) Updated module-support for PF2e Target Damage 2.0
+- (Fix) Fixed missing localization string
 # 1.9.11
 
 - (Module) Added compatibility with Forgotten Adventures Battlemaps module
