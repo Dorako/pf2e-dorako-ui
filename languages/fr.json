@@ -119,5 +119,9 @@
   "dorako-ui.settings.dialog-sheet-theme.name": "thème du dialogue de la feuille",
   "dorako-ui.text.default": "Par défaut",
   "dorako-ui.text.dark": "Sombre",
-  "dorako-ui.text.light": "Clair"
+  "dorako-ui.text.light": "Clair",
+  "dorako-ui.settings.glass-bg.hint": "toute couleur CSS valide devrait fonctionner",
+  "dorako-ui.settings.frosted-glass.name": "Utiliser le verre glacé",
+  "dorako-ui.settings.frosted-glass.hint": "ATTENTION : très gourmand en performance. Exemple : brillance (1.5) contraste (1.2) saturation (1.5) flou (5px)",
+  "dorako-ui.settings.glass-bg.name": "Utiliser comme alternative un fond en verre"
 }
