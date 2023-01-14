@@ -211,6 +211,7 @@ div#scrollToBottom {
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   background-color: #ECBF41;
+  text-shadow: none;
   color: black;
   margin-left: 6px;
   margin-right: 7px;

@@ -136,6 +136,7 @@ div#scrollToBottom {
     @include quick-transition;
     @include glass;
     background-color: #ECBF41;
+    text-shadow: none;
     color: black;
     margin-left: 6px;
     margin-right: 7px;
