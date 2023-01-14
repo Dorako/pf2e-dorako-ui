@@ -564,7 +564,7 @@ function addScalingToCombatTrackerAvatars(app, html, data) {
     if (scale < 1 || (combatImagesActive && combatant.actor.getFlag("combat-tracker-images", "trackerImage"))) {
       scale = 1;
     }
-    tokenImageElem.setAttribute("style", "transform: scale(" + scale + ")");
+    tokenImageElem.setAttribute("style", "transform: scale(" + Math.abs(scale) + ")");
   });
 }
 
@@ -682,7 +682,7 @@ Hooks.on("renderChatMessage", (message, b) => {
   if (avatar.type == "token") {
     const smallScale = game.settings.get("pf2e-dorako-ui", "small-creature-token-avatar-size");
     let smallCorrection = avatar.isSmall ? 1.25 * smallScale : 1;
-    avatarElem?.setAttribute("style", "transform: scale(" + avatar.scale * smallCorrection + ")");
+    avatarElem?.setAttribute("style", "transform: scale(" + Math.abs(avatar.scale) * smallCorrection + ")");
   }
 
   const portraitDegreeSetting = game.settings.get("pf2e-dorako-ui", "avatar-reacts-to-degree-of-success");

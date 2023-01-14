@@ -76,6 +76,28 @@
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
 }
+.dark-theme.message.chat-message .dice-roll .dice-total.success {
+  color: #00c000;
+}
+.dark-theme.message.chat-message .dice-roll .dice-total.failure {
+  color: #ff4040;
+}
+.dark-theme.message.chat-message .dice-total .dice-total-fullDamage-btn {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.dark-theme.message.chat-message .dice-total .dice-total-fullDamage-btn:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
 .dark-theme.message.chat-message .dice-roll .dice-result .statuseffect-rules {
   background: var(--sheet-dark);
   background-size: cover;

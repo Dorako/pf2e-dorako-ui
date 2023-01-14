@@ -23,7 +23,7 @@
     }
 
     &.light-header-text {
-        background-blend-mode: darken;
+        background-blend-mode: multiply;
         color: white;
         text-shadow: 0px 1px 1px black;
 
@@ -104,6 +104,8 @@
             gap: 2px;
 
             button {
+                @include quick-transition;
+                
                 &.half-damage  {
                     .transparent-half {
                         display: none;
@@ -120,7 +122,7 @@
                             position: absolute;
                             top: 0px;
                             left: 2px;
-                            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+                            clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
                             color: gray;
                         }
                     }
@@ -136,7 +138,7 @@
                     }
 
                     &.half-damage .fa-heart-broken::after {
-                        clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+                        clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
                         color: gray;
                     }
                 }

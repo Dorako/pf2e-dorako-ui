@@ -1,3 +1,12 @@
+# 1.9.13
+
+- (New) Added support for chat bubbles
+- (Fix) Fixed issue where mirrored tokens had their avatars upside down
+- (Maintenance) Updated module-support for new classic styling of PF2e Target Damage
+- (Fix) Fixed one of the familiar themes not working (and associated console error)
+- (Fix) Fixed issue where nat 1/20 were not colored appropriately in dark mode messages
+- (Refinement) Extend dark mode messages theme support to crit deck buttons
+
 # 1.9.12
 
 - (Refinement) Further expanded the scope of dark theme for app sheets

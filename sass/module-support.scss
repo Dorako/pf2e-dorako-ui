@@ -231,8 +231,13 @@ div.speaking-as--currentSpeaker+#chat-controls {
     font-size: var(--font-size-8);
 }
 
-.dark-theme.chat-message #target-damage-target-name {
-    color: var(--color-text-light-heading);
+wrapper.pf2e-td.name-top .pf2e-td.name {
+    // System styling
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border-light-2);
+    border-radius: 3px;
+    box-shadow: 0 0 2px #fff inset;
+    width: 100%;
 }
 
 .dark-theme.chat-message {
@@ -257,14 +262,39 @@ div.speaking-as--currentSpeaker+#chat-controls {
         }
     }
 
-    .pf2e-td.damage-application {
+    wrapper.pf2e-td {
         gap: 3px;
+
+        .pf2e-td.damage-application {
+            // gap: 5px;
+            gap: 3px;
+            margin-top: 0px;
+        }
+
+        &.name-left .pf2e-td.damage-application {
+            gap: 3px;
+        }
 
         .pf2e-td.name {
             color: var(--color-text-light-heading);
 
             &:hover {
                 color: var(--color-text-light-highlight);
+            }
+        }
+
+        &.name-top {
+            .pf2e-td.name {
+                @include glass;
+                @include quick-transition;
+                width: 100%;
+                line-height: 24px;
+                text-shadow: 0px 0px 3px black;
+    
+                &:hover {
+                    color: var(--color-text-light-highlight);
+                    background-color: var(--primary);
+                }
             }
         }
     }

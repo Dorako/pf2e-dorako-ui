@@ -11,6 +11,28 @@
         @include glass;
     }
 
+    .dice-roll .dice-total {
+        &.success {
+            color: #00c000;
+        }
+        &.failure {
+            color: #ff4040;
+        }
+    }
+
+    .dice-total .dice-total-fullDamage-btn {
+        @include glass;
+        @include quick-transition;
+        background-color: var(--glass-bg-light);
+        color: var(--color-text-light-heading);
+        text-shadow: 0px 0px 3px black;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--color-text-light-highlight);
+        }
+    }
+
     .dice-roll .dice-result {
         .statuseffect-rules {
             background: var(--sheet-dark);

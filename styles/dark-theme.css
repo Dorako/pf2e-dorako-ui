@@ -22,6 +22,11 @@
   background-color: var(--secondary-light);
 }
 
+.dark-theme {
+  --color-underline-active: var(--tertiary-dark);
+  --color-underline-header: var(--tertiary-dark);
+}
+
 .dark-theme.window-app .window-content {
   border: none;
   background-image: var(--sheet-light);

@@ -24,6 +24,11 @@
 
 }
 
+.dark-theme {
+    --color-underline-active: var(--tertiary-dark);
+    --color-underline-header: var(--tertiary-dark);
+}
+
 .dark-theme.window-app {
     // ::placeholder {
     //     color: var(--color-text-light-heading);

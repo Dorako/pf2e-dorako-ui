@@ -16,10 +16,10 @@ Hooks.once("init", async () => {
       hint: util.i18n("dorako-ui.settings.pc-sheet-theme.hint"),
       scope: "client",
       config: true,
-      default: "red",
+      default: "default",
       type: String,
       choices: {
-        red: util.i18n("dorako-ui.settings.pc-sheet-theme.choice.red"),
+        default: util.i18n("dorako-ui.text.default"),
         dark: util.i18n("dorako-ui.text.dark"),
       },
       requiresReload: true
@@ -90,10 +90,10 @@ Hooks.once("init", async () => {
       hint: util.i18n("dorako-ui.settings.familiar-sheet-theme.hint"),
       scope: "client",
       config: true,
-      default: "red",
+      default: "default",
       type: String,
       choices: {
-        red: util.i18n("dorako-ui.settings.familiar-sheet-theme.choice.red"),
+        default: util.i18n("dorako-ui.text.default"),
         dark: util.i18n("dorako-ui.text.dark"),
         darkRedHeader: util.i18n("dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header"),
       },
@@ -367,6 +367,7 @@ Hooks.once("init", async () => {
     injectCSS("messages");
     injectCSS("npc-sheet");
     injectCSS("loot-sheet");
+    injectCSS("chat-bubbles");
   
     const root = document.querySelector(":root").style;
     if (game.settings.get("pf2e-dorako-ui", "center-hotbar")) {
@@ -388,6 +389,6 @@ Hooks.once("init", async () => {
     const pcSheetSetting = game.settings.get("pf2e-dorako-ui", "pc-sheet-theme");
     if (pcSheetSetting == "dark") injectCSS("pc-sheet-dark");
     const familiarSheetSetting = game.settings.get("pf2e-dorako-ui", "familiar-sheet-theme");
-    if (familiarSheetSetting == "dark" || setting == "darkRedHeader") injectCSS("familiar-sheet-dark");
+    if (familiarSheetSetting == "dark" || familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark");
     if (familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
   });
