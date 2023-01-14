@@ -1,3 +1,6 @@
+# 1.9.14.1
+
+- (Fix) Whoops, that text shadow crept into messages as well, which made light theme messages looks very weird
 # 1.9.14
 
 - (New) Glass background color is now user-configurable in settings
