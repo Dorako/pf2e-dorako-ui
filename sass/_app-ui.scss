@@ -70,6 +70,12 @@
     }
 }
 
+.window-app .window-resizable-handle {
+    background: none;
+    border: none;
+    text-shadow: 0px 0px 3px black;
+}
+
 /* ----------------------------------------- */
 /* Context Menu                              */
 /* ----------------------------------------- */
@@ -77,6 +83,7 @@
 #context-menu {
     @include glass;
     backdrop-filter: blur(5px);
+    text-shadow: 0px 0px 3px black;
 
     &.expand-down {
         margin-top: 3px;
@@ -97,6 +104,7 @@
     min-height: 34px;
     font-size: var(--font-size-20);
     line-height: var(--font-size-20);
+    text-shadow: 0px 0px 3px black;
 }
 
 /* ----------------------------------------- */

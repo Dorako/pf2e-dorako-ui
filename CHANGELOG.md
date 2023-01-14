@@ -1,3 +1,10 @@
+# 1.9.14
+
+- (New) Glass background color is now user-configurable in settings
+- (New) Frosted glass setting is back, and also user-configurable in settings
+- (Fix) Filepicker+ apparently also has a sidebar - which is now fixed
+- (Refinement) Added text shadows to sidebar to better support bright or very transparent background colors
+
 # 1.9.13
 
 - (New) Added support for chat bubbles

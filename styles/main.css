@@ -85,6 +85,12 @@
   margin: 1px;
 }
 
+.window-app .window-resizable-handle {
+  background: none;
+  border: none;
+  text-shadow: 0px 0px 3px black;
+}
+
 /* ----------------------------------------- */
 /* Context Menu                              */
 /* ----------------------------------------- */
@@ -96,6 +102,7 @@
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
 }
 #context-menu.expand-down {
   margin-top: 3px;
@@ -118,6 +125,7 @@
   min-height: 34px;
   font-size: var(--font-size-20);
   line-height: var(--font-size-20);
+  text-shadow: 0px 0px 3px black;
 }
 
 /* ----------------------------------------- */
@@ -639,6 +647,10 @@ nav#navigation ol#scene-list li.nav-item.active {
 
 #chat-log {
   margin-left: 4px;
+}
+
+.sidebar-tab {
+  text-shadow: 0px 0px 3px black;
 }
 
 #sidebar {

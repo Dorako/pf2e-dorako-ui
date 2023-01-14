@@ -20,6 +20,7 @@
         }
     }
 
+    .dice-total .dice-total-setInitiative-btn,
     .dice-total .dice-total-fullDamage-btn {
         @include glass;
         @include quick-transition;

@@ -94,8 +94,12 @@
   "dorako-ui.settings.no-chat-control-icon.name": "Hide chat control icon?",
   "dorako-ui.settings.no-chat-control-icon.hint": "This is the dice icon next to roll options, it tends to crowd the UI.",
 
-  "dorako-ui.settings.backdrop-filter.name": "Use glassy transparency",
-  "dorako-ui.settings.backdrop-filter.hint": "WARNING: Very performance intensive, not suitable for laptops",
+  "dorako-ui.settings.frosted-glass.name": "Use frosted glass",
+  "dorako-ui.settings.frosted-glass.hint": "WARNING: Very performance intensive. Example: brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)",
+
+  "dorako-ui.settings.glass-bg.name": "Use alternate glass background",
+  "dorako-ui.settings.glass-bg.hint": "Any valid CSS color should work",
+
 
   "dorako-ui.settings.center-hotbar.name": "Enable centered hotbar?",
   "dorako-ui.settings.center-hotbar.hint": "Also known as macrobar",

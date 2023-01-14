@@ -328,6 +328,26 @@ Hooks.once("init", async () => {
       type: Boolean,
       requiresReload: true
     });
+
+    game.settings.register("pf2e-dorako-ui", "frosted-glass", {
+      name: util.i18n("dorako-ui.settings.frosted-glass.name"),
+      hint: util.i18n("dorako-ui.settings.frosted-glass.hint"),
+      scope: "client",
+      config: true,
+      default: "",
+      type: String,
+      requiresReload: true
+    });
+
+    game.settings.register("pf2e-dorako-ui", "glass-bg", {
+      name: util.i18n("dorako-ui.settings.glass-bg.name"),
+      hint: util.i18n("dorako-ui.settings.glass-bg.hint"),
+      scope: "client",
+      config: true,
+      default: "",
+      type: String,
+      requiresReload: true
+    });
   
     game.settings.register("pf2e-dorako-ui", "no-chat-control-icon", {
       name: util.i18n("dorako-ui.settings.no-chat-control-icon.name"),
@@ -392,3 +412,18 @@ Hooks.once("init", async () => {
     if (familiarSheetSetting == "dark" || familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark");
     if (familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
   });
+
+Hooks.once("ready", () => {
+  const frostedGlass = game.settings.get("pf2e-dorako-ui", "frosted-glass");
+  if (!frostedGlass) return;
+  $('body').addClass('frosted-glass');
+  const root = document.querySelector(":root").style;
+  root.setProperty("--frosted-glass", frostedGlass);
+});
+
+Hooks.once("ready", () => {
+  const glassBg = game.settings.get("pf2e-dorako-ui", "glass-bg");
+  if (!glassBg) return;
+  const root = document.querySelector(":root").style;
+  root.setProperty("--glass-bg", glassBg,"important");
+});
