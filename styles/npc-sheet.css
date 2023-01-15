@@ -209,6 +209,14 @@
 }
 
 /* Dark */
+.sheet.pf2e.actor.npc.dark-theme.dark-theme.window-app input[type=text],
+.sheet.pf2e.actor.npc.dark-theme.dark-theme.window-app input[type=number],
+.sheet.pf2e.actor.npc.dark-theme.dark-theme.window-app input[type=search],
+.sheet.pf2e.actor.npc.dark-theme.dark-theme.window-app input[type=date],
+.sheet.pf2e.actor.npc.dark-theme.dark-theme.window-app input[type=time] {
+  box-shadow: unset;
+}
+
 .sheet.pf2e.actor.npc.dark-theme .recall-knowledge .section-body button {
   box-shadow: var(--glassy);
 }

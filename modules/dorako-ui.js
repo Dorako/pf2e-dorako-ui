@@ -62,7 +62,7 @@ class TokenAvatar extends Avatar {
 }
 
 Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
-  const npcTheme = game.settings.get("pf2e-dorako-ui.theme", "theme.npc-sheet-theme");
+  const npcTheme = game.settings.get("pf2e-dorako-ui", "theme.npc-sheet-theme");
   if (npcTheme === "default") return;
   let html0 = html[0];
   html0.classList.add("dorako-theme");

@@ -1,3 +1,6 @@
+# 1.10.0.1
+
+- (Fix) Fix theme setting for NPC sheets not working
 # 1.10.0
 ## The settings release
 
