@@ -42,7 +42,11 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                   step: 1,
                 },
                 config: true,
-                requiresReload: true
+                requiresReload: false,
+                onChange: () => {
+                    const root = document.querySelector(":root").style;
+                    root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");                  
+                }
               },
               "small-creature-token-avatar-size": {
                 name: "pf2e-dorako-ui.settings.avatar.small-creature-token-avatar-size.name",

@@ -24,7 +24,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.chat-theme.hint",
         scope: "client",
         config: true,
-        default: "Light",
+        default: "light",
         type: String,
         choices: {
           light: "pf2e-dorako-ui.text.light",
@@ -55,7 +55,11 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         config: true,
         default: "",
         type: String,
-        requiresReload: true
+        requiresReload: false,
+        onChange: () => {
+          const root = document.querySelector(":root").style;
+          root.setProperty("--frosted-glass", game.settings.get("pf2e-dorako-ui", "theme.frosted-glass"));                  
+      }
       },
       "glass-bg": {
         name: "pf2e-dorako-ui.settings.theme.glass-bg.name",
@@ -64,14 +68,18 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         config: true,
         default: "",
         type: String,
-        requiresReload: true
+        requiresReload: false,
+        onChange: () => {
+          const root = document.querySelector(":root").style;
+          root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg"));                  
+      } 
       },
       "dark-theme-degree": {
         name: "pf2e-dorako-ui.settings.theme.dark-theme-degree.name",
         hint: "pf2e-dorako-ui.settings.theme.dark-theme-degree.hint",
         scope: "client",
         config: true,
-        default: "default",
+        default: "none",
         type: String,
         choices: {
           "none": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.none",
@@ -86,7 +94,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.hint",
         scope: "client",
         config: true,
-        default: "light-theme",
+        default: "default",
         type: String,
         choices: {
           "default": "pf2e-dorako-ui.text.default",

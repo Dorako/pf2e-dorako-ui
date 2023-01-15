@@ -41,7 +41,11 @@ export class UXSettings extends SettingsMenuDorakoUI {
                   step: 5,
                 },
                 config: true,
-                requiresReload: true
+                requiresReload: false,
+                onChange: () => {
+                    const root = document.querySelector(":root").style;
+                    root.setProperty("--chat-input-height", game.settings.get("pf2e-dorako-ui", "ux.chat-input-height").toString() + "px");
+                }
               },
               "restructure-card-info": {
                 name: "pf2e-dorako-ui.settings.ux.restructure-card-info.name",

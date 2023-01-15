@@ -1,6 +1,7 @@
 @import "mixins";
 
 #token-hud {
+    --secondary-dark: var(--glass-bg);
     .status-effects {
         background: none;
         box-shadow: none;

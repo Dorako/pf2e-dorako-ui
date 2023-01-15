@@ -270,13 +270,8 @@ div#scrollToBottom:hover {
   text-shadow: 0px 0px 3px black;
 }
 #polyglot select option {
-  border: none;
-  border-radius: 3px;
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  color: var(--color-text-light-heading);
-  backdrop-filter: blur(5px);
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-highlight);
 }
 
 /* ----------------------------------------- */
@@ -534,6 +529,13 @@ nav.damage-log-nav.tabs .item.active {
   color: black;
   text-shadow: 0 0 3px var(--color-text-light-highlight);
   box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Monk's Player Settings                    */
+/* ----------------------------------------- */
+#client-settings.dark-theme #mps-view-group {
+  border-bottom: 1px solid var(--tertiary);
 }
 
 /* ----------------------------------------- */

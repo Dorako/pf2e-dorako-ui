@@ -700,6 +700,9 @@ nav#navigation ol#scene-list li.nav-item.active {
   margin-left: 0px;
 }
 
+#token-hud {
+  --secondary-dark: var(--glass-bg);
+}
 #token-hud .status-effects {
   background: none;
   box-shadow: none;

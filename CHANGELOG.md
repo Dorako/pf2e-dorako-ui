@@ -1,3 +1,9 @@
+# 1.10.1
+
+- (Fix) Fix selects on Windows being illegible on dark theme or Polyglot
+- (Fix) Fix default values for some settings referring to non-existing keys
+- (New) Made several settings apply on saving, thereby not requiring a refresh
+
 # 1.10.0.1
 
 - (Fix) Fix theme setting for NPC sheets not working
