@@ -1,142 +1,194 @@
 {
-  "dorako-ui.settings.pc-sheet-theme.name": "PC sheet theme",
-  "dorako-ui.settings.pc-sheet-theme.hint": "Affects player sheets",
+  "pf2e-dorako-ui": {
+    "text": {
+      "secret": "Secret",
+      "self-roll": "Self roll",
+      "gm-only": "GM only",
+      "whisper": "Whisper",
+      "from": "From",
+      "to": "to",
+      "send-to-chat": "Send",
+      "default": "Default",
+      "dark": "Dark",
+      "light": "Light",
+      "disabled": "Disabled"
+    },
+    "settings": {
+      "theme": {
+        "name": "Theme Settings",
+        "label": "Configure Theme Settings",
+        "hint": "Change theme settings for various applications and UI elements",
 
-  "dorako-ui.settings.npc-sheet-theme.name": "NPC sheet theme",
-  "dorako-ui.settings.npc-sheet-theme.hint": "Affects NPC sheets",
+        "dark-theme-degree": {
+          "name": "Use dark theme for…",
+          "hint": "Decrease the degree of dark theme if you are encountering broken UI",
+          "choice": {
+            "none": "No applications",
+            "supported": "All known good applications",
+            "extended": "All known good applications, and all dialogs",
+            "maximum": "Everything, even potentially breaky stuff"
+          }
+        },
+        "frosted-glass": {
+          "name": "Use frosted glass",
+          "hint": "WARNING: Very performance intensive. Example: brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
+        },
+        "glass-bg": {
+          "name": "Use alternate glass background",
+          "hint": "Any valid CSS color should work"
+        },
+        "npc-sheet-theme": {
+          "name": "NPC sheet theme",
+          "hint": "Affects NPC sheets"
+        },
+        "chat-theme": {
+          "name": "Chat theme",
+          "hint": "Affects all chat messages",
+          "choice": {
+            "factions": "Players light, GM dark"
+          }
+        },
+        "pc-sheet-theme": {
+          "name": "PC sheet theme",
+          "hint": "Affects player sheets"
+        },
+        "loot-sheet-theme": {
+          "name": "Loot sheet theme",
+          "hint": "Affects Loot sheets"
+        },
+        "familiar-sheet-theme": {
+          "name": "Familiar sheet theme",
+          "hint": "Affects familiar sheets",
+          "choice": {
+            "dark-red-header": "Dark + Red Header"
+          }
+        },
+        "header-style": {
+          "name": "Chat message header theme",
+          "hint": "Adds a colored header to every chat message",
+          "choice": {
+            "red": "Red",
+            "blue": "Blue",
+            "tint": "Player color",
+            "none": "Disabled"
+          }
+        }
+      },
+      "avatar": {
+        "name": "Avatar Settings",
+        "label": "Configure Avatar Settings",
+        "hint": "Configure settings related to avatars in chat messages",
 
-  "dorako-ui.settings.loot-sheet-theme.name": "Loot sheet theme",
-  "dorako-ui.settings.loot-sheet-theme.hint": "Affects Loot sheets",
+        "source": {
+          "name": "Chat avatars",
+          "hint": "Adds an avatar to chat messages",
+          "choice": {
+            "token": "Prefer token image",
+            "actor": "Prefer actor image"
+          }
+        },
+        "hide-when-token-hidden": {
+          "name": "Hide avatar when token is hidden",
+          "hint": "Hides avatars when the speaker token is hidden"
+        },
+        "hide-gm-avatar-when-secret": {
+          "name": "Hide avatar when secret?",
+          "hint": "Hides avatars whenever GM rolls secret/private rolls"
+        },
+        "size": {
+          "name": "Size",
+          "hint": "Default of 40px"
+        },
+        "popout-support": {
+          "name": "Enable token avatar popout?",
+          "hint": "Scales the size of token avatars according to the token's scale"
+        },
+        "reacts-to-degree-of-success": {
+          "name": "Avatar reacts to critical rolls?",
+          "hint": "A critical success will glow green, and a critical failure becomes muted and dark"
+        },
+        "small-creature-token-avatar-size": {
+          "name": "Small creature avatar size",
+          "hint": "Default is 0.8"
+        },
+        "use-user-avatar": {
+          "name": "Use user avatar as fallback?",
+          "hint": "Configure user avatars by right-clicking users in the lower left area of Foundry"
+        }
+      },
+      "ux": {
+        "name": "UX Settings",
+        "label": "Configure UX Settings",
+        "hint": "Configure settings related to showing, hiding, making UI less obstructive or clearer, moving stuff to different locations",
 
-  "dorako-ui.settings.app-sheet-theme.name": "App sheet theme",
-  "dorako-ui.settings.app-sheet-theme.hint": "Affects various misc. sheets like Filepicker and Token Config",
+        "chat-input-height": {
+          "name": "Chatbox height",
+          "hint": "Foundry default is approx 100px",
+          "CGMPhint": "Foundry default is approx 100px; Note that with Cautious Gamemaster's Pack's \"Notify Typing\" setting enabled, the notification eats at most 60px of the height of the chatbox"
+        },
+        "restructure-card-info": {
+          "name": "Restructure chat card info?",
+          "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"
+        },
+        "remove-attack-info-from-damage-roll-messages": {
+          "name": "Remove attack info from damage roll messages?",
+          "hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with DFCE chat-merge"
+        },
+        "compact-ui": {
+          "name": "Enable Compact UI?",
+          "hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered"
+        },
+        "no-logo": {
+          "name": "Hide Foundry logo?",
+          "hint": "Removes the Foundry logo in the top left"
+        },
+        "no-cards": {
+          "name": "Hide Cards tab?",
+          "hint": "Removes the Cards tab in the sidebar entirely"
+        },
+        "no-chat-control-icon": {
+          "name": "Hide chat control icon?",
+          "hint": "This is the dice icon next to roll options, it tends to crowd the UI"
+        },
+        "center-hotbar": {
+          "name": "Enable centered hotbar?",
+          "hint": "Also known as macrobar"
+        },
+        "enable-player-tags": {
+          "name": "Enable player tags?",
+          "hint": "Adds a tag containing the name of the player next to the speaker"
+        },
+        "rolltype-indication": {
+          "name": "Rolltype indication mode",
+          "hint": "Configure user avatars by right-clicking users in the lower left area of Foundry",
+          "choice": {
+            "tags": "Tags",
+            "bg-color": "Background color tint",
+            "both": "Tags and background color",
+            "none": "Disabled"
+          }
+        }
+      },
 
-  "dorako-ui.settings.dialog-sheet-theme.name": "Dialog sheet theme",
-  "dorako-ui.settings.dialog-sheet-theme.hint": "Affects *all* Dialogs, including potentially unsupported ones",
+      "misc": {
+        "name": "Miscellaneous Settings",
+        "label": "Configure Misc. Settings",
+        "hint": "Configure settings related to other Dorako UI functionality",
 
-  "dorako-ui.settings.familiar-sheet-theme.name": "Familiar sheet theme",
-  "dorako-ui.settings.familiar-sheet-theme.hint": "Affects familiar sheets",
-  "dorako-ui.settings.familiar-sheet-theme.choice.dark-red-header": "Dark + Red Header",
+        "send-to-chat": {
+          "name": "Add 'Send' button to window header?",
+          "hint": "Sends content to chat as if sent via sheet"
+        },
 
-  "dorako-ui.settings.chat-theme.name": "Chat theme",
-  "dorako-ui.settings.chat-theme.hint": "Affects all chat messages",
-  "dorako-ui.settings.chat-theme.choice.factions": "Players light, GM dark",
+        "skin-combat-carousel": {
+          "name": "Enable styling for Combat Carousel?"
+        },
 
-  "dorako-ui.settings.header-style.name": "Header style",
-  "dorako-ui.settings.header-style.hint": "Affects all chat messages",
-  "dorako-ui.settings.header-style.choice.red": "Red",
-  "dorako-ui.settings.header-style.choice.blue": "Blue",
-  "dorako-ui.settings.header-style.choice.tint": "Player color",
-  "dorako-ui.settings.header-style.choice.none": "Disabled",
-
-  "dorako-ui.settings.use-avatars.name": "Avatar style",
-  "dorako-ui.settings.use-avatars.hint": "Adds an avatar to chat messages",
-  "dorako-ui.settings.use-avatars.choice.token": "Prefer token image",
-  "dorako-ui.settings.use-avatars.choice.actor": "Prefer actor image",
-  "dorako-ui.settings.use-avatars.choice.none": "Disabled",
-
-  "dorako-ui.settings.hide-gm-avatar-when-secret.name": "Hide avatar when secret?",
-  "dorako-ui.settings.hide-gm-avatar-when-secret.hint": "Hides avatars whenever GM rolls secret/private rolls",
-
-  "dorako-ui.settings.hide-avatar-when-hidden.name": "Hide avatar when token is hidden?",
-  "dorako-ui.settings.hide-avatar-when-hidden.hint": "Hides avatars when the speaker token is hidden",
-
-  "dorako-ui.settings.avatar-size.name": "Avatar size",
-  "dorako-ui.settings.avatar-size.hint": "Suggested size of 40px",
-
-  "dorako-ui.settings.popout-token-avatars.name": "Enable token avatar popout?",
-  "dorako-ui.settings.popout-token-avatars.hint": "Scales the avatars of BB/AV-style tokens to normalize the size of the token baseplate",
-
-  "dorako-ui.settings.avatar-reacts-to-degree-of-success.name": "Avatar reacts to critical rolls",
-  "dorako-ui.settings.avatar-reacts-to-degree-of-success.hint": "A critical success will glow green, and a critical failure becomes muted and dark",
-
-  "dorako-ui.settings.small-creature-token-avatar-size.name": "Small creature avatar size",
-  "dorako-ui.settings.small-creature-token-avatar-size.hint": "Default is 0.8",
-
-  "dorako-ui.settings.use-user-avatar.name": "Use user avatar as fallback?",
-  "dorako-ui.settings.use-user-avatar.hint": "Configure user avatars by right-clicking users in the lower left area of Foundry",
-
-  "dorako-ui.settings.avatar-border.name": "Enable avatar border",
-  "dorako-ui.settings.avatar-border.hint": "Disable this setting if you are using token avatars that pop out of their token baseplates",
-
-  "dorako-ui.settings.chat-input-height.name": "Chatbox height",
-  "dorako-ui.settings.chat-input-height.hint": "Foundry default is approx 100px",
-  "dorako-ui.settings.chat-input-height.CGMPhint": "Foundry default is approx 100px; Note that with Cautious Gamemaster's Pack's \"Notify Typing\" setting enabled, the notification eats at most 60px of the height of the chatbox",
-
-  "dorako-ui.settings.enable-player-tags.name": "Enable player tags?",
-  "dorako-ui.settings.enable-player-tags.hint": "Adds a tag containing the name of the player next to the speaker",
-
-  "dorako-ui.settings.rolltype-indication.name": "Rolltype indication mode",
-  "dorako-ui.settings.rolltype-indication.hint": "Secret rolls are tinted pink, and whispers are tinted blue",
-  "dorako-ui.settings.rolltype-indication.choice.tags": "Tags",
-  "dorako-ui.settings.rolltype-indication.choice.bg-color": "Background color tint",
-  "dorako-ui.settings.rolltype-indication.choice.both": "Tags and background color",
-  "dorako-ui.settings.rolltype-indication.choice.none": "Disabled",
-
-  "dorako-ui.settings.send-to-chat.name": "Add 'Send' button to window header?",
-  "dorako-ui.settings.send-to-chat.hint": "Sends content to chat as if sent via sheet",
-
-  "dorako-ui.settings.restructure-card-info.name": "Restructure chat card info?",
-  "dorako-ui.settings.restructure-card-info.hint": "Makes action-cost for features more apparent, and moves spell info out of the footer",
-
-  "dorako-ui.settings.combine-attack-and-damage-roll-messages.name": "Combine attack and damage roll messages?",
-  "dorako-ui.settings.combine-attack-and-damage-roll-messages.hint": "Makes damage roll messages take up less space by visually combining them with the attack",
-
-  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.name": "Remove attack info from damage roll messages?",
-  "dorako-ui.settings.remove-attack-info-from-damage-roll-messages.hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with DFCE chat-merge.",
-
-  "dorako-ui.settings.compact-ui.name": "Enable Compact UI?",
-  "dorako-ui.settings.compact-ui.hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered",
-
-  "dorako-ui.settings.no-logo.name": "Hide Foundry logo?",
-  "dorako-ui.settings.no-logo.hint": "Removes the Foundry logo in the top left",
-
-  "dorako-ui.settings.no-chat-control-icon.name": "Hide chat control icon?",
-  "dorako-ui.settings.no-chat-control-icon.hint": "This is the dice icon next to roll options, it tends to crowd the UI.",
-
-  "dorako-ui.settings.frosted-glass.name": "Use frosted glass",
-  "dorako-ui.settings.frosted-glass.hint": "WARNING: Very performance intensive. Example: brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)",
-
-  "dorako-ui.settings.glass-bg.name": "Use alternate glass background",
-  "dorako-ui.settings.glass-bg.hint": "Any valid CSS color should work",
-
-
-  "dorako-ui.settings.center-hotbar.name": "Enable centered hotbar?",
-  "dorako-ui.settings.center-hotbar.hint": "Also known as macrobar",
-
-  "dorako-ui.settings.edge-offset.name": "Edge-offset",
-  "dorako-ui.settings.edge-offset.hint": "Offset from the edge of screen in pixels",
-
-  "dorako-ui.settings.skin-chat.name": "Theme chat?",
-  "dorako-ui.settings.skin-navigation.name": "Theme scene navigation?",
-  "dorako-ui.settings.skin-hotbar.name": "Theme hotbar?",
-  "dorako-ui.settings.skin-controls.name": "Theme scene controls?",
-  "dorako-ui.settings.skin-token-hud.name": "Theme token HUD?",
-  "dorako-ui.settings.skin-effect-panel.name": "Theme effects panel?",
-  "dorako-ui.settings.skin-sidebar.name": "Theme sidebar?",
-  "dorako-ui.settings.skin-app-ui.name": "Theme app UI?",
-  "dorako-ui.settings.skin-combat-tracker.name": "Theme combat tracker?",
-  "dorako-ui.settings.skin-custom-hotbar.name": "Theme Custom Hotbar module?",
-  "dorako-ui.settings.skin-token-action-hud.name": "Theme Token Action HUD module?",
-  "dorako-ui.settings.skin-token-action-hud.hint": "Enable the 'Dorako UI' style in TAH.",
-  "dorako-ui.settings.skin-window-controls.name": "Theme Window Controls module?",
-  "dorako-ui.settings.skin-combat-carousel.name": "Theme Combat Carousel module?",
-  "dorako-ui.settings.skin-dice-tray.name": "Theme Dice Tray module?",
-
-  "dorako-ui.settings.skin-crb-journal.name": "Enable CRB styling for journals?",
-  "dorako-ui.settings.skin-crb-journal.hint": "Instructions at www.shorturl.at/mrzN1",
-
-  "dorako-ui.settings.skin-simple-calendar.name": "Theme Simple Calendar module?",
-  "dorako-ui.settings.skin-simple-calendar.hint": "Activate 'Classic' theme in Simple Calendar",
-
-  "dorako-ui.text.secret": "Secret",
-  "dorako-ui.text.self-roll": "Self roll",
-  "dorako-ui.text.gm-only": "GM only",
-  "dorako-ui.text.whisper": "Whisper",
-  "dorako-ui.text.from": "From",
-  "dorako-ui.text.to": "to",
-  "dorako-ui.text.send-to-chat": "Send",
-  "dorako-ui.text.default": "Default",
-  "dorako-ui.text.dark": "Dark",
-  "dorako-ui.text.light": "Light"
+        "skin-crb-journal": {
+          "name": "Enable CRB styling for journals?",
+          "hint": "Instructions at www.shorturl.at/mrzN1"
+        }
+      }
+    }
+  }
 }

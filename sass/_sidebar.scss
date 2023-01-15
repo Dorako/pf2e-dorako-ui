@@ -18,7 +18,6 @@
 
 #chat-form {
     margin: 0px 6px;
-    flex: 0 0 var(--chat-input-height);
     textarea {
         background: rgb(212 213 205);
         border: 1px solid#7a7971;    
@@ -45,6 +44,7 @@
         
         #sidebar-tabs .item.active {
             border: none;
+            margin: 2px 4px;
         }
     }
 

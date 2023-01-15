@@ -1,3 +1,11 @@
+# 1.10.0
+## The settings release
+
+- (New) Split the module into four setting menus
+- (New) By popular demand, added new setting to disable the Cards tab in the sidebar
+- (Fix) Partially reverted fix to CGMP's re-styling of emotes, so now only the colors is resat, and only for dark theme messages
+- (Fix) Potentially fixed issue where Polyglot's dropdown is illegible on certain browsers
+
 # 1.9.14.1
 
 - (Fix) Whoops, that text shadow crept into messages as well, which made light theme messages looks very weird

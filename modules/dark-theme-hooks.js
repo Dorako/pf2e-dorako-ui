@@ -1,17 +1,38 @@
-function injectSheetTheme(sheet, html) {
-  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
-  if (theme === "default") return;
+// Extended dark theme
+Hooks.on("renderDialog", (sheet, html) => {
+  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+  if (degree !== "extended") return;
   
   let html0 = html[0];
   html0.classList.add("dorako-theme");
-  html0.classList.add(theme);
+  html0.classList.add("dark-theme");
+});
+
+// Maximum dark theme
+Hooks.on("renderApplication", (sheet, html) => {
+  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+  if (degree !== "maximum") return;
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add("dark-theme");
+});
+
+function injectSheetTheme(sheet, html) {
+  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+  if (degree === "none" || degree === "maximum") return;
+  
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add("dark-theme");
 }
 
+// Supported dark theme
 const foundryDocuments = ["CombatTrackerConfig","InvitationLinks","SupportDetails","ToursManagement","WorldConfig","KeybindingsConfig", "FilePicker", "SettingsConfig", "PermissionConfig", "AVConfig", "DefaultTokenConfig", "FontConfig", "FolderConfig", "RollTableConfig", "PlaylistConfig", "CombatantConfig", "MeasuredTemplateConfig", "DocumentOwnershipConfig", "DocumentSheetConfig", "ModuleManagement", "MacroConfig", "Compendium", "CardsConfig", "WallConfig", "AmbientLightConfig", "AmbientSoundConfig", "TileConfig", "DrawingConfig"];
 const pf2eDocuments    = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
 const moduleDocuments  = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
+const dorakoUiDocument = ["AvatarSettings","MiscSettings","ThemeSettings","UiUxSettings"]
 
-for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments]) {
+for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments, ...dorakoUiDocument]) {
   Hooks.on("render"+document, injectSheetTheme)
 }
 
@@ -35,15 +56,6 @@ Hooks.on("renderFADownloader", (sheet, html) => { // Forgotten Adventure Battlem
   let html0 = html[0];
   html0.classList.add("dorako-theme");
   html0.classList.add("dark-theme");
-});
-
-Hooks.on("renderDialog", (sheet, html) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "dialog-sheet-theme");
-  if (theme === "default") return;
-  
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add(theme);
 });
 
 // function initialize(html){

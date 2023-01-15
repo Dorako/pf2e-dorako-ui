@@ -22,6 +22,10 @@
   background-color: var(--secondary-light);
 }
 
+.dark-theme form .form-group.buttons {
+  gap: 5px;
+}
+
 .dark-theme {
   --color-underline-active: var(--tertiary-dark);
   --color-underline-header: var(--tertiary-dark);
@@ -40,6 +44,9 @@
 }
 .dark-theme.window-app#module-management .package-list .package-title, .dark-theme.window-app#module-management .package-list .package-metadata, .dark-theme.window-app#module-management .package-list .package-description {
   color: var(--color-text-light-highlight);
+}
+.dark-theme.window-app.package-configuration aside.sidebar {
+  border: none;
 }
 .dark-theme.window-app.sheet header.sheet-header img {
   box-shadow: var(--gold-and-glow);
@@ -138,7 +145,7 @@
   color: var(--color-text-light-heading);
 }
 .dark-theme.window-app input[type=text], .dark-theme.window-app input[type=number], .dark-theme.window-app input[type=password], .dark-theme.window-app input[type=date], .dark-theme.window-app input[type=time], .dark-theme.window-app input[type=search], .dark-theme.window-app input[type=checkbox], .dark-theme.window-app input[type=radio] {
-  color: var(--color-text-light-highlight);
+  color: var(--color-text-light-heading);
   accent-color: var(--tertiary);
 }
 .dark-theme.window-app input[type=text]:checked, .dark-theme.window-app input[type=number]:checked, .dark-theme.window-app input[type=password]:checked, .dark-theme.window-app input[type=date]:checked, .dark-theme.window-app input[type=time]:checked, .dark-theme.window-app input[type=search]:checked, .dark-theme.window-app input[type=checkbox]:checked, .dark-theme.window-app input[type=radio]:checked {
@@ -152,7 +159,7 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
-  color: var(--color-text-light-highlight);
+  color: var(--color-text-light-heading);
 }
 .dark-theme.window-app input[type=color][data-edit] {
   border: none;

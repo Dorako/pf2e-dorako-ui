@@ -155,6 +155,7 @@ div#scrollToBottom {
         @include quick-transition;
         color: var(--color-text-light-heading);
         background-color: var(--glass-bg-light);
+        text-shadow: 0px 0px 3px black;
 
         &:hover {
             color: var(--color-text-light-highlight);
@@ -184,7 +185,13 @@ div#scrollToBottom {
     select {
         @include glass;
         background: var(--glass-bg-light);
-        color: var(--color-text-light-heading);    
+        color: var(--color-text-light-heading); 
+        text-shadow: 0px 0px 3px black;  
+        
+        option {
+            @include glass;
+            backdrop-filter: blur(5px);
+        }
     }
 }
 
@@ -786,10 +793,10 @@ nav.damage-log-nav.tabs {
 /* ----------------------------------------- */
 /* Cautious Gamemaster's Pack (CGMP)         */
 /* ----------------------------------------- */
-#chat-log .message.emote .message-content {
-    text-align: unset;
+#chat-log .dark-theme.message.emote .message-content {
+    // text-align: unset;
     color: unset;
-    font-style: unset;;
+    // font-style: unset;
 }
 
 /* ----------------------------------------- */
@@ -869,6 +876,10 @@ nav.damage-log-nav.tabs {
 #ui-bottom.centered {
     display: flex;
     justify-content: center;
+}
+
+#chat-form {
+    flex: 0 0 var(--chat-input-height) !important; // Inline style overwrite
 }
 
 #players h3 {

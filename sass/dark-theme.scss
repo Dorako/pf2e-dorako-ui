@@ -25,6 +25,12 @@
 }
 
 .dark-theme {
+    form .form-group.buttons {
+        gap: 5px;
+    }
+}
+
+.dark-theme {
     --color-underline-active: var(--tertiary-dark);
     --color-underline-header: var(--tertiary-dark);
 }
@@ -44,6 +50,9 @@
         .package-list .package-title, .package-list .package-metadata, .package-list .package-description {
             color: var(--color-text-light-highlight);
         }
+    }
+    &.package-configuration aside.sidebar {
+        border: none;
     }
 
     &.sheet header.sheet-header img {
@@ -142,7 +151,7 @@
     }
 
     input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"], input[type="search"], input[type="checkbox"], input[type="radio"] {
-        color: var(--color-text-light-highlight);
+        color: var(--color-text-light-heading);
         accent-color: var(--tertiary);
 
         &:checked {
@@ -153,7 +162,7 @@
 
     select {
         @include glass;
-        color: var(--color-text-light-highlight); 
+        color: var(--color-text-light-heading); 
     }
 
     input[type="color"][data-edit] {

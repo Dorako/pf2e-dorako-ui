@@ -15,7 +15,7 @@ function getActionGlyph(actionCost) {
 }
 
 function injectSheetTheme(sheet, html) {
-  const theme = game.settings.get("pf2e-dorako-ui", "app-sheet-theme");
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.app-sheet-theme");
   if (theme === "default") return;
   
   let html0 = html[0];
@@ -62,7 +62,7 @@ class TokenAvatar extends Avatar {
 }
 
 Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
-  const npcTheme = game.settings.get("pf2e-dorako-ui", "npc-sheet-theme");
+  const npcTheme = game.settings.get("pf2e-dorako-ui.theme", "theme.npc-sheet-theme");
   if (npcTheme === "default") return;
   let html0 = html[0];
   html0.classList.add("dorako-theme");
@@ -146,7 +146,7 @@ Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
 });
 
 Hooks.on("renderLootSheetPF2e", (sheet, html) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "loot-sheet-theme");
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.loot-sheet-theme");
   if (theme === "default") return;
   let html0 = html[0];
   html0.classList.add("dorako-theme");
@@ -155,12 +155,12 @@ Hooks.on("renderLootSheetPF2e", (sheet, html) => {
 
 
 Hooks.on("getItemSheetPF2eHeaderButtons", (sheet, buttons) => {
-  if (!game.settings.get("pf2e-dorako-ui", "send-to-chat")) {
+  if (!game.settings.get("pf2e-dorako-ui", "misc.send-to-chat")) {
     return;
   }
 
   buttons.unshift({
-    label: util.i18n("dorako-ui.text.send-to-chat"),
+    label: util.i18n("pf2e-dorako-ui.text.send-to-chat"),
     class: "send",
     icon: "fas fa-comment-alt",
     onclick: async () => {
@@ -193,7 +193,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 
   let html0 = html[0];
 
-  if (game.settings.get("pf2e-dorako-ui", "restructure-card-info")) {
+  if (game.settings.get("pf2e-dorako-ui", "ux.restructure-card-info")) {
       let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;
       if (uuid) {
         try {
@@ -213,7 +213,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   injectAuthorName(html, messageData);
 
   if (
-    game.settings.get("pf2e-dorako-ui", "hide-avatar-when-hidden") &&
+    game.settings.get("pf2e-dorako-ui", "avatar.hide-when-token-hidden") &&
     chatMessage.getFlag("pf2e-dorako-ui", "wasTokenHidden")
   ) {
   } else {
@@ -221,7 +221,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   }
   moveFlavorTextToContents(html);
 
-  const theme = game.settings.get("pf2e-dorako-ui", "chat-theme");
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.chat-theme");
 
   if (theme == "dark") html0.classList.add("dark-theme");
   if (theme == "light") html0.classList.add("light-theme");
@@ -237,7 +237,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 });
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  if (!game.settings.get("pf2e-dorako-ui", "remove-attack-info-from-damage-roll-messages")) return;
+  if (!game.settings.get("pf2e-dorako-ui", "ux.remove-attack-info-from-damage-roll-messages")) return;
 
   if (chatMessage?.isDamageRoll && chatMessage?._strike) {
     html[0].classList.add("dorako-damage-roll");
@@ -264,7 +264,7 @@ Hooks.once("ready", () => {
 function themeHeader(html, message) {
   let messageHeader = html.find(".message-header")[0];
 
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
   if (headerStyle != "none") {
     let bgCol = getHeaderColor(html, message);
     messageHeader.setAttribute("style", "background-color: " + bgCol);
@@ -461,7 +461,7 @@ function injectSpellInfo(html, spell) {
 
 function injectAuthorName(html, messageData) {
   if (messageData.author === undefined) return;
-  if (game.settings.get("pf2e-dorako-ui", "enable-player-tags")) {
+  if (game.settings.get("pf2e-dorako-ui", "ux.enable-player-tags")) {
     const messageSenderElem = html.find(".sender-wrapper");
     const playerName = messageData.author.name;
     const playerNameElem = document.createElement("span");
@@ -473,7 +473,7 @@ function injectAuthorName(html, messageData) {
 }
 
 function injectMessageTag(html, messageData) {
-  const setting = game.settings.get("pf2e-dorako-ui", "rolltype-indication");
+  const setting = game.settings.get("pf2e-dorako-ui", "ux.rolltype-indication");
   if (setting == "none") {
     return;
   } else if (setting == "tags" || setting == "both") {
@@ -491,16 +491,16 @@ function injectMessageTag(html, messageData) {
     const isRoll = messageData.message.rolls !== undefined;
 
     if (isBlind) {
-      rolltype.text(util.i18n("dorako-ui.text.secret"));
+      rolltype.text(util.i18n("pf2e-dorako-ui.text.secret"));
       messageMetadata.prepend(rolltype);
     } else if (isSelf && whisperTargets[0]) {
-      rolltype.text(util.i18n("dorako-ui.text.self-roll"));
+      rolltype.text(util.i18n("pf2e-dorako-ui.text.self-roll"));
       messageMetadata.prepend(rolltype);
     } else if (isRoll && isWhisper) {
-      rolltype.text(util.i18n("dorako-ui.text.gm-only"));
+      rolltype.text(util.i18n("pf2e-dorako-ui.text.gm-only"));
       messageMetadata.prepend(rolltype);
     } else if (isWhisper) {
-      rolltype.text(util.i18n("dorako-ui.text.whisper"));
+      rolltype.text(util.i18n("pf2e-dorako-ui.text.whisper"));
       messageMetadata.prepend(rolltype);
     }
   }
@@ -539,12 +539,12 @@ function injectWhisperParticipants(html, messageData) {
   whisperParticipants.addClass("whisper-to");
 
   const whisperFrom = $("<span>");
-  const fromText = titleCase(util.i18n("dorako-ui.text.from"));
+  const fromText = titleCase(util.i18n("pf2e-dorako-ui.text.from"));
   whisperFrom.text(`${fromText}: ${alias}`);
   whisperFrom.addClass("header-meta");
 
   const whisperTo = $("<span>");
-  const toText = titleCase(util.i18n("dorako-ui.text.to")).toLowerCase();
+  const toText = titleCase(util.i18n("pf2e-dorako-ui.text.to")).toLowerCase();
   whisperTo.text(`${toText}: ${whisperTargetString}`);
   whisperTo.addClass("header-meta");
 
@@ -569,7 +569,7 @@ function addScalingToCombatTrackerAvatars(app, html, data) {
 }
 
 function getHeaderColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
   if (headerStyle === "tint") {
     return message?.user?.color ?? "#DAC0FB";
   } else if (headerStyle === "blue") {
@@ -583,7 +583,7 @@ function getHeaderColor(html, message) {
 }
 
 function calcHeaderTextColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "header-style");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
   const messageHeader = html.find(".message-header")[0];
   if (headerStyle === "none") {
     if (html[0].classList.contains("dark-theme")) {
@@ -645,28 +645,28 @@ function addAvatarsToFlags(message) {
 }
 
 function getAvatar(message) {
-  const main = game.settings.get("pf2e-dorako-ui", "use-avatars");
-  if (main == "none") {
+  const source = game.settings.get("pf2e-dorako-ui", "avatar.source");
+  if (source == "none") {
     return null;
   }
 
   let combatantAvatar = message.getFlag("pf2e-dorako-ui", "combatantAvatar");
   let tokenAvatar = message.getFlag("pf2e-dorako-ui", "tokenAvatar");
   let actorAvatar = message.getFlag("pf2e-dorako-ui", "actorAvatar");
-  let userAvatar = game.settings.get("pf2e-dorako-ui", "use-user-avatar")
+  let userAvatar = game.settings.get("pf2e-dorako-ui", "avatar.use-user-avatar")
     ? message.getFlag("pf2e-dorako-ui", "userAvatar")
     : null;
 
   if (combatantAvatar) return combatantAvatar;
 
   if (
-    game.settings.get("pf2e-dorako-ui", "hide-avatar-when-hidden") &&
+    game.settings.get("pf2e-dorako-ui", "avatar.hide-when-token-hidden") &&
     message.getFlag("pf2e-dorako-ui", "wasTokenHidden")
   ) {
     return null;
   }
 
-  return main == "token" ? tokenAvatar || actorAvatar || userAvatar : actorAvatar || tokenAvatar || userAvatar;
+  return source == "token" ? tokenAvatar || actorAvatar || userAvatar : actorAvatar || tokenAvatar || userAvatar;
 }
 
 Hooks.on("renderChatMessage", (message, b) => {
@@ -680,12 +680,12 @@ Hooks.on("renderChatMessage", (message, b) => {
   avatarElem.src = avatar.image;
 
   if (avatar.type == "token") {
-    const smallScale = game.settings.get("pf2e-dorako-ui", "small-creature-token-avatar-size");
+    const smallScale = game.settings.get("pf2e-dorako-ui", "avatar.small-creature-token-avatar-size");
     let smallCorrection = avatar.isSmall ? 1.25 * smallScale : 1;
     avatarElem?.setAttribute("style", "transform: scale(" + Math.abs(avatar.scale) * smallCorrection + ")");
   }
 
-  const portraitDegreeSetting = game.settings.get("pf2e-dorako-ui", "avatar-reacts-to-degree-of-success");
+  const portraitDegreeSetting = game.settings.get("pf2e-dorako-ui", "avatar.reacts-to-degree-of-success");
 
   if (portraitDegreeSetting) {
     // console.log(message);

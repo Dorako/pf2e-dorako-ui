@@ -235,6 +235,7 @@ div#scrollToBottom:hover {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
   background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
 }
 #dfcp-rt-buttons button:hover {
   color: var(--color-text-light-highlight);
@@ -266,6 +267,16 @@ div#scrollToBottom:hover {
   color: var(--color-text-light-heading);
   background: var(--glass-bg-light);
   color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+#polyglot select option {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
 }
 
 /* ----------------------------------------- */
@@ -872,10 +883,8 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* Cautious Gamemaster's Pack (CGMP)         */
 /* ----------------------------------------- */
-#chat-log .message.emote .message-content {
-  text-align: unset;
+#chat-log .dark-theme.message.emote .message-content {
   color: unset;
-  font-style: unset;
 }
 
 /* ----------------------------------------- */
@@ -949,6 +958,10 @@ nav.damage-log-nav.tabs .item.active {
 #ui-bottom.centered {
   display: flex;
   justify-content: center;
+}
+
+#chat-form {
+  flex: 0 0 var(--chat-input-height) !important;
 }
 
 #players h3 {
