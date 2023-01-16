@@ -195,7 +195,7 @@
         "hint": "Modifier les paramètres du thème pour diverses applications et éléments de l'interface utilisateur",
         "frosted-glass": {
           "name": "Utilisez le verre dépoli",
-          "hint": "AVERTISSEMENT : Très gourmand en performances. Exemple : luminosité(1.5) contraste(1.2) saturation(1.5) flou(5px)"
+          "hint": "AVERTISSEMENT : Très gourmand en performances. Exemple : brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
         }
       },
       "avatar": {
