@@ -45,7 +45,7 @@ const foundryDocuments     = ["CombatTrackerConfig","InvitationLinks","SupportDe
 const pf2eDocuments        = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
 const moduleDocuments      = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
 const dorakoUiDocuments    = ["AvatarSettings","MiscSettings","ThemeSettings","UiUxSettings"]
-const blacklistedDocuments = ["EnhancedJournal","JournalSheetPF2e"]
+const blacklistedDocuments = ["ImagePopout","EnhancedJournal","JournalSheetPF2e"]
 const nativelyDarkDocuments  = ["FABattlemaps", "FADownloader"]
 
 for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments, ...dorakoUiDocuments]) {

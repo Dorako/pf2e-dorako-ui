@@ -2,6 +2,7 @@
 
 - (Fix) Fix an issue where all settings were turned into world settings
 - (Module) Made TAH's Dorako UI theme adhere to changes to glass-bg and frosted-glass
+- (Fix) Fix optgroups in selects on Windows being illegible on dark theme
 
 # 1.10.1
 

@@ -188,7 +188,7 @@ div#scrollToBottom {
         color: var(--color-text-light-heading); 
         text-shadow: 0px 0px 3px black;  
         
-        option {
+        option, optgroup {
             background-color: rgb(37, 37, 37);
             color: var(--color-text-light-highlight); 
         }
