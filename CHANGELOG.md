@@ -1,3 +1,8 @@
+# 1.10.2
+
+- (Fix) Fix an issue where all settings were turned into world settings
+- (Module) Made TAH's Dorako UI theme adhere to changes to glass-bg and frosted-glass
+
 # 1.10.1
 
 - (Fix) Fix selects on Windows being illegible on dark theme or Polyglot
@@ -7,6 +12,7 @@
 # 1.10.0.1
 
 - (Fix) Fix theme setting for NPC sheets not working
+
 # 1.10.0
 ## The settings release
 

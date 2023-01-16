@@ -28,7 +28,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                   actor: "pf2e-dorako-ui.settings.avatar.source.choice.actor",
                   none: "pf2e-dorako-ui.text.disabled",
                 },
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "size": {
                 name: "pf2e-dorako-ui.settings.avatar.size.name",
@@ -51,7 +52,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
               "small-creature-token-avatar-size": {
                 name: "pf2e-dorako-ui.settings.avatar.small-creature-token-avatar-size.name",
                 hint: "pf2e-dorako-ui.settings.avatar.small-creature-token-avatar-size.hint",
-                scope: "world",
+                scope: "client",
                 type: Number,
                 default: 0.8,
                 range: {
@@ -60,7 +61,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                   step: 0.1,
                 },
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "popout-support":{
                 name: "pf2e-dorako-ui.settings.avatar.popout-support.name",
@@ -69,7 +71,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: true,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "reacts-to-degree-of-success": {
                 name: "pf2e-dorako-ui.settings.avatar.reacts-to-degree-of-success.name",
@@ -78,7 +81,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: true,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "hide-when-token-hidden": {
                 name: "pf2e-dorako-ui.settings.avatar.hide-when-token-hidden.name",
@@ -87,7 +91,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: true,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "hide-gm-avatar-when-secret": {
                 name: "pf2e-dorako-ui.settings.avatar.hide-gm-avatar-when-secret.name",
@@ -96,7 +101,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: true,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "use-user-avatar": {
                 name: "pf2e-dorako-ui.settings.avatar.use-user-avatar.name",
@@ -105,7 +111,8 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: false,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               }
         };
     }

@@ -18,7 +18,8 @@ export class MiscSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: true,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "skin-combat-carousel": {
                 name: "pf2e-dorako-ui.settings.misc.skin-combat-carousel.name",
@@ -26,7 +27,8 @@ export class MiscSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: true,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "skin-crb-journal": {
                 name: "pf2e-dorako-ui.settings.misc.skin-crb-journal.name",
@@ -35,7 +37,8 @@ export class MiscSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: false,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               }
         };
     }

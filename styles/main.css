@@ -8,6 +8,7 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
 }
 #players h3 {
   cursor: pointer;
@@ -138,6 +139,7 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
 }
 
 /* ----------------------------------------- */
@@ -648,9 +650,6 @@ nav#navigation ol#scene-list li.nav-item.active {
   margin-left: 4px;
 }
 
-.sidebar-tab {
-  text-shadow: 0px 0px 3px black;
-}
 .sidebar-tab .message.chat-message {
   text-shadow: none;
 }
@@ -700,9 +699,6 @@ nav#navigation ol#scene-list li.nav-item.active {
   margin-left: 0px;
 }
 
-#token-hud {
-  --secondary-dark: var(--glass-bg);
-}
 #token-hud .status-effects {
   background: none;
   box-shadow: none;
@@ -822,6 +818,7 @@ nav#navigation ol#scene-list li.nav-item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
 }
 .placeable-hud input[type=text]:focus {
   box-shadow: var(--gold-and-glow), var(--glassy);

@@ -25,7 +25,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: false,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
             "chat-input-height": {
                 name: "pf2e-dorako-ui.settings.ux.chat-input-height.name",
@@ -54,7 +55,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: true,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "remove-attack-info-from-damage-roll-messages": {
                 name: "pf2e-dorako-ui.settings.ux.remove-attack-info-from-damage-roll-messages.name",
@@ -63,7 +65,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 type: Boolean,
                 default: true,
                 config: true,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "compact-ui": {
                 name: "pf2e-dorako-ui.settings.ux.compact-ui.name",
@@ -72,7 +75,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: false,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "no-logo": {
                 name: "pf2e-dorako-ui.settings.ux.no-logo.name",
@@ -81,7 +85,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: true,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "no-chat-control-icon": {
                 name: "pf2e-dorako-ui.settings.ux.no-chat-control-icon.name",
@@ -90,7 +95,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: true,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "no-cards": {
                 name: "pf2e-dorako-ui.settings.ux.no-cards.name",
@@ -99,7 +105,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: false,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "enable-player-tags": {
                 name: "pf2e-dorako-ui.settings.ux.enable-player-tags.name",
@@ -108,7 +115,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                 config: true,
                 default: true,
                 type: Boolean,
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
               "rolltype-indication": {
                 name: "pf2e-dorako-ui.settings.ux.rolltype-indication.name",
@@ -123,7 +131,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
                   both: "pf2e-dorako-ui.settings.ux.rolltype-indication.choice.both",
                   none: "pf2e-dorako-ui.settings.ux.rolltype-indication.choice.none",
                 },
-                requiresReload: true
+                requiresReload: true,
+                onChange: foundry.utils.debouncedReload
               },
         };
     }

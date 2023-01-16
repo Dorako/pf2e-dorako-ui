@@ -31,7 +31,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           dark: "pf2e-dorako-ui.text.dark",
           factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
       "header-style": {
         name: "pf2e-dorako-ui.settings.theme.header-style.name",
@@ -46,7 +47,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           tint: "pf2e-dorako-ui.settings.theme.header-style.choice.tint",
           none: "pf2e-dorako-ui.settings.theme.header-style.choice.none",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
       "frosted-glass":{
         name: "pf2e-dorako-ui.settings.theme.frosted-glass.name",
@@ -87,7 +89,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "extended": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.extended",
           "maximum": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.maximum",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
       "pc-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.name",
@@ -101,7 +104,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           // "light-theme": "pf2e-dorako-ui.text.light",
           "dark-theme": "pf2e-dorako-ui.text.dark",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
       "npc-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
@@ -115,7 +119,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "light-theme": "pf2e-dorako-ui.text.light",
           "dark-theme": "pf2e-dorako-ui.text.dark",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
       "familiar-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.name",
@@ -129,7 +134,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           dark: "pf2e-dorako-ui.text.dark",
           darkRedHeader: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.choice.dark-red-header",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
 
       "loot-sheet-theme": {
@@ -144,7 +150,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "light-theme": "pf2e-dorako-ui.text.light",
           // "dark-theme": "pf2e-dorako-ui.text.dark",
         },
-        requiresReload: true
+        requiresReload: true,
+        onChange: foundry.utils.debouncedReload
       },
     };
   }

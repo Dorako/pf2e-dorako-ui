@@ -12,7 +12,7 @@
       "flags": {}
     }
   ],
-  "version": "1.10.1",
+  "version": "1.10.2",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
@@ -63,6 +63,6 @@
     "modules/settings/settings.js",
     "modules/dark-theme-hooks.js"
   ],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.10.1.zip",
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.10.2.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json"
 }

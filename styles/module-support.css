@@ -455,6 +455,41 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   flex-direction: column;
   gap: 5px;
 }
+.dice-tray .dice-tray__stacked {
+  gap: 3px;
+}
+.dice-tray input[type=text] {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dice-tray input[type=text]:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  background-color: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.dice-tray input[type=text]:focus {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  background-color: var(--secondary-light);
+  color: white;
+}
 .dice-tray button {
   border: none;
   border-radius: 3px;
@@ -463,6 +498,31 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   box-shadow: var(--glassy);
   color: var(--color-text-light-heading);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dice-tray button svg {
+  filter: drop-shadow(0px 0px 3px black);
+}
+.dice-tray button svg * {
+  fill: var(--color-text-light-heading);
+}
+.dice-tray button.dice-tray__advantage:hover, .dice-tray button.dice-tray__disadvantage:hover, .dice-tray button.dice-tray__roll:hover, .dice-tray button.dice-tray__math--add:hover, .dice-tray button.dice-tray__math--sub:hover, .dice-tray button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dice-tray button.dice-tray__advantage:hover svg, .dice-tray button.dice-tray__disadvantage:hover svg, .dice-tray button.dice-tray__roll:hover svg, .dice-tray button.dice-tray__math--add:hover svg, .dice-tray button.dice-tray__math--sub:hover svg, .dice-tray button:hover svg {
+  filter: drop-shadow(0px 0px 3px black);
+}
+.dice-tray button.dice-tray__advantage:hover svg *, .dice-tray button.dice-tray__disadvantage:hover svg *, .dice-tray button.dice-tray__roll:hover svg *, .dice-tray button.dice-tray__math--add:hover svg *, .dice-tray button.dice-tray__math--sub:hover svg *, .dice-tray button:hover svg * {
+  fill: var(--color-text-light-highlight);
 }
 .dice-tray .flexrow {
   margin-left: 6px;
@@ -536,6 +596,13 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 #client-settings.dark-theme #mps-view-group {
   border-bottom: 1px solid var(--tertiary);
+}
+
+/* ----------------------------------------- */
+/* Monk's Enhanced Journal                   */
+/* ----------------------------------------- */
+.monks-enhanced-journal.window-app .window-content {
+  padding: 0px;
 }
 
 /* ----------------------------------------- */
@@ -899,6 +966,11 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* Token Action HUD (TAH)                    */
 /* ----------------------------------------- */
+:root {
+  --dorako-bg-current: var(--glass-bg);
+  --dorako-vibrancy: var(--frosted-glass);
+}
+
 #tah-categories {
   gap: 5px;
 }

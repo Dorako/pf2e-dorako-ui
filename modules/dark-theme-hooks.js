@@ -13,47 +13,57 @@ Hooks.on("renderApplication", (sheet, html) => {
   const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
   if (degree !== "maximum") return;
   let html0 = html[0];
+  if (html0.classList.contains("dark-theme-blacklist")) return;
   html0.classList.add("dorako-theme");
   html0.classList.add("dark-theme");
 });
 
-function injectSheetTheme(sheet, html) {
+
+function markAsDarkTheme(sheet, html) {
   const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
   if (degree === "none" || degree === "maximum") return;
-  
   let html0 = html[0];
   html0.classList.add("dorako-theme");
   html0.classList.add("dark-theme");
 }
 
-// Supported dark theme
-const foundryDocuments = ["CombatTrackerConfig","InvitationLinks","SupportDetails","ToursManagement","WorldConfig","KeybindingsConfig", "FilePicker", "SettingsConfig", "PermissionConfig", "AVConfig", "DefaultTokenConfig", "FontConfig", "FolderConfig", "RollTableConfig", "PlaylistConfig", "CombatantConfig", "MeasuredTemplateConfig", "DocumentOwnershipConfig", "DocumentSheetConfig", "ModuleManagement", "MacroConfig", "Compendium", "CardsConfig", "WallConfig", "AmbientLightConfig", "AmbientSoundConfig", "TileConfig", "DrawingConfig"];
-const pf2eDocuments    = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
-const moduleDocuments  = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
-const dorakoUiDocument = ["AvatarSettings","MiscSettings","ThemeSettings","UiUxSettings"]
-
-for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments, ...dorakoUiDocument]) {
-  Hooks.on("render"+document, injectSheetTheme)
+function markAsBlacklisted(sheet, html) {
+  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+  if (degree !== "maximum") return;
+  let html0 = html[0];
+  html0.classList.add("dark-theme-blacklist");
 }
 
-// filepicker-plus natively uses dark mode
+function markAsNativelyDarkTheme(sheet, html) {
+  let html0 = html[0];
+  html0.classList.add("dorako-theme");
+  html0.classList.add("dark-theme");
+}
+
+// Supported dark themes
+const foundryDocuments     = ["CombatTrackerConfig","InvitationLinks","SupportDetails","ToursManagement","WorldConfig","KeybindingsConfig", "FilePicker", "SettingsConfig", "PermissionConfig", "AVConfig", "DefaultTokenConfig", "FontConfig", "FolderConfig", "RollTableConfig", "PlaylistConfig", "CombatantConfig", "MeasuredTemplateConfig", "DocumentOwnershipConfig", "DocumentSheetConfig", "ModuleManagement", "MacroConfig", "Compendium", "CardsConfig", "WallConfig", "AmbientLightConfig", "AmbientSoundConfig", "TileConfig", "DrawingConfig"];
+const pf2eDocuments        = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
+const moduleDocuments      = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
+const dorakoUiDocuments    = ["AvatarSettings","MiscSettings","ThemeSettings","UiUxSettings"]
+const blacklistedDocuments = ["EnhancedJournal","JournalSheetPF2e"]
+const nativelyDarkDocuments  = ["FABattlemaps", "FADownloader"]
+
+for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments, ...dorakoUiDocuments]) {
+  Hooks.on("render"+document, markAsDarkTheme)
+}
+
+for (const document of [...blacklistedDocuments]) {
+  Hooks.on("render"+document, markAsBlacklisted)
+}
+
+for (const document of [...nativelyDarkDocuments]) {
+  Hooks.on("render"+document, markAsNativelyDarkTheme)
+}
+
+// filepicker-plus natively uses dark mode, but doesn't use its own document type
 Hooks.on("renderFilePicker", (sheet, html) => {
   let html0 = html[0];
   if (!game.modules.get("filepicker-plus")?.active) return;
-  html0.classList.add("dorako-theme");
-  html0.classList.add("dark-theme");
-});
-
-// FABattlemaps natively uses dark mode
-Hooks.on("renderFABattlemaps", (sheet, html) => { // Forgotten Adventure Battlemaps, natively dark
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add("dark-theme");
-});
-
-// FABattlemaps natively uses dark mode
-Hooks.on("renderFADownloader", (sheet, html) => { // Forgotten Adventure Battlemaps, natively dark
-  let html0 = html[0];
   html0.classList.add("dorako-theme");
   html0.classList.add("dark-theme");
 });

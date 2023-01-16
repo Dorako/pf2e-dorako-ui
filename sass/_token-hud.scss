@@ -1,7 +1,6 @@
 @import "mixins";
 
 #token-hud {
-    --secondary-dark: var(--glass-bg);
     .status-effects {
         background: none;
         box-shadow: none;
@@ -129,6 +128,7 @@
 .placeable-hud {
     input[type="text"] {
         @include glass;
+        text-shadow: 0px 0px 3px black;
         &:focus {
             box-shadow: var(--gold-and-glow), var(--glassy);
             border: none;    

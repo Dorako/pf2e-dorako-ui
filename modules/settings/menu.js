@@ -39,7 +39,6 @@ class SettingsMenuDorakoUI extends FormApplication {
         for (const setting of this.SETTINGS) {
             game.settings.register("pf2e-dorako-ui", `${this.prefix}${setting}`, {
                 ...settings[setting],
-                scope: "world",
                 config: false,
             });
         }
