@@ -1,3 +1,19 @@
+# 1.11.0
+
+- (Refinement) Spell buttons in light theme chat messages are now colored
+- (Refinement) Increased the scope of styling to affect various minor dialogs, and adding dark theme support
+- (Refinement) Many small tweaks to various Applications and sheets, affecting both light theme and dark theme
+- (Fix) Updated PC and NPC dark themes to be compatible with the new dark theme settings
+- (New) Settings are now applied immediately when saved, and chat messages are re-rendered, allowing you to quickly find a look to suit your preferences
+- (New) Chat bubbles are now styled
+- (New) New debug setting allows you to quickly check the styling of a window with/without Dorako UI and in light/dark theme
+- (Fix) Mystified text in NPC/PC dark theme sheets are now styled appropriately
+- (Fix) The glow of mystified effects is now secret-purple and no longer clips the left edge
+- (New) The crit/fumble deck is now styled
+- (Module) The Gatewalkers premium module journals have been verified to be working fine. All premium modules with fancy journals are entirely excluded from being styled by Dorako UI.
+- (New) New feature that notifies GM's of a conflict with a default-on setting for Monk's Little Details, and allows resolving it in multiple ways.
+- (Fix) Re-implemented the "Hide avatar for secret rolls" setting.
+
 # 1.10.2
 
 - (Fix) Fix an issue where all settings were turned into world settings
@@ -15,6 +31,7 @@
 - (Fix) Fix theme setting for NPC sheets not working
 
 # 1.10.0
+
 ## The settings release
 
 - (New) Split the module into four setting menus
@@ -25,6 +42,7 @@
 # 1.9.14.1
 
 - (Fix) Whoops, that text shadow crept into messages as well, which made light theme messages looks very weird
+
 # 1.9.14
 
 - (New) Glass background color is now user-configurable in settings
@@ -47,6 +65,7 @@
 - (Refinement) Updated Token HUD and Navigation styling
 - (Maintenance) Updated module-support for PF2e Target Damage 2.0
 - (Fix) Fixed missing localization string
+
 # 1.9.11
 
 - (Module) Added compatibility with Forgotten Adventures Battlemaps module
@@ -100,13 +119,14 @@
 - (Refinement) Updated styling for token hud, and extended it to also affect tile hud
 - (New) Compact controls setting is back
 - (New) Added styling for status-effect messages for both light and dark mode
-- (New) The glassy background can now be adjusted via the --glass-bg css variable 
+- (New) The glassy background can now be adjusted via the --glass-bg css variable
 
 # 1.9.4
 
 - (Fix) Option for removing redundant information from damage rolls now functional again
 - (Refinement) Improve spacing around persistent damage button on chat light theme
 - (Fix) Fixed chat functionality breaking when chat messages have origins where the uuid cannot be fetched synchronously (e.g. feats/spells linked from compendium actors)
+
 # 1.9.3
 
 - (Fix) Custom Hotbar now works without Monk's Hotbar also being enabled
@@ -115,6 +135,7 @@
 - (Refinement) Secret inline-rolls are now more saturated in dark theme chat messages
 
 # 1.9.2
+
 The hotbar patch!
 
 - (Module) Support for Custom Hotbar
@@ -123,6 +144,7 @@ The hotbar patch!
 - (New) Support for 'centered hotbar' (once again)
 
 # 1.9.1
+
 This is kind of a 1.9.0++ release.
 
 (Maintenance) Update css classes that were changed by the system

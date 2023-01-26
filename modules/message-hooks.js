@@ -1,4 +1,12 @@
-import * as util from './util.js';
+import { i18n } from "./util.js";
+import { Avatar, ActorAvatar, TokenAvatar, CombatantAvatar } from "./consts.js";
+
+const rgb2hex = (rgb) =>
+  `#${rgb
+    .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
+    .slice(1)
+    .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
+    .join("")}`;
 
 // second return value is whether the first value can be styled as pf2e-icon
 function getActionGlyph(actionCost) {
@@ -13,176 +21,6 @@ function getActionGlyph(actionCost) {
   else if (actionCost.length === 1) return [actionCost, true];
   else return [actionCost, false];
 }
-
-function injectSheetTheme(sheet, html) {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.app-sheet-theme");
-  if (theme === "default") return;
-  
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add(theme);
-}
-
-const rgb2hex = (rgb) =>
-  `#${rgb
-    .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
-    .slice(1)
-    .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
-    .join("")}`;
-
-class Avatar {
-  constructor(name, image) {
-    this.name = name;
-    this.image = image;
-    this.type = "avatar";
-  }
-}
-
-class CombatantAvatar extends Avatar {
-  constructor(name, image) {
-    super(name, image);
-    this.type = "combatant";
-  }
-}
-
-class ActorAvatar extends Avatar {
-  constructor(name, image) {
-    super(name, image);
-    this.type = "actor";
-  }
-}
-
-class TokenAvatar extends Avatar {
-  constructor(name, image, scale, isSmall) {
-    super(name, image);
-    this.type = "token";
-    this.scale = scale;
-    this.isSmall = isSmall;
-  }
-}
-
-Hooks.on("renderNPCSheetPF2e", (sheet, html) => {
-  const npcTheme = game.settings.get("pf2e-dorako-ui", "theme.npc-sheet-theme");
-  if (npcTheme === "default") return;
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add(npcTheme);
-  // console.log(sheet);
-  const acDetails = sheet.object.attributes.ac.details;
-  const collapseAc = acDetails === "";
-  // console.log({ collapseAc });
-  const hpDetails = sheet.object.attributes.hp.details;
-  const hpTemp = sheet.object.attributes.hp.temp;
-  const collapseHp = hpDetails === "" && hpTemp === 0;
-  // console.log({ collapseHp });
-  const collapseInitiative = sheet.object.attributes.initiative.ability === "perception";
-  // console.log({ collapseInitiative });
-  const collapseToggles = sheet.object.system.toggles.length === 0;
-  // console.log({ collapseToggles });
-  const collapseSaves = sheet.object.system.attributes.allSaves.value === "";
-
-  // console.log(sheet.object);
-  const immunities = sheet.object.system.attributes.immunities;
-  const collapseImmunities = immunities.length === 0 && immunities.custom === "";
-  const weaknesses = sheet.object.system.attributes.weaknesses;
-  const collapseWeaknesses = weaknesses.length === 0;
-  const resistances = sheet.object.system.attributes.resistances;
-  const collapseResistances = resistances.length === 0;
-
-  // console.log({ immunities });
-  // console.log({ weaknesses });
-  // console.log({ resistances });
-
-  if (collapseAc) {
-    let section = html.find(".armor-section")[0];
-    section.classList.add("collapsed");
-  }
-
-  if (collapseHp) {
-    let section = html.find(".health-section")[0];
-    section.classList.add("collapsed");
-  }
-
-  if (collapseInitiative) {
-    let section = html.find(".initiative")[0];
-    section.classList.add("collapsed");
-  }
-
-  if (collapseToggles) {
-    let section = html.find(".toggles")[0];
-    section.classList.add("dorako-display-none");
-  }
-
-  if (collapseImmunities) {
-    let section = html.find(".immunities")[0];
-    section.classList.add("collapsed", "empty");
-  }
-
-  if (collapseWeaknesses) {
-    let section = html.find(".weaknesses")[0];
-    section.classList.add("collapsed", "empty");
-  }
-
-  if (collapseResistances) {
-    let section = html.find(".resistances")[0];
-    section.classList.add("collapsed", "empty");
-  }
-
-  let saves = html.find(".saves")[0];
-  let saveDetails = html.find(".save-details")[0];
-  saveDetails.classList.remove("side-bar-section");
-
-  let initiative = html.find(".initiative")[0];
-  let newSaves = document.createElement("div");
-  newSaves.classList.add("saves-section", "side-bar-section");
-  newSaves.appendChild(saves);
-  newSaves.appendChild(saveDetails);
-  initiative.parentNode.insertBefore(newSaves, initiative.nextSibling);
-
-  if (collapseSaves) {
-    let section = html.find(".saves-section")[0];
-    section.classList.add("collapsed");
-  }
-});
-
-Hooks.on("renderLootSheetPF2e", (sheet, html) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.loot-sheet-theme");
-  if (theme === "default") return;
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add(theme);
-});
-
-
-Hooks.on("getItemSheetPF2eHeaderButtons", (sheet, buttons) => {
-  if (!game.settings.get("pf2e-dorako-ui", "misc.send-to-chat")) {
-    return;
-  }
-
-  buttons.unshift({
-    label: util.i18n("pf2e-dorako-ui.text.send-to-chat"),
-    class: "send",
-    icon: "fas fa-comment-alt",
-    onclick: async () => {
-      if (sheet.document.actor) {
-        await sheet.document.toChat(); // Can post directly
-      } else {
-        const json = sheet.document.toJSON();
-        const actor =
-          canvas.tokens.controlled[0]?.actor ?? // Selected token's corresponding actor
-          game.user?.character ?? // Assigned actor
-          new Actor({ name: game.user.name, type: "character" }); // Dummy actor fallback
-
-        await new sheet.document.constructor(json, { parent: actor }).toChat();
-      }
-    },
-  });
-});
-
-// Hooks
-// Combat Tracker
-Hooks.on("renderCombatTracker", addScalingToCombatTrackerAvatars);
-
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   const isNarratorToolsMessage = chatMessage.flags["narrator-tools"];
@@ -194,17 +32,17 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   let html0 = html[0];
 
   if (game.settings.get("pf2e-dorako-ui", "ux.restructure-card-info")) {
-      let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;
-      if (uuid) {
-        try {
-          let origin = fromUuidSync(uuid);
-          let actionCost = origin?.actionCost;
-          if (actionCost) injectActionCost(html, actionCost);
-          if (origin?.type === "spell") injectSpellInfo(html, origin);
-        } catch (error) {
-          // An error is thrown if the UUID is a reference to something that is not loaded, like an actor in a compendium.
-        }
+    let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;
+    if (uuid) {
+      try {
+        let origin = fromUuidSync(uuid);
+        let actionCost = origin?.actionCost;
+        if (actionCost) injectActionCost(html, actionCost);
+        if (origin?.type === "spell") injectSpellInfo(html, origin);
+      } catch (error) {
+        // An error is thrown if the UUID is a reference to something that is not loaded, like an actor in a compendium.
       }
+    }
   }
 
   injectSenderWrapper(html, messageData);
@@ -213,8 +51,9 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   injectAuthorName(html, messageData);
 
   if (
-    game.settings.get("pf2e-dorako-ui", "avatar.hide-when-token-hidden") &&
-    chatMessage.getFlag("pf2e-dorako-ui", "wasTokenHidden")
+    (game.settings.get("pf2e-dorako-ui", "avatar.hide-when-token-hidden") &&
+      chatMessage.getFlag("pf2e-dorako-ui", "wasTokenHidden")) ||
+    (game.settings.get("pf2e-dorako-ui", "avatar.hide-gm-avatar-when-secret") && !chatMessage.isContentVisible)
   ) {
   } else {
     injectAvatar(html, getAvatar(chatMessage));
@@ -236,6 +75,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   themeHeader(html, chatMessage);
 });
 
+// Is damage roll
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   if (!game.settings.get("pf2e-dorako-ui", "ux.remove-attack-info-from-damage-roll-messages")) return;
 
@@ -258,6 +98,16 @@ Hooks.once("ready", () => {
   });
   Hooks.on("updateChatMessage", (message) => {
     addAvatarsToFlags(message);
+  });
+
+  Hooks.on("renderChatMessage", (app, html, data) => {
+    const isKoboldWorksTurnAnnouncerMessage = app.flags["koboldworks-turn-announcer"];
+    if (!isKoboldWorksTurnAnnouncerMessage) return;
+    const avatar = html.find(".portrait");
+    avatar.css("transform", `scale(${app.flags["pf2e-dorako-ui"]?.tokenAvatar.scale})`);
+    avatar.css("flex", `0px 0px var(--avatar-size)`);
+    avatar.css("height", `var(--avatar-size)`);
+    avatar.css("width", `var(--avatar-size)`);
   });
 });
 
@@ -327,10 +177,10 @@ function injectActionCost(html, actionCost) {
 }
 
 function localizeComponent(componentKey) {
-  if (componentKey === "focus") return util.i18n("PF2E.SpellComponentF");
-  if (componentKey === "material") return util.i18n("PF2E.SpellComponentM");
-  if (componentKey === "somatic") return util.i18n("PF2E.SpellComponentS");
-  if (componentKey === "verbal") return util.i18n("PF2E.SpellComponentV");
+  if (componentKey === "focus") return i18n("PF2E.SpellComponentF");
+  if (componentKey === "material") return i18n("PF2E.SpellComponentM");
+  if (componentKey === "somatic") return i18n("PF2E.SpellComponentS");
+  if (componentKey === "verbal") return i18n("PF2E.SpellComponentV");
 }
 
 function spellComponentsToText(components) {
@@ -355,7 +205,7 @@ function injectSpellInfo(html, spell) {
   // Cast info
   let castInfo = document.createElement("p");
   let castInfoLabel = document.createElement("strong");
-  castInfoLabel.textContent = util.i18n("PF2E.SpellCostLabel") + " ";
+  castInfoLabel.textContent = i18n("PF2E.SpellCostLabel") + " ";
   let castTime = document.createElement("span");
   const [cost, shouldBeGlyph] = getActionGlyph(spell?.system?.time?.value);
   castTime.textContent = cost;
@@ -373,7 +223,7 @@ function injectSpellInfo(html, spell) {
     // console.log(duration);
     let durationInfo = document.createElement("p");
     let durationInfoLabel = document.createElement("strong");
-    durationInfoLabel.textContent = util.i18n("PF2E.SpellDurationLabel") + " ";
+    durationInfoLabel.textContent = i18n("PF2E.SpellDurationLabel") + " ";
     let durationValue = document.createElement("span");
     durationValue.textContent = duration;
     durationInfo.append(durationInfoLabel);
@@ -387,7 +237,7 @@ function injectSpellInfo(html, spell) {
     // console.log(target);
     let targetInfo = document.createElement("p");
     let targetInfoLabel = document.createElement("strong");
-    targetInfoLabel.textContent = util.i18n("PF2E.SpellTargetLabel") + " ";
+    targetInfoLabel.textContent = i18n("PF2E.SpellTargetLabel") + " ";
     let targetValue = document.createElement("span");
     targetValue.textContent = target;
     targetInfo.append(targetInfoLabel);
@@ -401,7 +251,7 @@ function injectSpellInfo(html, spell) {
     // console.log(range);
     let rangeInfo = document.createElement("p");
     let rangeInfoLabel = document.createElement("strong");
-    rangeInfoLabel.textContent = util.i18n("PF2E.SpellRangeLabel") + " ";
+    rangeInfoLabel.textContent = i18n("PF2E.SpellRangeLabel") + " ";
     let rangeValue = document.createElement("span");
     rangeValue.textContent = range;
     rangeInfo.append(rangeInfoLabel);
@@ -415,9 +265,9 @@ function injectSpellInfo(html, spell) {
     // console.log(area);
     let areaInfo = document.createElement("p");
     let areaInfoLabel = document.createElement("strong");
-    areaInfoLabel.textContent = util.i18n("PF2E.AreaLabel") + " ";
+    areaInfoLabel.textContent = i18n("PF2E.AreaLabel") + " ";
     let areaValue = document.createElement("span");
-    areaValue.textContent = area + " " + util.i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.type;
+    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.type;
     areaInfo.append(areaInfoLabel);
     areaInfo.append(areaValue);
     spellInfo.append(areaInfo);
@@ -491,16 +341,16 @@ function injectMessageTag(html, messageData) {
     const isRoll = messageData.message.rolls !== undefined;
 
     if (isBlind) {
-      rolltype.text(util.i18n("pf2e-dorako-ui.text.secret"));
+      rolltype.text(i18n("pf2e-dorako-ui.text.secret"));
       messageMetadata.prepend(rolltype);
     } else if (isSelf && whisperTargets[0]) {
-      rolltype.text(util.i18n("pf2e-dorako-ui.text.self-roll"));
+      rolltype.text(i18n("pf2e-dorako-ui.text.self-roll"));
       messageMetadata.prepend(rolltype);
     } else if (isRoll && isWhisper) {
-      rolltype.text(util.i18n("pf2e-dorako-ui.text.gm-only"));
+      rolltype.text(i18n("pf2e-dorako-ui.text.gm-only"));
       messageMetadata.prepend(rolltype);
     } else if (isWhisper) {
-      rolltype.text(util.i18n("pf2e-dorako-ui.text.whisper"));
+      rolltype.text(i18n("pf2e-dorako-ui.text.whisper"));
       messageMetadata.prepend(rolltype);
     }
   }
@@ -539,33 +389,18 @@ function injectWhisperParticipants(html, messageData) {
   whisperParticipants.addClass("whisper-to");
 
   const whisperFrom = $("<span>");
-  const fromText = titleCase(util.i18n("pf2e-dorako-ui.text.from"));
+  const fromText = titleCase(i18n("pf2e-dorako-ui.text.from"));
   whisperFrom.text(`${fromText}: ${alias}`);
   whisperFrom.addClass("header-meta");
 
   const whisperTo = $("<span>");
-  const toText = titleCase(util.i18n("pf2e-dorako-ui.text.to")).toLowerCase();
+  const toText = titleCase(i18n("pf2e-dorako-ui.text.to")).toLowerCase();
   whisperTo.text(`${toText}: ${whisperTargetString}`);
   whisperTo.addClass("header-meta");
 
   whisperParticipants.append(whisperFrom);
   whisperParticipants.append(whisperTo);
   messageHeader.append(whisperParticipants);
-}
-
-function addScalingToCombatTrackerAvatars(app, html, data) {
-  const combatImagesActive = game.modules.get("combat-tracker-images")?.active;
-  $(".combatant", html).each(function () {
-    let id = this.dataset.combatantId;
-    let combatant = game.combat.combatants.get(id);
-    // console.log(combatant);
-    let scale = combatant.token.texture.scaleX;
-    let tokenImageElem = this.getElementsByClassName("token-image")[0];
-    if (scale < 1 || (combatImagesActive && combatant.actor.getFlag("combat-tracker-images", "trackerImage"))) {
-      scale = 1;
-    }
-    tokenImageElem.setAttribute("style", "transform: scale(" + Math.abs(scale) + ")");
-  });
 }
 
 function getHeaderColor(html, message) {
@@ -669,6 +504,7 @@ function getAvatar(message) {
   return source == "token" ? tokenAvatar || actorAvatar || userAvatar : actorAvatar || tokenAvatar || userAvatar;
 }
 
+// Add avatar if message contains avatar data
 Hooks.on("renderChatMessage", (message, b) => {
   let avatar = getAvatar(message);
   if (!avatar) return;

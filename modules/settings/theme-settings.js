@@ -1,6 +1,4 @@
-import {
-  SettingsMenuDorakoUI
-} from "./menu.js";
+import { SettingsMenuDorakoUI } from "./menu.js";
 
 export class ThemeSettings extends SettingsMenuDorakoUI {
   static namespace = "theme";
@@ -14,7 +12,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
     "chat-theme",
     "header-style",
     "frosted-glass",
-    "glass-bg"
+    "glass-bg",
   ];
 
   static get settings() {
@@ -31,8 +29,13 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           dark: "pf2e-dorako-ui.text.dark",
           factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false,
+        onChange: () => {
+          const messages = game.messages.filter((m) => m instanceof ChatMessage);
+          for (const message of messages) {
+            ui.chat.updateMessage(message);
+          }
+        },
       },
       "header-style": {
         name: "pf2e-dorako-ui.settings.theme.header-style.name",
@@ -47,10 +50,15 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           tint: "pf2e-dorako-ui.settings.theme.header-style.choice.tint",
           none: "pf2e-dorako-ui.settings.theme.header-style.choice.none",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false,
+        onChange: () => {
+          const messages = game.messages.filter((m) => m instanceof ChatMessage);
+          for (const message of messages) {
+            ui.chat.updateMessage(message);
+          }
+        },
       },
-      "frosted-glass":{
+      "frosted-glass": {
         name: "pf2e-dorako-ui.settings.theme.frosted-glass.name",
         hint: "pf2e-dorako-ui.settings.theme.frosted-glass.hint",
         scope: "client",
@@ -60,8 +68,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         requiresReload: false,
         onChange: () => {
           const root = document.querySelector(":root").style;
-          root.setProperty("--frosted-glass", game.settings.get("pf2e-dorako-ui", "theme.frosted-glass"));                  
-      }
+          root.setProperty("--frosted-glass", game.settings.get("pf2e-dorako-ui", "theme.frosted-glass"));
+        },
       },
       "glass-bg": {
         name: "pf2e-dorako-ui.settings.theme.glass-bg.name",
@@ -73,8 +81,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         requiresReload: false,
         onChange: () => {
           const root = document.querySelector(":root").style;
-          root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg"));                  
-      } 
+          root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg"));
+        },
       },
       "dark-theme-degree": {
         name: "pf2e-dorako-ui.settings.theme.dark-theme-degree.name",
@@ -84,13 +92,18 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         default: "none",
         type: String,
         choices: {
-          "none": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.none",
-          "supported": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.supported",
-          "extended": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.extended",
-          "maximum": "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.maximum",
+          none: "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.none",
+          supported: "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.supported",
+          extended: "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.extended",
+          maximum: "pf2e-dorako-ui.settings.theme.dark-theme-degree.choice.maximum",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
       },
       "pc-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.name",
@@ -100,12 +113,17 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         default: "default",
         type: String,
         choices: {
-          "default": "pf2e-dorako-ui.text.default",
+          default: "pf2e-dorako-ui.text.default",
           // "light-theme": "pf2e-dorako-ui.text.light",
           "dark-theme": "pf2e-dorako-ui.text.dark",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
       },
       "npc-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
@@ -115,12 +133,17 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         default: "light-theme",
         type: String,
         choices: {
-          "default": "pf2e-dorako-ui.text.default",
+          default: "pf2e-dorako-ui.text.default",
           "light-theme": "pf2e-dorako-ui.text.light",
           "dark-theme": "pf2e-dorako-ui.text.dark",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
       },
       "familiar-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.name",
@@ -134,8 +157,13 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           dark: "pf2e-dorako-ui.text.dark",
           darkRedHeader: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.choice.dark-red-header",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
       },
 
       "loot-sheet-theme": {
@@ -150,8 +178,13 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "light-theme": "pf2e-dorako-ui.text.light",
           // "dark-theme": "pf2e-dorako-ui.text.dark",
         },
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
       },
     };
   }

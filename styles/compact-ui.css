@@ -1,63 +1,54 @@
-#controls .main-controls .scene-control:not(.active, .toggle),
-#controls .sub-controls .control-tool:not(.active, .toggle) {
+body.compact-ui {
+  /* #controls ol .scene-control,
+  #controls ol .control-tool {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 4px;
+  } */
+  /* #hotbar:hover,
+  #custom-hotbar:hover */
+}
+body.compact-ui #controls .main-controls .scene-control:not(.active, .toggle),
+body.compact-ui #controls .sub-controls .control-tool:not(.active, .toggle) {
   display: none;
 }
-
-#controls {
+body.compact-ui #controls {
   pointer-events: all;
   /* gap: 5px; */
   flex-wrap: nowrap;
   /* width: 75px; */
   flex-direction: row;
 }
-
-.main-controls {
+body.compact-ui .main-controls {
   display: flex;
   flex-direction: column;
 }
-
-#controls:hover .main-controls .scene-control,
-#controls:hover .sub-controls .control-tool {
+body.compact-ui #controls:hover .main-controls .scene-control,
+body.compact-ui #controls:hover .sub-controls .control-tool {
   display: block;
 }
-
-/* #controls ol .scene-control,
-#controls ol .control-tool {
-  width: 28px;
-  height: 28px;
-  font-size: 18px;
-  line-height: 28px;
-  margin-bottom: 4px;
-} */
-
-#controls ol.main-controls.app.control-tools {
+body.compact-ui #controls ol.main-controls.app.control-tools {
   width: unset;
 }
-
-
-
-#navigation #scene-list .scene:not(.active, .view),
-#navigation #nav-toggle {
+body.compact-ui #navigation #scene-list .scene:not(.active, .view),
+body.compact-ui #navigation #nav-toggle {
   display: none;
 }
-
-#navigation {
+body.compact-ui #navigation {
   pointer-events: all;
 }
-
-#navigation:hover #scene-list .scene {
+body.compact-ui #navigation:hover #scene-list .scene {
   display: flex;
 }
-
-#players {
+body.compact-ui #players {
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 }
-
-/* #hotbar:hover,
-#custom-hotbar:hover */
-
-#players:hover {
+body.compact-ui #players:hover {
   transition: opacity 0.25s ease-in-out;
   opacity: 1;
 }
+
+/*# sourceMappingURL=compact-ui.css.map */

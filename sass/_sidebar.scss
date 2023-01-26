@@ -3,86 +3,92 @@
 /* ----------------------------------------- */
 
 #ui-right {
-    #sidebar {
-        height: -webkit-fill-available;
-        &.collapsed {
-            height: auto;
-        }
+  #sidebar {
+    height: -webkit-fill-available;
+    &.collapsed {
+      height: auto;
     }
+  }
 }
 
-.chat-sidebar {
-    gap: 5px;
-    padding-bottom: 5px;
+section.chat-sidebar {
+  gap: 5px;
+  padding-bottom: 5px;
 }
 
 #chat-form {
-    margin: 0px 6px;
-    textarea {
-        background: rgb(212 213 205);
-        border: 1px solid#7a7971;    
-    }
+  margin: 0px 6px;
+  textarea {
+    background: rgb(212 213 205);
+    border: 1px solid#7a7971;
+  }
 }
 
 #chat-log {
-    margin-left: 4px;
+  margin-left: 4px;
+  li.dorako-ui:first-child {
+    margin-top: 2px;
+  }
 }
 
 .sidebar-tab {
-    // text-shadow: 0px 0px 3px black;
-    .message.chat-message {
-        text-shadow: none;
-    }
+  // text-shadow: 0px 0px 3px black;
+  .message.chat-message {
+    text-shadow: none;
+  }
 }
 
-#sidebar {
+#sidebar.dorako-ui {
+  @include glass;
+  border: none;
+  border-radius: 6px 3px 3px 3px;
+
+  &.collapsed {
+    border-radius: 3px;
+
+    #sidebar-tabs .item.active {
+      border: none;
+      margin: 2px 4px;
+    }
+  }
+
+  #sidebar-tabs {
+    --sidebar-tab-height: 20px;
+    --sidebar-tab-width: 20px;
     border: none;
-    border-radius: 6px 3px 3px 3px;
+    box-shadow: none;
+    margin: 0px;
+    margin-top: 1px;
 
-    &.collapsed {
+    > .collapse {
+      --sidebar-tab-width: 12px;
+      position: relative;
+    }
+
+    .item {
+      border: none;
+      margin: 2px 0px;
+      text-shadow: 0px 0px 3px black;
+
+      &.active {
+        @include gold-border;
+        margin: 2px 0px;
         border-radius: 3px;
-        
-        #sidebar-tabs .item.active {
-            border: none;
-            margin: 2px 4px;
-        }
+        color: white;
+        background-color: var(--primary-light);
+      }
+    }
+  }
+}
+
+.dorako-ui {
+  #chat-controls {
+    i.fas {
+      line-height: 24px; // center-aligns icons
     }
 
-    #sidebar-tabs {
-        --sidebar-tab-height: 20px;
-        --sidebar-tab-width: 20px;
-        border: none;
-        box-shadow: none;
-        margin: 0px;
-        margin-top: 1px;
-
-        > .collapse {
-            --sidebar-tab-width: 12px;
-            position: relative;
-        }
-
-        .item {
-            border: none;
-            margin: 2px 0px;
-            text-shadow: 0px 0px 3px black;
-
-            &.active {
-                @include gold-border;
-                margin: 2px 0px;
-                border-radius: 3px;
-                color: white;
-                background-color: var(--primary-light);
-            }
-        }
+    .roll-type-select {
+      margin-left: 0px;
     }
-
-    #chat-controls {
-        i.fas {
-            line-height: 24px; // center-aligns icons
-        }
-
-        .roll-type-select {
-            margin-left: 0px;
-        }
-    }
+  }
 }

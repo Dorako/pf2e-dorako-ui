@@ -1,16 +1,8 @@
-import * as util from '../util.js'
-import {
-  ThemeSettings
-} from "./theme-settings.js";
-import {
-  UXSettings
-} from "./ux-settings.js";
-import {
-  AvatarSettings
-} from "./avatar-settings.js";
-import {
-  MiscSettings
-} from "./misc-settings.js";
+import * as util from "../util.js";
+import { ThemeSettings } from "./theme-settings.js";
+import { UXSettings } from "./ux-settings.js";
+import { AvatarSettings } from "./avatar-settings.js";
+import { MiscSettings } from "./misc-settings.js";
 
 function injectCSS(filename) {
   const head = document.getElementsByTagName("head")[0];
@@ -23,6 +15,14 @@ function injectCSS(filename) {
 }
 
 Hooks.once("init", async () => {
+  util.debug("init");
+
+  game.settings.register("pf2e-dorako-ui", "mld-nag", {
+    scope: "world",
+    config: false,
+    default: true,
+    type: Boolean,
+  });
 
   game.settings.registerMenu("pf2e-dorako-ui", "theme", {
     name: "pf2e-dorako-ui.settings.theme.name",
@@ -30,7 +30,7 @@ Hooks.once("init", async () => {
     hint: "pf2e-dorako-ui.settings.theme.hint",
     icon: "fas fa-adjust",
     type: ThemeSettings,
-    restricted: false
+    restricted: false,
   });
   ThemeSettings.registerSettings();
 
@@ -40,7 +40,7 @@ Hooks.once("init", async () => {
     hint: "pf2e-dorako-ui.settings.avatar.hint",
     icon: "fas fa-circle-user",
     type: AvatarSettings,
-    restricted: false
+    restricted: false,
   });
   AvatarSettings.registerSettings();
 
@@ -50,7 +50,7 @@ Hooks.once("init", async () => {
     hint: "pf2e-dorako-ui.settings.ux.hint",
     icon: "fas fa-sliders",
     type: UXSettings,
-    restricted: false
+    restricted: false,
   });
   UXSettings.registerSettings();
 
@@ -60,20 +60,18 @@ Hooks.once("init", async () => {
     hint: "pf2e-dorako-ui.settings.misc.hint",
     icon: "fas fa-question-circle",
     type: MiscSettings,
-    restricted: false
+    restricted: false,
   });
   MiscSettings.registerSettings();
 
+  util.debug("registerSettings");
 
   injectCSS("dorako-ui");
   injectCSS("reset");
-  injectCSS("main");
-  injectCSS("dark-theme");
-  injectCSS("dark-theme-messages");
   injectCSS("module-support");
-  injectCSS("messages");
   injectCSS("npc-sheet");
   injectCSS("loot-sheet");
+  injectCSS("compact-ui");
   injectCSS("chat-bubbles");
 
   const root = document.querySelector(":root").style;
@@ -82,7 +80,10 @@ Hooks.once("init", async () => {
   }
 
   root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
-  root.setProperty("--chat-input-height", game.settings.get("pf2e-dorako-ui", "ux.chat-input-height").toString() + "px");
+  root.setProperty(
+    "--chat-input-height",
+    game.settings.get("pf2e-dorako-ui", "ux.chat-input-height").toString() + "px"
+  );
 
   if (game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal")) {
     injectCSS("crb-journal");
@@ -91,21 +92,40 @@ Hooks.once("init", async () => {
 
   if (game.settings.get("pf2e-dorako-ui", "misc.skin-combat-carousel")) injectCSS("combat-carousel");
   if (game.settings.get("pf2e-dorako-ui", "ux.compact-ui")) injectCSS("compact-ui");
-  if (game.settings.get("pf2e-dorako-ui", "ux.no-logo")) injectCSS("no-logo");
-  if (game.settings.get("pf2e-dorako-ui", "ux.no-chat-control-icon")) injectCSS("no-chat-control-icon");
+
   const pcSheetSetting = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
   if (pcSheetSetting == "dark-theme") injectCSS("pc-sheet-dark");
   const familiarSheetSetting = game.settings.get("pf2e-dorako-ui", "theme.familiar-sheet-theme");
   if (familiarSheetSetting == "dark" || familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark");
   if (familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
+
+  util.debug("injected sheets");
 });
 
 Hooks.once("ready", () => {
   const frostedGlass = game.settings.get("pf2e-dorako-ui", "theme.frosted-glass");
   if (!frostedGlass) return;
-  $('body').addClass('frosted-glass');
+  $("body").addClass("frosted-glass");
   const root = document.querySelector(":root").style;
   root.setProperty("--frosted-glass", frostedGlass);
+});
+
+Hooks.once("ready", () => {
+  const compactUi = game.settings.get("pf2e-dorako-ui", "ux.compact-ui");
+  if (!compactUi) return;
+  $("body").addClass("compact-ui");
+});
+
+Hooks.once("ready", () => {
+  if (game.settings.get("pf2e-dorako-ui", "ux.no-logo")) {
+    $("#logo")[0].style.setProperty("display", "none", "important");
+  }
+});
+
+Hooks.on("renderChatLogPF2e", (app, html, data) => {
+  if (game.settings.get("pf2e-dorako-ui", "ux.no-chat-control-icon")) {
+    html.find("#chat-controls")[0].classList.add("no-chat-control-icon");
+  }
 });
 
 Hooks.once("ready", () => {
@@ -120,32 +140,3 @@ Hooks.once("renderSidebar", () => {
   if (!noCards) return;
   $(".item[data-tab=cards]").addClass("dorako-display-none");
 });
-
-
-// /**
-//  * For more information about FormApplications, see:
-//  * https://hackmd.io/UsmsgTj6Qb6eDw3GTi5XCg
-//  */
-// class SettingsMenu extends FormApplication {
-//   // lots of other things...
-
-//   static get defaultOptions() {
-//     return mergeObject(super.defaultOptions, {
-//         id: 'X-settings',
-//         title: "X Settings",
-//         classes: ['sheet'],
-//         template: 'modules/pf2e-dorako-ui/templates/menu.hbs',
-//         width: 800,
-//     });
-// }
-
-//   getData() {
-//     return game.settings.get('pf2e-dorako-ui', 'allSettings');
-//   }
-
-//   _updateObject(event, formData) {
-//     const data = expandObject(formData);
-//     game.settings.set('pf2e-dorako-ui', 'allSettings', data);
-//   }
-
-// }

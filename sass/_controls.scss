@@ -3,7 +3,13 @@
 /* Controls                                  */
 /* ----------------------------------------- */
 
-nav#controls {
+// Fix foundry's inconsistent gaps
+#controls ol.control-tools.sub-controls > li,
+#controls ol.control-tools.main-controls {
+    margin-right: 8px;
+}
+
+nav#controls.dorako-ui {
     padding-top: 12px;
 
     ol.control-tools {
@@ -43,5 +49,19 @@ nav#controls {
                 }
             }
         }
+    }
+}
+
+#darkness-adjuster.dorako-ui {
+    @include glass;
+    height: 36px !important;
+    border-radius: 3px;
+    backdrop-filter: blur(5px);
+
+    .window-content {
+        overflow: hidden;
+        background: unset;
+        box-shadow: unset;
+        border: none;
     }
 }

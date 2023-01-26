@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 
 /* ----------------------------------------- */
 /* Color definitions                         */
@@ -14,12 +14,12 @@ $dark-gray-color: #545454;
 /* Global */
 $primary-color: #5e0000 !default;
 $secondary-color: #171f69 !default; /* used for mini headers, alternate primary color */
-$tertiary-color: #E9D7A1 !default; /* compliments the primary color, usually used in combination */
+$tertiary-color: #e9d7a1 !default; /* compliments the primary color, usually used in combination */
 
 $alt-color: #786452 !default; /* for all other uses */
 $alt-dark: #443730 !default;
 $gold-brown: #956d58 !default;
-$background-color: #F8F4F1 !default;
+$background-color: #f8f4f1 !default;
 $background-dark: darken($background-color, 10);
 $sub-color: #605856 !default;
 
@@ -30,8 +30,7 @@ $tertiary-dark-color: darken($tertiary-color, 10) !default;
 $tertiary-light-color: lighten($tertiary-color, 10) !default;
 
 /* Text */
-$text-dark-color: #1C1C1C !default;
-
+$text-dark-color: #1c1c1c !default;
 
 /* ----------------------------------------- */
 /* Color schemes                             */
@@ -60,7 +59,6 @@ $degree-failure-critical: rgb(255, 0, 0) !default;
 $adjusted-higher: #009988 !default;
 $adjusted-lower: #cc3311 !default;
 
-
 /* ----------------------------------------- */
 /* CSS Custom Properties                     */
 /* ----------------------------------------- */
@@ -71,8 +69,8 @@ $adjusted-lower: #cc3311 !default;
   --primary-light: #{color.scale($primary-color, $lightness: +20%)};
   --primary-dark: #{color.scale($primary-color, $lightness: -40%)};
   --secondary: #{$secondary-color};
-  --secondary-light: #{color.scale($secondary-color, $lightness: +20%)};
-  --secondary-dark: #{color.scale($secondary-color, $lightness: -40%)};
+  --secondary-light: #{color.scale($secondary-color, $lightness: +25%)};
+  --secondary-dark: #{color.scale($secondary-color, $lightness: -45%)};
   --tertiary: #{$tertiary-color};
 
   --alt: #{$alt-color};
@@ -82,6 +80,9 @@ $adjusted-lower: #cc3311 !default;
   --gold-brown: #{$gold-brown};
   --sub: #{$sub-color};
   --color-disabled: #{$light-gray-color};
+
+  --blind-bg: #a57aa5;
+  --whisper-bg: #e3e3ff;
 
   // Inline links and user visibility
   --inline-link-bg: #ddd;
@@ -115,7 +116,12 @@ $adjusted-lower: #cc3311 !default;
   --sidebar-title: var(--tertiary);
 
   /* App UI */
-  --glass-bg: rgba(20, 20, 20, 0.60);
+  --glass-bg: rgba(20, 20, 20, 0.6);
   --glass-bg-light: rgba(255, 255, 255, 0.1);
-  --glass-bg-dark: rgba(0, 0, 0, 0.70);
+  --glass-bg-dark: rgba(0, 0, 0, 0.7);
+  --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
+    0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --sheet-light: url(../img/background-light.webp);
+  --sheet-dark: url(../img/background-dark4.webp);
 }

@@ -1,0 +1,25 @@
+.dorako-display-none {
+  display: none !important;
+}
+
+a.content-link,
+[data-pf2-check],
+a.entity-link,
+[data-pf2-action],
+[data-pf2-effect-area],
+a.inline-roll {
+  text-shadow: none !important;
+}
+
+a.content-link,
+[data-pf2-check],
+a.entity-link,
+[data-pf2-action],
+[data-pf2-effect-area],
+a.inline-roll:not(.inline-result) {
+  color: black;
+}
+
+i[data-pf2-repost] {
+  top: 0px;
+}

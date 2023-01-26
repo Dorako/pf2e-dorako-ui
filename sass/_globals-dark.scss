@@ -1,0 +1,34 @@
+.dorako-ui.dark-theme {
+  [data-visibility]:not([data-visibility="all"]) {
+    border-radius: 3px;
+    outline: 1px dashed #720073;
+
+    /* ----------------------------------------- */
+    /* GM Visibility Elements                    */
+    /* ----------------------------------------- */
+    &[data-visibility="gm"] {
+      background: rgba(245, 234, 245, 0.1333333333);
+
+      &.message-sender {
+        max-width: fit-content;
+      }
+
+      [data-visibility="gm"] {
+        outline: none;
+        padding: initial;
+      }
+    }
+
+    /* ----------------------------------------- */
+    /* Owner Visibility Elements                 */
+    /* ----------------------------------------- */
+    &[data-visibility="owner"] {
+      background: rgba(245, 234, 245, 0.1333333333);
+
+      [data-visibility="owner"] {
+        outline: none;
+        padding: initial;
+      }
+    }
+  }
+}

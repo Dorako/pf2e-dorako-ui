@@ -1,11 +1,10 @@
 .chat-bubble {
   border: none;
-  background-image: var(--sheet-light);
-  background-size: cover;
-  /* prettier-ignore */
-  border: none;
   margin: 2px;
+  /* prettier-ignore */
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
 }
 
 .chat-bubble .bubble-content {
@@ -23,12 +22,11 @@
 
 .chat-bubble.emote {
   border: none;
-  background-image: var(--sheet-light);
-  background-size: cover;
-  /* prettier-ignore */
-  border: none;
   margin: 2px;
+  /* prettier-ignore */
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
   background-image: var(--sheet-dark);
   color: var(--color-text-light-heading);
   font-style: italic;
@@ -40,7 +38,6 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  color: var(--color-text-light-heading);
   border-radius: 5px;
   color: var(--color-text-light-heading);
 }

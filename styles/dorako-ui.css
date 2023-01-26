@@ -1,81 +1,921 @@
-:root {
-    --border-width: 1px;
-    --header-color: #fff;
-    --header-bg: var(--primary);
-    --body-padding: 0.0em 0.0em 0em 0em;
-    --edge-margin: 5px;
-
-    --dorako-bg-glass: rgba(120, 120, 120, 0.20);
-    --dorako-bg-glass: rgba(120, 120, 120, 0.50);
-    --dorako-sheet-light: rgba(20, 20, 20, 0.60);
-    --dorako-orange: rgba(255, 100, 0, 0.5);
-    /* --dorako-bg-current: var(--dorako-bg-glass); */
-    --dorako-bg-current: var(--dorako-sheet-light);
-    /* --dorako-bg-current: hsl(0,0%, 10%); */
-    --pf2e-color-mono-dark: hsl(0, 0%, 15%);
-
-    --blind-bg: #A57aA5;
-    --whisper-bg: #E3E3FF;
-
-    --dorako-vibrancy: none;
-    /* --dorako-vibrancy: brightness(2.0) contrast(1.2) blur(5px); */
-    /* --dorako-vibrancy-active: brightness(1.5) contrast(1.0) blur(15px);
-    --dorako-vibrancy-inactive: brightness(0.5) contrast(1.0) blur(15px); */
-
-    --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 3px rgba(255, 255, 255, .5);
-    /* --glassy:
-        0px 0px 2px rgba(255, 255, 255, 0.4) inset,
-        0px 0px 6px rgba(255, 255, 255, 0.2) inset,
-        1px 1px 1px rgba(0, 0, 0, 1),
-        1px -1px 1px rgba(0, 0, 0, 1),
-        -1px -1px 1px rgba(0, 0, 0, 1),
-        -1px 1px 1px rgba(0, 0, 0, 1),
-        0px 0px 3px rgba(0, 0, 0, 1),
-        0px 0px 4px rgba(0, 0, 0, 0.5); */
-    --glassy:
-        0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset,
-        0px 0px 2px 1px rgba(0, 0, 0, 1),
-        0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-
-    --primary-hue: 0;
-    --primary-sat: 100%;
-    --primary-lvl: 18%;
-
-    --secondary-hue: 234;
-    --secondary-sat: 64%;
-    --secondary-lvl: 25%;
-
-    --paizo-red-dark: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) - 10%));
-    --paizo-red: hsl(var(--primary-hue), var(--primary-sat), var(--primary-lvl));
-    --paizo-red-bright: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-lvl) + 10%));
-
-    --paizo-blue-dark: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) - 15%));
-    --paizo-blue: hsl(var(--secondary-hue), var(--secondary-sat), var(--secondary-lvl));
-    --paizo-blue-bright: hsl(var(--secondary-hue), var(--secondary-sat), calc(var(--secondary-lvl) + 15%));
-
-    --color-shadow-highlight: var(--paizo-red);
-    --color-shadow-primary: var(--paizo-blue);
-
-    --pf2e-sheets-bg: url(../img/background-light.webp);
-    --sheet-light: url(../img/background-light.webp);
-    --sheet-dark: url(../img/background-dark4.webp);
-
-    --dorako-text-shadow: 0px 0px 3px black;
-    --dorako-box-shadow: 0px 0px 3px black;
-    --dorako-radius: 3px;
-    /*transition: backdrop-filter 0.3s ease-out;*/
-    /*transition: background-color 0.3s ease-out;*/
-
+/* ----------------------------------------- */
+/* App UI                                    */
+/* ----------------------------------------- */
+#players.dorako-ui {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+}
+#players.dorako-ui h3 {
+  cursor: pointer;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+}
+#players.dorako-ui h3:hover {
+  text-shadow: 0px 0px 8px var(--color-shadow-highlight);
 }
 
+.dorako-ui.app {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border-radius: 5px;
+  box-shadow: var(--glassy), 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.dorako-ui.app.sidebar-popout {
+  border: none;
+}
+.dorako-ui.app.sidebar-popout .window-content {
+  background: none;
+  box-shadow: none;
+  margin: 0px;
+}
+.dorako-ui.app.image-popout {
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.app.image-popout .window-content {
+  background: none;
+  box-shadow: none;
+}
 
-/* .ability-builder-popup .window-content .background-stripes {
-    padding: 0px;
-    padding-left: 6px;
-} */
+.dorako-ui.app.journal-entry .window-content {
+  box-shadow: none;
+  margin: 0px;
+  background: none;
+}
+.dorako-ui.app.journal-entry .window-content .journal-entry-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  margin-left: 4px;
+  height: calc(100% - 4px);
+}
+
+.dorako-ui.window-app .window-header {
+  text-shadow: 0px 0px 3px black;
+  border: none;
+}
+
+.dorako-ui.window-app .window-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.window-app.chat-popout {
+  border-radius: 5px 5px 7px 7px;
+}
+.window-app.chat-popout .window-header {
+  border: none;
+}
+.window-app.chat-popout .message.chat-message {
+  margin: 1px;
+}
+
+.dorako-ui.window-app .window-resizable-handle {
+  background: none;
+  border: none;
+  text-shadow: 0px 0px 3px black;
+}
+
+.dorako-ui.package-configuration aside.sidebar nav.tabs {
+  padding: 10px;
+  margin: -10px;
+  margin-bottom: 0px;
+}
+
+.dorako-ui::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border: 1px solid var(--gold-brown);
+}
+
+/* ----------------------------------------- */
+/* Context Menu                              */
+/* ----------------------------------------- */
+.dorako-ui #context-menu {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui #context-menu.expand-down {
+  margin-top: 3px;
+}
+.dorako-ui #context-menu ol.context-items {
+  border: none;
+}
+
+.dialog .dialog-buttons button {
+  line-height: initial;
+}
+
+/* ----------------------------------------- */
+/* Tooltip                                   */
+/* ----------------------------------------- */
+#tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  min-height: 34px;
+  font-size: var(--font-size-20);
+  line-height: var(--font-size-20);
+  text-shadow: 0px 0px 3px black;
+}
+
+/* ----------------------------------------- */
+/* FPS display                               */
+/* ----------------------------------------- */
+#fps {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+}
+
+/* ----------------------------------------- */
+/* Color definitions                         */
+/* ----------------------------------------- */
+/* Colors */
+/* Global */
+/* used for mini headers, alternate primary color */
+/* compliments the primary color, usually used in combination */
+/* for all other uses */
+/* Lighter / Darker */
+/* Text */
+/* ----------------------------------------- */
+/* Color schemes                             */
+/* ----------------------------------------- */
+/* Proficiency ranks */
+/* Rarities */
+/* Degrees of success */
+/* Value adjustments (e.g. weak/elite) */
+/* ----------------------------------------- */
+/* CSS Custom Properties                     */
+/* ----------------------------------------- */
+:root {
+  /* Global */
+  --primary: #5e0000;
+  --primary-light: #b10000;
+  --primary-dark: #380000;
+  --secondary: #171f69;
+  --secondary-light: #2836b7;
+  --secondary-dark: #0d113a;
+  --tertiary: #e9d7a1;
+  --alt: #786452;
+  --alt-dark: #443730;
+  --bg: #f8f4f1;
+  --bg-dark: #e7d9cf;
+  --gold-brown: #956d58;
+  --sub: #605856;
+  --color-disabled: #ababab;
+  --blind-bg: #a57aa5;
+  --whisper-bg: #e3e3ff;
+  --inline-link-bg: #ddd;
+  --inline-repost-bg: #eaeaea;
+  --visibility-gm-bg: #e8e8ef;
+  --visibility-owner-bg: #ddebe1;
+  --blind-roll: #f5eaf5;
+  /* Lighter / Darker */
+  --light: #910000;
+  --dark: #2b0000;
+  --tertiary-dark: #dfc578;
+  --tertiary-light: #f3e9ca;
+  /* Text */
+  --body: var(--text-dark);
+  --color-text-trait: #f5efe0;
+  --text-dark: #1c1c1c;
+  --text-light: white;
+  /* Borders */
+  --color-border-trait: #d8c384;
+  --color-border-divider: #baa991;
+  /* Headers w/ boxes */
+  --header-color: var(--text-light);
+  --header-bg: var(--secondary);
+  /* Sidebar */
+  --sidebar-label: var(--tertiary-dark);
+  --sidebar-title: var(--tertiary);
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-bg-dark: rgba(0, 0, 0, 0.7);
+  --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
+    0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --sheet-light: url(../img/background-light.webp);
+  --sheet-dark: url(../img/background-dark4.webp);
+}
+
+.combat-sidebar .drag-gap {
+  visibility: hidden;
+}
+.combat-sidebar .hidden-name .token-name h4 {
+  color: var(--color-text-light-7);
+}
+.combat-sidebar li.combatant .token-image {
+  margin: 2px;
+}
+.combat-sidebar li.combatant .token-name img.token-effect {
+  border-radius: 50%;
+  border: 1px solid var(--tertiary);
+  box-shadow: 1px 1px 4px #222;
+}
+.combat-sidebar li.combatant.defeated img {
+  transform: unset;
+}
+.combat-sidebar li.combatant.active {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* Controls                                  */
+/* ----------------------------------------- */
+#controls ol.control-tools.sub-controls > li,
+#controls ol.control-tools.main-controls {
+  margin-right: 8px;
+}
+
+nav#controls.dorako-ui {
+  padding-top: 12px;
+}
+nav#controls.dorako-ui ol.control-tools.main-control {
+  margin-right: 8px;
+}
+nav#controls.dorako-ui ol.control-tools li.control-tool,
+nav#controls.dorako-ui ol.control-tools li.scene-control {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+nav#controls.dorako-ui ol.control-tools li.control-tool img,
+nav#controls.dorako-ui ol.control-tools li.scene-control img {
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
+nav#controls.dorako-ui ol.control-tools li.control-tool.active, nav#controls.dorako-ui ol.control-tools li.control-tool:hover,
+nav#controls.dorako-ui ol.control-tools li.scene-control.active,
+nav#controls.dorako-ui ol.control-tools li.scene-control:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
+}
+nav#controls.dorako-ui ol.control-tools li.control-tool.active img, nav#controls.dorako-ui ol.control-tools li.control-tool:hover img,
+nav#controls.dorako-ui ol.control-tools li.scene-control.active img,
+nav#controls.dorako-ui ol.control-tools li.scene-control:hover img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+nav#controls.dorako-ui ol.control-tools li.control-tool.toggle,
+nav#controls.dorako-ui ol.control-tools li.scene-control.toggle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--secondary-dark);
+}
+nav#controls.dorako-ui ol.control-tools li.control-tool.toggle.active, nav#controls.dorako-ui ol.control-tools li.control-tool.toggle:hover,
+nav#controls.dorako-ui ol.control-tools li.scene-control.toggle.active,
+nav#controls.dorako-ui ol.control-tools li.scene-control.toggle:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: white;
+  background-color: var(--secondary-light);
+}
+
+#darkness-adjuster.dorako-ui {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  height: 36px !important;
+  border-radius: 3px;
+  backdrop-filter: blur(5px);
+}
+#darkness-adjuster.dorako-ui .window-content {
+  overflow: hidden;
+  background: unset;
+  box-shadow: unset;
+  border: none;
+}
+
+#ui-middle {
+  position: relative;
+}
+
+.effect-panel.dorako-ui {
+  pointer-events: initial;
+  position: absolute;
+  top: 5px;
+  top: 0px;
+  right: 3px;
+  right: -3px;
+  overflow: hidden scroll;
+  height: calc(100% - 62px);
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 10%;
+  padding-left: 15px;
+}
+.effect-panel.dorako-ui::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+.effect-panel.dorako-ui .effect-item {
+  display: flex;
+  justify-content: flex-end;
+  height: 46px;
+  margin-bottom: 0.2em;
+  margin-right: 3px;
+}
+.effect-panel.dorako-ui .effect-item:hover .effect-info {
+  display: block;
+}
+.effect-panel.dorako-ui .effect-item .effect-info {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  display: none;
+  height: min-content;
+  margin: 3px;
+  margin-right: 0.5em;
+  padding: 4px 8px;
+  backdrop-filter: blur(5px);
+  z-index: var(--z-index-tooltip);
+}
+.effect-panel.dorako-ui .effect-item .effect-info h1 {
+  font-size: var(--font-size-16);
+  color: var(--color-text-light-highlight);
+  text-align: right;
+  border: none;
+}
+.effect-panel.dorako-ui .effect-item .effect-info p:last-child {
+  margin-bottom: 0px;
+}
+.effect-panel.dorako-ui .effect-item .effect-info .tags {
+  justify-content: flex-end;
+}
+.effect-panel.dorako-ui .effect-item .effect-info .tags .tag {
+  margin-bottom: 0;
+}
+.effect-panel.dorako-ui .effect-item .effect-info .tags .tag + .tag, .effect-panel.dorako-ui .effect-item .effect-info .tags .tag:first-child {
+  margin-left: 3px;
+  margin-right: -2px;
+}
+.effect-panel.dorako-ui .effect-item .effect-info .instructions {
+  color: var(--color-text-light-heading);
+  font-size: 0.75em;
+  text-align: right;
+}
+.effect-panel.dorako-ui .effect-item .icon {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 42px;
+  width: 42px;
+  margin-left: 3px;
+}
+.effect-panel.dorako-ui .effect-item .icon .expired {
+  position: absolute;
+  left: auto;
+  bottom: -1px;
+  width: 80%;
+  width: unset;
+  padding: 2px 2px;
+  color: white;
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary-light);
+  text-shadow: 0px 0px 3px black;
+  box-shadow: var(--gold-and-glow);
+  border-radius: 2px;
+}
+.effect-panel.dorako-ui .effect-item .icon .linked {
+  position: absolute;
+  display: inline-block;
+  bottom: -1px;
+  right: -1px;
+  padding: 0px 2px;
+  color: white;
+  color: var(--color-text-light-highlight);
+  background-color: rgba(0, 0, 0, 0.75);
+  background: none;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+}
+.effect-panel.dorako-ui .effect-item .icon .value {
+  position: absolute;
+  display: inline-block;
+  bottom: -1px;
+  left: -1px;
+  padding: 0px 2px;
+  color: white;
+  color: var(--color-text-light-highlight);
+  background-color: rgba(0, 0, 0, 0.75);
+  background: none;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+}
+.effect-panel.dorako-ui .effect-item .icon.unidentified {
+  filter: drop-shadow(0 0 8px var(--blind-bg));
+}
+.effect-panel.dorako-ui hr {
+  margin-right: 6;
+  margin-right: 2px;
+  width: 36px;
+  width: 42px;
+  border-top: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--gold-brown);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* ----------------------------------------- */
+/* Hotbar                                    */
+/* ----------------------------------------- */
+#hotbar.dorako-ui .macro {
+  height: calc(var(--macro-size) + 2px);
+  width: calc(var(--macro-size) + 2px);
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  box-shadow: none;
+}
+#hotbar.dorako-ui .macro.inactive::before, #hotbar.dorako-ui .macro.active::before {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#hotbar.dorako-ui .macro.active:hover::before {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#hotbar.dorako-ui .macro .macro-key {
+  background: none;
+  right: 6px;
+  padding: 0px;
+  font-weight: initial;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+}
+#hotbar.dorako-ui .macro .macro-icon {
+  border-radius: 3px;
+  border: none;
+  height: calc(var(--macro-size) + 2px);
+  width: calc(var(--macro-size) + 2px);
+}
+#hotbar.dorako-ui .macro.inactive {
+  box-shadow: none;
+}
+#hotbar.dorako-ui .macro:hover {
+  border: none;
+  background-color: var(--primary-light);
+}
+#hotbar.dorako-ui .macro.active:hover {
+  border: none;
+  background-color: var(--primary-dark);
+}
+#hotbar.dorako-ui #macro-list {
+  gap: 5px;
+  margin: 0px 5px;
+  border: none;
+  grid-template-columns: repeat(10, calc(var(--macro-size) + 2px));
+}
+#hotbar.dorako-ui .bar-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+@media (max-width: 1120px) {
+  #hotbar {
+    width: 354px;
+    height: 110px;
+  }
+  #hotbar #macro-list {
+    grid-template-columns: repeat(5, 50px);
+  }
+}
+/* ----------------------------------------- */
+/* Scene Navigation                          */
+/* ----------------------------------------- */
+nav#navigation.dorako-ui {
+  color: var(--color-text-light-heading);
+  width: calc(100% - 46px);
+}
+nav#navigation.dorako-ui #nav-toggle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: 0.25s;
+  flex: 0 0 32px;
+  height: 32px;
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: 0.25s;
+  text-shadow: 0px 0px 3px black;
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item > a:hover {
+  text-shadow: unset;
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item .scene-players {
+  text-shadow: none;
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item:hover {
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item.view {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item.view:hover {
+  color: white;
+  background-color: var(--primary-light);
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item.gm {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--secondary-dark);
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item.gm:hover, nav#navigation.dorako-ui ol#scene-list li.nav-item.gm.view {
+  color: var(--color-text-light-highlight);
+  background-color: var(--secondary-light);
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item.context {
+  box-shadow: var(--glassy);
+  border: none;
+}
+nav#navigation.dorako-ui ol#scene-list li.nav-item.active {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+}
+
+/* ----------------------------------------- */
+/* Notifications                             */
+/* ----------------------------------------- */
+.dorako-ui .notification {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui .notification.info {
+  background-color: var(--secondary);
+  border: none;
+}
+.dorako-ui .notification.error {
+  background-color: var(--primary);
+  border: none;
+}
+.dorako-ui .notification.warning, .dorako-ui .notification.alert {
+  background-color: #ECBF41;
+  color: black;
+  text-shadow: none;
+  border: none;
+}
+
+/* ----------------------------------------- */
+/* Sidebar                                   */
+/* ----------------------------------------- */
+#ui-right #sidebar {
+  height: -webkit-fill-available;
+}
+#ui-right #sidebar.collapsed {
+  height: auto;
+}
+
+section.chat-sidebar {
+  gap: 5px;
+  padding-bottom: 5px;
+}
+
+#chat-form {
+  margin: 0px 6px;
+}
+#chat-form textarea {
+  background: rgb(212, 213, 205);
+  border: 1px solid #7a7971;
+}
+
+#chat-log {
+  margin-left: 4px;
+}
+#chat-log li.dorako-ui:first-child {
+  margin-top: 2px;
+}
+
+.sidebar-tab .message.chat-message {
+  text-shadow: none;
+}
+
+#sidebar.dorako-ui {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border: none;
+  border-radius: 6px 3px 3px 3px;
+}
+#sidebar.dorako-ui.collapsed {
+  border-radius: 3px;
+}
+#sidebar.dorako-ui.collapsed #sidebar-tabs .item.active {
+  border: none;
+  margin: 2px 4px;
+}
+#sidebar.dorako-ui #sidebar-tabs {
+  --sidebar-tab-height: 20px;
+  --sidebar-tab-width: 20px;
+  border: none;
+  box-shadow: none;
+  margin: 0px;
+  margin-top: 1px;
+}
+#sidebar.dorako-ui #sidebar-tabs > .collapse {
+  --sidebar-tab-width: 12px;
+  position: relative;
+}
+#sidebar.dorako-ui #sidebar-tabs .item {
+  border: none;
+  margin: 2px 0px;
+  text-shadow: 0px 0px 3px black;
+}
+#sidebar.dorako-ui #sidebar-tabs .item.active {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  margin: 2px 0px;
+  border-radius: 3px;
+  color: white;
+  background-color: var(--primary-light);
+}
+
+.dorako-ui #chat-controls i.fas {
+  line-height: 24px;
+}
+.dorako-ui #chat-controls .roll-type-select {
+  margin-left: 0px;
+}
+
+#token-hud .status-effects {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0px;
+  grid-template-columns: repeat(5, 1fr);
+  width: auto;
+  gap: 8px;
+}
+#token-hud .status-effects .effect-control {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--glass-bg);
+}
+#token-hud .status-effects .effect-control::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#token-hud .status-effects .effect-control.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#token-hud .status-effects .effect-control:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#token-hud .status-effects .effect-control.active:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#token-hud .status-effects .effect-control:hover, #token-hud .status-effects .effect-control.active {
+  filter: none;
+  opacity: 1;
+  border: none;
+}
+#token-hud .status-effects .effect-control:hover img, #token-hud .status-effects .effect-control.active img {
+  border: none;
+}
+#token-hud .status-effects .effect-control.active:hover {
+  border: none;
+  filter: brightness(0.75) saturate(0.75);
+}
+#token-hud .status-effects .effect-control.active img {
+  border: none;
+  opacity: 1;
+}
+#token-hud .status-effects .effect-control img {
+  border: none;
+  margin: 0px;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  border-radius: 3px;
+}
+#token-hud .status-effects .title-bar {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  box-sizing: content-box;
+  font-size: var(--font-size-20);
+  font-weight: normal;
+  left: 0;
+  line-height: normal;
+  padding: 3px 0;
+  position: absolute;
+  text-align: center;
+  top: -40px;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1;
+}
+#token-hud .status-effects .title-bar.active {
+  visibility: visible;
+}
+
+.placeable-hud input[type=text] {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+}
+.placeable-hud input[type=text]:focus {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  border: none;
+}
+.placeable-hud .control-icon {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+}
+.placeable-hud .control-icon .badge {
+  text-shadow: none;
+}
+.placeable-hud .control-icon[data-action=overhead], .placeable-hud .control-icon[data-action=underfoot] {
+  background-color: var(--primary-dark);
+}
+.placeable-hud .control-icon[data-action=overhead]:hover, .placeable-hud .control-icon[data-action=overhead].active, .placeable-hud .control-icon[data-action=underfoot]:hover, .placeable-hud .control-icon[data-action=underfoot].active {
+  background-color: var(--primary-light);
+}
+.placeable-hud .control-icon[data-action=overhead]:hover > img, .placeable-hud .control-icon[data-action=overhead].active > img, .placeable-hud .control-icon[data-action=underfoot]:hover > img, .placeable-hud .control-icon[data-action=underfoot].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon[data-action=overhead]:hover:hover, .placeable-hud .control-icon[data-action=overhead].active:hover, .placeable-hud .control-icon[data-action=underfoot]:hover:hover, .placeable-hud .control-icon[data-action=underfoot].active:hover {
+  background-color: var(--primary-light);
+}
+.placeable-hud .control-icon[data-action=sort-up]:hover, .placeable-hud .control-icon[data-action=sort-down]:hover, .placeable-hud .control-icon[data-action=config]:hover, .placeable-hud .control-icon[data-action=trigger]:hover {
+  background-color: var(--primary);
+}
+.placeable-hud .control-icon[data-action=sort-up]:hover > img, .placeable-hud .control-icon[data-action=sort-down]:hover > img, .placeable-hud .control-icon[data-action=config]:hover > img, .placeable-hud .control-icon[data-action=trigger]:hover > img {
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon[data-action=visibility], .placeable-hud .control-icon[data-action=effects], .placeable-hud .control-icon[data-action=combat], .placeable-hud .control-icon[data-action=locked], .placeable-hud .control-icon[data-action=target], .placeable-hud .control-icon[data-action=active], .placeable-hud .control-icon[data-action=mystify] {
+  background-color: var(--secondary-dark);
+}
+.placeable-hud .control-icon[data-action=visibility]:hover, .placeable-hud .control-icon[data-action=visibility].active, .placeable-hud .control-icon[data-action=effects]:hover, .placeable-hud .control-icon[data-action=effects].active, .placeable-hud .control-icon[data-action=combat]:hover, .placeable-hud .control-icon[data-action=combat].active, .placeable-hud .control-icon[data-action=locked]:hover, .placeable-hud .control-icon[data-action=locked].active, .placeable-hud .control-icon[data-action=target]:hover, .placeable-hud .control-icon[data-action=target].active, .placeable-hud .control-icon[data-action=active]:hover, .placeable-hud .control-icon[data-action=active].active, .placeable-hud .control-icon[data-action=mystify]:hover, .placeable-hud .control-icon[data-action=mystify].active {
+  background-color: var(--secondary-light);
+}
+.placeable-hud .control-icon[data-action=visibility]:hover > img, .placeable-hud .control-icon[data-action=visibility].active > img, .placeable-hud .control-icon[data-action=effects]:hover > img, .placeable-hud .control-icon[data-action=effects].active > img, .placeable-hud .control-icon[data-action=combat]:hover > img, .placeable-hud .control-icon[data-action=combat].active > img, .placeable-hud .control-icon[data-action=locked]:hover > img, .placeable-hud .control-icon[data-action=locked].active > img, .placeable-hud .control-icon[data-action=target]:hover > img, .placeable-hud .control-icon[data-action=target].active > img, .placeable-hud .control-icon[data-action=active]:hover > img, .placeable-hud .control-icon[data-action=active].active > img, .placeable-hud .control-icon[data-action=mystify]:hover > img, .placeable-hud .control-icon[data-action=mystify].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon:hover {
+  background-color: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.placeable-hud .control-icon.active {
+  color: var(--color-text-light-highlight);
+  background-color: var(--secondary-light);
+  border: none;
+}
+.placeable-hud .control-icon.active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+.placeable-hud .control-icon > img {
+  opacity: 1;
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
 
 .dorako-display-none {
-    display: none !important;
+  display: none !important;
 }
 
 a.content-link,
@@ -84,7 +924,7 @@ a.entity-link,
 [data-pf2-action],
 [data-pf2-effect-area],
 a.inline-roll {
-    text-shadow: none !important;
+  text-shadow: none !important;
 }
 
 a.content-link,
@@ -93,9 +933,1779 @@ a.entity-link,
 [data-pf2-action],
 [data-pf2-effect-area],
 a.inline-roll:not(.inline-result) {
-    color: black;
+  color: black;
 }
 
 i[data-pf2-repost] {
-    top: 0px;
+  top: 0px;
 }
+
+.dorako-ui.sheet nav.sheet-tabs {
+  background-color: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--color-border-light-primary);
+  border-radius: 3px;
+  margin: 2px;
+}
+.dorako-ui.sheet nav.sheet-tabs .item:not(.active):hover {
+  color: var(--secondary-light);
+  text-shadow: 0px 0px 10px var(--secondary-light);
+}
+.dorako-ui.sheet nav.sheet-tabs .item.active {
+  color: var(--secondary-light);
+  text-shadow: 0px 0px 10px var(--secondary-light);
+}
+
+.dorako-ui.dark-theme.sheet nav.sheet-tabs {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+}
+.dorako-ui.dark-theme.sheet nav.sheet-tabs .item:not(.active):hover {
+  color: var(--tertiary);
+  text-shadow: 0px 0px 10px var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet nav.sheet-tabs .item.active {
+  color: var(--tertiary);
+  text-shadow: 0px 0px 10px var(--tertiary);
+}
+
+.dorako-ui.pf2e.item.sheet form .sheet-navigation .sheet-tabs > .list-row:hover, .dorako-ui.pf2e.item.sheet form .sheet-navigation .sheet-tabs > .list-row.active {
+  color: var(--secondary-light);
+  text-shadow: 0px 0px 10px;
+  text-decoration: unset;
+}
+
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-navigation .sheet-tabs > .list-row:hover, .dorako-ui.dark-theme.pf2e.item.sheet form .sheet-navigation .sheet-tabs > .list-row.active {
+  color: var(--tertiary);
+  text-shadow: 0px 0px 10px var(--tertiary);
+  text-decoration: unset;
+}
+
+.dorako-ui form button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border: 1px solid var(--color-border-light-primary);
+}
+.dorako-ui form button:hover {
+  background-color: var(--primary-light);
+  color: var(--color-text-light-highlight);
+  border: 1px solid var(--tertiary);
+}
+.dorako-ui form button:active {
+  background-color: var(--primary-light);
+  color: white;
+  border: 1px solid var(--gold-brown);
+}
+
+.dorako-ui.pf2e.item.sheet .sheet-header img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.dorako-ui.pf2e.item.sheet form .form-list {
+  padding: 0.5em 1em;
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+}
+
+.dorako-ui.app.token-sheet .tab.active[data-tab=appearance] fieldset {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+}
+.dorako-ui.app.token-sheet .tab.active[data-tab=appearance] fieldset legend {
+  color: var(--color-text-dark-primary);
+  margin-left: 5px;
+}
+
+.dorako-ui.pf2e.item.sheet .sheet-header {
+  border: none;
+}
+
+.dorako-ui.dark-theme.app.token-sheet .tab.active[data-tab=appearance] fieldset legend {
+  color: var(--color-text-light-heading);
+}
+
+.dorako-ui.pf2e.item.sheet form .sheet-navigation {
+  border-radius: 3px;
+  border: none;
+  border: 1px solid var(--color-border-light-primary);
+  background: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0px -1px 2px rgba(255, 255, 255, 0.3) inset;
+}
+
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-navigation {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+}
+
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .tab.item-details label {
+  color: var(--color-text-light-heading);
+}
+
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body input[type=text], .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body input[type=number], .dorako-ui.dark-theme.pf2e.item.sheet form article.sheet-content select {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+.dorako-ui.window-app.filepicker .display-modes a:hover {
+  text-shadow: 0px 0px 3px black;
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.window-app.filepicker .display-modes a.active {
+  text-shadow: 0px 0px 3px black;
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+
+.dorako-ui.window-app input[type=text],
+.dorako-ui.window-app input[type=number],
+.dorako-ui.window-app input[type=password],
+.dorako-ui.window-app input[type=date],
+.dorako-ui.window-app input[type=time],
+.dorako-ui.window-app input[type=search],
+.dorako-ui.window-app input[type=checkbox],
+.dorako-ui.window-app input[type=radio] {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  accent-color: var(--primary);
+}
+.dorako-ui.window-app input[type=text]:checked,
+.dorako-ui.window-app input[type=number]:checked,
+.dorako-ui.window-app input[type=password]:checked,
+.dorako-ui.window-app input[type=date]:checked,
+.dorako-ui.window-app input[type=time]:checked,
+.dorako-ui.window-app input[type=search]:checked,
+.dorako-ui.window-app input[type=checkbox]:checked,
+.dorako-ui.window-app input[type=radio]:checked {
+  accent-color: var(--primary);
+  filter: none;
+}
+.dorako-ui.window-app input[type=text]:hover,
+.dorako-ui.window-app input[type=number]:hover,
+.dorako-ui.window-app input[type=password]:hover,
+.dorako-ui.window-app input[type=date]:hover,
+.dorako-ui.window-app input[type=time]:hover,
+.dorako-ui.window-app input[type=search]:hover,
+.dorako-ui.window-app input[type=checkbox]:hover,
+.dorako-ui.window-app input[type=radio]:hover {
+  border-color: var(--secondary-light);
+  box-shadow: 0px 0px 5px var(--secondary-light);
+}
+.dorako-ui.window-app input[type=text]:focus,
+.dorako-ui.window-app input[type=number]:focus,
+.dorako-ui.window-app input[type=password]:focus,
+.dorako-ui.window-app input[type=date]:focus,
+.dorako-ui.window-app input[type=time]:focus,
+.dorako-ui.window-app input[type=search]:focus,
+.dorako-ui.window-app input[type=checkbox]:focus,
+.dorako-ui.window-app input[type=radio]:focus {
+  border-color: var(--secondary-light);
+  box-shadow: 0px 0px 5px var(--secondary-light);
+}
+
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 2px;
+  margin: 0px;
+  margin-right: 8px;
+}
+.dorako-ui.actor.sheet .crb-style aside .sidebar select {
+  color: white;
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .item-image .item-icon, .dorako-ui.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image .item-icon {
+  border-radius: 2px;
+}
+.dorako-ui.actor.sheet .crb-style aside .modifiers_button {
+  text-shadow: none;
+}
+.dorako-ui.actor.sheet .crb-style aside .modifiers_button:hover:not(:disabled) {
+  background: white;
+  color: var(--primary);
+}
+.dorako-ui.actor.sheet .crb-style {
+  background-image: url("../img/header.webp"), var(--sheet);
+}
+.dorako-ui.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image:hover .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name .item-image:hover, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item .item-name .item-image:hover {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background: white !important;
+}
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod {
+  border-image-source: var(--ornamentation);
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options {
+  gap: 3px;
+}
+.dorako-ui.sheet.actor.loot section.sidebar .gm-settings .loot-distribution {
+  box-shadow: unset;
+  background: unset;
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.dorako-ui.sheet.actor.loot section.sidebar .gm-settings .loot-distribution button {
+  background-color: var(--tertiary);
+}
+.dorako-ui.sheet.actor.loot section.sidebar .gm-settings .loot-distribution button:hover {
+  color: black;
+  background-color: var(--tertiary-dark);
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions button:not(:disabled) {
+  text-shadow: unset;
+}
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell.expanded {
+  border-radius: 0px 0px 10px 10px;
+}
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  color: white;
+  background-color: var(--primary);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset;
+  border: 1px solid var(--gold-brown);
+}
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button:hover {
+  background-color: var(--primary-light);
+}
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  margin: 5px 0px;
+  border-radius: 8px;
+}
+.dorako-ui.actor.sheet .crb-style nav.sheet-navigation .item, .dorako-ui.actor.sheet .crb-style nav.sheet-navigation .item:hover, .dorako-ui .actor.sheet .crb-style nav.sheet-navigation .item.active {
+  z-index: 4;
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header > button, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header > .controls {
+  gap: 3px;
+}
+.dorako-ui.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+  color: var(--half-transparent);
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .encumbrance .encumbrance-light-bulk-overflow {
+  color: var(--body);
+  text-shadow: unset;
+}
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name .item-image .item-icon {
+  border-radius: 2px;
+}
+.dorako-ui.actor.sheet .inventory .item-name .item-image {
+  background-color: var(--alt-dark);
+  border: 1px solid var(--gold-brown);
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.dorako-ui.actor.sheet .inventory .item-name .item-image:last-child {
+  border-bottom: 1px solid var(--gold-brown);
+}
+.dorako-ui.actor.sheet .inventory .container-held-items .item-name .item-image {
+  border-left: 1px solid var(--gold-brown);
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .wealth {
+  margin-bottom: unset;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list {
+  padding-top: 0.5rem;
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions {
+  gap: unset;
+}
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions > div {
+  padding-top: 0.5rem;
+}
+
+.dorako-ui.dark-theme h4.rarity-common {
+  color: #e1d8cf !important;
+}
+.dorako-ui.dark-theme h4.rarity-uncommon {
+  color: #c45500 !important;
+}
+.dorako-ui.dark-theme h4.rarity-rare {
+  color: #5362ff !important;
+}
+.dorako-ui.dark-theme h4.rarity-unique {
+  color: #e127e1 !important;
+}
+.dorako-ui.dark-theme .tags .tag.tag_secondary,
+.dorako-ui.dark-theme .tags .tag option.tag_secondary {
+  background-color: var(--tertiary-dark);
+  color: black;
+}
+.dorako-ui.dark-theme .tags .tag.tag_transparent,
+.dorako-ui.dark-theme .tags .tag option.tag_transparent {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+.dorako-ui.dark-theme.sheet.actor.loot section.sidebar .gm-settings .loot-distribution {
+  gap: 5px;
+}
+.dorako-ui.dark-theme.sheet.actor.loot section.sidebar .gm-settings .loot-distribution button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: unset;
+  background-color: var(--tertiary);
+  color: black;
+}
+.dorako-ui.dark-theme.sheet.actor.loot section.sidebar .gm-settings .loot-distribution button:hover {
+  background-color: var(--tertiary-dark);
+  color: black;
+}
+.dorako-ui.dark-theme.actor.sheet .inventory .item-summary {
+  background: rgba(0, 0, 0, 0.25);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
+  color: var(--color-border-light-primary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.unidentified {
+  border-radius: 3px;
+  background: rgba(245, 234, 245, 0.1333333333);
+  outline: 1px dashed #720073;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
+  border-image: linear-gradient(90deg, rgba(241, 237, 234, 0), black) 1;
+}
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-1, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-2 {
+  color: black;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.biography h3 {
+  color: var(--tertiary);
+  border-color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.biography .biography-content .editor .editor-content {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4 {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary .tag.tag_secondary {
+  background-color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme .crb-style .details-label {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1 {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header button {
+  background-color: var(--tertiary);
+  color: black;
+  text-shadow: unset;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill .rollable:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .rollable:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill .rollable:hover {
+  color: var(--tertiary);
+  text-shadow: unset;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .actions-title .action-name h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name h4:hover {
+  color: var(--tertiary);
+  text-shadow: unset;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+  font-family: var(--sans-serif);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button:hover {
+  background-color: var(--primary-light);
+  color: white;
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  margin: 5px 0px;
+  border-radius: 8px;
+  background-color: var(--secondary-dark);
+  background-blend-mode: luminosity;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content nav {
+  background: var(--glass-bg-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0px -1px 2px rgba(255, 255, 255, 0.3) inset;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content nav .tab {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content nav .tab.active {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content nav .tab:hover {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content nav::before, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content nav::after {
+  filter: invert(1);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .alt-usage img.alt-usage-icon {
+  filter: invert(1);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg path, .dorako-ui.dark-theme.actor.sheet a.roll-icon svg path {
+  fill: var(--text-light);
+}
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest.active, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
+  box-shadow: unset;
+}
+.dorako-ui.dark-theme.sheet.actor section.sidebar, .dorako-ui.dark-theme.sheet.actor section.sidebar .gm-settings, .dorako-ui.dark-theme.sheet.actor section.sidebar > img.actor-icon, .dorako-ui.dark-theme.sheet.actor section.sidebar .sidebar-meta, .dorako-ui.dark-theme.sheet.actor .sheet-header {
+  border-color: var(--tertiary) !important;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group {
+  gap: 3px;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled) {
+  background: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled).damage {
+  background: var(--primary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled).damage:hover {
+  background: var(--primary-light);
+  color: white;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled):hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+  background: var(--secondary-light);
+  color: white;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li button.cast-spell, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .blue-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  background: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li button.cast-spell:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .blue-button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+  background: var(--secondary-light);
+  color: white;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li[data-expended-state=true] .cast-spell {
+  background: var(--secondary-dark);
+  color: var(--color-disabled);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li[data-expended-state=true] .cast-spell:hover {
+  background: var(--secondary-dark);
+  color: var(--color-disabled);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text], .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number] {
+  background: unset;
+  box-shadow: unset;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text]:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text]:focus, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable:focus, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input:focus, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input:focus, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input:focus, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number]:hover, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number]:focus {
+  background: unset;
+  box-shadow: unset;
+}
+
+/* ----------------------------------------- */
+/* Header                                    */
+/* ----------------------------------------- */
+.dorako-ui .message-header {
+  background: none;
+  padding: 5px 5px 0px 5px;
+  margin: -5px -5px 0px -5px;
+  border-radius: 5px 5px 0px 0px;
+  gap: 5px;
+  align-items: center;
+}
+.dorako-ui .message-header .header-meta {
+  border-radius: 3px;
+  padding: 2px;
+  font-size: x-small;
+  align-self: center;
+  text-align: center;
+  text-shadow: none;
+}
+.dorako-ui .message-header.light-header-text {
+  background-blend-mode: multiply;
+  color: white;
+  text-shadow: 0px 1px 1px black;
+}
+.dorako-ui .message-header.light-header-text .header-meta {
+  color: white;
+  background-color: hsla(0deg, 0%, 50%, 0.4);
+  border: 1px solid hsla(0deg, 0%, 100%, 0.3);
+}
+.dorako-ui .message-header.dark-header-text {
+  background-blend-mode: luminosity;
+  color: black;
+  text-shadow: 0px 1px 1px white;
+}
+.dorako-ui .message-header.dark-header-text .header-meta {
+  color: hsl(0deg, 0%, 20%);
+  background-color: hsla(0deg, 0%, 90%, 0.5);
+  border: 1px solid hsla(0deg, 0%, 30%, 0.4);
+}
+.dorako-ui .message-header .portrait-and-name {
+  flex-grow: 1;
+  display: flex;
+  gap: 5px;
+}
+.dorako-ui .message-header .portrait-and-name .portrait-wrapper {
+  width: var(--avatar-size);
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+}
+.dorako-ui .message-header .portrait-and-name .portrait-wrapper .portrait {
+  height: var(--avatar-size);
+  object-fit: contain;
+  z-index: 0;
+}
+.dorako-ui .message-header .portrait-and-name .portrait-wrapper .portrait.actor {
+  border-radius: 3px;
+}
+.dorako-ui .message-header .portrait-and-name .sender-wrapper {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  justify-content: left;
+  align-self: center;
+  z-index: 1;
+}
+.dorako-ui .message-header .portrait-and-name .sender-wrapper .message-sender,
+.dorako-ui .message-header .portrait-and-name .sender-wrapper .player-name {
+  align-self: flex-start;
+  line-height: initial;
+}
+
+/* ----------------------------------------- */
+/* Clutter                                   */
+/* ----------------------------------------- */
+.dorako-ui.chat-message .message-content .damage-roll .dice-result .dice-total .instances {
+  padding-bottom: 4px;
+  margin-bottom: 0px;
+}
+
+/* ----------------------------------------- */
+/* Damage buttons                            */
+/* ----------------------------------------- */
+.dorako-ui.message .message-content .damage-application {
+  gap: 2px;
+}
+.dorako-ui.message .message-content .damage-application button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+}
+.dorako-ui.message .message-content .damage-application button.half-damage .transparent-half {
+  display: none;
+}
+.dorako-ui.message .message-content .damage-application button.half-damage .fa-heart-broken {
+  position: relative;
+}
+.dorako-ui.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
+  content: "\f7a9";
+  font-family: "Font Awesome 5 Free";
+  color: hsla(0deg, 0%, 0%, 0.5);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
+  color: gray;
+}
+.dorako-ui.message .message-content .damage-application button:hover {
+  box-shadow: none;
+  color: white;
+  border: 1px solid var(--gold-brown);
+  background-color: var(--primary-light);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--primary-light);
+}
+.dorako-ui.message .message-content .damage-application button:hover img {
+  filter: invert(1);
+}
+.dorako-ui.message .message-content .damage-application button:hover.half-damage .fa-heart-broken::after {
+  clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
+  color: gray;
+}
+.dorako-ui.message .message-content .damage-application button.shield-block:hover {
+  background-color: var(--secondary-light);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary-light);
+}
+.dorako-ui.message .message-content .damage-application button.shield-block.shield-activated {
+  background-color: var(--secondary-light);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary-light);
+}
+.dorako-ui.message .message-content .damage-application button.shield-block.shield-activated:hover {
+  background-color: var(--secondary-dark);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary-dark);
+}
+.dorako-ui.message .message-content .damage-application button.heal-damage:hover {
+  background-color: green;
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px green;
+}
+.dorako-ui.message .message-content .damage-application button.heal-damage:hover .fa-plus {
+  color: green;
+  text-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Chat card                                 */
+/* ----------------------------------------- */
+.dorako-ui.message.chat-message {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  margin: 5px 3px 3px 3px;
+}
+.dorako-ui.message.chat-message.whisper {
+  background-color: var(--whisper-bg);
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.chat-message.blind {
+  background-color: var(--blind-bg);
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.chat-message .flavor-text hr {
+  display: none;
+}
+.dorako-ui.message.chat-message .message-content {
+  margin-top: 5px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e-pd-card {
+  margin-top: 3px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e-pd-card hr {
+  display: none;
+}
+.dorako-ui.message.chat-message .message-content .pf2e-pd-card .apply-condition {
+  margin-top: 0px;
+}
+.dorako-ui.message.chat-message .message-content .dice-roll .dice-result .statuseffect-message {
+  background-color: unset;
+  box-shadow: none;
+  border: none;
+}
+.dorako-ui.message.chat-message .message-content .dice-roll .dice-result .statuseffect-message li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.dorako-ui.message.chat-message .message-content .dice-roll .dice-result .statuseffect-message img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.dorako-ui.message.chat-message .message-content .dice-roll .dice-result .statuseffect-rules {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .tags {
+  margin: 3px 0px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .tags .vr {
+  display: none;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons button {
+  text-shadow: 0px 0px 3px black;
+  color: white;
+  background-color: var(--primary);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset;
+  border: 1px solid var(--gold-brown);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons button:hover {
+  background-color: var(--primary-light);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--primary);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons button.hidden-to-others {
+  background-color: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons button.hidden-to-others:hover {
+  background-color: var(--secondary-light);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons button.with-image img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  height: 1.2em;
+  margin-right: 5px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-attack-buttons {
+  gap: 3px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child) {
+  background: var(--primary-dark);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child):hover {
+  color: white;
+  background: var(--primary-light);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header {
+  border: none;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  flex: 0 0 34px;
+  height: 34px;
+  width: 34px;
+  margin-right: 6px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header h3 {
+  display: flex;
+  margin-top: 3px;
+  margin-bottom: -3px;
+  line-height: 0.95em;
+  font-family: var(--serif);
+  font-size: var(--font-size-22);
+  text-rendering: geometricPrecision;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header h3.pf2-icon {
+  font-family: Pathfinder2eActions;
+  font-size: xxx-large;
+  flex: 0 0 34px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header h4 s {
+  color: gray;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header h4 span.heightened {
+  color: green;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-content {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 500;
+  margin: 0px;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-content hr {
+  margin: 0px -10px;
+  border-color: rgba(35, 35, 31, 0.3333333333);
+  border-bottom: none;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-footer {
+  border: none;
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-footer span {
+  border-right: 1px solid gray;
+}
+.dorako-ui.message.chat-message [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+  border-radius: 3px;
+  background: rgba(245, 234, 245, 0.6666666667);
+  outline: 1px dashed #720073;
+}
+
+/* ----------------------------------------- */
+/* Color definitions                         */
+/* ----------------------------------------- */
+/* Colors */
+/* Global */
+/* used for mini headers, alternate primary color */
+/* compliments the primary color, usually used in combination */
+/* for all other uses */
+/* Lighter / Darker */
+/* Text */
+/* ----------------------------------------- */
+/* Color schemes                             */
+/* ----------------------------------------- */
+/* Proficiency ranks */
+/* Rarities */
+/* Degrees of success */
+/* Value adjustments (e.g. weak/elite) */
+/* ----------------------------------------- */
+/* CSS Custom Properties                     */
+/* ----------------------------------------- */
+:root {
+  /* Global */
+  --primary: #5e0000;
+  --primary-light: #b10000;
+  --primary-dark: #380000;
+  --secondary: #171f69;
+  --secondary-light: #2836b7;
+  --secondary-dark: #0d113a;
+  --tertiary: #e9d7a1;
+  --alt: #786452;
+  --alt-dark: #443730;
+  --bg: #f8f4f1;
+  --bg-dark: #e7d9cf;
+  --gold-brown: #956d58;
+  --sub: #605856;
+  --color-disabled: #ababab;
+  --blind-bg: #a57aa5;
+  --whisper-bg: #e3e3ff;
+  --inline-link-bg: #ddd;
+  --inline-repost-bg: #eaeaea;
+  --visibility-gm-bg: #e8e8ef;
+  --visibility-owner-bg: #ddebe1;
+  --blind-roll: #f5eaf5;
+  /* Lighter / Darker */
+  --light: #910000;
+  --dark: #2b0000;
+  --tertiary-dark: #dfc578;
+  --tertiary-light: #f3e9ca;
+  /* Text */
+  --body: var(--text-dark);
+  --color-text-trait: #f5efe0;
+  --text-dark: #1c1c1c;
+  --text-light: white;
+  /* Borders */
+  --color-border-trait: #d8c384;
+  --color-border-divider: #baa991;
+  /* Headers w/ boxes */
+  --header-color: var(--text-light);
+  --header-bg: var(--secondary);
+  /* Sidebar */
+  --sidebar-label: var(--tertiary-dark);
+  --sidebar-title: var(--tertiary);
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-bg-dark: rgba(0, 0, 0, 0.7);
+  --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
+    0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --sheet-light: url(../img/background-light.webp);
+  --sheet-dark: url(../img/background-dark4.webp);
+}
+
+/* ----------------------------------------- */
+/* Glassy Buttons                            */
+/* ----------------------------------------- */
+.dorako-ui.dark-theme.message.chat-message .dice-roll .dice-formula,
+.dorako-ui.dark-theme.message.chat-message .dice-roll .dice-total {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+.dorako-ui.dark-theme.message.chat-message .dice-roll .dice-total.success {
+  color: #00c000;
+}
+.dorako-ui.dark-theme.message.chat-message .dice-roll .dice-total.failure {
+  color: #ff4040;
+}
+.dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-setInitiative-btn,
+.dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-fullDamage-btn {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-setInitiative-btn:hover,
+.dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-fullDamage-btn:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.message.chat-message .table-draw .table-description {
+  color: var(--color-text-light-highlight);
+  border-top: 1px solid var(--tertiary);
+}
+.dorako-ui.dark-theme.message.chat-message .table-draw .table-results .table-result img.result-image {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  object-fit: contain;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons {
+  margin: 0px;
+  margin-top: 5px;
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: var(--dorako-text-shadow);
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image:hover {
+  color: white;
+  background: var(--primary-light);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  height: 1.2em;
+  margin-right: 5px;
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: var(--dorako-text-shadow);
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button:hover {
+  color: white;
+  background: var(--primary-light);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .hidden-to-others {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  background: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .hidden-to-others:hover {
+  color: white;
+  background: var(--secondary-light);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons {
+  gap: 5px;
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child) {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  background: var(--primary-dark);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child):hover {
+  color: white;
+  background: var(--primary-light);
+}
+
+/* ----------------------------------------- */
+/* Damage buttons                            */
+/* ----------------------------------------- */
+.dorako-ui.dark-theme.message .message-content .damage-application {
+  gap: 5px;
+  margin-top: 5px;
+  text-rendering: geometricPrecision;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+  margin: 0px;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button img {
+  filter: invert(1) brightness(0.8) sepia(1) grayscale(0.8) drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: white;
+  background-color: var(--primary-light);
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button:hover img {
+  filter: invert(1) drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button:hover.half-damage .fa-heart-broken::after {
+  color: hsla(0deg, 0%, 0%, 0.5);
+  text-shadow: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
+  color: hsla(0deg, 0%, 0%, 0.5);
+  text-shadow: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.shield-block:hover {
+  background-color: var(--secondary-light);
+  border: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.shield-block.shield-activated {
+  background-color: var(--secondary-light);
+  border: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.shield-block.shield-activated:hover {
+  background-color: var(--secondary-dark);
+  border: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.heal-damage .fa-stack i.fa-plus {
+  color: hsla(0deg, 0%, 0%, 0.5);
+  text-shadow: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.heal-damage:hover {
+  background-color: green;
+  border: none;
+}
+.dorako-ui.dark-theme.message .message-content .damage-application button.heal-damage:hover .fa-stack i.fa-plus {
+  color: green;
+  text-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Chat card                                 */
+/* ----------------------------------------- */
+.dorako-ui.message.chat-message.dark-theme {
+  background: var(--sheet-dark);
+  background-size: cover;
+  color: var(--color-text-light-1);
+}
+.dorako-ui.message.chat-message.dark-theme.whisper {
+  background-color: var(--whisper-bg);
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.chat-message.dark-theme.blind {
+  background-color: var(--blind-bg);
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.chat-message.dark-theme .tags .tag_transparent {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+.dorako-ui.message.chat-message.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+  background: rgba(245, 234, 245, 0.1333333333);
+}
+.dorako-ui.message.chat-message.dark-theme span[data-pf2-check][data-pf2-traits*=secret] {
+  background: #f3ddf3;
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card {
+  margin-top: 5px;
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card .apply-condition {
+  margin-top: 0px;
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: var(--dorako-text-shadow);
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card button:hover {
+  background-color: var(--primary-light);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card > div:not(.card-buttons) {
+  margin-bottom: 5px;
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card .flat-check-failure {
+  text-rendering: optimizeLegibility;
+  background-color: #ff4500;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: var(--sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 3px 4px;
+  text-transform: uppercase;
+}
+.dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card .flat-check-success {
+  text-rendering: optimizeLegibility;
+  background-color: blue;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: var(--sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding: 3px 4px;
+  text-transform: uppercase;
+}
+.dorako-ui.message.chat-message.dark-theme .pf2e.chat-card .card-header h4 s {
+  color: gray;
+}
+.dorako-ui.message.chat-message.dark-theme .pf2e.chat-card .card-header h4 span.heightened {
+  color: green;
+}
+.dorako-ui.message.chat-message.dark-theme .pf2e.chat-card .card-content hr {
+  margin: 0px -10px;
+  border-color: var(--tertiary);
+  border-bottom: none;
+}
+
+/* ----------------------------------------- */
+/* Damage types                              */
+/* ----------------------------------------- */
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .dice-tooltip .instance .dice .part-formula,
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .dice-tooltip .instance .dice .part-total {
+  color: var(--color-text-light-5);
+}
+.dorako-ui.message.dark-theme .dice-tooltip .part-header {
+  border-bottom: 1px solid var(--color-text-dark-3);
+}
+.dorako-ui.message.dark-theme .dice-tooltip .part-header .part-total {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-text-dark-3);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance {
+  white-space: nowrap;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.acid {
+  border-color: #00b300;
+  color: #007300;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.acid:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.acid.tooltip-part > header {
+  background: rgba(0, 179, 0, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.acid .icon {
+  color: #00b300;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bleed {
+  border-color: #d90025;
+  color: #99001a;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bleed:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bleed.tooltip-part > header {
+  background: rgba(217, 0, 37, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bleed .icon {
+  color: #d90025;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bludgeoning {
+  border-color: #cccccc;
+  color: #acacac;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bludgeoning:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bludgeoning.tooltip-part > header {
+  background: rgba(204, 204, 204, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.bludgeoning .icon {
+  color: #cccccc;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.chaotic {
+  border-color: #e600e6;
+  color: #a600a6;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.chaotic:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.chaotic.tooltip-part > header {
+  background: rgba(230, 0, 230, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.chaotic .icon {
+  color: #e600e6;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.cold {
+  border-color: #4949cc;
+  color: #2f2fa6;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.cold:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.cold.tooltip-part > header {
+  background: rgba(73, 73, 204, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.cold .icon {
+  color: #4949cc;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.electricity {
+  border-color: #f1b012;
+  color: darkgoldenrod;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.electricity:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.electricity.tooltip-part > header {
+  background: rgba(241, 176, 18, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.electricity .icon {
+  color: #f1b012;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.evil {
+  border-color: #842ac4;
+  color: #611f90;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.evil:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.evil.tooltip-part > header {
+  background: rgba(132, 42, 196, 0.125);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.evil .icon {
+  color: #842ac4;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.fire {
+  border-color: #e64100;
+  color: #a62f00;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.fire:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.fire.tooltip-part > header {
+  background: rgba(230, 65, 0, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.fire .icon {
+  color: #e64100;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.force {
+  border-color: #89edfc;
+  color: #4be3fa;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.force:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.force.tooltip-part > header {
+  background: rgba(137, 237, 252, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.force .icon {
+  color: #89edfc;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.good {
+  border-color: #d99f0e;
+  color: #9d730a;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.good:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.good.tooltip-part > header {
+  background: rgba(217, 159, 14, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.good .icon {
+  color: #d99f0e;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.lawful {
+  border-color: #a86400;
+  color: #683e00;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.lawful:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.lawful.tooltip-part > header {
+  background: rgba(168, 100, 0, 0.125);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.lawful .icon {
+  color: #a86400;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.mental {
+  border-color: #3d53c7;
+  color: #2c3d99;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.mental:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.mental.tooltip-part > header {
+  background: rgba(61, 83, 199, 0.125);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.mental .icon {
+  color: #3d53c7;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.negative {
+  border-color: #4e4e68;
+  color: #4e4e68;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.negative:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.negative.tooltip-part > header {
+  background: rgba(78, 78, 104, 0.125);
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5), 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.negative .icon {
+  color: #4e4e68;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.piercing {
+  border-color: #acacac;
+  color: #8c8c8c;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.piercing:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.piercing.tooltip-part > header {
+  background: rgba(172, 172, 172, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.piercing .icon {
+  color: #acacac;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.poison {
+  border-color: #7e9f45;
+  color: #5b7332;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.poison:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.poison.tooltip-part > header {
+  background: rgba(126, 159, 69, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.poison .icon {
+  color: #7e9f45;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.positive {
+  border-color: white;
+  color: #ffffbf;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.positive:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.positive.tooltip-part > header {
+  background: rgba(255, 255, 255, 0.125);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.positive .icon {
+  color: white;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.slashing {
+  border-color: #acacac;
+  color: #8c8c8c;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.slashing:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.slashing.tooltip-part > header {
+  background: rgba(172, 172, 172, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.slashing .icon {
+  color: #acacac;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.sonic {
+  border-color: #00cbcb;
+  color: darkcyan;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.sonic:not(.tooltip-part), .dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.sonic.tooltip-part > header {
+  background: rgba(0, 203, 203, 0.125);
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance.sonic .icon {
+  color: #00cbcb;
+}
+.dorako-ui.message.dark-theme .message-content .damage-roll .dice-result .instance .splash {
+  border-color: inherit;
+  border-width: 1px;
+  border-style: dotted;
+  padding: 1px 2px;
+  line-height: 0;
+}
+
+.dorako-ui.dark-theme #sidebar .settings-sidebar button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0 0 3px black;
+  background-color: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme #sidebar .settings-sidebar button:hover {
+  background-color: var(--glass-bg);
+  color: var(--color-text-light-highlight);
+}
+
+.dorako-ui.dark-theme.dialog .dialog-buttons button.default {
+  background-color: var(--secondary);
+  border: none;
+}
+.dorako-ui.dark-theme.dialog .dialog-buttons button.default:hover {
+  background-color: var(--secondary-light);
+}
+
+.dorako-ui.dark-theme form .form-group.buttons {
+  gap: 5px;
+}
+
+.dorako-ui .dorako-ui.dark-theme.window-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  color: var(--color-text-light-heading);
+}
+
+.dorako-ui.dark-theme {
+  --color-underline-active: var(--tertiary-dark);
+  --color-underline-header: var(--tertiary-dark);
+}
+
+.dorako-ui.dark-theme.window-app footer.flexrow {
+  gap: 3px;
+}
+.dorako-ui.dark-theme.window-app .window-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  background-image: var(--sheet-dark);
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app#module-management .package-list .package-title,
+.dorako-ui.dark-theme.window-app#module-management .package-list .package-metadata,
+.dorako-ui.dark-theme.window-app#module-management .package-list .package-description {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app.package-configuration aside.sidebar {
+  border: none;
+}
+.dorako-ui.dark-theme.window-app.sheet header.sheet-header img {
+  box-shadow: var(--gold-and-glow);
+  border-radius: 5px;
+}
+.dorako-ui.dark-theme.window-app textarea {
+  color: white;
+  border: 1px solid var(--tertiary);
+}
+.dorako-ui.dark-theme.window-app a[href] {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.window-app hr {
+  border-top: 1px solid var(--tertiary);
+  border-bottom: 1px solid black;
+}
+.dorako-ui.dark-theme.window-app.sheet footer.sheet-footer {
+  gap: 5px;
+}
+.dorako-ui.dark-theme.window-app .compendium.directory .directory-list .directory-item {
+  border: none;
+}
+.dorako-ui.dark-theme.window-app button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0 0 3px black;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app button:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+  box-shadow: var(--glassy);
+}
+.dorako-ui.dark-theme.window-app button.privacy {
+  background-color: #2e0587;
+}
+.dorako-ui.dark-theme.window-app button.privacy:hover {
+  color: var(--color-text-light-heading);
+  background-color: #440eb9;
+}
+.dorako-ui.dark-theme.window-app button.pm-dropdown ul {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.dark-theme.window-app button.pm-dropdown li:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dorako-ui.dark-theme.window-app button.pm-dropdown i {
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app button.pm-dropdown:hover i {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app .private button.privacy {
+  color: var(--color-text-light-highlight);
+  background-color: #440eb9;
+}
+.dorako-ui.dark-theme.window-app.token-sheet .form-group.children-disabled .range-value,
+.dorako-ui.dark-theme.window-app input[type=range] + .range-value {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip) {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  padding-left: 5px;
+  color: var(--color-text-light-heading);
+  accent-color: var(--tertiary);
+}
+.dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):checked {
+  box-shadow: unset;
+  accent-color: var(--tertiary);
+  filter: none;
+}
+.dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):hover {
+  background-color: var(--secondary-dark);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):focus {
+  background-color: var(--secondary);
+  color: white;
+}
+.dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):disabled {
+  color: var(--color-border-dark-tertiary);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):disabled:hover {
+  color: var(--color-border-dark-tertiary);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip) {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip):hover {
+  background-color: var(--secondary-dark);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip) option {
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip) optgroup {
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app input[type=color][data-edit] {
+  border: none;
+}
+.dorako-ui.dark-theme.window-app form .form-group.slim .form-fields > label,
+.dorako-ui.dark-theme.window-app form .form-group span.units,
+.dorako-ui.dark-theme.window-app form .notes,
+.dorako-ui.dark-theme.window-app form .hint {
+  color: var(--color-text-dark-6);
+}
+.dorako-ui.dark-theme.window-app.filepicker .private .directory, .dorako-ui.dark-theme.window-app.filepicker .public .private.dir {
+  background: rgba(115, 49, 255, 0.15);
+}
+.dorako-ui.dark-theme.window-app.filepicker .display-modes a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-highlight);
+  text-shadow: 0 0 3px black;
+}
+.dorako-ui.dark-theme.window-app.filepicker .display-modes a:hover {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app.filepicker .display-modes a.active {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+  text-shadow: 0 0 3px black;
+}
+.dorako-ui.dark-theme.window-app#world-clock section.window-content .input-grid button img {
+  border: none;
+  height: 1.5em;
+  filter: invert(1) sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
+.dorako-ui.dark-theme.window-app#world-clock section.window-content .input-grid button:hover img {
+  filter: invert(1) sepia() brightness(0.9) drop-shadow(0px 0px 3px black);
+}
+.dorako-ui.dark-theme.window-app#keybindings .binding .key {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0 0 3px black;
+}
+.dorako-ui.dark-theme.window-app#keybindings .binding .key:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.window-app#keybindings .binding .key.uneditable {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.dark-theme.window-app#keybindings .binding .key.uneditable:hover {
+  color: var(--color-text-light-heading);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dorako-ui.dark-theme.window-app#invitation-links .connection.closed {
+  color: rgba(255, 0, 19, 0.6);
+}
+.dorako-ui.dark-theme.window-app#invitation-links .connection.open {
+  color: green;
+}
+.dorako-ui.dark-theme.window-app#invitation-links .connection.unknown {
+  color: rgba(250, 219, 60, 0.814);
+}
+
+/* ----------------------------------------- */
+/* Critical hit/fumble deck                  */
+/* ----------------------------------------- */
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme {
+  background: var(--sheet-dark);
+}
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-header .title {
+  color: var(--color-text-light-heading);
+}
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck blockquote,
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck blockquote {
+  box-shadow: var(--glassy);
+}
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck h1,
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck h1 {
+  box-shadow: var(--gold-and-glow);
+  margin-left: 2px;
+}
+
+.dorako-ui.dark-theme [data-visibility]:not([data-visibility=all]) {
+  border-radius: 3px;
+  outline: 1px dashed #720073;
+  /* ----------------------------------------- */
+  /* GM Visibility Elements                    */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /* Owner Visibility Elements                 */
+  /* ----------------------------------------- */
+}
+.dorako-ui.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+  background: rgba(245, 234, 245, 0.1333333333);
+}
+.dorako-ui.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=gm].message-sender {
+  max-width: fit-content;
+}
+.dorako-ui.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=gm] [data-visibility=gm] {
+  outline: none;
+  padding: initial;
+}
+.dorako-ui.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=owner] {
+  background: rgba(245, 234, 245, 0.1333333333);
+}
+.dorako-ui.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=owner] [data-visibility=owner] {
+  outline: none;
+  padding: initial;
+}
+
+/*# sourceMappingURL=dorako-ui.css.map */

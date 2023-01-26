@@ -1,0 +1,159 @@
+// prettier-ignore
+.dorako-ui {
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image {
+    @include gold-border;
+    border-radius: 2px;
+    margin: 0px;
+    margin-right: 8px;
+  }
+
+  &.actor.sheet .crb-style aside .sidebar select {
+    color: white;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .item-image .item-icon,
+  &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image .item-icon {
+    border-radius: 2px;
+  }
+
+  &.actor.sheet .crb-style aside .modifiers_button {
+    text-shadow: none;
+
+    &:hover:not(:disabled) {
+        background: white;
+        color: var(--primary);
+    }
+  }
+
+  &.actor.sheet .crb-style {
+    background-image: url("../img/header.webp"), var(--sheet);
+    // --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:%23231f20;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  // hover images
+  // prettier-ignore
+  &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image:hover
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name .item-image:hover,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item .item-name .item-image:hover {
+    @include quick-transition;
+    background: white !important; // overwrite !important;
+  }
+
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod {
+    border-image-source: var(--ornamentation);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options {
+    gap: 3px;
+  }
+
+  &.sheet.actor.loot section.sidebar .gm-settings .loot-distribution {
+    box-shadow: unset;
+    background: unset;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    button {
+      background-color: var(--tertiary);
+      &:hover {
+        color: black;
+        background-color: var(--tertiary-dark);
+      }
+    }
+  }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .auxiliary-actions button:not(:disabled) {
+    text-shadow: unset;
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell.expanded {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
+    @include quick-transition; 
+    text-shadow: 0px 0px 3px black;
+    color: white;
+    background-color: var(--primary);
+    box-shadow: 0px 0px 1px 1px var(--tertiary) inset;
+    border: 1px solid var(--gold-brown);
+
+    &:hover {
+      background-color: var(--primary-light);
+    }
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
+    @include sheet;
+    @include gold-border-shadow;
+    margin: 5px 0px;
+    border-radius: 8px;
+  }
+
+  &.actor.sheet .crb-style nav.sheet-navigation .item,
+  &.actor.sheet .crb-style nav.sheet-navigation .item:hover, .actor.sheet .crb-style nav.sheet-navigation .item.active {
+    z-index: 4; // in front on actor image and input fields
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header > button, 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header > .controls {
+    gap: 3px;
+  }
+
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+    color: var(--half-transparent);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .encumbrance .encumbrance-light-bulk-overflow {
+    color: var(--body);
+    text-shadow: unset;
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name .item-image .item-icon {
+    border-radius: 2px;
+  }
+
+  &.actor.sheet .inventory .item-name .item-image {
+    background-color: var(--alt-dark);
+    border: 1px solid var(--gold-brown);
+    border-bottom: 0px;
+    border-left: 0px;
+    &:last-child {
+      border-bottom: 1px solid var(--gold-brown);
+    }
+  }
+
+  &.actor.sheet .inventory .container-held-items .item-name .item-image {
+    border-left: 1px solid var(--gold-brown);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .wealth {
+    margin-bottom: unset;
+    box-shadow: 
+    inset 0 0 0 1px rgb(0 0 0 / 30%), 
+    inset 0 0 0 2px rgb(255 255 255 / 20%),
+    0 2px 4px rgb(0 0 0 / 18%);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .inventory-list {
+    padding-top: 0.5rem;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions {
+    gap: unset;
+
+    > div {
+      padding-top: 0.5rem;
+    }
+  }
+}

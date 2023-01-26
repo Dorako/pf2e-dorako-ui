@@ -1,0 +1,283 @@
+.dorako-ui.dark-theme {
+  h4.rarity {
+    &-common {
+      color: #e1d8cf !important;
+    }
+    &-uncommon {
+      color: #c45500 !important;
+    }
+    &-rare {
+      color: #5362ff !important;
+    }
+    &-unique {
+      color: #e127e1 !important;
+    }
+  }
+
+  .tags .tag.tag_secondary,
+  .tags .tag option.tag_secondary {
+    background-color: var(--tertiary-dark);
+    color: black;
+  }
+
+  .tags .tag.tag_transparent,
+  .tags .tag option.tag_transparent {
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 30%);
+  }
+
+  &.sheet.actor.loot section.sidebar .gm-settings .loot-distribution {
+    gap: 5px;
+    button {
+      @include glass;
+      text-shadow: unset;
+      background-color: var(--tertiary);
+      color: black;
+      &:hover {
+        background-color: var(--tertiary-dark);
+        color: black;
+      }
+    }
+  }
+
+  &.actor.sheet .inventory .item-summary {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
+    color: var(--color-border-light-primary);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.unidentified {
+    border-radius: 3px;
+    background: rgba(245, 234, 245, 0.1333333333);
+    outline: 1px dashed #720073;
+  }
+
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
+      border-image: linear-gradient(90deg, #f1edea00, black) 1;
+    }
+
+  &.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-1,
+  &.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-2 {
+    color: black;
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.biography h3 {
+    color: var(--tertiary);
+    border-color: var(--tertiary);
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.biography .biography-content .editor .editor-content {
+    @include glass;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header {
+    color: var(--tertiary);
+  }
+
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded h4 {
+      color: var(--tertiary);
+    }
+
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary .tag.tag_secondary {
+      background-color: var(--tertiary-dark);
+    }
+
+  .crb-style .details-label {
+    color: var(--tertiary);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id {
+    color: var(--tertiary);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane h1 {
+    color: var(--tertiary);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header button {
+    background-color: var(--tertiary);
+    color: black;
+    text-shadow: unset;
+  }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id, 
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
+      color: var(--tertiary-dark);
+    }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title {
+      color: var(--tertiary-dark);
+    }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill .rollable:hover, 
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .rollable:hover, 
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill .rollable:hover {
+      color: var(--tertiary);
+      text-shadow: unset;
+    }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name h4:hover,
+    &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
+    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .actions-title .action-name h4:hover,
+    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name h4:hover {
+      color: var(--tertiary);
+      text-shadow: unset;
+    }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
+    @include glass;
+    @include quick-transition;
+    background-color: var(--primary);
+    color: var(--color-text-light-highlight);
+    font-family: var(--sans-serif);
+    text-shadow: 0px 0px 3px black;
+
+    &:hover {
+      background-color: var(--primary-light);
+      color: white;
+      text-shadow: 0px 0px 3px black;
+    }
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
+    @include sheet;
+    margin: 5px 0px;
+    border-radius: 8px;
+    background-color: var(--secondary-dark);
+    background-blend-mode: luminosity;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content nav {
+    background: var(--glass-bg-light);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%), 0px -1px 2px rgb(255 255 255 / 30%) inset;
+
+    .tab {
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      color: var(--tertiary-dark);
+
+      &.active {
+        color: var(--tertiary);
+      }
+
+      &:hover {
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      }
+    }
+    &::before,
+    &::after {
+      filter: invert(1);
+    }
+  }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .alt-usage img.alt-usage-icon {
+      filter: invert(1);
+    }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg path,
+    &.actor.sheet a.roll-icon svg path {
+      fill: var(--text-light);
+    }
+
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest.active,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
+    color: var(--tertiary-dark);
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input,
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
+    box-shadow: unset;
+  }
+
+  &.sheet.actor section.sidebar,
+  &.sheet.actor section.sidebar .gm-settings,
+  &.sheet.actor section.sidebar > img.actor-icon,
+  &.sheet.actor section.sidebar .sidebar-meta,
+  &.sheet.actor .sheet-header {
+    border-color: var(--tertiary) !important;
+  }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group {
+      gap: 3px;
+      button {
+        @include glass;
+        @include quick-transition;
+        text-shadow: 0px 0px 3px black;
+  
+          &:not(:disabled) {
+              background: var(--secondary);
+              color: var(--color-text-light-highlight);
+  
+              &.damage {
+                  background: var(--primary);
+                  &:hover {
+                    background: var(--primary-light);
+                    color: white;
+                  }
+              }
+  
+              &:hover {
+                @include glass;
+                text-shadow: 0px 0px 3px black;
+                background: var(--secondary-light);
+                color: white;
+              }
+          }
+      }
+    }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li button.cast-spell,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .blue-button {
+    @include glass;
+    @include quick-transition;
+    text-shadow: 0px 0px 3px black;
+    background: var(--secondary);
+    color: var(--color-text-light-highlight);
+
+    &:hover {
+      @include glass;
+      text-shadow: 0px 0px 3px black;
+      background: var(--secondary-light);
+      color: white;
+    }
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li[data-expended-state="true"] .cast-spell {
+    background: var(--secondary-dark);
+    color: var(--color-disabled);
+
+    &:hover {
+      background: var(--secondary-dark);
+      color: var(--color-disabled);
+    }
+  }
+
+  &.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type="text"],
+  &.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable,
+  &.actor.sheet .crb-style header.char-header .char-level .level input,
+  &.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input,
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input,
+  &.actor.sheet .crb-style aside input[type="number"] {
+    background: unset;
+    box-shadow: unset;
+
+    &:hover,
+    &:focus {
+      background: unset;
+      box-shadow: unset;
+    }
+  }
+}

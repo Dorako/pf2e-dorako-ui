@@ -175,6 +175,11 @@
         "label": "Configure Misc. Settings",
         "hint": "Configure settings related to other Dorako UI functionality",
 
+        "enable-debug-mode": {
+          "name": "Enable debug mode?",
+          "hint": "Adds buttons to toggle dorako-ui styling for windows."
+        },
+
         "send-to-chat": {
           "name": "Add 'Send' button to window header?",
           "hint": "Sends content to chat as if sent via sheet"

@@ -1,94 +1,96 @@
-// Extended dark theme
-Hooks.on("renderDialog", (sheet, html) => {
-  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
-  if (degree !== "extended") return;
-  
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add("dark-theme");
-});
+import {
+  darkThemeIncompatibleApplications,
+  exclusivelyDarkApplications,
+  darkThemeCompatibleApplications,
+  baseThemePf2eSheets,
+} from "./consts.js";
+import { debug } from "./util.js";
 
-// Maximum dark theme
-Hooks.on("renderApplication", (sheet, html) => {
-  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
-  if (degree !== "maximum") return;
-  let html0 = html[0];
-  if (html0.classList.contains("dark-theme-blacklist")) return;
-  html0.classList.add("dorako-theme");
-  html0.classList.add("dark-theme");
-});
-
-
-function markAsDarkTheme(sheet, html) {
+// Supported dark theme
+function markAsDarkTheme(app, html) {
   const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
   if (degree === "none" || degree === "maximum") return;
+  debug(`render${app.constructor.name} | dark-theme-degree: ${degree}`);
   let html0 = html[0];
-  html0.classList.add("dorako-theme");
+  html0.classList.add("dorako-ui");
   html0.classList.add("dark-theme");
 }
 
-function markAsBlacklisted(sheet, html) {
+// Critical hit/fumble deck
+Hooks.on("renderJournalSheetPF2e", (app, html) => {
   const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
-  if (degree !== "maximum") return;
+  if (degree === "none") return;
+  if (!html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
+  debug(`renderDialog | critical-hit-fumble-deck | dark-theme-degree: ${degree}`);
+  html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
+});
+
+// Extended dark theme (Supported + Dialogs)
+Hooks.on("renderDialog", (app, html) => {
+  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+  if (degree !== "extended") return;
+  debug(`renderDialog | dark-theme-degree: ${degree}`);
   let html0 = html[0];
-  html0.classList.add("dark-theme-blacklist");
+  html0.classList.add("dorako-ui");
+  html0.classList.add("dark-theme");
+});
+
+// Extended dark theme support for 'fake' dialogs
+Hooks.on("renderApplication", (app, html, data) => {
+  const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+  if (degree !== "extended") return;
+
+  debug(`renderApplication | dark-theme-degree: ${degree}`);
+  let html0 = html[0];
+  if (html0.classList.contains("dialog")) return;
+  if (!html0.classList.contains("window-app")) return;
+  const fakeDialogPatterns = ["popup", "dialog"];
+  for (const fakeDialogPattern of [...fakeDialogPatterns]) {
+    if (app.constructor.name.toLowerCase().includes(fakeDialogPattern)) {
+      debug(`render${app.constructor.name} | constructor includes '${fakeDialogPattern}' => add .dark-theme`);
+      html0.classList.add("dark-theme");
+      return;
+    }
+  }
+});
+
+// Maximum dark theme (All '.app' applications except blacklisted ones)
+for (const app of ["Application", ...baseThemePf2eSheets]) {
+  Hooks.on("render" + app, (app, html, data) => {
+    const degree = game.settings.get("pf2e-dorako-ui", "theme.dark-theme-degree");
+    if (degree !== "maximum") return;
+    if (darkThemeIncompatibleApplications.includes(app?.constructor?.name)) return;
+    let html0 = html[0];
+    if (!html0.classList.contains("app")) return;
+    debug(`render${app.constructor.name}) | dark-theme-degree: ${degree}`);
+    html0.classList.add("dorako-ui");
+    html0.classList.add("dark-theme");
+  });
 }
 
-function markAsNativelyDarkTheme(sheet, html) {
+function markAsNativelyDarkTheme(app, html) {
   let html0 = html[0];
-  html0.classList.add("dorako-theme");
+  debug(`renderApplication (${app.constructor.name}) | forced dark theme`);
+  html0.classList.add("dorako-ui");
   html0.classList.add("dark-theme");
 }
 
-// Supported dark themes
-const foundryDocuments     = ["CombatTrackerConfig","InvitationLinks","SupportDetails","ToursManagement","WorldConfig","KeybindingsConfig", "FilePicker", "SettingsConfig", "PermissionConfig", "AVConfig", "DefaultTokenConfig", "FontConfig", "FolderConfig", "RollTableConfig", "PlaylistConfig", "CombatantConfig", "MeasuredTemplateConfig", "DocumentOwnershipConfig", "DocumentSheetConfig", "ModuleManagement", "MacroConfig", "Compendium", "CardsConfig", "WallConfig", "AmbientLightConfig", "AmbientSoundConfig", "TileConfig", "DrawingConfig"];
-const pf2eDocuments        = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
-const moduleDocuments      = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
-const dorakoUiDocuments    = ["AvatarSettings","MiscSettings","ThemeSettings","UiUxSettings"]
-const blacklistedDocuments = ["ImagePopout","EnhancedJournal","JournalSheetPF2e"]
-const nativelyDarkDocuments  = ["FABattlemaps", "FADownloader"]
-
-for (const document of [...foundryDocuments, ...pf2eDocuments, ...moduleDocuments, ...dorakoUiDocuments]) {
-  Hooks.on("render"+document, markAsDarkTheme)
+for (const document of [...darkThemeCompatibleApplications]) {
+  Hooks.on("render" + document, markAsDarkTheme);
 }
 
-for (const document of [...blacklistedDocuments]) {
-  Hooks.on("render"+document, markAsBlacklisted)
-}
-
-for (const document of [...nativelyDarkDocuments]) {
-  Hooks.on("render"+document, markAsNativelyDarkTheme)
+for (const document of [...exclusivelyDarkApplications]) {
+  Hooks.on("render" + document, markAsNativelyDarkTheme);
 }
 
 // filepicker-plus natively uses dark mode, but doesn't use its own document type
-Hooks.on("renderFilePicker", (sheet, html) => {
+Hooks.on("renderFilePicker", (app, html) => {
   let html0 = html[0];
   if (!game.modules.get("filepicker-plus")?.active) return;
-  html0.classList.add("dorako-theme");
+  debug(`renderApplication (${app.constructor.name}) | forced dark theme`);
+  html0.classList.add("dorako-ui");
   html0.classList.add("dark-theme");
 });
-
-// function initialize(html){
-//   let openBtn = $(`<a class="dark-mode-toggle" title="Toggle theme"><i class="fas fa-sun"></i>Theme</a>`);
-//   openBtn.click(ev => {
-//       if(localStorage.getItem('dark-mode') == 'true'){
-//           localStorage.setItem('dark-mode', 'false');
-//           $('body').removeClass('dark-theme');
-//           $('a.dark-mode-toggle>i.far.fa-sun').removeClass('far').addClass('fas');
-//       } else {
-//           localStorage.setItem('dark-mode', 'true');
-//           $('body').addClass('dark-theme');
-//           $('a.dark-mode-toggle>i.fas.fa-sun').removeClass('fas').addClass('far');
-//       }
-//   });
-//   html.closest('.app').find('.dark-mode-toggle').remove();
-//   let titleElement = html.closest('.app').find('.window-title');
-//   openBtn.insertAfter(titleElement);
-// }
-
-// Hooks.on('renderDialog', (app, html, data) => {
-//   initialize(html);
-// });
 
 // Hooks.on('init', () => {
 //   if(localStorage.getItem('dark-mode') == 'true'){
@@ -98,23 +100,32 @@ Hooks.on("renderFilePicker", (sheet, html) => {
 //   }
 // });
 
-// function createThemeButton(control, html, data) {
-//     const name = 'theme';
-//     const title = 'theme';
-//     const icon = (localStorage.getItem('dark-mode') === 'true') ? 'far fa-sun' : 'far fa-moon';
-//     const active = false; // localStorage.getItem('dark-mode') === 'true';
-//     const btn = $(`<li class="scene-control toggle ${active ? 'active' : ''}" title="${title}" data-tool="${name}"><i class="${icon}"></i></li>`);
-//     btn.on('click', () => {
-//       if(localStorage.getItem('dark-mode') == 'true'){
-//           localStorage.setItem('dark-mode', 'false');
-//           $('body').removeClass('dark-theme');
-//           $('li.scene-control.toggle>i.far.fa-moon').removeClass('fa-moon').addClass('fa-sun');
-//       } else {
-//           localStorage.setItem('dark-mode', 'true');
-//           $('body').addClass('dark-theme');
-//           $('li.scene-control.toggle>i.far.fa-sun').removeClass('fa-sun').addClass('fa-moon');
-//       }});
-//     html.find('.main-controls').append(btn);
-// }
+function createThemeButton(control, html, data) {
+  const name = "theme";
+  const title = "theme";
+  const icon = localStorage.getItem("dark-mode") === "true" ? "fas fa-sun" : "fas fa-moon";
+  const active = false; // localStorage.getItem('dark-mode') === 'true';
+  const btn = $(
+    `<li class="scene-control toggle ${
+      active ? "active" : ""
+    }" title="${title}" data-tool="${name}"><i class="${icon}"></i></li>`
+  );
+  btn.on("click", () => {
+    const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+    for (const app of apps) {
+      app.render();
+    }
+    // if (localStorage.getItem("dark-mode") == "true") {
+    //   localStorage.setItem("dark-mode", "false");
+    //   $("body").removeClass("dark-theme");
+    //   $("li.scene-control.toggle>i.fas.fa-moon").removeClass("fa-moon").addClass("fa-sun");
+    // } else {
+    //   localStorage.setItem("dark-mode", "true");
+    //   $("body").addClass("dark-theme");
+    //   $("li.scene-control.toggle>i.fas.fa-sun").removeClass("fa-sun").addClass("fa-moon");
+    // }
+  });
+  html.find(".main-controls").append(btn);
+}
 
-// Hooks.on('renderSceneControls', createThemeButton);
+// Hooks.on("renderSceneControls", createThemeButton);
