@@ -65,5 +65,71 @@
   "dorako-ui.text.from": "von",
   "dorako-ui.text.to": "zu",
   "dorako-ui.text.send-to-chat": "Senden",
-  "dorako-ui.settings.use-user-avatar.hint": "Konfigurieren Sie Benutzeravatare, indem Sie mit der rechten Maustaste auf Benutzer im unteren linken Bereich von Foundry klicken."
+  "dorako-ui.settings.use-user-avatar.hint": "Konfigurieren Sie Benutzeravatare, indem Sie mit der rechten Maustaste auf Benutzer im unteren linken Bereich von Foundry klicken.",
+  "pf2e-dorako-ui": {
+    "text": {
+      "secret": "Geheim",
+      "from": "Von",
+      "to": "an",
+      "whisper": "Flüstern",
+      "light": "Hell",
+      "disabled": "Deaktiviert",
+      "dark": "Dunkel",
+      "default": "Standard",
+      "self-roll": "Privater Wurf",
+      "gm-only": "Nur SL",
+      "send-to-chat": "Abschicken"
+    },
+    "settings": {
+      "theme": {
+        "dark-theme-degree": {
+          "name": "Verwende dunkle Darstellung für…",
+          "choice": {
+            "none": "Nicht anwenden",
+            "supported": "Alle guten bekannten Anwendungen",
+            "maximum": "Alles, selbst Dinge die vielleicht kaputt aussehen",
+            "extended": "Alle guten bekannten Anwendungen und alle Dialoge"
+          },
+          "hint": "Verringere den Grad der dunklen Darstellung wenn du Fehler im UI hast"
+        },
+        "name": "Darstellungseinstellungen",
+        "label": "Konfiguriere Einstellungen für die Darstellung",
+        "hint": "Passe Darstellungeinstellungen für diverse Anwendungen und UI-Elemente an",
+        "frosted-glass": {
+          "name": "Verwende Milchglas",
+          "hint": "WARNUNG: Sehr leistungsintensiv. Beispiel: brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
+        },
+        "glass-bg": {
+          "name": "Verwende alternativen Hintergrund für Glass",
+          "hint": "Jedes valide CSS sollte funktionieren"
+        },
+        "npc-sheet-theme": {
+          "name": "NSC-Bogen Darstellung",
+          "hint": "Betrifft die Bögen für Nicht-Spieler-Charaktere"
+        },
+        "chat-theme": {
+          "name": "Chat Darstellung",
+          "hint": "Betrifft alle Chat-Nachrichten",
+          "choice": {
+            "factions": "Spieler hell, SL dunkel"
+          }
+        },
+        "pc-sheet-theme": {
+          "name": "SC-Bogen Darstellung",
+          "hint": "Betrifft die Bögen für Spieler-Charaktere"
+        },
+        "loot-sheet-theme": {
+          "name": "Beutebogen Darstellung",
+          "hint": "Betrifft die Bögen für Beute"
+        },
+        "familiar-sheet-theme": {
+          "name": "Vertrauter-Bogen Darstellung",
+          "hint": "Betrifft die Bögen für Vertraute",
+          "choice": {
+            "dark-red-header": "Dunkel + Rote Kopfzeile"
+          }
+        }
+      }
+    }
+  }
 }
