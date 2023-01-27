@@ -305,6 +305,10 @@
         "hint": "Configurer les paramètres liés à d'autres fonctionnalités de l'interface utilisateur Dorako",
         "skin-combat-carousel": {
           "name": "Activer le style pour le carrousel de combat ?"
+        },
+        "enable-debug-mode": {
+          "name": "Activer le mode débogage ?",
+          "hint": "Ajoute des bouton pour activer le style dorako-ui pour les fenêtres."
         }
       }
     }
