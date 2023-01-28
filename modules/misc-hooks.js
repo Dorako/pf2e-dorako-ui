@@ -1,8 +1,14 @@
 import { baseThemePf2eSheets, MODULE_NAME } from "./consts.js";
+import migrate from "./settings/migrations.js";
 import { i18n, debug, warn } from "./util.js";
 
 Hooks.once("ready", () => {
   debug("ready");
+});
+
+Hooks.once("ready", () => {
+  debug("Attempting to migrate...");
+  migrate();
 });
 
 Hooks.once("ready", () => {
@@ -15,29 +21,57 @@ Hooks.once("ready", () => {
     content: `
       <p>Monk's Little Details has a default-on setting that influences the look of application windows.</p>
       <p>Dorako UI already affects application windows, so it is recommended to disable the setting.</p>
-      <p>If you want to make application windows opaque, Dorako UI has a setting for changing all glassy backgrounds.</p>`,
+      <p>If you want to make application windows opaque, Dorako UI has a setting for changing all glassy backgrounds.</p>
+      <p>Dorako UI can change your settings for you using the following buttons:</p>`,
     buttons: {
       disable: {
-        label: "Disable",
+        label: "Disable MLD setting",
         callback: () => {
           game.settings.set("monks-little-details", "window-css-changes", false);
         },
       },
       opaque: {
-        label: "Disable + make opaque",
+        label: "Disable MLD setting + use Dorako UI opaque background",
         callback: () => {
           game.settings.set("monks-little-details", "window-css-changes", false);
           game.settings.set("pf2e-dorako-ui", "theme.glass-bg", "rgba(40, 40, 40, 1)");
         },
       },
       "dont-ask": {
-        label: "Don't ask again",
+        label: "Do nothing, don't ask again",
         callback: () => {
           game.settings.set("pf2e-dorako-ui", "mld-nag", false);
         },
       },
     },
     default: "disable",
+  }).render(true);
+});
+
+Hooks.once("ready", () => {
+  if (!game.modules.get("token-action-hud")?.active) return;
+  if (game.settings.get("token-action-hud", "style") === "dorakoUI") return;
+  if (!game.settings.get("pf2e-dorako-ui", "tah-nag")) return;
+  new Dialog({
+    title: "Dorako UI - Token Action HUD style",
+    content: `
+      <p>Token Action HUD ships with a setting that matches the style of Dorako UI.</p>
+      <p>Dorako UI can turn the setting on for you (recommended).</p>`,
+    buttons: {
+      enable: {
+        label: "Enable Dorako UI style",
+        callback: () => {
+          game.settings.set("token-action-hud", "style", "dorakoUI");
+        },
+      },
+      "dont-ask": {
+        label: "Do nothing, don't ask again",
+        callback: () => {
+          game.settings.set("pf2e-dorako-ui", "tah-nag", false);
+        },
+      },
+    },
+    default: "enable",
   }).render(true);
 });
 

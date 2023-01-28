@@ -1,5 +1,23 @@
 import { MODULE_NAME } from "./consts.js";
 
+export function getSetting(key, localize = false) {
+  // if(!localize) {
+  //   const setting = CONSTANTS.DEFAULT_SETTINGS[key];
+  //   if (setting?.moduleIntegration && !game.modules.get(setting.moduleIntegration.key)?.active) {
+  //     return setting.default;
+  //   }
+  // }
+
+  // const value = game.settings.get(MODULE_NAME, key);
+  // if (localize) return game.i18n.localize(value);
+  // return value;
+  return game.settings.get(MODULE_NAME, key);
+}
+
+export function setSetting(key, value) {
+  return game.settings.set(MODULE_NAME, key, value);
+}
+
 export function log(message) {
   message = `${MODULE_NAME} | ${message}`;
   console.log(message.replace("<br>", "\n"));

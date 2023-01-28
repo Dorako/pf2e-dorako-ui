@@ -1,0 +1,74 @@
+.dorako-ui.familiar {
+  .main-section {
+    gap: 10px;
+    margin: 0px 10px;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .window-content .skills-content .skills-list .skill-name {
+    @include quick-transition;
+    background: rgba(255, 255, 240, 0.8);
+    border: 1px solid var(--color-border-light-primary);
+    &:hover {
+      box-shadow: none;
+      color: var(--color-text-light-highlight);
+      border: 1px solid var(--gold-brown);
+      background-color: var(--primary-light);
+      box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--primary-light);
+
+      .score {
+        color: var(--tertiary);
+      }
+    }
+  }
+
+  .section-container {
+    @include sheet;
+    box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+    padding: unset;
+    border-radius: 5px;
+
+    .section-header {
+      background: var(--primary);
+      border-radius: 5px 5px 0px 0px;
+      border: none;
+      box-shadow: var(--gold-and-glow);
+    }
+
+    .section-body {
+      border: none;
+    }
+  }
+}
+
+.dorako-ui.dark-theme.familiar {
+  .detail .detail-label {
+    color: var(--tertiary);
+  }
+
+  .window-content .familiar-sheet-header .header-content .details-section .hp-section .value input {
+    box-shadow: none;
+  }
+
+  .window-content .skills-content .skills-list .skill-name {
+    @include glass;
+
+    .score {
+      color: var(--primary-light);
+    }
+
+    &:hover {
+      @include glass;
+      background-color: var(--primary-light);
+
+      .score {
+        color: var(--tertiary);
+      }
+    }
+  }
+}

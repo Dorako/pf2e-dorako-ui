@@ -6,24 +6,24 @@ export const MODULE_NAME = "pf2e-dorako-ui";
 // prettier-ignore
 export const darkThemeCompatibleCoreFoundryApplications = ["CombatTrackerConfig","InvitationLinks","SupportDetails","ToursManagement","WorldConfig","KeybindingsConfig", "FilePicker", "SettingsConfig", "PermissionConfig", "AVConfig", "DefaultTokenConfig", "FontConfig", "FolderConfig", "RollTableConfig", "PlaylistConfig", "CombatantConfig", "MeasuredTemplateConfig", "DocumentOwnershipConfig", "DocumentSheetConfig", "ModuleManagement", "MacroConfig", "Compendium", "CardsConfig", "WallConfig", "AmbientLightConfig", "AmbientSoundConfig", "TileConfig", "DrawingConfig"];
 // prettier-ignore
-export const darkThemeCompatiblePf2eApplications = ["TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
+export const darkThemeCompatiblePf2eApplications = ["NPCSheetPF2e","CharacterSheetPF2e","TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
 // prettier-ignore
 export const darkThemeCompatibleModuleApplications = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
 // prettier-ignore
 export const dorakoUiApplications = ["AvatarSettings","MiscSettings","ThemeSettings","UXSettings"]
 // prettier-ignore
-export const darkThemeIncompatibleApplications = ["FamiliarSheetPF2e","HazardSheetPF2e","TokenActionHUD","CustomHotbar","SceneDarknessAdjuster","EffectsPanel","Notifications", "Pause","TokenHUD","HeadsUpDisplay","Sidebar","HotbarPF2e","SceneNavigation", "SceneControls","PlayerList", "ImagePopout","EnhancedJournal","JournalSheetPF2e"]
+export const darkThemeIncompatibleApplications = ["AbilityBuilderPopup","TokenActionHUD","CustomHotbar","SceneDarknessAdjuster","EffectsPanel","Notifications", "Pause","TokenHUD","HeadsUpDisplay","Sidebar","HotbarPF2e","SceneNavigation", "SceneControls","PlayerList", "ImagePopout","EnhancedJournal","JournalSheetPF2e"]
 // prettier-ignore
 export const exclusivelyDarkApplications = ["FABattlemaps", "FADownloader"]
 
 // prettier-ignore
 export const baseThemeCoreFoundryApplications = ["ImagePopout","ChatMessage","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD", "Sidebar","SceneNavigation"];
 // prettier-ignore
-export const baseThemePf2eApplications = ["JournalSheetPF2e","HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"];
+export const baseThemePf2eApplications = ["HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"]; // "JournalSheetPF2e",
 // prettier-ignore
-export const baseThemePf2eSheets = ["ItemSheet","ActorSheet"];
+export const baseThemePf2eSheets = ["ItemSheet","ActorSheet"]; //"FamiliarSheetPF2e","HazardSheetPF2e"
 // prettier-ignore
-export const baseThemeModuleApplications = ["MonksHotbarExpansion","CustomHotbar", "TokenActionHUD"]
+export const baseThemeModuleApplications = ["CommonToolbar","MonksHotbarExpansion","CustomHotbar", "TokenActionHUD"]
 
 // prettier-ignore
 export const baseThemeApplications = [...baseThemeCoreFoundryApplications,...baseThemePf2eApplications,...baseThemeModuleApplications, ...dorakoUiApplications];

@@ -24,6 +24,20 @@ Hooks.once("init", async () => {
     type: Boolean,
   });
 
+  game.settings.register("pf2e-dorako-ui", "tah-nag", {
+    scope: "client",
+    config: false,
+    default: true,
+    type: Boolean,
+  });
+
+  game.settings.register("pf2e-dorako-ui", "tah-nag", {
+    scope: "world",
+    config: false,
+    default: "0.0.0",
+    type: String,
+  });
+
   game.settings.registerMenu("pf2e-dorako-ui", "theme", {
     name: "pf2e-dorako-ui.settings.theme.name",
     label: "pf2e-dorako-ui.settings.theme.label",
@@ -64,20 +78,15 @@ Hooks.once("init", async () => {
   });
   MiscSettings.registerSettings();
 
-  util.debug("registerSettings");
+  util.debug("registered settings");
 
   injectCSS("dorako-ui");
   injectCSS("reset");
   injectCSS("module-support");
-  injectCSS("npc-sheet");
-  injectCSS("loot-sheet");
   injectCSS("compact-ui");
   injectCSS("chat-bubbles");
 
   const root = document.querySelector(":root").style;
-  if (game.settings.get("pf2e-dorako-ui", "ux.center-hotbar")) {
-    document.getElementById("ui-bottom").classList.add("centered");
-  }
 
   root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
   root.setProperty(
@@ -91,15 +100,13 @@ Hooks.once("init", async () => {
   }
 
   if (game.settings.get("pf2e-dorako-ui", "misc.skin-combat-carousel")) injectCSS("combat-carousel");
-  if (game.settings.get("pf2e-dorako-ui", "ux.compact-ui")) injectCSS("compact-ui");
-
-  const pcSheetSetting = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
-  if (pcSheetSetting == "dark-theme") injectCSS("pc-sheet-dark");
-  const familiarSheetSetting = game.settings.get("pf2e-dorako-ui", "theme.familiar-sheet-theme");
-  if (familiarSheetSetting == "dark" || familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark");
-  if (familiarSheetSetting == "darkRedHeader") injectCSS("familiar-sheet-dark-red-header");
 
   util.debug("injected sheets");
+});
+
+Hooks.once("ready", () => {
+  if (!game.settings.get("pf2e-dorako-ui", "ux.center-hotbar")) return;
+  document.getElementById("ui-bottom").classList.add("centered");
 });
 
 Hooks.once("ready", () => {

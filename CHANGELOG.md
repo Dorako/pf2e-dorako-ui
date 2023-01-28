@@ -1,3 +1,12 @@
+# 1.11.1
+
+- (Fix) Resolved an issue that caused scrollbars to appear on small dialogs
+- (Module) Dark-theme applications have support for PF2e Workbench's new rarity colors
+- (New) Styled Hazard sheets and Familiar sheets - also for dark theme
+- (Refinement) Improved styling for Basic Action Macros
+- (Module) Now notifies users of Token Action HUD that there is a Dorako UI style, if it is not currently selected
+- (New) Attempted to migrate dark-theme settings to a new centralized 'application theme' setting
+
 # 1.11.0
 
 - (Refinement) Spell buttons in light theme chat messages are now colored

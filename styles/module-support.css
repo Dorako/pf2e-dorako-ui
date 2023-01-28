@@ -27,6 +27,10 @@
   --secondary-light: #2836b7;
   --secondary-dark: #0d113a;
   --tertiary: #e9d7a1;
+  --rarity-common: #323232;
+  --rarity-uncommon: #98513d;
+  --rarity-rare: #002664;
+  --rarity-unique: #54166e;
   --alt: #786452;
   --alt-dark: #443730;
   --bg: #f8f4f1;
@@ -69,6 +73,9 @@
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue_header.webp);
+  --banner-top: url(../img/blue_sidebar_top.webp);
+  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
 }
 
 /* ----------------------------------------- */
@@ -337,6 +344,29 @@ div.speaking-as--currentSpeaker + #chat-controls {
 }
 .speaking-as--currentSpeaker--button:hover {
   color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* PF2e Workbench                            */
+/* ----------------------------------------- */
+.xdy-pf2e-workbench-rarity-common {
+  color: var(--rarity-common);
+  border-color: var(--rarity-common);
+}
+
+.xdy-pf2e-workbench-rarity-uncommon {
+  color: var(--rarity-uncommon);
+  border-color: var(--rarity-uncommon);
+}
+
+.xdy-pf2e-workbench-rarity-rare {
+  color: var(--rarity-rare);
+  border-color: var(--rarity-rare);
+}
+
+.xdy-pf2e-workbench-rarity-unique {
+  color: var(--rarity-unique);
+  border-color: var(--rarity-unique);
 }
 
 /* ----------------------------------------- */
@@ -612,6 +642,55 @@ nav.damage-log-nav.tabs .item.active {
   background-size: cover;
   background-blend-mode: luminosity;
   background-color: var(--blind-bg);
+}
+
+/* ----------------------------------------- */
+/* Monk's Common Display                     */
+/* ----------------------------------------- */
+#common-display-toolbar {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+#common-display-toolbar .move-handle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border-radius: 5px 0px 0px 5px;
+}
+#common-display-toolbar .common-display-button.small {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+}
+#common-display-toolbar .common-display-button.small:hover {
+  background-color: var(--primary);
+}
+#common-display-toolbar .common-display-button.toggle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--secondary-dark);
+  text-shadow: 0px 0px 3px black;
+}
+#common-display-toolbar .common-display-button.toggle:hover, #common-display-toolbar .common-display-button.toggle.active {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--secondary-light);
 }
 
 /* ----------------------------------------- */
@@ -977,8 +1056,22 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* Macros                                    */
 /* ----------------------------------------- */
-.window-app .window-content .dialog-content .cond-cont {
+.dorako-ui.window-app .window-content .dialog-content .cond-cont {
   background: none;
+}
+
+.dorako-ui.window-app .action-list button.action-btn img {
+  border-radius: 3px;
+  box-shadow: var(--gold-and-glow);
+}
+.dorako-ui.window-app .action-list button:hover {
+  filter: brightness(1.3);
+}
+.dorako-ui.window-app .action-list button.glow {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  animation: unset;
+  filter: brightness(1.1);
+  color: var(--tertiary);
 }
 
 /* ----------------------------------------- */

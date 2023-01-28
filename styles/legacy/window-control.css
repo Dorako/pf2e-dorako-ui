@@ -37,18 +37,6 @@
     /* box-shadow: none; */
 }
 
-.app.window-app.minimized.hazard {
-    background-color: #1C3531
-}
-
-.app.window-app.minimized.character {
-    background-color: #5D0E08
-}
-
-.app.window-app.minimized.npc {
-    background-color: #422d01
-}
-
 .sheet.journal-entry {
     box-shadow: var(--glassy), 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
     background-color: var(--dorako-bg-current);

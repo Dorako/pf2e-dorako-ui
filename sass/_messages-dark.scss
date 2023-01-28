@@ -41,6 +41,7 @@
     }
     .table-results .table-result img.result-image {
       @include sheet;
+      background-image: var(--sheet-light);
       object-fit: contain;
       border-radius: 3px;
       margin-right: 5px;

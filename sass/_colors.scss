@@ -73,6 +73,11 @@ $adjusted-lower: #cc3311 !default;
   --secondary-dark: #{color.scale($secondary-color, $lightness: -45%)};
   --tertiary: #{$tertiary-color};
 
+  --rarity-common: #{$rarity-common};
+  --rarity-uncommon: #{$rarity-uncommon};
+  --rarity-rare: #{$rarity-rare};
+  --rarity-unique: #{$rarity-unique};
+
   --alt: #{$alt-color};
   --alt-dark: #{$alt-dark};
   --bg: #{$background-color};
@@ -124,4 +129,7 @@ $adjusted-lower: #cc3311 !default;
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue_header.webp);
+  --banner-top: url(../img/blue_sidebar_top.webp);
+  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
 }

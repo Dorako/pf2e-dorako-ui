@@ -1,4 +1,9 @@
-import { baseThemeApplications, baseThemePf2eSheets, premiumModuleJournalSelector } from "./consts.js";
+import {
+  baseThemeApplications,
+  baseThemeCoreFoundryApplications,
+  baseThemePf2eSheets,
+  premiumModuleJournalSelector,
+} from "./consts.js";
 import { debug, warn } from "./util.js";
 
 // Debugging
@@ -7,7 +12,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   console.debug({ app });
 });
 
-// Add .dorako-ui to all whitelisted Applications
+// Add .dorako-ui to all always-styled applications
 for (const app of [...baseThemeApplications]) {
   Hooks.on("render" + app, (app, html, data) => {
     let html0 = html[0];
@@ -17,12 +22,48 @@ for (const app of [...baseThemeApplications]) {
   });
 }
 
+// Add .dorako-ui to all whitelisted Applications
+for (const app of [...baseThemeApplications]) {
+  Hooks.on("render" + app, (app, html, data) => {
+    let html0 = html[0];
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme === "no-theme") {
+      debug(`render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+      return;
+    }
+    debug(`baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
+    console.debug({ app });
+    html0.classList.add("dorako-ui");
+  });
+}
+
+Hooks.on("renderDialog", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "no-theme") {
+    debug(`render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+    return;
+  }
+  debug(`render${app.constructor.name} | pushing .dorako-ui class option`);
+  console.debug({ app });
+  app.options?.classes?.push("dorako-ui");
+  let position = app.position;
+  position.height += 6;
+  position.width += 6;
+  app.setPosition(position);
+  app.render();
+});
+
 // Add .dorako-ui to all .window-app Applications
 Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
   if (!html0.classList.contains("window-app")) return;
   if (html0.matches(premiumModuleJournalSelector)) {
     debug(`render${app.constructor.name} | matches premiumModuleJournalSelector => do not add .dorako-ui`);
+    return;
+  }
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "no-theme") {
+    debug(`render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
     return;
   }
   debug(`render${app.constructor.name} | is .window-app => add .dorako-ui`);
@@ -34,6 +75,11 @@ for (const app of [...baseThemePf2eSheets]) {
   Hooks.on("render" + app, (app, html, data) => {
     let html0 = html[0];
     if (!html0.classList.contains("window-app")) return;
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme === "no-theme") {
+      debug(`render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+      return;
+    }
     debug(`baseThemePf2eSheets | render${app.constructor.name} => add .dorako-ui`);
     console.debug({ app });
     html0.classList.add("dorako-ui");
@@ -46,6 +92,11 @@ Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
   if (html0.classList.contains("dialog")) return;
   if (!html0.classList.contains("window-app")) return;
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "no-theme") {
+    debug(`render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+    return;
+  }
   const fakeDialogPatterns = ["popup", "dialog"];
   for (const fakeDialogPattern of [...fakeDialogPatterns]) {
     if (app.constructor.name.toLowerCase().includes(fakeDialogPattern)) {
@@ -61,12 +112,25 @@ Hooks.on("renderLootSheetPF2e", (app, html, data) => {
   html.find("select").addClass("dorako-ui-skip");
 });
 
+Hooks.on("renderHazardSheetPF2e", (app, html, data) => {
+  html.find("input").addClass("dorako-ui-skip");
+});
+
+Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
+  html.find(".details-input").addClass("dorako-ui-skip");
+});
+
 Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
-  const npcTheme = game.settings.get("pf2e-dorako-ui", "theme.npc-sheet-theme");
-  if (npcTheme === "default") return;
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add(npcTheme);
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "no-theme") {
+    debug(`render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+    return;
+  }
+  // const npcTheme = game.settings.get("pf2e-dorako-ui", "theme.npc-sheet-theme");
+  // if (npcTheme === "default") return;
+  // let html0 = html[0];
+  // html0.classList.add("dorako-theme");
+  // html0.classList.add(npcTheme);
   const acDetails = app.object.attributes.ac.details;
   const collapseAc = acDetails === "";
   const hpDetails = app.object.attributes.hp.details;
@@ -140,10 +204,15 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   }
 });
 
-Hooks.on("renderLootSheetPF2e", (app, html, data) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.loot-sheet-theme");
-  if (theme === "default") return;
-  let html0 = html[0];
-  html0.classList.add("dorako-theme");
-  html0.classList.add(theme);
-});
+// Hooks.on("renderLootSheetPF2e", (app, html, data) => {
+//   const theme = game.settings.get("pf2e-dorako-ui", "theme.loot-sheet-theme");
+//   if (theme === "default") return;
+//   let html0 = html[0];
+//   html0.classList.add("dorako-theme");
+//   html0.classList.add(theme);
+// });
+
+// // Blue player sheet
+// Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
+//   html.closest(".app").find("aside").wrap("<div class='blue'></div>");
+// });

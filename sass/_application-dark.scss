@@ -30,6 +30,16 @@
   }
 }
 
+.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input {
+  button {
+    background-color: var(--primary-dark);
+    border: none;
+  }
+  input {
+    border-radius: 0px 3px 3px 0px;
+  }
+}
+
 .dorako-ui .dorako-ui.dark-theme.window-content {
   @include sheet;
   color: var(--color-text-light-heading);
@@ -150,7 +160,7 @@
   }
 
   input[type="checkbox"],
-  input[type="radio"],
+  // input[type="radio"],
   input[type="text"],
   input[type="number"],
   input[type="password"],

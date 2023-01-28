@@ -39,6 +39,18 @@
       box-shadow: none;
     }
   }
+
+  &.window-app.minimized.hazard {
+    background-color: #1c3531;
+  }
+
+  &.window-app.minimized.character {
+    background-color: #5d0e08;
+  }
+
+  &.window-app.minimized.npc {
+    background-color: #422d01;
+  }
 }
 
 .dorako-ui.app.journal-entry .window-content {
@@ -60,6 +72,8 @@
 
 .dorako-ui.window-app .window-content {
   @include sheet;
+  margin: unset; // messes with box-sizing
+  box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
   border-radius: 0px 0px 3px 3px;
 }
 
@@ -109,10 +123,6 @@
   ol.context-items {
     border: none;
   }
-}
-
-.dialog .dialog-buttons button {
-  line-height: initial;
 }
 
 /* ----------------------------------------- */

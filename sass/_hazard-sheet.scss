@@ -1,0 +1,48 @@
+.dorako-ui.hazard {
+  --hazard: #1c3532;
+
+  form > header {
+    box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .section-container {
+      @include sheet;
+      box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+      padding: unset;
+      border-radius: 5px;
+
+      &:first-child {
+        margin-top: 10px;
+      }
+
+      .section-header {
+        background: var(--hazard);
+        border-radius: 5px 5px 0px 0px;
+        border: none;
+        box-shadow: var(--gold-and-glow);
+      }
+
+      .section-body {
+        border: none;
+      }
+    }
+  }
+}
+
+.dorako-ui.dark-theme.hazard {
+  input {
+    color: var(--color-text-light-primary);
+  }
+  .sidebar {
+    border-right: 1px solid var(--tertiary);
+
+    .health input {
+      color: var(--color-text-light-primary);
+    }
+  }
+}

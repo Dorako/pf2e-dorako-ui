@@ -156,4 +156,46 @@
       padding-top: 0.5rem;
     }
   }
+
+  // Blue PC
+  
+  // &.actor.sheet .crb-style {
+  //   background-image: var(--header), var(--sheet);
+  // }
+
+  // &.actor.sheet .crb-style .blue {
+  //   position: relative;
+  //   height: max-content;
+
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0; left: 0;
+  //     width: 100%; height: 100%;
+  //     margin-left: 4px;
+  //     background-image: var(--banner-top), var(--banner-bottom);
+  //     background-repeat: no-repeat;
+  //     background-position: top center, bottom center;
+  //     background-size: 222px calc(100% - 52px), 222px 52px;
+  //     // filter: grayscale(100%);
+  //   }
+  //   aside {
+  //     background: none;
+  //     position: relative;
+
+  //     .sidebar .armor-class .shield-stats ol li .data-value {
+  //       border-radius: 2px;
+  //       border: 1px solid var(--tertiary);
+  //     }
+
+  //     .sidebar select {
+  //       background-color: var(--secondary);
+  //       border: 1px solid var(--tertiary);
+  //     }
+  //     .sidebar .hitpoints .hp-big .container.current-hp {
+  //       background-color: var(--secondary);
+  //       background-image: linear-gradient(    90deg, var(--secondary-dark) 0%, var(--secondary-light) 50%, var(--secondary-dark) 100%);
+  //    }
+  //   }
+  // }
 }

@@ -14,6 +14,11 @@
     }
   }
 
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+
   .tags .tag.tag_secondary,
   .tags .tag option.tag_secondary {
     background-color: var(--tertiary-dark);

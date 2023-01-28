@@ -41,6 +41,15 @@
   background: none;
   box-shadow: none;
 }
+.dorako-ui.app.window-app.minimized.hazard {
+  background-color: #1c3531;
+}
+.dorako-ui.app.window-app.minimized.character {
+  background-color: #5d0e08;
+}
+.dorako-ui.app.window-app.minimized.npc {
+  background-color: #422d01;
+}
 
 .dorako-ui.app.journal-entry .window-content {
   box-shadow: none;
@@ -70,6 +79,8 @@
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   background-image: var(--sheet);
   background-size: cover;
+  margin: unset;
+  box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
   border-radius: 0px 0px 3px 3px;
 }
 
@@ -117,10 +128,6 @@
 }
 .dorako-ui #context-menu ol.context-items {
   border: none;
-}
-
-.dialog .dialog-buttons button {
-  line-height: initial;
 }
 
 /* ----------------------------------------- */
@@ -180,6 +187,10 @@
   --secondary-light: #2836b7;
   --secondary-dark: #0d113a;
   --tertiary: #e9d7a1;
+  --rarity-common: #323232;
+  --rarity-uncommon: #98513d;
+  --rarity-rare: #002664;
+  --rarity-unique: #54166e;
   --alt: #786452;
   --alt-dark: #443730;
   --bg: #f8f4f1;
@@ -222,6 +233,9 @@
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue_header.webp);
+  --banner-top: url(../img/blue_sidebar_top.webp);
+  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
 }
 
 .combat-sidebar .drag-gap {
@@ -261,7 +275,7 @@ nav#controls.dorako-ui ol.control-tools.main-control {
   margin-right: 8px;
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool,
-nav#controls.dorako-ui ol.control-tools li.scene-control {
+nav#controls.dorako-ui ol.control-tools > li {
   border: none;
   border-radius: 3px;
   background: none;
@@ -273,12 +287,12 @@ nav#controls.dorako-ui ol.control-tools li.scene-control {
   margin-bottom: 8px;
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool img,
-nav#controls.dorako-ui ol.control-tools li.scene-control img {
+nav#controls.dorako-ui ol.control-tools > li img {
   filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool.active, nav#controls.dorako-ui ol.control-tools li.control-tool:hover,
-nav#controls.dorako-ui ol.control-tools li.scene-control.active,
-nav#controls.dorako-ui ol.control-tools li.scene-control:hover {
+nav#controls.dorako-ui ol.control-tools > li.active,
+nav#controls.dorako-ui ol.control-tools > li:hover {
   border: none;
   border-radius: 3px;
   background: none;
@@ -288,12 +302,12 @@ nav#controls.dorako-ui ol.control-tools li.scene-control:hover {
   background-color: var(--primary);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool.active img, nav#controls.dorako-ui ol.control-tools li.control-tool:hover img,
-nav#controls.dorako-ui ol.control-tools li.scene-control.active img,
-nav#controls.dorako-ui ol.control-tools li.scene-control:hover img {
+nav#controls.dorako-ui ol.control-tools > li.active img,
+nav#controls.dorako-ui ol.control-tools > li:hover img {
   filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool.toggle,
-nav#controls.dorako-ui ol.control-tools li.scene-control.toggle {
+nav#controls.dorako-ui ol.control-tools > li.toggle {
   border: none;
   border-radius: 3px;
   background: none;
@@ -302,8 +316,8 @@ nav#controls.dorako-ui ol.control-tools li.scene-control.toggle {
   background-color: var(--secondary-dark);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool.toggle.active, nav#controls.dorako-ui ol.control-tools li.control-tool.toggle:hover,
-nav#controls.dorako-ui ol.control-tools li.scene-control.toggle.active,
-nav#controls.dorako-ui ol.control-tools li.scene-control.toggle:hover {
+nav#controls.dorako-ui ol.control-tools > li.toggle.active,
+nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: none;
   border-radius: 3px;
   background: none;
@@ -1245,6 +1259,12 @@ i[data-pf2-repost] {
   padding-top: 0.5rem;
 }
 
+.dorako-ui.dark-theme {
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+}
 .dorako-ui.dark-theme h4.rarity-common {
   color: #e1d8cf !important;
 }
@@ -1826,6 +1846,10 @@ i[data-pf2-repost] {
   --secondary-light: #2836b7;
   --secondary-dark: #0d113a;
   --tertiary: #e9d7a1;
+  --rarity-common: #323232;
+  --rarity-uncommon: #98513d;
+  --rarity-rare: #002664;
+  --rarity-unique: #54166e;
   --alt: #786452;
   --alt-dark: #443730;
   --bg: #f8f4f1;
@@ -1868,6 +1892,9 @@ i[data-pf2-repost] {
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue_header.webp);
+  --banner-top: url(../img/blue_sidebar_top.webp);
+  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
 }
 
 /* ----------------------------------------- */
@@ -1915,6 +1942,7 @@ i[data-pf2-repost] {
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   background-image: var(--sheet);
   background-size: cover;
+  background-image: var(--sheet-light);
   object-fit: contain;
   border-radius: 3px;
   margin-right: 5px;
@@ -2388,6 +2416,14 @@ i[data-pf2-repost] {
   gap: 5px;
 }
 
+.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input button {
+  background-color: var(--primary-dark);
+  border: none;
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input input {
+  border-radius: 0px 3px 3px 0px;
+}
+
 .dorako-ui .dorako-ui.dark-theme.window-content {
   border: none;
   margin: 2px;
@@ -2499,7 +2535,6 @@ i[data-pf2-repost] {
   color: var(--color-text-light-heading);
 }
 .dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip),
-.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip),
 .dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip),
 .dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip),
 .dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip),
@@ -2516,7 +2551,6 @@ i[data-pf2-repost] {
   accent-color: var(--tertiary);
 }
 .dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):checked,
-.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):checked,
 .dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):checked,
 .dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):checked,
 .dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):checked,
@@ -2528,7 +2562,6 @@ i[data-pf2-repost] {
   filter: none;
 }
 .dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):hover,
-.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):hover,
 .dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):hover,
 .dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):hover,
 .dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):hover,
@@ -2539,7 +2572,6 @@ i[data-pf2-repost] {
   color: var(--color-text-light-highlight);
 }
 .dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):focus,
-.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):focus,
 .dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):focus,
 .dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):focus,
 .dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):focus,
@@ -2550,7 +2582,6 @@ i[data-pf2-repost] {
   color: white;
 }
 .dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):disabled,
-.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):disabled,
 .dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):disabled,
 .dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):disabled,
 .dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):disabled,
@@ -2561,7 +2592,6 @@ i[data-pf2-repost] {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .dorako-ui.dark-theme.window-app input[type=checkbox]:not(.dorako-ui-skip):disabled:hover,
-.dorako-ui.dark-theme.window-app input[type=radio]:not(.dorako-ui-skip):disabled:hover,
 .dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):disabled:hover,
 .dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):disabled:hover,
 .dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):disabled:hover,
@@ -2706,6 +2736,445 @@ i[data-pf2-repost] {
 .dorako-ui.dark-theme [data-visibility]:not([data-visibility=all])[data-visibility=owner] [data-visibility=owner] {
   outline: none;
   padding: initial;
+}
+
+.dorako-ui.hazard {
+  --hazard: #1c3532;
+}
+.dorako-ui.hazard form > header {
+  box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+}
+.dorako-ui.hazard .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dorako-ui.hazard .content .section-container {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+  padding: unset;
+  border-radius: 5px;
+}
+.dorako-ui.hazard .content .section-container:first-child {
+  margin-top: 10px;
+}
+.dorako-ui.hazard .content .section-container .section-header {
+  background: var(--hazard);
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  box-shadow: var(--gold-and-glow);
+}
+.dorako-ui.hazard .content .section-container .section-body {
+  border: none;
+}
+
+.dorako-ui.dark-theme.hazard input {
+  color: var(--color-text-light-primary);
+}
+.dorako-ui.dark-theme.hazard .sidebar {
+  border-right: 1px solid var(--tertiary);
+}
+.dorako-ui.dark-theme.hazard .sidebar .health input {
+  color: var(--color-text-light-primary);
+}
+
+.dorako-ui.familiar .main-section {
+  gap: 10px;
+  margin: 0px 10px;
+}
+.dorako-ui.familiar .main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dorako-ui.familiar .window-content .skills-content .skills-list .skill-name {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background: rgba(255, 255, 240, 0.8);
+  border: 1px solid var(--color-border-light-primary);
+}
+.dorako-ui.familiar .window-content .skills-content .skills-list .skill-name:hover {
+  box-shadow: none;
+  color: var(--color-text-light-highlight);
+  border: 1px solid var(--gold-brown);
+  background-color: var(--primary-light);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--primary-light);
+}
+.dorako-ui.familiar .window-content .skills-content .skills-list .skill-name:hover .score {
+  color: var(--tertiary);
+}
+.dorako-ui.familiar .section-container {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+  padding: unset;
+  border-radius: 5px;
+}
+.dorako-ui.familiar .section-container .section-header {
+  background: var(--primary);
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  box-shadow: var(--gold-and-glow);
+}
+.dorako-ui.familiar .section-container .section-body {
+  border: none;
+}
+
+.dorako-ui.dark-theme.familiar .detail .detail-label {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.familiar .window-content .familiar-sheet-header .header-content .details-section .hp-section .value input {
+  box-shadow: none;
+}
+.dorako-ui.dark-theme.familiar .window-content .skills-content .skills-list .skill-name {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+.dorako-ui.dark-theme.familiar .window-content .skills-content .skills-list .skill-name .score {
+  color: var(--primary-light);
+}
+.dorako-ui.dark-theme.familiar .window-content .skills-content .skills-list .skill-name:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary-light);
+}
+.dorako-ui.dark-theme.familiar .window-content .skills-content .skills-list .skill-name:hover .score {
+  color: var(--tertiary);
+}
+
+.dorako-ui.sheet.pf2e.actor.npc ol.spell-list > li .item-name .item-image .item-icon {
+  border-radius: 3px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sheet-body .tab {
+  padding-top: 2px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet input[type=number]:focus,
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet input[type=number]:hover:not(:disabled),
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet input[type=text]:focus,
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet input[type=text]:hover:not(:disabled) {
+  border: 1px solid var(--tertiary);
+  box-shadow: 0 0 10px var(--primary-light);
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet input.adjustable:not(:focus).adjusted-higher,
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet span.adjustable.adjusted-higher {
+  color: green !important;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet input.adjustable:not(:focus).adjusted-lower,
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet span.adjustable.adjusted-lower {
+  color: red !important;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .top-sections {
+  gap: 5px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  margin: 3px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.initiative select {
+  width: 98%;
+  margin-bottom: 2px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.collapsed {
+  max-height: 20px;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.collapsed .side-bar-section-header {
+  border-radius: 3px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.collapsed:not(.empty):hover {
+  max-height: 1000px;
+  transition: max-height 1s ease-in-out;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.collapsed:not(.empty):hover .side-bar-section-header {
+  border-radius: 3px 3px 0px 0px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.collapsed:not(.empty):hover .side-bar-section-content {
+  display: block;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar-section.collapsed .side-bar-section-content {
+  display: none;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .section-container {
+  box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+  padding: 0px;
+  border-radius: 3px;
+  margin: 3px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: var(--bg);
+  background-image: var(--sheet);
+  background-size: cover;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .section-container .section-header {
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.5);
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .section-container:not(.headerless) .section-body {
+  border-top: 1px solid var(--tertiary);
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .section-container .section-body {
+  border: none;
+  padding: 0;
+  padding: 5px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .section-container.toggles {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:gray;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 0px;
+  font-weight: 500;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-shadow: none;
+  background: none;
+  margin: 5px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .image-container {
+  border: none;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves-section.side-bar-section {
+  display: flex;
+  flex-direction: column;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves-section.side-bar-section.collapsed {
+  max-height: 42px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves-section.side-bar-section.collapsed:hover {
+  max-height: 1000px;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves {
+  margin-top: 0px;
+  width: unset;
+}
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .save-details {
+  font-size: 14px;
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 3px 3px 0px 0px;
+  color: #f5efe0;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.5);
+  margin-top: 0px;
+  height: 20px;
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header.disabled {
+  border-radius: 3px;
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header + .side-bar-section-content {
+  margin: 0px;
+  padding: 0px;
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header input[type=number],
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header input[type=text] {
+  color: #f5efe0;
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header a:hover {
+  text-shadow: 0px 0px 8px var(--tertiary);
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header .inventory-section .inventory-list .item .item-image {
+  border: none;
+  margin: 3px 4px 3px 6px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px #9f725b, inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header .side-bar .image-container,
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header .actions-options .actions-option {
+  cursor: pointer;
+}
+.dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header .actions-options .actions-option:hover {
+  text-shadow: 0 0 10px var(--primary-light);
+  color: var(--primary);
+}
+.dorako-ui.sheet.pf2e.actor.npc .recall-knowledge .section-body button {
+  background: var(--secondary);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 2px hsla(0deg, 0%, 100%, 0.2);
+  border: none;
+  color: white;
+  transition: background 0.15s ease-in-out;
+  margin-top: 3px;
+}
+.dorako-ui.sheet.pf2e.actor.npc .recall-knowledge .section-body button:hover {
+  background: var(--secondary-light);
+}
+
+.pf2e.actor.npc.dorako-ui.npc .npc-sheet .side-bar-section-content {
+  width: 98%;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.side-bar-section-header .pf2e-see-simple-scale-statistics-High-color-primary {
+  color: #3cff00;
+}
+.side-bar-section-header .pf2e-see-simple-scale-statistics-Moderate-color-primary {
+  color: #ffff54;
+}
+.side-bar-section-header .pf2e-see-simple-scale-statistics-Low-color-primary {
+  color: #ff8000;
+}
+.side-bar-section-header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
+  color: #ff0000;
+}
+
+/* Light */
+.dorako-ui.sheet.pf2e.actor.npc.light-theme form .sheet-tabs {
+  background-color: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--color-border-light-primary);
+  border-radius: 3px;
+  margin: 2px;
+  margin-bottom: 0px;
+  z-index: 1;
+}
+
+.dorako-ui.npc.light-theme .tabs .item {
+  color: var(--primary-light);
+}
+.dorako-ui.npc.light-theme .tabs .item a:hover {
+  text-shadow: 0px 0px 10px var(--primary);
+}
+.dorako-ui.npc.light-theme .tabs .item.disabled {
+  color: #ababab;
+}
+.dorako-ui.npc.light-theme .tabs .item.disabled:hover {
+  color: var(--primary-dark);
+  text-shadow: 0px 0px 10px var(--primary-dark);
+}
+.dorako-ui.npc.light-theme .tabs .item.active {
+  color: var(--secondary-light);
+  text-shadow: 0px 0px 10px var(--secondary-light);
+}
+
+/* Dark */
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+}
+
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme .npc-sheet .item.disabled {
+  color: #666666;
+}
+
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme.window-app .npc-sheet .effects .section-body .effects-list .item.unidentified {
+  outline: 1px dashed #720073;
+  background: rgba(245, 234, 245, 0.1333333333);
+}
+
+.sheet.pf2e.actor.npc.dark-theme.window-app input[type=text],
+.sheet.pf2e.actor.npc.dark-theme.window-app input[type=number],
+.sheet.pf2e.actor.npc.dark-theme.window-app input[type=search],
+.sheet.pf2e.actor.npc.dark-theme.window-app input[type=date],
+.sheet.pf2e.actor.npc.dark-theme.window-app input[type=time] {
+  box-shadow: unset;
+}
+
+.sheet.pf2e.actor.npc.dark-theme .recall-knowledge .section-body button {
+  box-shadow: var(--glassy);
+}
+
+.sheet.pf2e.actor.npc.dark-theme .tabs .item.active {
+  color: var(--tertiary);
+}
+
+.actor.pf2e.actor.npc.dark-theme .tabs .item.active,
+.actor.pf2e.actor.npc.dark-theme a:hover {
+  text-shadow: 0 0 10px var(--tertiary);
+}
+
+.sheet.pf2e.actor.npc.dark-theme .window-content {
+  background: none;
+  background-color: #111;
+  background: var(--sheet-dark);
+  background-size: cover;
+}
+
+.sheet.pf2e.actor.npc.dark-theme .tags .tag option.tag_transparent,
+.sheet.pf2e.actor.npc.dark-theme .tags .tag.tag_transparent {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.sheet.pf2e.actor.npc.dark-theme form .notes {
+  text-shadow: none;
+}
+
+.sheet.pf2e.actor.npc.dark-theme .npc-sheet,
+.actor.pf2e.actor.npc.dark-theme .npc-sheet .entries-list .spellcasting-entry .header h4.name input,
+.sheet.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls,
+.sheet.pf2e.actor.npc.dark-theme ol.spell-list > li.spell-level-header,
+.sheet.pf2e.actor.npc.dark-theme .npc-sheet .side-bar-section.initiative select,
+.sheet.pf2e.actor.npc.dark-theme .npc-sheet .notes .notes-text {
+  color: white;
+}
+
+.sheet.pf2e.actor.npc.dark-theme form input[type=number],
+.sheet.pf2e.actor.npc.dark-theme form input[type=text],
+.sheet.pf2e.actor.npc.dark-theme .npc-sheet .notes .details-label {
+  color: #c9c9c9;
+}
+
+.actor.pf2e.actor.npc.dark-theme .npc-sheet .sheet-tabs .disabled.active,
+.actor.pf2e.actor.npc.dark-theme .npc-sheet .sheet-tabs .disabled:hover {
+  color: gray;
+}
+
+.sheet.pf2e.actor.npc.dark-theme .inventory .item-summary,
+.sheet.pf2e.actor.npc.dark-theme ol.spell-list > li .item-summary {
+  background-color: transparent;
+}
+
+.sheet.pf2e.actor.npc.dark-theme .npc-sheet .actions-options .actions-option:hover {
+  text-shadow: 0 0 10px var(--tertiary);
+  color: var(--tertiary);
+}
+
+.actor.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls .item-control.item-carry-type.active,
+.actor.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls .item-control.item-toggle-invest.active,
+.actor.pf2e.actor.npc.dark-theme ol.spell-list > li .item-name h4:hover,
+.actor.pf2e.actor.npc.dark-theme .inventory .item-name h3:hover,
+.actor.pf2e.actor.npc.dark-theme .inventory .item-name h4:hover {
+  color: var(--tertiary);
+}
+
+.sheet.actor.pf2e.actor.npc.dark-theme .npc-sheet .section-container.toggles {
+  border-image-source: var(--ornamentation);
+}
+
+.sheet.actor.pf2e.actor.npc.dark-theme .npc-sheet .side-bar-section:not(.save-details),
+.sheet.actor.pf2e.actor.npc.dark-theme .npc-sheet .section-container {
+  background: var(--sheet-dark);
+  background-size: cover;
 }
 
 /*# sourceMappingURL=dorako-ui.css.map */

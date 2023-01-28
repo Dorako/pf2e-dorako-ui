@@ -19,14 +19,13 @@
         "label": "Configure Theme Settings",
         "hint": "Change theme settings for various applications and UI elements",
 
-        "dark-theme-degree": {
-          "name": "Use dark theme for…",
-          "hint": "Decrease the degree of dark theme if you are encountering broken UI",
+        "application-theme": {
+          "name": "Application theme",
+          "hint": "Affects rendered application windows",
           "choice": {
-            "none": "No applications",
-            "supported": "All known good applications",
-            "extended": "All known good applications, and all dialogs",
-            "maximum": "Everything, even potentially breaky stuff"
+            "no-theme": "No theme",
+            "light-theme": "Light Dorako UI",
+            "dark-theme": "Dark Dorako UI"
           }
         },
         "frosted-glass": {
