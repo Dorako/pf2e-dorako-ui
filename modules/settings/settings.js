@@ -31,7 +31,7 @@ Hooks.once("init", async () => {
     type: Boolean,
   });
 
-  game.settings.register("pf2e-dorako-ui", "tah-nag", {
+  game.settings.register("pf2e-dorako-ui", "migration-version", {
     scope: "world",
     config: false,
     default: "0.0.0",

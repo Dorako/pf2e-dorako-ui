@@ -66,6 +66,10 @@
   margin-left: 4px;
   height: calc(100% - 4px);
 }
+.dorako-ui.app.journal-entry.pf2e-av .journal-entry-content.flexcol {
+  color: black;
+  background: url(../../../modules/pf2e-abomination-vaults/styles/assets/parchment-av.jpg) repeat;
+}
 
 .dorako-ui.window-app .window-header {
   text-shadow: 0px 0px 3px black;
@@ -999,16 +1003,16 @@ i[data-pf2-repost] {
   text-decoration: unset;
 }
 
-.dorako-ui form button {
+.dorako-ui form button:not(.pm-dropdown) {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   border: 1px solid var(--color-border-light-primary);
 }
-.dorako-ui form button:hover {
+.dorako-ui form button:not(.pm-dropdown):hover {
   background-color: var(--primary-light);
   color: var(--color-text-light-highlight);
   border: 1px solid var(--tertiary);
 }
-.dorako-ui form button:active {
+.dorako-ui form button:not(.pm-dropdown):active {
   background-color: var(--primary-light);
   color: white;
   border: 1px solid var(--gold-brown);
@@ -1223,7 +1227,7 @@ i[data-pf2-repost] {
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header > button, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content h3.header > .controls {
   gap: 3px;
 }
-.dorako-ui.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+.dorako-ui.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type:not(.active) {
   color: var(--half-transparent);
 }
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.inventory .encumbrance .encumbrance-light-bulk-overflow {
@@ -1671,6 +1675,18 @@ i[data-pf2-repost] {
 .dorako-ui.message.chat-message .flavor-text hr {
   display: none;
 }
+.dorako-ui.message.chat-message .persistent-damage-recovery hr {
+  display: none;
+}
+.dorako-ui.message.chat-message .persistent-damage-recovery button {
+  margin-top: 3px;
+}
+.dorako-ui.message.chat-message .persistent-damage-recovery button:hover {
+  text-shadow: 0px 0px 3px black;
+  background-color: var(--primary-light);
+  color: white;
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--primary);
+}
 .dorako-ui.message.chat-message .message-content {
   margin-top: 5px;
 }
@@ -1928,6 +1944,24 @@ i[data-pf2-repost] {
 }
 .dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-setInitiative-btn:hover,
 .dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-fullDamage-btn:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.message.chat-message .persistent-damage-recovery hr {
+  display: none;
+}
+.dorako-ui.dark-theme.message.chat-message .persistent-damage-recovery button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+  margin-top: 5px;
+}
+.dorako-ui.dark-theme.message.chat-message .persistent-damage-recovery button:hover {
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
 }
@@ -2492,6 +2526,11 @@ i[data-pf2-repost] {
   color: var(--color-text-light-heading);
 }
 .dorako-ui.dark-theme.window-app button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
   box-shadow: var(--glassy);

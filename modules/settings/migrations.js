@@ -1,10 +1,12 @@
 import { MODULE_NAME } from "../consts.js";
-import { debug } from "../util.js";
+import { debug, getSetting, setSetting } from "../util.js";
 
 let oldSettings;
 export default async function migrate() {
   const oldWorldSettings = game.settings.storage.get("world").filter((setting) => setting.key.includes(MODULE_NAME));
-  const oldClientSettings = game.settings.storage.get("client").filter((setting) => setting.key.includes(MODULE_NAME));
+  const oldClientSettings = Object.keys(game.settings.storage.get("client")).filter((setting) =>
+    setting.includes(MODULE_NAME)
+  );
 
   oldSettings = [...oldWorldSettings, ...oldClientSettings];
 
@@ -31,27 +33,29 @@ function findOldSettingValue(oldSettingKey) {
 const migrations = {
   "1.11.1": async () => {
     // Migrate dark-theme degree -> application-theme
-    if (findOldSettingValue("theme.dark-theme-degree")) {
-      if (getSetting("theme.dark-theme-degree") === "supported" || getSetting("theme.dark-theme-degree") === "extended")
+    const oldDarkThemeDegree = findOldSettingValue("theme.dark-theme-degree");
+    if (oldDarkThemeDegree) {
+      if (oldDarkThemeDegree === "supported" || oldDarkThemeDegree === "extended")
         await setSetting("theme.application-theme", "dark-theme");
-      if (getSetting("theme.dark-theme-degree") === "none") await setSetting("theme.application-theme", "light-theme");
+      if (oldDarkThemeDegree === "none") await setSetting("theme.application-theme", "light-theme");
     }
 
     // Migrate individual dark theme sheets -> application-theme
-    if (findOldSettingValue("theme.pc-sheet-theme")) {
-      if (getSetting("theme.pc-sheet-theme") === "dark-theme")
-        await setSetting("theme.application-theme", "dark-theme");
+    const oldPcSheetTheme = findOldSettingValue("theme.pc-sheet-theme");
+    if (oldPcSheetTheme) {
+      if (oldPcSheetTheme === "dark-theme") await setSetting("theme.application-theme", "dark-theme");
     }
-    if (findOldSettingValue("theme.npc-sheet-theme")) {
-      if (getSetting("theme.npc-sheet-theme") === "dark-theme")
-        await setSetting("theme.application-theme", "dark-theme");
+    const oldNpcSheetTheme = findOldSettingValue("theme.npc-sheet-theme");
+    if (oldNpcSheetTheme) {
+      if (oldNpcSheetTheme === "dark-theme") await setSetting("theme.application-theme", "dark-theme");
     }
-    if (findOldSettingValue("theme.loot-sheet-theme")) {
-      if (getSetting("theme.loot-sheet-theme") === "dark-theme")
-        await setSetting("theme.application-theme", "dark-theme");
+    const oldLootSheetTheme = findOldSettingValue("theme.loot-sheet-theme");
+    if (oldLootSheetTheme) {
+      if (oldLootSheetTheme === "dark-theme") await setSetting("theme.application-theme", "dark-theme");
     }
-    if (findOldSettingValue("theme.familiar-sheet-theme")) {
-      if (getSetting("theme.loot-sheet-theme") === "dark" || getSetting("theme.loot-sheet-theme") === "darkRedHeader")
+    const oldFamiliarSheetTheme = findOldSettingValue("theme.familiar-sheet-theme");
+    if (oldFamiliarSheetTheme) {
+      if (oldFamiliarSheetTheme === "dark" || oldFamiliarSheetTheme === "darkRedHeader")
         await setSetting("theme.application-theme", "dark-theme");
     }
   },

@@ -291,6 +291,12 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   width: 100%;
 }
 
+.dorako-ui.chat-message {
+  hr.pf2e-td {
+    display: none !important; // inline style overwrite
+  }
+}
+
 .dorako-ui.dark-theme.chat-message {
   hr.pf2e-td {
     display: none !important; // inline style overwrite
@@ -764,7 +770,7 @@ nav.damage-log-nav.tabs {
 /* ----------------------------------------- */
 
 #chat-log .message.round-marker {
-  border-bottom: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--tertiary) !important; // is 'important' in source
 }
 
 #darkness-progress > div > div {

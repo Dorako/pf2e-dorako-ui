@@ -1,3 +1,12 @@
+# 1.11.2
+
+- (Fix) Made the TAH-nag actually go away forever if you tell it to
+- (Fix) Limited scope of styling to avoid affecting prose-mirror dropdowns, to resolve an issue where the dropdowns because illegible on hover
+- (New) Loot sheet now has dark theme compatibility
+- (Fix) Maybe fixed migrations, we'll see
+- (Fix) Made sure the module doesn't overwrite the background used in journals of the Abomination Vaults premium module v2
+- (Maintenance) Extended the styling to affect the system version of persistent damage, not just the module version
+
 # 1.11.1
 
 - (Fix) Resolved an issue that caused scrollbars to appear on small dialogs

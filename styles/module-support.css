@@ -384,6 +384,10 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   width: 100%;
 }
 
+.dorako-ui.chat-message hr.pf2e-td {
+  display: none !important;
+}
+
 .dorako-ui.dark-theme.chat-message hr.pf2e-td {
   display: none !important;
 }
@@ -870,7 +874,7 @@ nav.damage-log-nav.tabs .item.active {
 /* Monk's little details                     */
 /* ----------------------------------------- */
 #chat-log .message.round-marker {
-  border-bottom: 1px solid var(--tertiary);
+  border-bottom: 1px solid var(--tertiary) !important;
 }
 
 #darkness-progress > div > div {

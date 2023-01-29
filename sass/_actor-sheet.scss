@@ -110,7 +110,7 @@
     gap: 3px;
   }
 
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type:not(.active) {
     color: var(--half-transparent);
   }
 
@@ -158,7 +158,7 @@
   }
 
   // Blue PC
-  
+
   // &.actor.sheet .crb-style {
   //   background-image: var(--header), var(--sheet);
   // }

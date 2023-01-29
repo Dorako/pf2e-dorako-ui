@@ -34,6 +34,24 @@
     }
   }
 
+  .persistent-damage-recovery {
+    hr {
+      display: none;
+    }
+
+    button {
+      @include glass;
+      @include quick-transition;
+      color: var(--color-text-light-heading);
+      text-shadow: 0px 0px 3px black;
+      margin-top: 5px;
+      &:hover {
+        background-color: var(--primary);
+        color: var(--color-text-light-highlight);
+      }
+    }
+  }
+
   .table-draw {
     .table-description {
       color: var(--color-text-light-highlight);

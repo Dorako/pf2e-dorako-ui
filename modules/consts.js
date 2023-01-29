@@ -21,7 +21,7 @@ export const baseThemeCoreFoundryApplications = ["ImagePopout","ChatMessage","Sc
 // prettier-ignore
 export const baseThemePf2eApplications = ["HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"]; // "JournalSheetPF2e",
 // prettier-ignore
-export const baseThemePf2eSheets = ["ItemSheet","ActorSheet"]; //"FamiliarSheetPF2e","HazardSheetPF2e"
+export const baseThemePf2eSheets = ["ItemSheet","ActorSheet","LootSheetPF2e"]; //"FamiliarSheetPF2e","HazardSheetPF2e"
 // prettier-ignore
 export const baseThemeModuleApplications = ["CommonToolbar","MonksHotbarExpansion","CustomHotbar", "TokenActionHUD"]
 

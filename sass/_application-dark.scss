@@ -110,6 +110,7 @@
     color: var(--color-text-light-heading);
 
     &:hover {
+      @include glass; // re-included glass to set potential borders to none etc.
       background-color: var(--primary);
       color: var(--color-text-light-highlight);
       box-shadow: var(--glassy); // Overrides prosemirror, possibly other stuff

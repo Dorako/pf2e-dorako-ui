@@ -53,15 +53,22 @@
   }
 }
 
-.dorako-ui.app.journal-entry .window-content {
-  box-shadow: none;
-  margin: 0px;
-  background: none;
+.dorako-ui.app.journal-entry {
+  .window-content {
+    box-shadow: none;
+    margin: 0px;
+    background: none;
 
-  .journal-entry-content {
-    @include sheet;
-    margin-left: 4px;
-    height: calc(100% - 4px);
+    .journal-entry-content {
+      @include sheet;
+      margin-left: 4px;
+      height: calc(100% - 4px);
+    }
+  }
+
+  &.pf2e-av .journal-entry-content.flexcol {
+    color: black;
+    background: url(../../../modules/pf2e-abomination-vaults/styles/assets/parchment-av.jpg) repeat;
   }
 }
 
