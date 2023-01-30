@@ -196,6 +196,15 @@
         "frosted-glass": {
           "name": "Utilisez le verre dépoli",
           "hint": "AVERTISSEMENT : Très gourmand en performances. Exemple : brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
+        },
+        "application-theme": {
+          "hint": "Affecte les fenêtres d'application rendues",
+          "choice": {
+            "no-theme": "Pas de thème",
+            "light-theme": "Dorako UI clair",
+            "dark-theme": "Dorako UI sombre"
+          },
+          "name": "Thème de l'application"
         }
       },
       "avatar": {
@@ -305,6 +314,10 @@
         "hint": "Configurer les paramètres liés à d'autres fonctionnalités de l'interface utilisateur Dorako",
         "skin-combat-carousel": {
           "name": "Activer le style pour le carrousel de combat ?"
+        },
+        "enable-debug-mode": {
+          "name": "Activer le mode débogage ?",
+          "hint": "Ajoute des bouton pour activer le style dorako-ui pour les fenêtres."
         }
       }
     }
