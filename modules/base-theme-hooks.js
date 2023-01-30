@@ -117,7 +117,7 @@ Hooks.on("renderHazardSheetPF2e", (app, html, data) => {
 });
 
 Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
-  html.find(".details-input").addClass("dorako-ui-skip");
+  // html.find(".details-input").addClass("dorako-ui-skip");
 });
 
 Hooks.on("renderNPCSheetPF2e", (app, html, data) => {

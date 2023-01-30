@@ -30,6 +30,22 @@
   }
 }
 
+// Sidebar "grey"
+// prettier-ignore
+.dorako-ui.dark-theme {
+  &.pf2e.item.sheet form article.sheet-content > section.sheet-sidebar .item-summary,
+  &.pf2e.item.sheet form article.sheet-content > section.sheet-sidebar .inventory-details label,
+  &.pf2e.item.sheet form article.sheet-content > section.sheet-sidebar .feat-details label {
+    color: var(--color-text-light-heading);
+  }
+}
+
+// .dorako-ui.dark-theme {
+//   #tinymce {
+//     color: var(--color-text-light-heading);
+//   }
+// }
+
 .dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input {
   button {
     background-color: var(--primary-dark);
@@ -103,7 +119,7 @@
     border: none;
   }
 
-  button {
+  button:not(.tox-tbtn) {
     @include glass;
     @include quick-transition;
     text-shadow: 0 0 3px black;

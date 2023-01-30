@@ -12,7 +12,7 @@
       "flags": {}
     }
   ],
-  "version": "1.11.2",
+  "version": "1.11.3",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
@@ -66,6 +66,6 @@
     "modules/message-hooks.js",
     "modules/consts.js"
   ],
-  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.11.2.zip",
+  "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.11.3.zip",
   "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json"
 }

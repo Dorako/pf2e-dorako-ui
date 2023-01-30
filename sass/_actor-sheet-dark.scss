@@ -52,6 +52,12 @@
     color: var(--color-border-light-primary);
   }
 
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score input {
+    background: rgba(211, 204, 188, 0.2);
+    box-shadow: none;
+  }
+
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.unidentified {
     border-radius: 3px;
     background: rgba(245, 234, 245, 0.1333333333);

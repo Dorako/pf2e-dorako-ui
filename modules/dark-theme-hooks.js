@@ -62,7 +62,7 @@ for (const app of ["Application", ...baseThemePf2eSheets]) {
     if (darkThemeIncompatibleApplications.includes(app?.constructor?.name)) return;
     let html0 = html[0];
     if (!html0.classList.contains("app")) return;
-    debug(`render${app.constructor.name}) | theme: ${theme}`);
+    debug(`render${app.constructor.name} | theme: ${theme}`);
     html0.classList.add("dorako-ui");
     html0.classList.add("dark-theme");
   });

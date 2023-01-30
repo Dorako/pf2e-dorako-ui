@@ -1,5 +1,10 @@
 @import "mixins";
 
+.dorako-ui .tox:not(.tox-tinymce-inline) .tox-editor-header {
+  background: none;
+  box-shadow: none;
+}
+
 /* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
