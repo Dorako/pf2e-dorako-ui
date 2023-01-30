@@ -1,3 +1,9 @@
+# 1.11.3
+
+- (Fix) Fixed illegible text in dark theme windows with sidebars
+- (Fix) Fixed illegible buttons in TinyMCE journal sheets. Both default and TinyMCE journal editors are now excluded from dark theme.
+- (Fix) Fixed a regression on dark theme PC sheets where input fields were illegible.
+
 # 1.11.2
 
 - (Fix) Made the TAH-nag actually go away forever if you tell it to
