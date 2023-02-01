@@ -1,0 +1,74 @@
+/* ----------------------------------------- */
+/* Dice Tray                                 */
+/* ----------------------------------------- */
+
+.dice-tray {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .dice-tray__stacked {
+    gap: 3px;
+  }
+
+  input[type="text"] {
+    @include glass;
+    @include quick-transition;
+    background-color: var(--glass-bg-light);
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-heading);
+
+    &:hover {
+      @include glass;
+      background-color: var(--secondary);
+      color: var(--color-text-light-highlight);
+    }
+
+    &:focus {
+      @include glass;
+      background-color: var(--secondary-light);
+      color: white;
+    }
+  }
+
+  button {
+    @include glass;
+    @include quick-transition;
+    background-color: var(--glass-bg-light);
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-heading);
+
+    svg {
+      filter: drop-shadow(0px 0px 3px black);
+      * {
+        fill: var(--color-text-light-heading);
+      }
+    }
+
+    &.dice-tray__advantage:hover,
+    &.dice-tray__disadvantage:hover,
+    &.dice-tray__roll:hover,
+    &.dice-tray__math--add:hover,
+    &.dice-tray__math--sub:hover,
+    &:hover {
+      @include glass;
+      background-color: var(--primary);
+      color: var(--color-text-light-highlight);
+
+      svg {
+        filter: drop-shadow(0px 0px 3px black);
+        * {
+          fill: var(--color-text-light-highlight);
+        }
+      }
+    }
+  }
+  .flexrow {
+    margin-left: 6px;
+    margin-right: 6px;
+    gap: 5px;
+  }
+  > * {
+    margin: 0px;
+  }
+}

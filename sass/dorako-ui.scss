@@ -1,3 +1,9 @@
-@import "app-ui", "colors", "combat", "controls", "effects-panel", "hotbar", "mixins", "navigation", "notifications",
-  "sidebar", "token-hud", "misc", "forms", "actor-sheet", "actor-sheet-dark", "messages", "messages-dark",
-  "application-dark", "globals-dark", "hazard-sheet", "familiar-sheet", "npc-sheet";
+@import "mixins";
+@import "foundry";
+@import "module";
+@import "pf2e";
+@import "colors";
+@import "messages";
+@import "messages-dark";
+@import "reset";
+@import "misc";

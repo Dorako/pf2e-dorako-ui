@@ -1,0 +1,314 @@
+/* ----------------------------------------- */
+/* Monk's Common Display                     */
+/* ----------------------------------------- */
+
+#common-display-toolbar {
+  @include glass;
+  .move-handle {
+    @include glass;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .common-display-button.small {
+    @include glass;
+    @include quick-transition;
+    text-shadow: 0px 0px 3px black;
+
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+
+  .common-display-button.toggle {
+    @include glass;
+    @include quick-transition;
+    background-color: var(--secondary-dark);
+    text-shadow: 0px 0px 3px black;
+    &:hover,
+    &.active {
+      @include glass;
+      background-color: var(--secondary-light);
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Monk's Player Settings                    */
+/* ----------------------------------------- */
+
+#client-settings.dorako-ui.dark-theme #mps-view-group {
+  border-bottom: 1px solid var(--tertiary);
+}
+
+/* ----------------------------------------- */
+/* Monk's Enhanced Journal                   */
+/* ----------------------------------------- */
+
+.monks-enhanced-journal.window-app .window-content {
+  padding: 0px;
+}
+
+/* ----------------------------------------- */
+/* Monk's tokenbar                           */
+/* ----------------------------------------- */
+#tokenbar {
+  gap: 3px;
+
+  .token-list {
+    gap: 5px;
+    border: none;
+  }
+
+  .bar-controls {
+    @include glass;
+    div#tokenbar-move-handle {
+      @include glass;
+      border-radius: 5px 0px 0px 5px;
+      margin-right: 2px;
+    }
+  }
+  .token {
+    @include glass;
+    @include quick-transition;
+
+    flex: 0 0 52px; // Same size as macros
+
+    .token-stats {
+      background: none;
+      text-shadow: 0px 0px 3px black;
+    }
+    &:hover {
+      background-color: var(--primary);
+      .token-icon {
+        // box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+        box-shadow: none;
+        filter: drop-shadow(0px 0px 5px var(--tertiary));
+      }
+    }
+
+    .token-icon {
+      box-shadow: none;
+      border-radius: 3px;
+    }
+    .tooltip {
+      @include glass;
+      backdrop-filter: blur(5px);
+    }
+  }
+}
+
+.monks-tokenbar.chat-card .card-header h3:hover {
+  text-shadow: unset;
+}
+
+.monks-tokenbar .sheet .items-list .items-header {
+  border: none;
+}
+
+#tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i,
+#tokenbar[movement="free"] #movement-free:not(.disabled) i,
+#tokenbar[movement="none"] #movement-none:not(.disabled) i,
+#tokenbar[movement="combat"] #movement-combat:not(.disabled) i {
+  @include quick-transition;
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  text-shadow: 0px 0px 3px black;
+  background-color: var(--primary-light);
+  color: var(--color-text-light-highlight);
+}
+
+#tokenbar:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i,
+#tokenbar[movement="free"]:not(.hidectrl) #movement-free:not(.disabled):hover i,
+#tokenbar[movement="none"]:not(.hidectrl) #movement-none:not(.disabled):hover i,
+#tokenbar[movement="combat"]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
+  color: var(--color-text-light-highlight);
+}
+
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list .item .item-name,
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list,
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-header h3,
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list .items-header h3 {
+  color: var(--color-text-light-1);
+  font-family: unset;
+}
+
+.dorako-ui.dark-theme {
+  // hack to remove the 1 in 1dX to make space for scaled font sizes
+  &#requestsavingthrow .request-grid.dice-group div {
+    &::first-letter {
+      font-size: 0rem;
+    }
+  }
+  &#requestsavingthrow .request-grid {
+    gap: 5px;
+    margin: 5px 10px;
+    text-align: center;
+    &.dice-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    > div {
+      @include glass;
+      @include quick-transition;
+      color: var(--color-text-light-heading);
+      text-shadow: 0px 0px 3px black;
+      padding: 2px 6px;
+
+      background-color: var(--secondary-dark);
+      &:hover {
+        background-color: var(--secondary-light);
+        color: white;
+      }
+      &.selected {
+        background-color: var(--secondary-light);
+        color: white;
+      }
+    }
+  }
+
+  .monks-tokenbar .sheet .items-list .item {
+    border: none;
+    margin-bottom: 2px;
+  }
+
+  .monks-tokenbar .dialog-buttons {
+    gap: 5px;
+  }
+
+  .monks-tokenbar.chat-card {
+    .card-header {
+      border: none;
+    }
+    .card-footer {
+      border: none;
+
+      .flexrow {
+        gap: 5px;
+        .footer-button {
+          @include glass;
+          @include quick-transition;
+          color: var(--color-text-light-heading);
+          text-shadow: 0px 0px 3px black;
+
+          &:hover {
+            color: var(--color-text-light-highlight);
+            background-color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------------------------------------- */
+/* Monk's little details                     */
+/* ----------------------------------------- */
+
+#chat-log .message.round-marker {
+  border-bottom: 1px solid var(--tertiary) !important; // is 'important' in source
+}
+
+#darkness-progress > div > div {
+  background-color: var(--primary-light);
+}
+
+#token-hud.monks-little-details .status-effects .effect-control,
+#token-hud.monks-little-details .status-effects .pf2e-effect-control {
+  border-radius: unset;
+}
+
+#token-hud.placeable-hud.monks-little-details .status-effects {
+  grid-template-columns: 90px 90px 90px 90px !important;
+  background: none;
+
+  .effect-control {
+    border: none;
+    opacity: unset;
+
+    &.active {
+      border: none;
+      opacity: 1;
+      background-color: var(--secondary-light);
+
+      .effect-name {
+        color: white;
+        opacity: unset;
+      }
+    }
+
+    img {
+      border-radius: 4px 0px 0px 4px;
+
+      &::before {
+        @include quick-transition;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 1px var(--tertiary);
+        border-radius: 4px 0px 0px 4px;
+        overflow: hidden;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .effect-name {
+    opacity: unset;
+    padding-right: 4px;
+    color: var(--color-text-light-heading);
+    font-size: var(--font-size-12);
+  }
+}
+
+/* ----------------------------------------- */
+/* Monk's hotbar expansion                   */
+/* ----------------------------------------- */
+
+#hotbar .action-bar.no-arrows + .bar-controls span.page-number,
+#hotbar .hotbar-page .hotbar-page-row .bar-controls span.page-number,
+#hotbar .hotbar-page .hotbar-page-row .bar-controls i {
+  line-height: 52px;
+}
+
+#hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
+  color: var(--tertiary-dark);
+}
+
+[data-tooltip="MonksHotbarExpansion.clear-row"] {
+  @include quick-transition;
+  &:hover {
+    i {
+      text-shadow: 0 0 8px var(--color-shadow-primary);
+    }
+  }
+}
+
+.hotbar-page .page-number {
+  @include quick-transition;
+  &:hover {
+    text-shadow: 0 0 8px var(--color-shadow-primary);
+  }
+}
+
+#hotbar.dorako-ui {
+  width: 647px;
+
+  .hotbar-page {
+    overflow: visible;
+    gap: 4px;
+    bottom: 56px;
+
+    .macro-list {
+      gap: 7px;
+      border: none;
+    }
+
+    .action-bar {
+      margin: 0px 5px 0px 3px;
+    }
+  }
+}

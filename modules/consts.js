@@ -17,7 +17,7 @@ export const darkThemeIncompatibleApplications = ["JournalTextTinyMCESheetPF2e",
 export const exclusivelyDarkApplications = ["FABattlemaps", "FADownloader"]
 
 // prettier-ignore
-export const baseThemeCoreFoundryApplications = ["ImagePopout","ChatMessage","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD", "Sidebar","SceneNavigation"];
+export const baseThemeCoreFoundryApplications = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD", "Sidebar","SceneNavigation"];
 // prettier-ignore
 export const baseThemePf2eApplications = ["HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"]; // "JournalSheetPF2e",
 // prettier-ignore

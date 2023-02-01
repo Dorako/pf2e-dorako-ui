@@ -1,0 +1,35 @@
+/* ----------------------------------------- */
+/* Damage Log                                */
+/* ----------------------------------------- */
+
+nav.damage-log-nav.tabs {
+  flex: 0;
+  margin: 0px 2px;
+  box-shadow: none;
+  border: none;
+
+  .item {
+    @include quick-transition;
+    margin: 2px;
+    color: white;
+    border-radius: 3px;
+    margin: 2px;
+    border: none;
+
+    &:hover {
+      box-shadow: var(--gold-and-glow);
+      background-color: var(--secondary);
+      text-shadow: 0px 0px 3px black;
+      border: none;
+      border-radius: 3px;
+    }
+
+    &.active {
+      box-shadow: var(--gold-and-glow);
+      background-color: var(--secondary-light);
+      text-shadow: 0px 0px 3px black;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/* ----------------------------------------- */
+/* Macros                                    */
+/* ----------------------------------------- */
+
+// Condition Manager
+.dorako-ui.window-app .window-content .dialog-content .cond-cont {
+  background: none;
+}
+
+// Basic Action Macros
+.dorako-ui.window-app .action-list button {
+  &.action-btn img {
+    border-radius: 3px;
+    box-shadow: var(--gold-and-glow);
+  }
+  &:hover {
+    filter: brightness(1.3);
+  }
+  &.glow {
+    box-shadow: var(--gold-and-glow), var(--glassy);
+    animation: unset;
+    filter: brightness(1.1);
+    color: var(--tertiary);
+  }
+}

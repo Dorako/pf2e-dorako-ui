@@ -1,0 +1,8 @@
+/* ----------------------------------------- */
+/* Combat Carousel                           */
+/* ----------------------------------------- */
+
+// Needs to be marked as relative for the small caret to be positioned correctly when compact UI is enabled.
+#controls ol li.scene-control[data-control="combat-carousel"] {
+  position: relative;
+}

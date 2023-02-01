@@ -1,4 +1,4 @@
-import { baseThemeApplications, baseThemePf2eSheets, premiumModuleSelector } from "./consts.js";
+import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleSelector } from "./consts.js";
 
 // Debugging
 Hooks.on("renderApplication", (app, html, data) => {

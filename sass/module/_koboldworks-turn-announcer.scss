@@ -1,0 +1,22 @@
+/* ----------------------------------------- */
+/* Koboldworks turn announcer                */
+/* ----------------------------------------- */
+
+.chat-message[data-message-id].koboldworks.round-cycling h3.round-message {
+  margin-left: 17px;
+  gap: 20px;
+}
+
+.chat-message[data-message-id].koboldworks.turn-announcer.obfuscated {
+  @include sheet;
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: var(--blind-bg);
+
+  &.dorako-ui.dark-theme {
+    background: var(--sheet-dark);
+    background-size: cover;
+    background-blend-mode: luminosity;
+    background-color: var(--blind-bg);
+  }
+}

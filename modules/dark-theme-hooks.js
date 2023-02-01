@@ -3,6 +3,7 @@ import {
   exclusivelyDarkApplications,
   darkThemeCompatibleApplications,
   baseThemePf2eSheets,
+  MODULE_NAME,
 } from "./consts.js";
 
 // Supported dark theme

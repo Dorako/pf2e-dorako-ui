@@ -1,0 +1,23 @@
+/* ----------------------------------------- */
+/* Polyglot                                  */
+/* ----------------------------------------- */
+
+#polyglot {
+  flex-basis: 20px;
+  label {
+    display: none;
+  }
+
+  select {
+    @include glass;
+    background: var(--glass-bg-light);
+    color: var(--color-text-light-heading);
+    text-shadow: 0px 0px 3px black;
+
+    option,
+    optgroup {
+      background-color: rgb(37, 37, 37);
+      color: var(--color-text-light-highlight);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+/* ----------------------------------------- */
+/* Ripper's Filepicker+                      */
+/* ----------------------------------------- */
+
+.filepicker-plus-tooltip {
+  @include glass;
+  border: none;
+  backdrop-filter: blur(5px);
+}
+
+#sidebar .app.window-app.filepicker {
+  margin: 0px;
+}
+
+#sidebar .filepicker .window-content {
+  @include sheet;
+  background-image: var(--sheet-dark);
+  height: calc(100% - 5px);
+}

@@ -1,0 +1,27 @@
+/* ----------------------------------------- */
+/* Enhanced Terrain Layer                    */
+/* ----------------------------------------- */
+#controls ol.control-tools.sub-controls {
+  margin-right: 0px;
+}
+
+#controls ol.control-tools#terrainlayer-tools {
+  margin-top: 44px;
+
+  .control-tool {
+    @include quick-transition;
+    @include glass;
+    &:not(#tl-defaultcost):hover {
+      background-color: rgba(177, 177, 177, 0.5);
+      color: black;
+      button.control-btn {
+        &:hover {
+          border-radius: 3px;
+          color: black;
+          text-shadow: 0 0 3px var(--color-text-light-highlight);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

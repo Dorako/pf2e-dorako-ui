@@ -30,6 +30,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   }
 
   let html0 = html[0];
+  html0.classList.add("dorako-ui");
 
   if (game.settings.get("pf2e-dorako-ui", "ux.restructure-card-info")) {
     let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;

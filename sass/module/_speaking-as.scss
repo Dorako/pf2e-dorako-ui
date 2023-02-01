@@ -1,0 +1,22 @@
+/* ----------------------------------------- */
+/* Speaking As                               */
+/* ----------------------------------------- */
+
+div.speaking-as--currentSpeaker + #chat-controls {
+  padding: 0px;
+}
+
+.speaking-as--currentSpeaker {
+  @include glass;
+  background-color: var(--glass-bg-light);
+  padding-left: 5px;
+  margin: 0px 6px;
+  text-shadow: 0px 0px 3px black;
+}
+
+.speaking-as--currentSpeaker--button {
+  cursor: pointer;
+  &:hover {
+    color: var(--color-text-light-highlight);
+  }
+}

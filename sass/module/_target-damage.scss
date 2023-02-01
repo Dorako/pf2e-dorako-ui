@@ -1,0 +1,125 @@
+/* ----------------------------------------- */
+/* PF2e Target Damage                        */
+/* ----------------------------------------- */
+
+.chat-message .message-content .pf2e-td.damage-application button .label {
+  font-size: var(--font-size-8);
+}
+
+wrapper.pf2e-td.name-top .pf2e-td.name {
+  // System styling
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+  box-shadow: 0 0 2px #fff inset;
+  width: 100%;
+}
+
+.dorako-ui.chat-message {
+  hr.pf2e-td {
+    display: none !important; // inline style overwrite
+  }
+}
+
+.dorako-ui.dark-theme.chat-message {
+  hr.pf2e-td {
+    display: none !important; // inline style overwrite
+  }
+
+  button.small-button.pf2e-td {
+    @include glass;
+    @include quick-transition;
+    background-color: var(--glass-bg-light);
+    color: var(--color-text-light-heading);
+    text-shadow: 0px 0px 3px black;
+
+    margin: 2px;
+    width: 20px;
+    height: calc(100% - 4px);
+
+    &:hover {
+      background-color: var(--primary);
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  wrapper.pf2e-td {
+    gap: 3px;
+
+    .pf2e-td.damage-application {
+      // gap: 5px;
+      gap: 3px;
+      margin-top: 0px;
+    }
+
+    &.name-left .pf2e-td.damage-application {
+      gap: 3px;
+    }
+
+    .pf2e-td.name {
+      color: var(--color-text-light-heading);
+
+      &:hover {
+        color: var(--color-text-light-highlight);
+      }
+    }
+
+    &.name-top {
+      .pf2e-td.name {
+        @include glass;
+        @include quick-transition;
+        width: 100%;
+        line-height: 24px;
+        text-shadow: 0px 0px 3px black;
+
+        &:hover {
+          color: var(--color-text-light-highlight);
+          background-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .message-content .pf2e-td.damage-application button .label {
+    font-size: var(--font-size-8);
+  }
+}
+
+// Legacy <2.0 styling
+
+#target-damage-chat-window
+  [data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility="all"])[data-visibility="gm"] {
+  background-color: transparent;
+}
+
+#target-damage-chat-window {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#target-damage-chat-window:empty {
+  display: none;
+}
+
+.hidden #target-damage-hide-button {
+  left: 0px;
+  top: 2px;
+  margin: 0px;
+  padding: 0px;
+  height: 14px;
+  width: 14px;
+}
+
+.damage-application.hidden.right {
+  padding: 0px;
+}
+
+.hidden.right #target-damage-hide-button {
+  left: 0px;
+  top: 2px;
+  margin: 0px;
+  padding: 0px;
+  height: 14px;
+  width: 14px;
+}

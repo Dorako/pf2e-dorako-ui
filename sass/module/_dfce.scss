@@ -1,0 +1,111 @@
+/* ----------------------------------------- */
+/* DF Chat Enhancements                      */
+/* ----------------------------------------- */
+
+.message.chat-message.dorako-ui.dark-theme {
+  &.dfce-cm-middle .message-delete,
+  &.dfce-cm-bottom .message-delete {
+    color: white;
+    top: 5px;
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+.message.chat-message {
+  .message-delete {
+    z-index: 1;
+  }
+
+  &.dfce-cm-top {
+    border-bottom-style: none;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    &:hover {
+      box-shadow: var(--gold-and-glow);
+    }
+  }
+
+  &.dfce-cm-middle,
+  &.dfce-cm-bottom {
+    border-top-style: none;
+    border-bottom-style: none;
+    border-radius: 0px;
+
+    &:hover {
+      box-shadow: var(--gold-and-glow);
+    }
+    .message-content {
+      padding-right: 0px;
+    }
+
+    .sender-wrapper,
+    .portrait-and-name {
+      display: none;
+    }
+
+    .message-header {
+      background: transparent;
+      box-shadow: none;
+      text-shadow: 0px 0px 1px white;
+      margin: 0px;
+      padding: 0px;
+      padding-right: 5px;
+      color: var(--color-text-dark-primary);
+    }
+    .header-meta {
+      display: none;
+    }
+  }
+
+  &.dfce-cm-middle {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  &.dfce-cm-bottom {
+    margin-top: 0px;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+div#scrollToBottom {
+  @include quick-transition;
+  @include glass;
+  background-color: #ecbf41;
+  text-shadow: none;
+  color: black;
+  margin-left: 6px;
+  margin-right: 7px;
+  top: -27px;
+  z-index: 1;
+  &:hover {
+    background-color: lighten(#ecbf41, 10);
+  }
+}
+
+#dfcp-rt-buttons {
+  gap: 3px;
+
+  button {
+    @include glass;
+    @include quick-transition;
+    color: var(--color-text-light-heading);
+    background-color: var(--glass-bg-light);
+    text-shadow: 0px 0px 3px black;
+
+    &:hover {
+      color: var(--color-text-light-highlight);
+    }
+
+    &.active i {
+      text-shadow: 0px 0px 3px black;
+      color: var(--color-text-light-highlight);
+    }
+  }
+}
+
+#chat-controls {
+  padding: 0px;
+}
