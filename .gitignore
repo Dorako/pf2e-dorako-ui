@@ -56,5 +56,9 @@ static/packs/*
 foundryconfig.json
 
 dist/
-
 docs/
+
+jsconfig.json
+foundry.jsconfig
+/client
+/common

@@ -4,13 +4,12 @@ import {
   darkThemeCompatibleApplications,
   baseThemePf2eSheets,
 } from "./consts.js";
-import { debug } from "./util.js";
 
 // Supported dark theme
 function markAsDarkTheme(app, html) {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme" || theme === "light-theme") return;
-  debug(`render${app.constructor.name} | theme: ${theme}`);
+  console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}`);
   let html0 = html[0];
   html0.classList.add("dorako-ui");
   html0.classList.add("dark-theme");
@@ -21,7 +20,7 @@ Hooks.on("renderJournalSheetPF2e", (app, html) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme") return;
   if (!html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
-  debug(`renderJournalSheetPF2e | critical-hit-fumble-deck | theme: ${theme}`);
+  console.debug(`${MODULE_NAME} | renderJournalSheetPF2e | critical-hit-fumble-deck | theme: ${theme}`);
   html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
 });
 
@@ -62,7 +61,7 @@ for (const app of ["Application", ...baseThemePf2eSheets]) {
     if (darkThemeIncompatibleApplications.includes(app?.constructor?.name)) return;
     let html0 = html[0];
     if (!html0.classList.contains("app")) return;
-    debug(`render${app.constructor.name} | theme: ${theme}`);
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}`);
     html0.classList.add("dorako-ui");
     html0.classList.add("dark-theme");
   });
@@ -70,7 +69,7 @@ for (const app of ["Application", ...baseThemePf2eSheets]) {
 
 function markAsNativelyDarkTheme(app, html) {
   let html0 = html[0];
-  debug(`renderApplication (${app.constructor.name}) | forced dark theme`);
+  console.debug(`${MODULE_NAME} | renderApplication (${app.constructor.name}) | forced dark theme`);
   html0.classList.add("dorako-ui");
   html0.classList.add("dark-theme");
 }
@@ -87,7 +86,7 @@ for (const document of [...exclusivelyDarkApplications]) {
 Hooks.on("renderFilePicker", (app, html) => {
   let html0 = html[0];
   if (!game.modules.get("filepicker-plus")?.active) return;
-  debug(`renderApplication (${app.constructor.name}) | forced dark theme`);
+  console.debug(`${MODULE_NAME} | renderApplication (${app.constructor.name}) | forced dark theme`);
   html0.classList.add("dorako-ui");
   html0.classList.add("dark-theme");
 });

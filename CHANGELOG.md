@@ -1,3 +1,7 @@
+# 1.11.4
+
+- (Fix) Fix Adventure Importers with fancy frames getting overwritten. The logic that was formerly used for only Journals is now applied to all windows.
+
 # 1.11.3
 
 - (Fix) Fixed illegible text in dark theme windows with sidebars
