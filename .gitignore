@@ -59,6 +59,6 @@ dist/
 docs/
 
 jsconfig.json
-foundry.jsconfig
+foundry.js
 /client
 /common
