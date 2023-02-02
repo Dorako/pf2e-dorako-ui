@@ -57,7 +57,7 @@
       "path": "languages/ja.json"
     }
   ],
-  "styles": ["styles/fonts.css", "styles/dorako-ui.css"],
+  "styles": ["styles/fonts.css"],
   "esmodules": [
     "modules/misc-hooks.js",
     "modules/settings/settings.js",

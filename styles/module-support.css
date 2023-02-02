@@ -1,0 +1,1313 @@
+/* ----------------------------------------- */
+/* Color definitions                         */
+/* ----------------------------------------- */
+/* Colors */
+/* Global */
+/* used for mini headers, alternate primary color */
+/* compliments the primary color, usually used in combination */
+/* for all other uses */
+/* Lighter / Darker */
+/* Text */
+/* ----------------------------------------- */
+/* Color schemes                             */
+/* ----------------------------------------- */
+/* Proficiency ranks */
+/* Rarities */
+/* Degrees of success */
+/* Value adjustments (e.g. weak/elite) */
+/* ----------------------------------------- */
+/* CSS Custom Properties                     */
+/* ----------------------------------------- */
+:root {
+  /* Global */
+  --primary: #5e0000;
+  --primary-light: #b10000;
+  --primary-dark: #380000;
+  --secondary: #171f69;
+  --secondary-light: #2836b7;
+  --secondary-dark: #0d113a;
+  --tertiary: #e9d7a1;
+  --rarity-common: #323232;
+  --rarity-uncommon: #98513d;
+  --rarity-rare: #002664;
+  --rarity-unique: #54166e;
+  --alt: #786452;
+  --alt-dark: #443730;
+  --bg: #f8f4f1;
+  --bg-dark: #e7d9cf;
+  --gold-brown: #956d58;
+  --sub: #605856;
+  --color-disabled: #ababab;
+  --blind-bg: #a57aa5;
+  --whisper-bg: #e3e3ff;
+  --inline-link-bg: #ddd;
+  --inline-repost-bg: #eaeaea;
+  --visibility-gm-bg: #e8e8ef;
+  --visibility-owner-bg: #ddebe1;
+  --blind-roll: #f5eaf5;
+  /* Lighter / Darker */
+  --light: #910000;
+  --dark: #2b0000;
+  --tertiary-dark: #dfc578;
+  --tertiary-light: #f3e9ca;
+  /* Text */
+  --body: var(--text-dark);
+  --color-text-trait: #f5efe0;
+  --text-dark: #1c1c1c;
+  --text-light: white;
+  /* Borders */
+  --color-border-trait: #d8c384;
+  --color-border-divider: #baa991;
+  /* Headers w/ boxes */
+  --header-color: var(--text-light);
+  --header-bg: var(--secondary);
+  /* Sidebar */
+  --sidebar-label: var(--tertiary-dark);
+  --sidebar-title: var(--tertiary);
+  /* App UI */
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg-light: rgba(255, 255, 255, 0.1);
+  --glass-bg-dark: rgba(0, 0, 0, 0.7);
+  --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
+    0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --sheet-light: url(../img/background-light.webp);
+  --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue_header.webp);
+  --banner-top: url(../img/blue_sidebar_top.webp);
+  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
+}
+
+/* ----------------------------------------- */
+/* Cautious Gamemaster's Pack (CGMP)         */
+/* ----------------------------------------- */
+#chat-log .dorako-ui.dark-theme.message.emote .message-content {
+  color: unset;
+}
+
+/* ----------------------------------------- */
+/* Combat Carousel                           */
+/* ----------------------------------------- */
+#controls ol li.scene-control[data-control=combat-carousel] {
+  position: relative;
+}
+
+/* ----------------------------------------- */
+/* Custom Hotbar                             */
+/* ----------------------------------------- */
+:root {
+  --custom-hotbar-chb-macro-size: 52px;
+}
+
+#ui-bottom #hotbars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#ui-bottom #hotbars #hotbar {
+  position: unset;
+}
+
+@media (max-width: 1120px) {
+  #custom-hotbar {
+    width: 354px;
+  }
+}
+.dorako-ui#custom-hotbar {
+  position: static;
+  height: auto;
+  margin-bottom: 0px;
+}
+.dorako-ui#custom-hotbar #custom-action-bar {
+  margin-left: 3px;
+}
+.dorako-ui#custom-hotbar #custom-macro-list {
+  gap: 5px;
+  border: none;
+}
+.dorako-ui#custom-hotbar .bar-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  height: auto;
+}
+.dorako-ui#custom-hotbar .macro {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border-radius: 3px;
+}
+.dorako-ui#custom-hotbar .macro.active:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
+  border-radius: 3px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.dorako-ui#custom-hotbar .macro:hover {
+  background-color: var(--primary-light);
+}
+.dorako-ui#custom-hotbar .macro.inactive {
+  box-shadow: var(--glassy);
+}
+.dorako-ui#custom-hotbar .macro.active:hover {
+  box-shadow: var(--glassy);
+  border: none;
+  background-color: var(--primary);
+}
+.dorako-ui#custom-hotbar .macro .macro-key {
+  background: none;
+  right: 6px;
+  padding: 0px;
+  font-weight: initial;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+}
+
+/* ----------------------------------------- */
+/* Damage Log                                */
+/* ----------------------------------------- */
+nav.damage-log-nav.tabs {
+  flex: 0;
+  margin: 0px 2px;
+  box-shadow: none;
+  border: none;
+}
+nav.damage-log-nav.tabs .item {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  margin: 2px;
+  color: white;
+  border-radius: 3px;
+  margin: 2px;
+  border: none;
+}
+nav.damage-log-nav.tabs .item:hover {
+  box-shadow: var(--gold-and-glow);
+  background-color: var(--secondary);
+  text-shadow: 0px 0px 3px black;
+  border: none;
+  border-radius: 3px;
+}
+nav.damage-log-nav.tabs .item.active {
+  box-shadow: var(--gold-and-glow);
+  background-color: var(--secondary-light);
+  text-shadow: 0px 0px 3px black;
+  border: none;
+  border-radius: 3px;
+}
+
+/* ----------------------------------------- */
+/* DF Chat Enhancements                      */
+/* ----------------------------------------- */
+.message.chat-message.dorako-ui.dark-theme.dfce-cm-middle .message-delete, .message.chat-message.dorako-ui.dark-theme.dfce-cm-bottom .message-delete {
+  color: white;
+  top: 5px;
+  text-shadow: 0px 0px 1px black;
+}
+
+.message.chat-message .message-delete {
+  z-index: 1;
+}
+.message.chat-message.dfce-cm-top {
+  border-bottom-style: none;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+.message.chat-message.dfce-cm-top:hover {
+  box-shadow: var(--gold-and-glow);
+}
+.message.chat-message.dfce-cm-middle, .message.chat-message.dfce-cm-bottom {
+  border-top-style: none;
+  border-bottom-style: none;
+  border-radius: 0px;
+}
+.message.chat-message.dfce-cm-middle:hover, .message.chat-message.dfce-cm-bottom:hover {
+  box-shadow: var(--gold-and-glow);
+}
+.message.chat-message.dfce-cm-middle .message-content, .message.chat-message.dfce-cm-bottom .message-content {
+  padding-right: 0px;
+}
+.message.chat-message.dfce-cm-middle .sender-wrapper,
+.message.chat-message.dfce-cm-middle .portrait-and-name, .message.chat-message.dfce-cm-bottom .sender-wrapper,
+.message.chat-message.dfce-cm-bottom .portrait-and-name {
+  display: none;
+}
+.message.chat-message.dfce-cm-middle .message-header, .message.chat-message.dfce-cm-bottom .message-header {
+  background: transparent;
+  box-shadow: none;
+  text-shadow: 0px 0px 1px white;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 5px;
+  color: var(--color-text-dark-primary);
+}
+.message.chat-message.dfce-cm-middle .header-meta, .message.chat-message.dfce-cm-bottom .header-meta {
+  display: none;
+}
+.message.chat-message.dfce-cm-middle {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+.message.chat-message.dfce-cm-bottom {
+  margin-top: 0px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+div#scrollToBottom {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: #ecbf41;
+  text-shadow: none;
+  color: black;
+  margin-left: 6px;
+  margin-right: 7px;
+  top: -27px;
+  z-index: 1;
+}
+div#scrollToBottom:hover {
+  background-color: #f1cf6f;
+}
+
+#dfcp-rt-buttons {
+  gap: 3px;
+}
+#dfcp-rt-buttons button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+}
+#dfcp-rt-buttons button:hover {
+  color: var(--color-text-light-highlight);
+}
+#dfcp-rt-buttons button.active i {
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-highlight);
+}
+
+#chat-controls {
+  padding: 0px;
+}
+
+/* ----------------------------------------- */
+/* Dice Tray                                 */
+/* ----------------------------------------- */
+.dice-tray {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dice-tray .dice-tray__stacked {
+  gap: 3px;
+}
+.dice-tray input[type=text] {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dice-tray input[type=text]:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+.dice-tray input[type=text]:focus {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--secondary-light);
+  color: white;
+}
+.dice-tray button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dice-tray button svg {
+  filter: drop-shadow(0px 0px 3px black);
+}
+.dice-tray button svg * {
+  fill: var(--color-text-light-heading);
+}
+.dice-tray button.dice-tray__advantage:hover, .dice-tray button.dice-tray__disadvantage:hover, .dice-tray button.dice-tray__roll:hover, .dice-tray button.dice-tray__math--add:hover, .dice-tray button.dice-tray__math--sub:hover, .dice-tray button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dice-tray button.dice-tray__advantage:hover svg, .dice-tray button.dice-tray__disadvantage:hover svg, .dice-tray button.dice-tray__roll:hover svg, .dice-tray button.dice-tray__math--add:hover svg, .dice-tray button.dice-tray__math--sub:hover svg, .dice-tray button:hover svg {
+  filter: drop-shadow(0px 0px 3px black);
+}
+.dice-tray button.dice-tray__advantage:hover svg *, .dice-tray button.dice-tray__disadvantage:hover svg *, .dice-tray button.dice-tray__roll:hover svg *, .dice-tray button.dice-tray__math--add:hover svg *, .dice-tray button.dice-tray__math--sub:hover svg *, .dice-tray button:hover svg * {
+  fill: var(--color-text-light-highlight);
+}
+.dice-tray .flexrow {
+  margin-left: 6px;
+  margin-right: 6px;
+  gap: 5px;
+}
+.dice-tray > * {
+  margin: 0px;
+}
+
+/* ----------------------------------------- */
+/* PF2e Dorako UI                            */
+/* ----------------------------------------- */
+#chat-controls.no-chat-control-icon .chat-control-icon {
+  display: none;
+}
+#chat-controls.no-chat-control-icon #dfcp-rt-buttons {
+  margin-left: 0px !important;
+}
+
+#fps {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+}
+#fps label {
+  display: none;
+}
+
+#ui-bottom.centered {
+  display: flex;
+  justify-content: center;
+}
+
+#chat-form {
+  flex: 0 0 var(--chat-input-height) !important;
+}
+
+#players.dorako-ui h3 {
+  border: none;
+}
+
+.chat-message .dorako-header {
+  padding-bottom: 5px;
+  box-shadow: var(--gold-and-glow);
+  background: var(--sheet-light);
+  background-size: cover;
+}
+
+.combat-sidebar li.combatant .token-image {
+  z-index: 0;
+}
+
+.combat-sidebar li.combatant .token-name {
+  z-index: 1;
+}
+
+.chat-message .message-content .damage-roll:not(:first-child) {
+  margin-top: 5px;
+}
+
+.chat-message .flavor-text h4.action {
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+}
+.chat-message .flavor-text .target-dc-result {
+  line-height: 0.75rem;
+  margin-bottom: 4px;
+}
+.chat-message .flavor-text .target-dc-result .target-dc,
+.chat-message .flavor-text .target-dc-result .result {
+  display: block;
+  margin: 1px 0;
+  width: fit-content;
+}
+.chat-message .flavor-text .target-dc-result .unadjusted {
+  text-decoration: line-through;
+}
+.chat-message .flavor-text .target-dc-result .adjusted {
+  text-decoration: underline dotted;
+}
+.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: rgb(0, 128, 0);
+}
+.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: rgb(255, 0, 0);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: rgb(0, 128, 0);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: rgb(0, 0, 255);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: rgb(255, 69, 0);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: rgb(255, 0, 0);
+}
+.chat-message > .message-content .message-buttons {
+  display: flex;
+  margin: 0.35em 0 2px;
+  gap: 3px;
+}
+
+.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: #00c000;
+}
+.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: #ff4040;
+}
+.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: #00c000;
+}
+.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: #4040ff;
+}
+.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: #ff7440;
+}
+.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: #ff4040;
+}
+.dorako-ui.dark-theme.chat-message > .message-content .message-buttons {
+  gap: 5px;
+}
+.dorako-ui.dark-theme.chat-message > .message-content .message-buttons button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme.chat-message > .message-content .message-buttons button:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.chat-message > .message-content .message-buttons button.critical-success:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.chat-message > .message-header {
+  margin-bottom: 0px;
+}
+
+.dorako-damage-roll .flavor-text > *:nth-child(-n+3) {
+  display: none;
+}
+
+.frosted-glass #hotbar .bar-controls,
+.frosted-glass #hotbar .macro,
+.frosted-glass nav#navigation ol#scene-list li.nav-item,
+.frosted-glass nav#controls ol.control-tools li.control-tool,
+.frosted-glass nav#controls ol.control-tools li.scene-control,
+.frosted-glass #tah-expand-hud,
+.frosted-glass .tah-title-button,
+.frosted-glass .tah-action button,
+.frosted-glass #tokenbar .token,
+.frosted-glass #tokenbar .bar-controls,
+.frosted-glass #players,
+.frosted-glass nav#navigation #nav-toggle,
+.frosted-glass #fps,
+.frosted-glass .app {
+  backdrop-filter: var(--frosted-glass);
+}
+.frosted-glass #navigation,
+.frosted-glass .control-tools {
+  backdrop-filter: unset;
+}
+
+/* ----------------------------------------- */
+/* Enhanced Terrain Layer                    */
+/* ----------------------------------------- */
+#controls ol.control-tools.sub-controls {
+  margin-right: 0px;
+}
+
+#controls ol.control-tools#terrainlayer-tools {
+  margin-top: 44px;
+}
+#controls ol.control-tools#terrainlayer-tools .control-tool {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+#controls ol.control-tools#terrainlayer-tools .control-tool:not(#tl-defaultcost):hover {
+  background-color: rgba(177, 177, 177, 0.5);
+  color: black;
+}
+#controls ol.control-tools#terrainlayer-tools .control-tool:not(#tl-defaultcost):hover button.control-btn:hover {
+  border-radius: 3px;
+  color: black;
+  text-shadow: 0 0 3px var(--color-text-light-highlight);
+  box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Ripper's Filepicker+                      */
+/* ----------------------------------------- */
+.filepicker-plus-tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border: none;
+  backdrop-filter: blur(5px);
+}
+
+#sidebar .app.window-app.filepicker {
+  margin: 0px;
+}
+
+#sidebar .filepicker .window-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  background-image: var(--sheet-dark);
+  height: calc(100% - 5px);
+}
+
+/* ----------------------------------------- */
+/* Koboldworks turn announcer                */
+/* ----------------------------------------- */
+.chat-message[data-message-id].koboldworks.round-cycling h3.round-message {
+  margin-left: 17px;
+  gap: 20px;
+}
+
+.chat-message[data-message-id].koboldworks.turn-announcer.obfuscated {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: var(--blind-bg);
+}
+.chat-message[data-message-id].koboldworks.turn-announcer.obfuscated.dorako-ui.dark-theme {
+  background: var(--sheet-dark);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: var(--blind-bg);
+}
+
+/* ----------------------------------------- */
+/* Macros                                    */
+/* ----------------------------------------- */
+.dorako-ui.window-app .window-content .dialog-content .cond-cont {
+  background: none;
+}
+
+.dorako-ui.window-app .action-list button.action-btn img {
+  border-radius: 3px;
+  box-shadow: var(--gold-and-glow);
+}
+.dorako-ui.window-app .action-list button:hover {
+  filter: brightness(1.3);
+}
+.dorako-ui.window-app .action-list button.glow {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  animation: unset;
+  filter: brightness(1.1);
+  color: var(--tertiary);
+}
+
+/* ----------------------------------------- */
+/* Monarch                                   */
+/* ----------------------------------------- */
+.window-app.monarch .window-content {
+  box-shadow: none;
+  background: none;
+}
+
+.window-app.monarch-hand:not(.minimized).no-fade.trans,
+.window-app.monarch-hand:not(.minimized):hover.trans {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+}
+
+.window-app.monarch-hand .window-header,
+.monarch-hand footer.sheet-footer {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+.monarch .card-hud .controls a i {
+  color: var(--color-text-light-heading);
+}
+
+.monarch input[type=text],
+.monarch input[type=number],
+.monarch input[type=password],
+.monarch input[type=date],
+.monarch input[type=time] {
+  border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  color: var(--color-text-light-heading);
+}
+
+.monarch-hand footer.sheet-footer {
+  margin: 2px 10px;
+}
+.monarch-hand footer.sheet-footer button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.monarch-hand footer.sheet-footer button:hover {
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
+}
+
+.monarch .card-hud .badge,
+.monarch .card-hud .card-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+.monarch-hand .tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+}
+
+/* ----------------------------------------- */
+/* Monk's Common Display                     */
+/* ----------------------------------------- */
+#common-display-toolbar {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+#common-display-toolbar .move-handle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border-radius: 5px 0px 0px 5px;
+}
+#common-display-toolbar .common-display-button.small {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+}
+#common-display-toolbar .common-display-button.small:hover {
+  background-color: var(--primary);
+}
+#common-display-toolbar .common-display-button.toggle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--secondary-dark);
+  text-shadow: 0px 0px 3px black;
+}
+#common-display-toolbar .common-display-button.toggle:hover, #common-display-toolbar .common-display-button.toggle.active {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--secondary-light);
+}
+
+/* ----------------------------------------- */
+/* Monk's Player Settings                    */
+/* ----------------------------------------- */
+#client-settings.dorako-ui.dark-theme #mps-view-group {
+  border-bottom: 1px solid var(--tertiary);
+}
+
+/* ----------------------------------------- */
+/* Monk's Enhanced Journal                   */
+/* ----------------------------------------- */
+.monks-enhanced-journal.window-app .window-content {
+  padding: 0px;
+}
+
+/* ----------------------------------------- */
+/* Monk's tokenbar                           */
+/* ----------------------------------------- */
+#tokenbar {
+  gap: 3px;
+}
+#tokenbar .token-list {
+  gap: 5px;
+  border: none;
+}
+#tokenbar .bar-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+#tokenbar .bar-controls div#tokenbar-move-handle {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border-radius: 5px 0px 0px 5px;
+  margin-right: 2px;
+}
+#tokenbar .token {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  flex: 0 0 52px;
+}
+#tokenbar .token .token-stats {
+  background: none;
+  text-shadow: 0px 0px 3px black;
+}
+#tokenbar .token:hover {
+  background-color: var(--primary);
+}
+#tokenbar .token:hover .token-icon {
+  box-shadow: none;
+  filter: drop-shadow(0px 0px 5px var(--tertiary));
+}
+#tokenbar .token .token-icon {
+  box-shadow: none;
+  border-radius: 3px;
+}
+#tokenbar .token .tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+}
+
+.monks-tokenbar.chat-card .card-header h3:hover {
+  text-shadow: unset;
+}
+
+.monks-tokenbar .sheet .items-list .items-header {
+  border: none;
+}
+
+#tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i,
+#tokenbar[movement=free] #movement-free:not(.disabled) i,
+#tokenbar[movement=none] #movement-none:not(.disabled) i,
+#tokenbar[movement=combat] #movement-combat:not(.disabled) i {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border: none;
+  margin: 2px;
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  text-shadow: 0px 0px 3px black;
+  background-color: var(--primary-light);
+  color: var(--color-text-light-highlight);
+}
+
+#tokenbar:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i,
+#tokenbar[movement=free]:not(.hidectrl) #movement-free:not(.disabled):hover i,
+#tokenbar[movement=none]:not(.hidectrl) #movement-none:not(.disabled):hover i,
+#tokenbar[movement=combat]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
+  color: var(--color-text-light-highlight);
+}
+
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list .item .item-name,
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list,
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-header h3,
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list .items-header h3 {
+  color: var(--color-text-light-1);
+  font-family: unset;
+}
+
+.dorako-ui.dark-theme#requestsavingthrow .request-grid.dice-group div::first-letter {
+  font-size: 0rem;
+}
+.dorako-ui.dark-theme#requestsavingthrow .request-grid {
+  gap: 5px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.dorako-ui.dark-theme#requestsavingthrow .request-grid.dice-group {
+  display: flex;
+  justify-content: space-between;
+}
+.dorako-ui.dark-theme#requestsavingthrow .request-grid > div {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+  padding: 2px 6px;
+  background-color: var(--secondary-dark);
+}
+.dorako-ui.dark-theme#requestsavingthrow .request-grid > div:hover {
+  background-color: var(--secondary-light);
+  color: white;
+}
+.dorako-ui.dark-theme#requestsavingthrow .request-grid > div.selected {
+  background-color: var(--secondary-light);
+  color: white;
+}
+.dorako-ui.dark-theme .monks-tokenbar .sheet .items-list .item {
+  border: none;
+  margin-bottom: 2px;
+}
+.dorako-ui.dark-theme .monks-tokenbar .dialog-buttons {
+  gap: 5px;
+}
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-header {
+  border: none;
+}
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-footer {
+  border: none;
+}
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-footer .flexrow {
+  gap: 5px;
+}
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-footer .flexrow .footer-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme .monks-tokenbar.chat-card .card-footer .flexrow .footer-button:hover {
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
+}
+
+/* ----------------------------------------- */
+/* Monk's little details                     */
+/* ----------------------------------------- */
+#chat-log .message.round-marker {
+  border-bottom: 1px solid var(--tertiary) !important;
+}
+
+#darkness-progress > div > div {
+  background-color: var(--primary-light);
+}
+
+#token-hud.monks-little-details .status-effects .effect-control,
+#token-hud.monks-little-details .status-effects .pf2e-effect-control {
+  border-radius: unset;
+}
+
+#token-hud.placeable-hud.monks-little-details .status-effects {
+  grid-template-columns: 90px 90px 90px 90px !important;
+  background: none;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control {
+  border: none;
+  opacity: unset;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active {
+  border: none;
+  opacity: 1;
+  background-color: var(--secondary-light);
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active .effect-name {
+  color: white;
+  opacity: unset;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control img {
+  border-radius: 4px 0px 0px 4px;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-control img::before {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 1px var(--tertiary);
+  border-radius: 4px 0px 0px 4px;
+  overflow: hidden;
+  pointer-events: none;
+}
+#token-hud.placeable-hud.monks-little-details .status-effects .effect-name {
+  opacity: unset;
+  padding-right: 4px;
+  color: var(--color-text-light-heading);
+  font-size: var(--font-size-12);
+}
+
+/* ----------------------------------------- */
+/* Monk's hotbar expansion                   */
+/* ----------------------------------------- */
+#hotbar .action-bar.no-arrows + .bar-controls span.page-number,
+#hotbar .hotbar-page .hotbar-page-row .bar-controls span.page-number,
+#hotbar .hotbar-page .hotbar-page-row .bar-controls i {
+  line-height: 52px;
+}
+
+#hotbar .hotbar-page .hotbar-page-row.selected .bar-controls .page-number {
+  color: var(--tertiary-dark);
+}
+
+[data-tooltip="MonksHotbarExpansion.clear-row"] {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+}
+[data-tooltip="MonksHotbarExpansion.clear-row"]:hover i {
+  text-shadow: 0 0 8px var(--color-shadow-primary);
+}
+
+.hotbar-page .page-number {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+}
+.hotbar-page .page-number:hover {
+  text-shadow: 0 0 8px var(--color-shadow-primary);
+}
+
+#hotbar.dorako-ui {
+  width: 647px;
+}
+#hotbar.dorako-ui .hotbar-page {
+  overflow: visible;
+  gap: 4px;
+  bottom: 56px;
+}
+#hotbar.dorako-ui .hotbar-page .macro-list {
+  gap: 7px;
+  border: none;
+}
+#hotbar.dorako-ui .hotbar-page .action-bar {
+  margin: 0px 5px 0px 3px;
+}
+
+/* ----------------------------------------- */
+/* Polyglot                                  */
+/* ----------------------------------------- */
+#polyglot {
+  flex-basis: 20px;
+}
+#polyglot label {
+  display: none;
+}
+#polyglot select {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+#polyglot select option,
+#polyglot select optgroup {
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* Scene Preview                             */
+/* ----------------------------------------- */
+.navi-preview {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+
+/* ----------------------------------------- */
+/* Speaking As                               */
+/* ----------------------------------------- */
+div.speaking-as--currentSpeaker + #chat-controls {
+  padding: 0px;
+}
+
+.speaking-as--currentSpeaker {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--glass-bg-light);
+  padding-left: 5px;
+  margin: 0px 5px;
+  text-shadow: 0px 0px 3px black;
+}
+
+.speaking-as--currentSpeaker--button {
+  cursor: pointer;
+}
+.speaking-as--currentSpeaker--button:hover {
+  color: var(--color-text-light-highlight);
+}
+
+/* ----------------------------------------- */
+/* PF2e Target Damage                        */
+/* ----------------------------------------- */
+.chat-message .message-content .pf2e-td.damage-application button .label {
+  font-size: var(--font-size-8);
+}
+
+wrapper.pf2e-td.name-top .pf2e-td.name {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+  box-shadow: 0 0 2px #fff inset;
+  width: 100%;
+}
+
+.dorako-ui.chat-message hr.pf2e-td {
+  display: none !important;
+}
+
+.dorako-ui.dark-theme.chat-message hr.pf2e-td {
+  display: none !important;
+}
+.dorako-ui.dark-theme.chat-message button.small-button.pf2e-td {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  background-color: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+  margin: 2px;
+  width: 20px;
+  height: calc(100% - 4px);
+}
+.dorako-ui.dark-theme.chat-message button.small-button.pf2e-td:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td {
+  gap: 3px;
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td .pf2e-td.damage-application {
+  gap: 3px;
+  margin-top: 0px;
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td.name-left .pf2e-td.damage-application {
+  gap: 3px;
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td .pf2e-td.name {
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td .pf2e-td.name:hover {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td.name-top .pf2e-td.name {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  width: 100%;
+  line-height: 24px;
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme.chat-message wrapper.pf2e-td.name-top .pf2e-td.name:hover {
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary);
+}
+.dorako-ui.dark-theme.chat-message .message-content .pf2e-td.damage-application button .label {
+  font-size: var(--font-size-8);
+}
+
+#target-damage-chat-window [data-visibility]:is(div, em, h4, p, span, strong):not([data-visibility=all])[data-visibility=gm] {
+  background-color: transparent;
+}
+
+#target-damage-chat-window {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+#target-damage-chat-window:empty {
+  display: none;
+}
+
+.hidden #target-damage-hide-button {
+  left: 0px;
+  top: 2px;
+  margin: 0px;
+  padding: 0px;
+  height: 14px;
+  width: 14px;
+}
+
+.damage-application.hidden.right {
+  padding: 0px;
+}
+
+.hidden.right #target-damage-hide-button {
+  left: 0px;
+  top: 2px;
+  margin: 0px;
+  padding: 0px;
+  height: 14px;
+  width: 14px;
+}
+
+/* ----------------------------------------- */
+/* Token Action HUD (TAH)                    */
+/* ----------------------------------------- */
+:root {
+  --dorako-bg-current: var(--glass-bg);
+  --dorako-vibrancy: var(--frosted-glass);
+}
+
+#tah-categories {
+  gap: 5px;
+}
+
+#token-action-hud {
+  gap: 5px;
+}
+
+#tah-expand-hud {
+  width: 32px;
+  height: 32px;
+}
+
+#tah-expand-hud,
+.tah-title-button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  padding: 3px 5px 3px 5px;
+}
+#tah-expand-hud:hover,
+.tah-title-button:hover {
+  color: var(--color-text-light-highlight);
+}
+
+.tah-category.hover button.tah-title-button {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+
+.tah-subtitle {
+  width: 174px;
+}
+
+.tah-action button {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+}
+.tah-action button.toggle {
+  background-color: var(--secondary-dark);
+}
+.tah-action button:hover {
+  color: var(--color-text-light-highlight);
+}
+.tah-action button.active {
+  color: white;
+}
+
+/* ----------------------------------------- */
+/* PF2e Workbench                            */
+/* ----------------------------------------- */
+.xdy-pf2e-workbench-rarity-common {
+  color: var(--rarity-common);
+  border-color: var(--rarity-common);
+}
+
+.xdy-pf2e-workbench-rarity-uncommon {
+  color: var(--rarity-uncommon);
+  border-color: var(--rarity-uncommon);
+}
+
+.xdy-pf2e-workbench-rarity-rare {
+  color: var(--rarity-rare);
+  border-color: var(--rarity-rare);
+}
+
+.xdy-pf2e-workbench-rarity-unique {
+  color: var(--rarity-unique);
+  border-color: var(--rarity-unique);
+}
+
+/*# sourceMappingURL=module-support.css.map */

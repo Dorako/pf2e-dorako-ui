@@ -4,6 +4,7 @@ import {
   darkThemeCompatibleApplications,
   baseThemePf2eSheets,
   MODULE_NAME,
+  premiumModuleSelector,
 } from "./consts.js";
 
 // Supported dark theme
@@ -61,6 +62,12 @@ for (const app of ["Application", ...baseThemePf2eSheets]) {
     if (theme !== "dark-theme") return;
     if (darkThemeIncompatibleApplications.includes(app?.constructor?.name)) return;
     let html0 = html[0];
+    if (html0.matches(premiumModuleSelector)) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui or .dark-theme`
+      );
+      return;
+    }
     if (!html0.classList.contains("app")) return;
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}`);
     html0.classList.add("dorako-ui");

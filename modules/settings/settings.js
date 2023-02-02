@@ -80,6 +80,9 @@ Hooks.once("init", async () => {
 
   util.debug("registered settings");
 
+  injectCSS("dorako-ui");
+  injectCSS("module-support");
+
   const root = document.querySelector(":root").style;
 
   root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");

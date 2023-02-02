@@ -1,3 +1,8 @@
+# 1.11.6
+
+- (Fix) Ensured anti-premium module rules are also applied from dark theme styling.
+- (Fix) Fixed an issue where the load order of style sheets was causing various regressions.
+
 # 1.11.5
 
 - (Maintenance) Re-organize sass files, update release flow
