@@ -66,6 +66,9 @@
     "modules/message-hooks.js",
     "modules/consts.js"
   ],
+  "changelog": "https://github.com/Dorako/pf2e-dorako-ui/blob/master/CHANGELOG.md",
   "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.11.3.zip",
-  "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json"
+  "manifest": "https://github.com/Dorako/pf2e-dorako-ui/releases/latest/download/module.json",
+  "readme": "https://github.com/Dorako/pf2e-dorako-ui",
+  "bugs": "https://github.com/Dorako/pf2e-dorako-ui/issues"
 }

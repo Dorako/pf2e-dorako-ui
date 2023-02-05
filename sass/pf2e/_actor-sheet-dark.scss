@@ -145,6 +145,16 @@
       text-shadow: unset;
     }
 
+  &.actor.sheet .crb-style aside .modifiers_button {
+    background: hsla(0, 0%, 100%, 0.75);
+    border: none;
+    border-radius: 2px 2px 0 0;
+    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 40%);
+    color: var(--primary);
+    margin: 0;
+    padding: 2px 3px;
+  }
+
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
     @include glass;
     @include quick-transition;

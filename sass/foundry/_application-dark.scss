@@ -195,11 +195,13 @@
       }
 
       &:hover {
+        @include glass; // pf2e styling disables box-shadow
         background-color: var(--secondary-dark);
         color: var(--color-text-light-highlight);
       }
 
       &:focus {
+        @include glass; // pf2e styling disables box-shadow
         background-color: var(--secondary);
         color: white;
       }

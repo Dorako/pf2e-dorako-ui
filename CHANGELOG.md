@@ -1,3 +1,7 @@
+# 1.11.7
+
+- (Fix) Fixed modifier buttons in dark theme PC sheets' sidebars.
+
 # 1.11.6
 
 - (Fix) Ensured anti-premium module rules are also applied from dark theme styling.

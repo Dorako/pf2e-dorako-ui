@@ -356,6 +356,11 @@
 .dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):hover,
 .dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):hover,
 .dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
   background-color: var(--secondary-dark);
   color: var(--color-text-light-highlight);
 }
@@ -366,6 +371,11 @@
 .dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):focus,
 .dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):focus,
 .dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):focus {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
   background-color: var(--secondary);
   color: white;
 }
@@ -1549,6 +1559,15 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .actions-title .action-name h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name h4:hover {
   color: var(--tertiary);
   text-shadow: unset;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style aside .modifiers_button {
+  background: hsla(0deg, 0%, 100%, 0.75);
+  border: none;
+  border-radius: 2px 2px 0 0;
+  box-shadow: inset 0 0 0 1px hsla(0deg, 0%, 100%, 0.4);
+  color: var(--primary);
+  margin: 0;
+  padding: 2px 3px;
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
   border: none;
