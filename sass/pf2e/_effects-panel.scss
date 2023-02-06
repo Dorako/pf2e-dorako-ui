@@ -113,17 +113,22 @@
         background: none;
         text-shadow: 0px 1px 5px black, 0px 1px 5px black;
       }
-      .value {
-        position: absolute;
-        display: inline-block;
-        bottom: -1px;
-        left: -1px;
-        padding: 0px 2px;
-        color: white;
-        color: var(--color-text-light-highlight);
-        background-color: rgba(0, 0, 0, 0.75);
+
+      .value-wrapper {
         background: none;
-        text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+
+        .value {
+          // position: absolute;
+          // display: inline-block;
+          // bottom: -1px;
+          // left: -1px;
+          padding: 0px 2px;
+          color: white;
+          color: var(--color-text-light-highlight);
+          background-color: rgba(0, 0, 0, 0.75);
+          background: none;
+          text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+        }
       }
 
       &.unidentified {

@@ -1,3 +1,7 @@
+# 1.11.8
+
+- (Maintenance) Fixed a system regression that caused numbers in the effect panel to be missing.
+
 # 1.11.7
 
 - (Fix) Fixed modifier buttons in dark theme PC sheets' sidebars.
