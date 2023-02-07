@@ -1,3 +1,7 @@
+# 1.11.9
+
+- (New) Added dark-theme support for Party Overview.
+
 # 1.11.8
 
 - (Maintenance) Fixed a system regression that caused numbers in the effect panel to be missing.

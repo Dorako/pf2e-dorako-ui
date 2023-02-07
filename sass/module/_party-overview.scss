@@ -1,0 +1,17 @@
+.dorako-ui.dark-theme.party-overview-window {
+  .table-row:nth-child(2n) {
+    background-color: rgb(228, 228, 228, 0.2);
+  }
+  nav .item.active {
+    color: white;
+    border-bottom: 2px solid var(--tertiary);
+  }
+  .table-row {
+    border-bottom: 1px solid var(--tertiary);
+  }
+  .proficiencies .table-row .num:not(.party-overview-ellipsis-no-border) {
+    border-radius: 3px;
+    margin-right: 3px;
+    box-shadow: 0px 0px 1px 1px inset rgb(255 255 255 / 20%);
+  }
+}

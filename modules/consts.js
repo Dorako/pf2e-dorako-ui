@@ -8,7 +8,7 @@ export const darkThemeCompatibleCoreFoundryApplications = ["CombatTrackerConfig"
 // prettier-ignore
 export const darkThemeCompatiblePf2eApplications = ["NPCSheetPF2e","CharacterSheetPF2e","TokenConfigPF2e", "HomebrewElements", "VariantRulesSettings", "AutomationSettings", "MetagameSettings", "WorldClockSettings", "PersistentDamageDialog", "SceneConfigPF2e"];
 // prettier-ignore
-export const darkThemeCompatibleModuleApplications = ["RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
+export const darkThemeCompatibleModuleApplications = ["PartyOverviewApp","RollPrompt", "SavingThrowApp", "AssignXPApp", "ContestedRollApp", "ActiveTileConfig", "DFChatEditor"];
 // prettier-ignore
 export const dorakoUiApplications = ["AvatarSettings","MiscSettings","ThemeSettings","UXSettings"]
 // prettier-ignore
