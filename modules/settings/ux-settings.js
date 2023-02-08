@@ -14,6 +14,7 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "center-hotbar",
     "enable-player-tags",
     "rolltype-indication",
+    "start-sidebar-collapsed",
   ];
 
   rerenderChatMessages() {}
@@ -104,6 +105,15 @@ export class UXSettings extends SettingsMenuDorakoUI {
             $("body").removeClass("dorako-ui compact-ui");
           }
         },
+      },
+      "start-sidebar-collapsed": {
+        name: "pf2e-dorako-ui.settings.ux.start-sidebar-collapsed.name",
+        hint: "pf2e-dorako-ui.settings.ux.start-sidebar-collapsed.hint",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
+        requiresReload: false,
       },
       "no-logo": {
         name: "pf2e-dorako-ui.settings.ux.no-logo.name",

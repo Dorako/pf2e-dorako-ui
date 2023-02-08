@@ -59,11 +59,6 @@
   color: var(--color-text-light-heading);
 }
 
-.dorako-ui.dark-theme {
-  --color-underline-active: var(--tertiary-dark);
-  --color-underline-header: var(--tertiary-dark);
-}
-
 .dorako-ui.dark-theme.window-app {
   // ::placeholder {
   //     color: var(--color-text-light-heading);
@@ -74,7 +69,8 @@
   }
 
   .window-content {
-    @include sheet;
+    // Avoid margins from sheet
+    box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
     background-image: var(--sheet-dark);
     color: var(--color-text-light-heading);
   }
@@ -175,6 +171,16 @@
   }
 
   input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--tertiary);
+    &:checked {
+      box-shadow: unset;
+      accent-color: var(--tertiary);
+      filter: none;
+    }
+  }
+
+  // input[type="checkbox"],
   // input[type="radio"],
   input[type="text"],
   input[type="number"],

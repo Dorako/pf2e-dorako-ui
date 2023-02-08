@@ -1,23 +1,22 @@
 .dorako-ui.dark-theme {
   h4.rarity {
     &-common {
-      color: #e1d8cf !important;
+      color: var(--rarity-common);
+      border-color: var(--rarity-common);
     }
     &-uncommon {
-      color: #c45500 !important;
+      color: var(--rarity-uncommon);
+      border-color: var(--rarity-uncommon);
     }
     &-rare {
-      color: #5362ff !important;
+      color: var(--rarity-rare);
+      border-color: var(--rarity-rare);
     }
     &-unique {
-      color: #e127e1 !important;
+      color: var(--rarity-unique);
+      border-color: var(--rarity-unique);
     }
   }
-
-  --rarity-common: #e1d8cf;
-  --rarity-uncommon: #c45500;
-  --rarity-rare: #5362ff;
-  --rarity-unique: #e127e1;
 
   .tags .tag.tag_secondary,
   .tags .tag option.tag_secondary {

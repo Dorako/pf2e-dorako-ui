@@ -22,15 +22,6 @@ body.compact-ui {
     display: block;
   }
 
-  /* #controls ol .scene-control,
-#controls ol .control-tool {
-  width: 28px;
-  height: 28px;
-  font-size: 18px;
-  line-height: 28px;
-  margin-bottom: 4px;
-} */
-
   #controls ol.main-controls.app.control-tools {
     width: unset;
   }
@@ -52,9 +43,6 @@ body.compact-ui {
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
   }
-
-  /* #hotbar:hover,
-#custom-hotbar:hover */
 
   #players:hover {
     transition: opacity 0.25s ease-in-out;

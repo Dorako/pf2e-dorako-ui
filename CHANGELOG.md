@@ -1,3 +1,8 @@
+# 1.11.10
+
+- (Refinement) Improved dark-theme styling of the compendium browser.
+- (New) New UX setting to collapse the sidebar by default.
+
 # 1.11.9
 
 - (New) Added dark-theme support for Party Overview.

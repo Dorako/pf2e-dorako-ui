@@ -2,19 +2,20 @@
 /* Controls                                  */
 /* ----------------------------------------- */
 
-// Fix foundry's inconsistent gaps
-#controls ol.control-tools.sub-controls > li,
-#controls ol.control-tools.main-controls {
-  margin-right: 8px;
-}
-
 nav#controls.dorako-ui {
   padding-top: 12px;
+
+  // Fix foundry's inconsistent gaps
+  ol.control-tools.sub-controls > li,
+  ol.control-tools.main-controls {
+    margin-right: 8px;
+  }
 
   ol.control-tools {
     &.main-control {
       margin-right: 8px;
     }
+
     li.control-tool,
     > li {
       @include glass;
