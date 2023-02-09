@@ -1,3 +1,7 @@
+# 1.11.13
+
+- (Fix) Fixed an issue where TinyMCE text editors were illegible while editing in dark theme.
+
 # 1.11.12
 
 - (Maintenance) Mark Tokenizer as dark-theme incompatible.
