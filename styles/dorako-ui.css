@@ -1429,20 +1429,20 @@ section.chat-sidebar {
 }
 
 .dorako-ui.dark-theme h4.rarity-common {
-  color: var(--rarity-common);
-  border-color: var(--rarity-common);
+  color: var(--rarity-common) !important;
+  border-color: var(--rarity-common) !important;
 }
 .dorako-ui.dark-theme h4.rarity-uncommon {
-  color: var(--rarity-uncommon);
-  border-color: var(--rarity-uncommon);
+  color: var(--rarity-uncommon) !important;
+  border-color: var(--rarity-uncommon) !important;
 }
 .dorako-ui.dark-theme h4.rarity-rare {
-  color: var(--rarity-rare);
-  border-color: var(--rarity-rare);
+  color: var(--rarity-rare) !important;
+  border-color: var(--rarity-rare) !important;
 }
 .dorako-ui.dark-theme h4.rarity-unique {
-  color: var(--rarity-unique);
-  border-color: var(--rarity-unique);
+  color: var(--rarity-unique) !important;
+  border-color: var(--rarity-unique) !important;
 }
 .dorako-ui.dark-theme .tags .tag.tag_secondary,
 .dorako-ui.dark-theme .tags .tag option.tag_secondary {

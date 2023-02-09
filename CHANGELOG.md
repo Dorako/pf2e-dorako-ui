@@ -1,3 +1,8 @@
+# 1.11.11
+
+- (Fix) Fixed an issue where rarity-colors were illegible in dark theme.
+- (New) New UX setting to collapse the navigation bar by default.
+
 # 1.11.10
 
 - (Refinement) Improved dark-theme styling of the compendium browser.

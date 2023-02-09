@@ -15,6 +15,7 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "enable-player-tags",
     "rolltype-indication",
     "start-sidebar-collapsed",
+    "start-navigation-collapsed",
   ];
 
   rerenderChatMessages() {}
@@ -109,6 +110,15 @@ export class UXSettings extends SettingsMenuDorakoUI {
       "start-sidebar-collapsed": {
         name: "pf2e-dorako-ui.settings.ux.start-sidebar-collapsed.name",
         hint: "pf2e-dorako-ui.settings.ux.start-sidebar-collapsed.hint",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
+        requiresReload: false,
+      },
+      "start-navigation-collapsed": {
+        name: "pf2e-dorako-ui.settings.ux.start-navigation-collapsed.name",
+        hint: "pf2e-dorako-ui.settings.ux.start-navigation-collapsed.hint",
         scope: "client",
         config: true,
         default: false,

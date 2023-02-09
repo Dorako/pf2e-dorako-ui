@@ -166,3 +166,8 @@ Hooks.once("ready", (app, html, data) => {
   if (!game.settings.get(`${MODULE_NAME}`, "ux.start-sidebar-collapsed")) return;
   ui.sidebar.collapse();
 });
+
+Hooks.once("ready", (app, html, data) => {
+  if (!game.settings.get(`${MODULE_NAME}`, "ux.start-navigation-collapsed")) return;
+  ui.nav.collapse();
+});

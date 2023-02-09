@@ -141,6 +141,10 @@
           "name": "Collapse sidebar by default?",
           "hint": "Uses the collapsed state as the initial state"
         },
+        "start-navigation-collapsed": {
+          "name": "Collapse navigation by default?",
+          "hint": "Uses the collapsed state as the initial state"
+        },
         "no-logo": {
           "name": "Hide Foundry logo?",
           "hint": "Removes the Foundry logo in the top left"
