@@ -1,3 +1,8 @@
+# 1.11.14
+
+- (Refinement) When player-tags are enabled, remove the non-tag speaker name if it is identical to the tag. This conserves space.
+- (New) New UX setting that animates whispers from players to GM to draw attention to them.
+
 # 1.11.13
 
 - (Fix) Fixed an issue where TinyMCE text editors were illegible while editing in dark theme.

@@ -319,6 +319,9 @@ function injectAuthorName(html, messageData) {
     playerNameElem.appendChild(document.createTextNode(playerName));
     playerNameElem.classList.add("player-name");
     playerNameElem.classList.add("header-meta");
+    if (playerName === messageData.alias) {
+      html.find(".message-sender").addClass("dorako-display-none");
+    }
     messageSenderElem.append(playerNameElem);
   }
 }
@@ -353,6 +356,15 @@ function injectMessageTag(html, messageData) {
     } else if (isWhisper) {
       rolltype.text(i18n("pf2e-dorako-ui.text.whisper"));
       messageMetadata.prepend(rolltype);
+    }
+
+    if (game.settings.get("pf2e-dorako-ui", "ux.animate-messages")) {
+      // Draw attention to direct whispers from players to GM
+      const isGmSpeaker = game.users.get(messageData.message.user)?.isGM;
+      const isGmTarget = game.users.get(whisperTargets?.[0])?.isGM;
+      if (!(isBlind || isSelf) && isWhisper && !isGmSpeaker && isGmTarget) {
+        html[0].classList.add("attention");
+      }
     }
   }
 }

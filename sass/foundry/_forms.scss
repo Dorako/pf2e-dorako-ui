@@ -165,7 +165,7 @@
       filter: none;
     }
 
-    &:hover {
+    &:not(:disabled):hover {
       border-color: var(--secondary-light);
       box-shadow: 0px 0px 5px var(--secondary-light);
     }

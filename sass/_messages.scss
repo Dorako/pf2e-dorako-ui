@@ -185,7 +185,7 @@
 // Chat messages can be popped out, .message is too general and applies to stuff in modules
 .dorako-ui.message.chat-message {
   @include sheet;
-  @include gold-border-shadow;
+  // @include gold-border-shadow; bad idea, chat merge makes messages drop shadows on each other
   margin: 5px 3px 3px 3px;
 
   &.whisper {
@@ -387,5 +387,22 @@
     border-radius: 3px;
     background: #f5eaf5aa;
     outline: 1px dashed #720073;
+  }
+}
+
+/* ----------------------------------------- */
+/* Attention                                 */
+/* ----------------------------------------- */
+
+.dorako-ui.message.chat-message.attention {
+  animation: wiggle ease-in-out infinite 1s alternate;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: scale(0.9) translate(-15px);
+  }
+  100% {
+    transform: scale(0.9) translate(15px);
   }
 }

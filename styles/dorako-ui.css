@@ -847,14 +847,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   accent-color: var(--primary);
   filter: none;
 }
-.dorako-ui.window-app input[type=text]:hover,
-.dorako-ui.window-app input[type=number]:hover,
-.dorako-ui.window-app input[type=password]:hover,
-.dorako-ui.window-app input[type=date]:hover,
-.dorako-ui.window-app input[type=time]:hover,
-.dorako-ui.window-app input[type=search]:hover,
-.dorako-ui.window-app input[type=checkbox]:hover,
-.dorako-ui.window-app input[type=radio]:hover {
+.dorako-ui.window-app input[type=text]:not(:disabled):hover,
+.dorako-ui.window-app input[type=number]:not(:disabled):hover,
+.dorako-ui.window-app input[type=password]:not(:disabled):hover,
+.dorako-ui.window-app input[type=date]:not(:disabled):hover,
+.dorako-ui.window-app input[type=time]:not(:disabled):hover,
+.dorako-ui.window-app input[type=search]:not(:disabled):hover,
+.dorako-ui.window-app input[type=checkbox]:not(:disabled):hover,
+.dorako-ui.window-app input[type=radio]:not(:disabled):hover {
   border-color: var(--secondary-light);
   box-shadow: 0px 0px 5px var(--secondary-light);
 }
@@ -2609,10 +2609,6 @@ section.chat-sidebar {
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   background-image: var(--sheet);
   background-size: cover;
-  border: none;
-  margin: 2px;
-  /* prettier-ignore */
-  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
   margin: 5px 3px 3px 3px;
 }
 .dorako-ui.message.chat-message.whisper {
@@ -2784,6 +2780,21 @@ section.chat-sidebar {
   outline: 1px dashed #720073;
 }
 
+/* ----------------------------------------- */
+/* Attention                                 */
+/* ----------------------------------------- */
+.dorako-ui.message.chat-message.attention {
+  animation: wiggle ease-in-out infinite 1s alternate;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: scale(0.9) translate(-15px);
+  }
+  100% {
+    transform: scale(0.9) translate(15px);
+  }
+}
 /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */

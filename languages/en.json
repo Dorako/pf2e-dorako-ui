@@ -133,6 +133,10 @@
           "name": "Remove attack info from damage roll messages?",
           "hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with DFCE chat-merge"
         },
+        "animate-messages": {
+          "name": "Animate messages to draw attention to certain events?",
+          "hint": "Makes whispers from players to GM draw more attention"
+        },
         "compact-ui": {
           "name": "Enable Compact UI?",
           "hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered"

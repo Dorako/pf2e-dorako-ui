@@ -13,6 +13,7 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "remove-attack-info-from-damage-roll-messages",
     "center-hotbar",
     "enable-player-tags",
+    "animate-messages",
     "rolltype-indication",
     "start-sidebar-collapsed",
     "start-navigation-collapsed",
@@ -79,6 +80,21 @@ export class UXSettings extends SettingsMenuDorakoUI {
       "remove-attack-info-from-damage-roll-messages": {
         name: "pf2e-dorako-ui.settings.ux.remove-attack-info-from-damage-roll-messages.name",
         hint: "pf2e-dorako-ui.settings.ux.remove-attack-info-from-damage-roll-messages.hint",
+        scope: "world",
+        type: Boolean,
+        default: true,
+        config: true,
+        requiresReload: false,
+        onChange: () => {
+          const messages = game.messages.filter((m) => m instanceof ChatMessage);
+          for (const message of messages) {
+            ui.chat.updateMessage(message);
+          }
+        },
+      },
+      "animate-messages": {
+        name: "pf2e-dorako-ui.settings.ux.animate-messages.name",
+        hint: "pf2e-dorako-ui.settings.ux.animate-messages.hint",
         scope: "world",
         type: Boolean,
         default: true,
