@@ -3,7 +3,7 @@ import { SettingsMenuDorakoUI } from "./menu.js";
 export class MiscSettings extends SettingsMenuDorakoUI {
   static namespace = "misc";
 
-  static SETTINGS = ["enable-debug-mode", "send-to-chat", "skin-combat-carousel", "skin-crb-journal"];
+  static SETTINGS = ["enable-debug-mode", "send-to-chat", "skin-crb-journal"];
 
   static get settings() {
     return {
@@ -24,15 +24,6 @@ export class MiscSettings extends SettingsMenuDorakoUI {
         default: true,
         type: Boolean,
         requiresReload: false,
-      },
-      "skin-combat-carousel": {
-        name: "pf2e-dorako-ui.settings.misc.skin-combat-carousel.name",
-        scope: "world",
-        type: Boolean,
-        default: true,
-        config: true,
-        requiresReload: true,
-        onChange: foundry.utils.debouncedReload,
       },
       "skin-crb-journal": {
         name: "pf2e-dorako-ui.settings.misc.skin-crb-journal.name",

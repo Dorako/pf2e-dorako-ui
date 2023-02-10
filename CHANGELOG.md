@@ -1,3 +1,7 @@
+# 1.11.15
+
+- (New) Remade the styling for the Combat Carousel module, removed the old misc. setting.
+
 # 1.11.14
 
 - (Refinement) When player-tags are enabled, remove the non-tag speaker name if it is identical to the tag. This conserves space.

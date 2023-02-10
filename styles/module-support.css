@@ -130,6 +130,119 @@
   position: relative;
 }
 
+.dorako-ui#combat-carousel .splide__track {
+  overflow: visible;
+}
+.dorako-ui#combat-carousel:hover {
+  background: none;
+}
+.dorako-ui#combat-carousel .card {
+  background: none;
+  border: none;
+}
+.dorako-ui#combat-carousel .drag-handle {
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui#combat-carousel .splide__slide:hover meter::after {
+  top: -17px;
+  text-shadow: 0px 0px 3px black;
+  background: none;
+}
+.dorako-ui#combat-carousel .splide__slide:hover .fa-dice-d20 {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui#combat-carousel .initiative {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui#combat-carousel .initiative .fa-dice-d20 {
+  color: var(--color-text-light-heading);
+}
+.dorako-ui#combat-carousel .initiative:hover {
+  background-color: var(--primary);
+}
+.dorako-ui#combat-carousel .initiative:hover .fa-dice-d20 {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui#combat-carousel .is-active-combatant.card .avatar {
+  overflow: visible;
+}
+.dorako-ui#combat-carousel .is-active-combatant.card .avatar img {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  filter: drop-shadow(0px 0px 10px var(--tertiary));
+}
+.dorako-ui#combat-carousel .initiative input.fa-stack-1x {
+  font-size: 24px;
+  text-shadow: 0px 0px 3px black, 0px 1px 0px black;
+}
+.dorako-ui#combat-carousel .splide__slide:hover:not(.combat-round) {
+  transform: scale(1);
+  margin: 0px;
+}
+.dorako-ui#combat-carousel .splide__slide:hover:not(.combat-round) .avatar {
+  overflow: visible;
+}
+.dorako-ui#combat-carousel .splide__slide:hover:not(.combat-round) .avatar img {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  filter: drop-shadow(0px 0px 10px var(--tertiary));
+}
+.dorako-ui#combat-carousel .splide__slide:hover .name {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+  backdrop-filter: blur(5px);
+  min-height: 34px;
+  min-width: 100px;
+  font-size: var(--font-size-14);
+  line-height: var(--font-size-14);
+  top: -40px;
+  left: unset;
+  text-shadow: 0px 0px 3px black;
+  height: unset;
+  overflow: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px 8px;
+}
+.dorako-ui#combat-carousel .splide__slide:hover .name h3 {
+  margin: 0px;
+}
+.dorako-ui#combat-carousel .encounter-info, .dorako-ui#combat-carousel .encounter-controls {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui#combat-carousel:hover .combat-controls a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui#combat-carousel:hover .combat-controls a:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+
 /* ----------------------------------------- */
 /* Custom Hotbar                             */
 /* ----------------------------------------- */

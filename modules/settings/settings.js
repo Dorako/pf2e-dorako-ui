@@ -96,8 +96,6 @@ Hooks.once("init", async () => {
     injectCSS("fonts");
   }
 
-  if (game.settings.get("pf2e-dorako-ui", "misc.skin-combat-carousel")) injectCSS("combat-carousel");
-
   util.debug("injected sheets");
 });
 
