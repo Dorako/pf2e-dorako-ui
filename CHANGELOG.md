@@ -1,3 +1,7 @@
+# 1.11.16
+
+- (Refinement) [Cuingamehtar] Spell area types are now localizable.
+
 # 1.11.15
 
 - (New) Remade the styling for the Combat Carousel module, removed the old misc. setting.

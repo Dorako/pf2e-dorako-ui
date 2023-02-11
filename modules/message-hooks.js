@@ -267,8 +267,12 @@ function injectSpellInfo(html, spell) {
     let areaInfo = document.createElement("p");
     let areaInfoLabel = document.createElement("strong");
     areaInfoLabel.textContent = i18n("PF2E.AreaLabel") + " ";
+    let areaType = spell?.system?.area?.type;
+    let areaTypeLabel = areaType
+      ? i18n("PF2E.AreaType" + areaType.charAt(0).toUpperCase() + areaType.slice(1)).toLowerCase()
+      : "";
     let areaValue = document.createElement("span");
-    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + spell?.system?.area?.type;
+    areaValue.textContent = area + " " + i18n("PF2E.Foot").toLowerCase() + " " + areaTypeLabel;
     areaInfo.append(areaInfoLabel);
     areaInfo.append(areaValue);
     spellInfo.append(areaInfo);
