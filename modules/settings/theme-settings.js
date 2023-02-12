@@ -3,7 +3,14 @@ import { SettingsMenuDorakoUI } from "./menu.js";
 export class ThemeSettings extends SettingsMenuDorakoUI {
   static namespace = "theme";
 
-  static SETTINGS = ["application-theme", "chat-theme", "header-style", "frosted-glass", "glass-bg"];
+  static SETTINGS = [
+    "application-theme",
+    "chat-theme",
+    "header-style",
+    "frosted-glass",
+    "glass-bg",
+    "enable-dark-theme-journals",
+  ];
 
   static get settings() {
     return {
@@ -86,6 +93,21 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "light-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.light-theme",
           "dark-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.dark-theme",
         },
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
+      },
+      "enable-dark-theme-journals": {
+        name: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.name",
+        hint: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.hint",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
         requiresReload: false, // re-render all windows
         onChange: () => {
           const apps = Object.values(ui.windows).filter((w) => w instanceof Application);

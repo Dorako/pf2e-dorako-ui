@@ -1,0 +1,19 @@
+.dorako-ui#pf2e-dailies-interface .window-content {
+  @include sheet;
+}
+
+.dorako-ui#pf2e-dailies-interface .window-content input:not(:disabled) {
+  background: none;
+}
+
+.dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled) {
+  @include glass;
+  border-radius: 3px 0px 0px 3px;
+  border-right: 1px solid var(--tertiary);
+
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-dark);
+    color: var(--color-text-light-highlight);
+  }
+}

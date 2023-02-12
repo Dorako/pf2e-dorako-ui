@@ -1,3 +1,8 @@
+# 1.11.17
+
+- (Maintenance) Fixed regression in styling of PF2e Dailies.
+- (New) Added a new setting for enabling dark-theme for journal entries. Note that you might have to make different color-choices in journal entries for them to be legible.
+
 # 1.11.16
 
 - (Refinement) [Cuingamehtar] Spell area types are now localizable.

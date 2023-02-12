@@ -209,6 +209,14 @@
   gap: 5px;
 }
 
+.dorako-ui.dark-theme.app.choice-set-prompt section.window-content .choices .drop-zone span {
+  color: white;
+}
+
+.dorako-ui.dark-theme {
+  --color-text-dark-primary: var(--color-text-light-heading);
+}
+
 .dorako-ui.dark-theme.pf2e.item.sheet form article.sheet-content > section.sheet-sidebar .item-summary, .dorako-ui.dark-theme.pf2e.item.sheet form article.sheet-content > section.sheet-sidebar .inventory-details label, .dorako-ui.dark-theme.pf2e.item.sheet form article.sheet-content > section.sheet-sidebar .feat-details label {
   color: var(--color-text-light-heading);
 }
@@ -497,14 +505,27 @@
   color: rgba(250, 219, 60, 0.814);
 }
 
-/* ----------------------------------------- */
-/* Critical hit/fumble deck                  */
-/* ----------------------------------------- */
+/* ------------------------------------------------- */
+/* Dark theme journals + Critical hit/fumble deck    */
+/* ------------------------------------------------- */
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme {
   background: var(--sheet-dark);
+  color: var(--color-text-light-heading);
+}
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme table.pf2-table tr:nth-child(odd) {
+  background-color: #313131;
+}
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme table.pf2-table tr:nth-child(2n) {
+  background-color: #5d5d5d;
 }
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-header .title {
-  color: var(--color-text-light-heading);
+  color: var(--color-text-light-highlight);
+}
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h1,
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h2,
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h3,
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h4 {
+  color: var(--color-text-light-highlight);
 }
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck blockquote,
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck blockquote {

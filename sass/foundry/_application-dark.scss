@@ -39,6 +39,14 @@
   }
 }
 
+.dorako-ui.dark-theme.app.choice-set-prompt section.window-content .choices .drop-zone span {
+  color: white;
+}
+
+.dorako-ui.dark-theme {
+  --color-text-dark-primary: var(--color-text-light-heading);
+}
+
 // Sidebar "grey"
 // prettier-ignore
 .dorako-ui.dark-theme {
@@ -346,14 +354,30 @@
   }
 }
 
-/* ----------------------------------------- */
-/* Critical hit/fumble deck                  */
-/* ----------------------------------------- */
+/* ------------------------------------------------- */
+/* Dark theme journals + Critical hit/fumble deck    */
+/* ------------------------------------------------- */
 
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme {
   background: var(--sheet-dark);
+  color: var(--color-text-light-heading);
+
+  table.pf2-table tr:nth-child(odd) {
+    background-color: #313131;
+  }
+  table.pf2-table tr:nth-child(2n) {
+    background-color: #5d5d5d;
+  }
+
   .journal-header .title {
-    color: var(--color-text-light-heading);
+    color: var(--color-text-light-highlight);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-text-light-highlight);
   }
 
   .journal-entry-page .journal-page-content .critical-deck,

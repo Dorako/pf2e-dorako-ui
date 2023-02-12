@@ -71,6 +71,10 @@
             "tint": "Player color",
             "none": "Disabled"
           }
+        },
+        "enable-dark-theme-journals": {
+          "name": "Enable dark theme for Journals?",
+          "hint": "Does not affect premium modules journals"
         }
       },
       "avatar": {
@@ -87,7 +91,7 @@
           }
         },
         "hide-when-token-hidden": {
-          "name": "Hide avatar when token is hidden",
+          "name": "Hide avatar when token is hidden?",
           "hint": "Hides avatars when the speaker token is hidden"
         },
         "hide-gm-avatar-when-secret": {

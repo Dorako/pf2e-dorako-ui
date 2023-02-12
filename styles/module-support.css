@@ -1477,4 +1477,31 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   box-shadow: 0px 0px 1px 1px inset rgba(255, 255, 255, 0.2);
 }
 
+.dorako-ui#pf2e-dailies-interface .window-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+}
+
+.dorako-ui#pf2e-dailies-interface .window-content input:not(:disabled) {
+  background: none;
+}
+
+.dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled) {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border-radius: 3px 0px 0px 3px;
+  border-right: 1px solid var(--tertiary);
+}
+.dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled):hover, .dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled):focus {
+  background-color: var(--secondary-dark);
+  color: var(--color-text-light-highlight);
+}
+
 /*# sourceMappingURL=module-support.css.map */
