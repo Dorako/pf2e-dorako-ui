@@ -298,6 +298,18 @@
         "enable-player-tags": {
           "hint": "Ajoute une balise contenant le nom du joueur à côté de l'orateur",
           "name": "Activer les balises des joueurs ?"
+        },
+        "start-sidebar-collapsed": {
+          "name": "Réduire la barre latérale par défaut ?",
+          "hint": "Utilise l'état réduit au lancement"
+        },
+        "start-navigation-collapsed": {
+          "name": "Réduire la navigation par défaut ?",
+          "hint": "Utilise l'état réduit au lancement"
+        },
+        "animate-messages": {
+          "name": "Animer des messages pour attirer l'attention sur certains événements ?",
+          "hint": "Les chuchotements des joueurs au MJ attirent davantage l'attention"
         }
       },
       "misc": {
