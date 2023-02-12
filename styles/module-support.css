@@ -1391,50 +1391,44 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --dorako-vibrancy: var(--frosted-glass);
 }
 
-#tah-categories {
+.dorako-ui #tah-categories {
   gap: 5px;
 }
-
-#token-action-hud {
+.dorako-ui#token-action-hud {
   gap: 5px;
 }
-
-#tah-expand-hud {
+.dorako-ui #tah-expand-hud {
   width: 32px;
   height: 32px;
 }
-
-#tah-expand-hud,
-.tah-title-button {
+.dorako-ui #tah-expand-hud,
+.dorako-ui .tah-title-button {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
   padding: 3px 5px 3px 5px;
 }
-#tah-expand-hud:hover,
-.tah-title-button:hover {
+.dorako-ui #tah-expand-hud:hover,
+.dorako-ui .tah-title-button:hover {
   color: var(--color-text-light-highlight);
 }
-
-.tah-category.hover button.tah-title-button {
+.dorako-ui .tah-category.hover button.tah-title-button {
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
 }
-
-.tah-subtitle {
+.dorako-ui .tah-subtitle {
   width: 174px;
 }
-
-.tah-action button {
+.dorako-ui .tah-action button {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   color: var(--color-text-light-heading);
 }
-.tah-action button.toggle {
+.dorako-ui .tah-action button.toggle {
   background-color: var(--secondary-dark);
 }
-.tah-action button:hover {
+.dorako-ui .tah-action button:hover {
   color: var(--color-text-light-highlight);
 }
-.tah-action button.active {
+.dorako-ui .tah-action button.active {
   color: white;
 }
 

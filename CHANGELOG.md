@@ -1,3 +1,7 @@
+# 1.11.18
+
+- (Module) Added support for Token Action Hud Core (+ Pathfinder).
+
 # 1.11.17
 
 - (Maintenance) Fixed regression in styling of PF2e Dailies.

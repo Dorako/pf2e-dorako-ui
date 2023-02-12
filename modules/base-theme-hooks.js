@@ -31,6 +31,20 @@ for (const app of [...baseThemeApplications]) {
   });
 }
 
+Hooks.on("renderTokenActionHUD", (app, html, data) => {
+  if (!game.modules.get("token-action-hud")?.active && !game.settings.get("token-action-hud", "style") === "dorakoUI")
+    return;
+  if (
+    !game.modules.get("token-action-hud-core")?.active &&
+    !game.settings.get("token-action-hud-core", "style") === "dorakoUI"
+  )
+    return;
+
+  let html0 = html[0];
+  console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+  html0.classList.add("dorako-ui");
+});
+
 Hooks.on("renderDialog", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme") {
