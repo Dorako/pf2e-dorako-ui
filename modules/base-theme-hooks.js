@@ -32,17 +32,23 @@ for (const app of [...baseThemeApplications]) {
 }
 
 Hooks.on("renderTokenActionHUD", (app, html, data) => {
-  if (!game.modules.get("token-action-hud")?.active && !game.settings.get("token-action-hud", "style") === "dorakoUI")
+  // reconsider logic
+  if (game.modules.get("token-action-hud")?.active && game.settings.get("token-action-hud", "style") === "dorakoUI") {
+    let html0 = html[0];
+    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+    html0.classList.add("dorako-ui");
     return;
+  }
   if (
-    !game.modules.get("token-action-hud-core")?.active &&
-    !game.settings.get("token-action-hud-core", "style") === "dorakoUI"
-  )
+    game.modules.get("token-action-hud-core")?.active &&
+    game.settings.get("token-action-hud-core", "style") === "dorakoUI"
+  ) {
+    let html0 = html[0];
+    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+    html0.classList.add("dorako-ui");
     return;
-
-  let html0 = html[0];
-  console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
-  html0.classList.add("dorako-ui");
+  }
+  console.debug(`${MODULE_NAME}  | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
 });
 
 Hooks.on("renderDialog", (app, html, data) => {
@@ -61,7 +67,7 @@ Hooks.on("renderDialog", (app, html, data) => {
   app.render();
 });
 
-// Add .dorako-ui to all .window-app Applications
+// Add .dorako-ui to all .window-app Applications, except premium modules - except AV should have .dorako-ui
 Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
   if (!html0.classList.contains("window-app")) return;
@@ -69,6 +75,10 @@ Hooks.on("renderApplication", (app, html, data) => {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
     );
+    if (html0.matches(".pf2e-av")) {
+      console.debug(`${MODULE_NAME} | render${app.constructor.name} | matches pf2e-av => add .dorako-ui anyway`);
+      html0.classList.add("dorako-ui");
+    }
     return;
   }
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");

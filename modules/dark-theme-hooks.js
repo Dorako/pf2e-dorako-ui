@@ -28,13 +28,19 @@ Hooks.on("renderJournalSheetPF2e", (app, html) => {
   html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
 });
 
-// Dark theme journal hook
-Hooks.on("renderJournalSheetPF2e", (app, html) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") return;
+// Add .dorako-ui to all .journal-entry Applications
+// This hook is used to give modules (AV) a chance to add their own classes first
+Hooks.on("renderApplication", (app, html, data) => {
+  let html0 = html[0];
+  if (!html0.classList.contains("journal-entry")) return;
+  if (html0.matches(premiumModuleSelector)) {
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
+    );
+    return;
+  }
   const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
   if (!isDarkJournals) return;
-  let html0 = html[0];
   if (html0.matches(premiumModuleSelector)) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui or .dark-theme`

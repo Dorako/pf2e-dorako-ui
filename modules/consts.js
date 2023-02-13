@@ -31,7 +31,7 @@ export const baseThemeApplications = [...baseThemeCoreFoundryApplications,...bas
 export const darkThemeCompatibleApplications = [...darkThemeCompatibleCoreFoundryApplications, ...darkThemeCompatibleModuleApplications, ...darkThemeCompatiblePf2eApplications, ...dorakoUiApplications]
 
 // prettier-ignore
-export const premiumModuleSelector = ".gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; // pf2e-av
+export const premiumModuleSelector = ".pf2e-av, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
 
 // CLASSES
 export class Avatar {

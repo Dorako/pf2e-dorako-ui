@@ -1,3 +1,8 @@
+# 1.11.19
+
+- (Refinement) Ensure AV premium module journal entries are unaffected by dark-theme journal setting.
+- (Refinement) Update Dalvyn's CRB-styled journals to work with dark-theme journal setting.
+
 # 1.11.18
 
 - (Module) Added support for Token Action Hud Core (+ Pathfinder).

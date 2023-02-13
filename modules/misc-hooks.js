@@ -1,4 +1,4 @@
-import { baseThemePf2eSheets, MODULE_NAME } from "./consts.js";
+import { baseThemePf2eSheets, MODULE_NAME, premiumModuleSelector } from "./consts.js";
 import migrate from "./settings/migrations.js";
 import { i18n, debug, warn } from "./util.js";
 
@@ -76,6 +76,24 @@ Hooks.once("ready", () => {
     },
     default: "enable",
   }).render(true);
+});
+
+// If misc.skin-crb-journal is on, all non-premium module journals should have .dalvyn-journal
+Hooks.on("renderApplication", (app, html, data) => {
+  let html0 = html[0];
+  if (!html0.classList.contains("journal-entry")) return;
+  if (html0.matches(premiumModuleSelector)) {
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
+    );
+    return;
+  }
+  const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
+  if (!isDalvyn) return;
+  console.debug(
+    `${MODULE_NAME} | render${app.constructor.name} | is .journal-entry and skin-crb-journal = true => add .dalvyn-journal`
+  );
+  html0.classList.add("dalvyn-journal");
 });
 
 Hooks.on("getItemSheetPF2eHeaderButtons", (sheet, buttons) => {
