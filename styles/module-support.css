@@ -947,13 +947,6 @@ div#scrollToBottom:hover {
 }
 
 /* ----------------------------------------- */
-/* Monk's Enhanced Journal                   */
-/* ----------------------------------------- */
-.monks-enhanced-journal.window-app .window-content {
-  padding: 0px;
-}
-
-/* ----------------------------------------- */
 /* Monk's tokenbar                           */
 /* ----------------------------------------- */
 #tokenbar {
@@ -1209,6 +1202,296 @@ div#scrollToBottom:hover {
 }
 #hotbar.dorako-ui .hotbar-page .action-bar {
   margin: 0px 5px 0px 3px;
+}
+
+/* ----------------------------------------- */
+/* Monk's Enhanced Journal                   */
+/* ----------------------------------------- */
+.monks-journal-sheet.sheet .sheet-navigation,
+.monks-journal-sheet.sheet .sheet-header .header-details {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-14);
+}
+
+.monks-journal-sheet.sheet .editor  {
+  padding: 5px;
+}
+
+.monks-journal-sheet.sheet .editor-parent {
+  padding: 5px;
+}
+
+.monks-enhanced-journal.window-app .window-content {
+  padding: 0px;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px 0px 0px 5px;
+}
+
+.monks-enhanced-journal .directory-sidebar {
+  background: var(--glass-bg);
+  background: none;
+  border: none;
+  box-shadow: 0px 0px 2px 1px rgb(0, 0, 0), 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  color: var(--color-text-light-highlight);
+}
+
+#journal-directory .noborder,
+#journal-directory .document-name {
+  font-weight: 400;
+}
+
+.monks-enhanced-journal .body {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  margin: unset;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
+}
+
+.monks-enhanced-journal .collapse .body {
+  border-radius: 0px;
+}
+.monks-enhanced-journal .collapse .directory-sidebar {
+  box-shadow: none;
+}
+
+.monks-enhanced-journal .collapse .tab-bar .tab-button.sidebar-toggle {
+  color: var(--color-text-dark-primary);
+}
+
+.monks-enhanced-journal .tab-bar .tab-button.sidebar-toggle {
+  color: var(--color-text-light-highlight);
+  padding-top: 5px;
+}
+
+#journal-directory .directory-header {
+  padding-top: 5px;
+}
+
+.sheet.journal-entry .journal-entry-content {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  box-shadow: var(--gold-and-glow), 0px 5px 6px rgba(0, 0, 0, 0.5);
+}
+
+#MonksEnhancedJournal .journal-sheet-container .sidebar.directory {
+  background: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+#journal-directory li.folder.collapsed > .folder-header:not(.customcolor),
+#journal-directory li.folder.collapsed > .folder-header .create-folder,
+#journal-directory li.folder.collapsed > .folder-header .create-document {
+  color: var(--color-text-light-highlight);
+}
+
+#journal-directory li.folder.collapsed .folder-header.customcolor {
+  color: var(--color-text-light-highlight);
+}
+
+#journal-directory li.document .document-name {
+  color: var(--color-text-light-highlight);
+}
+
+#MonksEnhancedJournal .sheet.journal-entry .journal-entry-content {
+  border-radius: 10px;
+  margin: 10px 12px;
+  height: calc(100% - 20px);
+}
+
+#journal-directory li.journalentry,
+#journal-directory li.journalentrypage {
+  border-left: none;
+}
+
+#MonksEnhancedJournal .sheet.journal-entry .scrollable {
+  padding-right: unset;
+}
+
+.monks-enhanced-journal footer,
+.monks-enhanced-journal .mainbar .navigation {
+  background-color: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--color-border-light-primary);
+  border-left: none;
+  border-right: none;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.monks-enhanced-journal footer {
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.18);
+  border-bottom: none;
+  margin-bottom: 1px;
+  border-radius: 0px 0px 0px 5px;
+}
+
+.monks-journal-sheet.sheet .sheet-navigation {
+  background-color: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--color-border-light-primary);
+  border-radius: 3px;
+  margin: 5px;
+  margin-left: 0px;
+  margin-right: 8px;
+}
+
+.monks-journal-sheet.sheet .sheet-navigation .item {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  border: none;
+}
+.monks-journal-sheet.sheet .sheet-navigation .item:hover, .monks-journal-sheet.sheet .sheet-navigation .item.active {
+  border: none;
+  color: var(--secondary-light);
+  text-shadow: 0px 0px 10px;
+}
+
+.monks-journal-sheet.sheet .items-list .item .item-name .item-image {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-color: var(--bg);
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.monks-enhanced-journal .mainbar > div {
+  border: none;
+}
+
+.monks-enhanced-journal .tab-bar .journal-tab {
+  border-radius: 3px;
+}
+
+.monks-enhanced-journal .bookmark-bar .bookmark-button.add-bookmark {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.monks-enhanced-journal .bookmark-bar .bookmark-button.add-bookmark:hover {
+  background: var(--primary);
+  color: var(--color-text-light-heading);
+}
+
+.monks-enhanced-journal .mainbar .bookmark-bar {
+  margin-left: 8px;
+  margin-bottom: 5px;
+  column-gap: 8px;
+  row-gap: 4px;
+}
+.monks-enhanced-journal .mainbar .bookmark-bar .bookmark-button {
+  margin-left: unset;
+  padding: unset;
+  text-align: center;
+}
+.monks-enhanced-journal .mainbar .bookmark-bar .bookmark-button > div {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  padding: 0px 5px;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.monks-enhanced-journal .mainbar .bookmark-bar .bookmark-button > div:hover {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+
+.monks-enhanced-journal .mainbar .tab-row {
+  margin: 5px;
+  gap: 10px;
+}
+.monks-enhanced-journal .mainbar .tab-row .tab-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  opacity: unset;
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.monks-enhanced-journal .mainbar .tab-row .tab-button:hover {
+  background: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.monks-enhanced-journal .mainbar .tab-row .close {
+  margin-left: 5px;
+}
+.monks-enhanced-journal .mainbar .tab-row .journal-tab {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+  background-color: var(--secondary);
+  padding: 5px 10px;
+}
+.monks-enhanced-journal .mainbar .tab-row .journal-tab.active, .monks-enhanced-journal .mainbar .tab-row .journal-tab:hover {
+  background: var(--secondary-light);
+  color: white;
+}
+.monks-enhanced-journal .mainbar .tab-row .journal-tab.active {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+}
+
+section.readaloud {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 500;
+  margin: 0px;
+  margin-left: 5px;
+  background: none;
+  background-color: var(--bg);
+}
+section.readaloud:before, section.readaloud:after {
+  background: none;
+}
+
+.monks-journal-sheet.sheet .sheet-header .sheet-image,
+.monks-journal-sheet.sheet header.sheet-header {
+  border: none;
+}
+
+.monks-journal-sheet.sheet .sheet-header .sheet-image {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  background-color: var(--bg);
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.monks-journal-sheet.sheet .sheet-header .sheet-image img {
+  border-radius: 5px;
 }
 
 /* ----------------------------------------- */

@@ -53,6 +53,16 @@ Hooks.on("renderApplication", (app, html, data) => {
   );
 });
 
+// Add .dorako-ui.dark-theme to the page if it is not a page included in a premium module-styled journal
+Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
+  let journalFrame = app?.object?.parent?.sheet;
+  if (!journalFrame) return;
+  let frameHtml = journalFrame?.element;
+  if (!frameHtml || frameHtml.length == 0) return;
+  if (frameHtml[0].matches(premiumModuleSelector)) return;
+  frameHtml.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
+});
+
 // Maximum dark theme (All '.app' applications except blacklisted ones)
 for (const app of ["Application", ...baseThemePf2eSheets]) {
   Hooks.on("render" + app, (app, html, data) => {

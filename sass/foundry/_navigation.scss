@@ -8,7 +8,7 @@ nav#navigation.dorako-ui {
 
   #nav-toggle {
     @include glass;
-    transition: 0.25s;
+    @include quick-transition;
     flex: 0 0 32px;
     height: 32px;
   }
@@ -16,7 +16,7 @@ nav#navigation.dorako-ui {
   ol#scene-list {
     li.nav-item {
       @include glass;
-      transition: 0.25s;
+      @include quick-transition;
       text-shadow: 0px 0px 3px black;
 
       > a:hover {

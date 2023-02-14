@@ -1,3 +1,7 @@
+# 1.11.21
+
+- (Module) Added support for Monk's Enhanced Journals.
+
 # 1.11.20
 
 - (Fix) Fixed an issue where Monk's Enhanced Journals were unaffected by Dalvyn's CRB-styled journals.

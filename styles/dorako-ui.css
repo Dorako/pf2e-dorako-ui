@@ -991,7 +991,7 @@ nav#navigation.dorako-ui #nav-toggle {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: 0.25s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   flex: 0 0 32px;
   height: 32px;
 }
@@ -1001,7 +1001,7 @@ nav#navigation.dorako-ui ol#scene-list li.nav-item {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: 0.25s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
   text-shadow: 0px 0px 3px black;
 }
 nav#navigation.dorako-ui ol#scene-list li.nav-item > a:hover {
