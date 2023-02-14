@@ -81,7 +81,7 @@ Hooks.once("ready", () => {
 // If misc.skin-crb-journal is on, all non-premium module journals should have .dalvyn-journal
 Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
-  if (!html0.classList.contains("journal-entry")) return;
+  if (!(html0.classList.contains("journal-entry") || html0.classList.contains("monks-enhanced-journal"))) return;
   if (html0.matches(premiumModuleSelector)) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`

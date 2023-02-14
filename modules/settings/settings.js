@@ -82,6 +82,7 @@ Hooks.once("init", async () => {
 
   injectCSS("dorako-ui");
   injectCSS("module-support");
+  injectCSS("fonts");
 
   const root = document.querySelector(":root").style;
 
@@ -90,11 +91,6 @@ Hooks.once("init", async () => {
     "--chat-input-height",
     game.settings.get("pf2e-dorako-ui", "ux.chat-input-height").toString() + "px"
   );
-
-  if (game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal")) {
-    injectCSS("crb-journal");
-    injectCSS("fonts");
-  }
 
   util.debug("injected sheets");
 });

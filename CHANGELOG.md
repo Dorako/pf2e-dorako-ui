@@ -1,3 +1,7 @@
+# 1.11.20
+
+- (Fix) Fixed an issue where Monk's Enhanced Journals were unaffected by Dalvyn's CRB-styled journals.
+
 # 1.11.19
 
 - (Refinement) Ensure AV premium module journal entries are unaffected by dark-theme journal setting.
