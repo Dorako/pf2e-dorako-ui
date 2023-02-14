@@ -1,3 +1,8 @@
+# 1.11.22
+
+- (Refinement) Updated the wrapping-behavior of long in-character and player names. In general more stuff should avoid reflowing.
+- (System) Added experimental compatability with SWADE. Lots of stuff expected to work not-quite-right.
+
 # 1.11.21
 
 - (Module) Added support for Monk's Enhanced Journals.

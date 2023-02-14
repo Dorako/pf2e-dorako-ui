@@ -553,3 +553,11 @@ Hooks.on("renderChatMessage", (message, b) => {
     }
   }
 });
+
+// Add .spell to spells
+Hooks.on("renderChatMessage", (app, html, data) => {
+  const item = app?.item;
+  if (!item) return;
+  if (!item.constructor.name.includes("SpellPF2e")) return;
+  html[0].classList.add("spell");
+});

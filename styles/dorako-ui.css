@@ -16,7 +16,7 @@
 }
 #players.dorako-ui h3 {
   cursor: pointer;
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
 }
 #players.dorako-ui h3:hover {
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
@@ -173,7 +173,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0 0 3px black;
   background-color: var(--glass-bg-light);
   color: var(--color-text-light-heading);
@@ -282,7 +282,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0 0 3px black;
   color: var(--color-text-light-heading);
 }
@@ -421,7 +421,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   color: var(--color-text-light-heading);
 }
 .dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip):hover {
@@ -480,7 +480,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   color: var(--color-text-light-heading);
   text-shadow: 0 0 3px black;
 }
@@ -642,7 +642,7 @@ nav#controls.dorako-ui ol.control-tools > li {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   border-radius: 3px;
   margin-bottom: 8px;
@@ -754,7 +754,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 .dorako-ui form button:not(.pm-dropdown) {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   border: 1px solid var(--color-border-light-primary);
 }
 .dorako-ui form button:not(.pm-dropdown):hover {
@@ -854,7 +854,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .dorako-ui.window-app input[type=search],
 .dorako-ui.window-app input[type=checkbox],
 .dorako-ui.window-app input[type=radio] {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   accent-color: var(--primary);
 }
 .dorako-ui.window-app input[type=text]:checked,
@@ -902,11 +902,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   box-shadow: none;
 }
 #hotbar.dorako-ui .macro.inactive::before, #hotbar.dorako-ui .macro.active::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   content: "";
   position: absolute;
   top: 0;
@@ -919,7 +919,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   pointer-events: none;
 }
 #hotbar.dorako-ui .macro.active:hover::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   content: "";
   position: absolute;
   top: 0;
@@ -991,7 +991,7 @@ nav#navigation.dorako-ui #nav-toggle {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   flex: 0 0 32px;
   height: 32px;
 }
@@ -1001,7 +1001,7 @@ nav#navigation.dorako-ui ol#scene-list li.nav-item {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
 }
 nav#navigation.dorako-ui ol#scene-list li.nav-item > a:hover {
@@ -1291,7 +1291,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
 }
 .placeable-hud .control-icon .badge {
@@ -1367,7 +1367,7 @@ section.chat-sidebar {
   background-image: url("../img/header.webp"), var(--sheet);
 }
 .dorako-ui.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image:hover .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name .item-image:hover, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item .item-name .item-image:hover {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background: white !important;
 }
 .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod {
@@ -1397,7 +1397,7 @@ section.chat-sidebar {
   border-radius: 0px 0px 10px 10px;
 }
 .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   color: white;
   background-color: var(--primary);
@@ -1589,7 +1589,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
   font-family: var(--sans-serif);
@@ -1654,7 +1654,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled) {
@@ -1684,7 +1684,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   background: var(--secondary);
   color: var(--color-text-light-highlight);
@@ -1884,7 +1884,7 @@ section.chat-sidebar {
   gap: 10px;
 }
 .dorako-ui.familiar .window-content .skills-content .skills-list .skill-name {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background: rgba(255, 255, 240, 0.8);
   border: 1px solid var(--color-border-light-primary);
 }
@@ -2458,7 +2458,7 @@ section.chat-sidebar {
 }
 .dorako-ui a,
 .dorako-ui button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
 }
 
 .dorako-ui.dark-theme {
@@ -2488,6 +2488,9 @@ section.chat-sidebar {
   gap: 5px;
   align-items: center;
 }
+.dorako-ui .message-header .message-metadata {
+  flex: 2.5;
+}
 .dorako-ui .message-header .header-meta {
   border-radius: 3px;
   padding: 2px;
@@ -2495,6 +2498,7 @@ section.chat-sidebar {
   align-self: center;
   text-align: center;
   text-shadow: none;
+  white-space: nowrap;
 }
 .dorako-ui .message-header.light-header-text {
   background-blend-mode: multiply;
@@ -2516,9 +2520,16 @@ section.chat-sidebar {
   background-color: hsla(0deg, 0%, 90%, 0.5);
   border: 1px solid hsla(0deg, 0%, 30%, 0.4);
 }
+.dorako-ui .message-header .player-name,
+.dorako-ui .message-header .message-sender {
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .dorako-ui .message-header .portrait-and-name {
   flex-grow: 1;
   display: flex;
+  flex-basis: 100px;
   gap: 5px;
 }
 .dorako-ui .message-header .portrait-and-name .portrait-wrapper {
@@ -2565,7 +2576,7 @@ section.chat-sidebar {
   gap: 2px;
 }
 .dorako-ui.message .message-content .damage-application button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
 }
 .dorako-ui.message .message-content .damage-application button.half-damage .transparent-half {
   display: none;
@@ -2581,7 +2592,7 @@ section.chat-sidebar {
   z-index: 1;
   position: absolute;
   top: 0px;
-  left: 2px;
+  left: 2.4px;
   clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
   color: gray;
 }
@@ -2623,6 +2634,10 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* Chat card                                 */
 /* ----------------------------------------- */
+.dorako-ui.message.chat-message.spell {
+  padding-bottom: 0px;
+}
+
 .dorako-ui.message.chat-message {
   border: none;
   margin: 2px;
@@ -2779,8 +2794,7 @@ section.chat-sidebar {
   border-image-source: var(--ornamentation);
   border-image-width: 14px;
   border-style: double;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 3px 10px;
   font-weight: 500;
   margin: 0px;
 }
@@ -2915,7 +2929,7 @@ section.chat-sidebar {
 }
 .dorako-ui a,
 .dorako-ui button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
 }
 
 .dorako-ui.dark-theme {
@@ -2958,7 +2972,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background-color: var(--glass-bg-light);
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
@@ -2977,7 +2991,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
   margin-top: 5px;
@@ -3012,7 +3026,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: var(--dorako-text-shadow);
   background: var(--primary);
   color: var(--color-text-light-highlight);
@@ -3036,7 +3050,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: var(--dorako-text-shadow);
   background: var(--primary);
   color: var(--color-text-light-highlight);
@@ -3051,7 +3065,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   background: var(--secondary);
   color: var(--color-text-light-highlight);
@@ -3069,7 +3083,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   background: var(--primary-dark);
   color: var(--color-text-light-highlight);
@@ -3093,7 +3107,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   color: var(--color-text-light-heading);
   margin: 0px;
@@ -3178,7 +3192,7 @@ section.chat-sidebar {
   margin-top: 0px;
 }
 .dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   border: none;
   border-radius: 3px;
   background: none;

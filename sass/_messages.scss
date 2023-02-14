@@ -13,6 +13,10 @@
   gap: 5px;
   align-items: center;
 
+  .message-metadata {
+    flex: 2.5;
+  }
+
   .header-meta {
     border-radius: 3px;
     padding: 2px;
@@ -20,6 +24,7 @@
     align-self: center;
     text-align: center;
     text-shadow: none;
+    white-space: nowrap;
   }
 
   &.light-header-text {
@@ -46,9 +51,17 @@
     }
   }
 
+  .player-name,
+  .message-sender {
+    max-width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   .portrait-and-name {
     flex-grow: 1;
     display: flex;
+    flex-basis: 100px;
     gap: 5px;
 
     .portrait-wrapper {
@@ -122,7 +135,7 @@
               z-index: 1;
               position: absolute;
               top: 0px;
-              left: 2px;
+              left: 2.4px;
               clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
               color: gray;
             }
@@ -181,6 +194,10 @@
 /* ----------------------------------------- */
 /* Chat card                                 */
 /* ----------------------------------------- */
+
+.dorako-ui.message.chat-message.spell {
+  padding-bottom: 0px;
+}
 
 // Chat messages can be popped out, .message is too general and applies to stuff in modules
 .dorako-ui.message.chat-message {
@@ -362,8 +379,7 @@
         border-image-source: var(--ornamentation);
         border-image-width: 14px;
         border-style: double;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding: 3px 10px;
         font-weight: 500;
         margin: 0px;
 

@@ -26,6 +26,14 @@
           "minimum": "4.0.0",
           "verified": "4.7.1"
         }
+      },
+      {
+        "id": "swade",
+        "type": "system",
+        "compatibility": {
+          "minimum": "2.2.5",
+          "verified": "2.2.5"
+        }
       }
     ]
   },
