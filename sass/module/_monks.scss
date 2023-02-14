@@ -580,3 +580,9 @@ section.readaloud {
     border-radius: 5px;
   }
 }
+
+.monks-journal-sheet.sheet .items-list .item {
+  border: solid transparent;
+  border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+  border-width: 0 0 1px;
+}

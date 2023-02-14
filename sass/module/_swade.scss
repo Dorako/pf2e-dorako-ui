@@ -1,0 +1,16 @@
+.compendium-toc .toc .toc-entry .name {
+  text-decoration-color: var(--color-underline-header);
+}
+
+.compendium-toc .toc .content {
+  column-rule: 4px double var(--color-underline-header);
+}
+
+body.system-swade {
+  --primary-dark: #5c0b07;
+  --primary: #8c160f;
+  --primary-light: #bc2922;
+  //   --secondary-light: #ccc;
+  //   --secondary: #aaa;
+  //   --secondary-dark: #222;
+}

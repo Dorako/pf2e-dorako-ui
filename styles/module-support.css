@@ -1494,6 +1494,12 @@ section.readaloud:before, section.readaloud:after {
   border-radius: 5px;
 }
 
+.monks-journal-sheet.sheet .items-list .item {
+  border: solid transparent;
+  border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+  border-width: 0 0 1px;
+}
+
 /* ----------------------------------------- */
 /* Polyglot                                  */
 /* ----------------------------------------- */
@@ -2043,6 +2049,20 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-top: 0;
   border-bottom: 1px solid black;
   margin: 0;
+}
+
+.compendium-toc .toc .toc-entry .name {
+  text-decoration-color: var(--color-underline-header);
+}
+
+.compendium-toc .toc .content {
+  column-rule: 4px double var(--color-underline-header);
+}
+
+body.system-swade {
+  --primary-dark: #5c0b07;
+  --primary: #8c160f;
+  --primary-light: #bc2922;
 }
 
 /*# sourceMappingURL=module-support.css.map */

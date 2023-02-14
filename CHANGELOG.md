@@ -1,3 +1,9 @@
+# 1.11.23
+
+- (System) Blacklisted complex SWADE sheets from dark-theme.
+- (System) Rejiggered some things to make SWADE journals compatible with dark theme.
+- (System) Updated all instanced of 'red' (--primary) in SWADE to be the SWADE accent color.
+
 # 1.11.22
 
 - (Refinement) Updated the wrapping-behavior of long in-character and player names. In general more stuff should avoid reflowing.

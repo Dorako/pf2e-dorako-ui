@@ -49,7 +49,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   }
   html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
   console.debug(
-    `${MODULE_NAME} | renderJournalSheetPF2e | enable-dark-theme-journals: ${isDarkJournals} => add .dorako-ui .dark-theme`
+    `${MODULE_NAME} | render${app.constructor.name} | enable-dark-theme-journals: ${isDarkJournals} => add .dorako-ui .dark-theme`
   );
 });
 
