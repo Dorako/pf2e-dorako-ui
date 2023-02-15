@@ -1,3 +1,8 @@
+# 1.11.24
+
+- (Fix) Fixed an issue where Token Action Hud Core integration was not working as expected due to TAHC registering its settings much later than expected.
+- (Fix) Fixed an issue where some Journals were dark-themed regardles of the dark-theme journals setting.
+
 # 1.11.23
 
 - (System) Blacklisted complex SWADE sheets from dark-theme.

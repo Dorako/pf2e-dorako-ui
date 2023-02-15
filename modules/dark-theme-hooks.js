@@ -60,6 +60,8 @@ Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
   let frameHtml = journalFrame?.element;
   if (!frameHtml || frameHtml.length == 0) return;
   if (frameHtml[0].matches(premiumModuleSelector)) return;
+  const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
+  if (!isDarkJournals) return;
   frameHtml.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
 });
 
