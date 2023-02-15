@@ -26,6 +26,8 @@ section.chat-sidebar {
 
 #chat-log {
   margin-left: 4px;
+  display: flex;
+  flex-direction: column;
   li.dorako-ui:first-child {
     margin-top: 2px;
   }
@@ -84,6 +86,7 @@ section.chat-sidebar {
 .dorako-ui {
   #chat-controls {
     margin: 0px 5px;
+    gap: 5px;
 
     i.fas {
       line-height: 24px; // center-aligns icons
@@ -91,6 +94,7 @@ section.chat-sidebar {
 
     .roll-type-select {
       margin-left: 0px;
+      margin-right: 0px;
     }
   }
 }

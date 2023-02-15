@@ -2,6 +2,44 @@
 /* PF2e Target Damage                        */
 /* ----------------------------------------- */
 
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td {
+  &.criticalSuccess {
+    $color: rgb(0, 128, 0);
+    background-color: $color;
+    &:hover {
+      background-color: $color;
+      box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px $color;
+    }
+  }
+
+  &.success {
+    $color: rgb(0, 0, 255);
+    background-color: $color;
+    &:hover {
+      background-color: $color;
+      box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px $color;
+    }
+  }
+
+  &.failure {
+    $color: rgb(255, 69, 0);
+    background-color: $color;
+    &:hover {
+      background-color: $color;
+      box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px $color;
+    }
+  }
+
+  &.criticalFailure {
+    $color: rgb(255, 0, 0);
+    background-color: $color;
+    &:hover {
+      background-color: $color;
+      box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px $color;
+    }
+  }
+}
+
 .chat-message .message-content .pf2e-td.damage-application button .label {
   font-size: var(--font-size-8);
 }
@@ -24,6 +62,10 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 .dorako-ui.dark-theme.chat-message {
   hr.pf2e-td {
     display: none !important; // inline style overwrite
+  }
+
+  .spell-button.pf2e-td.target-button {
+    @include glass;
   }
 
   button.small-button.pf2e-td {

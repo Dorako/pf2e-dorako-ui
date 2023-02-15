@@ -649,7 +649,7 @@ nav#controls.dorako-ui ol.control-tools > li {
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool img,
 nav#controls.dorako-ui ol.control-tools > li img {
-  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+  filter: sepia() grayscale(0.9) brightness(0.8) drop-shadow(0px 0px 3px black);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool.active, nav#controls.dorako-ui ol.control-tools li.control-tool:hover,
 nav#controls.dorako-ui ol.control-tools > li.active,
@@ -1099,6 +1099,8 @@ section.chat-sidebar {
 
 #chat-log {
   margin-left: 4px;
+  display: flex;
+  flex-direction: column;
 }
 #chat-log li.dorako-ui:first-child {
   margin-top: 2px;
@@ -1154,12 +1156,14 @@ section.chat-sidebar {
 
 .dorako-ui #chat-controls {
   margin: 0px 5px;
+  gap: 5px;
 }
 .dorako-ui #chat-controls i.fas {
   line-height: 24px;
 }
 .dorako-ui #chat-controls .roll-type-select {
   margin-left: 0px;
+  margin-right: 0px;
 }
 
 #token-hud .status-effects {
@@ -2525,6 +2529,7 @@ section.chat-sidebar {
   max-width: 160px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .dorako-ui .message-header .portrait-and-name {
   flex-grow: 1;
@@ -2946,6 +2951,10 @@ section.chat-sidebar {
   --body: var(--text-light);
   --bg: var(--glass-bg-dark);
   --half-transparent: rgba(255, 255, 255, 0.5);
+}
+
+.dorako-ui.message.chat-message.spell {
+  padding-bottom: 3px;
 }
 
 /* ----------------------------------------- */

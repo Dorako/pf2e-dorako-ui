@@ -586,3 +586,70 @@ section.readaloud {
   border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
   border-width: 0 0 1px;
 }
+
+/* ----------------------------------------- */
+/* Monk's Scene Navigation                   */
+/* ----------------------------------------- */
+
+body.compact-ui #navigation .monks-scene-navigation #nav-toggle {
+  display: unset;
+}
+
+#navigation .nav-item-container {
+  @include glass;
+}
+
+#navigation .monks-scene-navigation .scene-list > li a {
+  @include glass;
+}
+
+#navigation .monks-scene-navigation .scene-list > li {
+  a {
+    @include glass;
+    @include quick-transition;
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-heading);
+    &:hover {
+      background-color: var(--primary);
+      color: var(--color-text-light-heading-highlight);
+    }
+  }
+
+  &.view a {
+    background-color: var(--primary);
+    color: var(--color-text-light-heading-highlight);
+
+    &:hover {
+      background-color: var(--primary-light);
+      color: white;
+    }
+  }
+
+  &.gm a {
+    background-color: var(--secondary);
+    color: var(--color-text-light-heading-highlight);
+
+    &:hover {
+      background-color: var(--secondary-light);
+      color: white;
+    }
+  }
+  &.gm.view a {
+    background-color: var(--secondary-light);
+    color: white;
+  }
+}
+#navigation .monks-scene-navigation .scene-list > li.view a,
+#navigation .monks-scene-navigation .scene-list > li.context a {
+  box-shadow: var(--glassy);
+  border: none;
+}
+
+#navigation .monks-scene-navigation .scene-list > li.active a {
+  @include glass;
+  box-shadow: var(--gold-and-glow), var(--glassy);
+}
+
+#navigation.background .monks-scene-navigation .scene-list {
+  @include glass;
+}

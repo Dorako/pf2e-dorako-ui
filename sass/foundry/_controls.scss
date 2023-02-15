@@ -25,7 +25,7 @@ nav#controls.dorako-ui {
       margin-bottom: 8px;
 
       img {
-        filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+        filter: sepia() grayscale(0.9) brightness(0.8) drop-shadow(0px 0px 3px black);
       }
 
       &.active,

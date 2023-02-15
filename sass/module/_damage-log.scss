@@ -33,3 +33,30 @@ nav.damage-log-nav.tabs {
     }
   }
 }
+
+#damage-log {
+  margin-left: 4px;
+}
+
+.dorako-ui {
+  /* Styling for damage messages */
+  &.message.damage-log.damage {
+    background-color: #ffd9d9;
+    background-blend-mode: luminosity;
+  }
+  /* Styling for healing messages */
+  &.message.damage-log.healing {
+    background-color: #d9ffd9;
+    background-blend-mode: luminosity;
+  }
+  /* Dim reverted damage */
+  &.message.damage-log.reverted.damage {
+    background-color: #ffeaea;
+    background-blend-mode: luminosity;
+  }
+  /* Dim reverted healing */
+  &.message.damage-log.reverted.healing {
+    background-color: #eaffea;
+    background-blend-mode: luminosity;
+  }
+}

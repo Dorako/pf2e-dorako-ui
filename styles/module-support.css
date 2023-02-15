@@ -357,6 +357,33 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: 3px;
 }
 
+#damage-log {
+  margin-left: 4px;
+}
+
+.dorako-ui {
+  /* Styling for damage messages */
+  /* Styling for healing messages */
+  /* Dim reverted damage */
+  /* Dim reverted healing */
+}
+.dorako-ui.message.damage-log.damage {
+  background-color: #ffd9d9;
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.damage-log.healing {
+  background-color: #d9ffd9;
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.damage-log.reverted.damage {
+  background-color: #ffeaea;
+  background-blend-mode: luminosity;
+}
+.dorako-ui.message.damage-log.reverted.healing {
+  background-color: #eaffea;
+  background-blend-mode: luminosity;
+}
+
 /* ----------------------------------------- */
 /* DF Chat Enhancements                      */
 /* ----------------------------------------- */
@@ -1501,6 +1528,87 @@ section.readaloud:before, section.readaloud:after {
 }
 
 /* ----------------------------------------- */
+/* Monk's Scene Navigation                   */
+/* ----------------------------------------- */
+body.compact-ui #navigation .monks-scene-navigation #nav-toggle {
+  display: unset;
+}
+
+#navigation .nav-item-container {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+#navigation .monks-scene-navigation .scene-list > li a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+#navigation .monks-scene-navigation .scene-list > li a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+#navigation .monks-scene-navigation .scene-list > li a:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-heading-highlight);
+}
+#navigation .monks-scene-navigation .scene-list > li.view a {
+  background-color: var(--primary);
+  color: var(--color-text-light-heading-highlight);
+}
+#navigation .monks-scene-navigation .scene-list > li.view a:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+#navigation .monks-scene-navigation .scene-list > li.gm a {
+  background-color: var(--secondary);
+  color: var(--color-text-light-heading-highlight);
+}
+#navigation .monks-scene-navigation .scene-list > li.gm a:hover {
+  background-color: var(--secondary-light);
+  color: white;
+}
+#navigation .monks-scene-navigation .scene-list > li.gm.view a {
+  background-color: var(--secondary-light);
+  color: white;
+}
+
+#navigation .monks-scene-navigation .scene-list > li.view a,
+#navigation .monks-scene-navigation .scene-list > li.context a {
+  box-shadow: var(--glassy);
+  border: none;
+}
+
+#navigation .monks-scene-navigation .scene-list > li.active a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  box-shadow: var(--gold-and-glow), var(--glassy);
+}
+
+#navigation.background .monks-scene-navigation .scene-list {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
+/* ----------------------------------------- */
 /* Polyglot                                  */
 /* ----------------------------------------- */
 #polyglot {
@@ -1565,6 +1673,35 @@ div.speaking-as--currentSpeaker + #chat-controls {
 /* ----------------------------------------- */
 /* PF2e Target Damage                        */
 /* ----------------------------------------- */
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.criticalSuccess {
+  background-color: rgb(0, 128, 0);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.criticalSuccess:hover {
+  background-color: rgb(0, 128, 0);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px rgb(0, 128, 0);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.success {
+  background-color: rgb(0, 0, 255);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.success:hover {
+  background-color: rgb(0, 0, 255);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px rgb(0, 0, 255);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.failure {
+  background-color: rgb(255, 69, 0);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.failure:hover {
+  background-color: rgb(255, 69, 0);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px rgb(255, 69, 0);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.criticalFailure {
+  background-color: rgb(255, 0, 0);
+}
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.criticalFailure:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px rgb(255, 0, 0);
+}
+
 .chat-message .message-content .pf2e-td.damage-application button .label {
   font-size: var(--font-size-8);
 }
@@ -1583,6 +1720,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 
 .dorako-ui.dark-theme.chat-message hr.pf2e-td {
   display: none !important;
+}
+.dorako-ui.dark-theme.chat-message .spell-button.pf2e-td.target-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
 }
 .dorako-ui.dark-theme.chat-message button.small-button.pf2e-td {
   border: none;

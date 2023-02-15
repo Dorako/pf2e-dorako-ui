@@ -464,13 +464,12 @@ function addAvatarsToFlags(message) {
     game.modules.get("combat-tracker-images")?.active && message.actor
       ? message.actor.getFlag("combat-tracker-images", "trackerImage")
       : null;
-  let actorImg = message.actor?.img;
-  let tokenImg = message.token?.texture.src;
+  let speaker = message.speaker;
+  const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token);
+  let tokenImg = token?.texture.src;
+  const actor = game.actors.get(speaker.actor);
+  let actorImg = actor?.img;
   let userImg = message.user?.avatar;
-
-  // console.log(message.token);
-  // console.log(message.token?.texture);
-  // console.log(message.token?.texture.src);
 
   let userAvatar = new Avatar(message.speaker.alias, userImg);
 
@@ -480,12 +479,7 @@ function addAvatarsToFlags(message) {
 
   let tokenAvatar = null;
   if (tokenImg) {
-    tokenAvatar = new TokenAvatar(
-      message.speaker.alias,
-      tokenImg,
-      message.token.texture.scaleX,
-      message.actor.size == "sm"
-    );
+    tokenAvatar = new TokenAvatar(message.speaker.alias, tokenImg, token.texture.scaleX, actor.size == "sm");
   }
 
   message.updateSource({

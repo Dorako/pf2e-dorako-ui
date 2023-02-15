@@ -1,3 +1,11 @@
+# 1.11.25
+
+- (SWADE) Made the token/portrait avatar setting functional.
+- (SWADE) Possibly avoided style collision with SWPF premium module.
+- (Fix) Fixed a regression that caused Damage Log messages to lose their background color.
+- (Module) Added support for Monk's Scene Navigation.
+- (Refinement) Updated support for new PF2e Target Damage features.
+
 # 1.11.24
 
 - (Fix) Fixed an issue where Token Action Hud Core integration was not working as expected due to TAHC registering its settings much later than expected.
@@ -5,14 +13,14 @@
 
 # 1.11.23
 
-- (System) Blacklisted complex SWADE sheets from dark-theme.
-- (System) Rejiggered some things to make SWADE journals compatible with dark theme.
-- (System) Updated all instanced of 'red' (--primary) in SWADE to be the SWADE accent color.
+- (SWADE) Blacklisted complex SWADE sheets from dark-theme.
+- (SWADE) Rejiggered some things to make SWADE journals compatible with dark theme.
+- (SWADE) Updated all instanced of 'red' (--primary) in SWADE to be the SWADE accent color.
 
 # 1.11.22
 
 - (Refinement) Updated the wrapping-behavior of long in-character and player names. In general more stuff should avoid reflowing.
-- (System) Added experimental compatability with SWADE. Lots of stuff expected to work not-quite-right.
+- (SWADE) Added experimental compatability with SWADE. Lots of stuff expected to work not-quite-right.
 
 # 1.11.21
 
