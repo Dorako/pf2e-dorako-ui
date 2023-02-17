@@ -527,6 +527,10 @@
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h4 {
   color: var(--color-text-light-highlight);
 }
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck h1,
+.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck code {
+  color: black;
+}
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck blockquote,
 .app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck blockquote {
   box-shadow: var(--glassy);

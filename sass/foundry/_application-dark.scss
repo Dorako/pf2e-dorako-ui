@@ -380,6 +380,11 @@
     color: var(--color-text-light-highlight);
   }
 
+  .journal-entry-page .journal-page-content .critical-deck h1,
+  .journal-entry-page .journal-page-content .critical-deck code {
+    color: black;
+  }
+
   .journal-entry-page .journal-page-content .critical-deck,
   .journal-entry-page .journal-page-content .fumble-deck {
     blockquote {

@@ -3,13 +3,20 @@
 }
 
 .dorako-ui#pf2e-dailies-interface .window-content input:not(:disabled) {
-  background: none;
+  background-image: var(--sheet);
+  background-position: center;
+  background-size: cover;
 }
 
 .dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled) {
   @include glass;
   border-radius: 3px 0px 0px 3px;
   border-right: 1px solid var(--tertiary);
+  background-image: var(--sheet);
+  background-position: center;
+  background-size: cover;
+  background-color: var(--glass-bg);
+  background-blend-mode: color;
 
   &:hover,
   &:focus {

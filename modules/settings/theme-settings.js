@@ -28,6 +28,9 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         },
         requiresReload: false,
         onChange: () => {
+          if (game.messages.size > 100) {
+            return ui.notifications.warn(game.i18n.localize("pf2e-dorako-ui.text.large-chatlog-warning"));
+          }
           const messages = game.messages.filter((m) => m instanceof ChatMessage);
           for (const message of messages) {
             ui.chat.updateMessage(message);
@@ -49,6 +52,9 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         },
         requiresReload: false,
         onChange: () => {
+          if (game.messages.size > 100) {
+            return ui.notifications.warn(game.i18n.localize("pf2e-dorako-ui.text.large-chatlog-warning"));
+          }
           const messages = game.messages.filter((m) => m instanceof ChatMessage);
           for (const message of messages) {
             ui.chat.updateMessage(message);
@@ -116,90 +122,6 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           }
         },
       },
-
-      // "pc-sheet-theme": {
-      //   name: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "default",
-      //   type: String,
-      //   choices: {
-      //     default: "pf2e-dorako-ui.text.default",
-      //     // "light-theme": "pf2e-dorako-ui.text.light",
-      //     "dark-theme": "pf2e-dorako-ui.text.dark",
-      //   },
-      //   requiresReload: false, // re-render all windows
-      //   onChange: () => {
-      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-      //     for (const app of apps) {
-      //       app.render();
-      //     }
-      //   },
-      // },
-
-      // "npc-sheet-theme": {
-      //   name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "light-theme",
-      //   type: String,
-      //   choices: {
-      //     default: "pf2e-dorako-ui.text.default",
-      //     "light-theme": "pf2e-dorako-ui.text.light",
-      //     "dark-theme": "pf2e-dorako-ui.text.dark",
-      //   },
-      //   requiresReload: false, // re-render all windows
-      //   onChange: () => {
-      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-      //     for (const app of apps) {
-      //       app.render();
-      //     }
-      //   },
-      // },
-
-      // "familiar-sheet-theme": {
-      //   name: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "default",
-      //   type: String,
-      //   choices: {
-      //     default: "pf2e-dorako-ui.text.default",
-      //     dark: "pf2e-dorako-ui.text.dark",
-      //     darkRedHeader: "pf2e-dorako-ui.settings.theme.familiar-sheet-theme.choice.dark-red-header",
-      //   },
-      //   requiresReload: false, // re-render all windows
-      //   onChange: () => {
-      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-      //     for (const app of apps) {
-      //       app.render();
-      //     }
-      //   },
-      // },
-
-      // "loot-sheet-theme": {
-      //   name: "pf2e-dorako-ui.settings.theme.loot-sheet-theme.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.loot-sheet-theme.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "light-theme",
-      //   type: String,
-      //   choices: {
-      //     default: "pf2e-dorako-ui.text.default",
-      //     "light-theme": "pf2e-dorako-ui.text.light",
-      //     // "dark-theme": "pf2e-dorako-ui.text.dark",
-      //   },
-      //   requiresReload: false, // re-render all windows
-      //   onChange: () => {
-      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-      //     for (const app of apps) {
-      //       app.render();
-      //     }
-      //   },
-      // },
     };
   }
 }

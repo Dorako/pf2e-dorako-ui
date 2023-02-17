@@ -1,3 +1,9 @@
+# 1.12.0
+
+- (Overhaul) Replaced the setting submenus with groups. This allows modules like Force Client Settings to easily work again.
+- (Fix) Fixed an issue where critical hit deck journals were illegible in dark theme. Also excluded them from Dalvyn's CRB styling.
+- (Maintenance) Fixed an issue where PF2e Dailies would sometimes show text on top of text.
+
 # 1.11.25
 
 - (SWADE) Made the token/portrait avatar setting functional.

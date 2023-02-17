@@ -38,44 +38,44 @@ Hooks.once("init", async () => {
     type: String,
   });
 
-  game.settings.registerMenu("pf2e-dorako-ui", "theme", {
-    name: "pf2e-dorako-ui.settings.theme.name",
-    label: "pf2e-dorako-ui.settings.theme.label",
-    hint: "pf2e-dorako-ui.settings.theme.hint",
-    icon: "fas fa-adjust",
-    type: ThemeSettings,
-    restricted: false,
-  });
+  // game.settings.registerMenu("pf2e-dorako-ui", "theme", {
+  //   name: "pf2e-dorako-ui.settings.theme.name",
+  //   label: "pf2e-dorako-ui.settings.theme.label",
+  //   hint: "pf2e-dorako-ui.settings.theme.hint",
+  //   icon: "fas fa-adjust",
+  //   type: ThemeSettings,
+  //   restricted: false,
+  // });
   ThemeSettings.registerSettings();
 
-  game.settings.registerMenu("pf2e-dorako-ui", "avatar", {
-    name: "pf2e-dorako-ui.settings.avatar.name",
-    label: "pf2e-dorako-ui.settings.avatar.label",
-    hint: "pf2e-dorako-ui.settings.avatar.hint",
-    icon: "fas fa-circle-user",
-    type: AvatarSettings,
-    restricted: false,
-  });
+  // game.settings.registerMenu("pf2e-dorako-ui", "avatar", {
+  //   name: "pf2e-dorako-ui.settings.avatar.name",
+  //   label: "pf2e-dorako-ui.settings.avatar.label",
+  //   hint: "pf2e-dorako-ui.settings.avatar.hint",
+  //   icon: "fas fa-circle-user",
+  //   type: AvatarSettings,
+  //   restricted: false,
+  // });
   AvatarSettings.registerSettings();
 
-  game.settings.registerMenu("pf2e-dorako-ui", "ux", {
-    name: "pf2e-dorako-ui.settings.ux.name",
-    label: "pf2e-dorako-ui.settings.ux.label",
-    hint: "pf2e-dorako-ui.settings.ux.hint",
-    icon: "fas fa-sliders",
-    type: UXSettings,
-    restricted: false,
-  });
+  // game.settings.registerMenu("pf2e-dorako-ui", "ux", {
+  //   name: "pf2e-dorako-ui.settings.ux.name",
+  //   label: "pf2e-dorako-ui.settings.ux.label",
+  //   hint: "pf2e-dorako-ui.settings.ux.hint",
+  //   icon: "fas fa-sliders",
+  //   type: UXSettings,
+  //   restricted: false,
+  // });
   UXSettings.registerSettings();
 
-  game.settings.registerMenu("pf2e-dorako-ui", "misc", {
-    name: "pf2e-dorako-ui.settings.misc.name",
-    label: "pf2e-dorako-ui.settings.misc.label",
-    hint: "pf2e-dorako-ui.settings.misc.hint",
-    icon: "fas fa-question-circle",
-    type: MiscSettings,
-    restricted: false,
-  });
+  // game.settings.registerMenu("pf2e-dorako-ui", "misc", {
+  //   name: "pf2e-dorako-ui.settings.misc.name",
+  //   label: "pf2e-dorako-ui.settings.misc.label",
+  //   hint: "pf2e-dorako-ui.settings.misc.hint",
+  //   icon: "fas fa-question-circle",
+  //   type: MiscSettings,
+  //   restricted: false,
+  // });
   MiscSettings.registerSettings();
 
   util.debug("registered settings");

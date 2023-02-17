@@ -111,6 +111,7 @@ Hooks.on("renderApplication", (app, html, data) => {
     );
     return;
   }
+  if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
   const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
   if (!isDalvyn) return;
   console.debug(
@@ -214,4 +215,30 @@ Hooks.once("ready", (app, html, data) => {
 Hooks.once("ready", (app, html, data) => {
   if (!game.settings.get(`${MODULE_NAME}`, "ux.start-navigation-collapsed")) return;
   ui.nav.collapse();
+});
+
+Hooks.on("renderSettingsConfig", (app, html, data) => {
+  $("<div>")
+    .addClass("form-group dorako-ui settings-header")
+    .html(
+      i18n("pf2e-dorako-ui.settings.theme.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.theme.hint")}</p>`
+    )
+    .insertBefore($('[name="pf2e-dorako-ui.theme.application-theme"]').parents("div.form-group:first"));
+  $("<div>")
+    .addClass("form-group dorako-ui settings-header")
+    .html(
+      i18n("pf2e-dorako-ui.settings.avatar.name") +
+        `<p class="notes">${i18n("pf2e-dorako-ui.settings.avatar.hint")}</p>`
+    )
+    .insertBefore($('[name="pf2e-dorako-ui.avatar.source"]').parents("div.form-group:first"));
+  $("<div>")
+    .addClass("form-group dorako-ui settings-header")
+    .html(i18n("pf2e-dorako-ui.settings.ux.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.ux.hint")}</p>`)
+    .insertBefore($('[name="pf2e-dorako-ui.ux.chat-input-height"]').parents("div.form-group:first"));
+  $("<div>")
+    .addClass("form-group dorako-ui settings-header")
+    .html(
+      i18n("pf2e-dorako-ui.settings.misc.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.misc.hint")}</p>`
+    )
+    .insertBefore($('[name="pf2e-dorako-ui.misc.enable-debug-mode"]').parents("div.form-group:first"));
 });

@@ -652,4 +652,5 @@ body.compact-ui #navigation .monks-scene-navigation #nav-toggle {
 
 #navigation.background .monks-scene-navigation .scene-list {
   @include glass;
+  gap: 5px;
 }

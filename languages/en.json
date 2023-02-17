@@ -11,7 +11,8 @@
       "default": "Default",
       "dark": "Dark",
       "light": "Light",
-      "disabled": "Disabled"
+      "disabled": "Disabled",
+      "large-chatlog-warning": "Due to large chatlog, some settings will apply on next reload."
     },
     "settings": {
       "reset-changes": "Reset Changes",

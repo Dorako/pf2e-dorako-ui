@@ -1,6 +1,9 @@
 /* ----------------------------------------- */
 /* PF2e Target Damage                        */
 /* ----------------------------------------- */
+.pf2e-td.name {
+  font-size: var(--font-size-9);
+}
 
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td {
   &.criticalSuccess {
@@ -64,8 +67,9 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
     display: none !important; // inline style overwrite
   }
 
-  .spell-button.pf2e-td.target-button {
+  .pf2e-td.target-section .target-button {
     @include glass;
+    height: calc(100% - 12px);
   }
 
   button.small-button.pf2e-td {

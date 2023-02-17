@@ -735,6 +735,37 @@ div#scrollToBottom:hover {
   backdrop-filter: unset;
 }
 
+.tab.category.active[data-tab=pf2e-dorako-ui] h2,
+.form-group.dorako-ui.settings-header {
+  font-size: larger;
+  background-color: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--color-border-light-primary);
+  border-radius: 3px;
+  margin: 2px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: var(--primary-light);
+}
+
+.tab.category.active[data-tab=pf2e-dorako-ui] h2 {
+  font-size: var(--font-size-48);
+  text-align: center;
+}
+
+.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2,
+.dorako-ui.dark-theme .form-group.dorako-ui.settings-header {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+  margin-bottom: 10px;
+  padding: 10px;
+  color: var(--tertiary);
+}
+
 /* ----------------------------------------- */
 /* Enhanced Terrain Layer                    */
 /* ----------------------------------------- */
@@ -1606,6 +1637,7 @@ body.compact-ui #navigation .monks-scene-navigation #nav-toggle {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
+  gap: 5px;
 }
 
 /* ----------------------------------------- */
@@ -1673,6 +1705,10 @@ div.speaking-as--currentSpeaker + #chat-controls {
 /* ----------------------------------------- */
 /* PF2e Target Damage                        */
 /* ----------------------------------------- */
+.pf2e-td.name {
+  font-size: var(--font-size-9);
+}
+
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.criticalSuccess {
   background-color: rgb(0, 128, 0);
 }
@@ -1721,12 +1757,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 .dorako-ui.dark-theme.chat-message hr.pf2e-td {
   display: none !important;
 }
-.dorako-ui.dark-theme.chat-message .spell-button.pf2e-td.target-button {
+.dorako-ui.dark-theme.chat-message .pf2e-td.target-section .target-button {
   border: none;
   border-radius: 3px;
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
+  height: calc(100% - 12px);
 }
 .dorako-ui.dark-theme.chat-message button.small-button.pf2e-td {
   border: none;
@@ -1915,7 +1952,9 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 
 .dorako-ui#pf2e-dailies-interface .window-content input:not(:disabled) {
-  background: none;
+  background-image: var(--sheet);
+  background-position: center;
+  background-size: cover;
 }
 
 .dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled) {
@@ -1926,6 +1965,11 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   box-shadow: var(--glassy);
   border-radius: 3px 0px 0px 3px;
   border-right: 1px solid var(--tertiary);
+  background-image: var(--sheet);
+  background-position: center;
+  background-size: cover;
+  background-color: var(--glass-bg);
+  background-blend-mode: color;
 }
 .dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled):hover, .dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled):focus {
   background-color: var(--secondary-dark);
