@@ -205,6 +205,10 @@
             "dark-theme": "Dorako UI sombre"
           },
           "name": "Thème de l'application"
+        },
+        "enable-dark-theme-journals": {
+          "name": "Activer le thème sombre dans les journaux ?",
+          "hint": "N'affecte par les modules de journaux premium"
         }
       },
       "avatar": {
@@ -220,7 +224,7 @@
         },
         "hide-when-token-hidden": {
           "hint": "Cacher les avatars lorsque le jeton de l'orateur est caché",
-          "name": "Cacher l'avatar lorsque le jeton est caché"
+          "name": "Cacher l'avatar lorsque le jeton est caché ?"
         },
         "hide-gm-avatar-when-secret": {
           "name": "Cacher l'avatar sur jet secret ?",

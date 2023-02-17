@@ -27,7 +27,7 @@ export default async function migrate() {
 }
 
 function findOldSettingValue(oldSettingKey) {
-  return oldSettings.find((setting) => setting.key.endsWith(oldSettingKey))?.value; // FIXME: key can be undefined
+  return oldSettings.find((setting) => setting?.key?.endsWith(oldSettingKey))?.value;
 }
 
 const migrations = {
