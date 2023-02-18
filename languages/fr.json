@@ -136,7 +136,8 @@
       "disabled": "Désactivé",
       "secret": "Secret",
       "whisper": "Murmure",
-      "send-to-chat": "Envoyé"
+      "send-to-chat": "Envoyé",
+      "large-chatlog-warning": "En raison de la taille du journal de la conversation, certains paramètres s'appliqueront lors du prochain rechargement."
     },
     "settings": {
       "theme": {
