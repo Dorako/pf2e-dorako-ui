@@ -81,12 +81,11 @@
   background: url(../../../modules/pf2e-abomination-vaults/styles/assets/parchment-av.jpg) repeat;
 }
 
-.dorako-ui.window-app .window-header {
+.dorako-ui.window-app:not(.swpf-sheet) .window-header {
   text-shadow: 0px 0px 3px black;
   border: none;
 }
-
-.dorako-ui.window-app .window-content {
+.dorako-ui.window-app:not(.swpf-sheet) .window-content {
   border: none;
   margin: 2px;
   /* prettier-ignore */
@@ -990,11 +989,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* ----------------------------------------- */
 /* Scene Navigation                          */
 /* ----------------------------------------- */
-nav#navigation.dorako-ui {
+#navigation.dorako-ui {
   color: var(--color-text-light-heading);
   width: calc(100% - 46px);
 }
-nav#navigation.dorako-ui #nav-toggle {
+#navigation.dorako-ui #nav-toggle {
   border: none;
   border-radius: 3px;
   background: none;
@@ -1004,7 +1003,7 @@ nav#navigation.dorako-ui #nav-toggle {
   flex: 0 0 32px;
   height: 32px;
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item {
+#navigation.dorako-ui ol#scene-list li.nav-item {
   border: none;
   border-radius: 3px;
   background: none;
@@ -1013,17 +1012,17 @@ nav#navigation.dorako-ui ol#scene-list li.nav-item {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item > a:hover {
+#navigation.dorako-ui ol#scene-list li.nav-item > a:hover {
   text-shadow: unset;
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item .scene-players {
+#navigation.dorako-ui ol#scene-list li.nav-item .scene-players {
   text-shadow: none;
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item:hover {
+#navigation.dorako-ui ol#scene-list li.nav-item:hover {
   color: var(--color-text-light-highlight);
   background-color: var(--primary);
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item.view {
+#navigation.dorako-ui ol#scene-list li.nav-item.view {
   border: none;
   border-radius: 3px;
   background: none;
@@ -1032,11 +1031,11 @@ nav#navigation.dorako-ui ol#scene-list li.nav-item.view {
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item.view:hover {
+#navigation.dorako-ui ol#scene-list li.nav-item.view:hover {
   color: white;
   background-color: var(--primary-light);
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item.gm {
+#navigation.dorako-ui ol#scene-list li.nav-item.gm {
   border: none;
   border-radius: 3px;
   background: none;
@@ -1044,15 +1043,15 @@ nav#navigation.dorako-ui ol#scene-list li.nav-item.gm {
   box-shadow: var(--glassy);
   background-color: var(--secondary-dark);
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item.gm:hover, nav#navigation.dorako-ui ol#scene-list li.nav-item.gm.view {
+#navigation.dorako-ui ol#scene-list li.nav-item.gm:hover, #navigation.dorako-ui ol#scene-list li.nav-item.gm.view {
   color: var(--color-text-light-highlight);
   background-color: var(--secondary-light);
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item.context {
+#navigation.dorako-ui ol#scene-list li.nav-item.context {
   box-shadow: var(--glassy);
   border: none;
 }
-nav#navigation.dorako-ui ol#scene-list li.nav-item.active {
+#navigation.dorako-ui ol#scene-list li.nav-item.active {
   box-shadow: var(--gold-and-glow), var(--glassy);
 }
 

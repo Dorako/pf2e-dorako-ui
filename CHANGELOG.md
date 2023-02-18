@@ -1,3 +1,12 @@
+# 1.12.3
+
+- (SWADE) Added support for the Card Hand Mini Toolbar module. (Use 'above Players' position if used with centered hotbar)
+- (SWADE) Probably exempted SWPF Premium Module character sheets from styling.
+- (Refinement) Ensure that "avatars react to critical degree" setting does not apply for messages where players cannot see the roll.
+- (Refinement) Improved styling for new Token Action HUD Core + Pathfinder.
+- (Refinement) Improved styling of Monk's Scene Navigation when 'Back button' is disabled.
+- (Refinement) Updated 'Dorako UI' settings menu styling.
+
 # 1.12.2
 
 - (Fix) Removed some WIP settings that had snuck into the last release.

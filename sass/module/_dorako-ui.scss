@@ -206,24 +206,27 @@
     backdrop-filter: unset;
   }
 }
+.dorako-ui {
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
+  .form-group.dorako-ui.settings-header {
+    font-size: larger;
+    background-color: var(--bg);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
+    border: 1px solid var(--color-border-light-primary);
+    border-radius: 3px;
+    margin: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--secondary-light);
+    // text-shadow: 0px 0px 10px var(--secondary-light);
+  }
 
-.tab.category.active[data-tab="pf2e-dorako-ui"] h2,
-.form-group.dorako-ui.settings-header {
-  font-size: larger;
-  background-color: var(--bg);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
-  border: 1px solid var(--color-border-light-primary);
-  border-radius: 3px;
-  margin: 2px;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: var(--primary-light);
-  // text-shadow: 0px 0px 10px var(--secondary-light);
-}
-
-.tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
-  font-size: var(--font-size-48);
-  text-align: center;
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
+    font-size: var(--font-size-48);
+    text-align: center;
+    color: var(--primary-light);
+    text-shadow: 0px 1px 0px var(--primary);
+  }
 }
 
 .dorako-ui.dark-theme {
@@ -234,6 +237,10 @@
     margin-bottom: 10px;
     padding: 10px;
     color: var(--tertiary);
+    text-shadow: 0px 0px 3px black;
     // text-shadow: 0px 0px 10px var(--tertiary);
+  }
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
+    color: var(--tertiary-dark);
   }
 }

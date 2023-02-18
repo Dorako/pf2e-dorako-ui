@@ -1,11 +1,14 @@
 /* ----------------------------------------- */
 /* Token Action HUD (TAH)                    */
 /* ----------------------------------------- */
-:root {
+#token-action-hud.dorako-ui {
   --dorako-bg-current: var(--glass-bg);
   --dorako-vibrancy: var(--frosted-glass);
-}
-.dorako-ui {
+  --paizo-blue: var(--secondary);
+  --paizo-blue-bright: var(--secondary-light);
+  --paizo-red-bright: var(--primary-light);
+  --pazio-red: var(--primary);
+
   #tah-categories {
     gap: 5px;
   }
@@ -46,6 +49,12 @@
 
     &.toggle {
       background-color: var(--secondary-dark);
+      &:hover {
+        background-color: var(--secondary);
+      }
+      &.active {
+        background-color: var(--secondary-light);
+      }
     }
     &:hover {
       color: var(--color-text-light-highlight);

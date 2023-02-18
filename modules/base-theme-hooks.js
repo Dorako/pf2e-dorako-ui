@@ -30,6 +30,19 @@ for (const app of [...baseThemeApplications]) {
     html0.classList.add("dorako-ui");
   });
 }
+// TAH Core
+Hooks.on("renderTokenActionHud", (app, html, data) => {
+  if (
+    game.modules.get("token-action-hud-core")?.active &&
+    game.settings.get("token-action-hud-core", "style") === "dorakoUI"
+  ) {
+    let html0 = html[0];
+    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+    html0.classList.add("dorako-ui");
+    return;
+  }
+  console.debug(`${MODULE_NAME} | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
+});
 
 Hooks.on("renderTokenActionHUD", (app, html, data) => {
   // reconsider logic
@@ -44,7 +57,7 @@ Hooks.on("renderTokenActionHUD", (app, html, data) => {
     game.settings.get("token-action-hud-core", "style") === "dorakoUI"
   ) {
     let html0 = html[0];
-    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} => add .dorako-ui`);
     html0.classList.add("dorako-ui");
     return;
   }

@@ -81,16 +81,18 @@
   }
 }
 
-.dorako-ui.window-app .window-header {
-  text-shadow: 0px 0px 3px black;
-  border: none;
-}
-
-.dorako-ui.window-app .window-content {
-  @include sheet;
-  margin: unset; // messes with box-sizing
-  box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
-  border-radius: 0px 0px 3px 3px;
+// ugly ":not"
+.dorako-ui.window-app:not(.swpf-sheet) {
+  .window-header {
+    text-shadow: 0px 0px 3px black;
+    border: none;
+  }
+  .window-content {
+    @include sheet;
+    margin: unset; // messes with box-sizing
+    box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
+    border-radius: 0px 0px 3px 3px;
+  }
 }
 
 .window-app.chat-popout {

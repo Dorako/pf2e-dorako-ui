@@ -2,7 +2,7 @@
 /* Monk's Common Display                     */
 /* ----------------------------------------- */
 
-#common-display-toolbar {
+#common-display-toolbar.dorako-ui {
   @include glass;
   .move-handle {
     @include glass;
@@ -686,66 +686,75 @@ section.readaloud {
 /* Monk's Scene Navigation                   */
 /* ----------------------------------------- */
 
-body.compact-ui #navigation .monks-scene-navigation #nav-toggle {
+body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   display: unset;
 }
 
-#navigation .nav-item-container {
-  @include glass;
-}
-
-#navigation .monks-scene-navigation .scene-list > li a {
-  @include glass;
-}
-
-#navigation .monks-scene-navigation .scene-list > li {
-  a {
+.dorako-ui {
+  &#navigation .nav-item-container {
     @include glass;
-    @include quick-transition;
-    text-shadow: 0px 0px 3px black;
-    color: var(--color-text-light-heading);
-    &:hover {
+    #nav-toggle {
+      box-shadow: unset;
+      border: unset;
+      background: unset;
+      height: unset;
+      flex: unset;
+    }
+  }
+
+  &#navigation .monks-scene-navigation .scene-list > li a {
+    @include glass;
+  }
+
+  &#navigation .monks-scene-navigation .scene-list > li {
+    a {
+      @include glass;
+      @include quick-transition;
+      text-shadow: 0px 0px 3px black;
+      color: var(--color-text-light-heading);
+      &:hover {
+        background-color: var(--primary);
+        color: var(--color-text-light-heading-highlight);
+      }
+    }
+
+    &.view a {
       background-color: var(--primary);
       color: var(--color-text-light-heading-highlight);
+
+      &:hover {
+        background-color: var(--primary-light);
+        color: white;
+      }
     }
-  }
 
-  &.view a {
-    background-color: var(--primary);
-    color: var(--color-text-light-heading-highlight);
+    &.gm a {
+      background-color: var(--secondary);
+      color: var(--color-text-light-heading-highlight);
 
-    &:hover {
-      background-color: var(--primary-light);
-      color: white;
+      &:hover {
+        background-color: var(--secondary-light);
+        color: white;
+      }
     }
-  }
-
-  &.gm a {
-    background-color: var(--secondary);
-    color: var(--color-text-light-heading-highlight);
-
-    &:hover {
+    &.gm.view a {
       background-color: var(--secondary-light);
       color: white;
     }
   }
-  &.gm.view a {
-    background-color: var(--secondary-light);
-    color: white;
+  &#navigation .monks-scene-navigation .scene-list > li.view a,
+  &#navigation .monks-scene-navigation .scene-list > li.context a {
+    box-shadow: var(--glassy);
+    border: none;
   }
-}
-#navigation .monks-scene-navigation .scene-list > li.view a,
-#navigation .monks-scene-navigation .scene-list > li.context a {
-  box-shadow: var(--glassy);
-  border: none;
-}
 
-#navigation .monks-scene-navigation .scene-list > li.active a {
-  @include glass;
-  box-shadow: var(--gold-and-glow), var(--glassy);
-}
+  &#navigation .monks-scene-navigation .scene-list > li.active a {
+    @include glass;
+    box-shadow: var(--gold-and-glow), var(--glassy);
+  }
 
-#navigation.background .monks-scene-navigation .scene-list {
-  @include glass;
-  gap: 5px;
+  &#navigation.background .monks-scene-navigation .scene-list {
+    @include glass;
+    gap: 5px;
+  }
 }

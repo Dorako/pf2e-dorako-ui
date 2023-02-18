@@ -1,0 +1,62 @@
+#hand-mini-bar-hands-container {
+  .hand-mini-bar-hand {
+    @include glass;
+    border-radius: 5px;
+  }
+  .hand-mini-bar-settings-hand {
+    background-position-x: 2px;
+  }
+  .hand-mini-bar-card-container {
+    background-color: unset;
+    border: unset;
+    min-width: 152px;
+    max-width: 152px;
+  }
+  .hand-mini-bar-settings,
+  .hand-mini-bar-actions {
+    > div {
+      box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset;
+      text-align: center;
+      border: none;
+      text-shadow: 0px 0px 3px black;
+      @include quick-transition;
+      &:hover {
+        background-color: var(--primary);
+      }
+    }
+  }
+  .hand-mini-bar-settings {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: 1px solid black;
+    div:first-child {
+      border-bottom: 1px solid black;
+    }
+  }
+  .hand-mini-bar-actions {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left: 1px solid black;
+    div:first-child {
+      border-bottom: 1px solid black;
+    }
+  }
+  .hand-mini-bar-pass:before {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.dorako-ui.dark-theme .hand-mini-bar-window-buttons {
+  gap: 3px;
+  .hand-mini-bar-window-button {
+    @include glass;
+    @include quick-transition;
+    color: var(--color-text-light-heading);
+    text-shadow: 0px 0px 3px black;
+    &:hover {
+      color: var(--color-text-light-highlight);
+      background-color: var(--primary);
+    }
+  }
+}

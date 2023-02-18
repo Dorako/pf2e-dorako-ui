@@ -534,7 +534,7 @@ Hooks.on("renderChatMessage", (message, b) => {
 
   const portraitDegreeSetting = game.settings.get("pf2e-dorako-ui", "avatar.reacts-to-degree-of-success");
 
-  if (portraitDegreeSetting) {
+  if (portraitDegreeSetting && message.isContentVisible) {
     // console.log(message);
     let outcome = message?.flags?.pf2e?.context?.outcome;
     if (outcome == undefined) return;
