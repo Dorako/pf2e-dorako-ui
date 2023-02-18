@@ -38,6 +38,30 @@ Hooks.once("init", async () => {
     type: String,
   });
 
+  const refresh = () => {
+    game.canvas?.tokens?.placeables.forEach((token) => {
+      void token.drawEffects();
+    });
+  };
+
+  game.settings.register("pf2e-dorako-ui", "effectIconsLayout", {
+    scope: "client",
+    config: true,
+    default: "above",
+    type: String,
+    choices: ["horizontal", "vertical", "above"],
+    onChange: refresh,
+  });
+
+  game.settings.register("pf2e-dorako-ui", "effectIconsPerRow", {
+    scope: "client",
+    config: true,
+    default: 10,
+    type: String,
+    onChange: refresh,
+    range: { min: 2, max: 10, step: 1 },
+  });
+
   // game.settings.registerMenu("pf2e-dorako-ui", "theme", {
   //   name: "pf2e-dorako-ui.settings.theme.name",
   //   label: "pf2e-dorako-ui.settings.theme.label",

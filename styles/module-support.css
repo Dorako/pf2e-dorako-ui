@@ -423,11 +423,9 @@ nav.damage-log-nav.tabs .item.active {
 .message.chat-message.dfce-cm-middle .message-header, .message.chat-message.dfce-cm-bottom .message-header {
   background: transparent;
   box-shadow: none;
-  text-shadow: 0px 0px 1px white;
   margin: 0px;
   padding: 0px;
   padding-right: 5px;
-  color: var(--color-text-dark-primary);
 }
 .message.chat-message.dfce-cm-middle .header-meta, .message.chat-message.dfce-cm-bottom .header-meta {
   display: none;
@@ -1265,6 +1263,108 @@ div#scrollToBottom:hover {
 /* ----------------------------------------- */
 /* Monk's Enhanced Journal                   */
 /* ----------------------------------------- */
+.dorako-ui.dark-theme.monks-journal-sheet.sheet .items-list .item .item-name,
+.dorako-ui.dark-theme .monks-journal-sheet.sheet .items-list .item .item-name {
+  color: var(--body);
+}
+.dorako-ui.dark-theme.monks-journal-sheet.sheet .items-list,
+.dorako-ui.dark-theme .monks-journal-sheet.sheet .items-list {
+  color: var(--color-text-light-heading-highlight);
+}
+.dorako-ui.dark-theme.monks-journal-sheet.sheet .items-list .items-header,
+.dorako-ui.dark-theme .monks-journal-sheet.sheet .items-list .items-header {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.monks-journal-sheet.sheet .sheet-navigation,
+.dorako-ui.dark-theme .monks-journal-sheet.sheet .sheet-navigation {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+}
+.dorako-ui.dark-theme.monks-enhanced-journal footer, .dorako-ui.dark-theme.monks-enhanced-journal .mainbar .navigation {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+}
+.dorako-ui.dark-theme.monks-enhanced-journal .mainbar .navigation .nav-button, .dorako-ui.dark-theme.monks-enhanced-journal footer.navigation .nav-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.monks-enhanced-journal .mainbar .navigation .nav-button:hover, .dorako-ui.dark-theme.monks-enhanced-journal footer.navigation .nav-button:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme .monks-enhanced-journal.request-item .request-buttons {
+  gap: 5px;
+}
+.dorako-ui.dark-theme .monks-enhanced-journal.request-item .request-buttons button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme .monks-enhanced-journal.request-item .request-buttons button:hover {
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme .monks-enhanced-journal.request-item .request-buttons button.request-accept:hover {
+  background-color: green;
+}
+
+.system-pf2e .monks-enhanced-journal.request-item.item-card {
+  height: unset;
+  padding: unset;
+}
+
+.monks-journal-sheet.sheet .person-container,
+.monks-journal-sheet.sheet .place-container,
+.monks-journal-sheet.sheet .quest-container,
+.monks-journal-sheet.sheet .organization-container,
+.monks-journal-sheet.sheet .shop-container,
+.monks-journal-sheet.sheet .loot-container,
+.monks-journal-sheet.sheet .poi-container,
+.monks-journal-sheet.sheet .event-container {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
+}
+
+.monks-enhanced-journal.request-item img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  object-fit: contain;
+  background-color: white;
+}
+
 .monks-journal-sheet.sheet .sheet-navigation,
 .monks-journal-sheet.sheet .sheet-header .header-details {
   font-family: var(--font-primary);
@@ -1556,6 +1656,20 @@ section.readaloud:before, section.readaloud:after {
   border: solid transparent;
   border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
   border-width: 0 0 1px;
+}
+
+.dorako-ui.dark-theme .monks-journal-sheet.sheet .items-list .item {
+  border-image: linear-gradient(90deg, rgba(241, 237, 234, 0), black) 1;
+}
+
+#journal-directory .directory-item.journalentry .permissions {
+  background-color: var(--glass-bg-light);
+  box-shadow: var(--glassy);
+}
+#journal-directory .directory-item.journalentry .permissions > div {
+  color: var(--tertiary);
+  box-shadow: var(--gold-and-glow), 0px 1px 3px black;
+  margin-top: 1px;
 }
 
 /* ----------------------------------------- */
@@ -1988,7 +2102,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: black;
 }
 
-.dalvyn-journal {
+.dalvyn-journal .journal-entry:not(.pf2e-av) {
   /* By Dalvyn */
   /* Custom CSS - PF2 STYLE v2.1 */
   /* TITRES
@@ -2011,40 +2125,40 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   /* Rarity (sub = uncommon, sup = rare, strikethrough = unique) */
   /* Dorako */
 }
-.dalvyn-journal .journal-header .title {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-header .title {
   color: var(--red) !important;
   font-family: "Taroca Regular";
 }
-.dalvyn-journal .journal-entry-page h1 {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h1 {
   color: var(--blue) !important;
   font-family: "Taroca Regular";
   line-height: 100%;
   border-bottom: 0;
 }
-.dalvyn-journal .journal-entry-page h1:hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h1:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dalvyn-journal .journal-entry-page h2 {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h2 {
   color: var(--red) !important;
   font-family: "Gin-Regular";
   text-transform: uppercase;
   line-height: 100%;
   border-bottom: 0;
 }
-.dalvyn-journal .journal-entry-page h2:hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h2:hover {
   background-image: linear-gradient(rgba(78, 7, 7, 0), rgba(78, 7, 7, 0), rgba(78, 7, 7, 0.2666666667));
 }
-.dalvyn-journal .journal-entry-page h3 {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h3 {
   color: var(--brown) !important;
   font-family: "Gin-Regular";
   text-transform: uppercase;
   line-height: 100%;
   border-bottom: 0;
 }
-.dalvyn-journal .journal-entry-page h3:hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h3:hover {
   background-image: linear-gradient(rgba(173, 111, 89, 0), rgba(173, 111, 89, 0), rgba(173, 111, 89, 0), rgba(173, 111, 89, 0.2666666667));
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h4 {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h4 {
   color: var(--blue) !important;
   font-family: "Gin-Regular";
   font-variant: small-caps;
@@ -2052,52 +2166,52 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   line-height: 100%;
   border-bottom: 0;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h4:hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h4:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dalvyn-journal .journal-entry-page h5 {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h5 {
   line-height: 100%;
   font-variant: small-caps;
   font-size: var(--font-size-14);
   border-bottom: 0;
   margin-bottom: 0;
 }
-.dalvyn-journal .journal-entry-page h5:hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page h5:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dalvyn-journal .journal-entry-page .window-content {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .window-content {
   font-family: "Gelasio";
 }
-.dalvyn-journal .journal-entry-page code {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page code {
   font-family: "pathfinder2eactions";
   font-style: normal;
   font-size: 150%;
   line-height: 66%;
 }
-.dalvyn-journal .journal-entry-page table {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page table {
   font-family: "roboto condensed";
   max-width: calc(100% - 24px);
   margin-left: auto;
   margin-right: auto;
 }
-.dalvyn-journal .journal-entry-page table th {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page table th {
   color: white;
   background-color: var(--red);
 }
-.dalvyn-journal .journal-entry-page tr:nth-child(2n) {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page tr:nth-child(2n) {
   background-color: #f5efe0;
 }
-.dalvyn-journal .journal-entry-page tr:nth-child(2n+1) {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page tr:nth-child(2n+1) {
   background-color: #efe3c8;
 }
-.dalvyn-journal .journal-entry-page tr:hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page tr:hover {
   background-color: #e9d7b0;
 }
-.dalvyn-journal .journal-entry-page table td,
-.dalvyn-journal .journal-entry-page table th {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page table td,
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page table th {
   padding: 4px 6px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
   border-left-width: 0;
   border-top: 2px solid #cfbf80;
   border-bottom: 2px solid #cfbf80;
@@ -2108,27 +2222,27 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   margin-left: 0;
   margin-right: 0;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover {
   color: #efdfa2;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 0;
   margin-bottom: 0;
   background-color: rgba(245, 239, 224, 0.6666666667);
 }
-.dalvyn-journal .journal-entry-page .journal-page-content :is(h6, h6 + p) {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content :is(h6, h6 + p) {
   font-family: "Tauri-Regular";
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.15em;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 {
   border-bottom: 1px solid black;
   padding: 4px 12px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p {
   text-align: right;
   position: relative;
   bottom: 24px;
@@ -2137,7 +2251,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   margin: 0;
   overflow: visible;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul {
   clear: both;
   display: flex;
   font-family: "roboto condensed";
@@ -2145,27 +2259,27 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   list-style-type: none;
   padding: 4px 12px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li strong {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li strong {
   font-weight: normal;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li em {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li em {
   font-style: normal;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li sub {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li sub {
   vertical-align: baseline;
   font-size: 100%;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li sup {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li sup {
   vertical-align: baseline;
   font-size: 100%;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li s {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li s {
   text-decoration: none;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p {
   margin: 0;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p {
   color: white;
   border: 3px solid #dac68a;
   border-left-width: 4px;
@@ -2173,67 +2287,67 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   text-transform: uppercase;
   margin: 0;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p {
   background-color: #58180d;
   padding: 2px 3px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p > strong {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p > strong {
   background-color: #576293;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p > em {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p > em {
   background-color: #3b7b59;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p > sub {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p > sub {
   background-color: #98513d;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p > sup {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p > sup {
   background-color: #002664;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul li p > s {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul li p > s {
   background-color: #54166e;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote {
   border: 0;
   padding: 0 12px 4px 12px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote {
   border: 0;
   padding: 4px 12px 4px 12px;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote p {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote p {
   font-family: "roboto condensed";
   font-style: normal;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote em {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote em {
   font-style: italic;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child) {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child) {
   text-indent: -1em;
   margin-left: 1em;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote p * {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote p * {
   text-indent: 0;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote p:first-child {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote p:first-child {
   margin-top: 0;
 }
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + blockquote hr,
-.dalvyn-journal .journal-entry-page .journal-page-content h6 + p + ul + blockquote hr {
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + blockquote hr,
+.dalvyn-journal .journal-entry:not(.pf2e-av) .journal-entry-page .journal-page-content h6 + p + ul + blockquote hr {
   border-top: 0;
   border-bottom: 1px solid black;
   margin: 0;
@@ -2251,6 +2365,76 @@ body.system-swade {
   --primary-dark: #5c0b07;
   --primary: #8c160f;
   --primary-light: #bc2922;
+}
+
+.dorako-ui .message-metadata {
+  max-height: unset;
+}
+.dorako-ui form button.emojiPickerButton {
+  display: flex;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0px 0px 3px black;
+  background-color: #f7ce64;
+}
+.dorako-ui form button.emojiPickerButton:hover {
+  background-color: #cfa436;
+}
+
+.dorako-ui.light-theme .emoji-button {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  background-image: var(--sheet-dark);
+  text-shadow: 0px 0px 3px black;
+  margin-right: 5px;
+}
+.dorako-ui.light-theme .emoji-button:hover {
+  background-color: var(--primary);
+  background-blend-mode: color-dodge;
+}
+.dorako-ui.light-theme .trigger {
+  background: none;
+  box-shadow: none;
+}
+.dorako-ui.light-theme .trigger:hover {
+  background: none;
+  box-shadow: none;
+}
+
+.dorako-ui.dark-theme .emoji-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.dark-theme .emoji-button:hover {
+  background-color: var(--primary);
+}
+.dorako-ui.dark-theme .trigger {
+  background-color: #f7ce64;
+  height: 20px;
+  width: 20px;
+  place-self: center;
+  display: flex;
+  text-align: center;
+}
+.dorako-ui.dark-theme .trigger:hover {
+  background-color: #cfa436;
 }
 
 /*# sourceMappingURL=module-support.css.map */

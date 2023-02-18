@@ -43,6 +43,12 @@
     }
   }
 
+  &.window-app.maximized {
+    border-radius: 0;
+    margin: 0px;
+    box-shadow: none;
+  }
+
   &.window-app.minimized.hazard {
     background-color: #1c3531;
   }

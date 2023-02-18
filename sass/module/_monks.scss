@@ -309,6 +309,88 @@
 /* Monk's Enhanced Journal                   */
 /* ----------------------------------------- */
 
+.dorako-ui.dark-theme {
+  &.monks-journal-sheet.sheet .items-list .item .item-name,
+  .monks-journal-sheet.sheet .items-list .item .item-name {
+    color: var(--body);
+  }
+  &.monks-journal-sheet.sheet .items-list,
+  .monks-journal-sheet.sheet .items-list {
+    color: var(--color-text-light-heading-highlight);
+  }
+  &.monks-journal-sheet.sheet .items-list .items-header,
+  .monks-journal-sheet.sheet .items-list .items-header {
+    @include glass;
+    background: var(--glass-bg-light);
+    color: var(--tertiary);
+  }
+  &.monks-journal-sheet.sheet .sheet-navigation,
+  .monks-journal-sheet.sheet .sheet-navigation {
+    @include glass;
+    background: var(--glass-bg-light);
+    // color: var(--tertiary);
+    // text-shadow: 0px 0px 10px var(--tertiary);
+  }
+  &.monks-enhanced-journal footer,
+  &.monks-enhanced-journal .mainbar .navigation {
+    @include glass;
+    background: var(--glass-bg-light);
+  }
+  &.monks-enhanced-journal .mainbar .navigation .nav-button,
+  &.monks-enhanced-journal footer.navigation .nav-button {
+    @include glass;
+    @include quick-transition;
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-heading);
+    &:hover {
+      background-color: var(--primary);
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  .monks-enhanced-journal.request-item .request-buttons {
+    gap: 5px;
+    button {
+      @include glass;
+      @include quick-transition;
+      text-shadow: 0px 0px 3px black;
+      color: var(--color-text-light-heading);
+      &:hover {
+        background-color: var(--primary);
+        color: var(--color-text-light-highlight);
+      }
+      &.request-accept:hover {
+        background-color: green;
+      }
+    }
+  }
+}
+
+.system-pf2e .monks-enhanced-journal.request-item.item-card {
+  height: unset;
+  padding: unset;
+}
+
+// Player point-of-view
+.monks-journal-sheet.sheet .person-container,
+.monks-journal-sheet.sheet .place-container,
+.monks-journal-sheet.sheet .quest-container,
+.monks-journal-sheet.sheet .organization-container,
+.monks-journal-sheet.sheet .shop-container,
+.monks-journal-sheet.sheet .loot-container,
+.monks-journal-sheet.sheet .poi-container,
+.monks-journal-sheet.sheet .event-container {
+  @include sheet;
+  box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
+}
+
+.monks-enhanced-journal.request-item img {
+  @include gold-border;
+  border-radius: 3px;
+  object-fit: contain;
+  background-color: white;
+}
+
 .monks-journal-sheet.sheet .sheet-navigation,
 .monks-journal-sheet.sheet .sheet-header .header-details {
   font-family: var(--font-primary);
@@ -585,6 +667,19 @@ section.readaloud {
   border: solid transparent;
   border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
   border-width: 0 0 1px;
+}
+.dorako-ui.dark-theme .monks-journal-sheet.sheet .items-list .item {
+  border-image: linear-gradient(90deg, rgba(241, 237, 234, 0), black) 1;
+}
+
+#journal-directory .directory-item.journalentry .permissions {
+  background-color: var(--glass-bg-light);
+  box-shadow: var(--glassy);
+  > div {
+    color: var(--tertiary);
+    box-shadow: var(--gold-and-glow), 0px 1px 3px black;
+    margin-top: 1px;
+  }
 }
 
 /* ----------------------------------------- */

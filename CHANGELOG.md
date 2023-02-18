@@ -1,3 +1,9 @@
+# 1.12.1
+
+- (Module) Added support for Chat Reactions.
+- (Fix) Fixed an issue where Monk's Enhanced Journals would under some circumstances not have a background.
+- (Refinement) Extended dark theme support for chat messages sent via Monk's Enhanced Journals.
+
 # 1.12.0
 
 - (Overhaul) Replaced the setting submenus with groups. This allows modules like Force Client Settings to easily work again.

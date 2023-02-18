@@ -194,16 +194,12 @@
 
         "enable-debug-mode": {
           "name": "Enable debug mode?",
-          "hint": "Adds buttons to toggle dorako-ui styling for windows."
+          "hint": "Adds buttons to toggle dorako-ui and dark-theme styling for windows"
         },
 
         "send-to-chat": {
           "name": "Add 'Send' button to window header?",
           "hint": "Sends content to chat as if sent via sheet"
-        },
-
-        "skin-combat-carousel": {
-          "name": "Enable styling for Combat Carousel?"
         },
 
         "skin-crb-journal": {

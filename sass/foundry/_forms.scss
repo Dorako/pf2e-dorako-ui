@@ -53,7 +53,8 @@
   }
 }
 
-.dorako-ui form button:not(.pm-dropdown) {
+.dorako-ui form button {
+  //:not(.pm-dropdown)
   @include quick-transition;
   border: 1px solid var(--color-border-light-primary);
 
