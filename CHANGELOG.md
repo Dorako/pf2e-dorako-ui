@@ -1,3 +1,8 @@
+# 1.12.2
+
+- (Fix) Removed some WIP settings that had snuck into the last release.
+- (Fix) Fixed an issue where Dalvyn's CRB styled journal styling was not applying to all journals.
+
 # 1.12.1
 
 - (Module) Added support for Chat Reactions.
