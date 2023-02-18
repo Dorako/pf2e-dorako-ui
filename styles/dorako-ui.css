@@ -22,45 +22,6 @@
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
 }
 
-.dorako-ui.app {
-  border: none;
-  border-radius: 3px;
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  border-radius: 5px;
-  box-shadow: var(--glassy), 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
-}
-.dorako-ui.app.sidebar-popout {
-  border: none;
-}
-.dorako-ui.app.sidebar-popout .window-content {
-  background: none;
-  box-shadow: none;
-  margin: 0px;
-}
-.dorako-ui.app.image-popout {
-  backdrop-filter: blur(5px);
-}
-.dorako-ui.app.image-popout .window-content {
-  background: none;
-  box-shadow: none;
-}
-.dorako-ui.app.window-app.maximized {
-  border-radius: 0;
-  margin: 0px;
-  box-shadow: none;
-}
-.dorako-ui.app.window-app.minimized.hazard {
-  background-color: #1c3531;
-}
-.dorako-ui.app.window-app.minimized.character {
-  background-color: #5d0e08;
-}
-.dorako-ui.app.window-app.minimized.npc {
-  background-color: #422d01;
-}
-
 .dorako-ui.app.journal-entry .window-content {
   box-shadow: none;
   margin: 0px;
@@ -81,11 +42,20 @@
   background: url(../../../modules/pf2e-abomination-vaults/styles/assets/parchment-av.jpg) repeat;
 }
 
-.dorako-ui.window-app:not(.swpf-sheet) .window-header {
+.dorako-ui.window-app {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  border-radius: 5px;
+  box-shadow: var(--glassy), 0px 10px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.dorako-ui.window-app .window-header {
   text-shadow: 0px 0px 3px black;
   border: none;
 }
-.dorako-ui.window-app:not(.swpf-sheet) .window-content {
+.dorako-ui.window-app .window-content {
   border: none;
   margin: 2px;
   /* prettier-ignore */
@@ -96,17 +66,44 @@
   box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
   border-radius: 0px 0px 3px 3px;
 }
-
-.window-app.chat-popout {
-  border-radius: 5px 5px 7px 7px;
-}
-.window-app.chat-popout .window-header {
+.dorako-ui.window-app.sidebar-popout {
   border: none;
 }
-.window-app.chat-popout .message.chat-message {
+.dorako-ui.window-app.sidebar-popout .window-content {
+  background: none;
+  box-shadow: none;
+  margin: 0px;
+}
+.dorako-ui.window-app.chat-popout {
+  border-radius: 5px 5px 7px 7px;
+}
+.dorako-ui.window-app.chat-popout .window-header {
+  border: none;
+}
+.dorako-ui.window-app.chat-popout .message.chat-message {
   margin: 1px;
 }
-
+.dorako-ui.window-app.image-popout {
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.window-app.image-popout .window-content {
+  background: none;
+  box-shadow: none;
+}
+.dorako-ui.window-app.maximized {
+  border-radius: 0;
+  margin: 0px;
+  box-shadow: none;
+}
+.dorako-ui.window-app.maximized.hazard {
+  background-color: #1c3531;
+}
+.dorako-ui.window-app.maximized.character {
+  background-color: #5d0e08;
+}
+.dorako-ui.window-app.maximized.npc {
+  background-color: #422d01;
+}
 .dorako-ui.window-app .window-resizable-handle {
   background: none;
   border: none;
@@ -233,7 +230,7 @@
   border-radius: 0px 3px 3px 0px;
 }
 
-.dorako-ui .dorako-ui.dark-theme.window-content {
+.dorako-ui.dark-theme.window-content {
   border: none;
   margin: 2px;
   /* prettier-ignore */
@@ -241,6 +238,11 @@
   background-image: var(--sheet);
   background-size: cover;
   color: var(--color-text-light-heading);
+}
+
+.dorako-ui.dark-theme.window-app.chat-popout .window-content {
+  background: unset;
+  box-shadow: unset;
 }
 
 .dorako-ui.dark-theme.window-app footer.flexrow {

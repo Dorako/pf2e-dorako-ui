@@ -1,3 +1,7 @@
+# 1.12.4
+
+- (Fix) Rejiggered some css to fix an issue where certain window apps unintentionally got a sheet background. This also undoes the second SWADE bullet in 1.12.3.
+
 # 1.12.3
 
 - (SWADE) Added support for the Card Hand Mini Toolbar module. (Use 'above Players' position if used with centered hotbar)

@@ -73,9 +73,13 @@
   }
 }
 
-.dorako-ui .dorako-ui.dark-theme.window-content {
+.dorako-ui.dark-theme.window-content {
   @include sheet;
   color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.window-app.chat-popout .window-content {
+  background: unset;
+  box-shadow: unset;
 }
 
 .dorako-ui.dark-theme.window-app {
