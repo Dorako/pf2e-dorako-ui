@@ -170,7 +170,7 @@ for (const application of ["Application", ...baseThemePf2eSheets]) {
     let isDark = html[0].classList.contains("dark-theme");
     let symbol = isDark ? "fa-sun" : "fa-moon";
     let openBtn = $(
-      `<a class="dark-theme-toggle" alt="Toggle dark theme" data-tooltip="Dark theme" data-tooltip-direction="UP"">
+      `<a class="header-button dark-theme-toggle" alt="Toggle dark theme" data-tooltip="Dark theme" data-tooltip-direction="UP"">
         <i class="fas fa-fw ${symbol}"></i>
      </a>`
     );
@@ -192,7 +192,7 @@ for (const application of ["Application", ...baseThemePf2eSheets]) {
     let symbol = isDorako ? "fa-thin" : "fas";
 
     let openBtn = $(
-      `<a class="dorako-ui-toggle" alt="Toggle Dorako UI" data-tooltip="Dorako UI" data-tooltip-direction="UP">
+      `<a class="header-button dorako-ui-toggle" alt="Toggle Dorako UI" data-tooltip="Dorako UI" data-tooltip-direction="UP">
         <i class="fa-fw ${symbol} fa-d"></i>
     </a>`
     );

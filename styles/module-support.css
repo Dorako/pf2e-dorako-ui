@@ -2434,6 +2434,11 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   column-rule: 4px double var(--color-underline-header);
 }
 
+.swpf-compendium .window-header a.header-button {
+  color: var(--color-text-dark-primary);
+  font-weight: bold;
+}
+
 body.system-swade {
   --primary-dark: #5c0b07;
   --primary: #8c160f;

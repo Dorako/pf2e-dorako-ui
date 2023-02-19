@@ -1,3 +1,7 @@
+# 1.12.5.1
+
+- (SWADE) Finally for reals exluded SWPF sheets once and for all. Thanks, Pinnacle Entertainment Group!
+
 # 1.12.5
 
 - (SWADE) Finally exluded SWPF sheets once and for all. Thanks, Pinnacle Entertainment Group!

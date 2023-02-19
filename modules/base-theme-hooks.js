@@ -9,6 +9,7 @@ Hooks.on("renderApplication", (app, html, data) => {
 // Add .dorako-ui to all always-styled applications
 for (const app of [...baseThemeApplications]) {
   Hooks.on("render" + app, (app, html, data) => {
+    if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
     let html0 = html[0];
     console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
     console.debug({ app });
@@ -84,6 +85,7 @@ Hooks.on("renderDialog", (app, html, data) => {
 Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
   if (!html0.classList.contains("window-app")) return;
+  if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
   if (html0.matches(premiumModuleSelector)) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
@@ -108,7 +110,7 @@ for (const app of [...baseThemePf2eSheets]) {
   Hooks.on("render" + app, (app, html, data) => {
     let html0 = html[0];
     if (!html0.classList.contains("window-app")) return;
-    if (app.constructor.name === "SWPFSheet") return; // Extended from ActorSheet
+    if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme === "no-theme") {
       console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
