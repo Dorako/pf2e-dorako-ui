@@ -1,3 +1,7 @@
+# 1.12.5
+
+- (SWADE) Finally exluded SWPF sheets once and for all. Thanks, Pinnacle Entertainment Group!
+
 # 1.12.4
 
 - (Fix) Rejiggered some css to fix an issue where certain window apps unintentionally got a sheet background. This also undoes the second SWADE bullet in 1.12.3.

@@ -108,6 +108,7 @@ for (const app of [...baseThemePf2eSheets]) {
   Hooks.on("render" + app, (app, html, data) => {
     let html0 = html[0];
     if (!html0.classList.contains("window-app")) return;
+    if (app.constructor.name === "SWPFSheet") return; // Extended from ActorSheet
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme === "no-theme") {
       console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);

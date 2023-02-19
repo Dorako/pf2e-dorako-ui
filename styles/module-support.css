@@ -1704,13 +1704,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-}
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li a {
-  border: none;
-  border-radius: 3px;
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
   color: var(--color-text-light-heading);
@@ -1758,6 +1751,10 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   gap: 5px;
+}
+
+.frosted-glass .monks-scene-navigation:not(.category-filter) {
+  backdrop-filter: unset;
 }
 
 /* ----------------------------------------- */
@@ -1874,16 +1871,22 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   display: none !important;
 }
 
-.dorako-ui.dark-theme.chat-message hr.pf2e-td {
-  display: none !important;
-}
-.dorako-ui.dark-theme.chat-message .pf2e-td.target-section .target-button {
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .pf2e-td.target-section .target-button {
   border: none;
   border-radius: 3px;
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   height: calc(100% - 12px);
+}
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .pf2e-td.target-section .target-button:hover {
+  box-shadow: var(--gold-and-glow);
+  background-color: var(--glass-bg);
+}
+
+.dorako-ui.dark-theme.chat-message hr.pf2e-td {
+  display: none !important;
 }
 .dorako-ui.dark-theme.chat-message button.small-button.pf2e-td {
   border: none;
@@ -2453,6 +2456,9 @@ body.system-swade {
 }
 .dorako-ui form button.emojiPickerButton:hover {
   background-color: #cfa436;
+}
+.dorako-ui .emoji-button-content .emoji-image {
+  filter: drop-shadow(0px 1px 2px black);
 }
 
 .dorako-ui.light-theme .emoji-button {

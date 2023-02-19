@@ -61,15 +61,21 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
     display: none !important; // inline style overwrite
   }
 }
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons {
+  .pf2e-td.target-section .target-button {
+    @include glass;
+    @include quick-transition;
+    height: calc(100% - 12px);
+    &:hover {
+      box-shadow: var(--gold-and-glow);
+      background-color: var(--glass-bg);
+    }
+  }
+}
 
 .dorako-ui.dark-theme.chat-message {
   hr.pf2e-td {
     display: none !important; // inline style overwrite
-  }
-
-  .pf2e-td.target-section .target-button {
-    @include glass;
-    height: calc(100% - 12px);
   }
 
   button.small-button.pf2e-td {

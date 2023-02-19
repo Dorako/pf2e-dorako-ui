@@ -702,10 +702,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
     }
   }
 
-  &#navigation .monks-scene-navigation .scene-list > li a {
-    @include glass;
-  }
-
   &#navigation .monks-scene-navigation .scene-list > li {
     a {
       @include glass;
@@ -757,4 +753,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
     @include glass;
     gap: 5px;
   }
+}
+
+.frosted-glass .monks-scene-navigation:not(.category-filter) {
+  backdrop-filter: unset;
 }

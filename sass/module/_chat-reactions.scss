@@ -13,6 +13,9 @@
       background-color: #cfa436;
     }
   }
+  .emoji-button-content .emoji-image {
+    filter: drop-shadow(0px 1px 2px black);
+  }
 }
 
 .dorako-ui.light-theme {
