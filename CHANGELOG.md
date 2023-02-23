@@ -1,3 +1,7 @@
+# 1.12.6
+
+- (Refinement) Treat pf2e-bb like pf2e-av, which should exclude its journals from Dalvyn's CRB-styling, but keep the Dorako UI journal frame.
+
 # 1.12.5.1
 
 - (SWADE) Finally for reals exluded SWPF sheets once and for all. Thanks, Pinnacle Entertainment Group!

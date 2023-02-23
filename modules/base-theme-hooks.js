@@ -90,8 +90,8 @@ Hooks.on("renderApplication", (app, html, data) => {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
     );
-    if (html0.matches(".pf2e-av")) {
-      console.debug(`${MODULE_NAME} | render${app.constructor.name} | matches pf2e-av => add .dorako-ui anyway`);
+    if (html0.matches(".pf2e-av") || html0.matches(".pf2e-bb")) {
+      console.debug(`${MODULE_NAME} | render${app.constructor.name} | matches pf2e-av/bb => add .dorako-ui anyway`);
       html0.classList.add("dorako-ui");
     }
     return;

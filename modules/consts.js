@@ -31,7 +31,7 @@ export const baseThemeApplications = [...baseThemeCoreFoundryApplications,...bas
 export const darkThemeCompatibleApplications = [...darkThemeCompatibleCoreFoundryApplications, ...darkThemeCompatibleModuleApplications, ...darkThemeCompatiblePf2eApplications, ...dorakoUiApplications]
 
 // prettier-ignore
-export const premiumModuleSelector = ".swpf-sheet, .swpf-wrapper, .pf2e-av, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
+export const premiumModuleSelector = ".swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
 // SWPFSheet
 // SWPFJournalSheet
 
