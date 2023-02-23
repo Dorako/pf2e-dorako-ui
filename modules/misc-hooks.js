@@ -241,4 +241,29 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
       i18n("pf2e-dorako-ui.settings.misc.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.misc.hint")}</p>`
     )
     .insertBefore($('[name="pf2e-dorako-ui.misc.enable-debug-mode"]').parents("div.form-group:first"));
+
+  document.getElementById("client-settings").onmousemove = (e) => {
+    for (const card of document.getElementsByClassName("dorako-ui settings-header")) {
+      const rect = card.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  };
+});
+
+Hooks.on("renderSceneControls", (app, html, data) => {
+  document.getElementById("controls").onmousemove = (e) => {
+    for (const control of document.querySelectorAll(".scene-control,.control-tool")) {
+      control.classList.add("card");
+      const rect = control.getBoundingClientRect(),
+        x = e.clientX - rect.left,
+        y = e.clientY - rect.top;
+
+      control.style.setProperty("--mouse-x", `${x}px`);
+      control.style.setProperty("--mouse-y", `${y}px`);
+    }
+  };
 });
