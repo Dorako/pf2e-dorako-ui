@@ -1,3 +1,8 @@
+# 1.12.7
+
+- (Module) Add support for Monk's Active Tile Triggers.
+- (Refinement) Extended Dalvyn's CRB-styling to also affect journals during editing.
+
 # 1.12.6
 
 - (Refinement) Treat pf2e-bb like pf2e-av, which should exclude its journals from Dalvyn's CRB-styling, but keep the Dorako UI journal frame.

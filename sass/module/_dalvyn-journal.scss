@@ -1,21 +1,4 @@
-.dalvyn-journal .dark-theme {
-  --red: var(--primary-light);
-  --blue: var(--secondary-light);
-  --brown: #ad6f59;
-
-  tbody {
-    color: black;
-  }
-
-  .journal-entry-page
-    .journal-page-content
-    :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
-    color: black;
-  }
-}
-
-.dalvyn-journal.journal-entry-content:not(.pf2e-av),
-.dalvyn-journal .journal-entry-content:not(.pf2e-av) {
+.dorako-ui.dalvyn-journal:not(.pf2e-av, .pf2e-bb) {
   /* By Dalvyn */
   /* Custom CSS - PF2 STYLE v2.1 */
   /* TITRES
@@ -24,11 +7,13 @@
   --blue: var(--secondary);
   --brown: #ad6f59;
 
+  &.journal-header .title,
   .journal-header .title {
     color: var(--red) !important;
     font-family: "Taroca Regular";
   }
 
+  &.journal-entry-page h1,
   .journal-entry-page h1 {
     color: var(--blue) !important;
     font-family: "Taroca Regular";
@@ -36,10 +21,12 @@
     border-bottom: 0;
   }
 
+  &.journal-entry-page h1:hover,
   .journal-entry-page h1:hover {
     background-image: linear-gradient(#02256e00, #02256e00, #02256e44);
   }
 
+  &.journal-entry-page h2,
   .journal-entry-page h2 {
     color: var(--red) !important;
     font-family: "Gin-Regular";
@@ -48,10 +35,12 @@
     border-bottom: 0;
   }
 
+  &.journal-entry-page h2:hover,
   .journal-entry-page h2:hover {
     background-image: linear-gradient(#4e070700, #4e070700, #4e070744);
   }
 
+  &.journal-entry-page h3,
   .journal-entry-page h3 {
     color: var(--brown) !important;
     font-family: "Gin-Regular";
@@ -60,10 +49,12 @@
     border-bottom: 0;
   }
 
+  &.journal-entry-page h3:hover,
   .journal-entry-page h3:hover {
     background-image: linear-gradient(#ad6f5900, #ad6f5900, #ad6f5900, #ad6f5944);
   }
 
+  &.journal-entry-page .journal-page-content h4,
   .journal-entry-page .journal-page-content h4 {
     color: var(--blue) !important;
     font-family: "Gin-Regular";
@@ -73,10 +64,12 @@
     border-bottom: 0;
   }
 
+  &.journal-entry-page .journal-page-content h4:hover,
   .journal-entry-page .journal-page-content h4:hover {
     background-image: linear-gradient(#02256e00, #02256e00, #02256e00, #02256e44);
   }
 
+  &.journal-entry-page h5,
   .journal-entry-page h5 {
     line-height: 100%;
     font-variant: small-caps;
@@ -85,6 +78,7 @@
     margin-bottom: 0;
   }
 
+  &.journal-entry-page h5:hover,
   .journal-entry-page h5:hover {
     background-image: linear-gradient(#02256e00, #02256e00, #02256e00, #02256e44);
   }
@@ -92,6 +86,7 @@
   /* TEXTE
 ====================================================== */
 
+  &.journal-entry-page .window-content,
   .journal-entry-page .window-content {
     font-family: "Gelasio";
   }
@@ -99,6 +94,7 @@
   /* SYMBOLES PF2
 ====================================================== */
 
+  &.journal-entry-page code,
   .journal-entry-page code {
     font-family: "pathfinder2eactions";
     font-style: normal;
@@ -109,6 +105,7 @@
   /* TABLES
 ====================================================== */
 
+  &.journal-entry-page table,
   .journal-entry-page table {
     font-family: "roboto condensed";
     max-width: calc(100% - 24px);
@@ -116,23 +113,29 @@
     margin-right: auto;
   }
 
+  &.journal-entry-page table th,
   .journal-entry-page table th {
     color: white;
     background-color: var(--red);
   }
 
+  &.journal-entry-page tr:nth-child(2n),
   .journal-entry-page tr:nth-child(2n) {
     background-color: #f5efe0;
   }
 
+  &.journal-entry-page tr:nth-child(2n + 1),
   .journal-entry-page tr:nth-child(2n + 1) {
     background-color: #efe3c8;
   }
 
+  &.journal-entry-page tr:hover,
   .journal-entry-page tr:hover {
     background-color: #e9d7b0;
   }
 
+  &.journal-entry-page table td,
+  &.journal-entry-page table th,
   .journal-entry-page table td,
   .journal-entry-page table th {
     padding: 4px 6px;
@@ -141,6 +144,9 @@
   /* TEXTES À LIRE
 ====================================================== */
 
+  &.journal-entry-page
+    .journal-page-content
+    blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote),
   .journal-entry-page
     .journal-page-content
     blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
@@ -155,6 +161,9 @@
     margin-right: 0;
   }
 
+  &.journal-entry-page
+    .journal-page-content
+    blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover,
   .journal-entry-page
     .journal-page-content
     blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover {
@@ -164,6 +173,9 @@
   /* BLOCS DESCRIPTIFS (via h6)
 ====================================================== */
 
+  &.journal-entry-page
+    .journal-page-content
+    :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
   .journal-entry-page
     .journal-page-content
     :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
@@ -174,6 +186,7 @@
     background-color: #f5efe0aa;
   }
 
+  &.journal-entry-page .journal-page-content :is(h6, h6 + p),
   .journal-entry-page .journal-page-content :is(h6, h6 + p) {
     font-family: "Tauri-Regular";
     text-transform: uppercase;
@@ -181,11 +194,13 @@
     font-size: 1.15em;
   }
 
+  &.journal-entry-page .journal-page-content h6,
   .journal-entry-page .journal-page-content h6 {
     border-bottom: 1px solid black;
     padding: 4px 12px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p,
   .journal-entry-page .journal-page-content h6 + p {
     text-align: right;
     position: relative;
@@ -196,6 +211,7 @@
     overflow: visible;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul,
   .journal-entry-page .journal-page-content h6 + p + ul {
     clear: both;
     display: flex;
@@ -207,38 +223,45 @@
 
   /* Alignment (bold) */
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li strong,
   .journal-entry-page .journal-page-content h6 + p + ul li strong {
     font-weight: normal;
   }
 
   /* Size (italics) */
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li em,
   .journal-entry-page .journal-page-content h6 + p + ul li em {
     font-style: normal;
   }
 
   /* Rarity (sub = uncommon, sup = rare, strikethrough = unique) */
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li sub,
   .journal-entry-page .journal-page-content h6 + p + ul li sub {
     vertical-align: baseline;
     font-size: 100%;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li sup,
   .journal-entry-page .journal-page-content h6 + p + ul li sup {
     vertical-align: baseline;
     font-size: 100%;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li s,
   .journal-entry-page .journal-page-content h6 + p + ul li s {
     text-decoration: none;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p,
   .journal-entry-page .journal-page-content h6 + p + ul li p {
     margin: 0;
   }
 
   /* Dorako */
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p,
   .journal-entry-page .journal-page-content h6 + p + ul li p {
     color: white;
     border: 3px solid #dac68a;
@@ -248,82 +271,129 @@
     margin: 0;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p,
   .journal-entry-page .journal-page-content h6 + p + ul li p {
     background-color: #58180d;
     padding: 2px 3px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p > strong,
   .journal-entry-page .journal-page-content h6 + p + ul li p > strong {
     background-color: #576293;
     padding: 2px 3px;
     margin: -2px -3px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p > em,
   .journal-entry-page .journal-page-content h6 + p + ul li p > em {
     background-color: #3b7b59;
     padding: 2px 3px;
     margin: -2px -3px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p > sub,
   .journal-entry-page .journal-page-content h6 + p + ul li p > sub {
     background-color: #98513d;
     padding: 2px 3px;
     margin: -2px -3px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p > sup,
   .journal-entry-page .journal-page-content h6 + p + ul li p > sup {
     background-color: #002664;
     padding: 2px 3px;
     margin: -2px -3px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul li p > s,
   .journal-entry-page .journal-page-content h6 + p + ul li p > s {
     background-color: #54166e;
     padding: 2px 3px;
     margin: -2px -3px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote,
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote {
     border: 0;
     padding: 0 12px 4px 12px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + blockquote,
   .journal-entry-page .journal-page-content h6 + p + blockquote {
     border: 0;
     padding: 4px 12px 4px 12px;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
+  &.journal-entry-page .journal-page-content h6 + p + blockquote p,
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
   .journal-entry-page .journal-page-content h6 + p + blockquote p {
     font-family: "roboto condensed";
     font-style: normal;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
+  &.journal-entry-page .journal-page-content h6 + p + blockquote em,
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
   .journal-entry-page .journal-page-content h6 + p + blockquote em {
     font-style: italic;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
+  &.journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child),
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
   .journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child) {
     text-indent: -1em;
     margin-left: 1em;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
+  &.journal-entry-page .journal-page-content h6 + p + blockquote p *,
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
   .journal-entry-page .journal-page-content h6 + p + blockquote p * {
     text-indent: 0;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
+  &.journal-entry-page .journal-page-content h6 + p + blockquote p:first-child,
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
   .journal-entry-page .journal-page-content h6 + p + blockquote p:first-child {
     margin-top: 0;
   }
 
+  &.journal-entry-page .journal-page-content h6 + p + blockquote hr,
+  &.journal-entry-page .journal-page-content h6 + p + ul + blockquote hr,
   .journal-entry-page .journal-page-content h6 + p + blockquote hr,
   .journal-entry-page .journal-page-content h6 + p + ul + blockquote hr {
     border-top: 0;
     border-bottom: 1px solid black;
     margin: 0;
+  }
+}
+
+.dorako-ui.dalvyn-journal.dark-theme:not(.pf2e-av, .pf2e-bb),
+.dorako-ui.dalvyn-journal:not(.pf2e-av, .pf2e-bb) .dark-theme {
+  --red: var(--primary-light);
+  --blue: var(--secondary-light);
+  --brown: #ad6f59;
+
+  tbody {
+    color: black;
+  }
+
+  &.journal-entry-page
+    .journal-page-content
+    :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+  .journal-entry-page
+    .journal-page-content
+    :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
+    color: black;
+  }
+}
+
+.dorako-ui.dalvyn-journal.journal-entry-page:not(.pf2e-av, .pf2e-bb) {
+  .journal-header .title {
+    color: var(--blue) !important;
+    font-family: "Taroca Regular";
   }
 }

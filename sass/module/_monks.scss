@@ -758,3 +758,38 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 .frosted-glass .monks-scene-navigation:not(.category-filter) {
   backdrop-filter: unset;
 }
+
+/* ----------------------------------------- */
+/* Monk's Active Tile Triggers               */
+/* ----------------------------------------- */
+
+.dorako-ui.dark-theme {
+  &.action-sheet .display-value {
+    @include glass;
+    color: var(--color-text-light-heading);
+  }
+  &.monks-active-tiles.sheet .items-list {
+    .items-header {
+      @include glass;
+      margin: 0px 2px;
+      background-color: var(--glass-bg-light);
+      box-shadow: var(--glassy);
+      h3 {
+        color: var(--tertiary);
+        text-shadow: 0px 0px 10px var(--tertiary);
+      }
+    }
+    .item .item-name {
+      color: var(--color-text-light-heading);
+    }
+    .item-control {
+      color: var(--color-text-light-heading);
+    }
+  }
+  &.monks-active-tiles div[data-tab="triggers"] .action-items .entity-style {
+    color: white;
+  }
+  &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
+    color: var(--color-text-light-highlight);
+  }
+}
