@@ -334,7 +334,7 @@
         },
         "enable-debug-mode": {
           "name": "Activer le mode débogage ?",
-          "hint": "Ajoute des bouton pour activer le style dorako-ui pour les fenêtres."
+          "hint": "Ajoute des boutons pour activer les styles dorako-ui et sombre pour les fenêtres"
         }
       },
       "reset-changes": "Réinitialiser les changements"
