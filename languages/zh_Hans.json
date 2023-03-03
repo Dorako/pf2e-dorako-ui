@@ -1,1 +1,205 @@
-{}
+{
+  "pf2e-dorako-ui": {
+    "settings": {
+      "ux": {
+        "remove-attack-info-from-damage-roll-messages": {
+          "name": "将攻击信息移出伤害骰卡片？",
+          "hint": "通过移出多余信息，让伤害卡片占据更小空间。应和DFCE chat-merge一同使用"
+        },
+        "compact-ui": {
+          "hint": "缩小控制台尺寸，隐藏不活跃控制台和引导元素，悬浮以显示",
+          "name": "启用紧凑UI？"
+        },
+        "name": "UX设置",
+        "label": "配置UX设置",
+        "chat-input-height": {
+          "name": "输入框高度",
+          "hint": "Foundry默认为大约100px",
+          "CGMPhint": "Foundry默认为100px高；注意，如果Cautious Gamemaster's Pack的“通知打字状态”为启用，此通知会占据输入框约60px高度"
+        },
+        "restructure-card-info": {
+          "name": "重筑聊天卡信息？",
+          "hint": "让特性的动作花费更清晰，并将法术信息移出页脚"
+        },
+        "animate-messages": {
+          "name": "使一些消息可动，来吸引注意力？",
+          "hint": "让玩家发给GM的私聊更显眼"
+        },
+        "start-navigation-collapsed": {
+          "name": "默认折叠引导？",
+          "hint": "初始为折叠状态"
+        },
+        "start-sidebar-collapsed": {
+          "name": "默认折叠边栏？",
+          "hint": "初始为折叠状态"
+        },
+        "no-logo": {
+          "name": "隐藏Foundry标识？",
+          "hint": "移除左上方的Foundry标识"
+        },
+        "no-cards": {
+          "name": "隐藏卡片栏？",
+          "hint": "从侧边栏彻底移除卡片栏"
+        },
+        "no-chat-control-icon": {
+          "name": "隐藏聊天控制图标？",
+          "hint": "指的是掷骰旁的骰子图标，它会让UI更拥挤"
+        },
+        "center-hotbar": {
+          "name": "热键栏居中？",
+          "hint": "也叫宏快捷栏"
+        },
+        "enable-player-tags": {
+          "name": "允许玩家标记？",
+          "hint": "在说话者旁添加含有玩家姓名的标识"
+        },
+        "rolltype-indication": {
+          "name": "掷骰提示模式",
+          "hint": "右键Foundry左下区域的用户名，以设置用户头像",
+          "choice": {
+            "tags": "标识",
+            "bg-color": "背景颜色着色",
+            "both": "标识和背景颜色",
+            "none": "禁用"
+          }
+        },
+        "hint": "显示、隐藏、UI遮挡度或清晰度、移动UI位置相关的设置"
+      },
+      "reset-changes": "重置更改",
+      "theme": {
+        "name": "主题设置",
+        "label": "配置主题",
+        "application-theme": {
+          "name": "进程主题",
+          "hint": "用于渲染进程窗口",
+          "choice": {
+            "no-theme": "无主题",
+            "light-theme": "明亮Dorako UI",
+            "dark-theme": "黑暗Dorako UI"
+          }
+        },
+        "hint": "为多个进程及UI元素更改主题设置",
+        "frosted-glass": {
+          "name": "使用霜降玻璃",
+          "hint": "警告：非常影响性能。例：brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
+        },
+        "glass-bg": {
+          "name": "使用替代玻璃背景",
+          "hint": "任何可用CSS颜色都可以"
+        },
+        "npc-sheet-theme": {
+          "name": "NPC卡风格",
+          "hint": "影响NPC人物卡"
+        },
+        "chat-theme": {
+          "name": "聊天主题",
+          "choice": {
+            "factions": "玩家明亮，GM黑暗"
+          },
+          "hint": "影响所有聊天消息"
+        },
+        "pc-sheet-theme": {
+          "name": "PC卡主题",
+          "hint": "影响玩家角色卡"
+        },
+        "loot-sheet-theme": {
+          "name": "战利品卡主题",
+          "hint": "影响战利品人物卡"
+        },
+        "familiar-sheet-theme": {
+          "name": "魔宠卡主题",
+          "hint": "影响魔宠人物卡",
+          "choice": {
+            "dark-red-header": "黑暗+红色抬头"
+          }
+        },
+        "header-style": {
+          "name": "聊天消息抬头主题",
+          "hint": "为每条聊天消息添加彩色抬头",
+          "choice": {
+            "red": "红",
+            "blue": "蓝",
+            "tint": "玩家颜色",
+            "none": "禁用"
+          }
+        },
+        "enable-dark-theme-journals": {
+          "name": "为日志启用黑暗主题？",
+          "hint": "不影响Premium模组附带日志"
+        }
+      },
+      "avatar": {
+        "name": "肖像设置",
+        "source": {
+          "name": "聊天头像",
+          "hint": "将头像添加到聊天消息",
+          "choice": {
+            "token": "偏好指示物图像",
+            "actor": "偏好Actor图像"
+          }
+        },
+        "hint": "配置聊天消息中的头像设置",
+        "label": "配置头像设置",
+        "hide-when-token-hidden": {
+          "name": "指示物不可见时隐藏头像？",
+          "hint": "说话者的指示物为不可见时，隐藏聊天消息中的头像"
+        },
+        "hide-gm-avatar-when-secret": {
+          "hint": "GM进行暗骰/私密掷骰时在聊天隐藏头像",
+          "name": "暗骰时隐藏头像？"
+        },
+        "size": {
+          "name": "尺寸",
+          "hint": "默认40px"
+        },
+        "popout-support": {
+          "name": "启用指示物头像弹出？",
+          "hint": "根据指示物大小调整聊天头像"
+        },
+        "reacts-to-degree-of-success": {
+          "name": "大成功反映在头像上？",
+          "hint": "大成功时头像发出绿光，大失败时头像沉默并变暗"
+        },
+        "small-creature-token-avatar-size": {
+          "name": "小型生物的头像尺寸",
+          "hint": "默认倍率0.8"
+        },
+        "use-user-avatar": {
+          "name": "使用用户肖像做备用？",
+          "hint": "右键点击Foundry左下区域的用户名，配置用户肖像"
+        }
+      },
+      "misc": {
+        "name": "其他设置",
+        "label": "杂项设置",
+        "hint": "配置Dorako UI的其他设置",
+        "enable-debug-mode": {
+          "name": "启用Debug模式？",
+          "hint": "在窗口添加是否启用Dorako UI及黑暗主题的按钮"
+        },
+        "send-to-chat": {
+          "name": "在窗口标题处添加“发送”按钮？",
+          "hint": "将内容发送到聊天"
+        },
+        "skin-crb-journal": {
+          "name": "为日志启用CRB排版风格？",
+          "hint": "指南见www.shorturl.at/mrzN1"
+        }
+      }
+    },
+    "text": {
+      "self-roll": "私密掷骰",
+      "gm-only": "仅GM",
+      "whisper": "私聊",
+      "from": "来自",
+      "to": "给",
+      "send-to-chat": "发送",
+      "default": "默认",
+      "dark": "黑暗",
+      "light": "明亮",
+      "disabled": "禁用",
+      "secret": "秘密",
+      "large-chatlog-warning": "由于聊天记录过多，一些设置将在下次刷新时启用。"
+    }
+  }
+}
