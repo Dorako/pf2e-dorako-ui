@@ -63,9 +63,16 @@
       "lang": "ja",
       "name": "日本語",
       "path": "languages/ja.json"
+    },
+    {
+      "lang": "zh-Hans",
+      "name": "中文（简体）",
+      "path": "languages/zh_Hans.json"
     }
   ],
-  "styles": ["styles/fonts.css"],
+  "styles": [
+    "styles/fonts.css"
+  ],
   "esmodules": [
     "modules/misc-hooks.js",
     "modules/settings/settings.js",
