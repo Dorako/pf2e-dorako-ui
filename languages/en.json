@@ -12,7 +12,8 @@
       "dark": "Dark",
       "light": "Light",
       "disabled": "Disabled",
-      "large-chatlog-warning": "Due to large chatlog, some settings will apply on next reload."
+      "large-chatlog-warning": "Due to large chatlog, some settings will apply on next reload.",
+      "maybe-reload": "Some changes might require a reload."
     },
     "settings": {
       "reset-changes": "Reset Changes",
@@ -186,7 +187,6 @@
           }
         }
       },
-
       "misc": {
         "name": "Miscellaneous Settings",
         "label": "Configure Misc. Settings",
@@ -205,6 +205,20 @@
         "skin-crb-journal": {
           "name": "Enable CRB styling for journals?",
           "hint": "Instructions at www.shorturl.at/mrzN1"
+        }
+      },
+      "customization": {
+        "name": "Customization",
+        "label": "",
+        "hint": "Make personalized changes using custom CSS, or opt out of certain Dorako UI styling",
+
+        "excluded-applications": {
+          "name": "Excluded applications",
+          "hint": "Look in logs for the name of the Application, or ask on Discord"
+        },
+        "custom-css": {
+          "name": "Custom CSS",
+          "hint": "Write CSS in an external editor and paste it in here"
         }
       }
     }

@@ -3,6 +3,7 @@ import { ThemeSettings } from "./theme-settings.js";
 import { UXSettings } from "./ux-settings.js";
 import { AvatarSettings } from "./avatar-settings.js";
 import { MiscSettings } from "./misc-settings.js";
+import { CustomizationSettings } from "./customization-settings.js";
 
 function injectCSS(filename) {
   const head = document.getElementsByTagName("head")[0];
@@ -12,6 +13,16 @@ function injectCSS(filename) {
   mainCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/" + filename + ".css");
   mainCss.setAttribute("media", "all");
   head.insertBefore(mainCss, head.lastChild);
+}
+
+export function refreshChat() {
+  if (game.messages.size > 100) {
+    return ui.notifications.warn(game.i18n.localize("pf2e-dorako-ui.text.large-chatlog-warning"));
+  }
+  const messages = game.messages.filter((m) => m instanceof ChatMessage);
+  for (const message of messages) {
+    ui.chat.updateMessage(message);
+  }
 }
 
 Hooks.once("init", async () => {
@@ -78,6 +89,8 @@ Hooks.once("init", async () => {
   // });
   MiscSettings.registerSettings();
 
+  CustomizationSettings.registerSettings();
+
   util.debug("registered settings");
 
   injectCSS("dorako-ui");
@@ -93,6 +106,13 @@ Hooks.once("init", async () => {
   );
 
   util.debug("injected sheets");
+});
+
+Hooks.once("ready", () => {
+  let dorakoCustomCss = document.createElement("style");
+  dorakoCustomCss.id = "dorako-custom-css";
+  dorakoCustomCss.innerHTML = game.settings.get("pf2e-dorako-ui", "customization.custom-css");
+  document.querySelector("head").appendChild(dorakoCustomCss);
 });
 
 Hooks.once("ready", () => {

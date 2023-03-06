@@ -22,12 +22,12 @@
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
 }
 
-.dorako-ui.app.journal-entry .window-content {
+.dorako-ui.app.journal-entry:not(.premium) .window-content {
   box-shadow: none;
   margin: 0px;
   background: none;
 }
-.dorako-ui.app.journal-entry .window-content .journal-entry-content {
+.dorako-ui.app.journal-entry:not(.premium) .window-content .journal-entry-content {
   border: none;
   margin: 2px;
   /* prettier-ignore */
@@ -37,7 +37,7 @@
   margin-left: 4px;
   height: calc(100% - 4px);
 }
-.dorako-ui.app.journal-entry.pf2e-av .journal-entry-content.flexcol {
+.dorako-ui.app.journal-entry:not(.premium).pf2e-av .journal-entry-content.flexcol {
   color: black;
   background: url(../../../modules/pf2e-abomination-vaults/styles/assets/parchment-av.jpg) repeat;
 }
@@ -65,6 +65,10 @@
   margin: unset;
   box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
   border-radius: 0px 0px 3px 3px;
+}
+.dorako-ui.window-app.journal-entry .window-content {
+  background: unset;
+  box-shadow: unset;
 }
 .dorako-ui.window-app.sidebar-popout {
   border: none;
@@ -168,6 +172,43 @@
   text-shadow: 0px 0px 3px black;
 }
 
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0 0 3px black;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes:hover, .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+  box-shadow: var(--glassy);
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes {
+  background-color: #2e0587;
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes:hover {
+  background-color: #440eb9;
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
+  background-color: #2e0587;
+  border: 1px dashed #440eb9;
+  padding: 4px;
+  border-radius: 15px;
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .tox-tinymce {
+  background-color: #440eb9;
+  background-blend-mode: luminosity;
+}
+
 .dorako-ui.dark-theme #sidebar .settings-sidebar button {
   border: none;
   border-radius: 3px;
@@ -230,7 +271,7 @@
   border-radius: 0px 3px 3px 0px;
 }
 
-.dorako-ui.dark-theme.window-content {
+.dorako-ui.dark-theme:not(.premium) .window-content {
   border: none;
   margin: 2px;
   /* prettier-ignore */
@@ -240,49 +281,54 @@
   color: var(--color-text-light-heading);
 }
 
+.dorako-ui.light-theme.journal-entry-content {
+  --color-text-dark-primary: #191813;
+  color: var(--color-text-dark-primary);
+}
+
 .dorako-ui.dark-theme.window-app.chat-popout .window-content {
   background: unset;
   box-shadow: unset;
 }
 
-.dorako-ui.dark-theme.window-app footer.flexrow {
+.dorako-ui.dark-theme:not(.premium).window-app footer.flexrow {
   gap: 3px;
 }
-.dorako-ui.dark-theme.window-app .window-content {
+.dorako-ui.dark-theme:not(.premium).window-app .window-content {
   box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
   background-image: var(--sheet-dark);
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.window-app#module-management .package-list .package-title,
-.dorako-ui.dark-theme.window-app#module-management .package-list .package-metadata,
-.dorako-ui.dark-theme.window-app#module-management .package-list .package-description {
+.dorako-ui.dark-theme:not(.premium).window-app#module-management .package-list .package-title,
+.dorako-ui.dark-theme:not(.premium).window-app#module-management .package-list .package-metadata,
+.dorako-ui.dark-theme:not(.premium).window-app#module-management .package-list .package-description {
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app.package-configuration aside.sidebar {
+.dorako-ui.dark-theme:not(.premium).window-app.package-configuration aside.sidebar {
   border: none;
 }
-.dorako-ui.dark-theme.window-app.sheet header.sheet-header img {
+.dorako-ui.dark-theme:not(.premium).window-app.sheet header.sheet-header img {
   box-shadow: var(--gold-and-glow);
   border-radius: 5px;
 }
-.dorako-ui.dark-theme.window-app textarea {
+.dorako-ui.dark-theme:not(.premium).window-app textarea {
   color: white;
   border: 1px solid var(--tertiary);
 }
-.dorako-ui.dark-theme.window-app a[href] {
+.dorako-ui.dark-theme:not(.premium).window-app a[href] {
   color: var(--tertiary-dark);
 }
-.dorako-ui.dark-theme.window-app hr {
+.dorako-ui.dark-theme:not(.premium).window-app hr {
   border-top: 1px solid var(--tertiary);
   border-bottom: 1px solid black;
 }
-.dorako-ui.dark-theme.window-app.sheet footer.sheet-footer {
+.dorako-ui.dark-theme:not(.premium).window-app.sheet footer.sheet-footer {
   gap: 5px;
 }
-.dorako-ui.dark-theme.window-app .compendium.directory .directory-list .directory-item {
+.dorako-ui.dark-theme:not(.premium).window-app .compendium.directory .directory-list .directory-item {
   border: none;
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn) {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn) {
   border: none;
   border-radius: 3px;
   background: none;
@@ -292,7 +338,7 @@
   text-shadow: 0 0 3px black;
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn):hover {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn):hover {
   border: none;
   border-radius: 3px;
   background: none;
@@ -302,14 +348,14 @@
   color: var(--color-text-light-highlight);
   box-shadow: var(--glassy);
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn).privacy {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).privacy {
   background-color: #2e0587;
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn).privacy:hover {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).privacy:hover {
   color: var(--color-text-light-heading);
   background-color: #440eb9;
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn).pm-dropdown ul {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).pm-dropdown ul {
   border: none;
   border-radius: 3px;
   background: none;
@@ -317,21 +363,21 @@
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn).pm-dropdown li:hover {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).pm-dropdown li:hover {
   background: rgba(0, 0, 0, 0.5);
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn).pm-dropdown i {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).pm-dropdown i {
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.window-app button:not(.tox-tbtn).pm-dropdown:hover i {
+.dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).pm-dropdown:hover i {
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app .private button.privacy {
+.dorako-ui.dark-theme:not(.premium).window-app .private button.privacy {
   color: var(--color-text-light-highlight);
   background-color: #440eb9;
 }
-.dorako-ui.dark-theme.window-app.token-sheet .form-group.children-disabled .range-value,
-.dorako-ui.dark-theme.window-app input[type=range] + .range-value {
+.dorako-ui.dark-theme:not(.premium).window-app.token-sheet .form-group.children-disabled .range-value,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=range] + .range-value {
   border: none;
   border-radius: 3px;
   background: none;
@@ -340,22 +386,22 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.window-app input[type=checkbox],
-.dorako-ui.dark-theme.window-app input[type=radio] {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=checkbox],
+.dorako-ui.dark-theme:not(.premium).window-app input[type=radio] {
   accent-color: var(--tertiary);
 }
-.dorako-ui.dark-theme.window-app input[type=checkbox]:checked,
-.dorako-ui.dark-theme.window-app input[type=radio]:checked {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=checkbox]:checked,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=radio]:checked {
   box-shadow: unset;
   accent-color: var(--tertiary);
   filter: none;
 }
-.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip),
-.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip),
-.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip),
-.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip),
-.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip),
-.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip) {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=text]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme:not(.premium).window-app input[type=number]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme:not(.premium).window-app input[type=password]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme:not(.premium).window-app input[type=date]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip),
+.dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip) {
   border: none;
   border-radius: 3px;
   background: none;
@@ -365,22 +411,22 @@
   color: var(--color-text-light-heading);
   accent-color: var(--tertiary);
 }
-.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):checked,
-.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):checked,
-.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):checked,
-.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):checked,
-.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):checked,
-.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):checked {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=text]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=number]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=password]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=date]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):checked,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):checked {
   box-shadow: unset;
   accent-color: var(--tertiary);
   filter: none;
 }
-.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):hover,
-.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):hover,
-.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):hover,
-.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):hover,
-.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):hover,
-.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):hover {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=text]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=number]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=password]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=date]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):hover {
   border: none;
   border-radius: 3px;
   background: none;
@@ -389,12 +435,12 @@
   background-color: var(--secondary-dark);
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):focus,
-.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):focus,
-.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):focus,
-.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):focus,
-.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):focus,
-.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):focus {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=text]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=number]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=password]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=date]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):focus,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):focus {
   border: none;
   border-radius: 3px;
   background: none;
@@ -403,25 +449,25 @@
   background-color: var(--secondary);
   color: white;
 }
-.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):disabled,
-.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):disabled,
-.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):disabled,
-.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):disabled,
-.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):disabled,
-.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):disabled {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=text]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=number]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=password]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=date]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):disabled,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):disabled {
   color: var(--color-border-dark-tertiary);
   background-color: rgba(0, 0, 0, 0.8);
 }
-.dorako-ui.dark-theme.window-app input[type=text]:not(.dorako-ui-skip):disabled:hover,
-.dorako-ui.dark-theme.window-app input[type=number]:not(.dorako-ui-skip):disabled:hover,
-.dorako-ui.dark-theme.window-app input[type=password]:not(.dorako-ui-skip):disabled:hover,
-.dorako-ui.dark-theme.window-app input[type=date]:not(.dorako-ui-skip):disabled:hover,
-.dorako-ui.dark-theme.window-app input[type=time]:not(.dorako-ui-skip):disabled:hover,
-.dorako-ui.dark-theme.window-app input[type=search]:not(.dorako-ui-skip):disabled:hover {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=text]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=number]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=password]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=date]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):disabled:hover,
+.dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):disabled:hover {
   color: var(--color-border-dark-tertiary);
   background-color: rgba(0, 0, 0, 0.8);
 }
-.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip) {
+.dorako-ui.dark-theme:not(.premium).window-app select:not(.dorako-ui-skip) {
   border: none;
   border-radius: 3px;
   background: none;
@@ -430,31 +476,31 @@
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip):hover {
+.dorako-ui.dark-theme:not(.premium).window-app select:not(.dorako-ui-skip):hover {
   background-color: var(--secondary-dark);
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip) option {
+.dorako-ui.dark-theme:not(.premium).window-app select:not(.dorako-ui-skip) option {
   background-color: rgb(37, 37, 37);
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.window-app select:not(.dorako-ui-skip) optgroup {
+.dorako-ui.dark-theme:not(.premium).window-app select:not(.dorako-ui-skip) optgroup {
   background-color: rgb(37, 37, 37);
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app input[type=color][data-edit] {
+.dorako-ui.dark-theme:not(.premium).window-app input[type=color][data-edit] {
   border: none;
 }
-.dorako-ui.dark-theme.window-app form .form-group.slim .form-fields > label,
-.dorako-ui.dark-theme.window-app form .form-group span.units,
-.dorako-ui.dark-theme.window-app form .notes,
-.dorako-ui.dark-theme.window-app form .hint {
+.dorako-ui.dark-theme:not(.premium).window-app form .form-group.slim .form-fields > label,
+.dorako-ui.dark-theme:not(.premium).window-app form .form-group span.units,
+.dorako-ui.dark-theme:not(.premium).window-app form .notes,
+.dorako-ui.dark-theme:not(.premium).window-app form .hint {
   color: var(--color-text-dark-6);
 }
-.dorako-ui.dark-theme.window-app.filepicker .private .directory, .dorako-ui.dark-theme.window-app.filepicker .public .private.dir {
+.dorako-ui.dark-theme:not(.premium).window-app.filepicker .private .directory, .dorako-ui.dark-theme:not(.premium).window-app.filepicker .public .private.dir {
   background: rgba(115, 49, 255, 0.15);
 }
-.dorako-ui.dark-theme.window-app.filepicker .display-modes a {
+.dorako-ui.dark-theme:not(.premium).window-app.filepicker .display-modes a {
   border: none;
   border-radius: 3px;
   background: none;
@@ -463,24 +509,24 @@
   color: var(--color-text-light-highlight);
   text-shadow: 0 0 3px black;
 }
-.dorako-ui.dark-theme.window-app.filepicker .display-modes a:hover {
+.dorako-ui.dark-theme:not(.premium).window-app.filepicker .display-modes a:hover {
   background: var(--primary);
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app.filepicker .display-modes a.active {
+.dorako-ui.dark-theme:not(.premium).window-app.filepicker .display-modes a.active {
   background: var(--primary);
   color: var(--color-text-light-highlight);
   text-shadow: 0 0 3px black;
 }
-.dorako-ui.dark-theme.window-app#world-clock section.window-content .input-grid button img {
+.dorako-ui.dark-theme:not(.premium).window-app#world-clock section.window-content .input-grid button img {
   border: none;
   height: 1.5em;
   filter: invert(1) sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
-.dorako-ui.dark-theme.window-app#world-clock section.window-content .input-grid button:hover img {
+.dorako-ui.dark-theme:not(.premium).window-app#world-clock section.window-content .input-grid button:hover img {
   filter: invert(1) sepia() brightness(0.9) drop-shadow(0px 0px 3px black);
 }
-.dorako-ui.dark-theme.window-app#keybindings .binding .key {
+.dorako-ui.dark-theme:not(.premium).window-app#keybindings .binding .key {
   border: none;
   border-radius: 3px;
   background: none;
@@ -490,59 +536,59 @@
   color: var(--color-text-light-heading);
   text-shadow: 0 0 3px black;
 }
-.dorako-ui.dark-theme.window-app#keybindings .binding .key:hover {
+.dorako-ui.dark-theme:not(.premium).window-app#keybindings .binding .key:hover {
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.window-app#keybindings .binding .key.uneditable {
+.dorako-ui.dark-theme:not(.premium).window-app#keybindings .binding .key.uneditable {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.dorako-ui.dark-theme.window-app#keybindings .binding .key.uneditable:hover {
+.dorako-ui.dark-theme:not(.premium).window-app#keybindings .binding .key.uneditable:hover {
   color: var(--color-text-light-heading);
   background-color: rgba(0, 0, 0, 0.8);
 }
-.dorako-ui.dark-theme.window-app#invitation-links .connection.closed {
+.dorako-ui.dark-theme:not(.premium).window-app#invitation-links .connection.closed {
   color: rgba(255, 0, 19, 0.6);
 }
-.dorako-ui.dark-theme.window-app#invitation-links .connection.open {
+.dorako-ui.dark-theme:not(.premium).window-app#invitation-links .connection.open {
   color: green;
 }
-.dorako-ui.dark-theme.window-app#invitation-links .connection.unknown {
+.dorako-ui.dark-theme:not(.premium).window-app#invitation-links .connection.unknown {
   color: rgba(250, 219, 60, 0.814);
 }
 
 /* ------------------------------------------------- */
 /* Dark theme journals + Critical hit/fumble deck    */
 /* ------------------------------------------------- */
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme {
   background: var(--sheet-dark);
   color: var(--color-text-light-heading);
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme table.pf2-table tr:nth-child(odd) {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme table.pf2-table tr:nth-child(odd) {
   background-color: #313131;
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme table.pf2-table tr:nth-child(2n) {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme table.pf2-table tr:nth-child(2n) {
   background-color: #5d5d5d;
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-header .title {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-header .title {
   color: var(--color-text-light-highlight);
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h1,
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h2,
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h3,
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme h4 {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme h1,
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme h2,
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme h3,
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme h4 {
   color: var(--color-text-light-highlight);
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck h1,
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck code {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck h1,
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck code {
   color: black;
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck blockquote,
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck blockquote {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck blockquote,
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck blockquote {
   box-shadow: var(--glassy);
 }
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck h1,
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck h1 {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .critical-deck h1,
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme .journal-entry-page .journal-page-content .fumble-deck h1 {
   box-shadow: var(--gold-and-glow);
   margin-left: 2px;
 }
@@ -1239,6 +1285,9 @@ section.chat-sidebar {
   overflow: hidden;
   pointer-events: none;
 }
+#token-hud .status-effects .effect-control:not(.active):hover img {
+  border: unset;
+}
 #token-hud .status-effects .effect-control:hover, #token-hud .status-effects .effect-control.active {
   filter: none;
   opacity: 1;
@@ -1783,6 +1832,9 @@ section.chat-sidebar {
 .effect-panel.dorako-ui .effect-item:hover .effect-info {
   display: block;
 }
+.effect-panel.dorako-ui .effect-item[data-badge-type=formula] .icon:hover:before {
+  border-radius: 50%;
+}
 .effect-panel.dorako-ui .effect-item .effect-info {
   border: none;
   border-radius: 3px;
@@ -1796,6 +1848,24 @@ section.chat-sidebar {
   padding: 4px 8px;
   backdrop-filter: blur(5px);
   z-index: var(--z-index-tooltip);
+}
+.effect-panel.dorako-ui .effect-item .effect-info a {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-align: center;
+  text-shadow: 0px 0px 3px black;
+  font-size: var(--font-size-12);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+.effect-panel.dorako-ui .effect-item .effect-info a:hover {
+  background-color: var(--primary-light);
+  color: white;
+  text-shadow: 0px 0px 3px black;
 }
 .effect-panel.dorako-ui .effect-item .effect-info h1 {
   font-size: var(--font-size-16);
@@ -3517,6 +3587,11 @@ a.inline-roll:not(.inline-result) {
 
 i[data-pf2-repost] {
   top: 0px;
+}
+
+.app.sheet.actor p,
+.pf2e p {
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=dorako-ui.css.map */

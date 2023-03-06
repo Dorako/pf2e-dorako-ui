@@ -23,3 +23,9 @@ a.inline-roll:not(.inline-result) {
 i[data-pf2-repost] {
   top: 0px;
 }
+
+// system uses 500, which makes it hard to tell whether something is bolded
+.app.sheet.actor p,
+.pf2e p {
+  font-weight: 400;
+}

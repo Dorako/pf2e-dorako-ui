@@ -72,6 +72,7 @@
     "modules/dark-theme-hooks.js",
     "modules/base-theme-hooks.js",
     "modules/message-hooks.js",
+    "modules/premium-module-hooks.js",
     "modules/consts.js"
   ],
   "changelog": "https://github.com/Dorako/pf2e-dorako-ui/blob/master/CHANGELOG.md",

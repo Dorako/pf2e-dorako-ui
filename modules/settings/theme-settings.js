@@ -1,4 +1,5 @@
 import { SettingsMenuDorakoUI } from "./menu.js";
+import { refreshChat } from "./settings.js";
 
 export class ThemeSettings extends SettingsMenuDorakoUI {
   static namespace = "theme";
@@ -27,15 +28,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
         },
         requiresReload: false,
-        onChange: () => {
-          if (game.messages.size > 100) {
-            return ui.notifications.warn(game.i18n.localize("pf2e-dorako-ui.text.large-chatlog-warning"));
-          }
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "header-style": {
         name: "pf2e-dorako-ui.settings.theme.header-style.name",
@@ -51,15 +44,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           none: "pf2e-dorako-ui.settings.theme.header-style.choice.none",
         },
         requiresReload: false,
-        onChange: () => {
-          if (game.messages.size > 100) {
-            return ui.notifications.warn(game.i18n.localize("pf2e-dorako-ui.text.large-chatlog-warning"));
-          }
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "frosted-glass": {
         name: "pf2e-dorako-ui.settings.theme.frosted-glass.name",

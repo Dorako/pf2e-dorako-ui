@@ -1,58 +1,39 @@
 import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleSelector } from "./consts.js";
 
-// Debugging
-Hooks.on("renderApplication", (app, html, data) => {
-  console.debug(`${MODULE_NAME} | renderApplication | render${app.constructor.name}`);
-  console.debug({ app });
-});
-
-// Add .dorako-ui to all always-styled applications
-for (const app of [...baseThemeApplications]) {
-  Hooks.on("render" + app, (app, html, data) => {
-    if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
-    let html0 = html[0];
-    console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
-    console.debug({ app });
-    html0.classList.add("dorako-ui");
-  });
-}
-
-// Add .dorako-ui to all whitelisted Applications
-for (const app of [...baseThemeApplications]) {
-  Hooks.on("render" + app, (app, html, data) => {
-    let html0 = html[0];
-    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-    if (theme === "no-theme") {
-      console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+// Add .dorako-ui to all always-styled applications (Does not include pf2e sheets)
+for (const appName of [...baseThemeApplications]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    // if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
+    const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+    if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .dorako-ui`
+      );
       return;
     }
+    let html0 = html[0];
     console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
-    console.debug({ app });
+    // console.debug({ app });
     html0.classList.add("dorako-ui");
   });
 }
+
+// // Add .dorako-ui to all whitelisted Applications
+// for (const app of [...baseThemeApplications]) {
+//   Hooks.on("render" + app, (app, html, data) => {
+//     let html0 = html[0];
+//     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+//     if (theme === "no-theme") {
+//       console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
+//       return;
+//     }
+//     console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
+//     html0.classList.add("dorako-ui");
+//   });
+// }
+
 // TAH Core
 Hooks.on("renderTokenActionHud", (app, html, data) => {
-  if (
-    game.modules.get("token-action-hud-core")?.active &&
-    game.settings.get("token-action-hud-core", "style") === "dorakoUI"
-  ) {
-    let html0 = html[0];
-    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
-    html0.classList.add("dorako-ui");
-    return;
-  }
-  console.debug(`${MODULE_NAME} | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
-});
-
-Hooks.on("renderTokenActionHUD", (app, html, data) => {
-  // reconsider logic
-  if (game.modules.get("token-action-hud")?.active && game.settings.get("token-action-hud", "style") === "dorakoUI") {
-    let html0 = html[0];
-    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
-    html0.classList.add("dorako-ui");
-    return;
-  }
   if (
     game.modules.get("token-action-hud-core")?.active &&
     game.settings.get("token-action-hud-core", "style") === "dorakoUI"
@@ -62,9 +43,22 @@ Hooks.on("renderTokenActionHUD", (app, html, data) => {
     html0.classList.add("dorako-ui");
     return;
   }
+  console.debug(`${MODULE_NAME} | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
+});
+
+// TAH (Original)
+Hooks.on("renderTokenActionHUD", (app, html, data) => {
+  // reconsider logic
+  if (game.modules.get("token-action-hud")?.active && game.settings.get("token-action-hud", "style") === "dorakoUI") {
+    let html0 = html[0];
+    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+    html0.classList.add("dorako-ui");
+    return;
+  }
   console.debug(`${MODULE_NAME}  | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
 });
 
+// Add .dorako-ui to all .dialog applications
 Hooks.on("renderDialog", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme") {
@@ -72,7 +66,7 @@ Hooks.on("renderDialog", (app, html, data) => {
     return;
   }
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | pushing .dorako-ui class option`);
-  console.debug({ app });
+  // console.debug({ app });
   app.options?.classes?.push("dorako-ui");
   let position = app.position;
   position.height += 6;
@@ -80,48 +74,6 @@ Hooks.on("renderDialog", (app, html, data) => {
   app.setPosition(position);
   app.render();
 });
-
-// Add .dorako-ui to all .window-app Applications, except premium modules - except AV should have .dorako-ui
-Hooks.on("renderApplication", (app, html, data) => {
-  let html0 = html[0];
-  if (!html0.classList.contains("window-app")) return;
-  if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
-  if (html0.matches(premiumModuleSelector)) {
-    console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
-    );
-    if (html0.matches(".pf2e-av") || html0.matches(".pf2e-bb")) {
-      console.debug(`${MODULE_NAME} | render${app.constructor.name} | matches pf2e-av/bb => add .dorako-ui anyway`);
-      html0.classList.add("dorako-ui");
-    }
-    return;
-  }
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") {
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
-    return;
-  }
-  console.debug(`${MODULE_NAME} | render${app.constructor.name} | is .window-app => add .dorako-ui`);
-  html0.classList.add("dorako-ui");
-});
-
-// Add .dorako-ui to all PF2E "applications", add .dorako-ui-skip to generalized stuff
-for (const app of [...baseThemePf2eSheets]) {
-  Hooks.on("render" + app, (app, html, data) => {
-    let html0 = html[0];
-    if (!html0.classList.contains("window-app")) return;
-    if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
-    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-    if (theme === "no-theme") {
-      console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
-      return;
-    }
-    console.debug(`${MODULE_NAME} | baseThemePf2eSheets | render${app.constructor.name} => add .dorako-ui`);
-    console.debug({ app });
-    html0.classList.add("dorako-ui");
-    html.find("select.tag").addClass("dorako-ui-skip");
-  });
-}
 
 // Add .dorako-ui and .dialog to all "Dialogs"
 Hooks.on("renderApplication", (app, html, data) => {
@@ -145,6 +97,41 @@ Hooks.on("renderApplication", (app, html, data) => {
     }
   }
 });
+
+// Add .dorako-ui to all PF2E "applications", add .dorako-ui-skip to generalized stuff
+for (const app of [...baseThemePf2eSheets]) {
+  Hooks.on("render" + app, (app, html, data) => {
+    let html0 = html[0];
+    // if (!app.constructor.name.endsWith("PF2e")) return; <- SpellPreparationSheet doesn't end with PF2e
+    if (!html0.classList.contains("window-app")) return;
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme === "no-theme") {
+      return;
+    }
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | is PF2e .window-app "Application" => add .dorako-ui`
+    );
+    html0.classList.add("dorako-ui");
+    html.find("select.tag").addClass("dorako-ui-skip");
+  });
+}
+
+// Add 'light-theme' to journal-entry-content if dark theme journals is not enabled
+for (const appName of ["JournalSheet", "JournalPageSheet"]) {
+  //"JournalPageSheet"
+  Hooks.on("render" + appName, (app, html, data) => {
+    if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
+    html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dalvyn-journal");
+    const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
+    if (!isDarkJournals) {
+      html.closest(".app").find(".journal-entry-content").addClass("dorako-ui light-theme");
+      return;
+    } else {
+      html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
+      return;
+    }
+  });
+}
 
 // Do not style selects on loot sheets
 Hooks.on("renderLootSheetPF2e", (app, html, data) => {

@@ -21,7 +21,7 @@
   }
 }
 
-.dorako-ui.app.journal-entry {
+.dorako-ui.app.journal-entry:not(.premium) {
   .window-content {
     box-shadow: none;
     margin: 0px;
@@ -54,6 +54,12 @@
     margin: unset; // messes with box-sizing
     box-shadow: 0 0 0 1px var(--gold-brown) inset, 0 0 0 2px var(--tertiary) inset;
     border-radius: 0px 0px 3px 3px;
+  }
+  &.journal-entry {
+    .window-content {
+      background: unset;
+      box-shadow: unset;
+    }
   }
 
   &.sidebar-popout {

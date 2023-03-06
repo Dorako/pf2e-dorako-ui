@@ -1,4 +1,5 @@
 import { SettingsMenuDorakoUI } from "./menu.js";
+import { refreshChat } from "./settings.js";
 
 export class AvatarSettings extends SettingsMenuDorakoUI {
   static namespace = "avatar";
@@ -29,12 +30,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
           none: "pf2e-dorako-ui.text.disabled",
         },
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       size: {
         name: "pf2e-dorako-ui.settings.avatar.size.name",
@@ -67,12 +63,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
         },
         config: true,
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "popout-support": {
         name: "pf2e-dorako-ui.settings.avatar.popout-support.name",
@@ -82,12 +73,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
         default: true,
         config: true,
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "reacts-to-degree-of-success": {
         name: "pf2e-dorako-ui.settings.avatar.reacts-to-degree-of-success.name",
@@ -97,12 +83,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
         default: true,
         config: true,
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "hide-when-token-hidden": {
         name: "pf2e-dorako-ui.settings.avatar.hide-when-token-hidden.name",
@@ -112,12 +93,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
         default: true,
         config: true,
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "hide-gm-avatar-when-secret": {
         name: "pf2e-dorako-ui.settings.avatar.hide-gm-avatar-when-secret.name",
@@ -127,12 +103,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
         default: true,
         type: Boolean,
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
       "use-user-avatar": {
         name: "pf2e-dorako-ui.settings.avatar.use-user-avatar.name",
@@ -142,12 +113,7 @@ export class AvatarSettings extends SettingsMenuDorakoUI {
         default: false,
         config: true,
         requiresReload: false,
-        onChange: () => {
-          const messages = game.messages.filter((m) => m instanceof ChatMessage);
-          for (const message of messages) {
-            ui.chat.updateMessage(message);
-          }
-        },
+        onChange: refreshChat,
       },
     };
   }

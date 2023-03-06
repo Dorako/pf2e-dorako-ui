@@ -97,7 +97,7 @@ export class UXSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.ux.animate-messages.hint",
         scope: "world",
         type: Boolean,
-        default: true,
+        default: false,
         config: true,
         requiresReload: false,
         onChange: () => {

@@ -1,3 +1,21 @@
+# 2.0.0
+
+- (New) Added screenshots to the github page; updated the FVTT module page description.
+- (New) New feature that allows disabling Dorako UI for any supported Application, if you prefer the unstyled version.
+- (New) New feature that allows you to use custom CSS for those nitpicky personal fixes.
+- (New) Added dark theme support for Monk's Enhanced Journals.
+- (New) Added dark journal support for Monk's Enhanced Journals.
+- (New) New localization (Simplified Chinese) courtesy of sakusenerio.
+- (Refinement) Overhauled the way the module handles fancy journals. The module now adds a .premium class to such journals and pages, and css has been updated to exclude any journal with that class.
+- (Refinement) Overhauled Dalvyn's CRB-styling. Now also works while editing a journal. Should play nice with any combination of dark journals, MEJ, premium journals, etc.
+- (Fix) Fixed an issue where spell cast time was using 'cost' label.
+- (Refinement) Added Cost and Ritual-specific properties such as amount of secondary casters and primary and secondary check to the restructured spell cards section.
+- (Maintenance) Slightly changed the logic for applying the Dorako UI window style. There should be no visual change, if you encounter regressions where window-app applications are missing their styling, please report them.
+- (Refinement) Updated logic relating to settings that would cause the rerendering of many chat messages. A warning is now shown if you have 100+ messages, and you will be asked to reload manually once finished.
+- (Maintenance) Update the 'animated cards' setting to be disabled by default.
+- (Refinement) Updated the Effects Panel with styling for rolling persistent damage and recovery checks.
+- (Refinement) Updated the dark theme styling to support the new GM notes functionality from the system.
+
 # 1.12.7
 
 - (Module) Add support for Monk's Active Tile Triggers.

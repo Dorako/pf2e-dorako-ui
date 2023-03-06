@@ -21,7 +21,9 @@ export const baseThemeCoreFoundryApplications = ["ImagePopout","SceneControls", 
 // prettier-ignore
 export const baseThemePf2eApplications = ["HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"]; // "JournalSheetPF2e",
 // prettier-ignore
-export const baseThemePf2eSheets = ["ItemSheet","ActorSheet","LootSheetPF2e"]; //"FamiliarSheetPF2e","HazardSheetPF2e"
+// export const baseThemePf2eSheets = ["ItemSheet","ActorSheet","LootSheetPF2e"]; //"FamiliarSheetPF2e","HazardSheetPF2e"
+export const baseThemePf2eSheets = ["SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPf2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet"
+
 // prettier-ignore
 export const baseThemeModuleApplications = ["CombatCarousel","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
 
@@ -34,6 +36,9 @@ export const darkThemeCompatibleApplications = [...darkThemeCompatibleCoreFoundr
 export const premiumModuleSelector = ".swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
 // SWPFSheet
 // SWPFJournalSheet
+
+// prettier-ignore
+// export const premiumModuleIds = ["pf2e-beginner-box", "pf2e-abomination-vaults","pf2e-ap178-180-outlaws-of-alkenstar","pf2e-ap181-186-blood-lords", "pf2e-ap187-189-gatewalkers"];
 
 // CLASSES
 export class Avatar {

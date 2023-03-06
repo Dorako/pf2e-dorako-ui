@@ -203,33 +203,70 @@ function injectSpellInfo(html, spell) {
   spellInfo.classList.add("spell-info");
   // console.log(spell);
 
-  // Cast info
-  let castInfo = document.createElement("p");
+  // Cast time + components
+  let time = spell?.system?.time?.value;
+  let components = spell?.system?.components;
+  let elem = document.createElement("p");
   let castInfoLabel = document.createElement("strong");
-  castInfoLabel.textContent = i18n("PF2E.SpellCostLabel") + " ";
+  castInfoLabel.textContent = i18n("PF2E.SpellTimeLabel") + " ";
   let castTime = document.createElement("span");
-  const [cost, shouldBeGlyph] = getActionGlyph(spell?.system?.time?.value);
-  castTime.textContent = cost;
+  const [actionCost, shouldBeGlyph] = getActionGlyph(time);
+  castTime.textContent = actionCost;
   if (shouldBeGlyph) castTime.classList.add("pf2-icon");
   let castComponents = document.createElement("span");
-  castComponents.textContent = spellComponentsToText(spell?.system?.components);
-  castInfo.append(castInfoLabel);
-  castInfo.append(castTime);
-  castInfo.append(castComponents);
-  spellInfo.append(castInfo);
+  castComponents.textContent = spellComponentsToText(components);
+  elem.append(castInfoLabel);
+  elem.append(castTime);
+  elem.append(castComponents);
+  spellInfo.append(elem);
 
-  // Duration info
-  let duration = spell?.system?.duration?.value;
-  if (duration) {
-    // console.log(duration);
-    let durationInfo = document.createElement("p");
-    let durationInfoLabel = document.createElement("strong");
-    durationInfoLabel.textContent = i18n("PF2E.SpellDurationLabel") + " ";
-    let durationValue = document.createElement("span");
-    durationValue.textContent = duration;
-    durationInfo.append(durationInfoLabel);
-    durationInfo.append(durationValue);
-    spellInfo.append(durationInfo);
+  // Cost info (note: not cast time, material cost)
+  let cost = spell?.system?.cost?.value;
+  if (cost) {
+    let elem = document.createElement("p");
+    let label = document.createElement("strong");
+    label.textContent = i18n("PF2E.SpellCostLabel") + " ";
+    let value = document.createElement("span");
+    value.textContent = cost;
+    elem.append(label);
+    elem.append(value);
+    spellInfo.append(elem);
+  }
+
+  let secondarycasters = spell?.system?.secondarycasters?.value;
+  if (secondarycasters) {
+    let info = document.createElement("p");
+    let label = document.createElement("strong");
+    label.textContent = i18n("PF2E.SpellSecondaryCasters") + " ";
+    let value = document.createElement("span");
+    value.textContent = secondarycasters;
+    info.append(label);
+    info.append(value);
+    spellInfo.append(info);
+  }
+
+  let primarycheck = spell?.system?.primarycheck?.value;
+  if (primarycheck) {
+    let info = document.createElement("p");
+    let label = document.createElement("strong");
+    label.textContent = i18n("PF2E.SpellPrimaryCheckLabel") + " ";
+    let value = document.createElement("span");
+    value.textContent = primarycheck;
+    info.append(label);
+    info.append(value);
+    spellInfo.append(info);
+  }
+
+  let secondarycheck = spell?.system?.secondarycheck?.value;
+  if (secondarycheck) {
+    let info = document.createElement("p");
+    let label = document.createElement("strong");
+    label.textContent = i18n("PF2E.SpellSecondaryChecksLabel") + " ";
+    let value = document.createElement("span");
+    value.textContent = secondarycheck;
+    info.append(label);
+    info.append(value);
+    spellInfo.append(info);
   }
 
   // Target info
@@ -276,6 +313,20 @@ function injectSpellInfo(html, spell) {
     areaInfo.append(areaInfoLabel);
     areaInfo.append(areaValue);
     spellInfo.append(areaInfo);
+  }
+
+  // Duration info
+  let duration = spell?.system?.duration?.value;
+  if (duration) {
+    // console.log(duration);
+    let durationInfo = document.createElement("p");
+    let durationInfoLabel = document.createElement("strong");
+    durationInfoLabel.textContent = i18n("PF2E.SpellDurationLabel") + " ";
+    let durationValue = document.createElement("span");
+    durationValue.textContent = duration;
+    durationInfo.append(durationInfoLabel);
+    durationInfo.append(durationValue);
+    spellInfo.append(durationInfo);
   }
 
   let hr = document.createElement("hr");

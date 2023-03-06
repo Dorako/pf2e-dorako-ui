@@ -1,3 +1,39 @@
+.dorako-ui.dark-theme {
+  &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a {
+    &.add-gm-notes,
+    &.editor-edit {
+      @include glass;
+      @include quick-transition;
+      text-shadow: 0 0 3px black;
+      color: var(--color-text-light-heading);
+
+      &:hover {
+        @include glass; // re-included glass to set potential borders to none etc.
+        background-color: var(--primary);
+        color: var(--color-text-light-highlight);
+        box-shadow: var(--glassy); // Overrides prosemirror, possibly other stuff
+      }
+    }
+    &.add-gm-notes {
+      background-color: #2e0587;
+      &:hover {
+        background-color: #440eb9;
+      }
+    }
+  }
+  &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
+    background-color: #2e0587;
+    border: 1px dashed #440eb9;
+    padding: 4px;
+    border-radius: 15px;
+  }
+
+  &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .tox-tinymce {
+    background-color: #440eb9;
+    background-blend-mode: luminosity;
+  }
+}
+
 .dorako-ui.dark-theme #sidebar .settings-sidebar {
   button {
     @include glass;
@@ -73,16 +109,20 @@
   }
 }
 
-.dorako-ui.dark-theme.window-content {
+.dorako-ui.dark-theme:not(.premium) .window-content {
   @include sheet;
   color: var(--color-text-light-heading);
+}
+.dorako-ui.light-theme.journal-entry-content {
+  --color-text-dark-primary: #191813;
+  color: var(--color-text-dark-primary);
 }
 .dorako-ui.dark-theme.window-app.chat-popout .window-content {
   background: unset;
   box-shadow: unset;
 }
 
-.dorako-ui.dark-theme.window-app {
+.dorako-ui.dark-theme:not(.premium).window-app {
   // ::placeholder {
   //     color: var(--color-text-light-heading);
   // }
@@ -362,7 +402,7 @@
 /* Dark theme journals + Critical hit/fumble deck    */
 /* ------------------------------------------------- */
 
-.app.journal-entry .window-content .journal-entry-content.dorako-ui.dark-theme {
+.app.journal-entry:not(.premium) .window-content .journal-entry-content.dorako-ui.dark-theme {
   background: var(--sheet-dark);
   color: var(--color-text-light-heading);
 
