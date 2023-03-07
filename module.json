@@ -65,7 +65,7 @@
       "path": "languages/ja.json"
     },
     {
-      "lang": "zh-Hans",
+      "lang": "cn",
       "name": "中文（简体）",
       "path": "languages/zh_Hans.json"
     }
