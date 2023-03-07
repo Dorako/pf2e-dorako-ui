@@ -74,20 +74,21 @@ Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
   frameHtml.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
 });
 
-Hooks.on("renderEnhancedJournal", (app, html, data) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") return;
-  html[0].classList.add(theme);
-  const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
-  if (!isDarkJournals) {
-    html.closest(".app").find(".journal-entry-content").addClass("dorako-ui light-theme");
-    return;
-  }
-  html.closest(".app").find(".journal-entry-content").addClass(`dorako-ui dark-theme`);
-  // ^ seems like this doesn't work, perhaps fires before the data exists.
-  // html.closest(".app").find(".journal-page-content").addClass(`dorako-ui dark-theme`);
-  // ^ seems like this doesn't work, perhaps fires before the data exists.
-});
+// MEJ dark theme not quite right yet
+// Hooks.on("renderEnhancedJournal", (app, html, data) => {
+//   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+//   if (theme === "no-theme") return;
+//   html[0].classList.add(theme);
+//   const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
+//   if (!isDarkJournals) {
+//     html.closest(".app").find(".journal-entry-content").addClass("dorako-ui light-theme");
+//     return;
+//   }
+//   html.closest(".app").find(".journal-entry-content").addClass(`dorako-ui dark-theme`);
+//   // ^ seems like this doesn't work, perhaps fires before the data exists.
+//   // html.closest(".app").find(".journal-page-content").addClass(`dorako-ui dark-theme`);
+//   // ^ seems like this doesn't work, perhaps fires before the data exists.
+// });
 
 // for (const appName of ["JournalSheet"]) {
 //   // "JournalPageSheet"

@@ -2657,4 +2657,8 @@ body.system-swade {
   background-color: var(--primary);
 }
 
+#module-credits-copy-export {
+  background: none !important;
+}
+
 /*# sourceMappingURL=module-support.css.map */

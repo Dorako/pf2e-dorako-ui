@@ -1,3 +1,10 @@
+# 2.0.1
+
+- (Fix) Fixed an issue where Dalvyn's CRB styled journals was applied regardless of setting
+- (Fix) Fixed an issue where Module Management+'s export screen was illegible in dark theme
+- (Fix) Fixed an issue where some text in the critical deck journal was illegible
+- (Fix) Fixed an issue where dark theme support for Monk's Enhanced Journals was not working right, by blacklisting MEJ from dark theme until I have the energy to debug it again
+
 # 2.0.0
 
 - (New) Added screenshots to the github page; updated the FVTT module page description.

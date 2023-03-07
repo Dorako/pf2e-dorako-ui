@@ -424,6 +424,8 @@
     color: var(--color-text-light-highlight);
   }
 
+  .journal-entry-page .journal-page-content .fumble-deck code,
+  .journal-entry-page .journal-page-content .fumble-deck h1,
   .journal-entry-page .journal-page-content .critical-deck h1,
   .journal-entry-page .journal-page-content .critical-deck code {
     color: black;
