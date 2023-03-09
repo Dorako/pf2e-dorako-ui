@@ -185,6 +185,18 @@
           "name": "为日志启用CRB排版风格？",
           "hint": "指南见www.shorturl.at/mrzN1"
         }
+      },
+      "customization": {
+        "excluded-applications": {
+          "name": "除去应用",
+          "hint": "检查应用的logs，或到Discord询问"
+        },
+        "custom-css": {
+          "name": "自定义CSS",
+          "hint": "将外部编辑器编译的CSS粘贴到这里"
+        },
+        "name": "自定义",
+        "hint": "使用自定义CSS进行个性化，或使用Dorako UI的特定风格"
       }
     },
     "text": {
@@ -199,7 +211,8 @@
       "light": "明亮",
       "disabled": "禁用",
       "secret": "秘密",
-      "large-chatlog-warning": "由于聊天记录过多，一些设置将在下次刷新时启用。"
+      "large-chatlog-warning": "由于聊天记录过多，一些设置将在下次刷新时启用。",
+      "maybe-reload": "一些更改需要刷新页面。"
     }
   }
 }

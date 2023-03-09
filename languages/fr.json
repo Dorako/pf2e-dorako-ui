@@ -137,7 +137,8 @@
       "secret": "Secret",
       "whisper": "Murmure",
       "send-to-chat": "Envoyé",
-      "large-chatlog-warning": "En raison de la taille du journal de la conversation, certains paramètres s'appliqueront lors du prochain rechargement."
+      "large-chatlog-warning": "En raison de la taille du journal de la conversation, certains paramètres s'appliqueront lors du prochain rechargement.",
+      "maybe-reload": "Certains changements pourraient nécessiter un rechargement."
     },
     "settings": {
       "theme": {
@@ -337,7 +338,19 @@
           "hint": "Ajoute des boutons pour activer les styles dorako-ui et sombre pour les fenêtres"
         }
       },
-      "reset-changes": "Réinitialiser les changements"
+      "reset-changes": "Réinitialiser les changements",
+      "customization": {
+        "name": "Personnalisation",
+        "excluded-applications": {
+          "name": "Applications exclues",
+          "hint": "Regardez dans les journaux pour le nom de l'application ou demandez sur Discord"
+        },
+        "custom-css": {
+          "name": "CSS personnalisé",
+          "hint": "Écrivez du CSS dans un éditeur extérieur et copiez le ici"
+        },
+        "hint": "Faites des changements personnalisés en utilisant un CSS personnalisé ou en retirant certains styles de Dorako UI"
+      }
     }
   }
 }
