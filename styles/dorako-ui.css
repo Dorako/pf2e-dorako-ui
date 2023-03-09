@@ -644,7 +644,6 @@ body.compact-ui #controls .sub-controls .control-tool:not(.active, .toggle) {
   display: none;
 }
 body.compact-ui #controls {
-  pointer-events: all;
   /* gap: 5px; */
   flex-wrap: nowrap;
   /* width: 75px; */
@@ -654,8 +653,8 @@ body.compact-ui .main-controls {
   display: flex;
   flex-direction: column;
 }
-body.compact-ui #controls:hover .main-controls .scene-control,
-body.compact-ui #controls:hover .sub-controls .control-tool {
+body.compact-ui #ui-left.active #controls .main-controls .scene-control,
+body.compact-ui #ui-left.active #controls .sub-controls .control-tool {
   display: block;
 }
 body.compact-ui #controls ol.main-controls.app.control-tools {

@@ -1,3 +1,7 @@
+# 2.0.2
+
+- (Refinement) Improved Compact UI mode so canvas elements near controls are clickable
+
 # 2.0.1
 
 - (Fix) Fixed an issue where Dalvyn's CRB styled journals was applied regardless of setting

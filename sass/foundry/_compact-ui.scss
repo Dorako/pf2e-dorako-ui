@@ -5,7 +5,7 @@ body.compact-ui {
   }
 
   #controls {
-    pointer-events: all;
+    // pointer-events: all;
     /* gap: 5px; */
     flex-wrap: nowrap;
     /* width: 75px; */
@@ -17,8 +17,8 @@ body.compact-ui {
     flex-direction: column;
   }
 
-  #controls:hover .main-controls .scene-control,
-  #controls:hover .sub-controls .control-tool {
+  #ui-left.active #controls .main-controls .scene-control,
+  #ui-left.active #controls .sub-controls .control-tool {
     display: block;
   }
 

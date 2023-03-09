@@ -131,7 +131,18 @@ Hooks.once("ready", () => {
 Hooks.once("ready", () => {
   const compactUi = game.settings.get("pf2e-dorako-ui", "ux.compact-ui");
   if (!compactUi) return;
-  $("body").addClass("compact-ui");
+  var body = document.body;
+  body.classList.add("compact-ui");
+  body.addEventListener("mousemove", toggleActive);
+
+  function toggleActive(e) {
+    if (e.clientX < 150) {
+      $("body").find("#ui-left").addClass("active");
+    }
+    if (e.clientX > 200) {
+      $("body").find("#ui-left").removeClass("active");
+    }
+  }
 });
 
 Hooks.once("ready", () => {
