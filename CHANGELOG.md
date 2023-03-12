@@ -1,3 +1,8 @@
+# 2.0.3
+
+- (Fix) Made sure that form button styling does not apply to prosemirror dropdowns, fixing an issue where dropdowns became illegible when hovered.
+- (Refinement) Made Dalvyn's CRB styled journals' font apply to text in journals in MEJ.
+
 # 2.0.2
 
 - (Refinement) Improved Compact UI mode so canvas elements near controls are clickable

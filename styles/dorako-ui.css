@@ -810,16 +810,16 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   text-decoration: unset;
 }
 
-.dorako-ui form button {
+.dorako-ui form button:not(.pm-dropdown) {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   border: 1px solid var(--color-border-light-primary);
 }
-.dorako-ui form button:hover {
+.dorako-ui form button:not(.pm-dropdown):hover {
   background-color: var(--primary-light);
   color: var(--color-text-light-highlight);
   border: 1px solid var(--tertiary);
 }
-.dorako-ui form button:active {
+.dorako-ui form button:not(.pm-dropdown):active {
   background-color: var(--primary-light);
   color: white;
   border: 1px solid var(--gold-brown);

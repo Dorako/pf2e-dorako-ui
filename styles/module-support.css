@@ -2264,7 +2264,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 .dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h5:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .window-content,
+.dorako-ui.dalvyn-journal:not(.premium).journal-entry-content, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .window-content,
 .dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .window-content {
   font-family: "Gelasio";
 }
