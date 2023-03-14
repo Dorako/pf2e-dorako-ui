@@ -24,7 +24,7 @@
         "type": "system",
         "compatibility": {
           "minimum": "4.0.0",
-          "verified": "4.7.1"
+          "verified": "4.9.2"
         }
       },
       {
@@ -70,9 +70,7 @@
       "path": "languages/zh_Hans.json"
     }
   ],
-  "styles": [
-    "styles/fonts.css"
-  ],
+  "styles": ["styles/fonts.css"],
   "esmodules": [
     "modules/misc-hooks.js",
     "modules/settings/settings.js",

@@ -1572,6 +1572,9 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet .inventory .item-summary {
   background: rgba(0, 0, 0, 0.25);
 }
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest {
+  color: var(--half-transparent);
+}
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
   color: var(--color-border-light-primary);
 }
@@ -1771,13 +1774,15 @@ section.chat-sidebar {
   background: var(--secondary-dark);
   color: var(--color-disabled);
 }
-.dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text], .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number] {
+.dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text], .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number], .dorako-ui.dark-theme.actor.sheet .crb-style aside .sidebar .stamina li input.right {
   background: unset;
   box-shadow: unset;
+  color: unset;
 }
-.dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text]:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text]:focus, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable:focus, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input:focus, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input:focus, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input:focus, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number]:hover, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number]:focus {
+.dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text]:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name input[type=text]:focus, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-details h1.char-name span.non-editable:focus, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input:hover, .dorako-ui.dark-theme.actor.sheet .crb-style header.char-header .char-level .level input:focus, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input:focus, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input:focus, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number]:hover, .dorako-ui.dark-theme.actor.sheet .crb-style aside input[type=number]:focus, .dorako-ui.dark-theme.actor.sheet .crb-style aside .sidebar .stamina li input.right:hover, .dorako-ui.dark-theme.actor.sheet .crb-style aside .sidebar .stamina li input.right:focus {
   background: unset;
   box-shadow: unset;
+  color: unset;
 }
 
 .combat-sidebar .drag-gap {
@@ -1908,6 +1913,11 @@ section.chat-sidebar {
   height: 42px;
   width: 42px;
   margin-left: 3px;
+}
+.effect-panel.dorako-ui .effect-item .icon.aura {
+  border-radius: 5px;
+  transform: scale(0.8);
+  box-shadow: 0 0 10px 3px var(--tertiary), 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
 }
 .effect-panel.dorako-ui .effect-item .icon .expired {
   position: absolute;

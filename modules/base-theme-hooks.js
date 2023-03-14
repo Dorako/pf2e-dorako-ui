@@ -113,6 +113,7 @@ for (const app of [...baseThemePf2eSheets]) {
     );
     html0.classList.add("dorako-ui");
     html.find("select.tag").addClass("dorako-ui-skip");
+    html.find(".initiative-select select").addClass("dorako-ui-skip");
   });
 }
 

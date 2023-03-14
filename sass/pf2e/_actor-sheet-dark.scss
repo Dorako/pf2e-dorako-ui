@@ -47,6 +47,9 @@
   &.actor.sheet .inventory .item-summary {
     background: rgba(0, 0, 0, 0.25);
   }
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest {
+    color: var(--half-transparent);
+  }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
     color: var(--color-border-light-primary);
@@ -291,14 +294,17 @@
   &.actor.sheet .crb-style header.char-header .char-level .level input,
   &.actor.sheet.character .crb-style header.char-header .char-level .exp-data .exp-input input,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header h3 input.item-name-input,
-  &.actor.sheet .crb-style aside input[type="number"] {
+  &.actor.sheet .crb-style aside input[type="number"],
+  &.actor.sheet .crb-style aside .sidebar .stamina li input.right {
     background: unset;
     box-shadow: unset;
+    color: unset;
 
     &:hover,
     &:focus {
       background: unset;
       box-shadow: unset;
+      color: unset;
     }
   }
 }

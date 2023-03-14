@@ -105,6 +105,17 @@
       width: 42px;
       margin-left: 3px; // Make room for box-shadow overflow for expired tag
 
+      &.aura {
+        border-radius: 5px;
+        transform: scale(0.8);
+        // prettier-ignore
+        box-shadow: 
+        0 0 10px 3px var(--tertiary), 
+        0 0 0 1px var(--tertiary), 
+        0 0 0 2px var(--gold-brown),
+          0 0 5px rgba(0, 0, 0, 0.8);
+      }
+
       .expired {
         position: absolute;
         left: auto;

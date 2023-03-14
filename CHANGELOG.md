@@ -1,3 +1,8 @@
+# 2.0.4
+
+- (Maintenance) Fix some issues affecting dark theme PC sheets introduced by recent system update.
+- (Refinement) Update Effect Panel styling so Auras look glowy and distinct from other effects.
+
 # 2.0.3
 
 - (Fix) Made sure that form button styling does not apply to prosemirror dropdowns, fixing an issue where dropdowns became illegible when hovered.
