@@ -24,7 +24,9 @@ function getActionGlyph(actionCost) {
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   const isNarratorToolsMessage = chatMessage.flags["narrator-tools"];
-  const isRoundMarker = chatMessage.flags["monks-little-details"]?.roundmarker;
+  const isMLDRoundMarker = chatMessage.flags["monks-little-details"]?.roundmarker;
+  const isMCDRoundMarker = chatMessage.flags["monks-combat-details"]?.roundmarker;
+  const isRoundMarker = isMLDRoundMarker || isMCDRoundMarker;
   if (isNarratorToolsMessage || isRoundMarker) {
     return;
   }

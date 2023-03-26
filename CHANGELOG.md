@@ -1,3 +1,8 @@
+# 2.0.5
+
+- (New) Added dark theme support for Dice Stats module.
+- (Maintenance) Support MLD roundmarkers from the new splinter module Monk's Combat Details.
+
 # 2.0.4
 
 - (Maintenance) Fix some issues affecting dark theme PC sheets introduced by recent system update.

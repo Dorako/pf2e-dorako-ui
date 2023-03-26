@@ -56,6 +56,7 @@ Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
 Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
   if (!html0.classList.contains("window-app")) return;
+  // TODO: This also triggers for SceneConfigPF2e
   if (isPremiumApplication(app, html, data, app.constructor.name)) return;
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme") {
@@ -70,6 +71,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   const journal = app.document;
   if (!journal) return;
   const flags = journal?.flags;
+  // TODO: This also triggers for SceneConfigPF2e
   if (flags.hasOwnProperty("pf2e-abomination-vaults") || flags.hasOwnProperty("pf2e-beginner-box")) {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | AV or BB => add .dorako-ui despite .premium`);
     html[0].classList.add("dorako-ui");

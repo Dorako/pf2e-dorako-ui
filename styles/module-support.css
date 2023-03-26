@@ -2661,4 +2661,11 @@ body.system-swade {
   background: none !important;
 }
 
+/* ----------------------------------------- */
+/* Dice Stats                                */
+/* ----------------------------------------- */
+.dorako-ui.dark-theme .chart-dice-stats {
+  background: rgba(245, 222, 179, 0.568627451);
+}
+
 /*# sourceMappingURL=module-support.css.map */
