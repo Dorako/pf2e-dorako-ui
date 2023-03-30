@@ -136,10 +136,11 @@ Hooks.once("ready", () => {
   body.addEventListener("mousemove", toggleActive);
 
   function toggleActive(e) {
-    if (e.clientX < 150) {
+    const offsetLeft = $("body").find("#ui-left")[0] ? $("body").find("#ui-left")[0].offsetLeft : 0;
+    if (e.clientX < offsetLeft + 150) {
       $("body").find("#ui-left").addClass("active");
     }
-    if (e.clientX > 200) {
+    if (e.clientX > offsetLeft + 200) {
       $("body").find("#ui-left").removeClass("active");
     }
   }

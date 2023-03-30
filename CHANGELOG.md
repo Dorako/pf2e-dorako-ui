@@ -1,3 +1,7 @@
+# 2.0.7
+
+- (Refinement) Made the Compact UI setting account for Foundry's Audio/Video sidebar.
+
 # 2.0.6
 
 - (Maintenance) Ensure clickable elements in effect panel text descriptions are styled appropriately.
