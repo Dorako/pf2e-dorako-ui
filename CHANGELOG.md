@@ -1,3 +1,7 @@
+# 2.0.6
+
+- (Maintenance) Ensure clickable elements in effect panel text descriptions are styled appropriately.
+
 # 2.0.5
 
 - (New) Added dark theme support for Dice Stats module.

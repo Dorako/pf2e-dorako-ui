@@ -1855,7 +1855,7 @@ section.chat-sidebar {
   backdrop-filter: blur(5px);
   z-index: var(--z-index-tooltip);
 }
-.effect-panel.dorako-ui .effect-item .effect-info a {
+.effect-panel.dorako-ui .effect-item .effect-info a:not(.content-link) {
   border: none;
   border-radius: 3px;
   background: none;
@@ -1868,7 +1868,7 @@ section.chat-sidebar {
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
 }
-.effect-panel.dorako-ui .effect-item .effect-info a:hover {
+.effect-panel.dorako-ui .effect-item .effect-info a:not(.content-link):hover {
   background-color: var(--primary-light);
   color: white;
   text-shadow: 0px 0px 3px black;

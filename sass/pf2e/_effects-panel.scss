@@ -45,7 +45,7 @@
       backdrop-filter: blur(5px);
       z-index: var(--z-index-tooltip);
 
-      a {
+      a:not(.content-link) {
         @include glass;
         @include quick-transition;
         text-align: center;
