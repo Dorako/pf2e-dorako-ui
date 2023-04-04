@@ -330,7 +330,7 @@
   form .form-group span.units,
   form .notes,
   form .hint {
-    color: var(--color-text-dark-6);
+    color: #a9a798; // darker than --color-text-light-heading
   }
 
   &.filepicker .private .directory,

@@ -1,3 +1,7 @@
+# 2.0.8
+
+- (Refinement) Adjustment to increase contrast of secondary labels for dark theme.
+
 # 2.0.7
 
 - (Refinement) Made the Compact UI setting account for Foundry's Audio/Video sidebar.
