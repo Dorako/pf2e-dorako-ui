@@ -495,7 +495,7 @@
 .dorako-ui.dark-theme:not(.premium).window-app form .form-group span.units,
 .dorako-ui.dark-theme:not(.premium).window-app form .notes,
 .dorako-ui.dark-theme:not(.premium).window-app form .hint {
-  color: var(--color-text-dark-6);
+  color: #a9a798;
 }
 .dorako-ui.dark-theme:not(.premium).window-app.filepicker .private .directory, .dorako-ui.dark-theme:not(.premium).window-app.filepicker .public .private.dir {
   background: rgba(115, 49, 255, 0.15);

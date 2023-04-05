@@ -1,3 +1,8 @@
+# 2.0.9
+
+- (Fix) Actually compile the stylesheet from 2.0.8 so it is included (whoops).
+- (New) zh-tw localization thanks to zeteticl.
+
 # 2.0.8
 
 - (Refinement) Adjustment to increase contrast of secondary labels for dark theme.
