@@ -59,6 +59,13 @@
   /* Borders */
   --color-border-trait: #d8c384;
   --color-border-divider: #baa991;
+  /* Mats */
+  --mats-dark: #1c1c1c;
+  --mats-gold-dark: #dbc682;
+  --mats-gold-light: #e6d8a7;
+  --mats-green-light: #99aea1;
+  --mats-green: #3e644b;
+  --mats-green-dark: #233b2b;
   /* Headers w/ boxes */
   --header-color: var(--text-light);
   --header-bg: var(--secondary);
@@ -1384,7 +1391,7 @@ div#scrollToBottom:hover {
   padding: 5px;
 }
 
-.monks-enhanced-journal.window-app .window-content {
+#MonksEnhancedJournal.window-app .window-content {
   padding: 0px;
   background: none;
   box-shadow: none;
@@ -2666,6 +2673,45 @@ body.system-swade {
 /* ----------------------------------------- */
 .dorako-ui.dark-theme .chart-dice-stats {
   background: rgba(245, 222, 179, 0.568627451);
+}
+
+/* ----------------------------------------- */
+/* Pin Cushion                               */
+/* ----------------------------------------- */
+.pin-cushion-hud-tooltip-default {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+}
+
+#powerTip:before {
+  color: var(--glass-bg);
+}
+
+/* ----------------------------------------- */
+/* Illandril's Token Tooltips                */
+/* ----------------------------------------- */
+.illandril-token-tooltips--tooltip {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-highlight);
+  font-size: 1rem;
+}
+
+.illandril-token-tooltips--tooltip .illandril-token-tooltips--name {
+  color: var(--color-text-light-highlight);
+  font-family: var(--font-primary);
+  font-size: 1.25rem;
+  padding: 4px 8px;
 }
 
 /*# sourceMappingURL=module-support.css.map */

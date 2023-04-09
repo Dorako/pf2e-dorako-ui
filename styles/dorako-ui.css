@@ -2514,6 +2514,13 @@ section.chat-sidebar {
   /* Borders */
   --color-border-trait: #d8c384;
   --color-border-divider: #baa991;
+  /* Mats */
+  --mats-dark: #1c1c1c;
+  --mats-gold-dark: #dbc682;
+  --mats-gold-light: #e6d8a7;
+  --mats-green-light: #99aea1;
+  --mats-green: #3e644b;
+  --mats-green-dark: #233b2b;
   /* Headers w/ boxes */
   --header-color: var(--text-light);
   --header-bg: var(--secondary);
@@ -2986,6 +2993,13 @@ section.chat-sidebar {
   /* Borders */
   --color-border-trait: #d8c384;
   --color-border-divider: #baa991;
+  /* Mats */
+  --mats-dark: #1c1c1c;
+  --mats-gold-dark: #dbc682;
+  --mats-gold-light: #e6d8a7;
+  --mats-green-light: #99aea1;
+  --mats-green: #3e644b;
+  --mats-green-dark: #233b2b;
   /* Headers w/ boxes */
   --header-color: var(--text-light);
   --header-bg: var(--secondary);

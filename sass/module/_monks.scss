@@ -405,10 +405,9 @@
   padding: 5px;
 }
 
-.monks-enhanced-journal.window-app .window-content {
+#MonksEnhancedJournal.window-app .window-content {
+  // The div only affects the 'GM' view with all the chrome, the class would also remove the background when a non-GM accesses the journal
   padding: 0px;
-  // background-color: rgba(0, 0, 0, 0.5);
-  // background-blend-mode: multiply;
   background: none;
   box-shadow: none;
   border-radius: 0px 0px 0px 5px;
@@ -419,7 +418,6 @@
   border: none;
   box-shadow: 0px 0px 2px 1px rgb(0 0 0), 0px 0px 5px 0px rgb(0 0 0 / 50%);
   box-shadow: none;
-
   color: var(--color-text-light-highlight);
 }
 

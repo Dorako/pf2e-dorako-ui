@@ -1,3 +1,9 @@
+# 2.0.10
+
+- (New) Add support for Pin Cushion tooltips.
+- (New) Add support for Illandril's Token Tooltips courtesy of @Vesselchuck.
+- (Fix) Fixed an issue where non-GM's viewing Monk's Enhanced Journals would see no background.
+
 # 2.0.9
 
 - (Fix) Actually compile the stylesheet from 2.0.8 so it is included (whoops).
