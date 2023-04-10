@@ -136,6 +136,10 @@
           "name": "Restructure chat card info?",
           "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"
         },
+        "adjust-token-effects-hud": {
+          "name": "Rearrange token effect indicators?",
+          "hint": "(Experimental) Puts effects around the token to avoid covering token art"
+        },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Remove attack info from damage roll messages?",
           "hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with DFCE chat-merge"

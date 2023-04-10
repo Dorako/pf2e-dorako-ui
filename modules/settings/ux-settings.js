@@ -17,6 +17,7 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "rolltype-indication",
     "start-sidebar-collapsed",
     "start-navigation-collapsed",
+    "adjust-token-effects-hud",
   ];
 
   rerenderChatMessages() {}
@@ -38,6 +39,15 @@ export class UXSettings extends SettingsMenuDorakoUI {
             document.getElementById("ui-bottom").classList.remove("centered");
           }
         },
+      },
+      "adjust-token-effects-hud": {
+        name: "pf2e-dorako-ui.settings.ux.adjust-token-effects-hud.name",
+        hint: "pf2e-dorako-ui.settings.ux.adjust-token-effects-hud.hint",
+        scope: "client",
+        type: Boolean,
+        default: false,
+        config: true,
+        requiresReload: true,
       },
       "chat-input-height": {
         name: "pf2e-dorako-ui.settings.ux.chat-input-height.name",
