@@ -138,7 +138,7 @@
         },
         "adjust-token-effects-hud": {
           "name": "Rearrange token effect indicators?",
-          "hint": "(Experimental) Puts effects around the token to avoid covering token art"
+          "hint": "(Experimental) When a token would have more than one column of effects, put the effects around the token instead"
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Remove attack info from damage roll messages?",

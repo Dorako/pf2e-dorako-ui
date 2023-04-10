@@ -152,15 +152,6 @@ const updateEffectScales = (token) => {
   // if (token?.actor?.size == "sm") return;
   const numEffects = countEffects(token);
   if (numEffects > 0 && token.effects.children.length > 0) {
-    const layout = game.settings.get("pf2e-dorako-ui", "effectIconsLayout");
-    const above = layout === "above";
-    const horizontal = above || layout === "horizontal";
-    const iconsPerRow = Math.ceil(
-      game.settings.get("pf2e-dorako-ui", "effectIconsPerRow") *
-        (horizontal ? token.document.width : token.document.height)
-    );
-
-    const width = (horizontal ? token.bounds.width : token.bounds.height) / iconsPerRow;
     const background = token.effects.children[0];
     if (!(background instanceof PIXI.Graphics)) {
       return;
@@ -170,6 +161,7 @@ const updateEffectScales = (token) => {
 
     // Exclude the background and overlay
     const effectIcons = token.effects.children.slice(1, 1 + numEffects);
+    if (token?.actor?.size != "tiny" && effectIcons.length <= 5) return;
 
     // Reposition and scale them
     effectIcons.forEach((effectIcon, i, effectIcons) => {

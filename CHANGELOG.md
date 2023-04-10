@@ -1,3 +1,7 @@
+# 2.1.0
+
+- (New) New experimental setting that arranges token effects around the token, instead of covering the token up.
+
 # 2.0.10
 
 - (New) Add support for Pin Cushion tooltips.
