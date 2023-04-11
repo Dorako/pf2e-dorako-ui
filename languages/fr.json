@@ -316,6 +316,10 @@
         "animate-messages": {
           "name": "Animer des messages pour attirer l'attention sur certains événements ?",
           "hint": "Les chuchotements des joueurs au MJ attirent davantage l'attention"
+        },
+        "adjust-token-effects-hud": {
+          "name": "Réarranger les indicateurs d'effet sur les jetons ?",
+          "hint": "[Expérimental] Lorsqu'un jeton devrait avoir des effets sur plus d'une colonne, place les effets autour du jeton à la place"
         }
       },
       "misc": {
