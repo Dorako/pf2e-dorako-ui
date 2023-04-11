@@ -1,3 +1,7 @@
+# 2.1.2
+
+- (Fix) Fixed an issue that messed up the token effects HUD when the new experimental setting was _not_ enabled
+
 # 2.1.1
 
 - (Fix) Adjust token effects HUD setting now accounts for the scene's gridsize

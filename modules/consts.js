@@ -25,7 +25,7 @@ export const baseThemePf2eApplications = ["HotbarPF2e", "EffectsPanel", "SceneDa
 export const baseThemePf2eSheets = ["SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPf2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet"
 
 // prettier-ignore
-export const baseThemeModuleApplications = ["PinCushionHUD","CombatCarousel","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
+export const baseThemeModuleApplications = ["ItemPileConfig","PinCushionHUD","CombatCarousel","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
 
 // prettier-ignore
 export const baseThemeApplications = [...baseThemeCoreFoundryApplications,...baseThemePf2eApplications,...baseThemeModuleApplications, ...dorakoUiApplications];

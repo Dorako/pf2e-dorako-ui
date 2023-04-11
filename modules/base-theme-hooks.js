@@ -18,6 +18,16 @@ for (const appName of [...baseThemeApplications]) {
   });
 }
 
+// Hooks.on("renderMerchantApp", (app, html, data) => {
+//   let html0 = html[0];
+//   html0.classList.add("dorako-ui");
+//   console.debug(`${MODULE_NAME} | LOOK AT ME`);
+//   console.log({ app });
+//   console.log({ html });
+//   console.log({ data });
+//   app.options.classes.push("dorako-ui");
+// });
+
 // // Add .dorako-ui to all whitelisted Applications
 // for (const app of [...baseThemeApplications]) {
 //   Hooks.on("render" + app, (app, html, data) => {

@@ -3,8 +3,10 @@ Token.prototype._refreshEffects = function (...args) {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
   // Draw the icons the way the system wants them drawn first. For most systems this is wasteful, but for some it might be
   // adjusting the icon positions based on something special, which we want to continue to respect.
-  // origRefreshEffects.apply(this, args);
-  if (!enabled) return;
+  if (!enabled) {
+    origRefreshEffects.apply(this, args);
+    return;
+  }
   if (this) {
     updateEffectScales(this);
   }

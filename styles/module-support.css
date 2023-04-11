@@ -2714,4 +2714,21 @@ body.system-swade {
   padding: 4px 8px;
 }
 
+.item-piles-player-list-trade-button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--glass-bg-light);
+}
+.item-piles-player-list-trade-button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+
 /*# sourceMappingURL=module-support.css.map */

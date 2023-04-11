@@ -1,0 +1,8 @@
+.item-piles-player-list-trade-button {
+  @include glass;
+  @include quick-transition;
+  background-color: var(--glass-bg-light);
+  &:hover {
+    @include glass;
+  }
+}
