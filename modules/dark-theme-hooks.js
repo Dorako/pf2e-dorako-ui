@@ -119,6 +119,15 @@ for (const app of ["Application", ...baseThemePf2eSheets]) {
   });
 }
 
+Hooks.on("renderSvelteApplication", (app) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme !== "dark-theme") return;
+  if (darkThemeIncompatibleApplications.includes(app?.constructor?.name)) return;
+  console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}`);
+  app.element[0].classList.add("dorako-ui");
+  app.element[0].classList.add("dark-theme");
+});
+
 function markAsNativelyDarkTheme(app, html) {
   let html0 = html[0];
   console.debug(`${MODULE_NAME} | renderApplication (${app.constructor.name}) | forced dark theme`);

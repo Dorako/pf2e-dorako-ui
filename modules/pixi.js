@@ -186,6 +186,7 @@ const drawBG = (effectIcon, background, gridScale) => {
 const updateEffectScales = (token) => {
   // if (token?.actor?.size == "sm") return;
   const numEffects = countEffects(token);
+  // debugger;
   if (numEffects > 0 && token.effects.children.length > 0) {
     const background = token.effects.children[0];
     if (!(background instanceof PIXI.Graphics)) {

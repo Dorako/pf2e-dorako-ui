@@ -6,3 +6,22 @@
     @include glass;
   }
 }
+
+.item-piles-img-container {
+  @include gold-border;
+  border-radius: 3px;
+  margin: 3px;
+}
+
+.item-piles-app {
+  --item-piles-even-color: #7a79717a;
+  --item-piles-shadow-primary: var(--color-shadow-primary);
+}
+
+.dorako-ui.dark-theme {
+  --color-text-dark-secondary: #a9a798;
+  --item-piles-minor-inactive: rgb(15, 15, 15);
+  .item.active.underscore.item-piles-flexrow.item-piles-clickable-link {
+    border-bottom: 2px solid var(--tertiary-dark);
+  }
+}

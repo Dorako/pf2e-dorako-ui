@@ -1,3 +1,7 @@
+# 2.1.3
+
+- (Module) Add support for Item Piles. The current implementation should also add support for other Svelte-based modules, but if that turns out to be too breaky I'll have to adjust.
+
 # 2.1.2
 
 - (Fix) Fixed an issue that messed up the token effects HUD when the new experimental setting was _not_ enabled

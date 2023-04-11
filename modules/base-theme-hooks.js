@@ -28,6 +28,10 @@ for (const appName of [...baseThemeApplications]) {
 //   app.options.classes.push("dorako-ui");
 // });
 
+Hooks.on("renderSvelteApplication", (app) => {
+  app.element[0].classList.add("dorako-ui");
+});
+
 // // Add .dorako-ui to all whitelisted Applications
 // for (const app of [...baseThemeApplications]) {
 //   Hooks.on("render" + app, (app, html, data) => {
