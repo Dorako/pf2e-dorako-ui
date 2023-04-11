@@ -137,8 +137,8 @@
           "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"
         },
         "adjust-token-effects-hud": {
-          "name": "Rearrange token effect indicators?",
-          "hint": "(Experimental) When a token would have more than one column of effects, put the effects around the token instead"
+          "name": "Adjust token effects HUD?",
+          "hint": "(Experimental) Makes effects circular and arranges them outside the token, or on the token ring for larger tokens"
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Remove attack info from damage roll messages?",

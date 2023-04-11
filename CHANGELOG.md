@@ -1,3 +1,8 @@
+# 2.1.1
+
+- (Fix) Adjust token effects HUD setting now accounts for the scene's gridsize
+- (Refinement) Adjust token effects HUD setting now looks nicer
+
 # 2.1.0
 
 - (New) New experimental setting that arranges token effects around the token, instead of covering the token up.

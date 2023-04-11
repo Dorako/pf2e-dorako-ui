@@ -3,7 +3,7 @@ Token.prototype._refreshEffects = function (...args) {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
   // Draw the icons the way the system wants them drawn first. For most systems this is wasteful, but for some it might be
   // adjusting the icon positions based on something special, which we want to continue to respect.
-  origRefreshEffects.apply(this, args);
+  // origRefreshEffects.apply(this, args);
   if (!enabled) return;
   if (this) {
     updateEffectScales(this);
@@ -106,9 +106,9 @@ const sortIcons = (e1, e2) => {
   return e1.position.x - e2.position.x;
 };
 
-const updateIconSize = (effectIcon, width) => {
-  effectIcon.width = width;
-  effectIcon.height = width;
+const updateIconSize = (effectIcon, size) => {
+  effectIcon.width = size;
+  effectIcon.height = size;
 };
 
 function polar_to_cartesian(r, theta) {
@@ -119,33 +119,66 @@ function polar_to_cartesian(r, theta) {
 }
 
 const updateIconPosition = (effectIcon, i, effectIcons, token) => {
-  const ratio = i / effectIcons.length;
-  const offset = sizeToOffset(token?.actor?.size);
-  const { x, y } = polar_to_cartesian(offset, ratio * 2 * Math.PI);
-  effectIcon.position.x = x + (token.document.width * 200) / 2;
-  effectIcon.position.y = y + (token.document.height * 200) / 2;
+  const actorSize = token?.actor?.size;
+  let max = 20;
+  if (actorSize == "tiny") max = 10;
+  if (actorSize == "sm") max = 16;
+  const ratio = i / max;
+  // const angularOffset = i < max ? 0 : ratio / 2;
+  const gridSize = token?.scene?.grid?.size ?? 100;
+  const tokenTileFactor = token?.document?.width ?? 1;
+  const sizeOffset = sizeToOffset(actorSize);
+  const offset = sizeOffset * tokenTileFactor * gridSize;
+  const quarterRotation = 0.5 * Math.PI;
+  const { x, y } = polar_to_cartesian(offset, (ratio + 0) * 2 * Math.PI + quarterRotation);
+  console.log({ x, y });
+  // debugger;
+  effectIcon.position.x = x / 2 + (gridSize * tokenTileFactor) / 2;
+  effectIcon.position.y = (-1 * y) / 2 + (gridSize * tokenTileFactor) / 2;
 };
 
+// Nudge icons to be on the token ring or slightly outside
 function sizeToOffset(size) {
   if (size == "tiny") {
-    return 65;
+    return 1.3;
   } else if (size == "sm") {
-    return 90;
+    return 0.95;
   } else if (size == "med") {
-    return 115;
+    return 1.15;
   } else if (size == "lg") {
-    return 200;
+    return 0.925;
   } else if (size == "huge") {
-    return 300;
+    return 0.925;
   } else if (size == "grg") {
-    return 400;
+    return 0.925;
   }
-  return 100;
+  return 1.0;
 }
 
-const drawBG = (effectIcon, background) => {
+function sizeToIconScale(size) {
+  if (size == "tiny") {
+    return 1.0;
+  } else if (size == "sm") {
+    return 1.0;
+  } else if (size == "med") {
+    return 1.0;
+  } else if (size == "lg") {
+    return 1.25;
+  } else if (size == "huge") {
+    return 1.55;
+  } else if (size == "grg") {
+    return 2.2;
+  }
+  return 1.0;
+}
+
+const drawBG = (effectIcon, background, gridScale) => {
   const r = effectIcon.width / 2;
-  background.drawCircle(effectIcon.position.x, effectIcon.position.y, r);
+  background.lineStyle((1 * gridScale) / 2, 0x956d58, 1, 0);
+  background.drawCircle(effectIcon.position.x, effectIcon.position.y, r + 1 * gridScale);
+  background.beginFill(0xe9d7a1);
+  background.drawCircle(effectIcon.position.x, effectIcon.position.y, r + 1 * gridScale);
+  background.endFill();
 };
 
 const updateEffectScales = (token) => {
@@ -161,17 +194,32 @@ const updateEffectScales = (token) => {
 
     // Exclude the background and overlay
     const effectIcons = token.effects.children.slice(1, 1 + numEffects);
-    if (token?.actor?.size != "tiny" && effectIcons.length <= 5) return;
+    const tokenSize = token?.actor?.size;
+    // if (tokenSize != "tiny" && effectIcons.length <= 5) return;
 
+    const gridSize = token?.scene?.grid?.size ?? 100;
     // Reposition and scale them
     effectIcons.forEach((effectIcon, i, effectIcons) => {
       if (!(effectIcon instanceof PIXI.Sprite)) {
         return;
       }
       effectIcon.anchor.set(0.5);
-      updateIconSize(effectIcon, 24);
+
+      const iconScale = sizeToIconScale(tokenSize);
+      const gridScale = gridSize / 100;
+      const scaledSize = 12 * iconScale * gridScale;
+      updateIconSize(effectIcon, scaledSize);
       updateIconPosition(effectIcon, i, effectIcons, token);
-      drawBG(effectIcon, background);
+      drawBG(effectIcon, background, gridScale);
+      const myMask = new PIXI.Graphics()
+        .beginFill(0xffffff, 0.001)
+        .drawCircle(0, 0, Math.min(effectIcon.width, effectIcon.height) / 2)
+        .endFill();
+      myMask.x = effectIcon.x;
+      myMask.y = effectIcon.y;
+      effectIcon.mask = myMask;
+      effectIcon.parent.addChild(myMask);
+      // debugger;
     });
   }
 };
