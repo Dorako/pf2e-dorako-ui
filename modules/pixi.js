@@ -1,64 +1,71 @@
 const origRefreshEffects = Token.prototype._refreshEffects;
 Token.prototype._refreshEffects = function (...args) {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
-  // Draw the icons the way the system wants them drawn first. For most systems this is wasteful, but for some it might be
-  // adjusting the icon positions based on something special, which we want to continue to respect.
   if (!enabled) {
     origRefreshEffects.apply(this, args);
     return;
   }
   if (this) {
+    origRefreshEffects.apply(this, args);
     updateEffectScales(this);
   }
 };
 
-const origDrawOverlay = Token.prototype._drawOverlay;
-Token.prototype._drawOverlay = async function (...args) {
+// const origDrawOverlay = Token.prototype._drawOverlay;
+// Token.prototype._drawOverlay = async function (...args) {
+//   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
+//   if (!enabled) {
+//     origDrawOverlay.apply(this, args);
+//     return;
+//   }
+//   if (this) {
+//     const src = args[0];
+//     const tint = args[1];
+//     const icon = await this._drawEffect(src, tint);
+//     if (icon) {
+//       const gridSize = this.scene?.grid?.size ?? 100;
+//       const gridScale = gridSize / 100;
+//       const tile = this.document.width;
+//       icon.alpha = 0.8;
+//       icon.x = 25 * gridScale * tile;
+//       icon.y = 25 * gridScale * tile;
+//       icon.width = 50 * gridScale * tile;
+//       icon.height = 50 * gridScale * tile;
+//     }
+//     // icon.anchor.set(0.5);
+//     // debugger;
+//     return icon;
+//   }
+// };
+
+const origDrawEffect = Token.prototype._drawEffect;
+Token.prototype._drawEffect = async function (...args) {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
   if (!enabled) {
-    origDrawOverlay.apply(this, args);
+    origDrawEffect.apply(this, args);
     return;
   }
   if (this) {
-    const src = args.src;
-    const tint = args.tint;
-    const icon = await this._drawEffect(src, tint);
-    if (icon) {
-      const gridSize = this.scene?.grid?.size ?? 100;
-      const gridScale = gridSize / 100;
-      const tile = this.document.width;
-      icon.alpha = 0.8;
-      icon.x = 24 * gridScale * tile;
-      icon.y = 24 * gridScale * tile;
-      icon.width = 48 * gridScale * tile;
-      icon.height = 48 * gridScale * tile;
+    const src = args[0];
+    const tint = args[1];
+    debugger;
+    if (!src) return;
+    let tex = await loadTexture(src, { fallback: "icons/svg/hazard.svg" });
+    let icon = new PIXI.Sprite(tex);
+    if (src != game.settings.get("pf2e", "deathIcon")) {
+      const myMask = new PIXI.Graphics()
+        .beginFill(0xffffff, 1)
+        .drawCircle(0, 0, Math.min(icon.width, icon.height) / 2)
+        .endFill();
+      myMask.x = icon.x;
+      myMask.y = icon.y;
+      icon.mask = myMask;
+      icon.addChild(myMask);
     }
-    // icon.anchor.set(0.5);
     // debugger;
-    return icon;
+    return this.effects.addChild(icon);
   }
 };
-
-// const origDrawEffect = Token.prototype._drawEffect;
-// Token.prototype._drawEffect = async function (...args) {
-//   // origDrawEffect.apply(this, args);
-//   if (this) {
-//     const src = args.src;
-//     const tint = args.tint;
-//     if (!src) return;
-//     let tex = await loadTexture(src, { fallback: "icons/svg/hazard.svg" });
-//     let icon = new PIXI.Sprite(tex);
-//     const mask = new PIXI.Graphics();
-//     mask.beginFill(0x000000);
-//     mask.drawCircle(icon.position.x, icon.position.y, icon.width / 2);
-//     mask.endFill();
-//     icon.mask = mask;
-//     icon.tint = 0xaa0000;
-//     if (tint) icon.tint = tint;
-//     // debugger;
-//     return this.effects.addChild(icon);
-//   }
-// };
 
 // Token.prototype._drawEffect = async function (...args) {
 //   if (this) {
@@ -222,13 +229,11 @@ const updateEffectScales = (token) => {
     if (!(background instanceof PIXI.Graphics)) {
       return;
     }
-    // background.clear().beginFill(0x956d58, 1).lineStyle(1.0, 0xe9d7a1);
     background.clear();
 
     // Exclude the background and overlay
     const effectIcons = token.effects.children.slice(1, 1 + numEffects);
     const tokenSize = token?.actor?.size;
-    // if (tokenSize != "tiny" && effectIcons.length <= 5) return;
 
     const gridSize = token?.scene?.grid?.size ?? 100;
     // Reposition and scale them
@@ -238,13 +243,6 @@ const updateEffectScales = (token) => {
       }
       // debugger;
 
-      // Overlay effect
-      if (effectIcon === token.effects.overlay) {
-        const size = Math.min(token.w * 0.1, token.h * 0.1);
-        effectIcon.width = effectIcon.height = size;
-        effectIcon.position.set((token.w - size) / 2, (token.h - size) / 2);
-      }
-
       effectIcon.anchor.set(0.5);
 
       const iconScale = sizeToIconScale(tokenSize);
@@ -253,14 +251,14 @@ const updateEffectScales = (token) => {
       updateIconSize(effectIcon, scaledSize);
       updateIconPosition(effectIcon, i, effectIcons, token);
       drawBG(effectIcon, background, gridScale);
-      const myMask = new PIXI.Graphics()
-        .beginFill(0xffffff, 0.001)
-        .drawCircle(0, 0, Math.min(effectIcon.width, effectIcon.height) / 2)
-        .endFill();
-      myMask.x = effectIcon.x;
-      myMask.y = effectIcon.y;
-      effectIcon.mask = myMask;
-      effectIcon.parent.addChild(myMask);
+      // const myMask = new PIXI.Graphics()
+      //   .beginFill(0xffffff, 0.001)
+      //   .drawCircle(0, 0, Math.min(effectIcon.width, effectIcon.height) / 2)
+      //   .endFill();
+      // myMask.x = effectIcon.x;
+      // myMask.y = effectIcon.y;
+      // effectIcon.mask = myMask;
+      // effectIcon.parent.addChild(myMask);
       // debugger;
     });
   }

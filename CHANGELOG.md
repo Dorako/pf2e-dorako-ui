@@ -1,3 +1,7 @@
+# 2.1.6
+
+- (Refinement) Refactored token effect code to be more sane. Might have fixed issue where applying and effect for the first time would sometimes make it big and square.
+
 # 2.1.5
 
 - (Fix) Fix canvas rendering breaking due to skull overlay change in 2.14 when adjusted token setting was disabled.
