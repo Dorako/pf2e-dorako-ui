@@ -1,3 +1,7 @@
+# 2.1.5
+
+- (Fix) Fix canvas rendering breaking due to skull overlay change in 2.14 when adjusted token setting was disabled.
+
 # 2.1.4
 
 - (Refinement) Adjusted token effect icons are now larger.

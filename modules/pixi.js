@@ -13,26 +13,30 @@ Token.prototype._refreshEffects = function (...args) {
 };
 
 const origDrawOverlay = Token.prototype._drawOverlay;
-Token.prototype._drawOverlay = async function (src, tint) {
+Token.prototype._drawOverlay = async function (...args) {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
   if (!enabled) {
     origDrawOverlay.apply(this, args);
     return;
   }
-  const icon = await this._drawEffect(src, tint);
-  if (icon) {
-    const gridSize = this.scene?.grid?.size ?? 100;
-    const gridScale = gridSize / 100;
-    const tile = this.document.width;
-    icon.alpha = 0.8;
-    icon.x = 24 * gridScale * tile;
-    icon.y = 24 * gridScale * tile;
-    icon.width = 48 * gridScale * tile;
-    icon.height = 48 * gridScale * tile;
+  if (this) {
+    const src = args.src;
+    const tint = args.tint;
+    const icon = await this._drawEffect(src, tint);
+    if (icon) {
+      const gridSize = this.scene?.grid?.size ?? 100;
+      const gridScale = gridSize / 100;
+      const tile = this.document.width;
+      icon.alpha = 0.8;
+      icon.x = 24 * gridScale * tile;
+      icon.y = 24 * gridScale * tile;
+      icon.width = 48 * gridScale * tile;
+      icon.height = 48 * gridScale * tile;
+    }
+    // icon.anchor.set(0.5);
+    // debugger;
+    return icon;
   }
-  // icon.anchor.set(0.5);
-  // debugger;
-  return icon;
 };
 
 // const origDrawEffect = Token.prototype._drawEffect;
