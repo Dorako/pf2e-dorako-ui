@@ -1,15 +1,20 @@
+# 2.1.4
+
+- (Refinement) Adjusted token effect icons are now larger.
+- (Fix) Skull overlay should be more reasonably sized when the adjusted token effect setting is enabled.
+
 # 2.1.3
 
 - (Module) Add support for Item Piles. The current implementation should also add support for other Svelte-based modules, but if that turns out to be too breaky I'll have to adjust.
 
 # 2.1.2
 
-- (Fix) Fixed an issue that messed up the token effects HUD when the new experimental setting was _not_ enabled
+- (Fix) Fixed an issue that messed up the token effects HUD when the new experimental setting was _not_ enabled.
 
 # 2.1.1
 
-- (Fix) Adjust token effects HUD setting now accounts for the scene's gridsize
-- (Refinement) Adjust token effects HUD setting now looks nicer
+- (Fix) Adjust token effects HUD setting now accounts for the scene's gridsize.
+- (Refinement) Adjust token effects HUD setting now looks nicer.
 
 # 2.1.0
 

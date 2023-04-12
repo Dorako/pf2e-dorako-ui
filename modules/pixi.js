@@ -12,6 +12,29 @@ Token.prototype._refreshEffects = function (...args) {
   }
 };
 
+const origDrawOverlay = Token.prototype._drawOverlay;
+Token.prototype._drawOverlay = async function (src, tint) {
+  const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
+  if (!enabled) {
+    origDrawOverlay.apply(this, args);
+    return;
+  }
+  const icon = await this._drawEffect(src, tint);
+  if (icon) {
+    const gridSize = this.scene?.grid?.size ?? 100;
+    const gridScale = gridSize / 100;
+    const tile = this.document.width;
+    icon.alpha = 0.8;
+    icon.x = 24 * gridScale * tile;
+    icon.y = 24 * gridScale * tile;
+    icon.width = 48 * gridScale * tile;
+    icon.height = 48 * gridScale * tile;
+  }
+  // icon.anchor.set(0.5);
+  // debugger;
+  return icon;
+};
+
 // const origDrawEffect = Token.prototype._drawEffect;
 // Token.prototype._drawEffect = async function (...args) {
 //   // origDrawEffect.apply(this, args);
@@ -64,28 +87,30 @@ Token.prototype._refreshEffects = function (...args) {
 //   }
 
 //   const isSmall = this.document.actor.size === "sm";
+//   const gridSize = this.scene?.grid?.size ?? 100;
+//   const gridScale = gridSize / 100;
 //   const scale = isSmall ? 0.8 : 1;
 //   const h = Math.round(t / 2);
 //   const o = Math.round(h / 2);
 
+//   this.border
+//     .lineStyle(t, 0x956d58, 1)
+//     .drawCircle((this.document.width * gridSize) / 2, (this.document.height * gridSize) / 2, gridScale * 104 * scale);
+//   this.border
+//     .lineStyle(t, 0xe9d7a1, 1)
+//     .drawCircle((this.document.width * gridSize) / 2, (this.document.height * gridSize) / 2, gridScale * 100 * scale);
+//   this.border
+//     .lineStyle(t, 0x956d58, 1)
+//     .drawCircle((this.document.width * gridSize) / 2, (this.document.height * gridSize) / 2, gridScale * 94 * scale);
 //   // this.border
-//   //   .lineStyle(t, 0x956d58, 1)
+//   //   .lineStyle(t, 0x23261a, 1)
 //   //   .drawCircle((this.document.width * 200) / 2, (this.document.height * 200) / 2, 104 * scale);
 //   // this.border
-//   //   .lineStyle(t, 0xe9d7a1, 1)
+//   //   .lineStyle(t, 0xeceec5, 1)
 //   //   .drawCircle((this.document.width * 200) / 2, (this.document.height * 200) / 2, 100 * scale);
 //   // this.border
-//   //   .lineStyle(t, 0x956d58, 1)
+//   //   .lineStyle(t, 0x3e4031, 1)
 //   //   .drawCircle((this.document.width * 200) / 2, (this.document.height * 200) / 2, 94 * scale);
-//   this.border
-//     .lineStyle(t, 0x23261a, 1)
-//     .drawCircle((this.document.width * 200) / 2, (this.document.height * 200) / 2, 104 * scale);
-//   this.border
-//     .lineStyle(t, 0xeceec5, 1)
-//     .drawCircle((this.document.width * 200) / 2, (this.document.height * 200) / 2, 100 * scale);
-//   this.border
-//     .lineStyle(t, 0x3e4031, 1)
-//     .drawCircle((this.document.width * 200) / 2, (this.document.height * 200) / 2, 94 * scale);
 // };
 
 const countEffects = (token) => {
@@ -124,7 +149,8 @@ const updateIconPosition = (effectIcon, i, effectIcons, token) => {
   const actorSize = token?.actor?.size;
   let max = 20;
   if (actorSize == "tiny") max = 10;
-  if (actorSize == "sm") max = 16;
+  if (actorSize == "sm") max = 14;
+  if (actorSize == "med") max = 16;
   const ratio = i / max;
   // const angularOffset = i < max ? 0 : ratio / 2;
   const gridSize = token?.scene?.grid?.size ?? 100;
@@ -142,11 +168,11 @@ const updateIconPosition = (effectIcon, i, effectIcons, token) => {
 // Nudge icons to be on the token ring or slightly outside
 function sizeToOffset(size) {
   if (size == "tiny") {
-    return 1.3;
+    return 1.4;
   } else if (size == "sm") {
-    return 0.95;
+    return 1.0;
   } else if (size == "med") {
-    return 1.15;
+    return 1.2;
   } else if (size == "lg") {
     return 0.925;
   } else if (size == "huge") {
@@ -159,11 +185,11 @@ function sizeToOffset(size) {
 
 function sizeToIconScale(size) {
   if (size == "tiny") {
-    return 1.0;
+    return 1.4;
   } else if (size == "sm") {
-    return 1.0;
+    return 1.4;
   } else if (size == "med") {
-    return 1.0;
+    return 1.4;
   } else if (size == "lg") {
     return 1.25;
   } else if (size == "huge") {
@@ -206,6 +232,15 @@ const updateEffectScales = (token) => {
       if (!(effectIcon instanceof PIXI.Sprite)) {
         return;
       }
+      // debugger;
+
+      // Overlay effect
+      if (effectIcon === token.effects.overlay) {
+        const size = Math.min(token.w * 0.1, token.h * 0.1);
+        effectIcon.width = effectIcon.height = size;
+        effectIcon.position.set((token.w - size) / 2, (token.h - size) / 2);
+      }
+
       effectIcon.anchor.set(0.5);
 
       const iconScale = sizeToIconScale(tokenSize);
