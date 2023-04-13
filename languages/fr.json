@@ -318,8 +318,8 @@
           "hint": "Les chuchotements des joueurs au MJ attirent davantage l'attention"
         },
         "adjust-token-effects-hud": {
-          "name": "Réarranger les indicateurs d'effet sur les jetons ?",
-          "hint": "[Expérimental] Lorsqu'un jeton devrait avoir des effets sur plus d'une colonne, place les effets autour du jeton à la place"
+          "name": "Ajuster les effets du HUD sur les jetons ?",
+          "hint": "[Expérimental] Place les effets en cercle et les arrange à l'extérieur du jeton ou sur le pourtour du jetons pour les jetons plus grands"
         }
       },
       "misc": {
