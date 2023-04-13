@@ -1,3 +1,7 @@
+# 2.1.7
+
+- (Refinement) Made the token effect setting evaluate its "activeness" during initialization. 'Disabled' should actually act as 'disabled'.
+
 # 2.1.6
 
 - (Refinement) Refactored token effect code to be more sane. Might have fixed issue where applying and effect for the first time would sometimes make it big and square.
