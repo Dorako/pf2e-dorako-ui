@@ -1,3 +1,7 @@
+# 2.1.8
+
+- (Fix) Removed debugger statement (whoops).
+
 # 2.1.7
 
 - (Refinement) Made the token effect setting evaluate its "activeness" during initialization. 'Disabled' should actually act as 'disabled'.

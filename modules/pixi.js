@@ -52,7 +52,7 @@ Hooks.once("init", () => {
     if (this) {
       const src = args[0];
       const tint = args[1];
-      debugger;
+      // debugger;
       if (!src) return;
       let tex = await loadTexture(src, { fallback: "icons/svg/hazard.svg" });
       let icon = new PIXI.Sprite(tex);
