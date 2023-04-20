@@ -216,6 +216,7 @@ Hooks.once("init", () => {
   }
 
   const drawBG = (effectIcon, background, gridScale) => {
+    debugger;
     const r = effectIcon.width / 2;
     background.lineStyle((1 * gridScale) / 2, 0x956d58, 1, 0);
     background.drawCircle(effectIcon.position.x, effectIcon.position.y, r + 1 * gridScale);
@@ -227,7 +228,7 @@ Hooks.once("init", () => {
   const updateEffectScales = (token) => {
     // if (token?.actor?.size == "sm") return;
     const numEffects = countEffects(token);
-    // debugger;
+    debugger;
     if (numEffects > 0 && token.effects.children.length > 0) {
       const background = token.effects.children[0];
       if (!(background instanceof PIXI.Graphics)) {
@@ -254,7 +255,7 @@ Hooks.once("init", () => {
         const scaledSize = 12 * iconScale * gridScale;
         updateIconSize(effectIcon, scaledSize);
         updateIconPosition(effectIcon, i, effectIcons, token);
-        drawBG(effectIcon, background, gridScale);
+        // drawBG(effectIcon, background, gridScale);
         // const myMask = new PIXI.Graphics()
         //   .beginFill(0xffffff, 0.001)
         //   .drawCircle(0, 0, Math.min(effectIcon.width, effectIcon.height) / 2)
@@ -264,6 +265,16 @@ Hooks.once("init", () => {
         // effectIcon.mask = myMask;
         // effectIcon.parent.addChild(myMask);
         // debugger;
+
+        const r = effectIcon.width / 2 - 1 * gridScale;
+        const myRings = new PIXI.Graphics()
+          .lineStyle((1 * gridScale) / 2, 0x956d58, 1, 1)
+          .drawCircle(effectIcon.position.x, effectIcon.position.y, r + 1 * gridScale)
+          // .beginFill(0xe9d7a1)
+          .lineStyle((1 * gridScale) / 2, 0xe9d7a1, 1, 0)
+          .drawCircle(effectIcon.position.x, effectIcon.position.y, r + 1 * gridScale);
+        // .endFill();
+        effectIcon.parent.addChild(myRings);
       });
     }
   };
