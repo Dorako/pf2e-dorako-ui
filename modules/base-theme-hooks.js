@@ -82,9 +82,9 @@ Hooks.on("renderDialog", (app, html, data) => {
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | pushing .dorako-ui class option`);
   // console.debug({ app });
   app.options?.classes?.push("dorako-ui");
-  let position = app.position;
-  position.height += 6;
-  position.width += 6;
+  // let position = app.position;
+  // position.height += 6;
+  // position.width += 6;
   app.setPosition(position);
   app.render();
 });

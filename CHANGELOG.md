@@ -1,3 +1,7 @@
+# 2.1.9
+
+- (Maintenance) Unexciting improvements.
+
 # 2.1.8
 
 - (Fix) Removed debugger statement (whoops).

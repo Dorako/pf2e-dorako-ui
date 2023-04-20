@@ -174,7 +174,6 @@ Hooks.once("init", () => {
     const offset = sizeOffset * tokenTileFactor * gridSize;
     const quarterRotation = 0.5 * Math.PI;
     const { x, y } = polar_to_cartesian(offset, (ratio + 0) * 2 * Math.PI + quarterRotation);
-    console.log({ x, y });
     // debugger;
     effectIcon.position.x = x / 2 + (gridSize * tokenTileFactor) / 2;
     effectIcon.position.y = (-1 * y) / 2 + (gridSize * tokenTileFactor) / 2;
