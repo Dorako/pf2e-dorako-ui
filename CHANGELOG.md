@@ -1,3 +1,7 @@
+# 2.1.9.1
+
+- (Maintenance) Removed console noise when rendering dialogs.
+
 # 2.1.9
 
 - (Maintenance) Unexciting improvements.

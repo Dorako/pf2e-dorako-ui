@@ -85,7 +85,7 @@ Hooks.on("renderDialog", (app, html, data) => {
   // let position = app.position;
   // position.height += 6;
   // position.width += 6;
-  app.setPosition(position);
+  // app.setPosition(position);
   app.render();
 });
 
