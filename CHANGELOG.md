@@ -1,3 +1,7 @@
+# 2.1.11
+
+- (Refinement) Adjust starting angle of Token Effects HUD icons.
+
 # 2.1.10
 
 - (Refinement) Add anti-aliasing to Token Effects HUD icons, courtesy of @Wasp.

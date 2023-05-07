@@ -59,16 +59,12 @@ Hooks.once("init", () => {
       let tex = await loadTexture(src, { fallback: "icons/svg/hazard.svg" });
       let icon = new PIXI.Sprite(tex);
       if (src != game.settings.get("pf2e", "deathIcon")) {
-
         // If the circular mask hasn't been created yet
-        if(!circularMaskTexture){
+        if (!circularMaskTexture) {
           // Define a new render texture that is 110x110
           circularMaskTexture = PIXI.RenderTexture.create(110, 110);
           // Define the mask sprite
-          const renderedMaskSprite = new PIXI.Graphics()
-            .beginFill(0xffffff)
-            .drawCircle(55, 55, 55)
-            .endFill();
+          const renderedMaskSprite = new PIXI.Graphics().beginFill(0xffffff).drawCircle(55, 55, 55).endFill();
           // Blur the mask sprite
           const blurFilter = new PIXI.filters.BlurFilter(2);
           renderedMaskSprite.filters = [blurFilter];
@@ -192,8 +188,8 @@ Hooks.once("init", () => {
     const tokenTileFactor = token?.document?.width ?? 1;
     const sizeOffset = sizeToOffset(actorSize);
     const offset = sizeOffset * tokenTileFactor * gridSize;
-    const quarterRotation = 0.5 * Math.PI;
-    const { x, y } = polar_to_cartesian(offset, (ratio + 0) * 2 * Math.PI + quarterRotation);
+    const initialRotation = (0.5 + (1 / max) * Math.PI) * Math.PI;
+    const { x, y } = polar_to_cartesian(offset, (ratio + 0) * 2 * Math.PI + initialRotation);
     // debugger;
     effectIcon.position.x = x / 2 + (gridSize * tokenTileFactor) / 2;
     effectIcon.position.y = (-1 * y) / 2 + (gridSize * tokenTileFactor) / 2;
