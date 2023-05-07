@@ -18,6 +18,10 @@ All clickable elements react to :hover, with a quick, standardized transition.
 Navigation, Controls, Hotbar, Sidebar
 <img src="./promo/web/red-blue-glass.jpg">
 
+### Token Effects HUD
+
+<img src="./promo/web/token-effects-hud.jpg">
+
 ### Chat messages
 
 #### A strike, using the light message theme
