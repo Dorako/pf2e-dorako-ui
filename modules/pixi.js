@@ -1,3 +1,5 @@
+let circularMaskTexture = null;
+
 Hooks.once("init", () => {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
   if (!enabled) return;
@@ -57,12 +59,30 @@ Hooks.once("init", () => {
       let tex = await loadTexture(src, { fallback: "icons/svg/hazard.svg" });
       let icon = new PIXI.Sprite(tex);
       if (src != game.settings.get("pf2e", "deathIcon")) {
-        const myMask = new PIXI.Graphics()
-          .beginFill(0xffffff, 0.5)
-          .drawCircle(0, 0, Math.min(icon.width, icon.height) / 2)
-          .endFill();
-        myMask.x = icon.x;
-        myMask.y = icon.y;
+
+        // If the circular mask hasn't been created yet
+        if(!circularMaskTexture){
+          // Define a new render texture that is 110x110
+          circularMaskTexture = PIXI.RenderTexture.create(110, 110);
+          // Define the mask sprite
+          const renderedMaskSprite = new PIXI.Graphics()
+            .beginFill(0xffffff)
+            .drawCircle(55, 55, 55)
+            .endFill();
+          // Blur the mask sprite
+          const blurFilter = new PIXI.filters.BlurFilter(2);
+          renderedMaskSprite.filters = [blurFilter];
+          // Render the result of the mask sprite to the texture
+          canvas.app.renderer.render(renderedMaskSprite, circularMaskTexture);
+        }
+
+        const minDimension = Math.min(icon.width, icon.height);
+        // Use the blurred pre-made texture and create a new mask sprite for the specific icon
+        const myMask = new PIXI.Sprite(circularMaskTexture);
+        myMask.anchor.set(0.5);
+        myMask.width = minDimension;
+        myMask.height = minDimension;
+
         icon.mask = myMask;
         icon.addChild(myMask);
       }
