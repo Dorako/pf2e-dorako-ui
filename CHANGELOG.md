@@ -1,3 +1,7 @@
+# 2.1.10
+
+- (Refinement) Add anti-aliasing to Token Effects HUD icons, courtesy of @Wasp.
+
 # 2.1.9.1
 
 - (Maintenance) Removed console noise when rendering dialogs.
