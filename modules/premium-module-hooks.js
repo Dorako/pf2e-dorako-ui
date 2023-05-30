@@ -21,7 +21,7 @@ function isPremiumApplication(app, html, data, appName) {
   }
   for (var key in app.document?.flags) {
     //prettier-ignore
-    const fvttPremium = new RegExp(/^pf2e-(beginner-box|abomination-vaults|kingmaker)/);
+    const fvttPremium = new RegExp(/^pf2e-(beginner-box|abomination-vaults|kingmaker|mercenary-marketplace-vol1)/);
     if (fvttPremium.test(key)) {
       console.debug(
         `${MODULE_NAME} | ${appName} contains key matching '^pf2e-(beginner-box|abomination-vaults|kingmaker)' => add .premium`

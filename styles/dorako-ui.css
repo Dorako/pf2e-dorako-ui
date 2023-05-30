@@ -1784,6 +1784,16 @@ section.chat-sidebar {
   box-shadow: unset;
   color: unset;
 }
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button {
+  background: var(--tertiary);
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: unset;
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button.selected {
+  background: var(--tertiary-dark);
+  color: var(--text-dark);
+  text-shadow: unset;
+}
 
 .combat-sidebar .drag-gap {
   visibility: hidden;

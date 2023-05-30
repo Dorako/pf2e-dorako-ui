@@ -2748,6 +2748,7 @@ body.system-swade {
 .dorako-ui.dark-theme {
   --color-text-dark-secondary: #a9a798;
   --item-piles-minor-inactive: rgb(15, 15, 15);
+  --item-piles-text-light-highlight: rgb(70, 70, 70);
 }
 .dorako-ui.dark-theme .item.active.underscore.item-piles-flexrow.item-piles-clickable-link {
   border-bottom: 2px solid var(--tertiary-dark);

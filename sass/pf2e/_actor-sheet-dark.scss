@@ -307,4 +307,22 @@
       color: unset;
     }
   }
+
+  // prettier-ignore
+  // &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled) {
+  //     background: var(--tertiary);
+  // }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button {
+    background: var(--tertiary);
+    color: rgba(0, 0, 0, 0.4);
+    text-shadow: unset;
+    &:hover,
+    &.selected {
+      background: var(--tertiary-dark);
+      color: var(--text-dark);
+      text-shadow: unset;
+    }
+  }
 }
