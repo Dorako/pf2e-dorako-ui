@@ -1,0 +1,142 @@
+#pf2e-token-hud.dorako-ui {
+  --color: white;
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+
+  .sidebar.skills {
+    --color-rank-0: #a6a6a6;
+    --color-rank-1: #3f4dcd;
+    --color-rank-2: #a828f0;
+    --color-rank-3: #cf931d;
+    --color-rank-4: #bf1c1c;
+  }
+
+  .sidebar.skills .skill .header .rank,
+  .sidebar.skills .lore .rank {
+    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+  }
+
+  .sidebar .header {
+    background: rgba(96, 88, 86, 0.5);
+  }
+
+  .sidebar.skills .skill .header .modifier,
+  .sidebar.skills .lore .modifier {
+    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+    color: var(--primary-light);
+  }
+
+  .sidebar.spells .entry .spell .details .extras .actions {
+    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+  }
+
+  .distance,
+  .status,
+  .popup,
+  .sidebar,
+  .inner {
+    border: none;
+    border-radius: 3px;
+    background: none;
+    background-color: var(--glass-bg);
+    box-shadow: var(--glassy);
+    backdrop-filter: blur(5px);
+
+    hr {
+      border: none;
+    }
+  }
+
+  .popup .header:before {
+    background: unset;
+  }
+
+  .sidebar .details .extras .actions a i.greyed {
+    text-shadow: 0px 1px 15px white;
+  }
+
+  .sidebar .item-img img {
+    border-color: wheat;
+  }
+
+  .sidebar.items .category .item .details .name {
+    &.rare,
+    &.unique,
+    &.uncommon {
+      text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+    }
+
+    &.uncommon {
+      color: var(--rarity-uncommon);
+    }
+
+    &.rare {
+      color: var(--rarity-rare);
+    }
+
+    &.unique {
+      color: var(--rarity-unique);
+    }
+  }
+}
+
+/* Custom CSS */
+#pf2e-token-hud .inner i {
+  text-shadow: 0px 0px 35px white, 0px 1px 1px black;
+}
+
+#pf2e-token-hud .inner i.fa-solid.fa-circle-h {
+  color: darkgoldenrod;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-user-graduate {
+  color: rebeccapurple;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-heart-half-stroke {
+  color: orangered;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-heart {
+  color: darkred;
+}
+#pf2e-token-hud .inner i.fa-regular.fa-helmet-battle {
+  color: darkslategray;
+}
+#pf2e-token-hud .inner i.fa-duotone.fa-eye-slash {
+  color: #9e9eff;
+}
+#pf2e-token-hud .inner i.fa-regular.fa-shield {
+  color: darkslategray;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-hand-fist {
+  color: purple;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-person-running {
+  color: rgb(61, 61, 255);
+}
+#pf2e-token-hud .inner i.fa-solid.fa-brain {
+  color: deeppink;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-skull {
+  color: black;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-tombstone {
+  color: brown;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-shoe-prints {
+  color: green;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-chevrons-down::before {
+  content: "\f713";
+  font: (--fa-font-solid);
+  color: saddlebrown;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-feather {
+  color: white;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-person-swimming {
+  color: dodgerblue;
+}
+#pf2e-token-hud .inner i.fa-solid.fa-spider {
+  color: #b7346f;
+}

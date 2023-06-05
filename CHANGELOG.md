@@ -1,3 +1,7 @@
+# 2.2.1
+
+- (Module) Support for Idle's PF2e Token Hud/Interactive Token Tooltip mdule
+
 # 2.2.0
 
 - (Maintenance) Update PC sheet styling to account for new versatile/modular buttons
