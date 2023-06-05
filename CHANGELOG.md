@@ -1,6 +1,6 @@
 # 2.2.1
 
-- (Module) Support for Idle's PF2e Token Hud/Interactive Token Tooltip mdule
+- (Module) Support for Idle's PF2e Token Hud/Interactive Token Tooltip module
 
 # 2.2.0
 
