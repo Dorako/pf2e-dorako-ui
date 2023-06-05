@@ -1,0 +1,222 @@
+{
+  "pf2e-dorako-ui": {
+    "text": {
+      "self-roll": "Tirada personal",
+      "gm-only": "MJ solo",
+      "whisper": "Susurro",
+      "from": "Desde",
+      "to": "a",
+      "send-to-chat": "Mandar",
+      "default": "Predeterminado",
+      "dark": "Oscuro",
+      "light": "Claro",
+      "disabled": "Desactivado",
+      "maybe-reload": "Algunos ajustes podrían necesitar una recarga.",
+      "secret": "Secreto",
+      "large-chatlog-warning": "Debido a un registro de chat largo, algunos ajustes se aplicarán con la siguiente recarga."
+    },
+    "settings": {
+      "reset-changes": "Reiniciar cambios",
+      "theme": {
+        "name": "Ajustes del tema",
+        "label": "Configurar ajustes de tema",
+        "hint": "Cambiar los ajustes del tema de varias aplicaciones y elementos de la interfaz",
+        "application-theme": {
+          "name": "Tema de aplicación",
+          "choice": {
+            "no-theme": "Sin tema",
+            "dark-theme": "Modo oscuro Dorako UI",
+            "light-theme": "Modo claro Dorako UI"
+          },
+          "hint": "Afecta a las ventanas de aplicación renderizadas"
+        },
+        "frosted-glass": {
+          "name": "Usar cristal desgastado",
+          "hint": "AVISO: Afecta mucho al rendimiento. Ejemplo: brillo (1.5) contraste (1.2) saturación (1.5) desenfoque (5px)"
+        },
+        "glass-bg": {
+          "name": "Usar el fondo alternativo de cristal",
+          "hint": "Cualquier color válido en CSS debería funcionar"
+        },
+        "npc-sheet-theme": {
+          "name": "Tema para la ficha de PNJ",
+          "hint": "Afecta a las fichas de PNJ"
+        },
+        "chat-theme": {
+          "name": "Tema del chat",
+          "hint": "Afecta a todos los mensajes de chat",
+          "choice": {
+            "factions": "Jugadores claro, MJ oscuro"
+          }
+        },
+        "pc-sheet-theme": {
+          "name": "Tema de la ficha de PJ",
+          "hint": "Afecta a las fichas de los jugadores"
+        },
+        "loot-sheet-theme": {
+          "name": "Tema de la ficha de botín",
+          "hint": "Afecta a las fichas de botín"
+        },
+        "familiar-sheet-theme": {
+          "name": "Tema de la ficha de familiar",
+          "choice": {
+            "dark-red-header": "Oscuro + rojo en la cabecera"
+          },
+          "hint": "Afecta a las fichas de los familiares"
+        },
+        "header-style": {
+          "name": "Tema de la cabecera del mensaje de chat",
+          "hint": "Agregar una cabecera coloreada a cada mensaje de chat",
+          "choice": {
+            "red": "Rojo",
+            "blue": "Azúl",
+            "tint": "Color de jugador",
+            "none": "Desactivado"
+          }
+        },
+        "enable-dark-theme-journals": {
+          "hint": "No afecta a los temas de los diarios premium",
+          "name": "¿Activar el tema oscuro para los diarios?"
+        }
+      },
+      "avatar": {
+        "name": "Ajustes del avatar",
+        "label": "Configurar ajustes del avatar",
+        "hint": "Configurar ajustes relacionados con los avatares en los mensajes de chat",
+        "source": {
+          "name": "Avatares de chat",
+          "hint": "Agrega un avatar a los mensajes de chat",
+          "choice": {
+            "token": "Preferir la imagen de token",
+            "actor": "Preferir la imagen del actor"
+          }
+        },
+        "hide-when-token-hidden": {
+          "name": "¿Ocultar avatar cuando el token está oculto?",
+          "hint": "Ocultar avatares cuando el token que habla está oculto"
+        },
+        "hide-gm-avatar-when-secret": {
+          "name": "¿Ocultar avatar cuando es secreto?",
+          "hint": "Ocultar avatar cuando el MJ realiza tiradas en secreto o privadas"
+        },
+        "size": {
+          "name": "Tamaño",
+          "hint": "Predeterminado a 40px"
+        },
+        "popout-support": {
+          "name": "¿Activar ventana emergente para el avatar del token?",
+          "hint": "Escala el tamaño del avatar del token de acuerdo a la escala del token"
+        },
+        "reacts-to-degree-of-success": {
+          "name": "¿El avatar debe reaccionar a las tiradas críticas?",
+          "hint": "Un éxito crítico hará que brille en verde, mientras que un fallo crítico hace que se vuelva oscuro"
+        },
+        "small-creature-token-avatar-size": {
+          "name": "Tamaño de avatar de una criatura pequeña",
+          "hint": "Predeterminado a 0.8"
+        },
+        "use-user-avatar": {
+          "hint": "Configurar los avatares haciendo clic derecho en la lista de usuarios en la parte de abajo a la izquierda en Foundry",
+          "name": "¿Utilizar el avatar del usuario como respaldo?"
+        }
+      },
+      "ux": {
+        "name": "Ajustes de Experiencia de Usuario",
+        "label": "Configurar ajustes de Experiencia de Usuario",
+        "hint": "Configurar los ajustes en relación a mostrar, esconder, hacer la interfaz menos intrusiva o clara, moviendo partes de la misma a distintos lugares",
+        "chat-input-height": {
+          "name": "Altura de la caja de texto",
+          "hint": "El tamaño predeterminado es de aproximadamente 100px",
+          "CGMPhint": "El tamaño predeterminado es aproximadamente 100px; Si usas la opción \"Notify Typing\" del módulo Cautious Gamemaster's Pack, dicha notificación hasta 60px de la altura de la caja de texto"
+        },
+        "restructure-card-info": {
+          "name": "¿Reestructurar la información en las tarjetas de chat?",
+          "hint": "Hace más visibles los costes en acción de los rasgos y mueve la información de los conjuros fuera del pié de página"
+        },
+        "adjust-token-effects-hud": {
+          "name": "¿Ajustar la interfaz de efectos para los token?",
+          "hint": "(Experimental) Hace que los efectos sean circulares y los coloca fuera del token, o en el anillo del token para tokens de mayor tamaño"
+        },
+        "remove-attack-info-from-damage-roll-messages": {
+          "name": "¿Eliminar la información sobre el ataque en los mensajes de daño?",
+          "hint": "Hace que las tiradas de daño tomen menos espacio al eliminar la información redundante. Pensado para usarse con DFCE chat-merge"
+        },
+        "animate-messages": {
+          "name": "¿Animar los mensajes para llamar la atención sobre ciertos eventos?",
+          "hint": "Hace que los susurros de jugador a MJ sean más llamativos"
+        },
+        "compact-ui": {
+          "name": "¿Activar la interfaz compacta?",
+          "hint": "Escala los controles, esconde los controles inactivos y los elementos de navegación hasta que se paso el ratón por encima"
+        },
+        "start-sidebar-collapsed": {
+          "name": "¿Colapsar la barra lateral por defecto?",
+          "hint": "Utiliza el estado colapsado como el estado inicial"
+        },
+        "start-navigation-collapsed": {
+          "name": "¿Colapsar la barra de navegación por defecto?",
+          "hint": "Utiliza el estado colapsado como el estado inicial"
+        },
+        "no-logo": {
+          "name": "¿Ocultar el logo de Foundry?",
+          "hint": "Elimina el logo de foundry que aparece arriba a la izquierda"
+        },
+        "no-cards": {
+          "name": "¿Ocultar la pestaña de cartas?",
+          "hint": "Elimina la pestaña de las cartas del menú lateral"
+        },
+        "no-chat-control-icon": {
+          "name": "¿Ocultar el icono de control de chat?",
+          "hint": "Hablamos del icono del dado junto a las opciones de tiradas, tiende a sobrecargar la interfaz"
+        },
+        "center-hotbar": {
+          "hint": "También llamada barra de macros",
+          "name": "¿Centrar la barra de accesos directos?"
+        },
+        "enable-player-tags": {
+          "hint": "Agrega una etiqueta del nombre del jugador junto al orador",
+          "name": "¿Activar las etiquetas de jugador?"
+        },
+        "rolltype-indication": {
+          "name": "Modo del indicador de tiradas",
+          "choice": {
+            "tags": "Etiquetas",
+            "both": "Etiquetas y color de fondo",
+            "bg-color": "Tinte de color de fondo",
+            "none": "Deshabilitado"
+          },
+          "hint": "Configura los avatares de los usuarios haciendo clic derecho en la lista de jugadores abajo a la izquierda en Foundry"
+        }
+      },
+      "misc": {
+        "name": "Ajustes misceláneos",
+        "label": "Configurar justes misceláneos",
+        "enable-debug-mode": {
+          "name": "¿Activar modo de depuración?",
+          "hint": "Agrega botones para conmutar Dorako UI y el tema oscuro en las ventanas"
+        },
+        "send-to-chat": {
+          "name": "¿Agregar el botón 'Send' a la cabecera de la ventana?",
+          "hint": "Manda contenido al chat como si se mandase desde una ficha"
+        },
+        "skin-crb-journal": {
+          "hint": "Instrucciones en www.shorturl.at/mrzN1",
+          "name": "¿Activar el estilo CRB para los diarios?"
+        },
+        "hint": "Configurar ajustes relacionados con otras funcionalidades de Dorako UI"
+      },
+      "customization": {
+        "name": "Personalización",
+        "hint": "Hacer ajustes personalizados usando un CSS propio, o eliminar ciertos ajustes de estilo de Dorako UI",
+        "excluded-applications": {
+          "name": "Aplicaciones excluidas",
+          "hint": "Busca en los registros por el nombre de la aplicación, o pregunta en Discord"
+        },
+        "custom-css": {
+          "name": "CSS personalizado",
+          "hint": "Escribe CSS en un editor externo y pégalo aquí"
+        }
+      }
+    }
+  }
+}
