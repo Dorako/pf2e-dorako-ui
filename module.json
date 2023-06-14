@@ -15,7 +15,7 @@
   "version": "1.11.3",
   "compatibility": {
     "minimum": "10",
-    "verified": "10"
+    "verified": "11"
   },
   "relationships": {
     "systems": [
@@ -24,7 +24,7 @@
         "type": "system",
         "compatibility": {
           "minimum": "4.0.0",
-          "verified": "4.12.6"
+          "verified": "5.0.0"
         }
       },
       {
@@ -37,6 +37,13 @@
       }
     ]
   },
+  "media": [
+    {
+      "type": "setup",
+      "name": "Setup Screen",
+      "url": "modules/pf2e-dorako-ui/img/hero.webp"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
@@ -80,9 +87,7 @@
       "path": "languages/es.json"
     }
   ],
-  "styles": [
-    "styles/fonts.css"
-  ],
+  "styles": ["styles/fonts.css"],
   "esmodules": [
     "modules/misc-hooks.js",
     "modules/settings/settings.js",

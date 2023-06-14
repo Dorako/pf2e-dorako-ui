@@ -2811,91 +2811,133 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui .sidebar .item-img img {
   border-color: wheat;
 }
-#pf2e-token-hud.dorako-ui .sidebar.items .category .item .details .name.rare, #pf2e-token-hud.dorako-ui .sidebar.items .category .item .details .name.unique, #pf2e-token-hud.dorako-ui .sidebar.items .category .item .details .name.uncommon {
+#pf2e-token-hud.dorako-ui .rarity {
   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
 }
-#pf2e-token-hud.dorako-ui .sidebar.items .category .item .details .name.uncommon {
+#pf2e-token-hud.dorako-ui .rarity.common {
+  color: var(--rarity-common);
+}
+#pf2e-token-hud.dorako-ui .rarity.uncommon {
   color: var(--rarity-uncommon);
 }
-#pf2e-token-hud.dorako-ui .sidebar.items .category .item .details .name.rare {
+#pf2e-token-hud.dorako-ui .rarity.rare {
   color: var(--rarity-rare);
 }
-#pf2e-token-hud.dorako-ui .sidebar.items .category .item .details .name.unique {
+#pf2e-token-hud.dorako-ui .rarity.unique {
   color: var(--rarity-unique);
 }
 
-/* Custom CSS */
-#pf2e-token-hud .inner i {
+#pf2e-token-hud.dorako-ui input,
+#pf2e-token-hud.dorako-ui select option {
+  background-color: var(--glass-bg);
+}
+
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud {
+  --color-rank-0: #a6a6a6;
+  --color-rank-1: #3f4dcd;
+  --color-rank-2: #a828f0;
+  --color-rank-3: #cf931d;
+  --color-rank-4: #bf1c1c;
+  --color: white;
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+}
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-skills,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-lores,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-lores-rolls {
+  background: repeating-linear-gradient(rgba(221, 221, 221, 0.4392156863) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk .header,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-skills .header,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-lores .header,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-lores-rolls .header {
+  color: white;
+}
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk .rank,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-skills .rank,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-lores .rank,
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-lores-rolls .rank {
+  font-weight: bold;
+}
+
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud {
+  --color-rank-0: #a6a6a6;
+  --color-rank-1: #3f4dcd;
+  --color-rank-2: #a828f0;
+  --color-rank-3: #cf931d;
+  --color-rank-4: #bf1c1c;
+}
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk,
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk-skills,
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk-lores,
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk-lores-rolls {
+  background: repeating-linear-gradient(rgba(221, 221, 221, 0.4392156863) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk .rank,
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk-skills .rank,
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk-lores .rank,
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud .rk-lores-rolls .rank {
+  font-weight: bold;
+}
+
+/* Symon Custom CSS */
+#pf2e-token-hud.dorako-ui .inner i {
   text-shadow: 0px 0px 35px white, 0px 1px 1px black;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-circle-h {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-circle-h {
   color: darkgoldenrod;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-user-graduate {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-user-graduate {
   color: rebeccapurple;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-heart-half-stroke {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-heart-half-stroke {
   color: orangered;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-heart {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-heart {
   color: darkred;
 }
-
-#pf2e-token-hud .inner i.fa-regular.fa-helmet-battle {
+#pf2e-token-hud.dorako-ui .inner i.fa-regular.fa-helmet-battle {
   color: darkslategray;
 }
-
-#pf2e-token-hud .inner i.fa-duotone.fa-eye-slash {
+#pf2e-token-hud.dorako-ui .inner i.fa-duotone.fa-eye-slash {
   color: #9e9eff;
 }
-
-#pf2e-token-hud .inner i.fa-regular.fa-shield {
+#pf2e-token-hud.dorako-ui .inner i.fa-regular.fa-shield {
   color: darkslategray;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-hand-fist {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-hand-fist {
   color: purple;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-person-running {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-person-running {
   color: rgb(61, 61, 255);
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-brain {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-brain {
   color: deeppink;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-skull {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-skull {
   color: black;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-tombstone {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-tombstone {
   color: brown;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-shoe-prints {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-shoe-prints {
   color: green;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-chevrons-down::before {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-chevrons-down::before {
   content: "\f713";
   font: --fa-font-solid;
   color: saddlebrown;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-feather {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-feather {
   color: white;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-person-swimming {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-person-swimming {
   color: dodgerblue;
 }
-
-#pf2e-token-hud .inner i.fa-solid.fa-spider {
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-spider {
   color: #b7346f;
 }
 

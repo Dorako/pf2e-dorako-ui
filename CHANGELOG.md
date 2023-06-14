@@ -1,3 +1,8 @@
+# 2.2.2
+
+- (Maintenance) Initial V11 support
+- (Maintenance) Updated Interactive Token Tooltip styling to be compatible with recent versions
+
 # 2.2.1
 
 - (Module) Support for Idle's PF2e Token Hud/Interactive Token Tooltip module

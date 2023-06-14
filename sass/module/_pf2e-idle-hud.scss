@@ -61,11 +61,11 @@
     border-color: wheat;
   }
 
-  .sidebar.items .category .item .details .name {
-    &.rare,
-    &.unique,
-    &.uncommon {
-      text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+  .rarity {
+    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+
+    &.common {
+      color: var(--rarity-common);
     }
 
     &.uncommon {
@@ -82,61 +82,119 @@
   }
 }
 
-/* Custom CSS */
-#pf2e-token-hud .inner i {
-  text-shadow: 0px 0px 35px white, 0px 1px 1px black;
+#pf2e-token-hud.dorako-ui input,
+#pf2e-token-hud.dorako-ui select option {
+  background-color: var(--glass-bg);
 }
 
-#pf2e-token-hud .inner i.fa-solid.fa-circle-h {
-  color: darkgoldenrod;
+// Recall Knowledge
+.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud {
+  --color-rank-0: #a6a6a6;
+  --color-rank-1: #3f4dcd;
+  --color-rank-2: #a828f0;
+  --color-rank-3: #cf931d;
+  --color-rank-4: #bf1c1c;
+  --color: white;
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+
+  .rk,
+  .rk-skills,
+  .rk-lores,
+  .rk-lores-rolls {
+    background: repeating-linear-gradient(
+      #dddddd70 0 var(--row-height),
+      transparent var(--row-height) calc(var(--row-height) * 2)
+    );
+    .header {
+      color: white;
+    }
+
+    .rank {
+      //   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+      font-weight: bold;
+    }
+  }
 }
-#pf2e-token-hud .inner i.fa-solid.fa-user-graduate {
-  color: rebeccapurple;
+
+.chat-message.message.dorako-ui.light-theme .pf2e-token-hud {
+  --color-rank-0: #a6a6a6;
+  --color-rank-1: #3f4dcd;
+  --color-rank-2: #a828f0;
+  --color-rank-3: #cf931d;
+  --color-rank-4: #bf1c1c;
+
+  .rk,
+  .rk-skills,
+  .rk-lores,
+  .rk-lores-rolls {
+    background: repeating-linear-gradient(
+      #dddddd70 0 var(--row-height),
+      transparent var(--row-height) calc(var(--row-height) * 2)
+    );
+    .rank {
+      //   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+      font-weight: bold;
+    }
+  }
 }
-#pf2e-token-hud .inner i.fa-solid.fa-heart-half-stroke {
-  color: orangered;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-heart {
-  color: darkred;
-}
-#pf2e-token-hud .inner i.fa-regular.fa-helmet-battle {
-  color: darkslategray;
-}
-#pf2e-token-hud .inner i.fa-duotone.fa-eye-slash {
-  color: #9e9eff;
-}
-#pf2e-token-hud .inner i.fa-regular.fa-shield {
-  color: darkslategray;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-hand-fist {
-  color: purple;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-person-running {
-  color: rgb(61, 61, 255);
-}
-#pf2e-token-hud .inner i.fa-solid.fa-brain {
-  color: deeppink;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-skull {
-  color: black;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-tombstone {
-  color: brown;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-shoe-prints {
-  color: green;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-chevrons-down::before {
-  content: "\f713";
-  font: (--fa-font-solid);
-  color: saddlebrown;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-feather {
-  color: white;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-person-swimming {
-  color: dodgerblue;
-}
-#pf2e-token-hud .inner i.fa-solid.fa-spider {
-  color: #b7346f;
+
+/* Symon Custom CSS */
+#pf2e-token-hud.dorako-ui .inner i {
+  text-shadow: 0px 0px 35px white, 0px 1px 1px black;
+  &.fa-solid.fa-circle-h {
+    color: darkgoldenrod;
+  }
+  &.fa-solid.fa-user-graduate {
+    color: rebeccapurple;
+  }
+  &.fa-solid.fa-heart-half-stroke {
+    color: orangered;
+  }
+  &.fa-solid.fa-heart {
+    color: darkred;
+  }
+  &.fa-regular.fa-helmet-battle {
+    color: darkslategray;
+  }
+  &.fa-duotone.fa-eye-slash {
+    color: #9e9eff;
+  }
+  &.fa-regular.fa-shield {
+    color: darkslategray;
+  }
+  &.fa-solid.fa-hand-fist {
+    color: purple;
+  }
+  &.fa-solid.fa-person-running {
+    color: rgb(61, 61, 255);
+  }
+  &.fa-solid.fa-brain {
+    color: deeppink;
+  }
+  &.fa-solid.fa-skull {
+    color: black;
+  }
+  &.fa-solid.fa-tombstone {
+    color: brown;
+  }
+  &.fa-solid.fa-shoe-prints {
+    color: green;
+  }
+  &.fa-solid.fa-chevrons-down::before {
+    content: "\f713";
+    font: (--fa-font-solid);
+    color: saddlebrown;
+  }
+  &.fa-solid.fa-feather {
+    color: white;
+  }
+  &.fa-solid.fa-person-swimming {
+    color: dodgerblue;
+  }
+  &.fa-solid.fa-spider {
+    color: #b7346f;
+  }
 }

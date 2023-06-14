@@ -74,10 +74,13 @@ Hooks.once("init", () => {
 
         const minDimension = Math.min(icon.width, icon.height);
         // Use the blurred pre-made texture and create a new mask sprite for the specific icon
-        const myMask = new PIXI.Sprite(circularMaskTexture);
-        myMask.anchor.set(0.5);
+        const myMask = new PIXI.Graphics().beginFill(0xffffff).drawCircle(55, 55, 55).endFill();
+        //const myMask = new PIXI.Sprite(circularMaskTexture);
+        //myMask.anchor.set(0.5,0.5);
         myMask.width = minDimension;
         myMask.height = minDimension;
+        myMask.x = -icon.width / 2;
+        myMask.y = -icon.height / 2;
 
         icon.mask = myMask;
         icon.addChild(myMask);
