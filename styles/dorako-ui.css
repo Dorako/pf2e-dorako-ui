@@ -1633,7 +1633,7 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title {
   color: var(--tertiary-dark);
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill .rollable:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill .rollable:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill .rollable:hover {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill .skill-score, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill .skill-score, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill .skill-score {
   color: var(--tertiary);
   text-shadow: unset;
 }

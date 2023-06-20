@@ -2940,5 +2940,11 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-spider {
   color: #b7346f;
 }
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-eye {
+  color: cadetblue;
+}
+#pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-dumbbell {
+  color: darkolivegreen;
+}
 
 /*# sourceMappingURL=module-support.css.map */

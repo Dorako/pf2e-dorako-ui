@@ -1,3 +1,8 @@
+# 2.2.3
+
+- (Maintenance) Fixed a small dark-theme PC sheet regression caused by system version 5.0.1
+- (New) Now 100% more hotreloading
+
 # 2.2.2
 
 - (Maintenance) Initial V11 support

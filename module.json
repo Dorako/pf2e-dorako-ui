@@ -24,7 +24,7 @@
         "type": "system",
         "compatibility": {
           "minimum": "4.0.0",
-          "verified": "5.0.0"
+          "verified": "5.0.1"
         }
       },
       {
@@ -44,6 +44,11 @@
       "url": "modules/pf2e-dorako-ui/img/hero.webp"
     }
   ],
+  "flags": {
+    "hotReload": {
+      "extensions": [".css", ".json"]
+    }
+  },
   "languages": [
     {
       "lang": "en",
