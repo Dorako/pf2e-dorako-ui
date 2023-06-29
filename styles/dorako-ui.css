@@ -2467,7 +2467,9 @@ section.chat-sidebar {
   margin-top: 10px;
 }
 
-/* ----------------------------------------- */
+.no-compendium-banner-images .compendium-sidebar .directory-item.compendium .compendium-banner {
+  display: none;
+} /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
 /* Colors */
@@ -3620,6 +3622,10 @@ a.entity-link,
 [data-pf2-action],
 [data-pf2-effect-area],
 a.inline-roll:not(.inline-result) {
+  color: black;
+}
+
+.dorako-ui.message.chat-message.dark-theme a.inline-roll {
   color: black;
 }
 

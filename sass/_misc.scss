@@ -20,6 +20,10 @@ a.inline-roll:not(.inline-result) {
   color: black;
 }
 
+.dorako-ui.message.chat-message.dark-theme a.inline-roll {
+  color: black;
+}
+
 i[data-pf2-repost] {
   top: 0px;
 }

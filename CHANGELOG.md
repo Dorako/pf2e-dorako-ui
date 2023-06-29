@@ -1,3 +1,7 @@
+# 2.2.4
+
+- (New) Adds a UX setting to remove compendium banner images in the sidebar
+
 # 2.2.3
 
 - (Maintenance) Fixed a small dark-theme PC sheet regression caused by system version 5.0.1

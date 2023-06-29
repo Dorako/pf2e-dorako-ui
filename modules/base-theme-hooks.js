@@ -171,7 +171,7 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   const hpTemp = app.object.attributes.hp.temp;
   const collapseHp = hpDetails === "" && hpTemp === 0;
   const collapseInitiative = app.object.attributes.initiative.ability === "perception";
-  const collapseToggles = app.object.system.toggles.length === 0;
+  const collapseToggles = app.object.system.toggles?.length === 0;
   const collapseSaves = app.object.system.attributes.allSaves.value === "";
 
   const immunities = app.object.system.attributes.immunities;

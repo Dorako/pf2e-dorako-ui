@@ -18,6 +18,7 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "start-sidebar-collapsed",
     "start-navigation-collapsed",
     "adjust-token-effects-hud",
+    "no-compendium-banner-images",
   ];
 
   rerenderChatMessages() {}
@@ -150,6 +151,18 @@ export class UXSettings extends SettingsMenuDorakoUI {
         default: false,
         type: Boolean,
         requiresReload: false,
+      },
+      "no-compendium-banner-images": {
+        name: "pf2e-dorako-ui.settings.ux.no-compendium-banner-images.name",
+        hint: "pf2e-dorako-ui.settings.ux.no-compendium-banner-images.hint",
+        scope: "client",
+        config: true,
+        default: false,
+        type: Boolean,
+        requiresReload: false,
+        onChange: (value) => {
+          $("#sidebar").toggleClass("no-compendium-banner-images");
+        },
       },
       "no-logo": {
         name: "pf2e-dorako-ui.settings.ux.no-logo.name",

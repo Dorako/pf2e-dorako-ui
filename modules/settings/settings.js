@@ -152,6 +152,12 @@ Hooks.once("ready", () => {
   }
 });
 
+Hooks.once("ready", () => {
+  if (game.settings.get("pf2e-dorako-ui", "ux.no-compendium-banner-images")) {
+    $("#sidebar").addClass("no-compendium-banner-images");
+  }
+});
+
 Hooks.on("renderChatLogPF2e", (app, html, data) => {
   if (game.settings.get("pf2e-dorako-ui", "ux.no-chat-control-icon")) {
     html.find("#chat-controls")[0].classList.add("no-chat-control-icon");
