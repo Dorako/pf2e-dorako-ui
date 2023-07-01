@@ -320,6 +320,10 @@
         "adjust-token-effects-hud": {
           "name": "Ajuster les effets du HUD sur les jetons ?",
           "hint": "[Expérimental] Place les effets en cercle et les arrange à l'extérieur du jeton ou sur le pourtour du jetons pour les jetons plus grands"
+        },
+        "no-compendium-banner-images": {
+          "hint": "Enlève les images des bannières de compendium dans la barre latérale",
+          "name": "Cacher les bannières d'image des compendium ?"
         }
       },
       "misc": {
