@@ -68,7 +68,7 @@
   "dorako-ui.settings.use-user-avatar.hint": "Konfigurieren Sie Benutzeravatare, indem Sie mit der rechten Maustaste auf Benutzer im unteren linken Bereich von Foundry klicken.",
   "pf2e-dorako-ui": {
     "text": {
-      "secret": "Geheim",
+      "secret": "Verdeckt",
       "from": "Von",
       "to": "an",
       "whisper": "Flüstern",
@@ -78,7 +78,9 @@
       "default": "Standard",
       "self-roll": "Privater Wurf",
       "gm-only": "Nur SL",
-      "send-to-chat": "Abschicken"
+      "send-to-chat": "Senden",
+      "maybe-reload": "Manche Änderungen erfordern einen Reload.",
+      "large-chatlog-warning": "Aufgrund größerer Chatlogs werden manche Einstellungen erst beim nächsten Reload übernommen."
     },
     "settings": {
       "theme": {
@@ -92,42 +94,204 @@
           },
           "hint": "Verringere den Grad der dunklen Darstellung wenn du Fehler im UI hast"
         },
-        "name": "Darstellungseinstellungen",
-        "label": "Konfiguriere Einstellungen für die Darstellung",
-        "hint": "Passe Darstellungeinstellungen für diverse Anwendungen und UI-Elemente an",
+        "name": "Design-Einstellungen",
+        "label": "Design-Einstellungen konfigurieren",
+        "hint": "Ändern der Design-Einstellungen für verschiedene Anwendungen und UI-Elemente",
         "frosted-glass": {
-          "name": "Verwende Milchglas",
+          "name": "Milchglas verwenden",
           "hint": "WARNUNG: Sehr leistungsintensiv. Beispiel: brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
         },
         "glass-bg": {
           "name": "Verwende alternativen Hintergrund für Glass",
-          "hint": "Jedes valide CSS sollte funktionieren"
+          "hint": "Jede gültige CSS-Farbe sollte funktionieren"
         },
         "npc-sheet-theme": {
-          "name": "NSC-Bogen Darstellung",
-          "hint": "Betrifft die Bögen für Nicht-Spieler-Charaktere"
+          "name": "NSC-Bogen Design",
+          "hint": "Beeinflusst NSC-Bögen"
         },
         "chat-theme": {
-          "name": "Chat Darstellung",
-          "hint": "Betrifft alle Chat-Nachrichten",
+          "name": "Chat-Design",
+          "hint": "Beeinflusst alle Chat-Nachrichten",
           "choice": {
             "factions": "Spieler hell, SL dunkel"
           }
         },
         "pc-sheet-theme": {
-          "name": "SC-Bogen Darstellung",
-          "hint": "Betrifft die Bögen für Spieler-Charaktere"
+          "name": "SC-Bogen Design",
+          "hint": "Beeinflusst SC-Bögen"
         },
         "loot-sheet-theme": {
-          "name": "Beutebogen Darstellung",
-          "hint": "Betrifft die Bögen für Beute"
+          "name": "Beutebogen Design",
+          "hint": "Beeinflusst den Beutebogen"
         },
         "familiar-sheet-theme": {
-          "name": "Vertrauter-Bogen Darstellung",
-          "hint": "Betrifft die Bögen für Vertraute",
+          "name": "Vertrauter-Bogen Design",
+          "hint": "Beeinflusst den Vertrautenbogen",
           "choice": {
-            "dark-red-header": "Dunkel + Rote Kopfzeile"
+            "dark-red-header": "Dunkel + rote Kopfzeile"
           }
+        },
+        "application-theme": {
+          "name": "Design der Anwendung",
+          "choice": {
+            "no-theme": "Kein Design",
+            "light-theme": "Helles Dorako UI",
+            "dark-theme": "Dunkles Dorako UI"
+          },
+          "hint": "Beeinflusst gerenderte Anwendungfenster"
+        },
+        "enable-dark-theme-journals": {
+          "name": "Dunkles Design für Notizbücher aktivieren?",
+          "hint": "Betrifft nicht premium Notizbücher-Module"
+        },
+        "header-style": {
+          "choice": {
+            "tint": "Spieler-Farbe",
+            "none": "Deaktiviert",
+            "red": "Rot",
+            "blue": "Blau"
+          },
+          "name": "Design der Chatnachrichten-Kopfzeile",
+          "hint": "Fügt eine farbige Kopfzeile zu jeder Chat-Nachricht hinzu"
+        }
+      },
+      "ux": {
+        "compact-ui": {
+          "hint": "Ändert die Größe von Steuerelementen und blendet inaktive Steuerelemente und Navigationselemente aus, wenn sie nicht mit dem Mauszeiger bewegt werden",
+          "name": "Kompaktes UI aktivieren?"
+        },
+        "start-sidebar-collapsed": {
+          "name": "Seitenleiste standardmäßig einklappen?",
+          "hint": "Verwendet den kollabierten Zustand als Ausgangszustand"
+        },
+        "name": "UX-Einstellungen",
+        "hint": "Konfiguriert Einstellungen für das Anzeigen, Verstecken oder Bewegen von Teilen des UI",
+        "restructure-card-info": {
+          "name": "Chat-Kartendaten umstrukturieren?",
+          "hint": "Die Aktionskosten für Funktionen werden deutlicher und die Informationen über Zaubersprüche werden aus der Fußzeile entfernt"
+        },
+        "no-cards": {
+          "name": "Registerkarte 'Kartenstapel' ausblenden?",
+          "hint": "Entfernt die Registerkarte \"Kartenstapel\" in der Seitenleiste vollständig"
+        },
+        "no-chat-control-icon": {
+          "name": "Symbol für die Chatsteuerung ausblenden?",
+          "hint": "Dies ist das Würfelsymbol neben den Wurfoptionen, es neigt dazu, die Benutzeroberfläche zu überladen"
+        },
+        "center-hotbar": {
+          "name": "Zentrierte Aktionsleiste aktivieren?",
+          "hint": "Auch bekannt als Makroleiste"
+        },
+        "enable-player-tags": {
+          "name": "Spieler-Tags aktivieren?",
+          "hint": "Fügt ein Tag mit dem Namen des Spielers neben dem Sprecher hinzu"
+        },
+        "rolltype-indication": {
+          "name": "Wurftyp-Anzeigemodus",
+          "hint": "Konfigurieren Sie Benutzeravatare, indem Sie mit der rechten Maustaste auf Benutzer im unteren linken Bereich von Foundry klicken",
+          "choice": {
+            "none": "Deaktiviert",
+            "tags": "Tags",
+            "bg-color": "Farbton des Hintergrunds",
+            "both": "Tags und Hintergrundfarbe"
+          }
+        },
+        "chat-input-height": {
+          "CGMPhint": "Der Standard von Foundry liegt bei ungefähr 100px; Beachte das die Funktion \"Notify Typing\" aus dem \"Cautious Gamemaster's Pack\" ungefähr 60px an Höhe der Chatbox einnimmt",
+          "name": "Höhe der Chatbox",
+          "hint": "Der Foundry-Standard beträgt ca. 100px"
+        },
+        "label": "UX-Einstellungen konfigurieren",
+        "adjust-token-effects-hud": {
+          "name": "\"Token Effects HUD\" anpassen?",
+          "hint": "(Experimentell) Stelle Effekte kreisförmig da und arrangiere sie außerhalb oder auf dem Token-Ring bei größeren Tokens"
+        },
+        "animate-messages": {
+          "hint": "Flüstern von Spielern zum SL erregt mehr Aufmerksamkeit",
+          "name": "Animierte Nachrichten, um die Aufmerksamkeit auf bestimmte Ereignisse zu lenken?"
+        },
+        "no-logo": {
+          "name": "Foundry-Logo ausblenden?",
+          "hint": "Entfernt das Foundry-Logo oben links"
+        },
+        "start-navigation-collapsed": {
+          "name": "Navigation standardmäßig einklappen?",
+          "hint": "Verwendet den kollabierten Zustand als Ausgangszustand"
+        },
+        "remove-attack-info-from-damage-roll-messages": {
+          "name": "Angriffsinfo aus Schadenswurfmeldungen entfernen?",
+          "hint": "Schadenswürfe nehmen weniger Platz ein, indem redundante Trefferinformationen entfernt werden. Gedacht für die Verwendung mit dem DFCE-Modul"
+        }
+      },
+      "avatar": {
+        "popout-support": {
+          "hint": "Skaliert die Größe von Token-Avataren entsprechend der Skala des Tokens",
+          "name": "Token-Avatar-Popout aktivieren?"
+        },
+        "source": {
+          "name": "Chat-Avatare",
+          "choice": {
+            "token": "Token-Bild bevorzugen",
+            "actor": "Spieler-Bild bevorzugen"
+          },
+          "hint": "Fügt einen Avatar zu Chat-Nachrichten hinzu"
+        },
+        "small-creature-token-avatar-size": {
+          "name": "Avatargröße für kleine Kreaturen",
+          "hint": "Standardwert ist 0.8"
+        },
+        "name": "Avatar-Einstellungen",
+        "size": {
+          "name": "Größe",
+          "hint": "Standardwert von 40px"
+        },
+        "label": "Avatar-Einstellungen konfigurieren",
+        "hint": "Einstellungen für Avatare in Chatnachrichten konfigurieren",
+        "hide-when-token-hidden": {
+          "name": "Avatar ausblenden, wenn Token versteckt ist?",
+          "hint": "Blendet Avatare aus, wenn das Sprecher-Token ausgeblendet ist"
+        },
+        "hide-gm-avatar-when-secret": {
+          "name": "Avatar ausblenden, wenn versteckt?",
+          "hint": "Verstecke Avatare, wenn der SL versteckte/private Würfe würfelt"
+        },
+        "use-user-avatar": {
+          "name": "Benutzer-Avatar als Ausweichmöglichkeit verwenden?",
+          "hint": "Konfigurieren Sie Benutzeravatare, indem Sie mit der rechten Maustaste auf Benutzer im unteren linken Bereich von Foundry klicken"
+        },
+        "reacts-to-degree-of-success": {
+          "name": "Reagiert der Avatar auf kritische Würfe?",
+          "hint": "Ein kritischer Erfolg leuchtet grün und ein kritischer Fehlschlag leicht dunkel"
+        }
+      },
+      "misc": {
+        "name": "Verschiedene Einstellungen",
+        "label": "Verschiedene Einstellungen konfigurieren",
+        "hint": "Konfigurieren Sie Einstellungen für andere Funktionen der Dorako UI",
+        "enable-debug-mode": {
+          "name": "Aktiviere Debug-Modus?",
+          "hint": "Hinzufügen von Schaltflächen zum Umschalten zwischen Hellen- und Dunklen-Design"
+        },
+        "send-to-chat": {
+          "name": "Schaltfläche \"Senden\" in der Kopfzeile des Fensters hinzufügen?",
+          "hint": "Sendet Inhalte an den Chat, als ob sie über einen Bogen gesendet würden"
+        },
+        "skin-crb-journal": {
+          "name": "Aktiviere CRB-Design für Notizbücher?",
+          "hint": "Anweisungen unter www.shorturl.at/mrzN1"
+        }
+      },
+      "reset-changes": "Änderungen zurücksetzen",
+      "customization": {
+        "name": "Personalisierung",
+        "excluded-applications": {
+          "name": "Ausgeschlossene Anwendungen",
+          "hint": "Suchen Sie in den Logs nach dem Namen der Anwendung oder fragen Sie auf Discord"
+        },
+        "hint": "Nehmen Sie personalisierte Änderungen mit benutzerdefiniertem CSS vor, oder entscheiden Sie sich gegen bestimmte Dorako UI-Stylings",
+        "custom-css": {
+          "name": "Benutzerdefiniertes CSS",
+          "hint": "Erstelle den CSS-Code in einem externen Editor und füge ihn hier ein"
         }
       }
     }
