@@ -221,6 +221,10 @@
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Angriffsinfo aus Schadenswurfmeldungen entfernen?",
           "hint": "Schadenswürfe nehmen weniger Platz ein, indem redundante Trefferinformationen entfernt werden. Gedacht für die Verwendung mit dem DFCE-Modul"
+        },
+        "no-compendium-banner-images": {
+          "name": "Kompendium Bannerbilder ausblenden?",
+          "hint": "Entfernt die Bannerbilder des Kompendiums in der Seitenleiste"
         }
       },
       "avatar": {
