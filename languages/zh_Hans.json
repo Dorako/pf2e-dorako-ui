@@ -67,6 +67,10 @@
         "adjust-token-effects-hud": {
           "name": "调整指示物效果HUD？",
           "hint": "(实验性) 令效果于指示物外环环绕显示，对于较大指示物则置于指示物内侧"
+        },
+        "no-compendium-banner-images": {
+          "name": "隐藏合集包的横幅图片？",
+          "hint": "在侧边栏中移除合集包的横幅图片"
         }
       },
       "reset-changes": "重置更改",
