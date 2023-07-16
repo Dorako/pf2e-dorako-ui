@@ -3,7 +3,7 @@ import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleS
 // Add .dorako-ui to all always-styled applications (Does not include pf2e sheets)
 for (const appName of [...baseThemeApplications]) {
   Hooks.on("render" + appName, (app, html, data) => {
-    // if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
+    if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
     if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
       console.debug(

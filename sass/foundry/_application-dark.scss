@@ -1,4 +1,8 @@
 .dorako-ui.dark-theme {
+  &.filepicker .favorites .path {
+    background: none;
+  }
+
   &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a {
     &.add-gm-notes,
     &.editor-edit {

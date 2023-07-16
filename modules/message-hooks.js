@@ -384,44 +384,43 @@ function injectAuthorName(html, messageData) {
 }
 
 function injectMessageTag(html, messageData) {
-  const setting = game.settings.get("pf2e-dorako-ui", "ux.rolltype-indication");
-  if (setting == "none") {
+  const setting = game.settings.get("pf2e-dorako-ui", "ux.enable-rolltype-indication");
+  if (setting == false) {
     return;
-  } else if (setting == "tags" || setting == "both") {
-    const messageMetadata = html.find(".message-metadata");
+  }
+  const messageMetadata = html.find(".message-metadata");
 
-    const rolltype = $("<span>");
-    rolltype.addClass("rolltype");
-    rolltype.addClass("header-meta");
+  const rolltype = $("<span>");
+  rolltype.addClass("rolltype");
+  rolltype.addClass("header-meta");
 
-    const whisperTargets = messageData.message.whisper;
+  const whisperTargets = messageData.message.whisper;
 
-    const isBlind = messageData.message.blind;
-    const isWhisper = whisperTargets?.length > 0;
-    const isSelf = isWhisper && whisperTargets.length === 1 && whisperTargets[0] === messageData.message.user;
-    const isRoll = messageData.message.rolls !== undefined;
+  const isBlind = messageData.message.blind;
+  const isWhisper = whisperTargets?.length > 0;
+  const isSelf = isWhisper && whisperTargets.length === 1 && whisperTargets[0] === messageData.message.user;
+  const isRoll = messageData.message.rolls !== undefined;
 
-    if (isBlind) {
-      rolltype.text(i18n("pf2e-dorako-ui.text.secret"));
-      messageMetadata.prepend(rolltype);
-    } else if (isSelf && whisperTargets[0]) {
-      rolltype.text(i18n("pf2e-dorako-ui.text.self-roll"));
-      messageMetadata.prepend(rolltype);
-    } else if (isRoll && isWhisper) {
-      rolltype.text(i18n("pf2e-dorako-ui.text.gm-only"));
-      messageMetadata.prepend(rolltype);
-    } else if (isWhisper) {
-      rolltype.text(i18n("pf2e-dorako-ui.text.whisper"));
-      messageMetadata.prepend(rolltype);
-    }
+  if (isBlind) {
+    rolltype.text(i18n("pf2e-dorako-ui.text.secret"));
+    messageMetadata.prepend(rolltype);
+  } else if (isSelf && whisperTargets[0]) {
+    rolltype.text(i18n("pf2e-dorako-ui.text.self-roll"));
+    messageMetadata.prepend(rolltype);
+  } else if (isRoll && isWhisper) {
+    rolltype.text(i18n("pf2e-dorako-ui.text.gm-only"));
+    messageMetadata.prepend(rolltype);
+  } else if (isWhisper) {
+    rolltype.text(i18n("pf2e-dorako-ui.text.whisper"));
+    messageMetadata.prepend(rolltype);
+  }
 
-    if (game.settings.get("pf2e-dorako-ui", "ux.animate-messages")) {
-      // Draw attention to direct whispers from players to GM
-      const isGmSpeaker = game.users.get(messageData.message.user)?.isGM;
-      const isGmTarget = game.users.get(whisperTargets?.[0])?.isGM;
-      if (!(isBlind || isSelf) && isWhisper && !isGmSpeaker && isGmTarget) {
-        html[0].classList.add("attention");
-      }
+  if (game.settings.get("pf2e-dorako-ui", "ux.animate-messages")) {
+    // Draw attention to direct whispers from players to GM
+    const isGmSpeaker = game.users.get(messageData.message.user)?.isGM;
+    const isGmTarget = game.users.get(whisperTargets?.[0])?.isGM;
+    if (!(isBlind || isSelf) && isWhisper && !isGmSpeaker && isGmTarget) {
+      html[0].classList.add("attention");
     }
   }
 }

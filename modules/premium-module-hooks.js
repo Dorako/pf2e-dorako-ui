@@ -77,3 +77,9 @@ Hooks.on("renderApplication", (app, html, data) => {
     html[0].classList.add("dorako-ui");
   }
 });
+
+Hooks.on("renderSWPFCompendiumTOC", (app, html, appName) => {
+  console.debug(`${MODULE_NAME} | ${appName} starts with 'SWPF' => add .premium`);
+  html[0].classList.add("premium");
+  // html.closest(".app").find(".journal-entry-content").addClass(".premium");
+});

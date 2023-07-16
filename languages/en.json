@@ -138,7 +138,7 @@
         },
         "adjust-token-effects-hud": {
           "name": "Adjust token effects HUD?",
-          "hint": "(Experimental) Makes effects circular and arranges them outside the token, or on the token ring for larger tokens"
+          "hint": "Makes effects circular and arranges them outside the token, or on the token ring for larger tokens"
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Remove attack info from damage roll messages?",
@@ -184,15 +184,9 @@
           "name": "Enable player tags?",
           "hint": "Adds a tag containing the name of the player next to the speaker"
         },
-        "rolltype-indication": {
-          "name": "Rolltype indication mode",
-          "hint": "Configure user avatars by right-clicking users in the lower left area of Foundry",
-          "choice": {
-            "tags": "Tags",
-            "bg-color": "Background color tint",
-            "both": "Tags and background color",
-            "none": "Disabled"
-          }
+        "enable-rolltype-indication": {
+          "name": "Enable rolltype tag?",
+          "hint": "Adds a tag containing the type of roll to chat messages"
         }
       },
       "misc": {

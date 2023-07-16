@@ -11,13 +11,13 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "no-logo",
     "compact-ui",
     "remove-attack-info-from-damage-roll-messages",
-    "center-hotbar",
+    "enable-rolltype-indication",
     "enable-player-tags",
-    "animate-messages",
-    "rolltype-indication",
+    "center-hotbar",
     "start-sidebar-collapsed",
     "start-navigation-collapsed",
     "adjust-token-effects-hud",
+    "animate-messages",
     "no-compendium-banner-images",
   ];
 
@@ -44,9 +44,9 @@ export class UXSettings extends SettingsMenuDorakoUI {
       "adjust-token-effects-hud": {
         name: "pf2e-dorako-ui.settings.ux.adjust-token-effects-hud.name",
         hint: "pf2e-dorako-ui.settings.ux.adjust-token-effects-hud.hint",
-        scope: "client",
+        scope: "world",
         type: Boolean,
-        default: false,
+        default: true,
         config: true,
         requiresReload: true,
       },
@@ -227,19 +227,13 @@ export class UXSettings extends SettingsMenuDorakoUI {
           }
         },
       },
-      "rolltype-indication": {
-        name: "pf2e-dorako-ui.settings.ux.rolltype-indication.name",
-        hint: "pf2e-dorako-ui.settings.ux.rolltype-indication.hint",
+      "enable-rolltype-indication": {
+        name: "pf2e-dorako-ui.settings.ux.enable-rolltype-indication.name",
+        hint: "pf2e-dorako-ui.settings.ux.enable-rolltype-indication.hint",
         scope: "client",
-        type: String,
-        default: "both",
+        type: Boolean,
+        default: true,
         config: true,
-        choices: {
-          tags: "pf2e-dorako-ui.settings.ux.rolltype-indication.choice.tags",
-          "bg-color": "pf2e-dorako-ui.settings.ux.rolltype-indication.choice.bg-color",
-          both: "pf2e-dorako-ui.settings.ux.rolltype-indication.choice.both",
-          none: "pf2e-dorako-ui.settings.ux.rolltype-indication.choice.none",
-        },
         requiresReload: false,
         onChange: () => {
           const messages = game.messages.filter((m) => m instanceof ChatMessage);

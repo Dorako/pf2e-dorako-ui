@@ -1,3 +1,11 @@
+# 2.2.5
+
+- (SWADE) Fix a regression causing non-journal application windows to not be tagged as "premium" and thus render with incorrect backgrounds
+- (Maintenance) Make v11-style file path favorites be legible in dark theme
+- (Refinement) Styled the 'jump-to' chat button
+- (Maintenance) Refactored rolltype-indication setting into a toggle
+- (Maintenance) Removed the 'experimental' wording from the adjust-effect-hud setting and made it default to true
+
 # 2.2.4
 
 - (New) Adds a UX setting to remove compendium banner images in the sidebar

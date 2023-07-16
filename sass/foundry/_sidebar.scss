@@ -98,3 +98,17 @@ section.chat-sidebar {
     }
   }
 }
+
+#sidebar .dorako-ui .jump-to-bottom {
+  @include glass;
+  @include quick-transition;
+  margin-left: 5px;
+  width: 288px;
+  text-shadow: 0px 0px 3px black;
+  background-color: var(--glass-bg-dark);
+
+  &:hover {
+    background-color: var(--primary-light);
+    text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+  }
+}
