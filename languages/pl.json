@@ -1,0 +1,57 @@
+{
+  "pf2e-dorako-ui": {
+    "text": {
+      "secret": "Sekret",
+      "whisper": "Szept",
+      "from": "Od",
+      "to": "do",
+      "send-to-chat": "Wyślij",
+      "default": "Domyślne",
+      "dark": "Ciemny",
+      "light": "Jasny",
+      "disabled": "Wyłączony",
+      "large-chatlog-warning": "Ze względu na duży log czatu, niektóre ustawienia zostaną zastosowane przy następnym przeładowaniu.",
+      "maybe-reload": "Niektóre zmiany mogą wymagać przeładowania."
+    },
+    "settings": {
+      "reset-changes": "Zresetuj ustawienia",
+      "theme": {
+        "label": "Skonfiguruj ustawienia motywu",
+        "hint": "Zmiana ustawień motywów dla różnych aplikacji i elementów interfejsu użytkownika",
+        "application-theme": {
+          "name": "Motyw aplikacji",
+          "hint": "Wpływa na renderowane okna aplikacji",
+          "choice": {
+            "no-theme": "Brak motywu",
+            "light-theme": "Jasny Dorako UI",
+            "dark-theme": "Ciemny Dorako UI"
+          }
+        },
+        "frosted-glass": {
+          "name": "Używaj matowego szkła",
+          "hint": "OSTRZEŻENIE: Bardzo wysoka zasobożerność. Przykład: jasność(1.5) kontrast(1.2) nasycenie(1.5) rozmycie(5px)"
+        },
+        "glass-bg": {
+          "name": "Użyj alternatywnego szklanego tła",
+          "hint": "Każdy prawidłowy kolor CSS powinien działać"
+        },
+        "npc-sheet-theme": {
+          "hint": "Wpływa na kartę NPC",
+          "name": "Motyw karty NPC"
+        },
+        "chat-theme": {
+          "name": "Motyw czatu",
+          "hint": "Wpływa na wszystkie wiadomości czatu",
+          "choice": {
+            "factions": "Gracze jasny, GM ciemny"
+          }
+        },
+        "pc-sheet-theme": {
+          "name": "Motyw karty PC",
+          "hint": "Wpływa na karty graczy"
+        },
+        "name": "Ustawienia motywu"
+      }
+    }
+  }
+}
