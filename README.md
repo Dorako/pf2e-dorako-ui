@@ -131,3 +131,9 @@ Besides the theme, Dorako UI also has a bunch of UI-adjacent features, including
 - Got a nitpicky feature request that isn't already a setting?
 
 Dorako UI's custom settings menu allows you to configure the theme to your liking.
+
+## Licenses & Attributions
+
+This code is available under the MIT license, see LICENSE.
+
+The sidebar resizing functionality has been adapted from [Sidebar Resizer](https://github.com/saif-ellafi/foundryvtt-sidebar-resizer) also available under the MIT license.

@@ -46,10 +46,7 @@
   ],
   "flags": {
     "hotReload": {
-      "extensions": [
-        ".css",
-        ".json"
-      ]
+      "extensions": [".css", ".json"]
     }
   },
   "languages": [
@@ -100,9 +97,7 @@
       "path": "languages/pl.json"
     }
   ],
-  "styles": [
-    "styles/fonts.css"
-  ],
+  "styles": ["styles/fonts.css"],
   "esmodules": [
     "modules/misc-hooks.js",
     "modules/settings/settings.js",
@@ -111,7 +106,8 @@
     "modules/message-hooks.js",
     "modules/premium-module-hooks.js",
     "modules/consts.js",
-    "modules/pixi.js"
+    "modules/pixi.js",
+    "modules/sidebar-resizer.js"
   ],
   "changelog": "https://github.com/Dorako/pf2e-dorako-ui/blob/master/CHANGELOG.md",
   "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.11.3.zip",

@@ -164,10 +164,12 @@
 
     // These can be clicked, but do not become active
     // 'trigger' is from Monk's Active Tiles
+    // 'pf2e-perception' is from PF2e Perception by Idle
     &[data-action="sort-up"],
     &[data-action="sort-down"],
     &[data-action="config"],
-    &[data-action="trigger"] {
+    &[data-action="trigger"],
+    &[data-action="pf2e-perception"] {
       &:hover {
         background-color: var(--primary);
         > img {

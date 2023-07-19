@@ -117,7 +117,7 @@
   @include sheet;
   color: var(--color-text-light-heading);
 }
-.dorako-ui.light-theme.journal-entry-content {
+.dorako-ui.light-theme:not(.premium) .journal-entry-content {
   --color-text-dark-primary: #191813;
   color: var(--color-text-dark-primary);
 }

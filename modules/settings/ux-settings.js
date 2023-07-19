@@ -4,7 +4,6 @@ export class UXSettings extends SettingsMenuDorakoUI {
   static namespace = "ux";
 
   static SETTINGS = [
-    "chat-input-height",
     "restructure-card-info",
     "no-cards",
     "no-chat-control-icon",
@@ -49,29 +48,6 @@ export class UXSettings extends SettingsMenuDorakoUI {
         default: true,
         config: true,
         requiresReload: true,
-      },
-      "chat-input-height": {
-        name: "pf2e-dorako-ui.settings.ux.chat-input-height.name",
-        hint: game.modules.get("CautiousGamemastersPack")?.active
-          ? "pf2e-dorako-ui.settings.ux.chat-input-height.CGMPhint"
-          : "pf2e-dorako-ui.settings.ux.chat-input-height.hint",
-        scope: "client",
-        type: Number,
-        default: 90,
-        range: {
-          min: 20,
-          max: 300,
-          step: 5,
-        },
-        config: true,
-        requiresReload: false,
-        onChange: (value) => {
-          const root = document.querySelector(":root").style;
-          root.setProperty(
-            "--chat-input-height",
-            game.settings.get("pf2e-dorako-ui", "ux.chat-input-height").toString() + "px"
-          );
-        },
       },
       "restructure-card-info": {
         name: "pf2e-dorako-ui.settings.ux.restructure-card-info.name",

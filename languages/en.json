@@ -126,12 +126,6 @@
         "name": "UX Settings",
         "label": "Configure UX Settings",
         "hint": "Configure settings related to showing, hiding, making UI less obstructive or clearer, moving stuff to different locations",
-
-        "chat-input-height": {
-          "name": "Chatbox height",
-          "hint": "Foundry default is approx 100px",
-          "CGMPhint": "Foundry default is approx 100px; Note that with Cautious Gamemaster's Pack's \"Notify Typing\" setting enabled, the notification eats at most 60px of the height of the chatbox"
-        },
         "restructure-card-info": {
           "name": "Restructure chat card info?",
           "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"

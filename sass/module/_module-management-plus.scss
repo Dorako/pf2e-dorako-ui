@@ -1,3 +1,14 @@
 #module-credits-copy-export {
   background: none !important;
 }
+
+#module-management.dorako-ui .package-list .package .package-overview .tag.expand {
+  color: inherit;
+  background: inherit;
+  border: none;
+  margin-bottom: unset;
+  margin-top: unset;
+  &:hover {
+    background-color: var(--primary);
+  }
+}

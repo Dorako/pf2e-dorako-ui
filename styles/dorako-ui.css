@@ -284,7 +284,7 @@
   color: var(--color-text-light-heading);
 }
 
-.dorako-ui.light-theme.journal-entry-content {
+.dorako-ui.light-theme:not(.premium) .journal-entry-content {
   --color-text-dark-primary: #191813;
   color: var(--color-text-dark-primary);
 }
@@ -1153,8 +1153,12 @@ section.chat-sidebar {
   margin: 0px 6px;
 }
 #chat-form textarea {
-  background: rgb(212, 213, 205);
-  border: 1px solid #7a7971;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #chat-log {
@@ -1224,23 +1228,40 @@ section.chat-sidebar {
 .dorako-ui #chat-controls .roll-type-select {
   margin-left: 0px;
   margin-right: 0px;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui #chat-controls .roll-type-select option,
+.dorako-ui #chat-controls .roll-type-select optgroup {
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-highlight);
 }
 
-#sidebar .dorako-ui .jump-to-bottom {
+.dorako-ui .jump-to-bottom {
   border: none;
   border-radius: 3px;
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
-  margin-left: 5px;
-  width: 288px;
-  text-shadow: 0px 0px 3px black;
-  background-color: var(--glass-bg-dark);
+  z-index: 1;
+  margin-left: 50px;
+  width: calc(100% - 100px);
+  text-shadow: none;
+  background-color: rgba(236, 191, 65, 0.8666666667);
+  color: black;
 }
-#sidebar .dorako-ui .jump-to-bottom:hover {
-  background-color: var(--primary-light);
-  text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+.dorako-ui .jump-to-bottom:hover {
+  background-color: rgba(255, 219, 119, 0.8666666667);
+}
+.dorako-ui .jump-to-bottom:hover a {
+  text-shadow: none;
 }
 
 #token-hud .status-effects {
@@ -1393,10 +1414,10 @@ section.chat-sidebar {
 .placeable-hud .control-icon[data-action=overhead]:hover:hover, .placeable-hud .control-icon[data-action=overhead].active:hover, .placeable-hud .control-icon[data-action=underfoot]:hover:hover, .placeable-hud .control-icon[data-action=underfoot].active:hover {
   background-color: var(--primary-light);
 }
-.placeable-hud .control-icon[data-action=sort-up]:hover, .placeable-hud .control-icon[data-action=sort-down]:hover, .placeable-hud .control-icon[data-action=config]:hover, .placeable-hud .control-icon[data-action=trigger]:hover {
+.placeable-hud .control-icon[data-action=sort-up]:hover, .placeable-hud .control-icon[data-action=sort-down]:hover, .placeable-hud .control-icon[data-action=config]:hover, .placeable-hud .control-icon[data-action=trigger]:hover, .placeable-hud .control-icon[data-action=pf2e-perception]:hover {
   background-color: var(--primary);
 }
-.placeable-hud .control-icon[data-action=sort-up]:hover > img, .placeable-hud .control-icon[data-action=sort-down]:hover > img, .placeable-hud .control-icon[data-action=config]:hover > img, .placeable-hud .control-icon[data-action=trigger]:hover > img {
+.placeable-hud .control-icon[data-action=sort-up]:hover > img, .placeable-hud .control-icon[data-action=sort-down]:hover > img, .placeable-hud .control-icon[data-action=config]:hover > img, .placeable-hud .control-icon[data-action=trigger]:hover > img, .placeable-hud .control-icon[data-action=pf2e-perception]:hover > img {
   filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
 .placeable-hud .control-icon[data-action=visibility], .placeable-hud .control-icon[data-action=effects], .placeable-hud .control-icon[data-action=combat], .placeable-hud .control-icon[data-action=locked], .placeable-hud .control-icon[data-action=target], .placeable-hud .control-icon[data-action=active], .placeable-hud .control-icon[data-action=mystify] {

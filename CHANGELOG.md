@@ -1,3 +1,9 @@
+# 2.3.0
+
+- (Module) Added support for PF2e Utility Buttons (formerly flatcheck-helper)
+- (New) :pacman:'d the Sidebar Resizer module, with some improvements to functionality
+- (Refinement) Updated the jump-to chatlog button to be more visible, and is now properly centered even on wider chatlogs
+
 # 2.2.5
 
 - (SWADE) Fix a regression causing non-journal application windows to not be tagged as "premium" and thus render with incorrect backgrounds

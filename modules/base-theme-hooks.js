@@ -65,11 +65,11 @@ Hooks.on("renderTokenActionHUD", (app, html, data) => {
   // reconsider logic
   if (game.modules.get("token-action-hud")?.active && game.settings.get("token-action-hud", "style") === "dorakoUI") {
     let html0 = html[0];
-    console.debug(`${MODULE_NAME}  | render${app.constructor.name} => add .dorako-ui`);
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} => add .dorako-ui`);
     html0.classList.add("dorako-ui");
     return;
   }
-  console.debug(`${MODULE_NAME}  | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
+  console.debug(`${MODULE_NAME} | render${app.constructor.name} but style !== "dorakoUI" => do not add .dorako-ui`);
 });
 
 // Add .dorako-ui to all .dialog applications
@@ -82,10 +82,10 @@ Hooks.on("renderDialog", (app, html, data) => {
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | pushing .dorako-ui class option`);
   // console.debug({ app });
   app.options?.classes?.push("dorako-ui");
-  // let position = app.position;
-  // position.height += 6;
-  // position.width += 6;
-  // app.setPosition(position);
+  let position = app.position;
+  position.height += 6;
+  position.width += 6;
+  app.setPosition(position);
   app.render();
 });
 

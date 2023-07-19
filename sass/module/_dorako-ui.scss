@@ -2,6 +2,29 @@
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
 
+#sidebar {
+  --sidebarWidth: 300px;
+  width: var(--sidebarWidth);
+  & > .dorako-resize {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    cursor: col-resize;
+  }
+}
+
+#chat-form {
+  --chatformHeight: 100px;
+  flex: 0 0 var(--chatformHeight);
+  > .dorako-resize {
+    width: 100%;
+    height: 4px;
+    position: fixed;
+    cursor: row-resize;
+  }
+}
+
 #chat-controls.no-chat-control-icon {
   .chat-control-icon {
     display: none;
@@ -28,9 +51,9 @@
   justify-content: center;
 }
 
-#chat-form {
-  flex: 0 0 var(--chat-input-height) !important; // Inline style overwrite
-}
+// #chat-form {
+//   flex: 0 0 var(--chat-input-height) !important; // Inline style overwrite
+// }
 
 #players.dorako-ui h3 {
   border: none;

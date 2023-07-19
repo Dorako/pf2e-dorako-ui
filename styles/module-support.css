@@ -577,6 +577,29 @@ div#scrollToBottom:hover {
 /* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
+#sidebar {
+  --sidebarWidth: 300px;
+  width: var(--sidebarWidth);
+}
+#sidebar > .dorako-resize {
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  cursor: col-resize;
+}
+
+#chat-form {
+  --chatformHeight: 100px;
+  flex: 0 0 var(--chatformHeight);
+}
+#chat-form > .dorako-resize {
+  width: 100%;
+  height: 4px;
+  position: fixed;
+  cursor: row-resize;
+}
+
 #chat-controls.no-chat-control-icon .chat-control-icon {
   display: none;
 }
@@ -597,10 +620,6 @@ div#scrollToBottom:hover {
 #ui-bottom.centered {
   display: flex;
   justify-content: center;
-}
-
-#chat-form {
-  flex: 0 0 var(--chat-input-height) !important;
 }
 
 #players.dorako-ui h3 {
@@ -2668,6 +2687,17 @@ body.system-swade {
   background: none !important;
 }
 
+#module-management.dorako-ui .package-list .package .package-overview .tag.expand {
+  color: inherit;
+  background: inherit;
+  border: none;
+  margin-bottom: unset;
+  margin-top: unset;
+}
+#module-management.dorako-ui .package-list .package .package-overview .tag.expand:hover {
+  background-color: var(--primary);
+}
+
 /* ----------------------------------------- */
 /* Dice Stats                                */
 /* ----------------------------------------- */
@@ -2945,6 +2975,64 @@ body.system-swade {
 }
 #pf2e-token-hud.dorako-ui .inner i.fa-solid.fa-dumbbell {
   color: darkolivegreen;
+}
+
+#fc-container button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+#fc-container button:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+#fc-container button:hover svg {
+  filter: drop-shadow(0px 0px 3px black);
+}
+#fc-container button:hover svg * {
+  fill: var(--color-text-light-highlight);
+}
+
+#initiative-delay,
+#initiative-return {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-heading);
+}
+#initiative-delay:hover,
+#initiative-return:hover {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+}
+#initiative-delay:hover svg,
+#initiative-return:hover svg {
+  filter: drop-shadow(0px 0px 3px black);
+}
+#initiative-delay:hover svg *,
+#initiative-return:hover svg * {
+  fill: var(--color-text-light-highlight);
 }
 
 /*# sourceMappingURL=module-support.css.map */
