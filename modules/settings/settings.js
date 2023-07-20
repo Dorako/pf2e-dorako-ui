@@ -100,10 +100,6 @@ Hooks.once("init", async () => {
   const root = document.querySelector(":root").style;
 
   root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
-  root.setProperty(
-    "--chat-input-height",
-    game.settings.get("pf2e-dorako-ui", "ux.chat-input-height").toString() + "px"
-  );
 
   util.debug("injected sheets");
 });

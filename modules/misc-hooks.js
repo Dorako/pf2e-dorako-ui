@@ -273,7 +273,7 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
   $("<div>")
     .addClass("form-group dorako-ui settings-header")
     .html(i18n("pf2e-dorako-ui.settings.ux.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.ux.hint")}</p>`)
-    .insertBefore($('[name="pf2e-dorako-ui.ux.chat-input-height"]').parents("div.form-group:first"));
+    .insertBefore($('[name="pf2e-dorako-ui.ux.restructure-card-info"]').parents("div.form-group:first"));
   $("<div>")
     .addClass("form-group dorako-ui settings-header")
     .html(

@@ -3,8 +3,6 @@
 /* ----------------------------------------- */
 
 #sidebar {
-  --sidebarWidth: 300px;
-  width: var(--sidebarWidth);
   & > .dorako-resize {
     width: 6px;
     height: 100%;
@@ -50,10 +48,6 @@
   display: flex;
   justify-content: center;
 }
-
-// #chat-form {
-//   flex: 0 0 var(--chat-input-height) !important; // Inline style overwrite
-// }
 
 #players.dorako-ui h3 {
   border: none;

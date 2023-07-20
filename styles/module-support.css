@@ -577,10 +577,6 @@ div#scrollToBottom:hover {
 /* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
-#sidebar {
-  --sidebarWidth: 300px;
-  width: var(--sidebarWidth);
-}
 #sidebar > .dorako-resize {
   width: 6px;
   height: 100%;
@@ -2687,14 +2683,14 @@ body.system-swade {
   background: none !important;
 }
 
-#module-management.dorako-ui .package-list .package .package-overview .tag.expand {
+#module-management.dorako-ui.dark-theme .package-list .package .package-overview .tag.expand {
   color: inherit;
   background: inherit;
   border: none;
   margin-bottom: unset;
   margin-top: unset;
 }
-#module-management.dorako-ui .package-list .package .package-overview .tag.expand:hover {
+#module-management.dorako-ui.dark-theme .package-list .package .package-overview .tag.expand:hover {
   background-color: var(--primary);
 }
 

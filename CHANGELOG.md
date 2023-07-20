@@ -1,3 +1,8 @@
+# 2.3.1
+
+- (Refinement) Did a better job cleaning up the removal of the chat-height setting, which amongst other things caused the 'ux settings' header to disappear from settings. Note that the new 'sidebar resizer' functionality allows you to adjust the height of chatboxes by dragging from the top.
+- (Refinement) Improved sidebar resizing functionality so it plays nicer with modules that need to know the width of the sidebar
+
 # 2.3.0
 
 - (Module) Added support for PF2e Utility Buttons (formerly flatcheck-helper)

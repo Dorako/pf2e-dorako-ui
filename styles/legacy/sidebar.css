@@ -164,10 +164,6 @@ nav.damage-log-nav.tabs {
 }
 
 
-#chat-form {
-    flex: 0 0 var(--chat-input-height);
-}
-
 #chat-form textarea {
     max-height: var(--chat-input-height);
     height: 100%;

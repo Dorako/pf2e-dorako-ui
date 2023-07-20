@@ -24,10 +24,11 @@ function _assignSidebarResizer(sidebar) {
   // Perform the resize operation
   function resize(e) {
     newSize = Math.round(startSize + mouseStart - e.clientX);
+    const root = document.querySelector(":root");
     if (newSize >= minSize) {
-      sidebar.style.setProperty("--sidebarWidth", `${newSize}px`);
+      root.style.setProperty("--sidebar-width", `${newSize}px`);
     } else {
-      sidebar.style.setProperty("--sidebarWidth", `${minSize}px`);
+      root.style.setProperty("--sidebar-width", `${minSize}px`);
     }
   }
 
@@ -199,8 +200,8 @@ Hooks.once("renderSidebarTab", function () {
   const storedSidebarWidth = window.localStorage.getItem("pf2e-dorako-ui.sidebar-width");
   if (!storedSidebarWidth) return;
   if (Number.isInteger(+storedSidebarWidth)) {
-    const sidebar = document.querySelector("#sidebar");
-    sidebar.style.setProperty("--sidebarWidth", `${storedSidebarWidth}px`);
+    const root = document.querySelector(":root");
+    root.style.setProperty("--sidebar-width", `${storedSidebarWidth}px`);
   }
 });
 
