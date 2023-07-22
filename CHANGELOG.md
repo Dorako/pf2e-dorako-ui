@@ -1,3 +1,8 @@
+# 2.3.2
+
+- (Maintenance) Small adjustments to NPC sheet sidebar to keep up with system style changes
+- (Maintenance) Keep up to date with renamed effect panel in 5.2.1
+
 # 2.3.1
 
 - (Refinement) Did a better job cleaning up the removal of the chat-height setting, which amongst other things caused the 'ux settings' header to disappear from settings. Note that the new 'sidebar resizer' functionality allows you to adjust the height of chatboxes by dragging from the top.
