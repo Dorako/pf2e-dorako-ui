@@ -47,8 +47,13 @@
         margin-bottom: 2px;
       }
 
+      .side-bar-section-header {
+        align-items: center;
+        margin-bottom: unset;
+      }
+
       &.collapsed {
-        max-height: 20px;
+        max-height: 24px;
         transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 
         .side-bar-section-header {
@@ -153,7 +158,7 @@
     color: #f5efe0;
     box-shadow: inset 0 0 3px rgb(255 255 255 / 50%);
     margin-top: 0px;
-    height: 20px;
+    height: 24px;
 
     &.disabled {
       border-radius: 3px;

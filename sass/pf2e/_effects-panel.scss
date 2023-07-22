@@ -2,7 +2,7 @@
   position: relative; // The panel is positioned relative to this element
 }
 
-.effect-panel.dorako-ui {
+#effects-panel.dorako-ui {
   pointer-events: initial;
   position: absolute;
   top: 5px;
@@ -18,7 +18,6 @@
   &::-webkit-scrollbar-track {
     box-shadow: none;
   }
-
   .effect-item {
     display: flex;
     justify-content: flex-end;
