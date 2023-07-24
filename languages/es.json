@@ -135,7 +135,7 @@
         },
         "adjust-token-effects-hud": {
           "name": "¿Ajustar la interfaz de efectos para los token?",
-          "hint": "(Experimental) Hace que los efectos sean circulares y los coloca fuera del token, o en el anillo del token para tokens de mayor tamaño"
+          "hint": "Hace que los efectos sean circulares y los coloca fuera del token, o en el anillo del token para tokens de mayor tamaño"
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "¿Eliminar la información sobre el ataque en los mensajes de daño?",
@@ -186,6 +186,14 @@
             "none": "Deshabilitado"
           },
           "hint": "Configura los avatares de los usuarios haciendo clic derecho en la lista de jugadores abajo a la izquierda en Foundry"
+        },
+        "enable-rolltype-indication": {
+          "name": "¿Activar la etiqueta de tipo de tirada?",
+          "hint": "Agrega una etiqueta con el tipo de tiradas en los mensajes de chat"
+        },
+        "no-compendium-banner-images": {
+          "name": "¿Ocultar las imágenes de la cabecera de los compendios?",
+          "hint": "Elimina las imágenes de las cabeceras de los compendios de la barra lateral"
         }
       },
       "misc": {
