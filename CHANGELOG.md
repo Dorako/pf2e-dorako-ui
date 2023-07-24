@@ -1,3 +1,7 @@
+# 2.3.3
+
+- (Maintenance) Update to make Familiar sheets render correctly with dark theme enabled
+
 # 2.3.2
 
 - (Maintenance) Small adjustments to NPC sheet sidebar to keep up with system style changes

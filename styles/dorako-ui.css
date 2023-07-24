@@ -1446,6 +1446,9 @@ section.chat-sidebar {
   filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
 
+.dorako-ui.sheet.familiar form {
+  background: unset;
+}
 .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image {
   border: none;
   margin: 2px;

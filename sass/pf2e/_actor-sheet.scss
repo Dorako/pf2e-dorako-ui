@@ -1,5 +1,9 @@
 // prettier-ignore
 .dorako-ui {
+  &.sheet.familiar form {
+    background: unset;
+  }
+
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image {
     @include gold-border;
     border-radius: 2px;
