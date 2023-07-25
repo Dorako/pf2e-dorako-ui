@@ -4,6 +4,7 @@ import { UXSettings } from "./ux-settings.js";
 import { AvatarSettings } from "./avatar-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
+import { ExternalModuleSettings } from "./external-module-settings.js";
 
 function injectCSS(filename) {
   const head = document.getElementsByTagName("head")[0];
@@ -49,47 +50,12 @@ Hooks.once("init", async () => {
     type: String,
   });
 
-  // game.settings.registerMenu("pf2e-dorako-ui", "theme", {
-  //   name: "pf2e-dorako-ui.settings.theme.name",
-  //   label: "pf2e-dorako-ui.settings.theme.label",
-  //   hint: "pf2e-dorako-ui.settings.theme.hint",
-  //   icon: "fas fa-adjust",
-  //   type: ThemeSettings,
-  //   restricted: false,
-  // });
   ThemeSettings.registerSettings();
-
-  // game.settings.registerMenu("pf2e-dorako-ui", "avatar", {
-  //   name: "pf2e-dorako-ui.settings.avatar.name",
-  //   label: "pf2e-dorako-ui.settings.avatar.label",
-  //   hint: "pf2e-dorako-ui.settings.avatar.hint",
-  //   icon: "fas fa-circle-user",
-  //   type: AvatarSettings,
-  //   restricted: false,
-  // });
   AvatarSettings.registerSettings();
-
-  // game.settings.registerMenu("pf2e-dorako-ui", "ux", {
-  //   name: "pf2e-dorako-ui.settings.ux.name",
-  //   label: "pf2e-dorako-ui.settings.ux.label",
-  //   hint: "pf2e-dorako-ui.settings.ux.hint",
-  //   icon: "fas fa-sliders",
-  //   type: UXSettings,
-  //   restricted: false,
-  // });
   UXSettings.registerSettings();
-
-  // game.settings.registerMenu("pf2e-dorako-ui", "misc", {
-  //   name: "pf2e-dorako-ui.settings.misc.name",
-  //   label: "pf2e-dorako-ui.settings.misc.label",
-  //   hint: "pf2e-dorako-ui.settings.misc.hint",
-  //   icon: "fas fa-question-circle",
-  //   type: MiscSettings,
-  //   restricted: false,
-  // });
   MiscSettings.registerSettings();
-
   CustomizationSettings.registerSettings();
+  ExternalModuleSettings.registerSettings();
 
   util.debug("registered settings");
 

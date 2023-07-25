@@ -1,3 +1,8 @@
+# 2.3.5
+
+- (Refinement) Added a new section in settings related to customizing other modules. The section only shows if you have a module with supported customizations active.
+- (Refinement) Added a setting to customize whether PF2e Interactive Tooltip uses a monochrome or colorized suite of icons
+
 # 2.3.4
 
 - (Maintenance) Update styling so inline checks are legible in dark theme once again

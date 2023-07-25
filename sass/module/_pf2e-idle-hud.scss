@@ -30,6 +30,7 @@
 
   .sidebar.spells .entry .spell .details .extras .actions {
     text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+    color: #f8f8f8;
   }
 
   .distance,
@@ -142,7 +143,7 @@
 }
 
 /* Symon Custom CSS */
-#pf2e-token-hud.dorako-ui .inner i {
+#pf2e-token-hud.dorako-ui.colorized .inner i {
   text-shadow: 0px 0px 35px white, 0px 1px 1px black;
   &.fa-solid.fa-circle-h {
     color: darkgoldenrod;

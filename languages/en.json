@@ -216,6 +216,16 @@
           "name": "Custom CSS",
           "hint": "Write CSS in an external editor and paste it in here"
         }
+      },
+      "external-module": {
+        "name": "External Module Settings",
+        "label": "",
+        "hint": "Adjustments for how other modules are affected by Dorako UI",
+
+        "colorize-idle-hud": {
+          "name": "Colorize PF2e Interactive Token Tooltip?",
+          "hint": "Applies a colorized theme to the icons in the main tooltip"
+        }
       }
     }
   }
