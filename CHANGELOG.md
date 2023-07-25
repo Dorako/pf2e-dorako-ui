@@ -1,3 +1,8 @@
+# 2.3.4
+
+- (Maintenance) Update styling so inline checks are legible in dark theme once again
+- (Refinement) Update sidebar resizer functionality to also work for popped out journal directory and settings
+
 # 2.3.3
 
 - (Maintenance) Update to make Familiar sheets render correctly with dark theme enabled

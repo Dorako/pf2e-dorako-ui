@@ -190,6 +190,28 @@ Hooks.once("ready", function () {
       },
       "WRAPPER"
     );
+    libWrapper.register(
+      "pf2e-dorako-ui",
+      "JournalDirectory.defaultOptions",
+      function (wrapped, ...args) {
+        let result = wrapped(...args);
+        result.resizable = true;
+        result.height = parseInt($("#board").css("height")) / _poppedOutSizeDenominator;
+        return result;
+      },
+      "WRAPPER"
+    );
+    libWrapper.register(
+      "pf2e-dorako-ui",
+      "Settings.defaultOptions",
+      function (wrapped, ...args) {
+        let result = wrapped(...args);
+        result.resizable = true;
+        result.height = parseInt($("#board").css("height")) / _poppedOutSizeDenominator;
+        return result;
+      },
+      "WRAPPER"
+    );
   } else {
     console.warn(`${MODULE_NAME} | libwrapper not enabled, resizing of popped-out sidebars will be limited`);
   }
