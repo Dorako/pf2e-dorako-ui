@@ -362,6 +362,14 @@
           "hint": "Écrivez du CSS dans un éditeur extérieur et copiez le ici"
         },
         "hint": "Faites des changements personnalisés en utilisant un CSS personnalisé ou en retirant certains styles de Dorako UI"
+      },
+      "external-module": {
+        "name": "Réglages du module externe",
+        "hint": "Ajustements concernant la manière dont les autres modules sont affectés par Dorako UI",
+        "colorize-idle-hud": {
+          "name": "Coloriser PF2e Interactive Token Tooltip ?",
+          "hint": "Applique un thème coloré aux icônes de l'infobulle principale"
+        }
       }
     }
   }
