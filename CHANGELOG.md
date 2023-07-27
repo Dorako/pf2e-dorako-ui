@@ -1,3 +1,7 @@
+# 2.3.6
+
+- (Maintenance) Update styling so templates and broken links are legible in dark theme once again
+
 # 2.3.5
 
 - (Refinement) Added a new section in settings related to customizing other modules. The section only shows if you have a module with supported customizations active.

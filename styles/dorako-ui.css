@@ -1971,7 +1971,7 @@ section.chat-sidebar {
 #effects-panel.dorako-ui .effect-item .icon.aura {
   border-radius: 5px;
   transform: scale(0.8);
-  box-shadow: 0 0 10px 3px var(--tertiary), 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 10px 3px var(--tertiary);
 }
 #effects-panel.dorako-ui .effect-item .icon .expired {
   position: absolute;
@@ -3659,19 +3659,17 @@ a.content-link,
 [data-pf2-check],
 a.entity-link,
 [data-pf2-action],
-[data-pf2-effect-area],
-a.inline-roll {
+span[data-pf2-effect-area],
+a.inline-check .label,
+a.inline-roll:not(.inline-result) {
+  font-weight: 400;
+  color: black;
   text-shadow: none !important;
 }
 
-a.content-link,
-[data-pf2-check],
-a.entity-link,
-[data-pf2-action],
-[data-pf2-effect-area],
-a.inline-check .label,
-a.inline-roll:not(.inline-result) {
-  color: black;
+.dorako-ui.dark-theme a.content-link.broken {
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
 }
 
 .dorako-ui.message.chat-message.dark-theme a.inline-roll {
@@ -3680,6 +3678,7 @@ a.inline-roll:not(.inline-result) {
 
 i[data-pf2-repost] {
   top: 0px;
+  cursor: pointer;
 }
 
 .app.sheet.actor p,

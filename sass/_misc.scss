@@ -6,19 +6,19 @@ a.content-link,
 [data-pf2-check],
 a.entity-link,
 [data-pf2-action],
-[data-pf2-effect-area],
-a.inline-roll {
+span[data-pf2-effect-area],
+a.inline-check .label,
+a.inline-roll:not(.inline-result) {
+  font-weight: 400;
+  color: black;
   text-shadow: none !important;
 }
 
-a.content-link,
-[data-pf2-check],
-a.entity-link,
-[data-pf2-action],
-[data-pf2-effect-area],
-a.inline-check .label,
-a.inline-roll:not(.inline-result) {
-  color: black;
+.dorako-ui.dark-theme {
+  a.content-link.broken {
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+  }
 }
 
 .dorako-ui.message.chat-message.dark-theme a.inline-roll {
@@ -27,6 +27,7 @@ a.inline-roll:not(.inline-result) {
 
 i[data-pf2-repost] {
   top: 0px;
+  cursor: pointer;
 }
 
 // system uses 500, which makes it hard to tell whether something is bolded
