@@ -123,6 +123,32 @@
       }
     }
   }
+
+  &.placeable-hud .control-icon {
+    .effect-control.valued .badge,
+    .effect-control .badge {
+      font-size: var(--font-size-16);
+      font-weight: 600;
+      line-height: var(--font-size-17);
+      border-radius: 0px 3px 0px 3px;
+      background: var(--primary-light);
+      // background: white;
+      margin: 1px;
+      // color: black;
+      color: white;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+      height: 1.1rem;
+      width: 1.1rem;
+      border: 1px solid var(--gold-brown);
+      box-shadow: -1px 1px 0px var(--tertiary);
+    }
+
+    .badge.fa-lock:before {
+      position: relative;
+      top: -2.5px;
+      font-size: var(--font-size-10);
+    }
+  }
 }
 
 .placeable-hud {

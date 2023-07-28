@@ -1377,6 +1377,26 @@ section.chat-sidebar {
 #token-hud .status-effects .title-bar.active {
   visibility: visible;
 }
+#token-hud.placeable-hud .control-icon .effect-control.valued .badge,
+#token-hud.placeable-hud .control-icon .effect-control .badge {
+  font-size: var(--font-size-16);
+  font-weight: 600;
+  line-height: var(--font-size-17);
+  border-radius: 0px 3px 0px 3px;
+  background: var(--primary-light);
+  margin: 1px;
+  color: white;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  height: 1.1rem;
+  width: 1.1rem;
+  border: 1px solid var(--gold-brown);
+  box-shadow: -1px 1px 0px var(--tertiary);
+}
+#token-hud.placeable-hud .control-icon .badge.fa-lock:before {
+  position: relative;
+  top: -2.5px;
+  font-size: var(--font-size-10);
+}
 
 .placeable-hud input[type=text] {
   border: none;
@@ -1908,6 +1928,9 @@ section.chat-sidebar {
   padding: 4px 8px;
   backdrop-filter: blur(5px);
   z-index: var(--z-index-tooltip);
+}
+#effects-panel.dorako-ui .effect-item .effect-info .description {
+  background: unset;
 }
 #effects-panel.dorako-ui .effect-item .effect-info a:not(.content-link) {
   border: none;
@@ -3670,6 +3693,14 @@ a.inline-roll:not(.inline-result) {
 .dorako-ui.dark-theme a.content-link.broken {
   background: rgba(255, 0, 0, 0.5);
   color: white;
+}
+
+.pf2e-av .journal-page-content a.inline-check > i.icon,
+.pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
+.pf2e-av .journal-page-content [data-pf2-repost] .label,
+.pf2e-av .journal-page-content [data-pf2-check] .label,
+.pf2e-av .journal-page-content [data-pf2-check]:not([data-pf2-show-dc=gm]) .label {
+  color: var(--av-green-light);
 }
 
 .dorako-ui.message.chat-message.dark-theme a.inline-roll {

@@ -1,3 +1,9 @@
+# 2.3.7
+
+- (Maintenance) Updated styling of effect panel information to avoid new solid background introduced by system change
+- (Refinement) Styled the effect badges in the token HUD. They're now larger.
+- (Maintenance) Fiddled with the inline buttons/checks/links again to resolve an issue in AV journals. Let me know if other premium module journals are affected.
+
 # 2.3.6
 
 - (Maintenance) Update styling so templates and broken links are legible in dark theme once again
