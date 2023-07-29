@@ -4,6 +4,9 @@ import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleS
 for (const appName of [...baseThemeApplications]) {
   Hooks.on("render" + appName, (app, html, data) => {
     if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
+
+    // ? To bad this isn't an array, it would make it easier to manage, this may also match against more than its supposed to
+    // ? For example if a Module as a name of Windows but you exclude WindowsTabs, Both apps will match and be exlcuded.
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
     if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
       console.debug(
@@ -11,6 +14,12 @@ for (const appName of [...baseThemeApplications]) {
       );
       return;
     }
+
+    // Get Array of Excluded Apps from API
+    const apiExcludedApps = game.modules.get(MODULE_NAME).api.excludedApplications;
+    // If AppName is in the array, do not add .dorako-ui
+    if (apiExcludedApps.includes(appName.toLowerCase())) return (console.debug(`${MODULE_NAME} | render${app.constructor.name} | is has been excluded via the api => do not add .dorako-ui`));
+
     let html0 = html[0];
     console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
     // console.debug({ app });
