@@ -1,3 +1,10 @@
+# 2.3.8
+
+- (New) Added a new "green" option for chat message headers. The color is based on the "Remaster" color scheme.
+- (Module) Added support for the Window Tabs module. The module provides its own style support for Dorako UI, this change just ensures it plays nice with dark theme.
+- (Maintenance) Readded a padding the system had removed that caused vertical bars in spell footers to hug the text too tightly.
+- (Maintenance) Removed a padding the system had added to template buttons that caused the 'repost' button to be offset from the edge.
+
 # 2.3.7
 
 - (Maintenance) Updated styling of effect panel information to avoid new solid background introduced by system change

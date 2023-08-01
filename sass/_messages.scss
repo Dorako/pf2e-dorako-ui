@@ -395,6 +395,7 @@
 
         span {
           border-right: 1px solid gray;
+          padding-right: 5px; // Undoes 0px set by system
         }
       }
     }

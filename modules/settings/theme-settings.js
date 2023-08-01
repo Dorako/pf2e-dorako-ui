@@ -40,6 +40,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         choices: {
           red: "pf2e-dorako-ui.settings.theme.header-style.choice.red",
           blue: "pf2e-dorako-ui.settings.theme.header-style.choice.blue",
+          green: "pf2e-dorako-ui.settings.theme.header-style.choice.green",
           tint: "pf2e-dorako-ui.settings.theme.header-style.choice.tint",
           none: "pf2e-dorako-ui.settings.theme.header-style.choice.none",
         },

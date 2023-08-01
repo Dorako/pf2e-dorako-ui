@@ -12,7 +12,7 @@ export const darkThemeCompatibleModuleApplications = ["PartyOverviewApp","RollPr
 // prettier-ignore
 export const dorakoUiApplications = ["AvatarSettings","MiscSettings","ThemeSettings","UXSettings"]
 // prettier-ignore
-export const darkThemeIncompatibleApplications = ["SwadeVehicleSheet","SwadeNPCSheet","JournalSheet","CharacterSheet","Tokenizer","JournalTextTinyMCESheetPF2e","JournalTextPageSheet","AbilityBuilderPopup","TokenActionHUD","CustomHotbar","SceneDarknessAdjuster","EffectsPanel","Notifications", "Pause","TokenHUD","HeadsUpDisplay","Sidebar","HotbarPF2e","SceneNavigation", "SceneControls","PlayerList", "ImagePopout","EnhancedJournal","JournalSheetPF2e"]
+export const darkThemeIncompatibleApplications = ["WindowTabs","Ye","SwadeVehicleSheet","SwadeNPCSheet","JournalSheet","CharacterSheet","Tokenizer","JournalTextTinyMCESheetPF2e","JournalTextPageSheet","AbilityBuilderPopup","TokenActionHUD","CustomHotbar","SceneDarknessAdjuster","EffectsPanel","Notifications", "Pause","TokenHUD","HeadsUpDisplay","Sidebar","HotbarPF2e","SceneNavigation", "SceneControls","PlayerList", "ImagePopout","EnhancedJournal","JournalSheetPF2e"]
 // prettier-ignore
 export const exclusivelyDarkApplications = ["FABattlemaps", "FADownloader"]
 

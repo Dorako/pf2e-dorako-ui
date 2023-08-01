@@ -480,6 +480,8 @@ function getHeaderColor(html, message) {
     return "#191F65";
   } else if (headerStyle === "red") {
     return "#540C06";
+  } else if (headerStyle === "green") {
+    return "#002A17";
   } else if (headerStyle === "none") {
     return null;
   }

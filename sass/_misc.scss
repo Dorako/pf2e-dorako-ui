@@ -14,6 +14,12 @@ a.inline-roll:not(.inline-result) {
   text-shadow: none !important;
 }
 
+// Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
+span[data-pf2-effect-area].with-repost {
+  padding: 0px;
+  padding-left: 4px;
+}
+
 .dorako-ui.dark-theme {
   a.content-link.broken {
     background: rgba(255, 0, 0, 0.5);

@@ -2997,6 +2997,7 @@ section.chat-sidebar {
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-footer span {
   border-right: 1px solid gray;
+  padding-right: 5px;
 }
 .dorako-ui.message.chat-message [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   border-radius: 3px;
@@ -3688,6 +3689,11 @@ a.inline-roll:not(.inline-result) {
   font-weight: 400;
   color: black;
   text-shadow: none !important;
+}
+
+span[data-pf2-effect-area].with-repost {
+  padding: 0px;
+  padding-left: 4px;
 }
 
 .dorako-ui.dark-theme a.content-link.broken {

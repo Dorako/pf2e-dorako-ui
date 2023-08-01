@@ -71,6 +71,7 @@
           "choice": {
             "red": "Red",
             "blue": "Blue",
+            "green": "Green",
             "tint": "Player color",
             "none": "Disabled"
           }
