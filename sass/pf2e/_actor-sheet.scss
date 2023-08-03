@@ -52,7 +52,9 @@
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability,
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod {
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
     border-image-source: var(--ornamentation);
   }
 

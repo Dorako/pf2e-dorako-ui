@@ -1,3 +1,7 @@
+# 2.3.9
+
+- (Maintenance) Updated styling and code to account for renaming of Ability Scores to Attributes, to ensure compability with PF2e System 5.3.0
+
 # 2.3.8
 
 - (New) Added a new "green" option for chat message headers. The color is based on the "Remaster" color scheme.

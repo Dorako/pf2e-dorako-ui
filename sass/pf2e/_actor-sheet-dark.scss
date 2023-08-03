@@ -105,7 +105,9 @@
     color: var(--tertiary);
   }
 
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id {
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-id {
     color: var(--tertiary);
   }
 
