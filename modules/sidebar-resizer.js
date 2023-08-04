@@ -213,7 +213,7 @@ Hooks.once("ready", function () {
       "WRAPPER"
     );
   } else {
-    console.warn(`${MODULE_NAME} | libwrapper not enabled, resizing of popped-out sidebars will be limited`);
+    console.warn(`pf2e-dorako-ui | libwrapper not enabled, resizing of popped-out sidebars will be limited`);
   }
 });
 

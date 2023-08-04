@@ -62,6 +62,12 @@ Hooks.on("renderApplication", (app, html, data) => {
   if (theme === "no-theme") {
     return;
   }
+
+  // Get Array of Excluded Apps from API
+  const apiExcludedApps = game.modules.get(MODULE_NAME).api.excludedApplications;
+  // If AppName is in the array, do not add .dorako-ui
+  if (apiExcludedApps.includes(app.constructor.name.toLowerCase())) return (console.debug(`${MODULE_NAME} | render${app.constructor.name} | has been excluded via the api => do not add .dorako-ui`));
+
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | is .window-app => add .dorako-ui`);
   html0.classList.add("dorako-ui");
 });

@@ -113,9 +113,17 @@ for (const app of ["Application", ...baseThemePf2eSheets]) {
       return;
     }
     if (!html0.classList.contains("app")) return;
+
+    // Get Array of Excluded Apps from API
+    const apiExcludedApps = game.modules.get(MODULE_NAME).api.excludedApplications;
+    // If AppName is in the array, do not add .dorako-ui
+    if (apiExcludedApps.includes(app.constructor.name.toLowerCase())) return (console.debug(`${MODULE_NAME} | render${app.constructor.name} | is has been excluded via the api => do not add .dorako-ui`));
+    
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}`);
     html0.classList.add("dorako-ui");
-    html0.classList.add("dark-theme");
+
+    // If app.options.dorakoDarkTheme is not False, add .dark-theme
+    if (app?.options?.dorakoDarkTheme !== false) html0.classList.add("dark-theme");
   });
 }
 

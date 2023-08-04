@@ -5,6 +5,7 @@ import { AvatarSettings } from "./avatar-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
+import { MODULE_NAME } from "../consts.js";
 
 function injectCSS(filename) {
   const head = document.getElementsByTagName("head")[0];
@@ -56,6 +57,18 @@ Hooks.once("init", async () => {
   MiscSettings.registerSettings();
   CustomizationSettings.registerSettings();
   ExternalModuleSettings.registerSettings();
+
+  // Register API for Module
+  game.modules.get(MODULE_NAME).api = {
+    excludedApplications: [],
+    registerExcludeApplication: (constructorName) => {
+      // Get the current list of excluded applications as a set to avoid duplicates
+      // Conver to lowercase for case-insensitive comparison
+      let excludedApplications = new Set([...game.modules.get(MODULE_NAME).api.excludedApplications, constructorName.toLowerCase()]);
+      // Update the setting with the new set as an array
+      game.modules.get(MODULE_NAME).api.excludedApplications = Array.from(excludedApplications);
+    }
+  }
 
   util.debug("registered settings");
 
