@@ -8,6 +8,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
     "application-theme",
     "chat-theme",
     "header-style",
+    "pc-sheet-theme",
     "frosted-glass",
     "glass-bg",
     "enable-dark-theme-journals",
@@ -46,6 +47,26 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         },
         requiresReload: false,
         onChange: refreshChat,
+      },
+      "pc-sheet-theme": {
+        name: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.hint",
+        scope: "client",
+        config: true,
+        default: "red",
+        type: String,
+        choices: {
+          red: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.choice.red",
+          blue: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.choice.blue",
+          green: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.choice.green",
+        },
+        requiresReload: false,
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
       },
       "frosted-glass": {
         name: "pf2e-dorako-ui.settings.theme.frosted-glass.name",

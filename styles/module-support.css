@@ -28,6 +28,9 @@
   --secondary-light: #2836b7;
   --secondary-dark: #0d113a;
   --tertiary: #e9d7a1;
+  --remaster: hsl(152, 87%, 15%);
+  --remaster-light: hsl(170, 96%, 19%);
+  --remaster-dark: hsl(153, 100%, 8%);
   --rarity-common: #323232;
   --rarity-uncommon: #98513d;
   --rarity-rare: #002664;
@@ -81,9 +84,9 @@
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
-  --header: url(../img/blue_header.webp);
-  --banner-top: url(../img/blue_sidebar_top.webp);
-  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
+  --header: url(../img/blue-header.webp);
+  --banner-top: url(../img/blue-sidebar-top.webp);
+  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
 }
 
 /* ----------------------------------------- */

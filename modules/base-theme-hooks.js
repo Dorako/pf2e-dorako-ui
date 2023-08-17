@@ -127,6 +127,7 @@ for (const app of [...baseThemePf2eSheets]) {
     );
     html0.classList.add("dorako-ui");
     html.find("select.tag").addClass("dorako-ui-skip");
+    html.find("select.pf-rank").addClass("dorako-ui-skip");
     html.find(".initiative-select select").addClass("dorako-ui-skip");
   });
 }
@@ -156,6 +157,12 @@ Hooks.on("renderLootSheetPF2e", (app, html, data) => {
 // Do not style input fields on hazard sheets
 Hooks.on("renderHazardSheetPF2e", (app, html, data) => {
   html.find("input").addClass("dorako-ui-skip");
+});
+
+Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
+  html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
+  html[0].classList.add(`${theme}-theme`);
 });
 
 // Re-organize NPC sheets, do not apply base styling to selects or input fields

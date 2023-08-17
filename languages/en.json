@@ -52,7 +52,12 @@
         },
         "pc-sheet-theme": {
           "name": "PC sheet theme",
-          "hint": "Affects player sheets"
+          "hint": "Affects player sheets",
+          "choice": {
+            "red": "Original Red",
+            "green": "Remaster Green",
+            "blue": "Classic Blue"
+          }
         },
         "loot-sheet-theme": {
           "name": "Loot sheet theme",

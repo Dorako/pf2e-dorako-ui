@@ -51,11 +51,14 @@
     color: var(--half-transparent);
   }
 
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-name,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
     color: var(--color-border-light-primary);
   }
 
   // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute input,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score input {
     background: rgba(211, 204, 188, 0.2);
     box-shadow: none;

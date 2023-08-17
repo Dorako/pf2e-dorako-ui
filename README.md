@@ -137,3 +137,5 @@ Dorako UI's custom settings menu allows you to configure the theme to your likin
 This code is available under the MIT license, see LICENSE.
 
 The sidebar resizing functionality has been adapted from [Sidebar Resizer](https://github.com/saif-ellafi/foundryvtt-sidebar-resizer) also available under the MIT license.
+
+The green PC sheet theme is contributed by Vesselchuck.

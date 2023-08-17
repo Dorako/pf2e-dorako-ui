@@ -1,3 +1,8 @@
+# 2.4.0
+
+- (New) Added a new "PC sheet theme" setting, which allows picking between three color themes.
+- (Maintenance) Adjusted some styling to account for system changes
+
 # 2.3.9
 
 - (Maintenance) Updated styling and code to account for renaming of Ability Scores to Attributes, to ensure compability with PF2e System 5.3.0

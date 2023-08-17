@@ -1,3 +1,5 @@
+import { MODULE_NAME } from "./consts.js";
+
 const _poppedOutSizeDenominator = 1.5;
 
 function _assignSidebarResizer(sidebar) {

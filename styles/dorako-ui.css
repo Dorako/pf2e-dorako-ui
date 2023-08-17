@@ -1590,6 +1590,67 @@ section.chat-sidebar {
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions > div {
   padding-top: 0.5rem;
 }
+.dorako-ui.actor.sheet aside {
+  z-index: 1;
+}
+.dorako-ui.actor.sheet.green-theme .crb-style {
+  background-image: url("../img/green-header.webp"), var(--sheet);
+}
+.dorako-ui.actor.sheet.green-theme .crb-style aside {
+  background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
+}
+.dorako-ui.actor.sheet.green-theme .crb-style aside .logo {
+  filter: grayscale(0.6);
+}
+.dorako-ui.actor.sheet.green-theme .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--remaster) 0%, var(--remaster-light) 50%, var(--remaster) 100%);
+  background-color: var(--remaster);
+}
+.dorako-ui.actor.sheet.green-theme .crb-style aside .sidebar .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+.dorako-ui.actor.sheet.green-theme .crb-style aside .sidebar .initiative-select select {
+  background-color: var(--remaster);
+}
+.dorako-ui.actor.sheet.green-theme .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+.dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation {
+  background: var(--remaster-light);
+}
+.dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation .item:hover,
+.dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../img/green-nav-item.webp");
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style {
+  background-image: url("../img/blue-header.webp"), var(--sheet);
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style aside {
+  background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style aside .logo {
+  filter: grayscale(0.6);
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--secondary) 0%, var(--secondary-light) 50%, var(--secondary) 100%);
+  background-color: var(--secondary);
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style aside .sidebar .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style aside .sidebar .initiative-select select {
+  background-color: var(--secondary);
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation {
+  background: var(--secondary-light);
+}
+.dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item:hover,
+.dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../img/blue-nav-item.webp");
+}
 
 .dorako-ui.dark-theme h4.rarity-common {
   color: var(--rarity-common) !important;
@@ -1639,10 +1700,10 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest {
   color: var(--half-transparent);
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-name, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
   color: var(--color-border-light-primary);
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score input {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute input, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score input {
   background: rgba(211, 204, 188, 0.2);
   box-shadow: none;
 }
@@ -2571,6 +2632,9 @@ section.chat-sidebar {
   --secondary-light: #2836b7;
   --secondary-dark: #0d113a;
   --tertiary: #e9d7a1;
+  --remaster: hsl(152, 87%, 15%);
+  --remaster-light: hsl(170, 96%, 19%);
+  --remaster-dark: hsl(153, 100%, 8%);
   --rarity-common: #323232;
   --rarity-uncommon: #98513d;
   --rarity-rare: #002664;
@@ -2624,9 +2688,9 @@ section.chat-sidebar {
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
-  --header: url(../img/blue_header.webp);
-  --banner-top: url(../img/blue_sidebar_top.webp);
-  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
+  --header: url(../img/blue-header.webp);
+  --banner-top: url(../img/blue-sidebar-top.webp);
+  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
 }
 
 /* ----------------------------------------- */
@@ -2758,6 +2822,70 @@ section.chat-sidebar {
 .dorako-ui.chat-message .message-content .damage-roll .dice-result .dice-total .instances {
   padding-bottom: 4px;
   margin-bottom: 0px;
+}
+
+/* ----------------------------------------- */
+/* .message-header fixes                     */
+/* ----------------------------------------- */
+.chat-message .flavor-text h4.action {
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.chat-message .flavor-text .target-dc-result {
+  line-height: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.chat-message .flavor-text .target-dc-result .target-dc,
+.chat-message .flavor-text .target-dc-result .result {
+  display: block;
+  margin: 1px 0;
+  width: fit-content;
+}
+
+.chat-message .flavor-text .target-dc-result .unadjusted {
+  text-decoration: line-through;
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted {
+  text-decoration: underline dotted;
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: rgb(0, 128, 0);
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: rgb(255, 0, 0);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: rgb(0, 128, 0);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: rgb(0, 0, 255);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: rgb(255, 69, 0);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: rgb(255, 0, 0);
+}
+
+.chat-message .flavor-text .effect {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.chat-message .flavor-text .effect img {
+  height: 32px;
+  width: 32px;
 }
 
 /* ----------------------------------------- */
@@ -3051,6 +3179,9 @@ section.chat-sidebar {
   --secondary-light: #2836b7;
   --secondary-dark: #0d113a;
   --tertiary: #e9d7a1;
+  --remaster: hsl(152, 87%, 15%);
+  --remaster-light: hsl(170, 96%, 19%);
+  --remaster-dark: hsl(153, 100%, 8%);
   --rarity-common: #323232;
   --rarity-uncommon: #98513d;
   --rarity-rare: #002664;
@@ -3104,9 +3235,9 @@ section.chat-sidebar {
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
-  --header: url(../img/blue_header.webp);
-  --banner-top: url(../img/blue_sidebar_top.webp);
-  --banner-bottom: url(../img/blue_sidebar_bottom.webp);
+  --header: url(../img/blue-header.webp);
+  --banner-top: url(../img/blue-sidebar-top.webp);
+  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
 }
 
 /* ----------------------------------------- */
