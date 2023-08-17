@@ -190,7 +190,8 @@
             "red": "Rouge",
             "blue": "Bleu",
             "tint": "Couleur du joueur",
-            "none": "Désactivé"
+            "none": "Désactivé",
+            "green": "Vert"
           }
         },
         "name": "Réglages du thème",

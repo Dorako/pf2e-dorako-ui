@@ -11,7 +11,9 @@
       "light": "Jasny",
       "disabled": "Wyłączony",
       "large-chatlog-warning": "Ze względu na duży log czatu, niektóre ustawienia zostaną zastosowane przy następnym przeładowaniu.",
-      "maybe-reload": "Niektóre zmiany mogą wymagać przeładowania."
+      "maybe-reload": "Niektóre zmiany mogą wymagać przeładowania.",
+      "self-roll": "Rzuć dla siebie",
+      "gm-only": "Tylko GM"
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
@@ -50,7 +52,10 @@
           "name": "Motyw karty PC",
           "hint": "Wpływa na karty graczy"
         },
-        "name": "Ustawienia motywu"
+        "name": "Ustawienia motywu",
+        "loot-sheet-theme": {
+          "hint": "Wpływa na kartę Łupu"
+        }
       }
     }
   }
