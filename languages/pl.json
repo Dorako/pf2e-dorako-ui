@@ -50,11 +50,178 @@
         },
         "pc-sheet-theme": {
           "name": "Motyw karty PC",
-          "hint": "Wpływa na karty graczy"
+          "hint": "Wpływa na karty graczy",
+          "choice": {
+            "green": "Poprawiony Zielony",
+            "blue": "Klasyczny niebieski",
+            "red": "Oryginalny czerwony"
+          }
         },
         "name": "Ustawienia motywu",
         "loot-sheet-theme": {
-          "hint": "Wpływa na kartę Łupu"
+          "hint": "Wpływa na kartę Łupu",
+          "name": "Motyw karty łupu"
+        },
+        "header-style": {
+          "choice": {
+            "none": "Wyłączony",
+            "tint": "Kolor gracza",
+            "red": "Czerwony",
+            "blue": "Niebieski",
+            "green": "Zielony"
+          },
+          "name": "Motyw nagłówka wiadomości czatu",
+          "hint": "Dodaje kolorowy nagłówek do każdej wiadomości czatu"
+        },
+        "enable-dark-theme-journals": {
+          "hint": "Nie ma wpływu na dzienniki modułów premium",
+          "name": "Włączyć ciemny motyw dla Dzienników?"
+        },
+        "familiar-sheet-theme": {
+          "name": "Motyw karty towarzysza",
+          "hint": "Wpływa na znane arkusze",
+          "choice": {
+            "dark-red-header": "Ciemny + czerwony nagłówek"
+          }
+        }
+      },
+      "avatar": {
+        "name": "Ustawienia awatara",
+        "source": {
+          "name": "Awatary czatu",
+          "hint": "Dodaje awatar do wiadomości czatu",
+          "choice": {
+            "token": "Preferowany obraz tokena",
+            "actor": "Preferowany wizerunek aktora"
+          }
+        },
+        "size": {
+          "name": "Rozmiar",
+          "hint": "Domyślnie 40px"
+        },
+        "label": "Konfiguracja ustawień awatara",
+        "hint": "Konfiguracja ustawień związanych z awatarami w wiadomościach czatu",
+        "hide-gm-avatar-when-secret": {
+          "name": "Ukryć awatar, gdy jest tajny?",
+          "hint": "Ukrywa awatary za każdym razem, gdy GM rzuca tajne/prywatne rzuty"
+        },
+        "hide-when-token-hidden": {
+          "hint": "Ukrywa awatary, gdy token mówcy jest ukryty",
+          "name": "Ukryć awatar, gdy token jest ukryty?"
+        },
+        "popout-support": {
+          "hint": "Skaluje rozmiar awatarów tokenów zgodnie ze skalą tokena",
+          "name": "Włączyć wyskakujący token awatara?"
+        },
+        "use-user-avatar": {
+          "name": "Używać awatara użytkownika jako rezerwowego?",
+          "hint": "Skonfiguruj awatary użytkowników, klikając prawym przyciskiem myszy użytkowników w lewym dolnym obszarze Foundry"
+        },
+        "reacts-to-degree-of-success": {
+          "name": "Awatar reaguje na rzuty krytyczne?",
+          "hint": "Krytyczny sukces będzie świecił na zielono, a krytyczna porażka stanie się wyciszona i ciemna"
+        },
+        "small-creature-token-avatar-size": {
+          "name": "Rozmiar awatara małej istoty",
+          "hint": "Domyślnie 0,8"
+        }
+      },
+      "ux": {
+        "animate-messages": {
+          "hint": "Sprawia, że szepty graczy do GM przyciągają więcej uwagi",
+          "name": "Animować wiadomości, aby zwrócić uwagę na określone wydarzenia?"
+        },
+        "compact-ui": {
+          "name": "Włączyć Compact UI?",
+          "hint": "Zmienia rozmiar elementów sterujących i ukrywa nieaktywne elementy sterujące i nawigacyjne, chyba że zostaną najechane"
+        },
+        "start-sidebar-collapsed": {
+          "name": "Zwiń domyślnie pasek boczny?",
+          "hint": "Używa stanu zwiniętego jako stanu początkowego"
+        },
+        "start-navigation-collapsed": {
+          "name": "Domyślnie zwinąć nawigację?",
+          "hint": "Używa stanu zwiniętego jako stanu początkowego"
+        },
+        "no-compendium-banner-images": {
+          "name": "Ukryć banery kompendium?",
+          "hint": "Usuwa banery kompendium na pasku bocznym"
+        },
+        "no-logo": {
+          "name": "Ukryć logo Foundry?",
+          "hint": "Usuwa logo Foundry w lewym górnym rogu"
+        },
+        "no-cards": {
+          "hint": "Całkowicie usuwa zakładkę Karty na pasku bocznym",
+          "name": "Ukryć zakładkę Karty?"
+        },
+        "no-chat-control-icon": {
+          "name": "Ukryć ikonę sterowania czatem?",
+          "hint": "Jest to ikona kości obok opcji rzutu, ma skłonność do zapychania interfejsu użytkownika"
+        },
+        "enable-rolltype-indication": {
+          "name": "Włączyć tag typ rzutu?",
+          "hint": "Dodaje znacznik zawierający typ rzutu do wiadomości czatu"
+        },
+        "enable-player-tags": {
+          "hint": "Dodaje znacznik zawierający nazwę gracza obok głośnika",
+          "name": "Włączyć tagi graczy?"
+        },
+        "hint": "Skonfiguruj ustawienia związane z pokazywaniem, ukrywaniem, zmniejszaniem lub zwiększaniem przejrzystości interfejsu użytkownika, przenoszeniem elementów do różnych lokalizacji",
+        "restructure-card-info": {
+          "name": "Restrukturyzacja informacji o karcie czatu?",
+          "hint": "Zwiększono widoczność kosztu akcji dla cech i przeniesiono informacje o zaklęciach ze stopki"
+        },
+        "name": "Ustawienia UX",
+        "adjust-token-effects-hud": {
+          "name": "Dostosować HUD efektów tokenów?",
+          "hint": "Sprawia, że efekty są okrągłe i układa je poza żetonem lub na pierścieniu żetonu w przypadku większych żetonów"
+        },
+        "label": "Konfiguracja ustawień UX",
+        "center-hotbar": {
+          "name": "Włączyć wyśrodkowany pasek skrótów?",
+          "hint": "Znany również jako pasek z makrami"
+        },
+        "remove-attack-info-from-damage-roll-messages": {
+          "name": "Usunąć informacje o ataku z komunikatów o obrażeniach?",
+          "hint": "Sprawia, że rzuty obrażeń zajmują mniej miejsca, usuwając zbędne informacje o trafieniach. Przeznaczony do użytku z DFCE chat-merge"
+        }
+      },
+      "misc": {
+        "label": "Skonfiguruj różne ustawienia",
+        "hint": "Konfiguracja ustawień związanych z innymi funkcjami Dorako UI",
+        "enable-debug-mode": {
+          "name": "Włączyć tryb debugowania?",
+          "hint": "Dodaje przyciski do przełączania stylu dorako-ui i ciemnego motywu dla okien"
+        },
+        "skin-crb-journal": {
+          "name": "Włączyć stylizację CRB dla dzienników?",
+          "hint": "Instrukcje na stronie www.shorturl.at/mrzN1"
+        },
+        "send-to-chat": {
+          "name": "Dodać przycisk \"Wyślij\" do nagłówka okna?",
+          "hint": "Wysyła zawartość do czatu tak, jakby była wysyłana przez kartę"
+        },
+        "name": "Różne ustawienia"
+      },
+      "customization": {
+        "name": "Personalizacja",
+        "excluded-applications": {
+          "name": "Wyłączone aplikacje",
+          "hint": "Poszukaj nazwy aplikacji w logach lub zapytaj na Discordzie"
+        },
+        "hint": "Wprowadź spersonalizowane zmiany za pomocą niestandardowego CSS lub zrezygnuj z niektórych stylów interfejsu Dorako",
+        "custom-css": {
+          "name": "Niestandardowy CSS",
+          "hint": "Napisz CSS w zewnętrznym edytorze i wklej go tutaj"
+        }
+      },
+      "external-module": {
+        "name": "Ustawienia zewnętrzne modułu",
+        "hint": "Dostosowania dotyczące wpływu interfejsu Dorako na inne moduły",
+        "colorize-idle-hud": {
+          "name": "Pokolorować PF2e Interactive Token Tooltip?",
+          "hint": "Stosuje kolorowy motyw do ikon w głównym pasku narzędzi"
         }
       }
     }
