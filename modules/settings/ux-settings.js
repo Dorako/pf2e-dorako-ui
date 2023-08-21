@@ -8,6 +8,8 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "no-cards",
     "no-chat-control-icon",
     "no-logo",
+    "chat-merge",
+    "adjust-chat-controls",
     "compact-ui",
     "remove-attack-info-from-damage-roll-messages",
     "enable-rolltype-indication",
@@ -24,6 +26,26 @@ export class UXSettings extends SettingsMenuDorakoUI {
 
   static get settings() {
     return {
+      "chat-merge": {
+        name: "pf2e-dorako-ui.settings.ux.chat-merge.name",
+        hint: "pf2e-dorako-ui.settings.ux.chat-merge.hint",
+        scope: "client",
+        type: Boolean,
+        default: false,
+        config: true,
+        requiresReload: true,
+        onChange: (value) => {},
+      },
+      "adjust-chat-controls": {
+        name: "pf2e-dorako-ui.settings.ux.adjust-chat-controls.name",
+        hint: "pf2e-dorako-ui.settings.ux.adjust-chat-controls.hint",
+        scope: "client",
+        type: Boolean,
+        default: true,
+        config: true,
+        requiresReload: true,
+        onChange: (value) => {},
+      },
       "center-hotbar": {
         name: "pf2e-dorako-ui.settings.ux.center-hotbar.name",
         hint: "pf2e-dorako-ui.settings.ux.center-hotbar.hint",

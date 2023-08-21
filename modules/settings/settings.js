@@ -5,6 +5,8 @@ import { AvatarSettings } from "./avatar-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
+import ChatMerge from "../chat-merge.js";
+import ChatRollPrivacy from "../chat-rolltype-buttons.js";
 
 function injectCSS(filename) {
   const head = document.getElementsByTagName("head")[0];
@@ -56,6 +58,15 @@ Hooks.once("init", async () => {
   MiscSettings.registerSettings();
   CustomizationSettings.registerSettings();
   ExternalModuleSettings.registerSettings();
+
+  if (game.settings.get("pf2e-dorako-ui", "ux.chat-merge")) {
+    ChatMerge.init();
+  }
+
+  if (game.settings.get("pf2e-dorako-ui", "ux.adjust-chat-controls")) {
+    ChatRollPrivacy.setup();
+    ChatRollPrivacy.init();
+  }
 
   util.debug("registered settings");
 

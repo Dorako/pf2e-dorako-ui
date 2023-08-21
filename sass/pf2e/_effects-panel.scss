@@ -48,21 +48,6 @@
         background: unset;
       }
 
-      a:not(.content-link) {
-        @include glass;
-        @include quick-transition;
-        text-align: center;
-        text-shadow: 0px 0px 3px black;
-        font-size: var(--font-size-12);
-        background-color: var(--primary);
-        color: var(--color-text-light-highlight);
-        &:hover {
-          background-color: var(--primary-light);
-          color: white;
-          text-shadow: 0px 0px 3px black;
-        }
-      }
-
       h1 {
         font-size: var(--font-size-16);
         color: var(--color-text-light-highlight);
@@ -94,7 +79,7 @@
       }
     }
 
-    .icon {
+    > .icon {
       @include gold-border-shadow;
       border-radius: 50%;
       align-items: center;

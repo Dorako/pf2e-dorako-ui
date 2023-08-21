@@ -66,27 +66,37 @@
 
   &.dfce-cm-bottom {
     margin-top: 0px;
+    padding-top: 0px;
     border-radius: 0px 0px 5px 5px;
   }
 }
 
-div#scrollToBottom {
-  @include quick-transition;
-  @include glass;
-  background-color: #ecbf41;
-  text-shadow: none;
-  color: black;
-  margin-left: 6px;
-  margin-right: 7px;
-  top: -27px;
-  z-index: 1;
-  &:hover {
-    background-color: lighten(#ecbf41, 10);
-  }
+// div#scrollToBottom {
+//   @include quick-transition;
+//   @include glass;
+//   background-color: #ecbf41;
+//   text-shadow: none;
+//   color: black;
+//   margin-left: 6px;
+//   margin-right: 7px;
+//   top: -27px;
+//   z-index: 1;
+//   &:hover {
+//     background-color: lighten(#ecbf41, 10);
+//   }
+// }
+
+#chat-controls {
+  padding: 0px;
 }
 
-#dfcp-rt-buttons {
-  gap: 3px;
+#dorako-nonrt-buttons {
+  flex-grow: 0;
+}
+
+#chat-controls .buttons {
+  display: flex;
+  gap: 2.5px;
 
   button {
     @include glass;
@@ -94,18 +104,52 @@ div#scrollToBottom {
     color: var(--color-text-light-heading);
     background-color: var(--glass-bg-light);
     text-shadow: 0px 0px 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    flex: 1 1 32px;
+    width: 32px;
 
     &:hover {
       color: var(--color-text-light-highlight);
+      background-color: var(--primary-light);
     }
 
-    &.active i {
-      text-shadow: 0px 0px 3px black;
-      color: var(--color-text-light-highlight);
+    &.toggle {
+      &:hover {
+        background-color: var(--secondary);
+      }
+      &.active {
+        color: var(--color-text-light-highlight);
+
+        background-color: var(--secondary-light);
+      }
     }
   }
 }
 
-#chat-controls {
-  padding: 0px;
+// #chat-controls .control-buttons {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 5px;
+
+//   a {
+//     @include glass;
+//     @include quick-transition;
+//     color: var(--color-text-light-heading);
+//     background-color: var(--glass-bg-light);
+//     text-shadow: 0px 0px 3px black;
+//     padding: 3px;
+//   }
+// }
+
+/* ----------------------------------------- */
+/* DFCE Chat Merge                           */
+/* ----------------------------------------- */
+
+.dfce-cm-middle header,
+.dfce-cm-bottom header {
+  display: none;
 }

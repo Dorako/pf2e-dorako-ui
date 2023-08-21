@@ -1,7 +1,15 @@
+# 2.5.0
+
+- (New) Added a new experimental UX setting "Enable chat merge?" based on DFCE's chat merge functionality.
+- (New) Added a new experimental UX setting "Adjust chat controls?" based on DFCE's privacy buttons functionality.
+- (New) Added ability to set keybinds for specific rolltypes, or toggling between public and secret, when new chat controls feature is enabled.
+- (Maintence) Fixed an issue that caused certain buttons in the Effects Panel overlay to break.
+- (Maintenance) Potentially fixed an issue where inline links in the new AP were unreadable.
+
 # 2.4.0
 
 - (New) Added a new "PC sheet theme" setting, which allows picking between three color themes.
-- (Maintenance) Adjusted some styling to account for system changes
+- (Maintenance) Adjusted some styling to account for system changes.
 
 # 2.3.9
 

@@ -1,6 +1,6 @@
 let circularMaskTexture = null;
 
-Hooks.once("init", () => {
+Hooks.once("ready", () => {
   const enabled = game.settings.get("pf2e-dorako-ui", "ux.adjust-token-effects-hud");
   if (!enabled) return;
 

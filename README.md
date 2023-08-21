@@ -138,4 +138,6 @@ This code is available under the MIT license, see LICENSE.
 
 The sidebar resizing functionality has been adapted from [Sidebar Resizer](https://github.com/saif-ellafi/foundryvtt-sidebar-resizer) also available under the MIT license.
 
+The chat merge and rolltype buttons functionality has been adapted from [DFCE](https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-chat-enhance) available under the BSD 3-Clause license.
+
 The green PC sheet theme is contributed by Vesselchuck.

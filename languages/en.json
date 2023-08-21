@@ -136,6 +136,14 @@
           "name": "Restructure chat card info?",
           "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"
         },
+        "chat-merge": {
+          "name": "Enable chat merge?",
+          "hint": "(Experimental) Merges messages sent in a rapid sequence together to save space"
+        },
+        "adjust-chat-controls": {
+          "name": "Adjust chat controls?",
+          "hint": "(Experimental) Restyles rolltype mode to buttons, and convert other chat controls to buttons"
+        },
         "adjust-token-effects-hud": {
           "name": "Adjust token effects HUD?",
           "hint": "Makes effects circular and arranges them outside the token, or on the token ring for larger tokens"
