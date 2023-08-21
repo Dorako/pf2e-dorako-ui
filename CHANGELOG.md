@@ -1,3 +1,7 @@
+# 2.5.0.1
+
+- (Bugfix) Removed Roll of Fate code that didn't work
+
 # 2.5.0
 
 - (New) Added a new experimental UX setting "Enable chat merge?" based on DFCE's chat merge functionality.

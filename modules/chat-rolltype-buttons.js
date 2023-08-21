@@ -106,13 +106,36 @@ export default class ChatRollPrivacy {
       }
       nonrolltype.append(button);
     });
-    const fateButton = $(document).find("#chat-controls .chat-control-icon .FATE-button");
-    if (fateButton) {
-      const title = fateButton.attr("title") ?? "";
-      const button = $(`<button class="fate" title="${title}"><i class="fas fa-yin-yang"></i></button>`);
-      nonrolltype.append(button);
-    }
+
+    // html.find("#chat-controls label[class^='die-hard']").each(function () {
+    //   const html = $(this).html();
+    //   const classes = $(this).attr("class") ?? "";
+    //   const title = $(this).attr("title") ?? "";
+    //   const style = $(this).attr("style") ?? "";
+    //   const button = $(`<button class="${classes}" title="${title}" style="${style}">${html}</button>`);
+    //   const events = $._data(this, "events"); // Chat Reactions "a" doesn't have event handler configured yet at the time this runs
+    //   if (events) {
+    //     const click = events["click"][0].handler;
+    //     button.on("click", click);
+    //   }
+    //   nonrolltype.append(button);
+    // });
+    // html.find("#chat-controls label[class^='die-hard']").remove();
     html.find("#chat-controls div.control-buttons").remove();
     html.find("#chat-controls").append(nonrolltype);
   }
 }
+
+// Hooks.on("canvasReady", async function () {
+//   await sleep(1000);
+//   const fateButton = $(document).find("#chat-controls .FATE-button");
+//   if (fateButton?.length > 0) {
+//     const button = $(`<button class="fate" title="Roll of Fate"><i class="fas fa-yin-yang"></i></button>`);
+//     const events = $._data(this.parent(), "events");
+//     const click = events["click"][0].handler;
+//     button.on("click", click);
+//     nonrolltype.append(button);
+//   }
+// });
+
+// const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
