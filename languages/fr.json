@@ -170,7 +170,12 @@
         },
         "pc-sheet-theme": {
           "name": "Thème de la feuille de PJ",
-          "hint": "Affecte les feuilles des joueurs"
+          "hint": "Affecte les feuilles des joueurs",
+          "choice": {
+            "green": "Vert du remaster",
+            "blue": "Bleu classique",
+            "red": "Rouge originel"
+          }
         },
         "loot-sheet-theme": {
           "name": "Thème des feuilles de butin",
