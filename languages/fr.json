@@ -334,6 +334,14 @@
         "enable-rolltype-indication": {
           "name": "Activer la balise type de jet ?",
           "hint": "Ajoute une balise contenant le type de jet des messages de la conversation"
+        },
+        "chat-merge": {
+          "hint": "(Expérimental) Fusionne les messages envoyés en une seule séquence rapide pour économiser de l'espace",
+          "name": "Activer la fusion de la conversation ?"
+        },
+        "adjust-chat-controls": {
+          "name": "Ajuster les contrôles de la conversation ?",
+          "hint": "(Expérimental) Restyle le mode rolltype en bouton et convertit les autres contrôles de la conversation en boutons"
         }
       },
       "misc": {
