@@ -51,7 +51,12 @@
         },
         "pc-sheet-theme": {
           "name": "Tema de la ficha de PJ",
-          "hint": "Afecta a las fichas de los jugadores"
+          "hint": "Afecta a las fichas de los jugadores",
+          "choice": {
+            "red": "Rojo original",
+            "green": "Verde remasterizado",
+            "blue": "Azul clásico"
+          }
         },
         "loot-sheet-theme": {
           "name": "Tema de la ficha de botín",
@@ -71,7 +76,8 @@
             "red": "Rojo",
             "blue": "Azúl",
             "tint": "Color de jugador",
-            "none": "Desactivado"
+            "none": "Desactivado",
+            "green": "Verde"
           }
         },
         "enable-dark-theme-journals": {
@@ -194,6 +200,14 @@
         "no-compendium-banner-images": {
           "name": "¿Ocultar las imágenes de la cabecera de los compendios?",
           "hint": "Elimina las imágenes de las cabeceras de los compendios de la barra lateral"
+        },
+        "chat-merge": {
+          "name": "¿Activar la mezcla del chat?",
+          "hint": "(Experimental) Mezcla los mensajes que se han enviado muy seguidos para ahorrar espacio"
+        },
+        "adjust-chat-controls": {
+          "name": "¿Ajustar los controles del chat?",
+          "hint": "(Experimental) Cambia el modo de tirar dados a botones, y convierte otros controles del chat en botones"
         }
       },
       "misc": {
@@ -223,6 +237,14 @@
         "custom-css": {
           "name": "CSS personalizado",
           "hint": "Escribe CSS en un editor externo y pégalo aquí"
+        }
+      },
+      "external-module": {
+        "name": "Ajustes de módulos externos",
+        "hint": "Ajusta como otros módulos se ven afectados por Dorako UI",
+        "colorize-idle-hud": {
+          "name": "¿Colorear PF2e Interactive Token Tooltip?",
+          "hint": "Aplica un tema con color a los iconos en la ventana principal del módulo"
         }
       }
     }
