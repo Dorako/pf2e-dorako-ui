@@ -45,16 +45,33 @@ section.chat-sidebar {
 #sidebar.dorako-ui {
   @include glass;
   border: none;
-  border-radius: 6px 3px 3px 3px;
+  // border-radius: 6px 3px 3px 3px;
+  border-radius: 6px var(--border-radius) var(--border-radius) var(--border-radius);
 
   &.collapsed {
-    border-radius: 3px;
+    border-radius: var(--border-radius);
 
     #sidebar-tabs .item.active {
       border: none;
       margin: 2px 4px;
     }
   }
+  #settings ul#game-details li.system-buttons {
+    gap: 5px;
+    button {
+      border-radius: var(--border-radius) !important;
+    }
+  }
+
+  // button {
+  //   @include glass;
+  //   background-color: var(--glass-bg-light);
+  //   color: var(--color-text-light-heading);
+  //   &:hover {
+  //     background-color: var(--primary-light);
+  //     color: var(--color-text-light-highlight);
+  //   }
+  // }
 
   #sidebar-tabs {
     --sidebar-tab-height: 20px;

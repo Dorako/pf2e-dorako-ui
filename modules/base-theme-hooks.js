@@ -86,7 +86,7 @@ Hooks.on("renderDialog", (app, html, data) => {
   position.height += 6;
   position.width += 6;
   app.setPosition(position);
-  app.render();
+  // app.render(); // Breaks forien-easy-poll
 });
 
 // Add .dorako-ui and .dialog to all "Dialogs"

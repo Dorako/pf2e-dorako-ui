@@ -4,13 +4,17 @@
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
   --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
 
   .sidebar.skills {
     --color-rank-0: #a6a6a6;
-    --color-rank-1: #3f4dcd;
-    --color-rank-2: #a828f0;
+    --color-rank-1: dodgerblue; // Symon recommended
+    --color-rank-2: #bf4fdb;
     --color-rank-3: #cf931d;
-    --color-rank-4: #bf1c1c;
+    --color-rank-4: red; // Symon recommended
   }
 
   .sidebar.skills .skill .header .rank,
@@ -25,7 +29,9 @@
   .sidebar.skills .skill .header .modifier,
   .sidebar.skills .lore .modifier {
     text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-    color: var(--primary-light);
+    // color: var(--primary-light);
+    // color: var(--tertiary);
+    color: #24ff00; // Symon recommended
   }
 
   .sidebar.spells .entry .spell .details .extras .actions {
@@ -38,11 +44,7 @@
   .popup,
   .sidebar,
   .inner {
-    border: none;
-    border-radius: 3px;
-    background: none;
-    background-color: var(--glass-bg);
-    box-shadow: var(--glassy);
+    @include glass;
     backdrop-filter: blur(5px);
 
     hr {
@@ -100,6 +102,10 @@
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
   --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
 
   .rk,
   .rk-skills,
@@ -143,65 +149,75 @@
 }
 
 /* Symon Custom CSS */
-#pf2e-token-hud.dorako-ui.colorized .inner i {
-  text-shadow: 0px 0px 35px white, 0px 1px 1px black;
-  &.fa-solid.fa-circle-h {
+#pf2e-token-hud.dorako-ui.colorized .inner {
+  i {
+    text-shadow: 0px 0px 35px white, 0px 1px 1px black;
+  }
+
+  i.fa-solid.fa-circle-h {
     color: darkgoldenrod;
   }
-  &.fa-solid.fa-user-graduate {
-    color: rebeccapurple;
+  i.fa-solid.fa-user-graduate {
+    color: rgb(141, 69, 212);
   }
-  &.fa-solid.fa-heart-half-stroke {
+  i.fa-solid.fa-heart-half-stroke {
     color: orangered;
   }
-  &.fa-solid.fa-heart {
-    color: darkred;
+  i.fa-solid.fa-heart {
+    color: rgb(192, 1, 1);
   }
-  &.fa-regular.fa-helmet-battle {
-    color: darkslategray;
+  i.fa-regular.fa-helmet-battle {
+    color: #cdcdcd;
   }
-  &.fa-duotone.fa-eye-slash {
-    color: #9e9eff;
+  i.fa-light.fa-block-brick {
+    color: deepskyblue;
   }
-  &.fa-regular.fa-shield {
-    color: darkslategray;
+  i.fa-regular.fa-shield {
+    color: rgb(103, 235, 213);
   }
-  &.fa-solid.fa-hand-fist {
-    color: purple;
+  i.fa-solid.fa-hand-fist {
+    color: rgb(201, 4, 201);
   }
-  &.fa-solid.fa-person-running {
-    color: rgb(61, 61, 255);
+  i.fa-solid.fa-person-running {
+    color: blue;
   }
-  &.fa-solid.fa-brain {
+  i.fa-solid.fa-brain {
     color: deeppink;
   }
-  &.fa-solid.fa-skull {
-    color: black;
-  }
-  &.fa-solid.fa-tombstone {
+  i.fa-solid.fa-tombstone {
     color: brown;
   }
-  &.fa-solid.fa-shoe-prints {
+  i.fa-solid.fa-shoe-prints {
     color: green;
   }
-  &.fa-solid.fa-chevrons-down::before {
+  i.fa-solid.fa-chevrons-down::before {
     content: "\f713";
     font: (--fa-font-solid);
-    color: saddlebrown;
+    color: rgb(175, 87, 24);
   }
-  &.fa-solid.fa-feather {
+  i.fa-solid.fa-feather {
     color: white;
   }
-  &.fa-solid.fa-person-swimming {
+  i.fa-solid.fa-person-swimming {
     color: dodgerblue;
   }
-  &.fa-solid.fa-spider {
+  i.fa-solid.fa-spider {
     color: #b7346f;
   }
-  &.fa-solid.fa-eye {
+  i.fa-solid.fa-eye {
     color: cadetblue;
   }
-  &.fa-solid.fa-dumbbell {
-    color: darkolivegreen;
+  i.fa-solid.fa-chess-rook {
+    color: rgb(110, 143, 54);
   }
+}
+
+#pf2e-token-hud.dorako-ui .sidebar.actions .section .action-icon {
+  background-color: #ffffffb5;
+}
+#pf2e-token-hud.dorako-ui .sidebar.hazard .section .action-icon {
+  background-color: #ffffffb5;
+}
+#pf2e-token-hud.dorako-ui .sidebar .sidebar-content .action-icon {
+  background-color: #ffffffb5;
 }

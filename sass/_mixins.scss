@@ -1,6 +1,6 @@
 @mixin glass {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);

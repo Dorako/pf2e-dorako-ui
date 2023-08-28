@@ -136,6 +136,23 @@
           "name": "Restructure chat card info?",
           "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"
         },
+        "border-radius": {
+          "name": "Roundedness",
+          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
+        },
+        "control-size": {
+          "name": "Control size",
+          "hint": "(default: 36px) Changes the size of controls and navigation elements"
+        },
+        "controls-alignment": {
+          "name": "Controls alignment",
+          "hint": "Changes the position of the controls",
+          "choice": {
+            "start": "Top",
+            "center": "Middle",
+            "end": "Bottom"
+          }
+        },
         "chat-merge": {
           "name": "Enable chat merge?",
           "hint": "(Experimental) Merges messages sent in a rapid sequence together to save space"

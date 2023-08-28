@@ -77,8 +77,11 @@ Hooks.once("init", async () => {
   const root = document.querySelector(":root").style;
 
   root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
+  root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "ux.border-radius").toString() + "px");
+  root.setProperty("--control-size", game.settings.get("pf2e-dorako-ui", "ux.control-size").toString() + "px");
+  root.setProperty("--controls-alignment", game.settings.get("pf2e-dorako-ui", "ux.controls-alignment").toString());
 
-  util.debug("injected sheets");
+  util.debug("initialized properties");
 });
 
 Hooks.once("ready", () => {

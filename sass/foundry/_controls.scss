@@ -4,16 +4,19 @@
 
 nav#controls.dorako-ui {
   padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: var(--controls-alignment);
 
   // Fix foundry's inconsistent gaps
   ol.control-tools.sub-controls > li,
   ol.control-tools.main-controls {
-    margin-right: 8px;
+    margin-right: var(--controls-margin);
   }
 
   ol.control-tools {
     &.main-control {
-      margin-right: 8px;
+      margin-right: var(--controls-margin);
     }
 
     li.control-tool,
@@ -21,8 +24,11 @@ nav#controls.dorako-ui {
       @include glass;
       @include quick-transition;
       text-shadow: 0px 0px 3px black;
-      border-radius: 3px;
-      margin-bottom: 8px;
+      border-radius: var(--border-radius);
+      margin-bottom: var(--controls-margin);
+      height: var(--control-size);
+      width: var(--control-size);
+      font-size: calc(var(--control-size) - 12px);
 
       img {
         filter: sepia() grayscale(0.9) brightness(0.8) drop-shadow(0px 0px 3px black);
@@ -57,7 +63,7 @@ nav#controls.dorako-ui {
 #darkness-adjuster.dorako-ui {
   @include glass;
   height: 36px !important;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   backdrop-filter: blur(5px);
 
   .window-content {

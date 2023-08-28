@@ -1,3 +1,12 @@
+# 2.6.0
+
+- (Refinement) Updated styling of Idle's Token Tooltip courtesy of Symon.
+- (Refinement) Converted certain styling to variables to allow for easier changes.
+- (New) Added a new UX setting for changing the roundedness of UI elements.
+- (New) Added a new UX setting for changing the alignment of controls.
+- (New) Added a new UX setting for changing the size of control and navigation elements.
+- (Fix) Fixed an issue where Dorako UI and Forien's Easy Polls would result in an infinite loop when opening the dialog.
+
 # 2.5.0.1
 
 - (Bugfix) Removed Roll of Fate code that didn't work
@@ -7,7 +16,7 @@
 - (New) Added a new experimental UX setting "Enable chat merge?" based on DFCE's chat merge functionality.
 - (New) Added a new experimental UX setting "Adjust chat controls?" based on DFCE's privacy buttons functionality.
 - (New) Added ability to set keybinds for specific rolltypes, or toggling between public and secret, when new chat controls feature is enabled.
-- (Maintence) Fixed an issue that caused certain buttons in the Effects Panel overlay to break.
+- (Maintenance) Fixed an issue that caused certain buttons in the Effects Panel overlay to break.
 - (Maintenance) Potentially fixed an issue where inline links in the new AP were unreadable.
 
 # 2.4.0

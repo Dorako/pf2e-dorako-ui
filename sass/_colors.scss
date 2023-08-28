@@ -143,6 +143,12 @@ $adjusted-lower: #cc3311 !default;
   --header: url(../img/blue-header.webp);
   --banner-top: url(../img/blue-sidebar-top.webp);
   --banner-bottom: url(../img/blue-sidebar-bottom.webp);
+  // --avatar-size: controlled in code
+  // --border-radius: controlled in code
+  // --control-size: controlled in code;
+  --hotbar-width: unset;
+  // --controls-alignment: controlled in code
+  --controls-margin: 8px;
 }
 
 /* ----------------------------------------- */

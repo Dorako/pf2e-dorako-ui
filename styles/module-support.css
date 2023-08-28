@@ -87,6 +87,8 @@
   --header: url(../img/blue-header.webp);
   --banner-top: url(../img/blue-sidebar-top.webp);
   --banner-bottom: url(../img/blue-sidebar-bottom.webp);
+  --hotbar-width: unset;
+  --controls-margin: 8px;
 }
 
 /* ----------------------------------------- */
@@ -165,7 +167,7 @@
 }
 .dorako-ui#combat-carousel .initiative {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -205,7 +207,7 @@
 }
 .dorako-ui#combat-carousel .splide__slide:hover .name {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -232,7 +234,7 @@
 }
 .dorako-ui#combat-carousel .encounter-info, .dorako-ui#combat-carousel .encounter-controls {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -241,7 +243,7 @@
 }
 .dorako-ui#combat-carousel:hover .combat-controls a {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -258,7 +260,7 @@
 /* Custom Hotbar                             */
 /* ----------------------------------------- */
 :root {
-  --custom-hotbar-chb-macro-size: 52px;
+  --custom-hotbar-chb-macro-size: calc(var(--macro-size) + 2px);
 }
 
 #ui-bottom #hotbars {
@@ -289,7 +291,7 @@
 }
 .dorako-ui#custom-hotbar .bar-controls {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -297,7 +299,7 @@
 }
 .dorako-ui#custom-hotbar .macro {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -466,7 +468,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 #chat-controls .buttons button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -514,7 +516,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dice-tray input[type=text] {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -525,7 +527,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dice-tray input[type=text]:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -534,7 +536,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dice-tray input[type=text]:focus {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -543,7 +545,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dice-tray button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -560,7 +562,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dice-tray button.dice-tray__advantage:hover, .dice-tray button.dice-tray__disadvantage:hover, .dice-tray button.dice-tray__roll:hover, .dice-tray button.dice-tray__math--add:hover, .dice-tray button.dice-tray__math--sub:hover, .dice-tray button:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -714,7 +716,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme.chat-message > .message-content .message-buttons button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -782,7 +784,7 @@ nav.damage-log-nav.tabs .item.active {
 .dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2,
 .dorako-ui.dark-theme .form-group.dorako-ui.settings-header {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -809,7 +811,7 @@ nav.damage-log-nav.tabs .item.active {
 #controls ol.control-tools#terrainlayer-tools .control-tool {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -830,7 +832,7 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 .filepicker-plus-tooltip {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -911,7 +913,7 @@ nav.damage-log-nav.tabs .item.active {
 .window-app.monarch-hand:not(.minimized).no-fade.trans,
 .window-app.monarch-hand:not(.minimized):hover.trans {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -921,7 +923,7 @@ nav.damage-log-nav.tabs .item.active {
 .window-app.monarch-hand .window-header,
 .monarch-hand footer.sheet-footer {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -947,7 +949,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .monarch-hand footer.sheet-footer button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -963,7 +965,7 @@ nav.damage-log-nav.tabs .item.active {
 .monarch .card-hud .badge,
 .monarch .card-hud .card-controls {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -971,7 +973,7 @@ nav.damage-log-nav.tabs .item.active {
 
 .monarch-hand .tooltip {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -983,14 +985,14 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 #common-display-toolbar.dorako-ui {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
 }
 #common-display-toolbar.dorako-ui .move-handle {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -998,7 +1000,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 #common-display-toolbar.dorako-ui .common-display-button.small {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1010,7 +1012,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 #common-display-toolbar.dorako-ui .common-display-button.toggle {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1020,7 +1022,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 #common-display-toolbar.dorako-ui .common-display-button.toggle:hover, #common-display-toolbar.dorako-ui .common-display-button.toggle.active {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1046,14 +1048,14 @@ nav.damage-log-nav.tabs .item.active {
 }
 #tokenbar .bar-controls {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
 }
 #tokenbar .bar-controls div#tokenbar-move-handle {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1062,7 +1064,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 #tokenbar .token {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1086,7 +1088,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 #tokenbar .token .tooltip {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1144,7 +1146,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme#requestsavingthrow .request-grid > div {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1180,7 +1182,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme .monks-tokenbar.chat-card .card-footer .flexrow .footer-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1276,9 +1278,6 @@ nav.damage-log-nav.tabs .item.active {
   text-shadow: 0 0 8px var(--color-shadow-primary);
 }
 
-#hotbar.dorako-ui {
-  width: 647px;
-}
 #hotbar.dorako-ui .hotbar-page {
   overflow: visible;
   gap: 4px;
@@ -1306,7 +1305,7 @@ nav.damage-log-nav.tabs .item.active {
 .dorako-ui.dark-theme.monks-journal-sheet.sheet .items-list .items-header,
 .dorako-ui.dark-theme .monks-journal-sheet.sheet .items-list .items-header {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1316,7 +1315,7 @@ nav.damage-log-nav.tabs .item.active {
 .dorako-ui.dark-theme.monks-journal-sheet.sheet .sheet-navigation,
 .dorako-ui.dark-theme .monks-journal-sheet.sheet .sheet-navigation {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1324,7 +1323,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme.monks-enhanced-journal footer, .dorako-ui.dark-theme.monks-enhanced-journal .mainbar .navigation {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1332,7 +1331,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme.monks-enhanced-journal .mainbar .navigation .nav-button, .dorako-ui.dark-theme.monks-enhanced-journal footer.navigation .nav-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1349,7 +1348,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme .monks-enhanced-journal.request-item .request-buttons button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1596,7 +1595,7 @@ nav.damage-log-nav.tabs .item.active {
 
 .monks-enhanced-journal .bookmark-bar .bookmark-button.add-bookmark {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1622,7 +1621,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .monks-enhanced-journal .mainbar .bookmark-bar .bookmark-button > div {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1642,7 +1641,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .monks-enhanced-journal .mainbar .tab-row .tab-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1660,7 +1659,7 @@ nav.damage-log-nav.tabs .item.active {
 }
 .monks-enhanced-journal .mainbar .tab-row .journal-tab {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1743,7 +1742,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 
 .dorako-ui#navigation .nav-item-container {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1757,7 +1756,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .dorako-ui#navigation .monks-scene-navigation .scene-list > li a {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1795,7 +1794,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .dorako-ui#navigation .monks-scene-navigation .scene-list > li.active a {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1803,7 +1802,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .dorako-ui#navigation.background .monks-scene-navigation .scene-list {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1819,7 +1818,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* ----------------------------------------- */
 .dorako-ui.dark-theme.action-sheet .display-value {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1827,7 +1826,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .dorako-ui.dark-theme.monks-active-tiles.sheet .items-list .items-header {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1863,7 +1862,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 #polyglot select {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1897,7 +1896,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
 
 .speaking-as--currentSpeaker {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1968,7 +1967,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .pf2e-td.target-section .target-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1985,7 +1984,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 .dorako-ui.dark-theme.chat-message button.small-button.pf2e-td {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2019,7 +2018,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 .dorako-ui.dark-theme.chat-message wrapper.pf2e-td.name-top .pf2e-td.name {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2186,7 +2185,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 
 .dorako-ui.dark-theme#pf2e-dailies-interface .window-content input:not(:disabled) {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2549,7 +2548,7 @@ body.system-swade {
 .dorako-ui form button.emojiPickerButton {
   display: flex;
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2594,7 +2593,7 @@ body.system-swade {
 
 .dorako-ui.dark-theme .emoji-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2618,7 +2617,7 @@ body.system-swade {
 
 #hand-mini-bar-hands-container .hand-mini-bar-hand {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2671,7 +2670,7 @@ body.system-swade {
 }
 .dorako-ui.dark-theme .hand-mini-bar-window-buttons .hand-mini-bar-window-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2711,7 +2710,7 @@ body.system-swade {
 /* ----------------------------------------- */
 .pin-cushion-hud-tooltip-default {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2728,7 +2727,7 @@ body.system-swade {
 /* ----------------------------------------- */
 .illandril-token-tooltips--tooltip {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2747,7 +2746,7 @@ body.system-swade {
 
 .item-piles-player-list-trade-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2756,7 +2755,7 @@ body.system-swade {
 }
 .item-piles-player-list-trade-button:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2791,13 +2790,17 @@ body.system-swade {
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
   --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
 }
 #pf2e-token-hud.dorako-ui .sidebar.skills {
   --color-rank-0: #a6a6a6;
-  --color-rank-1: #3f4dcd;
-  --color-rank-2: #a828f0;
+  --color-rank-1: dodgerblue;
+  --color-rank-2: #bf4fdb;
   --color-rank-3: #cf931d;
-  --color-rank-4: #bf1c1c;
+  --color-rank-4: red;
 }
 #pf2e-token-hud.dorako-ui .sidebar.skills .skill .header .rank,
 #pf2e-token-hud.dorako-ui .sidebar.skills .lore .rank {
@@ -2809,7 +2812,7 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui .sidebar.skills .skill .header .modifier,
 #pf2e-token-hud.dorako-ui .sidebar.skills .lore .modifier {
   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-  color: var(--primary-light);
+  color: #24ff00;
 }
 #pf2e-token-hud.dorako-ui .sidebar.spells .entry .spell .details .extras .actions {
   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
@@ -2821,7 +2824,7 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui .sidebar,
 #pf2e-token-hud.dorako-ui .inner {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2875,6 +2878,10 @@ body.system-swade {
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
   --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
 }
 .chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk,
 .chat-message.message.dorako-ui.dark-theme .pf2e-token-hud .rk-skills,
@@ -2923,34 +2930,31 @@ body.system-swade {
   color: darkgoldenrod;
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-user-graduate {
-  color: rebeccapurple;
+  color: rgb(141, 69, 212);
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-heart-half-stroke {
   color: orangered;
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-heart {
-  color: darkred;
+  color: rgb(192, 1, 1);
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-regular.fa-helmet-battle {
-  color: darkslategray;
+  color: #cdcdcd;
 }
-#pf2e-token-hud.dorako-ui.colorized .inner i.fa-duotone.fa-eye-slash {
-  color: #9e9eff;
+#pf2e-token-hud.dorako-ui.colorized .inner i.fa-light.fa-block-brick {
+  color: deepskyblue;
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-regular.fa-shield {
-  color: darkslategray;
+  color: rgb(103, 235, 213);
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-hand-fist {
-  color: purple;
+  color: rgb(201, 4, 201);
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-person-running {
-  color: rgb(61, 61, 255);
+  color: blue;
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-brain {
   color: deeppink;
-}
-#pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-skull {
-  color: black;
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-tombstone {
   color: brown;
@@ -2961,7 +2965,7 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-chevrons-down::before {
   content: "\f713";
   font: --fa-font-solid;
-  color: saddlebrown;
+  color: rgb(175, 87, 24);
 }
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-feather {
   color: white;
@@ -2975,13 +2979,25 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-eye {
   color: cadetblue;
 }
-#pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-dumbbell {
-  color: darkolivegreen;
+#pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-chess-rook {
+  color: rgb(110, 143, 54);
+}
+
+#pf2e-token-hud.dorako-ui .sidebar.actions .section .action-icon {
+  background-color: rgba(255, 255, 255, 0.7098039216);
+}
+
+#pf2e-token-hud.dorako-ui .sidebar.hazard .section .action-icon {
+  background-color: rgba(255, 255, 255, 0.7098039216);
+}
+
+#pf2e-token-hud.dorako-ui .sidebar .sidebar-content .action-icon {
+  background-color: rgba(255, 255, 255, 0.7098039216);
 }
 
 #fc-container button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2992,7 +3008,7 @@ body.system-swade {
 }
 #fc-container button:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3009,7 +3025,7 @@ body.system-swade {
 #initiative-delay,
 #initiative-return {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3021,7 +3037,7 @@ body.system-swade {
 #initiative-delay:hover,
 #initiative-return:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3050,6 +3066,28 @@ body.system-swade {
 #window-tabs-journal.dorako-ui > header.window-header .window-tabs a.window-tabs--tab {
   border-radius: 5px;
   margin-bottom: 3px;
+}
+
+.pinnedchatlog.tabs {
+  border: unset;
+  box-shadow: unset;
+  margin: 0px 2px;
+}
+.pinnedchatlog.tabs .item {
+  text-shadow: 0px 0px 3px black;
+}
+.pinnedchatlog.tabs .item.active {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  color: var(--color-text-light-highlight);
+  background: var(--primary-light);
+}
+
+.dorako-ui.dark-theme.forien-easy-polls .forien-switch .forien-switch-actual-label {
+  color: var(--color-text-light-heading);
 }
 
 /*# sourceMappingURL=module-support.css.map */

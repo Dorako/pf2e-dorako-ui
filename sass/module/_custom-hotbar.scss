@@ -2,7 +2,7 @@
 /* Custom Hotbar                             */
 /* ----------------------------------------- */
 :root {
-  --custom-hotbar-chb-macro-size: 52px;
+  --custom-hotbar-chb-macro-size: calc(var(--macro-size) + 2px);
 }
 
 // Custom hotbar introduces a 'hotbars' div, and restyles the core hotbar div

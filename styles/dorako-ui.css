@@ -8,7 +8,7 @@
 /* ----------------------------------------- */
 #players.dorako-ui {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -44,7 +44,7 @@
 
 .dorako-ui.window-app {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -130,7 +130,7 @@
 /* ----------------------------------------- */
 .dorako-ui #context-menu {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -149,7 +149,7 @@
 /* ----------------------------------------- */
 #tooltip {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -165,7 +165,7 @@
 /* ----------------------------------------- */
 #fps {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -177,7 +177,7 @@
 }
 .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -187,7 +187,7 @@
 }
 .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes:hover, .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -214,7 +214,7 @@
 
 .dorako-ui.dark-theme #sidebar .settings-sidebar button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -333,7 +333,7 @@
 }
 .dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn) {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -343,7 +343,7 @@
 }
 .dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn):hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -360,7 +360,7 @@
 }
 .dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).pm-dropdown ul {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -382,7 +382,7 @@
 .dorako-ui.dark-theme:not(.premium).window-app.token-sheet .form-group.children-disabled .range-value,
 .dorako-ui.dark-theme:not(.premium).window-app input[type=range] + .range-value {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -406,7 +406,7 @@
 .dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip),
 .dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip) {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -431,7 +431,7 @@
 .dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):hover,
 .dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -445,7 +445,7 @@
 .dorako-ui.dark-theme:not(.premium).window-app input[type=time]:not(.dorako-ui-skip):focus,
 .dorako-ui.dark-theme:not(.premium).window-app input[type=search]:not(.dorako-ui-skip):focus {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -472,7 +472,7 @@
 }
 .dorako-ui.dark-theme:not(.premium).window-app select:not(.dorako-ui-skip) {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -505,7 +505,7 @@
 }
 .dorako-ui.dark-theme:not(.premium).window-app.filepicker .display-modes a {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -531,7 +531,7 @@
 }
 .dorako-ui.dark-theme:not(.premium).window-app#keybindings .binding .key {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -634,7 +634,7 @@
 
 .chat-bubble.chatter {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -687,25 +687,31 @@ body.compact-ui #players:hover {
 /* ----------------------------------------- */
 nav#controls.dorako-ui {
   padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: var(--controls-alignment);
 }
 nav#controls.dorako-ui ol.control-tools.sub-controls > li,
 nav#controls.dorako-ui ol.control-tools.main-controls {
-  margin-right: 8px;
+  margin-right: var(--controls-margin);
 }
 nav#controls.dorako-ui ol.control-tools.main-control {
-  margin-right: 8px;
+  margin-right: var(--controls-margin);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool,
 nav#controls.dorako-ui ol.control-tools > li {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
-  border-radius: 3px;
-  margin-bottom: 8px;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--controls-margin);
+  height: var(--control-size);
+  width: var(--control-size);
+  font-size: calc(var(--control-size) - 12px);
 }
 nav#controls.dorako-ui ol.control-tools li.control-tool img,
 nav#controls.dorako-ui ol.control-tools > li img {
@@ -715,7 +721,7 @@ nav#controls.dorako-ui ol.control-tools li.control-tool.active, nav#controls.dor
 nav#controls.dorako-ui ol.control-tools > li.active,
 nav#controls.dorako-ui ol.control-tools > li:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -730,7 +736,7 @@ nav#controls.dorako-ui ol.control-tools > li:hover img {
 nav#controls.dorako-ui ol.control-tools li.control-tool.toggle,
 nav#controls.dorako-ui ol.control-tools > li.toggle {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -740,7 +746,7 @@ nav#controls.dorako-ui ol.control-tools li.control-tool.toggle.active, nav#contr
 nav#controls.dorako-ui ol.control-tools > li.toggle.active,
 nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -750,12 +756,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 
 #darkness-adjuster.dorako-ui {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   height: 36px !important;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   backdrop-filter: blur(5px);
 }
 #darkness-adjuster.dorako-ui .window-content {
@@ -786,7 +792,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 
 .dorako-ui.dark-theme.sheet nav.sheet-tabs {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -876,7 +882,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 
 .dorako-ui.dark-theme.pf2e.item.sheet form .sheet-navigation {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -889,7 +895,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 
 .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body input[type=text], .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body input[type=number], .dorako-ui.dark-theme.pf2e.item.sheet form article.sheet-content select {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -958,7 +964,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   height: calc(var(--macro-size) + 2px);
   width: calc(var(--macro-size) + 2px);
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -974,7 +980,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   width: 100%;
   height: 100%;
   box-shadow: var(--glassy);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   pointer-events: none;
 }
@@ -987,7 +993,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   pointer-events: none;
 }
@@ -997,9 +1003,10 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   padding: 0px;
   font-weight: initial;
   text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+  font-size: calc(var(--macro-size) / 3);
 }
 #hotbar.dorako-ui .macro .macro-icon {
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   border: none;
   height: calc(var(--macro-size) + 2px);
   width: calc(var(--macro-size) + 2px);
@@ -1020,10 +1027,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   margin: 0px 5px;
   border: none;
   grid-template-columns: repeat(10, calc(var(--macro-size) + 2px));
+  align-content: end;
 }
 #hotbar.dorako-ui .bar-controls {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1047,22 +1055,26 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 #navigation.dorako-ui #nav-toggle {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
-  flex: 0 0 32px;
-  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--control-size);
+  height: var(--control-size);
 }
 #navigation.dorako-ui ol#scene-list li.nav-item {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
+  line-height: var(--control-size);
 }
 #navigation.dorako-ui ol#scene-list li.nav-item > a:hover {
   text-shadow: unset;
@@ -1076,7 +1088,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 #navigation.dorako-ui ol#scene-list li.nav-item.view {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1089,7 +1101,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 #navigation.dorako-ui ol#scene-list li.nav-item.gm {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1112,7 +1124,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* ----------------------------------------- */
 .dorako-ui .notification {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1154,7 +1166,7 @@ section.chat-sidebar {
 }
 #chat-form textarea {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1176,19 +1188,25 @@ section.chat-sidebar {
 
 #sidebar.dorako-ui {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   border: none;
-  border-radius: 6px 3px 3px 3px;
+  border-radius: 6px var(--border-radius) var(--border-radius) var(--border-radius);
 }
 #sidebar.dorako-ui.collapsed {
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 }
 #sidebar.dorako-ui.collapsed #sidebar-tabs .item.active {
   border: none;
   margin: 2px 4px;
+}
+#sidebar.dorako-ui #settings ul#game-details li.system-buttons {
+  gap: 5px;
+}
+#sidebar.dorako-ui #settings ul#game-details li.system-buttons button {
+  border-radius: var(--border-radius) !important;
 }
 #sidebar.dorako-ui #sidebar-tabs {
   --sidebar-tab-height: 20px;
@@ -1229,7 +1247,7 @@ section.chat-sidebar {
   margin-left: 0px;
   margin-right: 0px;
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1245,7 +1263,7 @@ section.chat-sidebar {
 
 .dorako-ui .jump-to-bottom {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1278,6 +1296,7 @@ section.chat-sidebar {
   margin: 0px;
   padding: 0px;
   background-color: var(--glass-bg);
+  border-radius: var(--border-radius);
 }
 #token-hud .status-effects .effect-control::before {
   content: "";
@@ -1287,7 +1306,7 @@ section.chat-sidebar {
   width: 100%;
   height: 100%;
   box-shadow: var(--glassy);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   pointer-events: none;
 }
@@ -1299,7 +1318,7 @@ section.chat-sidebar {
   width: 100%;
   height: 100%;
   box-shadow: var(--gold-and-glow), var(--glassy);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   pointer-events: none;
 }
@@ -1311,7 +1330,7 @@ section.chat-sidebar {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 10px rgba(220, 200, 100, 0.5) inset, var(--glassy);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   pointer-events: none;
 }
@@ -1323,7 +1342,7 @@ section.chat-sidebar {
   width: 100%;
   height: 100%;
   box-shadow: var(--gold-and-glow), var(--glassy);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   pointer-events: none;
 }
@@ -1352,11 +1371,11 @@ section.chat-sidebar {
   opacity: 1;
   height: auto;
   width: auto;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 }
 #token-hud .status-effects .title-bar {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1382,7 +1401,7 @@ section.chat-sidebar {
   font-size: var(--font-size-16);
   font-weight: 600;
   line-height: var(--font-size-17);
-  border-radius: 0px 3px 0px 3px;
+  border-radius: 0px var(--border-radius) 0px var(--border-radius);
   background: var(--primary-light);
   margin: 1px;
   color: white;
@@ -1400,7 +1419,7 @@ section.chat-sidebar {
 
 .placeable-hud input[type=text] {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1412,7 +1431,7 @@ section.chat-sidebar {
 }
 .placeable-hud .control-icon {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1682,7 +1701,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.sheet.actor.loot section.sidebar .gm-settings .loot-distribution button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1724,7 +1743,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.biography .biography-content .editor .editor-content {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1777,7 +1796,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1842,7 +1861,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1862,7 +1881,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled):hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1872,7 +1891,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li button.cast-spell, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .blue-button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1883,7 +1902,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li button.cast-spell:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .blue-button:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -1978,7 +1997,7 @@ section.chat-sidebar {
 }
 #effects-panel.dorako-ui .effect-item .effect-info {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2142,7 +2161,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.familiar .window-content .skills-content .skills-list .skill-name {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2152,7 +2171,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.familiar .window-content .skills-content .skills-list .skill-name:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2463,7 +2482,7 @@ section.chat-sidebar {
 /* Dark */
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -2673,6 +2692,8 @@ section.chat-sidebar {
   --header: url(../img/blue-header.webp);
   --banner-top: url(../img/blue-sidebar-top.webp);
   --banner-bottom: url(../img/blue-sidebar-bottom.webp);
+  --hotbar-width: unset;
+  --controls-margin: 8px;
 }
 
 /* ----------------------------------------- */
@@ -3220,6 +3241,8 @@ section.chat-sidebar {
   --header: url(../img/blue-header.webp);
   --banner-top: url(../img/blue-sidebar-top.webp);
   --banner-bottom: url(../img/blue-sidebar-bottom.webp);
+  --hotbar-width: unset;
+  --controls-margin: 8px;
 }
 
 /* ----------------------------------------- */
@@ -3270,7 +3293,7 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.message.chat-message .dice-roll .dice-formula,
 .dorako-ui.dark-theme.message.chat-message .dice-roll .dice-total {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3284,7 +3307,7 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-setInitiative-btn,
 .dorako-ui.dark-theme.message.chat-message .dice-total .dice-total-fullDamage-btn {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3303,7 +3326,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message.chat-message .persistent-damage-recovery button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3338,7 +3361,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button.with-image {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3362,7 +3385,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3377,7 +3400,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .hidden-to-others {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3395,7 +3418,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child) {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3419,7 +3442,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message .message-content .damage-application button {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3433,7 +3456,7 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.message .message-content .damage-application button:hover {
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
@@ -3510,7 +3533,7 @@ section.chat-sidebar {
 .dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card button {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);

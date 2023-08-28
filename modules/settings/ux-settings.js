@@ -20,6 +20,9 @@ export class UXSettings extends SettingsMenuDorakoUI {
     "adjust-token-effects-hud",
     "animate-messages",
     "no-compendium-banner-images",
+    "border-radius",
+    "control-size",
+    "controls-alignment",
   ];
 
   rerenderChatMessages() {}
@@ -60,6 +63,60 @@ export class UXSettings extends SettingsMenuDorakoUI {
           } else {
             document.getElementById("ui-bottom").classList.remove("centered");
           }
+        },
+      },
+      "control-size": {
+        name: "pf2e-dorako-ui.settings.ux.control-size.name",
+        hint: "pf2e-dorako-ui.settings.ux.control-size.hint",
+        scope: "client",
+        type: Number,
+        default: 36,
+        range: {
+          min: 18,
+          max: 72,
+          step: 1,
+        },
+        config: true,
+        requiresReload: false,
+        onChange: (value) => {
+          const root = document.querySelector(":root").style;
+          root.setProperty("--control-size", `${value}px`);
+        },
+      },
+      "border-radius": {
+        name: "pf2e-dorako-ui.settings.ux.border-radius.name",
+        hint: "pf2e-dorako-ui.settings.ux.border-radius.hint",
+        scope: "client",
+        type: Number,
+        default: 3,
+        range: {
+          min: 0,
+          max: 48,
+          step: 1,
+        },
+        config: true,
+        requiresReload: false,
+        onChange: (value) => {
+          const root = document.querySelector(":root").style;
+          root.setProperty("--border-radius", `${value}px`);
+        },
+      },
+      "controls-alignment": {
+        name: "pf2e-dorako-ui.settings.ux.controls-alignment.name",
+        hint: "pf2e-dorako-ui.settings.ux.controls-alignment.hint",
+        scope: "client",
+        type: String,
+        default: "start",
+        choices: {
+          start: "pf2e-dorako-ui.settings.ux.controls-alignment.choice.start",
+          center: "pf2e-dorako-ui.settings.ux.controls-alignment.choice.center",
+          end: "pf2e-dorako-ui.settings.ux.controls-alignment.choice.end",
+        },
+        config: true,
+        requiresReload: false,
+        onChange: (value) => {
+          const root = document.querySelector(":root").style;
+          root.setProperty("--controls-alignment", value);
         },
       },
       "adjust-token-effects-hud": {
