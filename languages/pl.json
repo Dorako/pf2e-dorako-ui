@@ -185,6 +185,14 @@
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Usunąć informacje o ataku z komunikatów o obrażeniach?",
           "hint": "Sprawia, że rzuty obrażeń zajmują mniej miejsca, usuwając zbędne informacje o trafieniach. Przeznaczony do użytku z DFCE chat-merge"
+        },
+        "chat-merge": {
+          "name": "Włączyć scalanie czatu?",
+          "hint": "(Eksperymentalne) Łączy wiadomości wysłane w szybkiej sekwencji w celu zaoszczędzenia miejsca"
+        },
+        "adjust-chat-controls": {
+          "name": "Dostosować sterowanie czatem?",
+          "hint": "(Eksperymentalne) Przekształca tryb rolltype w przyciski i konwertuje inne kontrolki czatu na przyciski"
         }
       },
       "misc": {

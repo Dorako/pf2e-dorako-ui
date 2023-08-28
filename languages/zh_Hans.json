@@ -75,6 +75,14 @@
         "enable-rolltype-indication": {
           "name": "启用掷骰类型标签？",
           "hint": "在聊天信息中添加掷骰类型的标签信息"
+        },
+        "chat-merge": {
+          "name": "允许聊天合并？",
+          "hint": "（试验功能）合并在一段时间内连续发送的消息以节省空间"
+        },
+        "adjust-chat-controls": {
+          "hint": "(试验功能)将发送掷骰重塑为按钮，并将其他聊天控件转换为按钮",
+          "name": "调整聊天控件？"
         }
       },
       "reset-changes": "重置更改",
@@ -112,7 +120,12 @@
         },
         "pc-sheet-theme": {
           "name": "PC卡主题",
-          "hint": "影响玩家角色卡"
+          "hint": "影响玩家角色卡",
+          "choice": {
+            "red": "默认红",
+            "green": "重置绿（Remaster版）",
+            "blue": "经典蓝"
+          }
         },
         "loot-sheet-theme": {
           "name": "战利品卡主题",
@@ -132,7 +145,8 @@
             "red": "红",
             "blue": "蓝",
             "tint": "玩家颜色",
-            "none": "禁用"
+            "none": "禁用",
+            "green": "绿"
           }
         },
         "enable-dark-theme-journals": {
@@ -209,6 +223,14 @@
         },
         "name": "自定义",
         "hint": "使用自定义CSS进行个性化，或使用Dorako UI的特定风格"
+      },
+      "external-module": {
+        "colorize-idle-hud": {
+          "hint": "给tooltip主界面的按钮上色",
+          "name": "为 PF2e Interactive Token Tooltip 模组上色？"
+        },
+        "name": "模组联动设置",
+        "hint": "在这里调整Dorako UI对其它模组的影响"
       }
     },
     "text": {
