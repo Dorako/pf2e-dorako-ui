@@ -1,4 +1,4 @@
-#token-hud {
+#token-hud.dorako-ui {
   .status-effects {
     background: none;
     box-shadow: none;
@@ -125,6 +125,117 @@
     }
   }
 
+  &.placeable-hud {
+    input[type="text"] {
+      @include glass;
+      text-shadow: 0px 0px 3px black;
+      &:focus {
+        box-shadow: var(--gold-and-glow), var(--glassy);
+        border: none;
+      }
+    }
+    .control-icon {
+      @include glass;
+      @include quick-transition;
+      text-shadow: 0px 0px 3px black;
+
+      .badge {
+        text-shadow: none;
+      }
+
+      // These can become toggled on with a click, but not toggled off with a click
+      &[data-action="overhead"],
+      &[data-action="underfoot"] {
+        background-color: var(--primary-dark);
+
+        &:hover,
+        &.active {
+          background-color: var(--primary-light);
+          > img {
+            filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+          }
+
+          &:hover {
+            background-color: var(--primary-light);
+          }
+        }
+      }
+
+      // These can be clicked, but do not become active
+      // 'trigger' is from Monk's Active Tiles
+      // 'pf2e-perception' is from PF2e Perception by Idle
+      // 'clown-car' from system
+      &[data-action="sort-up"],
+      &[data-action="sort-down"],
+      &[data-action="config"],
+      &[data-action="trigger"],
+      &[data-action="pf2e-perception"],
+      &[data-action="clown-car"] {
+        &:hover {
+          background-color: var(--primary-light);
+          > img {
+            filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+          }
+        }
+      }
+
+      // These are toggles, inactive -> active -> inactive
+      // 'active' is from Monk's Active Tiles
+      // 'mystify' is from Workbench
+      &[data-action="visibility"],
+      &[data-action="effects"],
+      &[data-action="combat"],
+      &[data-action="locked"],
+      &[data-action="target"],
+      &[data-action="active"],
+      &[data-action="mystify"] {
+        background-color: var(--secondary-dark);
+
+        &:hover,
+        &.active {
+          background-color: var(--secondary-light);
+          > img {
+            filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+          }
+        }
+      }
+
+      &[data-action="clown-car"] img {
+        margin: unset; // the margin doesn't suit the system image
+      }
+
+      // Unknown HUD elements from modules etc. are treated as if they potentially could become active
+      // Since it is unknown whether they can de-activate via a click, active buttons should not darken on hover
+      &:hover {
+        background-color: var(--secondary);
+        color: var(--color-text-light-highlight);
+      }
+
+      &.active {
+        color: var(--color-text-light-highlight);
+        background-color: var(--secondary-light);
+        border: none;
+
+        // &:hover {
+        //     background-color: var(--secondary-dark);
+        //     color: white;
+        //     > img {
+        //         filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+        //     }
+        // }
+
+        > img {
+          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+        }
+      }
+
+      > img {
+        opacity: 1;
+        filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+      }
+    }
+  }
+
   &.placeable-hud .control-icon {
     .effect-control.valued .badge,
     .effect-control .badge {
@@ -148,112 +259,6 @@
       position: relative;
       top: -2.5px;
       font-size: var(--font-size-10);
-    }
-  }
-}
-
-.placeable-hud {
-  input[type="text"] {
-    @include glass;
-    text-shadow: 0px 0px 3px black;
-    &:focus {
-      box-shadow: var(--gold-and-glow), var(--glassy);
-      border: none;
-    }
-  }
-
-  .control-icon {
-    @include glass;
-    @include quick-transition;
-    text-shadow: 0px 0px 3px black;
-
-    .badge {
-      text-shadow: none;
-    }
-
-    // These can become toggled on with a click, but not toggled off with a click
-    &[data-action="overhead"],
-    &[data-action="underfoot"] {
-      background-color: var(--primary-dark);
-
-      &:hover,
-      &.active {
-        background-color: var(--primary-light);
-        > img {
-          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-        }
-
-        &:hover {
-          background-color: var(--primary-light);
-        }
-      }
-    }
-
-    // These can be clicked, but do not become active
-    // 'trigger' is from Monk's Active Tiles
-    // 'pf2e-perception' is from PF2e Perception by Idle
-    &[data-action="sort-up"],
-    &[data-action="sort-down"],
-    &[data-action="config"],
-    &[data-action="trigger"],
-    &[data-action="pf2e-perception"] {
-      &:hover {
-        background-color: var(--primary);
-        > img {
-          filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
-        }
-      }
-    }
-
-    // These are toggles, inactive -> active -> inactive
-    // 'active' is from Monk's Active Tiles
-    // 'mystify' is from Workbench
-    &[data-action="visibility"],
-    &[data-action="effects"],
-    &[data-action="combat"],
-    &[data-action="locked"],
-    &[data-action="target"],
-    &[data-action="active"],
-    &[data-action="mystify"] {
-      background-color: var(--secondary-dark);
-
-      &:hover,
-      &.active {
-        background-color: var(--secondary-light);
-        > img {
-          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-        }
-      }
-    }
-
-    // Unknown HUD elements from modules etc. are treated as if they potentially could become active
-    // Since it is unknown whether they can de-activate via a click, active buttons should not darken on hover
-    &:hover {
-      background-color: var(--secondary);
-      color: var(--color-text-light-highlight);
-    }
-
-    &.active {
-      color: var(--color-text-light-highlight);
-      background-color: var(--secondary-light);
-      border: none;
-
-      // &:hover {
-      //     background-color: var(--secondary-dark);
-      //     color: white;
-      //     > img {
-      //         filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-      //     }
-      // }
-
-      > img {
-        filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-      }
-    }
-
-    > img {
-      opacity: 1;
-      filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
     }
   }
 }

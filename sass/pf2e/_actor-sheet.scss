@@ -20,6 +20,14 @@
     border-radius: 2px;
   }
 
+  &.actor.sheet button.use-action {
+    text-shadow: unset !important;
+    color: black !important;
+    select {
+      box-shadow: unset !important;
+    }
+  }
+
   &.actor.sheet .crb-style aside .modifiers_button {
     text-shadow: none;
 
@@ -45,6 +53,7 @@
   }
 
   // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,

@@ -1282,7 +1282,7 @@ section.chat-sidebar {
   text-shadow: none;
 }
 
-#token-hud .status-effects {
+#token-hud.dorako-ui .status-effects {
   background: none;
   box-shadow: none;
   border: none;
@@ -1291,14 +1291,14 @@ section.chat-sidebar {
   width: auto;
   gap: 8px;
 }
-#token-hud .status-effects .effect-control {
+#token-hud.dorako-ui .status-effects .effect-control {
   border: none;
   margin: 0px;
   padding: 0px;
   background-color: var(--glass-bg);
   border-radius: var(--border-radius);
 }
-#token-hud .status-effects .effect-control::before {
+#token-hud.dorako-ui .status-effects .effect-control::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1310,7 +1310,7 @@ section.chat-sidebar {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .status-effects .effect-control.active::before {
+#token-hud.dorako-ui .status-effects .effect-control.active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1322,7 +1322,7 @@ section.chat-sidebar {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .status-effects .effect-control:hover::before {
+#token-hud.dorako-ui .status-effects .effect-control:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1334,7 +1334,7 @@ section.chat-sidebar {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .status-effects .effect-control.active:hover::before {
+#token-hud.dorako-ui .status-effects .effect-control.active:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1346,26 +1346,26 @@ section.chat-sidebar {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud .status-effects .effect-control:not(.active):hover img {
+#token-hud.dorako-ui .status-effects .effect-control:not(.active):hover img {
   border: unset;
 }
-#token-hud .status-effects .effect-control:hover, #token-hud .status-effects .effect-control.active {
+#token-hud.dorako-ui .status-effects .effect-control:hover, #token-hud.dorako-ui .status-effects .effect-control.active {
   filter: none;
   opacity: 1;
   border: none;
 }
-#token-hud .status-effects .effect-control:hover img, #token-hud .status-effects .effect-control.active img {
+#token-hud.dorako-ui .status-effects .effect-control:hover img, #token-hud.dorako-ui .status-effects .effect-control.active img {
   border: none;
 }
-#token-hud .status-effects .effect-control.active:hover {
+#token-hud.dorako-ui .status-effects .effect-control.active:hover {
   border: none;
   filter: brightness(0.75) saturate(0.75);
 }
-#token-hud .status-effects .effect-control.active img {
+#token-hud.dorako-ui .status-effects .effect-control.active img {
   border: none;
   opacity: 1;
 }
-#token-hud .status-effects .effect-control img {
+#token-hud.dorako-ui .status-effects .effect-control img {
   border: none;
   margin: 0px;
   opacity: 1;
@@ -1373,7 +1373,7 @@ section.chat-sidebar {
   width: auto;
   border-radius: var(--border-radius);
 }
-#token-hud .status-effects .title-bar {
+#token-hud.dorako-ui .status-effects .title-bar {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -1393,11 +1393,81 @@ section.chat-sidebar {
   width: 100%;
   z-index: 1;
 }
-#token-hud .status-effects .title-bar.active {
+#token-hud.dorako-ui .status-effects .title-bar.active {
   visibility: visible;
 }
-#token-hud.placeable-hud .control-icon .effect-control.valued .badge,
-#token-hud.placeable-hud .control-icon .effect-control .badge {
+#token-hud.dorako-ui.placeable-hud input[type=text] {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+}
+#token-hud.dorako-ui.placeable-hud input[type=text]:focus {
+  box-shadow: var(--gold-and-glow), var(--glassy);
+  border: none;
+}
+#token-hud.dorako-ui.placeable-hud .control-icon {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  text-shadow: 0px 0px 3px black;
+}
+#token-hud.dorako-ui.placeable-hud .control-icon .badge {
+  text-shadow: none;
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot] {
+  background-color: var(--primary-dark);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot].active {
+  background-color: var(--primary-light);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead]:hover:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=overhead].active:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot]:hover:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=underfoot].active:hover {
+  background-color: var(--primary-light);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=sort-up]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=sort-down]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=config]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=trigger]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=pf2e-perception]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=clown-car]:hover {
+  background-color: var(--primary-light);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=sort-up]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=sort-down]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=config]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=trigger]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=pf2e-perception]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=clown-car]:hover > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=visibility], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=effects], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=combat], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=locked], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=target], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=active], #token-hud.dorako-ui.placeable-hud .control-icon[data-action=mystify] {
+  background-color: var(--secondary-dark);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=visibility]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=visibility].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=effects]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=effects].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=combat]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=combat].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=locked]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=locked].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=target]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=target].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=active]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=active].active, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=mystify]:hover, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=mystify].active {
+  background-color: var(--secondary-light);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=visibility]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=visibility].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=effects]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=effects].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=combat]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=combat].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=locked]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=locked].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=target]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=target].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=active]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=active].active > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=mystify]:hover > img, #token-hud.dorako-ui.placeable-hud .control-icon[data-action=mystify].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon[data-action=clown-car] img {
+  margin: unset;
+}
+#token-hud.dorako-ui.placeable-hud .control-icon:hover {
+  background-color: var(--secondary);
+  color: var(--color-text-light-highlight);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon.active {
+  color: var(--color-text-light-highlight);
+  background-color: var(--secondary-light);
+  border: none;
+}
+#token-hud.dorako-ui.placeable-hud .control-icon.active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon > img {
+  opacity: 1;
+  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
+}
+#token-hud.dorako-ui.placeable-hud .control-icon .effect-control.valued .badge,
+#token-hud.dorako-ui.placeable-hud .control-icon .effect-control .badge {
   font-size: var(--font-size-16);
   font-weight: 600;
   line-height: var(--font-size-17);
@@ -1411,78 +1481,10 @@ section.chat-sidebar {
   border: 1px solid var(--gold-brown);
   box-shadow: -1px 1px 0px var(--tertiary);
 }
-#token-hud.placeable-hud .control-icon .badge.fa-lock:before {
+#token-hud.dorako-ui.placeable-hud .control-icon .badge.fa-lock:before {
   position: relative;
   top: -2.5px;
   font-size: var(--font-size-10);
-}
-
-.placeable-hud input[type=text] {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  text-shadow: 0px 0px 3px black;
-}
-.placeable-hud input[type=text]:focus {
-  box-shadow: var(--gold-and-glow), var(--glassy);
-  border: none;
-}
-.placeable-hud .control-icon {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
-  text-shadow: 0px 0px 3px black;
-}
-.placeable-hud .control-icon .badge {
-  text-shadow: none;
-}
-.placeable-hud .control-icon[data-action=overhead], .placeable-hud .control-icon[data-action=underfoot] {
-  background-color: var(--primary-dark);
-}
-.placeable-hud .control-icon[data-action=overhead]:hover, .placeable-hud .control-icon[data-action=overhead].active, .placeable-hud .control-icon[data-action=underfoot]:hover, .placeable-hud .control-icon[data-action=underfoot].active {
-  background-color: var(--primary-light);
-}
-.placeable-hud .control-icon[data-action=overhead]:hover > img, .placeable-hud .control-icon[data-action=overhead].active > img, .placeable-hud .control-icon[data-action=underfoot]:hover > img, .placeable-hud .control-icon[data-action=underfoot].active > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-}
-.placeable-hud .control-icon[data-action=overhead]:hover:hover, .placeable-hud .control-icon[data-action=overhead].active:hover, .placeable-hud .control-icon[data-action=underfoot]:hover:hover, .placeable-hud .control-icon[data-action=underfoot].active:hover {
-  background-color: var(--primary-light);
-}
-.placeable-hud .control-icon[data-action=sort-up]:hover, .placeable-hud .control-icon[data-action=sort-down]:hover, .placeable-hud .control-icon[data-action=config]:hover, .placeable-hud .control-icon[data-action=trigger]:hover, .placeable-hud .control-icon[data-action=pf2e-perception]:hover {
-  background-color: var(--primary);
-}
-.placeable-hud .control-icon[data-action=sort-up]:hover > img, .placeable-hud .control-icon[data-action=sort-down]:hover > img, .placeable-hud .control-icon[data-action=config]:hover > img, .placeable-hud .control-icon[data-action=trigger]:hover > img, .placeable-hud .control-icon[data-action=pf2e-perception]:hover > img {
-  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
-}
-.placeable-hud .control-icon[data-action=visibility], .placeable-hud .control-icon[data-action=effects], .placeable-hud .control-icon[data-action=combat], .placeable-hud .control-icon[data-action=locked], .placeable-hud .control-icon[data-action=target], .placeable-hud .control-icon[data-action=active], .placeable-hud .control-icon[data-action=mystify] {
-  background-color: var(--secondary-dark);
-}
-.placeable-hud .control-icon[data-action=visibility]:hover, .placeable-hud .control-icon[data-action=visibility].active, .placeable-hud .control-icon[data-action=effects]:hover, .placeable-hud .control-icon[data-action=effects].active, .placeable-hud .control-icon[data-action=combat]:hover, .placeable-hud .control-icon[data-action=combat].active, .placeable-hud .control-icon[data-action=locked]:hover, .placeable-hud .control-icon[data-action=locked].active, .placeable-hud .control-icon[data-action=target]:hover, .placeable-hud .control-icon[data-action=target].active, .placeable-hud .control-icon[data-action=active]:hover, .placeable-hud .control-icon[data-action=active].active, .placeable-hud .control-icon[data-action=mystify]:hover, .placeable-hud .control-icon[data-action=mystify].active {
-  background-color: var(--secondary-light);
-}
-.placeable-hud .control-icon[data-action=visibility]:hover > img, .placeable-hud .control-icon[data-action=visibility].active > img, .placeable-hud .control-icon[data-action=effects]:hover > img, .placeable-hud .control-icon[data-action=effects].active > img, .placeable-hud .control-icon[data-action=combat]:hover > img, .placeable-hud .control-icon[data-action=combat].active > img, .placeable-hud .control-icon[data-action=locked]:hover > img, .placeable-hud .control-icon[data-action=locked].active > img, .placeable-hud .control-icon[data-action=target]:hover > img, .placeable-hud .control-icon[data-action=target].active > img, .placeable-hud .control-icon[data-action=active]:hover > img, .placeable-hud .control-icon[data-action=active].active > img, .placeable-hud .control-icon[data-action=mystify]:hover > img, .placeable-hud .control-icon[data-action=mystify].active > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-}
-.placeable-hud .control-icon:hover {
-  background-color: var(--secondary);
-  color: var(--color-text-light-highlight);
-}
-.placeable-hud .control-icon.active {
-  color: var(--color-text-light-highlight);
-  background-color: var(--secondary-light);
-  border: none;
-}
-.placeable-hud .control-icon.active > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
-}
-.placeable-hud .control-icon > img {
-  opacity: 1;
-  filter: sepia() brightness(0.8) drop-shadow(0px 0px 3px black);
 }
 
 .dorako-ui.sheet.familiar form {
@@ -1503,6 +1505,13 @@ section.chat-sidebar {
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .item-image .item-icon, .dorako-ui.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image .item-icon {
   border-radius: 2px;
 }
+.dorako-ui.actor.sheet button.use-action {
+  text-shadow: unset !important;
+  color: black !important;
+}
+.dorako-ui.actor.sheet button.use-action select {
+  box-shadow: unset !important;
+}
 .dorako-ui.actor.sheet .crb-style aside .modifiers_button {
   text-shadow: none;
 }
@@ -1517,7 +1526,7 @@ section.chat-sidebar {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background: white !important;
 }
-.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
   border-image-source: var(--ornamentation);
 }
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options {
@@ -1719,7 +1728,7 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest {
   color: var(--half-transparent);
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-name, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .abbreviation, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-name, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
   color: var(--color-border-light-primary);
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute input, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-score input {
@@ -1731,8 +1740,8 @@ section.chat-sidebar {
   background: rgba(245, 234, 245, 0.1333333333);
   outline: 1px dashed #720073;
 }
-.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
-  border-image: linear-gradient(90deg, rgba(241, 237, 234, 0), black) 1;
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
+  border-image: linear-gradient(90deg, rgba(241, 237, 234, 0), var(--tertiary)) 1;
 }
 .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-1, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-2 {
   color: black;
@@ -1757,7 +1766,17 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary .tag.tag_secondary {
   background-color: var(--tertiary-dark);
 }
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .label,
 .dorako-ui.dark-theme .crb-style .details-label {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested.active, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name .actions-title .action-name > h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name .actions-title .action-name > h4:hover {
   color: var(--tertiary);
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-id, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-id {
@@ -1856,10 +1875,10 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.sheet.actor section.sidebar, .dorako-ui.dark-theme.sheet.actor section.sidebar .gm-settings, .dorako-ui.dark-theme.sheet.actor section.sidebar > img.actor-icon, .dorako-ui.dark-theme.sheet.actor section.sidebar .sidebar-meta, .dorako-ui.dark-theme.sheet.actor .sheet-header {
   border-color: var(--tertiary) !important;
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group {
   gap: 3px;
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button.tag, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button.tag {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -1868,18 +1887,18 @@ section.chat-sidebar {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   text-shadow: 0px 0px 3px black;
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled) {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button.tag:not(:disabled), .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button.tag:not(:disabled) {
   background: var(--secondary);
   color: var(--color-text-light-highlight);
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled).damage {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button.tag:not(:disabled).damage, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button.tag:not(:disabled).damage {
   background: var(--primary);
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled).damage:hover {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button.tag:not(:disabled).damage:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button.tag:not(:disabled).damage:hover {
   background: var(--primary-light);
   color: white;
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button:not(:disabled):hover {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button.tag:not(:disabled):hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button.tag:not(:disabled):hover {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -3838,9 +3857,15 @@ a.inline-roll:not(.inline-result) {
   color: black;
 }
 
+a.inline-check,
+span[data-pf2-check],
 span[data-pf2-effect-area].with-repost {
   padding: 0px;
   padding-left: 4px;
+}
+
+[data-visibility]:not([data-visibility=all]) {
+  padding: unset;
 }
 
 .dorako-ui.dark-theme a.content-link.broken {

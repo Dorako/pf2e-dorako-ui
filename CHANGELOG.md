@@ -1,3 +1,10 @@
+# 2.6.1
+
+- (New) Styling of Party Sheet's "clown car" button to make it fit with other control buttons.
+- (Maintenance) Keeping up to date with system for PC sheets.
+- (New) Initial support for Kineticist in PC sheets.
+- (Maintenance) Minor adjustments to the "inline button"-family of buttons.
+
 # 2.6.0
 
 - (Refinement) Updated styling of Idle's Token Tooltip courtesy of Symon.

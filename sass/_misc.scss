@@ -26,9 +26,16 @@ a.inline-roll:not(.inline-result) {
 }
 
 // Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
+a.inline-check,
+span[data-pf2-check],
 span[data-pf2-effect-area].with-repost {
   padding: 0px;
   padding-left: 4px;
+}
+
+// Fixes issue where hidden DC is too 'tall'
+[data-visibility]:not([data-visibility="all"]) {
+  padding: unset;
 }
 
 .dorako-ui.dark-theme {

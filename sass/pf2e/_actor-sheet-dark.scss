@@ -52,6 +52,7 @@
   }
 
   // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .abbreviation,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute .attribute-name,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability .ability-name {
     color: var(--color-border-light-primary);
@@ -71,9 +72,11 @@
   }
 
   // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, 
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action,
     &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item {
-      border-image: linear-gradient(90deg, #f1edea00, black) 1;
+      border-image: linear-gradient(90deg, #f1edea00, var(--tertiary)) 1;
     }
 
   &.actor.sheet .inventory .list-row .item-controls .item-control .fa-stack .fa-1,
@@ -104,7 +107,24 @@
       background-color: var(--tertiary-dark);
     }
 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .label,
   .crb-style .details-label {
+    color: var(--tertiary);
+  }
+
+  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+    color: var(--tertiary-dark);
+  }
+
+  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested.active,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
+    color: var(--tertiary);
+  }
+
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name .actions-title .action-name > h4:hover,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name .actions-title .action-name > h4:hover {
     color: var(--tertiary);
   }
 
@@ -239,9 +259,10 @@
   }
 
   // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group {
       gap: 3px;
-      button {
+      button.tag {
         @include glass;
         @include quick-transition;
         text-shadow: 0px 0px 3px black;
