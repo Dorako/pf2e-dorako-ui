@@ -19,6 +19,80 @@
     }
   }
 
+  &.actor.sheet.character {
+    --text-dark: var(--color-text-light-highlight);
+  }
+
+  // Party sheet
+  &.sheet.party {
+    --color-border: var(--tertiary);
+    --alt-dark: var(--tertiary-dark);
+  }
+
+  &.sheet.party form {
+    background: unset;
+  }
+
+  &.sheet.party form .details .title .name {
+    box-shadow: none !important;
+    background: none !important;
+  }
+
+  .tags .tag.tag_transparent,
+  .tags .tag option.tag_transparent {
+    color: white;
+  }
+
+  &.sheet.party [data-tab="overview"] .member .main-stats .ac .value {
+    color: var(--tertiary);
+    text-shadow: 0px 1px 0px black;
+  }
+
+  &.sheet.party [data-tab="overview"] .summary nav button.active {
+    background: var(--primary);
+  }
+
+  &.sheet.party .tag-light {
+    background: var(--tag-color);
+    color: white;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+  }
+
+  &.sheet.party nav.sub-nav a,
+  &.sheet.party nav.sub-nav .tab {
+    color: var(--tertiary-dark);
+  }
+
+  &.sheet.party [data-tab="exploration"] .activities .member-activity .empty .name,
+  &.sheet.party nav.sub-nav a.active,
+  &.sheet.party nav.sub-nav .tab.active {
+    color: var(--tertiary);
+  }
+
+  &.sheet.party nav.sub-nav {
+    background: var(--glass-bg-light);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%), 0px -1px 2px rgb(255 255 255 / 30%) inset;
+
+    .tab {
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    &::before,
+    &::after {
+      filter: invert(1);
+    }
+  }
+
+  &.sheet.party [data-tab="overview"] .member .name .hero-points .empty {
+    border-color: var(--tertiary);
+  }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .auxiliary-actions button select.modular {
+    color: black; // overwrite --text-dark
+  }
+
   .tags .tag.tag_secondary,
   .tags .tag option.tag_secondary {
     background-color: var(--tertiary-dark);

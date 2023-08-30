@@ -1,3 +1,8 @@
+# 2.6.2
+
+- (Maintenance) Fix various dark-theme breakages introduced in system 5.4.1.
+- (New) Initial Light and dark-theme support for Party Sheet.
+
 # 2.6.1
 
 - (New) Styling of Party Sheet's "clown car" button to make it fit with other control buttons.

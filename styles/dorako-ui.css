@@ -1490,6 +1490,9 @@ section.chat-sidebar {
 .dorako-ui.sheet.familiar form {
   background: unset;
 }
+.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-background .pc {
+  gap: 4px;
+}
 .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image {
   border: none;
   margin: 2px;
@@ -1695,6 +1698,59 @@ section.chat-sidebar {
 .dorako-ui.dark-theme h4.rarity-unique {
   color: var(--rarity-unique) !important;
   border-color: var(--rarity-unique) !important;
+}
+.dorako-ui.dark-theme.actor.sheet.character {
+  --text-dark: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.sheet.party {
+  --color-border: var(--tertiary);
+  --alt-dark: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.sheet.party form {
+  background: unset;
+}
+.dorako-ui.dark-theme.sheet.party form .details .title .name {
+  box-shadow: none !important;
+  background: none !important;
+}
+.dorako-ui.dark-theme .tags .tag.tag_transparent,
+.dorako-ui.dark-theme .tags .tag option.tag_transparent {
+  color: white;
+}
+.dorako-ui.dark-theme.sheet.party [data-tab=overview] .member .main-stats .ac .value {
+  color: var(--tertiary);
+  text-shadow: 0px 1px 0px black;
+}
+.dorako-ui.dark-theme.sheet.party [data-tab=overview] .summary nav button.active {
+  background: var(--primary);
+}
+.dorako-ui.dark-theme.sheet.party .tag-light {
+  background: var(--tag-color);
+  color: white;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+}
+.dorako-ui.dark-theme.sheet.party nav.sub-nav a, .dorako-ui.dark-theme.sheet.party nav.sub-nav .tab {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.sheet.party [data-tab=exploration] .activities .member-activity .empty .name, .dorako-ui.dark-theme.sheet.party nav.sub-nav a.active, .dorako-ui.dark-theme.sheet.party nav.sub-nav .tab.active {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.party nav.sub-nav {
+  background: var(--glass-bg-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0px -1px 2px rgba(255, 255, 255, 0.3) inset;
+}
+.dorako-ui.dark-theme.sheet.party nav.sub-nav .tab {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.dorako-ui.dark-theme.sheet.party nav.sub-nav::before, .dorako-ui.dark-theme.sheet.party nav.sub-nav::after {
+  filter: invert(1);
+}
+.dorako-ui.dark-theme.sheet.party [data-tab=overview] .member .name .hero-points .empty {
+  border-color: var(--tertiary);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .auxiliary-actions button select.modular {
+  color: black;
 }
 .dorako-ui.dark-theme .tags .tag.tag_secondary,
 .dorako-ui.dark-theme .tags .tag option.tag_secondary {
