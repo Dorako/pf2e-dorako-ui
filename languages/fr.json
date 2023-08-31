@@ -282,7 +282,7 @@
         },
         "no-logo": {
           "name": "Cacher le logo de Foundry ?",
-          "hint": "Supprime le logo Foundry en haut à gauche"
+          "hint": "Retire le logo Foundry en haut à gauche"
         },
         "no-cards": {
           "name": "Cacher l'onglet Cartes ?",
@@ -342,6 +342,23 @@
         "adjust-chat-controls": {
           "name": "Ajuster les contrôles de la conversation ?",
           "hint": "(Expérimental) Restyle le mode rolltype en bouton et convertit les autres contrôles de la conversation en boutons"
+        },
+        "border-radius": {
+          "hint": "(par défaut : 3px) Modifie le degré d'arrondi de nombreux éléments de l'interface utilisateur",
+          "name": "Arrondi"
+        },
+        "control-size": {
+          "hint": "(par défaut : 36px) Modifie la taille des contrôles et des éléments de navigation",
+          "name": "Taille des contrôles"
+        },
+        "controls-alignment": {
+          "name": "Alignement des contrôles",
+          "hint": "Modifie la position des contrôles",
+          "choice": {
+            "center": "Au milieu",
+            "end": "En bas",
+            "start": "En haut"
+          }
         }
       },
       "misc": {
