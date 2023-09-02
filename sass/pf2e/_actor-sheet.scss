@@ -4,6 +4,10 @@
     background: unset;
   }
 
+  &.sheet.party [data-tab=overview] .summary {
+    padding: 10px 12px;
+  }
+
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-background .pc {
     gap: 4px;
   }
@@ -57,6 +61,8 @@
   }
 
   // prettier-ignore
+  &.sheet.party [data-tab=overview] .summary,
+  &.sheet.party [data-tab=exploration] .activities .member-activity,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,

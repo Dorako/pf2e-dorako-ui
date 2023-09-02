@@ -1,3 +1,9 @@
+# 2.6.3
+
+- (Refinement) Further improvements to Party Sheet dark theme.
+- (Refinement) Made adjustments to the jump-to-bottom chat button. It no longer overlaps with the chatbox, or other module buttons in that general area.
+- (Fix) The jump-to-bottom button should no longer persist after clearing the chatlog.
+
 # 2.6.2
 
 - (Maintenance) Fix various dark-theme breakages introduced in system 5.4.1.

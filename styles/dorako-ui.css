@@ -1269,8 +1269,10 @@ section.chat-sidebar {
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   z-index: 1;
-  margin-left: 50px;
-  width: calc(100% - 100px);
+  flex: 0 0 28px;
+  width: calc(var(--sidebar-width) - 10px);
+  margin: 0px 5px;
+  position: unset;
   text-shadow: none;
   background-color: rgba(236, 191, 65, 0.8666666667);
   color: black;
@@ -1490,6 +1492,9 @@ section.chat-sidebar {
 .dorako-ui.sheet.familiar form {
   background: unset;
 }
+.dorako-ui.sheet.party [data-tab=overview] .summary {
+  padding: 10px 12px;
+}
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-background .pc {
   gap: 4px;
 }
@@ -1529,7 +1534,7 @@ section.chat-sidebar {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background: white !important;
 }
-.dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+.dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
   border-image-source: var(--ornamentation);
 }
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options {
@@ -1716,6 +1721,15 @@ section.chat-sidebar {
 .dorako-ui.dark-theme .tags .tag.tag_transparent,
 .dorako-ui.dark-theme .tags .tag option.tag_transparent {
   color: white;
+}
+.dorako-ui.dark-theme.sheet.party .sidebar .box footer {
+  background: var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.party [data-tab=exploration] .exploration-members .member .sub-data {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dorako-ui.dark-theme.sheet.party [data-tab=exploration] .exploration-members .member .sub-data > span:not(:last-child) {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .dorako-ui.dark-theme.sheet.party [data-tab=overview] .member .main-stats .ac .value {
   color: var(--tertiary);

@@ -132,8 +132,10 @@ section.chat-sidebar {
   @include glass;
   @include quick-transition;
   z-index: 1;
-  margin-left: 50px;
-  width: calc(100% - 100px);
+  flex: 0 0 28px;
+  width: calc(var(--sidebar-width) - 10px);
+  margin: 0px 5px;
+  position: unset;
   text-shadow: none;
   background-color: #ecbf41dd;
   color: black;
