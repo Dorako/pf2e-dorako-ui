@@ -3090,4 +3090,8 @@ body.system-swade {
   color: var(--color-text-light-heading);
 }
 
+.dorako-ui.tab#chat {
+  margin: unset;
+}
+
 /*# sourceMappingURL=module-support.css.map */

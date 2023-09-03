@@ -1,3 +1,8 @@
+# 2.6.4
+
+- (Refinement) Fixed a margin conflict with Button Feel.
+- (Refinement) Improved dark theme styling for damage type buttons on PC sheet strikes.
+
 # 2.6.3
 
 - (Refinement) Further improvements to Party Sheet dark theme.

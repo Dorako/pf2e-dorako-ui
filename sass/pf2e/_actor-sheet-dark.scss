@@ -99,6 +99,22 @@
   }
 
   // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button {
+    box-shadow: 0px 0px 1px 1px var(--tertiary) inset;
+    --color-border-piercing: #5c5c5c;
+    --color-border-slashing: #5c5c5c;
+    --color-border-bludgeoning: #5c5c5c;
+
+    &:hover,
+    &.selected {
+      background: white;
+    }
+    .icon {
+      text-shadow: none;
+    }
+  }
+
+  // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .auxiliary-actions button select.modular {
     color: black; // overwrite --text-dark
