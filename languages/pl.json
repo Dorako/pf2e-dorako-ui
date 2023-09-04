@@ -193,6 +193,23 @@
         "adjust-chat-controls": {
           "name": "Dostosować sterowanie czatem?",
           "hint": "(Eksperymentalne) Przekształca tryb rolltype w przyciski i konwertuje inne kontrolki czatu na przyciski"
+        },
+        "border-radius": {
+          "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika",
+          "name": "Zaokrąglenie"
+        },
+        "control-size": {
+          "name": "Kontrola rozmiaru",
+          "hint": "(domyślnie: 36px) Zmienia rozmiar elementów sterujących i nawigacyjnych"
+        },
+        "controls-alignment": {
+          "name": "Kontrola rozmieszczenia",
+          "hint": "Zmienia położenie elementów sterujących",
+          "choice": {
+            "start": "Góra",
+            "center": "Środek",
+            "end": "Dół"
+          }
         }
       },
       "misc": {
