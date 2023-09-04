@@ -1,3 +1,9 @@
+# 2.6.7
+
+- (Maintenance) Fixed some low-contrast dark-theme issues.
+- (Maintenance) Fixed an issue where reload and range increments were unreadable on dark-theme.
+- (Maintenance) Re-added missing ornamentation styling for expanded actions dark-theme PC sheets.
+
 # 2.6.6
 
 - (Maintenance) Kept up-to-date with system class names to fix an issue where saves on NPC sheets were cut short.

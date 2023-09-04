@@ -61,6 +61,8 @@
   }
 
   // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
   &.sheet.party [data-tab=overview] .summary,
   &.sheet.party [data-tab=exploration] .activities .member-activity,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,

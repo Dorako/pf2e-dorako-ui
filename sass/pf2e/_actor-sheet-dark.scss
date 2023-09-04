@@ -109,16 +109,32 @@
     &:hover,
     &.selected {
       background: white;
+      .icon {
+        color: black !important; // stopgap
+      }
     }
     .icon {
       text-shadow: none;
     }
+    &.damage.color.bludgeoning .icon, 
+    &.damage.color.piercing .icon, 
+    &.damage.color.slashing .icon {
+      color: var(--color-border-piercing);
+    }
   }
 
   // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .item-image i,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .auxiliary-actions button select.modular {
     color: black; // overwrite --text-dark
+  }
+
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary .tag.tag_secondary,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary .tag.tag_secondary {
+    background-color: var(--tertiary-dark);
+    color: black;
   }
 
   .tags .tag.tag_secondary,
@@ -442,15 +458,15 @@
   // }
 
   // prettier-ignore
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button {
-    background: var(--tertiary);
-    color: rgba(0, 0, 0, 0.4);
-    text-shadow: unset;
-    &:hover,
-    &.selected {
-      background: var(--tertiary-dark);
-      color: var(--text-dark);
-      text-shadow: unset;
-    }
-  }
+  // &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button {
+  //   background: var(--tertiary);
+  //   color: rgba(0, 0, 0, 0.4);
+  //   text-shadow: unset;
+  //   &:hover,
+  //   &.selected {
+  //     background: var(--tertiary-dark);
+  //     color: var(--text-dark);
+  //     text-shadow: unset;
+  //   }
+  // }
 }

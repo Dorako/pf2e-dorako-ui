@@ -1534,7 +1534,7 @@ section.chat-sidebar {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   background: white !important;
 }
-.dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
   border-image-source: var(--ornamentation);
 }
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options {
@@ -1772,10 +1772,20 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button.selected {
   background: white;
 }
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button:hover .icon, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button.selected .icon {
+  color: black !important;
+}
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button .icon {
   text-shadow: none;
 }
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .auxiliary-actions button select.modular {
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button.damage.color.bludgeoning .icon, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button.damage.color.piercing .icon, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group .versatile-options button.damage.color.slashing .icon {
+  color: var(--color-border-piercing);
+}
+.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .item-image i, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .auxiliary-actions button select.modular {
+  color: black;
+}
+.dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary .tag.tag_secondary, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary .tag.tag_secondary {
+  background-color: var(--tertiary-dark);
   color: black;
 }
 .dorako-ui.dark-theme .tags .tag.tag_secondary,
@@ -2028,16 +2038,6 @@ section.chat-sidebar {
   background: unset;
   box-shadow: unset;
   color: unset;
-}
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button {
-  background: var(--tertiary);
-  color: rgba(0, 0, 0, 0.4);
-  text-shadow: unset;
-}
-.dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button:hover, .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group .versatile-options button.selected {
-  background: var(--tertiary-dark);
-  color: var(--text-dark);
-  text-shadow: unset;
 }
 
 .combat-sidebar .drag-gap {
