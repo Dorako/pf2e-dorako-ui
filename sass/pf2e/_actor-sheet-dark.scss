@@ -19,6 +19,7 @@
     }
   }
 
+  &.sheet.preparation,
   &.actor.sheet.character {
     --text-dark: var(--color-text-light-highlight);
   }

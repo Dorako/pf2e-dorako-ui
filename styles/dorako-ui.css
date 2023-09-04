@@ -1704,7 +1704,7 @@ section.chat-sidebar {
   color: var(--rarity-unique) !important;
   border-color: var(--rarity-unique) !important;
 }
-.dorako-ui.dark-theme.actor.sheet.character {
+.dorako-ui.dark-theme.sheet.preparation, .dorako-ui.dark-theme.actor.sheet.character {
   --text-dark: var(--color-text-light-highlight);
 }
 .dorako-ui.dark-theme.sheet.party {

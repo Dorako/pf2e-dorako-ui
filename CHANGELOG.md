@@ -1,3 +1,7 @@
+# 2.6.5
+
+- (Fix) Fixed dark-theme styling for Spell Preparation sheets.
+
 # 2.6.4
 
 - (Refinement) Fixed a margin conflict with Button Feel.
