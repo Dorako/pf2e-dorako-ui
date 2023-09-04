@@ -1,3 +1,7 @@
+# 2.6.6
+
+- (Maintenance) Kept up-to-date with system class names to fix an issue where saves on NPC sheets were cut short.
+
 # 2.6.5
 
 - (Fix) Fixed dark-theme styling for Spell Preparation sheets.

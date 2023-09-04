@@ -2464,24 +2464,24 @@ section.chat-sidebar {
   background: none;
   margin: 5px;
 }
-.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .image-container {
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sidebar .image-container {
   border: none;
 }
-.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves-section.side-bar-section {
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sidebar .saves-section.side-bar-section {
   display: flex;
   flex-direction: column;
 }
-.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves-section.side-bar-section.collapsed {
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sidebar .saves-section.side-bar-section.collapsed {
   max-height: 42px;
 }
-.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves-section.side-bar-section.collapsed:hover {
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sidebar .saves-section.side-bar-section.collapsed:hover {
   max-height: 1000px;
 }
-.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .saves {
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sidebar .saves {
   margin-top: 0px;
   width: unset;
 }
-.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .side-bar .save-details {
+.dorako-ui.sheet.pf2e.actor.npc form.npc-sheet .sidebar .save-details {
   font-size: 14px;
 }
 .dorako-ui.sheet.pf2e.actor.npc .side-bar-section-header {
