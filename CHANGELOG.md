@@ -1,3 +1,10 @@
+# 2.6.8
+
+- (Fix) Fixed certain inline buttons in ITT having the wrong text color.
+- (Refinement) Adjusted ITT styling to make certain labels more legible, and made headers go to the border.
+- (Maintenance) Fixed dark-theme legibility issues with certain labels on items.
+- (System) Low effort support for the Fabula Ultima system. Some stuff might work, some stuff might not.
+
 # 2.6.7
 
 - (Maintenance) Fixed some low-contrast dark-theme issues.

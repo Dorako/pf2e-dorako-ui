@@ -347,6 +347,12 @@
     }
   }
 
+  &.pf2e.item.sheet form section.sheet-body .item-mystification.active .mystification-status label,
+  &.pf2e.item.sheet form .sheet-content section.sheet-sidebar .inventory-details label,
+  &.pf2e.item.sheet form .sheet-content section.sheet-sidebar .feat-details label {
+    color: var(--color-text-light);
+  }
+
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .alt-usage img.alt-usage-icon {
       filter: invert(1);

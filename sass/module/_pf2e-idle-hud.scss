@@ -17,6 +17,32 @@
     --color-rank-4: red; // Symon recommended
   }
 
+  .popup .notes-header {
+    border: 1px solid var(--color-border-light-2);
+    color: var(--color);
+    font-size: var(--font-size);
+    border-left: 0;
+    border-right: 0;
+    background: rgba(96, 88, 86, 0.5);
+    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+    margin: 0px -5px;
+  }
+
+  a.content-link,
+  [data-pf2-check],
+  a.entity-link,
+  [data-pf2-action],
+  span[data-pf2-effect-area],
+  a.inline-check .label,
+  a.inline-roll:not(.inline-result) {
+    color: black;
+  }
+
+  .sidebar.actions .sidebar-content .toggles .toggle select {
+    @include glass;
+    background-color: var(--glass-bg-light);
+  }
+
   .sidebar.skills .skill .header .rank,
   .sidebar.skills .lore .rank {
     text-shadow: 0px 1px 1px black, 0px 1px 15px white;
@@ -24,6 +50,7 @@
 
   .sidebar .header {
     background: rgba(96, 88, 86, 0.5);
+    margin: 0px -5px;
   }
 
   .sidebar.skills .skill .header .modifier,
@@ -172,6 +199,7 @@
   i.fa-light.fa-block-brick {
     color: deepskyblue;
   }
+  i.fa-solid.fa-shield,
   i.fa-regular.fa-shield {
     color: rgb(103, 235, 213);
   }

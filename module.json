@@ -34,6 +34,14 @@
           "minimum": "2.2.5",
           "verified": "2.2.5"
         }
+      },
+      {
+        "id": "fabulaultima",
+        "type": "system",
+        "compatibility": {
+          "minimum": "0.7.0",
+          "verified": "0.7.0"
+        }
       }
     ]
   },

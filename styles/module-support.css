@@ -2802,12 +2802,40 @@ body.system-swade {
   --color-rank-3: #cf931d;
   --color-rank-4: red;
 }
+#pf2e-token-hud.dorako-ui .popup .notes-header {
+  border: 1px solid var(--color-border-light-2);
+  color: var(--color);
+  font-size: var(--font-size);
+  border-left: 0;
+  border-right: 0;
+  background: rgba(96, 88, 86, 0.5);
+  text-shadow: 0px 1px 1px black, 0px 1px 15px white;
+  margin: 0px -5px;
+}
+#pf2e-token-hud.dorako-ui a.content-link,
+#pf2e-token-hud.dorako-ui [data-pf2-check],
+#pf2e-token-hud.dorako-ui a.entity-link,
+#pf2e-token-hud.dorako-ui [data-pf2-action],
+#pf2e-token-hud.dorako-ui span[data-pf2-effect-area],
+#pf2e-token-hud.dorako-ui a.inline-check .label,
+#pf2e-token-hud.dorako-ui a.inline-roll:not(.inline-result) {
+  color: black;
+}
+#pf2e-token-hud.dorako-ui .sidebar.actions .sidebar-content .toggles .toggle select {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--glass-bg-light);
+}
 #pf2e-token-hud.dorako-ui .sidebar.skills .skill .header .rank,
 #pf2e-token-hud.dorako-ui .sidebar.skills .lore .rank {
   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
 }
 #pf2e-token-hud.dorako-ui .sidebar .header {
   background: rgba(96, 88, 86, 0.5);
+  margin: 0px -5px;
 }
 #pf2e-token-hud.dorako-ui .sidebar.skills .skill .header .modifier,
 #pf2e-token-hud.dorako-ui .sidebar.skills .lore .modifier {
@@ -2944,6 +2972,7 @@ body.system-swade {
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-light.fa-block-brick {
   color: deepskyblue;
 }
+#pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-shield,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-regular.fa-shield {
   color: rgb(103, 235, 213);
 }
