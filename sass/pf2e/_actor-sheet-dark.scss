@@ -23,11 +23,18 @@
   &.actor.sheet.character {
     --text-dark: var(--color-text-light-highlight);
   }
+  
+
 
   // Party sheet
   &.sheet.party {
     --color-border: var(--tertiary);
     --alt-dark: var(--tertiary-dark);
+    --text-dark: var(--color-text-light-highlight);
+  }
+  
+  &.sheet.party .sidebar .box header {
+    border: 1px solid var(--tertiary);
   }
 
   &.sheet.party form {
@@ -264,15 +271,15 @@
 
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-id, 
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
-      color: var(--tertiary-dark);
-    }
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability.key .ability-mod {
+    color: var(--tertiary-dark);
+  }
 
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title {
-      color: var(--tertiary-dark);
-    }
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title {
+    color: var(--tertiary-dark);
+  }
 
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill .skill-score, 
@@ -284,12 +291,12 @@
 
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name h4:hover,
-    &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
-    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .actions-title .action-name h4:hover,
-    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name h4:hover {
-      color: var(--tertiary);
-      text-shadow: unset;
-    }
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .actions-title .action-name h4:hover,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name h4:hover {
+    color: var(--tertiary);
+    text-shadow: unset;
+  }
 
   &.actor.sheet .crb-style aside .modifiers_button {
     background: hsla(0, 0%, 100%, 0.75);

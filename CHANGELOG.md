@@ -1,3 +1,7 @@
+# 2.6.9
+
+- (Refinement) Small improvements to dark-theme support for Party Sheet.
+
 # 2.6.8
 
 - (Fix) Fixed certain inline buttons in ITT having the wrong text color.

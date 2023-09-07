@@ -1710,6 +1710,10 @@ section.chat-sidebar {
 .dorako-ui.dark-theme.sheet.party {
   --color-border: var(--tertiary);
   --alt-dark: var(--tertiary-dark);
+  --text-dark: var(--color-text-light-highlight);
+}
+.dorako-ui.dark-theme.sheet.party .sidebar .box header {
+  border: 1px solid var(--tertiary);
 }
 .dorako-ui.dark-theme.sheet.party form {
   background: unset;
