@@ -1,3 +1,7 @@
+# 2.6.10
+
+- (Maintenance) Fixed dark-theme legibility issue with inventory buttons on loot sheets.
+
 # 2.6.9
 
 - (Refinement) Small improvements to dark-theme support for Party Sheet.

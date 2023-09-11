@@ -19,12 +19,11 @@
     }
   }
 
+  &.sheet.actor.loot,
   &.sheet.preparation,
   &.actor.sheet.character {
     --text-dark: var(--color-text-light-highlight);
   }
-  
-
 
   // Party sheet
   &.sheet.party {
@@ -32,7 +31,7 @@
     --alt-dark: var(--tertiary-dark);
     --text-dark: var(--color-text-light-highlight);
   }
-  
+
   &.sheet.party .sidebar .box header {
     border: 1px solid var(--tertiary);
   }
