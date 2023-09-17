@@ -10,7 +10,7 @@
 /* Glassy Buttons                            */
 /* ----------------------------------------- */
 .dorako-ui.dark-theme.message.chat-message {
-  > .message-content .message-buttons button i.cue {
+  > .message-content .message-buttons button .cue i {
     --fa-primary-color: white;
     --fa-secondary-color: var(--tertiary);
   }

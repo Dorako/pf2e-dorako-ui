@@ -1,3 +1,7 @@
+# 2.6.12
+
+- (Refinement) Added dark-theme styling for the 'click me' button indicator in chat messages, but for realsies.
+
 # 2.6.11
 
 - (Refinement) Added dark-theme styling for the 'click me' button indicator in chat messages.
