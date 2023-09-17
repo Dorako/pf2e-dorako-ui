@@ -1,3 +1,8 @@
+# 2.6.11
+
+- (Refinement) Added dark-theme styling for the 'click me' button indicator in chat messages.
+- (Fix) Adjusted dark-theme styling worn/invested states of equipment on PC sheets.
+
 # 2.6.10
 
 - (Maintenance) Fixed dark-theme legibility issue with inventory buttons on loot sheets.

@@ -236,14 +236,18 @@
     color: var(--tertiary);
   }
 
-  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
-    color: var(--tertiary-dark);
+  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested {
+    color: rgba(255, 255, 255, 0.5);
   }
 
-  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested.active,
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
-    color: var(--tertiary);
+  // &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+  //   color: var(--tertiary);
+  // }
+
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest.active,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested.active {
+    color: var(--tertiary-dark);
   }
 
   // prettier-ignore
@@ -369,11 +373,6 @@
     &.actor.sheet a.roll-icon svg path {
       fill: var(--text-light);
     }
-
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest.active,
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
-    color: var(--tertiary-dark);
-  }
 
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {

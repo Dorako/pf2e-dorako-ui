@@ -10,6 +10,11 @@
 /* Glassy Buttons                            */
 /* ----------------------------------------- */
 .dorako-ui.dark-theme.message.chat-message {
+  > .message-content .message-buttons button i.cue {
+    --fa-primary-color: white;
+    --fa-secondary-color: var(--tertiary);
+  }
+
   .dice-roll .dice-formula,
   .dice-roll .dice-total {
     @include glass;

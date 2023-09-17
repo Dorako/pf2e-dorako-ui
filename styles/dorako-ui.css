@@ -1866,11 +1866,11 @@ section.chat-sidebar {
 .dorako-ui.dark-theme .crb-style .details-label {
   color: var(--tertiary);
 }
-.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
-  color: var(--tertiary-dark);
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested {
+  color: rgba(255, 255, 255, 0.5);
 }
-.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested.active, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
-  color: var(--tertiary);
+.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest.active, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested.active {
+  color: var(--tertiary-dark);
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name .actions-title .action-name > h4:hover, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name .actions-title .action-name > h4:hover {
   color: var(--tertiary);
@@ -1964,9 +1964,6 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg path, .dorako-ui.dark-theme.actor.sheet a.roll-icon svg path {
   fill: var(--text-light);
-}
-.dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-toggle-invest.active, .dorako-ui.dark-theme.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type.active {
-  color: var(--tertiary-dark);
 }
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input, .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
   box-shadow: unset;
@@ -3408,6 +3405,10 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* Glassy Buttons                            */
 /* ----------------------------------------- */
+.dorako-ui.dark-theme.message.chat-message > .message-content .message-buttons button i.cue {
+  --fa-primary-color: white;
+  --fa-secondary-color: var(--tertiary);
+}
 .dorako-ui.dark-theme.message.chat-message .dice-roll .dice-formula,
 .dorako-ui.dark-theme.message.chat-message .dice-roll .dice-total {
   border: none;
