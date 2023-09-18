@@ -1,3 +1,8 @@
+# 2.6.13
+
+- (New) Added styling for new Token HUD 'delay' button from Flatcheck Helper module.
+- (Fix) Automatically expand scene navigation when Carousel Combat is dismissed, while Compact UI is enabled, to resolve an issue where scene navigation would be inaccessible.
+
 # 2.6.12
 
 - (Refinement) Added dark-theme styling for the 'click me' button indicator in chat messages, but for realsies.

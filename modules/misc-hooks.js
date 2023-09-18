@@ -256,6 +256,11 @@ Hooks.once("ready", (app, html, data) => {
   ui.nav.collapse();
 });
 
+Hooks.on("closeCombatDock", (app, html, data) => {
+  if (!game.settings.get(`${MODULE_NAME}`, "ux.compact-ui")) return;
+  ui.nav.expand();
+});
+
 Hooks.on("renderSettingsConfig", (app, html, data) => {
   $("<div>")
     .addClass("form-group dorako-ui settings-header")

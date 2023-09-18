@@ -162,15 +162,14 @@
       }
 
       // These can be clicked, but do not become active
-      // 'trigger' is from Monk's Active Tiles
-      // 'pf2e-perception' is from PF2e Perception by Idle
-      // 'clown-car' from system
       &[data-action="sort-up"],
       &[data-action="sort-down"],
       &[data-action="config"],
-      &[data-action="trigger"],
-      &[data-action="pf2e-perception"],
-      &[data-action="clown-car"] {
+      &[data-action="trigger"],         // 'trigger' is from Monk's Active Tiles
+      &[data-action="pf2e-perception"], // 'pf2e-perception' is from PF2e Perception by Idle
+      &[data-action="clown-car"],       // 'clown-car' from system
+      &[data-action="delay"]            // from flatcheck helper
+      {
         &:hover {
           background-color: var(--primary-light);
           > img {

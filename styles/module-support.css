@@ -1869,6 +1869,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background: var(--glass-bg-light);
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
+  appearance: none;
 }
 #polyglot select option,
 #polyglot select optgroup {
