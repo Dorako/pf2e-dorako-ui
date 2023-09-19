@@ -174,6 +174,7 @@ function injectActionCost(html, actionCost) {
   // console.log("Injecting actionGlyph %s", actionGlyph);
   let messageHeader = html.find(".card-header")[0];
   let actionGlyphText = document.createElement("h3");
+  html.find(".action-glyph")?.get(0).remove(); // Remove action-glyph added by system
   if (shouldBeStyled) actionGlyphText.classList.add("pf2-icon");
   actionGlyphText.textContent = actionGlyph;
   messageHeader.append(actionGlyphText);

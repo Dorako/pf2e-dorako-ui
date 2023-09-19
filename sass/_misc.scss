@@ -25,6 +25,24 @@ a.inline-roll:not(.inline-result) {
   }
 }
 
+.chat-card .tags,
+.tags.paizo-style {
+  gap: 1px;
+
+  .tag {
+    border-radius: 0px;
+    box-shadow: unset;
+    border: 1px solid var(--tertiary);
+    outline: 1px solid var(--gold-brown);
+  }
+  .tag:first-child {
+    border-left-width: 1px;
+  }
+  .tag:last-child {
+    border-right-width: 1px;
+  }
+}
+
 // Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
 a.inline-check,
 span[data-pf2-check],

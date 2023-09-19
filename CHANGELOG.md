@@ -1,3 +1,8 @@
+# 2.6.14
+
+- (Maintenance) Removed the action-glyphs added by the system when "Restructure card info" setting is active, as it already did that.
+- (Refinement) Improved and standardised styling of tags in chat messages.
+
 # 2.6.13
 
 - (New) Added styling for new Token HUD 'delay' button from Flatcheck Helper module.

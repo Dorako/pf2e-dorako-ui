@@ -89,6 +89,13 @@ Hooks.once("ready", () => {
   dorakoCustomCss.id = "dorako-custom-css";
   dorakoCustomCss.innerHTML = game.settings.get("pf2e-dorako-ui", "customization.custom-css");
   document.querySelector("head").appendChild(dorakoCustomCss);
+  // const userColor = Color.fromString(game.user.color);
+  // const whiteColor = Color.fromString("#ffffff");
+  // const blackColor = Color.fromString("#000000");
+
+  // document.querySelector(":root").style.setProperty("--secondary", userColor.css);
+  // document.querySelector(":root").style.setProperty("--secondary-light", userColor.mix(whiteColor, 0.2));
+  // document.querySelector(":root").style.setProperty("--secondary-dark", userColor.mix(blackColor, 0.2));
 });
 
 Hooks.once("ready", () => {

@@ -658,7 +658,8 @@ body.compact-ui .main-controls {
 }
 body.compact-ui #ui-left.active #controls .main-controls .scene-control,
 body.compact-ui #ui-left.active #controls .sub-controls .control-tool {
-  display: block;
+  align-items: center;
+  display: flex;
 }
 body.compact-ui #controls ol.main-controls.app.control-tools {
   width: unset;
@@ -1270,7 +1271,7 @@ section.chat-sidebar {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   z-index: 1;
   flex: 0 0 28px;
-  width: calc(var(--sidebar-width) - 10px);
+  width: calc(100% - 10px);
   margin: 0px 5px;
   position: unset;
   text-shadow: none;
@@ -3148,7 +3149,8 @@ section.chat-sidebar {
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .tags {
-  margin: 3px 0px;
+  margin: 3px 1px;
+  margin-bottom: 8px;
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .tags .vr {
   display: none;
@@ -3216,7 +3218,7 @@ section.chat-sidebar {
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header h3.pf2-icon {
   font-family: Pathfinder2eActions;
-  font-size: xxx-large;
+  font-size: xx-large;
   flex: 0 0 34px;
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-header h4 s {
@@ -3955,6 +3957,26 @@ a.inline-roll:not(.inline-result) {
 .dorako-ui.dark-theme a.inline-check .label,
 .dorako-ui.dark-theme a.inline-roll:not(.inline-result) {
   color: black;
+}
+
+.chat-card .tags,
+.tags.paizo-style {
+  gap: 1px;
+}
+.chat-card .tags .tag,
+.tags.paizo-style .tag {
+  border-radius: 0px;
+  box-shadow: unset;
+  border: 1px solid var(--tertiary);
+  outline: 1px solid var(--gold-brown);
+}
+.chat-card .tags .tag:first-child,
+.tags.paizo-style .tag:first-child {
+  border-left-width: 1px;
+}
+.chat-card .tags .tag:last-child,
+.tags.paizo-style .tag:last-child {
+  border-right-width: 1px;
 }
 
 a.inline-check,

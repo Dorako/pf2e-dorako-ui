@@ -133,7 +133,7 @@ section.chat-sidebar {
   @include quick-transition;
   z-index: 1;
   flex: 0 0 28px;
-  width: calc(var(--sidebar-width) - 10px);
+  width: calc(100% - 10px);
   margin: 0px 5px;
   position: unset;
   text-shadow: none;

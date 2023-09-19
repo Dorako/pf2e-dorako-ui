@@ -19,7 +19,8 @@ body.compact-ui {
 
   #ui-left.active #controls .main-controls .scene-control,
   #ui-left.active #controls .sub-controls .control-tool {
-    display: block;
+    align-items: center;
+    display: flex;
   }
 
   #controls ol.main-controls.app.control-tools {

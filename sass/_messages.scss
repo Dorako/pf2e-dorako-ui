@@ -336,7 +336,8 @@
 
     .pf2e.chat-card {
       .tags {
-        margin: 3px 0px;
+        margin: 3px 1px;
+        margin-bottom: 8px;
 
         .vr {
           display: none;
@@ -413,7 +414,7 @@
 
         h3.pf2-icon {
           font-family: Pathfinder2eActions;
-          font-size: xxx-large;
+          font-size: xx-large;
           flex: 0 0 34px;
         }
 
