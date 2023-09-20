@@ -1,3 +1,9 @@
+# 2.6.16
+
+- (New) Make chat-merged messages show message-buttons on hover.
+- (New) Make deletion of chat-merged messages update neighbouring messages appropriately.
+- (Refinement) Adjusted tag styling in more interface elements.
+
 # 2.6.15
 
 - (Refinement) Made several changes to improve the styling of Token Action HUD PF2e, including making it react to the roundness setting, updating the styling of tags and inline links.

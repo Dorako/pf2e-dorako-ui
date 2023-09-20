@@ -26,8 +26,8 @@ a.inline-roll:not(.inline-result) {
 }
 
 .tah-tags-wrapper .tags,
-.chat-card .tags,
-.tags.paizo-style {
+.dorako-ui .message-content .tags,
+.dorako-ui .tags.paizo-style {
   gap: 1px;
 
   .tag:not(.tag_transparent) {
@@ -41,6 +41,25 @@ a.inline-roll:not(.inline-result) {
   }
   .tag:last-child {
     border-right-width: 1px;
+  }
+}
+
+.dorako-ui {
+  .tags.paizo-style select.tag:first-child {
+    border-left-width: 1px;
+    margin-right: 5px;
+  }
+  .tags.paizo-style tag:first-of-type {
+    border-left-width: 1px;
+  }
+  .tags.paizo-style tag:last-of-type {
+    border-right-width: 1px;
+  }
+
+  .tags.paizo-style tag,
+  .tags.paizo-style select.tag {
+    border-width: 1px;
+    outline: 1px solid var(--gold-brown);
   }
 }
 

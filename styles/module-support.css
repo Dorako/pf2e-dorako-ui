@@ -410,6 +410,8 @@ nav.damage-log-nav.tabs .item.active {
 }
 .message.chat-message.dfce-cm-top {
   border-bottom-style: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   margin-bottom: 0px;
   padding-bottom: 5px;
 }
@@ -417,6 +419,7 @@ nav.damage-log-nav.tabs .item.active {
   box-shadow: var(--gold-and-glow);
 }
 .message.chat-message.dfce-cm-middle, .message.chat-message.dfce-cm-bottom {
+  position: relative;
   border-top-style: none;
   border-bottom-style: none;
   border-radius: 0px;
@@ -498,9 +501,23 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* DFCE Chat Merge                           */
 /* ----------------------------------------- */
-.dfce-cm-middle header,
-.dfce-cm-bottom header {
+.dorako-ui.light-theme.dfce-cm-bottom .dorako-header, .dorako-ui.light-theme.dfce-cm-middle .dorako-header {
+  color: black !important;
+  text-shadow: 0px 1px 1px white !important;
+}
+
+.dorako-ui.dfce-cm-middle .dorako-header, .dorako-ui.dfce-cm-bottom .dorako-header {
   display: none;
+}
+.dorako-ui.dfce-cm-middle:hover .dorako-header, .dorako-ui.dfce-cm-bottom:hover .dorako-header {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  width: fit-content;
+  background: none !important;
+  box-shadow: none;
+  z-index: 1;
 }
 
 /* ----------------------------------------- */

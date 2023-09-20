@@ -18,6 +18,8 @@
 
   &.dfce-cm-top {
     border-bottom-style: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     margin-bottom: 0px;
     padding-bottom: 5px;
     &:hover {
@@ -27,6 +29,7 @@
 
   &.dfce-cm-middle,
   &.dfce-cm-bottom {
+    position: relative;
     border-top-style: none;
     border-bottom-style: none;
     border-radius: 0px;
@@ -149,7 +152,33 @@
 /* DFCE Chat Merge                           */
 /* ----------------------------------------- */
 
-.dfce-cm-middle header,
-.dfce-cm-bottom header {
-  display: none;
+.dorako-ui.light-theme {
+  &.dfce-cm-bottom,
+  &.dfce-cm-middle {
+    .dorako-header {
+      color: black !important;
+      text-shadow: 0px 1px 1px white !important;
+    }
+  }
+}
+
+.dorako-ui {
+  &.dfce-cm-middle,
+  &.dfce-cm-bottom {
+    .dorako-header {
+      display: none;
+    }
+    &:hover {
+      .dorako-header {
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 3px;
+        width: fit-content;
+        background: none !important;
+        box-shadow: none;
+        z-index: 1;
+      }
+    }
+  }
 }

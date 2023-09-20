@@ -1,8 +1,7 @@
 import { MODULE_NAME } from "./consts.js";
-
 class Registration {
 	nextId = 0;
-	wrappers = new Map();
+	wrappers;
 
 	handler(context, wrapped, ...args) {
 		let current = wrapped;
@@ -15,7 +14,7 @@ class Registration {
 }
 
 export default class libWrapperShared {
-	static registrations = new Map();
+	static registrations;
 
 	static register(target, handler) {
 		let registration = this.registrations.get(target);

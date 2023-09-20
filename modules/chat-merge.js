@@ -23,6 +23,7 @@ export default class ChatMerge {
   static init() {
     // libWrapperShared.register("ChatLog.prototype.deleteMessage", this._deleteMessage.bind(this));
     Hooks.on("renderChatMessage", this._renderChatMessage);
+    Hooks.on("deleteChatMessage", this.deleteMessage);
   }
 
   static ready() {
@@ -40,37 +41,67 @@ export default class ChatMerge {
     Hooks.on("renderChatLog", (_, html) => this._processAllMessage(html));
   }
 
-  static _deleteMessage(wrapper, messageId, { deleteAll = false } = {}) {
-    // Ignore the Delete All process. Everything is being obliterated, who cares about the styling
-    if (!deleteAll && this._enabled) {
-      const element = document.querySelector(`li[data-message-id="${messageId}"`);
-      // If we were a TOP
-      if (element?.classList?.contains("dfce-cm-top")) {
-        element.classList.remove("dfce-cm-top");
-        // If the next element was a middle, make it a top
-        if (element.nextElementSibling.classList.contains("dfce-cm-middle")) {
-          element.nextElementSibling.classList.remove("dfce-cm-middle");
-          element.nextElementSibling.classList.add("dfce-cm-top");
-        }
-        // Otherwise, it was a bottom and should now become a normal message again
-        else element.nextElementSibling.classList.remove("dfce-cm-bottom");
+  static deleteMessage(message, flags) {
+    if (flags.deleteAll === true) return;
+    const messageId = message._id;
+    const element = document.querySelector(`li[data-message-id="${messageId}"`);
+    // If we were a TOP
+    if (element?.classList?.contains("dfce-cm-top")) {
+      element.classList.remove("dfce-cm-top");
+      // If the next element was a middle, make it a top
+      if (element.nextElementSibling.classList.contains("dfce-cm-middle")) {
+        element.nextElementSibling.classList.remove("dfce-cm-middle");
+        element.nextElementSibling.classList.add("dfce-cm-top");
       }
-      // If we were a BOTTOM
-      else if (element?.classList?.contains("dfce-cm-bottom")) {
-        element.classList.remove("dfce-cm-bottom");
-        // If the previous element was a middle, make it a bottom
-        if (element.previousElementSibling.classList.contains("dfce-cm-middle")) {
-          element.previousElementSibling.classList.remove("dfce-cm-middle");
-          element.previousElementSibling.classList.add("dfce-cm-bottom");
-        }
-        // Otherwise, it was a top and should now become a normal message again
-        else element.previousElementSibling.classList.remove("dfce-cm-top");
-      }
-      // If we were a MIDDLE, let the above and below snug and they'll be fine
-      else if (element?.classList?.contains("dfce-cm-middle")) element.classList.remove("dfce-cm-middle");
+      // Otherwise, it was a bottom and should now become a normal message again
+      else element.nextElementSibling.classList.remove("dfce-cm-bottom");
     }
-    return wrapper(messageId, { deleteAll });
+    // If we were a BOTTOM
+    else if (element?.classList?.contains("dfce-cm-bottom")) {
+      element.classList.remove("dfce-cm-bottom");
+      // If the previous element was a middle, make it a bottom
+      if (element.previousElementSibling.classList.contains("dfce-cm-middle")) {
+        element.previousElementSibling.classList.remove("dfce-cm-middle");
+        element.previousElementSibling.classList.add("dfce-cm-bottom");
+      }
+      // Otherwise, it was a top and should now become a normal message again
+      else element.previousElementSibling.classList.remove("dfce-cm-top");
+    }
+    // If we were a MIDDLE, let the above and below snug and they'll be fine
+    else if (element?.classList?.contains("dfce-cm-middle")) element.classList.remove("dfce-cm-middle");
   }
+
+  // static _deleteMessage(wrapper, messageId, { deleteAll = false } = {}) {
+  //   // Ignore the Delete All process. Everything is being obliterated, who cares about the styling
+  //   if (!deleteAll && this._enabled) {
+  //     const element = document.querySelector(`li[data-message-id="${messageId}"`);
+  //     // If we were a TOP
+  //     if (element?.classList?.contains("dfce-cm-top")) {
+  //       element.classList.remove("dfce-cm-top");
+  //       // If the next element was a middle, make it a top
+  //       if (element.nextElementSibling.classList.contains("dfce-cm-middle")) {
+  //         element.nextElementSibling.classList.remove("dfce-cm-middle");
+  //         element.nextElementSibling.classList.add("dfce-cm-top");
+  //       }
+  //       // Otherwise, it was a bottom and should now become a normal message again
+  //       else element.nextElementSibling.classList.remove("dfce-cm-bottom");
+  //     }
+  //     // If we were a BOTTOM
+  //     else if (element?.classList?.contains("dfce-cm-bottom")) {
+  //       element.classList.remove("dfce-cm-bottom");
+  //       // If the previous element was a middle, make it a bottom
+  //       if (element.previousElementSibling.classList.contains("dfce-cm-middle")) {
+  //         element.previousElementSibling.classList.remove("dfce-cm-middle");
+  //         element.previousElementSibling.classList.add("dfce-cm-bottom");
+  //       }
+  //       // Otherwise, it was a top and should now become a normal message again
+  //       else element.previousElementSibling.classList.remove("dfce-cm-top");
+  //     }
+  //     // If we were a MIDDLE, let the above and below snug and they'll be fine
+  //     else if (element?.classList?.contains("dfce-cm-middle")) element.classList.remove("dfce-cm-middle");
+  //   }
+  //   return wrapper(messageId, { deleteAll });
+  // }
 
   static _processAllMessage(element) {
     element = element ?? $(document.body);
