@@ -1474,7 +1474,7 @@ section.chat-sidebar {
   font-size: var(--font-size-16);
   font-weight: 600;
   line-height: var(--font-size-17);
-  border-radius: 0px var(--border-radius) 0px var(--border-radius);
+  border-radius: 0px var(--border-radius) 0px 3px;
   background: var(--primary-light);
   margin: 1px;
   color: white;
@@ -2708,6 +2708,14 @@ section.chat-sidebar {
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.dorako-ui.dark-theme#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button, .dorako-ui.dark-theme#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
+  padding: 5px;
+  background-color: var(--glass-bg);
+  margin-bottom: 5px;
+}
+.dorako-ui.dark-theme#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button:hover, .dorako-ui.dark-theme#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button:hover {
+  background-color: var(--primary);
+}
 .dorako-ui.dark-theme#compendium-browser > section.window-content > .content-box .spell-browser .control-area, .dorako-ui.dark-theme#license-viewer > section.window-content > .content-box .spell-browser .control-area {
   display: flex;
   flex-direction: column;
@@ -3150,7 +3158,7 @@ section.chat-sidebar {
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .tags {
   margin: 3px 1px;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .tags .vr {
   display: none;
@@ -3959,21 +3967,25 @@ a.inline-roll:not(.inline-result) {
   color: black;
 }
 
+.tah-tags-wrapper .tags,
 .chat-card .tags,
 .tags.paizo-style {
   gap: 1px;
 }
-.chat-card .tags .tag,
-.tags.paizo-style .tag {
+.tah-tags-wrapper .tags .tag:not(.tag_transparent),
+.chat-card .tags .tag:not(.tag_transparent),
+.tags.paizo-style .tag:not(.tag_transparent) {
   border-radius: 0px;
   box-shadow: unset;
   border: 1px solid var(--tertiary);
   outline: 1px solid var(--gold-brown);
 }
+.tah-tags-wrapper .tags .tag:first-child,
 .chat-card .tags .tag:first-child,
 .tags.paizo-style .tag:first-child {
   border-left-width: 1px;
 }
+.tah-tags-wrapper .tags .tag:last-child,
 .chat-card .tags .tag:last-child,
 .tags.paizo-style .tag:last-child {
   border-right-width: 1px;

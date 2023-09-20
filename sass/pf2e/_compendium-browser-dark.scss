@@ -11,6 +11,16 @@
     background-color: rgba(0,0,0,0.3);
  }
 
+  &#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button,
+  &#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
+    padding: 5px;
+    background-color: var(--glass-bg);
+    margin-bottom: 5px;
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+
   &#compendium-browser > section.window-content > .content-box .spell-browser .control-area,
   &#license-viewer > section.window-content > .content-box .spell-browser .control-area {
     display: flex;

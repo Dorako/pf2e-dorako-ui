@@ -2082,6 +2082,9 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --paizo-blue-bright: var(--secondary-light);
   --paizo-red-bright: var(--primary-light);
   --pazio-red: var(--primary);
+  --tah-border-radius: var(--border-radius);
+  --tah-button-background-color: var(--glass-bg);
+  --tah-button-text-color: var(--color-text-light-highlight);
 }
 #token-action-hud.dorako-ui #tah-categories {
   gap: 5px;
@@ -2095,7 +2098,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 #token-action-hud.dorako-ui #tah-expand-hud,
 #token-action-hud.dorako-ui .tah-title-button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: unset;
   color: var(--color-text-light-heading);
   padding: 3px 5px 3px 5px;
 }
@@ -2110,9 +2113,12 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 #token-action-hud.dorako-ui .tah-subtitle {
   width: 174px;
 }
+#token-action-hud.dorako-ui .tah-tab-group,
+#token-action-hud.dorako-ui .tah-action {
+  backdrop-filter: blur(5px);
+}
 #token-action-hud.dorako-ui .tah-action button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
-  color: var(--color-text-light-heading);
+  transition: unset;
 }
 #token-action-hud.dorako-ui .tah-action button.toggle {
   background-color: var(--secondary-dark);
@@ -2128,6 +2134,35 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 #token-action-hud.dorako-ui .tah-action button.active {
   color: white;
+}
+
+.locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll),
+.tah-tooltip :is(a.content-link, a.inline-roll),
+#tooltip.active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
+  background: #ddd;
+  padding: 1px 4px;
+  border: 1px solid var(--color-border-dark-tertiary);
+  color: var(--color-text-dark-primary);
+  margin: 3px;
+}
+
+.tah-tooltip .tags .tag.tag_transparent {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--glass-bg-dark);
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+.tah-tooltip .tags .tag.tag_transparent:first-child {
+  margin-left: 0px;
+}
+
+.tah-tooltip .tag,
+.tah-tooltip table {
+  text-shadow: none;
+}
+
+.dorako-ui.dark-theme.tah-dialog .tagify.tah-dialog-tagify {
+  background: white;
 }
 
 /* ----------------------------------------- */

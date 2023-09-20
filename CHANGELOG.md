@@ -1,3 +1,10 @@
+# 2.6.15
+
+- (Refinement) Made several changes to improve the styling of Token Action HUD PF2e, including making it react to the roundness setting, updating the styling of tags and inline links.
+- (Refinement) Made TAH more snappy by disabling animations on certain buttons.
+- (Fix) Added a white backdrop to the tagify editor in TAH, when using dark-theme.
+- (Maintenance) Fixed some buttons in the compendium browser that looked real bad in dark-theme.
+
 # 2.6.14
 
 - (Maintenance) Removed the action-glyphs added by the system when "Restructure card info" setting is active, as it already did that.

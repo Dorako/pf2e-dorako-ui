@@ -25,11 +25,12 @@ a.inline-roll:not(.inline-result) {
   }
 }
 
+.tah-tags-wrapper .tags,
 .chat-card .tags,
 .tags.paizo-style {
   gap: 1px;
 
-  .tag {
+  .tag:not(.tag_transparent) {
     border-radius: 0px;
     box-shadow: unset;
     border: 1px solid var(--tertiary);
