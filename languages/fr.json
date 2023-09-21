@@ -159,7 +159,11 @@
         },
         "npc-sheet-theme": {
           "name": "Thème de la feuille de PNJ",
-          "hint": "Affecte les feuilles de PNJ"
+          "hint": "Ajuste le style des feuilles de PNJ",
+          "choice": {
+            "default": "Dorako UI par défaut",
+            "glassy": "(Expérimental) Vitreux"
+          }
         },
         "chat-theme": {
           "name": "Thème de la conversation",
