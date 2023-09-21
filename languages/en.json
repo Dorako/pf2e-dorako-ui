@@ -41,7 +41,11 @@
         },
         "npc-sheet-theme": {
           "name": "NPC sheet theme",
-          "hint": "Affects NPC sheets"
+          "hint": "Adjusts the styling of NPC sheets",
+          "choice": {
+            "default": "Default Dorako UI",
+            "glassy": "(Experimental) Glassy"
+          }
         },
         "chat-theme": {
           "name": "Chat theme",

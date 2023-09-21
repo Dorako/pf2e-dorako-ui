@@ -9,6 +9,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
     "chat-theme",
     "header-style",
     "pc-sheet-theme",
+    "npc-sheet-theme",
     "frosted-glass",
     "glass-bg",
     "enable-dark-theme-journals",
@@ -105,6 +106,25 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "no-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.no-theme",
           "light-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.light-theme",
           "dark-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.dark-theme",
+        },
+        requiresReload: false, // re-render all windows
+        onChange: () => {
+          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+          for (const app of apps) {
+            app.render();
+          }
+        },
+      },
+      "npc-sheet-theme": {
+        name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.hint",
+        scope: "client",
+        config: true,
+        default: "default",
+        type: String,
+        choices: {
+          default: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.default",
+          glassy: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.glassy",
         },
         requiresReload: false, // re-render all windows
         onChange: () => {

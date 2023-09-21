@@ -243,6 +243,14 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   }
 });
 
+Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.npc-sheet-theme");
+  if (theme === "default") {
+    return;
+  }
+  html[0].classList.add(`${theme}-theme`);
+});
+
 // // Blue player sheet
 // Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
 //   html.closest(".app").find("aside").wrap("<div class='blue'></div>");

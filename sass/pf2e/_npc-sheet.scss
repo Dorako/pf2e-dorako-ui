@@ -1,4 +1,12 @@
 .dorako-ui.sheet.pf2e.actor.npc {
+  .npc-sheet .adjustments {
+    gap: 1px;
+    .trait {
+      border: 1px solid var(--tertiary);
+      outline: 1px solid var(--gold-brown);
+    }
+  }
+
   ol.spell-list > li .item-name .item-image .item-icon {
     border-radius: 3px;
   }
@@ -252,6 +260,85 @@
 
   .pf2e-see-simple-scale-statistics-Terrible-color-primary {
     color: #ff0000;
+  }
+}
+
+/* Glassy */
+
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme {
+  background: none;
+  box-shadow: none;
+
+  .window-header {
+    box-shadow: var(--glassy);
+    background: var(--glass-bg);
+    border-radius: 3px;
+    margin: 0px 12px;
+    backdrop-filter: blur(5px);
+  }
+  .window-content {
+    background: none;
+    box-shadow: none;
+  }
+
+  .npc-sheet-header {
+    box-shadow: var(--glassy);
+    background: var(--glass-bg);
+    border-radius: 3px;
+    margin: 5px;
+    padding: 2px 5px;
+    backdrop-filter: blur(5px);
+
+    .name .level-label,
+    .name .name-value {
+      color: var(--tertiary-light);
+      text-shadow: 0px 0px 3px black;
+    }
+    .name .level {
+      color: var(--tertiary);
+      text-shadow: 0px 0px 3px black;
+    }
+  }
+
+  .npc-body {
+    padding-left: unset;
+  }
+
+  .image-container {
+    box-shadow: var(--glassy);
+    background: var(--glass-bg);
+    border-radius: 3px;
+    margin: 5px;
+    margin-bottom: 8px;
+    backdrop-filter: blur(5px);
+  }
+  &.dark-theme form .sheet-tabs {
+    background: var(--glass-bg);
+    margin: 5px;
+    backdrop-filter: blur(5px);
+    .item.disabled {
+      text-shadow: 0px 0px 3px black;
+    }
+  }
+  .npc-sheet .section-container.toggles {
+    background: var(--glass-bg);
+    box-shadow: var(--glassy);
+    margin: 5px;
+    margin-top: 0px;
+    backdrop-filter: blur(5px);
+    border: none;
+    color: var(--color-text-light-heading);
+  }
+  .sheet-body .tab {
+    &.inventory,
+    &.spells,
+    &.notes {
+      @include gold-border;
+      border-radius: 3px;
+      margin: 5px;
+      background: var(--sheet-dark);
+      background-size: cover;
+    }
   }
 }
 

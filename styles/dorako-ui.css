@@ -1705,6 +1705,43 @@ section.chat-sidebar {
   color: var(--rarity-unique) !important;
   border-color: var(--rarity-unique) !important;
 }
+.dorako-ui.dark-theme.npc .npc-sheet .actions-list li.action .button-group > button.use-action, .dorako-ui.dark-theme.npc .npc-sheet .attacks-list li.action .button-group > button.use-action {
+  border-radius: 2px;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+  background: var(--bg-dark);
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  font: 500 var(--font-size-10) var(--sans-serif);
+}
+.dorako-ui.dark-theme.npc .npc-sheet .actions-list li.action .button-group > button.use-action:hover, .dorako-ui.dark-theme.npc .npc-sheet .attacks-list li.action .button-group > button.use-action:hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
+}
+.dorako-ui.dark-theme.pf2e.item.sheet.action form .drop-zone picture, .dorako-ui.dark-theme.pf2e.item.sheet.action form .drop-zone img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  background-color: var(--glass-bg);
+}
+.dorako-ui.dark-theme.pf2e.item.sheet.action form .drop-zone {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--glass-bg-light);
+}
+.dorako-ui.dark-theme.pf2e.item.sheet.action form .drop-zone a.content-link {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  background-color: var(--primary);
+  color: var(--color-text-light-highlight);
+  padding-right: 15px;
+}
 .dorako-ui.dark-theme.sheet.actor.loot, .dorako-ui.dark-theme.sheet.preparation, .dorako-ui.dark-theme.actor.sheet.character {
   --text-dark: var(--color-text-light-highlight);
 }
@@ -2360,6 +2397,13 @@ section.chat-sidebar {
   color: var(--color-text-light-primary);
 }
 
+.dorako-ui.sheet.pf2e.actor.npc .npc-sheet .adjustments {
+  gap: 1px;
+}
+.dorako-ui.sheet.pf2e.actor.npc .npc-sheet .adjustments .trait {
+  border: 1px solid var(--tertiary);
+  outline: 1px solid var(--gold-brown);
+}
 .dorako-ui.sheet.pf2e.actor.npc ol.spell-list > li .item-name .item-image .item-icon {
   border-radius: 3px;
 }
@@ -2564,6 +2608,78 @@ section.chat-sidebar {
 }
 .side-bar-section-header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
   color: #ff0000;
+}
+
+/* Glassy */
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme {
+  background: none;
+  box-shadow: none;
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .window-header {
+  box-shadow: var(--glassy);
+  background: var(--glass-bg);
+  border-radius: 3px;
+  margin: 0px 12px;
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .window-content {
+  background: none;
+  box-shadow: none;
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header {
+  box-shadow: var(--glassy);
+  background: var(--glass-bg);
+  border-radius: 3px;
+  margin: 5px;
+  padding: 2px 5px;
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header .name .level-label,
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header .name .name-value {
+  color: var(--tertiary-light);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header .name .level {
+  color: var(--tertiary);
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-body {
+  padding-left: unset;
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .image-container {
+  box-shadow: var(--glassy);
+  background: var(--glass-bg);
+  border-radius: 3px;
+  margin: 5px;
+  margin-bottom: 8px;
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme.dark-theme form .sheet-tabs {
+  background: var(--glass-bg);
+  margin: 5px;
+  backdrop-filter: blur(5px);
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme.dark-theme form .sheet-tabs .item.disabled {
+  text-shadow: 0px 0px 3px black;
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet .section-container.toggles {
+  background: var(--glass-bg);
+  box-shadow: var(--glassy);
+  margin: 5px;
+  margin-top: 0px;
+  backdrop-filter: blur(5px);
+  border: none;
+  color: var(--color-text-light-heading);
+}
+.dorako-ui.sheet.pf2e.actor.npc.glassy-theme .sheet-body .tab.inventory, .dorako-ui.sheet.pf2e.actor.npc.glassy-theme .sheet-body .tab.spells, .dorako-ui.sheet.pf2e.actor.npc.glassy-theme .sheet-body .tab.notes {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+  margin: 5px;
+  background: var(--sheet-dark);
+  background-size: cover;
 }
 
 /* Light */
@@ -3993,7 +4109,6 @@ a.inline-roll:not(.inline-result) {
 
 .dorako-ui .tags.paizo-style select.tag:first-child {
   border-left-width: 1px;
-  margin-right: 5px;
 }
 .dorako-ui .tags.paizo-style tag:first-of-type {
   border-left-width: 1px;

@@ -1,3 +1,8 @@
+# 2.7.0
+
+- (New) New setting that can be used to enable an experimental look for NPC sheets, that is more HUD-like.
+- (New) Added styling for 'use' buttons for NPCs.
+
 # 2.6.16
 
 - (New) Make chat-merged messages show message-buttons on hover.
