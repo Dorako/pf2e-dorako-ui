@@ -1,3 +1,7 @@
+# 2.7.1
+
+- (Refinement) Missed a spot when styling 'use' buttons for NPCs.
+
 # 2.7.0
 
 - (New) New setting that can be used to enable an experimental look for NPC sheets, that is more HUD-like.

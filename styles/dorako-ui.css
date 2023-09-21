@@ -1516,7 +1516,6 @@ section.chat-sidebar {
 }
 .dorako-ui.actor.sheet button.use-action {
   text-shadow: unset !important;
-  color: black !important;
 }
 .dorako-ui.actor.sheet button.use-action select {
   box-shadow: unset !important;
@@ -1705,6 +1704,9 @@ section.chat-sidebar {
   color: var(--rarity-unique) !important;
   border-color: var(--rarity-unique) !important;
 }
+.dorako-ui.dark-theme.actor.sheet.character button.use-action {
+  color: black !important;
+}
 .dorako-ui.dark-theme.npc .npc-sheet .actions-list li.action .button-group > button.use-action, .dorako-ui.dark-theme.npc .npc-sheet .attacks-list li.action .button-group > button.use-action {
   border-radius: 2px;
   border: none;
@@ -1713,6 +1715,7 @@ section.chat-sidebar {
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
   font: 500 var(--font-size-10) var(--sans-serif);
+  color: black;
 }
 .dorako-ui.dark-theme.npc .npc-sheet .actions-list li.action .button-group > button.use-action:hover, .dorako-ui.dark-theme.npc .npc-sheet .attacks-list li.action .button-group > button.use-action:hover {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
