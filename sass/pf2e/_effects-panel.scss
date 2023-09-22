@@ -42,6 +42,7 @@
       margin-right: 0.5em;
       padding: 4px 8px;
       backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
       z-index: var(--z-index-tooltip);
 
       .description {

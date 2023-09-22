@@ -82,6 +82,7 @@
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -1110,6 +1111,7 @@ nav.damage-log-nav.tabs .item.active {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .monks-tokenbar.chat-card .card-header h3:hover {
@@ -2133,6 +2135,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 #token-action-hud.dorako-ui .tah-tab-group,
 #token-action-hud.dorako-ui .tah-action {
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 #token-action-hud.dorako-ui .tah-action button {
   transition: unset;
@@ -2910,6 +2913,7 @@ body.system-swade {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 #pf2e-token-hud.dorako-ui .distance hr,
 #pf2e-token-hud.dorako-ui .status hr,

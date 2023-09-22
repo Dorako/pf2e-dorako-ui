@@ -273,21 +273,25 @@
     box-shadow: var(--glassy);
     background: var(--glass-bg);
     border-radius: 3px;
-    margin: 0px 12px;
+    margin: 0px 10px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   .window-content {
     background: none;
     box-shadow: none;
+    margin: unset;
   }
 
   .npc-sheet-header {
+    --color-text-dark-input: var(--color-text-light-heading);
     box-shadow: var(--glassy);
     background: var(--glass-bg);
     border-radius: 3px;
     margin: 5px;
     padding: 2px 5px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
     .name .level-label,
     .name .name-value {
@@ -311,11 +315,13 @@
     margin: 5px;
     margin-bottom: 8px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
   &.dark-theme form .sheet-tabs {
     background: var(--glass-bg);
     margin: 5px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     .item.disabled {
       text-shadow: 0px 0px 3px black;
     }
@@ -326,6 +332,7 @@
     margin: 5px;
     margin-top: 0px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border: none;
     color: var(--color-text-light-heading);
   }

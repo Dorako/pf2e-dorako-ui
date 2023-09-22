@@ -51,6 +51,7 @@
   .tah-tab-group,
   .tah-action {
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   .tah-action button {

@@ -76,3 +76,80 @@
     }
   }
 }
+
+// Glassy
+
+.dorako-ui.familiar.glassy-theme {
+  box-shadow: unset !important;
+  background: unset !important;
+
+  .window-header {
+    @include glass;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin-left: 10px;
+    margin-right: 18px;
+  }
+
+  .window-content {
+    box-shadow: unset !important;
+    background: unset !important;
+    margin: unset;
+  }
+
+  .familiar-sheet-header {
+    @include glass;
+    --color-text-dark-primary: var(--color-text-light-heading);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    text-shadow: 0px 0px 3px black;
+
+    margin-left: 10px;
+    margin-right: 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: var(--color-text-light-primary);
+
+    .header-content .charname {
+      color: var(--tertiary-light);
+      input {
+        border: unset;
+        color: var(--tertiary-light);
+      }
+    }
+
+    select {
+      @include glass;
+      @include quick-transition;
+      background-color: var(--glass-bg-light) !important;
+      color: var(--color-text-light-primary);
+
+      &:hover {
+        color: var(--color-text-light-highlight);
+      }
+
+      option,
+      optgroup {
+        background-color: rgb(37, 37, 37);
+        color: var(--color-text-light-highlight);
+      }
+    }
+
+    .traits {
+      display: flex;
+      gap: 1px;
+
+      span {
+        border-radius: 0px;
+        box-shadow: unset;
+        border: 1px solid var(--tertiary);
+        outline: 1px solid var(--gold-brown);
+        height: auto;
+        padding: 0.33em 0.33em;
+      }
+    }
+  }
+  .editable > hr {
+    display: none;
+  }
+}

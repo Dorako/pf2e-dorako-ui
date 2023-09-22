@@ -40,8 +40,8 @@
           "hint": "Any valid CSS color should work"
         },
         "npc-sheet-theme": {
-          "name": "NPC sheet theme",
-          "hint": "Adjusts the styling of NPC sheets",
+          "name": "Actor sheet theme",
+          "hint": "Adjusts the styling of NPC/Hazard/Familiar sheets",
           "choice": {
             "default": "Default Dorako UI",
             "glassy": "(Experimental) Glassy"

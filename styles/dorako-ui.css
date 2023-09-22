@@ -135,6 +135,7 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   text-shadow: 0px 0px 3px black;
 }
 .dorako-ui #context-menu.expand-down {
@@ -154,6 +155,7 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   min-height: 34px;
   font-size: var(--font-size-20);
   line-height: var(--font-size-20);
@@ -365,6 +367,7 @@
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .dorako-ui.dark-theme:not(.premium).window-app button:not(.tox-tbtn).pm-dropdown li:hover {
   background: rgba(0, 0, 0, 0.5);
@@ -764,6 +767,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   height: 36px !important;
   border-radius: var(--border-radius);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 #darkness-adjuster.dorako-ui .window-content {
   overflow: hidden;
@@ -1383,6 +1387,7 @@ section.chat-sidebar {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-sizing: content-box;
   font-size: var(--font-size-20);
   font-weight: normal;
@@ -1507,6 +1512,9 @@ section.chat-sidebar {
   border-radius: 2px;
   margin: 0px;
   margin-right: 8px;
+}
+.dorako-ui.actor.sheet .crb-style aside .classdc-rank .modifiers_button {
+  border-radius: 2px;
 }
 .dorako-ui.actor.sheet .crb-style aside .sidebar select {
   color: white;
@@ -1950,6 +1958,9 @@ section.chat-sidebar {
   margin: 0;
   padding: 2px 3px;
 }
+.dorako-ui.dark-theme.actor.sheet .crb-style aside .classdc-rank .modifiers_button {
+  border-radius: 2px;
+}
 .dorako-ui.dark-theme.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
   border: none;
   border-radius: var(--border-radius);
@@ -2153,6 +2164,7 @@ section.chat-sidebar {
   margin-right: 0.5em;
   padding: 4px 8px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   z-index: var(--z-index-tooltip);
 }
 #effects-panel.dorako-ui .effect-item .effect-info .description {
@@ -2327,6 +2339,83 @@ section.chat-sidebar {
   color: var(--tertiary);
 }
 
+.dorako-ui.familiar.glassy-theme {
+  box-shadow: unset !important;
+  background: unset !important;
+}
+.dorako-ui.familiar.glassy-theme .window-header {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-left: 10px;
+  margin-right: 18px;
+}
+.dorako-ui.familiar.glassy-theme .window-content {
+  box-shadow: unset !important;
+  background: unset !important;
+  margin: unset;
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  --color-text-dark-primary: var(--color-text-light-heading);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+  margin-left: 10px;
+  margin-right: 18px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: var(--color-text-light-primary);
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header .header-content .charname {
+  color: var(--tertiary-light);
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header .header-content .charname input {
+  border: unset;
+  color: var(--tertiary-light);
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header select {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--glass-bg-light) !important;
+  color: var(--color-text-light-primary);
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header select:hover {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header select option,
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header select optgroup {
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header .traits {
+  display: flex;
+  gap: 1px;
+}
+.dorako-ui.familiar.glassy-theme .familiar-sheet-header .traits span {
+  border-radius: 0px;
+  box-shadow: unset;
+  border: 1px solid var(--tertiary);
+  outline: 1px solid var(--gold-brown);
+  height: auto;
+  padding: 0.33em 0.33em;
+}
+.dorako-ui.familiar.glassy-theme .editable > hr {
+  display: none;
+}
+
 .dorako-ui.dark-theme [data-visibility]:not([data-visibility=all]) {
   border-radius: 3px;
   outline: 1px dashed #720073;
@@ -2398,6 +2487,78 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.hazard .sidebar .health input {
   color: var(--color-text-light-primary);
+}
+
+.dorako-ui.hazard.glassy-theme {
+  background: unset;
+  box-shadow: unset;
+}
+.dorako-ui.hazard.glassy-theme .window-header {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-left: 5px;
+  margin-right: 18px;
+  margin-bottom: 5px;
+}
+.dorako-ui.hazard.glassy-theme .editable {
+  margin-right: 5px;
+}
+.dorako-ui.hazard.glassy-theme .window-content {
+  background: unset !important;
+  box-shadow: unset !important;
+  margin: unset;
+}
+.dorako-ui.hazard.glassy-theme .window-content form > header {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), 0 0 5px rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  width: auto;
+  margin-left: 5px;
+  margin-right: 13px;
+}
+.dorako-ui.hazard.glassy-theme .sidebar {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  --color-text-dark-primary: var(--color-text-light-highlight);
+  --color-text-dark-secondary: var(--color-text-light-primary);
+  text-shadow: 0px 0px 3px black;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  height: fit-content;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: var(--color-text-light-primary);
+}
+.dorako-ui.hazard.glassy-theme .sidebar .sidebar-title {
+  border-color: var(--tertiary);
+}
+.dorako-ui.hazard.glassy-theme .sidebar select {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--glass-bg-light) !important;
+  color: var(--color-text-light-primary);
+}
+.dorako-ui.hazard.glassy-theme .sidebar select:hover {
+  color: var(--color-text-light-highlight);
+}
+.dorako-ui.hazard.glassy-theme .sidebar select option,
+.dorako-ui.hazard.glassy-theme .sidebar select optgroup {
+  background-color: rgb(37, 37, 37);
+  color: var(--color-text-light-highlight);
 }
 
 .dorako-ui.sheet.pf2e.actor.npc .npc-sheet .adjustments {
@@ -2622,20 +2783,24 @@ section.chat-sidebar {
   box-shadow: var(--glassy);
   background: var(--glass-bg);
   border-radius: 3px;
-  margin: 0px 12px;
+  margin: 0px 10px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .dorako-ui.sheet.pf2e.actor.npc.glassy-theme .window-content {
   background: none;
   box-shadow: none;
+  margin: unset;
 }
 .dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header {
+  --color-text-dark-input: var(--color-text-light-heading);
   box-shadow: var(--glassy);
   background: var(--glass-bg);
   border-radius: 3px;
   margin: 5px;
   padding: 2px 5px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header .name .level-label,
 .dorako-ui.sheet.pf2e.actor.npc.glassy-theme .npc-sheet-header .name .name-value {
@@ -2656,11 +2821,13 @@ section.chat-sidebar {
   margin: 5px;
   margin-bottom: 8px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .dorako-ui.sheet.pf2e.actor.npc.glassy-theme.dark-theme form .sheet-tabs {
   background: var(--glass-bg);
   margin: 5px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .dorako-ui.sheet.pf2e.actor.npc.glassy-theme.dark-theme form .sheet-tabs .item.disabled {
   text-shadow: 0px 0px 3px black;
@@ -2671,6 +2838,7 @@ section.chat-sidebar {
   margin: 5px;
   margin-top: 0px;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: none;
   color: var(--color-text-light-heading);
 }
@@ -2930,6 +3098,7 @@ section.chat-sidebar {
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -3480,6 +3649,7 @@ section.chat-sidebar {
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -4088,25 +4258,31 @@ a.inline-roll:not(.inline-result) {
 
 .tah-tags-wrapper .tags,
 .dorako-ui .message-content .tags,
-.dorako-ui .tags.paizo-style {
+.dorako-ui .tags.paizo-style,
+.dorako-ui .tags {
   gap: 1px;
 }
 .tah-tags-wrapper .tags .tag:not(.tag_transparent),
 .dorako-ui .message-content .tags .tag:not(.tag_transparent),
-.dorako-ui .tags.paizo-style .tag:not(.tag_transparent) {
+.dorako-ui .tags.paizo-style .tag:not(.tag_transparent),
+.dorako-ui .tags .tag:not(.tag_transparent) {
   border-radius: 0px;
   box-shadow: unset;
   border: 1px solid var(--tertiary);
   outline: 1px solid var(--gold-brown);
+  height: auto;
+  padding: 0.33em 0.33em;
 }
 .tah-tags-wrapper .tags .tag:first-child,
 .dorako-ui .message-content .tags .tag:first-child,
-.dorako-ui .tags.paizo-style .tag:first-child {
+.dorako-ui .tags.paizo-style .tag:first-child,
+.dorako-ui .tags .tag:first-child {
   border-left-width: 1px;
 }
 .tah-tags-wrapper .tags .tag:last-child,
 .dorako-ui .message-content .tags .tag:last-child,
-.dorako-ui .tags.paizo-style .tag:last-child {
+.dorako-ui .tags.paizo-style .tag:last-child,
+.dorako-ui .tags .tag:last-child {
   border-right-width: 1px;
 }
 

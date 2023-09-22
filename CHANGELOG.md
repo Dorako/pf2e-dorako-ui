@@ -1,3 +1,10 @@
+# 2.7.2
+
+- (Fix) Exclude Journal Improvements sheets from dark-theme.
+- (Refinement) Made tags in Hazard and Familiar sheets use the new styling.
+- (Refinement) Made long text in tags (conditional IWR, etc.) not overflow the tag when wrapping.
+- (Refinement) Extended the glassy sheet theme option to affect Hazard and Familiar sheets.
+
 # 2.7.1
 
 - (Refinement) Missed a spot when styling 'use' buttons for NPCs.
