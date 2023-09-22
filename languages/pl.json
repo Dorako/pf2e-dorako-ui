@@ -38,8 +38,12 @@
           "hint": "Każdy prawidłowy kolor CSS powinien działać"
         },
         "npc-sheet-theme": {
-          "hint": "Wpływa na kartę NPC",
-          "name": "Motyw karty NPC"
+          "hint": "Dostosowuje styl arkuszy postaci niezależnych",
+          "name": "Motyw karty NPC",
+          "choice": {
+            "default": "Domyślny interfejs Dorako",
+            "glassy": "(Eksperymentalne) Szklany"
+          }
         },
         "chat-theme": {
           "name": "Motyw czatu",
