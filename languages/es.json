@@ -40,7 +40,11 @@
         },
         "npc-sheet-theme": {
           "name": "Tema para la ficha de PNJ",
-          "hint": "Afecta a las fichas de PNJ"
+          "hint": "Ajusta el estilo de las fichas de PNJ",
+          "choice": {
+            "glassy": "(Experimental) Traslúcido",
+            "default": "Dorako UI predeterminada"
+          }
         },
         "chat-theme": {
           "name": "Tema del chat",
@@ -208,6 +212,23 @@
         "adjust-chat-controls": {
           "name": "¿Ajustar los controles del chat?",
           "hint": "(Experimental) Cambia el modo de tirar dados a botones, y convierte otros controles del chat en botones"
+        },
+        "border-radius": {
+          "name": "Redondez",
+          "hint": "(por defecto: 3px) Cambia el grado de redondez en muchos elementos de la IU"
+        },
+        "control-size": {
+          "name": "Control de tamaño",
+          "hint": "(por defecto: 36px) Cambia el tamaño de los controles y los elementos de navegación"
+        },
+        "controls-alignment": {
+          "name": "Controles de alineamiento",
+          "hint": "Cambia la posición de los controles",
+          "choice": {
+            "start": "Arriba",
+            "end": "Abajo",
+            "center": "Medio"
+          }
         }
       },
       "misc": {
