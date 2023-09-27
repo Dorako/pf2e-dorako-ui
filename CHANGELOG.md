@@ -1,3 +1,7 @@
+# 2.7.6
+
+- (New) Initial support for Kingdom sheet.
+
 # 2.7.5
 
 - (Maintenance) Fix NPC sheet breakage caused by 5.6.0.

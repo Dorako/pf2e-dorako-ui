@@ -1,0 +1,54 @@
+.dorako-ui {
+  &.sheet.kingdom-builder form {
+    background: var(--sheet);
+  }
+  &.sheet.kingdom-builder .ability-builder .row-heading img,
+  &.sheet.kingdom-builder .build-element .choices .choice img {
+    @include gold-border;
+    border-radius: 3px;
+  }
+}
+
+.dorako-ui.dark-theme {
+  &.sheet.kingdom-builder .window-content {
+    box-shadow: var(--gold-and-glow);
+    --alt-dark: var(--tertiary);
+    button[data-action="boost"] {
+      transition: unset !important;
+      &:hover {
+        background: var(--button-color) !important;
+      }
+    }
+  }
+
+  &.sheet.kingdom-builder .build-element .selection {
+    box-shadow: var(--gold-and-glow);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+  }
+  &.sheet.kingdom-builder .ability-builder .summary-row .hint-container h3,
+  &.sheet.kingdom-builder .ability-builder .title {
+    color: var(--tertiary);
+  }
+  &.sheet.kingdom-builder .ability-builder .row-column button.boost {
+    --button-color: #316549;
+    --button-locked-color: #1b3c2a;
+  }
+  &.sheet.kingdom-builder .ability-builder .row-column button.flaw {
+    --button-color: #5e0000;
+    --button-locked-color: #5e0000;
+  }
+  &.sheet.kingdom-builder .ability-builder .row-column button.locked {
+    background: var(--button-locked-color) !important;
+    border-color: var(--button-locked-color) !important;
+  }
+
+  &.sheet.kingdom-builder .ability-builder .row-column button.locked {
+    background: var(--button-locked-color) !important;
+    border-color: var(--button-locked-color) !important;
+  }
+
+  &.sheet.kingdom-builder .ability-builder .row-column button.selected {
+    background: var(--button-color) !important;
+  }
+}

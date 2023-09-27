@@ -3021,7 +3021,58 @@ section.chat-sidebar {
 
 .no-compendium-banner-images .compendium-sidebar .directory-item.compendium .compendium-banner {
   display: none;
-} /* ----------------------------------------- */
+}
+
+.dorako-ui.sheet.kingdom-builder form {
+  background: var(--sheet);
+}
+.dorako-ui.sheet.kingdom-builder .ability-builder .row-heading img, .dorako-ui.sheet.kingdom-builder .build-element .choices .choice img {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  border-radius: 3px;
+}
+
+.dorako-ui.dark-theme.sheet.kingdom-builder .window-content {
+  box-shadow: var(--gold-and-glow);
+  --alt-dark: var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .window-content button[data-action=boost] {
+  transition: unset !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .window-content button[data-action=boost]:hover {
+  background: var(--button-color) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .build-element .selection {
+  box-shadow: var(--gold-and-glow);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius);
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .summary-row .hint-container h3, .dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .title {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .row-column button.boost {
+  --button-color: #316549;
+  --button-locked-color: #1b3c2a;
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .row-column button.flaw {
+  --button-color: #5e0000;
+  --button-locked-color: #5e0000;
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .row-column button.locked {
+  background: var(--button-locked-color) !important;
+  border-color: var(--button-locked-color) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .row-column button.locked {
+  background: var(--button-locked-color) !important;
+  border-color: var(--button-locked-color) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .row-column button.selected {
+  background: var(--button-color) !important;
+}
+
+/* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
 /* Colors */
