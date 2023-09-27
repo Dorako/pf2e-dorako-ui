@@ -38,8 +38,8 @@
           "hint": "Każdy prawidłowy kolor CSS powinien działać"
         },
         "npc-sheet-theme": {
-          "hint": "Dostosowuje styl arkuszy postaci niezależnych",
-          "name": "Motyw karty NPC",
+          "hint": "Dostosowuje styl arkuszy postaci niezależnych, zagrożeń i chowańców",
+          "name": "Motyw karty aktora",
           "choice": {
             "default": "Domyślny interfejs Dorako",
             "glassy": "(Eksperymentalne) Szklany"

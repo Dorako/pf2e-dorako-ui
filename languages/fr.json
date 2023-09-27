@@ -158,8 +158,8 @@
           "hint": "Toute couleur CSS valide devrait fonctionner"
         },
         "npc-sheet-theme": {
-          "name": "Thème de la feuille de PNJ",
-          "hint": "Ajuste le style des feuilles de PNJ",
+          "name": "Thème de la feuille d'acteur",
+          "hint": "Ajuste le style des feuilles de PNJ/Danger/Familier",
           "choice": {
             "default": "Dorako UI par défaut",
             "glassy": "(Expérimental) Vitreux"
