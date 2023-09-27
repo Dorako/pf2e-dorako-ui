@@ -1,3 +1,8 @@
+# 2.7.4
+
+- (Refinement) Made the circular effect HUD sharper, with less perceivable aliasing.
+- (Fix?) Potentially fixed an issue where non-gamemasters would sometimes see the normal circular effect hud for npcs.
+
 # 2.7.3
 
 - (Fix) Fixed an issue where the glassy theme would use dark backgrounds even in light mode.
