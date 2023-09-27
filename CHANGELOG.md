@@ -1,3 +1,7 @@
+# 2.7.5
+
+- (Maintenance) Fix NPC sheet breakage caused by 5.6.0.
+
 # 2.7.4
 
 - (Refinement) Made the circular effect HUD sharper, with less perceivable aliasing.

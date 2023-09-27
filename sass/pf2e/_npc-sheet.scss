@@ -1,5 +1,5 @@
 .dorako-ui.sheet.pf2e.actor.npc {
-  .npc-sheet .adjustments {
+  .adjustments {
     gap: 1px;
     .trait {
       border: 1px solid var(--tertiary);
@@ -11,7 +11,7 @@
     border-radius: 3px;
   }
 
-  form.npc-sheet {
+  form {
     .sheet-body .tab {
       padding-top: 2px;
     }
@@ -53,6 +53,7 @@
       &.initiative select {
         width: 98%;
         margin-bottom: 2px;
+        color: var(--color-text-dark-secondary);
       }
 
       .side-bar-section-header {
@@ -238,7 +239,7 @@
   }
 }
 
-.pf2e.actor.npc.dorako-ui.npc .npc-sheet .side-bar-section-content {
+.pf2e.actor.npc.dorako-ui.npc .side-bar-section-content {
   width: 98%;
   margin-left: 3px;
   margin-right: 3px;
@@ -326,7 +327,7 @@
       text-shadow: 0px 0px 3px black;
     }
   }
-  .npc-sheet .section-container.toggles {
+  form .section-container.toggles {
     background: var(--glass-bg);
     box-shadow: var(--glassy);
     margin: 5px;
@@ -391,12 +392,14 @@
   color: var(--color-text-light-heading);
 }
 
-.dorako-ui.sheet.pf2e.actor.npc.dark-theme .npc-sheet .item.disabled {
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme .npc-sheet .item.disabled,
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme form .item.disabled {
   color: #666666;
 }
 
 // prettier-ignore
-.dorako-ui.sheet.pf2e.actor.npc.dark-theme.window-app .npc-sheet .effects .section-body .effects-list .item.unidentified {
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme.window-app .npc-sheet .effects .section-body .effects-list .item.unidentified,
+.dorako-ui.sheet.pf2e.actor.npc.dark-theme.window-app form .sheet-body .effects .section-body .effects-list .item.unidentified {
   outline: 1px dashed #720073;
   background: rgba(245, 234, 245, 0.1333333333);
 }
@@ -439,23 +442,25 @@
   text-shadow: none;
 }
 
-.sheet.pf2e.actor.npc.dark-theme .npc-sheet,
-.actor.pf2e.actor.npc.dark-theme .npc-sheet .entries-list .spellcasting-entry .header h4.name input,
+.sheet.pf2e.actor.npc.dark-theme form,
+.actor.pf2e.actor.npc.dark-theme form .entries-list .spellcasting-entry .header h4.name input,
 .sheet.pf2e.actor.npc.dark-theme .inventory .list-row .item-controls,
 .sheet.pf2e.actor.npc.dark-theme ol.spell-list > li.spell-level-header,
-.sheet.pf2e.actor.npc.dark-theme .npc-sheet .side-bar-section.initiative select,
-.sheet.pf2e.actor.npc.dark-theme .npc-sheet .notes .notes-text {
+.sheet.pf2e.actor.npc.dark-theme form .side-bar-section.initiative select,
+.sheet.pf2e.actor.npc.dark-theme form .notes .notes-text,
+.actor.pf2e.actor.npc.dark-theme form .notes .notes-text {
   color: white;
 }
 
 .sheet.pf2e.actor.npc.dark-theme form input[type="number"],
 .sheet.pf2e.actor.npc.dark-theme form input[type="text"],
-.sheet.pf2e.actor.npc.dark-theme .npc-sheet .notes .details-label {
+.sheet.pf2e.actor.npc.dark-theme form .notes .details-label,
+.sheet.pf2e.actor.npc.dark-theme form .notes .details-label {
   color: #c9c9c9;
 }
 
-.actor.pf2e.actor.npc.dark-theme .npc-sheet .sheet-tabs .disabled.active,
-.actor.pf2e.actor.npc.dark-theme .npc-sheet .sheet-tabs .disabled:hover {
+.actor.pf2e.actor.npc.dark-theme form .sheet-tabs .disabled.active,
+.actor.pf2e.actor.npc.dark-theme form .sheet-tabs .disabled:hover {
   color: gray;
 }
 
@@ -464,7 +469,7 @@
   background-color: transparent;
 }
 
-.sheet.pf2e.actor.npc.dark-theme .npc-sheet .actions-options .actions-option:hover {
+.sheet.pf2e.actor.npc.dark-theme form .actions-options .actions-option:hover {
   text-shadow: 0 0 10px var(--tertiary);
   color: var(--tertiary);
 }
@@ -477,12 +482,12 @@
   color: var(--tertiary);
 }
 
-.sheet.actor.pf2e.actor.npc.dark-theme .npc-sheet .section-container.toggles {
+.sheet.actor.pf2e.actor.npc.dark-theme form .section-container.toggles {
   border-image-source: var(--ornamentation);
 }
 
-.sheet.actor.pf2e.actor.npc.dark-theme .npc-sheet .side-bar-section:not(.save-details),
-.sheet.actor.pf2e.actor.npc.dark-theme .npc-sheet .section-container {
+.sheet.actor.pf2e.actor.npc.dark-theme form .side-bar-section:not(.save-details),
+.sheet.actor.pf2e.actor.npc.dark-theme form .section-container {
   background: var(--sheet-dark);
   background-size: cover;
 }
