@@ -382,15 +382,16 @@
   color: var(--color-text-light-highlight);
   background-color: #440eb9;
 }
-.dorako-ui.dark-theme:not(.premium).window-app.token-sheet .form-group.children-disabled .range-value,
+.dorako-ui.dark-theme:not(.premium).window-app .nerd-details input:disabled, .dorako-ui.dark-theme:not(.premium).window-app.token-sheet .form-group.children-disabled .range-value,
 .dorako-ui.dark-theme:not(.premium).window-app input[type=range] + .range-value {
   border: none;
   border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
+  padding: 0px 4px;
   background-color: rgba(0, 0, 0, 0.8);
-  color: var(--color-text-light-heading);
+  color: var(--color-text-light-primary);
 }
 .dorako-ui.dark-theme:not(.premium).window-app input[type=checkbox],
 .dorako-ui.dark-theme:not(.premium).window-app input[type=radio] {
@@ -2849,7 +2850,7 @@ section.chat-sidebar {
   box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
   border-radius: 3px;
   margin: 5px;
-  background: var(--sheet-dark);
+  background: var(--sheet);
   background-size: cover;
 }
 

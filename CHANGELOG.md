@@ -1,3 +1,7 @@
+# 2.7.3
+
+- (Fix) Fixed an issue where the glassy theme would use dark backgrounds even in light mode.
+
 # 2.7.2
 
 - (Fix) Exclude Journal Improvements sheets from dark-theme.

@@ -231,11 +231,13 @@
     }
   }
 
+  .nerd-details input:disabled,
   &.token-sheet .form-group.children-disabled .range-value,
   input[type="range"] + .range-value {
     @include glass;
+    padding: 0px 4px;
     background-color: rgba(0, 0, 0, 0.8);
-    color: var(--color-text-light-heading);
+    color: var(--color-text-light-primary);
   }
 
   input[type="checkbox"],
