@@ -2754,6 +2754,11 @@ body.system-swade {
   background-color: var(--primary);
 }
 
+#module-credits-dialog.dorako-ui.dark-theme .journal-entry-content {
+  background: unset;
+  box-shadow: unset;
+}
+
 /* ----------------------------------------- */
 /* Dice Stats                                */
 /* ----------------------------------------- */
@@ -3178,6 +3183,37 @@ body.system-swade {
 
 .dorako-ui.tab#chat {
   margin: unset;
+}
+
+.clock-panel {
+  z-index: 1;
+  right: 5px;
+}
+.clock-panel .clock-entry {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
+.clock-panel .clock-entry .clock {
+  background: conic-gradient(var(--secondary-light) var(--filled-ratio), white var(--filled-ratio) 1turn);
+}
+.clock-panel [data-action=add-clock] {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  margin: unset;
+}
+.clock-panel [data-action=add-clock]:hover {
+  background-color: var(--primary);
+}
+
+.clock-panel.bottom {
+  bottom: 5px;
 }
 
 /*# sourceMappingURL=module-support.css.map */

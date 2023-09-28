@@ -12,3 +12,10 @@
     background-color: var(--primary);
   }
 }
+
+#module-credits-dialog.dorako-ui.dark-theme {
+  .journal-entry-content {
+    background: unset;
+    box-shadow: unset;
+  }
+}

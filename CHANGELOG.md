@@ -1,3 +1,7 @@
+# 2.8.0
+
+- (Refinement) Signficant additions to "mark as premium" functionality to avoid conflicting with premium content styling.
+
 # 2.7.6
 
 - (New) Initial support for Kingdom sheet.

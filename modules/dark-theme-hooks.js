@@ -11,6 +11,12 @@ import {
 function markAsDarkTheme(app, html) {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme" || theme === "light-theme") return;
+  if (html0.matches(premiumModuleSelector)) {
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
+    );
+    return;
+  }
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}`);
   let html0 = html[0];
   html0.classList.add("dorako-ui");

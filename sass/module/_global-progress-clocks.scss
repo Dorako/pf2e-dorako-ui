@@ -1,0 +1,25 @@
+.clock-panel {
+  z-index: 1;
+  right: 5px;
+
+  .clock-entry {
+    @include glass;
+    // border-top-right-radius: 50px;
+    // border-bottom-right-radius: 50px;
+    .clock {
+      background: conic-gradient(var(--secondary-light) var(--filled-ratio), white var(--filled-ratio) 1turn);
+    }
+  }
+  [data-action="add-clock"] {
+    @include glass;
+    @include quick-transition;
+    margin: unset;
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+}
+
+.clock-panel.bottom {
+  bottom: 5px;
+}

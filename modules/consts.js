@@ -12,7 +12,7 @@ export const darkThemeCompatibleModuleApplications = ["PartyOverviewApp","RollPr
 // prettier-ignore
 export const dorakoUiApplications = ["AvatarSettings","MiscSettings","ThemeSettings","UXSettings"]
 // prettier-ignore
-export const darkThemeIncompatibleApplications = ["KingdomSheetPF2e","ImprovedJournalSheet","WindowTabs","Ye","SwadeVehicleSheet","SwadeNPCSheet","JournalSheet","CharacterSheet","Tokenizer","JournalTextTinyMCESheetPF2e","JournalTextPageSheet","AbilityBuilderPopup","AttributeBuilder","TokenActionHUD","CustomHotbar","SceneDarknessAdjuster","EffectsPanel","Notifications", "Pause","TokenHUD","HeadsUpDisplay","Sidebar","HotbarPF2e","SceneNavigation", "SceneControls","PlayerList", "ImagePopout","EnhancedJournal","JournalSheetPF2e"]
+export const darkThemeIncompatibleApplications = ["HarrowReadingSheet","KingmakerJournalSheet","ClockAddDialog","KingdomSheetPF2e","ImprovedJournalSheet","WindowTabs","Ye","SwadeVehicleSheet","SwadeNPCSheet","JournalSheet","CharacterSheet","Tokenizer","JournalTextTinyMCESheetPF2e","JournalTextPageSheet","AbilityBuilderPopup","AttributeBuilder","TokenActionHUD","CustomHotbar","SceneDarknessAdjuster","EffectsPanel","Notifications", "Pause","TokenHUD","HeadsUpDisplay","Sidebar","HotbarPF2e","SceneNavigation", "SceneControls","PlayerList", "ImagePopout","EnhancedJournal","JournalSheetPF2e"]
 // prettier-ignore
 export const exclusivelyDarkApplications = ["FABattlemaps", "FADownloader"]
 
@@ -33,7 +33,7 @@ export const baseThemeApplications = [...baseThemeCoreFoundryApplications,...bas
 export const darkThemeCompatibleApplications = [...darkThemeCompatibleCoreFoundryApplications, ...darkThemeCompatibleModuleApplications, ...darkThemeCompatiblePf2eApplications, ...dorakoUiApplications]
 
 // prettier-ignore
-export const premiumModuleSelector = ".kingdom-app, .swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
+export const premiumModuleSelector = ".skykingstomb-wrapper, .skykingstomb, .stolenfate-wrapper, .stolenfate, .harrow-reading, .harrow, .pf2e-km, .kingdom-app, .swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
 // SWPFSheet
 // SWPFJournalSheet
 
