@@ -8,6 +8,10 @@
     padding: 10px 12px;
   }
 
+  &.sheet.party [data-tab=overview] .member > .data header .hero-points .empty {
+    border-color: var(--tertiary);
+  }
+
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-background .pc {
     gap: 4px;
   }

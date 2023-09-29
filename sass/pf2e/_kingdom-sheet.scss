@@ -52,3 +52,119 @@
     background: var(--button-color) !important;
   }
 }
+
+.dorako-ui.dark-theme.sheet.kingdom {
+  --alt-dark: var(--tertiary-dark);
+  --color-border-divider: var(--tertiary);
+  //   --paper-bg: rgba(255, 255, 255, 0.1);
+  --paper-bg: rgba(120, 100, 82, 0.3);
+  --drop-shadow: var(--gold-and-glow);
+  --drop-shadow: 0 0 0 1px var(--gold-brown), 0 0 0 1px var(--tertiary) inset, inset 0 0 3px rgba(255, 255, 255, 0.5);
+
+  .proficiency[data-rank="4"],
+  .proficiency option[value="4"] {
+    background: var(--color-proficiency-legendary) !important;
+  }
+
+  .proficiency[data-rank="3"],
+  .proficiency option[value="3"] {
+    background: var(--color-proficiency-master) !important;
+  }
+
+  .proficiency[data-rank="2"],
+  .proficiency option[value="2"] {
+    background: var(--color-proficiency-expert) !important;
+  }
+
+  .proficiency[data-rank="1"],
+  .proficiency option[value="1"] {
+    background: var(--color-proficiency-trained) !important;
+  }
+
+  button.small-button,
+  select.proficiency,
+  span.proficiency {
+    background: var(--color-proficiency-untrained) !important;
+  }
+
+  form {
+    background: unset;
+  }
+
+  h3.header button {
+    box-shadow: none;
+    border-radius: 3px 3px 0px 0px;
+    border: 1px solid var(--tertiary);
+    &:hover {
+      box-shadow: none;
+      border-radius: 3px 3px 0px 0px;
+      border: 1px solid var(--tertiary);
+      background-color: var(--tertiary-dark);
+      color: black;
+      text-shadow: unset;
+    }
+  }
+
+  form > header {
+    input {
+      box-shadow: none !important;
+      background: none !important;
+      border-radius: unset !important;
+      &:hover {
+        border-bottom: 1px solid white !important;
+      }
+    }
+  }
+
+  form > .container input[type="number"] {
+    background: none !important;
+    border-radius: 3px !important;
+    box-shadow: 0px 0px 0px 1px var(--tertiary) !important;
+    &:hover {
+      background: var(--tertiary-dark) !important;
+      color: black;
+    }
+  }
+
+  nav.sub-nav {
+    background: var(--glass-bg-light);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%), 0px -1px 2px rgb(255 255 255 / 30%) inset;
+
+    .tab {
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    &::before,
+    &::after {
+      filter: invert(1);
+    }
+    a,
+    .tab {
+      color: var(--tertiary-dark);
+      &.active {
+        color: var(--tertiary);
+      }
+    }
+  }
+
+  .tab.active[data-tab="main"] .ability-scores .ability .corruption-section .progress {
+    background: var(--paper-bg);
+    // border-top: 1px solid var(--gold-brown);
+    // box-shadow: var(--drop-shadow);
+    // border: 1px solid var(--gold-brown);
+    // border-bottom: 0px solid transparent;
+    // border-top: 1px var(--tertiary) transparent;
+    // margin-bottom: 1px;
+  }
+
+  .tab.active[data-tab="features"] .feat-item .item-name h4:hover,
+  .tab.active[data-tab="activities"] .skills .skill .mod,
+  h3.header {
+    color: var(--tertiary);
+  }
+
+  .tab.active[data-tab="activities"] .skills .control-dc .mod,
+  .tab.active[data-tab="features"] .feat-item .item-name .feat-slot-title {
+    color: var(--tertiary-dark);
+  }
+}

@@ -1502,6 +1502,9 @@ section.chat-sidebar {
 .dorako-ui.sheet.party [data-tab=overview] .summary {
   padding: 10px 12px;
 }
+.dorako-ui.sheet.party [data-tab=overview] .member > .data header .hero-points .empty {
+  border-color: var(--tertiary);
+}
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-background .pc {
   gap: 4px;
 }
@@ -3070,6 +3073,99 @@ section.chat-sidebar {
 }
 .dorako-ui.dark-theme.sheet.kingdom-builder .ability-builder .row-column button.selected {
   background: var(--button-color) !important;
+}
+
+.dorako-ui.dark-theme.sheet.kingdom {
+  --alt-dark: var(--tertiary-dark);
+  --color-border-divider: var(--tertiary);
+  --paper-bg: rgba(120, 100, 82, 0.3);
+  --drop-shadow: var(--gold-and-glow);
+  --drop-shadow: 0 0 0 1px var(--gold-brown), 0 0 0 1px var(--tertiary) inset, inset 0 0 3px rgba(255, 255, 255, 0.5);
+}
+.dorako-ui.dark-theme.sheet.kingdom .proficiency[data-rank="4"],
+.dorako-ui.dark-theme.sheet.kingdom .proficiency option[value="4"] {
+  background: var(--color-proficiency-legendary) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom .proficiency[data-rank="3"],
+.dorako-ui.dark-theme.sheet.kingdom .proficiency option[value="3"] {
+  background: var(--color-proficiency-master) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom .proficiency[data-rank="2"],
+.dorako-ui.dark-theme.sheet.kingdom .proficiency option[value="2"] {
+  background: var(--color-proficiency-expert) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom .proficiency[data-rank="1"],
+.dorako-ui.dark-theme.sheet.kingdom .proficiency option[value="1"] {
+  background: var(--color-proficiency-trained) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom button.small-button,
+.dorako-ui.dark-theme.sheet.kingdom select.proficiency,
+.dorako-ui.dark-theme.sheet.kingdom span.proficiency {
+  background: var(--color-proficiency-untrained) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom form {
+  background: unset;
+}
+.dorako-ui.dark-theme.sheet.kingdom h3.header button {
+  box-shadow: none;
+  border-radius: 3px 3px 0px 0px;
+  border: 1px solid var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.kingdom h3.header button:hover {
+  box-shadow: none;
+  border-radius: 3px 3px 0px 0px;
+  border: 1px solid var(--tertiary);
+  background-color: var(--tertiary-dark);
+  color: black;
+  text-shadow: unset;
+}
+.dorako-ui.dark-theme.sheet.kingdom form > header input {
+  box-shadow: none !important;
+  background: none !important;
+  border-radius: unset !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom form > header input:hover {
+  border-bottom: 1px solid white !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom form > .container input[type=number] {
+  background: none !important;
+  border-radius: 3px !important;
+  box-shadow: 0px 0px 0px 1px var(--tertiary) !important;
+}
+.dorako-ui.dark-theme.sheet.kingdom form > .container input[type=number]:hover {
+  background: var(--tertiary-dark) !important;
+  color: black;
+}
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav {
+  background: var(--glass-bg-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18), 0px -1px 2px rgba(255, 255, 255, 0.3) inset;
+}
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav .tab {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav::before, .dorako-ui.dark-theme.sheet.kingdom nav.sub-nav::after {
+  filter: invert(1);
+}
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav a,
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav .tab {
+  color: var(--tertiary-dark);
+}
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav a.active,
+.dorako-ui.dark-theme.sheet.kingdom nav.sub-nav .tab.active {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.kingdom .tab.active[data-tab=main] .ability-scores .ability .corruption-section .progress {
+  background: var(--paper-bg);
+}
+.dorako-ui.dark-theme.sheet.kingdom .tab.active[data-tab=features] .feat-item .item-name h4:hover,
+.dorako-ui.dark-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .skill .mod,
+.dorako-ui.dark-theme.sheet.kingdom h3.header {
+  color: var(--tertiary);
+}
+.dorako-ui.dark-theme.sheet.kingdom .tab.active[data-tab=activities] .skills .control-dc .mod,
+.dorako-ui.dark-theme.sheet.kingdom .tab.active[data-tab=features] .feat-item .item-name .feat-slot-title {
+  color: var(--tertiary-dark);
 }
 
 /* ----------------------------------------- */

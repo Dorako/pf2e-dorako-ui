@@ -1,3 +1,7 @@
+# 2.8.1
+
+- (New) Add dark-theme support for Kingdom sheet.
+
 # 2.8.0
 
 - (Refinement) Signficant additions to "mark as premium" functionality to avoid conflicting with premium content styling.
