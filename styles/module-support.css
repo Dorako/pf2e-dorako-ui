@@ -1875,6 +1875,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* ----------------------------------------- */
 #polyglot {
   flex-basis: 20px;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 #polyglot label {
   display: none;
@@ -1889,11 +1891,63 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
   appearance: none;
+  margin: unset;
+  padding-left: 7px;
+  flex: 1 1 70px;
 }
 #polyglot select option,
 #polyglot select optgroup {
   background-color: rgb(37, 37, 37);
   color: var(--color-text-light-highlight);
+}
+#polyglot.polyglot-lang-select input {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  margin: unset;
+  accent-color: var(--color-checkbox-checked);
+  accent-color: var(--secondary-dark);
+}
+#polyglot.polyglot-lang-select input:checked {
+  accent-color: var(--secondary-light);
+}
+#polyglot .polyglot-user-list {
+  outline: 1px solid var(--gold-brown);
+  margin: unset;
+  margin-right: 2px;
+  margin-left: 2px;
+  display: flex;
+  gap: 1px;
+  border-radius: var(--border-radius);
+  flex-grow: 1;
+  flex-direction: row;
+  flex: 1 0 20px;
+  max-width: unset;
+}
+#polyglot .polyglot-user-list:empty {
+  outline: unset;
+  flex: unset;
+  margin-right: -5px;
+}
+#polyglot .polyglot-user-list div {
+  display: flex;
+  border-radius: unset;
+  height: 22px;
+  width: unset;
+  flex: 1 0;
+  width: 10px;
+  border: 1px solid var(--tertiary);
+  margin: unset;
+}
+#polyglot .polyglot-user-list div:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+#polyglot .polyglot-user-list div:last-child {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 /* ----------------------------------------- */
