@@ -3075,12 +3075,20 @@ section.chat-sidebar {
   background: var(--button-color) !important;
 }
 
+.dorako-ui.kingdom.sheet .tab.active[data-tab=activities] .actions h3.header .filters .choice {
+  background-color: var(--secondary);
+  opacity: unset;
+}
+.dorako-ui.kingdom.sheet .tab.active[data-tab=activities] .actions h3.header .filters .choice.active {
+  background-color: var(--secondary-light);
+}
+
 .dorako-ui.dark-theme.sheet.kingdom {
   --alt-dark: var(--tertiary-dark);
   --color-border-divider: var(--tertiary);
   --paper-bg: rgba(120, 100, 82, 0.3);
-  --drop-shadow: var(--gold-and-glow);
   --drop-shadow: 0 0 0 1px var(--gold-brown), 0 0 0 1px var(--tertiary) inset, inset 0 0 3px rgba(255, 255, 255, 0.5);
+  --color-text-dark-input: var(--color-text-light-highlight);
 }
 .dorako-ui.dark-theme.sheet.kingdom .proficiency[data-rank="4"],
 .dorako-ui.dark-theme.sheet.kingdom .proficiency option[value="4"] {

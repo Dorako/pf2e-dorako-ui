@@ -1,3 +1,8 @@
+# 2.8.2
+
+- (Refinement) Adjust toggle-traits in Kingdom sheet to be blue to be consistent with general Dorako UI UX pattern.
+- (Fix) Fixed a heading that was illegible in dark theme Kingdom sheets.
+
 # 2.8.1
 
 - (New) Add dark-theme support for Kingdom sheet.
