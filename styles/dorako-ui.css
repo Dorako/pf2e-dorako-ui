@@ -4423,6 +4423,12 @@ a.inline-roll:not(.inline-result) {
 .dorako-ui .tags {
   gap: 1px;
 }
+.tah-tags-wrapper .tags .tag,
+.dorako-ui .message-content .tags .tag,
+.dorako-ui .tags.paizo-style .tag,
+.dorako-ui .tags .tag {
+  height: auto;
+}
 .tah-tags-wrapper .tags .tag:not(.tag_transparent),
 .dorako-ui .message-content .tags .tag:not(.tag_transparent),
 .dorako-ui .tags.paizo-style .tag:not(.tag_transparent),
@@ -4431,7 +4437,6 @@ a.inline-roll:not(.inline-result) {
   box-shadow: unset;
   border: 1px solid var(--tertiary);
   outline: 1px solid var(--gold-brown);
-  height: auto;
   padding: 0.33em 0.33em;
 }
 .tah-tags-wrapper .tags .tag:first-child,

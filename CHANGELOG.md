@@ -1,3 +1,7 @@
+# 2.8.4
+
+- (Maintenance) Updated to be compatible with new-new Polyglot version.
+
 # 2.8.3
 
 - (New) Updated Polyglot styling so it applies to the new elements. The player colors are made more prominent, and will use an extra row if needed.

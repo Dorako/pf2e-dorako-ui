@@ -2,6 +2,61 @@
 /* Polyglot                                  */
 /* ----------------------------------------- */
 
+.select2-dropdown.polyglot-language {
+  @include glass;
+  backdrop-filter: blur(5px);
+
+  .polyglot-user-list div {
+    box-shadow: 0px 0px 0px 1px var(--tertiary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: 1px solid var(--gold-brown);
+  }
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  @include glass;
+  @include quick-transition;
+  background: var(--glass-bg-light);
+
+  &:focus,
+  &:active,
+  &:hover {
+    background: var(--secondary-dark);
+    color: var(--color-text-light-highlight);
+  }
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+  padding-top: 1px;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  // @include glass;
+  // @include gold-border;
+  background: var(--secondary-light);
+  // border: 1px solid var(--tertiary);
+  box-shadow: 0px 0px 0px 1px var(--tertiary);
+  color: var(--color-text-light-highlight);
+}
+
+.select2-container--default .select2-results__option--selected {
+  // @include glass;
+  // @include gold-border;
+  background: var(--primary-light);
+  // border: 1px solid var(--tertiary);
+  box-shadow: 0px 0px 0px 1px var(--tertiary);
+  color: var(--color-text-light-highlight);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--color-text-light-heading);
+}
+
 #polyglot {
   flex-basis: 20px;
   gap: 5px;
@@ -9,6 +64,23 @@
 
   label {
     display: none;
+  }
+
+  &.polyglot-lang-select > span.select2-container {
+    margin: unset;
+  }
+
+  .select2-selection {
+    @include glass;
+    @include quick-transition;
+    cursor: pointer;
+    background: var(--glass-bg-light);
+    &:focus,
+    &:active,
+    &:hover {
+      background: var(--secondary-dark);
+      color: var(--color-text-light-highlight);
+    }
   }
 
   select {
@@ -48,7 +120,7 @@
     margin: unset;
     margin-right: 2px;
     margin-left: 2px;
-    display: flex;
+    // display: flex;
     gap: 1px;
     border-radius: var(--border-radius);
     flex-grow: 1;
@@ -58,7 +130,7 @@
     div {
       display: flex;
       border-radius: unset;
-      height: 22px;
+      // height: 22px;
       // width: 10px;
       width: unset;
       flex: 1 0;
