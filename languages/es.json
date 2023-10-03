@@ -39,8 +39,8 @@
           "hint": "Cualquier color válido en CSS debería funcionar"
         },
         "npc-sheet-theme": {
-          "name": "Tema para la ficha de PNJ",
-          "hint": "Ajusta el estilo de las fichas de PNJ",
+          "name": "Tema para la ficha de actor",
+          "hint": "Ajusta el estilo de las fichas de PNJ/Peligros/Familiares",
           "choice": {
             "glassy": "(Experimental) Traslúcido",
             "default": "Dorako UI predeterminada"
