@@ -1,3 +1,8 @@
+# 2.8.5
+
+- (Maintenance) Update Polygot styling to be compatible with new-new-new version.
+- (Maintenance) Update jump-to-button styling to be compatible with Core Foundry changes.
+
 # 2.8.4
 
 - (Maintenance) Updated to be compatible with new-new Polyglot version.

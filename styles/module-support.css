@@ -1921,8 +1921,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-text-light-highlight);
 }
 
+.polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered,
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--color-text-light-heading);
+}
+
+.polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: var(--color-text-light-heading) transparent transparent transparent;
 }
 
 #polyglot {

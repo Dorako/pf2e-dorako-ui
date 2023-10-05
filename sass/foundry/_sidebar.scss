@@ -128,22 +128,32 @@ section.chat-sidebar {
   }
 }
 
-.dorako-ui .jump-to-bottom {
-  @include glass;
-  @include quick-transition;
-  z-index: 1;
-  flex: 0 0 28px;
-  width: calc(100% - 10px);
-  margin: 0px 5px;
-  position: unset;
-  text-shadow: none;
-  background-color: #ecbf41dd;
-  color: black;
+.dorako-ui section.chat-sidebar .jump-to-bottom {
+  > a {
+    @include glass;
+    @include quick-transition;
+    border-radius: 0px;
+    z-index: 1;
+    text-shadow: none;
+    background-color: #ecbf41dd;
+    background-color: #ecbf41;
+    background-color: var(--alt-dark);
+    background-color: var(--glass-bg-dark);
+    backdrop-filter: blur(5px);
+    color: var(--color-text-light-heading);
+    color: var(--color-text-light-highlight);
+    text-shadow: 0px 0px 3px black;
+    font-size: large;
 
-  &:hover {
-    background-color: #ffdb77dd;
-    a {
-      text-shadow: none;
+    &:hover {
+      background-color: #ffdb77dd;
+      background-color: #ffdb77;
+      background-color: var(--alt);
+      background-color: var(--glass-bg);
+      color: var(--color-text-light-highlight);
+      a {
+        text-shadow: none;
+      }
     }
   }
 }

@@ -1267,26 +1267,34 @@ section.chat-sidebar {
   color: var(--color-text-light-highlight);
 }
 
-.dorako-ui .jump-to-bottom {
+.dorako-ui section.chat-sidebar .jump-to-bottom > a {
   border: none;
   border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  border-radius: 0px;
   z-index: 1;
-  flex: 0 0 28px;
-  width: calc(100% - 10px);
-  margin: 0px 5px;
-  position: unset;
   text-shadow: none;
   background-color: rgba(236, 191, 65, 0.8666666667);
-  color: black;
+  background-color: #ecbf41;
+  background-color: var(--alt-dark);
+  background-color: var(--glass-bg-dark);
+  backdrop-filter: blur(5px);
+  color: var(--color-text-light-heading);
+  color: var(--color-text-light-highlight);
+  text-shadow: 0px 0px 3px black;
+  font-size: large;
 }
-.dorako-ui .jump-to-bottom:hover {
+.dorako-ui section.chat-sidebar .jump-to-bottom > a:hover {
   background-color: rgba(255, 219, 119, 0.8666666667);
+  background-color: #ffdb77;
+  background-color: var(--alt);
+  background-color: var(--glass-bg);
+  color: var(--color-text-light-highlight);
 }
-.dorako-ui .jump-to-bottom:hover a {
+.dorako-ui section.chat-sidebar .jump-to-bottom > a:hover a {
   text-shadow: none;
 }
 
