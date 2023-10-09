@@ -1,0 +1,59 @@
+.dorako-ui.dark-theme {
+  &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+    // @include glass;
+    background-color: var(--glass-bg);
+    border-radius: 5px;
+    box-shadow: var(--glassy-sharp);
+  }
+
+  .ͼ2 .cm-content {
+    caret-color: white;
+  }
+
+  .ͼ2 .cm-gutters {
+    background-color: black;
+    background-color: var(--glass-bg);
+    border-right: 1px solid var(--tertiary);
+  }
+
+  .ͼ2 .cm-activeLineGutter {
+    background-color: var(--tertiary);
+    color: black;
+  }
+
+  .ͼ2 .cm-activeLine {
+    background-color: rgba(245, 222, 179, 0.246);
+  }
+
+  .ͼ1.cm-focused .cm-matchingBracket {
+    background-color: yellow;
+    color: black;
+    border-radius: 3px;
+    box-shadow: 0px 2px 3px black;
+  }
+
+  // strings
+  .ͼe {
+    color: red;
+  }
+
+  // numbers
+  .ͼd {
+    color: greenyellow;
+  }
+
+  // bools
+  .ͼc {
+    color: rgb(68, 68, 252);
+  }
+
+  // null
+  .ͼb {
+    color: rgb(217, 31, 217);
+  }
+
+  // red triangle
+  .ͼ1 .cm-lintPoint:after {
+    border-bottom: 4px solid var(--primary-light);
+  }
+}

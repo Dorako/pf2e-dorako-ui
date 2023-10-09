@@ -1,3 +1,8 @@
+# 2.9.0
+
+- (New) Added dark-theme styling for Code Mirror when editing Rule Elements.
+- (Refinement) Added second generation glass styling to buttons and inputs in the sidebar. Feedback appreciated.
+
 # 2.8.5
 
 - (Maintenance) Update Polygot styling to be compatible with new-new-new version.

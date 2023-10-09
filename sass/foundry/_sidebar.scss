@@ -63,15 +63,45 @@ section.chat-sidebar {
     }
   }
 
-  // button {
-  //   @include glass;
-  //   background-color: var(--glass-bg-light);
-  //   color: var(--color-text-light-heading);
-  //   &:hover {
-  //     background-color: var(--primary-light);
-  //     color: var(--color-text-light-highlight);
-  //   }
-  // }
+  .settings-sidebar h2 {
+    // @include gold-border;
+    background-color: var(--alt);
+    border-color: var(--alt-dark);
+  }
+
+  .directory .action-buttons button,
+  .settings-sidebar button {
+    @include glass;
+    box-shadow: var(--glassy-sharp);
+    backdrop-filter: blur(5px);
+    background-color: var(--glass-bg-light);
+    color: var(--color-text-light-heading);
+    text-shadow: 0px 0px 3px black;
+    &:hover {
+      box-shadow: var(--glassy-sharp-highlight);
+      background-color: var(--glass-bg-gold);
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  .directory .directory-header .header-search input {
+    @include glass;
+    box-shadow: var(--glassy-sharp);
+    backdrop-filter: blur(5px);
+    background-color: var(--glass-bg-light);
+    caret-color: var(--tertiary);
+    color: var(--color-text-light-highlight);
+    text-shadow: 0px 0px 3px black;
+
+    &::placeholder {
+      color: var(--color-text-light-heading);
+    }
+    &:hover,
+    &:focus {
+      background-color: var(--glass-bg-gold);
+      box-shadow: var(--glassy-sharp-highlight);
+    }
+  }
 
   #sidebar-tabs {
     --sidebar-tab-height: 20px;

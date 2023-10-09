@@ -77,12 +77,14 @@
   --sidebar-title: var(--tertiary);
   /* App UI */
   --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg-gold: rgba(103, 88, 60, 0.441);
   --glass-bg-light: rgba(255, 255, 255, 0.1);
   --glass-bg-dark: rgba(0, 0, 0, 0.7);
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -3237,6 +3239,20 @@ body.system-swade {
 }
 #fc-container button:hover svg * {
   fill: var(--color-text-light-highlight);
+}
+
+#fc-button-target.highlight {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  outline: unset;
+  background-color: var(--secondary-dark);
+}
+#fc-button-target.highlight:hover {
+  background-color: var(--secondary-light);
 }
 
 #initiative-delay,

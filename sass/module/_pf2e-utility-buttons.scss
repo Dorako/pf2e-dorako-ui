@@ -21,6 +21,16 @@
   }
 }
 
+#fc-button-target.highlight {
+  @include glass;
+  @include quick-transition;
+  outline: unset;
+  background-color: var(--secondary-dark);
+  &:hover {
+    background-color: var(--secondary-light);
+  }
+}
+
 #initiative-delay,
 #initiative-return {
   @include glass;

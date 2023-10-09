@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .dorako-ui .tox:not(.tox-tinymce-inline) .tox-editor-header {
   background: none;
   box-shadow: none;
@@ -1213,6 +1214,49 @@ section.chat-sidebar {
 }
 #sidebar.dorako-ui #settings ul#game-details li.system-buttons button {
   border-radius: var(--border-radius) !important;
+}
+#sidebar.dorako-ui .settings-sidebar h2 {
+  background-color: var(--alt);
+  border-color: var(--alt-dark);
+}
+#sidebar.dorako-ui .directory .action-buttons button,
+#sidebar.dorako-ui .settings-sidebar button {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  box-shadow: var(--glassy-sharp);
+  backdrop-filter: blur(5px);
+  background-color: var(--glass-bg-light);
+  color: var(--color-text-light-heading);
+  text-shadow: 0px 0px 3px black;
+}
+#sidebar.dorako-ui .directory .action-buttons button:hover,
+#sidebar.dorako-ui .settings-sidebar button:hover {
+  box-shadow: var(--glassy-sharp-highlight);
+  background-color: var(--glass-bg-gold);
+  color: var(--color-text-light-highlight);
+}
+#sidebar.dorako-ui .directory .directory-header .header-search input {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  box-shadow: var(--glassy-sharp);
+  backdrop-filter: blur(5px);
+  background-color: var(--glass-bg-light);
+  caret-color: var(--tertiary);
+  color: var(--color-text-light-highlight);
+  text-shadow: 0px 0px 3px black;
+}
+#sidebar.dorako-ui .directory .directory-header .header-search input::placeholder {
+  color: var(--color-text-light-heading);
+}
+#sidebar.dorako-ui .directory .directory-header .header-search input:hover, #sidebar.dorako-ui .directory .directory-header .header-search input:focus {
+  background-color: var(--glass-bg-gold);
+  box-shadow: var(--glassy-sharp-highlight);
 }
 #sidebar.dorako-ui #sidebar-tabs {
   --sidebar-tab-height: 20px;
@@ -3184,6 +3228,48 @@ section.chat-sidebar {
   color: var(--tertiary-dark);
 }
 
+.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+  background-color: var(--glass-bg);
+  border-radius: 5px;
+  box-shadow: var(--glassy-sharp);
+}
+.dorako-ui.dark-theme .ͼ2 .cm-content {
+  caret-color: white;
+}
+.dorako-ui.dark-theme .ͼ2 .cm-gutters {
+  background-color: black;
+  background-color: var(--glass-bg);
+  border-right: 1px solid var(--tertiary);
+}
+.dorako-ui.dark-theme .ͼ2 .cm-activeLineGutter {
+  background-color: var(--tertiary);
+  color: black;
+}
+.dorako-ui.dark-theme .ͼ2 .cm-activeLine {
+  background-color: rgba(245, 222, 179, 0.246);
+}
+.dorako-ui.dark-theme .ͼ1.cm-focused .cm-matchingBracket {
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+  box-shadow: 0px 2px 3px black;
+}
+.dorako-ui.dark-theme .ͼe {
+  color: red;
+}
+.dorako-ui.dark-theme .ͼd {
+  color: greenyellow;
+}
+.dorako-ui.dark-theme .ͼc {
+  color: rgb(68, 68, 252);
+}
+.dorako-ui.dark-theme .ͼb {
+  color: rgb(217, 31, 217);
+}
+.dorako-ui.dark-theme .ͼ1 .cm-lintPoint:after {
+  border-bottom: 4px solid var(--primary-light);
+}
+
 /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
@@ -3262,12 +3348,14 @@ section.chat-sidebar {
   --sidebar-title: var(--tertiary);
   /* App UI */
   --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg-gold: rgba(103, 88, 60, 0.441);
   --glass-bg-light: rgba(255, 255, 255, 0.1);
   --glass-bg-dark: rgba(0, 0, 0, 0.7);
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -3648,13 +3736,16 @@ section.chat-sidebar {
   height: 1.2em;
   margin-right: 5px;
 }
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-button,
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-attack-buttons {
   gap: 3px;
 }
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-button button:not(:first-child),
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child) {
   background: var(--primary-dark);
   color: var(--color-text-light-highlight);
 }
+.dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-button button:not(:first-child):hover,
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child):hover {
   color: white;
   background: var(--primary-light);
@@ -3813,12 +3904,14 @@ section.chat-sidebar {
   --sidebar-title: var(--tertiary);
   /* App UI */
   --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-bg-gold: rgba(103, 88, 60, 0.441);
   --glass-bg-light: rgba(255, 255, 255, 0.1);
   --glass-bg-dark: rgba(0, 0, 0, 0.7);
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -4000,9 +4093,11 @@ section.chat-sidebar {
   color: white;
   background: var(--secondary-light);
 }
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-button,
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons {
   gap: 5px;
 }
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-button button:not(:first-child),
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child) {
   border: none;
   border-radius: var(--border-radius);
@@ -4014,6 +4109,7 @@ section.chat-sidebar {
   background: var(--primary-dark);
   color: var(--color-text-light-highlight);
 }
+.dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-button button:not(:first-child):hover,
 .dorako-ui.dark-theme.message.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons button:not(:first-child):hover {
   color: white;
   background: var(--primary-light);
