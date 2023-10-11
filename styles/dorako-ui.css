@@ -273,8 +273,15 @@
   background-color: var(--primary-dark);
   border: none;
 }
+.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input button:hover {
+  background-color: var(--primary);
+  box-shadow: var(--glassy);
+}
 .dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input input {
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
 
 .dorako-ui.dark-theme:not(.premium) .window-content {
@@ -1244,7 +1251,8 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  box-shadow: var(--glassy-sharp);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  box-shadow: var(--glassy-sharp-inset);
   backdrop-filter: blur(5px);
   background-color: var(--glass-bg-light);
   caret-color: var(--tertiary);
@@ -1252,11 +1260,11 @@ section.chat-sidebar {
   text-shadow: 0px 0px 3px black;
 }
 #sidebar.dorako-ui .directory .directory-header .header-search input::placeholder {
-  color: var(--color-text-light-heading);
+  color: var(--color-text-light-5);
 }
 #sidebar.dorako-ui .directory .directory-header .header-search input:hover, #sidebar.dorako-ui .directory .directory-header .header-search input:focus {
   background-color: var(--glass-bg-gold);
-  box-shadow: var(--glassy-sharp-highlight);
+  box-shadow: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 }
 #sidebar.dorako-ui #sidebar-tabs {
   --sidebar-tab-height: 20px;
@@ -3355,6 +3363,7 @@ section.chat-sidebar {
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
@@ -3911,6 +3920,7 @@ section.chat-sidebar {
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);

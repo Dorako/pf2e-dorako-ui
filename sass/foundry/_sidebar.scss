@@ -86,20 +86,23 @@ section.chat-sidebar {
 
   .directory .directory-header .header-search input {
     @include glass;
-    box-shadow: var(--glassy-sharp);
+    @include quick-transition;
+    box-shadow: var(--glassy-sharp-inset);
     backdrop-filter: blur(5px);
     background-color: var(--glass-bg-light);
     caret-color: var(--tertiary);
     color: var(--color-text-light-highlight);
     text-shadow: 0px 0px 3px black;
+    // border: 1px solid var(--gold-brown);
 
     &::placeholder {
-      color: var(--color-text-light-heading);
+      color: var(--color-text-light-5);
     }
+
     &:hover,
     &:focus {
       background-color: var(--glass-bg-gold);
-      box-shadow: var(--glassy-sharp-highlight);
+      box-shadow: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
     }
   }
 

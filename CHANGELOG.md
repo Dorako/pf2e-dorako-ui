@@ -1,3 +1,8 @@
+# 2.9.1
+
+- (Maintenance) Update Polygot styling to be compatible with new-new-new-new version.
+- (Refinement) Adjust styling of inputs in sidebar to differentiate them better from buttons.
+
 # 2.9.0
 
 - (New) Added dark-theme styling for Code Mirror when editing Rule Elements.

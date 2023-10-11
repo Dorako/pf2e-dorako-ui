@@ -84,6 +84,7 @@
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
@@ -1883,9 +1884,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
 }
-.select2-dropdown.polyglot-language .polyglot-user-list div {
-  box-shadow: 0px 0px 0px 1px var(--tertiary);
-}
 .select2-dropdown.polyglot-language ::-webkit-scrollbar-thumb {
   background: var(--tertiary);
   border: 1px solid var(--gold-brown);
@@ -1930,6 +1928,10 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 
 .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-color: var(--color-text-light-heading) transparent transparent transparent;
+}
+
+.polyglot-user-list div {
+  box-shadow: 0px 0px 0px 1px var(--tertiary);
 }
 
 #polyglot {
@@ -1991,9 +1993,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 #polyglot .polyglot-user-list {
   outline: 1px solid var(--gold-brown);
-  margin: unset;
-  margin-right: 2px;
-  margin-left: 2px;
+  background: var(--gold-brown);
+  margin: 3px;
   gap: 1px;
   border-radius: var(--border-radius);
   flex-grow: 1;
@@ -2010,6 +2011,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   display: flex;
   border-radius: unset;
   width: unset;
+  height: unset;
   flex: 1 0;
   width: 10px;
   border: 1px solid var(--tertiary);

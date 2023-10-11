@@ -107,9 +107,16 @@
   button {
     background-color: var(--primary-dark);
     border: none;
+    &:hover {
+      background-color: var(--primary);
+      box-shadow: var(--glassy);
+    }
   }
   input {
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+  }
+  .attachment {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
   }
 }
 

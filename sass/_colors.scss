@@ -140,6 +140,7 @@ $adjusted-lower: #cc3311 !default;
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);

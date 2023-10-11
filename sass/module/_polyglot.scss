@@ -6,10 +6,6 @@
   @include glass;
   backdrop-filter: blur(5px);
 
-  .polyglot-user-list div {
-    box-shadow: 0px 0px 0px 1px var(--tertiary);
-  }
-
   ::-webkit-scrollbar-thumb {
     background: var(--tertiary);
     border: 1px solid var(--gold-brown);
@@ -60,6 +56,10 @@
 
 .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-color: var(--color-text-light-heading) transparent transparent transparent;
+}
+
+.polyglot-user-list div {
+  box-shadow: 0px 0px 0px 1px var(--tertiary);
 }
 
 #polyglot {
@@ -122,9 +122,8 @@
       margin-right: -5px;
     }
     outline: 1px solid var(--gold-brown);
-    margin: unset;
-    margin-right: 2px;
-    margin-left: 2px;
+    background: var(--gold-brown);
+    margin: 3px;
     // display: flex;
     gap: 1px;
     border-radius: var(--border-radius);
@@ -138,6 +137,7 @@
       // height: 22px;
       // width: 10px;
       width: unset;
+      height: unset;
       flex: 1 0;
       width: 10px;
       border: 1px solid var(--tertiary);
