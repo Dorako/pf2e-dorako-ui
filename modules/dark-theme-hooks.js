@@ -10,7 +10,7 @@ import {
 // Supported dark theme
 function markAsDarkTheme(app, html) {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme" || theme === "light-theme") return;
+  if (theme === "no-theme" || theme === "light-theme" || theme === "foundry2-theme") return;
   let html0 = html[0];
   if (html0.matches(premiumModuleSelector)) {
     console.debug(
@@ -26,7 +26,7 @@ function markAsDarkTheme(app, html) {
 // Critical hit/fumble deck
 Hooks.on("renderJournalSheetPF2e", (app, html) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") return;
+  if (theme === "no-theme" || theme === "foundry2-theme") return;
   if (!html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
   console.debug(
     `${MODULE_NAME} | renderJournalSheetPF2e | critical-hit-fumble-deck | theme: ${theme} => add .dorako-ui .dark-theme`

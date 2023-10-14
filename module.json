@@ -111,6 +111,7 @@
     "modules/settings/settings.js",
     "modules/dark-theme-hooks.js",
     "modules/base-theme-hooks.js",
+    "modules/foundry2-theme.js",
     "modules/message-hooks.js",
     "modules/premium-module-hooks.js",
     "modules/consts.js",

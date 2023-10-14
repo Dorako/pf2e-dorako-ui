@@ -4,6 +4,8 @@ import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleS
 for (const appName of [...baseThemeApplications]) {
   Hooks.on("render" + appName, (app, html, data) => {
     if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme === "no-theme" || theme === "foundry2-theme") return;
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
     if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
       console.debug(
@@ -75,7 +77,7 @@ Hooks.on("renderTokenActionHUD", (app, html, data) => {
 // Add .dorako-ui to all .dialog applications
 Hooks.on("renderDialog", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") {
+  if (theme === "no-theme" || theme === "foundry2-theme") {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
     return;
   }
@@ -95,7 +97,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   if (html0.classList.contains("dialog")) return;
   if (!html0.classList.contains("window-app")) return;
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") {
+  if (theme === "no-theme" || theme === "foundry2-theme") {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
     return;
   }
@@ -119,7 +121,7 @@ for (const app of [...baseThemePf2eSheets]) {
     // if (!app.constructor.name.endsWith("PF2e")) return; <- SpellPreparationSheet doesn't end with PF2e
     if (!html0.classList.contains("window-app")) return;
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-    if (theme === "no-theme") {
+    if (theme === "no-theme" || theme === "foundry2-theme") {
       return;
     }
     console.debug(
@@ -168,7 +170,7 @@ Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
 // Re-organize NPC sheets, do not apply base styling to selects or input fields
 Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") {
+  if (theme === "no-theme" || theme === "foundry2-theme") {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
     return;
   }

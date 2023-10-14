@@ -28,7 +28,8 @@
           "choice": {
             "no-theme": "No theme",
             "light-theme": "Light Dorako UI",
-            "dark-theme": "Dark Dorako UI"
+            "dark-theme": "Dark Dorako UI",
+            "foundry2-theme": "Foundry 2"
           }
         },
         "frosted-glass": {

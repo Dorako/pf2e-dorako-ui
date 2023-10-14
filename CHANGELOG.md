@@ -1,3 +1,7 @@
+# 2.10.0
+
+- (New) Added a new application theme inspired by the modern Foundry design. Sheets with no explicit support will render as system default.
+
 # 2.9.1
 
 - (Maintenance) Update Polygot styling to be compatible with new-new-new-new version.

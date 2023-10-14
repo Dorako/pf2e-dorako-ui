@@ -21,6 +21,24 @@
   }
 }
 
+#players.foundry2 {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+
+  h3 {
+    cursor: pointer;
+    @include quick-transition;
+
+    &:hover {
+      text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+    }
+  }
+}
+
 .dorako-ui.app.journal-entry:not(.premium) {
   .window-content {
     box-shadow: none;
@@ -149,7 +167,7 @@
 /* Tooltip                                   */
 /* ----------------------------------------- */
 // Exists in outermost scope
-#tooltip {
+#tooltip[data-theme="dorako-ui"] {
   @include glass;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -159,11 +177,51 @@
   text-shadow: 0px 0px 3px black;
 }
 
+#tooltip[data-theme="foundry2"] {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  min-height: 34px;
+  font-size: var(--font-size-20);
+  line-height: var(--font-size-20);
+  text-shadow: 0px 0px 3px black;
+}
+
+.foundry2 #context-menu {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+  li.context-item {
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    &:last-child {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    &:hover {
+      box-shadow: 0px 0px 0px 1px var(--color-warm-1);
+      background: var(--color-warm-2);
+      text-shadow: 0px 0px 3px black;
+    }
+  }
+}
+
 /* ----------------------------------------- */
 /* FPS display                               */
 /* ----------------------------------------- */
 
-#fps {
+#fps[data-theme="dorako-ui"] {
   @include glass;
   text-shadow: 0px 0px 3px black;
+}
+
+#fps[data-theme="foundry2"] {
+  @include f2-app;
 }

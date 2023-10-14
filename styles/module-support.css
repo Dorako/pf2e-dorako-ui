@@ -83,9 +83,9 @@
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
-  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -783,6 +783,9 @@ nav.damage-log-nav.tabs .item.active {
   backdrop-filter: unset;
 }
 
+/* ----------------------------------------- */
+/* Settings                                  */
+/* ----------------------------------------- */
 .dorako-ui .tab.category.active[data-tab=pf2e-dorako-ui] h2,
 .dorako-ui .form-group.dorako-ui.settings-header {
   font-size: larger;
@@ -817,6 +820,32 @@ nav.damage-log-nav.tabs .item.active {
 }
 .dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
   color: var(--tertiary-dark);
+}
+
+.foundry2 .tab.category.active[data-tab=pf2e-dorako-ui] h2,
+.foundry2 .form-group.dorako-ui.settings-header {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  font-size: larger;
+  margin: 2px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: var(--color-light-2);
+  background: var(--color-cool-2);
+}
+.foundry2 .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
+  font-size: var(--font-size-48);
+  text-align: center;
+  color: var(--color-light-2);
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  text-shadow: 0px 1px 0px var(--color-warm-3);
 }
 
 /* ----------------------------------------- */
@@ -1925,6 +1954,12 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--color-text-light-heading);
 }
+.polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered:focus, .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered:active, .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered:hover,
+.select2-container--default .select2-selection--single .select2-selection__rendered:focus,
+.select2-container--default .select2-selection--single .select2-selection__rendered:active,
+.select2-container--default .select2-selection--single .select2-selection__rendered:hover {
+  color: var(--color-text-light-highlight);
+}
 
 .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-color: var(--color-text-light-heading) transparent transparent transparent;
@@ -1954,6 +1989,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
   cursor: pointer;
   background: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
 }
 #polyglot .select2-selection:focus, #polyglot .select2-selection:active, #polyglot .select2-selection:hover {
   background: var(--secondary-dark);
@@ -2887,6 +2923,20 @@ body.system-swade {
 #module-credits-dialog.dorako-ui.dark-theme .journal-entry-content {
   background: unset;
   box-shadow: unset;
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2#module-management .package-list .package .package-overview .tag.expand {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+}
+.foundry2 .package-list .package .tag {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
 }
 
 /* ----------------------------------------- */

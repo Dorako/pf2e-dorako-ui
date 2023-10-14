@@ -19,3 +19,21 @@
     box-shadow: unset;
   }
 }
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+.foundry2 {
+  &#module-management .package-list .package .package-overview .tag.expand {
+    background: var(--color-cool-4);
+    border: 1px solid var(--color-cool-3);
+    color: var(--color-light-2);
+  }
+
+  .package-list .package .tag {
+    background: var(--color-cool-4);
+    border: 1px solid var(--color-cool-3);
+    color: var(--color-light-2);
+  }
+}

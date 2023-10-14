@@ -75,7 +75,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   // TODO: This also triggers for SceneConfigPF2e
   if (isPremiumApplication(app, html, data, app.constructor.name)) return;
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme") {
+  if (theme === "no-theme" || theme == "foundry2-theme") {
     return;
   }
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | is .window-app => add .dorako-ui`);

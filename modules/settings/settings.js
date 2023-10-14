@@ -68,6 +68,16 @@ Hooks.once("init", async () => {
     ChatRollPrivacy.init();
   }
 
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "foundry2-theme") {
+    document.querySelector("#tooltip").classList.add("foundry2");
+    $("#tooltip").attr("data-theme", "foundry2");
+    $("#fps").attr("data-theme", "foundry2");
+  } else if (theme !== "no-theme") {
+    $("#tooltip").attr("data-theme", "dorako-ui");
+    $("#fps").attr("data-theme", "dorako-ui");
+  }
+
   util.debug("registered settings");
 
   injectCSS("dorako-ui");

@@ -57,3 +57,67 @@
     border-bottom: 4px solid var(--primary-light);
   }
 }
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+.foundry2 {
+  &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+    background-color: var(--color-cool-4);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-cool-3);
+    color: var(--color-light-2);
+  }
+
+  .ͼ2 .cm-content {
+    caret-color: white;
+  }
+
+  .ͼ2 .cm-gutters {
+    background-color: var(--application-bg);
+    border-right: 1px solid var(--color-warm-2);
+    border: unset;
+  }
+
+  .ͼ2 .cm-activeLineGutter {
+    background-color: var(--color-warm-1);
+    color: black;
+  }
+
+  .ͼ2 .cm-activeLine {
+    background-color: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
+  }
+
+  .ͼ1.cm-focused .cm-matchingBracket {
+    background-color: yellow;
+    color: black;
+    border-radius: 3px;
+    box-shadow: 0px 2px 3px black;
+  }
+
+  // strings
+  .ͼe {
+    color: var(--color-level-error);
+  }
+
+  // numbers
+  .ͼd {
+    color: greenyellow;
+  }
+
+  // bools
+  .ͼc {
+    color: var(--color-level-info);
+  }
+
+  // null
+  .ͼb {
+    color: rgb(217, 31, 217);
+  }
+
+  // red triangle
+  .ͼ1 .cm-lintPoint:after {
+    border-bottom: 4px solid var(--primary-light);
+  }
+}

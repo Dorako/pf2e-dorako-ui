@@ -74,3 +74,90 @@ nav#controls.dorako-ui {
     border: none;
   }
 }
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+nav#controls.foundry2 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: var(--controls-alignment);
+
+  // Fix foundry's inconsistent gaps
+  ol.control-tools.sub-controls > li,
+  ol.control-tools.main-controls {
+    margin-right: var(--controls-margin);
+  }
+
+  ol.control-tools {
+    &.main-control {
+      margin-right: var(--controls-margin);
+    }
+
+    li.control-tool,
+    > li {
+      @include quick-transition;
+      background-color: var(--app-background);
+      border: 1px solid var(--color-cool-3);
+      text-shadow: 0px 1px 2px black;
+      border-radius: var(--border-radius);
+      --box-shadow: 0px 1px 3px 1px black;
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      margin-bottom: var(--controls-margin);
+      height: var(--control-size);
+      width: var(--control-size);
+      font-size: calc(var(--control-size) - 12px);
+      color: var(--color-light-3);
+
+      img {
+        filter: sepia() grayscale(0.9) brightness(0.8) drop-shadow(0px 0px 3px black);
+      }
+
+      &.active,
+      &:hover {
+        color: var(--color-light-1);
+        background-color: var(--color-warm-2);
+        border: 1px solid var(--color-warm-1);
+
+        img {
+          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+        }
+      }
+
+      &.toggle {
+        background-color: var(--color-cool-3);
+        border: 1px solid var(--color-cool-2);
+
+        &.active,
+        &:hover {
+          // @include glass;
+          color: var(--color-light-1);
+          background-color: var(--color-cool-2);
+          border: 1px solid var(--color-cool-1);
+          box-shadow: var(--box-shadow);
+        }
+      }
+    }
+  }
+}
+
+#darkness-adjuster.foundry2 {
+  height: 42px !important; //overwrite system's !important
+  margin-top: 3px;
+  border-radius: var(--border-radius);
+  color: var(--color-light-1);
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+
+  .window-content {
+    overflow: hidden;
+    background: unset;
+    box-shadow: unset;
+    border: none;
+  }
+}

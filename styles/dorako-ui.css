@@ -23,6 +23,22 @@
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
 }
 
+#players.foundry2 {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+#players.foundry2 h3 {
+  cursor: pointer;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+}
+#players.foundry2 h3:hover {
+  text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+}
+
 .dorako-ui.app.journal-entry:not(.premium) .window-content {
   box-shadow: none;
   margin: 0px;
@@ -149,7 +165,7 @@
 /* ----------------------------------------- */
 /* Tooltip                                   */
 /* ----------------------------------------- */
-#tooltip {
+#tooltip[data-theme=dorako-ui] {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -163,16 +179,61 @@
   text-shadow: 0px 0px 3px black;
 }
 
+#tooltip[data-theme=foundry2] {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  min-height: 34px;
+  font-size: var(--font-size-20);
+  line-height: var(--font-size-20);
+  text-shadow: 0px 0px 3px black;
+}
+
+.foundry2 #context-menu {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+}
+.foundry2 #context-menu li.context-item:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.foundry2 #context-menu li.context-item:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.foundry2 #context-menu li.context-item:hover {
+  box-shadow: 0px 0px 0px 1px var(--color-warm-1);
+  background: var(--color-warm-2);
+  text-shadow: 0px 0px 3px black;
+}
+
 /* ----------------------------------------- */
 /* FPS display                               */
 /* ----------------------------------------- */
-#fps {
+#fps[data-theme=dorako-ui] {
   border: none;
   border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   text-shadow: 0px 0px 3px black;
+}
+
+#fps[data-theme=foundry2] {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
 }
 
 .dorako-ui.dark-theme.filepicker .favorites .path {
@@ -786,6 +847,85 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+nav#controls.foundry2 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: var(--controls-alignment);
+}
+nav#controls.foundry2 ol.control-tools.sub-controls > li,
+nav#controls.foundry2 ol.control-tools.main-controls {
+  margin-right: var(--controls-margin);
+}
+nav#controls.foundry2 ol.control-tools.main-control {
+  margin-right: var(--controls-margin);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool,
+nav#controls.foundry2 ol.control-tools > li {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--controls-margin);
+  height: var(--control-size);
+  width: var(--control-size);
+  font-size: calc(var(--control-size) - 12px);
+  color: var(--color-light-3);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool img,
+nav#controls.foundry2 ol.control-tools > li img {
+  filter: sepia() grayscale(0.9) brightness(0.8) drop-shadow(0px 0px 3px black);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.active, nav#controls.foundry2 ol.control-tools li.control-tool:hover,
+nav#controls.foundry2 ol.control-tools > li.active,
+nav#controls.foundry2 ol.control-tools > li:hover {
+  color: var(--color-light-1);
+  background-color: var(--color-warm-2);
+  border: 1px solid var(--color-warm-1);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.active img, nav#controls.foundry2 ol.control-tools li.control-tool:hover img,
+nav#controls.foundry2 ol.control-tools > li.active img,
+nav#controls.foundry2 ol.control-tools > li:hover img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.toggle,
+nav#controls.foundry2 ol.control-tools > li.toggle {
+  background-color: var(--color-cool-3);
+  border: 1px solid var(--color-cool-2);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.toggle.active, nav#controls.foundry2 ol.control-tools li.control-tool.toggle:hover,
+nav#controls.foundry2 ol.control-tools > li.toggle.active,
+nav#controls.foundry2 ol.control-tools > li.toggle:hover {
+  color: var(--color-light-1);
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+  box-shadow: var(--box-shadow);
+}
+
+#darkness-adjuster.foundry2 {
+  height: 42px !important;
+  margin-top: 3px;
+  border-radius: var(--border-radius);
+  color: var(--color-light-1);
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
+#darkness-adjuster.foundry2 .window-content {
+  overflow: hidden;
+  background: unset;
+  box-shadow: unset;
+  border: none;
+}
+
+/* ----------------------------------------- */
 /* Forms                                     */
 /* ----------------------------------------- */
 .dorako-ui.sheet nav.sheet-tabs {
@@ -1061,6 +1201,78 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   }
 }
 /* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+#hotbar.foundry2 .bar-controls {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+#hotbar.foundry2 .macro {
+  height: calc(var(--macro-size) + 2px);
+  width: calc(var(--macro-size) + 2px);
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+}
+#hotbar.foundry2 .macro.inactive::before, #hotbar.foundry2 .macro.active::before {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  pointer-events: none;
+}
+#hotbar.foundry2 .macro.active:hover::before {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in srgb, var(--color-warm-1) 20%, transparent);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  pointer-events: none;
+}
+#hotbar.foundry2 .macro .macro-key {
+  background: none;
+  right: 6px;
+  padding: 0px;
+  font-weight: initial;
+  text-shadow: 0px 1px 5px black, 0px 1px 5px black;
+  font-size: calc(var(--macro-size) / 3);
+}
+#hotbar.foundry2 .macro .macro-icon {
+  border-radius: var(--border-radius);
+  height: calc(var(--macro-size) + 0px);
+  width: calc(var(--macro-size) + 0px);
+}
+#hotbar.foundry2 #macro-list {
+  gap: 5px;
+  margin: 0px 5px;
+  border: none;
+  grid-template-columns: repeat(10, calc(var(--macro-size) + 2px));
+  align-content: end;
+}
+
+/* ----------------------------------------- */
 /* Scene Navigation                          */
 /* ----------------------------------------- */
 #navigation.dorako-ui {
@@ -1134,6 +1346,73 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+#navigation.foundry2 {
+  color: var(--color-light-2);
+  width: calc(100% - 46px);
+}
+#navigation.foundry2 #nav-toggle {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--control-size);
+  height: var(--control-size);
+}
+#navigation.foundry2 ol#scene-list li.nav-item {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  line-height: var(--control-size);
+}
+#navigation.foundry2 ol#scene-list li.nav-item > a:hover {
+  text-shadow: unset;
+}
+#navigation.foundry2 ol#scene-list li.nav-item .scene-players {
+  text-shadow: none;
+}
+#navigation.foundry2 ol#scene-list li.nav-item:hover {
+  color: var(--color-light-1);
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.view {
+  background-color: var(--color-warm-2);
+  color: var(--color-light-2);
+  border-color: var(--color-warm-1);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.view:hover {
+  color: var(--color-light-1);
+  background-color: var(--color-warm-1);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm {
+  background-color: var(--color-cool-3);
+  border-color: var(--color-cool-2);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm:hover, #navigation.foundry2 ol#scene-list li.nav-item.gm.view {
+  color: var(--color-light-1);
+  background-color: var(--color-cool-2);
+  border-color: var(--color-cool-1);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.active {
+  border-color: var(--color-warm-1);
+}
+
+/* ----------------------------------------- */
 /* Notifications                             */
 /* ----------------------------------------- */
 .dorako-ui .notification {
@@ -1158,6 +1437,27 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: black;
   text-shadow: none;
   border: none;
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2 .notification {
+  border: 1px solid transparent;
+  text-shadow: 0px 0px 3px black;
+  box-shadow: 0px 2px 2px black;
+}
+.foundry2 .notification.info {
+  background: var(--color-level-info-bg);
+  border-color: var(--color-level-info-border);
+}
+.foundry2 .notification.alert, .foundry2 .notification.warning {
+  background: var(--color-level-warning-bg);
+  border-color: var(--color-level-warning-border);
+}
+.foundry2 .notification.error {
+  background: var(--color-level-error-bg);
+  border-color: var(--color-level-error-border);
 }
 
 /* ----------------------------------------- */
@@ -1209,6 +1509,9 @@ section.chat-sidebar {
   border: none;
   border-radius: 6px var(--border-radius) var(--border-radius) var(--border-radius);
 }
+#sidebar.dorako-ui hr {
+  display: none;
+}
 #sidebar.dorako-ui.collapsed {
   border-radius: var(--border-radius);
 }
@@ -1223,8 +1526,8 @@ section.chat-sidebar {
   border-radius: var(--border-radius) !important;
 }
 #sidebar.dorako-ui .settings-sidebar h2 {
-  background-color: var(--alt);
-  border-color: var(--alt-dark);
+  background: unset;
+  border: unset;
 }
 #sidebar.dorako-ui .directory .action-buttons button,
 #sidebar.dorako-ui .settings-sidebar button {
@@ -1236,14 +1539,15 @@ section.chat-sidebar {
   box-shadow: var(--glassy-sharp);
   backdrop-filter: blur(5px);
   background-color: var(--glass-bg-light);
-  color: var(--color-text-light-heading);
-  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-highlight);
+  text-shadow: 0px 1px 3px black;
 }
 #sidebar.dorako-ui .directory .action-buttons button:hover,
 #sidebar.dorako-ui .settings-sidebar button:hover {
   box-shadow: var(--glassy-sharp-highlight);
+  text-shadow: 0px 1px 2px black;
   background-color: var(--glass-bg-gold);
-  color: var(--color-text-light-highlight);
+  color: white;
 }
 #sidebar.dorako-ui .directory .directory-header .header-search input {
   border: none;
@@ -1554,6 +1858,555 @@ section.chat-sidebar {
   position: relative;
   top: -2.5px;
   font-size: var(--font-size-10);
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2.placeable-hud input[type=text] {
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
+
+.foundry2.placeable-hud .control-icon {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
+
+:root {
+  --color-warm-1: #ee9b3a;
+  --color-warm-2: #c9593f;
+  --color-warm-3: #5d142b;
+  --color-cool-1: #b1a0d4;
+  --color-cool-2: #79689c;
+  --color-cool-3: #584a75;
+  --color-cool-4: #302831;
+  --color-cool-5: #0b0a13;
+  --color-cool-5-25: rgba(11, 10, 19, 0.25);
+  --color-cool-5-50: rgba(11, 10, 19, 0.5);
+  --color-cool-5-75: rgba(11, 10, 19, 0.75);
+  --color-cool-5-90: rgba(11, 10, 19, 0.9);
+  --color-light-1: #f7f3e8;
+  --color-light-2: #efe6d8;
+  --color-light-3: #e7d1b1;
+  --color-light-4: #d0b8a3;
+  --color-light-5: #9f8475;
+  --color-light-6: #816b66;
+  --color-level-error: #ce0707;
+  --color-level-error-bg: rgba(105, 0, 8, 0.8);
+  --color-level-error-border: #750003;
+  --color-level-info: #59a1f6;
+  --color-level-info-bg: rgba(47, 80, 132, 0.8);
+  --color-level-info-border: #5c87b9;
+  --color-level-success: #26b231;
+  --color-level-success-bg: rgba(26, 107, 34, 0.8);
+  --color-level-success-border: #1b8f23;
+  --color-level-warning: #ee9b3a;
+  --color-level-warning-bg: rgba(214, 150, 0, 0.8);
+  --color-level-warning-border: #b18404;
+  --color-level-green-bg: rgba(138, 211, 4, 0.4);
+  --color-level-green-border: #8ad304;
+  --color-level-yellow-bg: rgba(211, 192, 4, 0.4);
+  --color-level-yellow-border: #d3c004;
+  --color-level-orange-bg: rgba(211, 119, 4, 0.4);
+  --color-level-orange-border: #d37704;
+  --color-level-red-bg: rgba(211, 20, 4, 0.4);
+  --color-level-red-border: #d31404;
+  --color-scrollbar: #5d142b;
+  --color-scrollbar-border: #8d151b;
+  --app-background: var(--color-cool-5-90);
+  --app-border-color: var(--color-cool-4);
+}
+
+.foundry2 {
+  --color-shadow-primary: transparent;
+  --color-shadow-highlight: transparent;
+  --color-border-light-highlight: var(--color-cool-3);
+  --color-border-light-primary: var(--color-cool-4);
+  --color-border-light-secondary: var(--color-cool-4);
+  --color-border-light-tertiary: var(--color-cool-4);
+  --color-border-dark-1: var(--color-cool-4);
+  --color-border-dark-2: var(--color-cool-4);
+  --color-border-dark-3: var(--color-cool-4);
+  --color-border-dark-4: var(--color-cool-3);
+  --color-border-dark-5: var(--color-cool-2);
+  --color-border-dark-primary: var(--color-cool-4);
+  --color-border-dark-secondary: var(--color-cool-5);
+  --color-underline-header: var(--color-warm-2);
+  --color-underline-active: var(--color-warm-1);
+  --color-text-hyperlink: var(--color-warm-1);
+  --input-height: 24px;
+  --color-border-highlight: var(--color-warm-1);
+  --color-border-highlight-alt: var(--color-warm-2);
+  --color-border-light-tertiary: var(--color-cool-4);
+  --color-bg-btn-minor-inactive: var(--app-background);
+  --color-bg-btn-minor-active: var(--color-warm-2);
+  --color-text-dark-primary: var(--color-light-3);
+  --color-text-dark-secondary: var(--color-light-4);
+  color: var(--color-light-3);
+}
+.foundry2 hr {
+  border: none;
+  border-top: 1px solid var(--color-cool-3);
+  border-bottom: 1px solid var(--color-cool-5);
+}
+.foundry2.dialog .dialog-buttons button.default {
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+}
+.foundry2 form .form-group .form-fields button {
+  height: var(--form-field-height);
+}
+.foundry2.filepicker .current-dir button {
+  height: 32px;
+}
+.foundry2.sheet nav.sheet-tabs {
+  border: none;
+}
+.foundry2 input[type=range]::-webkit-slider-runnable-track {
+  box-shadow: unset;
+  border-radius: 3px;
+  background: var(--color-cool-5);
+  border: 1px solid var(--color-cool-4);
+}
+.foundry2 input[type=range]::-webkit-slider-thumb {
+  box-shadow: unset;
+  background: var(--color-cool-3);
+  border: 1px solid var(--color-cool-4);
+  background: var(--color-warm-2);
+  border: 1px solid var(--color-warm-1);
+  border-radius: 50%;
+}
+.foundry2 input[type=color i]::-webkit-color-swatch {
+  border-color: var(--color-cool-4);
+}
+.foundry2 input[type=range] + .range-value {
+  flex: none;
+  height: 24px;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+  border-radius: 2px;
+  font-size: var(--font-size-12);
+  opacity: 0.75;
+}
+.foundry2 ::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: var(--color-scrollbar);
+  border: 1px solid var(--color-scrollbar-border);
+}
+.foundry2 ::-webkit-scrollbar-track {
+  box-shadow: 0 0 1px var(--color-cool-3) inset;
+  box-shadow: unset;
+  border-radius: 4px;
+}
+.foundry2 .directory .directory-header .header-search input {
+  background: var(--color-cool-4);
+}
+.foundry2#sidebar {
+  border: 1px solid var(--color-cool-3);
+  --glassy: 0px 0px 0px 1px var(--color-cool-3);
+  --glass-bg-light: var(--app-background);
+  --gold-and-glow: transparent;
+  --primary-dark: var(--color-warm-3);
+  --primary: var(--color-warm-2);
+  --primary-light: var(--color-warm-1);
+  --secondary-dark: var(--color-warm-3);
+  --secondary: var(--color-warm-2);
+  --secondary-light: var(--color-warm-2);
+}
+.foundry2#sidebar .dorako-ui.message.chat-message.dark-theme {
+  background: var(--app-background);
+  box-shadow: unset;
+  border: 1px solid var(--color-warm-1);
+}
+.foundry2.app {
+  border-radius: var(--border-radius);
+  background: unset;
+  background: var(--app-background);
+  border-color: var(--app-border-color);
+  border: 1px solid var(--color-cool-3);
+}
+.foundry2.window-app {
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 1px 20px 3px black;
+  box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent), 0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent), 0px 0px 10px 5px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+}
+.foundry2.window-app .window-header {
+  border: unset;
+}
+.foundry2.window-app .window-content {
+  background: unset;
+  box-shadow: unset;
+}
+.foundry2.window-app .window-resizable-handle {
+  background: var(--color-warm-3);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 4px 0px 4px 0px;
+  border-bottom: unset;
+  border-right: unset;
+  bottom: -1px;
+  right: -1px;
+}
+.foundry2 h1 {
+  color: var(--color-light-1);
+}
+.foundry2 h2 {
+  color: var(--color-light-1);
+}
+.foundry2 h3 {
+  color: var(--color-light-1);
+}
+.foundry2 h4 {
+  color: var(--color-light-2);
+}
+.foundry2 h5 {
+  color: var(--color-light-2);
+}
+.foundry2 h6 {
+  color: var(--color-light-2);
+}
+.foundry2 a.button,
+.foundry2 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: var(--font-size-14);
+  gap: 5px;
+}
+.foundry2 a.button:hover,
+.foundry2 button:hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2 a.button.active,
+.foundry2 button.active {
+  outline: 1px solid var(--button-focus-outline-color);
+  box-shadow: 0 0 4px var(--button-focus-outline-color);
+}
+.foundry2 a.button,
+.foundry2 button {
+  --button-background-color: var(--color-cool-5-50);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-light-3);
+  --button-hover-text-color: var(--color-light-1);
+}
+.foundry2 a.button:disabled,
+.foundry2 button:disabled {
+  --button-background-color: var(--color-cool-5);
+  --button-border-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2 a.button.bright,
+.foundry2 button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-3);
+  --button-hover-text-color: #000000;
+}
+.foundry2 a.button.bright:disabled,
+.foundry2 button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2#token-action-hud-core-settings input,
+.foundry2 input[type=text],
+.foundry2 input[type=number],
+.foundry2 input[type=password],
+.foundry2 input[type=date],
+.foundry2 input[type=time],
+.foundry2 input[type=search],
+.foundry2 select {
+  width: 100%;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.5rem;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+}
+.foundry2#token-action-hud-core-settings input:focus,
+.foundry2 input[type=text]:focus,
+.foundry2 input[type=number]:focus,
+.foundry2 input[type=password]:focus,
+.foundry2 input[type=date]:focus,
+.foundry2 input[type=time]:focus,
+.foundry2 input[type=search]:focus,
+.foundry2 select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+.foundry2 input[type=checkbox]:checked,
+.foundry2 input[type=radio]:checked {
+  accent-color: var(--color-cool-3);
+}
+.foundry2 input,
+.foundry2 select {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-text-color: var(--color-light-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --input-text-selection-color: var(--color-cool-3);
+}
+.foundry2 fieldset {
+  border: 1px solid var(--color-cool-3);
+}
+.foundry2 fieldset > legend {
+  color: var(--color-light-2);
+  text-shadow: unset;
+}
+
+/* ----------------------------------------- */
+/* Core overwrites                           */
+/* ----------------------------------------- */
+.foundry2.app.token-sheet .tab.active[data-tab=appearance] fieldset {
+  border-color: var(--color-cool-3);
+}
+.foundry2.app.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
+  color: var(--color-light-2);
+}
+.foundry2.sheet nav.sheet-tabs {
+  gap: 5px;
+  margin: 0px 2px;
+}
+.foundry2.sheet nav.sheet-tabs .item {
+  --button-border-color: var(--color-cool-4);
+}
+
+/* ----------------------------------------- */
+/* System overwrites                         */
+/* ----------------------------------------- */
+.foundry2 .tags.tags.paizo-style {
+  background-color: var(--color-cool-5-50);
+}
+.foundry2.pf2e.item.sheet {
+  --color-text-dark-2: var(--color-light-3);
+  --color-text-dark-4: var(--color-light-3);
+  --color-text-dark-input: var(--color-light-2);
+  --color-border-dark: var(--color-light-2);
+}
+.foundry2.pf2e.item.sheet input:disabled {
+  --button-background-color: var(--color-cool-5);
+  --button-border-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  border-radius: 3px;
+}
+.foundry2 a.content-link,
+.foundry2 [data-pf2-check],
+.foundry2 a.entity-link,
+.foundry2 [data-pf2-action],
+.foundry2 span[data-pf2-effect-area],
+.foundry2 a.inline-check .label,
+.foundry2 a.inline-roll:not(.inline-result) {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+}
+.foundry2 a.content-link::before,
+.foundry2 a.content-link i,
+.foundry2 a.content-link i.icon,
+.foundry2 [data-pf2-check]::before,
+.foundry2 [data-pf2-check] i,
+.foundry2 [data-pf2-check] i.icon,
+.foundry2 a.entity-link::before,
+.foundry2 a.entity-link i,
+.foundry2 a.entity-link i.icon,
+.foundry2 [data-pf2-action]::before,
+.foundry2 [data-pf2-action] i,
+.foundry2 [data-pf2-action] i.icon,
+.foundry2 span[data-pf2-effect-area]::before,
+.foundry2 span[data-pf2-effect-area] i,
+.foundry2 span[data-pf2-effect-area] i.icon,
+.foundry2 a.inline-check .label::before,
+.foundry2 a.inline-check .label i,
+.foundry2 a.inline-check .label i.icon,
+.foundry2 a.inline-roll:not(.inline-result)::before,
+.foundry2 a.inline-roll:not(.inline-result) i,
+.foundry2 a.inline-roll:not(.inline-result) i.icon {
+  color: var(--color-light-1);
+}
+.foundry2 i[data-pf2-repost] {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  cursor: pointer;
+  background: unset;
+  border-left: unset;
+}
+.foundry2 i[data-pf2-repost]:hover::before {
+  color: var(--color-warm-2);
+}
+.foundry2.pf2e.item.sheet form .form-list, .foundry2.pf2e.item.sheet form section.sheet-body fieldset {
+  border-color: var(--color-cool-3);
+}
+.foundry2.pf2e.item.sheet form .form-list > legend, .foundry2.pf2e.item.sheet form section.sheet-body fieldset > legend {
+  color: var(--color-light-2);
+}
+.foundry2.pf2e.item.sheet form .form-list.basics, .foundry2.pf2e.item.sheet form section.sheet-body fieldset.basics {
+  border-color: transparent;
+}
+.foundry2.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
+  color: var(--color-light-2);
+}
+.foundry2 .tags .tag.tag_transparent,
+.foundry2 .tags .tag option.tag_transparent {
+  box-shadow: unset;
+  background: var(--color-cool-4);
+}
+.foundry2.pf2e.item.sheet form .sheet-content input[type=text], .foundry2.pf2e.item.sheet form .sheet-content input[type=number], .foundry2.pf2e.item.sheet form .sheet-content select, .foundry2.pf2e.item.sheet .sheet-header input[type=text], .foundry2.pf2e.item.sheet .sheet-header input[type=number], .foundry2.pf2e.item.sheet form section.sheet-body input[type=text], .foundry2.pf2e.item.sheet form section.sheet-body input[type=number] {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+}
+.foundry2.pf2e.item.sheet form .sheet-content input[type=text]:focus, .foundry2.pf2e.item.sheet form .sheet-content input[type=number]:focus, .foundry2.pf2e.item.sheet form .sheet-content select:focus, .foundry2.pf2e.item.sheet .sheet-header input[type=text]:focus, .foundry2.pf2e.item.sheet .sheet-header input[type=number]:focus, .foundry2.pf2e.item.sheet form section.sheet-body input[type=text]:focus, .foundry2.pf2e.item.sheet form section.sheet-body input[type=number]:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+.foundry2.pf2e.item.sheet form .sheet-content button:hover:not(:disabled), .foundry2.pf2e.item.sheet form .sheet-content button:focus {
+  border: 1px solid var(--button-border-color);
+  box-shadow: unset;
+}
+.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range]):hover:not(:disabled), .foundry2.pf2e.item.sheet form .sheet-content input:not([type=range]):focus, .foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled), .foundry2.pf2e.item.sheet form .sheet-content select:focus {
+  border: 1px solid var(--input-border-color);
+  box-shadow: unset;
+}
+.foundry2.pf2e.item.sheet.action form .drop-zone a.content-link, .foundry2.pf2e.item.sheet.action form .drop-zone picture, .foundry2.pf2e.item.sheet.action form .drop-zone img {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+}
+.foundry2.pf2e.item.sheet .sheet-header {
+  border: unset;
+}
+.foundry2.pf2e.item.sheet form > nav {
+  border: unset;
+}
+.foundry2.pf2e.item.sheet form > nav .sheet-tabs {
+  gap: 5px;
+  margin: 2px;
+}
+.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a {
+  --button-border-color: var(--color-cool-4);
+}
+.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.active {
+  text-decoration: unset;
+}
+.foundry2.pf2e.item.sheet form .effects-container, .foundry2.pf2e.item.sheet form .details-container, .foundry2.pf2e.item.sheet form .dice-data {
+  gap: 5px;
+  align-items: center;
+}
+.foundry2.pf2e.item.sheet form section.sheet-body .item-mystification.active .mystification-status label {
+  color: var(--color-text-dark-4);
+}
+.foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
+  border-radius: 3px;
+  background-color: var(--app-background);
+  border-color: var(--color-cool-3);
+}
+.foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, .foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+}
+.foundry2.pf2e.item.sheet .sheet-header img {
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+}
+.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
+  border: 1px solid var(--color-warm-2);
+  background: var(--color-warm-3);
+}
+.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment:hover {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+}
+.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input input, .foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input tags {
+  border-left: unset;
+}
+.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input input:hover, .foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input tags:hover {
+  border-left: unset;
+}
+.foundry2 textarea {
+  color: var(--color-light-2);
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+}
+.foundry2 tags.tagify.pf2e-tagify {
+  --tags-disabled-bg: #f1f1f1;
+  --tags-border-color: #ddd;
+  --tags-hover-border-color: #ccc;
+  --tags-focus-border-color: #3595f6;
+  --tag-border-radius: 3px;
+  --tag-bg: #e5e5e5;
+  --tag-hover: #d3e2e2;
+  --tag-text-color: black;
+  --tag-text-color--edit: black;
+  --tag-pad: 0.3em 0.5em;
+  --tag-inset-shadow-size: 1.1em;
+  --tag-invalid-color: #d39494;
+  --tag-invalid-bg: rgba(211, 148, 148, 0.5);
+  --tag-remove-bg: rgba(211, 148, 148, 0.3);
+  --tag-remove-btn-color: black;
+  --tag-remove-btn-bg: none;
+  --tag-remove-btn-bg--hover: #c77777;
+  --input-color: inherit;
+  --tag-hide-transition: 0.3s;
+  --placeholder-color: rgba(0, 0, 0, 0.4);
+  --placeholder-color-focus: rgba(0, 0, 0, 0.25);
+  --tag-bg: var(--color-warm-2);
+  --tags-border-color: var(--color-cool-3);
+  --tags-hover-border-color: var(--color-cool-3);
+  --tag-color: var(--color-light-2);
+  --tag-bg: var(--color-cool-4);
+  --tag-border-color: var(--color-cool-3);
+  --tags-border-color: var(--color-cool-3);
+  background: var(--color-cool-4);
+}
+.foundry2 tags.tagify.pf2e-tagify:hover {
+  box-shadow: unset;
+}
+.foundry2 tags.tagify.pf2e-tagify tag {
+  border-radius: 4px;
+  border: 1px solid var(--tag-border-color);
+}
+.foundry2 tags.tagify.pf2e-tagify tag .tagify__tag__removeBtn,
+.foundry2 tags.tagify.pf2e-tagify tag > div .tagify__tag-text {
+  color: var(--tag-color);
+}
+.foundry2 tags.paizo-style select {
+  width: auto;
+}
+.foundry2 .tox .tox-sidebar-wrap {
+  background-color: white;
 }
 
 .dorako-ui.sheet.familiar form {
@@ -2328,6 +3181,76 @@ section.chat-sidebar {
   border-top: 1px solid var(--tertiary);
   border-bottom: 1px solid var(--gold-brown);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+#effects-panel.foundry2 .effect-item .effect-info .description a,
+#effects-panel.foundry2 .effect-item .effect-info .description span[data-pf2-effect-area] {
+  color: var(--color-light-2);
+}
+#effects-panel.foundry2 .effect-item .effect-info {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  min-height: 34px;
+  font-size: var(--font-size-20);
+  line-height: var(--font-size-20);
+  text-shadow: 0px 0px 3px black;
+  border-radius: var(--border-radius);
+}
+#effects-panel.foundry2 .effect-item .effect-info .description {
+  background: unset;
+}
+#effects-panel.foundry2 .effect-item > .icon {
+  border: 1px solid var(--color-cool-3);
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
+#effects-panel.foundry2 .effect-item > .icon.aura {
+  border-radius: 50%;
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+}
+#effects-panel.foundry2 .effect-item > .icon .linked {
+  color: var(--color-light-2);
+  background: var(--color-warm-3);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 4px 0px 4px 0px;
+  border-bottom: unset;
+  border-right: unset;
+  text-shadow: 0px 1px 2px black;
+}
+#effects-panel.foundry2 .effect-item > .icon .value-wrapper {
+  background: none;
+  bottom: -1px;
+  left: -3px;
+}
+#effects-panel.foundry2 .effect-item > .icon .value-wrapper .value {
+  padding: 0px 4px;
+  color: var(--color-light-2);
+  background: var(--color-warm-3);
+  border-radius: 0px 4px 0px 4px;
+  border: 1px solid var(--color-cool-3);
+  border-bottom: unset;
+  border-left: unset;
+  text-shadow: 0px 1px 2px black;
+}
+#effects-panel.foundry2 .effect-item > .icon .expired {
+  position: absolute;
+  left: auto;
+  width: 80%;
+  width: unset;
+  padding: 2px 1px;
+  color: var(--color-light-1);
+  background: var(--color-warm-2);
+  border: 1px solid var(--color-warm-1);
+  text-shadow: 0px 1px 2px black;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .dorako-ui.familiar .main-section {
@@ -3279,6 +4202,52 @@ section.chat-sidebar {
 }
 
 /* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+  background-color: var(--color-cool-4);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+}
+.foundry2 .ͼ2 .cm-content {
+  caret-color: white;
+}
+.foundry2 .ͼ2 .cm-gutters {
+  background-color: var(--application-bg);
+  border-right: 1px solid var(--color-warm-2);
+  border: unset;
+}
+.foundry2 .ͼ2 .cm-activeLineGutter {
+  background-color: var(--color-warm-1);
+  color: black;
+}
+.foundry2 .ͼ2 .cm-activeLine {
+  background-color: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
+}
+.foundry2 .ͼ1.cm-focused .cm-matchingBracket {
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+  box-shadow: 0px 2px 3px black;
+}
+.foundry2 .ͼe {
+  color: var(--color-level-error);
+}
+.foundry2 .ͼd {
+  color: greenyellow;
+}
+.foundry2 .ͼc {
+  color: var(--color-level-info);
+}
+.foundry2 .ͼb {
+  color: rgb(217, 31, 217);
+}
+.foundry2 .ͼ1 .cm-lintPoint:after {
+  border-bottom: 4px solid var(--primary-light);
+}
+
+/* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
 /* Colors */
@@ -3362,9 +4331,9 @@ section.chat-sidebar {
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
-  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -3919,9 +4888,9 @@ section.chat-sidebar {
   --gold-and-glow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown), inset 0 0 3px rgba(255, 255, 255, 0.5);
   --glassy: 0px 0px 3px 0px rgba(255, 255, 255, 0.4) inset, 0px 0px 2px 1px rgba(0, 0, 0, 1),
     0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
-  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8);
+  --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
   --header: url(../img/blue-header.webp);
@@ -4502,10 +5471,6 @@ img {
   border-radius: 0px;
 }
 
-input:disabled {
-  border-radius: 2px;
-}
-
 .dorako-display-none {
   display: none !important;
 }
@@ -4531,18 +5496,24 @@ a.inline-roll:not(.inline-result) {
   color: black;
 }
 
+.foundry2 .tags,
+.foundry2 .tags.paizo-style,
 .tah-tags-wrapper .tags,
 .dorako-ui .message-content .tags,
 .dorako-ui .tags.paizo-style,
 .dorako-ui .tags {
   gap: 1px;
 }
+.foundry2 .tags .tag,
+.foundry2 .tags.paizo-style .tag,
 .tah-tags-wrapper .tags .tag,
 .dorako-ui .message-content .tags .tag,
 .dorako-ui .tags.paizo-style .tag,
 .dorako-ui .tags .tag {
   height: auto;
 }
+.foundry2 .tags .tag:not(.tag_transparent),
+.foundry2 .tags.paizo-style .tag:not(.tag_transparent),
 .tah-tags-wrapper .tags .tag:not(.tag_transparent),
 .dorako-ui .message-content .tags .tag:not(.tag_transparent),
 .dorako-ui .tags.paizo-style .tag:not(.tag_transparent),
@@ -4553,12 +5524,16 @@ a.inline-roll:not(.inline-result) {
   outline: 1px solid var(--gold-brown);
   padding: 0.33em 0.33em;
 }
+.foundry2 .tags .tag:first-child,
+.foundry2 .tags.paizo-style .tag:first-child,
 .tah-tags-wrapper .tags .tag:first-child,
 .dorako-ui .message-content .tags .tag:first-child,
 .dorako-ui .tags.paizo-style .tag:first-child,
 .dorako-ui .tags .tag:first-child {
   border-left-width: 1px;
 }
+.foundry2 .tags .tag:last-child,
+.foundry2 .tags.paizo-style .tag:last-child,
 .tah-tags-wrapper .tags .tag:last-child,
 .dorako-ui .message-content .tags .tag:last-child,
 .dorako-ui .tags.paizo-style .tag:last-child,

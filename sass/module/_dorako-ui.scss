@@ -219,6 +219,11 @@
     backdrop-filter: unset;
   }
 }
+
+/* ----------------------------------------- */
+/* Settings                                  */
+/* ----------------------------------------- */
+
 .dorako-ui {
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
   .form-group.dorako-ui.settings-header {
@@ -255,5 +260,27 @@
   }
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
     color: var(--tertiary-dark);
+  }
+}
+
+.foundry2 {
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
+  .form-group.dorako-ui.settings-header {
+    @include f2-app;
+    font-size: larger;
+    margin: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--color-light-2);
+    background: var(--color-cool-2);
+  }
+
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
+    font-size: var(--font-size-48);
+    text-align: center;
+    color: var(--color-light-2);
+    background: var(--color-warm-2);
+    border-color: var(--color-warm-1);
+    text-shadow: 0px 1px 0px var(--color-warm-3);
   }
 }

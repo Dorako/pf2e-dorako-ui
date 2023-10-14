@@ -69,3 +69,70 @@
     }
   }
 }
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+#navigation.foundry2 {
+  color: var(--color-light-2);
+  width: calc(100% - 46px); // Add some breathing room to ensure navigation isn't covering effect panel
+
+  #nav-toggle {
+    @include f2-app;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 var(--control-size);
+    height: var(--control-size);
+  }
+
+  ol#scene-list {
+    li.nav-item {
+      @include quick-transition;
+      @include f2-app;
+      line-height: var(--control-size);
+
+      > a:hover {
+        text-shadow: unset;
+      }
+
+      .scene-players {
+        text-shadow: none;
+      }
+
+      &:hover {
+        color: var(--color-light-1);
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+      }
+
+      &.view {
+        background-color: var(--color-warm-2);
+        color: var(--color-light-2);
+        border-color: var(--color-warm-1);
+
+        &:hover {
+          color: var(--color-light-1);
+          background-color: var(--color-warm-1);
+        }
+      }
+
+      &.gm {
+        background-color: var(--color-cool-3);
+        border-color: var(--color-cool-2);
+
+        &:hover,
+        &.view {
+          color: var(--color-light-1);
+          background-color: var(--color-cool-2);
+          border-color: var(--color-cool-1);
+        }
+      }
+
+      &.active {
+        border-color: var(--color-warm-1);
+      }
+    }
+  }
+}

@@ -244,6 +244,28 @@ for (const application of ["Application", ...baseThemePf2eSheets]) {
     let titleElement = html.closest(".app").find(".window-title");
     openBtn.insertAfter(titleElement);
   });
+
+  Hooks.on("render" + application, (app, html, data) => {
+    if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
+      return;
+    }
+    let isFoundry2 = html[0].classList.contains("foundry2");
+    let symbol = isFoundry2 ? "fa-thin" : "fas";
+
+    let openBtn = $(
+      `<a class="header-button foundry2-toggle" alt="Toggle Foundry2" data-tooltip="Foundry2" data-tooltip-direction="UP">
+        <i class="fa-fw ${symbol} fa-f"></i>
+    </a>`
+    );
+    openBtn.click((ev) => {
+      html[0].classList.toggle("foundry2");
+      openBtn.find("i").toggleClass("fa-thin");
+      openBtn.find("i").toggleClass("fas");
+    });
+    html.closest(".app").find(".foundry2-toggle").remove();
+    let titleElement = html.closest(".app").find(".window-title");
+    openBtn.insertAfter(titleElement);
+  });
 }
 
 Hooks.once("ready", (app, html, data) => {

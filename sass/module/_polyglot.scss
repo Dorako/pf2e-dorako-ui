@@ -52,6 +52,11 @@
 .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered,
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--color-text-light-heading);
+  &:focus,
+  &:active,
+  &:hover {
+    color: var(--color-text-light-highlight);
+  }
 }
 
 .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
@@ -80,6 +85,7 @@
     @include quick-transition;
     cursor: pointer;
     background: var(--glass-bg-light);
+    text-shadow: 0px 0px 3px black;
     &:focus,
     &:active,
     &:hover {

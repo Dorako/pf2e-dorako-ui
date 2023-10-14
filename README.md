@@ -89,6 +89,10 @@ Image shows a journal with Dalvyn's CRB styled journals enabled.
 
 <img src="./promo/web/token-action-hud.jpg">
 
+#### Foundry 2 Application Theme
+
+<img src="./promo/web/foundry2-theme.jpg">
+
 ## Features
 
 Besides the theme, Dorako UI also has a bunch of UI-adjacent features, including:

@@ -45,7 +45,9 @@ section.chat-sidebar {
 #sidebar.dorako-ui {
   @include glass;
   border: none;
-  // border-radius: 6px 3px 3px 3px;
+  hr {
+    display: none;
+  }
   border-radius: 6px var(--border-radius) var(--border-radius) var(--border-radius);
 
   &.collapsed {
@@ -65,8 +67,8 @@ section.chat-sidebar {
 
   .settings-sidebar h2 {
     // @include gold-border;
-    background-color: var(--alt);
-    border-color: var(--alt-dark);
+    background: unset;
+    border: unset;
   }
 
   .directory .action-buttons button,
@@ -75,12 +77,13 @@ section.chat-sidebar {
     box-shadow: var(--glassy-sharp);
     backdrop-filter: blur(5px);
     background-color: var(--glass-bg-light);
-    color: var(--color-text-light-heading);
-    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-highlight);
+    text-shadow: 0px 1px 3px black;
     &:hover {
       box-shadow: var(--glassy-sharp-highlight);
+      text-shadow: 0px 1px 2px black;
       background-color: var(--glass-bg-gold);
-      color: var(--color-text-light-highlight);
+      color: white;
     }
   }
 
