@@ -141,6 +141,8 @@ for (const appName of ["JournalSheet", "JournalPageSheet"]) {
     if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
     // html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dalvyn-journal");
     const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme === "foundry2-theme") return;
     if (!isDarkJournals) {
       html.closest(".app").find(".journal-entry-content").addClass("dorako-ui light-theme");
       return;

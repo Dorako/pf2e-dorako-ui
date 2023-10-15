@@ -274,6 +274,8 @@
     padding: 10px;
     color: var(--color-light-2);
     background: var(--color-cool-2);
+    --box-shadow: 0px 1px 3px 1px black;
+    box-shadow: var(--box-shadow);
   }
 
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {

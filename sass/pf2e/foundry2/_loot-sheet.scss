@@ -1,0 +1,39 @@
+.foundry2 {
+  &.sheet.actor.loot {
+    --text-dark: var(--color-light-2);
+    --primary: var(--color-warm-2);
+  }
+
+  &.sheet.actor.loot section.sidebar {
+    box-shadow: unset;
+    border: unset;
+  }
+
+  &.sheet.actor.loot section.sidebar .image-container > img.actor-image {
+    border: unset;
+  }
+
+  &.sheet.actor.loot section.sidebar .gm-settings {
+    border: unset;
+  }
+
+  &.sheet.actor.loot .sheet-header {
+    border: unset;
+    box-shadow: unset;
+  }
+
+  &.sheet.actor.loot section.sidebar .gm-settings .loot-distribution {
+    box-shadow: unset;
+    background: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &.sheet.actor.loot .sheet-header .tags .tag,
+  &.sheet.actor.loot .sheet-header h1 > input {
+    border: 1px solid var(--color-cool-3);
+    background: var(--color-cool-4);
+    color: var(--color-light-2);
+  }
+}

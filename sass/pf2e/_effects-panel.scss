@@ -124,7 +124,6 @@
         bottom: -1px;
         right: -1px;
         padding: 0px 2px;
-        color: white;
         color: var(--color-text-light-highlight);
         background-color: rgba(0, 0, 0, 0.75);
         background: none;
@@ -206,7 +205,7 @@
       color: var(--color-light-2);
       background: var(--color-warm-3);
       border: 1px solid var(--color-cool-3);
-      border-radius: 4px 0px 4px 0px;
+      border-radius: 4px 0px var(--border-radius) 0px;
       border-bottom: unset;
       border-right: unset;
       text-shadow: 0px 1px 2px black;
@@ -220,7 +219,7 @@
         padding: 0px 4px;
         color: var(--color-light-2);
         background: var(--color-warm-3);
-        border-radius: 0px 4px 0px 4px;
+        border-radius: 0px 4px 0px var(--border-radius);
         border: 1px solid var(--color-cool-3);
         border-bottom: unset;
         border-left: unset;

@@ -272,10 +272,136 @@
   box-shadow: var(--box-shadow);
 }
 
-.foundry2.placeable-hud .control-icon {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  // text-shadow: 0px 1px 2px black;
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
+.foundry2 {
+  &#token-hud .status-effects.active {
+    // @include f2-app;
+    gap: 3px;
+    background: unset;
+    border: unset;
+    box-shadow: unset;
+    picture {
+      img {
+        opacity: unset;
+        @include f2-app;
+      }
+
+      &:hover img {
+        border-color: var(--color-warm-2);
+        box-shadow: 0px 0px 6px var(--color-warm-3), 0px 2px 8px 1px var(--color-warm-4);
+      }
+
+      &.active img {
+        border-color: var(--color-warm-1);
+        box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+      }
+    }
+  }
+
+  &#token-hud .status-effects .title-bar {
+    @include f2-app;
+    background: var(--app-background);
+    border: 1px solid var(--color-warm-1);
+    box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+    backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+    -webkit-backdrop-filter: blur(5px);
+    text-shadow: 0px 0px 3px black;
+  }
+
+  &#token-hud .status-effects .effect-control .badge {
+    border-width: 1px;
+    border-radius: 0px var(--border-radius) 0px 3px;
+    background: var(--color-warm-3);
+    border-left-color: var(--color-warm-1);
+    border-bottom-color: var(--color-warm-1);
+    color: var(--color-light-2);
+    font-size: 10px;
+    text-shadow: 0px 1px 2px black;
+    top: 0px;
+    right: 1px;
+    font-weight: 600;
+  }
+
+  .badge.fa-lock:before {
+    position: relative;
+    font-size: 6px;
+  }
+
+  &#token-hud .status-effects .effect-control {
+    opacity: unset;
+  }
+
+  .control-icon {
+    @include f2-app;
+    @include quick-transition;
+    text-shadow: 0px 1px 2px black;
+
+    &:hover,
+    &.active {
+      color: var(--color-light-2);
+    }
+
+    > img {
+      opacity: unset;
+      filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
+    }
+
+    &[data-action="overhead"],
+    &[data-action="underfoot"] {
+      background-color: var(--color-warm-4);
+
+      &:hover,
+      &.active {
+        background-color: var(--color-warm-3);
+        > img {
+          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+        }
+
+        &:hover {
+          background-color: var(--color-warm-2);
+        }
+      }
+    }
+
+    // These can be clicked, but do not become active
+    &[data-action="sort-up"],
+    &[data-action="sort-down"],
+    &[data-action="config"],
+    &[data-action="trigger"],         // 'trigger' is from Monk's Active Tiles
+    &[data-action="pf2e-perception"], // 'pf2e-perception' is from PF2e Perception by Idle
+    &[data-action="clown-car"],       // 'clown-car' from system
+    &[data-action="delay"]            // from flatcheck helper
+    {
+      &:hover {
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+        > img {
+          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+        }
+      }
+    }
+
+    // These are toggles, inactive -> active -> inactive
+    // 'active' is from Monk's Active Tiles
+    // 'mystify' is from Workbench
+    &[data-action="visibility"],
+    &[data-action="effects"],
+    &[data-action="combat"],
+    &[data-action="locked"],
+    &[data-action="target"],
+    &[data-action="active"],
+    &[data-action="mystify"] {
+      background-color: var(--color-cool-3);
+      border-color: var(--color-cool-2);
+
+      &:hover,
+      &.active {
+        background-color: var(--color-cool-2);
+        border-color: var(--color-cool-1);
+        > img {
+          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+        }
+      }
+    }
+  }
 }

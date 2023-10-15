@@ -46,6 +46,8 @@ Hooks.on("renderApplication", (app, html, data) => {
     return;
   }
   const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "foundry2-theme") return;
   if (!isDarkJournals) {
     html.closest(".app").find(".journal-entry-content").addClass("dorako-ui light-theme");
     return;
@@ -70,6 +72,8 @@ Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
   if (!frameHtml || frameHtml.length == 0) return;
   // if (frameHtml[0].matches(premiumModuleSelector)) return;
   const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "foundry2-theme") return;
   if (!isDarkJournals) {
     html.closest(".app").find(".journal-entry-content").addClass("dorako-ui light-theme");
     return;

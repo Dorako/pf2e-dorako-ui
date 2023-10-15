@@ -1,6 +1,12 @@
+# 2.10.2
+
+- (Refinement) Tonnes of adjustments and additions to Foundry 2 theme.
+- (Refinement) Journals now work in Foundry 2 theme.
+- (New) Foundry 2 application theme now applies to Party, NPC, Familiar, Hazard, and Loot sheets. PC and Kingdom sheets are rendered as Dorako UI's normal dark theme.
+
 # 2.10.1
 
-- (Refinement) Added a new chat theme inspired by the mdoern Foundry design. Is automatically enabled when using the application theme, but can also be used on its own.
+- (New) Added a new chat theme inspired by the modern Foundry design. Is automatically enabled when using the application theme, but can also be used on its own.
 
 # 2.10.0
 

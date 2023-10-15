@@ -1,4 +1,5 @@
 import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleSelector } from "./consts.js";
+import { isPremiumApplication } from "./premium-module-hooks.js";
 
 // Add .dorako-ui to all always-styled applications (Does not include pf2e sheets)
 for (const appName of [...baseThemeApplications]) {
@@ -23,6 +24,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   //   if (html0.classList.contains("dialog")) return;
   if (html0.classList.contains("editable")) return;
   if (!html0.classList.contains("window-app")) return;
+  if (isPremiumApplication(app, html, data, app.constructor.name)) return;
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme !== "foundry2-theme") {
     return;
@@ -63,11 +65,14 @@ Hooks.on("renderItemSheet", (app, html, data) => {
   html.find("form > nav a").addClass("button");
 });
 
-// Hooks.on("renderSettingsConfig", (app, html, data) => {
-//   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-//   if (theme !== "foundry2-theme") {
-//     return;
-//   }
-
-//   html.find("form button[type='submit']").addClass("bright");
-// });
+for (const app of ["CharacterSheetPF2e", "KingdomSheetPF2e"]) {
+  Hooks.on("render" + app, (app, html, data) => {
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme !== "foundry2-theme") return;
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}, no explicit support, fall back to .dorako-ui.dark-theme`
+    );
+    html.addClass("dorako-ui");
+    html.addClass("dark-theme");
+  });
+}

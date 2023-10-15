@@ -5,6 +5,10 @@
   font-size: var(--font-size-9);
 }
 
+.foundry2 .pf2e-td .damage-application {
+  margin-top: unset;
+}
+
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td {
   &.criticalSuccess {
     $color: rgb(0, 128, 0);

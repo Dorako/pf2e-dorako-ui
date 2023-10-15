@@ -1,7 +1,7 @@
 import { MODULE_NAME, premiumModuleSelector } from "./consts.js";
 
 // Should return true for anything premium
-function isPremiumApplication(app, html, data, appName) {
+export function isPremiumApplication(app, html, data, appName) {
   if (app.constructor.name.startsWith("SWPF")) {
     console.debug(`${MODULE_NAME} | ${appName} starts with 'SWPF' => add .premium`);
     html[0].classList.add("premium");
@@ -47,8 +47,6 @@ function isPremiumApplication(app, html, data, appName) {
   }
   return false;
 }
-
-("pf2e-kingmaker.KingmakerJournalSheet");
 
 Hooks.on("renderKingmakerJournalSheet", (app, html, data) => {
   console.debug(`${MODULE_NAME} | renderKingmakerJournalSheet' => add .premium`);

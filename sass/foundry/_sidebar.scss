@@ -218,4 +218,26 @@ section.chat-sidebar {
   &#sidebar.collapsed #sidebar-tabs > .item.active {
     border-color: var(--color-warm-1);
   }
+
+  #settings ul#game-details li.system-buttons {
+    gap: 5px;
+    button {
+      border-width: 1px;
+      border-radius: var(--border-radius) !important;
+    }
+  }
+
+  .compendium.directory .directory-header .compendium-name,
+  .compendium-sidebar .directory-item.compendium .compendium-name,
+  .compendium-sidebar .directory-item.compendium.locked .compendium-name {
+    @include f2-app;
+  }
+
+  .compendium-sidebar .directory-item.compendium .compendium-footer .source {
+    @include f2-app;
+    border-left: unset;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+    border-bottom-right-radius: unset;
+  }
 }

@@ -17,7 +17,7 @@
 }
 #players.dorako-ui h3 {
   cursor: pointer;
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 #players.dorako-ui h3:hover {
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
@@ -33,7 +33,7 @@
 }
 #players.foundry2 h3 {
   cursor: pointer;
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 #players.foundry2 h3:hover {
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
@@ -184,6 +184,7 @@
   border: 1px solid var(--color-warm-1);
   box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
   backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
   min-height: 34px;
   font-size: var(--font-size-20);
@@ -198,6 +199,7 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   text-shadow: 0px 0px 3px black;
+  border-radius: var(--border-radius);
 }
 .foundry2 #context-menu li.context-item:first-child {
   border-top-left-radius: 3px;
@@ -245,7 +247,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0 0 3px black;
   color: var(--color-text-light-heading);
 }
@@ -282,7 +284,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0 0 3px black;
   background-color: var(--glass-bg-light);
   color: var(--color-text-light-heading);
@@ -408,7 +410,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0 0 3px black;
   color: var(--color-text-light-heading);
 }
@@ -549,7 +551,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   color: var(--color-text-light-heading);
 }
 .dorako-ui.dark-theme:not(.premium).window-app select:not(.dorako-ui-skip):hover {
@@ -608,7 +610,7 @@
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   color: var(--color-text-light-heading);
   text-shadow: 0 0 3px black;
 }
@@ -779,7 +781,7 @@ nav#controls.dorako-ui ol.control-tools > li {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   border-radius: var(--border-radius);
   margin-bottom: var(--controls-margin);
@@ -864,7 +866,7 @@ nav#controls.foundry2 ol.control-tools.main-control {
 }
 nav#controls.foundry2 ol.control-tools li.control-tool,
 nav#controls.foundry2 ol.control-tools > li {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
   text-shadow: 0px 1px 2px black;
@@ -974,7 +976,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
 }
 
 .dorako-ui form button:not(.pm-dropdown) {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   border: 1px solid var(--color-border-light-primary);
 }
 .dorako-ui form button:not(.pm-dropdown):hover {
@@ -1074,7 +1076,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
 .dorako-ui.window-app input[type=search],
 .dorako-ui.window-app input[type=checkbox],
 .dorako-ui.window-app input[type=radio] {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   accent-color: var(--primary);
 }
 .dorako-ui.window-app input[type=text]:checked,
@@ -1122,11 +1124,11 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   box-shadow: none;
 }
 #hotbar.dorako-ui .macro.inactive::before, #hotbar.dorako-ui .macro.active::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   content: "";
   position: absolute;
   top: 0;
@@ -1139,7 +1141,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   pointer-events: none;
 }
 #hotbar.dorako-ui .macro.active:hover::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   content: "";
   position: absolute;
   top: 0;
@@ -1224,10 +1226,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 #hotbar.foundry2 .macro.inactive::before, #hotbar.foundry2 .macro.active::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   content: "";
   position: absolute;
   top: 0;
@@ -1239,7 +1241,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   pointer-events: none;
 }
 #hotbar.foundry2 .macro.active:hover::before {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   content: "";
   position: absolute;
   top: 0;
@@ -1285,7 +1287,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1298,7 +1300,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   line-height: var(--control-size);
 }
@@ -1368,7 +1370,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   height: var(--control-size);
 }
 #navigation.foundry2 ol#scene-list li.nav-item {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
   text-shadow: 0px 1px 2px black;
@@ -1555,7 +1557,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   box-shadow: var(--glassy-sharp-inset);
   backdrop-filter: blur(5px);
   background-color: var(--glass-bg-light);
@@ -1629,7 +1631,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   border-radius: 0px;
   z-index: 1;
   text-shadow: none;
@@ -1661,7 +1663,7 @@ section.chat-sidebar {
   border: unset;
 }
 .foundry2 #sidebar-tabs > .item {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 .foundry2 #sidebar-tabs > .item:hover {
   color: var(--color-light-2);
@@ -1681,6 +1683,39 @@ section.chat-sidebar {
 }
 .foundry2#sidebar.collapsed #sidebar-tabs > .item.active {
   border-color: var(--color-warm-1);
+}
+.foundry2 #settings ul#game-details li.system-buttons {
+  gap: 5px;
+}
+.foundry2 #settings ul#game-details li.system-buttons button {
+  border-width: 1px;
+  border-radius: var(--border-radius) !important;
+}
+.foundry2 .compendium.directory .directory-header .compendium-name,
+.foundry2 .compendium-sidebar .directory-item.compendium .compendium-name,
+.foundry2 .compendium-sidebar .directory-item.compendium.locked .compendium-name {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2 .compendium-sidebar .directory-item.compendium .compendium-footer .source {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  border-left: unset;
+  border-bottom-left-radius: unset;
+  border-top-left-radius: unset;
+  border-bottom-right-radius: unset;
 }
 
 #token-hud.dorako-ui .status-effects {
@@ -1816,7 +1851,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
 }
 #token-hud.dorako-ui.placeable-hud .control-icon .badge {
@@ -1897,17 +1932,124 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
 }
 
-.foundry2.placeable-hud .control-icon {
+.foundry2#token-hud .status-effects.active {
+  gap: 3px;
+  background: unset;
+  border: unset;
+  box-shadow: unset;
+}
+.foundry2#token-hud .status-effects.active picture img {
+  opacity: unset;
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2#token-hud .status-effects.active picture:hover img {
+  border-color: var(--color-warm-2);
+  box-shadow: 0px 0px 6px var(--color-warm-3), 0px 2px 8px 1px var(--color-warm-4);
+}
+.foundry2#token-hud .status-effects.active picture.active img {
+  border-color: var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+}
+.foundry2#token-hud .status-effects .title-bar {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  -webkit-backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
+}
+.foundry2#token-hud .status-effects .effect-control .badge {
+  border-width: 1px;
+  border-radius: 0px var(--border-radius) 0px 3px;
+  background: var(--color-warm-3);
+  border-left-color: var(--color-warm-1);
+  border-bottom-color: var(--color-warm-1);
+  color: var(--color-light-2);
+  font-size: 10px;
+  text-shadow: 0px 1px 2px black;
+  top: 0px;
+  right: 1px;
+  font-weight: 600;
+}
+.foundry2 .badge.fa-lock:before {
+  position: relative;
+  font-size: 6px;
+}
+.foundry2#token-hud .status-effects .effect-control {
+  opacity: unset;
+}
+.foundry2 .control-icon {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  text-shadow: 0px 1px 2px black;
+}
+.foundry2 .control-icon:hover, .foundry2 .control-icon.active {
+  color: var(--color-light-2);
+}
+.foundry2 .control-icon > img {
+  opacity: unset;
+  filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
+}
+.foundry2 .control-icon[data-action=overhead], .foundry2 .control-icon[data-action=underfoot] {
+  background-color: var(--color-warm-4);
+}
+.foundry2 .control-icon[data-action=overhead]:hover, .foundry2 .control-icon[data-action=overhead].active, .foundry2 .control-icon[data-action=underfoot]:hover, .foundry2 .control-icon[data-action=underfoot].active {
+  background-color: var(--color-warm-3);
+}
+.foundry2 .control-icon[data-action=overhead]:hover > img, .foundry2 .control-icon[data-action=overhead].active > img, .foundry2 .control-icon[data-action=underfoot]:hover > img, .foundry2 .control-icon[data-action=underfoot].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+}
+.foundry2 .control-icon[data-action=overhead]:hover:hover, .foundry2 .control-icon[data-action=overhead].active:hover, .foundry2 .control-icon[data-action=underfoot]:hover:hover, .foundry2 .control-icon[data-action=underfoot].active:hover {
+  background-color: var(--color-warm-2);
+}
+.foundry2 .control-icon[data-action=sort-up]:hover, .foundry2 .control-icon[data-action=sort-down]:hover, .foundry2 .control-icon[data-action=config]:hover, .foundry2 .control-icon[data-action=trigger]:hover, .foundry2 .control-icon[data-action=pf2e-perception]:hover, .foundry2 .control-icon[data-action=clown-car]:hover, .foundry2 .control-icon[data-action=delay]:hover {
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+}
+.foundry2 .control-icon[data-action=sort-up]:hover > img, .foundry2 .control-icon[data-action=sort-down]:hover > img, .foundry2 .control-icon[data-action=config]:hover > img, .foundry2 .control-icon[data-action=trigger]:hover > img, .foundry2 .control-icon[data-action=pf2e-perception]:hover > img, .foundry2 .control-icon[data-action=clown-car]:hover > img, .foundry2 .control-icon[data-action=delay]:hover > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+}
+.foundry2 .control-icon[data-action=visibility], .foundry2 .control-icon[data-action=effects], .foundry2 .control-icon[data-action=combat], .foundry2 .control-icon[data-action=locked], .foundry2 .control-icon[data-action=target], .foundry2 .control-icon[data-action=active], .foundry2 .control-icon[data-action=mystify] {
+  background-color: var(--color-cool-3);
+  border-color: var(--color-cool-2);
+}
+.foundry2 .control-icon[data-action=visibility]:hover, .foundry2 .control-icon[data-action=visibility].active, .foundry2 .control-icon[data-action=effects]:hover, .foundry2 .control-icon[data-action=effects].active, .foundry2 .control-icon[data-action=combat]:hover, .foundry2 .control-icon[data-action=combat].active, .foundry2 .control-icon[data-action=locked]:hover, .foundry2 .control-icon[data-action=locked].active, .foundry2 .control-icon[data-action=target]:hover, .foundry2 .control-icon[data-action=target].active, .foundry2 .control-icon[data-action=active]:hover, .foundry2 .control-icon[data-action=active].active, .foundry2 .control-icon[data-action=mystify]:hover, .foundry2 .control-icon[data-action=mystify].active {
+  background-color: var(--color-cool-2);
+  border-color: var(--color-cool-1);
+}
+.foundry2 .control-icon[data-action=visibility]:hover > img, .foundry2 .control-icon[data-action=visibility].active > img, .foundry2 .control-icon[data-action=effects]:hover > img, .foundry2 .control-icon[data-action=effects].active > img, .foundry2 .control-icon[data-action=combat]:hover > img, .foundry2 .control-icon[data-action=combat].active > img, .foundry2 .control-icon[data-action=locked]:hover > img, .foundry2 .control-icon[data-action=locked].active > img, .foundry2 .control-icon[data-action=target]:hover > img, .foundry2 .control-icon[data-action=target].active > img, .foundry2 .control-icon[data-action=active]:hover > img, .foundry2 .control-icon[data-action=active].active > img, .foundry2 .control-icon[data-action=mystify]:hover > img, .foundry2 .control-icon[data-action=mystify].active > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
 }
 
 :root {
   --color-warm-1: #ee9b3a;
   --color-warm-2: #c9593f;
   --color-warm-3: #5d142b;
+  --color-warm-4: #420418;
+  --color-warm-5: #26020d;
   --color-cool-1: #b1a0d4;
   --color-cool-2: #79689c;
   --color-cool-3: #584a75;
@@ -1975,8 +2117,14 @@ section.chat-sidebar {
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-4);
   --color-bg-option: var(--color-cool-4);
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: var(--color-light-3);
   --alt: var(--color-cool-3);
+  --bg: var(--color-warm-3);
   --visibility-gm-bg: var(--color-warm-3);
 }
 .foundry2 [data-visibility]:not([data-visibility=all]) {
@@ -1994,7 +2142,7 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   border-radius: 0px;
   border-left: unset;
   border-right: unset;
@@ -2065,13 +2213,34 @@ section.chat-sidebar {
   box-shadow: unset;
   border-radius: 4px;
 }
+.foundry2 .directory .action-buttons button {
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
 .foundry2 .directory .directory-header .header-search input {
   background: var(--color-cool-4);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
+.foundry2 .directory .action-buttons button,
+.foundry2 .settings-sidebar button {
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+}
+.foundry2 #chat-form textarea {
+  transition: outline 0.5s;
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+}
+.foundry2 #chat-form textarea:focus {
+  outline: 2px solid var(--color-cool-3);
 }
 .foundry2#sidebar {
   border: 1px solid var(--color-cool-3);
   --glassy: 0px 0px 0px 1px var(--color-cool-3);
   --glass-bg-light: var(--app-background);
+  --glassy: 0px 0px 0px 1px var(--color-cool-3), 0px 1px 3px 1px black;
+  --glass-bg-light: var(--color-cool-5-50);
   --gold-and-glow: transparent;
   --primary-dark: var(--color-warm-3);
   --primary: var(--color-warm-2);
@@ -2079,6 +2248,12 @@ section.chat-sidebar {
   --secondary-dark: var(--color-warm-3);
   --secondary: var(--color-warm-2);
   --secondary-light: var(--color-warm-2);
+  --color-text-light-heading: var(--color-light-3);
+  --color-text-light-highlight: var(--color-light-2);
+  --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),
+                     linear-gradient(to bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
+                     var(--app-background);
+  background: var(--warm-background);
 }
 .foundry2#sidebar .dorako-ui.message.chat-message.dark-theme {
   background: var(--app-background);
@@ -2105,11 +2280,11 @@ section.chat-sidebar {
   box-shadow: unset;
 }
 .foundry2.window-app .window-resizable-handle {
-  background: var(--color-warm-3);
+  background: var(--color-warm-4);
   border: 1px solid var(--color-cool-3);
-  border-radius: 4px 0px 4px 0px;
-  border-bottom: unset;
-  border-right: unset;
+  border-radius: 4px 0px var(--border-radius) 0px;
+  border-bottom-color: var(--color-warm-3);
+  border-right-color: var(--color-warm-3);
   bottom: -1px;
   right: -1px;
 }
@@ -2145,6 +2320,9 @@ section.chat-sidebar {
   cursor: pointer;
   font-size: var(--font-size-14);
   gap: 5px;
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  text-shadow: 0px 1px 2px black;
 }
 .foundry2 a.button:hover,
 .foundry2 button:hover {
@@ -2183,6 +2361,7 @@ section.chat-sidebar {
   --button-hover-background-color: #fda948;
   --button-hover-border-color: var(--color-warm-3);
   --button-hover-text-color: #000000;
+  text-shadow: unset;
 }
 .foundry2 a.button.bright:disabled,
 .foundry2 button.bright:disabled {
@@ -2200,13 +2379,14 @@ section.chat-sidebar {
 .foundry2 input[type=time],
 .foundry2 input[type=search],
 .foundry2 select {
-  width: 100%;
   height: var(--input-height);
   line-height: var(--input-height);
   padding: 0 0.5rem;
   background: var(--input-background-color);
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
   outline: 1px solid transparent;
   color: var(--input-text-color);
   user-select: text;
@@ -2255,10 +2435,39 @@ section.chat-sidebar {
 }
 .foundry2.sheet nav.sheet-tabs {
   gap: 5px;
-  margin: 0px 2px;
 }
 .foundry2.sheet nav.sheet-tabs .item {
   --button-border-color: var(--color-cool-4);
+}
+
+.foundry2.sheet.journal-entry .journal-entry-content {
+  background: unset;
+  border: unset;
+}
+.foundry2.journal-sheet .journal-header .title {
+  background: var(--color-cool-4);
+}
+.foundry2 .editor-edit {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+.foundry2 .editor-edit:hover {
+  border-color: var(--color-warm-1);
+  background-color: var(--color-warm-2);
+}
+.foundry2 table tr:nth-child(even) {
+  background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
+}
+.foundry2 section.readaloud {
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ----------------------------------------- */
@@ -2318,7 +2527,7 @@ section.chat-sidebar {
   color: var(--color-light-1);
 }
 .foundry2 i[data-pf2-repost] {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   cursor: pointer;
   background: unset;
   border-left: unset;
@@ -2402,6 +2611,7 @@ section.chat-sidebar {
 .foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
   border: 1px solid var(--color-warm-2);
   background: var(--color-warm-3);
+  z-index: 1;
 }
 .foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment:hover {
   background: var(--color-warm-2);
@@ -2514,11 +2724,8 @@ section.chat-sidebar {
   background-image: url("../img/header.webp"), var(--sheet);
 }
 .dorako-ui.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image:hover .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name .item-image:hover, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action .item-name .item-image:hover, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item .item-name .item-image:hover {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background: white !important;
-}
-.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
-  border-image-source: var(--ornamentation);
 }
 .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options {
   gap: 3px;
@@ -2544,7 +2751,7 @@ section.chat-sidebar {
   border-radius: 0px 0px 10px 10px;
 }
 .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary .item-buttons button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   color: white;
   background-color: var(--primary);
@@ -2669,6 +2876,25 @@ section.chat-sidebar {
 .dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item:hover,
 .dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
+}
+
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod,
+.foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
+.foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
+.foundry2.sheet.party [data-tab=overview] .summary,
+.foundry2.sheet.party [data-tab=exploration] .activities .member-activity,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
+.foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
+.foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute,
+.foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+  border-image-source: var(--ornamentation);
 }
 
 .dorako-ui.dark-theme h4.rarity-common {
@@ -2942,7 +3168,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--primary);
   color: var(--color-text-light-highlight);
   font-family: var(--sans-serif);
@@ -3007,7 +3233,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
 }
 .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button.tag:not(:disabled), .dorako-ui.dark-theme.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list.strikes-list li.strike .button-group button.tag:not(:disabled) {
@@ -3037,7 +3263,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   background: var(--secondary);
   color: var(--color-text-light-highlight);
@@ -3211,7 +3437,6 @@ section.chat-sidebar {
   bottom: -1px;
   right: -1px;
   padding: 0px 2px;
-  color: white;
   color: var(--color-text-light-highlight);
   background-color: rgba(0, 0, 0, 0.75);
   background: none;
@@ -3278,7 +3503,7 @@ section.chat-sidebar {
   color: var(--color-light-2);
   background: var(--color-warm-3);
   border: 1px solid var(--color-cool-3);
-  border-radius: 4px 0px 4px 0px;
+  border-radius: 4px 0px var(--border-radius) 0px;
   border-bottom: unset;
   border-right: unset;
   text-shadow: 0px 1px 2px black;
@@ -3292,7 +3517,7 @@ section.chat-sidebar {
   padding: 0px 4px;
   color: var(--color-light-2);
   background: var(--color-warm-3);
-  border-radius: 0px 4px 0px 4px;
+  border-radius: 0px 4px 0px var(--border-radius);
   border: 1px solid var(--color-cool-3);
   border-bottom: unset;
   border-left: unset;
@@ -3321,7 +3546,7 @@ section.chat-sidebar {
   gap: 10px;
 }
 .dorako-ui.familiar .window-content .skills-content .skills-list .skill-name {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background: rgba(255, 255, 240, 0.8);
   border: 1px solid var(--color-border-light-primary);
 }
@@ -3433,7 +3658,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--glass-bg-light) !important;
   color: var(--color-text-light-primary);
 }
@@ -3593,7 +3818,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--glass-bg-light) !important;
   color: var(--color-text-light-primary);
 }
@@ -4305,6 +4530,368 @@ section.chat-sidebar {
   border-bottom: 4px solid var(--primary-light);
 }
 
+.foundry2.sheet.hazard {
+  --color-text-light: var(--color-light-2);
+}
+.foundry2.sheet.hazard.window-app .window-header {
+  background: #19302c;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.foundry2.sheet.hazard input[type=text], .foundry2.sheet.hazard input[type=number] {
+  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-4);
+}
+.foundry2.sheet.hazard input[type=text]:hover, .foundry2.sheet.hazard input[type=text]:focus, .foundry2.sheet.hazard input[type=number]:hover, .foundry2.sheet.hazard input[type=number]:focus {
+  border: 1px solid var(--color-cool-3);
+  outline: 2px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=text]:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=number]:focus {
+  border: 1px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.hazard form > header .title {
+  align-items: center;
+}
+.foundry2.sheet.hazard form > header .title .name {
+  height: 32px;
+}
+.foundry2.sheet.hazard .sidebar .sidebar-title {
+  border: unset;
+}
+.foundry2.sheet.hazard .sidebar {
+  border: unset;
+  box-shadow: unset;
+}
+.foundry2.sheet.hazard .sidebar > section {
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.foundry2.sheet.hazard .section-container {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  padding: unset;
+  margin: 4px 6px 0;
+  border: 1px solid var(--color-warm-3);
+  background: var(--color-warm-4);
+  border-radius: var(--border-radius);
+}
+.foundry2.sheet.hazard .section-container .section-header {
+  background: unset;
+  border: unset;
+}
+.foundry2.sheet.hazard .section-container .section-body {
+  background: unset;
+  border: unset;
+}
+
+.foundry2.sheet.familiar form {
+  background: unset;
+}
+.foundry2.sheet.familiar .section-container {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  --primary: var(--color-light-3);
+  padding: unset;
+  margin: 4px 6px 0;
+  border: 1px solid var(--color-warm-3);
+  background: var(--color-warm-4);
+  border-radius: var(--border-radius);
+}
+.foundry2.sheet.familiar .section-container .section-header {
+  background: unset;
+  border: unset;
+}
+.foundry2.sheet.familiar .section-container .section-body {
+  background: unset;
+  border: unset;
+}
+.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input, .foundry2.sheet.familiar select, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text] {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-4);
+  border-radius: 3px;
+  color: var(--color-light-2);
+  text-shadow: unset;
+}
+.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input::placeholder, .foundry2.sheet.familiar select::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]::placeholder {
+  color: var(--color-light-3);
+}
+.foundry2.sheet.familiar .skills-content .skills-list .skill-name {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+}
+.foundry2.sheet.familiar .skills-content .skills-list .skill-name:hover {
+  border-color: var(--color-warm-1);
+  background: var(--color-warm-2);
+  color: var(--color-light-1);
+}
+
+.foundry2.sheet.actor.loot {
+  --text-dark: var(--color-light-2);
+  --primary: var(--color-warm-2);
+}
+.foundry2.sheet.actor.loot section.sidebar {
+  box-shadow: unset;
+  border: unset;
+}
+.foundry2.sheet.actor.loot section.sidebar .image-container > img.actor-image {
+  border: unset;
+}
+.foundry2.sheet.actor.loot section.sidebar .gm-settings {
+  border: unset;
+}
+.foundry2.sheet.actor.loot .sheet-header {
+  border: unset;
+  box-shadow: unset;
+}
+.foundry2.sheet.actor.loot section.sidebar .gm-settings .loot-distribution {
+  box-shadow: unset;
+  background: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.foundry2.sheet.actor.loot .sheet-header .tags .tag, .foundry2.sheet.actor.loot .sheet-header h1 > input {
+  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-4);
+  color: var(--color-light-2);
+}
+
+.foundry2.actor.npc.sheet {
+  --text-dark: var(--color-light-2);
+  --primary: var(--color-warm-2);
+  --secondary: var(--color-cool-2);
+}
+.foundry2.actor.npc.sheet form .sheet-body .section-container {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  padding: unset;
+  margin: 4px 6px 0;
+  border: 1px solid var(--color-warm-3);
+  background: var(--color-warm-4);
+  border-radius: var(--border-radius);
+}
+.foundry2.actor.npc.sheet form .sheet-body .section-container .section-header {
+  background: unset;
+  border: unset;
+}
+.foundry2.actor.npc.sheet form .sheet-body .section-container .section-body {
+  background: unset;
+  border: unset;
+}
+.foundry2.actor.npc.sheet form .side-bar-section.initiative select {
+  background: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child), .foundry2.actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
+  border-color: var(--color-warm-3);
+}
+.foundry2.actor.npc.sheet form .notes .details-label {
+  color: var(--color-light-2);
+}
+.foundry2.actor.npc.sheet form .notes .notes-text {
+  color: var(--color-light-3);
+}
+.foundry2.actor.npc.sheet form .side-bar-section-header {
+  border: unset;
+}
+.foundry2.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
+  background-color: var(--color-warm-1);
+  color: black;
+  text-shadow: unset;
+}
+
+.foundry2.pf2e.actor form input[type=text], .foundry2.pf2e.actor form input[type=number] {
+  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-4);
+  color: var(--color-light-2);
+}
+.foundry2.pf2e.actor form input[type=text]:hover, .foundry2.pf2e.actor form input[type=text]:focus, .foundry2.pf2e.actor form input[type=number]:hover, .foundry2.pf2e.actor form input[type=number]:focus {
+  border: 1px solid var(--color-cool-3);
+  outline: 2px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet nav.sheet-tabs .item {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  border-radius: 3px;
+}
+.foundry2.sheet nav.sheet-tabs .item:hover, .foundry2.sheet nav.sheet-tabs .item.active {
+  border-color: var(--color-warm-1);
+  background: var(--color-warm-2);
+  color: var(--color-light-2);
+}
+.foundry2.sheet nav.sheet-tabs .item.disabled {
+  border-color: var(--color-warm-4);
+  background: var(--color-cool-5);
+  color: var(--color-light-5);
+}
+.foundry2.sheet nav.sheet-tabs .item.disabled:hover {
+  border-color: var(--color-warm-3);
+  background: var(--color-cool-4);
+  color: var(--color-light-4);
+}
+.foundry2 .tags.paizo-style .tag.rarity.common,
+.foundry2 .tags.paizo-style .tag.rarity[value=common],
+.foundry2 .tags.paizo-style .tag.rarity > option[value=common] {
+  color: black;
+}
+.foundry2 .currency li > button {
+  text-shadow: unset;
+}
+
+.foundry2.sheet.party {
+  --color-border: var(--color-warm-3);
+  --alt-dark: var(--color-light-4);
+  --sub: var(--color-cool-3);
+}
+.foundry2.sheet.party .tag-light {
+  background: var(--tag-color);
+  border-color: var(--color-cool-4);
+  color: white;
+}
+.foundry2.sheet.party nav.sub-nav {
+  background: unset;
+}
+.foundry2.sheet.party nav.sub-nav > a {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2.sheet.party nav.sub-nav > a:hover, .foundry2.sheet.party nav.sub-nav > a.active {
+  border-color: var(--color-warm-1);
+  background: var(--color-warm-2);
+  color: var(--color-light-2);
+}
+.foundry2.sheet.party nav.sub-nav > a.disabled {
+  border-color: var(--color-warm-4);
+  background: var(--color-cool-5);
+  color: var(--color-light-5);
+}
+.foundry2.sheet.party nav.sub-nav > a.disabled:hover {
+  border-color: var(--color-warm-3);
+  background: var(--color-cool-4);
+  color: var(--color-light-4);
+}
+.foundry2.sheet.party form > header input[type=text], .foundry2.sheet.party form > header input[type=number] {
+  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-4);
+  height: 32px;
+}
+.foundry2.sheet.party form > header input[type=text]:hover, .foundry2.sheet.party form > header input[type=text]:focus, .foundry2.sheet.party form > header input[type=number]:hover, .foundry2.sheet.party form > header input[type=number]:focus {
+  border: 1px solid var(--color-cool-3);
+  outline: 2px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.party form {
+  background: unset;
+}
+.foundry2.sheet.party.window-app .window-header {
+  background: #1f391f;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.foundry2.sheet.party [data-tab=overview] .summary {
+  background: var(--color-warm-4);
+  border-image-source: var(--ornamentation);
+}
+.foundry2.sheet.party [data-tab=overview] .summary nav button {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2.sheet.party [data-tab=overview] .summary nav button:hover, .foundry2.sheet.party [data-tab=overview] .summary nav button.active {
+  border: 1px solid var(--color-warm-1);
+  background: var(--color-warm-2);
+}
+.foundry2.sheet.party [data-tab=overview] .member > .data .main-stats > section {
+  background-color: var(--color-warm-4);
+}
+.foundry2.sheet.party [data-tab=overview] .member > .data .main-stats > section.ac {
+  background: unset;
+  border: unset;
+}
+.foundry2.sheet.party [data-tab=overview] .member > .data .main-stats .ac .value {
+  color: var(--color-warm-1);
+}
+.foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .name {
+  color: var(--color-light-2);
+}
+.foundry2.sheet.party [data-tab=exploration] .activities .member-activity {
+  background-color: var(--color-warm-4);
+}
+.foundry2.sheet.party [data-tab=overview] .member > .data header .hero-points .empty {
+  border: 2px dashed var(--color-warm-2);
+}
+.foundry2.sheet.party [data-tab=overview] .member > .data header .name {
+  color: var(--color-light-2);
+}
+.foundry2.sheet.party header.content-header button {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2.sheet.party header.content-header button:hover, .foundry2.sheet.party header.content-header button.active {
+  border: 1px solid var(--color-warm-1);
+  background: var(--color-warm-2);
+}
+
 /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
@@ -4420,7 +5007,7 @@ section.chat-sidebar {
 }
 .dorako-ui a,
 .dorako-ui button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 
 .dorako-ui.dark-theme {
@@ -4613,7 +5200,7 @@ section.chat-sidebar {
   gap: 2px;
 }
 .dorako-ui.message .message-content .damage-application button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 .dorako-ui.message .message-content .damage-application button.half-damage .transparent-half {
   display: none;
@@ -4987,7 +5574,7 @@ section.chat-sidebar {
 }
 .dorako-ui a,
 .dorako-ui button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 
 .dorako-ui.dark-theme {
@@ -5038,7 +5625,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--glass-bg-light);
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
@@ -5057,7 +5644,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   color: var(--color-text-light-heading);
   text-shadow: 0px 0px 3px black;
   margin-top: 5px;
@@ -5092,7 +5679,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: var(--dorako-text-shadow);
   background: var(--primary);
   color: var(--color-text-light-highlight);
@@ -5116,7 +5703,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: var(--dorako-text-shadow);
   background: var(--primary);
   color: var(--color-text-light-highlight);
@@ -5131,7 +5718,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   background: var(--secondary);
   color: var(--color-text-light-highlight);
@@ -5151,7 +5738,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   background: var(--primary-dark);
   color: var(--color-text-light-highlight);
@@ -5176,7 +5763,7 @@ section.chat-sidebar {
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 0px 3px black;
   color: var(--color-text-light-heading);
   margin: 0px;
@@ -5261,7 +5848,7 @@ section.chat-sidebar {
   margin-top: 0px;
 }
 .dorako-ui.message.chat-message.dark-theme .message-content .pf2e-pd-card button {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -5542,6 +6129,9 @@ section.chat-sidebar {
   color: var(--color-light-3);
   --color-text-light-6: var(--color-cool-3);
 }
+.foundry2.chat-message button {
+  --button-border-color: var(--color-cool-3);
+}
 .foundry2.chat-message.whisper {
   border-color: var(--color-cool-1);
   background: var(--color-cool-2);
@@ -5549,6 +6139,9 @@ section.chat-sidebar {
 .foundry2.chat-message.whisper.blind {
   border-color: var(--color-scrollbar-border);
   background: var(--color-scrollbar);
+}
+.foundry2.chat-message .message-content .damage-roll .dice-result .dice-tooltip .instance {
+  border-radius: var(--border-radius);
 }
 .foundry2.chat-message .dice-roll .dice-formula,
 .foundry2.chat-message .dice-roll .dice-total {
@@ -5566,6 +6159,7 @@ section.chat-sidebar {
   text-shadow: 0px 1px 2px black;
   border-color: var(--color-cool-2);
   background: var(--color-cool-3);
+  border-radius: var(--border-radius);
 }
 .foundry2.chat-message .dice-roll .dice-formula button:hover,
 .foundry2.chat-message .dice-roll .dice-total button:hover {
@@ -5608,13 +6202,35 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* Damage buttons                            */
 /* ----------------------------------------- */
+.foundry2.chat-message button {
+  border-radius: var(--border-radius);
+}
+
 .foundry2.chat-message > .message-content .message-buttons button {
-  border-color: var(--color-cool-3);
+  border-radius: var(--border-radius);
+}
+
+.foundry2.chat-message .flavor-text hr {
+  display: none;
+}
+.foundry2.chat-message .card-content hr {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.foundry2.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons,
+.foundry2.chat-message .pf2e.chat-card .card-buttons .spell-button {
+  gap: 3px;
+}
+.foundry2.chat-message .persistent-damage-recovery {
+  margin-top: 4px;
+}
+.foundry2.chat-message .persistent-damage-recovery hr {
+  display: none;
 }
 
 .foundry2.message .message-content .damage-application {
-  gap: 5px;
-  margin-top: 5px;
+  gap: 3px;
+  margin-top: 3px;
   text-rendering: geometricPrecision;
 }
 .foundry2.message .message-content .damage-application button {
@@ -5626,7 +6242,7 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   margin: 0px;
 }
 .foundry2.message .message-content .damage-application button img {
@@ -5693,13 +6309,14 @@ section.chat-sidebar {
   gap: 5px;
 }
 .foundry2.chat-message .message-header.dorako-header {
+  border-radius: var(--border-radius);
   background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
   text-shadow: 0px 1px 1px black;
   padding-bottom: 5px;
   margin-bottom: 2px;
 }
 .foundry2.chat-message .message-header.dorako-header a {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 .foundry2.chat-message .message-header.dorako-header a:hover {
   text-shadow: 0px 1px 1px black;
@@ -5800,7 +6417,7 @@ section.chat-sidebar {
   --color-bg-spirit: rgba(90, 85, 133, 0.125);
   --color-bg-vitality: rgba(255, 255, 224, 0.125);
   --color-bg-void: rgb(81, 21, 78, 0.125);
-  --color-border-acid: #007300;
+  --color-border-acid: #12a812;
   --color-border-bleed: #99001a;
   --color-border-chaotic: #a600a6;
   --color-border-cold: #2f2fa6;
@@ -5817,7 +6434,7 @@ section.chat-sidebar {
   --color-border-spirit: #5a5585;
   --color-border-vitality: #ffffe0;
   --color-border-void: rgb(122, 38, 117);
-  --color-text-acid: #003300;
+  --color-text-acid: #34aa34;
   --color-text-bleed: #59000f;
   --color-text-chaotic: #660066;
   --color-text-cold: #3a3ac5;
