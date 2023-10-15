@@ -160,3 +160,16 @@
     }
   }
 }
+
+.foundry2 a.polyglot-message-language {
+  display: unset;
+  background: unset;
+  border: unset;
+  padding: unset;
+  &:hover {
+    display: unset;
+    background: unset;
+    border: unset;
+    padding: unset;
+  }
+}

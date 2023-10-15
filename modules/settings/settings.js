@@ -73,6 +73,7 @@ Hooks.once("init", async () => {
     document.querySelector("#tooltip").classList.add("foundry2");
     $("#tooltip").attr("data-theme", "foundry2");
     $("#fps").attr("data-theme", "foundry2");
+    game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
   } else if (theme !== "no-theme") {
     $("#tooltip").attr("data-theme", "dorako-ui");
     $("#fps").attr("data-theme", "dorako-ui");

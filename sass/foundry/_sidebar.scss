@@ -193,3 +193,29 @@ section.chat-sidebar {
     }
   }
 }
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+.foundry2 {
+  #sidebar-tabs {
+    border: unset;
+    > .item {
+      @include quick-transition;
+      &:hover {
+        color: var(--color-light-2);
+      }
+
+      &.active {
+        @include f2-app;
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+        color: var(--color-light-2);
+      }
+    }
+  }
+  &#sidebar.collapsed #sidebar-tabs > .item.active {
+    border-color: var(--color-warm-1);
+  }
+}

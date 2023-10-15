@@ -1654,6 +1654,35 @@ section.chat-sidebar {
   text-shadow: none;
 }
 
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2 #sidebar-tabs {
+  border: unset;
+}
+.foundry2 #sidebar-tabs > .item {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+}
+.foundry2 #sidebar-tabs > .item:hover {
+  color: var(--color-light-2);
+}
+.foundry2 #sidebar-tabs > .item.active {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-2);
+}
+.foundry2#sidebar.collapsed #sidebar-tabs > .item.active {
+  border-color: var(--color-warm-1);
+}
+
 #token-hud.dorako-ui .status-effects {
   background: none;
   box-shadow: none;
@@ -1945,7 +1974,36 @@ section.chat-sidebar {
   --color-bg-btn-minor-active: var(--color-warm-2);
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-4);
+  --color-bg-option: var(--color-cool-4);
   color: var(--color-light-3);
+  --alt: var(--color-cool-3);
+  --visibility-gm-bg: var(--color-warm-3);
+}
+.foundry2 [data-visibility]:not([data-visibility=all]) {
+  outline: 1px dashed var(--color-scrollbar-border);
+}
+.foundry2 section.chat-sidebar .jump-to-bottom {
+  z-index: 1;
+}
+.foundry2 section.chat-sidebar .jump-to-bottom > a {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  border-radius: 0px;
+  border-left: unset;
+  border-right: unset;
+  background-color: var(--color-scrollbar);
+  border-color: var(--color-scrollbar-border);
+}
+.foundry2 section.chat-sidebar .jump-to-bottom > a:hover {
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
 }
 .foundry2 hr {
   border: none;
@@ -4469,6 +4527,7 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* Clutter                                   */
 /* ----------------------------------------- */
+.foundry2.chat-message .message-content .damage-roll .dice-result .dice-total .instances,
 .dorako-ui.chat-message .message-content .damage-roll .dice-result .dice-total .instances {
   padding-bottom: 4px;
   margin-bottom: 0px;
@@ -4477,6 +4536,15 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* .message-header fixes                     */
 /* ----------------------------------------- */
+.chat-message .dmgBtn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-message ul.notes {
+  padding: 0px;
+}
+
 .chat-message .flavor-text h4.action {
   font-weight: 700;
   line-height: 1.5em;
@@ -5458,6 +5526,316 @@ section.chat-sidebar {
   line-height: 0;
 }
 
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2.chat-message {
+  background: unset;
+  --gold-and-glow: transparent;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  --color-text-light-6: var(--color-cool-3);
+}
+.foundry2.chat-message.whisper {
+  border-color: var(--color-cool-1);
+  background: var(--color-cool-2);
+}
+.foundry2.chat-message.whisper.blind {
+  border-color: var(--color-scrollbar-border);
+  background: var(--color-scrollbar);
+}
+.foundry2.chat-message .dice-roll .dice-formula,
+.foundry2.chat-message .dice-roll .dice-total {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2.chat-message .dice-roll .dice-formula button,
+.foundry2.chat-message .dice-roll .dice-total button {
+  text-shadow: 0px 1px 2px black;
+  border-color: var(--color-cool-2);
+  background: var(--color-cool-3);
+}
+.foundry2.chat-message .dice-roll .dice-formula button:hover,
+.foundry2.chat-message .dice-roll .dice-total button:hover {
+  border-color: var(--color-cool-1);
+  background: var(--color-cool-2);
+  color: var(--color-light-2);
+}
+.foundry2.chat-message .dice-tooltip .part-header .part-total {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  box-shadow: unset;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: unset;
+}
+.foundry2.chat-message .pf2e.chat-card .card-header {
+  border: unset;
+}
+.foundry2.chat-message .pf2e.chat-card .card-header img {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  border-color: var(--color-warm-2);
+}
+.foundry2.chat-message .pf2e.chat-card .card-footer {
+  border-top: 1px solid var(--color-cool-2);
+}
+
+/* ----------------------------------------- */
+/* Damage buttons                            */
+/* ----------------------------------------- */
+.foundry2.chat-message > .message-content .message-buttons button {
+  border-color: var(--color-cool-3);
+}
+
+.foundry2.message .message-content .damage-application {
+  gap: 5px;
+  margin-top: 5px;
+  text-rendering: geometricPrecision;
+}
+.foundry2.message .message-content .damage-application button {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+  margin: 0px;
+}
+.foundry2.message .message-content .damage-application button img {
+  filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 2px black);
+}
+.foundry2.message .message-content .damage-application button.half-damage .transparent-half {
+  display: none;
+}
+.foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken {
+  position: relative;
+}
+.foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
+  content: "\f7a9";
+  font-family: "Font Awesome 5 Free";
+  color: var(--color-cool-3);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 2.4px;
+  clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
+}
+.foundry2.message .message-content .damage-application button:hover {
+  color: var(--color-light-1);
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+}
+.foundry2.message .message-content .damage-application button:hover img {
+  filter: invert(1) drop-shadow(0px 1px 2px black);
+}
+.foundry2.message .message-content .damage-application button.shield-block:hover {
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+}
+.foundry2.message .message-content .damage-application button.shield-block.shield-activated {
+  background-color: var(--color-cool-1);
+  border: 1px solid var(--color-cool-2);
+}
+.foundry2.message .message-content .damage-application button.shield-block.shield-activated:hover {
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+}
+.foundry2.message .message-content .damage-application button.heal-damage .fa-stack i.fa-plus {
+  color: var(--color-cool-5);
+  text-shadow: none;
+}
+.foundry2.message .message-content .damage-application button.heal-damage:hover {
+  background-color: var(--color-level-success);
+  border-color: var(--color-level-success-border);
+}
+.foundry2.message .message-content .damage-application button.heal-damage:hover .fa-stack i.fa-plus {
+  color: var(--color-level-success);
+  text-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Header                                    */
+/* ----------------------------------------- */
+.foundry2.chat-message .message-header {
+  background: none;
+  padding: 5px 5px 0px 5px;
+  margin: -5px -5px 0px -5px;
+  border-radius: 5px 5px 0px 0px;
+  gap: 5px;
+}
+.foundry2.chat-message .message-header.dorako-header {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
+  text-shadow: 0px 1px 1px black;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+.foundry2.chat-message .message-header.dorako-header a {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s;
+}
+.foundry2.chat-message .message-header.dorako-header a:hover {
+  text-shadow: 0px 1px 1px black;
+  color: var(--color-warm-1);
+}
+.foundry2.chat-message .message-header .message-metadata {
+  flex: 2.5;
+}
+.foundry2.chat-message .message-header .message-timestamp,
+.foundry2.chat-message .message-header .header-meta {
+  border-radius: 3px;
+  padding: 2px;
+  font-size: x-small;
+  align-self: center;
+  text-align: center;
+  text-shadow: none;
+  white-space: nowrap;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
+  border-color: color-mix(in srgb, var(--header-color) 50%, white);
+}
+.foundry2.chat-message .message-header.dark-header-text {
+  color: var(--header-color);
+}
+.foundry2.chat-message .message-header.dark-header-text .message-sender {
+  color: var(--header-color);
+}
+.foundry2.chat-message .message-header.dark-header-text .header-meta {
+  color: var(--header-color);
+}
+.foundry2.chat-message .message-header .player-name,
+.foundry2.chat-message .message-header .message-sender {
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.foundry2.chat-message .message-header .portrait-and-name {
+  flex-grow: 1;
+  display: flex;
+  flex-basis: 100px;
+  gap: 5px;
+}
+.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper {
+  width: var(--avatar-size);
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+}
+.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper .portrait {
+  height: var(--avatar-size);
+  object-fit: contain;
+  z-index: 0;
+}
+.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper .portrait.actor {
+  border-radius: 3px;
+}
+.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  justify-content: left;
+  align-self: center;
+  z-index: 1;
+}
+.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper .message-sender,
+.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper .player-name {
+  align-self: flex-start;
+  line-height: initial;
+}
+
+/* ----------------------------------------- */
+/* Damage colors                             */
+/* ----------------------------------------- */
+.foundry2 .damage {
+  --color-bg-acid: rgba(0, 115, 0, 0.125);
+  --color-bg-bleed: rgba(153, 0, 26, 0.125);
+  --color-bg-chaotic: rgba(166, 0, 166, 0.125);
+  --color-bg-cold: rgba(72, 72, 198, 0.125);
+  --color-bg-electricity: rgba(184, 134, 11, 0.125);
+  --color-bg-evil: rgba(75, 0, 130, 0.125);
+  --color-bg-fire: rgba(166, 47, 0, 0.125);
+  --color-bg-force: rgba(99, 0, 170, 0.125);
+  --color-bg-good: rgba(157, 115, 10, 0.125);
+  --color-bg-lawful: rgba(64, 38, 0, 0.125);
+  --color-bg-mental: rgba(25, 25, 112, 0.125);
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-bg-poison: rgba(91, 115, 50, 0.125);
+  --color-bg-sonic: rgba(0, 139, 139, 0.125);
+  --color-bg-spirit: rgba(90, 85, 133, 0.125);
+  --color-bg-vitality: rgba(255, 255, 224, 0.125);
+  --color-bg-void: rgb(81, 21, 78, 0.125);
+  --color-border-acid: #007300;
+  --color-border-bleed: #99001a;
+  --color-border-chaotic: #a600a6;
+  --color-border-cold: #2f2fa6;
+  --color-border-electricity: darkgoldenrod;
+  --color-border-evil: indigo;
+  --color-border-fire: #a62f00;
+  --color-border-force: #6300aa;
+  --color-border-good: #9d730a;
+  --color-border-lawful: #402600;
+  --color-border-mental: midnightblue;
+  --color-border-physical: #737272;
+  --color-border-poison: #5b7332;
+  --color-border-sonic: darkcyan;
+  --color-border-spirit: #5a5585;
+  --color-border-vitality: #ffffe0;
+  --color-border-void: rgb(122, 38, 117);
+  --color-text-acid: #003300;
+  --color-text-bleed: #59000f;
+  --color-text-chaotic: #660066;
+  --color-text-cold: #3a3ac5;
+  --color-text-electricity: #7c5a07;
+  --color-text-evil: #260042;
+  --color-text-fire: #882700;
+  --color-text-force: #3e006a;
+  --color-text-good: #614706;
+  --color-text-lawful: white;
+  --color-text-mental: #0d0d3c;
+  --color-text-physical: #a0a0a0;
+  --color-text-poison: #38471f;
+  --color-text-sonic: #004b4b;
+  --color-text-spirit: #403c5e;
+  --color-text-vitality: #ffffa0;
+  --color-text-void: rgb(122, 38, 117);
+}
+
 h3 {
   border-bottom: none;
 }
@@ -5496,24 +5874,18 @@ a.inline-roll:not(.inline-result) {
   color: black;
 }
 
-.foundry2 .tags,
-.foundry2 .tags.paizo-style,
 .tah-tags-wrapper .tags,
 .dorako-ui .message-content .tags,
 .dorako-ui .tags.paizo-style,
 .dorako-ui .tags {
   gap: 1px;
 }
-.foundry2 .tags .tag,
-.foundry2 .tags.paizo-style .tag,
 .tah-tags-wrapper .tags .tag,
 .dorako-ui .message-content .tags .tag,
 .dorako-ui .tags.paizo-style .tag,
 .dorako-ui .tags .tag {
   height: auto;
 }
-.foundry2 .tags .tag:not(.tag_transparent),
-.foundry2 .tags.paizo-style .tag:not(.tag_transparent),
 .tah-tags-wrapper .tags .tag:not(.tag_transparent),
 .dorako-ui .message-content .tags .tag:not(.tag_transparent),
 .dorako-ui .tags.paizo-style .tag:not(.tag_transparent),
@@ -5524,16 +5896,12 @@ a.inline-roll:not(.inline-result) {
   outline: 1px solid var(--gold-brown);
   padding: 0.33em 0.33em;
 }
-.foundry2 .tags .tag:first-child,
-.foundry2 .tags.paizo-style .tag:first-child,
 .tah-tags-wrapper .tags .tag:first-child,
 .dorako-ui .message-content .tags .tag:first-child,
 .dorako-ui .tags.paizo-style .tag:first-child,
 .dorako-ui .tags .tag:first-child {
   border-left-width: 1px;
 }
-.foundry2 .tags .tag:last-child,
-.foundry2 .tags.paizo-style .tag:last-child,
 .tah-tags-wrapper .tags .tag:last-child,
 .dorako-ui .message-content .tags .tag:last-child,
 .dorako-ui .tags.paizo-style .tag:last-child,

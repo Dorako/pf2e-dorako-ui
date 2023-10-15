@@ -71,8 +71,34 @@
   --color-bg-btn-minor-active: var(--color-warm-2);
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-4);
+  --color-bg-option: var(--color-cool-4); // input-background-color
 
   color: var(--color-light-3);
+
+  // System compat mode
+  --alt: var(--color-cool-3);
+  --visibility-gm-bg: var(--color-warm-3);
+
+  [data-visibility]:not([data-visibility="all"]) {
+    outline: 1px dashed var(--color-scrollbar-border);
+  }
+
+  section.chat-sidebar .jump-to-bottom {
+    z-index: 1;
+    > a {
+      @include f2-app;
+      @include quick-transition;
+      border-radius: 0px;
+      border-left: unset;
+      border-right: unset;
+      background-color: var(--color-scrollbar);
+      border-color: var(--color-scrollbar-border);
+      &:hover {
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+      }
+    }
+  }
 
   hr {
     border: none;

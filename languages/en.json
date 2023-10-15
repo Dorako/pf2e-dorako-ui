@@ -52,7 +52,8 @@
           "name": "Chat theme",
           "hint": "Affects all chat messages",
           "choice": {
-            "factions": "Players light, GM dark"
+            "factions": "Players light, GM dark",
+            "foundry2": "Foundry 2"
           }
         },
         "pc-sheet-theme": {
@@ -172,7 +173,7 @@
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Remove attack info from damage roll messages?",
-          "hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with DFCE chat-merge"
+          "hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with chat-merge"
         },
         "animate-messages": {
           "name": "Animate messages to draw attention to certain events?",

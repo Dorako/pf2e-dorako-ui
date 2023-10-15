@@ -655,6 +655,7 @@ nav.damage-log-nav.tabs .item.active {
   box-shadow: var(--gold-and-glow);
   background: var(--sheet-light);
   background-size: cover;
+  background-color: var(--header-color);
 }
 
 .combat-sidebar li.combatant .token-image {
@@ -2062,6 +2063,19 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border-bottom-right-radius: var(--border-radius);
 }
 
+.foundry2 a.polyglot-message-language {
+  display: unset;
+  background: unset;
+  border: unset;
+  padding: unset;
+}
+.foundry2 a.polyglot-message-language:hover {
+  display: unset;
+  background: unset;
+  border: unset;
+  padding: unset;
+}
+
 /* ----------------------------------------- */
 /* Scene Preview                             */
 /* ----------------------------------------- */
@@ -2923,6 +2937,7 @@ body.system-swade {
 #module-credits-dialog.dorako-ui.dark-theme .journal-entry-content {
   background: unset;
   box-shadow: unset;
+  border: unset;
 }
 
 /* ----------------------------------------- */
@@ -2932,6 +2947,11 @@ body.system-swade {
   background: var(--color-cool-4);
   border: 1px solid var(--color-cool-3);
   color: var(--color-light-2);
+}
+.foundry2#module-credits-dialog .journal-entry-content {
+  background: unset;
+  box-shadow: unset;
+  border: unset;
 }
 .foundry2 .package-list .package .tag {
   background: var(--color-cool-4);

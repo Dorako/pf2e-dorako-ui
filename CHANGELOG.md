@@ -1,3 +1,7 @@
+# 2.10.1
+
+- (Refinement) Added a new chat theme inspired by the mdoern Foundry design. Is automatically enabled when using the application theme, but can also be used on its own.
+
 # 2.10.0
 
 - (New) Added a new application theme inspired by the modern Foundry design. Sheets with no explicit support will render as system default.

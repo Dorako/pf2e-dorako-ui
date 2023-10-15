@@ -104,6 +104,7 @@
 /* Clutter                                   */
 /* ----------------------------------------- */
 
+.foundry2.chat-message .message-content .damage-roll .dice-result .dice-total .instances,
 .dorako-ui.chat-message .message-content .damage-roll .dice-result .dice-total .instances {
   padding-bottom: 4px;
   margin-bottom: 0px;
@@ -112,6 +113,15 @@
 /* ----------------------------------------- */
 /* .message-header fixes                     */
 /* ----------------------------------------- */
+
+.chat-message .dmgBtn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-message ul.notes {
+  padding: 0px;
+}
 
 .chat-message .flavor-text h4.action {
   font-weight: 700;

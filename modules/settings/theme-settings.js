@@ -28,6 +28,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           light: "pf2e-dorako-ui.text.light",
           dark: "pf2e-dorako-ui.text.dark",
           factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
+          foundry2: "pf2e-dorako-ui.settings.theme.chat-theme.choice.foundry2",
         },
         requiresReload: false,
         onChange: refreshChat,
@@ -109,6 +110,12 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "foundry2-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.foundry2-theme",
         },
         requiresReload: true, // re-render all windows
+        onChange: (choice) => {
+          if (choice === "foundry2-theme") {
+            game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
+            // Doesn't work
+          }
+        },
       },
       "npc-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",

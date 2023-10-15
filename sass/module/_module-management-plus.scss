@@ -17,6 +17,7 @@
   .journal-entry-content {
     background: unset;
     box-shadow: unset;
+    border: unset;
   }
 }
 
@@ -29,6 +30,14 @@
     background: var(--color-cool-4);
     border: 1px solid var(--color-cool-3);
     color: var(--color-light-2);
+  }
+
+  &#module-credits-dialog {
+    .journal-entry-content {
+      background: unset;
+      box-shadow: unset;
+      border: unset;
+    }
   }
 
   .package-list .package .tag {

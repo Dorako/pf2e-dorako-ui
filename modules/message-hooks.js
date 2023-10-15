@@ -31,8 +31,14 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     return;
   }
 
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.chat-theme");
+
   let html0 = html[0];
-  html0.classList.add("dorako-ui");
+  if (theme !== "foundry2") {
+    html0.classList.add("dorako-ui");
+  } else {
+    html0.style.setProperty("--border-tint", chatMessage?.user?.color ?? "#DAC0FB");
+  }
 
   if (game.settings.get("pf2e-dorako-ui", "ux.restructure-card-info")) {
     let uuid = chatMessage?.flags?.pf2e?.origin?.uuid;
@@ -63,8 +69,6 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   }
   moveFlavorTextToContents(html);
 
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.chat-theme");
-
   if (theme == "dark") html0.classList.add("dark-theme");
   if (theme == "light") html0.classList.add("light-theme");
   if (theme == "factions") {
@@ -73,6 +77,9 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     } else {
       html0.classList.add("light-theme");
     }
+  }
+  if (theme == "foundry2") {
+    html0.classList.add("foundry2");
   }
 
   themeHeader(html, chatMessage);
@@ -106,6 +113,7 @@ Hooks.once("ready", () => {
   Hooks.on("renderChatMessage", (app, html, data) => {
     const isKoboldWorksTurnAnnouncerMessage = app.flags["koboldworks-turn-announcer"];
     if (!isKoboldWorksTurnAnnouncerMessage) return;
+
     const avatar = html.find(".portrait");
     avatar.css("transform", `scale(${app.flags["pf2e-dorako-ui"]?.tokenAvatar.scale})`);
     avatar.css("flex", `0px 0px var(--avatar-size)`);
@@ -120,7 +128,7 @@ function themeHeader(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
   if (headerStyle != "none") {
     let bgCol = getHeaderColor(html, message);
-    messageHeader.setAttribute("style", "background-color: " + bgCol);
+    messageHeader.style.setProperty("--header-color", bgCol);
     messageHeader.classList.add("dorako-header");
   }
 
@@ -493,15 +501,17 @@ function calcHeaderTextColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
   const messageHeader = html.find(".message-header")[0];
   if (headerStyle === "none") {
-    if (html[0].classList.contains("dark-theme")) {
+    if (html[0].classList.contains("dark-theme") || html[0].classList.contains("foundry2")) {
       return "light-header-text";
     } else {
       return "dark-header-text";
     }
   }
 
-  let bgCol = messageHeader.style.backgroundColor;
-  bgCol = rgb2hex(bgCol);
+  // let bgCol = messageHeader.style.backgroundColor;
+
+  let bgCol = getHeaderColor(html, message);
+  // bgCol = rgb2hex(bgCol);
   var r = parseInt(bgCol.substr(1, 2), 16);
   var g = parseInt(bgCol.substr(3, 2), 16);
   var b = parseInt(bgCol.substr(5, 2), 16);
