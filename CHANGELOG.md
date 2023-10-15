@@ -1,3 +1,8 @@
+# 2.10.3
+
+- (Refinement) Made the new Foundry 2 sheets actually render automatically, rather than only via debug button...
+- (New) Added Foundry 2 styling for new "Check Prompt Generator".
+
 # 2.10.2
 
 - (Refinement) Tonnes of adjustments and additions to Foundry 2 theme.

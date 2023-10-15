@@ -65,6 +65,21 @@ Hooks.on("renderItemSheet", (app, html, data) => {
   html.find("form > nav a").addClass("button");
 });
 
+for (const app of [
+  ...baseThemePf2eSheets.filter((elem) => elem !== "KingdomSheetPF2e" && elem !== "CharacterSheetPF2e"),
+]) {
+  Hooks.on("render" + app, (app, html, data) => {
+    let html0 = html[0];
+    if (!html0.classList.contains("window-app")) return;
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (theme !== "foundry2-theme") return;
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | is PF2e .window-app "Application" => add .foundry2`
+    );
+    html.addClass("foundry2");
+  });
+}
+
 for (const app of ["CharacterSheetPF2e", "KingdomSheetPF2e"]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");

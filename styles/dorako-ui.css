@@ -2473,6 +2473,9 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* System overwrites                         */
 /* ----------------------------------------- */
+.foundry2 {
+  --blind-roll: var(--color-warm-3);
+}
 .foundry2 .tags.tags.paizo-style {
   background-color: var(--color-cool-5-50);
 }
@@ -2491,6 +2494,23 @@ section.chat-sidebar {
   border: 1px solid var(--button-border-color);
   color: var(--button-text-color);
   border-radius: 3px;
+}
+.foundry2#generate-check-prompt nav h4 a {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  padding: 4px 8px;
+}
+.foundry2#generate-check-prompt nav h4 a:hover, .foundry2#generate-check-prompt nav h4 a.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  text-decoration: unset;
 }
 .foundry2 a.content-link,
 .foundry2 [data-pf2-check],
@@ -2628,6 +2648,7 @@ section.chat-sidebar {
   background: var(--color-cool-4);
   border: 1px solid var(--color-cool-3);
 }
+.foundry2 .tagify,
 .foundry2 tags.tagify.pf2e-tagify {
   --tags-disabled-bg: #f1f1f1;
   --tags-border-color: #ddd;
@@ -2659,13 +2680,21 @@ section.chat-sidebar {
   --tags-border-color: var(--color-cool-3);
   background: var(--color-cool-4);
 }
+.foundry2 .tagify.tagify--empty .tagify__input::before,
+.foundry2 tags.tagify.pf2e-tagify.tagify--empty .tagify__input::before {
+  color: var(--color-light-5);
+}
+.foundry2 .tagify:hover,
 .foundry2 tags.tagify.pf2e-tagify:hover {
   box-shadow: unset;
 }
+.foundry2 .tagify tag,
 .foundry2 tags.tagify.pf2e-tagify tag {
   border-radius: 4px;
   border: 1px solid var(--tag-border-color);
 }
+.foundry2 .tagify tag .tagify__tag__removeBtn,
+.foundry2 .tagify tag > div .tagify__tag-text,
 .foundry2 tags.tagify.pf2e-tagify tag .tagify__tag__removeBtn,
 .foundry2 tags.tagify.pf2e-tagify tag > div .tagify__tag-text {
   color: var(--tag-color);
@@ -4877,7 +4906,10 @@ section.chat-sidebar {
 .foundry2.sheet.party [data-tab=overview] .member > .data header .name {
   color: var(--color-light-2);
 }
-.foundry2.sheet.party header.content-header button {
+.foundry2.sheet.party header.content-header .buttons {
+  gap: 5px;
+}
+.foundry2.sheet.party header.content-header .buttons button {
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
   text-shadow: 0px 1px 2px black;
@@ -4887,7 +4919,7 @@ section.chat-sidebar {
   border-radius: var(--border-radius);
   color: var(--color-light-3);
 }
-.foundry2.sheet.party header.content-header button:hover, .foundry2.sheet.party header.content-header button.active {
+.foundry2.sheet.party header.content-header .buttons button:hover, .foundry2.sheet.party header.content-header .buttons button.active {
   border: 1px solid var(--color-warm-1);
   background: var(--color-warm-2);
 }

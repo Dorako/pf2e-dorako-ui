@@ -536,6 +536,23 @@
     }
   }
 
+  --blind-roll: var(--color-warm-3);
+
+  &#generate-check-prompt {
+    nav h4 a {
+      @include f2-app;
+      @include quick-transition;
+      padding: 4px 8px;
+
+      &:hover,
+      &.active {
+        background: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+        text-decoration: unset;
+      }
+    }
+  }
+
   a.content-link,
   [data-pf2-check],
   a.entity-link,
@@ -694,6 +711,7 @@
     border: 1px solid var(--color-cool-3);
   }
 
+  .tagify,
   tags.tagify.pf2e-tagify {
     --tags-disabled-bg: #f1f1f1;
     --tags-border-color: #ddd;
@@ -725,6 +743,10 @@
     --tag-bg: var(--color-cool-4);
     --tag-border-color: var(--color-cool-3);
     --tags-border-color: var(--color-cool-3);
+
+    &.tagify--empty .tagify__input::before {
+      color: var(--color-light-5);
+    }
 
     background: var(--color-cool-4);
     &:hover {
