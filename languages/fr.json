@@ -169,7 +169,8 @@
           "name": "Thème de la conversation",
           "hint": "Affecte tous les messages de la conversation",
           "choice": {
-            "factions": "Joueurs en clair, MJ en sombre"
+            "factions": "Joueurs en clair, MJ en sombre",
+            "foundry2": "Foundry 2"
           }
         },
         "pc-sheet-theme": {
@@ -214,7 +215,8 @@
           "choice": {
             "no-theme": "Pas de thème",
             "light-theme": "Dorako UI clair",
-            "dark-theme": "Dorako UI sombre"
+            "dark-theme": "Dorako UI sombre",
+            "foundry2-theme": "Foundry 2"
           },
           "name": "Thème de l'application"
         },
@@ -278,7 +280,7 @@
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Retirer les infos de l'attaque des messages de jets de dégâts ?",
-          "hint": "Les jets de dégâts prennent moins de place en retirant les informations du coup redondantes. Destiné à être utilisé avec fusion dans la conversation DFCE"
+          "hint": "Les jets de dégâts prennent moins de place en retirant les informations du coup redondantes. Destiné à être utilisé avec fusion dans la conversation"
         },
         "compact-ui": {
           "name": "Activer l'interface utilisateur compacte ?",

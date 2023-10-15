@@ -26,7 +26,8 @@
           "choice": {
             "no-theme": "Brak motywu",
             "light-theme": "Jasny Dorako UI",
-            "dark-theme": "Ciemny Dorako UI"
+            "dark-theme": "Ciemny Dorako UI",
+            "foundry2-theme": "Foundry 2"
           }
         },
         "frosted-glass": {
@@ -49,7 +50,8 @@
           "name": "Motyw czatu",
           "hint": "Wpływa na wszystkie wiadomości czatu",
           "choice": {
-            "factions": "Gracze jasny, GM ciemny"
+            "factions": "Gracze jasny, GM ciemny",
+            "foundry2": "Foundry 2"
           }
         },
         "pc-sheet-theme": {
@@ -188,7 +190,7 @@
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Usunąć informacje o ataku z komunikatów o obrażeniach?",
-          "hint": "Sprawia, że rzuty obrażeń zajmują mniej miejsca, usuwając zbędne informacje o trafieniach. Przeznaczony do użytku z DFCE chat-merge"
+          "hint": "Sprawia, że rzuty obrażeń zajmują mniej miejsca, usuwając zbędne informacje o trafieniach. Przeznaczony do użytku z funkcją chat-merge"
         },
         "chat-merge": {
           "name": "Włączyć scalanie czatu?",
