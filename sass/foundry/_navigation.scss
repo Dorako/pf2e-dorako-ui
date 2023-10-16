@@ -75,7 +75,6 @@
 /* ----------------------------------------- */
 
 #navigation.foundry2 {
-  color: var(--color-light-2);
   width: calc(100% - 46px); // Add some breathing room to ensure navigation isn't covering effect panel
 
   #nav-toggle {
@@ -89,8 +88,7 @@
 
   ol#scene-list {
     li.nav-item {
-      @include quick-transition;
-      @include f2-app;
+      @include f2-button-warm;
       line-height: var(--control-size);
 
       > a:hover {
@@ -102,36 +100,43 @@
       }
 
       &:hover {
-        color: var(--color-light-1);
+        color: var(--color-light-2);
         background-color: var(--color-warm-2);
         border-color: var(--color-warm-1);
       }
 
       &.view {
+        @include f2-button-warm;
         background-color: var(--color-warm-2);
         color: var(--color-light-2);
         border-color: var(--color-warm-1);
-
-        &:hover {
-          color: var(--color-light-1);
-          background-color: var(--color-warm-1);
+        &.active {
+          border-color: var(--color-cool-2);
         }
       }
 
       &.gm {
-        background-color: var(--color-cool-3);
-        border-color: var(--color-cool-2);
+        @include f2-button-cool;
 
-        &:hover,
-        &.view {
-          color: var(--color-light-1);
-          background-color: var(--color-cool-2);
-          border-color: var(--color-cool-1);
+        &.active {
+          color: var(--color-light-2);
+          border-color: var(--color-cool-3);
+          background-color: var(--color-cool-3);
+          &:hover {
+            color: var(--color-light-1);
+            border-color: var(--color-cool-1);
+            background-color: var(--color-cool-2);
+          }
         }
-      }
-
-      &.active {
-        border-color: var(--color-warm-1);
+        &.view {
+          background-color: var(--color-cool-2);
+          color: var(--color-light-2);
+          border-color: var(--color-warm-1);
+          &:hover {
+            border-color: var(--color-warm-1);
+            background-color: var(--color-cool-2);
+          }
+        }
       }
     }
   }

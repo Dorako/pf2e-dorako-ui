@@ -8,24 +8,23 @@
     border-top-right-radius: var(--border-radius);
   }
 
+  &.sheet.hazard .section-container.publication .section-body input[type="text"],
   &.sheet.hazard input[type="text"],
   &.sheet.hazard input[type="number"] {
-    border: 1px solid var(--color-cool-3);
-    background: var(--color-cool-4);
-    &:hover,
-    &:focus {
-      border: 1px solid var(--color-cool-3);
-      outline: 2px solid var(--color-cool-3);
-      box-shadow: var(--box-shadow);
-    }
+    @include f2-input;
   }
 
   &.sheet.hazard form > header input[type="text"]:hover:not(:disabled),
   &.sheet.hazard form > header input[type="text"]:focus,
   &.sheet.hazard form > header input[type="number"]:hover:not(:disabled),
   &.sheet.hazard form > header input[type="number"]:focus {
-    border: 1px solid var(--color-cool-3);
-    box-shadow: var(--box-shadow);
+    @include f2-input;
+  }
+
+  &.sheet.hazard form > header .details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 
   &.sheet.hazard form > header .title {
@@ -38,6 +37,7 @@
   &.sheet.hazard .sidebar .sidebar-title {
     border: unset;
   }
+
   &.sheet.hazard .sidebar {
     border: unset;
     box-shadow: unset;
@@ -55,7 +55,7 @@
     margin: 4px 6px 0;
     border: 1px solid var(--color-warm-3);
     background: var(--color-warm-4);
-    border-radius: var(--border-radius);
+
     .section-header {
       background: unset;
       border: unset;

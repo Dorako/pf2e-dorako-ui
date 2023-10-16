@@ -93,6 +93,7 @@
   --alt: var(--color-cool-3);
   --bg: var(--color-warm-3);
   --visibility-gm-bg: var(--color-warm-3);
+  --blind-roll: var(--color-warm-3);
 
   [data-visibility]:not([data-visibility="all"]) {
     outline: 1px dashed var(--color-scrollbar-border);
@@ -277,7 +278,6 @@
 
   &.window-app {
     backdrop-filter: blur(4px);
-    box-shadow: 0px 1px 20px 3px black;
     // prettier-ignore
     box-shadow: 0px 5px 20px 3px black,
                 0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent),
@@ -350,7 +350,6 @@
     cursor: pointer;
     font-size: var(--font-size-14);
     gap: 5px;
-    // position: relative;
     --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
     text-shadow: 0px 1px 2px black;
@@ -365,10 +364,6 @@
     &.active {
       outline: 1px solid var(--button-focus-outline-color);
       box-shadow: 0 0 4px var(--button-focus-outline-color);
-    }
-    > i {
-      //   position: absolute;
-      //   left: 6px;
     }
   }
 
@@ -432,7 +427,9 @@
     font-size: var(--font-size-14);
     transition: outline-color 0.5s;
 
+    &:hover,
     &:focus {
+      cursor: pointer;
       outline: 2px solid var(--input-focus-outline-color);
     }
   }
@@ -491,13 +488,9 @@
     background: var(--color-cool-4);
   }
   .editor-edit {
-    @include f2-app;
+    @include f2-button-warm;
     border-radius: 3px;
     padding: 2px 5px;
-    &:hover {
-      border-color: var(--color-warm-1);
-      background-color: var(--color-warm-2);
-    }
   }
 
   table tr:nth-child(even) {
@@ -514,15 +507,12 @@
 /* ----------------------------------------- */
 
 .foundry2 {
-  .tags.tags.paizo-style {
-    background-color: var(--color-cool-5-50);
-  }
-
   &.pf2e.item.sheet {
     --color-text-dark-2: var(--color-light-3);
     --color-text-dark-4: var(--color-light-3);
-    --color-text-dark-input: var(--color-light-2);
+    --color-text-dark-input: var(--color-light-3);
     --color-border-dark: var(--color-light-2);
+    --color-border-medium: var(--color-cool-3);
 
     input:disabled {
       --button-background-color: var(--color-cool-5);
@@ -535,8 +525,6 @@
       border-radius: 3px;
     }
   }
-
-  --blind-roll: var(--color-warm-3);
 
   &#generate-check-prompt {
     nav h4 a {
@@ -592,6 +580,33 @@
     }
   }
 
+  &.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
+    @include f2-button-warm;
+    border-radius: 3px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    right: 40px;
+    height: 28px;
+    width: 28px;
+    background-color: var(--color-warm-4);
+    border-color: var(--color-warm-3);
+    > i {
+      margin-top: 3px;
+    }
+  }
+
+  &.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
+    @include f2-button-cool;
+    border-radius: 3px;
+    // display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+  }
+
+  &.pf2e.item.sheet form .sheet-content section.sidebar .item-summary,
   &.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
     color: var(--color-light-2);
   }
@@ -650,11 +665,7 @@
     gap: 5px;
     margin: 2px;
     > a {
-      //   --button-border-color: transparent; // bad foundry default
-      --button-border-color: var(--color-cool-4);
-      &.active {
-        text-decoration: unset;
-      }
+      @include f2-button-warm;
     }
   }
 
@@ -669,11 +680,12 @@
     color: var(--color-text-dark-4); // System using hardcoded color
   }
 
+  &.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes,
   &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
-    // background-color: var(--visibility-gm-bg);
-    border-radius: 3px;
-    background-color: var(--app-background);
-    border-color: var(--color-cool-3);
+    @include f2-app;
+    background-color: var(--visibility-gm-bg);
+    border-style: dashed;
+    border-color: var(--color-warm-4);
   }
 
   &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes,
@@ -711,6 +723,11 @@
     border: 1px solid var(--color-cool-3);
   }
 
+  //   .tags.tags.paizo-style {
+  //     // @include f2-input;
+  //     // background-color: var(--color-cool-5);
+  //   }
+
   .tagify,
   tags.tagify.pf2e-tagify {
     --tags-disabled-bg: #f1f1f1;
@@ -744,6 +761,9 @@
     --tag-border-color: var(--color-cool-3);
     --tags-border-color: var(--color-cool-3);
 
+    border: 1px solid var(--color-cool-4);
+    border-radius: 3px;
+
     &.tagify--empty .tagify__input::before {
       color: var(--color-light-5);
     }
@@ -752,10 +772,19 @@
     &:hover {
       box-shadow: unset;
     }
+    select.tag {
+      border-width: 1px 1px 1px 1px;
+      height: var(--font-size-23);
+    }
 
     tag {
       border-radius: 4px;
       border: 1px solid var(--tag-border-color);
+    }
+    tag .tagify__tag__removeBtn {
+      width: 12px;
+      height: 12px;
+      font: 12px/1 Arial;
     }
     tag .tagify__tag__removeBtn,
     tag > div .tagify__tag-text {
@@ -771,5 +800,38 @@
 
   .tox .tox-sidebar-wrap {
     background-color: white;
+  }
+  .tags .tag {
+    height: auto;
+    padding: 3px 3px;
+  }
+
+  .tags,
+  .tags.paizo-style {
+    gap: 1px;
+
+    tag {
+      height: auto;
+    }
+
+    .tag,
+    select.tag,
+    tag:not(.tag_transparent) {
+      border-radius: 0px;
+      box-shadow: unset;
+      border: 1px solid var(--tertiary);
+      outline: 1px solid var(--gold-brown);
+      padding: 0.33em 0.33em;
+    }
+    .tag:first-child,
+    select.tag:first-child,
+    tag:first-child {
+      border-left-width: 1px;
+    }
+    .tag:first-child,
+    select.tag:last-child,
+    tag:last-child {
+      border-right-width: 1px;
+    }
   }
 }

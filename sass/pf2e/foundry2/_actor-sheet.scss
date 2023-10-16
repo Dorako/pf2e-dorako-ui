@@ -1,27 +1,11 @@
 .foundry2 {
   &.pf2e.actor form input[type="text"],
   &.pf2e.actor form input[type="number"] {
-    border: 1px solid var(--color-cool-3);
-    background: var(--color-cool-4);
-    color: var(--color-light-2);
-    &:hover,
-    &:focus {
-      border: 1px solid var(--color-cool-3);
-      outline: 2px solid var(--color-cool-3);
-      box-shadow: var(--box-shadow);
-    }
+    @include f2-input;
   }
 
   &.sheet nav.sheet-tabs .item {
-    @include f2-app;
-    @include quick-transition;
-    border-radius: 3px;
-    &:hover,
-    &.active {
-      border-color: var(--color-warm-1);
-      background: var(--color-warm-2);
-      color: var(--color-light-2);
-    }
+    @include f2-button-warm;
     &.disabled {
       border-color: var(--color-warm-4);
       background: var(--color-cool-5);
@@ -39,6 +23,7 @@
   .tags.paizo-style .tag.rarity > option[value="common"] {
     color: black;
   }
+
   .currency li > button {
     text-shadow: unset;
   }

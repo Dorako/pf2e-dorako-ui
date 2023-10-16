@@ -1,3 +1,10 @@
+# 2.10.4
+
+- (Refinement) Added Foundry 2 styling for the Critical hit deck journals.
+- (Fix) Resolved an issue where the CRB styled journal styling would affect the Critical hit deck journals.
+- (Refinement) Refactored the Foundry 2 styling to use more mixins.
+- (Refinement) Various minor adjustsments to Foundry 2 styling.
+
 # 2.10.3
 
 - (Refinement) Made the new Foundry 2 sheets actually render automatically, rather than only via debug button...

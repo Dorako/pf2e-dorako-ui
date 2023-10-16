@@ -268,8 +268,7 @@
 /* ----------------------------------------- */
 
 .foundry2.placeable-hud input[type="text"] {
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
+  @include f2-input;
 }
 
 .foundry2 {
@@ -298,14 +297,7 @@
   }
 
   &#token-hud .status-effects .title-bar {
-    @include f2-app;
-    background: var(--app-background);
-    border: 1px solid var(--color-warm-1);
-    box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
-    backdrop-filter: blur(5px);
-    border-radius: var(--border-radius);
-    -webkit-backdrop-filter: blur(5px);
-    text-shadow: 0px 0px 3px black;
+    @include f2-tooltip;
   }
 
   &#token-hud .status-effects .effect-control .badge {
@@ -333,7 +325,6 @@
 
   .control-icon {
     @include f2-app;
-    @include quick-transition;
     text-shadow: 0px 1px 2px black;
 
     &:hover,
@@ -348,11 +339,14 @@
 
     &[data-action="overhead"],
     &[data-action="underfoot"] {
+      @include quick-transition;
       background-color: var(--color-warm-4);
+      border-color: var(--color-warm-3);
 
       &:hover,
       &.active {
-        background-color: var(--color-warm-3);
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
         > img {
           filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
         }
@@ -373,11 +367,7 @@
     &[data-action="delay"]            // from flatcheck helper
     {
       &:hover {
-        background-color: var(--color-warm-2);
-        border-color: var(--color-warm-1);
-        > img {
-          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
-        }
+        @include f2-button-warm;
       }
     }
 
@@ -391,17 +381,7 @@
     &[data-action="target"],
     &[data-action="active"],
     &[data-action="mystify"] {
-      background-color: var(--color-cool-3);
-      border-color: var(--color-cool-2);
-
-      &:hover,
-      &.active {
-        background-color: var(--color-cool-2);
-        border-color: var(--color-cool-1);
-        > img {
-          filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
-        }
-      }
+      @include f2-button-cool;
     }
   }
 }

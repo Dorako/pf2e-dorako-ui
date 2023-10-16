@@ -69,10 +69,11 @@ for (const app of [
   ...baseThemePf2eSheets.filter((elem) => elem !== "KingdomSheetPF2e" && elem !== "CharacterSheetPF2e"),
 ]) {
   Hooks.on("render" + app, (app, html, data) => {
-    let html0 = html[0];
-    if (!html0.classList.contains("window-app")) return;
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;
+    let html0 = html[0];
+    if (!html0.classList.contains("window-app")) return;
+    if (html0.classList.contains("character")) return;
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is PF2e .window-app "Application" => add .foundry2`
     );

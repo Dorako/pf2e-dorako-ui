@@ -193,21 +193,29 @@
 }
 
 .foundry2 #context-menu {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
   background: var(--app-background);
   border: 1px solid var(--color-warm-1);
   box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
   backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
   text-shadow: 0px 0px 3px black;
-  border-radius: var(--border-radius);
 }
 .foundry2 #context-menu li.context-item:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 .foundry2 #context-menu li.context-item:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 .foundry2 #context-menu li.context-item:hover {
   box-shadow: 0px 0px 0px 1px var(--color-warm-1);
@@ -866,7 +874,6 @@ nav#controls.foundry2 ol.control-tools.main-control {
 }
 nav#controls.foundry2 ol.control-tools li.control-tool,
 nav#controls.foundry2 ol.control-tools > li {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
   text-shadow: 0px 1px 2px black;
@@ -874,51 +881,72 @@ nav#controls.foundry2 ol.control-tools > li {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   margin-bottom: var(--controls-margin);
   height: var(--control-size);
   width: var(--control-size);
   font-size: calc(var(--control-size) - 12px);
-  color: var(--color-light-3);
 }
-nav#controls.foundry2 ol.control-tools li.control-tool img,
-nav#controls.foundry2 ol.control-tools > li img {
-  filter: sepia() grayscale(0.9) brightness(0.8) drop-shadow(0px 0px 3px black);
+nav#controls.foundry2 ol.control-tools li.control-tool:hover, nav#controls.foundry2 ol.control-tools li.control-tool.active,
+nav#controls.foundry2 ol.control-tools > li:hover,
+nav#controls.foundry2 ol.control-tools > li.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
-nav#controls.foundry2 ol.control-tools li.control-tool.active, nav#controls.foundry2 ol.control-tools li.control-tool:hover,
-nav#controls.foundry2 ol.control-tools > li.active,
-nav#controls.foundry2 ol.control-tools > li:hover {
-  color: var(--color-light-1);
-  background-color: var(--color-warm-2);
-  border: 1px solid var(--color-warm-1);
+nav#controls.foundry2 ol.control-tools li.control-tool > img,
+nav#controls.foundry2 ol.control-tools > li > img {
+  filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
 }
-nav#controls.foundry2 ol.control-tools li.control-tool.active img, nav#controls.foundry2 ol.control-tools li.control-tool:hover img,
-nav#controls.foundry2 ol.control-tools > li.active img,
-nav#controls.foundry2 ol.control-tools > li:hover img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 0px 3px black);
+nav#controls.foundry2 ol.control-tools li.control-tool:hover > img,
+nav#controls.foundry2 ol.control-tools > li:hover > img {
+  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
 }
 nav#controls.foundry2 ol.control-tools li.control-tool.toggle,
 nav#controls.foundry2 ol.control-tools > li.toggle {
-  background-color: var(--color-cool-3);
-  border: 1px solid var(--color-cool-2);
-}
-nav#controls.foundry2 ol.control-tools li.control-tool.toggle.active, nav#controls.foundry2 ol.control-tools li.control-tool.toggle:hover,
-nav#controls.foundry2 ol.control-tools > li.toggle.active,
-nav#controls.foundry2 ol.control-tools > li.toggle:hover {
-  color: var(--color-light-1);
-  background-color: var(--color-cool-2);
-  border: 1px solid var(--color-cool-1);
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-3);
+  border-color: var(--color-cool-2);
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.toggle:hover, nav#controls.foundry2 ol.control-tools li.control-tool.toggle.active,
+nav#controls.foundry2 ol.control-tools > li.toggle:hover,
+nav#controls.foundry2 ol.control-tools > li.toggle.active {
+  background: var(--color-cool-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-2);
+  box-shadow: var(--box-shadow);
+  text-decoration: unset;
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.toggle:hover:hover, nav#controls.foundry2 ol.control-tools li.control-tool.toggle.active:hover,
+nav#controls.foundry2 ol.control-tools > li.toggle:hover:hover,
+nav#controls.foundry2 ol.control-tools > li.toggle.active:hover {
+  border-color: var(--color-cool-1);
 }
 
 #darkness-adjuster.foundry2 {
   height: 42px !important;
-  margin-top: 3px;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
-  color: var(--color-light-1);
-  background-color: var(--color-cool-2);
-  border: 1px solid var(--color-cool-1);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  margin-top: 3px;
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
 }
 #darkness-adjuster.foundry2 .window-content {
   overflow: hidden;
@@ -1226,7 +1254,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 #hotbar.foundry2 .macro.inactive::before, #hotbar.foundry2 .macro.active::before {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
@@ -1351,7 +1378,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
 /* Foundry2                                  */
 /* ----------------------------------------- */
 #navigation.foundry2 {
-  color: var(--color-light-2);
   width: calc(100% - 46px);
 }
 #navigation.foundry2 #nav-toggle {
@@ -1370,7 +1396,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   height: var(--control-size);
 }
 #navigation.foundry2 ol#scene-list li.nav-item {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
   text-shadow: 0px 1px 2px black;
@@ -1379,7 +1404,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   line-height: var(--control-size);
+}
+#navigation.foundry2 ol#scene-list li.nav-item:hover, #navigation.foundry2 ol#scene-list li.nav-item.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
 #navigation.foundry2 ol#scene-list li.nav-item > a:hover {
   text-shadow: unset;
@@ -1388,30 +1421,75 @@ nav#controls.foundry2 ol.control-tools > li.toggle:hover {
   text-shadow: none;
 }
 #navigation.foundry2 ol#scene-list li.nav-item:hover {
-  color: var(--color-light-1);
+  color: var(--color-light-2);
   background-color: var(--color-warm-2);
   border-color: var(--color-warm-1);
 }
 #navigation.foundry2 ol#scene-list li.nav-item.view {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--color-warm-2);
   color: var(--color-light-2);
   border-color: var(--color-warm-1);
 }
-#navigation.foundry2 ol#scene-list li.nav-item.view:hover {
-  color: var(--color-light-1);
-  background-color: var(--color-warm-1);
+#navigation.foundry2 ol#scene-list li.nav-item.view:hover, #navigation.foundry2 ol#scene-list li.nav-item.view.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
-#navigation.foundry2 ol#scene-list li.nav-item.gm {
-  background-color: var(--color-cool-3);
+#navigation.foundry2 ol#scene-list li.nav-item.view.active {
   border-color: var(--color-cool-2);
 }
-#navigation.foundry2 ol#scene-list li.nav-item.gm:hover, #navigation.foundry2 ol#scene-list li.nav-item.gm.view {
-  color: var(--color-light-1);
-  background-color: var(--color-cool-2);
+#navigation.foundry2 ol#scene-list li.nav-item.gm {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-3);
+  border-color: var(--color-cool-2);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm:hover, #navigation.foundry2 ol#scene-list li.nav-item.gm.active {
+  background: var(--color-cool-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-2);
+  box-shadow: var(--box-shadow);
+  text-decoration: unset;
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm:hover:hover, #navigation.foundry2 ol#scene-list li.nav-item.gm.active:hover {
   border-color: var(--color-cool-1);
 }
-#navigation.foundry2 ol#scene-list li.nav-item.active {
+#navigation.foundry2 ol#scene-list li.nav-item.gm.active {
+  color: var(--color-light-2);
+  border-color: var(--color-cool-3);
+  background-color: var(--color-cool-3);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm.active:hover {
+  color: var(--color-light-1);
+  border-color: var(--color-cool-1);
+  background-color: var(--color-cool-2);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm.view {
+  background-color: var(--color-cool-2);
+  color: var(--color-light-2);
   border-color: var(--color-warm-1);
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm.view:hover {
+  border-color: var(--color-warm-1);
+  background-color: var(--color-cool-2);
 }
 
 /* ----------------------------------------- */
@@ -1684,6 +1762,10 @@ section.chat-sidebar {
 .foundry2#sidebar.collapsed #sidebar-tabs > .item.active {
   border-color: var(--color-warm-1);
 }
+.foundry2#sidebar.collapsed #sidebar-tabs > .item.active:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
 .foundry2 #settings ul#game-details li.system-buttons {
   gap: 5px;
 }
@@ -1928,8 +2010,27 @@ section.chat-sidebar {
 /* Foundry2                                  */
 /* ----------------------------------------- */
 .foundry2.placeable-hud input[type=text] {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+  text-shadow: unset;
+}
+.foundry2.placeable-hud input[type=text]:hover, .foundry2.placeable-hud input[type=text]:focus {
+  outline: 2px solid var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.placeable-hud input[type=text]::placeholder {
+  color: var(--color-light-4);
 }
 
 .foundry2#token-hud .status-effects.active {
@@ -2003,7 +2104,6 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   text-shadow: 0px 1px 2px black;
 }
 .foundry2 .control-icon:hover, .foundry2 .control-icon.active {
@@ -2014,10 +2114,13 @@ section.chat-sidebar {
   filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
 }
 .foundry2 .control-icon[data-action=overhead], .foundry2 .control-icon[data-action=underfoot] {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background-color: var(--color-warm-4);
+  border-color: var(--color-warm-3);
 }
 .foundry2 .control-icon[data-action=overhead]:hover, .foundry2 .control-icon[data-action=overhead].active, .foundry2 .control-icon[data-action=underfoot]:hover, .foundry2 .control-icon[data-action=underfoot].active {
-  background-color: var(--color-warm-3);
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
 }
 .foundry2 .control-icon[data-action=overhead]:hover > img, .foundry2 .control-icon[data-action=overhead].active > img, .foundry2 .control-icon[data-action=underfoot]:hover > img, .foundry2 .control-icon[data-action=underfoot].active > img {
   filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
@@ -2026,22 +2129,45 @@ section.chat-sidebar {
   background-color: var(--color-warm-2);
 }
 .foundry2 .control-icon[data-action=sort-up]:hover, .foundry2 .control-icon[data-action=sort-down]:hover, .foundry2 .control-icon[data-action=config]:hover, .foundry2 .control-icon[data-action=trigger]:hover, .foundry2 .control-icon[data-action=pf2e-perception]:hover, .foundry2 .control-icon[data-action=clown-car]:hover, .foundry2 .control-icon[data-action=delay]:hover {
-  background-color: var(--color-warm-2);
-  border-color: var(--color-warm-1);
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
-.foundry2 .control-icon[data-action=sort-up]:hover > img, .foundry2 .control-icon[data-action=sort-down]:hover > img, .foundry2 .control-icon[data-action=config]:hover > img, .foundry2 .control-icon[data-action=trigger]:hover > img, .foundry2 .control-icon[data-action=pf2e-perception]:hover > img, .foundry2 .control-icon[data-action=clown-car]:hover > img, .foundry2 .control-icon[data-action=delay]:hover > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+.foundry2 .control-icon[data-action=sort-up]:hover:hover, .foundry2 .control-icon[data-action=sort-up]:hover.active, .foundry2 .control-icon[data-action=sort-down]:hover:hover, .foundry2 .control-icon[data-action=sort-down]:hover.active, .foundry2 .control-icon[data-action=config]:hover:hover, .foundry2 .control-icon[data-action=config]:hover.active, .foundry2 .control-icon[data-action=trigger]:hover:hover, .foundry2 .control-icon[data-action=trigger]:hover.active, .foundry2 .control-icon[data-action=pf2e-perception]:hover:hover, .foundry2 .control-icon[data-action=pf2e-perception]:hover.active, .foundry2 .control-icon[data-action=clown-car]:hover:hover, .foundry2 .control-icon[data-action=clown-car]:hover.active, .foundry2 .control-icon[data-action=delay]:hover:hover, .foundry2 .control-icon[data-action=delay]:hover.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
 .foundry2 .control-icon[data-action=visibility], .foundry2 .control-icon[data-action=effects], .foundry2 .control-icon[data-action=combat], .foundry2 .control-icon[data-action=locked], .foundry2 .control-icon[data-action=target], .foundry2 .control-icon[data-action=active], .foundry2 .control-icon[data-action=mystify] {
-  background-color: var(--color-cool-3);
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-3);
   border-color: var(--color-cool-2);
 }
 .foundry2 .control-icon[data-action=visibility]:hover, .foundry2 .control-icon[data-action=visibility].active, .foundry2 .control-icon[data-action=effects]:hover, .foundry2 .control-icon[data-action=effects].active, .foundry2 .control-icon[data-action=combat]:hover, .foundry2 .control-icon[data-action=combat].active, .foundry2 .control-icon[data-action=locked]:hover, .foundry2 .control-icon[data-action=locked].active, .foundry2 .control-icon[data-action=target]:hover, .foundry2 .control-icon[data-action=target].active, .foundry2 .control-icon[data-action=active]:hover, .foundry2 .control-icon[data-action=active].active, .foundry2 .control-icon[data-action=mystify]:hover, .foundry2 .control-icon[data-action=mystify].active {
-  background-color: var(--color-cool-2);
-  border-color: var(--color-cool-1);
+  background: var(--color-cool-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-2);
+  box-shadow: var(--box-shadow);
+  text-decoration: unset;
 }
-.foundry2 .control-icon[data-action=visibility]:hover > img, .foundry2 .control-icon[data-action=visibility].active > img, .foundry2 .control-icon[data-action=effects]:hover > img, .foundry2 .control-icon[data-action=effects].active > img, .foundry2 .control-icon[data-action=combat]:hover > img, .foundry2 .control-icon[data-action=combat].active > img, .foundry2 .control-icon[data-action=locked]:hover > img, .foundry2 .control-icon[data-action=locked].active > img, .foundry2 .control-icon[data-action=target]:hover > img, .foundry2 .control-icon[data-action=target].active > img, .foundry2 .control-icon[data-action=active]:hover > img, .foundry2 .control-icon[data-action=active].active > img, .foundry2 .control-icon[data-action=mystify]:hover > img, .foundry2 .control-icon[data-action=mystify].active > img {
-  filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
+.foundry2 .control-icon[data-action=visibility]:hover:hover, .foundry2 .control-icon[data-action=visibility].active:hover, .foundry2 .control-icon[data-action=effects]:hover:hover, .foundry2 .control-icon[data-action=effects].active:hover, .foundry2 .control-icon[data-action=combat]:hover:hover, .foundry2 .control-icon[data-action=combat].active:hover, .foundry2 .control-icon[data-action=locked]:hover:hover, .foundry2 .control-icon[data-action=locked].active:hover, .foundry2 .control-icon[data-action=target]:hover:hover, .foundry2 .control-icon[data-action=target].active:hover, .foundry2 .control-icon[data-action=active]:hover:hover, .foundry2 .control-icon[data-action=active].active:hover, .foundry2 .control-icon[data-action=mystify]:hover:hover, .foundry2 .control-icon[data-action=mystify].active:hover {
+  border-color: var(--color-cool-1);
 }
 
 :root {
@@ -2126,6 +2252,7 @@ section.chat-sidebar {
   --alt: var(--color-cool-3);
   --bg: var(--color-warm-3);
   --visibility-gm-bg: var(--color-warm-3);
+  --blind-roll: var(--color-warm-3);
 }
 .foundry2 [data-visibility]:not([data-visibility=all]) {
   outline: 1px dashed var(--color-scrollbar-border);
@@ -2269,7 +2396,6 @@ section.chat-sidebar {
 }
 .foundry2.window-app {
   backdrop-filter: blur(4px);
-  box-shadow: 0px 1px 20px 3px black;
   box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent), 0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent), 0px 0px 10px 5px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
 }
 .foundry2.window-app .window-header {
@@ -2393,14 +2519,22 @@ section.chat-sidebar {
   font-size: var(--font-size-14);
   transition: outline-color 0.5s;
 }
-.foundry2#token-action-hud-core-settings input:focus,
+.foundry2#token-action-hud-core-settings input:hover, .foundry2#token-action-hud-core-settings input:focus,
+.foundry2 input[type=text]:hover,
 .foundry2 input[type=text]:focus,
+.foundry2 input[type=number]:hover,
 .foundry2 input[type=number]:focus,
+.foundry2 input[type=password]:hover,
 .foundry2 input[type=password]:focus,
+.foundry2 input[type=date]:hover,
 .foundry2 input[type=date]:focus,
+.foundry2 input[type=time]:hover,
 .foundry2 input[type=time]:focus,
+.foundry2 input[type=search]:hover,
 .foundry2 input[type=search]:focus,
+.foundry2 select:hover,
 .foundry2 select:focus {
+  cursor: pointer;
   outline: 2px solid var(--input-focus-outline-color);
 }
 .foundry2 input[type=checkbox]:checked,
@@ -2456,12 +2590,16 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   border-radius: 3px;
   padding: 2px 5px;
 }
-.foundry2 .editor-edit:hover {
+.foundry2 .editor-edit:hover, .foundry2 .editor-edit.active {
+  background: var(--color-warm-2);
   border-color: var(--color-warm-1);
-  background-color: var(--color-warm-2);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
 .foundry2 table tr:nth-child(even) {
   background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
@@ -2473,17 +2611,12 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* System overwrites                         */
 /* ----------------------------------------- */
-.foundry2 {
-  --blind-roll: var(--color-warm-3);
-}
-.foundry2 .tags.tags.paizo-style {
-  background-color: var(--color-cool-5-50);
-}
 .foundry2.pf2e.item.sheet {
   --color-text-dark-2: var(--color-light-3);
   --color-text-dark-4: var(--color-light-3);
-  --color-text-dark-input: var(--color-light-2);
+  --color-text-dark-input: var(--color-light-3);
   --color-border-dark: var(--color-light-2);
+  --color-border-medium: var(--color-cool-3);
 }
 .foundry2.pf2e.item.sheet input:disabled {
   --button-background-color: var(--color-cool-5);
@@ -2564,7 +2697,65 @@ section.chat-sidebar {
 .foundry2.pf2e.item.sheet form .form-list.basics, .foundry2.pf2e.item.sheet form section.sheet-body fieldset.basics {
   border-color: transparent;
 }
-.foundry2.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  border-radius: 3px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  right: 40px;
+  height: 28px;
+  width: 28px;
+  background-color: var(--color-warm-4);
+  border-color: var(--color-warm-3);
+}
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:hover, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
+}
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes > i {
+  margin-top: 3px;
+}
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-3);
+  border-color: var(--color-cool-2);
+  border-radius: 3px;
+  align-content: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+}
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:hover, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active {
+  background: var(--color-cool-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-2);
+  box-shadow: var(--box-shadow);
+  text-decoration: unset;
+}
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:hover:hover, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active:hover {
+  border-color: var(--color-cool-1);
+}
+.foundry2.pf2e.item.sheet form .sheet-content section.sidebar .item-summary, .foundry2.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
   color: var(--color-light-2);
 }
 .foundry2 .tags .tag.tag_transparent,
@@ -2602,9 +2793,21 @@ section.chat-sidebar {
   margin: 2px;
 }
 .foundry2.pf2e.item.sheet form > nav .sheet-tabs > a {
-  --button-border-color: var(--color-cool-4);
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.active {
+.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a:hover, .foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
   text-decoration: unset;
 }
 .foundry2.pf2e.item.sheet form .effects-container, .foundry2.pf2e.item.sheet form .details-container, .foundry2.pf2e.item.sheet form .dice-data {
@@ -2614,10 +2817,18 @@ section.chat-sidebar {
 .foundry2.pf2e.item.sheet form section.sheet-body .item-mystification.active .mystification-status label {
   color: var(--color-text-dark-4);
 }
-.foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
-  border-radius: 3px;
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes, .foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
   background-color: var(--app-background);
-  border-color: var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  background-color: var(--visibility-gm-bg);
+  border-style: dashed;
+  border-color: var(--color-warm-4);
 }
 .foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, .foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
   background: var(--color-cool-4);
@@ -2678,6 +2889,8 @@ section.chat-sidebar {
   --tag-bg: var(--color-cool-4);
   --tag-border-color: var(--color-cool-3);
   --tags-border-color: var(--color-cool-3);
+  border: 1px solid var(--color-cool-4);
+  border-radius: 3px;
   background: var(--color-cool-4);
 }
 .foundry2 .tagify.tagify--empty .tagify__input::before,
@@ -2688,10 +2901,21 @@ section.chat-sidebar {
 .foundry2 tags.tagify.pf2e-tagify:hover {
   box-shadow: unset;
 }
+.foundry2 .tagify select.tag,
+.foundry2 tags.tagify.pf2e-tagify select.tag {
+  border-width: 1px 1px 1px 1px;
+  height: var(--font-size-23);
+}
 .foundry2 .tagify tag,
 .foundry2 tags.tagify.pf2e-tagify tag {
   border-radius: 4px;
   border: 1px solid var(--tag-border-color);
+}
+.foundry2 .tagify tag .tagify__tag__removeBtn,
+.foundry2 tags.tagify.pf2e-tagify tag .tagify__tag__removeBtn {
+  width: 12px;
+  height: 12px;
+  font: 12px/1 Arial;
 }
 .foundry2 .tagify tag .tagify__tag__removeBtn,
 .foundry2 .tagify tag > div .tagify__tag-text,
@@ -2704,6 +2928,46 @@ section.chat-sidebar {
 }
 .foundry2 .tox .tox-sidebar-wrap {
   background-color: white;
+}
+.foundry2 .tags .tag {
+  height: auto;
+  padding: 3px 3px;
+}
+.foundry2 .tags,
+.foundry2 .tags.paizo-style {
+  gap: 1px;
+}
+.foundry2 .tags tag,
+.foundry2 .tags.paizo-style tag {
+  height: auto;
+}
+.foundry2 .tags .tag,
+.foundry2 .tags select.tag,
+.foundry2 .tags tag:not(.tag_transparent),
+.foundry2 .tags.paizo-style .tag,
+.foundry2 .tags.paizo-style select.tag,
+.foundry2 .tags.paizo-style tag:not(.tag_transparent) {
+  border-radius: 0px;
+  box-shadow: unset;
+  border: 1px solid var(--tertiary);
+  outline: 1px solid var(--gold-brown);
+  padding: 0.33em 0.33em;
+}
+.foundry2 .tags .tag:first-child,
+.foundry2 .tags select.tag:first-child,
+.foundry2 .tags tag:first-child,
+.foundry2 .tags.paizo-style .tag:first-child,
+.foundry2 .tags.paizo-style select.tag:first-child,
+.foundry2 .tags.paizo-style tag:first-child {
+  border-left-width: 1px;
+}
+.foundry2 .tags .tag:first-child,
+.foundry2 .tags select.tag:last-child,
+.foundry2 .tags tag:last-child,
+.foundry2 .tags.paizo-style .tag:first-child,
+.foundry2 .tags.paizo-style select.tag:last-child,
+.foundry2 .tags.paizo-style tag:last-child {
+  border-right-width: 1px;
 }
 
 .dorako-ui.sheet.familiar form {
@@ -3503,25 +3767,37 @@ section.chat-sidebar {
   color: var(--color-light-2);
 }
 #effects-panel.foundry2 .effect-item .effect-info {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
   background: var(--app-background);
   border: 1px solid var(--color-warm-1);
   box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
   backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
+  text-shadow: 0px 0px 3px black;
   min-height: 34px;
   font-size: var(--font-size-20);
   line-height: var(--font-size-20);
-  text-shadow: 0px 0px 3px black;
-  border-radius: var(--border-radius);
 }
 #effects-panel.foundry2 .effect-item .effect-info .description {
   background: unset;
 }
 #effects-panel.foundry2 .effect-item > .icon {
+  background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
 }
 #effects-panel.foundry2 .effect-item > .icon.aura {
   border-radius: 50%;
@@ -4567,18 +4843,56 @@ section.chat-sidebar {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-.foundry2.sheet.hazard input[type=text], .foundry2.sheet.hazard input[type=number] {
+.foundry2.sheet.hazard .section-container.publication .section-body input[type=text], .foundry2.sheet.hazard input[type=text], .foundry2.sheet.hazard input[type=number] {
+  background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
-  background: var(--color-cool-4);
-}
-.foundry2.sheet.hazard input[type=text]:hover, .foundry2.sheet.hazard input[type=text]:focus, .foundry2.sheet.hazard input[type=number]:hover, .foundry2.sheet.hazard input[type=number]:focus {
-  border: 1px solid var(--color-cool-3);
-  outline: 2px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+  text-shadow: unset;
+}
+.foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:hover, .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:focus, .foundry2.sheet.hazard input[type=text]:hover, .foundry2.sheet.hazard input[type=text]:focus, .foundry2.sheet.hazard input[type=number]:hover, .foundry2.sheet.hazard input[type=number]:focus {
+  outline: 2px solid var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.hazard .section-container.publication .section-body input[type=text]::placeholder, .foundry2.sheet.hazard input[type=text]::placeholder, .foundry2.sheet.hazard input[type=number]::placeholder {
+  color: var(--color-light-4);
 }
 .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=text]:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=number]:focus {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+  text-shadow: unset;
+}
+.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):hover, .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):focus, .foundry2.sheet.hazard form > header input[type=text]:focus:hover, .foundry2.sheet.hazard form > header input[type=text]:focus:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):hover, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):focus, .foundry2.sheet.hazard form > header input[type=number]:focus:hover, .foundry2.sheet.hazard form > header input[type=number]:focus:focus {
+  outline: 2px solid var(--color-cool-3);
   border: 1px solid var(--color-cool-3);
   box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled)::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled)::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus::placeholder {
+  color: var(--color-light-4);
+}
+.foundry2.sheet.hazard form > header .details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 .foundry2.sheet.hazard form > header .title {
   align-items: center;
@@ -4611,7 +4925,6 @@ section.chat-sidebar {
   margin: 4px 6px 0;
   border: 1px solid var(--color-warm-3);
   background: var(--color-warm-4);
-  border-radius: var(--border-radius);
 }
 .foundry2.sheet.hazard .section-container .section-header {
   background: unset;
@@ -4658,14 +4971,19 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
-  border: 1px solid var(--color-cool-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
   border-radius: 3px;
-  color: var(--color-light-2);
   text-shadow: unset;
 }
+.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:hover, .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:focus, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:hover, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:focus, .foundry2.sheet.familiar select:hover, .foundry2.sheet.familiar select:focus, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:hover, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:focus {
+  outline: 2px solid var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
 .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input::placeholder, .foundry2.sheet.familiar select::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]::placeholder {
-  color: var(--color-light-3);
+  color: var(--color-light-4);
 }
 .foundry2.sheet.familiar .skills-content .skills-list .skill-name {
   background-color: var(--app-background);
@@ -4678,10 +4996,12 @@ section.chat-sidebar {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name:hover {
-  border-color: var(--color-warm-1);
+.foundry2.sheet.familiar .skills-content .skills-list .skill-name:hover, .foundry2.sheet.familiar .skills-content .skills-list .skill-name.active {
   background: var(--color-warm-2);
-  color: var(--color-light-1);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
 
 .foundry2.sheet.actor.loot {
@@ -4710,9 +5030,27 @@ section.chat-sidebar {
   gap: 3px;
 }
 .foundry2.sheet.actor.loot .sheet-header .tags .tag, .foundry2.sheet.actor.loot .sheet-header h1 > input {
+  background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background: var(--color-cool-4);
-  color: var(--color-light-2);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+  text-shadow: unset;
+}
+.foundry2.sheet.actor.loot .sheet-header .tags .tag:hover, .foundry2.sheet.actor.loot .sheet-header .tags .tag:focus, .foundry2.sheet.actor.loot .sheet-header h1 > input:hover, .foundry2.sheet.actor.loot .sheet-header h1 > input:focus {
+  outline: 2px solid var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.actor.loot .sheet-header .tags .tag::placeholder, .foundry2.sheet.actor.loot .sheet-header h1 > input::placeholder {
+  color: var(--color-light-4);
 }
 
 .foundry2.actor.npc.sheet {
@@ -4765,14 +5103,27 @@ section.chat-sidebar {
 }
 
 .foundry2.pf2e.actor form input[type=text], .foundry2.pf2e.actor form input[type=number] {
+  background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background: var(--color-cool-4);
-  color: var(--color-light-2);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+  text-shadow: unset;
 }
 .foundry2.pf2e.actor form input[type=text]:hover, .foundry2.pf2e.actor form input[type=text]:focus, .foundry2.pf2e.actor form input[type=number]:hover, .foundry2.pf2e.actor form input[type=number]:focus {
-  border: 1px solid var(--color-cool-3);
   outline: 2px solid var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
   box-shadow: var(--box-shadow);
+}
+.foundry2.pf2e.actor form input[type=text]::placeholder, .foundry2.pf2e.actor form input[type=number]::placeholder {
+  color: var(--color-light-4);
 }
 .foundry2.sheet nav.sheet-tabs .item {
   background-color: var(--app-background);
@@ -4784,12 +5135,13 @@ section.chat-sidebar {
   border-radius: var(--border-radius);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  border-radius: 3px;
 }
 .foundry2.sheet nav.sheet-tabs .item:hover, .foundry2.sheet nav.sheet-tabs .item.active {
-  border-color: var(--color-warm-1);
   background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
   color: var(--color-light-2);
+  text-decoration: unset;
 }
 .foundry2.sheet nav.sheet-tabs .item.disabled {
   border-color: var(--color-warm-4);
@@ -4814,6 +5166,7 @@ section.chat-sidebar {
   --color-border: var(--color-warm-3);
   --alt-dark: var(--color-light-4);
   --sub: var(--color-cool-3);
+  --text-dark: var(--color-light-2);
 }
 .foundry2.sheet.party .tag-light {
   background: var(--tag-color);
@@ -4849,14 +5202,32 @@ section.chat-sidebar {
   color: var(--color-light-4);
 }
 .foundry2.sheet.party form > header input[type=text], .foundry2.sheet.party form > header input[type=number] {
+  background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  border-radius: 3px;
+  text-shadow: unset;
   height: 32px;
 }
 .foundry2.sheet.party form > header input[type=text]:hover, .foundry2.sheet.party form > header input[type=text]:focus, .foundry2.sheet.party form > header input[type=number]:hover, .foundry2.sheet.party form > header input[type=number]:focus {
-  border: 1px solid var(--color-cool-3);
   outline: 2px solid var(--color-cool-3);
+  border: 1px solid var(--color-cool-3);
   box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.party form > header input[type=text]::placeholder, .foundry2.sheet.party form > header input[type=number]::placeholder {
+  color: var(--color-light-4);
+}
+.foundry2.sheet.party .sidebar {
+  box-shadow: unset;
+  border: unset;
 }
 .foundry2.sheet.party form {
   background: unset;
@@ -4879,10 +5250,14 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 .foundry2.sheet.party [data-tab=overview] .summary nav button:hover, .foundry2.sheet.party [data-tab=overview] .summary nav button.active {
-  border: 1px solid var(--color-warm-1);
   background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
 }
 .foundry2.sheet.party [data-tab=overview] .member > .data .main-stats > section {
   background-color: var(--color-warm-4);
@@ -4918,10 +5293,386 @@ section.chat-sidebar {
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
   color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 .foundry2.sheet.party header.content-header .buttons button:hover, .foundry2.sheet.party header.content-header .buttons button.active {
-  border: 1px solid var(--color-warm-1);
   background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
+}
+.foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .icon {
+  background: var(--color-warm-5);
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+.foundry2.chat-message {
+  background: unset;
+  --gold-and-glow: transparent;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  --color-text-light-6: var(--color-cool-3);
+}
+.foundry2.chat-message button {
+  --button-border-color: var(--color-cool-3);
+}
+.foundry2.chat-message.whisper {
+  border-color: var(--color-cool-1);
+  background: var(--color-cool-2);
+}
+.foundry2.chat-message.whisper.blind {
+  border-color: var(--color-scrollbar-border);
+  background: var(--color-scrollbar);
+}
+.foundry2.chat-message .message-content .damage-roll .dice-result .dice-tooltip .instance {
+  border-radius: var(--border-radius);
+}
+.foundry2.chat-message .dice-roll .dice-formula,
+.foundry2.chat-message .dice-roll .dice-total {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+}
+.foundry2.chat-message .dice-roll .dice-formula button,
+.foundry2.chat-message .dice-roll .dice-total button {
+  text-shadow: 0px 1px 2px black;
+  border-color: var(--color-cool-2);
+  background: var(--color-cool-3);
+  border-radius: var(--border-radius);
+}
+.foundry2.chat-message .dice-roll .dice-formula button:hover,
+.foundry2.chat-message .dice-roll .dice-total button:hover {
+  border-color: var(--color-cool-1);
+  background: var(--color-cool-2);
+  color: var(--color-light-2);
+}
+.foundry2.chat-message .dice-tooltip .part-header .part-total {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  box-shadow: unset;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: unset;
+}
+.foundry2.chat-message .pf2e.chat-card .card-header {
+  border: unset;
+}
+.foundry2.chat-message .pf2e.chat-card .card-header img {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  border-color: var(--color-warm-2);
+}
+.foundry2.chat-message .pf2e.chat-card .card-footer {
+  border-top: 1px solid var(--color-cool-2);
+}
+
+/* ----------------------------------------- */
+/* Damage buttons                            */
+/* ----------------------------------------- */
+.foundry2.chat-message button {
+  border-radius: var(--border-radius);
+}
+
+.foundry2.chat-message > .message-content .message-buttons button {
+  border-radius: var(--border-radius);
+}
+
+.foundry2.chat-message .flavor-text hr {
+  display: none;
+}
+.foundry2.chat-message .card-content hr {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.foundry2.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons,
+.foundry2.chat-message .pf2e.chat-card .card-buttons .spell-button {
+  gap: 3px;
+}
+.foundry2.chat-message .persistent-damage-recovery {
+  margin-top: 4px;
+}
+.foundry2.chat-message .persistent-damage-recovery hr {
+  display: none;
+}
+
+.foundry2.message .message-content .damage-application {
+  gap: 3px;
+  margin-top: 3px;
+  text-rendering: geometricPrecision;
+}
+.foundry2.message .message-content .damage-application button {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  margin: 0px;
+}
+.foundry2.message .message-content .damage-application button img {
+  filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 2px black);
+}
+.foundry2.message .message-content .damage-application button.half-damage .transparent-half {
+  display: none;
+}
+.foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken {
+  position: relative;
+}
+.foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
+  content: "\f7a9";
+  font-family: "Font Awesome 5 Free";
+  color: var(--color-cool-3);
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 2.4px;
+  clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
+}
+.foundry2.message .message-content .damage-application button:hover {
+  color: var(--color-light-1);
+  background-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+}
+.foundry2.message .message-content .damage-application button:hover img {
+  filter: invert(1) drop-shadow(0px 1px 2px black);
+}
+.foundry2.message .message-content .damage-application button.shield-block:hover {
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+}
+.foundry2.message .message-content .damage-application button.shield-block.shield-activated {
+  background-color: var(--color-cool-1);
+  border: 1px solid var(--color-cool-2);
+}
+.foundry2.message .message-content .damage-application button.shield-block.shield-activated:hover {
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+}
+.foundry2.message .message-content .damage-application button.heal-damage .fa-stack i.fa-plus {
+  color: var(--color-cool-5);
+  text-shadow: none;
+}
+.foundry2.message .message-content .damage-application button.heal-damage:hover {
+  background-color: var(--color-level-success);
+  border-color: var(--color-level-success-border);
+}
+.foundry2.message .message-content .damage-application button.heal-damage:hover .fa-stack i.fa-plus {
+  color: var(--color-level-success);
+  text-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Header                                    */
+/* ----------------------------------------- */
+.foundry2.chat-message .message-header {
+  background: none;
+  padding: 5px 5px 0px 5px;
+  margin: -5px -5px 0px -5px;
+  border-radius: 5px 5px 0px 0px;
+  gap: 5px;
+}
+.foundry2.chat-message .message-header.dorako-header {
+  border-radius: var(--border-radius);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
+  text-shadow: 0px 1px 1px black;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+.foundry2.chat-message .message-header.dorako-header a {
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+}
+.foundry2.chat-message .message-header.dorako-header a:hover {
+  text-shadow: 0px 1px 1px black;
+  color: var(--color-warm-1);
+}
+.foundry2.chat-message .message-header .message-metadata {
+  flex: 2.5;
+}
+.foundry2.chat-message .message-header .message-timestamp,
+.foundry2.chat-message .message-header .header-meta {
+  border-radius: 3px;
+  padding: 2px;
+  font-size: x-small;
+  align-self: center;
+  text-align: center;
+  text-shadow: none;
+  white-space: nowrap;
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
+  border-color: color-mix(in srgb, var(--header-color) 50%, white);
+}
+.foundry2.chat-message .message-header.dark-header-text {
+  color: var(--header-color);
+}
+.foundry2.chat-message .message-header.dark-header-text .message-sender {
+  color: var(--header-color);
+}
+.foundry2.chat-message .message-header.dark-header-text .header-meta {
+  color: var(--header-color);
+}
+.foundry2.chat-message .message-header .player-name,
+.foundry2.chat-message .message-header .message-sender {
+  max-width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.foundry2.chat-message .message-header .portrait-and-name {
+  flex-grow: 1;
+  display: flex;
+  flex-basis: 100px;
+  gap: 5px;
+}
+.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper {
+  width: var(--avatar-size);
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+}
+.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper .portrait {
+  height: var(--avatar-size);
+  object-fit: contain;
+  z-index: 0;
+}
+.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper .portrait.actor {
+  border-radius: 3px;
+}
+.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  justify-content: left;
+  align-self: center;
+  z-index: 1;
+}
+.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper .message-sender,
+.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper .player-name {
+  align-self: flex-start;
+  line-height: initial;
+}
+
+/* ----------------------------------------- */
+/* Damage colors                             */
+/* ----------------------------------------- */
+.foundry2 .damage {
+  --color-bg-acid: rgba(0, 115, 0, 0.125);
+  --color-bg-bleed: rgba(153, 0, 26, 0.125);
+  --color-bg-chaotic: rgba(166, 0, 166, 0.125);
+  --color-bg-cold: rgba(72, 72, 198, 0.125);
+  --color-bg-electricity: rgba(184, 134, 11, 0.125);
+  --color-bg-evil: rgba(75, 0, 130, 0.125);
+  --color-bg-fire: rgba(166, 47, 0, 0.125);
+  --color-bg-force: rgba(99, 0, 170, 0.125);
+  --color-bg-good: rgba(157, 115, 10, 0.125);
+  --color-bg-lawful: rgba(64, 38, 0, 0.125);
+  --color-bg-mental: rgba(25, 25, 112, 0.125);
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-bg-poison: rgba(91, 115, 50, 0.125);
+  --color-bg-sonic: rgba(0, 139, 139, 0.125);
+  --color-bg-spirit: rgba(90, 85, 133, 0.125);
+  --color-bg-vitality: rgba(255, 255, 224, 0.125);
+  --color-bg-void: rgb(81, 21, 78, 0.125);
+  --color-border-acid: #12a812;
+  --color-border-bleed: #99001a;
+  --color-border-chaotic: #a600a6;
+  --color-border-cold: #2f2fa6;
+  --color-border-electricity: darkgoldenrod;
+  --color-border-evil: indigo;
+  --color-border-fire: #a62f00;
+  --color-border-force: #6300aa;
+  --color-border-good: #9d730a;
+  --color-border-lawful: #402600;
+  --color-border-mental: midnightblue;
+  --color-border-physical: #737272;
+  --color-border-poison: #5b7332;
+  --color-border-sonic: darkcyan;
+  --color-border-spirit: #5a5585;
+  --color-border-vitality: #ffffe0;
+  --color-border-void: rgb(122, 38, 117);
+  --color-text-acid: #34aa34;
+  --color-text-bleed: #59000f;
+  --color-text-chaotic: #660066;
+  --color-text-cold: #3a3ac5;
+  --color-text-electricity: #7c5a07;
+  --color-text-evil: #260042;
+  --color-text-fire: #882700;
+  --color-text-force: #3e006a;
+  --color-text-good: #614706;
+  --color-text-lawful: white;
+  --color-text-mental: #0d0d3c;
+  --color-text-physical: #a0a0a0;
+  --color-text-poison: #38471f;
+  --color-text-sonic: #004b4b;
+  --color-text-spirit: #403c5e;
+  --color-text-vitality: #ffffa0;
+  --color-text-void: rgb(122, 38, 117);
+}
+
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck {
+  --text-dark: var(--color-light-2);
+}
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck blockquote {
+  background: var(--color-warm-4);
+  border: 1px solid var(--color-warm-3);
+  color: var(--color-light-3);
+  box-shadow: 0px 1px 3px 1px black;
+}
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck h1 {
+  background-color: var(--color-warm-2);
+  border: 1px solid var(--color-warm-1);
+  color: var(--color-light-2);
+  text-shadow: 0px 1px 2px black;
+  box-shadow: 0px 1px 3px 1px black;
+  font-family: var(--font-primary);
+}
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck code {
+  background: unset;
+  box-shadow: unset;
+  border-radius: 32px;
+  background-color: var(--color-cool-2);
+  border: 1px solid var(--color-cool-1);
+  color: var(--color-light-2);
+  text-shadow: 0px 1px 2px black;
+  box-shadow: 0px 1px 3px 1px black;
+  font-family: var(--font-primary);
 }
 
 /* ----------------------------------------- */
@@ -6143,346 +6894,6 @@ section.chat-sidebar {
   border-style: dotted;
   padding: 1px 2px;
   line-height: 0;
-}
-
-/* ----------------------------------------- */
-/* Foundry2                                  */
-/* ----------------------------------------- */
-.foundry2.chat-message {
-  background: unset;
-  --gold-and-glow: transparent;
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  color: var(--color-light-3);
-  --color-text-light-6: var(--color-cool-3);
-}
-.foundry2.chat-message button {
-  --button-border-color: var(--color-cool-3);
-}
-.foundry2.chat-message.whisper {
-  border-color: var(--color-cool-1);
-  background: var(--color-cool-2);
-}
-.foundry2.chat-message.whisper.blind {
-  border-color: var(--color-scrollbar-border);
-  background: var(--color-scrollbar);
-}
-.foundry2.chat-message .message-content .damage-roll .dice-result .dice-tooltip .instance {
-  border-radius: var(--border-radius);
-}
-.foundry2.chat-message .dice-roll .dice-formula,
-.foundry2.chat-message .dice-roll .dice-total {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  color: var(--color-light-3);
-}
-.foundry2.chat-message .dice-roll .dice-formula button,
-.foundry2.chat-message .dice-roll .dice-total button {
-  text-shadow: 0px 1px 2px black;
-  border-color: var(--color-cool-2);
-  background: var(--color-cool-3);
-  border-radius: var(--border-radius);
-}
-.foundry2.chat-message .dice-roll .dice-formula button:hover,
-.foundry2.chat-message .dice-roll .dice-total button:hover {
-  border-color: var(--color-cool-1);
-  background: var(--color-cool-2);
-  color: var(--color-light-2);
-}
-.foundry2.chat-message .dice-tooltip .part-header .part-total {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  color: var(--color-light-3);
-  box-shadow: unset;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom: unset;
-}
-.foundry2.chat-message .pf2e.chat-card .card-header {
-  border: unset;
-}
-.foundry2.chat-message .pf2e.chat-card .card-header img {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  color: var(--color-light-3);
-  border-color: var(--color-warm-2);
-}
-.foundry2.chat-message .pf2e.chat-card .card-footer {
-  border-top: 1px solid var(--color-cool-2);
-}
-
-/* ----------------------------------------- */
-/* Damage buttons                            */
-/* ----------------------------------------- */
-.foundry2.chat-message button {
-  border-radius: var(--border-radius);
-}
-
-.foundry2.chat-message > .message-content .message-buttons button {
-  border-radius: var(--border-radius);
-}
-
-.foundry2.chat-message .flavor-text hr {
-  display: none;
-}
-.foundry2.chat-message .card-content hr {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-.foundry2.chat-message .pf2e.chat-card .card-buttons .spell-attack-buttons,
-.foundry2.chat-message .pf2e.chat-card .card-buttons .spell-button {
-  gap: 3px;
-}
-.foundry2.chat-message .persistent-damage-recovery {
-  margin-top: 4px;
-}
-.foundry2.chat-message .persistent-damage-recovery hr {
-  display: none;
-}
-
-.foundry2.message .message-content .damage-application {
-  gap: 3px;
-  margin-top: 3px;
-  text-rendering: geometricPrecision;
-}
-.foundry2.message .message-content .damage-application button {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  margin: 0px;
-}
-.foundry2.message .message-content .damage-application button img {
-  filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 2px black);
-}
-.foundry2.message .message-content .damage-application button.half-damage .transparent-half {
-  display: none;
-}
-.foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken {
-  position: relative;
-}
-.foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
-  content: "\f7a9";
-  font-family: "Font Awesome 5 Free";
-  color: var(--color-cool-3);
-  display: block;
-  z-index: 1;
-  position: absolute;
-  top: 0px;
-  left: 2.4px;
-  clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
-}
-.foundry2.message .message-content .damage-application button:hover {
-  color: var(--color-light-1);
-  background-color: var(--color-warm-2);
-  border-color: var(--color-warm-1);
-}
-.foundry2.message .message-content .damage-application button:hover img {
-  filter: invert(1) drop-shadow(0px 1px 2px black);
-}
-.foundry2.message .message-content .damage-application button.shield-block:hover {
-  background-color: var(--color-cool-2);
-  border: 1px solid var(--color-cool-1);
-}
-.foundry2.message .message-content .damage-application button.shield-block.shield-activated {
-  background-color: var(--color-cool-1);
-  border: 1px solid var(--color-cool-2);
-}
-.foundry2.message .message-content .damage-application button.shield-block.shield-activated:hover {
-  background-color: var(--color-cool-2);
-  border: 1px solid var(--color-cool-1);
-}
-.foundry2.message .message-content .damage-application button.heal-damage .fa-stack i.fa-plus {
-  color: var(--color-cool-5);
-  text-shadow: none;
-}
-.foundry2.message .message-content .damage-application button.heal-damage:hover {
-  background-color: var(--color-level-success);
-  border-color: var(--color-level-success-border);
-}
-.foundry2.message .message-content .damage-application button.heal-damage:hover .fa-stack i.fa-plus {
-  color: var(--color-level-success);
-  text-shadow: none;
-}
-
-/* ----------------------------------------- */
-/* Header                                    */
-/* ----------------------------------------- */
-.foundry2.chat-message .message-header {
-  background: none;
-  padding: 5px 5px 0px 5px;
-  margin: -5px -5px 0px -5px;
-  border-radius: 5px 5px 0px 0px;
-  gap: 5px;
-}
-.foundry2.chat-message .message-header.dorako-header {
-  border-radius: var(--border-radius);
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
-  text-shadow: 0px 1px 1px black;
-  padding-bottom: 5px;
-  margin-bottom: 2px;
-}
-.foundry2.chat-message .message-header.dorako-header a {
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-}
-.foundry2.chat-message .message-header.dorako-header a:hover {
-  text-shadow: 0px 1px 1px black;
-  color: var(--color-warm-1);
-}
-.foundry2.chat-message .message-header .message-metadata {
-  flex: 2.5;
-}
-.foundry2.chat-message .message-header .message-timestamp,
-.foundry2.chat-message .message-header .header-meta {
-  border-radius: 3px;
-  padding: 2px;
-  font-size: x-small;
-  align-self: center;
-  text-align: center;
-  text-shadow: none;
-  white-space: nowrap;
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
-  color: var(--color-light-3);
-  background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
-  border-color: color-mix(in srgb, var(--header-color) 50%, white);
-}
-.foundry2.chat-message .message-header.dark-header-text {
-  color: var(--header-color);
-}
-.foundry2.chat-message .message-header.dark-header-text .message-sender {
-  color: var(--header-color);
-}
-.foundry2.chat-message .message-header.dark-header-text .header-meta {
-  color: var(--header-color);
-}
-.foundry2.chat-message .message-header .player-name,
-.foundry2.chat-message .message-header .message-sender {
-  max-width: 160px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.foundry2.chat-message .message-header .portrait-and-name {
-  flex-grow: 1;
-  display: flex;
-  flex-basis: 100px;
-  gap: 5px;
-}
-.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper {
-  width: var(--avatar-size);
-  display: flex;
-  flex: none;
-  justify-content: center;
-  align-items: center;
-}
-.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper .portrait {
-  height: var(--avatar-size);
-  object-fit: contain;
-  z-index: 0;
-}
-.foundry2.chat-message .message-header .portrait-and-name .portrait-wrapper .portrait.actor {
-  border-radius: 3px;
-}
-.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper {
-  display: flex;
-  gap: 3px;
-  flex-direction: column;
-  justify-content: left;
-  align-self: center;
-  z-index: 1;
-}
-.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper .message-sender,
-.foundry2.chat-message .message-header .portrait-and-name .sender-wrapper .player-name {
-  align-self: flex-start;
-  line-height: initial;
-}
-
-/* ----------------------------------------- */
-/* Damage colors                             */
-/* ----------------------------------------- */
-.foundry2 .damage {
-  --color-bg-acid: rgba(0, 115, 0, 0.125);
-  --color-bg-bleed: rgba(153, 0, 26, 0.125);
-  --color-bg-chaotic: rgba(166, 0, 166, 0.125);
-  --color-bg-cold: rgba(72, 72, 198, 0.125);
-  --color-bg-electricity: rgba(184, 134, 11, 0.125);
-  --color-bg-evil: rgba(75, 0, 130, 0.125);
-  --color-bg-fire: rgba(166, 47, 0, 0.125);
-  --color-bg-force: rgba(99, 0, 170, 0.125);
-  --color-bg-good: rgba(157, 115, 10, 0.125);
-  --color-bg-lawful: rgba(64, 38, 0, 0.125);
-  --color-bg-mental: rgba(25, 25, 112, 0.125);
-  --color-bg-physical: rgba(132, 132, 132, 0.125);
-  --color-bg-poison: rgba(91, 115, 50, 0.125);
-  --color-bg-sonic: rgba(0, 139, 139, 0.125);
-  --color-bg-spirit: rgba(90, 85, 133, 0.125);
-  --color-bg-vitality: rgba(255, 255, 224, 0.125);
-  --color-bg-void: rgb(81, 21, 78, 0.125);
-  --color-border-acid: #12a812;
-  --color-border-bleed: #99001a;
-  --color-border-chaotic: #a600a6;
-  --color-border-cold: #2f2fa6;
-  --color-border-electricity: darkgoldenrod;
-  --color-border-evil: indigo;
-  --color-border-fire: #a62f00;
-  --color-border-force: #6300aa;
-  --color-border-good: #9d730a;
-  --color-border-lawful: #402600;
-  --color-border-mental: midnightblue;
-  --color-border-physical: #737272;
-  --color-border-poison: #5b7332;
-  --color-border-sonic: darkcyan;
-  --color-border-spirit: #5a5585;
-  --color-border-vitality: #ffffe0;
-  --color-border-void: rgb(122, 38, 117);
-  --color-text-acid: #34aa34;
-  --color-text-bleed: #59000f;
-  --color-text-chaotic: #660066;
-  --color-text-cold: #3a3ac5;
-  --color-text-electricity: #7c5a07;
-  --color-text-evil: #260042;
-  --color-text-fire: #882700;
-  --color-text-force: #3e006a;
-  --color-text-good: #614706;
-  --color-text-lawful: white;
-  --color-text-mental: #0d0d3c;
-  --color-text-physical: #a0a0a0;
-  --color-text-poison: #38471f;
-  --color-text-sonic: #004b4b;
-  --color-text-spirit: #403c5e;
-  --color-text-vitality: #ffffa0;
-  --color-text-void: rgb(122, 38, 117);
 }
 
 h3 {

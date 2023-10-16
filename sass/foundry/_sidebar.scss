@@ -215,8 +215,13 @@ section.chat-sidebar {
       }
     }
   }
+
   &#sidebar.collapsed #sidebar-tabs > .item.active {
     border-color: var(--color-warm-1);
+    &:first-child {
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+    }
   }
 
   #settings ul#game-details li.system-buttons {

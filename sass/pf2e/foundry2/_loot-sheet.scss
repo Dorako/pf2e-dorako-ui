@@ -32,8 +32,6 @@
 
   &.sheet.actor.loot .sheet-header .tags .tag,
   &.sheet.actor.loot .sheet-header h1 > input {
-    border: 1px solid var(--color-cool-3);
-    background: var(--color-cool-4);
-    color: var(--color-light-2);
+    @include f2-input;
   }
 }

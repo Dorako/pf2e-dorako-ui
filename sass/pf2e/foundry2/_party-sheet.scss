@@ -3,6 +3,7 @@
     --color-border: var(--color-warm-3);
     --alt-dark: var(--color-light-4);
     --sub: var(--color-cool-3);
+    --text-dark: var(--color-light-2);
   }
 
   &.sheet.party .tag-light {
@@ -38,15 +39,13 @@
 
   &.sheet.party form > header input[type="text"],
   &.sheet.party form > header input[type="number"] {
-    border: 1px solid var(--color-cool-3);
-    background: var(--color-cool-4);
+    @include f2-input;
     height: 32px;
-    &:hover,
-    &:focus {
-      border: 1px solid var(--color-cool-3);
-      outline: 2px solid var(--color-cool-3);
-      box-shadow: var(--box-shadow);
-    }
+  }
+
+  &.sheet.party .sidebar {
+    box-shadow: unset;
+    border: unset;
   }
 
   &.sheet.party form {
@@ -63,12 +62,7 @@
     border-image-source: var(--ornamentation);
   }
   &.sheet.party [data-tab="overview"] .summary nav button {
-    @include f2-app;
-    &:hover,
-    &.active {
-      border: 1px solid var(--color-warm-1);
-      background: var(--color-warm-2);
-    }
+    @include f2-button-warm;
   }
   &.sheet.party [data-tab="overview"] .member > .data .main-stats > section {
     background-color: var(--color-warm-4);
@@ -98,12 +92,10 @@
   &.sheet.party header.content-header .buttons {
     gap: 5px;
     button {
-      @include f2-app;
-      &:hover,
-      &.active {
-        border: 1px solid var(--color-warm-1);
-        background: var(--color-warm-2);
-      }
+      @include f2-button-warm;
     }
+  }
+  &.sheet.party [data-tab="exploration"] .activities .member-activity .empty .icon {
+    background: var(--color-warm-5);
   }
 }

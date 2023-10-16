@@ -24,24 +24,10 @@
   &.sheet.familiar .familiar-sheet-header .header-content .charname input,
   &.sheet.familiar select,
   &.sheet.familiar .familiar-section .familiar-content input[type="text"] {
-    @include f2-app;
-    border: 1px solid var(--color-cool-3);
-    background: var(--color-cool-4);
-    border-radius: 3px;
-    color: var(--color-light-2);
-    text-shadow: unset;
-    &::placeholder {
-      color: var(--color-light-3);
-    }
+    @include f2-input;
   }
 
   &.sheet.familiar .skills-content .skills-list .skill-name {
-    @include f2-app;
-    @include quick-transition;
-    &:hover {
-      border-color: var(--color-warm-1);
-      background: var(--color-warm-2);
-      color: var(--color-light-1);
-    }
+    @include f2-button-warm;
   }
 }

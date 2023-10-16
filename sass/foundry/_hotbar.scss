@@ -106,7 +106,6 @@
     height: calc(var(--macro-size) + 2px);
     width: calc(var(--macro-size) + 2px);
     @include f2-app;
-    @include quick-transition;
 
     &.inactive::before,
     &.active::before {

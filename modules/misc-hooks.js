@@ -125,7 +125,7 @@ for (const appName of ["JournalSheet", "JournalPageSheet"]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
     if (!isDalvyn) return;
-    if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
+    if (app.id.includes("Compendium-pf2e-criticaldeck")) return;
     html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dalvyn-journal");
 
     // html[0].classList.add("dorako-ui");
@@ -134,13 +134,13 @@ for (const appName of ["JournalSheet", "JournalPageSheet"]) {
   });
 }
 
-Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
-  const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
-  if (!isDalvyn) return;
-  if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
-  html[0].classList.add("dorako-ui");
-  html[0].classList.add("dalvyn-journal");
-});
+// Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
+//   const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
+//   if (!isDalvyn) return;
+//   if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
+//   html[0].classList.add("dorako-ui");
+//   html[0].classList.add("dalvyn-journal");
+// });
 
 // // Add .dorako-ui.dark-theme to the page if it is not a page included in a premium module-styled journal
 // Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
