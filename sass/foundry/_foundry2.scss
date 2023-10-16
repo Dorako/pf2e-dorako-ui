@@ -131,6 +131,16 @@
     height: var(--form-field-height);
   }
 
+  &.filepicker .favorites .paths {
+    box-shadow: unset;
+    border: 1px solid var(--color-cool-3);
+    background: var(--color-cool-5-50);
+    .path {
+      @include f2-button-cool;
+      border-radius: 3px;
+    }
+  }
+
   &.filepicker .current-dir button {
     height: 32px;
   }
@@ -463,6 +473,11 @@
 /* ----------------------------------------- */
 
 .foundry2 {
+  &.window-app .tabs .item {
+    @include f2-button-warm;
+    padding: 4px 8px;
+  }
+
   &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
     border-color: var(--color-cool-3);
     > legend {
@@ -528,16 +543,8 @@
 
   &#generate-check-prompt {
     nav h4 a {
-      @include f2-app;
-      @include quick-transition;
+      @include f2-button-warm;
       padding: 4px 8px;
-
-      &:hover,
-      &.active {
-        background: var(--color-warm-2);
-        border-color: var(--color-warm-1);
-        text-decoration: unset;
-      }
     }
   }
 

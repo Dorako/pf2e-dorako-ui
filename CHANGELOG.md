@@ -1,3 +1,7 @@
+# 2.10.5
+
+- (Refinement) Added Foundry 2 styling for the Critical fumble deck journals also...
+
 # 2.10.4
 
 - (Refinement) Added Foundry 2 styling for the Critical hit deck journals.

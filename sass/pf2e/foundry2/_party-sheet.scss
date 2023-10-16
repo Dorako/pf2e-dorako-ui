@@ -56,6 +56,9 @@
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
   }
+  &.sheet.party.window-app.minimized .window-header {
+    border-radius: var(--border-radius);
+  }
 
   &.sheet.party [data-tab="overview"] .summary {
     background: var(--color-warm-4);

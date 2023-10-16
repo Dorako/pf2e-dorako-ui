@@ -730,9 +730,7 @@ body.compact-ui #controls .sub-controls .control-tool:not(.active, .toggle) {
   display: none;
 }
 body.compact-ui #controls {
-  /* gap: 5px; */
   flex-wrap: nowrap;
-  /* width: 75px; */
   flex-direction: row;
 }
 body.compact-ui .main-controls {
@@ -2023,6 +2021,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
 }
 .foundry2.placeable-hud input[type=text]:hover, .foundry2.placeable-hud input[type=text]:focus {
   outline: 2px solid var(--color-cool-3);
@@ -2291,6 +2290,35 @@ section.chat-sidebar {
 }
 .foundry2 form .form-group .form-fields button {
   height: var(--form-field-height);
+}
+.foundry2.filepicker .favorites .paths {
+  box-shadow: unset;
+  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-5-50);
+}
+.foundry2.filepicker .favorites .paths .path {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background: var(--color-cool-3);
+  border-color: var(--color-cool-2);
+  border-radius: 3px;
+}
+.foundry2.filepicker .favorites .paths .path:hover, .foundry2.filepicker .favorites .paths .path.active {
+  background: var(--color-cool-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-2);
+  box-shadow: var(--box-shadow);
+  text-decoration: unset;
+}
+.foundry2.filepicker .favorites .paths .path:hover:hover, .foundry2.filepicker .favorites .paths .path.active:hover {
+  border-color: var(--color-cool-1);
 }
 .foundry2.filepicker .current-dir button {
   height: 32px;
@@ -2561,6 +2589,25 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* Core overwrites                           */
 /* ----------------------------------------- */
+.foundry2.window-app .tabs .item {
+  background-color: var(--app-background);
+  border: 1px solid var(--color-cool-3);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  padding: 4px 8px;
+}
+.foundry2.window-app .tabs .item:hover, .foundry2.window-app .tabs .item.active {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
+  text-decoration: unset;
+}
 .foundry2.app.token-sheet .tab.active[data-tab=appearance] fieldset {
   border-color: var(--color-cool-3);
 }
@@ -2643,6 +2690,8 @@ section.chat-sidebar {
 .foundry2#generate-check-prompt nav h4 a:hover, .foundry2#generate-check-prompt nav h4 a.active {
   background: var(--color-warm-2);
   border-color: var(--color-warm-1);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-2);
   text-decoration: unset;
 }
 .foundry2 a.content-link,
@@ -4843,6 +4892,9 @@ section.chat-sidebar {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
+.foundry2.sheet.hazard.window-app.minimized .window-header {
+  border-radius: var(--border-radius);
+}
 .foundry2.sheet.hazard .section-container.publication .section-body input[type=text], .foundry2.sheet.hazard input[type=text], .foundry2.sheet.hazard input[type=number] {
   background-color: var(--app-background);
   border: 1px solid var(--color-cool-3);
@@ -4857,6 +4909,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
 }
 .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:hover, .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:focus, .foundry2.sheet.hazard input[type=text]:hover, .foundry2.sheet.hazard input[type=text]:focus, .foundry2.sheet.hazard input[type=number]:hover, .foundry2.sheet.hazard input[type=number]:focus {
   outline: 2px solid var(--color-cool-3);
@@ -4880,6 +4933,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
 }
 .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):hover, .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):focus, .foundry2.sheet.hazard form > header input[type=text]:focus:hover, .foundry2.sheet.hazard form > header input[type=text]:focus:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):hover, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):focus, .foundry2.sheet.hazard form > header input[type=number]:focus:hover, .foundry2.sheet.hazard form > header input[type=number]:focus:focus {
   outline: 2px solid var(--color-cool-3);
@@ -4976,6 +5030,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
 }
 .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:hover, .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:focus, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:hover, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:focus, .foundry2.sheet.familiar select:hover, .foundry2.sheet.familiar select:focus, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:hover, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:focus {
   outline: 2px solid var(--color-cool-3);
@@ -5043,6 +5098,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
 }
 .foundry2.sheet.actor.loot .sheet-header .tags .tag:hover, .foundry2.sheet.actor.loot .sheet-header .tags .tag:focus, .foundry2.sheet.actor.loot .sheet-header h1 > input:hover, .foundry2.sheet.actor.loot .sheet-header h1 > input:focus {
   outline: 2px solid var(--color-cool-3);
@@ -5116,6 +5172,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
 }
 .foundry2.pf2e.actor form input[type=text]:hover, .foundry2.pf2e.actor form input[type=text]:focus, .foundry2.pf2e.actor form input[type=number]:hover, .foundry2.pf2e.actor form input[type=number]:focus {
   outline: 2px solid var(--color-cool-3);
@@ -5215,6 +5272,7 @@ section.chat-sidebar {
   border: 1px solid var(--color-cool-3);
   border-radius: 3px;
   text-shadow: unset;
+  padding: 0px calc(0.1em + 3px);
   height: 32px;
 }
 .foundry2.sheet.party form > header input[type=text]:hover, .foundry2.sheet.party form > header input[type=text]:focus, .foundry2.sheet.party form > header input[type=number]:hover, .foundry2.sheet.party form > header input[type=number]:focus {
@@ -5236,6 +5294,9 @@ section.chat-sidebar {
   background: #1f391f;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
+}
+.foundry2.sheet.party.window-app.minimized .window-header {
+  border-radius: var(--border-radius);
 }
 .foundry2.sheet.party [data-tab=overview] .summary {
   background: var(--color-warm-4);
@@ -5414,6 +5475,7 @@ section.chat-sidebar {
 .foundry2.chat-message .pf2e.chat-card .card-buttons .spell-button {
   gap: 3px;
 }
+
 .foundry2.chat-message .persistent-damage-recovery {
   margin-top: 4px;
 }
@@ -5646,15 +5708,25 @@ section.chat-sidebar {
   --color-text-void: rgb(122, 38, 117);
 }
 
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck,
 .foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck {
   --text-dark: var(--color-light-2);
 }
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck blockquote,
 .foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck blockquote {
-  background: var(--color-warm-4);
-  border: 1px solid var(--color-warm-3);
   color: var(--color-light-3);
   box-shadow: 0px 1px 3px 1px black;
+  background: var(--color-warm-4);
 }
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck blockquote {
+  border: 1px solid var(--color-level-error);
+  background-color: var(--color-level-error-bg);
+}
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck blockquote {
+  border: 1px solid var(--color-level-success);
+  background-color: var(--color-level-success-bg);
+}
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck h1,
 .foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck h1 {
   background-color: var(--color-warm-2);
   border: 1px solid var(--color-warm-1);
@@ -5663,6 +5735,7 @@ section.chat-sidebar {
   box-shadow: 0px 1px 3px 1px black;
   font-family: var(--font-primary);
 }
+.foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck code,
 .foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .critical-deck code {
   background: unset;
   box-shadow: unset;

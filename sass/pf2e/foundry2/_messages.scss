@@ -73,7 +73,6 @@
 }
 
 .foundry2.chat-message > .message-content .message-buttons button {
-  //   border-color: var(--color-cool-3);
   border-radius: var(--border-radius);
 }
 
@@ -92,9 +91,6 @@
   .pf2e.chat-card .card-buttons .spell-attack-buttons,
   .pf2e.chat-card .card-buttons .spell-button {
     gap: 3px;
-    button {
-      //   border-color: var(--color-cool-3);
-    }
   }
 }
 
