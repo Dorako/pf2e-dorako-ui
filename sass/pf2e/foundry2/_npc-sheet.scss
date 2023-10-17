@@ -5,6 +5,7 @@
     --primary: var(--color-warm-2);
     --secondary: var(--color-cool-2);
   }
+
   &.actor.npc.sheet form .sheet-body .section-container {
     @include f2-app;
     padding: unset;
@@ -22,8 +23,12 @@
     }
   }
 
+  &.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type="text"] {
+    @include f2-input;
+  }
+
   &.actor.npc.sheet form .side-bar-section.initiative select {
-    background: var(--color-cool-4);
+    @include f2-input;
   }
 
   &.actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child),
@@ -47,5 +52,15 @@
     background-color: var(--color-warm-1);
     color: black;
     text-shadow: unset;
+  }
+
+  &.app.npc-skills-editor form ol li.skill:nth-child(even) {
+    background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
+  }
+  &.app.npc-skills-editor form ol li.skill:nth-child(odd) {
+    background-color: color-mix(in srgb, var(--color-cool-4) 40%, transparent);
+  }
+  &.app.npc-skills-editor form ol li.skill.header {
+    background-color: var(--color-warm-2);
   }
 }

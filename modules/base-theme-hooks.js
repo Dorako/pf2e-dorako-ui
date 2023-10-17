@@ -164,11 +164,13 @@ Hooks.on("renderHazardSheetPF2e", (app, html, data) => {
   html.find("input").addClass("dorako-ui-skip");
 });
 
-Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
-  html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
-  html[0].classList.add(`${theme}-theme`);
-});
+for (const appName of [..."CharacterSheetPF2e", "VehicleSheetPF2e"]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
+    // html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
+    html[0].classList.add(`${theme}-theme`);
+  });
+}
 
 // Re-organize NPC sheets, do not apply base styling to selects or input fields
 Hooks.on("renderNPCSheetPF2e", (app, html, data) => {

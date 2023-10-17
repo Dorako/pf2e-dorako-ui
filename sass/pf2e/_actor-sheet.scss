@@ -226,11 +226,12 @@
 .dorako-ui {
   &.actor.sheet.green-theme {
     .crb-style {
-      --header: url("../img/green-header.webp");
-      background-image: url("../img/green-header.webp"), var(--sheet);
+      --header: url("/modules/pf2e-dorako-ui/img/green-header.webp");
+      background-image: url("/modules/pf2e-dorako-ui/img/green-header.webp"), var(--sheet);
 
       aside {
-        background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
+        background-image: url("/modules/pf2e-dorako-ui/img/green-sidebar-top.webp"),
+          url("/modules/pf2e-dorako-ui/img/green-sidebar-bottom.webp");
         .logo {
           filter: grayscale(0.6);
         }
@@ -245,7 +246,7 @@
             background-color: var(--remaster);
           }
           .armor-class .shield.hp {
-            background: url("../img/blue-shield.webp") no-repeat top center;
+            background: url("/modules/pf2e-dorako-ui/img/blue-shield.webp") no-repeat top center;
           }
           .initiative-select select {
             background-color: var(--remaster);
@@ -254,7 +255,7 @@
       }
 
       header.char-header .char-level .level {
-        background: url("../img/blue-level-badge.webp") no-repeat;
+        background: url("/modules/pf2e-dorako-ui/img/blue-level-badge.webp") no-repeat;
       }
 
       nav.sheet-navigation {
@@ -262,7 +263,7 @@
 
         .item:hover,
         .item.active {
-          background-image: url("../img/green-nav-item.webp");
+          background-image: url("/modules/pf2e-dorako-ui/img/green-nav-item.webp");
         }
       }
     }
@@ -270,11 +271,12 @@
 
   &.actor.sheet.blue-theme {
     .crb-style {
-      --header: url("../img/blue-header.webp");
-      background-image: url("../img/blue-header.webp"), var(--sheet);
+      --header: url("/modules/pf2e-dorako-ui/img/blue-header.webp");
+      background-image: url("/modules/pf2e-dorako-ui/img/blue-header.webp"), var(--sheet);
 
       aside {
-        background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
+        background-image: url("/modules/pf2e-dorako-ui/img/blue-sidebar-top.webp"),
+          url("/modules/pf2e-dorako-ui/img/blue-sidebar-bottom.webp");
         .logo {
           filter: grayscale(0.6);
         }
@@ -289,7 +291,7 @@
             background-color: var(--secondary);
           }
           .armor-class .shield.hp {
-            background: url("../img/blue-shield.webp") no-repeat top center;
+            background: url("/modules/pf2e-dorako-ui/img/blue-shield.webp") no-repeat top center;
           }
           .initiative-select select {
             background-color: var(--secondary);
@@ -298,7 +300,7 @@
       }
 
       header.char-header .char-level .level {
-        background: url("../img/blue-level-badge.webp") no-repeat;
+        background: url("/modules/pf2e-dorako-ui/img/blue-level-badge.webp") no-repeat;
       }
 
       nav.sheet-navigation {
@@ -306,7 +308,7 @@
 
         .item:hover,
         .item.active {
-          background-image: url("../img/blue-nav-item.webp");
+          background-image: url("/modules/pf2e-dorako-ui/img/blue-nav-item.webp");
         }
       }
     }

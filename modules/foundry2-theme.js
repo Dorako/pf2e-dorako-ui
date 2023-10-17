@@ -88,7 +88,7 @@ for (const app of [...baseThemePf2eSheets]) {
   });
 }
 
-for (const app of ["CharacterSheetPF2e"]) {
+for (const app of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;

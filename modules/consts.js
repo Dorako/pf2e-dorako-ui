@@ -19,7 +19,7 @@ export const exclusivelyDarkApplications = ["FABattlemaps", "FADownloader"]
 // prettier-ignore
 export const baseThemeCoreFoundryApplications = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD", "Sidebar","SceneNavigation", "Hotbar"];
 // prettier-ignore
-export const baseThemePf2eApplications = ["HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"]; // "JournalSheetPF2e",
+export const baseThemePf2eApplications = ["VehicleSheetPF2e","HotbarPF2e", "EffectsPanel", "SceneDarknessAdjuster"]; // "JournalSheetPF2e",
 // prettier-ignore
 // export const baseThemePf2eSheets = ["ItemSheet","ActorSheet","LootSheetPF2e"]; //"FamiliarSheetPF2e","HazardSheetPF2e"
 export const baseThemePf2eSheets = ["KingdomSheetPF2e","CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPf2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet"

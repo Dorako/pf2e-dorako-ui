@@ -58,7 +58,7 @@
         },
         "pc-sheet-theme": {
           "name": "PC sheet theme",
-          "hint": "Affects player sheets",
+          "hint": "Affects sheets for player characters and vehicles",
           "choice": {
             "red": "Original Red",
             "green": "Remaster Green",

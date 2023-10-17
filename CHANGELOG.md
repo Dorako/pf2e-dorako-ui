@@ -1,3 +1,8 @@
+# 2.10.7
+
+- (Refinement) Added Foundry 2 styling for Vehicle sheet.
+- (Refinement) Vehicle sheet now respects PC sheet color theme setting.
+
 # 2.10.6
 
 - (Refinement) Added Foundry 2 styling for PC sheets and Kingdom sheets. All sheets should now be styled.
