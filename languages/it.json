@@ -1,1 +1,57 @@
-{}
+{
+  "pf2e-dorako-ui": {
+    "text": {
+      "self-roll": "Tiro personale",
+      "gm-only": "Solo GM",
+      "whisper": "Sussurro",
+      "from": "Da",
+      "to": "a",
+      "send-to-chat": "Invia",
+      "default": "Predefinito",
+      "dark": "Scuro",
+      "light": "Chiaro",
+      "disabled": "Disabilitato",
+      "maybe-reload": "Alcune modifiche potrebbero richiedere un ricaricamento.",
+      "secret": "Segreto",
+      "large-chatlog-warning": "A causa della lunga storia della chat, alcune impostazioni verranno applicate al prossimo caricamento."
+    },
+    "settings": {
+      "reset-changes": "Ripristina Modifiche",
+      "theme": {
+        "name": "Impostazioni Tema",
+        "label": "Configura Impostazioni Tema",
+        "application-theme": {
+          "name": "Tema applicazione",
+          "hint": "Influisce sulle finestre delle applicazioni renderizzate",
+          "choice": {
+            "no-theme": "Nessun tema",
+            "light-theme": "Interfaccia Dorako Chiara",
+            "dark-theme": "Interfaccia Dorako Scura",
+            "foundry2-theme": "Foundry2"
+          }
+        },
+        "frosted-glass": {
+          "name": "Usa il vetro smerigliato",
+          "hint": "ATTENZIONE: prestazioni molto intense. Esempio: luminosità(1.5) contrasto(1.2) saturazione(1.5) sfocatura(5px)"
+        },
+        "glass-bg": {
+          "name": "Utilizzare uno sfondo di vetro alternativo",
+          "hint": "Dovrebbe funzionare un qualsiasi colore valido anche in CSS"
+        },
+        "npc-sheet-theme": {
+          "name": "Tema della scheda attore",
+          "hint": "Regola lo stile delle schede dei PNG/Pericoli/Famigli",
+          "choice": {
+            "default": "Interfaccia Dorako Predefinita",
+            "glassy": "(Sperimentale) Vetroso"
+          }
+        },
+        "chat-theme": {
+          "name": "Tema della chat",
+          "hint": "Impatta tutti i messaggi di chat"
+        },
+        "hint": "Cambia impostazioni tema per varie applicazioni ed elementi dell'interfaccia utente"
+      }
+    }
+  }
+}
