@@ -6,7 +6,8 @@ for (const appName of [...baseThemeApplications]) {
     if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme === "no-theme" || theme === "foundry2-theme") return;
-    const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+    const excludeString =
+      game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", MonksEnhancedJournal";
     if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .dorako-ui`

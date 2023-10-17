@@ -2,6 +2,26 @@
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
 
+section.readaloud {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 500;
+  margin: 0px;
+  margin-left: 5px;
+
+  background: none;
+  background-color: var(--bg);
+  &:before,
+  &:after {
+    background: none;
+  }
+}
+
 #sidebar {
   & > .dorako-resize {
     width: 6px;
@@ -273,9 +293,13 @@
     margin-bottom: 10px;
     padding: 10px;
     color: var(--color-light-2);
-    background: var(--color-cool-2);
+    border-color: var(--color-cool-2);
+    background: var(--color-cool-3);
     --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
+    .notes {
+      color: var(--color-light-3);
+    }
   }
 
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {

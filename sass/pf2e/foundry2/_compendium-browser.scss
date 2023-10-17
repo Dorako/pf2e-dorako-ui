@@ -1,0 +1,34 @@
+.foundry2 {
+  // prettier-ignore
+  &#compendium-browser>section.window-content>.content-box .compendium-browser-settings form .setting-section,
+  &#license-viewer>section.window-content>.content-box .compendium-browser-settings form .setting-section,
+  &#compendium-browser > section.window-content > .content-box .spell-browser .filtercontainer,
+  &#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer,
+  &#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer,
+  &#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {
+    @include f2-app;
+    padding: 5px;
+    cursor: pointer;
+    // border-color: var(--color-cool-3);
+    // @include f2-app;
+    // background-color: rgba(0,0,0,0.3);
+ }
+
+  &#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button,
+  &#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
+    @include f2-button-warm;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  &#compendium-browser > section.window-content > .content-box .spell-browser .control-area,
+  &#license-viewer > section.window-content > .content-box .spell-browser .control-area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-x: clip;
+    > div:first-child {
+      margin-top: 10px;
+    }
+  }
+}

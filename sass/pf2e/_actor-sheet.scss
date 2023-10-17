@@ -176,10 +176,59 @@
     z-index: 1;
   }
 
+}
+
+.dorako-ui,
+.foundry2 {
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
+    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
+    &.sheet.party [data-tab=overview] .summary,
+    &.sheet.party [data-tab=exploration] .activities .member-activity,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
+    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
+    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+      border-image-source: var(--ornamentation);
+    }
+}
+
+.foundry2-pc {
+  // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
+  &.sheet.party [data-tab=overview] .summary,
+  &.sheet.party [data-tab=exploration] .activities .member-activity,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+    border-image-source: var(--ornamentation);
+    background: var(--color-warm-4);
+  }
+}
+
+.foundry2-pc,
+.dorako-ui {
   &.actor.sheet.green-theme {
     .crb-style {
+      --header: url("../img/green-header.webp");
       background-image: url("../img/green-header.webp"), var(--sheet);
-  
+
       aside {
         background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
         .logo {
@@ -187,7 +236,12 @@
         }
         .sidebar {
           .hitpoints .hp-big .container.current-hp {
-            background-image: linear-gradient(90deg, var(--remaster) 0%, var(--remaster-light) 50%, var(--remaster) 100%);
+            background-image: linear-gradient(
+              90deg,
+              var(--remaster) 0%,
+              var(--remaster-light) 50%,
+              var(--remaster) 100%
+            );
             background-color: var(--remaster);
           }
           .armor-class .shield.hp {
@@ -198,14 +252,14 @@
           }
         }
       }
-  
+
       header.char-header .char-level .level {
         background: url("../img/blue-level-badge.webp") no-repeat;
       }
-  
+
       nav.sheet-navigation {
         background: var(--remaster-light);
-  
+
         .item:hover,
         .item.active {
           background-image: url("../img/green-nav-item.webp");
@@ -213,11 +267,12 @@
       }
     }
   }
-  
+
   &.actor.sheet.blue-theme {
     .crb-style {
+      --header: url("../img/blue-header.webp");
       background-image: url("../img/blue-header.webp"), var(--sheet);
-  
+
       aside {
         background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
         .logo {
@@ -241,14 +296,14 @@
           }
         }
       }
-  
+
       header.char-header .char-level .level {
         background: url("../img/blue-level-badge.webp") no-repeat;
       }
-  
+
       nav.sheet-navigation {
         background: var(--secondary-light);
-  
+
         .item:hover,
         .item.active {
           background-image: url("../img/blue-nav-item.webp");
@@ -256,26 +311,4 @@
       }
     }
   }
-}
-
-.dorako-ui,
-.foundry2 {
-  // prettier-ignore
-  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
-    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
-    &.sheet.party [data-tab=overview] .summary,
-    &.sheet.party [data-tab=exploration] .activities .member-activity,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
-    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
-    &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute,
-    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
-      border-image-source: var(--ornamentation);
-    }
 }

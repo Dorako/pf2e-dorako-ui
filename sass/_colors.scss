@@ -66,8 +66,10 @@ $adjusted-lower: #cc3311 !default;
 :root {
   /* Global */
   --primary: #{$primary-color};
+  --system-primary: #{$primary-color};
   --primary-light: #{color.scale($primary-color, $lightness: +20%)};
   --primary-dark: #{color.scale($primary-color, $lightness: -40%)};
+  --system-secondary: #{$secondary-color};
   --secondary: #{$secondary-color};
   --secondary-light: #{color.scale($secondary-color, $lightness: +25%)};
   --secondary-dark: #{color.scale($secondary-color, $lightness: -45%)};

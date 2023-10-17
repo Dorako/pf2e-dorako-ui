@@ -22,12 +22,7 @@
 }
 
 #players.foundry2 {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
-  text-shadow: 0px 1px 2px black;
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  @include f2-app;
 
   h3 {
     cursor: pointer;

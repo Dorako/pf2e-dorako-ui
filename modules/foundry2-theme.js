@@ -29,6 +29,15 @@ Hooks.on("renderApplication", (app, html, data) => {
   if (theme !== "foundry2-theme") {
     return;
   }
+  const excludeString =
+    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", MonksEnhancedJournal";
+  if (excludeString.toLowerCase().includes(app.constructor.name.toLowerCase())) {
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+    );
+    return;
+  }
+
   const fakeDialogPatterns = ["popup", "dialog"];
   for (const fakeDialogPattern of [...fakeDialogPatterns]) {
     if (app.constructor.name.toLowerCase().includes(fakeDialogPattern)) {
@@ -65,9 +74,7 @@ Hooks.on("renderItemSheet", (app, html, data) => {
   html.find("form > nav a").addClass("button");
 });
 
-for (const app of [
-  ...baseThemePf2eSheets.filter((elem) => elem !== "KingdomSheetPF2e" && elem !== "CharacterSheetPF2e"),
-]) {
+for (const app of [...baseThemePf2eSheets]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;
@@ -81,14 +88,11 @@ for (const app of [
   });
 }
 
-for (const app of ["CharacterSheetPF2e", "KingdomSheetPF2e"]) {
+for (const app of ["CharacterSheetPF2e"]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;
-    console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | theme: ${theme}, no explicit support, fall back to .dorako-ui.dark-theme`
-    );
-    html.addClass("dorako-ui");
-    html.addClass("dark-theme");
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => add .foundry2-pc`);
+    html.addClass("foundry2-pc");
   });
 }

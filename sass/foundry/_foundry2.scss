@@ -52,6 +52,7 @@
   --app-border-color: var(--color-cool-4);
 }
 
+.foundry2-pc,
 .foundry2 {
   // Undo v1 styling
   --color-shadow-primary: transparent;
@@ -77,11 +78,11 @@
   --color-bg-btn-minor-inactive: var(--app-background);
   --color-bg-btn-minor-active: var(--color-warm-2);
   --color-text-dark-primary: var(--color-light-3);
-  --color-text-dark-secondary: var(--color-light-4);
+  --color-text-dark-secondary: var(--color-light-5);
   --color-bg-option: var(--color-cool-4); // input-background-color
 
   // Dark theme
-  --color-rarity-common: #e1d8cf;
+  --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
   --color-rarity-rare: #5362ff;
   --color-rarity-unique: #e127e1;
@@ -89,6 +90,62 @@
 
   color: var(--color-light-3);
 
+  ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: var(--color-scrollbar);
+    border: 1px solid var(--color-scrollbar-border);
+    transition: outline 0.15s;
+    &:hover {
+      outline: 4px solid var(--color-warm-1);
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 0 1px var(--color-cool-3) inset;
+    box-shadow: unset;
+    border-radius: 4px;
+  }
+
+  a.content-link,
+  [data-pf2-check],
+  a.entity-link,
+  [data-pf2-action],
+  span[data-pf2-effect-area],
+  a.inline-check .label,
+  a.inline-roll:not(.inline-result) {
+    background: var(--color-cool-4);
+    border: 1px solid var(--color-cool-3);
+    color: var(--color-light-2);
+
+    &::before,
+    i,
+    i.icon {
+      color: var(--color-light-1);
+    }
+  }
+
+  i[data-pf2-repost] {
+    @include quick-transition;
+    cursor: pointer;
+    background: unset;
+    border-left: unset;
+    &:hover::before {
+      color: var(--color-warm-2);
+    }
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"],
+  input[type="search"] {
+    min-width: 24px;
+  }
+}
+
+.foundry2 {
   // System compat mode
   --alt: var(--color-cool-3);
   --bg: var(--color-warm-3);
@@ -145,6 +202,13 @@
     height: 32px;
   }
 
+  &.package-configuration aside.sidebar nav.tabs {
+    gap: 5px;
+    .category-tab {
+      padding: 4px 8px;
+    }
+  }
+
   &.sheet nav.sheet-tabs {
     border: none;
   }
@@ -163,6 +227,10 @@
     background: var(--color-warm-2);
     border: 1px solid var(--color-warm-1);
     border-radius: 50%;
+    transition: outline 0.15s;
+    &:hover {
+      outline: 4px solid var(--color-warm-1);
+    }
   }
 
   input[type="color" i]::-webkit-color-swatch {
@@ -182,19 +250,6 @@
     border-radius: 2px;
     font-size: var(--font-size-12);
     opacity: 0.75;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: var(--color-scrollbar);
-    border: 1px solid var(--color-scrollbar-border);
-  }
-
-  ::-webkit-scrollbar-track {
-    box-shadow: 0 0 1px var(--color-cool-3) inset;
-    box-shadow: unset;
-    border-radius: 4px;
   }
 
   .directory .action-buttons button {
@@ -220,7 +275,7 @@
     textarea {
       transition: outline 0.5s;
       background: var(--color-cool-4);
-      border: 1px solid var(--color-cool-3);
+      //   border: 1px solid var(--color-cool-3);      // no border since --glassy
       &:focus {
         outline: 2px solid var(--color-cool-3);
       }
@@ -306,7 +361,7 @@
     .window-resizable-handle {
       //   background: var(--color-cool-4);
       background: var(--color-warm-4);
-      border: 1px solid var(--color-cool-3);
+      border: 1px solid var(--color-cool-4);
       border-radius: 4px 0px var(--border-radius) 0px;
       border-bottom-color: var(--color-warm-3);
       border-right-color: var(--color-warm-3);
@@ -379,39 +434,7 @@
 
   a.button,
   button {
-    --button-background-color: var(--color-cool-5-50);
-    // --button-border-color: var(--color-light-5); // bad foundry default
-    --button-border-color: var(--color-cool-4);
-    --button-text-color: var(--color-light-3);
-    --button-focus-outline-color: var(--color-warm-2);
-    --button-hover-background-color: var(--color-warm-2);
-    --button-hover-border-color: var(--color-light-3);
-    --button-hover-text-color: var(--color-light-1);
-
-    &:disabled {
-      --button-background-color: var(--color-cool-5);
-      --button-border-color: var(--color-cool-4);
-      --button-hover-background-color: var(--color-cool-5);
-      --button-text-color: var(--color-light-5);
-    }
-
-    &.bright {
-      --button-background-color: var(--color-warm-1);
-      --button-border-color: var(--color-cool-5);
-      --button-text-color: var(--color-cool-5);
-      --button-hover-background-color: #fda948;
-      --button-hover-border-color: var(--color-warm-3);
-      --button-hover-text-color: #000000;
-      text-shadow: unset;
-
-      &:disabled {
-        --button-background-color: var(--color-cool-4);
-        --button-hover-background-color: var(--color-cool-4);
-        --button-text-color: var(--color-light-5);
-        --button-hover-text-color: var(--color-light-5);
-        --button-hover-border-color: transparent;
-      }
-    }
+    @include f2-button-warm;
   }
 
   &#token-action-hud-core-settings input,
@@ -422,31 +445,32 @@
   input[type="time"],
   input[type="search"],
   select {
-    // width: 100%;
-    height: var(--input-height);
-    line-height: var(--input-height);
-    padding: 0 0.5rem;
-    background: var(--input-background-color);
-    border: 1px solid var(--input-border-color);
-    border-radius: 4px;
-    --box-shadow: 0px 1px 3px 1px black;
-    box-shadow: var(--box-shadow);
-    outline: 1px solid transparent;
-    color: var(--input-text-color);
-    user-select: text;
-    font-size: var(--font-size-14);
-    transition: outline-color 0.5s;
+    @include f2-input;
+    // // width: 100%;
+    // height: var(--input-height);
+    // line-height: var(--input-height);
+    // padding: 0 0.5rem;
+    // background: var(--input-background-color);
+    // border: 1px solid var(--input-border-color);
+    // border-radius: 4px;
+    // --box-shadow: 0px 1px 3px 1px black;
+    // box-shadow: var(--box-shadow);
+    // outline: 1px solid transparent;
+    // color: var(--input-text-color);
+    // user-select: text;
+    // font-size: var(--font-size-14);
+    // transition: outline-color 0.5s;
 
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      outline: 2px solid var(--input-focus-outline-color);
-    }
+    // &:not(:disabled, .disabled):hover,
+    // &:focus {
+    //   cursor: pointer;
+    //   outline: 2px solid var(--input-focus-outline-color);
+    // }
   }
 
   input[type="checkbox"]:checked,
   input[type="radio"]:checked {
-    accent-color: var(--color-cool-3);
+    accent-color: var(--color-warm-2);
   }
 
   input,
@@ -461,6 +485,7 @@
 
   fieldset {
     border: 1px solid var(--color-cool-3);
+    border-radius: var(--border-radius);
     > legend {
       color: var(--color-light-2);
       text-shadow: unset;
@@ -545,34 +570,6 @@
     nav h4 a {
       @include f2-button-warm;
       padding: 4px 8px;
-    }
-  }
-
-  a.content-link,
-  [data-pf2-check],
-  a.entity-link,
-  [data-pf2-action],
-  span[data-pf2-effect-area],
-  a.inline-check .label,
-  a.inline-roll:not(.inline-result) {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
-    color: var(--color-light-2);
-
-    &::before,
-    i,
-    i.icon {
-      color: var(--color-light-1);
-    }
-  }
-
-  i[data-pf2-repost] {
-    @include quick-transition;
-    cursor: pointer;
-    background: unset;
-    border-left: unset;
-    &:hover::before {
-      color: var(--color-warm-2);
     }
   }
 
@@ -707,15 +704,19 @@
     border-radius: 3px;
   }
 
+  &.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
-    border: 1px solid var(--color-warm-2);
-    background: var(--color-warm-3);
+    --button-border-color: var(--color-warm-2);
+    --button-background-color: var(--color-warm-3);
+    --button-hover-border-color: var(--color-warm-4);
+    --button-hover-background-color: var(--color-warm-5);
     z-index: 1;
-    &:hover {
-      background: var(--color-warm-2);
-      border-color: var(--color-warm-1);
-    }
   }
+
+  &.pf2e.item.sheet form .tab.active.rules select {
+    height: var(--input-height);
+  }
+
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input input,
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input tags {
     border-left: unset;
@@ -768,7 +769,7 @@
     --tag-border-color: var(--color-cool-3);
     --tags-border-color: var(--color-cool-3);
 
-    border: 1px solid var(--color-cool-4);
+    border: 1px solid var(--tag-border-color);
     border-radius: 3px;
 
     &.tagify--empty .tagify__input::before {
@@ -821,8 +822,8 @@
       height: auto;
     }
 
-    .tag,
     select.tag,
+    .tag:not(.tag_transparent),
     tag:not(.tag_transparent) {
       border-radius: 0px;
       box-shadow: unset;

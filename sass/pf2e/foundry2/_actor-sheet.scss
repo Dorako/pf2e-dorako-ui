@@ -6,25 +6,28 @@
 
   &.sheet nav.sheet-tabs .item {
     @include f2-button-warm;
-    &.disabled {
-      border-color: var(--color-warm-4);
-      background: var(--color-cool-5);
-      color: var(--color-light-5);
-      &:hover {
-        border-color: var(--color-warm-3);
-        background: var(--color-cool-4);
-        color: var(--color-light-4);
-      }
-    }
+    // &.disabled {
+    //   border-color: var(--color-warm-4);
+    //   background: var(--color-cool-5);
+    //   color: var(--color-light-5);
+    //   &:hover {
+    //     border-color: var(--color-warm-3);
+    //     background: var(--color-cool-4);
+    //     color: var(--color-light-4);
+    //   }
+    // }
   }
 
   .tags.paizo-style .tag.rarity.common,
   .tags.paizo-style .tag.rarity[value="common"],
   .tags.paizo-style .tag.rarity > option[value="common"] {
-    color: black;
+    --input-text-color: black;
   }
+}
 
+.foundry2-pc,
+.foundry2 {
   .currency li > button {
-    text-shadow: unset;
+    @include f2-button-warm;
   }
 }

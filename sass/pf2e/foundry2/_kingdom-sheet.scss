@@ -1,2 +1,76 @@
 .foundry2 {
+  &.sheet.kingdom-builder,
+  &.sheet.kingdom {
+    --primary: var(--color-warm-2);
+    --secondary: var(--color-cool-3);
+    --text-dark: var(--color-light-2);
+    --color-border-divider: var(--color-cool-3);
+    --sub: var(--color-light-6);
+    --alt: var(--color-light-5);
+    --alt-dark: var(--color-light-4);
+    --bg: var(--color-cool-5-90);
+    --paper-bg: var(--color-cool-4);
+    // --drop-shadow: var(--box-shadow);
+
+    .details-label,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      --primary: var(--color-light-2);
+    }
+
+    .tags {
+      --primary: var(--color-warm-2);
+    }
+  }
+
+  &.sheet.kingdom-builder {
+    --alt-dark: var(--color-warm-1);
+  }
+
+  &.sheet.kingdom form {
+    background: unset;
+  }
+
+  &.sheet.kingdom-builder form {
+    background: unset;
+  }
+
+  &.sheet.kingdom.window-app .window-header {
+    background: #304717;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+  }
+
+  &.sheet.kingdom.window-app.minimized .window-header {
+    border-radius: var(--border-radius);
+  }
+
+  &.sheet.kingdom nav.sub-nav {
+    background: unset;
+    box-shadow: unset;
+    a,
+    .tab {
+      @include f2-button-warm;
+      font-family: var(--font-primary);
+
+      &.active {
+        font-weight: unset;
+      }
+    }
+  }
+
+  &.sheet.kingdom form > header .details input[type="text"],
+  &.sheet.kingdom form > header .details input[type="number"] {
+    --input-background-color: transparent;
+    --input-border-color: transparent;
+    --box-shadow: transparent;
+  }
+
+  &.sheet.kingdom-builder .build-element .selection {
+    @include f2-app;
+  }
 }

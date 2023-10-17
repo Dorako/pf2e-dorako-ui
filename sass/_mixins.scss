@@ -39,13 +39,12 @@
 }
 
 @mixin f2-app {
-  background-color: var(--app-background);
-  border: 1px solid var(--color-cool-3);
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
   color: var(--color-light-3);
 }
 
@@ -63,52 +62,133 @@
   @include f2-app;
   @include quick-transition;
 
-  &:hover,
-  &.active {
-    background: var(--color-warm-2);
-    border-color: var(--color-warm-1);
-    box-shadow: var(--box-shadow);
-    color: var(--color-light-2);
-    text-decoration: unset;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+
+  &:not(.disabled, :disabled):hover {
+    background: var(--button-hover-background-color);
+    color: var(--button-hover-text-color);
+    border-color: var(--button-hover-border-color);
   }
-}
 
-@mixin f2-button-cool {
-  @include f2-app;
-  @include quick-transition;
-  background: var(--color-cool-3);
-  border-color: var(--color-cool-2);
-
-  &:hover,
   &.active {
-    background: var(--color-cool-2);
-    border-color: var(--color-warm-1);
-    color: var(--color-light-2);
-    box-shadow: var(--box-shadow);
-    text-decoration: unset;
-    &:hover {
-      border-color: var(--color-cool-1);
+    background: var(--button-hover-background-color);
+    outline: 1px solid var(--button-focus-outline-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-text-color);
+  }
+
+  &.disabled,
+  &:disabled {
+    --button-background-color: var(--color-warm-5);
+    --button-border-color: var(--color-warm-4);
+    --button-hover-background-color: var(--color-cool-5);
+    --button-text-color: var(--color-light-5);
+  }
+
+  &.bright {
+    --button-background-color: var(--color-warm-1);
+    --button-border-color: var(--color-cool-5);
+    --button-text-color: var(--color-cool-5);
+    --button-hover-background-color: #fda948;
+    --button-hover-border-color: var(--color-warm-2);
+    --button-hover-text-color: #000000;
+    text-shadow: unset;
+
+    &.disabled,
+    &:disabled {
+      --button-background-color: var(--color-cool-4);
+      --button-hover-background-color: var(--color-cool-4);
+      --button-text-color: var(--color-light-5);
+      --button-hover-text-color: var(--color-light-5);
+      --button-hover-border-color: transparent;
     }
   }
 }
 
-@mixin f2-input {
-  @include f2-app;
-  @include quick-transition;
-  background: var(--color-cool-4);
-  border: 1px solid var(--color-cool-3);
-  border-radius: 3px;
-  text-shadow: unset;
-  padding: 0px calc(0.1em + 3px);
+@mixin f2-button-cool {
+  @include f2-button-warm;
+  --button-background-color: var(--color-cool-3);
+  --button-border-color: var(--color-cool-2);
+  --button-text-color: var(--color-light-2);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-cool-2);
+  --button-hover-border-color: var(--color-cool-1);
+  --button-hover-text-color: var(--color-light-1);
 
-  &:hover,
+  &:disabled {
+    --button-background-color: var(--color-cool-5);
+    --button-border-color: var(--color-cool-4);
+    --button-hover-background-color: var(--color-cool-5);
+    --button-text-color: var(--color-light-5);
+  }
+}
+
+@mixin f2-input {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+
+  &:not(:disabled, .disabled):hover,
   &:focus {
-    outline: 2px solid var(--color-cool-3);
-    border: 1px solid var(--color-cool-3);
+    outline: 2px solid var(--input-focus-outline-color);
+    border: 1px solid var(--input-border-color);
+    color: var(--input-focus-text-color);
     box-shadow: var(--box-shadow);
   }
+
+  &.disabled,
+  &:disabled {
+    --input-text-color: var(--color-light-6);
+    --input-background-color: var(--color-cool-5);
+    --input-border-color: var(--color-cool-4);
+  }
+
   &::placeholder {
-    color: var(--color-light-4);
+    color: var(--input-placeholder-color);
+  }
+
+  &::selection {
+    color: var(--input-text-color);
+    background: var(--input-focus-outline-color);
+  }
+
+  &[type="checkbox"] {
+    border: unset;
   }
 }
 

@@ -1,3 +1,7 @@
+# 2.10.6
+
+- (Refinement) Added Foundry 2 styling for PC sheets and Kingdom sheets. All sheets should now be styled.
+
 # 2.10.5
 
 - (Refinement) Added Foundry 2 styling for the Critical fumble deck journals also...

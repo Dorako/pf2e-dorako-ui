@@ -22,9 +22,9 @@
     border-bottom-right-radius: 0px;
     margin-bottom: 0px;
     padding-bottom: 5px;
-    &:hover {
-      box-shadow: var(--gold-and-glow);
-    }
+    // &:hover {
+    //   box-shadow: var(--gold-and-glow);
+    // }
   }
 
   &.dfce-cm-middle,
@@ -34,9 +34,9 @@
     border-bottom-style: none;
     border-radius: 0px;
 
-    &:hover {
-      box-shadow: var(--gold-and-glow);
-    }
+    // &:hover {
+    //   box-shadow: var(--gold-and-glow);
+    // }
     .message-content {
       padding-right: 0px;
     }

@@ -111,7 +111,7 @@
     }
   }
   &.polyglot-lang-select input {
-    @include glass;
+    // @include glass;
     // border radius doesn't work here
     margin: unset;
     accent-color: var(--color-checkbox-checked);

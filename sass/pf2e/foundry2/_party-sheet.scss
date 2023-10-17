@@ -16,23 +16,14 @@
 
   &.sheet.party nav.sub-nav {
     background: unset;
-    > a {
-      @include f2-app;
-      &:hover,
+    box-shadow: unset;
+    a,
+    .tab {
+      @include f2-button-warm;
+      font-family: var(--font-primary);
+
       &.active {
-        border-color: var(--color-warm-1);
-        background: var(--color-warm-2);
-        color: var(--color-light-2);
-      }
-      &.disabled {
-        border-color: var(--color-warm-4);
-        background: var(--color-cool-5);
-        color: var(--color-light-5);
-        &:hover {
-          border-color: var(--color-warm-3);
-          background: var(--color-cool-4);
-          color: var(--color-light-4);
-        }
+        font-weight: unset;
       }
     }
   }
@@ -40,7 +31,8 @@
   &.sheet.party form > header input[type="text"],
   &.sheet.party form > header input[type="number"] {
     @include f2-input;
-    height: 32px;
+    height: 48px;
+    font-size: 48px;
   }
 
   &.sheet.party .sidebar {

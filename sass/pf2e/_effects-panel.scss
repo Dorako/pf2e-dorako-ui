@@ -186,7 +186,12 @@
   }
 
   .effect-item > .icon {
-    @include f2-app;
+    border: 1px solid var(--color-cool-4);
+    border-radius: var(--border-radius);
+    --box-shadow: 0px 1px 3px 1px black;
+    box-shadow: var(--box-shadow);
+    color: var(--color-light-3);
+    position: relative;
     &.aura {
       border-radius: 50%;
       border: 1px solid var(--color-warm-1);
@@ -195,7 +200,7 @@
     .linked {
       color: var(--color-light-2);
       background: var(--color-warm-3);
-      border: 1px solid var(--color-cool-3);
+      border: 1px solid var(--color-cool-4);
       border-radius: 4px 0px var(--border-radius) 0px;
       border-bottom: unset;
       border-right: unset;
@@ -211,7 +216,7 @@
         color: var(--color-light-2);
         background: var(--color-warm-3);
         border-radius: 0px 4px 0px var(--border-radius);
-        border: 1px solid var(--color-cool-3);
+        border: 1px solid var(--color-cool-4);
         border-bottom: unset;
         border-left: unset;
         text-shadow: 0px 1px 2px black;

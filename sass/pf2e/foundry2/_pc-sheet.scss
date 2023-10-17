@@ -1,0 +1,206 @@
+.foundry2-pc {
+  &.actor.sheet {
+    --header: url("/systems/pf2e/assets/sheet/header.webp");
+  }
+
+  &.actor.sheet .crb-style .sheet-body {
+    --primary: var(--color-warm-2);
+    --secondary: var(--color-cool-3);
+    --text-dark: var(--color-light-2);
+    --color-border-divider: var(--color-cool-3);
+    --sub: var(--color-light-6);
+    --alt: var(--color-light-5);
+    --bg: var(--color-cool-5-90);
+    background: unset;
+
+    input[type="number"] {
+      @include f2-input;
+    }
+    select:not(.pf-rank, .modular) {
+      @include f2-input;
+    }
+
+    .details-label,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      --primary: var(--color-light-2);
+    }
+  }
+
+  &.window-app {
+    @include f2-app;
+    text-shadow: unset;
+    backdrop-filter: blur(4px);
+    //prettier-ignore
+    box-shadow: 0px 5px 20px 3px black,
+                    0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent),
+                    0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent),
+                    0px 0px 10px 05px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+
+    .window-header {
+      border: unset;
+    }
+
+    .window-content {
+      background: unset;
+      box-shadow: unset;
+    }
+
+    .window-resizable-handle {
+      //   background: var(--color-cool-4);
+      background: var(--color-warm-4);
+      border: 1px solid var(--color-cool-3);
+      border-radius: 4px 0px var(--border-radius) 0px;
+      border-bottom-color: var(--color-warm-3);
+      border-right-color: var(--color-warm-3);
+      bottom: -1px;
+      right: -1px;
+    }
+  }
+
+  // &.app,
+  // &.window-app .window-content {
+  //   background: unset;
+  //   box-shadow: unset;
+  // }
+  &.actor.sheet .crb-style {
+    background: unset;
+    background: var(--header), transparent !important;
+    background-repeat: repeat-x, no-repeat !important;
+    background-size: auto 89px, cover !important;
+    background-attachment: local !important;
+  }
+
+  &.sheet.actor.window-app .window-header {
+    background: #5a0c02;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    // border: 1px solid var(--color-cool-3);
+    // border-bottom: unset;
+    // box-shadow: 0px 0px 10px 5px black;
+  }
+  &.sheet.actor.window-app.green-theme .window-header {
+    background: #0e2a1a;
+  }
+  &.sheet.actor.window-app.blue-theme .window-header {
+    background: #1a1e5f;
+  }
+  &.sheet.actor.window-app.minimized .window-header {
+    border-radius: var(--border-radius);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .pc_deity img.symbol {
+    background: var(--color-warm-4);
+    border: 1px solid var(--color-warm-3);
+    box-shadow: 0px 0px 0px 1px var(--color-warm-3), var(--box-shadow);
+  }
+
+  &.sheet.actor .crb-style nav.sub-nav {
+    background: unset;
+    box-shadow: unset;
+    a,
+    .tab {
+      @include f2-button-warm;
+      font-family: var(--font-primary);
+
+      &.active {
+        font-weight: unset;
+      }
+    }
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .item-image:hover i {
+    background: var(--color-warm-2);
+    text-shadow: 0px 1px 2px black;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
+    @include f2-input;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography {
+    section input {
+      @include f2-input;
+    }
+    .editor {
+      @include f2-input;
+    }
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input,
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
+    @include f2-input;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 {
+    @include f2-input;
+
+    &:hover {
+      outline: 0px transparent !important;
+    }
+  }
+
+  .crb-style .details-input {
+    @include f2-input;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate {
+    @include f2-button-warm;
+  }
+
+  &.actor.sheet .crb-style aside .sidebar .tags .tag.edit-btn {
+    background: #dad8cc;
+  }
+
+  //prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
+    filter: invert(1);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select {
+    --input-text-color: black;
+    --input-background-color: transparent;
+    --input-border-color: transparent;
+    --box-shadow: transparent;
+    color: black;
+  }
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .label {
+    opacity: unset;
+    color: var(--color-light-5);
+  }
+
+  .actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
+  .actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+    // Do system PR to fix this constant
+  }
+
+  //prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill .button-group h6:hover,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill .button-group h6:hover,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill .button-group h6:hover {
+    --primary: var(--color-warm-2);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+    border-image: linear-gradient(90deg, transparent, var(--color-warm-2) 20%, transparent) 1;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+    --text-dark: black;
+    --primary: var(--color-warm-2);
+    .button-group {
+      button {
+        --primary: var(--system-primary);
+        --secondary: var(--system-secondary);
+      }
+    }
+  }
+}
