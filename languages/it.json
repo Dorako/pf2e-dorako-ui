@@ -27,7 +27,7 @@
             "no-theme": "Nessun tema",
             "light-theme": "Interfaccia Dorako Chiara",
             "dark-theme": "Interfaccia Dorako Scura",
-            "foundry2-theme": "Foundry2"
+            "foundry2-theme": "Foundry 2"
           }
         },
         "frosted-glass": {
@@ -48,9 +48,94 @@
         },
         "chat-theme": {
           "name": "Tema della chat",
-          "hint": "Impatta tutti i messaggi di chat"
+          "hint": "Impatta tutti i messaggi di chat",
+          "choice": {
+            "factions": "Giocatori chiaro, GM scuro",
+            "foundry2": "Foundry 2"
+          }
         },
-        "hint": "Cambia impostazioni tema per varie applicazioni ed elementi dell'interfaccia utente"
+        "hint": "Cambia impostazioni tema per varie applicazioni ed elementi dell'interfaccia utente",
+        "pc-sheet-theme": {
+          "name": "Tema scheda PG",
+          "hint": "Impatta le schede dei PG e dei veicoli",
+          "choice": {
+            "red": "Rosso Originale",
+            "green": "Verde Rimasterizzazione",
+            "blue": "Blu Classico"
+          }
+        },
+        "loot-sheet-theme": {
+          "name": "Tema della scheda del bottino",
+          "hint": "Impatta le schede del bottino"
+        },
+        "familiar-sheet-theme": {
+          "name": "Tema della scheda famiglio",
+          "hint": "Impatta le schede dei famigli",
+          "choice": {
+            "dark-red-header": "Intestazione Scura + Rossa"
+          }
+        },
+        "header-style": {
+          "name": "Tema dell'intestazione dei messaggi di chat",
+          "choice": {
+            "blue": "Blu",
+            "green": "Verde",
+            "tint": "Colore del giocatore",
+            "none": "Disabilitato",
+            "red": "Rosso"
+          },
+          "hint": "Aggiunge un'intestazione colorata ad ogni messaggio di chat"
+        },
+        "enable-dark-theme-journals": {
+          "name": "Attivare il tema scuro per i Diari?",
+          "hint": "Non influisce sui diari dei moduli premium"
+        }
+      },
+      "avatar": {
+        "name": "Impostazioni Avatar",
+        "label": "Configura Impostazioni Avatar",
+        "hint": "Configurazione delle impostazioni relative agli avatar nei messaggi di chat",
+        "source": {
+          "name": "Avatar per la chat",
+          "hint": "Aggiunge un avatar ai messaggi di chat",
+          "choice": {
+            "token": "Preferire l'immagine del token",
+            "actor": "Preferire l'immagine dell'attore"
+          }
+        },
+        "hide-when-token-hidden": {
+          "hint": "Nasconde gli avatar quando il token di chi parla è nascosto",
+          "name": "Nascondere l'avatar quando il token è nascosto?"
+        },
+        "hide-gm-avatar-when-secret": {
+          "name": "Nascondere l'avatar quando è segreto?",
+          "hint": "Nasconde gli avatar ogni volta che il GM effettua tiri segreti/privati"
+        },
+        "size": {
+          "name": "Taglia",
+          "hint": "Predefinito di 40px"
+        },
+        "popout-support": {
+          "hint": "Ridimensiona i token degli avatar in base alla scala del token",
+          "name": "Abilitare il pop-out del token dell'avatar?"
+        },
+        "reacts-to-degree-of-success": {
+          "name": "L'avatar reagisce ai tiri critici?",
+          "hint": "Un successo critico illuminerà di verde, mentre un fallimento critico farà diventare muto e scuro"
+        },
+        "small-creature-token-avatar-size": {
+          "name": "Dimensione avatar creatura di taglia piccola",
+          "hint": "Il predefinito è 0.8"
+        },
+        "use-user-avatar": {
+          "name": "Usare l'avatar dell'utente come soluzione alternativa?",
+          "hint": "Configurare gli avatar dell'utente facendo clic con il tasto destro sulla lista utenti nell'area in basso a sinistra di Foundry"
+        }
+      },
+      "ux": {
+        "name": "Impostazioni Esperienza Utente",
+        "label": "Configura Impostazioni Esperienza Utente",
+        "hint": "Configurare le impostazioni relative a mostrare, nascondere, rendere l'interfaccia utente meno ostruente o più chiara, spostare le cose in posizioni differenti"
       }
     }
   }
