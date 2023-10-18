@@ -56,7 +56,7 @@
         },
         "pc-sheet-theme": {
           "name": "Motyw karty PC",
-          "hint": "Wpływa na karty graczy",
+          "hint": "Karty efektów dla postaci graczy i pojazdów",
           "choice": {
             "green": "Poprawiony Zielony",
             "blue": "Klasyczny niebieski",
