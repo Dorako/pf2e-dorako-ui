@@ -1,3 +1,9 @@
+# 2.10.9
+
+- (Refinement) Made Foundry 2 theme play nice with Workbench setting that adds rarity colors to feats and spells.
+- (Refinement) Improved Generate Check prompt in Foundry 2 and Dark theme.
+- (Refinement) Improved styling for PF2e Perception.
+
 # 2.10.8
 
 - (Maintenance) Fixed an issue where the RE editor would have a white background with Foundry 2 or Dark theme active.

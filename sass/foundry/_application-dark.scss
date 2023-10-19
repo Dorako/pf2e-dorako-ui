@@ -36,6 +36,42 @@
     background-color: #440eb9;
     background-blend-mode: luminosity;
   }
+
+  &#generate-check-prompt .dialog-content tags.tagify {
+    --tags-disabled-bg: #f1f1f1;
+    --tags-border-color: #ddd;
+    --tags-hover-border-color: #ccc;
+    --tags-focus-border-color: #3595f6;
+    --tag-border-radius: 3px;
+    --tag-bg: #e5e5e5;
+    --tag-hover: #d3e2e2;
+    --tag-text-color: black;
+    --tag-text-color--edit: black;
+    --tag-pad: 0.3em 0.5em;
+    --tag-inset-shadow-size: 1.1em;
+    --tag-invalid-color: #d39494;
+    --tag-invalid-bg: rgba(211, 148, 148, 0.5);
+    --tag-remove-bg: rgba(211, 148, 148, 0.3);
+    --tag-remove-btn-color: black;
+    --tag-remove-btn-bg: none;
+    --tag-remove-btn-bg--hover: #c77777;
+    --input-color: inherit;
+    --tag-hide-transition: 0.3s;
+    --placeholder-color: var(--color-text-light-heading);
+    --placeholder-color-focus: var(--color-text-light-highlight);
+
+    --tag-bg: var(--tertiary);
+    --tags-border-color: var(--tertiary);
+    --tags-hover-border-color: var(--tertiary);
+    --tag-color: var(--color-light-2);
+
+    --tag-bg: var(--tertiary);
+    --tag-border-color: var(--tertiary);
+    --tags-border-color: var(--tertiary);
+
+    border: 1px solid var(--tag-border-color);
+    border-radius: 3px;
+  }
 }
 
 .dorako-ui.dark-theme #sidebar .settings-sidebar {

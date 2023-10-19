@@ -197,3 +197,11 @@ $adjusted-lower: #cc3311 !default;
   --bg: var(--glass-bg-dark);
   --half-transparent: rgba(255, 255, 255, 0.5);
 }
+
+.foundry2-pc,
+.foundry2 {
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+}

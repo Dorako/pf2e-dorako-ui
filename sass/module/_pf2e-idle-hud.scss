@@ -236,6 +236,18 @@
   }
 }
 
+.foundry2 {
+  &[id^="pf2e-perception-"] .window-content .buttons button {
+    @include f2-button-warm;
+    box-shadow: unset;
+  }
+  &[id^="pf2e-perception-"] .window-content .tokens section .token.ui-selected .name,
+  &[id^="pf2e-perception-"] .window-content .tokens section .token.ui-selecting .name {
+    color: var(--color-warm-1);
+    text-shadow: 0px 0px 5px var(--color-warm-2);
+  }
+}
+
 /* ----------------------------------------- */
 /* Symon Custom CSS                          */
 /* ----------------------------------------- */

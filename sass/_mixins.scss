@@ -90,6 +90,7 @@
     outline: 1px solid var(--button-focus-outline-color);
     border-color: var(--button-hover-border-color);
     color: var(--button-hover-text-color);
+    text-decoration: none;
   }
 
   &.disabled,

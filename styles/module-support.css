@@ -135,6 +135,14 @@
   --half-transparent: rgba(255, 255, 255, 0.5);
 }
 
+.foundry2-pc,
+.foundry2 {
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+}
+
 /* ----------------------------------------- */
 /* Cautious Gamemaster's Pack (CGMP)         */
 /* ----------------------------------------- */
@@ -2865,6 +2873,71 @@ body.system-swade {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   margin: unset;
+}
+
+.foundry2[id^=pf2e-perception-] .window-content .buttons button {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+  box-shadow: unset;
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.disabled, .foundry2[id^=pf2e-perception-] .window-content .buttons button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright.disabled, .foundry2[id^=pf2e-perception-] .window-content .buttons button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, .foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
+  color: var(--color-warm-1);
+  text-shadow: 0px 0px 5px var(--color-warm-2);
 }
 
 /* ----------------------------------------- */

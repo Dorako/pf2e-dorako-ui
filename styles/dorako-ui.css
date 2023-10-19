@@ -284,6 +284,38 @@
   background-color: #440eb9;
   background-blend-mode: luminosity;
 }
+.dorako-ui.dark-theme#generate-check-prompt .dialog-content tags.tagify {
+  --tags-disabled-bg: #f1f1f1;
+  --tags-border-color: #ddd;
+  --tags-hover-border-color: #ccc;
+  --tags-focus-border-color: #3595f6;
+  --tag-border-radius: 3px;
+  --tag-bg: #e5e5e5;
+  --tag-hover: #d3e2e2;
+  --tag-text-color: black;
+  --tag-text-color--edit: black;
+  --tag-pad: 0.3em 0.5em;
+  --tag-inset-shadow-size: 1.1em;
+  --tag-invalid-color: #d39494;
+  --tag-invalid-bg: rgba(211, 148, 148, 0.5);
+  --tag-remove-bg: rgba(211, 148, 148, 0.3);
+  --tag-remove-btn-color: black;
+  --tag-remove-btn-bg: none;
+  --tag-remove-btn-bg--hover: #c77777;
+  --input-color: inherit;
+  --tag-hide-transition: 0.3s;
+  --placeholder-color: var(--color-text-light-heading);
+  --placeholder-color-focus: var(--color-text-light-highlight);
+  --tag-bg: var(--tertiary);
+  --tags-border-color: var(--tertiary);
+  --tags-hover-border-color: var(--tertiary);
+  --tag-color: var(--color-light-2);
+  --tag-bg: var(--tertiary);
+  --tag-border-color: var(--tertiary);
+  --tags-border-color: var(--tertiary);
+  border: 1px solid var(--tag-border-color);
+  border-radius: 3px;
+}
 
 .dorako-ui.dark-theme #sidebar .settings-sidebar button {
   border: none;
@@ -911,6 +943,7 @@ nav#controls.foundry2 ol.control-tools > li.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 nav#controls.foundry2 ol.control-tools li.control-tool.disabled, nav#controls.foundry2 ol.control-tools li.control-tool:disabled,
 nav#controls.foundry2 ol.control-tools > li.disabled,
@@ -992,6 +1025,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 nav#controls.foundry2 ol.control-tools li.control-tool.toggle.disabled, nav#controls.foundry2 ol.control-tools li.control-tool.toggle:disabled,
 nav#controls.foundry2 ol.control-tools > li.toggle.disabled,
@@ -1521,6 +1555,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 #navigation.foundry2 ol#scene-list li.nav-item.disabled, #navigation.foundry2 ol#scene-list li.nav-item:disabled {
   --button-background-color: var(--color-warm-5);
@@ -1593,6 +1628,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 #navigation.foundry2 ol#scene-list li.nav-item.view.disabled, #navigation.foundry2 ol#scene-list li.nav-item.view:disabled {
   --button-background-color: var(--color-warm-5);
@@ -1661,6 +1697,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 #navigation.foundry2 ol#scene-list li.nav-item.gm.disabled, #navigation.foundry2 ol#scene-list li.nav-item.gm:disabled {
   --button-background-color: var(--color-warm-5);
@@ -2397,6 +2434,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2 .control-icon[data-action=sort-up]:hover.disabled, .foundry2 .control-icon[data-action=sort-up]:hover:disabled, .foundry2 .control-icon[data-action=sort-down]:hover.disabled, .foundry2 .control-icon[data-action=sort-down]:hover:disabled, .foundry2 .control-icon[data-action=config]:hover.disabled, .foundry2 .control-icon[data-action=config]:hover:disabled, .foundry2 .control-icon[data-action=trigger]:hover.disabled, .foundry2 .control-icon[data-action=trigger]:hover:disabled, .foundry2 .control-icon[data-action=pf2e-perception]:hover.disabled, .foundry2 .control-icon[data-action=pf2e-perception]:hover:disabled, .foundry2 .control-icon[data-action=clown-car]:hover.disabled, .foundry2 .control-icon[data-action=clown-car]:hover:disabled, .foundry2 .control-icon[data-action=delay]:hover.disabled, .foundry2 .control-icon[data-action=delay]:hover:disabled {
   --button-background-color: var(--color-warm-5);
@@ -2462,6 +2500,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2 .control-icon[data-action=visibility].disabled, .foundry2 .control-icon[data-action=visibility]:disabled, .foundry2 .control-icon[data-action=effects].disabled, .foundry2 .control-icon[data-action=effects]:disabled, .foundry2 .control-icon[data-action=combat].disabled, .foundry2 .control-icon[data-action=combat]:disabled, .foundry2 .control-icon[data-action=locked].disabled, .foundry2 .control-icon[data-action=locked]:disabled, .foundry2 .control-icon[data-action=target].disabled, .foundry2 .control-icon[data-action=target]:disabled, .foundry2 .control-icon[data-action=active].disabled, .foundry2 .control-icon[data-action=active]:disabled, .foundry2 .control-icon[data-action=mystify].disabled, .foundry2 .control-icon[data-action=mystify]:disabled {
   --button-background-color: var(--color-warm-5);
@@ -2770,6 +2809,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.filepicker .favorites .paths .path.disabled, .foundry2.filepicker .favorites .paths .path:disabled {
   --button-background-color: var(--color-warm-5);
@@ -3005,6 +3045,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2 a.button.disabled, .foundry2 a.button:disabled,
 .foundry2 button.disabled,
@@ -3195,6 +3236,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.window-app .tabs .item.disabled, .foundry2.window-app .tabs .item:disabled {
   --button-background-color: var(--color-warm-5);
@@ -3275,6 +3317,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2 .editor-edit.disabled, .foundry2 .editor-edit:disabled {
   --button-background-color: var(--color-warm-5);
@@ -3361,6 +3404,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2#generate-check-prompt nav h4 a.disabled, .foundry2#generate-check-prompt nav h4 a:disabled {
   --button-background-color: var(--color-warm-5);
@@ -3383,6 +3427,38 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2#generate-check-prompt .dialog-content tags.tagify {
+  --tags-disabled-bg: #f1f1f1;
+  --tags-border-color: #ddd;
+  --tags-hover-border-color: #ccc;
+  --tags-focus-border-color: #3595f6;
+  --tag-border-radius: 3px;
+  --tag-bg: #e5e5e5;
+  --tag-hover: #d3e2e2;
+  --tag-text-color: black;
+  --tag-text-color--edit: black;
+  --tag-pad: 0.3em 0.5em;
+  --tag-inset-shadow-size: 1.1em;
+  --tag-invalid-color: #d39494;
+  --tag-invalid-bg: rgba(211, 148, 148, 0.5);
+  --tag-remove-bg: rgba(211, 148, 148, 0.3);
+  --tag-remove-btn-color: black;
+  --tag-remove-btn-bg: none;
+  --tag-remove-btn-bg--hover: #c77777;
+  --input-color: inherit;
+  --tag-hide-transition: 0.3s;
+  --placeholder-color: rgba(0, 0, 0, 0.4);
+  --placeholder-color-focus: rgba(0, 0, 0, 0.25);
+  --tag-bg: var(--color-warm-2);
+  --tags-border-color: var(--color-cool-3);
+  --tags-hover-border-color: var(--color-cool-3);
+  --tag-color: var(--color-light-2);
+  --tag-bg: var(--color-cool-4);
+  --tag-border-color: var(--color-cool-3);
+  --tags-border-color: var(--color-cool-3);
+  border: 1px solid var(--tag-border-color);
+  border-radius: 3px;
 }
 .foundry2.pf2e.item.sheet form .form-list, .foundry2.pf2e.item.sheet form section.sheet-body fieldset {
   border-color: var(--color-cool-3);
@@ -3437,6 +3513,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.disabled, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:disabled {
   --button-background-color: var(--color-warm-5);
@@ -3510,6 +3587,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.disabled, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --button-background-color: var(--color-warm-5);
@@ -3612,6 +3690,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.disabled, .foundry2.pf2e.item.sheet form > nav .sheet-tabs > a:disabled {
   --button-background-color: var(--color-warm-5);
@@ -5964,6 +6043,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.sheet.familiar .skills-content .skills-list .skill-name.disabled, .foundry2.sheet.familiar .skills-content .skills-list .skill-name:disabled {
   --button-background-color: var(--color-warm-5);
@@ -6283,6 +6363,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.sheet nav.sheet-tabs .item.disabled, .foundry2.sheet nav.sheet-tabs .item:disabled {
   --button-background-color: var(--color-warm-5);
@@ -6359,6 +6440,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2-pc .currency li > button.disabled, .foundry2-pc .currency li > button:disabled,
 .foundry2 .currency li > button.disabled,
@@ -6477,6 +6559,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.sheet.kingdom nav.sub-nav a.disabled, .foundry2.sheet.kingdom nav.sub-nav a:disabled,
 .foundry2.sheet.kingdom nav.sub-nav .tab.disabled,
@@ -6578,6 +6661,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.sheet.party nav.sub-nav a.disabled, .foundry2.sheet.party nav.sub-nav a:disabled,
 .foundry2.sheet.party nav.sub-nav .tab.disabled,
@@ -6711,6 +6795,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.sheet.party [data-tab=overview] .summary nav button.disabled, .foundry2.sheet.party [data-tab=overview] .summary nav button:disabled {
   --button-background-color: var(--color-warm-5);
@@ -6794,6 +6879,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2.sheet.party header.content-header .buttons button.disabled, .foundry2.sheet.party header.content-header .buttons button:disabled {
   --button-background-color: var(--color-warm-5);
@@ -7390,6 +7476,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav a.disabled, .foundry2-pc.sheet.actor .crb-style nav.sub-nav a:disabled,
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav .tab.disabled,
@@ -7734,6 +7821,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.disabled, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:disabled, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.disabled, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:disabled {
   --button-background-color: var(--color-warm-5);
@@ -7885,6 +7973,7 @@ section.chat-sidebar {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
+  text-decoration: none;
 }
 .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.disabled, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button:disabled, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.disabled, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button:disabled {
   --button-background-color: var(--color-warm-5);
@@ -8061,6 +8150,14 @@ section.chat-sidebar {
   --body: var(--text-light);
   --bg: var(--glass-bg-dark);
   --half-transparent: rgba(255, 255, 255, 0.5);
+}
+
+.foundry2-pc,
+.foundry2 {
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
 }
 
 /* ----------------------------------------- */
@@ -8630,6 +8727,14 @@ section.chat-sidebar {
   --body: var(--text-light);
   --bg: var(--glass-bg-dark);
   --half-transparent: rgba(255, 255, 255, 0.5);
+}
+
+.foundry2-pc,
+.foundry2 {
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
 }
 
 .dorako-ui.message.chat-message.spell {
