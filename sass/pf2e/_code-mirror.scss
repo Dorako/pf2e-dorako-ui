@@ -1,4 +1,5 @@
 .dorako-ui.dark-theme {
+  &.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
   &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
     // @include glass;
     background-color: var(--glass-bg);
@@ -63,6 +64,7 @@
 /* ----------------------------------------- */
 
 .foundry2 {
+  &.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
   &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
     background-color: var(--color-cool-4);
     border-radius: var(--border-radius);

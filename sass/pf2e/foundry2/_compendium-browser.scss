@@ -31,4 +31,16 @@
       margin-top: 10px;
     }
   }
+
+  &#compendium-browser > section.window-content > .content-box > nav,
+  &#license-viewer > section.window-content > .content-box > nav {
+    --secondary: var(--color-cool-3);
+  }
+
+  &.roll-modifiers-dialog {
+    --secondary: var(--color-cool-3);
+    .window-header {
+      background: linear-gradient(90deg, var(--secondary) 0%, var(--color-cool-3) 50%, var(--secondary) 100%);
+    }
+  }
 }

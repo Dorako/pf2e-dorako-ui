@@ -203,4 +203,14 @@
       }
     }
   }
+
+  .attack-popout {
+    select {
+      @include f2-input;
+    }
+  }
+
+  &.actor.sheet.character .attack-popout.actions ol.actions-list li.strike .item-name .item-image {
+    flex: 0 0 32px;
+  }
 }

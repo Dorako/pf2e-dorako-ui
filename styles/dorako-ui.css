@@ -4059,6 +4059,17 @@ section.chat-sidebar {
   color: var(--rarity-unique) !important;
   border-color: var(--rarity-unique) !important;
 }
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body {
+  --color-text-dark-2: var(--color-light-2);
+  --visibility-gm-bg: var(--alt);
+}
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body input[type=text]:not(:disabled), .dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body input[type=number]:not(:disabled) {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+}
 .dorako-ui.dark-theme.actor.sheet.character button.use-action {
   color: black !important;
 }
@@ -5613,7 +5624,7 @@ section.chat-sidebar {
   color: var(--tertiary-dark);
 }
 
-.dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+.dorako-ui.dark-theme.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor, .dorako-ui.dark-theme.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
   background-color: var(--glass-bg);
   border-radius: 5px;
   box-shadow: var(--glassy-sharp);
@@ -5658,7 +5669,7 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 /* Foundry2                                  */
 /* ----------------------------------------- */
-.foundry2.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+.foundry2.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor, .foundry2.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
   background-color: var(--color-cool-4);
   border-radius: var(--border-radius);
   border: 1px solid var(--color-cool-3);
@@ -7777,6 +7788,54 @@ section.chat-sidebar {
   --primary: var(--system-primary);
   --secondary: var(--system-secondary);
 }
+.foundry2-pc .attack-popout select {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+}
+.foundry2-pc .attack-popout select:not(:disabled, .disabled):hover, .foundry2-pc .attack-popout select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2-pc .attack-popout select.disabled, .foundry2-pc .attack-popout select:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2-pc .attack-popout select::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2-pc .attack-popout select::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2-pc .attack-popout select[type=checkbox] {
+  border: unset;
+}
+.foundry2-pc.actor.sheet.character .attack-popout.actions ol.actions-list li.strike .item-name .item-image {
+  flex: 0 0 32px;
+}
 
 .foundry2#compendium-browser > section.window-content > .content-box .compendium-browser-settings form .setting-section, .foundry2#license-viewer > section.window-content > .content-box .compendium-browser-settings form .setting-section, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .filtercontainer, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {
   background: var(--color-cool-5-75);
@@ -7857,6 +7916,15 @@ section.chat-sidebar {
 }
 .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .control-area > div:first-child, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .control-area > div:first-child {
   margin-top: 10px;
+}
+.foundry2#compendium-browser > section.window-content > .content-box > nav, .foundry2#license-viewer > section.window-content > .content-box > nav {
+  --secondary: var(--color-cool-3);
+}
+.foundry2.roll-modifiers-dialog {
+  --secondary: var(--color-cool-3);
+}
+.foundry2.roll-modifiers-dialog .window-header {
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--color-cool-3) 50%, var(--secondary) 100%);
 }
 
 /* ----------------------------------------- */

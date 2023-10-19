@@ -1,3 +1,9 @@
+# 2.10.8
+
+- (Maintenance) Fixed an issue where the RE editor would have a white background with Foundry 2 or Dark theme active.
+- (Maintenance) Fixed some regressions in the regular dark theme.
+- (Fix) Fixed an issue where the PC color theme would not apply to character sheets.
+
 # 2.10.7
 
 - (Refinement) Added Foundry 2 styling for Vehicle sheet.

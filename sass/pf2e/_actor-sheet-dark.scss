@@ -19,6 +19,16 @@
     }
   }
 
+  &.pf2e.item.sheet form .sheet-body {
+    --color-text-dark-2: var(--color-light-2);
+    --visibility-gm-bg: var(--alt);
+  }
+
+  &.pf2e.item.sheet form .sheet-body input[type="text"]:not(:disabled),
+  &.pf2e.item.sheet form .sheet-body input[type="number"]:not(:disabled) {
+    @include glass;
+  }
+
   &.actor.sheet.character button.use-action {
     color: black !important;
   }

@@ -164,7 +164,7 @@ Hooks.on("renderHazardSheetPF2e", (app, html, data) => {
   html.find("input").addClass("dorako-ui-skip");
 });
 
-for (const appName of [..."CharacterSheetPF2e", "VehicleSheetPF2e"]) {
+for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
     // html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dark-theme");
