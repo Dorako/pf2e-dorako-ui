@@ -54,7 +54,10 @@
   ],
   "flags": {
     "hotReload": {
-      "extensions": [".css", ".json"]
+      "extensions": [
+        ".css",
+        ".json"
+      ]
     }
   },
   "languages": [
@@ -103,9 +106,16 @@
       "lang": "pl",
       "name": "polski",
       "path": "languages/pl.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "languages/it.json"
     }
   ],
-  "styles": ["styles/fonts.css"],
+  "styles": [
+    "styles/fonts.css"
+  ],
   "esmodules": [
     "modules/misc-hooks.js",
     "modules/settings/settings.js",
