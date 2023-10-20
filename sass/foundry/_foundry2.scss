@@ -180,8 +180,7 @@
   }
 
   &.dialog .dialog-buttons button.default {
-    background: var(--button-background-color);
-    border: 1px solid var(--button-border-color);
+    @include f2-button-warm;
   }
 
   form .form-group .form-fields button {
@@ -285,7 +284,6 @@
   &#sidebar {
     border: 1px solid var(--color-cool-3);
     // Dorako UI compat mode
-
     --glassy: 0px 0px 0px 1px var(--color-cool-3);
     --glass-bg-light: var(--app-background);
     --glassy: 0px 0px 0px 1px var(--color-cool-3), 0px 1px 3px 1px black;
@@ -294,7 +292,7 @@
     --gold-and-glow: transparent;
     --primary-dark: var(--color-warm-3);
     --primary: var(--color-warm-2);
-    --primary-light: var(--color-warm-1);
+    --primary-light: var(--color-warm-2);
     // --secondary-dark: var(--color-cool-3);
     // --secondary: var(--color-cool-2);
     // --secondary-light: var(--color-cool-1);
@@ -407,29 +405,10 @@
     align-items: center;
     justify-content: center;
     padding: 0 0.5rem;
-    background: var(--button-background-color);
-    border: 1px solid var(--button-border-color);
-    border-radius: 4px;
-    color: var(--button-text-color);
     text-decoration: none;
     cursor: pointer;
     font-size: var(--font-size-14);
     gap: 5px;
-    --box-shadow: 0px 1px 3px 1px black;
-    box-shadow: var(--box-shadow);
-    text-shadow: 0px 1px 2px black;
-
-    &:hover {
-      background: var(--button-hover-background-color);
-      color: var(--button-hover-text-color);
-      border-color: var(--button-hover-border-color);
-      transition: background-color 0.5s, border-color 0.5s;
-    }
-
-    &.active {
-      outline: 1px solid var(--button-focus-outline-color);
-      box-shadow: 0 0 4px var(--button-focus-outline-color);
-    }
   }
 
   a.button,

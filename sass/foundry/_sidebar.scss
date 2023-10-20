@@ -201,6 +201,8 @@ section.chat-sidebar {
 .foundry2 {
   #sidebar-tabs {
     border: unset;
+    --sidebar-tab-height: 22px;
+
     > .item {
       @include quick-transition;
       &:hover {
@@ -218,6 +220,7 @@ section.chat-sidebar {
 
   &#sidebar.collapsed #sidebar-tabs > .item.active {
     border-color: var(--color-warm-1);
+    border-radius: var(--border-radius);
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-top-right-radius: var(--border-radius);

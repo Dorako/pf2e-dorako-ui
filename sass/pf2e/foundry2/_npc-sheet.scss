@@ -23,6 +23,20 @@
     }
   }
 
+  &.actor.sheet .item-image:hover i {
+    background: var(--color-warm-2);
+    text-shadow: 0px 1px 2px black;
+  }
+
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input,
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
+    @include f2-input;
+  }
+
+  &.actor.npc.sheet form .spellcasting-entry select {
+    @include f2-input;
+  }
+
   &.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type="text"] {
     @include f2-input;
   }

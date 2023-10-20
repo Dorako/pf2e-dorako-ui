@@ -113,7 +113,7 @@ nav#controls.foundry2 {
 }
 
 #darkness-adjuster.foundry2 {
-  height: 42px !important; //overwrite system's !important
+  height: 42px !important; // overwrite system's !important
   @include f2-app;
   margin-top: 3px;
   background-color: var(--color-cool-2);

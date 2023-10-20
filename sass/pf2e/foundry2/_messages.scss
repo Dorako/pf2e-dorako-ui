@@ -185,11 +185,11 @@
   background: none;
   padding: 5px 5px 0px 5px;
   margin: -5px -5px -0px -5px;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   gap: 5px;
 
   &.dorako-header {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
     background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
     text-shadow: 0px 1px 1px black;
     padding-bottom: 5px;
@@ -233,12 +233,12 @@
   // }
 
   &.dark-header-text {
-    color: var(--header-color);
+    color: color-mix(in srgb, var(--header-color) 20%, white);
     .message-sender {
-      color: var(--header-color);
+      color: color-mix(in srgb, var(--header-color) 20%, white);
     }
     .header-meta {
-      color: var(--header-color);
+      color: color-mix(in srgb, var(--header-color) 20%, white);
     }
   }
 

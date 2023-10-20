@@ -31,7 +31,7 @@ export function isPremiumApplication(app, html, data, appName) {
       return true;
     }
   }
-  const isKingmaker = "pf2e-kingmaker.KingmakerJournalSheet" === app.document?.flags["core"]?.sheetClass;
+  const isKingmaker = "pf2e-kingmaker.KingmakerJournalSheet" === app.document?.flags?.["core"]?.sheetClass;
   if (isKingmaker) {
     console.debug(`${MODULE_NAME} | ${appName} contains core flags for kingmaker => add .premium`);
     html[0].classList.add("premium");

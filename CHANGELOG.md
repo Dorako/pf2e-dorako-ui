@@ -1,3 +1,12 @@
+# 2.10.10
+
+- (Refinement) Ensured that Season of Ghosts journals are excluded from styling.
+- (Refinement) Improved spell section for NPC sheets in Foundry2 styling.
+- (Refinement) Made Foundry 2 styling compatible with Condition Manager from Workbench.
+- (Refinement) Made Foundry 2 styling compatible with Monk's hotbar expansion.
+- (Refinement) Improved Foundry 2 styling for dice tray.
+- (Refinement) Adjusted how player colors blend fo Foundry 2 chat message headers.
+
 # 2.10.9
 
 - (Refinement) Made Foundry 2 theme play nice with Workbench setting that adds rarity colors to feats and spells.

@@ -207,7 +207,7 @@
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
-  text-shadow: 0px 0px 3px black;
+  text-shadow: 0px 1px 2px black;
 }
 .foundry2 #context-menu li.context-item:first-child {
   border-top-left-radius: var(--border-radius);
@@ -972,6 +972,11 @@ nav#controls.foundry2 ol.control-tools > li.bright:disabled {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+nav#controls.foundry2 ol.control-tools li.control-tool.bright:not(.disabled, :disabled):hover,
+nav#controls.foundry2 ol.control-tools > li.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 nav#controls.foundry2 ol.control-tools li.control-tool > img,
 nav#controls.foundry2 ol.control-tools > li > img {
   filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
@@ -1053,6 +1058,11 @@ nav#controls.foundry2 ol.control-tools > li.toggle.bright:disabled {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+nav#controls.foundry2 ol.control-tools li.control-tool.toggle.bright:not(.disabled, :disabled):hover,
+nav#controls.foundry2 ol.control-tools > li.toggle.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 nav#controls.foundry2 ol.control-tools li.control-tool.toggle:disabled,
 nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
@@ -1579,6 +1589,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+#navigation.foundry2 ol#scene-list li.nav-item.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 #navigation.foundry2 ol#scene-list li.nav-item > a:hover {
   text-shadow: unset;
 }
@@ -1652,6 +1666,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+#navigation.foundry2 ol#scene-list li.nav-item.view.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 #navigation.foundry2 ol#scene-list li.nav-item.view.active {
   border-color: var(--color-cool-2);
 }
@@ -1720,6 +1738,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+#navigation.foundry2 ol#scene-list li.nav-item.gm.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 #navigation.foundry2 ol#scene-list li.nav-item.gm:disabled {
   --button-background-color: var(--color-cool-5);
@@ -1994,6 +2016,7 @@ section.chat-sidebar {
 /* ----------------------------------------- */
 .foundry2 #sidebar-tabs {
   border: unset;
+  --sidebar-tab-height: 22px;
 }
 .foundry2 #sidebar-tabs > .item {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
@@ -2015,6 +2038,7 @@ section.chat-sidebar {
 }
 .foundry2#sidebar.collapsed #sidebar-tabs > .item.active {
   border-color: var(--color-warm-1);
+  border-radius: var(--border-radius);
 }
 .foundry2#sidebar.collapsed #sidebar-tabs > .item.active:first-child {
   border-top-left-radius: var(--border-radius);
@@ -2345,7 +2369,7 @@ section.chat-sidebar {
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
-  text-shadow: 0px 0px 3px black;
+  text-shadow: 0px 1px 2px black;
 }
 .foundry2#token-hud .status-effects .effect-control .badge {
   border-width: 1px;
@@ -2458,6 +2482,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2 .control-icon[data-action=sort-up]:hover.bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=sort-down]:hover.bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=config]:hover.bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=trigger]:hover.bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=pf2e-perception]:hover.bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=clown-car]:hover.bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=delay]:hover.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2 .control-icon[data-action=visibility], .foundry2 .control-icon[data-action=effects], .foundry2 .control-icon[data-action=combat], .foundry2 .control-icon[data-action=locked], .foundry2 .control-icon[data-action=target], .foundry2 .control-icon[data-action=active], .foundry2 .control-icon[data-action=mystify] {
   background: var(--color-cool-5-75);
   border: 1px solid var(--color-cool-4);
@@ -2523,6 +2551,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2 .control-icon[data-action=visibility].bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=effects].bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=combat].bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=locked].bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=target].bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=active].bright:not(.disabled, :disabled):hover, .foundry2 .control-icon[data-action=mystify].bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2 .control-icon[data-action=visibility]:disabled, .foundry2 .control-icon[data-action=effects]:disabled, .foundry2 .control-icon[data-action=combat]:disabled, .foundry2 .control-icon[data-action=locked]:disabled, .foundry2 .control-icon[data-action=target]:disabled, .foundry2 .control-icon[data-action=active]:disabled, .foundry2 .control-icon[data-action=mystify]:disabled {
   --button-background-color: var(--color-cool-5);
@@ -2755,8 +2787,67 @@ section.chat-sidebar {
   border-bottom: 1px solid var(--color-cool-5);
 }
 .foundry2.dialog .dialog-buttons button.default {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
   background: var(--button-background-color);
   border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2.dialog .dialog-buttons button.default:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2.dialog .dialog-buttons button.default.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.dialog .dialog-buttons button.default.disabled, .foundry2.dialog .dialog-buttons button.default:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.dialog .dialog-buttons button.default.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.dialog .dialog-buttons button.default.bright.disabled, .foundry2.dialog .dialog-buttons button.default.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.dialog .dialog-buttons button.default.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2 form .form-group .form-fields button {
   height: var(--form-field-height);
@@ -2832,6 +2923,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2.filepicker .favorites .paths .path.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2.filepicker .favorites .paths .path:disabled {
   --button-background-color: var(--color-cool-5);
@@ -2916,7 +3011,7 @@ section.chat-sidebar {
   --gold-and-glow: transparent;
   --primary-dark: var(--color-warm-3);
   --primary: var(--color-warm-2);
-  --primary-light: var(--color-warm-1);
+  --primary-light: var(--color-warm-2);
   --secondary-dark: var(--color-warm-3);
   --secondary: var(--color-warm-2);
   --secondary-light: var(--color-warm-2);
@@ -2983,29 +3078,10 @@ section.chat-sidebar {
   align-items: center;
   justify-content: center;
   padding: 0 0.5rem;
-  background: var(--button-background-color);
-  border: 1px solid var(--button-border-color);
-  border-radius: 4px;
-  color: var(--button-text-color);
   text-decoration: none;
   cursor: pointer;
   font-size: var(--font-size-14);
   gap: 5px;
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  text-shadow: 0px 1px 2px black;
-}
-.foundry2 a.button:hover,
-.foundry2 button:hover {
-  background: var(--button-hover-background-color);
-  color: var(--button-hover-text-color);
-  border-color: var(--button-hover-border-color);
-  transition: background-color 0.5s, border-color 0.5s;
-}
-.foundry2 a.button.active,
-.foundry2 button.active {
-  outline: 1px solid var(--button-focus-outline-color);
-  box-shadow: 0 0 4px var(--button-focus-outline-color);
 }
 .foundry2 a.button,
 .foundry2 button {
@@ -3073,6 +3149,11 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2 a.button.bright:not(.disabled, :disabled):hover,
+.foundry2 button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2#token-action-hud-core-settings input,
 .foundry2 input[type=text],
@@ -3260,6 +3341,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2.window-app .tabs .item.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2.app.token-sheet .tab.active[data-tab=appearance] fieldset {
   border-color: var(--color-cool-3);
 }
@@ -3340,6 +3425,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2 .editor-edit.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2 table tr:nth-child(even) {
   background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
@@ -3427,6 +3516,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2#generate-check-prompt nav h4 a.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2#generate-check-prompt .dialog-content tags.tagify {
   --tags-disabled-bg: #f1f1f1;
@@ -3537,6 +3630,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes > i {
   margin-top: 3px;
 }
@@ -3610,6 +3707,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --button-background-color: var(--color-cool-5);
@@ -3713,6 +3814,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2.pf2e.item.sheet form .effects-container, .foundry2.pf2e.item.sheet form .details-container, .foundry2.pf2e.item.sheet form .dice-data {
   gap: 5px;
@@ -4723,7 +4828,7 @@ section.chat-sidebar {
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
-  text-shadow: 0px 0px 3px black;
+  text-shadow: 0px 1px 2px black;
   min-height: 34px;
   font-size: var(--font-size-20);
   line-height: var(--font-size-20);
@@ -5776,7 +5881,7 @@ section.chat-sidebar {
   box-shadow: 0px 2px 3px black;
 }
 .foundry2 .ͼe {
-  color: var(--color-level-error);
+  color: red;
 }
 .foundry2 .ͼd {
   color: greenyellow;
@@ -6067,6 +6172,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2.sheet.familiar .skills-content .skills-list .skill-name.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 
 .foundry2.sheet.actor.loot {
   --text-dark: var(--color-light-2);
@@ -6164,6 +6273,100 @@ section.chat-sidebar {
 }
 .foundry2.actor.npc.sheet form .sheet-body .section-container .section-body {
   background: unset;
+  border: unset;
+}
+.foundry2.actor.sheet .item-image:hover i {
+  background: var(--color-warm-2);
+  text-shadow: 0px 1px 2px black;
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input:focus, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input.disabled, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input:disabled, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input.disabled, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input::selection, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input[type=checkbox], .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input[type=checkbox] {
+  border: unset;
+}
+.foundry2.actor.npc.sheet form .spellcasting-entry select {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+}
+.foundry2.actor.npc.sheet form .spellcasting-entry select:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form .spellcasting-entry select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.actor.npc.sheet form .spellcasting-entry select.disabled, .foundry2.actor.npc.sheet form .spellcasting-entry select:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form .spellcasting-entry select::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.actor.npc.sheet form .spellcasting-entry select::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.actor.npc.sheet form .spellcasting-entry select[type=checkbox] {
   border: unset;
 }
 .foundry2.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text] {
@@ -6387,6 +6590,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2.sheet nav.sheet-tabs .item.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2 .tags.paizo-style .tag.rarity.common,
 .foundry2 .tags.paizo-style .tag.rarity[value=common],
 .foundry2 .tags.paizo-style .tag.rarity > option[value=common] {
@@ -6468,6 +6675,11 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2-pc .currency li > button.bright:not(.disabled, :disabled):hover,
+.foundry2 .currency li > button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 
 .foundry2.sheet.kingdom-builder, .foundry2.sheet.kingdom {
@@ -6588,6 +6800,11 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2.sheet.kingdom nav.sub-nav a.bright:not(.disabled, :disabled):hover,
+.foundry2.sheet.kingdom nav.sub-nav .tab.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2.sheet.kingdom nav.sub-nav a.active,
 .foundry2.sheet.kingdom nav.sub-nav .tab.active {
   font-weight: unset;
@@ -6689,6 +6906,11 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2.sheet.party nav.sub-nav a.bright:not(.disabled, :disabled):hover,
+.foundry2.sheet.party nav.sub-nav .tab.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2.sheet.party nav.sub-nav a.active,
 .foundry2.sheet.party nav.sub-nav .tab.active {
@@ -6819,6 +7041,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2.sheet.party [data-tab=overview] .summary nav button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2.sheet.party [data-tab=overview] .member > .data .main-stats > section {
   background-color: var(--color-warm-4);
 }
@@ -6902,6 +7128,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2.sheet.party header.content-header .buttons button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .icon {
   background: var(--color-warm-5);
@@ -7079,11 +7309,11 @@ section.chat-sidebar {
   background: none;
   padding: 5px 5px 0px 5px;
   margin: -5px -5px 0px -5px;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   gap: 5px;
 }
 .foundry2.chat-message .message-header.dorako-header {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
   text-shadow: 0px 1px 1px black;
   padding-bottom: 5px;
@@ -7119,13 +7349,13 @@ section.chat-sidebar {
   border-color: color-mix(in srgb, var(--header-color) 50%, white);
 }
 .foundry2.chat-message .message-header.dark-header-text {
-  color: var(--header-color);
+  color: color-mix(in srgb, var(--header-color) 20%, white);
 }
 .foundry2.chat-message .message-header.dark-header-text .message-sender {
-  color: var(--header-color);
+  color: color-mix(in srgb, var(--header-color) 20%, white);
 }
 .foundry2.chat-message .message-header.dark-header-text .header-meta {
-  color: var(--header-color);
+  color: color-mix(in srgb, var(--header-color) 20%, white);
 }
 .foundry2.chat-message .message-header .player-name,
 .foundry2.chat-message .message-header .message-sender {
@@ -7505,6 +7735,11 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2-pc.sheet.actor .crb-style nav.sub-nav a.bright:not(.disabled, :disabled):hover,
+.foundry2-pc.sheet.actor .crb-style nav.sub-nav .tab.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav a.active,
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav .tab.active {
   font-weight: unset;
@@ -7845,6 +8080,10 @@ section.chat-sidebar {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright:not(.disabled, :disabled):hover, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 .foundry2-pc.actor.sheet .crb-style aside .sidebar .tags .tag.edit-btn {
   background: #dad8cc;
 }
@@ -7996,6 +8235,10 @@ section.chat-sidebar {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.bright:not(.disabled, :disabled):hover, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .control-area, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .control-area {
   display: flex;

@@ -1,0 +1,50 @@
+// #tokenAttacher {
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+//   display: flex;
+//   align-items: var(--controls-alignment);
+
+//   // Fix foundry's inconsistent gaps
+//   ol.control-tools.sub-controls > li,
+//   ol.control-tools.main-controls {
+//     margin-right: var(--controls-margin);
+//   }
+
+//   ol.control-tools {
+//     &.main-control {
+//       margin-right: var(--controls-margin);
+//     }
+
+//     li.control-tool,
+//     > li {
+//       @include f2-button-warm;
+//       @include f2-grayscale;
+//       margin-bottom: var(--controls-margin);
+//       height: var(--control-size);
+//       width: var(--control-size);
+//       flex: 0 0 var(--control-size);
+//       align-items: center;
+//       justify-content: center;
+//       display: flex;
+//       font-size: calc(var(--control-size) - 12px);
+
+//       &.toggle {
+//         @include f2-button-cool;
+//       }
+//     }
+//   }
+//   .image {
+//     border: 1px solid var(--color-cool-4);
+//     text-shadow: 0px 1px 2px black;
+//     border-radius: var(--border-radius);
+//     --box-shadow: 0px 1px 3px 1px black;
+//     box-shadow: var(--box-shadow);
+//     color: var(--color-light-3);
+//     .token-name {
+//       @include f2-app;
+//     }
+//   }
+//   .close {
+//     @include f2-button-warm;
+//   }
+// }

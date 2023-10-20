@@ -72,3 +72,22 @@
     margin: 0px;
   }
 }
+
+.foundry2 {
+  .dice-tray {
+    .dice-tray__buttons {
+      height: 32px;
+      button {
+        height: 100%;
+        width: auto;
+        > svg {
+          margin: 0px -10px;
+        }
+      }
+    }
+    input[type="text"] {
+      @include f2-input;
+      height: auto;
+    }
+  }
+}

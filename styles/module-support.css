@@ -609,6 +609,63 @@ nav.damage-log-nav.tabs .item.active {
   margin: 0px;
 }
 
+.foundry2 .dice-tray .dice-tray__buttons {
+  height: 32px;
+}
+.foundry2 .dice-tray .dice-tray__buttons button {
+  height: 100%;
+  width: auto;
+}
+.foundry2 .dice-tray .dice-tray__buttons button > svg {
+  margin: 0px -10px;
+}
+.foundry2 .dice-tray input[type=text] {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+  height: auto;
+}
+.foundry2 .dice-tray input[type=text]:not(:disabled, .disabled):hover, .foundry2 .dice-tray input[type=text]:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2 .dice-tray input[type=text].disabled, .foundry2 .dice-tray input[type=text]:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2 .dice-tray input[type=text]::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2 .dice-tray input[type=text]::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2 .dice-tray input[type=text][type=checkbox] {
+  border: unset;
+}
+
 /* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
@@ -965,6 +1022,24 @@ section.readaloud:before, section.readaloud:after {
 /* ----------------------------------------- */
 .dorako-ui.window-app .window-content .dialog-content .cond-cont {
   background: none;
+}
+
+.foundry2.window-app .window-content .dialog-content .cond-cont {
+  background: none;
+}
+.foundry2.window-app .window-content .dialog-content .cond-cont .cond-butt-set {
+  display: flex;
+}
+.foundry2.window-app .window-content .dialog-content .cond-cont button {
+  box-shadow: unset;
+}
+.foundry2.window-app .window-content .dialog-content .cond-cont .cond-buttons,
+.foundry2.window-app .window-content .dialog-content .cond-cont .cond-buttons:focus {
+  width: 100%;
+}
+.foundry2.window-app .window-content .dialog-content .cond-cont .cond-buttons-small,
+.foundry2.window-app .window-content .dialog-content .cond-cont .cond-buttons-small:focus {
+  width: 13%;
 }
 
 .dorako-ui.window-app .action-list button.action-btn img {
@@ -1358,15 +1433,18 @@ section.readaloud:before, section.readaloud:after {
   text-shadow: 0 0 8px var(--color-shadow-primary);
 }
 
+#hotbar.foundry2 .hotbar-page,
 #hotbar.dorako-ui .hotbar-page {
   overflow: visible;
   gap: 4px;
   bottom: 56px;
 }
+#hotbar.foundry2 .hotbar-page .macro-list,
 #hotbar.dorako-ui .hotbar-page .macro-list {
   gap: 7px;
   border: none;
 }
+#hotbar.foundry2 .hotbar-page .action-bar,
 #hotbar.dorako-ui .hotbar-page .action-bar {
   margin: 0px 5px 0px 3px;
 }
@@ -2534,9 +2612,67 @@ body.system-swade {
 /* Foundry2                                  */
 /* ----------------------------------------- */
 .foundry2#module-management .package-list .package .package-overview .tag.expand {
-  background: var(--color-cool-4);
-  border: 1px solid var(--color-cool-3);
-  color: var(--color-light-2);
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2#module-management .package-list .package .package-overview .tag.expand:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2#module-management .package-list .package .package-overview .tag.expand.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2#module-management .package-list .package .package-overview .tag.expand.disabled, .foundry2#module-management .package-list .package .package-overview .tag.expand:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2#module-management .package-list .package .package-overview .tag.expand.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2#module-management .package-list .package .package-overview .tag.expand.bright.disabled, .foundry2#module-management .package-list .package .package-overview .tag.expand.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2#module-management .package-list .package .package-overview .tag.expand.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2#module-credits-dialog .journal-entry-content {
   background: unset;
@@ -2593,6 +2729,13 @@ body.system-swade {
   font-family: var(--font-primary);
   font-size: 1.25rem;
   padding: 4px 8px;
+}
+
+/* ----------------------------------------- */
+/* Heartbeat                                 */
+/* ----------------------------------------- */
+button#heartbeat-button {
+  box-shadow: unset;
 }
 
 .item-piles-player-list-trade-button {
@@ -2934,6 +3077,10 @@ body.system-swade {
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, .foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
   color: var(--color-warm-1);

@@ -7,6 +7,24 @@
   background: none;
 }
 
+.foundry2.window-app .window-content .dialog-content .cond-cont {
+  background: none;
+  .cond-butt-set {
+    display: flex;
+  }
+  button {
+    box-shadow: unset;
+  }
+  .cond-buttons,
+  .cond-buttons:focus {
+    width: 100%;
+  }
+  .cond-buttons-small,
+  .cond-buttons-small:focus {
+    width: 13%;
+  }
+}
+
 // Basic Action Macros
 .dorako-ui.window-app .action-list button {
   &.action-btn img {
