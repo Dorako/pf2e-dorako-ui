@@ -129,6 +129,26 @@
     }
     .editor {
       @include f2-input;
+      height: auto;
+      .tox.tox-tinymce {
+        background: white;
+      }
+    }
+  }
+
+  &.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography {
+    section input,
+    .editor {
+      --input-text-color: var(--color-light-3);
+      --input-focus-text-color: var(--color-light-3);
+      --input-background-color: transparent;
+      --input-border-color: transparent;
+      --input-focus-outline-color: transparent;
+      --box-shadow: transparent;
+
+      &:hover {
+        outline-color: transparent;
+      }
     }
   }
 

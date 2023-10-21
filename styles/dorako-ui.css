@@ -3430,7 +3430,7 @@ section.chat-sidebar {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-.foundry2 table tr:nth-child(even) {
+.foundry2 table:not(.pf2-table) tr:nth-child(even) {
   background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
 }
 .foundry2 section.readaloud {
@@ -6604,6 +6604,15 @@ section.chat-sidebar {
   border: unset;
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
 }
+.foundry2.spellcasting-entry {
+  --primary: var(--color-warm-2);
+  --secondary: var(--color-cool-3);
+  --text-dark: var(--color-light-2);
+  --color-border-divider: var(--color-cool-3);
+  --sub: var(--color-light-6);
+  --alt: var(--color-light-5);
+  --bg: var(--color-cool-5-90);
+}
 
 .foundry2-pc .tags,
 .foundry2 .tags {
@@ -7861,6 +7870,7 @@ section.chat-sidebar {
   user-select: text;
   font-size: var(--font-size-14);
   transition: outline-color 0.5s;
+  height: auto;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:not(:disabled, .disabled):hover, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:focus {
   outline: 2px solid var(--input-focus-outline-color);
@@ -7882,6 +7892,22 @@ section.chat-sidebar {
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor[type=checkbox] {
   border: unset;
+}
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor .tox.tox-tinymce {
+  background: white;
+}
+.foundry2-pc.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography section input,
+.foundry2-pc.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography .editor {
+  --input-text-color: var(--color-light-3);
+  --input-focus-text-color: var(--color-light-3);
+  --input-background-color: transparent;
+  --input-border-color: transparent;
+  --input-focus-outline-color: transparent;
+  --box-shadow: transparent;
+}
+.foundry2-pc.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography section input:hover,
+.foundry2-pc.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography .editor:hover {
+  outline-color: transparent;
 }
 .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
   --input-background-color: var(--color-cool-4);

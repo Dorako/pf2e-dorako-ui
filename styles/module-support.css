@@ -1361,32 +1361,30 @@ section.readaloud:before, section.readaloud:after {
   background-color: var(--primary-light);
 }
 
-#token-hud.monks-little-details .status-effects .effect-control,
-#token-hud.monks-little-details .status-effects .pf2e-effect-control {
+.dorako-ui#token-hud.monks-little-details .status-effects .effect-control, .dorako-ui#token-hud.monks-little-details .status-effects .pf2e-effect-control {
   border-radius: unset;
 }
-
-#token-hud.placeable-hud.monks-little-details .status-effects {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects {
   grid-template-columns: 90px 90px 90px 90px !important;
   background: none;
 }
-#token-hud.placeable-hud.monks-little-details .status-effects .effect-control {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects .effect-control {
   border: none;
   opacity: unset;
 }
-#token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active {
   border: none;
   opacity: 1;
   background-color: var(--secondary-light);
 }
-#token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active .effect-name {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects .effect-control.active .effect-name {
   color: white;
   opacity: unset;
 }
-#token-hud.placeable-hud.monks-little-details .status-effects .effect-control img {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects .effect-control img {
   border-radius: 4px 0px 0px 4px;
 }
-#token-hud.placeable-hud.monks-little-details .status-effects .effect-control img::before {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects .effect-control img::before {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   content: "";
   position: absolute;
@@ -1399,11 +1397,94 @@ section.readaloud:before, section.readaloud:after {
   overflow: hidden;
   pointer-events: none;
 }
-#token-hud.placeable-hud.monks-little-details .status-effects .effect-name {
+.dorako-ui #token-hud.placeable-hud.monks-little-details .status-effects .effect-name {
   opacity: unset;
   padding-right: 4px;
   color: var(--color-text-light-heading);
   font-size: var(--font-size-12);
+}
+
+.foundry2#token-hud.monks-little-details .status-effects {
+  gap: 5px;
+}
+.foundry2#token-hud.monks-little-details .status-effects .effect-control.active, .foundry2#token-hud.monks-little-details .status-effects .pf2e-effect-control.active {
+  border: unset;
+}
+.foundry2 picture {
+  opacity: 1 !important;
+  left: -1px;
+  top: -1px;
+  position: relative;
+}
+.foundry2 #token-hud .status-effects .effect-control .badge {
+  border-top: unset;
+  border-right: unset;
+  width: 18px;
+  right: 0px;
+}
+
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.disabled, body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.bright.disabled, body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
 }
 
 /* ----------------------------------------- */
@@ -3321,6 +3402,409 @@ button#heartbeat-button {
 
 .clock-panel.bottom {
   bottom: 5px;
+}
+
+.foundry2 #tokenizer div.avatar div.view > div > canvas,
+.foundry2 #tokenizer div.token div.view > div > canvas {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+.foundry2 #tokenizer div.menu,
+.foundry2 #tokenizer div.view-layer-control {
+  background: unset;
+}
+.foundry2 #tokenizer div.view-layer-control {
+  border: unset;
+}
+.foundry2 #tokenizer div.view-layer-control canvas,
+.foundry2 #tokenizer div.view-layer-control .section.move-control button {
+  border-radius: var(--border-radius);
+}
+.foundry2 #tokenizer button .fa-regular::before,
+.foundry2 #tokenizer button .fas::before,
+.foundry2 #tokenizer button .button-fas::before {
+  margin-top: unset;
+}
+.foundry2 #tokenizer div.section {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  border-color: var(--color-cool-3);
+}
+.foundry2 #tokenizer div.section button {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2 #tokenizer div.section button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2 #tokenizer div.section button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2 #tokenizer div.section button.disabled, .foundry2 #tokenizer div.section button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2 #tokenizer div.section button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2 #tokenizer div.section button.bright.disabled, .foundry2 #tokenizer div.section button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2 #tokenizer div.section button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2 #tokenizer button.menu-button {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2 #tokenizer button.menu-button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2 #tokenizer button.menu-button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2 #tokenizer button.menu-button.disabled, .foundry2 #tokenizer button.menu-button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2 #tokenizer button.menu-button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2 #tokenizer button.menu-button.bright.disabled, .foundry2 #tokenizer button.menu-button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2 #tokenizer button.menu-button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2.tokenizer .title .box-button {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+  --button-background-color: var(--color-cool-2);
+  --button-border-color: var(--color-warm-1);
+  --button-text-color: var(--color-light-1);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-cool-3);
+  --button-hover-border-color: var(--color-cool-2);
+  --button-hover-text-color: var(--color-light-2);
+}
+.foundry2.tokenizer .title .box-button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2.tokenizer .title .box-button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.tokenizer .title .box-button.disabled, .foundry2.tokenizer .title .box-button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.tokenizer .title .box-button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.tokenizer .title .box-button.bright.disabled, .foundry2.tokenizer .title .box-button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.tokenizer .title .box-button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2.tokenizer .title .box-button.deselected {
+  --button-background-color: var(--color-cool-3);
+  --button-border-color: var(--color-cool-2);
+  --button-text-color: var(--color-light-2);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-cool-2);
+  --button-hover-border-color: var(--color-cool-1);
+  --button-hover-text-color: var(--color-light-1);
+}
+.foundry2.tokenizer .title .box-button > i:before {
+  margin-top: 50% !important;
+}
+
+.foundry2 .monks-active-tiles.sheet .items-list .items-header, .foundry2.monks-active-tiles.sheet .items-list .items-header {
+  background: unset;
+  border: unset;
+}
+.foundry2 .monks-active-tiles.sheet .items-list .items-header .item-controls, .foundry2.monks-active-tiles.sheet .items-list .items-header .item-controls {
+  color: var(--color-light-3);
+}
+.foundry2 .monks-active-tiles.sheet .items-list .items-header h3, .foundry2.monks-active-tiles.sheet .items-list .items-header h3 {
+  font-family: Signika, sans-serif;
+}
+.foundry2#trigger-action .files-list .items-header .item-controls, .foundry2#trigger-action .buttons-list .items-header .item-controls, .foundry2.monks-active-tiles .files-list .items-header .item-controls {
+  color: var(--color-light-2);
+}
+.foundry2.monks-active-tiles .file-list {
+  color: var(--color-light-3);
+}
+.foundry2.monks-active-tiles.sheet .items-list, .foundry2#trigger-action .items-list li a, .foundry2.monks-active-tiles .file-list li a {
+  color: var(--color-light-3);
+}
+.foundry2#trigger-action .file-list li, .foundry2.monks-active-tiles.sheet .file-list li.item {
+  border-color: var(--color-cool-3);
+}
+.foundry2.action-sheet .display-value {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size-14);
+  transition: outline-color 0.5s;
+}
+.foundry2.action-sheet .display-value:not(:disabled, .disabled):hover, .foundry2.action-sheet .display-value:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.action-sheet .display-value.disabled, .foundry2.action-sheet .display-value:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.action-sheet .display-value::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.action-sheet .display-value::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.action-sheet .display-value[type=checkbox] {
+  border: unset;
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a.disabled, .foundry2.monks-active-tiles.sheet .items-list .item-controls a:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a.bright.disabled, .foundry2.monks-active-tiles.sheet .items-list .item-controls a.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2.monks-active-tiles.sheet .items-list .item .item-name {
+  color: var(--color-light-3);
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .action-style {
+  color: #fafafa;
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .filter-style {
+  color: #f73458;
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .logic-style {
+  color: #2b40f8;
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .entity-style {
+  color: #a9a9a9;
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .details-style {
+  color: #a326fc;
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .value-style {
+  color: #515151;
+}
+.foundry2.monks-active-tiles div[data-tab=triggers] .action-items .tag-style {
+  color: #063d68;
 }
 
 /*# sourceMappingURL=module-support.css.map */

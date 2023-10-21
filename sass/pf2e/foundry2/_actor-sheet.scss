@@ -19,6 +19,16 @@
     border: unset;
     box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
   }
+
+  &.spellcasting-entry {
+    --primary: var(--color-warm-2);
+    --secondary: var(--color-cool-3);
+    --text-dark: var(--color-light-2);
+    --color-border-divider: var(--color-cool-3);
+    --sub: var(--color-light-6);
+    --alt: var(--color-light-5);
+    --bg: var(--color-cool-5-90);
+  }
 }
 
 .foundry2-pc,

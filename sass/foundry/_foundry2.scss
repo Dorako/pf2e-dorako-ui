@@ -512,7 +512,7 @@
     padding: 2px 5px;
   }
 
-  table tr:nth-child(even) {
+  table:not(.pf2-table) tr:nth-child(even) {
     background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
   }
 

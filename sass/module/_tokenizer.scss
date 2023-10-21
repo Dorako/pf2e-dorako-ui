@@ -1,0 +1,68 @@
+.foundry2 {
+  #tokenizer div.avatar div.view > div > canvas,
+  #tokenizer div.token div.view > div > canvas {
+    @include f2-app;
+    background-image: linear-gradient(45deg, #808080 25%, transparent 25%),
+      linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%),
+      linear-gradient(-45deg, transparent 75%, #808080 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  #tokenizer div.menu,
+  #tokenizer div.view-layer-control {
+    background: unset;
+  }
+
+  #tokenizer div.view-layer-control {
+    border: unset;
+  }
+
+  #tokenizer div.view-layer-control canvas,
+  #tokenizer div.view-layer-control .section.move-control button {
+    border-radius: var(--border-radius);
+  }
+
+  #tokenizer button .fa-regular::before,
+  #tokenizer button .fas::before,
+  #tokenizer button .button-fas::before {
+    margin-top: unset;
+  }
+
+  #tokenizer div.section {
+    @include f2-app;
+    border-color: var(--color-cool-3);
+    button {
+      @include f2-button-warm;
+    }
+  }
+
+  #tokenizer button.menu-button {
+    @include f2-button-warm;
+  }
+
+  &.tokenizer .title .box-button {
+    @include f2-button-warm;
+    --button-background-color: var(--color-cool-2);
+    --button-border-color: var(--color-warm-1);
+    --button-text-color: var(--color-light-1);
+    --button-focus-outline-color: var(--color-warm-1);
+    --button-hover-background-color: var(--color-cool-3);
+    --button-hover-border-color: var(--color-cool-2);
+    --button-hover-text-color: var(--color-light-2);
+
+    &.deselected {
+      --button-background-color: var(--color-cool-3);
+      --button-border-color: var(--color-cool-2);
+      --button-text-color: var(--color-light-2);
+      --button-focus-outline-color: var(--color-warm-1);
+      --button-hover-background-color: var(--color-cool-2);
+      --button-hover-border-color: var(--color-cool-1);
+      --button-hover-text-color: var(--color-light-1);
+    }
+
+    > i:before {
+      margin-top: 50% !important;
+    }
+  }
+}

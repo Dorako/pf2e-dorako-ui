@@ -1,3 +1,12 @@
+# 2.10.11
+
+- (Refinement) Ensured that Jewel of Indigo Isles and World of Indigo Isles journals are excluded from styling.
+- (Refinement) Added Foundry 2 styling for Tokenizer.
+- (Refinement) Added Foundry 2 styling for MLD's Token HUD.
+- (Refinement) Added Foundry 2 styling for Monk's active token thingie.
+- (Refinement) Fixed several Foundry 2 styling issues related to biography on PC sheets or spell prep.
+- (Refinement) Ensured that Foundry 2 styling doesn't apply to .pf2e tables, like those in class descriptions.
+
 # 2.10.10
 
 - (Refinement) Ensured that Season of Ghosts journals are excluded from styling.

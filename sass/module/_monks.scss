@@ -206,55 +206,86 @@
   background-color: var(--primary-light);
 }
 
-#token-hud.monks-little-details .status-effects .effect-control,
-#token-hud.monks-little-details .status-effects .pf2e-effect-control {
-  border-radius: unset;
+.dorako-ui {
+  &#token-hud.monks-little-details .status-effects .effect-control,
+  &#token-hud.monks-little-details .status-effects .pf2e-effect-control {
+    border-radius: unset;
+  }
+
+  #token-hud.placeable-hud.monks-little-details .status-effects {
+    grid-template-columns: 90px 90px 90px 90px !important;
+    background: none;
+
+    .effect-control {
+      border: none;
+      opacity: unset;
+
+      &.active {
+        border: none;
+        opacity: 1;
+        background-color: var(--secondary-light);
+
+        .effect-name {
+          color: white;
+          opacity: unset;
+        }
+      }
+
+      img {
+        border-radius: 4px 0px 0px 4px;
+
+        &::before {
+          @include quick-transition;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0px 0px 1px var(--tertiary);
+          border-radius: 4px 0px 0px 4px;
+          overflow: hidden;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .effect-name {
+      opacity: unset;
+      padding-right: 4px;
+      color: var(--color-text-light-heading);
+      font-size: var(--font-size-12);
+    }
+  }
 }
 
-#token-hud.placeable-hud.monks-little-details .status-effects {
-  grid-template-columns: 90px 90px 90px 90px !important;
-  background: none;
-
-  .effect-control {
-    border: none;
-    opacity: unset;
-
-    &.active {
-      border: none;
-      opacity: 1;
-      background-color: var(--secondary-light);
-
-      .effect-name {
-        color: white;
-        opacity: unset;
-      }
-    }
-
-    img {
-      border-radius: 4px 0px 0px 4px;
-
-      &::before {
-        @include quick-transition;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        box-shadow: 0px 0px 1px var(--tertiary);
-        border-radius: 4px 0px 0px 4px;
-        overflow: hidden;
-        pointer-events: none;
-      }
-    }
+.foundry2 {
+  &#token-hud.monks-little-details .status-effects {
+    gap: 5px;
   }
 
-  .effect-name {
-    opacity: unset;
-    padding-right: 4px;
-    color: var(--color-text-light-heading);
-    font-size: var(--font-size-12);
+  &#token-hud.monks-little-details .status-effects .effect-control.active,
+  &#token-hud.monks-little-details .status-effects .pf2e-effect-control.active {
+    border: unset;
   }
+
+  picture {
+    opacity: 1 !important;
+    left: -1px;
+    top: -1px;
+    position: relative;
+  }
+
+  #token-hud .status-effects .effect-control .badge {
+    border-top: unset;
+    border-right: unset;
+    width: 18px;
+    right: 0px;
+  }
+}
+
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control {
+  @include f2-button-warm;
 }
 
 /* ----------------------------------------- */
