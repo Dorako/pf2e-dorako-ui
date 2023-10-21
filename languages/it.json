@@ -135,7 +135,125 @@
       "ux": {
         "name": "Impostazioni Esperienza Utente",
         "label": "Configura Impostazioni Esperienza Utente",
-        "hint": "Configurare le impostazioni relative a mostrare, nascondere, rendere l'interfaccia utente meno ostruente o più chiara, spostare le cose in posizioni differenti"
+        "hint": "Configurare le impostazioni relative a mostrare, nascondere, rendere l'interfaccia utente meno ostruente o più chiara, spostare le cose in posizioni differenti",
+        "restructure-card-info": {
+          "name": "Ristrutturare le informazioni della scheda di chat?",
+          "hint": "Rende più evidenti i costi delle azioni per le caratteristiche e sposta le informazioni sugli incantesimi dal piè di pagina"
+        },
+        "border-radius": {
+          "name": "Arrotondamento",
+          "hint": "(predefinito: 3px) Modifica il grado di arrotondamento di molti elementi dell'interfaccia utente"
+        },
+        "control-size": {
+          "name": "Dimensione controllo",
+          "hint": "(predefinito: 36px) Modifica le dimensioni dei controlli e degli elementi di navigazione"
+        },
+        "controls-alignment": {
+          "name": "Allineamento controlli",
+          "hint": "Cambia la posizione dei controlli",
+          "choice": {
+            "start": "Alto",
+            "center": "Centro",
+            "end": "Fondo"
+          }
+        },
+        "chat-merge": {
+          "name": "Attivare l'unione delle chat?",
+          "hint": "(Sperimentale) Unisce i messaggi inviati in rapida sequenza per risparmiare spazio"
+        },
+        "adjust-chat-controls": {
+          "name": "Regolare i controlli della chat?",
+          "hint": "(Sperimentale) Converte la modalità rolltype in pulsanti e cambia anche altri controlli della chat in pulsanti"
+        },
+        "adjust-token-effects-hud": {
+          "name": "Regolare gli effetti dell'HUD dei token?",
+          "hint": "Rende gli effetti circolari e li dispone all'esterno del token, o sull'anello del token per i token più grandi"
+        },
+        "remove-attack-info-from-damage-roll-messages": {
+          "name": "Rimuovere le informazioni sull'attacco dai messaggi sui tiri per i danni?",
+          "hint": "Rende i tiri per i danni meno ingombranti, eliminando le informazioni ridondanti sui colpi. Da usare assieme al chat-merge"
+        },
+        "animate-messages": {
+          "name": "Animare i messaggi per attirare l'attenzione su determinati eventi?",
+          "hint": "Fa sì che i sussurri dei giocatori al GM attirino maggiormente l'attenzione"
+        },
+        "compact-ui": {
+          "name": "Attivare l'interfaccia utente compatta?",
+          "hint": "Ridimensiona i controlli e nasconde quelli inattivi assieme agli elementi di navigazione, a meno che non ci si sposti sopra col mouse"
+        },
+        "start-sidebar-collapsed": {
+          "name": "Collassare la barra laterale per impostazione predefinita?",
+          "hint": "Utilizza lo stato collassato come stato iniziale"
+        },
+        "start-navigation-collapsed": {
+          "hint": "Utilizza lo stato compattato come stato iniziale",
+          "name": "Compattare la navigazione per impostazione predefinita?"
+        },
+        "no-compendium-banner-images": {
+          "name": "Nascondere le immagini del banner del compendio?",
+          "hint": "Rimuove le immagini del banner del compendio nella barra laterale"
+        },
+        "no-logo": {
+          "name": "Nascondere il logo di Foundry?",
+          "hint": "Rimuove il logo Foundry in alto a sinistra"
+        },
+        "no-cards": {
+          "name": "Nascondere la scheda Carte?",
+          "hint": "Rimuove completamente la scheda Carte dalla barra laterale"
+        },
+        "no-chat-control-icon": {
+          "name": "Nascondere l'icona di controllo della chat?",
+          "hint": "Questa è l'icona dei dadi accanto alle opzioni di lancio, tende ad affollare l'interfaccia utente"
+        },
+        "center-hotbar": {
+          "name": "Abilitare la barra di scelta rapida centrata?",
+          "hint": "Conosciuta anche come barra delle macro"
+        },
+        "enable-player-tags": {
+          "name": "Abilitare le etichette dei giocatori?",
+          "hint": "Aggiunge un tag contenente il nome del giocatore accanto a chi parla"
+        },
+        "enable-rolltype-indication": {
+          "name": "Abilitare il tag del tipo di tiro?",
+          "hint": "Aggiunge un tag contenente il tipo di tiro ai messaggi di chat"
+        }
+      },
+      "misc": {
+        "name": "Impostazioni Varie",
+        "label": "Configurare le Impostazioni Varie",
+        "hint": "Configurare le impostazioni relative ad altre funzionalità di Dorako UI",
+        "enable-debug-mode": {
+          "name": "Abilitare la modalità di debug?",
+          "hint": "Aggiunge pulsanti per attivare lo stile dorako-ui e tema scuro per le finestre"
+        },
+        "send-to-chat": {
+          "name": "Aggiungere il pulsante 'Invia' all'intestazione della finestra?",
+          "hint": "Invia il contenuto alla chat come se fosse stato inviato tramite una scheda"
+        },
+        "skin-crb-journal": {
+          "name": "Attivare lo stile CRB per i diari?",
+          "hint": "Istruzioni su www.shorturl.at/mrzN1"
+        }
+      },
+      "customization": {
+        "name": "Personalizzazione",
+        "hint": "Apportare modifiche personalizzate utilizzando CSS personalizzati o escludere determinati stili di Dorako UI",
+        "excluded-applications": {
+          "name": "Applicazioni escluse",
+          "hint": "Cercate nei log il nome dell'Applicazione o chiedete su Discord"
+        },
+        "custom-css": {
+          "name": "CSS personalizzato",
+          "hint": "Scrivere il CSS in un editor esterno e incollarlo qui"
+        }
+      },
+      "external-module": {
+        "name": "Impostazioni Modulo Esterno",
+        "hint": "Aggiustamenti su come gli altri moduli sono influenzati da Dorako UI",
+        "colorize-idle-hud": {
+          "name": "Colorare il tooltip dei Token Interattivi di PF2e?",
+          "hint": "Applica un tema colorato alle icone del tooltip principale"
+        }
       }
     }
   }
