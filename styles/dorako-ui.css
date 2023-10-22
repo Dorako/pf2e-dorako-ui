@@ -733,14 +733,63 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 /* ----------------------------------------- */
-/* DF Chat Enhancements                      */
+/* DFCE Rolltype Buttons                     */
 /* ----------------------------------------- */
-.message.chat-message.dorako-ui.dark-theme.dfce-cm-middle .message-delete, .message.chat-message.dorako-ui.dark-theme.dfce-cm-bottom .message-delete {
-  color: white;
-  top: 5px;
-  text-shadow: 0px 0px 1px black;
+#chat-controls {
+  padding: 0px;
+  gap: var(--sidebar-gap);
+}
+#chat-controls .buttons {
+  gap: var(--sidebar-gap);
+  flex-wrap: nowrap;
 }
 
+#dorako-rt-buttons {
+  flex: 1 0 170px;
+}
+
+#dorako-nonrt-buttons {
+  flex: 1 1 30px !important;
+}
+#dorako-nonrt-buttons:empty {
+  display: none;
+}
+#dorako-nonrt-buttons > button {
+  flex: 1 1 32px;
+}
+
+.dorako-ui #chat-controls .buttons {
+  gap: 4px;
+}
+.dorako-ui #chat-controls .buttons button {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  color: var(--color-text-light-heading);
+  background-color: var(--glass-bg-light);
+  text-shadow: 0px 0px 3px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dorako-ui #chat-controls .buttons button:hover {
+  color: var(--color-text-light-highlight);
+  background-color: var(--primary-light);
+}
+.dorako-ui #chat-controls .buttons button.toggle:hover {
+  background-color: var(--secondary);
+}
+.dorako-ui #chat-controls .buttons button.toggle.active {
+  color: var(--color-text-light-highlight);
+  background-color: var(--secondary-light);
+}
+
+/* ----------------------------------------- */
+/* DFCE Chat Merge                           */
+/* ----------------------------------------- */
 .message.chat-message .message-delete {
   z-index: 1;
 }
@@ -785,50 +834,12 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: 0px 0px 5px 5px;
 }
 
-#chat-controls {
-  padding: 0px;
+.message.chat-message.dorako-ui.dark-theme.dfce-cm-middle .message-delete, .message.chat-message.dorako-ui.dark-theme.dfce-cm-bottom .message-delete {
+  color: white;
+  top: 5px;
+  text-shadow: 0px 0px 1px black;
 }
 
-#dorako-nonrt-buttons {
-  flex-grow: 0;
-}
-
-.dorako-ui #chat-controls .buttons {
-  display: flex;
-  gap: 2.5px;
-}
-.dorako-ui #chat-controls .buttons button {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  color: var(--color-text-light-heading);
-  background-color: var(--glass-bg-light);
-  text-shadow: 0px 0px 3px black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 32px;
-  flex: 1 1 32px;
-  width: 32px;
-}
-.dorako-ui #chat-controls .buttons button:hover {
-  color: var(--color-text-light-highlight);
-  background-color: var(--primary-light);
-}
-.dorako-ui #chat-controls .buttons button.toggle:hover {
-  background-color: var(--secondary);
-}
-.dorako-ui #chat-controls .buttons button.toggle.active {
-  color: var(--color-text-light-highlight);
-  background-color: var(--secondary-light);
-}
-
-/* ----------------------------------------- */
-/* DFCE Chat Merge                           */
-/* ----------------------------------------- */
 .dorako-ui.light-theme.dfce-cm-bottom .dorako-header, .dorako-ui.light-theme.dfce-cm-middle .dorako-header {
   color: black !important;
   text-shadow: 0px 1px 1px white !important;
@@ -852,29 +863,6 @@ nav.damage-log-nav.tabs .item.active {
 .dfce-cm-middle:hover .dorako-header .portrait-and-name,
 .dfce-cm-bottom:hover .dorako-header .portrait-and-name {
   display: none !important;
-}
-
-/* ----------------------------------------- */
-/* Foundry2                                  */
-/* ----------------------------------------- */
-.foundry2 #chat-controls {
-  gap: var(--sidebar-gap);
-}
-.foundry2 #chat-controls .buttons {
-  gap: var(--sidebar-gap);
-  flex-wrap: nowrap;
-}
-.foundry2 #dorako-rt-buttons {
-  flex: 1 0 170px;
-}
-.foundry2 #dorako-nonrt-buttons {
-  flex: 1 1 30px !important;
-}
-.foundry2 #dorako-nonrt-buttons:empty {
-  display: none;
-}
-.foundry2 #dorako-nonrt-buttons > button {
-  flex: 1 1 32px;
 }
 
 /* ----------------------------------------- */
@@ -1108,6 +1096,129 @@ nav.damage-log-nav.tabs .item.active {
 
 .dorako-ui.dark-theme.forien-easy-polls .forien-switch .forien-switch-actual-label {
   color: var(--color-text-light-heading);
+}
+
+.foundry2#forien-quest-log nav.tabs, .foundry2.window-app.forien-quest-preview nav.tabs {
+  background: unset;
+}
+.foundry2#forien-quest-log nav.tabs .item.active, .foundry2#forien-quest-log nav.tabs .item.active:hover, .foundry2.window-app.forien-quest-preview nav.tabs .item.active, .foundry2.window-app.forien-quest-preview nav.tabs .item.active:hover {
+  font-weight: unset;
+  color: var(--color-light-1);
+  text-shadow: 0px 1px 2px black;
+}
+.foundry2#forien-quest-log nav.tabs .item:hover, .foundry2.window-app.forien-quest-preview nav.tabs .item:hover {
+  text-shadow: 0px 1px 2px black;
+}
+.foundry2#forien-quest-log .quest-log.bookmarks nav.log-tabs .item {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--app-background) !important;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border-right: 1px solid transparent;
+  margin: 0 6px 8px;
+}
+.foundry2#forien-quest-log .quest-log.bookmarks nav.log-tabs .item:hover, .foundry2#forien-quest-log .quest-log.bookmarks nav.log-tabs .item.active {
+  font-weight: unset;
+  border-right: 1px solid transparent;
+  border-color: var(--color-warm-1);
+  background: var(--color-warm-2) !important;
+  color: var(--color-light-1);
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  --button-background-color: var(--color-cool-5-75);
+  --button-border-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash:not(.disabled, :disabled):hover, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos:not(.disabled, :disabled):hover, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.active, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.active, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.disabled, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash:disabled, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.disabled, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos:disabled, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.disabled, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright.disabled, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright:disabled, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright.disabled, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright:disabled, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright.disabled, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright:not(.disabled, :disabled):hover, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright:not(.disabled, :disabled):hover, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2#forien-quest-log .editor, .foundry2.window-app.forien-quest-preview .editor {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+}
+.foundry2#forien-quest-log .editor .editor-content, .foundry2.window-app.forien-quest-preview .editor .editor-content {
+  color: var(--color-light-3);
+}
+.foundry2#forien-quest-log .editor .tox.tox-tinymce, .foundry2.window-app.forien-quest-preview .editor .tox.tox-tinymce {
+  background: white;
+}
+.foundry2#forien-quest-log .quest-log .table ul li.drag-quest, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .drop-info, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .drop-info, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-setup section, .foundry2.window-app.forien-quest-preview .quest-body .management .subquests .subquests-box li, .foundry2.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-rewards ul li, .foundry2.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-tasks ul li {
+  background: var(--color-cool-5-75);
+  border: 1px solid var(--color-cool-4);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  border-color: var(--color-scrollbar-border);
+  background: var(--color-warm-3);
+}
+.foundry2#forien-quest-log .actions i, .foundry2.window-app.forien-quest-preview .actions i {
+  color: var(--color-light-2);
+}
+.foundry2#forien-quest-log .actions i:hover, .foundry2.window-app.forien-quest-preview .actions i:hover {
+  color: var(--color-warm-1);
 }
 
 .clock-panel {

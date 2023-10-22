@@ -81,7 +81,7 @@ Hooks.once("init", async () => {
   // injectCSS("dorako-theme/dorako-theme");
   // injectCSS("foundry2-theme/foundry2-theme");
   // injectCSS("dorako-ux/dorako-ux");
-  injectCSS("fonts");
+  // injectCSS("fonts");
 
   // const root = document.querySelector(":root").style;
 

@@ -1,3 +1,7 @@
+# 2.11.1
+
+- (New) Added Foundry 2 styling for Forien's Quest Log.
+
 # 2.11.0
 
 - (Refactor) Massive internal refactor.

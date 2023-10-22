@@ -98,7 +98,7 @@ Hooks.once("init", async () => {
 
   util.debug(`${MODULE_NAME} | INJECTING CSS`);
 
-  injectCSS("dorako-ux/dorako-ux");
+  //   injectCSS("dorako-ux/dorako-ux");
   injectCSS("fonts");
 
   util.debug(`${MODULE_NAME} | INJECTING CSS VARIABLES`);
