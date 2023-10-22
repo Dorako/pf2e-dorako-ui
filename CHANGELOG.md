@@ -1,3 +1,7 @@
+# 2.11.3
+
+- (Maintenance) Fixed a regression where rarity-colored labels from Workbench would be illegible in Foundry 2 theme.
+
 # 2.11.2
 
 - (Refinement) Foundry 2 theme now always removes application backgrounds, fixing legibility issues with applications that add their own (light) backgrounds.

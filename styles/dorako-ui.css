@@ -1110,8 +1110,8 @@ nav.damage-log-nav.tabs .item.active {
   text-shadow: 0px 1px 2px black;
 }
 .foundry2#forien-quest-log .quest-log.bookmarks nav.log-tabs .item {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -1130,15 +1130,15 @@ nav.damage-log-nav.tabs .item.active {
   color: var(--color-light-1);
 }
 .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -1204,8 +1204,8 @@ nav.damage-log-nav.tabs .item.active {
   background: white;
 }
 .foundry2#forien-quest-log .quest-log .table ul li.drag-quest, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .drop-info, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .drop-info, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-setup section, .foundry2.window-app.forien-quest-preview .quest-body .management .subquests .subquests-box li, .foundry2.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-rewards ul li, .foundry2.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-tasks ul li {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -1438,15 +1438,15 @@ button#heartbeat-button {
 /* Foundry2                                  */
 /* ----------------------------------------- */
 .foundry2#module-management .package-list .package .package-overview .tag.expand {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -1880,15 +1880,15 @@ button#heartbeat-button {
 }
 
 body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -2180,15 +2180,15 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border: unset;
 }
 .foundry2.monks-active-tiles.sheet .items-list .item-controls a {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -2506,8 +2506,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .foundry2#pf2e-token-hud .sidebar, .foundry2#pf2e-token-hud .inner, .foundry2#pf2e-token-hud .popup {
   background: unset;
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -2516,8 +2516,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   backdrop-filter: blur(4px);
 }
 .foundry2#pf2e-token-hud .inner .group .section input[type=number] {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -2531,8 +2531,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .foundry2#pf2e-token-hud .distance.free {
   background: unset;
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -2548,8 +2548,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-2);
 }
 .foundry2#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -2559,15 +2559,15 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 
 .foundry2[id^=pf2e-perception-] .window-content .buttons button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -2830,15 +2830,15 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .foundry2 #initiative-delay,
 .foundry2 #initiative-return {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -3504,15 +3504,15 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 #token-action-hud[data-theme=foundry2] .tah-action-button:focus,
 #token-action-hud[data-theme=foundry2] .tah-group-button,
 #token-action-hud[data-theme=foundry2] .tah-group-button:focus {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -3592,8 +3592,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-border-color: var(--color-warm-1);
 }
 #token-action-hud[data-theme=foundry2] #tah-expand-hud {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -3611,15 +3611,15 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   box-shadow: unset !important;
 }
 #token-action-hud[data-theme=foundry2] .tah-action-button.toggle {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -3692,8 +3692,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-bottom-left-radius: var(--border-radius);
 }
 #token-action-hud[data-theme=foundry2] .tah-list-image {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -3703,8 +3703,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 
 .foundry2 #tokenizer div.avatar div.view > div > canvas,
 .foundry2 #tokenizer div.token div.view > div > canvas {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -3731,8 +3731,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   margin-top: unset;
 }
 .foundry2 #tokenizer div.section {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -3741,15 +3741,15 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-color: var(--color-cool-3);
 }
 .foundry2 #tokenizer div.section button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -3805,15 +3805,15 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2 #tokenizer button.menu-button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -3869,15 +3869,15 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-border-color: var(--color-warm-1);
 }
 .foundry2.tokenizer .title .box-button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -4012,8 +4012,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 
 #players.foundry2 {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -6393,8 +6393,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-2);
 }
 #effects-panel.foundry2 .effect-item .effect-info {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -8356,8 +8356,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* FPS display                               */
 /* ----------------------------------------- */
 #fps[data-theme=foundry2] {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -8384,8 +8384,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* Context menu                              */
 /* ----------------------------------------- */
 .foundry2 #context-menu {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -8453,6 +8453,10 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --color-rarity-uncommon: #c45500;
   --color-rarity-rare: #5362ff;
   --color-rarity-unique: #e127e1;
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
@@ -8659,15 +8663,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] button,
 .foundry2 a.button,
 .foundry2 button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -8950,15 +8954,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 [data-theme=foundry2].dialog .dialog-buttons button.default,
 .foundry2.dialog .dialog-buttons button.default {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9031,8 +9035,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 [data-theme=foundry2].sheet header.sheet-header img,
 .foundry2.sheet header.sheet-header img {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -9098,15 +9102,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 [data-theme=foundry2].filepicker .favorites .paths .path,
 .foundry2.filepicker .favorites .paths .path {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9283,15 +9287,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* Core overwrites                           */
 /* ----------------------------------------- */
 .foundry2.window-app .tabs .item {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9371,15 +9375,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   background: var(--color-cool-4);
 }
 .foundry2 .editor-edit {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9572,15 +9576,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-radius: 3px;
 }
 .foundry2#generate-check-prompt nav h4 a {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9678,15 +9682,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-color: transparent;
 }
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9754,15 +9758,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   margin-top: 3px;
 }
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9874,15 +9878,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   margin: 2px;
 }
 .foundry2.pf2e.item.sheet form > nav .sheet-tabs > a {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -9945,8 +9949,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-text-dark-4);
 }
 .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes, .foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10003,15 +10007,15 @@ nav#controls.foundry2 ol.control-tools.main-control {
 }
 nav#controls.foundry2 ol.control-tools li.control-tool,
 nav#controls.foundry2 ol.control-tools > li {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10088,15 +10092,15 @@ nav#controls.foundry2 ol.control-tools > li:hover > img {
 }
 nav#controls.foundry2 ol.control-tools li.control-tool.toggle,
 nav#controls.foundry2 ol.control-tools > li.toggle {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10176,8 +10180,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 
 .foundry2#darkness-adjuster {
   height: 42px !important;
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10198,8 +10202,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 /* Hotbar                                    */
 /* ----------------------------------------- */
 #hotbar.foundry2 .bar-controls {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10209,8 +10213,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 #hotbar.foundry2 .macro {
   height: calc(var(--macro-size) + 2px);
   width: calc(var(--macro-size) + 2px);
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10270,8 +10274,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   width: calc(100% - 46px);
 }
 #navigation.foundry2 #nav-toggle {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10284,15 +10288,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   height: var(--control-size);
 }
 #navigation.foundry2 ol#scene-list li.nav-item {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10360,15 +10364,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border-color: var(--color-warm-1);
 }
 #navigation.foundry2 ol#scene-list li.nav-item.view {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10430,15 +10434,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border-color: var(--color-cool-2);
 }
 #navigation.foundry2 ol#scene-list li.nav-item.gm {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10608,8 +10612,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2#token-hud .status-effects.active picture img {
   opacity: unset;
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10625,8 +10629,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
 }
 .foundry2#token-hud .status-effects .title-bar {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10661,15 +10665,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   opacity: unset;
 }
 .foundry2 .control-icon {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10731,15 +10735,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   filter: sepia() grayscale(0.95) brightness(1) drop-shadow(0px 1px 1px black);
 }
 .foundry2 .control-icon[data-action=visibility], .foundry2 .control-icon[data-action=effects], .foundry2 .control-icon[data-action=combat], .foundry2 .control-icon[data-action=locked], .foundry2 .control-icon[data-action=target], .foundry2 .control-icon[data-action=active], .foundry2 .control-icon[data-action=mystify] {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -10822,8 +10826,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-2);
 }
 .foundry2 #sidebar-tabs > .item.active {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10851,8 +10855,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2 .compendium.directory .directory-header .compendium-name,
 .foundry2 .compendium-sidebar .directory-item.compendium .compendium-name,
 .foundry2 .compendium-sidebar .directory-item.compendium.locked .compendium-name {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10860,8 +10864,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
 }
 .foundry2 .compendium-sidebar .directory-item.compendium .compendium-footer .source {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -10884,8 +10888,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   z-index: 1;
 }
 .foundry2 section.chat-sidebar .jump-to-bottom > a {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -11055,8 +11059,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   flex-direction: column;
 }
 .foundry2.sheet.hazard .section-container {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -11080,8 +11084,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   background: unset;
 }
 .foundry2.sheet.familiar .section-container {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -11154,15 +11158,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   margin-right: 100px;
 }
 .foundry2.sheet.familiar .skills-content .skills-list .skill-name {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -11296,8 +11300,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --secondary: var(--color-cool-2);
 }
 .foundry2.actor.npc.sheet form .sheet-body .section-container {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -11582,15 +11586,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.sheet nav.sheet-tabs .item {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -11671,15 +11675,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2-pc .currency li > button,
 .foundry2 .currency li > button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -11795,15 +11799,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2.sheet.kingdom nav.sub-nav a,
 .foundry2.sheet.kingdom nav.sub-nav .tab {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -11877,8 +11881,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: transparent;
 }
 .foundry2.sheet.kingdom-builder .build-element .selection {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -11903,15 +11907,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2.sheet.party nav.sub-nav a,
 .foundry2.sheet.party nav.sub-nav .tab {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -12047,15 +12051,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border-image-source: var(--ornamentation);
 }
 .foundry2.sheet.party [data-tab=overview] .summary nav button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -12136,15 +12140,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   gap: 5px;
 }
 .foundry2.sheet.party header.content-header .buttons button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -12208,14 +12212,14 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 .foundry2.chat-message {
   background: unset;
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  --color-text-light-6: var(--color-cool-3);
+  --color-text-light-6: var(--color-cool-4);
 }
 .foundry2.chat-message.whisper {
   border-color: var(--color-cool-1);
@@ -12239,8 +12243,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2.chat-message .dice-roll .dice-formula,
 .foundry2.chat-message .dice-roll .dice-total {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12261,8 +12265,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-2);
 }
 .foundry2.chat-message .dice-tooltip .part-header .part-total {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12277,8 +12281,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.chat-message .pf2e.chat-card .card-header img {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12404,8 +12408,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   text-align: center;
   text-shadow: none;
   white-space: nowrap;
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12473,8 +12477,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   box-shadow: unset;
 }
 .foundry2.chat-message > .message-content ul.participant-conditions li img {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12588,6 +12592,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --secondary: var(--color-cool-3);
   --text-dark: var(--color-light-2);
   --color-border-divider: var(--color-cool-3);
+  --color-border-light-2: var(--color-cool-4);
   --sub: var(--color-light-6);
   --alt: var(--color-light-5);
   --bg: var(--color-cool-5-90);
@@ -12695,8 +12700,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --primary: var(--color-light-2);
 }
 .foundry2-pc.window-app {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12754,15 +12759,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav a,
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav .tab {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -13131,15 +13136,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -13275,9 +13280,19 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   flex: 0 0 32px;
 }
 
-.foundry2#compendium-browser > section.window-content > .content-box .compendium-browser-settings form .setting-section, .foundry2#license-viewer > section.window-content > .content-box .compendium-browser-settings form .setting-section, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .filtercontainer, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {
+.foundry2.spellcasting-entry.preparation ol.spell-list > li.spell-level-header, .foundry2.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header,
+.foundry2-pc.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
+.foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
   background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+}
+.foundry2.spellcasting-entry.preparation,
+.foundry2-pc.spellcasting-entry.preparation {
+  --color-border-light-2: var(--color-cool-4);
+}
+
+.foundry2#compendium-browser > section.window-content > .content-box .compendium-browser-settings form .setting-section, .foundry2#license-viewer > section.window-content > .content-box .compendium-browser-settings form .setting-section, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .filtercontainer, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
@@ -13287,15 +13302,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   cursor: pointer;
 }
 .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  --button-background-color: var(--color-cool-5-75);
+  --button-background-color: var(--app-background);
   --button-border-color: var(--color-cool-4);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
@@ -13877,8 +13892,8 @@ section.readaloud:before, section.readaloud:after {
 
 .foundry2 .tab.category.active[data-tab=pf2e-dorako-ui] h2,
 .foundry2 .form-group.dorako-ui.settings-header {
-  background: var(--color-cool-5-75);
-  border: 1px solid var(--color-cool-4);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
   --box-shadow: 0px 1px 3px 1px black;

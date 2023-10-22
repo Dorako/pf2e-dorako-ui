@@ -8,6 +8,7 @@
     --secondary: var(--color-cool-3);
     --text-dark: var(--color-light-2);
     --color-border-divider: var(--color-cool-3);
+    --color-border-light-2: var(--color-cool-4);
     --sub: var(--color-light-6);
     --alt: var(--color-light-5);
     --bg: var(--color-cool-5-90);
@@ -232,5 +233,16 @@
 
   &.actor.sheet.character .attack-popout.actions ol.actions-list li.strike .item-name .item-image {
     flex: 0 0 32px;
+  }
+}
+
+.foundry2,
+.foundry2-pc {
+  &.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
+    background: var(--color-cool-5-75);
+  }
+  &.spellcasting-entry.preparation {
+    --color-border-light-2: var(--color-cool-4);
   }
 }
