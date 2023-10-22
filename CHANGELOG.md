@@ -1,3 +1,8 @@
+# 2.11.2
+
+- (Refinement) Foundry 2 theme now always removes application backgrounds, fixing legibility issues with applications that add their own (light) backgrounds.
+- (Maintenance) Fixed a regression to PC sheets where certain elements would not be styled as expected with the Foundry 2 theme active.
+
 # 2.11.1
 
 - (New) Added Foundry 2 styling for Forien's Quest Log.
