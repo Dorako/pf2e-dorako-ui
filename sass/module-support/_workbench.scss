@@ -1,0 +1,26 @@
+/* ----------------------------------------- */
+/* PF2e Workbench                            */
+/* ----------------------------------------- */
+
+// required to have higher specificity than Workbench
+html {
+  .xdy-pf2e-workbench-rarity-common {
+    color: var(--rarity-common);
+    border-color: var(--rarity-common);
+  }
+
+  .xdy-pf2e-workbench-rarity-uncommon {
+    color: var(--rarity-uncommon);
+    border-color: var(--rarity-uncommon);
+  }
+
+  .xdy-pf2e-workbench-rarity-rare {
+    color: var(--rarity-rare);
+    border-color: var(--rarity-rare);
+  }
+
+  .xdy-pf2e-workbench-rarity-unique {
+    color: var(--rarity-unique);
+    border-color: var(--rarity-unique);
+  }
+}

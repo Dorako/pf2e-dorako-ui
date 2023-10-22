@@ -1,0 +1,114 @@
+.dorako-display-none {
+  display: none !important;
+}
+
+a.content-link,
+[data-pf2-check],
+a.entity-link,
+[data-pf2-action],
+span[data-pf2-effect-area],
+a.inline-check .label,
+a.inline-roll:not(.inline-result) {
+  font-weight: 400;
+  text-shadow: none !important;
+}
+
+.dorako-ui.dark-theme {
+  a.content-link,
+  [data-pf2-check],
+  a.entity-link,
+  [data-pf2-action],
+  span[data-pf2-effect-area],
+  a.inline-check .label,
+  a.inline-roll:not(.inline-result) {
+    color: black;
+  }
+}
+
+// Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
+a.inline-check,
+span[data-pf2-check],
+span[data-pf2-effect-area].with-repost {
+  padding: 0px;
+  padding-left: 4px;
+}
+
+.dorako-ui.message.chat-message.dark-theme a.inline-roll {
+  color: black;
+}
+
+i[data-pf2-repost] {
+  top: 0px;
+  cursor: pointer;
+}
+
+.tah-tags-wrapper .tags,
+.dorako-ui .message-content .tags,
+.dorako-ui .tags.paizo-style,
+.dorako-ui .tags {
+  gap: 1px;
+
+  .tag {
+    height: auto;
+  }
+
+  .tag:not(.tag_transparent) {
+    border-radius: 0px;
+    box-shadow: unset;
+    border: 1px solid var(--tertiary);
+    outline: 1px solid var(--gold-brown);
+    padding: 0.33em 0.33em;
+  }
+  .tag:first-child {
+    border-left-width: 1px;
+  }
+  .tag:last-child {
+    border-right-width: 1px;
+  }
+}
+
+.dorako-ui {
+  .tags.paizo-style select.tag:first-child {
+    border-left-width: 1px;
+    // margin-right: 5px;
+  }
+  .tags.paizo-style tag:first-of-type {
+    border-left-width: 1px;
+  }
+  .tags.paizo-style tag:last-of-type {
+    border-right-width: 1px;
+  }
+
+  .tags.paizo-style tag,
+  .tags.paizo-style select.tag {
+    border-width: 1px;
+    outline: 1px solid var(--gold-brown);
+  }
+}
+
+// Fixes issue where hidden DC is too 'tall'
+[data-visibility]:not([data-visibility="all"]) {
+  padding: unset;
+}
+
+.dorako-ui.dark-theme {
+  a.content-link.broken {
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+  }
+}
+
+// ugly hack
+.pf2e-av .journal-page-content a.inline-check > i.icon,
+.pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
+.pf2e-av .journal-page-content [data-pf2-repost] .label,
+.pf2e-av .journal-page-content [data-pf2-check] .label,
+.pf2e-av .journal-page-content [data-pf2-check]:not([data-pf2-show-dc="gm"]) .label {
+  color: var(--av-green-light);
+}
+
+// system uses 500, which makes it hard to tell whether something is bolded
+.app.sheet.actor p,
+.pf2e p {
+  font-weight: 400;
+}

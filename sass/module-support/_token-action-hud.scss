@@ -1,0 +1,163 @@
+/* ----------------------------------------- */
+/* Token Action HUD (TAH)                    */
+/* ----------------------------------------- */
+#token-action-hud.dorako-ui {
+  --dorako-bg-current: var(--glass-bg);
+  --dorako-vibrancy: var(--frosted-glass);
+  --paizo-blue: var(--secondary);
+  --paizo-blue-bright: var(--secondary-light);
+  --paizo-red-bright: var(--primary-light);
+  --pazio-red: var(--primary);
+  --tah-border-radius: var(--border-radius);
+  --tah-button-background-color: var(--glass-bg);
+  --tah-button-text-color: var(--color-text-light-highlight);
+
+  #tah-categories {
+    gap: 5px;
+  }
+
+  &#token-action-hud {
+    gap: 5px;
+  }
+
+  #tah-expand-hud {
+    width: 32px;
+    height: 32px;
+  }
+
+  #tah-expand-hud,
+  .tah-title-button {
+    // @include quick-transition;
+    transition: unset;
+
+    color: var(--color-text-light-heading);
+    padding: 3px 5px 3px 5px;
+    &:hover {
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  .tah-category.hover {
+    button.tah-title-button {
+      background-color: var(--primary);
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  .tah-subtitle {
+    width: 174px;
+  }
+
+  .tah-tab-group,
+  .tah-action {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .tah-action button {
+    // @include quick-transition;
+    transition: unset;
+
+    &.toggle {
+      background-color: var(--secondary-dark);
+      &:hover {
+        background-color: var(--secondary);
+      }
+      &.active {
+        background-color: var(--secondary-light);
+      }
+    }
+    &:hover {
+      color: var(--color-text-light-highlight);
+    }
+    &.active {
+      color: white;
+    }
+  }
+}
+
+.locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll),
+.tah-tooltip :is(a.content-link, a.inline-roll),
+#tooltip.active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
+  background: #ddd;
+  padding: 1px 4px;
+  border: 1px solid var(--color-border-dark-tertiary);
+  color: var(--color-text-dark-primary);
+  margin: 3px;
+}
+
+.tah-tooltip .tags {
+  .tag.tag_transparent {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--glass-bg-dark);
+    margin-left: 2px;
+    margin-bottom: 2px;
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+.tah-tooltip .tag,
+.tah-tooltip table {
+  text-shadow: none;
+}
+
+.dorako-ui.dark-theme.tah-dialog {
+  .tagify.tah-dialog-tagify {
+    background: white;
+  }
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+.foundry2 {
+  &#token-action-hud-core-settings input {
+    @include f2-input;
+  }
+}
+
+#tooltip[data-theme="foundry-2"] {
+  .tah-tooltip-wrapper {
+    font-size: 12px;
+  }
+}
+
+#token-action-hud[data-theme="foundry2"] {
+  .tah-action-button,
+  .tah-action-button:focus,
+  .tah-group-button,
+  .tah-group-button:focus {
+    @include f2-button-warm;
+  }
+
+  #tah-expand-hud {
+    @include f2-app;
+    justify-content: center;
+    width: 32px;
+    > i {
+      color: var(--color-light-3);
+      text-shadow: 0px 1px 2px black;
+    }
+  }
+
+  #tah-collapse-hud,
+  #tah-unlock {
+    box-shadow: unset !important;
+  }
+
+  .tah-action-button.toggle {
+    @include f2-button-cool;
+  }
+
+  .tah-button-image {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  .tah-list-image {
+    @include f2-app;
+  }
+}

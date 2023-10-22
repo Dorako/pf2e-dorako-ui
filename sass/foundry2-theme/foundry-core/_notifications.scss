@@ -1,0 +1,27 @@
+/* ----------------------------------------- */
+/* Notifications                             */
+/* ----------------------------------------- */
+
+.foundry2 {
+  .notification {
+    border: 1px solid transparent;
+    text-shadow: 0px 0px 3px black;
+    box-shadow: 0px 2px 2px black;
+
+    &.info {
+      background: var(--color-level-info-bg);
+      border-color: var(--color-level-info-border);
+    }
+
+    &.alert,
+    &.warning {
+      background: var(--color-level-warning-bg);
+      border-color: var(--color-level-warning-border);
+    }
+
+    &.error {
+      background: var(--color-level-error-bg);
+      border-color: var(--color-level-error-border);
+    }
+  }
+}

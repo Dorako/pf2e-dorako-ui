@@ -1,4 +1,5 @@
 @use "sass:color";
+@import "mixins";
 
 /* ----------------------------------------- */
 /* Color definitions                         */
@@ -144,17 +145,71 @@ $adjusted-lower: #cc3311 !default;
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
-  --sheet-light: url(../img/background-light.webp);
-  --sheet-dark: url(../img/background-dark4.webp);
-  --header: url(../img/blue-header.webp);
-  --banner-top: url(../img/blue-sidebar-top.webp);
-  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
+  --sheet-light: url("/modules/pf2e-dorako-ui/img/background-light.webp");
+  --sheet-dark: url("/modules/pf2e-dorako-ui/img/background-dark4.webp");
+  --header: url("/modules/pf2e-dorako-ui/img/blue-header.webp");
+  --banner-top: url("/modules/pf2e-dorako-ui/img/blue-sidebar-top.webp");
+  --banner-bottom: url("/modules/pf2e-dorako-ui/img/blue-sidebar-bottom.webp");
   // --avatar-size: controlled in code
   // --border-radius: controlled in code
   // --control-size: controlled in code;
   --hotbar-width: unset;
   // --controls-alignment: controlled in code
   --controls-margin: 8px;
+}
+
+:root {
+  --color-warm-1: #ee9b3a;
+  --color-warm-2: #c9593f;
+  --color-warm-3: #5d142b;
+  --color-warm-4: #420418; // custom
+  --color-warm-5: #26020d; // custom
+
+  --color-cool-1: #b1a0d4; // custom
+  --color-cool-2: #79689c; // custom
+  --color-cool-3: #584a75;
+  --color-cool-4: #302831;
+  --color-cool-5: #0b0a13;
+
+  --color-cool-5-25: rgba(11, 10, 19, 0.25);
+  --color-cool-5-50: rgba(11, 10, 19, 0.5);
+  --color-cool-5-75: rgba(11, 10, 19, 0.75);
+  --color-cool-5-90: rgba(11, 10, 19, 0.9);
+
+  --color-light-1: #f7f3e8;
+  --color-light-2: #efe6d8;
+  --color-light-3: #e7d1b1;
+  --color-light-4: #d0b8a3;
+  --color-light-5: #9f8475;
+  --color-light-6: #816b66;
+
+  --color-level-error: #ce0707;
+  --color-level-error-bg: rgba(105, 0, 8, 0.8);
+  --color-level-error-border: #750003;
+  --color-level-info: #59a1f6;
+  --color-level-info-bg: rgba(47, 80, 132, 0.8);
+  --color-level-info-border: #5c87b9;
+  --color-level-success: #26b231;
+  --color-level-success-bg: rgba(26, 107, 34, 0.8);
+  --color-level-success-border: #1b8f23;
+  --color-level-warning: #ee9b3a;
+  --color-level-warning-bg: rgba(214, 150, 0, 0.8);
+  --color-level-warning-border: #b18404;
+
+  --color-level-green-bg: rgba(138, 211, 4, 0.4); // custom from website
+  --color-level-green-border: #8ad304; // custom from website
+  --color-level-yellow-bg: rgba(211, 192, 4, 0.4); // custom from website
+  --color-level-yellow-border: #d3c004; // custom from website
+  --color-level-orange-bg: rgba(211, 119, 4, 0.4); // custom from website
+  --color-level-orange-border: #d37704; // custom from website
+  --color-level-red-bg: rgba(211, 20, 4, 0.4); // custom from website
+  --color-level-red-border: #d31404; // custom from website
+
+  --color-scrollbar: #5d142b;
+  --color-scrollbar-border: #8d151b;
+
+  --app-background: var(--color-cool-5-90);
+  --app-border-color: var(--color-cool-4);
 }
 
 /* ----------------------------------------- */
@@ -196,12 +251,4 @@ $adjusted-lower: #cc3311 !default;
   --body: var(--text-light);
   --bg: var(--glass-bg-dark);
   --half-transparent: rgba(255, 255, 255, 0.5);
-}
-
-.foundry2-pc,
-.foundry2 {
-  --rarity-common: #e1d8cf;
-  --rarity-uncommon: #c45500;
-  --rarity-rare: #5362ff;
-  --rarity-unique: #e127e1;
 }

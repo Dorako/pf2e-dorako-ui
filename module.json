@@ -24,7 +24,7 @@
         "type": "system",
         "compatibility": {
           "minimum": "4.0.0",
-          "verified": "5.6.0"
+          "verified": "5.7.3"
         }
       },
       {
@@ -54,10 +54,7 @@
   ],
   "flags": {
     "hotReload": {
-      "extensions": [
-        ".css",
-        ".json"
-      ]
+      "extensions": [".css", ".json"]
     }
   },
   "languages": [
@@ -113,20 +110,19 @@
       "path": "languages/it.json"
     }
   ],
-  "styles": [
-    "styles/fonts.css"
-  ],
+  "styles": ["styles/fonts.css", "styles/dorako-ui.css"],
   "esmodules": [
-    "modules/misc-hooks.js",
-    "modules/settings/settings.js",
-    "modules/dark-theme-hooks.js",
-    "modules/base-theme-hooks.js",
-    "modules/foundry2-theme.js",
-    "modules/message-hooks.js",
-    "modules/premium-module-hooks.js",
-    "modules/consts.js",
-    "modules/pixi.js",
-    "modules/sidebar-resizer.js"
+    "esmodules/misc-hooks.js",
+    "esmodules/settings/settings.js",
+    "esmodules/dark-theme-hooks.js",
+    "esmodules/dorako-theme.js",
+    "esmodules/foundry2-theme.js",
+    "esmodules/message-hooks.js",
+    "esmodules/premium-module-hooks.js",
+    "esmodules/consts.js",
+    "esmodules/dorako-ux/customization.js",
+    "esmodules/dorako-ux/radial-condition-hud.js",
+    "esmodules/dorako-ux/sidebar-resizer.js"
   ],
   "changelog": "https://github.com/Dorako/pf2e-dorako-ui/blob/master/CHANGELOG.md",
   "download": "https://github.com/Dorako/pf2e-dorako-ui/archive/refs/tags/v1.11.3.zip",

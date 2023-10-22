@@ -1,3 +1,10 @@
+# 2.11.0
+
+- (Refactor) Massive internal refactor.
+- (Refinement) Added Foundry 2 styling for Token Action HUD.
+- (Refinement) Allowed certain header input fields to inherit height in Foundry 2 theme.
+- (Fix) Fixed a regression where PF2e See Simple Scale Statistics labels would be colored in the default Dorako theme.
+
 # 2.10.11
 
 - (Refinement) Ensured that Jewel of Indigo Isles and World of Indigo Isles journals are excluded from styling.

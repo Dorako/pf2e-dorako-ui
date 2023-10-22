@@ -1,0 +1,29 @@
+/* ----------------------------------------- */
+/* Notifications                             */
+/* ----------------------------------------- */
+
+.dorako-ui {
+  .notification {
+    @include glass;
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-highlight);
+
+    &.info {
+      background-color: var(--secondary);
+      border: none;
+    }
+
+    &.error {
+      background-color: var(--primary);
+      border: none;
+    }
+
+    &.warning,
+    &.alert {
+      background-color: #ecbf41;
+      color: black;
+      text-shadow: none;
+      border: none;
+    }
+  }
+}

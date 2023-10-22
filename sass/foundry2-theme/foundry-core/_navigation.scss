@@ -1,0 +1,71 @@
+/* ----------------------------------------- */
+/* Navigation                                */
+/* ----------------------------------------- */
+
+#navigation.foundry2 {
+  width: calc(100% - 46px); // Add some breathing room to ensure navigation isn't covering effect panel
+
+  #nav-toggle {
+    @include f2-app;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 var(--control-size);
+    height: var(--control-size);
+  }
+
+  ol#scene-list {
+    li.nav-item {
+      @include f2-button-warm;
+      line-height: var(--control-size);
+
+      > a:hover {
+        text-shadow: unset;
+      }
+
+      .scene-players {
+        text-shadow: none;
+      }
+
+      &:hover {
+        color: var(--color-light-2);
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+      }
+
+      &.view {
+        @include f2-button-warm;
+        background-color: var(--color-warm-2);
+        color: var(--color-light-2);
+        border-color: var(--color-warm-1);
+        &.active {
+          border-color: var(--color-cool-2);
+        }
+      }
+
+      &.gm {
+        @include f2-button-cool;
+
+        &.active {
+          color: var(--color-light-2);
+          border-color: var(--color-cool-3);
+          background-color: var(--color-cool-3);
+          &:hover {
+            color: var(--color-light-1);
+            border-color: var(--color-cool-1);
+            background-color: var(--color-cool-2);
+          }
+        }
+        &.view {
+          background-color: var(--color-cool-2);
+          color: var(--color-light-2);
+          border-color: var(--color-warm-1);
+          &:hover {
+            border-color: var(--color-warm-1);
+            background-color: var(--color-cool-2);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+/* ----------------------------------------- */
+/* Dice Tray                                 */
+/* ----------------------------------------- */
+
+.dorako-ui {
+  .dice-tray {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .dice-tray__stacked {
+      gap: 3px;
+    }
+
+    input[type="text"] {
+      @include glass;
+      @include quick-transition;
+      background-color: var(--glass-bg-light);
+      text-shadow: 0px 0px 3px black;
+      color: var(--color-text-light-heading);
+
+      &:hover {
+        @include glass;
+        background-color: var(--secondary);
+        color: var(--color-text-light-highlight);
+      }
+
+      &:focus {
+        @include glass;
+        background-color: var(--secondary-light);
+        color: white;
+      }
+    }
+
+    button {
+      @include glass;
+      @include quick-transition;
+      background-color: var(--glass-bg-light);
+      text-shadow: 0px 0px 3px black;
+      color: var(--color-text-light-heading);
+
+      svg {
+        filter: drop-shadow(0px 0px 3px black);
+        * {
+          fill: var(--color-text-light-heading);
+        }
+      }
+
+      &.dice-tray__advantage:hover,
+      &.dice-tray__disadvantage:hover,
+      &.dice-tray__roll:hover,
+      &.dice-tray__math--add:hover,
+      &.dice-tray__math--sub:hover,
+      &:hover {
+        @include glass;
+        background-color: var(--primary);
+        color: var(--color-text-light-highlight);
+
+        svg {
+          filter: drop-shadow(0px 0px 3px black);
+          * {
+            fill: var(--color-text-light-highlight);
+          }
+        }
+      }
+    }
+    .flexrow {
+      margin-left: 6px;
+      margin-right: 6px;
+      gap: 5px;
+    }
+    > * {
+      margin: 0px;
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+.foundry2 {
+  .dice-tray {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sidebar-gap);
+    > * {
+      margin: 0 var(--sidebar-margin);
+    }
+    .flexrow {
+      gap: var(--sidebar-gap);
+    }
+    .dice-tray__stacked {
+      button:first-child {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+      button:last-child {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+    }
+    .dice-tray__buttons {
+      height: 32px;
+
+      button {
+        height: 100%;
+        width: auto;
+
+        > svg {
+          margin: 0px -10px;
+          filter: drop-shadow(0px 1px 2px black);
+          * {
+            fill: var(--color-light-3);
+          }
+        }
+
+        &.dice-tray__advantage:hover,
+        &.dice-tray__disadvantage:hover,
+        &.dice-tray__roll:hover,
+        &.dice-tray__math--add:hover,
+        &.dice-tray__math--sub:hover,
+        &:hover {
+          svg {
+            filter: drop-shadow(0px 1px 2px black);
+            * {
+              fill: var(--color-light-1);
+            }
+          }
+        }
+      }
+    }
+
+    input[type="text"] {
+      @include f2-input;
+      height: auto;
+      border-radius: var(--border-radius);
+    }
+  }
+}

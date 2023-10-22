@@ -1,0 +1,71 @@
+.dorako-ui {
+  #fc-container {
+    button {
+      @include glass;
+      @include quick-transition;
+      background-color: var(--glass-bg-light);
+      text-shadow: 0px 0px 3px black;
+      color: var(--color-text-light-heading);
+
+      &:hover {
+        @include glass;
+        background-color: var(--primary);
+        color: var(--color-text-light-highlight);
+
+        svg {
+          filter: drop-shadow(0px 0px 3px black);
+          * {
+            fill: var(--color-text-light-highlight);
+          }
+        }
+      }
+    }
+  }
+
+  #fc-button-target.highlight {
+    @include glass;
+    @include quick-transition;
+    outline: unset;
+    background-color: var(--secondary-dark);
+    &:hover {
+      background-color: var(--secondary-light);
+    }
+  }
+
+  #initiative-delay,
+  #initiative-return {
+    @include glass;
+    @include quick-transition;
+    background-color: var(--glass-bg-light);
+    text-shadow: 0px 0px 3px black;
+    color: var(--color-text-light-heading);
+
+    &:hover {
+      @include glass;
+      background-color: var(--primary);
+      color: var(--color-text-light-highlight);
+
+      svg {
+        filter: drop-shadow(0px 0px 3px black);
+        * {
+          fill: var(--color-text-light-highlight);
+        }
+      }
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+
+.foundry2 {
+  #fc-container {
+    margin: 0px var(--sidebar-margin);
+  }
+
+  #initiative-delay,
+  #initiative-return {
+    @include f2-button-warm;
+  }
+}

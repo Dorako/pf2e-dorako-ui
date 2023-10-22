@@ -1,0 +1,103 @@
+/* ----------------------------------------- */
+/* Placeable HUD                             */
+/* ----------------------------------------- */
+
+.foundry2.placeable-hud input[type="text"] {
+  @include f2-input;
+}
+
+/* ----------------------------------------- */
+/* Token HUD                                 */
+/* ----------------------------------------- */
+
+.foundry2 {
+  &#token-hud .status-effects.active {
+    // @include f2-app;
+    gap: 3px;
+    background: unset;
+    border: unset;
+    box-shadow: unset;
+    picture {
+      img {
+        opacity: unset;
+        @include f2-app;
+      }
+
+      &:hover img {
+        border-color: var(--color-warm-2);
+        box-shadow: 0px 0px 6px var(--color-warm-3), 0px 2px 8px 1px var(--color-warm-4);
+      }
+
+      &.active img {
+        border-color: var(--color-warm-1);
+        box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+      }
+    }
+  }
+
+  &#token-hud .status-effects .title-bar {
+    @include f2-tooltip;
+  }
+
+  &#token-hud .status-effects .effect-control .badge {
+    border-width: 1px;
+    border-radius: 0px var(--border-radius) 0px 3px;
+    background: var(--color-warm-3);
+    border-left-color: var(--color-warm-1);
+    border-bottom-color: var(--color-warm-1);
+    color: var(--color-light-2);
+    font-size: 10px;
+    text-shadow: 0px 1px 2px black;
+    top: 0px;
+    right: 1px;
+    font-weight: 600;
+    &.fa-lock:before {
+      position: relative;
+      font-size: 6px;
+    }
+  }
+
+  &#token-hud .status-effects .effect-control {
+    opacity: unset;
+  }
+
+  .control-icon {
+    @include f2-button-warm;
+    @include f2-grayscale;
+
+    // These can be clicked, which makes them active but something else inactive
+    // This is the default behaviour for controls, and as such should be styled the same
+
+    // &[data-action="overhead"],
+    // &[data-action="underfoot"] {
+    //   @include quick-transition;
+    //   --button-background-color: var(--color-warm-4);
+    //   --button-border-color: var(--color-warm-3);
+    //   --button-hover-background-color: var(--color-warm-2);
+    //   --button-hover-border-color: var(--color-warm-1);
+    // }
+
+    // These can be clicked, but do not become active
+    // &[data-action="sort-up"],
+    //   &[data-action="sort-down"],
+    //   &[data-action="config"],
+    //   &[data-action="trigger"],         // 'trigger' is from Monk's Active Tiles
+    //   &[data-action="pf2e-perception"], // 'pf2e-perception' is from PF2e Perception by Idle
+    //   &[data-action="clown-car"],       // 'clown-car' from system
+    //   &[data-action="delay"]            // from flatcheck helper
+    // {
+    // }
+
+    // These are toggles, inactive -> active -> inactive
+    &[data-action="visibility"],
+      &[data-action="effects"],
+      &[data-action="combat"],
+      &[data-action="locked"],
+      &[data-action="target"],
+      &[data-action="active"], // From Monk's Active Tiles
+      &[data-action="mystify"] // from Workbench
+    {
+      @include f2-button-cool;
+    }
+  }
+}

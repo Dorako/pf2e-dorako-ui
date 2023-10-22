@@ -1,0 +1,84 @@
+.foundry2 {
+  &.actor.npc.sheet {
+    // --text-light: var(--color-cool-5);
+    --text-dark: var(--color-light-2);
+    --primary: var(--color-warm-2);
+    --secondary: var(--color-cool-2);
+  }
+
+  &.actor.npc.sheet form .sheet-body .section-container {
+    @include f2-app;
+    padding: unset;
+    margin: 4px 6px 0;
+    border: 1px solid var(--color-warm-3);
+    background: var(--color-warm-4);
+    border-radius: var(--border-radius);
+    .section-header {
+      background: unset;
+      border: unset;
+    }
+    .section-body {
+      background: unset;
+      border: unset;
+    }
+  }
+
+  &.actor.sheet .item-image:hover i {
+    background: var(--color-warm-2);
+    text-shadow: 0px 1px 2px black;
+  }
+
+  &.actor.npc.sheet form .npc-sheet-header .name input {
+    --font-size: inherit;
+  }
+
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input,
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
+    @include f2-input;
+  }
+
+  &.actor.npc.sheet form .spellcasting-entry select {
+    @include f2-input;
+  }
+
+  &.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type="text"] {
+    @include f2-input;
+  }
+
+  &.actor.npc.sheet form .side-bar-section.initiative select {
+    @include f2-input;
+  }
+
+  &.actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child),
+  &.actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
+    border-color: var(--color-warm-3);
+  }
+
+  &.actor.npc.sheet form .notes .details-label {
+    color: var(--color-light-2);
+  }
+
+  &.actor.npc.sheet form .notes .notes-text {
+    color: var(--color-light-3);
+  }
+
+  &.actor.npc.sheet form .side-bar-section-header {
+    border: unset;
+  }
+
+  &.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
+    background-color: var(--color-warm-1);
+    color: black;
+    text-shadow: unset;
+  }
+
+  &.app.npc-skills-editor form ol li.skill:nth-child(even) {
+    background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
+  }
+  &.app.npc-skills-editor form ol li.skill:nth-child(odd) {
+    background-color: color-mix(in srgb, var(--color-cool-4) 40%, transparent);
+  }
+  &.app.npc-skills-editor form ol li.skill.header {
+    background-color: var(--color-warm-2);
+  }
+}

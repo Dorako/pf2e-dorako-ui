@@ -1,0 +1,53 @@
+/* ----------------------------------------- */
+/* Controls                                  */
+/* ----------------------------------------- */
+
+nav#controls.foundry2 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: var(--controls-alignment);
+
+  // Fix foundry's inconsistent gaps
+  ol.control-tools.sub-controls > li,
+  ol.control-tools.main-controls {
+    margin-right: var(--controls-margin);
+  }
+
+  ol.control-tools {
+    &.main-control {
+      margin-right: var(--controls-margin);
+    }
+
+    li.control-tool,
+    > li {
+      @include f2-button-warm;
+      @include f2-grayscale;
+      margin-bottom: var(--controls-margin);
+      height: var(--control-size);
+      width: var(--control-size);
+      font-size: calc(var(--control-size) - 12px);
+
+      &.toggle {
+        @include f2-button-cool;
+      }
+    }
+  }
+}
+
+.foundry2 {
+  &#darkness-adjuster {
+    height: 42px !important; // overwrite system's !important
+    @include f2-app;
+    margin-top: 3px;
+    background-color: var(--color-cool-2);
+    border: 1px solid var(--color-cool-1);
+
+    .window-content {
+      overflow: hidden;
+      background: unset;
+      box-shadow: unset;
+      border: none;
+    }
+  }
+}

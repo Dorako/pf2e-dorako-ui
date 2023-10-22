@@ -1,0 +1,197 @@
+/* ----------------------------------------- */
+/* Polyglot                                  */
+/* ----------------------------------------- */
+
+.dorako-ui {
+  .select2-dropdown.polyglot-language {
+    @include glass;
+    backdrop-filter: blur(5px);
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--tertiary);
+      border: 1px solid var(--gold-brown);
+    }
+  }
+
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    @include glass;
+    @include quick-transition;
+    background: var(--glass-bg-light);
+
+    &:focus,
+    &:active,
+    &:hover {
+      background: var(--secondary-dark);
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  .select2-container--default .select2-results > .select2-results__options {
+    color: var(--color-text-light-heading);
+    text-shadow: 0px 0px 3px black;
+    padding-top: 1px;
+  }
+
+  .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    // @include glass;
+    // @include gold-border;
+    background: var(--secondary-light);
+    // border: 1px solid var(--tertiary);
+    box-shadow: 0px 0px 0px 1px var(--tertiary);
+    color: var(--color-text-light-highlight);
+  }
+
+  .select2-container--default .select2-results__option--selected {
+    // @include glass;
+    // @include gold-border;
+    background: var(--primary-light);
+    // border: 1px solid var(--tertiary);
+    box-shadow: 0px 0px 0px 1px var(--tertiary);
+    color: var(--color-text-light-highlight);
+  }
+
+  .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered,
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--color-text-light-heading);
+    &:focus,
+    &:active,
+    &:hover {
+      color: var(--color-text-light-highlight);
+    }
+  }
+
+  .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: var(--color-text-light-heading) transparent transparent transparent;
+  }
+
+  .polyglot-user-list div {
+    box-shadow: 0px 0px 0px 1px var(--tertiary);
+  }
+
+  #polyglot {
+    flex-basis: 20px;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    label {
+      display: none;
+    }
+
+    &.polyglot-lang-select > span.select2-container {
+      margin: unset;
+    }
+
+    .select2-selection {
+      @include glass;
+      @include quick-transition;
+      cursor: pointer;
+      background: var(--glass-bg-light);
+      text-shadow: 0px 0px 3px black;
+      &:focus,
+      &:active,
+      &:hover {
+        background: var(--secondary-dark);
+        color: var(--color-text-light-highlight);
+      }
+    }
+
+    select {
+      @include glass;
+      background: var(--glass-bg-light);
+      color: var(--color-text-light-heading);
+      text-shadow: 0px 0px 3px black;
+      appearance: none;
+      margin: unset;
+      padding-left: 7px;
+      flex: 1 1 70px;
+
+      option,
+      optgroup {
+        background-color: rgb(37, 37, 37);
+        color: var(--color-text-light-highlight);
+      }
+    }
+    &.polyglot-lang-select input {
+      // @include glass;
+      // border radius doesn't work here
+      margin: unset;
+      accent-color: var(--color-checkbox-checked);
+      accent-color: var(--secondary-dark);
+
+      &:checked {
+        accent-color: var(--secondary-light);
+      }
+    }
+    .polyglot-user-list {
+      &:empty {
+        outline: unset;
+        flex: unset;
+        margin-right: -5px;
+      }
+      outline: 1px solid var(--gold-brown);
+      background: var(--gold-brown);
+      margin: 3px;
+      // display: flex;
+      gap: 1px;
+      border-radius: var(--border-radius);
+      flex-grow: 1;
+      flex-direction: row;
+      flex: 1 0 20px;
+      max-width: unset;
+      div {
+        display: flex;
+        border-radius: unset;
+        // height: 22px;
+        // width: 10px;
+        width: unset;
+        height: unset;
+        flex: 1 0;
+        width: 10px;
+        border: 1px solid var(--tertiary);
+        margin: unset;
+        // box-shadow: 0px 0px 3px 1px white;
+        &:first-child {
+          border-top-left-radius: var(--border-radius);
+          border-bottom-left-radius: var(--border-radius);
+        }
+        &:last-child {
+          border-top-right-radius: var(--border-radius);
+          border-bottom-right-radius: var(--border-radius);
+        }
+      }
+    }
+  }
+}
+
+.foundry2 {
+  #polyglot {
+    label {
+      display: none;
+    }
+  }
+
+  .polyglot-lang-select input {
+    margin: unset;
+    flex: 0 0 var(--input-height);
+    width: var(--input-height);
+    height: var(--input-height);
+  }
+
+  .polyglot-lang-select span.select2-selection {
+    @include f2-input;
+  }
+
+  .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--input-text-color);
+  }
+
+  .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: var(--input-text-color) transparent transparent transparent;
+  }
+
+  .polyglot-user-list div {
+    box-shadow: 0px 0px 0px 1px rgba(white, 0.5) inset;
+    width: 14px;
+    height: 14px;
+  }
+}

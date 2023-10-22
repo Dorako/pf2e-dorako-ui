@@ -1,0 +1,113 @@
+/* ----------------------------------------- */
+/* Sidebar                                   */
+/* ----------------------------------------- */
+
+.foundry2 {
+  #sidebar-tabs {
+    border: unset;
+    --sidebar-tab-height: 22px;
+
+    > .item {
+      @include quick-transition;
+      &:hover {
+        color: var(--color-light-2);
+      }
+
+      &.active {
+        @include f2-app;
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+        color: var(--color-light-2);
+      }
+    }
+  }
+
+  &#sidebar.collapsed #sidebar-tabs > .item.active {
+    border-color: var(--color-warm-1);
+    border-radius: var(--border-radius);
+    &:first-child {
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+    }
+  }
+
+  #settings ul#game-details li.system-buttons {
+    gap: 5px;
+    button {
+      border-width: 1px;
+      border-radius: var(--border-radius) !important;
+    }
+  }
+
+  .compendium.directory .directory-header .compendium-name,
+  .compendium-sidebar .directory-item.compendium .compendium-name,
+  .compendium-sidebar .directory-item.compendium.locked .compendium-name {
+    @include f2-app;
+  }
+
+  .compendium-sidebar .directory-item.compendium .compendium-footer .source {
+    @include f2-app;
+    border-left: unset;
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+}
+
+.foundry2 {
+  &.chat-sidebar,
+  .chat-sidebar {
+    --sidebar-gap: 4px;
+    --sidebar-margin: 6px;
+    gap: var(--sidebar-gap);
+    padding-bottom: var(--sidebar-margin);
+  }
+
+  section.chat-sidebar .jump-to-bottom {
+    z-index: 1;
+    > a {
+      @include f2-app;
+      @include quick-transition;
+      border-radius: 0px;
+      border-left: unset;
+      border-right: unset;
+      background-color: var(--color-scrollbar);
+      border-color: var(--color-scrollbar-border);
+      &:hover {
+        background-color: var(--color-warm-2);
+        border-color: var(--color-warm-1);
+      }
+    }
+  }
+
+  &#sidebar {
+    border: 1px solid var(--color-cool-3);
+    // Dorako UI compat mode
+    --glassy: 0px 0px 0px 1px var(--color-cool-3);
+    --glass-bg-light: var(--app-background);
+    --glassy: 0px 0px 0px 1px var(--color-cool-3), 0px 1px 3px 1px black;
+    --glass-bg-light: var(--color-cool-5-50);
+    --gold-and-glow: transparent;
+    --primary-dark: var(--color-warm-3);
+    --primary: var(--color-warm-2);
+    --primary-light: var(--color-warm-2);
+    --secondary-dark: var(--color-warm-3);
+    --secondary: var(--color-warm-2);
+    --secondary-light: var(--color-warm-2);
+    --color-text-light-heading: var(--color-light-3);
+    --color-text-light-highlight: var(--color-light-2);
+
+    // prettier-ignore
+    --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),
+                         linear-gradient(to bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
+                         var(--app-background);
+    background: var(--warm-background);
+
+    // Allows dorako-ui chat themes to be used
+    .dorako-ui.message.chat-message.dark-theme {
+      background: var(--app-background);
+      box-shadow: unset;
+      border: 1px solid var(--color-warm-1);
+    }
+  }
+}

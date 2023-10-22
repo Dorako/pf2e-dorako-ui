@@ -1,0 +1,313 @@
+/* ----------------------------------------- */
+/* PF2e Dorako UI                            */
+/* ----------------------------------------- */
+
+section.readaloud {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 500;
+  margin: 0px;
+  margin-left: 5px;
+
+  background: none;
+  background-color: var(--bg);
+  &:before,
+  &:after {
+    background: none;
+  }
+}
+
+#sidebar {
+  & > .dorako-resize {
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    cursor: col-resize;
+  }
+}
+
+#chat-form {
+  --chatform-height: 100px;
+  flex: 0 0 var(--chatform-height);
+  > .dorako-resize {
+    width: 100%;
+    height: 4px;
+    position: fixed;
+    cursor: row-resize;
+  }
+}
+
+#chat-controls.no-chat-control-icon {
+  .chat-control-icon {
+    display: none;
+  }
+}
+
+#fps {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+
+  label {
+    display: none;
+  }
+}
+
+#ui-bottom.centered {
+  display: flex;
+  justify-content: center;
+}
+
+#players.dorako-ui h3 {
+  border: none;
+}
+
+.chat-message {
+  .dorako-header {
+    padding-bottom: 5px;
+    box-shadow: var(--gold-and-glow);
+    background: var(--sheet-light);
+    background-size: cover;
+    background-color: var(--header-color);
+  }
+}
+
+.combat-sidebar li.combatant .token-image {
+  z-index: 0;
+}
+
+.combat-sidebar li.combatant .token-name {
+  z-index: 1;
+}
+
+.chat-message .message-content .damage-roll:not(:first-child) {
+  margin-top: 5px;
+}
+
+.chat-message {
+  .flavor-text {
+    h4.action {
+      font-weight: 700;
+      line-height: 1.5em;
+      margin: 0;
+    }
+
+    .target-dc-result {
+      line-height: 0.75rem;
+      margin-bottom: 4px;
+
+      .target-dc,
+      .result {
+        display: block;
+        margin: 1px 0;
+        width: fit-content;
+      }
+
+      .unadjusted {
+        text-decoration: line-through;
+      }
+
+      .adjusted {
+        text-decoration: underline dotted;
+        &.increased {
+          color: $degree-success-critical;
+        }
+        &.decreased {
+          color: $degree-failure-critical;
+        }
+      }
+
+      .degree-of-success {
+        .criticalSuccess {
+          color: $degree-success-critical;
+        }
+        .success {
+          color: $degree-success;
+        }
+        .failure {
+          color: $degree-failure;
+        }
+        .criticalFailure {
+          color: $degree-failure-critical;
+        }
+      }
+    }
+  }
+
+  > .message-content .message-buttons {
+    display: flex;
+    margin: 0.35em 0 2px;
+    gap: 3px;
+  }
+}
+
+.dorako-ui.dark-theme.chat-message {
+  .flavor-text {
+    .target-dc-result {
+      .adjusted {
+        &.increased {
+          $color: $degree-success-critical;
+          $adjustment: +12.5%;
+          color: color.adjust($color, $lightness: $adjustment);
+        }
+        &.decreased {
+          $color: $degree-failure-critical;
+          $adjustment: +12.5%;
+          color: color.adjust($color, $lightness: $adjustment);
+        }
+      }
+
+      .degree-of-success {
+        .criticalSuccess {
+          $color: $degree-success-critical;
+          $adjustment: +12.5%;
+          color: color.adjust($color, $lightness: $adjustment);
+        }
+        .success {
+          $color: $degree-success;
+          $adjustment: +12.5%;
+          color: color.adjust($color, $lightness: $adjustment);
+        }
+        .failure {
+          $color: $degree-failure;
+          $adjustment: +12.5%;
+          color: color.adjust($color, $lightness: $adjustment);
+        }
+        .criticalFailure {
+          $color: $degree-failure-critical;
+          $adjustment: +12.5%;
+          color: color.adjust($color, $lightness: $adjustment);
+        }
+      }
+    }
+  }
+  > .message-content .message-buttons {
+    gap: 5px;
+
+    button {
+      @include glass;
+      @include quick-transition;
+      color: var(--color-text-light-heading);
+      text-shadow: 0px 0px 3px black;
+
+      &:hover {
+        background-color: var(--primary);
+        color: var(--color-text-light-highlight);
+      }
+
+      &.critical-success:hover {
+        background-color: var(--primary-light);
+        color: white;
+      }
+    }
+  }
+}
+
+.chat-message > .message-header {
+  margin-bottom: 0px;
+}
+
+.dorako-damage-roll .flavor-text > *:nth-child(-n + 3) {
+  display: none;
+}
+
+.frosted-glass {
+  #hotbar .bar-controls,
+  #hotbar .macro,
+  nav#navigation ol#scene-list li.nav-item,
+  nav#controls ol.control-tools li.control-tool,
+  nav#controls ol.control-tools li.scene-control,
+  #tah-expand-hud,
+  .tah-title-button,
+  .tah-action button,
+  #tokenbar .token,
+  #tokenbar .bar-controls,
+  #players,
+  nav#navigation #nav-toggle,
+  #fps,
+  .app {
+    backdrop-filter: var(--frosted-glass);
+  }
+  #navigation,
+  .control-tools {
+    backdrop-filter: unset;
+  }
+}
+
+/* ----------------------------------------- */
+/* Settings                                  */
+/* ----------------------------------------- */
+
+.dorako-ui {
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
+  .form-group.dorako-ui.settings-header {
+    font-size: larger;
+    background-color: var(--bg);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
+    border: 1px solid var(--color-border-light-primary);
+    border-radius: 3px;
+    margin: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--secondary-light);
+    // text-shadow: 0px 0px 10px var(--secondary-light);
+  }
+
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
+    font-size: var(--font-size-48);
+    text-align: center;
+    color: var(--primary-light);
+    text-shadow: 0px 1px 0px var(--primary);
+  }
+}
+
+.dorako-ui.dark-theme {
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
+  .form-group.dorako-ui.settings-header {
+    @include glass;
+    background: var(--glass-bg-light);
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--tertiary);
+    text-shadow: 0px 0px 3px black;
+    // text-shadow: 0px 0px 10px var(--tertiary);
+  }
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
+    color: var(--tertiary-dark);
+  }
+}
+
+.foundry2 {
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
+  .form-group.dorako-ui.settings-header {
+    @include f2-app;
+    font-size: larger;
+    margin: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--color-light-2);
+    border-color: var(--color-cool-2);
+    background: var(--color-cool-3);
+    --box-shadow: 0px 1px 3px 1px black;
+    box-shadow: var(--box-shadow);
+    .notes {
+      color: var(--color-light-3);
+    }
+  }
+
+  .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
+    font-size: var(--font-size-48);
+    text-align: center;
+    color: var(--color-light-2);
+    background: var(--color-warm-2);
+    border-color: var(--color-warm-1);
+    text-shadow: 0px 1px 0px var(--color-warm-3);
+  }
+}
