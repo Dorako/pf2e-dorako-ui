@@ -63,7 +63,7 @@
   @include quick-transition;
 
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);

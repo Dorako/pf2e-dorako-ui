@@ -803,6 +803,7 @@ nav.damage-log-nav.tabs .item.active {
 .message.chat-message.dfce-cm-middle, .message.chat-message.dfce-cm-bottom {
   position: relative;
   border-radius: 0px;
+  margin-top: 0px !important;
 }
 .message.chat-message.dfce-cm-middle .message-content, .message.chat-message.dfce-cm-bottom .message-content {
   padding-right: 0px;
@@ -1139,7 +1140,7 @@ nav.damage-log-nav.tabs .item.active {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -1447,7 +1448,7 @@ button#heartbeat-button {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -1889,7 +1890,7 @@ body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effec
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -2189,7 +2190,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -2488,7 +2489,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* ----------------------------------------- */
 /* Foundry 2                                 */
 /* ----------------------------------------- */
-.foundry2#pf2e-token-hud {
+.foundry2-pc#pf2e-token-hud {
   --primary: var(--color-warm-2);
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
@@ -2504,7 +2505,146 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --color-rank-3: #cf931d;
   --color-rank-4: red;
 }
-.foundry2#pf2e-token-hud .sidebar, .foundry2#pf2e-token-hud .inner, .foundry2#pf2e-token-hud .popup {
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+  --input-height: 14px;
+  padding: 1px;
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input:not(:disabled, .disabled):hover, .foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input.disabled, .foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input[type=checkbox] {
+  border: unset;
+}
+.foundry2-pc#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions .uses input:last-child {
+  --input-background-color: transparent;
+  --input-border-color: transparent;
+  --box-shadow: transparent;
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select {
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select:not(:disabled, .disabled):hover, .foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select.disabled, .foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select[type=checkbox] {
+  border: unset;
+}
+.foundry2-pc#pf2e-token-hud .sidebar.items .sidebar-content .hud-bulk .over-max {
+  color: var(--color-level-red-border);
+}
+.foundry2-pc a:hover {
+  color: var(--color-warm-2);
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .item-img.hover i {
+  background: var(--color-warm-2);
+  border-color: var(--color-warm-1);
+  color: var(--color-light-1);
+  text-shadow: 0px 1px 2px black;
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details .extras .actions a i.greyed {
+  color: var(--color-light-6);
+}
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .header {
+  background: var(--color-cool-4);
+  border-color: var(--color-cool-5);
+  margin: 0px -5px;
+}
+.foundry2-pc.pf2e-token-hud .no-macro, .foundry2-pc#pf2e-token-hud .no-macro {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--color-warm-3);
+  border: 1px solid var(--color-scrollbar-border);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions a {
+  color: var(--color-light-3);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions a:hover {
+  color: var(--color-warm-2);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions span {
+  color: var(--color-light-4);
+}
+.foundry2-pc#pf2e-token-hud .sidebar, .foundry2-pc#pf2e-token-hud .inner, .foundry2-pc#pf2e-token-hud .popup {
   background: unset;
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
@@ -2515,7 +2655,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-3);
   backdrop-filter: blur(4px);
 }
-.foundry2#pf2e-token-hud .inner .group .section input[type=number] {
+.foundry2-pc#pf2e-token-hud .inner .group .section input[type=number] {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -2525,11 +2665,11 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-3);
   border-radius: 3px;
 }
-.foundry2#pf2e-token-hud .sidebar .sidebar-content .action-icon img {
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .action-icon img {
   filter: invert(1);
   mix-blend-mode: plus-lighter;
 }
-.foundry2#pf2e-token-hud .distance.free {
+.foundry2-pc#pf2e-token-hud .distance.free {
   background: unset;
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
@@ -2543,11 +2683,11 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border-bottom-right-radius: unset;
   border-bottom: unset;
 }
-.foundry2#pf2e-token-hud .popup .header:before {
+.foundry2-pc#pf2e-token-hud .popup .header:before {
   background: unset;
   color: var(--color-light-2);
 }
-.foundry2#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select {
+.foundry2-pc#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -2558,7 +2698,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   margin: unset;
 }
 
-.foundry2[id^=pf2e-perception-] .window-content .buttons button {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -2568,7 +2708,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -2584,26 +2724,26 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   transition: background-color 0.5s, border-color 0.5s;
   box-shadow: unset;
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled):hover {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button.active {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button.disabled, .foundry2[id^=pf2e-perception-] .window-content .buttons button:disabled {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.disabled, .foundry2-pc[id^=pf2e-perception-] .window-content .buttons button:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -2612,18 +2752,18 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright.disabled, .foundry2[id^=pf2e-perception-] .window-content .buttons button.bright:disabled {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright.disabled, .foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright:not(.disabled, :disabled):hover {
+.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-.foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, .foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
+.foundry2-pc[id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, .foundry2-pc[id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
   color: var(--color-warm-1);
   text-shadow: 0px 0px 5px var(--color-warm-2);
 }
@@ -2631,79 +2771,79 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* ----------------------------------------- */
 /* Symon Custom CSS                          */
 /* ----------------------------------------- */
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-circle-h,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-circle-h,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-circle-h {
   color: darkgoldenrod;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-user-graduate,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-user-graduate,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-user-graduate {
   color: rgb(141, 69, 212);
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-heart-half-stroke,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-heart-half-stroke,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-heart-half-stroke {
   color: orangered;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-heart,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-heart,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-heart {
   color: rgb(192, 1, 1);
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-regular.fa-helmet-battle,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-regular.fa-helmet-battle,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-regular.fa-helmet-battle {
   color: #cdcdcd;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-light.fa-block-brick,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-light.fa-block-brick,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-light.fa-block-brick {
   color: deepskyblue;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-shield,
-#pf2e-token-hud.foundry2.colorized .inner i.fa-regular.fa-shield,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-shield,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-regular.fa-shield,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-shield,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-regular.fa-shield {
   color: rgb(103, 235, 213);
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-hand-fist,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-hand-fist,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-hand-fist {
   color: rgb(201, 4, 201);
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-person-running,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-person-running,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-person-running {
   color: blue;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-brain,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-brain,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-brain {
   color: deeppink;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-tombstone,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-tombstone,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-tombstone {
   color: brown;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-shoe-prints,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-shoe-prints,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-shoe-prints {
   color: green;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-chevrons-down::before,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-chevrons-down::before,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-chevrons-down::before {
   content: "\f713";
   font: --fa-font-solid;
   color: rgb(175, 87, 24);
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-feather,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-feather,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-feather {
   color: white;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-person-swimming,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-person-swimming,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-person-swimming {
   color: dodgerblue;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-spider,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-spider,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-spider {
   color: #b7346f;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-eye,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-eye,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-eye {
   color: cadetblue;
 }
-#pf2e-token-hud.foundry2.colorized .inner i.fa-solid.fa-chess-rook,
+#pf2e-token-hud.foundry2-pc.colorized .inner i.fa-solid.fa-chess-rook,
 #pf2e-token-hud.dorako-ui.colorized .inner i.fa-solid.fa-chess-rook {
   color: rgb(110, 143, 54);
 }
@@ -2839,7 +2979,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -3513,7 +3653,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -3620,7 +3760,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -3750,7 +3890,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -3814,7 +3954,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -3878,7 +4018,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -8378,6 +8518,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   font-size: var(--font-size-16);
   line-height: var(--font-size-16);
   text-shadow: 0px 1px 2px black;
+  padding: 0.4em 0.6em;
 }
 
 /* ----------------------------------------- */
@@ -8481,11 +8622,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   background: var(--color-scrollbar);
   border: 1px solid var(--color-scrollbar-border);
   transition: outline 0.15s;
-}
-.foundry2-pc ::-webkit-scrollbar-thumb:hover,
-[data-theme=foundry2] ::-webkit-scrollbar-thumb:hover,
-.foundry2 ::-webkit-scrollbar-thumb:hover {
-  outline: 4px solid var(--color-warm-1);
 }
 .foundry2-pc ::-webkit-scrollbar-track,
 [data-theme=foundry2] ::-webkit-scrollbar-track,
@@ -8672,7 +8808,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -8925,7 +9061,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] hr,
 .foundry2 hr {
   border: none;
-  border-top: 1px solid var(--color-cool-3);
+  border-top: 1px solid var(--app-border-color);
   border-bottom: 1px solid var(--color-cool-5);
 }
 [data-theme=foundry2] h1,
@@ -8963,7 +9099,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9111,7 +9247,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9296,7 +9432,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9384,7 +9520,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9585,7 +9721,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9691,7 +9827,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9767,7 +9903,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -9887,7 +10023,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10016,7 +10152,7 @@ nav#controls.foundry2 ol.control-tools > li {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10101,7 +10237,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10297,7 +10433,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10373,7 +10509,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10443,7 +10579,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10674,7 +10810,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -10744,7 +10880,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -11167,7 +11303,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -11595,7 +11731,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -11684,7 +11820,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -11808,7 +11944,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -11916,7 +12052,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -12060,7 +12196,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -12149,7 +12285,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -12288,10 +12424,12 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  border-color: var(--color-warm-2);
+  border-color: var(--color-warm-1);
 }
 .foundry2.chat-message .pf2e.chat-card .card-footer {
-  border-top: 1px solid var(--color-cool-2);
+  border-top: 1px solid var(--app-border-color);
+  margin: 0px -5px;
+  padding: 0px 5px;
 }
 
 /* ----------------------------------------- */
@@ -12768,7 +12906,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -13145,7 +13283,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);
@@ -13311,7 +13449,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
-  --button-border-color: var(--color-cool-4);
+  --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-2);
   --button-hover-background-color: var(--color-warm-2);

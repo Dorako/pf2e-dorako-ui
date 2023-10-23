@@ -170,7 +170,6 @@
       transparent var(--row-height) calc(var(--row-height) * 2)
     );
     .rank {
-      //   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
       font-weight: bold;
     }
   }
@@ -180,7 +179,7 @@
 /* Foundry 2                                 */
 /* ----------------------------------------- */
 
-.foundry2 {
+.foundry2-pc {
   &#pf2e-token-hud {
     --primary: var(--color-warm-2);
     --rarity-common: #e1d8cf;
@@ -196,6 +195,68 @@
     --color-rank-2: #bf4fdb;
     --color-rank-3: #cf931d;
     --color-rank-4: red; // Symon recommended
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-content .details input {
+    @include f2-input;
+    --input-height: 14px;
+    padding: 1px;
+  }
+
+  &#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions .uses {
+    input:last-child {
+      --input-background-color: transparent;
+      --input-border-color: transparent;
+      --box-shadow: transparent;
+    }
+  }
+
+  &#pf2e-token-hud .sidebar.extras .sidebar-content .row select {
+    @include f2-input;
+  }
+
+  &#pf2e-token-hud .sidebar.items .sidebar-content .hud-bulk .over-max {
+    color: var(--color-level-red-border);
+  }
+
+  a:hover {
+    color: var(--color-warm-2);
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-content .item-img.hover i {
+    background: var(--color-warm-2);
+    border-color: var(--color-warm-1);
+    color: var(--color-light-1);
+    text-shadow: 0px 1px 2px black;
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-content .details .extras .actions a i.greyed {
+    color: var(--color-light-6);
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-content .header {
+    background: var(--color-cool-4);
+    border-color: var(--color-cool-5);
+    margin: 0px -5px;
+  }
+
+  &.pf2e-token-hud .no-macro,
+  &#pf2e-token-hud .no-macro {
+    @include f2-app;
+    background: var(--color-warm-3);
+    border: 1px solid var(--color-scrollbar-border);
+  }
+
+  &#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions {
+    a {
+      color: var(--color-light-3);
+      &:hover {
+        color: var(--color-warm-2);
+      }
+    }
+    span {
+      color: var(--color-light-4);
+    }
   }
 
   &#pf2e-token-hud .sidebar,
@@ -236,7 +297,7 @@
   }
 }
 
-.foundry2 {
+.foundry2-pc {
   &[id^="pf2e-perception-"] .window-content .buttons button {
     @include f2-button-warm;
     box-shadow: unset;
@@ -252,7 +313,7 @@
 /* Symon Custom CSS                          */
 /* ----------------------------------------- */
 
-#pf2e-token-hud.foundry2.colorized .inner,
+#pf2e-token-hud.foundry2-pc.colorized .inner,
 #pf2e-token-hud.dorako-ui.colorized .inner {
   i.fa-solid.fa-circle-h {
     color: darkgoldenrod;

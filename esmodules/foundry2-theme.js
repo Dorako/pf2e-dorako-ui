@@ -7,7 +7,7 @@ for (const appName of [...baseThemeApplications]) {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;
     const excludeString =
-      game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + "VehicleSheetPF2e";
+      game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + "VehicleSheetPF2e" + "HUD";
     if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
@@ -103,7 +103,7 @@ for (const app of [...baseThemePf2eSheets]) {
   });
 }
 
-for (const app of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
+for (const app of ["CharacterSheetPF2e", "VehicleSheetPF2e", "HUD"]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;

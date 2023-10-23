@@ -1,3 +1,7 @@
+# 2.11.4
+
+- (Refinement) Minor improvements to Foundry 2 theme for ITT.
+
 # 2.11.3
 
 - (Maintenance) Fixed a regression where rarity-colored labels from Workbench would be illegible in Foundry 2 theme.

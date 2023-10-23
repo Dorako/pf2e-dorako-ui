@@ -20,6 +20,7 @@
   font-size: var(--font-size-16);
   line-height: var(--font-size-16);
   text-shadow: 0px 1px 2px black;
+  padding: 0.4em 0.6em;
 }
 
 /* ----------------------------------------- */
@@ -116,9 +117,6 @@
     background: var(--color-scrollbar);
     border: 1px solid var(--color-scrollbar-border);
     transition: outline 0.15s;
-    &:hover {
-      outline: 4px solid var(--color-warm-1);
-    }
   }
 
   ::-webkit-scrollbar-track {
@@ -249,7 +247,7 @@
 
   hr {
     border: none;
-    border-top: 1px solid var(--color-cool-3);
+    border-top: 1px solid var(--app-border-color);
     border-bottom: 1px solid var(--color-cool-5);
   }
 
