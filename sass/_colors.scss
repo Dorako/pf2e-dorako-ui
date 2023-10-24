@@ -145,11 +145,11 @@ $adjusted-lower: #cc3311 !default;
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
-  --sheet-light: url("/modules/pf2e-dorako-ui/img/background-light.webp");
-  --sheet-dark: url("/modules/pf2e-dorako-ui/img/background-dark4.webp");
-  --header: url("/modules/pf2e-dorako-ui/img/blue-header.webp");
-  --banner-top: url("/modules/pf2e-dorako-ui/img/blue-sidebar-top.webp");
-  --banner-bottom: url("/modules/pf2e-dorako-ui/img/blue-sidebar-bottom.webp");
+  --sheet-light: url(../img/background-light.webp);
+  --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue-header.webp);
+  --banner-top: url(../img/blue-sidebar-top.webp);
+  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
   // --avatar-size: controlled in code
   // --border-radius: controlled in code
   // --control-size: controlled in code;

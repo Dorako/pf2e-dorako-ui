@@ -1,3 +1,9 @@
+# 2.11.5
+
+- (Fix) Reverted to using relative file paths to fix an issue with servers with route prefix.
+- (Refinement) Adjusted the inputs in the token HUD.
+- (Refinement) Ensured that Year of Monsters journals are excluded from styling.
+
 # 2.11.4
 
 - (Refinement) Minor improvements to Foundry 2 theme for ITT.

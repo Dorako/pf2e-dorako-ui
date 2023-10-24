@@ -5866,12 +5866,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 
 .foundry2-pc.actor.sheet.green-theme .crb-style,
 .dorako-ui.actor.sheet.green-theme .crb-style {
-  --header: url("/modules/pf2e-dorako-ui/img/green-header.webp");
-  background-image: url("/modules/pf2e-dorako-ui/img/green-header.webp"), var(--sheet);
+  --header: url("../img/green-header.webp");
+  background-image: url("../img/green-header.webp"), var(--sheet);
 }
 .foundry2-pc.actor.sheet.green-theme .crb-style aside,
 .dorako-ui.actor.sheet.green-theme .crb-style aside {
-  background-image: url("/modules/pf2e-dorako-ui/img/green-sidebar-top.webp"), url("/modules/pf2e-dorako-ui/img/green-sidebar-bottom.webp");
+  background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
 }
 .foundry2-pc.actor.sheet.green-theme .crb-style aside .logo,
 .dorako-ui.actor.sheet.green-theme .crb-style aside .logo {
@@ -5884,7 +5884,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 .foundry2-pc.actor.sheet.green-theme .crb-style aside .sidebar .armor-class .shield.hp,
 .dorako-ui.actor.sheet.green-theme .crb-style aside .sidebar .armor-class .shield.hp {
-  background: url("/modules/pf2e-dorako-ui/img/blue-shield.webp") no-repeat top center;
+  background: url("../img/blue-shield.webp") no-repeat top center;
 }
 .foundry2-pc.actor.sheet.green-theme .crb-style aside .sidebar .initiative-select select,
 .dorako-ui.actor.sheet.green-theme .crb-style aside .sidebar .initiative-select select {
@@ -5892,7 +5892,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 .foundry2-pc.actor.sheet.green-theme .crb-style header.char-header .char-level .level,
 .dorako-ui.actor.sheet.green-theme .crb-style header.char-header .char-level .level {
-  background: url("/modules/pf2e-dorako-ui/img/blue-level-badge.webp") no-repeat;
+  background: url("../img/blue-level-badge.webp") no-repeat;
 }
 .foundry2-pc.actor.sheet.green-theme .crb-style nav.sheet-navigation,
 .dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation {
@@ -5902,16 +5902,16 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2-pc.actor.sheet.green-theme .crb-style nav.sheet-navigation .item.active,
 .dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation .item:hover,
 .dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation .item.active {
-  background-image: url("/modules/pf2e-dorako-ui/img/green-nav-item.webp");
+  background-image: url("../img/green-nav-item.webp");
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style,
 .dorako-ui.actor.sheet.blue-theme .crb-style {
-  --header: url("/modules/pf2e-dorako-ui/img/blue-header.webp");
-  background-image: url("/modules/pf2e-dorako-ui/img/blue-header.webp"), var(--sheet);
+  --header: url("../img/blue-header.webp");
+  background-image: url("../img/blue-header.webp"), var(--sheet);
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style aside,
 .dorako-ui.actor.sheet.blue-theme .crb-style aside {
-  background-image: url("/modules/pf2e-dorako-ui/img/blue-sidebar-top.webp"), url("/modules/pf2e-dorako-ui/img/blue-sidebar-bottom.webp");
+  background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style aside .logo,
 .dorako-ui.actor.sheet.blue-theme .crb-style aside .logo {
@@ -5924,7 +5924,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style aside .sidebar .armor-class .shield.hp,
 .dorako-ui.actor.sheet.blue-theme .crb-style aside .sidebar .armor-class .shield.hp {
-  background: url("/modules/pf2e-dorako-ui/img/blue-shield.webp") no-repeat top center;
+  background: url("../img/img/blue-shield.webp") no-repeat top center;
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style aside .sidebar .initiative-select select,
 .dorako-ui.actor.sheet.blue-theme .crb-style aside .sidebar .initiative-select select {
@@ -5932,7 +5932,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style header.char-header .char-level .level,
 .dorako-ui.actor.sheet.blue-theme .crb-style header.char-header .char-level .level {
-  background: url("/modules/pf2e-dorako-ui/img/blue-level-badge.webp") no-repeat;
+  background: url("../img/blue-level-badge.webp") no-repeat;
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style nav.sheet-navigation,
 .dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation {
@@ -5942,7 +5942,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2-pc.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item.active,
 .dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item:hover,
 .dorako-ui.actor.sheet.blue-theme .crb-style nav.sheet-navigation .item.active {
-  background-image: url("/modules/pf2e-dorako-ui/img/blue-nav-item.webp");
+  background-image: url("../img/blue-nav-item.webp");
 }
 
 .dorako-ui.dark-theme h4.rarity-common {
@@ -10690,6 +10690,18 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Placeable HUD                             */
 /* ----------------------------------------- */
+.foundry2 #token-hud .attribute.bar1 input {
+  --input-border-color: var(--color-level-success-border);
+  --input-focus-outline-color: var(--color-level-success-border);
+  --input-background-color: var(--color-level-success-bg);
+  --input-focus-text-color: var(--color-light-2);
+}
+.foundry2 #token-hud .attribute.bar2 input {
+  --input-border-color: var(--color-level-info-border);
+  --input-focus-outline-color: var(--color-level-info-border);
+  --input-background-color: var(--color-level-info-bg);
+  --input-text-color: var(--color-level-light-2);
+}
 .foundry2.placeable-hud input[type=text] {
   --input-background-color: var(--color-cool-4);
   --input-border-color: transparent;
@@ -10714,6 +10726,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   user-select: text;
   font-size: var(--font-size);
   transition: outline-color 0.5s;
+  --input-height: 40px;
+  --font-size: 28px;
+  text-shadow: 0px 1px 2px black;
+  --input-focus-text-color: var(--color-light-2);
 }
 .foundry2.placeable-hud input[type=text]:not(:disabled, .disabled):hover, .foundry2.placeable-hud input[type=text]:focus {
   outline: 2px solid var(--input-focus-outline-color);
@@ -10735,6 +10751,18 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2.placeable-hud input[type=text][type=checkbox] {
   border: unset;
+}
+.foundry2.placeable-hud input[type=text][name=elevation] {
+  --input-background-color: var(--app-background);
+  --font-size: 18px;
+  width: 42px;
+}
+.foundry2 .placeable-hud .control-icon img {
+  opacity: 1;
+}
+.foundry2 #token-hud .attribute i.fas {
+  color: var(--color-cool-1);
+  text-shadow: 0px 1px 2px black;
 }
 
 /* ----------------------------------------- */
@@ -13659,11 +13687,11 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --glassy-sharp: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --glassy-sharp-inset: 0px 0px 0px 1px rgba(255, 255, 255, 0.4) inset, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
-  --sheet-light: url("/modules/pf2e-dorako-ui/img/background-light.webp");
-  --sheet-dark: url("/modules/pf2e-dorako-ui/img/background-dark4.webp");
-  --header: url("/modules/pf2e-dorako-ui/img/blue-header.webp");
-  --banner-top: url("/modules/pf2e-dorako-ui/img/blue-sidebar-top.webp");
-  --banner-bottom: url("/modules/pf2e-dorako-ui/img/blue-sidebar-bottom.webp");
+  --sheet-light: url(../img/background-light.webp);
+  --sheet-dark: url(../img/background-dark4.webp);
+  --header: url(../img/blue-header.webp);
+  --banner-top: url(../img/blue-sidebar-top.webp);
+  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
   --hotbar-width: unset;
   --controls-margin: 8px;
 }
