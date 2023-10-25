@@ -8,13 +8,14 @@
   // --gold-and-glow: transparent;
   @include f2-app;
   --color-text-light-6: var(--color-cool-4);
+  --color-text-dark-secondary: var(--color-light-4); // 5 is too dark on colored message backgrounds
 
   &.whisper {
     border-color: var(--color-cool-1);
-    background: var(--color-cool-2);
+    background: var(--color-cool-3-75);
     &.blind {
       border-color: var(--color-scrollbar-border);
-      background: var(--color-scrollbar);
+      background: var(--color-warm-3-75);
     }
   }
   .table-draw .table-results .table-result img.result-image {

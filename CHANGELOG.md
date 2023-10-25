@@ -1,3 +1,11 @@
+# 2.11.6
+
+- (Refinement) Introduced new Foundry 2 colors for toggled-off state, whisper messages, blind messages.
+- (Refinement) Adjusted certain text color in Foundry 2 message theme to be more legible on colored backgrounds.
+- (Refinement) Made disabled range inputs cool rather than warm in Foundry 2 theme.
+- (Ugly Hack) Set the height of all dialogs to auto, to avoid scrollbars on small dialogs.
+- (Ugly Hack) Set the height of the token-sheet to auto, to avoid nav buttons adjusting size.
+
 # 2.11.5
 
 - (Fix) Reverted to using relative file paths to fix an issue with servers with route prefix.

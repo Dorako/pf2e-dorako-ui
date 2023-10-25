@@ -3774,7 +3774,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
@@ -8764,16 +8764,26 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 [data-theme=foundry2] input[type=range]::-webkit-slider-thumb,
 .foundry2 input[type=range]::-webkit-slider-thumb {
+  border-radius: 50%;
   box-shadow: unset;
+}
+[data-theme=foundry2] input[type=range]:disabled::-webkit-slider-thumb,
+.foundry2 input[type=range]:disabled::-webkit-slider-thumb {
+  background: var(--color-cool-3);
+  border: 1px solid var(--color-cool-4);
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+}
+[data-theme=foundry2] input[type=range]:not(:disabled)::-webkit-slider-thumb,
+.foundry2 input[type=range]:not(:disabled)::-webkit-slider-thumb {
   background: var(--color-cool-3);
   border: 1px solid var(--color-cool-4);
   background: var(--color-warm-2);
   border: 1px solid var(--color-warm-1);
-  border-radius: 50%;
   transition: outline 0.15s;
 }
-[data-theme=foundry2] input[type=range]::-webkit-slider-thumb:hover,
-.foundry2 input[type=range]::-webkit-slider-thumb:hover {
+[data-theme=foundry2] input[type=range]:not(:disabled)::-webkit-slider-thumb:hover,
+.foundry2 input[type=range]:not(:disabled)::-webkit-slider-thumb:hover {
   outline: 4px solid var(--color-warm-1);
 }
 [data-theme=foundry2] input[type=color i]::-webkit-color-swatch,
@@ -9230,6 +9240,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --visibility-gm-bg: var(--color-warm-3);
   --blind-roll: var(--color-warm-3);
 }
+[data-theme=foundry2].token-sheet, [data-theme=foundry2].dialog,
+.foundry2.token-sheet,
+.foundry2.dialog {
+  height: auto !important;
+}
 [data-theme=foundry2].filepicker .favorites .paths,
 .foundry2.filepicker .favorites .paths {
   box-shadow: unset;
@@ -9261,7 +9276,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
@@ -9917,7 +9932,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
@@ -10251,7 +10266,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
@@ -10593,7 +10608,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
@@ -10922,7 +10937,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
@@ -12384,14 +12399,15 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   --color-text-light-6: var(--color-cool-4);
+  --color-text-dark-secondary: var(--color-light-4);
 }
 .foundry2.chat-message.whisper {
   border-color: var(--color-cool-1);
-  background: var(--color-cool-2);
+  background: var(--color-cool-3-75);
 }
 .foundry2.chat-message.whisper.blind {
   border-color: var(--color-scrollbar-border);
-  background: var(--color-scrollbar);
+  background: var(--color-warm-3-75);
 }
 .foundry2.chat-message .table-draw .table-results .table-result img.result-image {
   background-color: var(--color-light-2);
@@ -13700,11 +13716,13 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-warm-1: #ee9b3a;
   --color-warm-2: #c9593f;
   --color-warm-3: #5d142b;
+  --color-warm-3-75: #5d142bd2;
   --color-warm-4: #420418;
   --color-warm-5: #26020d;
   --color-cool-1: #b1a0d4;
   --color-cool-2: #79689c;
   --color-cool-3: #584a75;
+  --color-cool-3-75: #584a75af;
   --color-cool-4: #302831;
   --color-cool-5: #0b0a13;
   --color-cool-5-25: rgba(11, 10, 19, 0.25);

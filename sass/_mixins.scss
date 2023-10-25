@@ -129,7 +129,7 @@
 
 @mixin f2-button-cool {
   @include f2-button-warm;
-  --button-background-color: var(--color-cool-3);
+  --button-background-color: var(--color-cool-3-75);
   --button-border-color: var(--color-cool-2);
   --button-text-color: var(--color-light-2);
   --button-focus-outline-color: var(--color-warm-1);
