@@ -297,7 +297,13 @@
   }
 }
 
-.foundry2-pc {
+.foundry2 {
+  &[id^="pf2e-perception-"] {
+    height: auto !important;
+    .window-content {
+      max-height: 100%;
+    }
+  }
   &[id^="pf2e-perception-"] .window-content .buttons button {
     @include f2-button-warm;
     box-shadow: unset;

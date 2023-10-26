@@ -562,6 +562,11 @@
   .tags.paizo-style {
     gap: 1px;
 
+    // doesn't work due to whitespace
+    &:empty {
+      display: none;
+    }
+
     tag {
       height: auto;
     }

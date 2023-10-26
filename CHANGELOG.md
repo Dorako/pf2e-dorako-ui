@@ -1,5 +1,11 @@
 # 2.11.6
 
+- (Refinement) Increased legibility of action-cost icons in Compendium Browser in Foundry 2 theme.
+- (Fix) Fixed an issue where PF2e Perception would not be styled correctly.
+- (Maintenance) Updated the remove-attack-info-from-damage-rolls setting to work in never system versions.
+
+# 2.11.6
+
 - (Refinement) Introduced new Foundry 2 colors for toggled-off state, whisper messages, blind messages.
 - (Refinement) Adjusted certain text color in Foundry 2 message theme to be more legible on colored backgrounds.
 - (Refinement) Made disabled range inputs cool rather than warm in Foundry 2 theme.

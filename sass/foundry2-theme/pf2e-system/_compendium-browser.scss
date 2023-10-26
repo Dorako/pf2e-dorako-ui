@@ -32,6 +32,11 @@
     }
   }
 
+  .item img {
+    @include f2-app;
+    background-color: white;
+  }
+
   &#compendium-browser > section.window-content > .content-box > nav,
   &#license-viewer > section.window-content > .content-box > nav {
     --secondary: var(--color-cool-3);

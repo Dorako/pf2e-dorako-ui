@@ -29,7 +29,7 @@
             "no-theme": "No theme",
             "light-theme": "Light Dorako UI",
             "dark-theme": "Dark Dorako UI",
-            "foundry2-theme": "Foundry 2"
+            "foundry2-theme": "Foundry 2 inspired"
           }
         },
         "frosted-glass": {
@@ -53,7 +53,7 @@
           "hint": "Affects all chat messages",
           "choice": {
             "factions": "Players light, GM dark",
-            "foundry2": "Foundry 2"
+            "foundry2": "Foundry 2 inspired"
           }
         },
         "pc-sheet-theme": {

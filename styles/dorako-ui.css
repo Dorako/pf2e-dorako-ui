@@ -2698,7 +2698,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   margin: unset;
 }
 
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button {
+.foundry2[id^=pf2e-perception-] {
+  height: auto !important;
+}
+.foundry2[id^=pf2e-perception-] .window-content {
+  max-height: 100%;
+}
+.foundry2[id^=pf2e-perception-] .window-content .buttons button {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -2724,26 +2730,26 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   transition: background-color 0.5s, border-color 0.5s;
   box-shadow: unset;
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled):hover {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.active {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.disabled, .foundry2-pc[id^=pf2e-perception-] .window-content .buttons button:disabled {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.disabled, .foundry2[id^=pf2e-perception-] .window-content .buttons button:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -2752,18 +2758,18 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright.disabled, .foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright:disabled {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright.disabled, .foundry2[id^=pf2e-perception-] .window-content .buttons button.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .buttons button.bright:not(.disabled, :disabled):hover {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-.foundry2-pc[id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, .foundry2-pc[id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
+.foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, .foundry2[id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
   color: var(--color-warm-1);
   text-shadow: 0px 0px 5px var(--color-warm-2);
 }
@@ -9673,6 +9679,10 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2 .tags.paizo-style {
   gap: 1px;
 }
+.foundry2 .tags:empty,
+.foundry2 .tags.paizo-style:empty {
+  display: none;
+}
 .foundry2 .tags tag,
 .foundry2 .tags.paizo-style tag {
   height: auto;
@@ -12677,7 +12687,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-bg-bleed: rgba(153, 0, 26, 0.125);
   --color-bg-chaotic: rgba(166, 0, 166, 0.125);
   --color-bg-cold: rgba(72, 72, 198, 0.125);
-  --color-bg-electricity: rgba(184, 134, 11, 0.125);
+  --color-bg-electricity: rgba(221, 167, 30, 0.125);
   --color-bg-evil: rgba(75, 0, 130, 0.125);
   --color-bg-fire: rgba(166, 47, 0, 0.125);
   --color-bg-force: rgba(99, 0, 170, 0.125);
@@ -12694,7 +12704,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-border-bleed: #99001a;
   --color-border-chaotic: #a600a6;
   --color-border-cold: #2f2fa6;
-  --color-border-electricity: darkgoldenrod;
+  --color-border-electricity: yellow;
   --color-border-evil: indigo;
   --color-border-fire: #a62f00;
   --color-border-force: #6300aa;
@@ -12711,7 +12721,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-text-bleed: #59000f;
   --color-text-chaotic: #660066;
   --color-text-cold: #3a3ac5;
-  --color-text-electricity: #7c5a07;
+  --color-text-electricity: #e7b22b;
   --color-text-evil: #260042;
   --color-text-fire: #882700;
   --color-text-force: #3e006a;
@@ -13558,6 +13568,16 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .control-area > div:first-child, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .control-area > div:first-child {
   margin-top: 10px;
 }
+.foundry2 .item img {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background-color: white;
+}
 .foundry2#compendium-browser > section.window-content > .content-box > nav, .foundry2#license-viewer > section.window-content > .content-box > nav {
   --secondary: var(--color-cool-3);
 }
@@ -13718,6 +13738,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-warm-3: #5d142b;
   --color-warm-3-75: #5d142bd2;
   --color-warm-4: #420418;
+  --color-warm-4-75: #420418d7;
   --color-warm-5: #26020d;
   --color-cool-1: #b1a0d4;
   --color-cool-2: #79689c;

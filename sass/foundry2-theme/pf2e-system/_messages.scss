@@ -318,11 +318,11 @@
   --color-bg-bleed: rgba(153, 0, 26, 0.125);
   --color-bg-chaotic: rgba(166, 0, 166, 0.125);
   --color-bg-cold: rgba(72, 72, 198, 0.125); // adjusted
-  --color-bg-electricity: rgba(184, 134, 11, 0.125);
+  --color-bg-electricity: rgba(221, 167, 30, 0.125); // adjusted
   --color-bg-evil: rgba(75, 0, 130, 0.125);
   --color-bg-fire: rgba(166, 47, 0, 0.125);
   --color-bg-force: rgba(99, 0, 170, 0.125);
-  --color-bg-good: rgba(157, 115, 10, 0.125);
+  --color-bg-good: rgba(157, 115, 10, 0.125); // adjusted
   --color-bg-lawful: rgba(64, 38, 0, 0.125);
   --color-bg-mental: rgba(25, 25, 112, 0.125);
   --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
@@ -335,7 +335,7 @@
   --color-border-bleed: #99001a;
   --color-border-chaotic: #a600a6;
   --color-border-cold: #2f2fa6;
-  --color-border-electricity: darkgoldenrod;
+  --color-border-electricity: yellow; // adjusted
   --color-border-evil: indigo;
   --color-border-fire: #a62f00;
   --color-border-force: #6300aa;
@@ -352,7 +352,7 @@
   --color-text-bleed: #59000f;
   --color-text-chaotic: #660066;
   --color-text-cold: #3a3ac5; // adjusted
-  --color-text-electricity: #7c5a07;
+  --color-text-electricity: #e7b22b; // adjusted
   --color-text-evil: #260042;
   --color-text-fire: #882700; // adjusted
   --color-text-force: #3e006a;

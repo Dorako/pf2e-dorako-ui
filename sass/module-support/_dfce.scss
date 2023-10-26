@@ -64,6 +64,13 @@
 /* DFCE Chat Merge                           */
 /* ----------------------------------------- */
 
+// Can't get rid of damage buttons, because sometimes you need to attack twice and then roll damage
+// .message.dfce-cm-top {
+//   > .message-content .message-buttons {
+//     display: none;
+//   }
+// }
+
 .message.chat-message {
   .message-delete {
     z-index: 1;
