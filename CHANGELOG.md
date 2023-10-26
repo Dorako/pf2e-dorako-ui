@@ -1,4 +1,4 @@
-# 2.11.6
+# 2.11.7
 
 - (Refinement) Increased legibility of action-cost icons in Compendium Browser in Foundry 2 theme.
 - (Fix) Fixed an issue where PF2e Perception would not be styled correctly.
