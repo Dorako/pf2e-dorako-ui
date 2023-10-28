@@ -181,7 +181,7 @@
 
 .foundry2-pc {
   &#pf2e-token-hud {
-    --primary: var(--color-warm-2);
+    // --primary: var(--color-warm-2);
     --rarity-common: #e1d8cf;
     --rarity-uncommon: #c45500;
     --rarity-rare: #5362ff;
@@ -295,6 +295,11 @@
     @include f2-app;
     margin: unset;
   }
+
+  &#pf2e-token-hud .sidebar.skills .sidebar-content .skill .header .modifier,
+  &#pf2e-token-hud .sidebar.skills .sidebar-content .lore .modifier {
+    color: var(--color-warm-1);
+  }
 }
 
 .foundry2 {
@@ -303,6 +308,9 @@
     .window-content {
       max-height: 100%;
     }
+  }
+  &[id^="pf2e-perception-"] .window-content .tokens section .token[data-token-id]:is(:hover, .hover) {
+    background: color-mix(in srgb, var(--color-warm-2) 80%, transparent);
   }
   &[id^="pf2e-perception-"] .window-content .buttons button {
     @include f2-button-warm;

@@ -24,3 +24,20 @@ html {
     border-color: var(--rarity-unique);
   }
 }
+
+.foundry2 {
+  .roll-app-nav button {
+    @include f2-button-warm;
+  }
+
+  .roll-app .roll-app-table tbody button {
+    @include f2-button-warm;
+  }
+  .roll-app .roll-app-table tbody tr.selected {
+    background: var(--color-warm-2);
+    border-radius: var(--border-radius);
+    button.rollable {
+      color: var(--color-light-2);
+    }
+  }
+}

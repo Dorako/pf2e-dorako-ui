@@ -990,14 +990,6 @@ nav.damage-log-nav.tabs .item.active {
   fill: var(--color-light-1);
 }
 .foundry2 .dice-tray input[type=text] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -1026,6 +1018,9 @@ nav.damage-log-nav.tabs .item.active {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2 .dice-tray input[type=text].disabled::placeholder, .foundry2 .dice-tray input[type=text]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2 .dice-tray input[type=text]::placeholder {
   color: var(--input-placeholder-color);
@@ -1138,7 +1133,6 @@ nav.damage-log-nav.tabs .item.active {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -1446,7 +1440,6 @@ button#heartbeat-button {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -1589,6 +1582,16 @@ button#heartbeat-button {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   backdrop-filter: blur(5px);
+}
+
+.foundry2.window-app.monarch-hand .window-header, .foundry2.monarch-hand footer.sheet-footer, .foundry2.monarch-hand footer.sheet-footer button, .foundry2.monarch .card-hud .badge, .foundry2.monarch .card-hud .card-controls, .foundry2.monarch-hand .tooltip {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
 }
 
 /* ----------------------------------------- */
@@ -1888,7 +1891,6 @@ body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effec
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -2135,14 +2137,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border-color: var(--color-cool-3);
 }
 .foundry2.action-sheet .display-value {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -2170,6 +2164,9 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.action-sheet .display-value.disabled::placeholder, .foundry2.action-sheet .display-value:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.action-sheet .display-value::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -2188,7 +2185,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -2490,7 +2486,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* Foundry 2                                 */
 /* ----------------------------------------- */
 .foundry2-pc#pf2e-token-hud {
-  --primary: var(--color-warm-2);
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
@@ -2506,14 +2501,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --color-rank-4: red;
 }
 .foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -2543,6 +2530,9 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input.disabled::placeholder, .foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc#pf2e-token-hud .sidebar .sidebar-content .details input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -2559,14 +2549,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --box-shadow: transparent;
 }
 .foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -2593,6 +2575,9 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select.disabled::placeholder, .foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2-pc#pf2e-token-hud .sidebar.extras .sidebar-content .row select::placeholder {
   color: var(--input-placeholder-color);
@@ -2697,12 +2682,18 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--color-light-3);
   margin: unset;
 }
+.foundry2-pc#pf2e-token-hud .sidebar.skills .sidebar-content .skill .header .modifier, .foundry2-pc#pf2e-token-hud .sidebar.skills .sidebar-content .lore .modifier {
+  color: var(--color-warm-1);
+}
 
 .foundry2[id^=pf2e-perception-] {
   height: auto !important;
 }
 .foundry2[id^=pf2e-perception-] .window-content {
   max-height: 100%;
+}
+.foundry2[id^=pf2e-perception-] .window-content .tokens section .token[data-token-id]:is(:hover, .hover) {
+  background: color-mix(in srgb, var(--color-warm-2) 80%, transparent);
 }
 .foundry2[id^=pf2e-perception-] .window-content .buttons button {
   background: var(--app-background);
@@ -2712,7 +2703,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -2983,7 +2973,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -3223,14 +3212,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   height: var(--input-height);
 }
 .foundry2 .polyglot-lang-select span.select2-selection {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -3257,6 +3238,9 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2 .polyglot-lang-select span.select2-selection.disabled::placeholder, .foundry2 .polyglot-lang-select span.select2-selection:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2 .polyglot-lang-select span.select2-selection::placeholder {
   color: var(--input-placeholder-color);
@@ -3345,6 +3329,83 @@ body.system-swade {
 
 .foundry2 .pf2e-td .damage-application {
   margin-top: unset;
+}
+
+.foundry2 .pf2e-td.small-button.target-button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+  --button-background-color: var(--color-cool-3-75);
+  --button-border-color: var(--color-cool-2);
+  --button-text-color: var(--color-light-2);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-cool-2);
+  --button-hover-border-color: var(--color-cool-1);
+  --button-hover-text-color: var(--color-light-1);
+}
+.foundry2 .pf2e-td.small-button.target-button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2 .pf2e-td.small-button.target-button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2 .pf2e-td.small-button.target-button.disabled, .foundry2 .pf2e-td.small-button.target-button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2 .pf2e-td.small-button.target-button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2 .pf2e-td.small-button.target-button.bright.disabled, .foundry2 .pf2e-td.small-button.target-button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2 .pf2e-td.small-button.target-button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2 .pf2e-td.small-button.target-button:disabled {
+  --button-background-color: var(--color-cool-5);
+  --button-border-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
 }
 
 .dorako-ui.message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td.criticalSuccess {
@@ -3563,28 +3624,24 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: white;
 }
 
-.locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll),
-.tah-tooltip :is(a.content-link, a.inline-roll),
-#tooltip.active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
+#tooltip[data-theme=dorako-ui].locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll), #tooltip[data-theme=dorako-ui].tah-tooltip :is(a.content-link, a.inline-roll), #tooltip[data-theme=dorako-ui].active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
   background: #ddd;
   padding: 1px 4px;
   border: 1px solid var(--color-border-dark-tertiary);
   color: var(--color-text-dark-primary);
   margin: 3px;
 }
-
-.tah-tooltip .tags .tag.tag_transparent {
+#tooltip[data-theme=dorako-ui] .tah-tooltip .tags .tag.tag_transparent {
   background: rgba(255, 255, 255, 0.5);
   color: var(--glass-bg-dark);
   margin-left: 2px;
   margin-bottom: 2px;
 }
-.tah-tooltip .tags .tag.tag_transparent:first-child {
+#tooltip[data-theme=dorako-ui] .tah-tooltip .tags .tag.tag_transparent:first-child {
   margin-left: 0px;
 }
-
-.tah-tooltip .tag,
-.tah-tooltip table {
+#tooltip[data-theme=dorako-ui] .tah-tooltip .tag,
+#tooltip[data-theme=dorako-ui] .tah-tooltip table {
   text-shadow: none;
 }
 
@@ -3596,14 +3653,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 /* Foundry2                                  */
 /* ----------------------------------------- */
 .foundry2#token-action-hud-core-settings input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -3631,6 +3680,9 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2#token-action-hud-core-settings input.disabled::placeholder, .foundry2#token-action-hud-core-settings input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2#token-action-hud-core-settings input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -3642,8 +3694,19 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: unset;
 }
 
-#tooltip[data-theme=foundry-2] .tah-tooltip-wrapper {
-  font-size: 12px;
+#tooltip[data-theme=foundry2].locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll), #tooltip[data-theme=foundry2].tah-tooltip :is(a.content-link, a.inline-roll), #tooltip[data-theme=foundry2].active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+}
+#tooltip[data-theme=foundry2].locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll)::before,
+#tooltip[data-theme=foundry2].locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll) i,
+#tooltip[data-theme=foundry2].locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll) i.icon, #tooltip[data-theme=foundry2].tah-tooltip :is(a.content-link, a.inline-roll)::before,
+#tooltip[data-theme=foundry2].tah-tooltip :is(a.content-link, a.inline-roll) i,
+#tooltip[data-theme=foundry2].tah-tooltip :is(a.content-link, a.inline-roll) i.icon, #tooltip[data-theme=foundry2].active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll)::before,
+#tooltip[data-theme=foundry2].active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) i,
+#tooltip[data-theme=foundry2].active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) i.icon {
+  color: var(--color-light-1);
 }
 
 #token-action-hud[data-theme=foundry2] .tah-action-button,
@@ -3657,7 +3720,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -3737,6 +3799,18 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
+#token-action-hud[data-theme=foundry2] .tah-subtitle-text {
+  color: var(--color-light-1);
+}
+#token-action-hud[data-theme=foundry2] .tah-info1,
+#token-action-hud[data-theme=foundry2] .tah-info2,
+#token-action-hud[data-theme=foundry2] .tah-info3 {
+  color: var(--color-light-4);
+  font-size: x-small;
+}
+#token-action-hud[data-theme=foundry2] button {
+  transition: unset !important;
+}
 #token-action-hud[data-theme=foundry2] #tah-expand-hud {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
@@ -3764,7 +3838,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -3837,7 +3910,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
 }
-#token-action-hud[data-theme=foundry2] .tah-list-image {
+#token-action-hud[data-theme=foundry2] .tah-group[data-level="3"] > .tah-list-image {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -3845,6 +3918,28 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
+}
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-1 {
+  --button-background-color: #171f69;
+  --button-border-color: #3a47ba;
+}
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-2 {
+  --button-background-color: #3c005e;
+  --button-border-color: #630e94;
+}
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-3 {
+  --button-background-color: #640;
+  --button-border-color: rgb(153, 107, 14);
+}
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-4 {
+  --button-background-color: #5e0000;
+  --button-border-color: #960b0b;
+}
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-1,
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-2,
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-3,
+#token-action-hud[data-theme=foundry2] .tah-action button.tah-pf2e-skill-rank-4 {
+  --button-text-color: var(--color-light-2);
 }
 
 .foundry2 #tokenizer div.avatar div.view > div > canvas,
@@ -3894,7 +3989,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -3958,7 +4052,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -4022,7 +4115,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -4131,6 +4223,140 @@ html .xdy-pf2e-workbench-rarity-rare {
 html .xdy-pf2e-workbench-rarity-unique {
   color: var(--rarity-unique);
   border-color: var(--rarity-unique);
+}
+
+.foundry2 .roll-app-nav button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2 .roll-app-nav button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2 .roll-app-nav button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2 .roll-app-nav button.disabled, .foundry2 .roll-app-nav button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2 .roll-app-nav button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2 .roll-app-nav button.bright.disabled, .foundry2 .roll-app-nav button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2 .roll-app-nav button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2 .roll-app .roll-app-table tbody button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2 .roll-app .roll-app-table tbody button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2 .roll-app .roll-app-table tbody button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2 .roll-app .roll-app-table tbody button.disabled, .foundry2 .roll-app .roll-app-table tbody button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2 .roll-app .roll-app-table tbody button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2 .roll-app .roll-app-table tbody button.bright.disabled, .foundry2 .roll-app .roll-app-table tbody button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2 .roll-app .roll-app-table tbody button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2 .roll-app .roll-app-table tbody tr.selected {
+  background: var(--color-warm-2);
+  border-radius: var(--border-radius);
+}
+.foundry2 .roll-app .roll-app-table tbody tr.selected button.rollable {
+  color: var(--color-light-2);
 }
 
 .dorako-ui .tox:not(.tox-tinymce-inline) .tox-editor-header {
@@ -8619,6 +8845,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --color-rarity-unique: #e127e1;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --input-height: 24px;
+  --input-background-color: var(--color-cool-4);
+  --input-border-color: transparent;
+  --input-border-color: var(--color-cool-3);
+  --input-focus-text-color: var(--color-light-2);
+  --input-text-color: var(--color-light-3);
+  --input-placeholder-color: var(--color-light-4);
+  --input-text-selection-color: var(--color-cool-3);
+  --input-focus-outline-color: var(--color-cool-3);
 }
 .foundry2-pc ::-webkit-scrollbar-thumb,
 [data-theme=foundry2] ::-webkit-scrollbar-thumb,
@@ -8822,7 +9056,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -8902,28 +9135,92 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
+[data-theme=foundry2].dialog .dialog-buttons button,
+.foundry2.dialog .dialog-buttons button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+[data-theme=foundry2].dialog .dialog-buttons button:not(.disabled, :disabled):hover,
+.foundry2.dialog .dialog-buttons button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme=foundry2].dialog .dialog-buttons button.active,
+.foundry2.dialog .dialog-buttons button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+[data-theme=foundry2].dialog .dialog-buttons button.disabled, [data-theme=foundry2].dialog .dialog-buttons button:disabled,
+.foundry2.dialog .dialog-buttons button.disabled,
+.foundry2.dialog .dialog-buttons button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+[data-theme=foundry2].dialog .dialog-buttons button.bright,
+.foundry2.dialog .dialog-buttons button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+[data-theme=foundry2].dialog .dialog-buttons button.bright.disabled, [data-theme=foundry2].dialog .dialog-buttons button.bright:disabled,
+.foundry2.dialog .dialog-buttons button.bright.disabled,
+.foundry2.dialog .dialog-buttons button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+[data-theme=foundry2].dialog .dialog-buttons button.bright:not(.disabled, :disabled):hover,
+.foundry2.dialog .dialog-buttons button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 [data-theme=foundry2] input[type=text],
 [data-theme=foundry2] input[type=number],
 [data-theme=foundry2] input[type=password],
 [data-theme=foundry2] input[type=date],
 [data-theme=foundry2] input[type=time],
 [data-theme=foundry2] input[type=search],
-[data-theme=foundry2] select,
+[data-theme=foundry2] select:not(.tag),
 .foundry2 input[type=text],
 .foundry2 input[type=number],
 .foundry2 input[type=password],
 .foundry2 input[type=date],
 .foundry2 input[type=time],
 .foundry2 input[type=search],
-.foundry2 select {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
+.foundry2 select:not(.tag) {
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -8951,8 +9248,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] input[type=time]:focus,
 [data-theme=foundry2] input[type=search]:not(:disabled, .disabled):hover,
 [data-theme=foundry2] input[type=search]:focus,
-[data-theme=foundry2] select:not(:disabled, .disabled):hover,
-[data-theme=foundry2] select:focus,
+[data-theme=foundry2] select:not(.tag):not(:disabled, .disabled):hover,
+[data-theme=foundry2] select:not(.tag):focus,
 .foundry2 input[type=text]:not(:disabled, .disabled):hover,
 .foundry2 input[type=text]:focus,
 .foundry2 input[type=number]:not(:disabled, .disabled):hover,
@@ -8965,8 +9262,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2 input[type=time]:focus,
 .foundry2 input[type=search]:not(:disabled, .disabled):hover,
 .foundry2 input[type=search]:focus,
-.foundry2 select:not(:disabled, .disabled):hover,
-.foundry2 select:focus {
+.foundry2 select:not(.tag):not(:disabled, .disabled):hover,
+.foundry2 select:not(.tag):focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: 1px solid var(--input-border-color);
   color: var(--input-focus-text-color);
@@ -8983,8 +9280,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] input[type=time]:disabled,
 [data-theme=foundry2] input[type=search].disabled,
 [data-theme=foundry2] input[type=search]:disabled,
-[data-theme=foundry2] select.disabled,
-[data-theme=foundry2] select:disabled,
+[data-theme=foundry2] select:not(.tag).disabled,
+[data-theme=foundry2] select:not(.tag):disabled,
 .foundry2 input[type=text].disabled,
 .foundry2 input[type=text]:disabled,
 .foundry2 input[type=number].disabled,
@@ -8997,11 +9294,40 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2 input[type=time]:disabled,
 .foundry2 input[type=search].disabled,
 .foundry2 input[type=search]:disabled,
-.foundry2 select.disabled,
-.foundry2 select:disabled {
+.foundry2 select:not(.tag).disabled,
+.foundry2 select:not(.tag):disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+[data-theme=foundry2] input[type=text].disabled::placeholder, [data-theme=foundry2] input[type=text]:disabled::placeholder,
+[data-theme=foundry2] input[type=number].disabled::placeholder,
+[data-theme=foundry2] input[type=number]:disabled::placeholder,
+[data-theme=foundry2] input[type=password].disabled::placeholder,
+[data-theme=foundry2] input[type=password]:disabled::placeholder,
+[data-theme=foundry2] input[type=date].disabled::placeholder,
+[data-theme=foundry2] input[type=date]:disabled::placeholder,
+[data-theme=foundry2] input[type=time].disabled::placeholder,
+[data-theme=foundry2] input[type=time]:disabled::placeholder,
+[data-theme=foundry2] input[type=search].disabled::placeholder,
+[data-theme=foundry2] input[type=search]:disabled::placeholder,
+[data-theme=foundry2] select:not(.tag).disabled::placeholder,
+[data-theme=foundry2] select:not(.tag):disabled::placeholder,
+.foundry2 input[type=text].disabled::placeholder,
+.foundry2 input[type=text]:disabled::placeholder,
+.foundry2 input[type=number].disabled::placeholder,
+.foundry2 input[type=number]:disabled::placeholder,
+.foundry2 input[type=password].disabled::placeholder,
+.foundry2 input[type=password]:disabled::placeholder,
+.foundry2 input[type=date].disabled::placeholder,
+.foundry2 input[type=date]:disabled::placeholder,
+.foundry2 input[type=time].disabled::placeholder,
+.foundry2 input[type=time]:disabled::placeholder,
+.foundry2 input[type=search].disabled::placeholder,
+.foundry2 input[type=search]:disabled::placeholder,
+.foundry2 select:not(.tag).disabled::placeholder,
+.foundry2 select:not(.tag):disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 [data-theme=foundry2] input[type=text]::placeholder,
 [data-theme=foundry2] input[type=number]::placeholder,
@@ -9009,14 +9335,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] input[type=date]::placeholder,
 [data-theme=foundry2] input[type=time]::placeholder,
 [data-theme=foundry2] input[type=search]::placeholder,
-[data-theme=foundry2] select::placeholder,
+[data-theme=foundry2] select:not(.tag)::placeholder,
 .foundry2 input[type=text]::placeholder,
 .foundry2 input[type=number]::placeholder,
 .foundry2 input[type=password]::placeholder,
 .foundry2 input[type=date]::placeholder,
 .foundry2 input[type=time]::placeholder,
 .foundry2 input[type=search]::placeholder,
-.foundry2 select::placeholder {
+.foundry2 select:not(.tag)::placeholder {
   color: var(--input-placeholder-color);
 }
 [data-theme=foundry2] input[type=text]::selection,
@@ -9025,14 +9351,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] input[type=date]::selection,
 [data-theme=foundry2] input[type=time]::selection,
 [data-theme=foundry2] input[type=search]::selection,
-[data-theme=foundry2] select::selection,
+[data-theme=foundry2] select:not(.tag)::selection,
 .foundry2 input[type=text]::selection,
 .foundry2 input[type=number]::selection,
 .foundry2 input[type=password]::selection,
 .foundry2 input[type=date]::selection,
 .foundry2 input[type=time]::selection,
 .foundry2 input[type=search]::selection,
-.foundry2 select::selection {
+.foundry2 select:not(.tag)::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
@@ -9042,14 +9368,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] input[type=date][type=checkbox],
 [data-theme=foundry2] input[type=time][type=checkbox],
 [data-theme=foundry2] input[type=search][type=checkbox],
-[data-theme=foundry2] select[type=checkbox],
+[data-theme=foundry2] select:not(.tag)[type=checkbox],
 .foundry2 input[type=text][type=checkbox],
 .foundry2 input[type=number][type=checkbox],
 .foundry2 input[type=password][type=checkbox],
 .foundry2 input[type=date][type=checkbox],
 .foundry2 input[type=time][type=checkbox],
 .foundry2 input[type=search][type=checkbox],
-.foundry2 select[type=checkbox] {
+.foundry2 select:not(.tag)[type=checkbox] {
   border: unset;
 }
 [data-theme=foundry2] input[type=checkbox]:checked,
@@ -9113,7 +9439,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -9208,7 +9533,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-radius: var(--border-radius);
   background: unset;
   background: var(--app-background);
-  border-color: var(--app-border-color);
   border: 1px solid var(--color-cool-3);
 }
 [data-theme=foundry2].window-app,
@@ -9228,7 +9552,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2].window-app .window-resizable-handle,
 .foundry2.window-app .window-resizable-handle {
   background: var(--color-warm-4);
-  border: 1px solid var(--color-cool-4);
+  border: 1px solid var(--app-border-color);
   border-radius: 4px 0px var(--border-radius) 0px;
   border-bottom-color: var(--color-warm-3);
   border-right-color: var(--color-warm-3);
@@ -9241,7 +9565,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* ----------------------------------------- */
 [data-theme=foundry2],
 .foundry2 {
-  --alt: var(--color-cool-3);
   --bg: var(--color-warm-3);
   --visibility-gm-bg: var(--color-warm-3);
   --blind-roll: var(--color-warm-3);
@@ -9266,7 +9589,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -9385,14 +9707,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 [data-theme=foundry2] #chat-form textarea,
 .foundry2 #chat-form textarea {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -9426,6 +9740,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+[data-theme=foundry2] #chat-form textarea.disabled::placeholder, [data-theme=foundry2] #chat-form textarea:disabled::placeholder,
+.foundry2 #chat-form textarea.disabled::placeholder,
+.foundry2 #chat-form textarea:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 [data-theme=foundry2] #chat-form textarea::placeholder,
 .foundry2 #chat-form textarea::placeholder {
   color: var(--input-placeholder-color);
@@ -9451,7 +9770,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -9539,7 +9857,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -9744,7 +10061,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -9850,7 +10166,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -9926,7 +10241,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10046,7 +10360,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10175,7 +10488,6 @@ nav#controls.foundry2 ol.control-tools > li {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10260,7 +10572,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10456,7 +10767,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10532,7 +10842,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10602,7 +10911,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10728,14 +11036,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-level-light-2);
 }
 .foundry2.placeable-hud input[type=text] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -10766,6 +11066,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2.placeable-hud input[type=text].disabled::placeholder, .foundry2.placeable-hud input[type=text]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2.placeable-hud input[type=text]::placeholder {
   color: var(--input-placeholder-color);
@@ -10861,7 +11164,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -10931,7 +11233,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -11096,20 +11397,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border-color: var(--color-warm-1);
 }
 .foundry2#sidebar {
-  border: 1px solid var(--color-cool-3);
-  --glassy: 0px 0px 0px 1px var(--color-cool-3);
-  --glass-bg-light: var(--app-background);
-  --glassy: 0px 0px 0px 1px var(--color-cool-3), 0px 1px 3px 1px black;
-  --glass-bg-light: var(--color-cool-5-50);
+  border: 1px solid var(--app-border-color);
   --gold-and-glow: transparent;
-  --primary-dark: var(--color-warm-3);
-  --primary: var(--color-warm-2);
-  --primary-light: var(--color-warm-2);
-  --secondary-dark: var(--color-warm-3);
-  --secondary: var(--color-warm-2);
-  --secondary-light: var(--color-warm-2);
-  --color-text-light-heading: var(--color-light-3);
-  --color-text-light-highlight: var(--color-light-2);
   --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),
                        linear-gradient(to bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
                        var(--app-background);
@@ -11133,14 +11422,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
 }
 .foundry2.sheet.hazard .section-container.publication .section-body input[type=text], .foundry2.sheet.hazard input[type=text], .foundry2.sheet.hazard input[type=number] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11168,6 +11449,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.sheet.hazard .section-container.publication .section-body input[type=text].disabled::placeholder, .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:disabled::placeholder, .foundry2.sheet.hazard input[type=text].disabled::placeholder, .foundry2.sheet.hazard input[type=text]:disabled::placeholder, .foundry2.sheet.hazard input[type=number].disabled::placeholder, .foundry2.sheet.hazard input[type=number]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]::placeholder, .foundry2.sheet.hazard input[type=text]::placeholder, .foundry2.sheet.hazard input[type=number]::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -11179,14 +11463,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=text]:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=number]:focus {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11213,6 +11489,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled::placeholder, .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus.disabled::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus:disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus.disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled)::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled)::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus::placeholder {
   color: var(--input-placeholder-color);
@@ -11296,14 +11575,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input, .foundry2.sheet.familiar select, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11331,6 +11602,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input.disabled::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:disabled::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input.disabled::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:disabled::placeholder, .foundry2.sheet.familiar select.disabled::placeholder, .foundry2.sheet.familiar select:disabled::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text].disabled::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input::placeholder, .foundry2.sheet.familiar select::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -11354,7 +11628,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -11437,14 +11710,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   gap: 3px;
 }
 .foundry2.sheet.actor.loot .sheet-header .tags .tag, .foundry2.sheet.actor.loot .sheet-header h1 > input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11471,6 +11736,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2.sheet.actor.loot .sheet-header .tags .tag.disabled::placeholder, .foundry2.sheet.actor.loot .sheet-header .tags .tag:disabled::placeholder, .foundry2.sheet.actor.loot .sheet-header h1 > input.disabled::placeholder, .foundry2.sheet.actor.loot .sheet-header h1 > input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2.sheet.actor.loot .sheet-header .tags .tag::placeholder, .foundry2.sheet.actor.loot .sheet-header h1 > input::placeholder {
   color: var(--input-placeholder-color);
@@ -11518,14 +11786,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --font-size: inherit;
 }
 .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11553,6 +11813,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input.disabled::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input:disabled::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input.disabled::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -11564,14 +11827,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.actor.npc.sheet form .spellcasting-entry select {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11599,6 +11854,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.actor.npc.sheet form .spellcasting-entry select.disabled::placeholder, .foundry2.actor.npc.sheet form .spellcasting-entry select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.actor.npc.sheet form .spellcasting-entry select::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -11610,14 +11868,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11645,6 +11895,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text].disabled::placeholder, .foundry2.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text]::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -11656,14 +11909,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2.actor.npc.sheet form .side-bar-section.initiative select {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11690,6 +11935,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form .side-bar-section.initiative select.disabled::placeholder, .foundry2.actor.npc.sheet form .side-bar-section.initiative select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2.actor.npc.sheet form .side-bar-section.initiative select::placeholder {
   color: var(--input-placeholder-color);
@@ -11729,14 +11977,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 
 .foundry2.pf2e.actor form input[type=text], .foundry2.pf2e.actor form input[type=number] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -11764,6 +12004,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2.pf2e.actor form input[type=text].disabled::placeholder, .foundry2.pf2e.actor form input[type=text]:disabled::placeholder, .foundry2.pf2e.actor form input[type=number].disabled::placeholder, .foundry2.pf2e.actor form input[type=number]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2.pf2e.actor form input[type=text]::placeholder, .foundry2.pf2e.actor form input[type=number]::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -11782,7 +12025,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -11871,7 +12113,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -11995,7 +12236,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -12103,7 +12343,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -12173,14 +12412,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   font-weight: unset;
 }
 .foundry2.sheet.party form > header input[type=text], .foundry2.sheet.party form > header input[type=number] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -12209,6 +12440,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2.sheet.party form > header input[type=text].disabled::placeholder, .foundry2.sheet.party form > header input[type=text]:disabled::placeholder, .foundry2.sheet.party form > header input[type=number].disabled::placeholder, .foundry2.sheet.party form > header input[type=number]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2.sheet.party form > header input[type=text]::placeholder, .foundry2.sheet.party form > header input[type=number]::placeholder {
   color: var(--input-placeholder-color);
@@ -12247,7 +12481,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -12336,7 +12569,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -12419,6 +12651,14 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border-color: var(--color-scrollbar-border);
   background: var(--color-warm-3-75);
 }
+.foundry2.chat-message .message-content {
+  text-shadow: 0px 1px 1px black;
+}
+.foundry2.chat-message.pf2e.chat-card .card-header h3 {
+  font-family: var(--serif);
+  font-size: x-large;
+  line-height: 1.3rem;
+}
 .foundry2.chat-message .table-draw .table-results .table-result img.result-image {
   background-color: var(--color-light-2);
   border: 1px solid var(--color-warm-2);
@@ -12443,16 +12683,89 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2.chat-message .dice-roll .dice-formula button,
 .foundry2.chat-message .dice-roll .dice-total button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
-  border-color: var(--color-cool-2);
-  background: var(--color-cool-3);
   border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+  --button-background-color: var(--color-cool-3-75);
+  --button-border-color: var(--color-cool-2);
+  --button-text-color: var(--color-light-2);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-cool-2);
+  --button-hover-border-color: var(--color-cool-1);
+  --button-hover-text-color: var(--color-light-1);
 }
-.foundry2.chat-message .dice-roll .dice-formula button:hover,
-.foundry2.chat-message .dice-roll .dice-total button:hover {
-  border-color: var(--color-cool-1);
-  background: var(--color-cool-2);
-  color: var(--color-light-2);
+.foundry2.chat-message .dice-roll .dice-formula button:not(.disabled, :disabled):hover,
+.foundry2.chat-message .dice-roll .dice-total button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.chat-message .dice-roll .dice-formula button.active,
+.foundry2.chat-message .dice-roll .dice-total button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.chat-message .dice-roll .dice-formula button.disabled, .foundry2.chat-message .dice-roll .dice-formula button:disabled,
+.foundry2.chat-message .dice-roll .dice-total button.disabled,
+.foundry2.chat-message .dice-roll .dice-total button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.chat-message .dice-roll .dice-formula button.bright,
+.foundry2.chat-message .dice-roll .dice-total button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.chat-message .dice-roll .dice-formula button.bright.disabled, .foundry2.chat-message .dice-roll .dice-formula button.bright:disabled,
+.foundry2.chat-message .dice-roll .dice-total button.bright.disabled,
+.foundry2.chat-message .dice-roll .dice-total button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.chat-message .dice-roll .dice-formula button.bright:not(.disabled, :disabled):hover,
+.foundry2.chat-message .dice-roll .dice-total button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2.chat-message .dice-roll .dice-formula button:disabled,
+.foundry2.chat-message .dice-roll .dice-total button:disabled {
+  --button-background-color: var(--color-cool-5);
+  --button-border-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
 }
 .foundry2.chat-message .dice-tooltip .part-header .part-total {
   background: var(--app-background);
@@ -12677,61 +12990,134 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
 }
+.foundry2.chat-message .message-content .damage-taken button.revert-damage {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2.chat-message .message-content .damage-taken button.revert-damage:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.chat-message .message-content .damage-taken button.revert-damage.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.chat-message .message-content .damage-taken button.revert-damage.disabled, .foundry2.chat-message .message-content .damage-taken button.revert-damage:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.chat-message .message-content .damage-taken button.revert-damage.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.chat-message .message-content .damage-taken button.revert-damage.bright.disabled, .foundry2.chat-message .message-content .damage-taken button.revert-damage.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.chat-message .message-content .damage-taken button.revert-damage.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2.chat-message.emote > .message-content p.action-content img {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  border-color: var(--color-warm-1);
+}
 
 /* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
 .foundry2-pc .damage,
 .foundry2 .damage {
-  --color-bg-acid: rgba(0, 115, 0, 0.125);
-  --color-bg-bleed: rgba(153, 0, 26, 0.125);
-  --color-bg-chaotic: rgba(166, 0, 166, 0.125);
+  --color-bg-acid: rgba(32, 194, 32, 0.125);
+  --color-bg-bleed: rgba(207, 28, 58, 0.125);
+  --color-bg-chaotic: rgba(221, 26, 221, 0.125);
   --color-bg-cold: rgba(72, 72, 198, 0.125);
   --color-bg-electricity: rgba(221, 167, 30, 0.125);
-  --color-bg-evil: rgba(75, 0, 130, 0.125);
-  --color-bg-fire: rgba(166, 47, 0, 0.125);
-  --color-bg-force: rgba(99, 0, 170, 0.125);
+  --color-bg-evil: rgba(133, 45, 195, 0.125);
+  --color-bg-fire: rgba(229, 93, 39, 0.125);
+  --color-bg-force: rgba(177, 77, 249, 0.125);
   --color-bg-good: rgba(157, 115, 10, 0.125);
-  --color-bg-lawful: rgba(64, 38, 0, 0.125);
-  --color-bg-mental: rgba(25, 25, 112, 0.125);
+  --color-bg-lawful: rgba(123, 85, 28, 0.125);
+  --color-bg-mental: rgba(66, 66, 189, 0.125);
   --color-bg-physical: rgba(132, 132, 132, 0.125);
-  --color-bg-poison: rgba(91, 115, 50, 0.125);
-  --color-bg-sonic: rgba(0, 139, 139, 0.125);
-  --color-bg-spirit: rgba(90, 85, 133, 0.125);
+  --color-bg-poison: rgba(147, 178, 93, 0.125);
+  --color-bg-sonic: rgba(28, 217, 217, 0.125);
+  --color-bg-spirit: rgba(147, 142, 189, 0.125);
   --color-bg-vitality: rgba(255, 255, 224, 0.125);
   --color-bg-void: rgb(81, 21, 78, 0.125);
   --color-border-acid: #12a812;
-  --color-border-bleed: #99001a;
-  --color-border-chaotic: #a600a6;
+  --color-border-bleed: #d11c3b;
+  --color-border-chaotic: #d311d3;
   --color-border-cold: #2f2fa6;
   --color-border-electricity: yellow;
-  --color-border-evil: indigo;
-  --color-border-fire: #a62f00;
-  --color-border-force: #6300aa;
-  --color-border-good: #9d730a;
-  --color-border-lawful: #402600;
-  --color-border-mental: midnightblue;
+  --color-border-evil: rgb(126, 48, 181);
+  --color-border-fire: #cd4a17;
+  --color-border-force: #9222e2;
+  --color-border-good: #dcb85f;
+  --color-border-lawful: #97743f;
+  --color-border-mental: rgb(63, 63, 182);
   --color-border-physical: #737272;
-  --color-border-poison: #5b7332;
-  --color-border-sonic: darkcyan;
+  --color-border-poison: #9aba64;
+  --color-border-sonic: rgb(30, 202, 202);
   --color-border-spirit: #5a5585;
   --color-border-vitality: #ffffe0;
   --color-border-void: rgb(122, 38, 117);
   --color-text-acid: #34aa34;
-  --color-text-bleed: #59000f;
-  --color-text-chaotic: #660066;
+  --color-text-bleed: #b0162f;
+  --color-text-chaotic: #b71ab7;
   --color-text-cold: #3a3ac5;
   --color-text-electricity: #e7b22b;
-  --color-text-evil: #260042;
+  --color-text-evil: #594566;
   --color-text-fire: #882700;
-  --color-text-force: #3e006a;
-  --color-text-good: #614706;
+  --color-text-force: #8321ca;
+  --color-text-good: #c79b2b;
   --color-text-lawful: white;
-  --color-text-mental: #0d0d3c;
+  --color-text-mental: #3b3bad;
   --color-text-physical: #a0a0a0;
-  --color-text-poison: #38471f;
-  --color-text-sonic: #004b4b;
-  --color-text-spirit: #403c5e;
+  --color-text-poison: #657d3f;
+  --color-text-sonic: #21c2c2;
+  --color-text-spirit: #827dac;
   --color-text-vitality: #ffffa0;
   --color-text-void: rgb(122, 38, 117);
 }
@@ -12791,14 +13177,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   background: unset;
 }
 .foundry2-pc.actor.sheet .crb-style .sheet-body input[type=number] {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -12826,6 +13204,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc.actor.sheet .crb-style .sheet-body input[type=number].disabled::placeholder, .foundry2-pc.actor.sheet .crb-style .sheet-body input[type=number]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc.actor.sheet .crb-style .sheet-body input[type=number]::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -12837,14 +13218,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2-pc.actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular) {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -12871,6 +13244,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2-pc.actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular).disabled::placeholder, .foundry2-pc.actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular):disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2-pc.actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular)::placeholder {
   color: var(--input-placeholder-color);
@@ -12958,7 +13334,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -13032,14 +13407,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   text-shadow: 0px 1px 2px black;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13067,6 +13434,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input.disabled::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:disabled::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input.disabled::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -13078,14 +13448,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography section input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13113,6 +13475,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography section input.disabled::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography section input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography section input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -13124,14 +13489,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13160,6 +13517,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor.disabled::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -13187,14 +13547,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   outline-color: transparent;
 }
 .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13222,6 +13574,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input.disabled::placeholder, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input:disabled::placeholder, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input.disabled::placeholder, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input::placeholder, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -13233,14 +13588,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: unset;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13268,6 +13615,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3.disabled::placeholder, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -13282,14 +13632,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   outline: 0px transparent !important;
 }
 .foundry2-pc .crb-style .details-input {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13317,6 +13659,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
+.foundry2-pc .crb-style .details-input.disabled::placeholder, .foundry2-pc .crb-style .details-input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
 .foundry2-pc .crb-style .details-input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -13335,7 +13680,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -13423,14 +13767,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --secondary: var(--system-secondary);
 }
 .foundry2-pc .attack-popout select {
-  --input-background-color: var(--color-cool-4);
-  --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
   background: var(--input-background-color);
@@ -13457,6 +13793,9 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
+}
+.foundry2-pc .attack-popout select.disabled::placeholder, .foundry2-pc .attack-popout select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
 .foundry2-pc .attack-popout select::placeholder {
   color: var(--input-placeholder-color);
@@ -13501,7 +13840,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -13568,7 +13906,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .control-area > div:first-child, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .control-area > div:first-child {
   margin-top: 10px;
 }
-.foundry2 .item img {
+.foundry2#compendium-browser .spell-browser .item img {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -13578,8 +13916,12 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   background-color: white;
 }
-.foundry2#compendium-browser > section.window-content > .content-box > nav, .foundry2#license-viewer > section.window-content > .content-box > nav {
+.foundry2#compendium-browser > section.window-content > .content-box .compendium-browser-settings > nav, .foundry2#license-viewer > section.window-content > .content-box .compendium-browser-settings > nav, .foundry2#compendium-browser > section.window-content > .content-box > nav, .foundry2#license-viewer > section.window-content > .content-box > nav {
   --secondary: var(--color-cool-3);
+}
+.foundry2#compendium-browser > section.window-content > .content-box .spell-browser ul.result-list > li:hover, .foundry2#license-viewer > section.window-content > .content-box .spell-browser ul.result-list > li:hover {
+  background-color: var(--color-warm-2);
+  border-radius: var(--border-radius);
 }
 .foundry2.roll-modifiers-dialog {
   --secondary: var(--color-cool-3);

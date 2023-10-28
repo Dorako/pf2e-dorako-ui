@@ -81,21 +81,21 @@
   }
 
   &#sidebar {
-    border: 1px solid var(--color-cool-3);
+    border: 1px solid var(--app-border-color);
     // Dorako UI compat mode
-    --glassy: 0px 0px 0px 1px var(--color-cool-3);
-    --glass-bg-light: var(--app-background);
-    --glassy: 0px 0px 0px 1px var(--color-cool-3), 0px 1px 3px 1px black;
-    --glass-bg-light: var(--color-cool-5-50);
+    // --glassy: 0px 0px 0px 1px var(--color-cool-3);
+    // --glass-bg-light: var(--app-background);
+    // --glassy: 0px 0px 0px 1px var(--color-cool-3), 0px 1px 3px 1px black;
+    // --glass-bg-light: var(--color-cool-5-50);
     --gold-and-glow: transparent;
-    --primary-dark: var(--color-warm-3);
-    --primary: var(--color-warm-2);
-    --primary-light: var(--color-warm-2);
-    --secondary-dark: var(--color-warm-3);
-    --secondary: var(--color-warm-2);
-    --secondary-light: var(--color-warm-2);
-    --color-text-light-heading: var(--color-light-3);
-    --color-text-light-highlight: var(--color-light-2);
+    // --primary-dark: var(--color-warm-3);
+    // --primary: var(--color-warm-2);
+    // --primary-light: var(--color-warm-2);
+    // --secondary-dark: var(--color-warm-3);
+    // --secondary: var(--color-warm-2);
+    // --secondary-light: var(--color-warm-2);
+    // --color-text-light-heading: var(--color-light-3);
+    // --color-text-light-highlight: var(--color-light-2);
 
     // prettier-ignore
     --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),

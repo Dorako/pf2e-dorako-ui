@@ -1,8 +1,16 @@
+# 2.11.8
+
+- (Refinement) Improved Foundry 2 styling for TAH.
+- (Refinement) Adjusted damage type colors for Foundry 2 theme.
+- (Refinement) Made minor tweaks to certain pf2e chat messages in Foundry 2 theme.
+- (New) Added Foundry 2 styling for Workbench's NPC roller journal.
+- (Fix) Adjusted selector that adds white background to icons to be more cleanly scoped to compendium browser.
+
 # 2.11.7
 
 - (Refinement) Increased legibility of action-cost icons in Compendium Browser in Foundry 2 theme.
 - (Fix) Fixed an issue where PF2e Perception would not be styled correctly.
-- (Maintenance) Updated the remove-attack-info-from-damage-rolls setting to work in never system versions.
+- (Maintenance) Updated the remove-attack-info-from-damage-rolls setting to work in newer system versions.
 
 # 2.11.6
 

@@ -58,3 +58,14 @@
   @include glass;
   backdrop-filter: blur(5px);
 }
+
+.foundry2 {
+  &.window-app.monarch-hand .window-header,
+  &.monarch-hand footer.sheet-footer,
+  &.monarch-hand footer.sheet-footer button,
+  &.monarch .card-hud .badge,
+  &.monarch .card-hud .card-controls,
+  &.monarch-hand .tooltip {
+    @include f2-app;
+  }
+}
