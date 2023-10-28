@@ -175,7 +175,7 @@
         },
         "pc-sheet-theme": {
           "name": "Thème de la feuille de PJ",
-          "hint": "Affecte les feuilles des joueurs",
+          "hint": "Affecte les feuilles des PJ et des véhicules",
           "choice": {
             "green": "Vert du remaster",
             "blue": "Bleu classique",
