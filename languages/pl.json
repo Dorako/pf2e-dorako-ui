@@ -27,7 +27,7 @@
             "no-theme": "Brak motywu",
             "light-theme": "Jasny Dorako UI",
             "dark-theme": "Ciemny Dorako UI",
-            "foundry2-theme": "Foundry 2"
+            "foundry2-theme": "Inspirowany Foundry 2"
           }
         },
         "frosted-glass": {
@@ -51,7 +51,7 @@
           "hint": "Wpływa na wszystkie wiadomości czatu",
           "choice": {
             "factions": "Gracze jasny, GM ciemny",
-            "foundry2": "Foundry 2"
+            "foundry2": "Inspirowany Foundry 2"
           }
         },
         "pc-sheet-theme": {
