@@ -1,3 +1,9 @@
+# 2.11.9
+
+- (Refinement) Added Foundry 2 styling for Monk's TokenBar.
+- (New) Added Foundry 2 styling for PF2e Toolbelt's heroic action stuff.
+- (Maintenance) Changed localization in send-to-chat functionality.
+
 # 2.11.8
 
 - (Refinement) Improved Foundry 2 styling for TAH.

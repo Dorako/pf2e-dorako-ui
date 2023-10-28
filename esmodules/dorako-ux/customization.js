@@ -134,7 +134,7 @@ Hooks.on("getItemSheetPF2eHeaderButtons", (sheet, buttons) => {
   }
 
   buttons.unshift({
-    label: util.i18n(`${MODULE_NAME}.text.send-to-chat`),
+    label: `${MODULE_NAME}.text.send-to-chat`,
     class: "send",
     icon: "fas fa-comment-alt",
     onclick: async () => {

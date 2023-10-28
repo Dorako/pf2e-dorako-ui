@@ -89,6 +89,22 @@ Hooks.on("renderTokenActionHud", (app, html, data) => {
   html.attr("data-theme", "foundry2");
 });
 
+Hooks.on("renderTokenBar", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme !== "foundry2-theme") {
+    html.attr("data-theme", "dorako-ui");
+    return;
+  }
+  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+  if (excludeString.toLowerCase().includes("TokenBar".toLowerCase())) {
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+    );
+    return;
+  }
+  html.attr("data-theme", "foundry2");
+});
+
 for (const app of [...baseThemePf2eSheets]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");

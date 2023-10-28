@@ -42,7 +42,8 @@
 /* ----------------------------------------- */
 /* Monk's tokenbar                           */
 /* ----------------------------------------- */
-#tokenbar {
+
+#tokenbar[data-theme="dorako-ui"] {
   gap: 3px;
 
   .token-list {
@@ -87,35 +88,35 @@
       -webkit-backdrop-filter: blur(5px);
     }
   }
-}
 
-.monks-tokenbar.chat-card .card-header h3:hover {
-  text-shadow: unset;
-}
+  .monks-tokenbar.chat-card .card-header h3:hover {
+    text-shadow: unset;
+  }
 
-.monks-tokenbar .sheet .items-list .items-header {
-  border: none;
-}
+  .monks-tokenbar .sheet .items-list .items-header {
+    border: none;
+  }
 
-#tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i,
-#tokenbar[movement="free"] #movement-free:not(.disabled) i,
-#tokenbar[movement="none"] #movement-none:not(.disabled) i,
-#tokenbar[movement="combat"] #movement-combat:not(.disabled) i {
-  @include quick-transition;
-  border: none;
-  margin: 2px;
-  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
-  border-radius: 3px;
-  text-shadow: 0px 0px 3px black;
-  background-color: var(--primary-light);
-  color: var(--color-text-light-highlight);
-}
+  .bar-controls .tokenbar-buttons div.active:not(.disabled) i,
+  &[movement="free"] #movement-free:not(.disabled) i,
+  &[movement="none"] #movement-none:not(.disabled) i,
+  &[movement="combat"] #movement-combat:not(.disabled) i {
+    @include quick-transition;
+    border: none;
+    margin: 2px;
+    box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+    border-radius: 3px;
+    text-shadow: 0px 0px 3px black;
+    background-color: var(--primary-light);
+    color: var(--color-text-light-highlight);
+  }
 
-#tokenbar:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i,
-#tokenbar[movement="free"]:not(.hidectrl) #movement-free:not(.disabled):hover i,
-#tokenbar[movement="none"]:not(.hidectrl) #movement-none:not(.disabled):hover i,
-#tokenbar[movement="combat"]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
-  color: var(--color-text-light-highlight);
+  &:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i,
+  &[movement="free"]:not(.hidectrl) #movement-free:not(.disabled):hover i,
+  &[movement="none"]:not(.hidectrl) #movement-none:not(.disabled):hover i,
+  &[movement="combat"]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
+    color: var(--color-text-light-highlight);
+  }
 }
 
 .dorako-ui.dark-theme .monks-tokenbar .sheet .items-list .item .item-name,
@@ -192,6 +193,58 @@
         }
       }
     }
+  }
+}
+
+#tokenbar[data-theme="foundry2"] {
+  .bar-controls {
+    @include f2-app;
+    div#tokenbar-move-handle {
+      background: unset;
+    }
+  }
+  .token-list {
+    border: unset;
+    gap: 5px;
+    .token {
+      @include f2-app;
+      .tooltip {
+        background: var(--app-background);
+        border: 1px solid var(--color-warm-1);
+        box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+        backdrop-filter: blur(5px);
+        border-radius: var(--border-radius);
+        -webkit-backdrop-filter: blur(5px);
+        font-size: var(--font-size-16);
+        line-height: var(--font-size-16);
+        text-shadow: 0px 1px 2px black;
+        padding: 0.3em 0.6em;
+      }
+      .token-stats {
+        background: unset;
+      }
+      .token-icon {
+        box-shadow: unset;
+      }
+    }
+  }
+}
+
+.foundry2 {
+  &#requestsavingthrow .request-grid > div {
+    @include f2-button-warm;
+    text-align: center;
+  }
+  &#requestsavingthrow .request-grid {
+    gap: 6px;
+    grid-template-columns: 31% 31% 31%;
+  }
+  .monks-tokenbar .sheet .items-list .items-header {
+    background: unset;
+    border: unset;
+  }
+  .monks-tokenbar .sheet .items-list .item {
+    border: unset;
   }
 }
 

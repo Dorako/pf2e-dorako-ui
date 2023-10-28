@@ -1155,7 +1155,7 @@ nav.damage-log-nav.tabs .item.active {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.active, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.active, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.active {
+.foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.selected, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.active, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.selected, .foundry2.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.active, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.selected, .foundry2.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -1462,7 +1462,7 @@ button#heartbeat-button {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2#module-management .package-list .package .package-overview .tag.expand.active {
+.foundry2#module-management .package-list .package .package-overview .tag.expand.selected, .foundry2#module-management .package-list .package .package-overview .tag.expand.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -1653,21 +1653,21 @@ button#heartbeat-button {
 /* ----------------------------------------- */
 /* Monk's tokenbar                           */
 /* ----------------------------------------- */
-#tokenbar {
+#tokenbar[data-theme=dorako-ui] {
   gap: 3px;
 }
-#tokenbar .token-list {
+#tokenbar[data-theme=dorako-ui] .token-list {
   gap: 5px;
   border: none;
 }
-#tokenbar .bar-controls {
+#tokenbar[data-theme=dorako-ui] .bar-controls {
   border: none;
   border-radius: var(--border-radius);
   background: none;
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
 }
-#tokenbar .bar-controls div#tokenbar-move-handle {
+#tokenbar[data-theme=dorako-ui] .bar-controls div#tokenbar-move-handle {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -1676,7 +1676,7 @@ button#heartbeat-button {
   border-radius: 5px 0px 0px 5px;
   margin-right: 2px;
 }
-#tokenbar .token {
+#tokenbar[data-theme=dorako-ui] .token {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -1685,22 +1685,22 @@ button#heartbeat-button {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   flex: 0 0 52px;
 }
-#tokenbar .token .token-stats {
+#tokenbar[data-theme=dorako-ui] .token .token-stats {
   background: none;
   text-shadow: 0px 0px 3px black;
 }
-#tokenbar .token:hover {
+#tokenbar[data-theme=dorako-ui] .token:hover {
   background-color: var(--primary);
 }
-#tokenbar .token:hover .token-icon {
+#tokenbar[data-theme=dorako-ui] .token:hover .token-icon {
   box-shadow: none;
   filter: drop-shadow(0px 0px 5px var(--tertiary));
 }
-#tokenbar .token .token-icon {
+#tokenbar[data-theme=dorako-ui] .token .token-icon {
   box-shadow: none;
   border-radius: 3px;
 }
-#tokenbar .token .tooltip {
+#tokenbar[data-theme=dorako-ui] .token .tooltip {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -1709,19 +1709,13 @@ button#heartbeat-button {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-
-.monks-tokenbar.chat-card .card-header h3:hover {
+#tokenbar[data-theme=dorako-ui] .monks-tokenbar.chat-card .card-header h3:hover {
   text-shadow: unset;
 }
-
-.monks-tokenbar .sheet .items-list .items-header {
+#tokenbar[data-theme=dorako-ui] .monks-tokenbar .sheet .items-list .items-header {
   border: none;
 }
-
-#tokenbar .bar-controls .tokenbar-buttons div.active:not(.disabled) i,
-#tokenbar[movement=free] #movement-free:not(.disabled) i,
-#tokenbar[movement=none] #movement-none:not(.disabled) i,
-#tokenbar[movement=combat] #movement-combat:not(.disabled) i {
+#tokenbar[data-theme=dorako-ui] .bar-controls .tokenbar-buttons div.active:not(.disabled) i, #tokenbar[data-theme=dorako-ui][movement=free] #movement-free:not(.disabled) i, #tokenbar[data-theme=dorako-ui][movement=none] #movement-none:not(.disabled) i, #tokenbar[data-theme=dorako-ui][movement=combat] #movement-combat:not(.disabled) i {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   border: none;
   margin: 2px;
@@ -1731,11 +1725,7 @@ button#heartbeat-button {
   background-color: var(--primary-light);
   color: var(--color-text-light-highlight);
 }
-
-#tokenbar:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i,
-#tokenbar[movement=free]:not(.hidectrl) #movement-free:not(.disabled):hover i,
-#tokenbar[movement=none]:not(.hidectrl) #movement-none:not(.disabled):hover i,
-#tokenbar[movement=combat]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
+#tokenbar[data-theme=dorako-ui]:not(.hidectrl) .bar-controls .tokenbar-buttons div.active:not(.disabled):hover i, #tokenbar[data-theme=dorako-ui][movement=free]:not(.hidectrl) #movement-free:not(.disabled):hover i, #tokenbar[data-theme=dorako-ui][movement=none]:not(.hidectrl) #movement-none:not(.disabled):hover i, #tokenbar[data-theme=dorako-ui][movement=combat]:not(.hidectrl) #movement-combat:not(.disabled):hover i {
   color: var(--color-text-light-highlight);
 }
 
@@ -1808,6 +1798,126 @@ button#heartbeat-button {
 .dorako-ui.dark-theme .monks-tokenbar.chat-card .card-footer .flexrow .footer-button:hover {
   color: var(--color-text-light-highlight);
   background-color: var(--primary);
+}
+
+#tokenbar[data-theme=foundry2] .bar-controls {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+}
+#tokenbar[data-theme=foundry2] .bar-controls div#tokenbar-move-handle {
+  background: unset;
+}
+#tokenbar[data-theme=foundry2] .token-list {
+  border: unset;
+  gap: 5px;
+}
+#tokenbar[data-theme=foundry2] .token-list .token {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+}
+#tokenbar[data-theme=foundry2] .token-list .token .tooltip {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: var(--font-size-16);
+  line-height: var(--font-size-16);
+  text-shadow: 0px 1px 2px black;
+  padding: 0.3em 0.6em;
+}
+#tokenbar[data-theme=foundry2] .token-list .token .token-stats {
+  background: unset;
+}
+#tokenbar[data-theme=foundry2] .token-list .token .token-icon {
+  box-shadow: unset;
+}
+
+.foundry2#requestsavingthrow .request-grid > div {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+  text-align: center;
+}
+.foundry2#requestsavingthrow .request-grid > div:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2#requestsavingthrow .request-grid > div.selected, .foundry2#requestsavingthrow .request-grid > div.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2#requestsavingthrow .request-grid > div.disabled, .foundry2#requestsavingthrow .request-grid > div:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2#requestsavingthrow .request-grid > div.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2#requestsavingthrow .request-grid > div.bright.disabled, .foundry2#requestsavingthrow .request-grid > div.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2#requestsavingthrow .request-grid > div.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2#requestsavingthrow .request-grid {
+  gap: 6px;
+  grid-template-columns: 31% 31% 31%;
+}
+.foundry2 .monks-tokenbar .sheet .items-list .items-header {
+  background: unset;
+  border: unset;
+}
+.foundry2 .monks-tokenbar .sheet .items-list .item {
+  border: unset;
 }
 
 /* ----------------------------------------- */
@@ -1913,7 +2023,7 @@ body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effec
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.active {
+body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.selected, body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -2207,7 +2317,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.monks-active-tiles.sheet .items-list .item-controls a.active {
+.foundry2.monks-active-tiles.sheet .items-list .item-controls a.selected, .foundry2.monks-active-tiles.sheet .items-list .item-controls a.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -2726,7 +2836,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2[id^=pf2e-perception-] .window-content .buttons button.active {
+.foundry2[id^=pf2e-perception-] .window-content .buttons button.selected, .foundry2[id^=pf2e-perception-] .window-content .buttons button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -2888,6 +2998,77 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: #ff0000;
 }
 
+.foundry2-pc.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] ol.actions-list.heroActions-list .action .item-controls > button {
+  color: black;
+}
+.foundry2-pc.sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] ol.actions-list.heroActions-list .action .item-controls > button:hover {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
+}
+.foundry2-pc .heroActions-list > button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+  margin-top: 5px;
+}
+.foundry2-pc .heroActions-list > button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2-pc .heroActions-list > button.selected, .foundry2-pc .heroActions-list > button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2-pc .heroActions-list > button.disabled, .foundry2-pc .heroActions-list > button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2-pc .heroActions-list > button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2-pc .heroActions-list > button.bright.disabled, .foundry2-pc .heroActions-list > button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2-pc .heroActions-list > button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+
 .dorako-ui #fc-container button {
   border: none;
   border-radius: var(--border-radius);
@@ -2996,7 +3177,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 #initiative-delay.active,
+.foundry2 #initiative-delay.selected, .foundry2 #initiative-delay.active,
+.foundry2 #initiative-return.selected,
 .foundry2 #initiative-return.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -3368,7 +3550,7 @@ body.system-swade {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 .pf2e-td.small-button.target-button.active {
+.foundry2 .pf2e-td.small-button.target-button.selected, .foundry2 .pf2e-td.small-button.target-button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -3745,9 +3927,12 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-#token-action-hud[data-theme=foundry2] .tah-action-button.active,
+#token-action-hud[data-theme=foundry2] .tah-action-button.selected, #token-action-hud[data-theme=foundry2] .tah-action-button.active,
+#token-action-hud[data-theme=foundry2] .tah-action-button:focus.selected,
 #token-action-hud[data-theme=foundry2] .tah-action-button:focus.active,
+#token-action-hud[data-theme=foundry2] .tah-group-button.selected,
 #token-action-hud[data-theme=foundry2] .tah-group-button.active,
+#token-action-hud[data-theme=foundry2] .tah-group-button:focus.selected,
 #token-action-hud[data-theme=foundry2] .tah-group-button:focus.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -3867,7 +4052,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-#token-action-hud[data-theme=foundry2] .tah-action-button.toggle.active {
+#token-action-hud[data-theme=foundry2] .tah-action-button.toggle.selected, #token-action-hud[data-theme=foundry2] .tah-action-button.toggle.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -4011,7 +4196,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 #tokenizer div.section button.active {
+.foundry2 #tokenizer div.section button.selected, .foundry2 #tokenizer div.section button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -4074,7 +4259,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 #tokenizer button.menu-button.active {
+.foundry2 #tokenizer button.menu-button.selected, .foundry2 #tokenizer button.menu-button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -4144,7 +4329,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.tokenizer .title .box-button.active {
+.foundry2.tokenizer .title .box-button.selected, .foundry2.tokenizer .title .box-button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -4255,7 +4440,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 .roll-app-nav button.active {
+.foundry2 .roll-app-nav button.selected, .foundry2 .roll-app-nav button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -4318,7 +4503,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 .roll-app .roll-app-table tbody button.active {
+.foundry2 .roll-app .roll-app-table tbody button.selected, .foundry2 .roll-app .roll-app-table tbody button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -9081,9 +9266,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme=foundry2] a.button.active,
+[data-theme=foundry2] a.button.selected, [data-theme=foundry2] a.button.active,
+[data-theme=foundry2] button.selected,
 [data-theme=foundry2] button.active,
+.foundry2 a.button.selected,
 .foundry2 a.button.active,
+.foundry2 button.selected,
 .foundry2 button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -9167,7 +9355,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme=foundry2].dialog .dialog-buttons button.active,
+[data-theme=foundry2].dialog .dialog-buttons button.selected, [data-theme=foundry2].dialog .dialog-buttons button.active,
+.foundry2.dialog .dialog-buttons button.selected,
 .foundry2.dialog .dialog-buttons button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -9462,7 +9651,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme=foundry2].dialog .dialog-buttons button.default.active,
+[data-theme=foundry2].dialog .dialog-buttons button.default.selected, [data-theme=foundry2].dialog .dialog-buttons button.default.active,
+.foundry2.dialog .dialog-buttons button.default.selected,
 .foundry2.dialog .dialog-buttons button.default.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -9620,7 +9810,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme=foundry2].filepicker .favorites .paths .path.active,
+[data-theme=foundry2].filepicker .favorites .paths .path.selected, [data-theme=foundry2].filepicker .favorites .paths .path.active,
+.foundry2.filepicker .favorites .paths .path.selected,
 .foundry2.filepicker .favorites .paths .path.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -9793,7 +9984,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.window-app .tabs .item.active {
+.foundry2.window-app .tabs .item.selected, .foundry2.window-app .tabs .item.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -9881,7 +10072,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 .editor-edit.active {
+.foundry2 .editor-edit.selected, .foundry2 .editor-edit.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10084,7 +10275,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2#generate-check-prompt nav h4 a.active {
+.foundry2#generate-check-prompt nav h4 a.selected, .foundry2#generate-check-prompt nav h4 a.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10197,7 +10388,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active {
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.selected, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10275,7 +10466,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active {
+.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.selected, .foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10382,7 +10573,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.active {
+.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.selected, .foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10515,7 +10706,8 @@ nav#controls.foundry2 ol.control-tools > li:not(.disabled, :disabled):hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-nav#controls.foundry2 ol.control-tools li.control-tool.active,
+nav#controls.foundry2 ol.control-tools li.control-tool.selected, nav#controls.foundry2 ol.control-tools li.control-tool.active,
+nav#controls.foundry2 ol.control-tools > li.selected,
 nav#controls.foundry2 ol.control-tools > li.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -10602,7 +10794,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:not(.disabled, :disabled):hov
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-nav#controls.foundry2 ol.control-tools li.control-tool.toggle.active,
+nav#controls.foundry2 ol.control-tools li.control-tool.toggle.selected, nav#controls.foundry2 ol.control-tools li.control-tool.toggle.active,
+nav#controls.foundry2 ol.control-tools > li.toggle.selected,
 nav#controls.foundry2 ol.control-tools > li.toggle.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -10790,7 +10983,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-#navigation.foundry2 ol#scene-list li.nav-item.active {
+#navigation.foundry2 ol#scene-list li.nav-item.selected, #navigation.foundry2 ol#scene-list li.nav-item.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10867,7 +11060,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-#navigation.foundry2 ol#scene-list li.nav-item.view.active {
+#navigation.foundry2 ol#scene-list li.nav-item.view.selected, #navigation.foundry2 ol#scene-list li.nav-item.view.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -10940,7 +11133,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-#navigation.foundry2 ol#scene-list li.nav-item.gm.active {
+#navigation.foundry2 ol#scene-list li.nav-item.gm.selected, #navigation.foundry2 ol#scene-list li.nav-item.gm.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -11186,7 +11379,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 .control-icon.active {
+.foundry2 .control-icon.selected, .foundry2 .control-icon.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -11262,7 +11455,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2 .control-icon[data-action=visibility].active, .foundry2 .control-icon[data-action=effects].active, .foundry2 .control-icon[data-action=combat].active, .foundry2 .control-icon[data-action=locked].active, .foundry2 .control-icon[data-action=target].active, .foundry2 .control-icon[data-action=active].active, .foundry2 .control-icon[data-action=mystify].active {
+.foundry2 .control-icon[data-action=visibility].selected, .foundry2 .control-icon[data-action=visibility].active, .foundry2 .control-icon[data-action=effects].selected, .foundry2 .control-icon[data-action=effects].active, .foundry2 .control-icon[data-action=combat].selected, .foundry2 .control-icon[data-action=combat].active, .foundry2 .control-icon[data-action=locked].selected, .foundry2 .control-icon[data-action=locked].active, .foundry2 .control-icon[data-action=target].selected, .foundry2 .control-icon[data-action=target].active, .foundry2 .control-icon[data-action=active].selected, .foundry2 .control-icon[data-action=active].active, .foundry2 .control-icon[data-action=mystify].selected, .foundry2 .control-icon[data-action=mystify].active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -11650,7 +11843,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name.active {
+.foundry2.sheet.familiar .skills-content .skills-list .skill-name.selected, .foundry2.sheet.familiar .skills-content .skills-list .skill-name.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -12047,7 +12240,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet nav.sheet-tabs .item.active {
+.foundry2.sheet nav.sheet-tabs .item.selected, .foundry2.sheet nav.sheet-tabs .item.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -12136,7 +12329,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2-pc .currency li > button.active,
+.foundry2-pc .currency li > button.selected, .foundry2-pc .currency li > button.active,
+.foundry2 .currency li > button.selected,
 .foundry2 .currency li > button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -12260,7 +12454,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.kingdom nav.sub-nav a.active,
+.foundry2.sheet.kingdom nav.sub-nav a.selected, .foundry2.sheet.kingdom nav.sub-nav a.active,
+.foundry2.sheet.kingdom nav.sub-nav .tab.selected,
 .foundry2.sheet.kingdom nav.sub-nav .tab.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -12367,7 +12562,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.party nav.sub-nav a.active,
+.foundry2.sheet.party nav.sub-nav a.selected, .foundry2.sheet.party nav.sub-nav a.active,
+.foundry2.sheet.party nav.sub-nav .tab.selected,
 .foundry2.sheet.party nav.sub-nav .tab.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -12503,7 +12699,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.party [data-tab=overview] .summary nav button.active {
+.foundry2.sheet.party [data-tab=overview] .summary nav button.selected, .foundry2.sheet.party [data-tab=overview] .summary nav button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -12591,7 +12787,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.party header.content-header .buttons button.active {
+.foundry2.sheet.party header.content-header .buttons button.selected, .foundry2.sheet.party header.content-header .buttons button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -12654,10 +12850,11 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2.chat-message .message-content {
   text-shadow: 0px 1px 1px black;
 }
-.foundry2.chat-message.pf2e.chat-card .card-header h3 {
+.foundry2.chat-message .pf2e.chat-card .card-header h3 {
   font-family: var(--serif);
   font-size: x-large;
   line-height: 1.3rem;
+  color: var(--color-light-2);
 }
 .foundry2.chat-message .table-draw .table-results .table-result img.result-image {
   background-color: var(--color-light-2);
@@ -12720,7 +12917,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.chat-message .dice-roll .dice-formula button.active,
+.foundry2.chat-message .dice-roll .dice-formula button.selected, .foundry2.chat-message .dice-roll .dice-formula button.active,
+.foundry2.chat-message .dice-roll .dice-total button.selected,
 .foundry2.chat-message .dice-roll .dice-total button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -13020,7 +13218,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.chat-message .message-content .damage-taken button.revert-damage.active {
+.foundry2.chat-message .message-content .damage-taken button.revert-damage.selected, .foundry2.chat-message .message-content .damage-taken button.revert-damage.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -13358,7 +13556,8 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2-pc.sheet.actor .crb-style nav.sub-nav a.active,
+.foundry2-pc.sheet.actor .crb-style nav.sub-nav a.selected, .foundry2-pc.sheet.actor .crb-style nav.sub-nav a.active,
+.foundry2-pc.sheet.actor .crb-style nav.sub-nav .tab.selected,
 .foundry2-pc.sheet.actor .crb-style nav.sub-nav .tab.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
@@ -13404,6 +13603,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .item-image:hover i {
   background: var(--color-warm-2);
+  color: var(--color-light-1);
   text-shadow: 0px 1px 2px black;
 }
 .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
@@ -13702,7 +13902,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active {
+.foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.selected, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.selected, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -13864,7 +14064,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.active, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.active {
+.foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.selected, .foundry2#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.active, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.selected, .foundry2#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
