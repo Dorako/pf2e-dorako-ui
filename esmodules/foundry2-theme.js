@@ -1,6 +1,12 @@
 import { baseThemeApplications, baseThemePf2eSheets, MODULE_NAME, premiumModuleSelector } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 
+Hooks.on("renderSvelteApplication", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme !== "foundry2-theme") return;
+  app.element[0].classList.add("foundry2");
+});
+
 for (const appName of [...baseThemeApplications]) {
   Hooks.on("render" + appName, (app, html, data) => {
     if (app.constructor.name.startsWith("SWPF")) return; // SWPFCompendiumTOC, SWPFSheet

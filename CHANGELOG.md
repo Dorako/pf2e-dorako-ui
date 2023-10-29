@@ -1,3 +1,9 @@
+# 2.11.10
+
+- (Refinement) Added Foundry 2 styling for Item Piles.
+- (Refinement) Made adjustments to degree of success colors in Foundry 2 theme.
+- (Fix) Fixed some occurances of missing styles for Foundry 2 theme.
+
 # 2.11.9
 
 - (Refinement) Added Foundry 2 styling for Monk's TokenBar.

@@ -91,6 +91,68 @@ section.readaloud {
   margin-top: 5px;
 }
 
+/* ----------------------------------------- */
+/* .message-header fixes (all themes)        */
+/* ----------------------------------------- */
+
+.chat-message .dmgBtn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-message ul.notes {
+  padding: 0px;
+}
+
+.chat-message .flavor-text h4.action {
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+}
+.chat-message .flavor-text .target-dc-result {
+  line-height: 0.75rem;
+  margin-bottom: 4px;
+}
+.chat-message .flavor-text .target-dc-result .target-dc,
+.chat-message .flavor-text .target-dc-result .result {
+  display: block;
+  margin: 1px 0;
+  width: fit-content;
+}
+.chat-message .flavor-text .target-dc-result .unadjusted {
+  text-decoration: line-through;
+}
+.chat-message .flavor-text .target-dc-result .adjusted {
+  text-decoration: underline dotted;
+}
+.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: var(--adjusted-higher);
+}
+.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: var(--adjusted-lower);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: var(--degree-success-critical);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: var(--degree-success);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: var(--degree-failure);
+}
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: var(--degree-failure-critical);
+}
+.chat-message .flavor-text .effect {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.chat-message .flavor-text .effect img {
+  height: 32px;
+  width: 32px;
+}
+
 .chat-message {
   .flavor-text {
     h4.action {
@@ -117,25 +179,25 @@ section.readaloud {
       .adjusted {
         text-decoration: underline dotted;
         &.increased {
-          color: $degree-success-critical;
+          // color: $degree-success-critical;
         }
         &.decreased {
-          color: $degree-failure-critical;
+          // color: $degree-failure-critical;
         }
       }
 
       .degree-of-success {
         .criticalSuccess {
-          color: $degree-success-critical;
+          // color: $degree-success-critical;
         }
         .success {
-          color: $degree-success;
+          // color: $degree-success;
         }
         .failure {
-          color: $degree-failure;
+          // color: $degree-failure;
         }
         .criticalFailure {
-          color: $degree-failure-critical;
+          // color: $degree-failure-critical;
         }
       }
     }

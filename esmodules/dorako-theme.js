@@ -32,6 +32,8 @@ for (const appName of [...baseThemeApplications]) {
 // });
 
 Hooks.on("renderSvelteApplication", (app) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (theme === "no-theme" || theme === "foundry2-theme") return;
   app.element[0].classList.add("dorako-ui");
 });
 

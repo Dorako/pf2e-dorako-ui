@@ -34,4 +34,17 @@
   &.sheet.actor.loot .sheet-header h1 > input {
     @include f2-input;
   }
+
+  &.sheet.actor.loot .sheet-header h1 > input {
+    --input-height: 40px;
+    --font-size: inherit;
+  }
+
+  &.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:not(:hover) {
+    box-shadow: unset;
+  }
+
+  &.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button {
+    @include f2-button-warm;
+  }
 }

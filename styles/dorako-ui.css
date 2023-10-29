@@ -1287,6 +1287,22 @@ nav.damage-log-nav.tabs .item.active {
   border-bottom: 2px solid var(--tertiary-dark);
 }
 
+.foundry2 {
+  --item-piles-minor-inactive: var(--color-warm-3);
+  --item-piles-even-color: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
+  --item-piles-border-light-primary: var(--color-cool-3);
+}
+.foundry2 .item-piles-img-container {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  border-color: var(--color-warm-1);
+}
+
 /* ----------------------------------------- */
 /* Koboldworks turn announcer                */
 /* ----------------------------------------- */
@@ -8051,79 +8067,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* ----------------------------------------- */
-/* .message-header fixes                     */
-/* ----------------------------------------- */
-.chat-message .dmgBtn-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.chat-message ul.notes {
-  padding: 0px;
-}
-
-.chat-message .flavor-text h4.action {
-  font-weight: 700;
-  line-height: 1.5em;
-  margin: 0;
-}
-
-.chat-message .flavor-text .target-dc-result {
-  line-height: 0.75rem;
-  margin-bottom: 4px;
-}
-
-.chat-message .flavor-text .target-dc-result .target-dc,
-.chat-message .flavor-text .target-dc-result .result {
-  display: block;
-  margin: 1px 0;
-  width: fit-content;
-}
-
-.chat-message .flavor-text .target-dc-result .unadjusted {
-  text-decoration: line-through;
-}
-
-.chat-message .flavor-text .target-dc-result .adjusted {
-  text-decoration: underline dotted;
-}
-
-.chat-message .flavor-text .target-dc-result .adjusted.increased {
-  color: rgb(0, 128, 0);
-}
-
-.chat-message .flavor-text .target-dc-result .adjusted.decreased {
-  color: rgb(255, 0, 0);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
-  color: rgb(0, 128, 0);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .success {
-  color: rgb(0, 0, 255);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
-  color: rgb(255, 69, 0);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
-  color: rgb(255, 0, 0);
-}
-
-.chat-message .flavor-text .effect {
-  display: flex;
-  align-items: center;
-  column-gap: 5px;
-}
-
-.chat-message .flavor-text .effect img {
-  height: 32px;
-  width: 32px;
-}
-
-/* ----------------------------------------- */
 /* Damage buttons                            */
 /* ----------------------------------------- */
 .dorako-ui.message .message-content .damage-application {
@@ -9029,6 +8972,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --color-rarity-rare: #5362ff;
   --color-rarity-unique: #e127e1;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* Degrees of success */
+  --degree-success-critical: rgb(107, 255, 0);
+  --degree-success: rgb(0, 241, 255);
+  --degree-failure: rgb(255, 129, 0);
+  --degree-failure-critical: rgb(255, 0, 0);
+  /* Value adjustments (e.g. weak/elite) */
+  --adjusted-higher: #009988;
+  --adjusted-lower: #cc3311;
   --input-height: 24px;
   --input-background-color: var(--color-cool-4);
   --input-border-color: transparent;
@@ -9753,23 +9704,28 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* ----------------------------------------- */
 /* Application specific                      */
 /* ----------------------------------------- */
+.foundry2-pc,
 [data-theme=foundry2],
 .foundry2 {
   --bg: var(--color-warm-3);
   --visibility-gm-bg: var(--color-warm-3);
   --blind-roll: var(--color-warm-3);
 }
-[data-theme=foundry2].token-sheet, [data-theme=foundry2].dialog,
+.foundry2-pc.token-sheet, .foundry2-pc.dialog,
+[data-theme=foundry2].token-sheet,
+[data-theme=foundry2].dialog,
 .foundry2.token-sheet,
 .foundry2.dialog {
   height: auto !important;
 }
+.foundry2-pc.filepicker .favorites .paths,
 [data-theme=foundry2].filepicker .favorites .paths,
 .foundry2.filepicker .favorites .paths {
   box-shadow: unset;
   border: 1px solid var(--color-cool-3);
   background: var(--color-cool-5-50);
 }
+.foundry2-pc.filepicker .favorites .paths .path,
 [data-theme=foundry2].filepicker .favorites .paths .path,
 .foundry2.filepicker .favorites .paths .path {
   background: var(--app-background);
@@ -9803,6 +9759,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: var(--color-light-1);
   border-radius: 3px;
 }
+.foundry2-pc.filepicker .favorites .paths .path:not(.disabled, :disabled):hover,
 [data-theme=foundry2].filepicker .favorites .paths .path:not(.disabled, :disabled):hover,
 .foundry2.filepicker .favorites .paths .path:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
@@ -9810,7 +9767,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme=foundry2].filepicker .favorites .paths .path.selected, [data-theme=foundry2].filepicker .favorites .paths .path.active,
+.foundry2-pc.filepicker .favorites .paths .path.selected, .foundry2-pc.filepicker .favorites .paths .path.active,
+[data-theme=foundry2].filepicker .favorites .paths .path.selected,
+[data-theme=foundry2].filepicker .favorites .paths .path.active,
 .foundry2.filepicker .favorites .paths .path.selected,
 .foundry2.filepicker .favorites .paths .path.active {
   background: var(--button-hover-background-color);
@@ -9819,7 +9778,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-[data-theme=foundry2].filepicker .favorites .paths .path.disabled, [data-theme=foundry2].filepicker .favorites .paths .path:disabled,
+.foundry2-pc.filepicker .favorites .paths .path.disabled, .foundry2-pc.filepicker .favorites .paths .path:disabled,
+[data-theme=foundry2].filepicker .favorites .paths .path.disabled,
+[data-theme=foundry2].filepicker .favorites .paths .path:disabled,
 .foundry2.filepicker .favorites .paths .path.disabled,
 .foundry2.filepicker .favorites .paths .path:disabled {
   --button-background-color: var(--color-warm-5);
@@ -9827,6 +9788,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
+.foundry2-pc.filepicker .favorites .paths .path.bright,
 [data-theme=foundry2].filepicker .favorites .paths .path.bright,
 .foundry2.filepicker .favorites .paths .path.bright {
   --button-background-color: var(--color-warm-1);
@@ -9837,7 +9799,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-[data-theme=foundry2].filepicker .favorites .paths .path.bright.disabled, [data-theme=foundry2].filepicker .favorites .paths .path.bright:disabled,
+.foundry2-pc.filepicker .favorites .paths .path.bright.disabled, .foundry2-pc.filepicker .favorites .paths .path.bright:disabled,
+[data-theme=foundry2].filepicker .favorites .paths .path.bright.disabled,
+[data-theme=foundry2].filepicker .favorites .paths .path.bright:disabled,
 .foundry2.filepicker .favorites .paths .path.bright.disabled,
 .foundry2.filepicker .favorites .paths .path.bright:disabled {
   --button-background-color: var(--color-cool-4);
@@ -9846,11 +9810,13 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
+.foundry2-pc.filepicker .favorites .paths .path.bright:not(.disabled, :disabled):hover,
 [data-theme=foundry2].filepicker .favorites .paths .path.bright:not(.disabled, :disabled):hover,
 .foundry2.filepicker .favorites .paths .path.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
+.foundry2-pc.filepicker .favorites .paths .path:disabled,
 [data-theme=foundry2].filepicker .favorites .paths .path:disabled,
 .foundry2.filepicker .favorites .paths .path:disabled {
   --button-background-color: var(--color-cool-5);
@@ -9858,33 +9824,41 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
+.foundry2-pc.filepicker .current-dir button,
 [data-theme=foundry2].filepicker .current-dir button,
 .foundry2.filepicker .current-dir button {
   height: 32px;
 }
+.foundry2-pc.package-configuration aside.sidebar nav.tabs,
 [data-theme=foundry2].package-configuration aside.sidebar nav.tabs,
 .foundry2.package-configuration aside.sidebar nav.tabs {
   gap: 5px;
 }
+.foundry2-pc.package-configuration aside.sidebar nav.tabs .category-tab,
 [data-theme=foundry2].package-configuration aside.sidebar nav.tabs .category-tab,
 .foundry2.package-configuration aside.sidebar nav.tabs .category-tab {
   padding: 4px 8px;
 }
+.foundry2-pc.sheet nav.sheet-tabs,
 [data-theme=foundry2].sheet nav.sheet-tabs,
 .foundry2.sheet nav.sheet-tabs {
   border: none;
 }
+.foundry2-pc .directory .action-buttons button,
 [data-theme=foundry2] .directory .action-buttons button,
 .foundry2 .directory .action-buttons button {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
 }
+.foundry2-pc .directory .directory-header .header-search input,
 [data-theme=foundry2] .directory .directory-header .header-search input,
 .foundry2 .directory .directory-header .header-search input {
   background: var(--color-cool-4);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
 }
+.foundry2-pc .directory .action-buttons button,
+.foundry2-pc .settings-sidebar button,
 [data-theme=foundry2] .directory .action-buttons button,
 [data-theme=foundry2] .settings-sidebar button,
 .foundry2 .directory .action-buttons button,
@@ -9892,10 +9866,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
 }
+.foundry2-pc #chat-form,
 [data-theme=foundry2] #chat-form,
 .foundry2 #chat-form {
   margin: 0px var(--sidebar-margin);
 }
+.foundry2-pc #chat-form textarea,
 [data-theme=foundry2] #chat-form textarea,
 .foundry2 #chat-form textarea {
   --font-size: var(--font-size-14);
@@ -9916,7 +9892,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   height: 100%;
   border-radius: var(--border-radius);
 }
-[data-theme=foundry2] #chat-form textarea:not(:disabled, .disabled):hover, [data-theme=foundry2] #chat-form textarea:focus,
+.foundry2-pc #chat-form textarea:not(:disabled, .disabled):hover, .foundry2-pc #chat-form textarea:focus,
+[data-theme=foundry2] #chat-form textarea:not(:disabled, .disabled):hover,
+[data-theme=foundry2] #chat-form textarea:focus,
 .foundry2 #chat-form textarea:not(:disabled, .disabled):hover,
 .foundry2 #chat-form textarea:focus {
   outline: 2px solid var(--input-focus-outline-color);
@@ -9924,27 +9902,34 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme=foundry2] #chat-form textarea.disabled, [data-theme=foundry2] #chat-form textarea:disabled,
+.foundry2-pc #chat-form textarea.disabled, .foundry2-pc #chat-form textarea:disabled,
+[data-theme=foundry2] #chat-form textarea.disabled,
+[data-theme=foundry2] #chat-form textarea:disabled,
 .foundry2 #chat-form textarea.disabled,
 .foundry2 #chat-form textarea:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-[data-theme=foundry2] #chat-form textarea.disabled::placeholder, [data-theme=foundry2] #chat-form textarea:disabled::placeholder,
+.foundry2-pc #chat-form textarea.disabled::placeholder, .foundry2-pc #chat-form textarea:disabled::placeholder,
+[data-theme=foundry2] #chat-form textarea.disabled::placeholder,
+[data-theme=foundry2] #chat-form textarea:disabled::placeholder,
 .foundry2 #chat-form textarea.disabled::placeholder,
 .foundry2 #chat-form textarea:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
+.foundry2-pc #chat-form textarea::placeholder,
 [data-theme=foundry2] #chat-form textarea::placeholder,
 .foundry2 #chat-form textarea::placeholder {
   color: var(--input-placeholder-color);
 }
+.foundry2-pc #chat-form textarea::selection,
 [data-theme=foundry2] #chat-form textarea::selection,
 .foundry2 #chat-form textarea::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
+.foundry2-pc #chat-form textarea[type=checkbox],
 [data-theme=foundry2] #chat-form textarea[type=checkbox],
 .foundry2 #chat-form textarea[type=checkbox] {
   border: unset;
@@ -11943,6 +11928,76 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2.sheet.actor.loot .sheet-header .tags .tag[type=checkbox], .foundry2.sheet.actor.loot .sheet-header h1 > input[type=checkbox] {
   border: unset;
 }
+.foundry2.sheet.actor.loot .sheet-header h1 > input {
+  --input-height: 40px;
+  --font-size: inherit;
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:not(:hover) {
+  box-shadow: unset;
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0px 1px 2px black;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: 1px solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.selected, .foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.disabled, .foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:disabled {
+  --button-background-color: var(--color-warm-5);
+  --button-border-color: var(--color-warm-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: unset;
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright.disabled, .foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+.foundry2.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
 
 .foundry2.actor.npc.sheet {
   --text-dark: var(--color-light-2);
@@ -12838,6 +12893,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   --color-text-light-6: var(--color-cool-4);
   --color-text-dark-secondary: var(--color-light-4);
+}
+.foundry2.chat-message > .message-content .message-buttons button .cue i {
+  --fa-primary-color: var(--color-light-1);
+  --fa-secondary-color: var(--color-light-3);
 }
 .foundry2.chat-message.whisper {
   border-color: var(--color-cool-1);
@@ -14272,6 +14331,14 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --banner-bottom: url(../img/blue-sidebar-bottom.webp);
   --hotbar-width: unset;
   --controls-margin: 8px;
+  /* Degrees of success */
+  --degree-success-critical: rgb(0, 128, 0);
+  --degree-success: rgb(0, 0, 255);
+  --degree-failure: rgb(255, 69, 0);
+  --degree-failure-critical: rgb(255, 0, 0);
+  /* Value adjustments (e.g. weak/elite) */
+  --adjusted-higher: #009988;
+  --adjusted-lower: #cc3311;
 }
 
 :root {
@@ -14484,6 +14551,79 @@ section.readaloud:before, section.readaloud:after {
   margin-top: 5px;
 }
 
+/* ----------------------------------------- */
+/* .message-header fixes (all themes)        */
+/* ----------------------------------------- */
+.chat-message .dmgBtn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-message ul.notes {
+  padding: 0px;
+}
+
+.chat-message .flavor-text h4.action {
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.chat-message .flavor-text .target-dc-result {
+  line-height: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.chat-message .flavor-text .target-dc-result .target-dc,
+.chat-message .flavor-text .target-dc-result .result {
+  display: block;
+  margin: 1px 0;
+  width: fit-content;
+}
+
+.chat-message .flavor-text .target-dc-result .unadjusted {
+  text-decoration: line-through;
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted {
+  text-decoration: underline dotted;
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted.increased {
+  color: var(--adjusted-higher);
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted.decreased {
+  color: var(--adjusted-lower);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
+  color: var(--degree-success-critical);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .success {
+  color: var(--degree-success);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
+  color: var(--degree-failure);
+}
+
+.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
+  color: var(--degree-failure-critical);
+}
+
+.chat-message .flavor-text .effect {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.chat-message .flavor-text .effect img {
+  height: 32px;
+  width: 32px;
+}
+
 .chat-message .flavor-text h4.action {
   font-weight: 700;
   line-height: 1.5em;
@@ -14504,24 +14644,6 @@ section.readaloud:before, section.readaloud:after {
 }
 .chat-message .flavor-text .target-dc-result .adjusted {
   text-decoration: underline dotted;
-}
-.chat-message .flavor-text .target-dc-result .adjusted.increased {
-  color: rgb(0, 128, 0);
-}
-.chat-message .flavor-text .target-dc-result .adjusted.decreased {
-  color: rgb(255, 0, 0);
-}
-.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
-  color: rgb(0, 128, 0);
-}
-.chat-message .flavor-text .target-dc-result .degree-of-success .success {
-  color: rgb(0, 0, 255);
-}
-.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
-  color: rgb(255, 69, 0);
-}
-.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
-  color: rgb(255, 0, 0);
 }
 .chat-message > .message-content .message-buttons {
   display: flex;

@@ -156,6 +156,16 @@ $adjusted-lower: #cc3311 !default;
   --hotbar-width: unset;
   // --controls-alignment: controlled in code
   --controls-margin: 8px;
+
+  /* Degrees of success */
+  --degree-success-critical: rgb(0, 128, 0);
+  --degree-success: rgb(0, 0, 255);
+  --degree-failure: rgb(255, 69, 0);
+  --degree-failure-critical: rgb(255, 0, 0);
+
+  /* Value adjustments (e.g. weak/elite) */
+  --adjusted-higher: #009988;
+  --adjusted-lower: #cc3311;
 }
 
 :root {
