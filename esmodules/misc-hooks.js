@@ -101,50 +101,6 @@ Hooks.on("tokenActionHudCoreReady", () => {
   }).render(true);
 });
 
-// If misc.skin-crb-journal is on, all non-premium module journals should have .dalvyn-journal
-// Hooks.on("renderApplication", (app, html, data) => {
-//   let html0 = html[0];
-//   if (!(html0.classList.contains("journal-entry") || html0.classList.contains("monks-enhanced-journal"))) return;
-//   if (html0.matches(premiumModuleSelector)) {
-//     console.debug(
-//       `${MODULE_NAME} | render${app.constructor.name} | matches premiumModuleSelector => do not add .dorako-ui`
-//     );
-//     return;
-//   }
-//   if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
-//   const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
-//   if (!isDalvyn) return;
-//   console.debug(
-//     `${MODULE_NAME} | render${app.constructor.name} | is .journal-entry and skin-crb-journal = true => add .dalvyn-journal`
-//   );
-//   html0.classList.add("dalvyn-journal");
-// });
-
-// Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
-//   const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
-//   if (!isDalvyn) return;
-//   if (html[0].id.includes("JournalSheetPF2e-Compendium-pf2e-criticaldeck")) return;
-//   html[0].classList.add("dorako-ui");
-//   html[0].classList.add("dalvyn-journal");
-// });
-
-// // Add .dorako-ui.dark-theme to the page if it is not a page included in a premium module-styled journal
-// Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
-//   let journalFrame = app?.object?.parent?.sheet;
-//   if (!journalFrame) return;
-//   let frameHtml = journalFrame?.element;
-//   if (!frameHtml || frameHtml.length == 0) return;
-//   if (frameHtml[0].matches(premiumModuleSelector)) return;
-//   const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
-//   if (!isDalvyn) return;
-//   console.debug(`${MODULE_NAME} | render${app.constructor.name} | skin-crb-journal = true => add .dalvyn-journal`);
-//   html[0].classList.add("dalvyn-journal");
-//   frameHtml.closest(".app").find(".journal-entry-content").addClass("dorako-ui");
-//   const isDarkJournals = game.settings.get("pf2e-dorako-ui", "theme.enable-dark-theme-journals");
-//   if (!isDarkJournals) return;
-//   frameHtml.closest(".app").find(".journal-entry-content").addClass("dark-theme");
-// });
-
 // Add debug buttons
 for (const application of ["Application", ...baseThemePf2eSheets]) {
   Hooks.on("render" + application, (app, html, data) => {

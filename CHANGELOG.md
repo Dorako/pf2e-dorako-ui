@@ -1,3 +1,10 @@
+# 2.11.11
+
+- (Refinement) Added Foundry 2 styling for Speaking As.
+- (Maintenance) Updated Foundry 2 styling for new version of Dice Tray.
+- (Refinement) Impoved Foundry 2 styling for Journals using the CRB-styled journal setting.
+- (Refinement) Rewrote exclusion logic to be more robust, so it doesn't falsely exclude things like the Camping sheet from the Kingmaker Tools (Unofficial) module.
+
 # 2.11.10
 
 - (Refinement) Added Foundry 2 styling for Item Piles.

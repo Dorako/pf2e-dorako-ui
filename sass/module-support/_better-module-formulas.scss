@@ -1,0 +1,18 @@
+.foundry2.chat-message {
+  .dice-tooltip .dice-rolls .roll {
+    color: var(--color-light-3);
+    &.die {
+      color: black;
+      text-shadow: none;
+      &.success,
+      &.max {
+        color: var(--degree-success-critical);
+        text-shadow: 0px 1px 2px black;
+      }
+      &.min {
+        color: var(--degree-failure-critical);
+        text-shadow: 0px 1px 2px black;
+      }
+    }
+  }
+}

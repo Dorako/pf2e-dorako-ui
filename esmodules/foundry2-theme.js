@@ -13,8 +13,9 @@ for (const appName of [...baseThemeApplications]) {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;
     const excludeString =
-      game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + "VehicleSheetPF2e" + "HUD";
-    if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
+      game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", VehicleSheetPF2e, HUD";
+    const excludeList = excludeString.split(/[\s,]+/);
+    if (excludeList.includes(app.constructor.name)) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
       );
@@ -27,7 +28,6 @@ for (const appName of [...baseThemeApplications]) {
 
 Hooks.on("renderApplication", (app, html, data) => {
   let html0 = html[0];
-  //   if (html0.classList.contains("dialog")) return;
   if (html0.classList.contains("editable")) return;
   if (!html0.classList.contains("window-app")) return;
   if (isPremiumApplication(app, html, data, app.constructor.name)) return;
@@ -37,7 +37,8 @@ Hooks.on("renderApplication", (app, html, data) => {
   }
   const excludeString =
     game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", MonksEnhancedJournal";
-  if (excludeString.toLowerCase().includes(app.constructor.name.toLowerCase())) {
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes(app.constructor.name)) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
     );
@@ -86,7 +87,8 @@ Hooks.on("renderTokenActionHud", (app, html, data) => {
     return;
   }
   const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
-  if (excludeString.toLowerCase().includes("TokenActionHud".toLowerCase())) {
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes("TokenActionHud")) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
     );
@@ -102,7 +104,8 @@ Hooks.on("renderTokenBar", (app, html, data) => {
     return;
   }
   const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
-  if (excludeString.toLowerCase().includes("TokenBar".toLowerCase())) {
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes("TokenBar")) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
     );

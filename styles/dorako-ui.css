@@ -1,4 +1,20 @@
 @charset "UTF-8";
+.foundry2.chat-message .dice-tooltip .dice-rolls .roll {
+  color: var(--color-light-3);
+}
+.foundry2.chat-message .dice-tooltip .dice-rolls .roll.die {
+  color: black;
+  text-shadow: none;
+}
+.foundry2.chat-message .dice-tooltip .dice-rolls .roll.die.success, .foundry2.chat-message .dice-tooltip .dice-rolls .roll.die.max {
+  color: var(--degree-success-critical);
+  text-shadow: 0px 1px 2px black;
+}
+.foundry2.chat-message .dice-tooltip .dice-rolls .roll.die.min {
+  color: var(--degree-failure-critical);
+  text-shadow: 0px 1px 2px black;
+}
+
 .dorako-ui.tab#chat {
   margin: unset;
 }
@@ -352,7 +368,7 @@
   text-shadow: 0px 1px 5px black, 0px 1px 5px black;
 }
 
-.dorako-ui.dalvyn-journal:not(.premium) {
+.dalvyn-journal:not(.premium) {
   /* By Dalvyn */
   /* Custom CSS - PF2 STYLE v2.1 */
   /* TITRES
@@ -375,48 +391,48 @@
   /* Rarity (sub = uncommon, sup = rare, strikethrough = unique) */
   /* Dorako */
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-header .title,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-header .title {
+.dalvyn-journal:not(.premium).journal-header .title,
+.dalvyn-journal:not(.premium) .journal-header .title {
   color: var(--red) !important;
   font-family: "Taroca Regular";
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h1,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h1 {
+.dalvyn-journal:not(.premium).journal-entry-page h1,
+.dalvyn-journal:not(.premium) .journal-entry-page h1 {
   color: var(--blue) !important;
   font-family: "Taroca Regular";
   line-height: 100%;
   border-bottom: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h1:hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h1:hover {
+.dalvyn-journal:not(.premium).journal-entry-page h1:hover,
+.dalvyn-journal:not(.premium) .journal-entry-page h1:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h2,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h2 {
+.dalvyn-journal:not(.premium).journal-entry-page h2,
+.dalvyn-journal:not(.premium) .journal-entry-page h2 {
   color: var(--red) !important;
   font-family: "Gin-Regular";
   text-transform: uppercase;
   line-height: 100%;
   border-bottom: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h2:hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h2:hover {
+.dalvyn-journal:not(.premium).journal-entry-page h2:hover,
+.dalvyn-journal:not(.premium) .journal-entry-page h2:hover {
   background-image: linear-gradient(rgba(78, 7, 7, 0), rgba(78, 7, 7, 0), rgba(78, 7, 7, 0.2666666667));
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h3,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h3 {
+.dalvyn-journal:not(.premium).journal-entry-page h3,
+.dalvyn-journal:not(.premium) .journal-entry-page h3 {
   color: var(--brown) !important;
   font-family: "Gin-Regular";
   text-transform: uppercase;
   line-height: 100%;
   border-bottom: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h3:hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h3:hover {
+.dalvyn-journal:not(.premium).journal-entry-page h3:hover,
+.dalvyn-journal:not(.premium) .journal-entry-page h3:hover {
   background-image: linear-gradient(rgba(173, 111, 89, 0), rgba(173, 111, 89, 0), rgba(173, 111, 89, 0), rgba(173, 111, 89, 0.2666666667));
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h4,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h4 {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h4,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h4 {
   color: var(--blue) !important;
   font-family: "Gin-Regular";
   font-variant: small-caps;
@@ -424,64 +440,67 @@
   line-height: 100%;
   border-bottom: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h4:hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h4:hover {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h4:hover,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h4:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h5,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h5 {
+.dalvyn-journal:not(.premium).journal-entry-page h5,
+.dalvyn-journal:not(.premium) .journal-entry-page h5 {
   line-height: 100%;
   font-variant: small-caps;
   font-size: var(--font-size-14);
   border-bottom: 0;
   margin-bottom: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page h5:hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page h5:hover {
+.dalvyn-journal:not(.premium).journal-entry-page h5:hover,
+.dalvyn-journal:not(.premium) .journal-entry-page h5:hover {
   background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-content, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .window-content,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .window-content {
+.dalvyn-journal:not(.premium).journal-entry-content, .dalvyn-journal:not(.premium).journal-entry-page .window-content,
+.dalvyn-journal:not(.premium) .journal-entry-page .window-content {
   font-family: "Gelasio";
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page code,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page code {
+.dalvyn-journal:not(.premium).journal-entry-page code,
+.dalvyn-journal:not(.premium) .journal-entry-page code {
   font-family: "pathfinder2eactions";
   font-style: normal;
   font-size: 150%;
   line-height: 66%;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page table,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page table {
+.dalvyn-journal:not(.premium).journal-entry-page table,
+.dalvyn-journal:not(.premium) .journal-entry-page table {
   font-family: "roboto condensed";
   max-width: calc(100% - 24px);
   margin-left: auto;
   margin-right: auto;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page table th,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page table th {
+.dalvyn-journal:not(.premium).journal-entry-page table th,
+.dalvyn-journal:not(.premium) .journal-entry-page table th {
   color: white;
   background-color: var(--red);
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page tr:nth-child(2n),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page tr:nth-child(2n) {
+.dalvyn-journal:not(.premium).journal-entry-page tr:nth-child(2n),
+.dalvyn-journal:not(.premium) .journal-entry-page tr:nth-child(2n) {
   background-color: #f5efe0;
+  color: black;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page tr:nth-child(2n+1),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page tr:nth-child(2n+1) {
+.dalvyn-journal:not(.premium).journal-entry-page tr:nth-child(2n+1),
+.dalvyn-journal:not(.premium) .journal-entry-page tr:nth-child(2n+1) {
   background-color: #efe3c8;
+  color: black;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page tr:hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page tr:hover {
+.dalvyn-journal:not(.premium).journal-entry-page tr:hover,
+.dalvyn-journal:not(.premium) .journal-entry-page tr:hover {
   background-color: #e9d7b0;
+  color: black;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page table td, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page table th,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page table td,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page table th {
+.dalvyn-journal:not(.premium).journal-entry-page table td, .dalvyn-journal:not(.premium).journal-entry-page table th,
+.dalvyn-journal:not(.premium) .journal-entry-page table td,
+.dalvyn-journal:not(.premium) .journal-entry-page table th {
   padding: 4px 6px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote),
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
   border-left-width: 0;
   border-top: 2px solid #cfbf80;
   border-bottom: 2px solid #cfbf80;
@@ -492,32 +511,32 @@
   margin-left: 0;
   margin-right: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover {
   color: #efdfa2;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 0;
   margin-bottom: 0;
   background-color: rgba(245, 239, 224, 0.6666666667);
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p) {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p),
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p) {
   font-family: "Tauri-Regular";
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.15em;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 {
   border-bottom: 1px solid black;
   padding: 4px 12px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p {
   text-align: right;
   position: relative;
   bottom: 24px;
@@ -526,8 +545,8 @@
   margin: 0;
   overflow: visible;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul {
   clear: both;
   display: flex;
   font-family: "roboto condensed";
@@ -535,34 +554,34 @@
   list-style-type: none;
   padding: 4px 12px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li strong,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li strong {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li strong,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li strong {
   font-weight: normal;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li em,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li em {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li em,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li em {
   font-style: normal;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li sub,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li sub {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li sub,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li sub {
   vertical-align: baseline;
   font-size: 100%;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li sup,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li sup {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li sup,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li sup {
   vertical-align: baseline;
   font-size: 100%;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li s,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li s {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li s,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li s {
   text-decoration: none;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
   margin: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
   color: white;
   border: 3px solid #dac68a;
   border-left-width: 4px;
@@ -570,105 +589,109 @@
   text-transform: uppercase;
   margin: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
   background-color: #58180d;
   padding: 2px 3px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > strong,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > strong {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > strong,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > strong {
   background-color: #576293;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > em,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > em {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > em,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > em {
   background-color: #3b7b59;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > sub,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > sub {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > sub,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > sub {
   background-color: #98513d;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > sup,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > sup {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > sup,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > sup {
   background-color: #002664;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > s,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > s {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > s,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > s {
   background-color: #54166e;
   padding: 2px 3px;
   margin: -2px -3px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote {
   border: 0;
   padding: 0 12px 4px 12px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote {
   border: 0;
   padding: 4px 12px 4px 12px;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p {
   font-family: "roboto condensed";
   font-style: normal;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote em, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote em,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote em {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote em, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote em,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote em {
   font-style: italic;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child), .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child) {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child), .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child),
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child) {
   text-indent: -1em;
   margin-left: 1em;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p *, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p *,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p * {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p *, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p *,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p * {
   text-indent: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p:first-child,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p:first-child {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p:first-child,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p:first-child {
   margin-top: 0;
 }
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote hr, .dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote hr,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote hr,
-.dorako-ui.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote hr {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote hr, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote hr,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote hr,
+.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote hr {
   border-top: 0;
   border-bottom: 1px solid black;
   margin: 0;
 }
 
-.dorako-ui.dalvyn-journal.dark-theme:not(.premium),
-.dorako-ui.dalvyn-journal:not(.premium) .dark-theme {
+.foundry2 .dalvyn-journal:not(.premium),
+.dalvyn-journal.dark-theme:not(.premium),
+.dalvyn-journal:not(.premium) .dark-theme {
   --red: var(--primary-light);
   --blue: var(--secondary-light);
   --brown: #ad6f59;
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dalvyn-journal.dark-theme:not(.premium) tbody,
-.dorako-ui.dalvyn-journal:not(.premium) .dark-theme tbody {
+.foundry2 .dalvyn-journal:not(.premium) tbody,
+.dalvyn-journal.dark-theme:not(.premium) tbody,
+.dalvyn-journal:not(.premium) .dark-theme tbody {
   color: black;
 }
-.dorako-ui.dalvyn-journal.dark-theme:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dorako-ui.dalvyn-journal.dark-theme:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dorako-ui.dalvyn-journal:not(.premium) .dark-theme.journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dorako-ui.dalvyn-journal:not(.premium) .dark-theme .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
+.foundry2 .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+.foundry2 .dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+.dalvyn-journal.dark-theme:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+.dalvyn-journal.dark-theme:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+.dalvyn-journal:not(.premium) .dark-theme.journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
+.dalvyn-journal:not(.premium) .dark-theme .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
   color: black;
 }
 
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page .journal-header .title {
+.dalvyn-journal:not(.premium).journal-entry-page .journal-header .title {
   color: var(--blue) !important;
   font-family: "Taroca Regular";
 }
@@ -968,6 +991,12 @@ nav.damage-log-nav.tabs .item.active {
 .foundry2 .dice-tray .dice-tray__stacked button:last-child {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+}
+.foundry2 .dice-tray button div.dice {
+  background-color: var(--color-light-3);
+}
+.foundry2 .dice-tray button:hover div.dice {
+  background-color: var(--color-light-1);
 }
 .foundry2 .dice-tray .dice-tray__buttons {
   height: 32px;
@@ -3497,6 +3526,18 @@ div.speaking-as--currentSpeaker + #chat-controls {
 }
 .speaking-as--currentSpeaker--button:hover {
   color: var(--color-text-light-highlight);
+}
+
+.foundry2 .speaking-as--currentSpeaker {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  margin: 0px var(--sidebar-margin);
+  padding-left: 8px;
 }
 
 .compendium-toc .toc .toc-entry .name {
@@ -13150,6 +13191,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   text-shadow: 0px 1px 1px black;
   padding-bottom: 5px;
   margin-bottom: 2px;
+  box-shadow: none;
 }
 .foundry2.chat-message .message-header.dorako-header a {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
@@ -13319,64 +13361,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   border-color: var(--color-warm-1);
-}
-
-/* ----------------------------------------- */
-/* Damage colors                             */
-/* ----------------------------------------- */
-.foundry2-pc .damage,
-.foundry2 .damage {
-  --color-bg-acid: rgba(32, 194, 32, 0.125);
-  --color-bg-bleed: rgba(207, 28, 58, 0.125);
-  --color-bg-chaotic: rgba(221, 26, 221, 0.125);
-  --color-bg-cold: rgba(72, 72, 198, 0.125);
-  --color-bg-electricity: rgba(221, 167, 30, 0.125);
-  --color-bg-evil: rgba(133, 45, 195, 0.125);
-  --color-bg-fire: rgba(229, 93, 39, 0.125);
-  --color-bg-force: rgba(177, 77, 249, 0.125);
-  --color-bg-good: rgba(157, 115, 10, 0.125);
-  --color-bg-lawful: rgba(123, 85, 28, 0.125);
-  --color-bg-mental: rgba(66, 66, 189, 0.125);
-  --color-bg-physical: rgba(132, 132, 132, 0.125);
-  --color-bg-poison: rgba(147, 178, 93, 0.125);
-  --color-bg-sonic: rgba(28, 217, 217, 0.125);
-  --color-bg-spirit: rgba(147, 142, 189, 0.125);
-  --color-bg-vitality: rgba(255, 255, 224, 0.125);
-  --color-bg-void: rgb(81, 21, 78, 0.125);
-  --color-border-acid: #12a812;
-  --color-border-bleed: #d11c3b;
-  --color-border-chaotic: #d311d3;
-  --color-border-cold: #2f2fa6;
-  --color-border-electricity: yellow;
-  --color-border-evil: rgb(126, 48, 181);
-  --color-border-fire: #cd4a17;
-  --color-border-force: #9222e2;
-  --color-border-good: #dcb85f;
-  --color-border-lawful: #97743f;
-  --color-border-mental: rgb(63, 63, 182);
-  --color-border-physical: #737272;
-  --color-border-poison: #9aba64;
-  --color-border-sonic: rgb(30, 202, 202);
-  --color-border-spirit: #5a5585;
-  --color-border-vitality: #ffffe0;
-  --color-border-void: rgb(122, 38, 117);
-  --color-text-acid: #34aa34;
-  --color-text-bleed: #b0162f;
-  --color-text-chaotic: #b71ab7;
-  --color-text-cold: #3a3ac5;
-  --color-text-electricity: #e7b22b;
-  --color-text-evil: #594566;
-  --color-text-fire: #882700;
-  --color-text-force: #8321ca;
-  --color-text-good: #c79b2b;
-  --color-text-lawful: white;
-  --color-text-mental: #3b3bad;
-  --color-text-physical: #a0a0a0;
-  --color-text-poison: #657d3f;
-  --color-text-sonic: #21c2c2;
-  --color-text-spirit: #827dac;
-  --color-text-vitality: #ffffa0;
-  --color-text-void: rgb(122, 38, 117);
 }
 
 .foundry2 .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck,
@@ -14427,6 +14411,65 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --body: var(--text-light);
   --bg: var(--glass-bg-dark);
   --half-transparent: rgba(255, 255, 255, 0.5);
+}
+
+/* ----------------------------------------- */
+/* Damage colors                             */
+/* ----------------------------------------- */
+.dorako-ui.dark-theme .damage,
+.foundry2-pc .damage,
+.foundry2 .damage {
+  --color-bg-acid: rgba(32, 194, 32, 0.125);
+  --color-bg-bleed: rgba(207, 28, 58, 0.125);
+  --color-bg-chaotic: rgba(221, 26, 221, 0.125);
+  --color-bg-cold: rgba(72, 72, 198, 0.125);
+  --color-bg-electricity: rgba(221, 167, 30, 0.125);
+  --color-bg-evil: rgba(133, 45, 195, 0.125);
+  --color-bg-fire: rgba(229, 93, 39, 0.125);
+  --color-bg-force: rgba(177, 77, 249, 0.125);
+  --color-bg-good: rgba(157, 115, 10, 0.125);
+  --color-bg-lawful: rgba(123, 85, 28, 0.125);
+  --color-bg-mental: rgba(66, 66, 189, 0.125);
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-bg-poison: rgba(147, 178, 93, 0.125);
+  --color-bg-sonic: rgba(28, 217, 217, 0.125);
+  --color-bg-spirit: rgba(147, 142, 189, 0.125);
+  --color-bg-vitality: rgba(255, 255, 224, 0.125);
+  --color-bg-void: rgb(81, 21, 78, 0.125);
+  --color-border-acid: #12a812;
+  --color-border-bleed: #d11c3b;
+  --color-border-chaotic: #d311d3;
+  --color-border-cold: #2f2fa6;
+  --color-border-electricity: yellow;
+  --color-border-evil: rgb(126, 48, 181);
+  --color-border-fire: #cd4a17;
+  --color-border-force: #9222e2;
+  --color-border-good: #dcb85f;
+  --color-border-lawful: #97743f;
+  --color-border-mental: rgb(63, 63, 182);
+  --color-border-physical: #737272;
+  --color-border-poison: #9aba64;
+  --color-border-sonic: rgb(30, 202, 202);
+  --color-border-spirit: #5a5585;
+  --color-border-vitality: #ffffe0;
+  --color-border-void: rgb(122, 38, 117);
+  --color-text-acid: #34aa34;
+  --color-text-bleed: #b0162f;
+  --color-text-chaotic: #b71ab7;
+  --color-text-cold: #3a3ac5;
+  --color-text-electricity: #e7b22b;
+  --color-text-evil: #594566;
+  --color-text-fire: #882700;
+  --color-text-force: #8321ca;
+  --color-text-good: #c79b2b;
+  --color-text-lawful: white;
+  --color-text-mental: #3b3bad;
+  --color-text-physical: #a0a0a0;
+  --color-text-poison: #657d3f;
+  --color-text-sonic: #21c2c2;
+  --color-text-spirit: #827dac;
+  --color-text-vitality: #ffffa0;
+  --color-text-void: rgb(122, 38, 117);
 }
 
 body.compact-ui #controls .main-controls .scene-control:not(.active, .toggle),

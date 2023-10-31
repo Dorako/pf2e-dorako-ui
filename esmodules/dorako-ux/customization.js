@@ -174,6 +174,6 @@ for (const appName of ["JournalSheet", "JournalPageSheet"]) {
     const isDalvyn = game.settings.get("pf2e-dorako-ui", "misc.skin-crb-journal");
     if (!isDalvyn) return;
     if (app.id.includes("Compendium-pf2e-criticaldeck")) return;
-    html.closest(".app").find(".journal-entry-content").addClass("dorako-ui dalvyn-journal");
+    html.closest(".app").find(".journal-entry-content").addClass("dalvyn-journal");
   });
 }

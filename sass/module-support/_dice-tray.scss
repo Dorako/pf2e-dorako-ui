@@ -100,6 +100,14 @@
         border-top-right-radius: 0px;
       }
     }
+    button {
+      div.dice {
+        background-color: var(--color-light-3);
+      }
+      &:hover div.dice {
+        background-color: var(--color-light-1);
+      }
+    }
     .dice-tray__buttons {
       height: 32px;
 

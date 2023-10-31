@@ -8,7 +8,8 @@ for (const appName of [...baseThemeApplications]) {
     if (theme === "no-theme" || theme === "foundry2-theme") return;
     const excludeString =
       game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", MonksEnhancedJournal";
-    if (excludeString.toLowerCase().includes(appName.toLowerCase())) {
+    const excludeList = excludeString.split(/[\s,]+/);
+    if (excludeList.includes(app.constructor.name)) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .dorako-ui`
       );
@@ -21,35 +22,11 @@ for (const appName of [...baseThemeApplications]) {
   });
 }
 
-// Hooks.on("renderMerchantApp", (app, html, data) => {
-//   let html0 = html[0];
-//   html0.classList.add("dorako-ui");
-//   console.debug(`${MODULE_NAME} | LOOK AT ME`);
-//   console.log({ app });
-//   console.log({ html });
-//   console.log({ data });
-//   app.options.classes.push("dorako-ui");
-// });
-
 Hooks.on("renderSvelteApplication", (app) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "no-theme" || theme === "foundry2-theme") return;
   app.element[0].classList.add("dorako-ui");
 });
-
-// // Add .dorako-ui to all whitelisted Applications
-// for (const app of [...baseThemeApplications]) {
-//   Hooks.on("render" + app, (app, html, data) => {
-//     let html0 = html[0];
-//     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-//     if (theme === "no-theme") {
-//       console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
-//       return;
-//     }
-//     console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .dorako-ui`);
-//     html0.classList.add("dorako-ui");
-//   });
-// }
 
 // TAH Core
 Hooks.on("renderTokenActionHud", (app, html, data) => {
@@ -177,7 +154,7 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
 // Re-organize NPC sheets, do not apply base styling to selects or input fields
 Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme" || theme === "foundry2-theme") {
+  if (theme === "no-theme") {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => do not add .dorako-ui`);
     return;
   }

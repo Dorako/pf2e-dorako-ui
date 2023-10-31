@@ -20,3 +20,11 @@ div.speaking-as--currentSpeaker + #chat-controls {
     color: var(--color-text-light-highlight);
   }
 }
+
+.foundry2 {
+  .speaking-as--currentSpeaker {
+    @include f2-app;
+    margin: 0px var(--sidebar-margin);
+    padding-left: 8px;
+  }
+}

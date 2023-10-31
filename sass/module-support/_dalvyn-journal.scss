@@ -1,4 +1,4 @@
-.dorako-ui.dalvyn-journal:not(.premium) {
+.dalvyn-journal:not(.premium) {
   /* By Dalvyn */
   /* Custom CSS - PF2 STYLE v2.1 */
   /* TITRES
@@ -123,16 +123,19 @@
   &.journal-entry-page tr:nth-child(2n),
   .journal-entry-page tr:nth-child(2n) {
     background-color: #f5efe0;
+    color: black;
   }
 
   &.journal-entry-page tr:nth-child(2n + 1),
   .journal-entry-page tr:nth-child(2n + 1) {
     background-color: #efe3c8;
+    color: black;
   }
 
   &.journal-entry-page tr:hover,
   .journal-entry-page tr:hover {
     background-color: #e9d7b0;
+    color: black;
   }
 
   &.journal-entry-page table td,
@@ -372,8 +375,9 @@
   }
 }
 
-.dorako-ui.dalvyn-journal.dark-theme:not(.premium),
-.dorako-ui.dalvyn-journal:not(.premium) .dark-theme {
+.foundry2 .dalvyn-journal:not(.premium),
+.dalvyn-journal.dark-theme:not(.premium),
+.dalvyn-journal:not(.premium) .dark-theme {
   --red: var(--primary-light);
   --blue: var(--secondary-light);
   --brown: #ad6f59;
@@ -394,7 +398,7 @@
   }
 }
 
-.dorako-ui.dalvyn-journal:not(.premium).journal-entry-page {
+.dalvyn-journal:not(.premium).journal-entry-page {
   .journal-header .title {
     color: var(--blue) !important;
     font-family: "Taroca Regular";
