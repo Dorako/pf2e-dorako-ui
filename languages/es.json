@@ -26,7 +26,8 @@
           "choice": {
             "no-theme": "Sin tema",
             "dark-theme": "Modo oscuro Dorako UI",
-            "light-theme": "Modo claro Dorako UI"
+            "light-theme": "Modo claro Dorako UI",
+            "foundry2-theme": "Inspirado en Foundry 2"
           },
           "hint": "Afecta a las ventanas de aplicación renderizadas"
         },
@@ -50,12 +51,13 @@
           "name": "Tema del chat",
           "hint": "Afecta a todos los mensajes de chat",
           "choice": {
-            "factions": "Jugadores claro, MJ oscuro"
+            "factions": "Jugadores claro, MJ oscuro",
+            "foundry2": "Inspirado en Foundry 2"
           }
         },
         "pc-sheet-theme": {
           "name": "Tema de la ficha de PJ",
-          "hint": "Afecta a las fichas de los jugadores",
+          "hint": "Afecta a las fichas de los personajes jugadores y vehículos",
           "choice": {
             "red": "Rojo original",
             "green": "Verde remasterizado",
@@ -149,7 +151,7 @@
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "¿Eliminar la información sobre el ataque en los mensajes de daño?",
-          "hint": "Hace que las tiradas de daño tomen menos espacio al eliminar la información redundante. Pensado para usarse con DFCE chat-merge"
+          "hint": "Hace que las tiradas de daño tomen menos espacio al eliminar la información redundante. Pensado para usarse con chat-merge"
         },
         "animate-messages": {
           "name": "¿Animar los mensajes para llamar la atención sobre ciertos eventos?",
