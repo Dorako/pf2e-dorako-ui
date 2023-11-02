@@ -1,3 +1,7 @@
+# 2.11.12
+
+- (Maintenance) Update theming of damage-buttons to be compatible with system version 5.8.0.
+
 # 2.11.11
 
 - (Refinement) Added Foundry 2 styling for Speaking As.

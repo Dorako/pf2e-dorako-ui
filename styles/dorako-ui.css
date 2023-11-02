@@ -8121,6 +8121,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 .dorako-ui.message .message-content .damage-application button.half-damage .fa-heart-broken {
   position: relative;
+  -webkit-text-fill-color: unset;
 }
 .dorako-ui.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
   content: "\f7a9";
@@ -8148,23 +8149,23 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
   color: gray;
 }
-.dorako-ui.message .message-content .damage-application button.shield-block:hover {
+.dorako-ui.message .message-content .damage-application button[data-action=shield-block]:hover {
   background-color: var(--secondary-light);
   box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary-light);
 }
-.dorako-ui.message .message-content .damage-application button.shield-block.shield-activated {
+.dorako-ui.message .message-content .damage-application button[data-action=shield-block].shield-activated {
   background-color: var(--secondary-light);
   box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary-light);
 }
-.dorako-ui.message .message-content .damage-application button.shield-block.shield-activated:hover {
+.dorako-ui.message .message-content .damage-application button[data-action=shield-block].shield-activated:hover {
   background-color: var(--secondary-dark);
   box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px var(--secondary-dark);
 }
-.dorako-ui.message .message-content .damage-application button.heal-damage:hover {
+.dorako-ui.message .message-content .damage-application button[data-action=apply-healing]:hover {
   background-color: green;
   box-shadow: 0px 0px 1px 1px var(--tertiary) inset, 0px 0px 5px green;
 }
-.dorako-ui.message .message-content .damage-application button.heal-damage:hover .fa-plus {
+.dorako-ui.message .message-content .damage-application button[data-action=apply-healing]:hover .fa-plus {
   color: green;
   text-shadow: none;
 }
@@ -13135,6 +13136,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 }
 .foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken {
   position: relative;
+  -webkit-text-fill-color: unset;
 }
 .foundry2.message .message-content .damage-application button.half-damage .fa-heart-broken::after {
   content: "\f7a9";
@@ -13150,27 +13152,27 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2.message .message-content .damage-application button:hover img {
   filter: invert(1) drop-shadow(0px 1px 1px black);
 }
-.foundry2.message .message-content .damage-application button.shield-block:hover {
+.foundry2.message .message-content .damage-application button[data-action=shield-block]:hover {
   background-color: var(--color-cool-2);
   border: 1px solid var(--color-cool-1);
 }
-.foundry2.message .message-content .damage-application button.shield-block.shield-activated {
+.foundry2.message .message-content .damage-application button[data-action=shield-block].shield-activated {
   background-color: var(--color-cool-1);
   border: 1px solid var(--color-cool-2);
 }
-.foundry2.message .message-content .damage-application button.shield-block.shield-activated:hover {
+.foundry2.message .message-content .damage-application button[data-action=shield-block].shield-activated:hover {
   background-color: var(--color-cool-2);
   border: 1px solid var(--color-cool-1);
 }
-.foundry2.message .message-content .damage-application button.heal-damage .fa-stack i.fa-plus {
+.foundry2.message .message-content .damage-application button[data-action=apply-healing] .fa-stack i.fa-plus {
   color: var(--color-cool-5);
   text-shadow: none;
 }
-.foundry2.message .message-content .damage-application button.heal-damage:hover {
+.foundry2.message .message-content .damage-application button[data-action=apply-healing]:hover {
   background-color: var(--color-level-success);
   border-color: var(--color-level-success-border);
 }
-.foundry2.message .message-content .damage-application button.heal-damage:hover .fa-stack i.fa-plus {
+.foundry2.message .message-content .damage-application button[data-action=apply-healing]:hover .fa-stack i.fa-plus {
   color: var(--color-level-success);
   text-shadow: none;
 }
