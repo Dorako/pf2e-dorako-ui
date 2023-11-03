@@ -1,3 +1,7 @@
+# 2.11.13
+
+- (Refinement) Added styling for inline roll tooltips.
+
 # 2.11.12
 
 - (Maintenance) Update theming of damage-buttons to be compatible with system version 5.8.0.

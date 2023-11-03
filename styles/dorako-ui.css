@@ -4606,6 +4606,15 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: none;
 }
 
+.dorako-ui .inline-roll .dice-tooltip {
+  border: none;
+  margin: 2px;
+  /* prettier-ignore */
+  box-shadow: 0 0 0 1px var(--tertiary), 0 0 0 2px var(--gold-brown);
+  background-image: var(--sheet);
+  background-size: cover;
+}
+
 /* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
@@ -4622,23 +4631,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
 }
 #players.dorako-ui h3:hover {
-  text-shadow: 0px 0px 8px var(--color-shadow-highlight);
-}
-
-#players.foundry2 {
-  background: var(--app-background);
-  border: 1px solid var(--app-border-color);
-  text-shadow: 0px 1px 2px black;
-  border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
-  box-shadow: var(--box-shadow);
-  color: var(--color-light-3);
-}
-#players.foundry2 h3 {
-  cursor: pointer;
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-}
-#players.foundry2 h3:hover {
   text-shadow: 0px 0px 8px var(--color-shadow-highlight);
 }
 
@@ -8924,6 +8916,28 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* ----------------------------------------- */
+/* Players                                   */
+/* ----------------------------------------- */
+#players.foundry2 {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+}
+#players.foundry2 h3 {
+  cursor: pointer;
+  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  color: var(--color-light-3);
+}
+#players.foundry2 h3:hover {
+  color: var(--color-light-1);
+  text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+}
+
+/* ----------------------------------------- */
 /* Context menu                              */
 /* ----------------------------------------- */
 .foundry2 #context-menu {
@@ -9054,21 +9068,21 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2-pc [data-pf2-action],
 .foundry2-pc span[data-pf2-effect-area],
 .foundry2-pc a.inline-check .label,
-.foundry2-pc a.inline-roll:not(.inline-result),
+.foundry2-pc a.inline-roll,
 [data-theme=foundry2] a.content-link,
 [data-theme=foundry2] [data-pf2-check],
 [data-theme=foundry2] a.entity-link,
 [data-theme=foundry2] [data-pf2-action],
 [data-theme=foundry2] span[data-pf2-effect-area],
 [data-theme=foundry2] a.inline-check .label,
-[data-theme=foundry2] a.inline-roll:not(.inline-result),
+[data-theme=foundry2] a.inline-roll,
 .foundry2 a.content-link,
 .foundry2 [data-pf2-check],
 .foundry2 a.entity-link,
 .foundry2 [data-pf2-action],
 .foundry2 span[data-pf2-effect-area],
 .foundry2 a.inline-check .label,
-.foundry2 a.inline-roll:not(.inline-result) {
+.foundry2 a.inline-roll {
   background: var(--color-cool-4);
   border: 1px solid var(--color-cool-3);
   color: var(--color-light-2);
@@ -9091,9 +9105,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2-pc a.inline-check .label::before,
 .foundry2-pc a.inline-check .label i,
 .foundry2-pc a.inline-check .label i.icon,
-.foundry2-pc a.inline-roll:not(.inline-result)::before,
-.foundry2-pc a.inline-roll:not(.inline-result) i,
-.foundry2-pc a.inline-roll:not(.inline-result) i.icon,
+.foundry2-pc a.inline-roll::before,
+.foundry2-pc a.inline-roll i,
+.foundry2-pc a.inline-roll i.icon,
 [data-theme=foundry2] a.content-link::before,
 [data-theme=foundry2] a.content-link i,
 [data-theme=foundry2] a.content-link i.icon,
@@ -9112,9 +9126,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] a.inline-check .label::before,
 [data-theme=foundry2] a.inline-check .label i,
 [data-theme=foundry2] a.inline-check .label i.icon,
-[data-theme=foundry2] a.inline-roll:not(.inline-result)::before,
-[data-theme=foundry2] a.inline-roll:not(.inline-result) i,
-[data-theme=foundry2] a.inline-roll:not(.inline-result) i.icon,
+[data-theme=foundry2] a.inline-roll::before,
+[data-theme=foundry2] a.inline-roll i,
+[data-theme=foundry2] a.inline-roll i.icon,
 .foundry2 a.content-link::before,
 .foundry2 a.content-link i,
 .foundry2 a.content-link i.icon,
@@ -9133,9 +9147,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2 a.inline-check .label::before,
 .foundry2 a.inline-check .label i,
 .foundry2 a.inline-check .label i.icon,
-.foundry2 a.inline-roll:not(.inline-result)::before,
-.foundry2 a.inline-roll:not(.inline-result) i,
-.foundry2 a.inline-roll:not(.inline-result) i.icon {
+.foundry2 a.inline-roll::before,
+.foundry2 a.inline-roll i,
+.foundry2 a.inline-roll i.icon {
   color: var(--color-light-1);
 }
 .foundry2-pc i[data-pf2-repost],
@@ -9759,6 +9773,20 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2.token-sheet,
 .foundry2.dialog {
   height: auto !important;
+}
+.foundry2-pc .inline-roll .dice-tooltip,
+[data-theme=foundry2] .inline-roll .dice-tooltip,
+.foundry2 .inline-roll .dice-tooltip {
+  background: var(--app-background);
+  border: 1px solid var(--color-warm-1);
+  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: var(--font-size-16);
+  line-height: var(--font-size-16);
+  text-shadow: 0px 1px 2px black;
+  padding: 0.4em 0.6em;
 }
 .foundry2-pc.filepicker .favorites .paths,
 [data-theme=foundry2].filepicker .favorites .paths,

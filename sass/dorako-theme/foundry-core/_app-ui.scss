@@ -3,6 +3,10 @@
   box-shadow: none;
 }
 
+.dorako-ui .inline-roll .dice-tooltip {
+  @include sheet;
+}
+
 /* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
@@ -10,19 +14,6 @@
 #players.dorako-ui {
   @include glass;
   text-shadow: 0px 0px 3px black;
-
-  h3 {
-    cursor: pointer;
-    @include quick-transition;
-
-    &:hover {
-      text-shadow: 0px 0px 8px var(--color-shadow-highlight);
-    }
-  }
-}
-
-#players.foundry2 {
-  @include f2-app;
 
   h3 {
     cursor: pointer;
