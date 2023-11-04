@@ -32,6 +32,22 @@
     --font-size: inherit;
   }
 
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {
+    @include f2-input;
+    --input-height: 18px;
+  }
+
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select {
+    @include f2-input;
+    max-width: 60px;
+  }
+
+  &.actor.npc.sheet form ol.spell-list > li.spell-level-header input,
+  &.actor.npc.sheet form ol.spell-list > li .uses input {
+    @include f2-input;
+    --input-height: 18px;
+  }
+
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input,
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
     @include f2-input;

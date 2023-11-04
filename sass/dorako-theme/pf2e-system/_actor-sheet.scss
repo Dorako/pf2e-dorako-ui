@@ -225,6 +225,9 @@
 .foundry2-pc,
 .dorako-ui {
   &.actor.sheet.green-theme {
+    --color-warm-4: var(--remaster-dark);
+    --color-scrollbar: var(--remaster-light);
+    --color-scrollbar-border: var(--tertiary);
     .crb-style {
       --header: url("../img/green-header.webp");
       background-image: url("../img/green-header.webp"), var(--sheet);
@@ -269,6 +272,9 @@
   }
 
   &.actor.sheet.blue-theme {
+    --color-warm-4: var(--secondary-dark);
+    --color-scrollbar: var(--secondary-light);
+    --color-scrollbar-border: var(--tertiary);
     .crb-style {
       --header: url("../img/blue-header.webp");
       background-image: url("../img/blue-header.webp"), var(--sheet);

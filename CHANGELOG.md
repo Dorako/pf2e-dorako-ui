@@ -1,3 +1,8 @@
+# 2.11.14
+
+- (Maintenance) Update theming of spellcasting inputs and selects for NPC's for Foundry 2 to be compatible with recent system versions.
+- (Refinement) Made PC-sheet theme setting influence more elements in Foundry 2 theme.
+
 # 2.11.13
 
 - (Refinement) Added styling for inline roll tooltips.

@@ -6330,6 +6330,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   background: var(--color-warm-4);
 }
 
+.foundry2-pc.actor.sheet.green-theme,
+.dorako-ui.actor.sheet.green-theme {
+  --color-warm-4: var(--remaster-dark);
+  --color-scrollbar: var(--remaster-light);
+  --color-scrollbar-border: var(--tertiary);
+}
 .foundry2-pc.actor.sheet.green-theme .crb-style,
 .dorako-ui.actor.sheet.green-theme .crb-style {
   --header: url("../img/green-header.webp");
@@ -6369,6 +6375,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation .item:hover,
 .dorako-ui.actor.sheet.green-theme .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/green-nav-item.webp");
+}
+.foundry2-pc.actor.sheet.blue-theme,
+.dorako-ui.actor.sheet.blue-theme {
+  --color-warm-4: var(--secondary-dark);
+  --color-scrollbar: var(--secondary-light);
+  --color-scrollbar-border: var(--tertiary);
 }
 .foundry2-pc.actor.sheet.blue-theme .crb-style,
 .dorako-ui.actor.sheet.blue-theme .crb-style {
@@ -12103,6 +12115,132 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2.actor.npc.sheet form .npc-sheet-header .name input {
   --font-size: inherit;
 }
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+  --input-height: 18px;
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input.disabled, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input.disabled::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input[type=checkbox] {
+  border: unset;
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select {
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+  max-width: 60px;
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select.disabled, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select.disabled::placeholder, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select[type=checkbox] {
+  border: unset;
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input {
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+  --input-height: 18px;
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input:focus, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input:not(:disabled, .disabled):hover, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input.disabled, .foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input:disabled, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input.disabled, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input.disabled::placeholder, .foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input:disabled::placeholder, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input.disabled::placeholder, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input::placeholder, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input::selection, .foundry2.actor.npc.sheet form ol.spell-list > li .uses input::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.actor.npc.sheet form ol.spell-list > li.spell-level-header input[type=checkbox], .foundry2.actor.npc.sheet form ol.spell-list > li .uses input[type=checkbox] {
+  border: unset;
+}
 .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input, .foundry2.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
   --font-size: var(--font-size-14);
   --box-shadow: 0px 1px 3px 1px black;
@@ -12494,6 +12632,13 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2 .currency li > button.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
+}
+.foundry2-pc.actor.sheet .item-image.framed, .foundry2-pc.actor.sheet .item-image.framed i,
+.foundry2.actor.sheet .item-image.framed,
+.foundry2.actor.sheet .item-image.framed i {
+  box-shadow: unset !important;
+  outline: 1px solid var(--color-warm-1);
+  border-radius: 3px;
 }
 
 .foundry2.sheet.kingdom-builder, .foundry2.sheet.kingdom {

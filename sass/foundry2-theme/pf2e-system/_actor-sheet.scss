@@ -40,4 +40,10 @@
   .currency li > button {
     @include f2-button-warm;
   }
+  &.actor.sheet .item-image.framed,
+  &.actor.sheet .item-image.framed i {
+    box-shadow: unset !important;
+    outline: 1px solid var(--color-warm-1);
+    border-radius: 3px;
+  }
 }
