@@ -44,3 +44,13 @@
     color: var(--tertiary);
   }
 }
+
+.foundry2 .action-list button {
+  .action-btn img {
+    border: 1px solid var(--color-warm-1);
+    border-radius: var(--border-radius);
+  }
+  &:hover {
+    text-shadow: 0px 1px 2px black;
+  }
+}

@@ -1,3 +1,7 @@
+# 2.11.16
+
+- (Fix) Fixed an issue where Foundry2 theme did not get applied to ITT.
+
 # 2.11.15
 
 - (New) Added support for Monk's PF2e Encounter Aftermath module.
