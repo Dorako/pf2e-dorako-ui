@@ -246,6 +246,15 @@
   .monks-tokenbar .sheet .items-list .item {
     border: unset;
   }
+  .monks-tokenbar:not(.editstats) .sheet input[type="text"],
+  .monks-tokenbar .sheet input[type="number"] {
+    @include f2-input;
+  }
+  &#assignexperience .sheet .sheet-navigation {
+    margin: unset;
+    font-family: var(--sans-serif);
+    font-weight: unset;
+  }
 }
 
 /* ----------------------------------------- */

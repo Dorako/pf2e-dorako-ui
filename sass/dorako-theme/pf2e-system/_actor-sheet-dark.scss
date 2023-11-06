@@ -131,6 +131,7 @@
     color: var(--tertiary-dark);
   }
 
+  &.sheet.party [data-tab="aftermath"] .activities .member-activity .empty .name,
   &.sheet.party [data-tab="exploration"] .activities .member-activity .empty .name,
   &.sheet.party nav.sub-nav a.active,
   &.sheet.party nav.sub-nav .tab.active {

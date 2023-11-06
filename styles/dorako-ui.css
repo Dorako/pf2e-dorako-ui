@@ -1964,6 +1964,62 @@ button#heartbeat-button {
 .foundry2 .monks-tokenbar .sheet .items-list .item {
   border: unset;
 }
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text],
+.foundry2 .monks-tokenbar .sheet input[type=number] {
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+}
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text]:not(:disabled, .disabled):hover, .foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text]:focus,
+.foundry2 .monks-tokenbar .sheet input[type=number]:not(:disabled, .disabled):hover,
+.foundry2 .monks-tokenbar .sheet input[type=number]:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text].disabled, .foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text]:disabled,
+.foundry2 .monks-tokenbar .sheet input[type=number].disabled,
+.foundry2 .monks-tokenbar .sheet input[type=number]:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text].disabled::placeholder, .foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text]:disabled::placeholder,
+.foundry2 .monks-tokenbar .sheet input[type=number].disabled::placeholder,
+.foundry2 .monks-tokenbar .sheet input[type=number]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text]::placeholder,
+.foundry2 .monks-tokenbar .sheet input[type=number]::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text]::selection,
+.foundry2 .monks-tokenbar .sheet input[type=number]::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2 .monks-tokenbar:not(.editstats) .sheet input[type=text][type=checkbox],
+.foundry2 .monks-tokenbar .sheet input[type=number][type=checkbox] {
+  border: unset;
+}
+.foundry2#assignexperience .sheet .sheet-navigation {
+  margin: unset;
+  font-family: var(--sans-serif);
+  font-weight: unset;
+}
 
 /* ----------------------------------------- */
 /* Monk's little details                     */
@@ -2640,6 +2696,24 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* ----------------------------------------- */
 /* Foundry 2                                 */
 /* ----------------------------------------- */
+.foundry2.chat-message.message .pf2e-token-hud .rk {
+  --text-dark: var(--color-light-2);
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
+  --color-rank-0: #a6a6a6;
+  --color-rank-1: dodgerblue;
+  --color-rank-2: #bf4fdb;
+  --color-rank-3: #cf931d;
+  --color-rank-4: red;
+  background: repeating-linear-gradient(color-mix(in srgb, var(--color-cool-3) 20%, transparent) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
+
 .foundry2-pc#pf2e-token-hud {
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
@@ -6306,11 +6380,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   z-index: 1;
 }
 
-.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod,
+.dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .dorako-ui.sheet.party [data-tab=overview] .summary, .dorako-ui.sheet.party [data-tab=exploration] .activities .member-activity, .dorako-ui.sheet.party [data-tab=aftermath] .activities .member-activity, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .dorako-ui.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .dorako-ui.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod,
 .foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
 .foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
 .foundry2.sheet.party [data-tab=overview] .summary,
 .foundry2.sheet.party [data-tab=exploration] .activities .member-activity,
+.foundry2.sheet.party [data-tab=aftermath] .activities .member-activity,
 .foundry2.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
 .foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
 .foundry2.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
@@ -6325,7 +6400,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-image-source: var(--ornamentation);
 }
 
-.foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .foundry2-pc.sheet.party [data-tab=overview] .summary, .foundry2-pc.sheet.party [data-tab=exploration] .activities .member-activity, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+.foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, .foundry2-pc.sheet.party [data-tab=overview] .summary, .foundry2-pc.sheet.party [data-tab=exploration] .activities .member-activity, .foundry2-pc.sheet.party [data-tab=aftermath] .activities .member-activity, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, .foundry2-pc.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, .foundry2-pc.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
   border-image-source: var(--ornamentation);
   background: var(--color-warm-4);
 }
@@ -6537,7 +6612,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .dorako-ui.dark-theme.sheet.party nav.sub-nav a, .dorako-ui.dark-theme.sheet.party nav.sub-nav .tab {
   color: var(--tertiary-dark);
 }
-.dorako-ui.dark-theme.sheet.party [data-tab=exploration] .activities .member-activity .empty .name, .dorako-ui.dark-theme.sheet.party nav.sub-nav a.active, .dorako-ui.dark-theme.sheet.party nav.sub-nav .tab.active {
+.dorako-ui.dark-theme.sheet.party [data-tab=aftermath] .activities .member-activity .empty .name, .dorako-ui.dark-theme.sheet.party [data-tab=exploration] .activities .member-activity .empty .name, .dorako-ui.dark-theme.sheet.party nav.sub-nav a.active, .dorako-ui.dark-theme.sheet.party nav.sub-nav .tab.active {
   color: var(--tertiary);
 }
 .dorako-ui.dark-theme.sheet.party nav.sub-nav {
@@ -13012,16 +13087,16 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2.sheet.party [data-tab=overview] .member > .data .main-stats .ac .value {
   color: var(--color-warm-1);
 }
-.foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .name {
+.foundry2.sheet.party [data-tab=aftermath] .activities .member-activity .empty .name, .foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .name {
   color: var(--color-light-2);
 }
-.foundry2.sheet.party [data-tab=exploration] .activities .member-activity {
+.foundry2.sheet.party [data-tab=aftermath] .activities .member-activity, .foundry2.sheet.party [data-tab=exploration] .activities .member-activity {
   background-color: var(--color-warm-4);
 }
-.foundry2.sheet.party [data-tab=overview] .member > .data header .hero-points .empty {
+.foundry2.sheet.party [data-tab=aftermath] .member > .data header .hero-points .empty, .foundry2.sheet.party [data-tab=overview] .member > .data header .hero-points .empty {
   border: 2px dashed var(--color-warm-2);
 }
-.foundry2.sheet.party [data-tab=overview] .member > .data header .name {
+.foundry2.sheet.party [data-tab=aftermath] .member > .data header .name, .foundry2.sheet.party [data-tab=overview] .member > .data header .name {
   color: var(--color-light-2);
 }
 .foundry2.sheet.party header.content-header .buttons {
@@ -13090,8 +13165,22 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-.foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .icon {
+.foundry2.sheet.party [data-tab=aftermath] .activities .member-activity .empty .icon, .foundry2.sheet.party [data-tab=exploration] .activities .member-activity .empty .icon {
   background: var(--color-warm-5);
+}
+.foundry2.sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .activity-name {
+  overflow: unset;
+}
+.foundry2.sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .icon img {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  filter: unset;
+  border-color: var(--color-warm-2);
 }
 
 /* ----------------------------------------- */
@@ -13129,6 +13218,17 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   font-size: x-large;
   line-height: 1.3rem;
   color: var(--color-light-2);
+}
+.foundry2.chat-message .pf2e.chat-card .card-header h3.pf2-icon {
+  font-family: "Pathfinder2eActions", sans-serif;
+  flex: 0;
+  margin-right: 5px;
+}
+.foundry2.chat-message .pf2e.chat-card .card-footer span {
+  border-right: 1px solid var(--color-cool-4);
+}
+.foundry2.chat-message .pf2e.chat-card .card-footer span:last-child {
+  border: unset;
 }
 .foundry2.chat-message .table-draw .table-results .table-result img.result-image {
   background-color: var(--color-light-2);

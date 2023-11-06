@@ -32,6 +32,19 @@
     font-size: x-large;
     line-height: 1.3rem;
     color: var(--color-light-2);
+
+    &.pf2-icon {
+      font-family: "Pathfinder2eActions", sans-serif;
+      flex: 0;
+      margin-right: 5px;
+    }
+  }
+
+  .pf2e.chat-card .card-footer span {
+    border-right: 1px solid var(--color-cool-4);
+    &:last-child {
+      border: unset;
+    }
   }
 
   .table-draw .table-results .table-result img.result-image {

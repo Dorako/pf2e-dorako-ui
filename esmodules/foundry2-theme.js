@@ -132,6 +132,15 @@ for (const app of ["CharacterSheetPF2e", "VehicleSheetPF2e", "HUD"]) {
   Hooks.on("render" + app, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
     if (theme !== "foundry2-theme") return;
+    const excludeString =
+      game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", VehicleSheetPF2e, HUD";
+    const excludeList = excludeString.split(/[\s,]+/);
+    if (excludeList.includes(app.constructor.name)) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+      );
+      return;
+    }
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => add .foundry2-pc`);
     html.addClass("foundry2-pc");
   });

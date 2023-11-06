@@ -1,3 +1,8 @@
+# 2.11.15
+
+- (New) Added support for Monk's PF2e Encounter Aftermath module.
+- (Fix) Fixed an issue where RK chat messages produced by ITT were illegible in Foundry2 theme.
+
 # 2.11.14
 
 - (Maintenance) Update theming of spellcasting inputs and selects for NPC's for Foundry 2 to be compatible with recent system versions.

@@ -179,6 +179,29 @@
 /* Foundry 2                                 */
 /* ----------------------------------------- */
 
+.foundry2 {
+  &.chat-message.message .pf2e-token-hud .rk {
+    --text-dark: var(--color-light-2);
+    --rarity-common: #e1d8cf;
+    --rarity-uncommon: #c45500;
+    --rarity-rare: #5362ff;
+    --rarity-unique: #e127e1;
+    --color-rarity-common: #e1d8cf;
+    --color-rarity-uncommon: #c45500;
+    --color-rarity-rare: #5362ff;
+    --color-rarity-unique: #e127e1;
+    --color-rank-0: #a6a6a6;
+    --color-rank-1: dodgerblue; // Symon recommended
+    --color-rank-2: #bf4fdb;
+    --color-rank-3: #cf931d;
+    --color-rank-4: red; // Symon recommended
+    background: repeating-linear-gradient(
+      color-mix(in srgb, var(--color-cool-3) 20%, transparent) 0 var(--row-height),
+      transparent var(--row-height) calc(var(--row-height) * 2)
+    );
+  }
+}
+
 .foundry2-pc {
   &#pf2e-token-hud {
     // --primary: var(--color-warm-2);
