@@ -28,6 +28,10 @@ export const baseThemeModuleApplications = ["ControlManager","HUD","ItemPileConf
 
 // prettier-ignore
 export const baseThemeApplications = [...baseThemeCoreFoundryApplications,...baseThemePf2eApplications,...baseThemeModuleApplications, ...dorakoUiApplications];
+
+// prettier-ignore
+export const foundry2RestrictedApplications = ["KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "VehicleSheetPF2e", "HUD"];
+
 // prettier-ignore
 export const darkThemeCompatibleApplications = [...darkThemeCompatibleCoreFoundryApplications, ...darkThemeCompatibleModuleApplications, ...darkThemeCompatiblePf2eApplications, ...dorakoUiApplications]
 

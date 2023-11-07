@@ -1,4 +1,4 @@
-.foundry2 {
+.foundry2-restricted {
   &.sheet.party {
     --color-border: var(--color-warm-3);
     --alt-dark: var(--color-light-4);
@@ -28,12 +28,12 @@
     }
   }
 
-  &.sheet.party form > header input[type="text"],
-  &.sheet.party form > header input[type="number"] {
-    @include f2-input;
-    height: 48px;
-    font-size: 48px;
-  }
+  // &.sheet.party form > header input[type="text"],
+  // &.sheet.party form > header input[type="number"] {
+  //   @include f2-input;
+  //   height: 48px;
+  //   font-size: 48px;
+  // }
 
   &.sheet.party .sidebar {
     box-shadow: unset;

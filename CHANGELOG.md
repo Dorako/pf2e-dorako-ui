@@ -1,3 +1,10 @@
+# 2.11.17
+
+- (New) Added support for Tagger.
+- (Refinement) Refactored the NPC-sheet restructuring as a dorako-ux feature, meaning it works with Foundry 2 theme.
+- (Refinement) Refactored the NPC-sheet styling so it is largely controlled by css variables.
+- (Refinement) Re-implemented the Light/Dark Dorako themed NPC sheets using said simple variables.
+
 # 2.11.16
 
 - (Fix) Fixed an issue where Foundry2 theme did not get applied to ITT.
@@ -5,7 +12,7 @@
 # 2.11.15
 
 - (New) Added support for Monk's PF2e Encounter Aftermath module.
-- (Fix) Fixed an issue where RK chat messages produced by ITT were illegible in Foundry2 theme.
+- (Fix) Fixed an issue where RK chat messages produced by ITT were illegible in Foundry 2 theme.
 
 # 2.11.14
 

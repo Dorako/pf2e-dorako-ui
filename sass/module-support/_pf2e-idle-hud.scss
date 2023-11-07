@@ -202,7 +202,7 @@
   }
 }
 
-.foundry2-pc {
+.foundry2-restricted {
   &#pf2e-token-hud {
     // --primary: var(--color-warm-2);
     --rarity-common: #e1d8cf;
@@ -218,6 +218,11 @@
     --color-rank-2: #bf4fdb;
     --color-rank-3: #cf931d;
     --color-rank-4: red; // Symon recommended
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-content .item-img img {
+    border-color: var(--color-warm-2);
+    border-radius: var(--border-radius);
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .details input {
@@ -350,7 +355,7 @@
 /* Symon Custom CSS                          */
 /* ----------------------------------------- */
 
-#pf2e-token-hud.foundry2-pc.colorized .inner,
+#pf2e-token-hud.foundry2-restricted.colorized .inner,
 #pf2e-token-hud.dorako-ui.colorized .inner {
   i.fa-solid.fa-circle-h {
     color: darkgoldenrod;

@@ -70,7 +70,7 @@
 /* ----------------------------------------- */
 
 [data-theme="foundry2"],
-.foundry2-pc,
+.foundry2-restricted,
 .foundry2 {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
@@ -99,10 +99,10 @@
 }
 
 /* ----------------------------------------- */
-/* .foundry2-pc specific                     */
+/* .foundry2-restricted specific                     */
 /* ----------------------------------------- */
 
-.foundry2-pc {
+.foundry2-restricted {
   --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
   --color-rarity-rare: #5362ff;
@@ -115,10 +115,10 @@
 }
 
 /* ----------------------------------------------------- */
-/* Generalized style choices (inclusive of .foundry2-pc) */
+/* Generalized style choices (inclusive of .foundry2-restricted) */
 /* ----------------------------------------------------- */
 
-.foundry2-pc,
+.foundry2-restricted,
 [data-theme="foundry2"],
 .foundry2 {
   // Dark theme
@@ -201,7 +201,7 @@
 }
 
 /* ---------------------------------------------------- */
-/* Generalized style choices (exlusive of .foundry2-pc) */
+/* Generalized style choices (exlusive of .foundry2-restricted) */
 /* ---------------------------------------------------- */
 
 [data-theme="foundry2"],
@@ -412,7 +412,7 @@
 /* Application specific                      */
 /* ----------------------------------------- */
 
-.foundry2-pc,
+.foundry2-restricted,
 [data-theme="foundry2"],
 .foundry2 {
   // System compat mode
@@ -545,6 +545,7 @@
 /* Tagify and tags                           */
 /* ----------------------------------------- */
 
+.foundry2-restricted,
 .foundry2 {
   .tagify,
   tags.tagify.pf2e-tagify {
@@ -618,7 +619,7 @@
 
   .tags .tag {
     height: auto;
-    padding: 3px 3px;
+    // padding: 3px 3px;
   }
 
   .tags,

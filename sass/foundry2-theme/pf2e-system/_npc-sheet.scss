@@ -1,26 +1,15 @@
-.foundry2 {
-  &.actor.npc.sheet {
-    // --text-light: var(--color-cool-5);
-    --text-dark: var(--color-light-2);
-    --primary: var(--color-warm-2);
-    --secondary: var(--color-cool-2);
-  }
+.foundry2-restricted {
+  &.sheet.pf2e.actor.npc.app {
+    --section-background: var(--color-warm-5);
+    --section-header: var(--color-warm-4);
+    --section-border-color: var(--color-scrollbar-border);
+    --section-outline-color: var(--color-cool-5);
+    --section-header-text-color: var(--color-light-2);
+    --tag-border-color: var(--color-light-5);
+    --tag-background-color: var(--color-cool-4);
+    --tag-text-color: var(--color-light-4);
 
-  &.actor.npc.sheet form .sheet-body .section-container {
-    @include f2-app;
-    padding: unset;
-    margin: 4px 6px 0;
-    border: 1px solid var(--color-warm-3);
-    background: var(--color-warm-4);
-    border-radius: var(--border-radius);
-    .section-header {
-      background: unset;
-      border: unset;
-    }
-    .section-body {
-      background: unset;
-      border: unset;
-    }
+    --text-dark: var(--color-light-2);
   }
 
   &.actor.sheet .item-image:hover i {
@@ -28,8 +17,21 @@
     text-shadow: 0px 1px 2px black;
   }
 
-  &.actor.npc.sheet form .npc-sheet-header .name input {
-    --font-size: inherit;
+  nav.sheet-tabs {
+    background: unset;
+    box-shadow: unset;
+    a.item,
+    .tab {
+      @include f2-button-warm;
+      padding: 5px 10px;
+      font-family: var(--font-primary);
+      text-shadow: 0px 1px 2px black;
+
+      &.active {
+        font-weight: unset;
+        text-shadow: 0px 1px 2px black;
+      }
+    }
   }
 
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {
@@ -53,6 +55,10 @@
     @include f2-input;
   }
 
+  &.actor.npc.sheet form .notes .notes-section.publication .notes-text .license select {
+    @include f2-input;
+  }
+
   &.actor.npc.sheet form .spellcasting-entry select {
     @include f2-input;
   }
@@ -67,7 +73,7 @@
 
   &.actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child),
   &.actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
-    border-color: var(--color-warm-3);
+    border-color: var(--section-border-color);
   }
 
   &.actor.npc.sheet form .notes .details-label {
@@ -87,7 +93,9 @@
     color: black;
     text-shadow: unset;
   }
+}
 
+.foundry2 {
   &.app.npc-skills-editor form ol li.skill:nth-child(even) {
     background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
   }

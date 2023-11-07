@@ -1,0 +1,30 @@
+.foundry2 {
+  fieldset.tagger .tag-container .tag {
+    border: 1px solid var(--color-cool-4);
+    background: var(--color-cool-3);
+    color: var(--color-light-2);
+  }
+  fieldset.tagger .tag-container .tag.dropping {
+    background: #c6eaa7;
+    background: var(--color-warm-2);
+  }
+
+  fieldset.tagger .tag-container .tag span:hover {
+    color: #834100;
+    color: var(--color-light-2);
+  }
+
+  fieldset.tagger .tag-container .tag i:hover {
+    color: #e30f0f;
+    color: var(--color-warm-1);
+  }
+  fieldset.tagger .tag-container .tag:has(i:hover) {
+    background-color: #ffb6b6;
+    background-color: var(--color-warm-2);
+    background-color: var(--color-level-error);
+  }
+  fieldset.tagger .tag-container .tag:has(span:hover) {
+    background-color: #fffdd4;
+    background-color: var(--color-warm-2);
+  }
+}

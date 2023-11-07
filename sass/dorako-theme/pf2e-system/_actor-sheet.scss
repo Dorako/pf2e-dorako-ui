@@ -201,7 +201,7 @@
     }
 }
 
-.foundry2-pc {
+.foundry2-restricted {
   // prettier-ignore
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
@@ -224,7 +224,7 @@
   }
 }
 
-.foundry2-pc,
+.foundry2-restricted,
 .dorako-ui {
   &.actor.sheet.green-theme {
     --color-warm-4: var(--remaster-dark);

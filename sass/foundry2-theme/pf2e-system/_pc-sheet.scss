@@ -1,4 +1,4 @@
-.foundry2-pc {
+.foundry2-restricted {
   &.actor.sheet {
     --header: url("/systems/pf2e/assets/sheet/header.webp");
   }
@@ -63,11 +63,6 @@
     }
   }
 
-  // &.app,
-  // &.window-app .window-content {
-  //   background: unset;
-  //   box-shadow: unset;
-  // }
   &.actor.sheet .crb-style {
     background: unset;
     background: var(--header), transparent !important;
@@ -76,20 +71,25 @@
     background-attachment: local !important;
   }
 
-  &.sheet.actor.window-app .window-header {
+  &.sheet.actor.window-app.vehicle .window-header,
+  &.sheet.actor.window-app.character .window-header {
     background: #5a0c02;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    // border: 1px solid var(--color-cool-3);
-    // border-bottom: unset;
-    // box-shadow: 0px 0px 10px 5px black;
   }
-  &.sheet.actor.window-app.green-theme .window-header {
+
+  &.sheet.actor.window-app.green-theme.vehicle .window-header,
+  &.sheet.actor.window-app.green-theme.character .window-header {
     background: #0e2a1a;
   }
-  &.sheet.actor.window-app.blue-theme .window-header {
+
+  &.sheet.actor.window-app.blue-theme.vehicle
+    .window-header
+    &.sheet.actor.window-app.blue-theme.character
+    .window-header {
     background: #1a1e5f;
   }
+
   &.sheet.actor.window-app.minimized .window-header {
     border-radius: var(--border-radius);
   }
@@ -238,7 +238,7 @@
 }
 
 .foundry2,
-.foundry2-pc {
+.foundry2-restricted {
   &.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
     background: var(--color-cool-5-75);

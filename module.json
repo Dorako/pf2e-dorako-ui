@@ -121,6 +121,7 @@
     "esmodules/premium-module-hooks.js",
     "esmodules/consts.js",
     "esmodules/dorako-ux/customization.js",
+    "esmodules/dorako-ux/npc-sheet.js",
     "esmodules/dorako-ux/radial-condition-hud.js",
     "esmodules/dorako-ux/sidebar-resizer.js"
   ],
