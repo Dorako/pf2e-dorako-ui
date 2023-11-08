@@ -6428,11 +6428,17 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   background: var(--color-warm-4);
 }
 
+.foundry2-restricted.actor.sheet.red-theme,
+.dorako-ui.actor.sheet.red-theme {
+  --theme-color: var(--primary);
+}
 .foundry2-restricted.actor.sheet.green-theme,
 .dorako-ui.actor.sheet.green-theme {
+  --color-warm-3: var(--remaster);
   --color-warm-4: var(--remaster-dark);
   --color-scrollbar: var(--remaster-light);
   --color-scrollbar-border: var(--tertiary);
+  --theme-color: var(--remaster);
 }
 .foundry2-restricted.actor.sheet.green-theme .crb-style,
 .dorako-ui.actor.sheet.green-theme .crb-style {
@@ -6476,9 +6482,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 .foundry2-restricted.actor.sheet.blue-theme,
 .dorako-ui.actor.sheet.blue-theme {
+  --color-warm-3: var(--secondary);
   --color-warm-4: var(--secondary-dark);
   --color-scrollbar: var(--secondary-light);
   --color-scrollbar-border: var(--tertiary);
+  --theme-color: var(--secondary);
 }
 .foundry2-restricted.actor.sheet.blue-theme .crb-style,
 .dorako-ui.actor.sheet.blue-theme .crb-style {
@@ -7475,6 +7483,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-text-light-highlight);
 }
 
+.dorako-ui.sheet.pf2e.actor.npc {
+  --color-text-dark-input: black;
+}
 .dorako-ui.sheet.pf2e.actor.npc form .activity-icon {
   font-weight: 100;
 }
@@ -7567,7 +7578,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* Light */
-.dorako-ui.sheet.pf2e.actor.npc.light-theme form .sheet-tabs {
+.dorako-ui.sheet.pf2e.actor.npc.light-theme .sheet-tabs {
   background-color: #f8f4f1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   border: 1px solid #b5b3a4;
@@ -7596,6 +7607,10 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* Dark */
+.dorako-ui.dark-theme.pf2e.actor.npc {
+  --color-text-dark-input: var(--color-light-2);
+}
+
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {
   border: none;
   border-radius: var(--border-radius);
@@ -10168,78 +10183,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .foundry2 tags.tagify.pf2e-tagify tag > div .tagify__tag-text {
   color: var(--tag-color);
 }
-.foundry2-restricted tags.paizo-style select,
-.foundry2 tags.paizo-style select {
-  width: auto;
-}
-.foundry2-restricted .tags .tag,
-.foundry2 .tags .tag {
-  height: auto;
-}
-.foundry2-restricted .tags,
-.foundry2-restricted .tags.paizo-style,
-.foundry2 .tags,
-.foundry2 .tags.paizo-style {
-  gap: 1px;
-}
-.foundry2-restricted .tags:empty,
-.foundry2-restricted .tags.paizo-style:empty,
-.foundry2 .tags:empty,
-.foundry2 .tags.paizo-style:empty {
-  display: none;
-}
-.foundry2-restricted .tags tag,
-.foundry2-restricted .tags.paizo-style tag,
-.foundry2 .tags tag,
-.foundry2 .tags.paizo-style tag {
-  height: auto;
-}
-.foundry2-restricted .tags select.tag,
-.foundry2-restricted .tags .tag:not(.tag_transparent),
-.foundry2-restricted .tags tag:not(.tag_transparent),
-.foundry2-restricted .tags.paizo-style select.tag,
-.foundry2-restricted .tags.paizo-style .tag:not(.tag_transparent),
-.foundry2-restricted .tags.paizo-style tag:not(.tag_transparent),
-.foundry2 .tags select.tag,
-.foundry2 .tags .tag:not(.tag_transparent),
-.foundry2 .tags tag:not(.tag_transparent),
-.foundry2 .tags.paizo-style select.tag,
-.foundry2 .tags.paizo-style .tag:not(.tag_transparent),
-.foundry2 .tags.paizo-style tag:not(.tag_transparent) {
-  border-radius: 0px;
-  box-shadow: unset;
-  border: 1px solid var(--tertiary);
-  outline: 1px solid var(--gold-brown);
-  padding: 0.33em 0.33em;
-}
-.foundry2-restricted .tags .tag:first-child,
-.foundry2-restricted .tags select.tag:first-child,
-.foundry2-restricted .tags tag:first-child,
-.foundry2-restricted .tags.paizo-style .tag:first-child,
-.foundry2-restricted .tags.paizo-style select.tag:first-child,
-.foundry2-restricted .tags.paizo-style tag:first-child,
-.foundry2 .tags .tag:first-child,
-.foundry2 .tags select.tag:first-child,
-.foundry2 .tags tag:first-child,
-.foundry2 .tags.paizo-style .tag:first-child,
-.foundry2 .tags.paizo-style select.tag:first-child,
-.foundry2 .tags.paizo-style tag:first-child {
-  border-left-width: 1px;
-}
-.foundry2-restricted .tags .tag:first-child,
-.foundry2-restricted .tags select.tag:last-child,
-.foundry2-restricted .tags tag:last-child,
-.foundry2-restricted .tags.paizo-style .tag:first-child,
-.foundry2-restricted .tags.paizo-style select.tag:last-child,
-.foundry2-restricted .tags.paizo-style tag:last-child,
-.foundry2 .tags .tag:first-child,
-.foundry2 .tags select.tag:last-child,
-.foundry2 .tags tag:last-child,
-.foundry2 .tags.paizo-style .tag:first-child,
-.foundry2 .tags.paizo-style select.tag:last-child,
-.foundry2 .tags.paizo-style tag:last-child {
-  border-right-width: 1px;
-}
 
 /* ----------------------------------------- */
 /* System overwrites                         */
@@ -10348,7 +10291,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --placeholder-color: rgba(0, 0, 0, 0.4);
   --placeholder-color-focus: rgba(0, 0, 0, 0.25);
   --tag-bg: var(--color-warm-2);
-  --tags-border-color: var(--color-cool-3);
+  --tags-border-color: var(--color-cool-4);
   --tags-hover-border-color: var(--color-cool-3);
   --tag-color: var(--color-light-2);
   --tag-bg: var(--color-cool-4);
@@ -12040,6 +11983,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --tag-border-color: var(--color-light-5);
   --tag-background-color: var(--color-cool-4);
   --tag-text-color: var(--color-light-4);
+  --color-text-dark-input: var(--color-light-3);
   --text-dark: var(--color-light-2);
 }
 .foundry2-restricted.actor.sheet .item-image:hover i {
@@ -12701,6 +12645,10 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2-restricted.actor.sheet .inventory .list-row .item-controls,
 .foundry2.actor.sheet .inventory .list-row .item-controls {
   --secondary: var(--color-cool-2);
+}
+.foundry2-restricted.actor.sheet .inventory .item-summary,
+.foundry2.actor.sheet .inventory .item-summary {
+  background: color-mix(in srgb, var(--theme-color) 50%, transparent);
 }
 
 .foundry2-restricted.sheet.kingdom-builder, .foundry2-restricted.sheet.kingdom {
@@ -14731,24 +14679,25 @@ body.compact-ui #players:hover {
   --section-border-color: var(--tertiary);
   --section-outline-color: var(--gold-brown);
   --section-header-text-color: var(--color-light-2);
+  --active-text-color: var(--color-text-dark-input);
   --tag-border-color: var(--gold-brown);
   --tag-background-color: var(--alt-dark);
   --tag-text-color: var(--color-light-2);
-  --color-text-dark-input: var(--color-light-5);
   --color-border-light-highlight: var(--primary);
   --color-border-light-primary: var(--primary-light);
   --color-border-light-tertiary: var(--primary);
   --color-border-light-2: var(--color-light-5);
-  --color-text-dark-input: var(--color-light-5);
-  --color-border-light-2: var(--color-light-5);
   --bg: var(--section-background);
+}
+.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header {
+  --color-text-dark-input: var(--color-light-2);
 }
 .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select, .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text], .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number] {
   color: var(--color-text-dark-input);
   border-color: transparent;
 }
 .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select:hover:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text]:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text]:hover:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number]:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number]:hover:not(disabled) {
-  color: var(--color-light-4);
+  color: var(--active-text-color);
   box-shadow: none;
   border-color: transparent;
 }
@@ -14787,7 +14736,7 @@ body.compact-ui #players:hover {
   border-color: transparent;
 }
 .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .notes .notes-section > h4 {
-  color: var(--color-light-2);
+  color: var(--color-text-dark-input);
 }
 .dorako-ux.sheet.pf2e.actor.npc .tox.tox-tinymce .tox-edit-area__iframe {
   background: white;
@@ -14914,7 +14863,7 @@ body.compact-ui #players:hover {
   flex-direction: column;
 }
 .dorako-ux.sheet.pf2e.actor.npc form .sidebar .saves-section.side-bar-section.collapsed {
-  max-height: 52px;
+  max-height: 10rem;
 }
 .dorako-ux.sheet.pf2e.actor.npc form .sidebar .saves-section.side-bar-section.collapsed:hover {
   max-height: 1000px;
@@ -15287,6 +15236,7 @@ span[data-pf2-effect-area],
 a.inline-check .label,
 a.inline-roll:not(.inline-result) {
   font-weight: 400;
+  padding: 0px 4px;
   text-shadow: none !important;
 }
 
@@ -15317,20 +15267,40 @@ i[data-pf2-repost] {
 }
 
 .tah-tags-wrapper .tags,
+.foundry2 .tags,
+.foundry2-restricted .tags,
+.foundry2 .tags.paizo-style,
+.foundry2-restricted .tags.paizo-style,
 .dorako-ui .message-content .tags,
 .dorako-ui .tags.paizo-style,
 .dorako-ui .tags {
   gap: 1px;
 }
 .tah-tags-wrapper .tags .tag,
+.foundry2 .tags .tag,
+.foundry2-restricted .tags .tag,
+.foundry2 .tags.paizo-style .tag,
+.foundry2-restricted .tags.paizo-style .tag,
 .dorako-ui .message-content .tags .tag,
 .dorako-ui .tags.paizo-style .tag,
 .dorako-ui .tags .tag {
   height: auto;
 }
+.tah-tags-wrapper .tags tag,
 .tah-tags-wrapper .tags .tag:not(.tag_transparent),
+.foundry2 .tags tag,
+.foundry2 .tags .tag:not(.tag_transparent),
+.foundry2-restricted .tags tag,
+.foundry2-restricted .tags .tag:not(.tag_transparent),
+.foundry2 .tags.paizo-style tag,
+.foundry2 .tags.paizo-style .tag:not(.tag_transparent),
+.foundry2-restricted .tags.paizo-style tag,
+.foundry2-restricted .tags.paizo-style .tag:not(.tag_transparent),
+.dorako-ui .message-content .tags tag,
 .dorako-ui .message-content .tags .tag:not(.tag_transparent),
+.dorako-ui .tags.paizo-style tag,
 .dorako-ui .tags.paizo-style .tag:not(.tag_transparent),
+.dorako-ui .tags tag,
 .dorako-ui .tags .tag:not(.tag_transparent) {
   border-radius: 0px;
   box-shadow: unset;
@@ -15338,32 +15308,41 @@ i[data-pf2-repost] {
   outline: 1px solid var(--gold-brown);
   padding: 0.33em 0.33em;
 }
+.tah-tags-wrapper .tags tag:first-of-type,
 .tah-tags-wrapper .tags .tag:first-child,
+.foundry2 .tags tag:first-of-type,
+.foundry2 .tags .tag:first-child,
+.foundry2-restricted .tags tag:first-of-type,
+.foundry2-restricted .tags .tag:first-child,
+.foundry2 .tags.paizo-style tag:first-of-type,
+.foundry2 .tags.paizo-style .tag:first-child,
+.foundry2-restricted .tags.paizo-style tag:first-of-type,
+.foundry2-restricted .tags.paizo-style .tag:first-child,
+.dorako-ui .message-content .tags tag:first-of-type,
 .dorako-ui .message-content .tags .tag:first-child,
+.dorako-ui .tags.paizo-style tag:first-of-type,
 .dorako-ui .tags.paizo-style .tag:first-child,
+.dorako-ui .tags tag:first-of-type,
 .dorako-ui .tags .tag:first-child {
   border-left-width: 1px;
 }
+.tah-tags-wrapper .tags tag:last-of-type,
 .tah-tags-wrapper .tags .tag:last-child,
+.foundry2 .tags tag:last-of-type,
+.foundry2 .tags .tag:last-child,
+.foundry2-restricted .tags tag:last-of-type,
+.foundry2-restricted .tags .tag:last-child,
+.foundry2 .tags.paizo-style tag:last-of-type,
+.foundry2 .tags.paizo-style .tag:last-child,
+.foundry2-restricted .tags.paizo-style tag:last-of-type,
+.foundry2-restricted .tags.paizo-style .tag:last-child,
+.dorako-ui .message-content .tags tag:last-of-type,
 .dorako-ui .message-content .tags .tag:last-child,
+.dorako-ui .tags.paizo-style tag:last-of-type,
 .dorako-ui .tags.paizo-style .tag:last-child,
+.dorako-ui .tags tag:last-of-type,
 .dorako-ui .tags .tag:last-child {
   border-right-width: 1px;
-}
-
-.dorako-ui .tags.paizo-style select.tag:first-child {
-  border-left-width: 1px;
-}
-.dorako-ui .tags.paizo-style tag:first-of-type {
-  border-left-width: 1px;
-}
-.dorako-ui .tags.paizo-style tag:last-of-type {
-  border-right-width: 1px;
-}
-.dorako-ui .tags.paizo-style tag,
-.dorako-ui .tags.paizo-style select.tag {
-  border-width: 1px;
-  outline: 1px solid var(--gold-brown);
 }
 
 [data-visibility]:not([data-visibility=all]) {

@@ -50,4 +50,8 @@
   &.actor.sheet .inventory .list-row .item-controls {
     --secondary: var(--color-cool-2);
   }
+
+  &.actor.sheet .inventory .item-summary {
+    background: color-mix(in srgb, var(--theme-color) 50%, transparent);
+  }
 }

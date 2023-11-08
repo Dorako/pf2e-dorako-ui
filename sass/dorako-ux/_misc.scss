@@ -10,6 +10,7 @@ span[data-pf2-effect-area],
 a.inline-check .label,
 a.inline-roll:not(.inline-result) {
   font-weight: 400;
+  padding: 0px 4px;
   text-shadow: none !important;
 }
 
@@ -43,6 +44,10 @@ i[data-pf2-repost] {
 }
 
 .tah-tags-wrapper .tags,
+.foundry2 .tags,
+.foundry2-restricted .tags,
+.foundry2 .tags.paizo-style,
+.foundry2-restricted .tags.paizo-style,
 .dorako-ui .message-content .tags,
 .dorako-ui .tags.paizo-style,
 .dorako-ui .tags {
@@ -52,6 +57,7 @@ i[data-pf2-repost] {
     height: auto;
   }
 
+  tag,
   .tag:not(.tag_transparent) {
     border-radius: 0px;
     box-shadow: unset;
@@ -59,30 +65,15 @@ i[data-pf2-repost] {
     outline: 1px solid var(--gold-brown);
     padding: 0.33em 0.33em;
   }
+
+  tag:first-of-type,
   .tag:first-child {
     border-left-width: 1px;
   }
+
+  tag:last-of-type,
   .tag:last-child {
     border-right-width: 1px;
-  }
-}
-
-.dorako-ui {
-  .tags.paizo-style select.tag:first-child {
-    border-left-width: 1px;
-    // margin-right: 5px;
-  }
-  .tags.paizo-style tag:first-of-type {
-    border-left-width: 1px;
-  }
-  .tags.paizo-style tag:last-of-type {
-    border-right-width: 1px;
-  }
-
-  .tags.paizo-style tag,
-  .tags.paizo-style select.tag {
-    border-width: 1px;
-    outline: 1px solid var(--gold-brown);
   }
 }
 

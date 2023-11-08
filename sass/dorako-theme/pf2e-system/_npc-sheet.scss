@@ -1,4 +1,6 @@
 .dorako-ui.sheet.pf2e.actor.npc {
+  --color-text-dark-input: black;
+
   form {
     .activity-icon {
       font-weight: 100;
@@ -104,7 +106,7 @@
 
 /* Light */
 
-.dorako-ui.sheet.pf2e.actor.npc.light-theme form .sheet-tabs {
+.dorako-ui.sheet.pf2e.actor.npc.light-theme .sheet-tabs {
   background-color: #f8f4f1;
   box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
   border: 1px solid #b5b3a4;
@@ -137,6 +139,10 @@
 }
 
 /* Dark */
+
+.dorako-ui.dark-theme.pf2e.actor.npc {
+  --color-text-dark-input: var(--color-light-2);
+}
 
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {
   @include glass;

@@ -1,3 +1,7 @@
+# 2.11.18
+
+- (Refinement) Various tweaks to light/dark/foundry2 NPC sheets.
+
 # 2.11.17
 
 - (New) Added support for Tagger.
