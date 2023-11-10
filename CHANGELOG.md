@@ -1,3 +1,8 @@
+# 2.11.19
+
+- (New) Added support for Quick Insert.
+- (Refinement) Adjusted style of transparent tags on light theme NPC sheets.
+
 # 2.11.18
 
 - (Refinement) Various tweaks to light/dark/foundry2 NPC sheets.

@@ -1,0 +1,81 @@
+.foundry2 {
+  &.quick-insert-app {
+    background: none;
+    @include f2-app;
+    .quick-insert-result li img {
+      border: 1px solid var(--color-warm-1);
+      border-radius: var(--border-radius);
+      background-color: var(--color-cool-2);
+    }
+  }
+  &.quick-insert-app .search-selected a,
+  .quick-insert-result li a:hover {
+    background: var(--color-warm-2);
+    text-shadow: 0px 1px 2px black !important;
+    border-radius: var(--border-radius);
+    span.sub {
+      color: var(--color-light-4);
+    }
+  }
+  &.quick-insert-app .search-editable-input {
+    @include f2-input;
+    outline: none !important;
+  }
+  .quick-insert-hint {
+    background: none;
+  }
+
+  .quick-insert-result {
+    background: none;
+  }
+  .quick-insert-result li a i.action-icon {
+    opacity: 1;
+    color: var(--color-light-3);
+    background: #fff2;
+  }
+  .quick-insert-result li span.sub {
+    color: var(--color-light-5);
+  }
+}
+
+.dorako-ui {
+  &.quick-insert-app {
+    background: none;
+    @include glass;
+    backdrop-filter: blur(5px);
+    color: var(--color-light-1);
+    text-shadow: 0px 1px 2px black;
+    .quick-insert-result li img {
+      border: 1px solid var(--tertiary);
+      border-radius: var(--border-radius);
+      background-color: var(--alt);
+    }
+  }
+  &.quick-insert-app .search-selected a,
+  .quick-insert-result li a:hover {
+    background: var(--primary);
+    text-shadow: 0px 1px 2px black !important;
+    border-radius: var(--border-radius);
+    span.sub {
+      color: var(--color-light-4);
+    }
+  }
+  &.quick-insert-app .search-editable-input {
+    background: none;
+  }
+  .quick-insert-hint {
+    background: none;
+  }
+
+  .quick-insert-result {
+    background: none;
+  }
+  .quick-insert-result li a i.action-icon {
+    opacity: 1;
+    color: var(--color-light-3);
+    background: #fff2;
+  }
+  .quick-insert-result li span.sub {
+    color: var(--color-light-5);
+  }
+}

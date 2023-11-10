@@ -140,8 +140,11 @@
 
 /* Dark */
 
-.dorako-ui.dark-theme.pf2e.actor.npc {
+.dorako-ui.dark-theme.sheet.pf2e.actor.npc {
   --color-text-dark-input: var(--color-light-2);
+  --tag-border-color: var(--tertiary-dark);
+  --tag-background-color: rgba(40, 40, 40, 0.5);
+  --tag-text-color: var(--color-light-2);
 }
 
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {

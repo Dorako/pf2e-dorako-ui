@@ -3561,6 +3561,132 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   height: 14px;
 }
 
+.foundry2.quick-insert-app {
+  background: none;
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+}
+.foundry2.quick-insert-app .quick-insert-result li img {
+  border: 1px solid var(--color-warm-1);
+  border-radius: var(--border-radius);
+  background-color: var(--color-cool-2);
+}
+.foundry2.quick-insert-app .search-selected a,
+.foundry2 .quick-insert-result li a:hover {
+  background: var(--color-warm-2);
+  text-shadow: 0px 1px 2px black !important;
+  border-radius: var(--border-radius);
+}
+.foundry2.quick-insert-app .search-selected a span.sub,
+.foundry2 .quick-insert-result li a:hover span.sub {
+  color: var(--color-light-4);
+}
+.foundry2.quick-insert-app .search-editable-input {
+  --font-size: var(--font-size-14);
+  --box-shadow: 0px 1px 3px 1px black;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  height: var(--input-height);
+  line-height: var(--input-height);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  font-size: var(--font-size);
+  transition: outline-color 0.5s;
+  outline: none !important;
+}
+.foundry2.quick-insert-app .search-editable-input:not(:disabled, .disabled):hover, .foundry2.quick-insert-app .search-editable-input:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+.foundry2.quick-insert-app .search-editable-input.disabled, .foundry2.quick-insert-app .search-editable-input:disabled {
+  --input-text-color: var(--color-light-6);
+  --input-background-color: var(--color-cool-5);
+  --input-border-color: var(--color-cool-4);
+}
+.foundry2.quick-insert-app .search-editable-input.disabled::placeholder, .foundry2.quick-insert-app .search-editable-input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
+}
+.foundry2.quick-insert-app .search-editable-input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.foundry2.quick-insert-app .search-editable-input::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+.foundry2.quick-insert-app .search-editable-input[type=checkbox] {
+  border: unset;
+}
+.foundry2 .quick-insert-hint {
+  background: none;
+}
+.foundry2 .quick-insert-result {
+  background: none;
+}
+.foundry2 .quick-insert-result li a i.action-icon {
+  opacity: 1;
+  color: var(--color-light-3);
+  background: rgba(255, 255, 255, 0.1333333333);
+}
+.foundry2 .quick-insert-result li span.sub {
+  color: var(--color-light-5);
+}
+
+.dorako-ui.quick-insert-app {
+  background: none;
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  backdrop-filter: blur(5px);
+  color: var(--color-light-1);
+  text-shadow: 0px 1px 2px black;
+}
+.dorako-ui.quick-insert-app .quick-insert-result li img {
+  border: 1px solid var(--tertiary);
+  border-radius: var(--border-radius);
+  background-color: var(--alt);
+}
+.dorako-ui.quick-insert-app .search-selected a,
+.dorako-ui .quick-insert-result li a:hover {
+  background: var(--primary);
+  text-shadow: 0px 1px 2px black !important;
+  border-radius: var(--border-radius);
+}
+.dorako-ui.quick-insert-app .search-selected a span.sub,
+.dorako-ui .quick-insert-result li a:hover span.sub {
+  color: var(--color-light-4);
+}
+.dorako-ui.quick-insert-app .search-editable-input {
+  background: none;
+}
+.dorako-ui .quick-insert-hint {
+  background: none;
+}
+.dorako-ui .quick-insert-result {
+  background: none;
+}
+.dorako-ui .quick-insert-result li a i.action-icon {
+  opacity: 1;
+  color: var(--color-light-3);
+  background: rgba(255, 255, 255, 0.1333333333);
+}
+.dorako-ui .quick-insert-result li span.sub {
+  color: var(--color-light-5);
+}
+
 /* ----------------------------------------- */
 /* Scene Preview                             */
 /* ----------------------------------------- */
@@ -7607,8 +7733,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* Dark */
-.dorako-ui.dark-theme.pf2e.actor.npc {
+.dorako-ui.dark-theme.sheet.pf2e.actor.npc {
   --color-text-dark-input: var(--color-light-2);
+  --tag-border-color: var(--tertiary-dark);
+  --tag-background-color: rgba(40, 40, 40, 0.5);
+  --tag-text-color: var(--color-light-2);
 }
 
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {
@@ -14680,9 +14809,9 @@ body.compact-ui #players:hover {
   --section-outline-color: var(--gold-brown);
   --section-header-text-color: var(--color-light-2);
   --active-text-color: var(--color-text-dark-input);
-  --tag-border-color: var(--gold-brown);
-  --tag-background-color: var(--alt-dark);
-  --tag-text-color: var(--color-light-2);
+  --tag-border-color: var(--alt-dark);
+  --tag-background-color: transparent;
+  --tag-text-color: var(--alt-dark);
   --color-border-light-highlight: var(--primary);
   --color-border-light-primary: var(--primary-light);
   --color-border-light-tertiary: var(--primary);
