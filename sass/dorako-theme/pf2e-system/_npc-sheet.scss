@@ -16,6 +16,47 @@
       color: red !important;
     }
   }
+
+  &.actor.npc.sheet form ol.spell-list > li.spell-level-header input,
+  &.actor.npc.sheet form ol.spell-list > li .uses input {
+    color: var(--text-light);
+  }
+}
+
+/* Green */
+.dorako-ui.sheet.pf2e.actor.npc.green-theme {
+  --section-background: var(--remaster-dark);
+  --section-header: var(--remaster);
+  --section-border-color: var(--tertiary);
+  --section-outline-color: var(--gold-brown);
+  --section-header-text-color: var(--color-light-2);
+  --tag-border-color: var(--color-light-5);
+  --tag-background-color: var(--remaster);
+  --tag-text-color: var(--tertiary);
+
+  --color-text-dark-input: var(--color-light-5);
+  --color-border-light-highlight: var(--remaster);
+  --color-border-light-primary: var(--remaster-light);
+  --color-border-light-tertiary: var(--remaster);
+  --color-border-light-2: var(--color-light-5);
+}
+
+/* Blue */
+.dorako-ui.sheet.pf2e.actor.npc.blue-theme {
+  --section-background: var(--secondary-dark);
+  --section-header: var(--secondary);
+  --section-border-color: var(--tertiary);
+  --section-outline-color: var(--gold-brown);
+  --section-header-text-color: var(--color-light-2);
+  --tag-border-color: var(--color-light-5);
+  --tag-background-color: var(--secondary);
+  --tag-text-color: var(--tertiary);
+
+  --color-text-dark-input: var(--color-light-5);
+  --color-border-light-highlight: var(--secondary);
+  --color-border-light-primary: var(--secondary-light);
+  --color-border-light-tertiary: var(--secondary);
+  --color-border-light-2: var(--color-light-5);
 }
 
 /* Glassy */

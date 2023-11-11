@@ -1,3 +1,9 @@
+# 2.11.20
+
+- (New) Added support for Smalltime.
+- (Refinement) Improvements to MATT colors in dark theme.
+- (Refinement) Improved scoping of white background icons in compendium browser in Foundry 2 theme.
+
 # 2.11.19
 
 - (New) Added support for Quick Insert.

@@ -1,0 +1,44 @@
+.dorako-ui,
+.foundry2 {
+  &#smalltime-app #displayContainer {
+    background: unset;
+    box-shadow: unset;
+  }
+
+  &#smalltime-app #dragHandle {
+    background: unset;
+  }
+
+  &#smalltime-app #slideContainer {
+    margin-bottom: 10px;
+  }
+}
+
+.foundry2 {
+  &#smalltime-app {
+    @include f2-app;
+  }
+
+  &#smalltime-app .arrow,
+  &#smalltime-app .arrow-left,
+  &#smalltime-app.arrow-right {
+    @include f2-button-warm;
+  }
+}
+
+.dorako-ui {
+  &#smalltime-app {
+    @include glass;
+  }
+
+  &#smalltime-app .arrow,
+  &#smalltime-app .arrow-left,
+  &#smalltime-app.arrow-right {
+    @include glass;
+    @include quick-transition;
+    &:hover {
+      border: unset;
+      background: var(--primary);
+    }
+  }
+}

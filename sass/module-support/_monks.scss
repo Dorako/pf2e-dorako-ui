@@ -953,7 +953,10 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   &.monks-active-tiles.sheet .items-list .item .item-name {
     color: var(--color-light-3);
   }
+}
 
+.foundry2,
+.dorako-ui.dark-theme {
   &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
     color: #fafafa;
   }
