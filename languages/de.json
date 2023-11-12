@@ -107,18 +107,26 @@
         },
         "npc-sheet-theme": {
           "name": "NSC-Bogen Design",
-          "hint": "Beeinflusst NSC-Bögen"
+          "hint": "Passt den Stil von NPC-/Gefahren-/Vertrautenbögen an",
+          "choice": {
+            "default": "Standard-Dorako-Benutzeroberfläche"
+          }
         },
         "chat-theme": {
           "name": "Chat-Design",
           "hint": "Beeinflusst alle Chat-Nachrichten",
           "choice": {
-            "factions": "Spieler hell, SL dunkel"
+            "factions": "Spieler hell, SL dunkel",
+            "foundry2": "Foundry 2 inspiriert"
           }
         },
         "pc-sheet-theme": {
           "name": "SC-Bogen Design",
-          "hint": "Beeinflusst SC-Bögen"
+          "hint": "Beeinflusst Spielerbögen und Fahrzeuge",
+          "choice": {
+            "blue": "Klassisches Blau",
+            "red": "Original Rot"
+          }
         },
         "loot-sheet-theme": {
           "name": "Beutebogen Design",
@@ -136,7 +144,8 @@
           "choice": {
             "no-theme": "Kein Design",
             "light-theme": "Helles Dorako UI",
-            "dark-theme": "Dunkles Dorako UI"
+            "dark-theme": "Dunkles Dorako UI",
+            "foundry2-theme": "Foundry 2 inspiriert"
           },
           "hint": "Beeinflusst gerenderte Anwendungfenster"
         },
@@ -149,7 +158,8 @@
             "tint": "Spieler-Farbe",
             "none": "Deaktiviert",
             "red": "Rot",
-            "blue": "Blau"
+            "blue": "Blau",
+            "green": "Grün"
           },
           "name": "Design der Chatnachrichten-Kopfzeile",
           "hint": "Fügt eine farbige Kopfzeile zu jeder Chat-Nachricht hinzu"
@@ -204,7 +214,7 @@
         "label": "UX-Einstellungen konfigurieren",
         "adjust-token-effects-hud": {
           "name": "\"Token Effects HUD\" anpassen?",
-          "hint": "(Experimentell) Stelle Effekte kreisförmig da und arrangiere sie außerhalb oder auf dem Token-Ring bei größeren Tokens"
+          "hint": "Stelle Effekte kreisförmig da und arrangiere sie außerhalb oder auf dem Token-Ring bei größeren Tokens"
         },
         "animate-messages": {
           "hint": "Flüstern von Spielern zum SL erregt mehr Aufmerksamkeit",
@@ -220,11 +230,33 @@
         },
         "remove-attack-info-from-damage-roll-messages": {
           "name": "Angriffsinfo aus Schadenswurfmeldungen entfernen?",
-          "hint": "Schadenswürfe nehmen weniger Platz ein, indem redundante Trefferinformationen entfernt werden. Gedacht für die Verwendung mit dem DFCE-Modul"
+          "hint": "Schadenswürfe nehmen weniger Platz ein, indem redundante Trefferinformationen entfernt werden. Gedacht für die Verwendung mit dem Chat-Zusammenführung-Modul"
         },
         "no-compendium-banner-images": {
           "name": "Kompendium Bannerbilder ausblenden?",
           "hint": "Entfernt die Bannerbilder des Kompendiums in der Seitenleiste"
+        },
+        "border-radius": {
+          "hint": "(Standard: 3px) Ändert den Grad der Rundung in vielen UI-Elementen",
+          "name": "Abrundung"
+        },
+        "controls-alignment": {
+          "hint": "Ändert die Position der Steuerelemente",
+          "choice": {
+            "start": "Oben",
+            "center": "Mitte",
+            "end": "Unten"
+          }
+        },
+        "control-size": {
+          "hint": "(Standard: 36px) Ändert die Größe von Steuer- und Navigationselementen"
+        },
+        "chat-merge": {
+          "name": "Chatzusammenführung aktivieren?",
+          "hint": "(Experimentell) Führt in schneller Folge gesendete Nachrichten zusammen, um Platz zu sparen"
+        },
+        "adjust-chat-controls": {
+          "name": "Chat-Steuerung anpassen?"
         }
       },
       "avatar": {
@@ -297,6 +329,13 @@
           "name": "Benutzerdefiniertes CSS",
           "hint": "Erstelle den CSS-Code in einem externen Editor und füge ihn hier ein"
         }
+      },
+      "external-module": {
+        "colorize-idle-hud": {
+          "hint": "Wendet ein farbiges Thema auf die Symbole im Haupt-Tooltip an"
+        },
+        "name": "Externe Moduleinstellungen",
+        "hint": "Anpassungen, wie andere Module von der Dorako-Benutzeroberfläche betroffen sind"
       }
     }
   }
