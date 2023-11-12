@@ -14,7 +14,7 @@ Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   const collapseSaves = app.object.system.attributes.allSaves.value === "";
 
   const immunities = app.object.system.attributes.immunities;
-  const collapseImmunities = immunities.length === 0 && immunities.custom === "";
+  const collapseImmunities = immunities.length === 0 && (immunities.custom === undefined || immunities.custom === "");
   const weaknesses = app.object.system.attributes.weaknesses;
   const collapseWeaknesses = weaknesses.length === 0;
   const resistances = app.object.system.attributes.resistances;

@@ -1,4 +1,4 @@
-.dorako-ui.sheet.pf2e.actor.npc {
+.dorako-ux.sheet.pf2e.actor.npc {
   --color-text-dark-input: black;
 
   form {
@@ -20,6 +20,13 @@
   &.actor.npc.sheet form ol.spell-list > li.spell-level-header input,
   &.actor.npc.sheet form ol.spell-list > li .uses input {
     color: var(--text-light);
+  }
+
+  &.actor.npc.sheet form .side-bar-label.empty {
+    color: var(--section-header-text-color);
+  }
+  .item.empty {
+    color: var(--color-text-dark-inactive);
   }
 }
 

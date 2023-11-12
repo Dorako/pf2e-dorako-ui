@@ -1,3 +1,9 @@
+# 2.11.21
+
+- (Maintenance) Made adjustments to NPC sheet themes to keep up to date with system changes.
+- (Maintenance) Kept up to date with system changes to system changes to add-gm-notes and editor buttons for dark theme.
+- (Refinement) Adjusted Smalltime styling to account for date display.
+
 # 2.11.20
 
 - (New) Added support for Smalltime.

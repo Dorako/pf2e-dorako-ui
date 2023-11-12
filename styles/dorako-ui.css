@@ -3717,7 +3717,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 .dorako-ui#smalltime-app #slideContainer,
 .foundry2#smalltime-app #slideContainer {
-  margin-bottom: 10px;
+  max-height: 24px;
+}
+.dorako-ui#smalltime-app #dateDisplay,
+.foundry2#smalltime-app #dateDisplay {
+  text-shadow: 0px 1px 2px black;
+  background: unset;
+  box-shadow: unset;
 }
 
 .foundry2#smalltime-app {
@@ -5127,7 +5133,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 .dorako-ui.dark-theme.filepicker .favorites .path {
   background: none;
 }
-.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes, .dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -5137,7 +5143,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-shadow: 0 0 3px black;
   color: var(--color-text-light-heading);
 }
-.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes:hover, .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit:hover {
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:hover, .dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:hover {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -5147,10 +5153,10 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--color-text-light-highlight);
   box-shadow: var(--glassy);
 }
-.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes {
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
   background-color: #2e0587;
 }
-.dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes:hover {
+.dorako-ui.dark-theme.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:hover {
   background-color: #440eb9;
 }
 .dorako-ui.dark-theme.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
@@ -7724,22 +7730,28 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-text-light-highlight);
 }
 
-.dorako-ui.sheet.pf2e.actor.npc {
+.dorako-ux.sheet.pf2e.actor.npc {
   --color-text-dark-input: black;
 }
-.dorako-ui.sheet.pf2e.actor.npc form .activity-icon {
+.dorako-ux.sheet.pf2e.actor.npc form .activity-icon {
   font-weight: 100;
 }
-.dorako-ui.sheet.pf2e.actor.npc form input.adjustable:not(:focus).adjusted-higher,
-.dorako-ui.sheet.pf2e.actor.npc form span.adjustable.adjusted-higher {
+.dorako-ux.sheet.pf2e.actor.npc form input.adjustable:not(:focus).adjusted-higher,
+.dorako-ux.sheet.pf2e.actor.npc form span.adjustable.adjusted-higher {
   color: green !important;
 }
-.dorako-ui.sheet.pf2e.actor.npc form input.adjustable:not(:focus).adjusted-lower,
-.dorako-ui.sheet.pf2e.actor.npc form span.adjustable.adjusted-lower {
+.dorako-ux.sheet.pf2e.actor.npc form input.adjustable:not(:focus).adjusted-lower,
+.dorako-ux.sheet.pf2e.actor.npc form span.adjustable.adjusted-lower {
   color: red !important;
 }
-.dorako-ui.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li.spell-level-header input, .dorako-ui.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li .uses input {
+.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li.spell-level-header input, .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li .uses input {
   color: var(--text-light);
+}
+.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-label.empty {
+  color: var(--section-header-text-color);
+}
+.dorako-ux.sheet.pf2e.actor.npc .item.empty {
+  color: var(--color-text-dark-inactive);
 }
 
 /* Green */

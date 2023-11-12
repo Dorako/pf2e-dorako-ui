@@ -10,7 +10,12 @@
   }
 
   &#smalltime-app #slideContainer {
-    margin-bottom: 10px;
+    max-height: 24px;
+  }
+  &#smalltime-app #dateDisplay {
+    text-shadow: 0px 1px 2px black;
+    background: unset;
+    box-shadow: unset;
   }
 }
 

@@ -3,7 +3,7 @@
     background: none;
   }
 
-  &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a {
+  &.pf2e.item.sheet form .sheet-body .tab.active.description .editor a {
     &.add-gm-notes,
     &.editor-edit {
       @include glass;
