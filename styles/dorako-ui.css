@@ -3813,6 +3813,10 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background-color: var(--glass-bg);
   box-shadow: var(--glassy);
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  background-color: var(--glass-bg-light);
+  display: flex;
+  align-items: center;
+  padding: unset;
 }
 .dorako-ui#smalltime-app .arrow:hover, .dorako-ui#smalltime-app .arrow-left:hover, .dorako-ui#smalltime-app.arrow-right:hover {
   border: unset;
@@ -3826,7 +3830,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
   padding: 0px;
 }
 
-.speaking-as--currentSpeaker {
+.chat-sidebar .speaking-as--currentSpeaker {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -3836,6 +3840,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
   padding-left: 5px;
   margin: 0px 5px;
   text-shadow: 0px 0px 3px black;
+  padding-left: 8px;
 }
 
 .speaking-as--currentSpeaker--button {
@@ -3854,7 +3859,6 @@ div.speaking-as--currentSpeaker + #chat-controls {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   margin: 0px var(--sidebar-margin);
-  padding-left: 8px;
 }
 
 .compendium-toc .toc .toc-entry .name {
@@ -7744,9 +7748,6 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 .dorako-ux.sheet.pf2e.actor.npc form span.adjustable.adjusted-lower {
   color: red !important;
 }
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li.spell-level-header input, .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li .uses input {
-  color: var(--text-light);
-}
 .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-label.empty {
   color: var(--section-header-text-color);
 }
@@ -7902,6 +7903,10 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --tag-border-color: var(--tertiary-dark);
   --tag-background-color: rgba(40, 40, 40, 0.5);
   --tag-text-color: var(--color-light-2);
+}
+
+.dorako-ui.dark-theme.pf2e.actor.npc.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field input, .dorako-ui.dark-theme.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li.spell-level-header input[type=number], .dorako-ui.dark-theme.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li .uses input[type=number] {
+  --color-text-dark-input: black;
 }
 
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {
@@ -14974,7 +14979,6 @@ body.compact-ui #players:hover {
   --section-border-color: var(--tertiary);
   --section-outline-color: var(--gold-brown);
   --section-header-text-color: var(--color-light-2);
-  --active-text-color: var(--color-text-dark-input);
   --tag-border-color: var(--alt-dark);
   --tag-background-color: transparent;
   --tag-text-color: var(--alt-dark);
@@ -14992,7 +14996,6 @@ body.compact-ui #players:hover {
   border-color: transparent;
 }
 .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select:hover:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text]:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text]:hover:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number]:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number]:hover:not(disabled) {
-  color: var(--active-text-color);
   box-shadow: none;
   border-color: transparent;
 }

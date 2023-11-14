@@ -17,14 +17,10 @@
     }
   }
 
-  &.actor.npc.sheet form ol.spell-list > li.spell-level-header input,
-  &.actor.npc.sheet form ol.spell-list > li .uses input {
-    color: var(--text-light);
-  }
-
   &.actor.npc.sheet form .side-bar-label.empty {
     color: var(--section-header-text-color);
   }
+
   .item.empty {
     color: var(--color-text-dark-inactive);
   }
@@ -193,6 +189,14 @@
   --tag-border-color: var(--tertiary-dark);
   --tag-background-color: rgba(40, 40, 40, 0.5);
   --tag-text-color: var(--color-light-2);
+}
+
+.dorako-ui.dark-theme.pf2e.actor.npc {
+  &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field input,
+  &.actor.npc.sheet form ol.spell-list > li.spell-level-header input[type="number"],
+  &.actor.npc.sheet form ol.spell-list > li .uses input[type="number"] {
+    --color-text-dark-input: black;
+  }
 }
 
 .dorako-ui.sheet.pf2e.actor.npc.dark-theme form .sheet-tabs {

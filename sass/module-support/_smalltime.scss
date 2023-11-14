@@ -41,6 +41,10 @@
   &#smalltime-app.arrow-right {
     @include glass;
     @include quick-transition;
+    background-color: var(--glass-bg-light);
+    display: flex;
+    align-items: center;
+    padding: unset;
     &:hover {
       border: unset;
       background: var(--primary);

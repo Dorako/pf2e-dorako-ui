@@ -1,3 +1,7 @@
+# 2.11.22
+
+- (Fix) Fixed certain input fields on NPC sheets being illegible.
+
 # 2.11.21
 
 - (Maintenance) Made adjustments to NPC sheet themes to keep up to date with system changes.
