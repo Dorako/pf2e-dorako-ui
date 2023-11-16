@@ -1,7 +1,5 @@
 import * as util from "../util.js";
 import { ThemeSettings } from "./theme-settings.js";
-import { UXSettings } from "./ux-settings.js";
-import { AvatarSettings } from "./avatar-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
@@ -51,8 +49,6 @@ Hooks.once("init", async () => {
   });
 
   ThemeSettings.registerSettings();
-  AvatarSettings.registerSettings();
-  UXSettings.registerSettings();
   MiscSettings.registerSettings();
   CustomizationSettings.registerSettings();
   ExternalModuleSettings.registerSettings();
@@ -83,10 +79,10 @@ Hooks.once("init", async () => {
   // injectCSS("dorako-ux/dorako-ux");
   // injectCSS("fonts");
 
-  // const root = document.querySelector(":root").style;
+  const root = document.querySelector(":root").style;
 
   // root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
-  // root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "ux.border-radius").toString() + "px");
+  root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
   // root.setProperty("--control-size", game.settings.get("pf2e-dorako-ui", "ux.control-size").toString() + "px");
   // root.setProperty("--controls-alignment", game.settings.get("pf2e-dorako-ui", "ux.controls-alignment").toString());
 

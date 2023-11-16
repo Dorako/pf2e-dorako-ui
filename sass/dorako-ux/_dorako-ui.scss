@@ -22,33 +22,6 @@ section.readaloud {
   }
 }
 
-#sidebar {
-  & > .dorako-resize {
-    width: 6px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    cursor: col-resize;
-  }
-}
-
-#chat-form {
-  --chatform-height: 100px;
-  flex: 0 0 var(--chatform-height);
-  > .dorako-resize {
-    width: 100%;
-    height: 4px;
-    position: fixed;
-    cursor: row-resize;
-  }
-}
-
-#chat-controls.no-chat-control-icon {
-  .chat-control-icon {
-    display: none;
-  }
-}
-
 #fps {
   position: absolute;
   right: 0;
@@ -276,10 +249,6 @@ section.readaloud {
   margin-bottom: 0px;
 }
 
-.dorako-damage-roll .flavor-text > *:nth-child(-n + 3) {
-  display: none;
-}
-
 .frosted-glass {
   #hotbar .bar-controls,
   #hotbar .macro,
@@ -308,8 +277,9 @@ section.readaloud {
 /* ----------------------------------------- */
 
 .dorako-ui {
+  .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
-  .form-group.dorako-ui.settings-header {
+  .form-group.dorako.settings-header {
     font-size: larger;
     background-color: var(--bg);
     box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
@@ -322,6 +292,7 @@ section.readaloud {
     // text-shadow: 0px 0px 10px var(--secondary-light);
   }
 
+  .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
     font-size: var(--font-size-48);
     text-align: center;
@@ -331,24 +302,26 @@ section.readaloud {
 }
 
 .dorako-ui.dark-theme {
+  .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
-  .form-group.dorako-ui.settings-header {
+  .form-group.dorako.settings-header {
     @include glass;
     background: var(--glass-bg-light);
     margin-bottom: 10px;
     padding: 10px;
     color: var(--tertiary);
     text-shadow: 0px 0px 3px black;
-    // text-shadow: 0px 0px 10px var(--tertiary);
   }
+  .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
     color: var(--tertiary-dark);
   }
 }
 
 .foundry2 {
+  .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
-  .form-group.dorako-ui.settings-header {
+  .form-group.dorako.settings-header {
     @include f2-app;
     font-size: larger;
     margin: 2px;
@@ -364,6 +337,7 @@ section.readaloud {
     }
   }
 
+  .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
     font-size: var(--font-size-48);
     text-align: center;

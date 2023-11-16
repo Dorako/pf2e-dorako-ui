@@ -21,7 +21,6 @@
         "name": "Theme Settings",
         "label": "Configure Theme Settings",
         "hint": "Change theme settings for various applications and UI elements",
-
         "application-theme": {
           "name": "Application theme",
           "hint": "Affects rendered application windows",
@@ -31,6 +30,10 @@
             "dark-theme": "Dark Dorako UI",
             "foundry2-theme": "Foundry 2 inspired"
           }
+        },
+        "border-radius": {
+          "name": "Roundedness",
+          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
         },
         "frosted-glass": {
           "name": "Use frosted glass",
@@ -92,152 +95,13 @@
           "hint": "Does not affect premium modules journals"
         }
       },
-      "avatar": {
-        "name": "Avatar Settings",
-        "label": "Configure Avatar Settings",
-        "hint": "Configure settings related to avatars in chat messages",
-
-        "source": {
-          "name": "Chat avatars",
-          "hint": "Adds an avatar to chat messages",
-          "choice": {
-            "token": "Prefer token image",
-            "actor": "Prefer actor image"
-          }
-        },
-        "hide-when-token-hidden": {
-          "name": "Hide avatar when token is hidden?",
-          "hint": "Hides avatars when the speaker token is hidden"
-        },
-        "hide-gm-avatar-when-secret": {
-          "name": "Hide avatar when secret?",
-          "hint": "Hides avatars whenever GM rolls secret/private rolls"
-        },
-        "size": {
-          "name": "Size",
-          "hint": "Default of 40px"
-        },
-        "popout-support": {
-          "name": "Enable token avatar popout?",
-          "hint": "Scales the size of token avatars according to the token's scale"
-        },
-        "reacts-to-degree-of-success": {
-          "name": "Avatar reacts to critical rolls?",
-          "hint": "A critical success will glow green, and a critical failure becomes muted and dark"
-        },
-        "small-creature-token-avatar-size": {
-          "name": "Small creature avatar size",
-          "hint": "Default is 0.8"
-        },
-        "use-user-avatar": {
-          "name": "Use user avatar as fallback?",
-          "hint": "Configure user avatars by right-clicking users in the lower left area of Foundry"
-        }
-      },
-      "ux": {
-        "name": "UX Settings",
-        "label": "Configure UX Settings",
-        "hint": "Configure settings related to showing, hiding, making UI less obstructive or clearer, moving stuff to different locations",
-        "restructure-card-info": {
-          "name": "Restructure chat card info?",
-          "hint": "Makes action-cost for features more apparent, and moves spell info out of the footer"
-        },
-        "border-radius": {
-          "name": "Roundedness",
-          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
-        },
-        "control-size": {
-          "name": "Control size",
-          "hint": "(default: 36px) Changes the size of controls and navigation elements"
-        },
-        "controls-alignment": {
-          "name": "Controls alignment",
-          "hint": "Changes the position of the controls",
-          "choice": {
-            "start": "Top",
-            "center": "Middle",
-            "end": "Bottom"
-          }
-        },
-        "chat-merge": {
-          "name": "Enable chat merge?",
-          "hint": "(Experimental) Merges messages sent in a rapid sequence together to save space"
-        },
-        "adjust-chat-controls": {
-          "name": "Adjust chat controls?",
-          "hint": "(Experimental) Restyles rolltype mode to buttons, and convert other chat controls to buttons"
-        },
-        "adjust-token-effects-hud": {
-          "name": "Adjust token effects HUD?",
-          "hint": "Makes effects circular and arranges them outside the token, or on the token ring for larger tokens"
-        },
-        "remove-attack-info-from-damage-roll-messages": {
-          "name": "Remove attack info from damage roll messages?",
-          "hint": "Makes damage rolls take up less space by removing redundant hit information. Intended to be used with chat-merge"
-        },
-        "animate-messages": {
-          "name": "Animate messages to draw attention to certain events?",
-          "hint": "Makes whispers from players to GM draw more attention"
-        },
-        "compact-ui": {
-          "name": "Enable Compact UI?",
-          "hint": "Resizes controls, and hides inactive controls and navigation elements unless hovered"
-        },
-        "start-sidebar-collapsed": {
-          "name": "Collapse sidebar by default?",
-          "hint": "Uses the collapsed state as the initial state"
-        },
-        "start-navigation-collapsed": {
-          "name": "Collapse navigation by default?",
-          "hint": "Uses the collapsed state as the initial state"
-        },
-        "no-compendium-banner-images": {
-          "name": "Hide compendium banner images?",
-          "hint": "Removes the compendium banner images in the sidebar"
-        },
-        "no-logo": {
-          "name": "Hide Foundry logo?",
-          "hint": "Removes the Foundry logo in the top left"
-        },
-        "no-cards": {
-          "name": "Hide Cards tab?",
-          "hint": "Removes the Cards tab in the sidebar entirely"
-        },
-        "no-chat-control-icon": {
-          "name": "Hide chat control icon?",
-          "hint": "This is the dice icon next to roll options, it tends to crowd the UI"
-        },
-        "center-hotbar": {
-          "name": "Enable centered hotbar?",
-          "hint": "Also known as macrobar"
-        },
-        "enable-player-tags": {
-          "name": "Enable player tags?",
-          "hint": "Adds a tag containing the name of the player next to the speaker"
-        },
-        "enable-rolltype-indication": {
-          "name": "Enable rolltype tag?",
-          "hint": "Adds a tag containing the type of roll to chat messages"
-        }
-      },
       "misc": {
         "name": "Miscellaneous Settings",
         "label": "Configure Misc. Settings",
         "hint": "Configure settings related to other Dorako UI functionality",
-
         "enable-debug-mode": {
           "name": "Enable debug mode?",
           "hint": "Adds buttons to toggle dorako-ui and dark-theme styling for windows"
-        },
-
-        "send-to-chat": {
-          "name": "Add 'Send' button to window header?",
-          "hint": "Sends content to chat as if sent via sheet"
-        },
-
-        "skin-crb-journal": {
-          "name": "Enable CRB styling for journals?",
-          "hint": "Instructions at www.shorturl.at/mrzN1"
         }
       },
       "customization": {

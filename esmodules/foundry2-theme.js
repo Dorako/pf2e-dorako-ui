@@ -42,7 +42,7 @@ Hooks.on("renderApplication", (app, html, data) => {
     return;
   }
   const excludeString =
-    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", MonksEnhancedJournal";
+    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", EnhancedJournal";
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes(app.constructor.name)) {
     console.debug(

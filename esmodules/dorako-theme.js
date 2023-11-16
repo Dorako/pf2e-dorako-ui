@@ -175,8 +175,3 @@ Hooks.on("renderFamiliarSheetPF2e", (app, html, data) => {
   }
   html[0].classList.add(`${theme}-theme`);
 });
-
-// // Blue player sheet
-// Hooks.on("renderCharacterSheetPF2e", (app, html, data) => {
-//   html.closest(".app").find("aside").wrap("<div class='blue'></div>");
-// });

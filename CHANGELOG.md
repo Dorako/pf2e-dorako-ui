@@ -1,3 +1,7 @@
+# 3.0.0
+
+- (New) All non-UI functionality has been split to the new PF2e Dorako UX module.
+
 # 2.11.22
 
 - (Fix) Fixed certain input fields on NPC sheets being illegible.

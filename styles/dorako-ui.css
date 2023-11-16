@@ -368,334 +368,6 @@
   text-shadow: 0px 1px 5px black, 0px 1px 5px black;
 }
 
-.dalvyn-journal:not(.premium) {
-  /* By Dalvyn */
-  /* Custom CSS - PF2 STYLE v2.1 */
-  /* TITRES
-  ====================================================== */
-  --red: var(--primary);
-  --blue: var(--secondary);
-  --brown: #ad6f59;
-  /* TEXTE
-  ====================================================== */
-  /* SYMBOLES PF2
-  ====================================================== */
-  /* TABLES
-  ====================================================== */
-  /* TEXTES À LIRE
-  ====================================================== */
-  /* BLOCS DESCRIPTIFS (via h6)
-  ====================================================== */
-  /* Alignment (bold) */
-  /* Size (italics) */
-  /* Rarity (sub = uncommon, sup = rare, strikethrough = unique) */
-  /* Dorako */
-}
-.dalvyn-journal:not(.premium).journal-header .title,
-.dalvyn-journal:not(.premium) .journal-header .title {
-  color: var(--red) !important;
-  font-family: "Taroca Regular";
-}
-.dalvyn-journal:not(.premium).journal-entry-page h1,
-.dalvyn-journal:not(.premium) .journal-entry-page h1 {
-  color: var(--blue) !important;
-  font-family: "Taroca Regular";
-  line-height: 100%;
-  border-bottom: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page h1:hover,
-.dalvyn-journal:not(.premium) .journal-entry-page h1:hover {
-  background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
-}
-.dalvyn-journal:not(.premium).journal-entry-page h2,
-.dalvyn-journal:not(.premium) .journal-entry-page h2 {
-  color: var(--red) !important;
-  font-family: "Gin-Regular";
-  text-transform: uppercase;
-  line-height: 100%;
-  border-bottom: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page h2:hover,
-.dalvyn-journal:not(.premium) .journal-entry-page h2:hover {
-  background-image: linear-gradient(rgba(78, 7, 7, 0), rgba(78, 7, 7, 0), rgba(78, 7, 7, 0.2666666667));
-}
-.dalvyn-journal:not(.premium).journal-entry-page h3,
-.dalvyn-journal:not(.premium) .journal-entry-page h3 {
-  color: var(--brown) !important;
-  font-family: "Gin-Regular";
-  text-transform: uppercase;
-  line-height: 100%;
-  border-bottom: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page h3:hover,
-.dalvyn-journal:not(.premium) .journal-entry-page h3:hover {
-  background-image: linear-gradient(rgba(173, 111, 89, 0), rgba(173, 111, 89, 0), rgba(173, 111, 89, 0), rgba(173, 111, 89, 0.2666666667));
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h4,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h4 {
-  color: var(--blue) !important;
-  font-family: "Gin-Regular";
-  font-variant: small-caps;
-  font-size: 132%;
-  line-height: 100%;
-  border-bottom: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h4:hover,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h4:hover {
-  background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
-}
-.dalvyn-journal:not(.premium).journal-entry-page h5,
-.dalvyn-journal:not(.premium) .journal-entry-page h5 {
-  line-height: 100%;
-  font-variant: small-caps;
-  font-size: var(--font-size-14);
-  border-bottom: 0;
-  margin-bottom: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page h5:hover,
-.dalvyn-journal:not(.premium) .journal-entry-page h5:hover {
-  background-image: linear-gradient(rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0), rgba(2, 37, 110, 0.2666666667));
-}
-.dalvyn-journal:not(.premium).journal-entry-content, .dalvyn-journal:not(.premium).journal-entry-page .window-content,
-.dalvyn-journal:not(.premium) .journal-entry-page .window-content {
-  font-family: "Gelasio";
-}
-.dalvyn-journal:not(.premium).journal-entry-page code,
-.dalvyn-journal:not(.premium) .journal-entry-page code {
-  font-family: "pathfinder2eactions";
-  font-style: normal;
-  font-size: 150%;
-  line-height: 66%;
-}
-.dalvyn-journal:not(.premium).journal-entry-page table,
-.dalvyn-journal:not(.premium) .journal-entry-page table {
-  font-family: "roboto condensed";
-  max-width: calc(100% - 24px);
-  margin-left: auto;
-  margin-right: auto;
-}
-.dalvyn-journal:not(.premium).journal-entry-page table th,
-.dalvyn-journal:not(.premium) .journal-entry-page table th {
-  color: white;
-  background-color: var(--red);
-}
-.dalvyn-journal:not(.premium).journal-entry-page tr:nth-child(2n),
-.dalvyn-journal:not(.premium) .journal-entry-page tr:nth-child(2n) {
-  background-color: #f5efe0;
-  color: black;
-}
-.dalvyn-journal:not(.premium).journal-entry-page tr:nth-child(2n+1),
-.dalvyn-journal:not(.premium) .journal-entry-page tr:nth-child(2n+1) {
-  background-color: #efe3c8;
-  color: black;
-}
-.dalvyn-journal:not(.premium).journal-entry-page tr:hover,
-.dalvyn-journal:not(.premium) .journal-entry-page tr:hover {
-  background-color: #e9d7b0;
-  color: black;
-}
-.dalvyn-journal:not(.premium).journal-entry-page table td, .dalvyn-journal:not(.premium).journal-entry-page table th,
-.dalvyn-journal:not(.premium) .journal-entry-page table td,
-.dalvyn-journal:not(.premium) .journal-entry-page table th {
-  padding: 4px 6px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote),
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote) {
-  border-left-width: 0;
-  border-top: 2px solid #cfbf80;
-  border-bottom: 2px solid #cfbf80;
-  background-color: var(--red);
-  border-radius: 8px;
-  color: #cfbf80;
-  padding: 4px 12px;
-  margin-left: 0;
-  margin-right: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content blockquote:not(h6 + p + ul + blockquote, h6 + p + blockquote, h6 + ul + blockquote, h6 + blockquote):hover {
-  color: #efdfa2;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: rgba(245, 239, 224, 0.6666666667);
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p),
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p) {
-  font-family: "Tauri-Regular";
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.15em;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 {
-  border-bottom: 1px solid black;
-  padding: 4px 12px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p {
-  text-align: right;
-  position: relative;
-  bottom: 24px;
-  right: 12px;
-  height: 0;
-  margin: 0;
-  overflow: visible;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul {
-  clear: both;
-  display: flex;
-  font-family: "roboto condensed";
-  font-size: 94%;
-  list-style-type: none;
-  padding: 4px 12px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li strong,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li strong {
-  font-weight: normal;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li em,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li em {
-  font-style: normal;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li sub,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li sub {
-  vertical-align: baseline;
-  font-size: 100%;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li sup,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li sup {
-  vertical-align: baseline;
-  font-size: 100%;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li s,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li s {
-  text-decoration: none;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
-  margin: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
-  color: white;
-  border: 3px solid #dac68a;
-  border-left-width: 4px;
-  border-right-width: 4px;
-  text-transform: uppercase;
-  margin: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p {
-  background-color: #58180d;
-  padding: 2px 3px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > strong,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > strong {
-  background-color: #576293;
-  padding: 2px 3px;
-  margin: -2px -3px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > em,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > em {
-  background-color: #3b7b59;
-  padding: 2px 3px;
-  margin: -2px -3px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > sub,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > sub {
-  background-color: #98513d;
-  padding: 2px 3px;
-  margin: -2px -3px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > sup,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > sup {
-  background-color: #002664;
-  padding: 2px 3px;
-  margin: -2px -3px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul li p > s,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul li p > s {
-  background-color: #54166e;
-  padding: 2px 3px;
-  margin: -2px -3px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote {
-  border: 0;
-  padding: 0 12px 4px 12px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote {
-  border: 0;
-  padding: 4px 12px 4px 12px;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p {
-  font-family: "roboto condensed";
-  font-style: normal;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote em, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote em,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote em,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote em {
-  font-style: italic;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child), .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child),
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:has(strong:first-child),
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p:has(strong:first-child) {
-  text-indent: -1em;
-  margin-left: 1em;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p *, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p *,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p *,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p * {
-  text-indent: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote p:first-child,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote p:first-child,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote p:first-child {
-  margin-top: 0;
-}
-.dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + blockquote hr, .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content h6 + p + ul + blockquote hr,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + blockquote hr,
-.dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content h6 + p + ul + blockquote hr {
-  border-top: 0;
-  border-bottom: 1px solid black;
-  margin: 0;
-}
-
-.foundry2 .dalvyn-journal:not(.premium),
-.dalvyn-journal.dark-theme:not(.premium),
-.dalvyn-journal:not(.premium) .dark-theme {
-  --red: var(--primary-light);
-  --blue: var(--secondary-light);
-  --brown: #ad6f59;
-  color: var(--color-text-light-heading);
-}
-.foundry2 .dalvyn-journal:not(.premium) tbody,
-.dalvyn-journal.dark-theme:not(.premium) tbody,
-.dalvyn-journal:not(.premium) .dark-theme tbody {
-  color: black;
-}
-.foundry2 .dalvyn-journal:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.foundry2 .dalvyn-journal:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dalvyn-journal.dark-theme:not(.premium).journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dalvyn-journal.dark-theme:not(.premium) .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dalvyn-journal:not(.premium) .dark-theme.journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote),
-.dalvyn-journal:not(.premium) .dark-theme .journal-entry-page .journal-page-content :is(h6, h6 + p, h6 + p + ul, h6 + p + blockquote, h6 + p + ul + blockquote) {
-  color: black;
-}
-
-.dalvyn-journal:not(.premium).journal-entry-page .journal-header .title {
-  color: var(--blue) !important;
-  font-family: "Taroca Regular";
-}
-
 /* ----------------------------------------- */
 /* Damage Log                                */
 /* ----------------------------------------- */
@@ -2595,6 +2267,8 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background: rgba(96, 88, 86, 0.5);
   margin: 0px -5px;
 }
+#pf2e-token-hud.dorako-ui .sidebar.skills .sidebar-content .skill .header .modifier,
+#pf2e-token-hud.dorako-ui .sidebar.skills .sidebar-content .lore .modifier,
 #pf2e-token-hud.dorako-ui .sidebar.skills .skill .header .modifier,
 #pf2e-token-hud.dorako-ui .sidebar.skills .lore .modifier {
   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
@@ -3816,7 +3490,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background-color: var(--glass-bg-light);
   display: flex;
   align-items: center;
-  padding: unset;
+  padding: 2px 5px;
 }
 .dorako-ui#smalltime-app .arrow:hover, .dorako-ui#smalltime-app .arrow-left:hover, .dorako-ui#smalltime-app.arrow-right:hover {
   border: unset;
@@ -4594,6 +4268,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   cursor: pointer;
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
+  align-items: center;
 }
 .foundry2 #tokenizer div.section button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
@@ -5652,7 +5327,6 @@ nav#controls.dorako-ui {
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
-  align-items: var(--controls-alignment);
 }
 nav#controls.dorako-ui ol.control-tools.sub-controls > li,
 nav#controls.dorako-ui ol.control-tools.main-controls {
@@ -9223,6 +8897,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --color-border-dark-5: var(--color-cool-2);
   --color-border-dark-primary: var(--color-cool-4);
   --color-border-dark-secondary: var(--color-cool-5);
+  --color-border-light-1: var(--color-cool-3);
+  --color-border-light-2: var(--color-cool-4);
   --color-underline-header: var(--color-warm-2);
   --color-underline-active: var(--color-warm-1);
   --color-text-hyperlink: var(--color-warm-1);
@@ -9237,7 +8913,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 
 /* ----------------------------------------- */
-/* .foundry2-restricted specific                     */
+/* .foundry2-restricted specific             */
 /* ----------------------------------------- */
 .foundry2-restricted {
   --color-rarity-common: #efeadc;
@@ -9251,9 +8927,9 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* ----------------------------------------------------- */
+/* ------------------------------------------------------------- */
 /* Generalized style choices (inclusive of .foundry2-restricted) */
-/* ----------------------------------------------------- */
+/* ------------------------------------------------------------- */
 .foundry2-restricted,
 [data-theme=foundry2],
 .foundry2 {
@@ -9451,6 +9127,11 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 [data-theme=foundry2] input[type=range]:not(:disabled)::-webkit-slider-thumb:hover,
 .foundry2 input[type=range]:not(:disabled)::-webkit-slider-thumb:hover {
   outline: 4px solid var(--color-warm-1);
+}
+[data-theme=foundry2] input[type=color][data-edit],
+.foundry2 input[type=color][data-edit] {
+  border: 1px solid var(--color-border-light-highlight);
+  border-radius: var(--border-radius);
 }
 [data-theme=foundry2] input[type=color i]::-webkit-color-swatch,
 .foundry2 input[type=color i]::-webkit-color-swatch {
@@ -9964,7 +9645,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-radius: var(--border-radius);
   background: unset;
   background: var(--app-background);
-  border: 1px solid var(--color-cool-3);
+  border: 1px solid var(--app-border-color);
 }
 [data-theme=foundry2].window-app,
 .foundry2.window-app {
@@ -14011,7 +13692,7 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2-restricted.sheet.actor.window-app.green-theme.vehicle .window-header, .foundry2-restricted.sheet.actor.window-app.green-theme.character .window-header {
   background: #0e2a1a;
 }
-.foundry2-restricted.sheet.actor.window-app.blue-theme.vehicle .window-header .foundry2-restricted.sheet.actor.window-app.blue-theme.character .window-header {
+.foundry2-restricted.sheet.actor.window-app.blue-theme.vehicle .window-header, .foundry2-restricted.sheet.actor.window-app.blue-theme.character .window-header {
   background: #1a1e5f;
 }
 .foundry2-restricted.sheet.actor.window-app.minimized .window-header {
@@ -14776,7 +14457,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --banner-top: url(../img/blue-sidebar-top.webp);
   --banner-bottom: url(../img/blue-sidebar-bottom.webp);
   --hotbar-width: unset;
-  --controls-margin: 8px;
   /* Degrees of success */
   --degree-success-critical: rgb(0, 128, 0);
   --degree-success: rgb(0, 0, 255);
@@ -14791,14 +14471,14 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-warm-1: #ee9b3a;
   --color-warm-2: #c9593f;
   --color-warm-3: #5d142b;
-  --color-warm-3-75: #5d142bd2;
+  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
   --color-warm-4: #420418;
-  --color-warm-4-75: #420418d7;
+  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
   --color-warm-5: #26020d;
   --color-cool-1: #b1a0d4;
   --color-cool-2: #79689c;
   --color-cool-3: #584a75;
-  --color-cool-3-75: #584a75af;
+  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
   --color-cool-4: #302831;
   --color-cool-5: #0b0a13;
   --color-cool-5-25: rgba(11, 10, 19, 0.25);
@@ -14835,6 +14515,163 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-scrollbar-border: #8d151b;
   --app-background: var(--color-cool-5-90);
   --app-border-color: var(--color-cool-4);
+}
+
+:root {
+  --brown-1: rgb(223, 207, 153);
+  --brown-2: rgb(163, 141, 109);
+  --brown-3: rgb(117, 81, 29);
+  --brown-4: rgb(115, 78, 50);
+  --table-header: rgb(51, 47, 36);
+  --table-odd: rgb(38, 35, 27);
+  --table-even: rgb(33, 31, 24);
+  --dark-20: rgb(20, 20, 20);
+  --dark-15: rgb(15, 15, 15);
+  --link-color: #f2c462;
+  --link-active-color: #f2dcae;
+  --red-link-color: #f25749;
+  --red-link-active-color:#f2b4ae
+  --trade-exact-price: rgb(163, 141, 109);
+  --trade-currency-text: rgb(170, 158, 130);
+  --trade-button-text-color: rgb(233, 207, 159);
+  --trade-color-light-1: rgb(255, 248, 225);
+  --trade-color-light-2: rgb(163, 141, 109);
+  --trade-color-light-3: rgb(130, 120, 106);
+  --poe-color-default: rgb(127, 127, 127);
+  --poe-color-valuedefault: rgb(255, 255, 255);
+  --poe-color-pink: rgb(255, 192, 203);
+  --poe-color-dodgerblue: rgb(30, 144, 255);
+  --poe-color-fire: rgb(150, 0, 0);
+  --poe-color-cold: rgb(54, 100, 146);
+  --poe-color-lightning: rgb(255, 215, 0);
+  --poe-color-chaos: rgb(208, 32, 144);
+  --poe-color-augmented: rgb(136, 136, 255);
+  --poe-color-crafted: rgb(184, 218, 242);
+  --poe-color-fractured: rgb(162, 145, 98);
+  --poe-color-enchanted: rgb(184, 218, 242);
+  --poe-color-hellscaped: rgb(255, 110, 37);
+  --poe-color-unmet: rgb(210, 0, 0);
+  --poe-color-uniqueitem: rgb(175, 96, 37);
+  --poe-color-unique: rgb(175, 96, 37);
+  --poe-color-rareitem: rgb(255, 255, 119);
+  --poe-color-rare: rgb(255, 255, 119);
+  --poe-color-magicitem: rgb(136, 136, 255);
+  --poe-color-magic: rgb(136, 136, 255);
+  --poe-color-whiteitem: rgb(200, 200, 200);
+  --poe-color-normal: rgb(200, 200, 200);
+  --poe-color-gemitem: rgb(27, 162, 155);
+  --poe-color-gem: rgb(27, 162, 155);
+  --poe-color-currencyitem: rgb(170, 158, 130);
+  --poe-color-currency: rgb(170, 158, 130);
+  --poe-color-questitem: rgb(74, 230, 58);
+  --poe-color-quest: rgb(74, 230, 58);
+  --poe-color-nemesismod: rgb(255, 200, 0);
+  --poe-color-nemesismodoutline: rgb(219, 34, 0); /* 220,255,40,0 */
+  --poe-color-talismanmod: rgb(141, 241, 79);
+  --poe-color-talismanmodoutline: rgb(0, 0, 0); /* 220,0,0,0 */
+  --poe-color-title: rgb(231, 180, 120);
+  --poe-color-corrupted: rgb(210, 0, 0);
+  --poe-color-favour: rgb(170, 158, 130);
+  --poe-color-supporterpacknewitem: rgb(180, 96, 0);
+  --poe-color-supporterpackitem: rgb(163, 141, 109);
+  --poe-color-bloodlinemod: rgb(210, 0, 220);
+  --poe-color-bloodlinemodoutline: rgb(58, 0, 125); /* 200,74,0,160 */
+  --poe-color-tormentmod: rgb(50, 230, 100);
+  --poe-color-tormentmodoutline: rgb(0, 78, 117); /* 200,0,100,150 */
+  --poe-color-canttradeormodify: rgb(210, 0, 0);
+  --poe-color-lockedtoaccount: rgb(210, 0, 0);
+  --poe-color-divination: rgb(14, 186, 255);
+  --poe-color-prophecy: rgb(181, 75, 255);
+  --poe-color-essencemod: rgb(164, 210, 255);
+  --poe-color-essencemodoutline: rgb(0, 41, 82); /* 210,0,50,100 */
+  --poe-color-premiumchat: rgb(253, 242, 126);
+  --poe-color-premiumchatoutline: rgb(209, 46, 46);
+  --poe-color-uniquefoil: rgb(130, 173, 106);
+  --poe-color-legacy: rgb(212, 145, 63);
+  --poe-color-bestiarymod: rgb(255, 255, 255);
+  --poe-color-bestiarymodoutline: rgb(219, 34, 0); /* 220,255,40,0 */
+  --poe-color-blightmod: rgb(255, 255, 255);
+  --poe-color-blightmodoutline: rgb(215, 0, 0); /* 255,215,0,0 */
+  --poe-color-afflictionmod: rgb(22, 25, 28);
+  --poe-color-afflictionmodoutline: rgb(151, 164, 181); /* 200,193,210,232 */
+  --poe-color-stackitemlevel: rgb(255, 255, 255);
+  --poe-color-harvestprimary: rgb(100, 111, 73);
+  --poe-color-harvestsecondary: rgb(83, 130, 161);
+  --poe-color-craftingcaster: rgb(179, 248, 254);
+  --poe-color-craftingphysical: rgb(199, 157, 147);
+  --poe-color-craftingfire: rgb(255, 154, 119);
+  --poe-color-craftingcold: rgb(147, 216, 255);
+  --poe-color-craftinglightning: rgb(248, 203, 118);
+  --poe-color-craftingchaos: rgb(216, 167, 211);
+  --poe-color-craftingspeed: rgb(207, 238, 165);
+  --poe-color-craftingcrit: rgb(178, 167, 214);
+  --poe-color-craftingred: rgb(200, 103, 110);
+  --poe-color-craftingblue: rgb(162, 207, 251);
+  --poe-color-craftinggreen: rgb(134, 189, 163);
+  --poe-color-craftinglife: rgb(201, 110, 110);
+  --poe-color-craftingdefences: rgb(168, 143, 103);
+  --poe-color-craftingattack: rgb(218, 129, 77);
+  --poe-color-heist: rgb(25, 30, 25);
+  --poe-color-heiststolenitem: rgb(210, 0, 0);
+  --poe-color-atlasmaven: rgb(182, 12, 169);
+  --poe-color-ultimatumnumber: rgb(254, 92, 81);
+  --poe-color-incursionunreachable: rgb(90, 90, 90);
+  --poe-color-lockedinplaceitem: rgb(127, 127, 127);
+  --poe-color-craftaffectremove: rgb(254, 153, 0);
+  --poe-color-craftaffectwarning: rgb(235, 200, 80);
+  --poe-color-craftaffectreroll: rgb(254, 153, 0);
+  --poe-color-skillpopuptitle: rgb(249, 230, 202);
+  --poe-color-disabledstats: rgb(150, 150, 167);
+  --poe-color-skillextrainfo: rgb(255, 192, 119);
+  --poe-color-fakeitemcount: rgb(200, 200, 200);
+}
+:root .c-cblock {
+  border: 1px solid #2c2b2b;
+  background-color: #141414;
+}
+:root .c-cblock--violet {
+  border-color: #585477;
+  background-color: #151517;
+}
+:root .c-cblock--gold {
+  border-color: #75693c;
+  background-color: #1c1b19;
+}
+:root .c-mbox--warning {
+  border-color: #781c1c;
+  background-color: #241515;
+}
+:root .c-mbox--action {
+  border-color: #693a1e;
+  background-color: #26211f;
+}
+:root .c-mbox--content {
+  border-color: #664c1e;
+  background-color: #26231f;
+}
+:root .c-mbox--style {
+  border-color: #75693c;
+  background-color: #24231f;
+}
+:root .c-mbox--info {
+  border-color: #4b5e6a;
+  background-color: #191b1c;
+}
+:root .c-mbox--legal {
+  border-color: #403b2d;
+  background-color: #21201c;
+}
+:root .c-mbox--proposal {
+  border-color: #585477;
+  background-color: #19191c;
+}
+:root .c-mbox--lock {
+  border-color: #59534e;
+  background-color: #211f1d;
+}
+:root #catlinks {
+  border: 1px solid #503a1e;
+  background-color: #130f0a;
 }
 
 /* ----------------------------------------- */
@@ -15220,29 +15057,6 @@ section.readaloud:before, section.readaloud:after {
   background: none;
 }
 
-#sidebar > .dorako-resize {
-  width: 6px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  cursor: col-resize;
-}
-
-#chat-form {
-  --chatform-height: 100px;
-  flex: 0 0 var(--chatform-height);
-}
-#chat-form > .dorako-resize {
-  width: 100%;
-  height: 4px;
-  position: fixed;
-  cursor: row-resize;
-}
-
-#chat-controls.no-chat-control-icon .chat-control-icon {
-  display: none;
-}
-
 #fps {
   position: absolute;
   right: 0;
@@ -15426,10 +15240,6 @@ section.readaloud:before, section.readaloud:after {
   margin-bottom: 0px;
 }
 
-.dorako-damage-roll .flavor-text > *:nth-child(-n+3) {
-  display: none;
-}
-
 .frosted-glass #hotbar .bar-controls,
 .frosted-glass #hotbar .macro,
 .frosted-glass nav#navigation ol#scene-list li.nav-item,
@@ -15454,8 +15264,9 @@ section.readaloud:before, section.readaloud:after {
 /* ----------------------------------------- */
 /* Settings                                  */
 /* ----------------------------------------- */
+.dorako-ui .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 .dorako-ui .tab.category.active[data-tab=pf2e-dorako-ui] h2,
-.dorako-ui .form-group.dorako-ui.settings-header {
+.dorako-ui .form-group.dorako.settings-header {
   font-size: larger;
   background-color: var(--bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
@@ -15466,6 +15277,7 @@ section.readaloud:before, section.readaloud:after {
   padding: 10px;
   color: var(--secondary-light);
 }
+.dorako-ui .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 .dorako-ui .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
   font-size: var(--font-size-48);
   text-align: center;
@@ -15473,8 +15285,9 @@ section.readaloud:before, section.readaloud:after {
   text-shadow: 0px 1px 0px var(--primary);
 }
 
+.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 .dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2,
-.dorako-ui.dark-theme .form-group.dorako-ui.settings-header {
+.dorako-ui.dark-theme .form-group.dorako.settings-header {
   border: none;
   border-radius: var(--border-radius);
   background: none;
@@ -15486,12 +15299,14 @@ section.readaloud:before, section.readaloud:after {
   color: var(--tertiary);
   text-shadow: 0px 0px 3px black;
 }
+.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 .dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
   color: var(--tertiary-dark);
 }
 
+.foundry2 .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 .foundry2 .tab.category.active[data-tab=pf2e-dorako-ui] h2,
-.foundry2 .form-group.dorako-ui.settings-header {
+.foundry2 .form-group.dorako.settings-header {
   background: var(--app-background);
   border: 1px solid var(--app-border-color);
   text-shadow: 0px 1px 2px black;
@@ -15509,10 +15324,12 @@ section.readaloud:before, section.readaloud:after {
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
 }
+.foundry2 .tab.category.active[data-tab=pf2e-dorako-ux] h2 .notes,
 .foundry2 .tab.category.active[data-tab=pf2e-dorako-ui] h2 .notes,
-.foundry2 .form-group.dorako-ui.settings-header .notes {
+.foundry2 .form-group.dorako.settings-header .notes {
   color: var(--color-light-3);
 }
+.foundry2 .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 .foundry2 .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
   font-size: var(--font-size-48);
   text-align: center;

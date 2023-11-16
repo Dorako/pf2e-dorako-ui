@@ -13,6 +13,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
     "frosted-glass",
     "glass-bg",
     "enable-dark-theme-journals",
+    "border-radius",
   ];
 
   static get settings() {
@@ -134,6 +135,24 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           for (const app of apps) {
             app.render();
           }
+        },
+      },
+      "border-radius": {
+        name: "pf2e-dorako-ui.settings.theme.border-radius.name",
+        hint: "pf2e-dorako-ui.settings.theme.border-radius.hint",
+        scope: "client",
+        type: Number,
+        default: 3,
+        range: {
+          min: 0,
+          max: 48,
+          step: 1,
+        },
+        config: true,
+        requiresReload: false,
+        onChange: (value) => {
+          const root = document.querySelector(":root").style;
+          root.setProperty("--border-radius", `${value}px`);
         },
       },
       "enable-dark-theme-journals": {
