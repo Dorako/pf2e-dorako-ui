@@ -185,6 +185,14 @@
     border-radius: 4px;
   }
 
+  code {
+    background: var(--color-cool-4);
+    border: 1px solid var(--color-cool-3);
+    color: var(--color-light-2);
+    border-radius: 3px;
+    padding: 0px 2px;
+  }
+
   a.content-link,
   [data-pf2-check],
   a.entity-link,
@@ -824,8 +832,14 @@
     color: var(--color-light-2);
   }
 
+  &.pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
+    @include f2-app;
+    border-color: var(--color-warm-1);
+  }
+
   &.pf2e.item.sheet .sheet-header img {
-    border: 1px solid var(--color-cool-3);
+    @include f2-app;
+    border-color: var(--color-warm-1);
     border-radius: 3px;
   }
 
@@ -835,6 +849,8 @@
     --button-background-color: var(--color-warm-3);
     --button-hover-border-color: var(--color-warm-4);
     --button-hover-background-color: var(--color-warm-5);
+    --box-shadow: none;
+    border-color: var(--button-border-color);
     z-index: 1;
   }
 

@@ -26,8 +26,8 @@
           "hint": "Affects rendered application windows",
           "choice": {
             "no-theme": "No theme",
-            "light-theme": "Light Dorako UI",
-            "dark-theme": "Dark Dorako UI",
+            "light-theme": "CRB inspired (light)",
+            "dark-theme": "CRB inspired (dark)",
             "foundry2-theme": "Foundry 2 inspired"
           }
         },

@@ -25,3 +25,14 @@
     }
   }
 }
+
+.foundry2 {
+  &.pf2e.item.sheet form .tab.active.rules .rule-form .validation-failures {
+    border: 1px solid transparent;
+    text-shadow: 0px 0px 3px black;
+    box-shadow: 0px 2px 2px black;
+
+    background: var(--color-level-warning-bg);
+    border-color: var(--color-level-warning-border);
+  }
+}

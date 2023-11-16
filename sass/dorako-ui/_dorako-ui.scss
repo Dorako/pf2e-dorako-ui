@@ -43,7 +43,7 @@ section.readaloud {
 }
 
 .chat-message {
-  .dorako-header {
+  .message-header.dorako-header {
     padding-bottom: 5px;
     box-shadow: var(--gold-and-glow);
     background: var(--sheet-light);
@@ -245,9 +245,9 @@ section.readaloud {
   }
 }
 
-.chat-message > .message-header {
-  margin-bottom: 0px;
-}
+// .chat-message > .message-header {
+//   margin-bottom: 0px;
+// }
 
 .frosted-glass {
   #hotbar .bar-controls,

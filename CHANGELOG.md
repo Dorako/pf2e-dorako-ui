@@ -1,3 +1,7 @@
+# 3.0.1
+
+- (Fix) Fixed an issue with chat message headers in CRB theme.
+
 # 3.0.0
 
 - (New) All non-UI functionality has been split to the new PF2e Dorako UX module.

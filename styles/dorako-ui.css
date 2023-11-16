@@ -5784,6 +5784,20 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: none;
 }
 
+.dorako-ui.pf2e.item.sheet form .tab.active.rules .rule-form .validation-failures {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  background-color: var(--glass-bg);
+  box-shadow: var(--glassy);
+  text-shadow: 0px 0px 3px black;
+  color: var(--color-text-light-highlight);
+  background-color: #ecbf41;
+  color: black;
+  text-shadow: none;
+  border: none;
+}
+
 /* ----------------------------------------- */
 /* Sidebar                                   */
 /* ----------------------------------------- */
@@ -8972,6 +8986,15 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   box-shadow: unset;
   border-radius: 4px;
 }
+.foundry2-restricted code,
+[data-theme=foundry2] code,
+.foundry2 code {
+  background: var(--color-cool-4);
+  border: 1px solid var(--color-cool-3);
+  color: var(--color-light-2);
+  border-radius: 3px;
+  padding: 0px 2px;
+}
 .foundry2-restricted a.content-link,
 .foundry2-restricted [data-pf2-check],
 .foundry2-restricted a.entity-link,
@@ -10569,8 +10592,25 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--color-cool-3);
   color: var(--color-light-2);
 }
+.foundry2.pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  border-color: var(--color-warm-1);
+}
 .foundry2.pf2e.item.sheet .sheet-header img {
-  border: 1px solid var(--color-cool-3);
+  background: var(--app-background);
+  border: 1px solid var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  --box-shadow: 0px 1px 3px 1px black;
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  border-color: var(--color-warm-1);
   border-radius: 3px;
 }
 .foundry2.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment, .foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
@@ -10578,6 +10618,8 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-background-color: var(--color-warm-3);
   --button-hover-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-warm-5);
+  --box-shadow: none;
+  border-color: var(--button-border-color);
   z-index: 1;
 }
 .foundry2.pf2e.item.sheet form .tab.active.rules select {
@@ -11150,6 +11192,14 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
 .foundry2 .notification.error {
   background: var(--color-level-error-bg);
   border-color: var(--color-level-error-border);
+}
+
+.foundry2.pf2e.item.sheet form .tab.active.rules .rule-form .validation-failures {
+  border: 1px solid transparent;
+  text-shadow: 0px 0px 3px black;
+  box-shadow: 0px 2px 2px black;
+  background: var(--color-level-warning-bg);
+  border-color: var(--color-level-warning-border);
 }
 
 /* ----------------------------------------- */
@@ -14771,271 +14821,6 @@ nav#controls.foundry2 ol.control-tools > li.toggle:disabled {
   --color-text-void: rgb(122, 38, 117);
 }
 
-body.compact-ui #controls .main-controls .scene-control:not(.active, .toggle),
-body.compact-ui #controls .sub-controls .control-tool:not(.active, .toggle) {
-  display: none;
-}
-body.compact-ui #controls {
-  flex-wrap: nowrap;
-  flex-direction: row;
-}
-body.compact-ui .main-controls {
-  display: flex;
-  flex-direction: column;
-}
-body.compact-ui #ui-left.active #controls .main-controls .scene-control,
-body.compact-ui #ui-left.active #controls .sub-controls .control-tool {
-  align-items: center;
-  display: flex;
-}
-body.compact-ui #controls ol.main-controls.app.control-tools {
-  width: unset;
-}
-body.compact-ui #navigation #scene-list .scene:not(.active, .view),
-body.compact-ui #navigation #nav-toggle {
-  display: none;
-}
-body.compact-ui #navigation {
-  pointer-events: all;
-}
-body.compact-ui #navigation:hover #scene-list .scene {
-  display: flex;
-}
-body.compact-ui #players {
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-}
-body.compact-ui #players:hover {
-  transition: opacity 0.25s ease-in-out;
-  opacity: 1;
-}
-
-.dorako-ux.sheet.pf2e.actor.npc {
-  --section-background: var(--sheet);
-  --section-header: var(--primary);
-  --section-border-color: var(--tertiary);
-  --section-outline-color: var(--gold-brown);
-  --section-header-text-color: var(--color-light-2);
-  --tag-border-color: var(--alt-dark);
-  --tag-background-color: transparent;
-  --tag-text-color: var(--alt-dark);
-  --color-border-light-highlight: var(--primary);
-  --color-border-light-primary: var(--primary-light);
-  --color-border-light-tertiary: var(--primary);
-  --color-border-light-2: var(--color-light-5);
-  --bg: var(--section-background);
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header {
-  --color-text-dark-input: var(--color-light-2);
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select, .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text], .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number] {
-  color: var(--color-text-dark-input);
-  border-color: transparent;
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative select:hover:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text]:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=text]:hover:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number]:focus:not(disabled), .dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form input[type=number]:hover:not(disabled) {
-  box-shadow: none;
-  border-color: transparent;
-}
-.dorako-ux.sheet.pf2e.actor.npc.pf2e.actor form .tag-legacy {
-  background: var(--tag-background-color);
-  border-color: var(--tag-border-color);
-  color: var(--tag-text-color);
-}
-.dorako-ux.sheet.pf2e.actor.npc .tags .tag.tag_transparent,
-.dorako-ux.sheet.pf2e.actor.npc .tags .tag option.tag_transparent {
-  background: var(--tag-background-color);
-  border: 1px solid var(--tag-border-color);
-  color: var(--tag-text-color);
-  box-shadow: unset;
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .adjustments {
-  gap: 1px;
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .adjustments .trait {
-  border: 1px solid var(--tertiary);
-  outline: 1px solid var(--gold-brown);
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry {
-  border: 1px solid var(--section-border-color);
-  outline: 1px solid var(--section-outline-color);
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header {
-  background: var(--section-header);
-  border-bottom: 1px solid var(--section-border-color);
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section,
-.dorako-ux.sheet.pf2e.actor.npc .section-container {
-  box-shadow: 0px 2px 5px black;
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list, .dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form ol.spell-list > li.spell-level-header {
-  border-color: transparent;
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .notes .notes-section > h4 {
-  color: var(--color-text-dark-input);
-}
-.dorako-ux.sheet.pf2e.actor.npc .tox.tox-tinymce .tox-edit-area__iframe {
-  background: white;
-}
-.dorako-ux.sheet.pf2e.actor.npc.actor.npc.sheet form .side-bar-section.initiative a.roll-init {
-  margin-bottom: unset;
-}
-.dorako-ux.sheet.pf2e.actor.npc ol.spell-list > li .item-name .item-image .item-icon {
-  border-radius: 3px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sheet-body .tab {
-  padding-top: 2px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .activity-icon {
-  font-weight: 100;
-}
-.dorako-ux.sheet.pf2e.actor.npc form input.adjustable:not(:focus).adjusted-higher,
-.dorako-ux.sheet.pf2e.actor.npc form span.adjustable.adjusted-higher {
-  color: green !important;
-}
-.dorako-ux.sheet.pf2e.actor.npc form input.adjustable:not(:focus).adjusted-lower,
-.dorako-ux.sheet.pf2e.actor.npc form span.adjustable.adjusted-lower {
-  color: red !important;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .top-sections {
-  gap: 5px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section {
-  background: var(--section-background);
-  background-size: cover;
-  border: 1px solid var(--section-border-color);
-  outline: 1px solid var(--section-outline-color);
-  border-radius: 3px;
-  margin: 3px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.initiative select {
-  width: 98%;
-  margin-bottom: 2px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section .side-bar-section-header {
-  align-items: center;
-  margin-bottom: unset;
-  margin-bottom: 2px;
-  padding-left: 4px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section .side-bar-section-header.disabled {
-  margin-bottom: unset;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed .side-bar-section-header {
-  margin-bottom: unset;
-  border-bottom: unset;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed .side-bar-section-header.disabled {
-  margin-bottom: unset;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed {
-  max-height: 26px;
-  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed .side-bar-section-header {
-  border-radius: 3px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed:not(.empty):hover {
-  max-height: 1000px;
-  transition: max-height 1s ease-in-out;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed:not(.empty):hover .side-bar-section-header {
-  border-radius: 3px 3px 0px 0px;
-  border-bottom: 1px solid var(--section-border-color);
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed:not(.empty):hover .side-bar-section-content {
-  display: block;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section.collapsed .side-bar-section-content {
-  display: none;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .section-container {
-  padding: 0px;
-  border-radius: 3px;
-  margin: 3px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  background: var(--section-background);
-  border: 1px solid var(--section-border-color);
-  outline: 1px solid var(--section-outline-color);
-  background-size: cover;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .section-container .section-header {
-  background: var(--section-header);
-  border: unset;
-  border-bottom: 1px solid var(--section-border-color);
-  color: var(--section-header-text-color);
-}
-.dorako-ux.sheet.pf2e.actor.npc form .section-container .section-body {
-  border: none;
-  padding: 0;
-  padding: 5px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .section-container.toggles {
-  outline: none;
-  border-image-repeat: repeat;
-  border-image-slice: 11;
-  border-image-source: var(--ornamentation);
-  border-image-width: 14px;
-  border-style: double;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: 0px;
-  font-weight: 500;
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  box-shadow: none;
-  background: none;
-  margin: 5px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sidebar .image-container {
-  border: none;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sidebar .saves-section.side-bar-section {
-  display: flex;
-  flex-direction: column;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sidebar .saves-section.side-bar-section.collapsed {
-  max-height: 10rem;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sidebar .saves-section.side-bar-section.collapsed:hover {
-  max-height: 1000px;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sidebar .saves {
-  margin-top: 4px;
-  width: unset;
-}
-.dorako-ux.sheet.pf2e.actor.npc form .sidebar .save-details {
-  font-size: 14px;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header {
-  background: var(--section-header);
-  border-radius: 3px 3px 0px 0px;
-  color: var(--section-header-text-color);
-  margin-top: 0px;
-  height: 24px;
-  border: unset;
-  border-bottom: 1px solid var(--section-border-color);
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header.disabled {
-  border-radius: 3px;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .inventory-section .inventory-list .item .item-image {
-  border: none;
-  margin: 3px 4px 3px 6px;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .side-bar .image-container,
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .actions-options .actions-option {
-  cursor: pointer;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-content {
-  width: 98%;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
 /* ----------------------------------------- */
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
@@ -15076,7 +14861,7 @@ section.readaloud:before, section.readaloud:after {
   border: none;
 }
 
-.chat-message .dorako-header {
+.chat-message .message-header.dorako-header {
   padding-bottom: 5px;
   box-shadow: var(--gold-and-glow);
   background: var(--sheet-light);
@@ -15236,10 +15021,6 @@ section.readaloud:before, section.readaloud:after {
   color: white;
 }
 
-.chat-message > .message-header {
-  margin-bottom: 0px;
-}
-
 .frosted-glass #hotbar .bar-controls,
 .frosted-glass #hotbar .macro,
 .frosted-glass nav#navigation ol#scene-list li.nav-item,
@@ -15337,10 +15118,6 @@ section.readaloud:before, section.readaloud:after {
   background: var(--color-warm-2);
   border-color: var(--color-warm-1);
   text-shadow: 0px 1px 0px var(--color-warm-3);
-}
-
-.dorako-display-none {
-  display: none !important;
 }
 
 a.content-link,
