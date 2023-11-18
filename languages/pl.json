@@ -89,6 +89,10 @@
           "choice": {
             "dark-red-header": "Ciemny + czerwony nagłówek"
           }
+        },
+        "border-radius": {
+          "name": "Zaokrąglenie",
+          "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika"
         }
       },
       "avatar": {
