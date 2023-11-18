@@ -44,10 +44,9 @@
     text-shadow: unset;
     backdrop-filter: blur(4px);
     //prettier-ignore
-    box-shadow: 0px 5px 20px 3px black,
-                    0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent),
-                    0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent),
-                    0px 0px 10px 05px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+    // Electron app bug
+    box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
+      0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 05px var(--color-warm-1-40);
 
     .window-header {
       border: unset;
