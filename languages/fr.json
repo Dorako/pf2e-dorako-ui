@@ -170,7 +170,7 @@
           "hint": "Affecte tous les messages de la conversation",
           "choice": {
             "factions": "Joueurs en clair, MJ en sombre",
-            "foundry2": "Foundry 2"
+            "foundry2": "Inspiré de Foundry 2"
           }
         },
         "pc-sheet-theme": {
@@ -214,15 +214,19 @@
           "hint": "Affecte les fenêtres d'application rendues",
           "choice": {
             "no-theme": "Pas de thème",
-            "light-theme": "Dorako UI clair",
-            "dark-theme": "Dorako UI sombre",
-            "foundry2-theme": "Foundry 2"
+            "light-theme": "Inspiré du LdB (clair)",
+            "dark-theme": "Inspiré du LdB (sombre)",
+            "foundry2-theme": "Inspiré de Foundry 2"
           },
           "name": "Thème de l'application"
         },
         "enable-dark-theme-journals": {
           "name": "Activer le thème sombre dans les journaux ?",
           "hint": "N'affecte par les modules de journaux premium"
+        },
+        "border-radius": {
+          "name": "Arrondi",
+          "hint": "(défaut : 3px) Change le degré de l'arrondi de nombreux éléments de l'IU"
         }
       },
       "avatar": {
