@@ -2,7 +2,7 @@
 /* FPS display                               */
 /* ----------------------------------------- */
 
-#fps[data-theme="foundry2"] {
+#fps[data-dorako-ui-theme] {
   @include f2-app;
 }
 
@@ -10,7 +10,7 @@
 /* Tooltip                                   */
 /* ----------------------------------------- */
 
-#tooltip[data-theme="foundry2"] {
+#tooltip[data-dorako-ui-theme] {
   background: var(--app-background);
   border: 1px solid var(--color-warm-1);
   box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
@@ -27,7 +27,7 @@
 /* Players                                   */
 /* ----------------------------------------- */
 
-#players.foundry2 {
+#players[data-dorako-ui-theme] {
   @include f2-app;
 
   h3 {
@@ -46,7 +46,7 @@
 /* Context menu                              */
 /* ----------------------------------------- */
 
-.foundry2 #context-menu {
+[data-dorako-ui-theme] #context-menu {
   @include f2-tooltip;
   li.context-item {
     &:first-child {
@@ -69,9 +69,8 @@
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
 
-[data-theme="foundry2"],
-.foundry2-restricted,
-.foundry2 {
+[data-dorako-ui-theme],
+.foundry2-restricted {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
   --color-border-light-highlight: var(--color-cool-3);
@@ -100,26 +99,6 @@
   --color-bg-option: var(--color-cool-4);
 }
 
-// [data-theme="foundry2"],
-// .foundry2-restricted,
-// .foundry2 {
-//   // &.poe {
-//   --color-warm-1: color-mix(in srgb, var(--poe-color-gem) 50%, white);
-//   --color-warm-2: var(--poe-color-gem);
-//   --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
-//   --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
-//   --color-cool-1: var(--tertiary);
-//   --color-cool-2: var(--tertiary);
-//   --color-cool-3: #664c1e;
-//   --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
-//   --color-cool-4: #26231f;
-//   --app-background: var(--dark-15);
-//   --app-border-color: var(--brown-4);
-//   --color-scrollbar: var(--poe-color-gem);
-//   --color-scrollbar-border: color-mix(in srgb, var(--poe-color-gem) 50%, white);
-//   // }
-// }
-
 /* ----------------------------------------- */
 /* .foundry2-restricted specific             */
 /* ----------------------------------------- */
@@ -140,9 +119,8 @@
 /* Generalized style choices (inclusive of .foundry2-restricted) */
 /* ------------------------------------------------------------- */
 
-.foundry2-restricted,
-[data-theme="foundry2"],
-.foundry2 {
+[data-dorako-ui-theme],
+.foundry2-restricted {
   // Dark theme
   --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
@@ -170,6 +148,7 @@
   --input-placeholder-color: var(--color-light-4);
   --input-text-selection-color: var(--color-cool-3);
   --input-focus-outline-color: var(--color-cool-3);
+  --box-shadow: 0px 1px 3px 1px black;
 
   ::-webkit-scrollbar-thumb {
     outline: none;
@@ -200,14 +179,14 @@
   span[data-pf2-effect-area],
   a.inline-check .label,
   a.inline-roll {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
-    color: var(--color-light-2);
+    background: var(--inline-bg);
+    border: 1px solid var(--inline-border-color);
+    color: var(--inline-text-color);
 
     &::before,
     i,
     i.icon {
-      color: var(--color-light-1);
+      color: var(--inline-icon-color);
     }
   }
 
@@ -222,12 +201,11 @@
   }
 }
 
-/* ---------------------------------------------------- */
+/* ------------------------------------------------------------ */
 /* Generalized style choices (exlusive of .foundry2-restricted) */
-/* ---------------------------------------------------- */
+/* ------------------------------------------------------------ */
 
-[data-theme="foundry2"],
-.foundry2 {
+[data-dorako-ui-theme] {
   color: var(--color-light-3);
 
   input[type="text"],
@@ -314,11 +292,11 @@
 
   input[type="checkbox"]:checked,
   input[type="radio"]:checked {
-    accent-color: var(--color-warm-2);
+    accent-color: var(--accent-color);
   }
 
   fieldset {
-    border: 1px solid var(--color-cool-3);
+    border: 1px solid var(--color-border-medium);
     border-radius: var(--border-radius);
     > legend {
       color: var(--color-light-2);
@@ -328,8 +306,9 @@
 
   textarea {
     color: var(--color-light-2);
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
+    background: var(--input-background-color);
+    border: var(--window-app-border-style);
+    border-color: var(--window-app-border-color);
   }
 
   hr {
@@ -376,14 +355,17 @@
   &.sheet header.sheet-header h1 input {
     --font-size: inherit;
   }
+
+  &.app.sidebar-popout .window-content {
+    color: inherit;
+  }
 }
 
 /* ----------------------------------------- */
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
-[data-theme="foundry2"],
-.foundry2 {
+[data-dorako-ui-theme] {
   &.app {
     border-radius: var(--border-radius);
     background: unset;
@@ -398,7 +380,10 @@
 
     // cool
     background: var(--app-background);
-    border: 1px solid var(--app-border-color);
+    background-position: top;
+    background-size: cover;
+    border: var(--app-border-style);
+    border-color: var(--app-border-color);
 
     // warm borders, no transparency
     // background: linear-gradient(var(--app-background), var(--app-background)) padding-box,
@@ -407,12 +392,17 @@
   }
 
   &.window-app {
+    background: var(--window-app-background);
+    background-position: top;
+    background-size: cover;
+    border: var(--window-app-border-style);
+    border-color: var(--window-app-border-color);
     backdrop-filter: blur(4px);
     // prettier-ignore
-    box-shadow: 0px 5px 20px 3px black,
-              0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent),
-              0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent),
-              0px 0px 10px 05px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+    // box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent), 0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent), 0px 0px 10px 05px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+    // Electron app bug
+    box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
+      0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 05px var(--color-warm-1-40);
 
     .window-header {
       border: unset;
@@ -425,7 +415,7 @@
 
     .window-resizable-handle {
       background: var(--color-warm-4);
-      border: 1px solid var(--app-border-color);
+      border: 1px solid var(--window-app-border-color);
       border-radius: 4px 0px var(--border-radius) 0px;
       border-bottom-color: var(--color-warm-3);
       border-right-color: var(--color-warm-3);
@@ -439,9 +429,8 @@
 /* Application specific                      */
 /* ----------------------------------------- */
 
-.foundry2-restricted,
-[data-theme="foundry2"],
-.foundry2 {
+[data-dorako-ui-theme],
+.foundry2-restricted {
   // System compat mode
   // --alt: var(--color-cool-3);
   --bg: var(--color-warm-3);
@@ -466,6 +455,10 @@
     padding: 0.4em 0.6em;
   }
 
+  #chat-controls .roll-type-select {
+    @include f2-input;
+  }
+
   &.filepicker .favorites .paths {
     box-shadow: unset;
     border: 1px solid var(--color-cool-3);
@@ -480,10 +473,15 @@
     height: 32px;
   }
 
-  &.package-configuration aside.sidebar nav.tabs {
-    gap: 5px;
-    .category-tab {
-      padding: 4px 8px;
+  &.package-configuration aside.sidebar {
+    border: unset;
+    nav.tabs {
+      gap: 5px;
+      .category-tab {
+        @include f2-button-warm;
+        padding: 4px 8px;
+        margin: 1px 4px;
+      }
     }
   }
 
@@ -492,19 +490,16 @@
   }
 
   .directory .action-buttons button {
-    --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
   }
 
   .directory .directory-header .header-search input {
     background: var(--color-cool-4);
-    --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
   }
 
   .directory .action-buttons button,
   .settings-sidebar button {
-    --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
   }
 
@@ -522,7 +517,7 @@
 /* Core overwrites                           */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.window-app .tabs .item {
     @include f2-button-warm;
     padding: 4px 8px;
@@ -547,7 +542,7 @@
 /* Journals                                  */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.sheet.journal-entry .journal-entry-content {
     background: unset;
     border: unset;
@@ -572,8 +567,8 @@
 /* Tagify and tags                           */
 /* ----------------------------------------- */
 
-.foundry2-restricted,
-.foundry2 {
+[data-dorako-ui-theme],
+.foundry2-restricted {
   .tagify,
   tags.tagify.pf2e-tagify {
     --tags-disabled-bg: #f1f1f1;
@@ -599,13 +594,12 @@
     --placeholder-color-focus: rgba(0, 0, 0, 0.25);
 
     --tag-bg: var(--color-warm-2);
-    --tags-border-color: var(--color-cool-3);
     --tags-hover-border-color: var(--color-cool-3);
     --tag-color: var(--color-light-2);
 
     --tag-bg: var(--color-cool-4);
-    --tag-border-color: var(--color-cool-3);
-    --tags-border-color: var(--color-cool-3);
+    --tag-border-color: var(--color-border-medium);
+    --tags-border-color: var(--color-border-medium);
 
     border: 1px solid var(--tag-border-color);
     border-radius: 3px;
@@ -643,6 +637,7 @@
 /* System overwrites                         */
 /* ----------------------------------------- */
 
+[data-dorako-ui-theme],
 .foundry2 {
   &.pf2e.item.sheet {
     --color-text-dark-2: var(--color-light-3);
@@ -661,6 +656,10 @@
       color: var(--button-text-color);
       border-radius: 3px;
     }
+  }
+
+  &.pf2e.item.sheet .sheet-header .details {
+    align-items: center;
   }
 
   &#generate-check-prompt {
@@ -758,15 +757,22 @@
   &.pf2e.item.sheet form .sheet-content input[type="text"],
   &.pf2e.item.sheet form .sheet-content input[type="number"],
   &.pf2e.item.sheet form .sheet-content select,
-  &.pf2e.item.sheet .sheet-header input[type="text"],
-  &.pf2e.item.sheet .sheet-header input[type="number"],
   &.pf2e.item.sheet form section.sheet-body input[type="text"],
   &.pf2e.item.sheet form section.sheet-body input[type="number"] {
-    background: var(--input-background-color);
-    border: 1px solid var(--input-border-color);
-    &:focus {
-      outline: 2px solid var(--input-focus-outline-color);
-    }
+    @include f2-input;
+  }
+
+  &.pf2e.item.sheet .sheet-header input[type="text"],
+  &.pf2e.item.sheet .sheet-header input[type="number"] {
+    @include f2-input;
+    --input-height: var(--font-size-34);
+    --font-size: var(--font-size-34);
+  }
+
+  &.pf2e.item.sheet form .sheet-body .tab.active.details select,
+  &.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select,
+  &.pf2e.item.sheet form .sheet-content section.sidebar select {
+    @include f2-input;
   }
 
   &.pf2e.item.sheet form .sheet-content button:hover:not(:disabled),
@@ -775,19 +781,20 @@
     box-shadow: unset;
   }
 
-  &.pf2e.item.sheet form .sheet-content input:not([type="range"]):hover:not(:disabled),
-  &.pf2e.item.sheet form .sheet-content input:not([type="range"]):focus,
+  &.pf2e.item.sheet form .sheet-content input:not([type="range"], [type="checkbox"]):hover:not(:disabled),
+  &.pf2e.item.sheet form .sheet-content input:not([type="range"], [type="checkbox"]):focus,
   &.pf2e.item.sheet form .sheet-content select:hover:not(:disabled),
   &.pf2e.item.sheet form .sheet-content select:focus {
-    border: 1px solid var(--input-border-color);
-    box-shadow: unset;
+    @include f2-input;
   }
 
+  &.pf2e.item.sheet.action form .drop-zone {
+    @include f2-app;
+  }
   &.pf2e.item.sheet.action form .drop-zone a.content-link,
   &.pf2e.item.sheet.action form .drop-zone picture,
   &.pf2e.item.sheet.action form .drop-zone img {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
+    @include f2-app;
   }
 
   &.pf2e.item.sheet .sheet-header {
@@ -839,6 +846,7 @@
 
   &.pf2e.item.sheet .sheet-header img {
     @include f2-app;
+    --app-border-style: 1px solid;
     border-color: var(--color-warm-1);
     border-radius: 3px;
   }

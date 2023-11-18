@@ -166,17 +166,20 @@ $adjusted-lower: #cc3311 !default;
 
 :root {
   --color-warm-1: #ee9b3a;
+  --color-warm-1-40: color-mix(in srgb, var(--color-warm-1) 40%, transparent);
   --color-warm-2: #c9593f;
+  --color-warm-2-20: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
   --color-warm-3: #5d142b;
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);  //custom
-  --color-warm-4: #420418; // custom
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);  //custom
-  --color-warm-5: #26020d; // custom
+  --color-warm-3-10: color-mix(in srgb, var(--color-warm-3) 10%, transparent);
+  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
+  --color-warm-4: #420418;
+  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
+  --color-warm-5: #26020d;
 
-  --color-cool-1: #b1a0d4; // custom
-  --color-cool-2: #79689c; // custom
+  --color-cool-1: #b1a0d4;
+  --color-cool-2: #79689c;
   --color-cool-3: #584a75;
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);  //custom
+  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
   --color-cool-4: #302831;
   --color-cool-5: #0b0a13;
 
@@ -219,6 +222,18 @@ $adjusted-lower: #cc3311 !default;
 
   --app-background: var(--color-cool-5-90);
   --app-border-color: var(--color-cool-4);
+  --window-app-background: var(--color-cool-5-90);
+  --window-app-border-color: var(--color-cool-4);
+  --app-border-style: 1px solid;
+  --font-size: var(--font-size-12);
+
+  --accent-color: var(--color-warm-2);
+
+  --inline-bg: var(--color-cool-4);
+  --inline-border-color: var(--color-cool-3);
+  --inline-text-color: var(--color-light-2);
+  --inline-icon-color: var(--color-light-1);
+
 }
 
 :root {
@@ -431,9 +446,9 @@ $adjusted-lower: #cc3311 !default;
 /* Damage colors                             */
 /* ----------------------------------------- */
 
+[data-dorako-ui-theme] .damage,
 .dorako-ui.dark-theme .damage,
-.foundry2-restricted .damage,
-.foundry2 .damage {
+.foundry2-restricted .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125); // adjusted
   --color-bg-bleed: rgba(207, 28, 58, 0.125); // adjusted
   --color-bg-chaotic: rgba(221, 26, 221, 0.125); // adjusted

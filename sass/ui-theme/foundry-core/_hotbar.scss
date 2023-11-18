@@ -2,7 +2,7 @@
 /* Hotbar                                    */
 /* ----------------------------------------- */
 
-#hotbar.foundry2 {
+#hotbar[data-dorako-ui-theme] {
   .bar-controls {
     @include f2-app;
   }

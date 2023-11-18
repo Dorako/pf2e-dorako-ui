@@ -7,10 +7,13 @@ import {
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 
+const dataTheme = "foundry2";
+
 Hooks.on("renderSvelteApplication", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme !== "foundry2-theme") return;
-  app.element[0].classList.add("foundry2");
+  // app.element[0].classList.add("foundry2");
+  app.element[0].dataset.dorakoUiTheme = dataTheme;
 });
 
 for (const appName of [...baseThemeApplications]) {
@@ -28,7 +31,8 @@ for (const appName of [...baseThemeApplications]) {
       return;
     }
     console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .foundry2`);
-    html.addClass("foundry2");
+    // html.addClass("foundry2");
+    app.element[0].dataset.dorakoUiTheme = dataTheme;
   });
 }
 
@@ -42,7 +46,9 @@ Hooks.on("renderApplication", (app, html, data) => {
     return;
   }
   const excludeString =
-    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") + ", EnhancedJournal";
+    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") +
+    ", EnhancedJournal" +
+    ", SceneActorsLayer";
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes(app.constructor.name)) {
     console.debug(
@@ -60,7 +66,8 @@ Hooks.on("renderApplication", (app, html, data) => {
       html.addClass("dialog");
     }
   }
-  html.addClass("foundry2");
+  // html.addClass("foundry2");
+  app.element[0].dataset.dorakoUiTheme = dataTheme;
   //   app.options?.classes?.push("foundry2");
   html.find("form button[type='submit']").addClass("bright");
   html.find(".item-controls button[data-action='apply']").addClass("bright");
@@ -74,7 +81,8 @@ Hooks.on("renderDialog", (app, html, data) => {
     return;
   }
   console.debug(`${MODULE_NAME} | render${app.constructor.name} | pushing .foundry2 class option`);
-  html.addClass("foundry2");
+  // html.addClass("foundry2");
+  app.element[0].dataset.dorakoUiTheme = dataTheme;
 });
 
 Hooks.on("renderItemSheet", (app, html, data) => {
@@ -83,15 +91,14 @@ Hooks.on("renderItemSheet", (app, html, data) => {
     return;
   }
   //   app.options?.classes?.push("foundry2");
-  html.addClass("foundry2");
+  // html.addClass("foundry2");
+  app.element[0].dataset.dorakoUiTheme = dataTheme;
   html.find("form > nav a").addClass("button");
 });
 
 Hooks.on("renderTokenActionHud", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme !== "foundry2-theme") {
-    return;
-  }
+
   const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes("TokenActionHud")) {
@@ -100,7 +107,12 @@ Hooks.on("renderTokenActionHud", (app, html, data) => {
     );
     return;
   }
-  html.attr("data-theme", "foundry2");
+  if (theme !== "foundry2-theme") {
+    app.element[0].dataset.dorakoUiTheme = "crb-dark";
+    return;
+  }
+  // html.attr("data-theme", "foundry2");
+  app.element[0].dataset.dorakoUiTheme = dataTheme;
 });
 
 Hooks.on("renderTokenBar", (app, html, data) => {
@@ -117,7 +129,8 @@ Hooks.on("renderTokenBar", (app, html, data) => {
     );
     return;
   }
-  html.attr("data-theme", "foundry2");
+  // html.attr("data-theme", "foundry2");
+  app.element[0].dataset.dorakoUiTheme = dataTheme;
 });
 
 for (const appName of [...baseThemePf2eSheets]) {
@@ -130,7 +143,8 @@ for (const appName of [...baseThemePf2eSheets]) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is PF2e .window-app "Application" => add .foundry2`
     );
-    html.addClass("foundry2");
+    // html.addClass("foundry2");
+    app.element[0].dataset.dorakoUiTheme = dataTheme;
   });
 }
 

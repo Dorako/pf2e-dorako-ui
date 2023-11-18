@@ -2,7 +2,7 @@
 /* Controls                                  */
 /* ----------------------------------------- */
 
-nav#controls.foundry2 {
+nav#controls[data-dorako-ui-theme] {
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
@@ -35,7 +35,7 @@ nav#controls.foundry2 {
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &#darkness-adjuster {
     height: 42px !important; // overwrite system's !important
     @include f2-app;

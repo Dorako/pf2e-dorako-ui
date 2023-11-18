@@ -40,10 +40,10 @@
 
 @mixin f2-app {
   background: var(--app-background);
-  border: 1px solid var(--app-border-color);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
   text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius);
-  --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
 }
@@ -71,7 +71,8 @@
   --button-hover-text-color: var(--color-light-1);
 
   background: var(--button-background-color);
-  border: 1px solid var(--button-border-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
   color: var(--button-text-color);
   box-shadow: var(--box-shadow);
   text-decoration: none;
@@ -82,7 +83,8 @@
   &:not(.disabled, :disabled):hover {
     background: var(--button-hover-background-color);
     color: var(--button-hover-text-color);
-    border: 1px solid var(--button-hover-border-color);
+    border: var(--app-border-style);
+    border-color: var(--button-hover-border-color);
     box-shadow: var(--box-shadow);
   }
 
@@ -147,11 +149,9 @@
 }
 
 @mixin f2-input {
-  --font-size: var(--font-size-14);
-  --box-shadow: 0px 1px 3px 1px black;
-
   background: var(--input-background-color);
-  border: 1px solid var(--input-border-color) !important;
+  border: var(--app-border-style);
+  border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
@@ -164,10 +164,11 @@
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 
-  &:not(:disabled, .disabled):hover,
+  &:not(:disabled, .disabled, [type="checkbox"]):hover,
   &:focus {
     outline: 2px solid var(--input-focus-outline-color);
-    border: 1px solid var(--input-border-color);
+    border: var(--app-border-style);
+    border-color: var(--input-border-color);
     color: var(--input-focus-text-color);
     box-shadow: var(--box-shadow);
   }
@@ -192,7 +193,9 @@
   }
 
   &[type="checkbox"] {
-    border: unset;
+    outline: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
   }
 }
 

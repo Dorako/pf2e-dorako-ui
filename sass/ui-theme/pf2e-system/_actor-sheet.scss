@@ -1,4 +1,4 @@
-.foundry2 {
+[data-dorako-ui-theme] {
   &.pf2e.actor form input[type="text"],
   &.pf2e.actor form input[type="number"] {
     @include f2-input;
@@ -32,7 +32,7 @@
 }
 
 .foundry2-restricted,
-.foundry2 {
+[data-dorako-ui-theme] {
   .tags {
     --color-rarity-common: #323232;
   }

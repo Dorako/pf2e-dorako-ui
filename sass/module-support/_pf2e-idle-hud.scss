@@ -181,7 +181,7 @@
 /* Foundry 2                                 */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.chat-message.message .pf2e-token-hud .rk {
     --text-dark: var(--color-light-2);
     --rarity-common: #e1d8cf;
@@ -332,7 +332,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &[id^="pf2e-perception-"] {
     height: auto !important;
     .window-content {

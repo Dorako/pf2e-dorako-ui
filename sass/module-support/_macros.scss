@@ -6,8 +6,7 @@
   background: none;
 }
 
-// Foundry2
-.foundry2.window-app .window-content .dialog-content .cond-cont {
+.window-app[data-dorako-ui-theme] .window-content .dialog-content .cond-cont {
   background: none;
   .cond-butt-set {
     display: flex;
@@ -45,7 +44,7 @@
   }
 }
 
-.foundry2 .action-list button {
+[data-dorako-ui-theme] .action-list button {
   .action-btn img {
     border: 1px solid var(--color-warm-1);
     border-radius: var(--border-radius);

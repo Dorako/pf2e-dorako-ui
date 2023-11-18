@@ -5,11 +5,11 @@
   font-size: var(--font-size-9);
 }
 
-.foundry2 .pf2e-td .damage-application {
+[data-dorako-ui-theme] .pf2e-td .damage-application {
   margin-top: unset;
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   .pf2e-td.small-button.target-button {
     @include f2-button-cool;
   }

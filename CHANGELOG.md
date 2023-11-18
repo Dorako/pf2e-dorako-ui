@@ -1,3 +1,10 @@
+# 3.0.2
+
+- (New) Added support for Monk's Sound Enhancements.
+- (New) Added support for Yendor's Scene Actors.
+- (Fix) Changed the window-app drop shadow to avoid rendering issue encountered when using the Electron client.
+- (Refinement) Reorganized theming structure to support future features. If you are using custom css to style Dorako UI, it might need updating.
+
 # 3.0.1
 
 - (Fix) Fixed an issue with chat message headers in CRB theme.

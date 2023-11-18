@@ -66,12 +66,12 @@ Hooks.once("init", async () => {
 
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "foundry2-theme") {
-    $("#tooltip").attr("data-theme", "foundry2");
-    $("#fps").attr("data-theme", "foundry2");
+    $("#tooltip").attr("data-dorako-ui-theme", "foundry2");
+    $("#fps").attr("data-dorako-ui-theme", "foundry2");
     game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
   } else if (theme !== "no-theme") {
-    $("#tooltip").attr("data-theme", "dorako-ui");
-    $("#fps").attr("data-theme", "dorako-ui");
+    $("#tooltip").attr("data-dorako-ui-theme", "crb-dark");
+    $("#fps").attr("data-dorako-ui-theme", "crb-dark");
   }
 
   // injectCSS("dorako-theme/dorako-theme");
@@ -83,6 +83,7 @@ Hooks.once("init", async () => {
 
   // root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
   root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
+  root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg").toString());
   // root.setProperty("--control-size", game.settings.get("pf2e-dorako-ui", "ux.control-size").toString() + "px");
   // root.setProperty("--controls-alignment", game.settings.get("pf2e-dorako-ui", "ux.controls-alignment").toString());
 

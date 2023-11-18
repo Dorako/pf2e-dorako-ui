@@ -3,9 +3,11 @@
 /* ----------------------------------------- */
 /* Foundry2                                  */
 /* ----------------------------------------- */
-.foundry2.chat-message {
+.chat-message[data-dorako-ui-theme] {
   background: unset;
   @include f2-app;
+  border: 1px solid;
+  border-color: var(--window-app-border-color);
   --color-text-light-6: var(--color-cool-4);
   --color-text-dark-secondary: var(--color-light-4); // 5 is too dark on colored message backgrounds
 
@@ -97,7 +99,7 @@
 /* Damage buttons                            */
 /* ----------------------------------------- */
 
-.foundry2.chat-message {
+.chat-message[data-dorako-ui-theme] {
   .flavor-text {
     hr {
       display: none;
@@ -115,7 +117,7 @@
   }
 }
 
-.foundry2.chat-message {
+.chat-message[data-dorako-ui-theme] {
   .persistent-damage-recovery {
     margin-top: 4px;
     hr {
@@ -124,7 +126,7 @@
   }
 }
 
-.foundry2.message {
+.message[data-dorako-ui-theme] {
   .message-content {
     .damage-application {
       gap: 3px;
@@ -206,12 +208,8 @@
 /* Header                                    */
 /* ----------------------------------------- */
 
-.foundry2.chat-message .message-header {
-  background: none;
-  padding: 5px 5px 0px 5px;
-  margin: -5px -5px -0px -5px;
+.chat-message[data-dorako-ui-theme] .message-header {
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-  gap: 5px;
 
   &.dorako-header {
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
@@ -231,19 +229,8 @@
     }
   }
 
-  .message-metadata {
-    flex: 2.5;
-  }
-
   .message-timestamp,
   .header-meta {
-    border-radius: 3px;
-    padding: 2px;
-    font-size: x-small;
-    align-self: center;
-    text-align: center;
-    text-shadow: none;
-    white-space: nowrap;
     @include f2-app;
     background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
     border-color: color-mix(in srgb, var(--header-color) 50%, white);
@@ -320,7 +307,7 @@
 /* System overwrites                         */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.chat-message > .message-content ul.participant-conditions {
     border: unset;
     box-shadow: unset;

@@ -150,8 +150,8 @@ for (const application of ["Application", ...baseThemePf2eSheets]) {
     if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
       return;
     }
-    let isFoundry2 = html[0].classList.contains("foundry2");
-    let symbol = isFoundry2 ? "fa-thin" : "fas";
+    let theme = "dorakoUiTheme" in html[0].dataset;
+    let symbol = theme ? "fa-thin" : "fas";
 
     let openBtn = $(
       `<a class="header-button foundry2-toggle" alt="Toggle Foundry2" data-tooltip="Foundry2" data-tooltip-direction="UP">
@@ -159,11 +159,44 @@ for (const application of ["Application", ...baseThemePf2eSheets]) {
     </a>`
     );
     openBtn.click((ev) => {
-      html[0].classList.toggle("foundry2");
+      let theme = "dorakoUiTheme" in html[0].dataset;
+      if (theme) {
+        delete html[0].dataset.dorakoUiTheme;
+      } else {
+        html[0].dataset.dorakoUiTheme = "foundry2";
+      }
       openBtn.find("i").toggleClass("fa-thin");
       openBtn.find("i").toggleClass("fas");
     });
     html.closest(".app").find(".foundry2-toggle").remove();
+    let titleElement = html.closest(".app").find(".window-title");
+    openBtn.insertAfter(titleElement);
+  });
+
+  Hooks.on("render" + application, (app, html, data) => {
+    if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
+      return;
+    }
+    if (!html[0].classList.contains("window-app")) return;
+    let theme = "dorakoUiTheme" in html[0].dataset;
+    let symbol = theme ? "fa-thin" : "fas";
+
+    let openBtn = $(
+      `<a class="header-button crb-dark-toggle" alt="Toggle crb-dark" data-tooltip="crb-dark" data-tooltip-direction="UP">
+        <i class="fa-fw ${symbol} fa-c"></i>
+    </a>`
+    );
+    openBtn.click((ev) => {
+      let theme = "dorakoUiTheme" in html[0].dataset;
+      if (theme) {
+        delete html[0].dataset.dorakoUiTheme;
+      } else {
+        html[0].dataset.dorakoUiTheme = "crb-dark";
+      }
+      openBtn.find("i").toggleClass("fa-thin");
+      openBtn.find("i").toggleClass("fas");
+    });
+    html.closest(".app").find(".crb-dark-toggle").remove();
     let titleElement = html.closest(".app").find(".window-title");
     openBtn.insertAfter(titleElement);
   });

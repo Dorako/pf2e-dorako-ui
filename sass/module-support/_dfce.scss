@@ -27,6 +27,13 @@
   }
 }
 
+[data-dorako-ui-theme],
+.foundry2 {
+  #dorako-rt-buttons button.active {
+    background-color: var(--color-warm-2);
+  }
+}
+
 // Dorako Theme
 .dorako-ui {
   #chat-controls .buttons {

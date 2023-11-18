@@ -37,7 +37,8 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     }
   }
   if (theme == "foundry2") {
-    html0.classList.add("foundry2");
+    // html0.classList.add("foundry2");
+    html0.dataset.dorakoUiTheme = "foundry2";
   }
 
   themeHeader(html, chatMessage);

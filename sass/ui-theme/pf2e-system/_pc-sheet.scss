@@ -7,8 +7,10 @@
     --primary: var(--color-warm-2);
     --secondary: var(--color-cool-3);
     --text-dark: var(--color-light-2);
-    --color-border-divider: var(--color-cool-3);
     --color-border-light-2: var(--color-cool-4);
+    --color-border-light-primary: var(--color-warm-1);
+    --color-border-light-highlight: var(--color-warm-2);
+    --color-border-divider: var(--color-cool-3);
     --sub: var(--color-light-6);
     --alt: var(--color-light-5);
     --bg: var(--color-cool-5-90);
@@ -34,6 +36,11 @@
 
   &.window-app {
     @include f2-app;
+    background: var(--window-app-background);
+    background-position: top;
+    background-size: cover;
+    border: var(--window-app-border-style);
+    border-color: var(--window-app-border-color);
     text-shadow: unset;
     backdrop-filter: blur(4px);
     //prettier-ignore
@@ -52,9 +59,8 @@
     }
 
     .window-resizable-handle {
-      //   background: var(--color-cool-4);
       background: var(--color-warm-4);
-      border: 1px solid var(--color-cool-3);
+      border: 1px solid var(--window-app-border-color);
       border-radius: 4px 0px var(--border-radius) 0px;
       border-bottom-color: var(--color-warm-3);
       border-right-color: var(--color-warm-3);
@@ -92,6 +98,8 @@
     border-radius: var(--border-radius);
   }
 
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd img.deity-emblem,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .pc_deity img.symbol {
     background: var(--color-warm-4);
     border: 1px solid var(--color-warm-3);

@@ -25,7 +25,7 @@ html {
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   .roll-app-nav button {
     @include f2-button-warm;
   }

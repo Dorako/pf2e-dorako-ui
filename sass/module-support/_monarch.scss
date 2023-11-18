@@ -59,7 +59,12 @@
   backdrop-filter: blur(5px);
 }
 
-.foundry2 {
+.window-app.monarch.trans {
+  box-shadow: unset;
+  backdrop-filter: unset;
+}
+
+[data-dorako-ui-theme] {
   &.window-app.monarch-hand .window-header,
   &.monarch-hand footer.sheet-footer,
   &.monarch-hand footer.sheet-footer button,

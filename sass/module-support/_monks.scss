@@ -196,7 +196,7 @@
   }
 }
 
-#tokenbar[data-theme="foundry2"] {
+#tokenbar[data-dorako-ui-theme] {
   .bar-controls {
     @include f2-app;
     div#tokenbar-move-handle {
@@ -230,7 +230,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &#requestsavingthrow .request-grid > div {
     @include f2-button-warm;
     text-align: center;
@@ -322,7 +322,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &#token-hud.monks-little-details .status-effects {
     gap: 5px;
   }
@@ -347,7 +347,7 @@
   }
 }
 
-body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effect-control {
+body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-effects .effect-control {
   @include f2-button-warm;
 }
 
@@ -381,7 +381,7 @@ body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effec
   }
 }
 
-#hotbar.foundry2,
+#hotbar[data-dorako-ui-theme],
 #hotbar.dorako-ui {
   // width: 647px;
 
@@ -398,6 +398,39 @@ body.system-pf2e #token-hud.monks-little-details.foundry2 .status-effects .effec
     .action-bar {
       margin: 0px 5px 0px 3px;
     }
+  }
+}
+
+/* ----------------------------------------- */
+/* Monk's Sound Enhancements                 */
+/* ----------------------------------------- */
+
+.dorako-ui.dark-theme {
+  &.sheet .sound-sheet .items-list {
+    color: var(--color-light-1);
+  }
+  &.sheet .sound-sheet .items-list .item {
+    border-bottom: 1px solid var(--tertiary);
+  }
+
+  &.sheet .sound-sheet .items-list .item .item-name {
+    color: var(--color-light-2);
+  }
+  &.sheet .sound-sheet .items-list .items-header {
+    @include glass;
+    background-color: var(--glass-bg-light);
+  }
+}
+
+[data-dorako-ui-theme] {
+  &.sheet .sound-sheet .items-list .items-header {
+    border: unset;
+  }
+  &.sheet .sound-sheet .items-list .item {
+    border-bottom: 1px solid var(--color-cool-4);
+  }
+  &.sheet .sound-sheet .items-list .item .item-name {
+    color: var(--color-light-3);
   }
 }
 
@@ -905,7 +938,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 /* Foundry2                                  */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   .monks-active-tiles.sheet .items-list .items-header,
   &.monks-active-tiles.sheet .items-list .items-header {
     background: unset;
@@ -955,7 +988,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   }
 }
 
-.foundry2,
+[data-dorako-ui-theme],
 .dorako-ui.dark-theme {
   &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
     color: #fafafa;

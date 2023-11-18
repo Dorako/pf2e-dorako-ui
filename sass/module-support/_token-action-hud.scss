@@ -115,13 +115,13 @@
 /* Foundry2                                  */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &#token-action-hud-core-settings input {
     @include f2-input;
   }
 }
 
-#tooltip[data-theme="foundry2"] {
+#tooltip[data-dorako-ui-theme] {
   &.locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll),
   &.tah-tooltip :is(a.content-link, a.inline-roll),
   &.active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
@@ -137,7 +137,7 @@
   }
 }
 
-#token-action-hud[data-theme="foundry2"] {
+#token-action-hud[data-dorako-ui-theme] {
   .tah-action-button,
   .tah-action-button:focus,
   .tah-group-button,

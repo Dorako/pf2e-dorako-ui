@@ -27,7 +27,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   --item-piles-minor-inactive: var(--color-warm-3);
   --item-piles-even-color: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
   --item-piles-border-light-primary: var(--color-cool-3);

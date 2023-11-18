@@ -25,10 +25,11 @@
 /* Foundry2                                  */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &#module-management .package-list .package .package-overview .tag.expand {
     @include f2-button-warm;
   }
+
   &#module-credits-dialog {
     .journal-entry-content {
       background: unset;

@@ -66,20 +66,6 @@ Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
   isPremiumApplication(app, html, data, "JournalTextPageSheet");
 });
 
-// adds .dorako-ui to all .window-app Applications that are not .premium
-Hooks.on("renderApplication", (app, html, data) => {
-  let html0 = html[0];
-  if (!html0.classList.contains("window-app")) return;
-  // TODO: This also triggers for SceneConfigPF2e
-  if (isPremiumApplication(app, html, data, app.constructor.name)) return;
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "no-theme" || theme == "foundry2-theme") {
-    return;
-  }
-  console.debug(`${MODULE_NAME} | render${app.constructor.name} | is .window-app => add .dorako-ui`);
-  html0.classList.add("dorako-ui");
-});
-
 // adds .dorako-ui to AV and BB journals specifically, since those have no special frames
 Hooks.on("renderApplication", (app, html, data) => {
   const journal = app.document;

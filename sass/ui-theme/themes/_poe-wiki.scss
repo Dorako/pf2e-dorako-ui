@@ -1,0 +1,75 @@
+[data-dorako-ui-theme="poe-wiki"] {
+  --color-warm-1: var(--tertiary);
+  --color-warm-2: var(--poe-color-unique);
+  --color-warm-3: var(--primary-dark);
+  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
+  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
+  --color-cool-1: var(--secondary-light);
+  --color-cool-2: var(--secondary);
+  --color-cool-3: var(--secondary-dark);
+  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
+  --color-cool-4: #26231f;
+}
+
+[data-dorako-ui-theme="poe-wiki"] {
+  --window-app-background: var(--dark-15);
+  --window-app-border-color: var(--brown-4);
+  --window-app-border-style: 1px solid;
+  --app-background: var(--glass-bg);
+  --app-border-color: var(--alt);
+  --app-border-style: 1px solid;
+  --color-scrollbar: var(--brown-1);
+  --color-scrollbar-border: var(--brown-2);
+  --box-shadow: 0px 1px 2px black;
+  --accent-color: var(--tertiary);
+
+  --color-light-2: var(--color-text-light-highlight);
+  --color-light-3: var(--color-text-light-heading);
+
+  --color-border-medium: var(--brown-1) !important;
+  --color-border-divider: var(--brown-1) !important;
+
+  --inline-bg: transparent;
+  --inline-border-color: transparent;
+  --inline-text-color: var(--poe-color-magic);
+  --inline-icon-color: var(--poe-color-gem);
+
+  select,
+  input,
+  button {
+    --button-background-color: #21201c;
+    --button-border-color: #403b2d;
+    --input-border-color: var(--brown-2);
+    --input-background-color: var(--alt-dark);
+    --input-focus-outline-color: var(--tertiary);
+  }
+
+  &#hotbar .macro {
+    border: 1px solid black;
+  }
+
+  &#sidebar {
+    background: var(--app-background) !important;
+    box-shadow: var(--box-shadow);
+  }
+
+  &.sidebar-popout {
+    background: var(--app-background) !important;
+  }
+
+  &.message.chat-message {
+    background: var(--window-app-background);
+    background-position: top;
+    background-size: cover;
+    &.whisper {
+      background: var(--window-app-background);
+      background-color: var(--whisper-bg);
+      background-blend-mode: luminosity;
+      &.blind {
+        background: var(--window-app-background);
+        background-color: var(--blind-bg);
+        background-blend-mode: luminosity;
+      }
+    }
+  }
+}

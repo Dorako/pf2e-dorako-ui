@@ -1,5 +1,5 @@
 .dorako-ui,
-.foundry2 {
+[data-dorako-ui-theme] {
   &#smalltime-app #displayContainer {
     background: unset;
     box-shadow: unset;
@@ -19,7 +19,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &#smalltime-app {
     @include f2-app;
   }

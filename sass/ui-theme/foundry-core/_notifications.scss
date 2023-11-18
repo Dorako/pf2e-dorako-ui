@@ -2,7 +2,7 @@
 /* Notifications                             */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   .notification {
     border: 1px solid transparent;
     text-shadow: 0px 0px 3px black;
@@ -26,7 +26,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.pf2e.item.sheet form .tab.active.rules .rule-form .validation-failures {
     border: 1px solid transparent;
     text-shadow: 0px 0px 3px black;

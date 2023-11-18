@@ -22,7 +22,7 @@ div.speaking-as--currentSpeaker + #chat-controls {
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   .speaking-as--currentSpeaker {
     @include f2-app;
     margin: 0px var(--sidebar-margin);

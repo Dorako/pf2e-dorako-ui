@@ -123,7 +123,7 @@
     "esmodules/settings/settings.js",
     "esmodules/dark-theme-hooks.js",
     "esmodules/dorako-theme.js",
-    "esmodules/foundry2-theme.js",
+    "esmodules/ui-theme.js",
     "esmodules/message-hooks.js",
     "esmodules/premium-module-hooks.js",
     "esmodules/consts.js"

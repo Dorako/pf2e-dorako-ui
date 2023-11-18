@@ -64,6 +64,108 @@ section.readaloud {
   margin-top: 5px;
 }
 
+a.content-link,
+[data-pf2-check],
+a.entity-link,
+[data-pf2-action],
+span[data-pf2-effect-area],
+a.inline-check .label,
+a.inline-roll:not(.inline-result) {
+  font-weight: 400;
+  padding: 0px 4px;
+  text-shadow: none !important;
+}
+
+.dorako-ui.dark-theme {
+  a.content-link,
+  [data-pf2-check],
+  a.entity-link,
+  [data-pf2-action],
+  span[data-pf2-effect-area],
+  a.inline-check .label,
+  a.inline-roll:not(.inline-result) {
+    color: black;
+  }
+}
+
+// Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
+a.inline-check,
+span[data-pf2-check],
+span[data-pf2-effect-area].with-repost {
+  padding: 0px;
+  padding-left: 4px;
+}
+
+.dorako-ui.message.chat-message.dark-theme a.inline-roll {
+  color: black;
+}
+
+i[data-pf2-repost] {
+  top: 0px;
+  cursor: pointer;
+}
+
+.tah-tags-wrapper .tags,
+[data-dorako-ui-theme] .tags,
+.foundry2-restricted .tags,
+[data-dorako-ui-theme] .tags.paizo-style,
+.foundry2-restricted .tags.paizo-style,
+.dorako-ui .message-content .tags,
+.dorako-ui .tags.paizo-style,
+.dorako-ui .tags {
+  gap: 1px;
+
+  .tag {
+    height: auto;
+  }
+
+  tag,
+  .tag:not(.tag_transparent) {
+    border-radius: 0px;
+    box-shadow: unset;
+    border: 1px solid var(--tertiary);
+    outline: 1px solid var(--gold-brown);
+    padding: 0.33em 0.33em;
+  }
+
+  tag:first-of-type,
+  .tag:first-child {
+    border-left-width: 1px;
+  }
+
+  tag:last-of-type,
+  .tag:last-child {
+    border-right-width: 1px;
+  }
+}
+
+// Fixes issue where hidden DC is too 'tall'
+[data-visibility]:not([data-visibility="all"]) {
+  padding: unset;
+}
+
+.dorako-ui.dark-theme {
+  a.content-link.broken {
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+  }
+}
+
+// ugly hack
+.pf2e-av .journal-page-content a.inline-check > i.icon,
+.pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
+.pf2e-av .journal-page-content [data-pf2-repost] .label,
+.pf2e-av .journal-page-content [data-pf2-check] .label,
+.pf2e-av .journal-page-content [data-pf2-check]:not([data-pf2-show-dc="gm"]) .label {
+  color: var(--av-green-light);
+}
+
+// system uses 500, which makes it hard to tell whether something is bolded
+.app.sheet.actor p,
+.pf2e p {
+  font-weight: 400;
+}
+
 /* ----------------------------------------- */
 /* .message-header fixes (all themes)        */
 /* ----------------------------------------- */
@@ -245,10 +347,6 @@ section.readaloud {
   }
 }
 
-// .chat-message > .message-header {
-//   margin-bottom: 0px;
-// }
-
 .frosted-glass {
   #hotbar .bar-controls,
   #hotbar .macro,
@@ -318,7 +416,7 @@ section.readaloud {
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
   .form-group.dorako.settings-header {

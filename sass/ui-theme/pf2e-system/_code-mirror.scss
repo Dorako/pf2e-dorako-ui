@@ -2,7 +2,7 @@
 /* Code mirror                               */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
   &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
     background-color: var(--color-cool-4);

@@ -2,7 +2,7 @@
 /* Navigation                                */
 /* ----------------------------------------- */
 
-#navigation.foundry2 {
+#navigation[data-dorako-ui-theme] {
   width: calc(100% - 46px); // Add some breathing room to ensure navigation isn't covering effect panel
 
   #nav-toggle {
