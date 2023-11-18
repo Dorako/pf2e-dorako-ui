@@ -253,27 +253,6 @@ i[data-pf2-repost] {
 
       .adjusted {
         text-decoration: underline dotted;
-        &.increased {
-          // color: $degree-success-critical;
-        }
-        &.decreased {
-          // color: $degree-failure-critical;
-        }
-      }
-
-      .degree-of-success {
-        .criticalSuccess {
-          // color: $degree-success-critical;
-        }
-        .success {
-          // color: $degree-success;
-        }
-        .failure {
-          // color: $degree-failure;
-        }
-        .criticalFailure {
-          // color: $degree-failure-critical;
-        }
       }
     }
   }

@@ -14181,7 +14181,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--window-app-border-color);
   text-shadow: unset;
   backdrop-filter: blur(4px);
-  box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent), 0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent), 0px 0px 10px 5px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+  box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10), 0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 5px var(--color-warm-1-40);
 }
 .foundry2-restricted.window-app .window-header {
   border: unset;
