@@ -1,4 +1,4 @@
-.foundry2 {
+[data-dorako-ui-theme] {
   &.sheet.familiar form {
     background: unset;
   }
@@ -30,6 +30,7 @@
   &.sheet.familiar .familiar-sheet-header .header-content .charname input {
     --font-size: inherit;
     --input-height: auto;
+    font-size: 24px;
     margin-right: 100px;
   }
 

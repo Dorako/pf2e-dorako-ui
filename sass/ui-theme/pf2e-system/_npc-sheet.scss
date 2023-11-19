@@ -96,7 +96,7 @@
   }
 }
 
-.foundry2 {
+[data-dorako-ui-theme] {
   &.app.npc-skills-editor form ol li.skill:nth-child(even) {
     background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
   }

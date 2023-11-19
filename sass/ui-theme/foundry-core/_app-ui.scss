@@ -354,6 +354,7 @@
 
   &.sheet header.sheet-header h1 input {
     --font-size: inherit;
+    font-size: 28px;
   }
 
   &.app.sidebar-popout .window-content {
@@ -637,8 +638,7 @@
 /* System overwrites                         */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme],
-.foundry2 {
+[data-dorako-ui-theme] {
   &.pf2e.item.sheet {
     --color-text-dark-2: var(--color-light-3);
     --color-text-dark-4: var(--color-light-3);
@@ -713,6 +713,17 @@
     }
     &.basics {
       border-color: transparent;
+    }
+  }
+
+  section.compendium-sidebar ol.directory-list ol.document-matches li.match {
+    .thumbnail img {
+      @include f2-app;
+      padding: 0px;
+    }
+    &:hover .thumbnail img {
+      border: var(--app-border-style);
+      border-color: var(--color-warm-2);
     }
   }
 

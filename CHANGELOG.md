@@ -1,3 +1,7 @@
+# 3.0.5
+
+- (Fix) Fixed the Foundry 2 theme not applying properly to Hazard and Familiar sheets.
+
 # 3.0.4
 
 - (Fix) Changed the window-app drop shadow to avoid rendering issue encountered when using the Electron client, electric boogaloo #2.

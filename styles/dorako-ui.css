@@ -9492,6 +9492,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 }
 [data-dorako-ui-theme].sheet header.sheet-header h1 input {
   --font-size: inherit;
+  font-size: 28px;
 }
 [data-dorako-ui-theme].app.sidebar-popout .window-content {
   color: inherit;
@@ -10128,16 +10129,14 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
 /* ----------------------------------------- */
 /* System overwrites                         */
 /* ----------------------------------------- */
-[data-dorako-ui-theme].pf2e.item.sheet,
-.foundry2.pf2e.item.sheet {
+[data-dorako-ui-theme].pf2e.item.sheet {
   --color-text-dark-2: var(--color-light-3);
   --color-text-dark-4: var(--color-light-3);
   --color-text-dark-input: var(--color-light-3);
   --color-border-dark: var(--color-light-2);
   --color-border-medium: var(--color-cool-3);
 }
-[data-dorako-ui-theme].pf2e.item.sheet input:disabled,
-.foundry2.pf2e.item.sheet input:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet input:disabled {
   --button-background-color: var(--color-cool-5);
   --button-border-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-5);
@@ -10147,12 +10146,10 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--button-text-color);
   border-radius: 3px;
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header .details,
-.foundry2.pf2e.item.sheet .sheet-header .details {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header .details {
   align-items: center;
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a,
-.foundry2#generate-check-prompt nav h4 a {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10178,33 +10175,27 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   transition: background-color 0.5s, border-color 0.5s;
   padding: 4px 8px;
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a:not(.disabled, :disabled):hover,
-.foundry2#generate-check-prompt nav h4 a:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
   border-color: var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.selected, [data-dorako-ui-theme]#generate-check-prompt nav h4 a.active,
-.foundry2#generate-check-prompt nav h4 a.selected,
-.foundry2#generate-check-prompt nav h4 a.active {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a.selected, [data-dorako-ui-theme]#generate-check-prompt nav h4 a.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.disabled, [data-dorako-ui-theme]#generate-check-prompt nav h4 a:disabled,
-.foundry2#generate-check-prompt nav h4 a.disabled,
-.foundry2#generate-check-prompt nav h4 a:disabled {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a.disabled, [data-dorako-ui-theme]#generate-check-prompt nav h4 a:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright,
-.foundry2#generate-check-prompt nav h4 a.bright {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -10213,22 +10204,18 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright.disabled, [data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright:disabled,
-.foundry2#generate-check-prompt nav h4 a.bright.disabled,
-.foundry2#generate-check-prompt nav h4 a.bright:disabled {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright.disabled, [data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright:not(.disabled, :disabled):hover,
-.foundry2#generate-check-prompt nav h4 a.bright:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-[data-dorako-ui-theme]#generate-check-prompt .dialog-content tags.tagify,
-.foundry2#generate-check-prompt .dialog-content tags.tagify {
+[data-dorako-ui-theme]#generate-check-prompt .dialog-content tags.tagify {
   --tags-disabled-bg: #f1f1f1;
   --tags-border-color: #ddd;
   --tags-hover-border-color: #ccc;
@@ -10260,23 +10247,30 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border: 1px solid var(--tag-border-color);
   border-radius: 3px;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .form-list, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body fieldset,
-.foundry2.pf2e.item.sheet form .form-list,
-.foundry2.pf2e.item.sheet form section.sheet-body fieldset {
+[data-dorako-ui-theme].pf2e.item.sheet form .form-list, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body fieldset {
   border-color: var(--color-cool-3);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .form-list > legend, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body fieldset > legend,
-.foundry2.pf2e.item.sheet form .form-list > legend,
-.foundry2.pf2e.item.sheet form section.sheet-body fieldset > legend {
+[data-dorako-ui-theme].pf2e.item.sheet form .form-list > legend, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body fieldset > legend {
   color: var(--color-light-2);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .form-list.basics, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body fieldset.basics,
-.foundry2.pf2e.item.sheet form .form-list.basics,
-.foundry2.pf2e.item.sheet form section.sheet-body fieldset.basics {
+[data-dorako-ui-theme].pf2e.item.sheet form .form-list.basics, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body fieldset.basics {
   border-color: transparent;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
+[data-dorako-ui-theme] section.compendium-sidebar ol.directory-list ol.document-matches li.match .thumbnail img {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  padding: 0px;
+}
+[data-dorako-ui-theme] section.compendium-sidebar ol.directory-list ol.document-matches li.match:hover .thumbnail img {
+  border: var(--app-border-style);
+  border-color: var(--color-warm-2);
+}
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10310,33 +10304,27 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   background-color: var(--color-warm-4);
   border-color: var(--color-warm-3);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:not(.disabled, :disabled):hover,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
   border-color: var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.selected, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.selected,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.selected, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -10345,26 +10333,21 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright.disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:not(.disabled, :disabled):hover,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes > i,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes > i {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes > i {
   margin-top: 3px;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10401,33 +10384,27 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   height: 28px;
   width: 28px;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:not(.disabled, :disabled):hover,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
   border-color: var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.selected, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.selected,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.selected, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -10436,46 +10413,33 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright.disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:not(.disabled, :disabled):hover,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --button-background-color: var(--color-cool-5);
   --button-border-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar .item-summary, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar .item-summary,
-.foundry2.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar .item-summary, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
   color: var(--color-light-2);
 }
 [data-dorako-ui-theme] .tags .tag.tag_transparent,
-[data-dorako-ui-theme] .tags .tag option.tag_transparent,
-.foundry2 .tags .tag.tag_transparent,
-.foundry2 .tags .tag option.tag_transparent {
+[data-dorako-ui-theme] .tags .tag option.tag_transparent {
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
   background: var(--color-cool-4);
   color: var(--color-light-3);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text], [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number],
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text],
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number],
-.foundry2.pf2e.item.sheet form .sheet-content select,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text],
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number] {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text], [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number] {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -10491,81 +10455,34 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:focus,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text]:focus,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number]:focus,
-.foundry2.pf2e.item.sheet form .sheet-content select:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text]:focus,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number]:focus {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text].disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number].disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text].disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number].disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text].disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text]:disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number].disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number]:disabled,
-.foundry2.pf2e.item.sheet form .sheet-content select.disabled,
-.foundry2.pf2e.item.sheet form .sheet-content select:disabled,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text].disabled,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text]:disabled,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number].disabled,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number]:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text].disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number].disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text].disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number].disabled, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text].disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text]:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number].disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number]:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select.disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:disabled::placeholder,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text].disabled::placeholder,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text]:disabled::placeholder,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number].disabled::placeholder,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number]:disabled::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text]::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number]::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select::placeholder,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text]::placeholder,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number]::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select::selection, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]::selection, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]::selection,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text]::selection,
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number]::selection,
-.foundry2.pf2e.item.sheet form .sheet-content select::selection,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text]::selection,
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number]::selection {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text]::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number]::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select::selection, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text]::selection, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number]::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number][type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content input[type=text][type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content input[type=number][type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content select[type=checkbox],
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=text][type=checkbox],
-.foundry2.pf2e.item.sheet form section.sheet-body input[type=number][type=checkbox] {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=text][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input[type=number][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=text][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body input[type=number][type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text], [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number],
-.foundry2.pf2e.item.sheet .sheet-header input[type=text],
-.foundry2.pf2e.item.sheet .sheet-header input[type=number] {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text], [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number] {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -10583,55 +10500,34 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --input-height: var(--font-size-34);
   --font-size: var(--font-size-34);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:focus,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text]:focus,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number]:focus {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text].disabled, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:disabled, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number].disabled, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:disabled,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text].disabled,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text]:disabled,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number].disabled,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number]:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text].disabled, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:disabled, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number].disabled, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:disabled::placeholder,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text].disabled::placeholder,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text]:disabled::placeholder,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number].disabled::placeholder,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number]:disabled::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number].disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]::placeholder,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text]::placeholder,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number]::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]::placeholder, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]::selection, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]::selection,
-.foundry2.pf2e.item.sheet .sheet-header input[type=text]::selection,
-.foundry2.pf2e.item.sheet .sheet-header input[type=number]::selection {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]::selection, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number][type=checkbox],
-.foundry2.pf2e.item.sheet .sheet-header input[type=text][type=checkbox],
-.foundry2.pf2e.item.sheet .sheet-header input[type=number][type=checkbox] {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text][type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number][type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -10647,71 +10543,38 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:focus,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select:focus,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:focus,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select:focus {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select.disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select:disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select.disabled,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select.disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select.disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select:disabled::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select::selection,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select::selection,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select::selection,
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select::selection {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details select[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content section.sidebar select[type=checkbox] {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details select[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content section.sidebar select[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content button:hover:not(:disabled), [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content button:focus,
-.foundry2.pf2e.item.sheet form .sheet-content button:hover:not(:disabled),
-.foundry2.pf2e.item.sheet form .sheet-content button:focus {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content button:hover:not(:disabled), [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content button:focus {
   border: 1px solid var(--button-border-color);
   box-shadow: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled), [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled), [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled),
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled),
-.foundry2.pf2e.item.sheet form .sheet-content select:focus {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled), [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled), [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -10727,71 +10590,34 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:focus,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):focus,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:focus,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled):focus,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus:not(:disabled, .disabled, [type=checkbox]):hover,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus:focus {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):focus, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus.disabled,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus.disabled::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus:disabled::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus.disabled::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled)::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled)::placeholder,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus::placeholder {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled)::placeholder, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled)::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus::selection,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)::selection,
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus::selection,
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled)::selection,
-.foundry2.pf2e.item.sheet form .sheet-content select:focus::selection {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled)::selection, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content select:hover:not(:disabled)[type=checkbox],
-.foundry2.pf2e.item.sheet form .sheet-content select:focus[type=checkbox] {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].pf2e.item.sheet form .sheet-content select:focus[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone,
-.foundry2.pf2e.item.sheet.action form .drop-zone {
+[data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10800,10 +10626,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
 }
-[data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone a.content-link, [data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone picture, [data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone img,
-.foundry2.pf2e.item.sheet.action form .drop-zone a.content-link,
-.foundry2.pf2e.item.sheet.action form .drop-zone picture,
-.foundry2.pf2e.item.sheet.action form .drop-zone img {
+[data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone a.content-link, [data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone picture, [data-dorako-ui-theme].pf2e.item.sheet.action form .drop-zone img {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10812,21 +10635,17 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header,
-.foundry2.pf2e.item.sheet .sheet-header {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header {
   border: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav,
-.foundry2.pf2e.item.sheet form > nav {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav {
   border: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs {
   gap: 5px;
   margin: 2px;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10851,33 +10670,27 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a:not(.disabled, :disabled):hover,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
   border-color: var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.selected, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.active,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.selected,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.active {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.selected, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.disabled, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a:disabled,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.disabled,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.disabled, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.bright {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -10886,34 +10699,25 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright:disabled,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.bright.disabled,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.bright:disabled {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright:not(.disabled, :disabled):hover,
-.foundry2.pf2e.item.sheet form > nav .sheet-tabs > a.bright:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .effects-container, [data-dorako-ui-theme].pf2e.item.sheet form .details-container, [data-dorako-ui-theme].pf2e.item.sheet form .dice-data,
-.foundry2.pf2e.item.sheet form .effects-container,
-.foundry2.pf2e.item.sheet form .details-container,
-.foundry2.pf2e.item.sheet form .dice-data {
+[data-dorako-ui-theme].pf2e.item.sheet form .effects-container, [data-dorako-ui-theme].pf2e.item.sheet form .details-container, [data-dorako-ui-theme].pf2e.item.sheet form .dice-data {
   gap: 5px;
   align-items: center;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-mystification.active .mystification-status label,
-.foundry2.pf2e.item.sheet form section.sheet-body .item-mystification.active .mystification-status label {
+[data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-mystification.active .mystification-status label {
   color: var(--color-text-dark-4);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes,
-.foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10925,15 +10729,12 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-style: dashed;
   border-color: var(--color-warm-4);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit,
-.foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes,
-.foundry2.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
+[data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes, [data-dorako-ui-theme].pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
   background: var(--color-cool-4);
   border: 1px solid var(--color-cool-3);
   color: var(--color-light-2);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img,
-.foundry2.pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
+[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10943,8 +10744,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   color: var(--color-light-3);
   border-color: var(--color-warm-1);
 }
-[data-dorako-ui-theme].pf2e.item.sheet .sheet-header img,
-.foundry2.pf2e.item.sheet .sheet-header img {
+[data-dorako-ui-theme].pf2e.item.sheet .sheet-header img {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -10956,9 +10756,7 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-color: var(--color-warm-1);
   border-radius: 3px;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment,
-.foundry2.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,
-.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
+[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
   --button-border-color: var(--color-warm-2);
   --button-background-color: var(--color-warm-3);
   --button-hover-border-color: var(--color-warm-4);
@@ -10967,22 +10765,16 @@ nav#controls.dorako-ui ol.control-tools > li.toggle:hover {
   border-color: var(--button-border-color);
   z-index: 1;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules select,
-.foundry2.pf2e.item.sheet form .tab.active.rules select {
+[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules select {
   height: var(--input-height);
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input input, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input tags,
-.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input input,
-.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input tags {
+[data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input input, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input tags {
   border-left: unset;
 }
-[data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input input:hover, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input tags:hover,
-.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input input:hover,
-.foundry2.pf2e.item.sheet form .item-rules .rule-form .attached-input tags:hover {
+[data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input input:hover, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input tags:hover {
   border-left: unset;
 }
-[data-dorako-ui-theme] .tox .tox-sidebar-wrap,
-.foundry2 .tox .tox-sidebar-wrap {
+[data-dorako-ui-theme] .tox .tox-sidebar-wrap {
   background-color: white;
 }
 
@@ -12017,18 +11809,18 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background: var(--warm-background);
 }
 
-.foundry2.sheet.hazard {
+[data-dorako-ui-theme].sheet.hazard {
   --color-text-light: var(--color-light-2);
 }
-.foundry2.sheet.hazard.window-app .window-header {
+[data-dorako-ui-theme].sheet.hazard.window-app .window-header {
   background: #19302c;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-.foundry2.sheet.hazard.window-app.minimized .window-header {
+[data-dorako-ui-theme].sheet.hazard.window-app.minimized .window-header {
   border-radius: var(--border-radius);
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text], .foundry2.sheet.hazard input[type=text], .foundry2.sheet.hazard input[type=number] {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text], [data-dorako-ui-theme].sheet.hazard input[type=text], [data-dorako-ui-theme].sheet.hazard input[type=number] {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -12044,34 +11836,34 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:focus, .foundry2.sheet.hazard input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard input[type=text]:focus, .foundry2.sheet.hazard input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard input[type=number]:focus {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard input[type=number]:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text].disabled, .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:disabled, .foundry2.sheet.hazard input[type=text].disabled, .foundry2.sheet.hazard input[type=text]:disabled, .foundry2.sheet.hazard input[type=number].disabled, .foundry2.sheet.hazard input[type=number]:disabled {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled, [data-dorako-ui-theme].sheet.hazard input[type=text].disabled, [data-dorako-ui-theme].sheet.hazard input[type=text]:disabled, [data-dorako-ui-theme].sheet.hazard input[type=number].disabled, [data-dorako-ui-theme].sheet.hazard input[type=number]:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text].disabled::placeholder, .foundry2.sheet.hazard .section-container.publication .section-body input[type=text]:disabled::placeholder, .foundry2.sheet.hazard input[type=text].disabled::placeholder, .foundry2.sheet.hazard input[type=text]:disabled::placeholder, .foundry2.sheet.hazard input[type=number].disabled::placeholder, .foundry2.sheet.hazard input[type=number]:disabled::placeholder {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=text]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=number].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=number]:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text]::placeholder, .foundry2.sheet.hazard input[type=text]::placeholder, .foundry2.sheet.hazard input[type=number]::placeholder {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=text]::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=number]::placeholder {
   color: var(--input-placeholder-color);
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text]::selection, .foundry2.sheet.hazard input[type=text]::selection, .foundry2.sheet.hazard input[type=number]::selection {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]::selection, [data-dorako-ui-theme].sheet.hazard input[type=text]::selection, [data-dorako-ui-theme].sheet.hazard input[type=number]::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-.foundry2.sheet.hazard .section-container.publication .section-body input[type=text][type=checkbox], .foundry2.sheet.hazard input[type=text][type=checkbox], .foundry2.sheet.hazard input[type=number][type=checkbox] {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text][type=checkbox], [data-dorako-ui-theme].sheet.hazard input[type=text][type=checkbox], [data-dorako-ui-theme].sheet.hazard input[type=number][type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=text]:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled), .foundry2.sheet.hazard form > header input[type=number]:focus {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled), [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled), [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -12087,57 +11879,60 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):focus, .foundry2.sheet.hazard form > header input[type=text]:focus:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard form > header input[type=text]:focus:focus, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):focus, .foundry2.sheet.hazard form > header input[type=number]:focus:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.hazard form > header input[type=number]:focus:focus {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled, .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled, .foundry2.sheet.hazard form > header input[type=text]:focus.disabled, .foundry2.sheet.hazard form > header input[type=text]:focus:disabled, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled, .foundry2.sheet.hazard form > header input[type=number]:focus.disabled, .foundry2.sheet.hazard form > header input[type=number]:focus:disabled {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus.disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus.disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled::placeholder, .foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus.disabled::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus:disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus.disabled::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus:disabled::placeholder {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus.disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus.disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled)::placeholder, .foundry2.sheet.hazard form > header input[type=text]:focus::placeholder, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled)::placeholder, .foundry2.sheet.hazard form > header input[type=number]:focus::placeholder {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled)::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled)::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus::placeholder {
   color: var(--input-placeholder-color);
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled)::selection, .foundry2.sheet.hazard form > header input[type=text]:focus::selection, .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled)::selection, .foundry2.sheet.hazard form > header input[type=number]:focus::selection {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled)::selection, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus::selection, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled)::selection, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-.foundry2.sheet.hazard form > header input[type=text]:hover:not(:disabled)[type=checkbox], .foundry2.sheet.hazard form > header input[type=text]:focus[type=checkbox], .foundry2.sheet.hazard form > header input[type=number]:hover:not(:disabled)[type=checkbox], .foundry2.sheet.hazard form > header input[type=number]:focus[type=checkbox] {
+[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus[type=checkbox], [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-.foundry2.sheet.hazard form > header .details {
+[data-dorako-ui-theme].sheet.hazard form > header .details {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-.foundry2.sheet.hazard form > header .title {
+[data-dorako-ui-theme].sheet.hazard form > header .title {
   align-items: center;
+  --input-height: 32px;
+  --font-size: 32px;
 }
-.foundry2.sheet.hazard form > header .title .name {
-  height: 32px;
+[data-dorako-ui-theme].sheet.hazard form > header .title .name {
+  --input-height: 32px;
+  --font-size: 32px;
 }
-.foundry2.sheet.hazard .sidebar .sidebar-title {
+[data-dorako-ui-theme].sheet.hazard .sidebar .sidebar-title {
   border: unset;
 }
-.foundry2.sheet.hazard .sidebar {
+[data-dorako-ui-theme].sheet.hazard .sidebar {
   border: unset;
   box-shadow: unset;
 }
-.foundry2.sheet.hazard .sidebar > section {
+[data-dorako-ui-theme].sheet.hazard .sidebar > section {
   gap: 3px;
   display: flex;
   flex-direction: column;
 }
-.foundry2.sheet.hazard .section-container {
+[data-dorako-ui-theme].sheet.hazard .section-container {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -12150,19 +11945,19 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--color-warm-3);
   background: var(--color-warm-4);
 }
-.foundry2.sheet.hazard .section-container .section-header {
+[data-dorako-ui-theme].sheet.hazard .section-container .section-header {
   background: unset;
   border: unset;
 }
-.foundry2.sheet.hazard .section-container .section-body {
+[data-dorako-ui-theme].sheet.hazard .section-container .section-body {
   background: unset;
   border: unset;
 }
 
-.foundry2.sheet.familiar form {
+[data-dorako-ui-theme].sheet.familiar form {
   background: unset;
 }
-.foundry2.sheet.familiar .section-container {
+[data-dorako-ui-theme].sheet.familiar .section-container {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -12177,15 +11972,15 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background: var(--color-warm-4);
   border-radius: var(--border-radius);
 }
-.foundry2.sheet.familiar .section-container .section-header {
+[data-dorako-ui-theme].sheet.familiar .section-container .section-header {
   background: unset;
   border: unset;
 }
-.foundry2.sheet.familiar .section-container .section-body {
+[data-dorako-ui-theme].sheet.familiar .section-container .section-body {
   background: unset;
   border: unset;
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input, .foundry2.sheet.familiar select, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text] {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input, [data-dorako-ui-theme].sheet.familiar select, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text] {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -12201,39 +11996,40 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   font-size: var(--font-size);
   transition: outline-color 0.5s;
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:focus, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:focus, .foundry2.sheet.familiar select:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.familiar select:focus, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:focus {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:focus, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input:focus, [data-dorako-ui-theme].sheet.familiar select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.familiar select:focus, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text]:focus {
   outline: 2px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input.disabled, .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:disabled, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input.disabled, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:disabled, .foundry2.sheet.familiar select.disabled, .foundry2.sheet.familiar select:disabled, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text].disabled, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:disabled {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input.disabled, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:disabled, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input.disabled, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input:disabled, [data-dorako-ui-theme].sheet.familiar select.disabled, [data-dorako-ui-theme].sheet.familiar select:disabled, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text].disabled, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text]:disabled {
   --input-text-color: var(--color-light-6);
   --input-background-color: var(--color-cool-5);
   --input-border-color: var(--color-cool-4);
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input.disabled::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:disabled::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input.disabled::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input:disabled::placeholder, .foundry2.sheet.familiar select.disabled::placeholder, .foundry2.sheet.familiar select:disabled::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text].disabled::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]:disabled::placeholder {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input.disabled::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:disabled::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input.disabled::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input:disabled::placeholder, [data-dorako-ui-theme].sheet.familiar select.disabled::placeholder, [data-dorako-ui-theme].sheet.familiar select:disabled::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text]:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::placeholder, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input::placeholder, .foundry2.sheet.familiar select::placeholder, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]::placeholder {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input::placeholder, [data-dorako-ui-theme].sheet.familiar select::placeholder, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text]::placeholder {
   color: var(--input-placeholder-color);
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::selection, .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input::selection, .foundry2.sheet.familiar select::selection, .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text]::selection {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input::selection, [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input::selection, [data-dorako-ui-theme].sheet.familiar select::selection, [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text]::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input[type=checkbox], .foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input[type=checkbox], .foundry2.sheet.familiar select[type=checkbox], .foundry2.sheet.familiar .familiar-section .familiar-content input[type=text][type=checkbox] {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input[type=checkbox], [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input[type=checkbox], [data-dorako-ui-theme].sheet.familiar select[type=checkbox], [data-dorako-ui-theme].sheet.familiar .familiar-section .familiar-content input[type=text][type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-.foundry2.sheet.familiar .familiar-sheet-header .header-content .charname input {
+[data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input {
   --font-size: inherit;
   --input-height: auto;
+  font-size: 24px;
   margin-right: 100px;
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -12258,27 +12054,27 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: 0px 1px 2px black;
   transition: background-color 0.5s, border-color 0.5s;
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
   border-color: var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name.selected, .foundry2.sheet.familiar .skills-content .skills-list .skill-name.active {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.selected, [data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name.disabled, .foundry2.sheet.familiar .skills-content .skills-list .skill-name:disabled {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.disabled, [data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name:disabled {
   --button-background-color: var(--color-warm-5);
   --button-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-cool-5);
   --button-text-color: var(--color-light-5);
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name.bright {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -12287,14 +12083,14 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: #000000;
   text-shadow: unset;
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name.bright.disabled, .foundry2.sheet.familiar .skills-content .skills-list .skill-name.bright:disabled {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright.disabled, [data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-.foundry2.sheet.familiar .skills-content .skills-list .skill-name.bright:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
@@ -12908,13 +12704,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: unset;
 }
 
-.foundry2.app.npc-skills-editor form ol li.skill:nth-child(even) {
+[data-dorako-ui-theme].app.npc-skills-editor form ol li.skill:nth-child(even) {
   background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
 }
-.foundry2.app.npc-skills-editor form ol li.skill:nth-child(odd) {
+[data-dorako-ui-theme].app.npc-skills-editor form ol li.skill:nth-child(odd) {
   background-color: color-mix(in srgb, var(--color-cool-4) 40%, transparent);
 }
-.foundry2.app.npc-skills-editor form ol li.skill.header {
+[data-dorako-ui-theme].app.npc-skills-editor form ol li.skill.header {
   background-color: var(--color-warm-2);
 }
 

@@ -76,7 +76,7 @@ Navigation, Controls, Hotbar, Sidebar
 
 #### Explicit styling for a bunch of ironkmonk's modules
 
-Including "Active Tile Triggers", "Common Display", "Enhanced Journal", "Hotbar Expansion", "Little Details", "Scene Navigation", "TokenBar", etc.
+Including "Active Tile Triggers", "Common Display", "Hotbar Expansion", "Little Details", "Scene Navigation", "TokenBar", etc.
 Image shows a journal with Dalvyn's CRB styled journals enabled.
 
 <img src="./promo/web/monks.jpg">
@@ -85,7 +85,7 @@ Image shows a journal with Dalvyn's CRB styled journals enabled.
 
 <img src="./promo/web/token-hud-monk.jpg">
 
-#### Token Action HUD, both the old one and the new Core + Pathfinder one
+#### Token Action HUD
 
 <img src="./promo/web/token-action-hud.jpg">
 
@@ -95,31 +95,7 @@ Image shows a journal with Dalvyn's CRB styled journals enabled.
 
 ## Features
 
-Besides the theme, Dorako UI also has a bunch of UI-adjacent features, including:
-
-- Use dark theme messages for GM and light theme for players
-- Use the player color as the header color for messages
-- Chat message avatars
-  - Supports Token or Actor or Combatant images
-  - Supports 'pop out' tokens (also for Combat Tracker)
-  - Configurable size
-  - Reacts to critical rolls, glowing green on a critical success, and dimming and desaturating for critical failures
-  - Hidden when token is hidden, or roll is secret
-- Chat message accesibility
-  - Label indicating whispered messages and secret rolls
-  - Label for Player names
-- Chat message simplification
-  - Pull important spellcasting information out of the footer and into the main message
-  - Remove attack-related tags from damage rolls to save space
-- Centered hotbar
-  - Also works with modules that add extra hotbar rows
-- Hide stuff you don't want to see
-  - Foundry icon
-  - Cards sidebar
-  - Chat control icon
-  - "Compact UI" mode that fades out UI when inactive
-  - Collapse the Sidebar and/or Navigation by default
-- Includes Dalvyn's CRB-styled journal theme
+Non-theme features have been moved to [Dorako UX](https://github.com/Dorako/pf2e-dorako-ux)
 
 ## Wide compatability
 
@@ -143,9 +119,5 @@ Dorako UI's custom settings menu allows you to configure the theme to your likin
 ## Licenses & Attributions
 
 This code is available under the MIT license, see LICENSE.
-
-The sidebar resizing functionality has been adapted from [Sidebar Resizer](https://github.com/saif-ellafi/foundryvtt-sidebar-resizer) also available under the MIT license.
-
-The chat merge and rolltype buttons functionality has been adapted from [DFCE](https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-chat-enhance) available under the BSD 3-Clause license.
 
 The green PC sheet theme is contributed by Vesselchuck.
