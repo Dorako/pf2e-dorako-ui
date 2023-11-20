@@ -1,3 +1,8 @@
+# 3.0.6
+
+- (Refinement) Adjusted styling for the daily crafting button and alt-weapon-usage hints on PC sheets.
+- (Refinement) Reorganized theming structure to support future features. If you are using custom css to style Dorako UI, it might need updating.
+
 # 3.0.5
 
 - (Fix) Fixed the Foundry 2 theme not applying properly to Hazard and Familiar sheets.

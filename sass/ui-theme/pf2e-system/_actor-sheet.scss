@@ -31,8 +31,8 @@
   }
 }
 
-.foundry2-restricted,
-[data-dorako-ui-theme] {
+[data-dorako-ui-theme],
+[data-dorako-ui-scope="limited"] {
   .tags {
     --color-rarity-common: #323232;
   }
@@ -40,6 +40,17 @@
   .currency li > button {
     @include f2-button-warm;
   }
+
+  &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
+  &.actor.sheet .item-image {
+    margin: 1px 2px;
+    border: 1px solid var(--color-warm-2);
+    border-radius: 3px;
+    img {
+      border-radius: 3px;
+    }
+  }
+
   &.actor.sheet .item-image.framed,
   &.actor.sheet .item-image.framed i {
     box-shadow: unset !important;

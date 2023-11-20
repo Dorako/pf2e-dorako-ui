@@ -141,7 +141,7 @@
 
     input[type="text"] {
       @include f2-input;
-      height: auto;
+      height: auto !important;
       border-radius: var(--border-radius);
     }
   }

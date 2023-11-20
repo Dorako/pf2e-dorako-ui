@@ -448,7 +448,7 @@ $adjusted-lower: #cc3311 !default;
 
 [data-dorako-ui-theme] .damage,
 .dorako-ui.dark-theme .damage,
-.foundry2-restricted .damage {
+[data-dorako-ui-scope="limited"] .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125); // adjusted
   --color-bg-bleed: rgba(207, 28, 58, 0.125); // adjusted
   --color-bg-chaotic: rgba(221, 26, 221, 0.125); // adjusted

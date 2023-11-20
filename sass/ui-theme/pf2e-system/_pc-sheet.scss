@@ -1,4 +1,4 @@
-.foundry2-restricted {
+[data-dorako-ui-scope="limited"] {
   &.actor.sheet {
     --header: url("/systems/pf2e/assets/sheet/header.webp");
   }
@@ -97,6 +97,36 @@
     border-radius: var(--border-radius);
   }
 
+  button.daily-crafting {
+    @include f2-button-warm;
+    --button-background-color: var(--color-warm-1);
+    --button-border-color: var(--color-cool-5);
+    --button-text-color: var(--color-cool-5);
+    --button-hover-background-color: #fda948;
+    --button-hover-border-color: var(--color-warm-2);
+    --button-hover-text-color: #000000;
+    text-shadow: unset;
+
+    &.disabled,
+    &:disabled {
+      --button-background-color: var(--color-cool-4);
+      --button-hover-background-color: var(--color-cool-4);
+      --button-text-color: var(--color-light-5);
+      --button-hover-text-color: var(--color-light-5);
+      --button-hover-border-color: transparent;
+    }
+
+    &:not(.disabled, :disabled):hover {
+      --button-hover-background-color: #cb7f27;
+      --button-hover-border-color: var(--color-warm-1);
+    }
+  }
+
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .alt-usage .alt-usage-icon {
+    filter: invert(1);  
+  }
+
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd img.deity-emblem,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .pc_deity img.symbol {
@@ -123,6 +153,7 @@
     background: var(--color-warm-2);
     color: var(--color-light-1);
     text-shadow: 0px 1px 2px black;
+    border-radius: 2px;
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input,
@@ -242,8 +273,8 @@
   }
 }
 
-.foundry2,
-.foundry2-restricted {
+[data-dorako-ui-theme],
+[data-dorako-ui-scope="limited"] {
   &.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
     background: var(--color-cool-5-75);

@@ -5,6 +5,7 @@
 #chat-controls {
   padding: 0px;
   gap: var(--sidebar-gap);
+  align-items: center;
   .buttons {
     gap: var(--sidebar-gap);
     flex-wrap: nowrap;

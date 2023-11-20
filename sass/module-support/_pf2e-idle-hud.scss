@@ -204,7 +204,7 @@
   }
 }
 
-.foundry2-restricted {
+[data-dorako-ui-scope="limited"] {
   &#pf2e-token-hud {
     // --primary: var(--color-warm-2);
     --rarity-common: #e1d8cf;
@@ -357,7 +357,7 @@
 /* Symon Custom CSS                          */
 /* ----------------------------------------- */
 
-#pf2e-token-hud.foundry2-restricted.colorized .inner,
+#pf2e-token-hud[data-dorako-ui-scope="limited"].colorized .inner,
 #pf2e-token-hud.dorako-ui.colorized .inner {
   i.fa-solid.fa-circle-h {
     color: darkgoldenrod;

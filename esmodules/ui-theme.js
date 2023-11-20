@@ -7,13 +7,14 @@ import {
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 
-const dataTheme = "foundry2";
+export const dataTheme = "";
 
 Hooks.on("renderSvelteApplication", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme !== "foundry2-theme") return;
   // app.element[0].classList.add("foundry2");
   app.element[0].dataset.dorakoUiTheme = dataTheme;
+  app.element[0].dataset.dorakoUiScope = "unlimited";
 });
 
 for (const appName of [...baseThemeApplications]) {
@@ -26,13 +27,16 @@ for (const appName of [...baseThemeApplications]) {
     const excludeList = excludeString.split(/[\s,]+/);
     if (excludeList.includes(app.constructor.name)) {
       console.debug(
-        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dataTheme}`
       );
       return;
     }
-    console.debug(`${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => add .foundry2`);
+    console.debug(
+      `${MODULE_NAME} | baseThemeApplications | render${app.constructor.name} => set dorako-ui-theme to ${dataTheme}`
+    );
     // html.addClass("foundry2");
     app.element[0].dataset.dorakoUiTheme = dataTheme;
+    app.element[0].dataset.dorakoUiScope = "unlimited";
   });
 }
 
@@ -52,7 +56,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes(app.constructor.name)) {
     console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dataTheme}`
     );
     return;
   }
@@ -66,13 +70,11 @@ Hooks.on("renderApplication", (app, html, data) => {
       html.addClass("dialog");
     }
   }
-  // html.addClass("foundry2");
   app.element[0].dataset.dorakoUiTheme = dataTheme;
-  //   app.options?.classes?.push("foundry2");
+  app.element[0].dataset.dorakoUiScope = "unlimited";
   html.find("form button[type='submit']").addClass("bright");
   html.find(".item-controls button[data-action='apply']").addClass("bright");
   html.find("form button[data-action='save']").addClass("bright");
-  // html.find("nav.sheet-tabs .item").addClass("button");
 });
 
 Hooks.on("renderDialog", (app, html, data) => {
@@ -80,9 +82,9 @@ Hooks.on("renderDialog", (app, html, data) => {
   if (theme !== "foundry2-theme") {
     return;
   }
-  console.debug(`${MODULE_NAME} | render${app.constructor.name} | pushing .foundry2 class option`);
-  // html.addClass("foundry2");
+  console.debug(`${MODULE_NAME} | render${app.constructor.name} | set dorako-ui-theme to ${dataTheme}`);
   app.element[0].dataset.dorakoUiTheme = dataTheme;
+  app.element[0].dataset.dorakoUiScope = "unlimited";
 });
 
 Hooks.on("renderItemSheet", (app, html, data) => {
@@ -90,8 +92,6 @@ Hooks.on("renderItemSheet", (app, html, data) => {
   if (theme !== "foundry2-theme") {
     return;
   }
-  //   app.options?.classes?.push("foundry2");
-  // html.addClass("foundry2");
   app.element[0].dataset.dorakoUiTheme = dataTheme;
   html.find("form > nav a").addClass("button");
 });
@@ -103,7 +103,7 @@ Hooks.on("renderTokenActionHud", (app, html, data) => {
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes("TokenActionHud")) {
     console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dataTheme}`
     );
     return;
   }
@@ -111,8 +111,8 @@ Hooks.on("renderTokenActionHud", (app, html, data) => {
     app.element[0].dataset.dorakoUiTheme = "crb-dark";
     return;
   }
-  // html.attr("data-theme", "foundry2");
   app.element[0].dataset.dorakoUiTheme = dataTheme;
+  app.element[0].dataset.dorakoUiScope = "unlimited";
 });
 
 Hooks.on("renderTokenBar", (app, html, data) => {
@@ -125,12 +125,12 @@ Hooks.on("renderTokenBar", (app, html, data) => {
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes("TokenBar")) {
     console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2`
+      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dataTheme}`
     );
     return;
   }
-  // html.attr("data-theme", "foundry2");
   app.element[0].dataset.dorakoUiTheme = dataTheme;
+  app.element[0].dataset.dorakoUiScope = "unlimited";
 });
 
 for (const appName of [...baseThemePf2eSheets]) {
@@ -141,10 +141,11 @@ for (const appName of [...baseThemePf2eSheets]) {
     let html0 = html[0];
     if (!html0.classList.contains("window-app")) return;
     console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | is PF2e .window-app "Application" => add .foundry2`
+      `${MODULE_NAME} | render${app.constructor.name} | is PF2e .window-app "Application" => set dorako-ui-theme to ${dataTheme}`
     );
     // html.addClass("foundry2");
     app.element[0].dataset.dorakoUiTheme = dataTheme;
+    app.element[0].dataset.dorakoUiScope = "unlimited";
   });
 }
 
@@ -156,11 +157,14 @@ for (const appName of [...foundry2RestrictedApplications]) {
     const excludeList = excludeString.split(/[\s,]+/);
     if (excludeList.includes(app.constructor.name)) {
       console.debug(
-        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not add .foundry2-restricted`
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set data-dorako-ui-scope to 'limited'`
       );
       return;
     }
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => add .foundry2-restricted`);
-    html.addClass("foundry2-restricted");
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => set data-dorako-ui-scope to 'limited'`
+    );
+    app.element[0].dataset.dorakoUiTheme = dataTheme;
+    app.element[0].dataset.dorakoUiScope = "limited";
   });
 }

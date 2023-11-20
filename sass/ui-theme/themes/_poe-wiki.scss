@@ -1,4 +1,5 @@
-[data-dorako-ui-theme="poe-wiki"] {
+[data-dorako-ui-theme="poe-wiki"],
+[data-dorako-ui-theme="poe-wiki"][data-dorako-ui-scope="limited"] {
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--poe-color-unique);
   --color-warm-3: var(--primary-dark);
@@ -9,9 +10,7 @@
   --color-cool-3: var(--secondary-dark);
   --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
   --color-cool-4: #26231f;
-}
 
-[data-dorako-ui-theme="poe-wiki"] {
   --window-app-background: var(--dark-15);
   --window-app-border-color: var(--brown-4);
   --window-app-border-style: 1px solid;
@@ -23,17 +22,26 @@
   --box-shadow: 0px 1px 2px black;
   --accent-color: var(--tertiary);
 
-  --color-light-2: var(--color-text-light-highlight);
-  --color-light-3: var(--color-text-light-heading);
-
-  --color-border-medium: var(--brown-1) !important;
-  --color-border-divider: var(--brown-1) !important;
-
   --inline-bg: transparent;
   --inline-border-color: transparent;
   --inline-text-color: var(--poe-color-magic);
   --inline-icon-color: var(--poe-color-gem);
 
+  --input-border-color: var(--brown-2);
+
+  --color-border-light-primary: var(--brown-1);
+  --color-border-light-highlight: var(--brown-2);
+  &.actor.sheet .crb-style .sheet-body {
+    --color-border-medium: var(--brown-1);
+    --color-border-divider: var(--brown-1);
+    --secondary: var(--poe-color-gem);
+  }
+  &.actor.sheet .inventory .list-row .item-controls {
+    --secondary: var(--poe-color-gem);
+  }
+}
+
+[data-dorako-ui-theme="poe-wiki"] {
   select,
   input,
   button {

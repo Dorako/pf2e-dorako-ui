@@ -3,6 +3,7 @@ import { ThemeSettings } from "./theme-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
+import { dataTheme } from "../ui-theme.js";
 
 function injectCSS(filename) {
   const head = document.getElementsByTagName("head")[0];
@@ -66,8 +67,8 @@ Hooks.once("init", async () => {
 
   const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   if (theme === "foundry2-theme") {
-    $("#tooltip").attr("data-dorako-ui-theme", "foundry2");
-    $("#fps").attr("data-dorako-ui-theme", "foundry2");
+    $("#tooltip").attr("data-dorako-ui-theme", dataTheme);
+    $("#fps").attr("data-dorako-ui-theme", dataTheme);
     game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
   } else if (theme !== "no-theme") {
     $("#tooltip").attr("data-dorako-ui-theme", "crb-dark");

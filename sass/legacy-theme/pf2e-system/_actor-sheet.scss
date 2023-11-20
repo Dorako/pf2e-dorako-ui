@@ -201,7 +201,7 @@
     }
 }
 
-.foundry2-restricted {
+[data-dorako-ui-scope="limited"] {
   // prettier-ignore
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
@@ -224,7 +224,7 @@
   }
 }
 
-.foundry2-restricted,
+[data-dorako-ui-scope="limited"],
 .dorako-ui {
   &.actor.sheet.red-theme {
     --theme-color: var(--primary);

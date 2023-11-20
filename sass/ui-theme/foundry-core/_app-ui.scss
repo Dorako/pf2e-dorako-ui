@@ -70,7 +70,7 @@
 /* ----------------------------------------- */
 
 [data-dorako-ui-theme],
-.foundry2-restricted {
+[data-dorako-ui-scope="limited"] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
   --color-border-light-highlight: var(--color-cool-3);
@@ -100,10 +100,10 @@
 }
 
 /* ----------------------------------------- */
-/* .foundry2-restricted specific             */
+/* limited scope specific                    */
 /* ----------------------------------------- */
 
-.foundry2-restricted {
+[data-dorako-ui-scope="limited"] {
   --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
   --color-rarity-rare: #5362ff;
@@ -116,11 +116,10 @@
 }
 
 /* ------------------------------------------------------------- */
-/* Generalized style choices (inclusive of .foundry2-restricted) */
+/* Generalized style choices (inclusive of limited scope)        */
 /* ------------------------------------------------------------- */
 
-[data-dorako-ui-theme],
-.foundry2-restricted {
+[data-dorako-ui-theme] {
   // Dark theme
   --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
@@ -202,10 +201,10 @@
 }
 
 /* ------------------------------------------------------------ */
-/* Generalized style choices (exlusive of .foundry2-restricted) */
+/* Generalized style choices (exlusive of limited scope)        */
 /* ------------------------------------------------------------ */
 
-[data-dorako-ui-theme] {
+[data-dorako-ui-theme][data-dorako-ui-scope="unlimited"] {
   color: var(--color-light-3);
 
   input[type="text"],
@@ -366,7 +365,7 @@
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-dorako-ui-theme][data-dorako-ui-scope="unlimited"] {
   &.app {
     border-radius: var(--border-radius);
     background: unset;
@@ -430,8 +429,7 @@
 /* Application specific                      */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme],
-.foundry2-restricted {
+[data-dorako-ui-theme] {
   // System compat mode
   // --alt: var(--color-cool-3);
   --bg: var(--color-warm-3);
@@ -458,6 +456,7 @@
 
   #chat-controls .roll-type-select {
     @include f2-input;
+    margin: 0px;
   }
 
   &.filepicker .favorites .paths {
@@ -568,8 +567,7 @@
 /* Tagify and tags                           */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme],
-.foundry2-restricted {
+[data-dorako-ui-theme] {
   .tagify,
   tags.tagify.pf2e-tagify {
     --tags-disabled-bg: #f1f1f1;
@@ -727,10 +725,13 @@
     }
   }
 
+  &.pf2e.item.sheet form .sheet-body .tab.active.description .editor:hover a.add-gm-notes {
+    display: flex;
+  }
+
   &.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
     @include f2-button-warm;
     border-radius: 3px;
-    display: flex;
     align-content: center;
     justify-content: center;
     right: 40px;

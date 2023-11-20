@@ -107,9 +107,9 @@ i[data-pf2-repost] {
 
 .tah-tags-wrapper .tags,
 [data-dorako-ui-theme] .tags,
-.foundry2-restricted .tags,
+[data-dorako-ui-scope="limited"] .tags,
 [data-dorako-ui-theme] .tags.paizo-style,
-.foundry2-restricted .tags.paizo-style,
+[data-dorako-ui-scope="limited"] .tags.paizo-style,
 .dorako-ui .message-content .tags,
 .dorako-ui .tags.paizo-style,
 .dorako-ui .tags {
