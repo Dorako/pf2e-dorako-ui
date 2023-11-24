@@ -94,8 +94,9 @@
           "hint": "用于渲染进程窗口",
           "choice": {
             "no-theme": "无主题",
-            "light-theme": "明亮Dorako UI",
-            "dark-theme": "黑暗Dorako UI"
+            "light-theme": "CRB主题（明亮）",
+            "dark-theme": "CRB主题（黑暗）",
+            "foundry2-theme": "Foundry 2主题"
           }
         },
         "hint": "为多个进程及UI元素更改主题设置",
@@ -108,19 +109,24 @@
           "hint": "任何可用CSS颜色都可以"
         },
         "npc-sheet-theme": {
-          "name": "NPC卡风格",
-          "hint": "影响NPC人物卡"
+          "name": "角色卡风格",
+          "hint": "影响NPC/危害/魔宠角色卡",
+          "choice": {
+            "default": "默认Dorako UI",
+            "glassy": "(实验性) 玻璃"
+          }
         },
         "chat-theme": {
           "name": "聊天主题",
           "choice": {
-            "factions": "玩家明亮，GM黑暗"
+            "factions": "玩家明亮，GM黑暗",
+            "foundry2": "Foundry 2 主题"
           },
           "hint": "影响所有聊天消息"
         },
         "pc-sheet-theme": {
           "name": "PC卡主题",
-          "hint": "影响玩家角色卡",
+          "hint": "影响玩家和载具角色卡",
           "choice": {
             "red": "默认红",
             "green": "重置绿（Remaster版）",
@@ -152,6 +158,10 @@
         "enable-dark-theme-journals": {
           "name": "为日志启用黑暗主题？",
           "hint": "不影响Premium模组附带日志"
+        },
+        "border-radius": {
+          "hint": "(默认：3px) 更改部分UI元素的圆润度",
+          "name": "圆润度"
         }
       },
       "avatar": {
