@@ -1,19 +1,9 @@
-[data-dorako-ui-scope="limited"] {
+[data-dorako-ui-theme][data-dorako-ui-scope="limited"]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
   &.actor.sheet {
     --header: url("/systems/pf2e/assets/sheet/header.webp");
   }
 
   &.actor.sheet .crb-style .sheet-body {
-    --primary: var(--color-warm-2);
-    --secondary: var(--color-cool-3);
-    --text-dark: var(--color-light-2);
-    --color-border-light-2: var(--color-cool-4);
-    --color-border-light-primary: var(--color-warm-1);
-    --color-border-light-highlight: var(--color-warm-2);
-    --color-border-divider: var(--color-cool-3);
-    --sub: var(--color-light-6);
-    --alt: var(--color-light-5);
-    --bg: var(--color-cool-5-90);
     background: unset;
 
     input[type="number"] {
@@ -105,7 +95,7 @@
     --button-hover-background-color: #fda948;
     --button-hover-border-color: var(--color-warm-2);
     --button-hover-text-color: #000000;
-    text-shadow: unset;
+    text-shadow: none;
 
     &.disabled,
     &:disabled {
@@ -197,7 +187,7 @@
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3 {
     @include f2-input;
-
+    padding: 0.5em 0.25em;
     &:hover {
       outline: 0px transparent !important;
     }

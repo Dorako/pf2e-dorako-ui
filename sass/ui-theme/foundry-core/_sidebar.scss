@@ -16,6 +16,7 @@
       &.active {
         @include f2-app;
         background-color: var(--color-warm-2);
+        border: var(--window-app-border-style);
         border-color: var(--color-warm-1);
         color: var(--color-light-2);
       }
@@ -68,11 +69,11 @@
       border-radius: 0px;
       border-left: unset;
       border-right: unset;
-      background-color: var(--color-scrollbar);
-      border-color: var(--color-scrollbar-border);
+      --app-background: var(--color-scrollbar);
+      --app-border-color: var(--color-scrollbar-border);
       &:hover {
-        background-color: var(--color-warm-2);
-        border-color: var(--color-warm-1);
+        --app-background: var(--color-warm-2);
+        --app-border-color: var(--color-warm-1);
       }
     }
   }

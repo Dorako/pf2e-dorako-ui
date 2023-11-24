@@ -22,6 +22,7 @@
 [data-dorako-ui-theme] {
   &#smalltime-app {
     @include f2-app;
+    outline: none;
   }
 
   &#smalltime-app .arrow,

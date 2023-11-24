@@ -84,7 +84,8 @@
     border: unset;
     img {
       @include f2-app;
-      border-color: var(--color-warm-1);
+      border: 1px solid;
+      border-color: var(--icon-border-color);
     }
   }
 
@@ -147,13 +148,19 @@
           .fa-heart-broken {
             position: relative;
             -webkit-text-fill-color: unset;
+            // clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
+
+            &::before {
+              opacity: 0.5;
+            }
 
             &::after {
               content: "\f7a9";
               font-family: "Font Awesome 5 Free";
-              color: var(--color-cool-3);
+              // color: red;
               display: block;
               z-index: 1;
+              opacity: 1;
               position: absolute;
               top: 0px;
               left: 2.4px;
@@ -171,21 +178,25 @@
         &[data-action="shield-block"] {
           &:hover {
             background-color: var(--color-cool-2);
-            border: 1px solid var(--color-cool-1);
+            border: var(--app-border-style);
+            border-color: var(--color-cool-1);
           }
           &.shield-activated {
             background-color: var(--color-cool-1);
-            border: 1px solid var(--color-cool-2);
+            border: var(--app-border-style);
+            border-color: var(--color-cool-2);
             &:hover {
               background-color: var(--color-cool-2);
-              border: 1px solid var(--color-cool-1);
+              border: var(--app-border-style);
+              border-color: var(--color-cool-1);
             }
           }
         }
 
         &[data-action="apply-healing"] {
           .fa-stack i.fa-plus {
-            color: var(--color-cool-5);
+            // color: var(--color-cool-5);
+            --fa-inverse: white;
             text-shadow: none;
           }
 
@@ -194,7 +205,7 @@
             border-color: var(--color-level-success-border);
 
             .fa-stack i.fa-plus {
-              color: var(--color-level-success);
+              --fa-inverse: var(--color-level-success);
               text-shadow: none;
             }
           }
@@ -245,12 +256,15 @@
   // }
 
   &.dark-header-text {
-    color: color-mix(in srgb, var(--header-color) 20%, white);
-    .message-sender {
-      color: color-mix(in srgb, var(--header-color) 20%, white);
+    color: color-mix(in srgb, var(--header-color) 20%, black);
+    text-shadow: none;
+    .message-sender:not([data-visibility="gm"]) {
+      color: color-mix(in srgb, var(--header-color) 20%, black);
+      text-shadow: none;
     }
     .header-meta {
-      color: color-mix(in srgb, var(--header-color) 20%, white);
+      color: color-mix(in srgb, var(--header-color) 20%, black);
+      text-shadow: none;
     }
   }
 
@@ -322,6 +336,7 @@
 
   &.chat-message.emote > .message-content p.action-content img {
     @include f2-app;
-    border-color: var(--color-warm-1);
+    border: 1px solid;
+    border-color: var(--icon-border-color);
   }
 }

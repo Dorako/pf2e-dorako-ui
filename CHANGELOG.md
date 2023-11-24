@@ -1,3 +1,9 @@
+# 3.1.0 / WIP
+
+- (New) Massive refactor.
+- (New) New theme settings.
+- (Fix) Fixed custom css not working.
+
 # 3.0.6
 
 - (Refinement) Adjusted styling for the daily crafting button and alt-weapon-usage hints on PC sheets.

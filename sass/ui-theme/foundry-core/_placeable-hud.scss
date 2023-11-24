@@ -8,24 +8,23 @@
     --input-focus-outline-color: var(--color-level-success-border);
     --input-background-color: var(--color-level-success-bg);
     --input-focus-text-color: var(--color-light-2);
+    --input-text-color: var(--color-light-2);
   }
 
   #token-hud .attribute.bar2 input {
     --input-border-color: var(--color-level-info-border);
     --input-focus-outline-color: var(--color-level-info-border);
     --input-background-color: var(--color-level-info-bg);
-    --input-text-color: var(--color-level-light-2); // looks disabled otherwise
+    --input-text-color: var(--color-light-2); // looks disabled otherwise
   }
 
   &.placeable-hud input[type="text"] {
     @include f2-input;
-    --input-height: 40px;
-    --font-size: 28px;
     text-shadow: 0px 1px 2px black;
     --input-focus-text-color: var(--color-light-2);
     &[name="elevation"] {
       --input-background-color: var(--app-background);
-      --font-size: 18px;
+      font-size: 18px;
       width: 42px;
     }
   }

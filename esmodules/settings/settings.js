@@ -3,17 +3,7 @@ import { ThemeSettings } from "./theme-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
-import { dataTheme } from "../ui-theme.js";
-
-function injectCSS(filename) {
-  const head = document.getElementsByTagName("head")[0];
-  const mainCss = document.createElement("link");
-  mainCss.setAttribute("rel", "stylesheet");
-  mainCss.setAttribute("type", "text/css");
-  mainCss.setAttribute("href", "modules/pf2e-dorako-ui/styles/" + filename + ".css");
-  mainCss.setAttribute("media", "all");
-  head.insertBefore(mainCss, head.lastChild);
-}
+import { getUiTheme } from "../ui-theme.js";
 
 export function refreshChat() {
   if (game.messages.size > 100) {
@@ -56,37 +46,31 @@ Hooks.once("init", async () => {
 
   util.debug("registered settings");
 
-  // if (game.settings.get("pf2e-dorako-ui", "ux.chat-merge")) {
-  //   ChatMerge.init();
-  // }
-
-  // if (game.settings.get("pf2e-dorako-ui", "ux.adjust-chat-controls")) {
-  //   ChatRollPrivacy.setup();
-  //   ChatRollPrivacy.init();
-  // }
-
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (theme === "foundry2-theme") {
-    $("#tooltip").attr("data-dorako-ui-theme", dataTheme);
-    $("#fps").attr("data-dorako-ui-theme", dataTheme);
+  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+  if (applicationTheme === "foundry2") {
     game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
-  } else if (theme !== "no-theme") {
-    $("#tooltip").attr("data-dorako-ui-theme", "crb-dark");
-    $("#fps").attr("data-dorako-ui-theme", "crb-dark");
   }
+  if (applicationTheme !== "no-theme") {
+    const uiTheme = getUiTheme();
+    const { dorakoUiTheme, colorScheme } = uiTheme;
 
-  // injectCSS("dorako-theme/dorako-theme");
-  // injectCSS("foundry2-theme/foundry2-theme");
-  // injectCSS("dorako-ux/dorako-ux");
-  // injectCSS("fonts");
+    if (uiTheme) {
+      $("#tooltip").attr("data-dorako-ui-theme", dorakoUiTheme);
+      $("#fps").attr("data-dorako-ui-theme", dorakoUiTheme);
+    }
+  }
 
   const root = document.querySelector(":root").style;
 
-  // root.setProperty("--avatar-size", game.settings.get("pf2e-dorako-ui", "avatar.size").toString() + "px");
   root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
   root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg").toString());
-  // root.setProperty("--control-size", game.settings.get("pf2e-dorako-ui", "ux.control-size").toString() + "px");
-  // root.setProperty("--controls-alignment", game.settings.get("pf2e-dorako-ui", "ux.controls-alignment").toString());
 
   util.debug("initialized properties");
+});
+
+Hooks.once("ready", () => {
+  let dorakoCustomCss = document.createElement("style");
+  dorakoCustomCss.id = "dorako-custom-css";
+  dorakoCustomCss.innerHTML = game.settings.get("pf2e-dorako-ui", "customization.custom-css");
+  document.querySelector("head").appendChild(dorakoCustomCss);
 });

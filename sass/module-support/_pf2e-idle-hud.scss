@@ -220,10 +220,16 @@
     --color-rank-2: #bf4fdb;
     --color-rank-3: #cf931d;
     --color-rank-4: red; // Symon recommended
+    --color-disabled: var(--color-light-disabled);
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-header input {
+    @include f2-input;
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .item-img img {
-    border-color: var(--color-warm-2);
+    border: 1px solid;
+    border-color: var(--icon-border-color);
     border-radius: var(--border-radius);
   }
 
@@ -261,13 +267,17 @@
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .details .extras .actions a i.greyed {
-    color: var(--color-light-6);
+    color: var(--color-light-disabled);
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .header {
     background: var(--color-cool-4);
     border-color: var(--color-cool-5);
     margin: 0px -5px;
+  }
+
+  &#pf2e-token-hud .sidebar.doubled .sidebar-content .header {
+    margin: 0px 0px;
   }
 
   &.pf2e-token-hud .no-macro,
@@ -277,10 +287,14 @@
     border: 1px solid var(--color-scrollbar-border);
   }
 
+  &#pf2e-token-hud .sidebar.spells .expended img {
+    filter: saturate(0);
+  }
+
   &#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions {
-    a {
+    a:not(.disabled) {
       color: var(--color-light-3);
-      &:hover {
+      :hover {
         color: var(--color-warm-2);
       }
     }
@@ -295,6 +309,15 @@
     background: unset;
     @include f2-app;
     backdrop-filter: blur(4px);
+  }
+
+  &#pf2e-token-hud .popup .item-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    button {
+      @include f2-button-warm;
+    }
   }
 
   &#pf2e-token-hud .inner .group .section input[type="number"] {

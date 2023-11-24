@@ -1,5 +1,4 @@
-import { i18n } from "./util.js";
-import { Avatar, ActorAvatar, TokenAvatar, CombatantAvatar } from "./consts.js";
+import { getChatTheme } from "./ui-theme.js";
 
 const rgb2hex = (rgb) =>
   `#${rgb
@@ -7,6 +6,30 @@ const rgb2hex = (rgb) =>
     .slice(1)
     .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
     .join("")}`;
+
+Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  const setting = game.settings.get("pf2e-dorako-ui", "theme.chat-color-scheme");
+  const { dorakoUiTheme, defaultColorScheme } = getChatTheme();
+  let colorScheme = null;
+  switch (setting) {
+    case "default":
+      colorScheme = defaultColorScheme;
+      break;
+    case "prefer-dark":
+      colorScheme = "dark";
+      break;
+    case "prefer-light":
+      colorScheme = "light";
+      break;
+    case "alliance": // not implemented yet
+      colorScheme = "dark";
+      break;
+    case "gm-vs-players":
+      colorScheme = chatMessage.user.isGM ? "dark" : "light";
+      break;
+  }
+  html[0].dataset.colorScheme = colorScheme;
+});
 
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
@@ -18,27 +41,14 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     return;
   }
 
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.chat-theme");
-
   let html0 = html[0];
-  if (theme !== "foundry2") {
-    html0.classList.add("dorako-ui");
-  } else {
-    html0.style.setProperty("--border-tint", chatMessage?.user?.color ?? "#DAC0FB");
-  }
+  html0.style.setProperty("--border-tint", chatMessage?.user?.color ?? "#DAC0FB");
 
-  if (theme == "dark") html0.classList.add("dark-theme");
-  if (theme == "light") html0.classList.add("light-theme");
-  if (theme == "factions") {
-    if (chatMessage.user.isGM) {
-      html0.classList.add("dark-theme");
-    } else {
-      html0.classList.add("light-theme");
-    }
-  }
-  if (theme == "foundry2") {
-    // html0.classList.add("foundry2");
-    html0.dataset.dorakoUiTheme = "foundry2";
+  const uiTheme = getChatTheme();
+  const { dorakoUiTheme, colorScheme } = uiTheme;
+  if (uiTheme) {
+    html0.dataset.dorakoUiTheme = dorakoUiTheme;
+    html0.dataset.dorakoUiScope = "unlimited";
   }
 
   themeHeader(html, chatMessage);

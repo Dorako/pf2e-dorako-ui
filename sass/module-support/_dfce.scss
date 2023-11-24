@@ -28,10 +28,11 @@
   }
 }
 
-[data-dorako-ui-theme],
-.foundry2 {
+[data-dorako-ui-theme] {
   #dorako-rt-buttons button.active {
     background-color: var(--color-warm-2);
+    border: var(--app-border-style);
+    border-color: var(--app-border-color);
   }
 }
 

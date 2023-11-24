@@ -70,7 +70,7 @@
 /* ----------------------------------------- */
 
 [data-dorako-ui-theme],
-[data-dorako-ui-scope="limited"] {
+[data-dorako-ui-theme][data-dorako-ui-scope="limited"] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
   --color-border-light-highlight: var(--color-cool-3);
@@ -103,7 +103,7 @@
 /* limited scope specific                    */
 /* ----------------------------------------- */
 
-[data-dorako-ui-scope="limited"] {
+[data-dorako-ui-theme][data-dorako-ui-scope="limited"][data-color-scheme="dark"] {
   --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
   --color-rarity-rare: #5362ff;
@@ -119,7 +119,7 @@
 /* Generalized style choices (inclusive of limited scope)        */
 /* ------------------------------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-dorako-ui-theme][data-dorako-ui-theme][data-color-scheme="dark"] {
   // Dark theme
   --color-rarity-common: #efeadc;
   --color-rarity-uncommon: #c45500;
@@ -136,7 +136,9 @@
   /* Value adjustments (e.g. weak/elite) */
   --adjusted-higher: #009988;
   --adjusted-lower: #cc3311;
+}
 
+[data-dorako-ui-theme] {
   --input-height: 24px;
 
   --input-background-color: var(--color-cool-4);
@@ -147,7 +149,9 @@
   --input-placeholder-color: var(--color-light-4);
   --input-text-selection-color: var(--color-cool-3);
   --input-focus-outline-color: var(--color-cool-3);
+  --icon-border-color: var(--color-warm-2);
   --box-shadow: 0px 1px 3px 1px black;
+  --app-text-shadow: 0px 1px 2px black;
 
   ::-webkit-scrollbar-thumb {
     outline: none;
@@ -181,6 +185,7 @@
     background: var(--inline-bg);
     border: 1px solid var(--inline-border-color);
     color: var(--inline-text-color);
+    box-shadow: var(--inline-box-shadow);
 
     &::before,
     i,
@@ -198,11 +203,37 @@
       color: var(--color-warm-2);
     }
   }
+
+  &.pf2e.item.sheet form .sheet-body fieldset.basics {
+    background: none !important;
+    border: none !important;
+  }
 }
 
 /* ------------------------------------------------------------ */
 /* Generalized style choices (exlusive of limited scope)        */
 /* ------------------------------------------------------------ */
+
+[data-dorako-ui-theme][data-dorako-ui-scope="unlimited"][data-color-scheme="dark"] {
+  h1 {
+    color: var(--color-light-1);
+  }
+  h2 {
+    color: var(--color-light-1);
+  }
+  h3 {
+    color: var(--color-light-1);
+  }
+  h4 {
+    color: var(--color-light-2);
+  }
+  h5 {
+    color: var(--color-light-2);
+  }
+  h6 {
+    color: var(--color-light-2);
+  }
+}
 
 [data-dorako-ui-theme][data-dorako-ui-scope="unlimited"] {
   color: var(--color-light-3);
@@ -214,6 +245,16 @@
   input[type="time"],
   input[type="search"] {
     min-width: 24px;
+  }
+
+  fieldset {
+    border: 1px solid var(--fieldset-border-color) !important;
+    background: var(--fieldset-background-color) !important;
+    border-radius: var(--border-radius);
+    > legend {
+      color: var(--fieldset-legend-color);
+      text-shadow: unset;
+    }
   }
 
   input[type="range"]::-webkit-slider-runnable-track {
@@ -266,6 +307,7 @@
     border: 1px solid var(--color-warm-1);
     color: var(--color-light-1);
     text-shadow: 0px 1px 2px black;
+    box-shadow: var(--box-shadow);
     border-radius: 3px;
     font-size: var(--font-size-12);
   }
@@ -294,15 +336,6 @@
     accent-color: var(--accent-color);
   }
 
-  fieldset {
-    border: 1px solid var(--color-border-medium);
-    border-radius: var(--border-radius);
-    > legend {
-      color: var(--color-light-2);
-      text-shadow: unset;
-    }
-  }
-
   textarea {
     color: var(--color-light-2);
     background: var(--input-background-color);
@@ -314,25 +347,6 @@
     border: none;
     border-top: 1px solid var(--app-border-color);
     border-bottom: 1px solid var(--color-cool-5);
-  }
-
-  h1 {
-    color: var(--color-light-1);
-  }
-  h2 {
-    color: var(--color-light-1);
-  }
-  h3 {
-    color: var(--color-light-1);
-  }
-  h4 {
-    color: var(--color-light-2);
-  }
-  h5 {
-    color: var(--color-light-2);
-  }
-  h6 {
-    color: var(--color-light-2);
   }
 
   &.dialog .dialog-buttons button.default {
@@ -365,7 +379,7 @@
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme][data-dorako-ui-scope="unlimited"] {
+[data-dorako-ui-theme] {
   &.app {
     border-radius: var(--border-radius);
     background: unset;
@@ -404,8 +418,14 @@
     box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
       0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 05px var(--color-warm-1-40);
 
+    &.sidebar-popout {
+      border: var(--app-border-style);
+      box-shadow: var(--box-shadow);
+    }
+
     .window-header {
       border: unset;
+      text-shadow: 0px 1px 2px black;
     }
 
     .window-content {
@@ -430,12 +450,6 @@
 /* ----------------------------------------- */
 
 [data-dorako-ui-theme] {
-  // System compat mode
-  // --alt: var(--color-cool-3);
-  --bg: var(--color-warm-3);
-  --visibility-gm-bg: var(--color-warm-3);
-  --blind-roll: var(--color-warm-3);
-
   &.token-sheet,
   &.dialog {
     height: auto !important;
@@ -494,8 +508,9 @@
   }
 
   .directory .directory-header .header-search input {
-    background: var(--color-cool-4);
-    box-shadow: var(--box-shadow);
+    @include f2-input;
+    // background: var(--color-cool-4);
+    // box-shadow: var(--box-shadow);
   }
 
   .directory .action-buttons button,
@@ -516,6 +531,14 @@
 /* ----------------------------------------- */
 /* Core overwrites                           */
 /* ----------------------------------------- */
+[data-dorako-ui-theme][data-color-scheme="dark"] {
+  &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
+    border-color: var(--color-cool-3);
+    > legend {
+      color: var(--color-light-2);
+    }
+  }
+}
 
 [data-dorako-ui-theme] {
   &.window-app .tabs .item {
@@ -523,19 +546,13 @@
     padding: 4px 8px;
   }
 
-  &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
-    border-color: var(--color-cool-3);
-    > legend {
-      color: var(--color-light-2);
-    }
-  }
   &.sheet nav.sheet-tabs {
     gap: 5px;
   }
-  &.sheet nav.sheet-tabs .item {
-    // --button-border-color: transparent; // bad foundry default
-    --button-border-color: var(--color-cool-4);
-  }
+  // &.sheet nav.sheet-tabs .item {
+  //   // --button-border-color: transparent; // bad foundry default
+  //   --button-border-color: var(--color-cool-4);
+  // }
 }
 
 /* ----------------------------------------- */
@@ -549,7 +566,8 @@
   }
 
   &.journal-sheet .journal-header .title {
-    background: var(--color-cool-4);
+    @include f2-input;
+    // background: var(--color-cool-4);
   }
 
   .editor-edit {
@@ -635,15 +653,27 @@
 /* ----------------------------------------- */
 /* System overwrites                         */
 /* ----------------------------------------- */
-
-[data-dorako-ui-theme] {
+[data-dorako-ui-theme][data-color-scheme="dark"] {
   &.pf2e.item.sheet {
     --color-text-dark-2: var(--color-light-3);
     --color-text-dark-4: var(--color-light-3);
     --color-text-dark-input: var(--color-light-3);
     --color-border-dark: var(--color-light-2);
     --color-border-medium: var(--color-cool-3);
+  }
 
+  &.pf2e.item.sheet form .sheet-content section.sidebar .item-summary,
+  &.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
+    color: var(--color-light-2);
+  }
+
+  &.pf2e.item.sheet form .tab.active.rules .rule-form .rule-element-header .priority input {
+    width: 5ch;
+  }
+}
+
+[data-dorako-ui-theme] {
+  &.pf2e.item.sheet {
     input:disabled {
       --button-background-color: var(--color-cool-5);
       --button-border-color: var(--color-cool-4);
@@ -754,18 +784,6 @@
     width: 28px;
   }
 
-  &.pf2e.item.sheet form .sheet-content section.sidebar .item-summary,
-  &.pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
-    color: var(--color-light-2);
-  }
-
-  .tags .tag.tag_transparent,
-  .tags .tag option.tag_transparent {
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
-    background: var(--color-cool-4);
-    color: var(--color-light-3);
-  }
-
   &.pf2e.item.sheet form .sheet-content input[type="text"],
   &.pf2e.item.sheet form .sheet-content input[type="number"],
   &.pf2e.item.sheet form .sheet-content select,
@@ -815,13 +833,22 @@
 
   &.pf2e.item.sheet form > nav {
     border: unset;
+    .sheet-tabs {
+      gap: 5px;
+      margin: 2px;
+      > a {
+        @include f2-button-warm;
+      }
+    }
   }
 
-  &.pf2e.item.sheet form > nav .sheet-tabs {
-    gap: 5px;
-    margin: 2px;
-    > a {
-      @include f2-button-warm;
+  &.pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs {
+    border: unset;
+    h4 {
+      > a {
+        @include f2-button-warm;
+        padding: 5px 10px;
+      }
     }
   }
 
@@ -853,14 +880,16 @@
 
   &.pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
     @include f2-app;
-    border-color: var(--color-warm-1);
+    border: 1px solid;
+    border-color: var(--icon-border-color);
   }
 
   &.pf2e.item.sheet .sheet-header img {
     @include f2-app;
     --app-border-style: 1px solid;
-    border-color: var(--color-warm-1);
-    border-radius: 3px;
+    border-color: var(--icon-border-color);
+    border-radius: var(--border-radius);
+    margin-left: 2px;
   }
 
   &.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,

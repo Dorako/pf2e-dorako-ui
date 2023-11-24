@@ -1,0 +1,173 @@
+[data-dorako-ui-theme^="crb"] {
+  --icon-border-color: var(--tertiary);
+  --color-scrollbar: var(--tertiary);
+  --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+
+  --window-app-border-color: var(--tertiary);
+  --window-app-border-style: 1px solid;
+  --app-background: var(--glass-bg);
+  --app-border-color: transparent;
+  --app-border-style: none;
+  --box-shadow: var(--glassy);
+  --accent-color: var(--tertiary);
+  --inline-box-shadow: none;
+
+  --color-warm-1: var(--tertiary);
+  --color-warm-2: var(--primary-light);
+  --color-warm-3: var(--primary-dark);
+  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
+  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
+  --color-cool-1: var(--secondary-light);
+  --color-cool-2: var(--secondary);
+  --color-cool-3: var(--secondary-dark);
+  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
+
+  .app,
+  &.app {
+    --color-light-1: white;
+    --color-light-2: var(--color-text-light-highlight);
+    --color-light-3: var(--color-text-light-heading);
+  }
+
+  &.app.window-app {
+    outline: 1px solid var(--gold-brown);
+  }
+
+  &.app.window-app.journal-sheet.journal-entry {
+    --window-app-background: var(--glass-bg);
+  }
+
+  &.sheet.journal-entry .journal-entry-content {
+    background-image: var(--sheet);
+    background-size: cover;
+    border: var(--window-app-border-style);
+    border-color: var(--window-app-border-color);
+    box-shadow: 0px 0px 0px 1px var(--gold-brown);
+    border-bottom: unset;
+    border-right: unset;
+    margin: unset;
+  }
+
+  &.chat-message .message-header.dorako-header {
+    background-image: var(--sheet);
+    background-size: cover;
+    background-color: var(--header-color);
+    background-blend-mode: screen;
+    border-bottom: 1px solid var(--tertiary);
+    box-shadow: 0px 1px 0px 0px var(--gold-brown);
+
+    margin-bottom: 5px;
+
+    .message-timestamp,
+    .header-meta {
+      border: none;
+      background: none;
+      padding: unset;
+      --box-shadow: none;
+    }
+  }
+  &.chat-message.whisper .message-header.dorako-header {
+    border-bottom: 1px solid var(--whisper-bg);
+  }
+  &.chat-message.whisper.blind .message-header.dorako-header {
+    border-bottom: 1px solid var(--blind-bg);
+  }
+
+  section.chat-sidebar .jump-to-bottom > a {
+    --app-background: var(--glass-bg-dark);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  &.chat-message {
+    outline: 1px solid var(--gold-brown);
+    .card-content {
+      --app-border-color: var(--tertiary);
+      border-image-repeat: repeat;
+      border-image-slice: 11;
+      border-image-source: var(--ornamentation);
+      border-image-width: 14px;
+      border-style: double;
+      padding: 3px 10px;
+      font-weight: 500;
+      margin: 0px;
+      margin-top: 5px;
+
+      hr {
+        margin: 0px -10px;
+        border-bottom: none;
+      }
+    }
+    .card-footer {
+      border: none;
+
+      span {
+        border-right: 1px solid gray;
+        padding-right: 5px; // Undoes 0px set by system
+      }
+    }
+  }
+
+  hr {
+    border-top: none;
+  }
+
+  &#hotbar .macro {
+    border: 1px solid black;
+  }
+
+  &#sidebar {
+    background: var(--app-background) !important;
+    box-shadow: var(--box-shadow);
+  }
+
+  &.sidebar-popout {
+    background: var(--app-background) !important;
+  }
+
+  &.message.chat-message {
+    background: var(--window-app-background);
+    background-position: top;
+    background-size: cover;
+    &.whisper {
+      background: var(--window-app-background);
+      background-color: var(--whisper-bg);
+      background-blend-mode: luminosity;
+      &.blind {
+        background: var(--window-app-background);
+        background-color: var(--blind-bg);
+        background-blend-mode: luminosity;
+      }
+    }
+  }
+
+  &#effects-panel .effect-item > .icon {
+    border-radius: 50%;
+    border-color: var(--tertiary);
+    outline: 1px solid var(--gold-brown);
+    &.aura {
+      border-radius: 33%;
+      transform: scale(0.8);
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Modules                                   */
+/* ----------------------------------------- */
+[data-dorako-ui-theme^="crb"] {
+  &#token-action-hud {
+    button {
+      --app-background: var(--glass-bg);
+    }
+  }
+
+  &#pf2e-token-hud {
+    --color-warm-2: var(--tertiary);
+    --color-cool-4: var(--glass-bg-light);
+
+    hr {
+      display: none;
+    }
+  }
+}

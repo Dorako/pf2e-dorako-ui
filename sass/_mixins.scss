@@ -42,7 +42,7 @@
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
-  text-shadow: 0px 1px 2px black;
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
@@ -69,6 +69,8 @@
   --button-hover-background-color: var(--color-warm-2);
   --button-hover-border-color: var(--color-warm-1);
   --button-hover-text-color: var(--color-light-1);
+  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-border-color: var(--color-warm-4);
 
   background: var(--button-background-color);
   border: var(--app-border-style);
@@ -77,7 +79,7 @@
   box-shadow: var(--box-shadow);
   text-decoration: none;
   cursor: pointer;
-  text-shadow: 0px 1px 2px black;
+  text-shadow: var(--app-text-shadow);
   transition: background-color 0.5s, border-color 0.5s;
 
   &:not(.disabled, :disabled):hover {
@@ -99,9 +101,9 @@
 
   &.disabled,
   &:disabled {
-    --button-background-color: var(--color-warm-5);
-    --button-border-color: var(--color-warm-4);
-    --button-hover-background-color: var(--color-cool-5);
+    --button-background-color: var(--button-disabled-background-color);
+    --button-border-color: var(--button-disabled-border-color);
+    --button-hover-background-color: var(--button-disabled-background-color);
     --button-text-color: var(--color-light-5);
   }
 
@@ -112,7 +114,7 @@
     --button-hover-background-color: #fda948;
     --button-hover-border-color: var(--color-warm-2);
     --button-hover-text-color: #000000;
-    text-shadow: unset;
+    text-shadow: none;
 
     &.disabled,
     &:disabled {
@@ -155,13 +157,13 @@
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  height: var(--input-height);
-  line-height: var(--input-height);
+  // height: var(--input-height);
+  // line-height: var(--input-height);
   padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
-  font-size: var(--font-size);
+  // font-size: var(--font-size);
   transition: outline-color 0.5s;
 
   &:not(:disabled, .disabled, [type="checkbox"]):hover,
@@ -175,9 +177,9 @@
 
   &.disabled,
   &:disabled {
-    --input-text-color: var(--color-light-6);
-    --input-background-color: var(--color-cool-5);
-    --input-border-color: var(--color-cool-4);
+    --input-text-color: var(--color-light-disabled);
+    --input-background-color: var(--input-disabled-background-color);
+    --input-border-color: var(--input-disabled-border-color);
     &::placeholder {
       color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
     }

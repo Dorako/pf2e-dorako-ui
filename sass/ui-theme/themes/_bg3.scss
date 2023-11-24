@@ -1,0 +1,164 @@
+:root {
+  --bg3-border-color: #5f5244;
+  --bg3-background-1: #433c36;
+  --bg3-background-2: #423c36;
+  --bg3-background-3: #2a2522;
+  --bg3-background-4: #292421;
+  --bg3-text-1: #fafafa;
+  --bg3-text-2: #d1c9b9;
+  --bg3-text-3: #b0947b;
+  --bg3-text-4: #e8dea8;
+}
+
+[data-dorako-ui-theme="bg3"][data-color-scheme="light"] {
+  --window-app-background: radial-gradient(
+    circle at top,
+    #6c5842 0,
+    var(--bg3-background-2) 50%,
+    var(--bg3-background-3) 100%
+  );
+}
+
+[data-dorako-ui-theme="bg3"],
+[data-dorako-ui-theme="bg3"][data-dorako-ui-scope="limited"] {
+  --color-warm-1: var(--tertiary);
+  --color-warm-2: var(--primary);
+  --color-warm-3: var(--primary-dark);
+  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
+  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
+  --color-warm-4: var(--remaster);
+  --color-warm-5: var(--remaster-dark);
+  --color-cool-1: var(--secondary-light);
+  --color-cool-2: var(--secondary);
+  --color-cool-3: var(--secondary-dark);
+  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
+  --color-cool-4: #26231f;
+
+  --window-app-background: radial-gradient(circle at top, #50453a 0, #2c2824 50%, #1c1814 100%);
+  --window-app-background: radial-gradient(circle at bottom right, transparent 0, #2c2824ff 50%, #0c0804ee 100%),
+    radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
+  --window-app-border-color: #9d7b53;
+  --window-app-border-style: 1px solid;
+  --app-background: var(--glass-bg);
+  --app-border-color: var(--bg3-border-color);
+  --app-border-style: 1px solid;
+  --color-scrollbar: #ecc090;
+  --color-scrollbar-border: #6c5842;
+  --box-shadow: 0px 1px 2px black;
+  --icon-border-color: var(--tertiary);
+  --accent-color: var(--bg3-text-2);
+
+  --visibility-gm-bg: var(--bg3-background-4);
+
+  --inline-bg: #21201c;
+  --inline-border-color: #403b2d;
+  --inline-text-color: var(--bg3-text-1);
+  --inline-icon-color: var(--bg3-text-1);
+
+  --input-border-color: var(--brown-2);
+  --input-disabled-background-color: var(--bg3-background-4);
+  --input-disabled-border-color: var(--bg3-background-3);
+
+  --color-border-light-primary: var(--brown-1);
+  --color-border-light-highlight: var(--brown-2);
+
+  //   --fieldset-border-color: var(--color-scrollbar-border);
+  //   --fieldset-background-color: var(--bg3-background-4);
+  //   --fieldset-legend-color: var(--bg3-text-1);
+
+  --fieldset-border-color: transparent;
+  --fieldset-background-color: rgba(0, 0, 0, 0.2);
+  --fieldset-legend-color: var(--bg3-text-4);
+
+  &.app.window-app {
+    box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
+      0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 5px var(--color-warm-1-40),
+      0px 0px 5px rgba(0, 0, 0, 0.5) inset;
+  }
+
+  &.pf2e.item.sheet {
+    --color-border-medium: var(--bg3-border-color);
+  }
+
+  &.pf2e.item.sheet form .sheet-body fieldset:not(.basics) {
+    background: #21201c;
+  }
+
+  &.actor.sheet .crb-style .sheet-body {
+    --color-border-medium: var(--brown-1);
+    --color-border-divider: var(--color-scrollbar-border);
+    --text-dark: var(--bg3-text-2);
+  }
+  &.actor.sheet .inventory .list-row .item-controls {
+    --secondary: var(--bg3-text-1);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+    border-image: linear-gradient(90deg, transparent, var(--bg3-text-2) 20%, transparent) 1 !important;
+  }
+
+  // prettier-ignore
+  &.actor.sheet .inventory .list-row .item-controls,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title,
+    &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
+    &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
+      --secondary: var(--bg3-text-1);
+      --fa-inverse: black;
+    }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
+    --primary: var(--tertiary);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+    border-image: linear-gradient(90deg, transparent, var(--tertiary) 20%, transparent) 1;
+  }
+}
+
+[data-dorako-ui-theme="bg3"] {
+  select,
+  input,
+  button {
+    --button-background-color: #21201c;
+    --button-border-color: #403b2d;
+    --input-border-color: var(--brown-2);
+    --input-background-color: var(--alt-dark);
+    --input-focus-outline-color: var(--tertiary);
+  }
+
+  &#hotbar .macro {
+    border: 1px solid black;
+  }
+
+  &#sidebar {
+    background: var(--app-background) !important;
+    box-shadow: var(--box-shadow);
+  }
+
+  &.sidebar-popout {
+    background: var(--app-background) !important;
+  }
+
+  &.message.chat-message {
+    background: var(--window-app-background);
+    background-position: top;
+    background-size: cover;
+    &.whisper {
+      background: var(--window-app-background);
+      background-color: var(--whisper-bg);
+      background-blend-mode: luminosity;
+      &.blind {
+        background: var(--window-app-background);
+        background-color: var(--blind-bg);
+        background-blend-mode: luminosity;
+      }
+    }
+  }
+}

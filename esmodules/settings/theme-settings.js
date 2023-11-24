@@ -7,6 +7,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
   static SETTINGS = [
     "application-theme",
     "chat-theme",
+    "chat-color-scheme",
     "header-style",
     "pc-sheet-theme",
     "npc-sheet-theme",
@@ -18,22 +19,22 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
 
   static get settings() {
     return {
-      "chat-theme": {
-        name: "pf2e-dorako-ui.settings.theme.chat-theme.name",
-        hint: "pf2e-dorako-ui.settings.theme.chat-theme.hint",
-        scope: "client",
-        config: true,
-        default: "light",
-        type: String,
-        choices: {
-          light: "pf2e-dorako-ui.text.light",
-          dark: "pf2e-dorako-ui.text.dark",
-          factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
-          foundry2: "pf2e-dorako-ui.settings.theme.chat-theme.choice.foundry2",
-        },
-        requiresReload: false,
-        onChange: refreshChat,
-      },
+      // "chat-theme": {
+      //   name: "pf2e-dorako-ui.settings.theme.chat-theme.name",
+      //   hint: "pf2e-dorako-ui.settings.theme.chat-theme.hint",
+      //   scope: "client",
+      //   config: true,
+      //   default: "light",
+      //   type: String,
+      //   choices: {
+      //     light: "pf2e-dorako-ui.text.light",
+      //     dark: "pf2e-dorako-ui.text.dark",
+      //     factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
+      //     foundry2: "pf2e-dorako-ui.settings.theme.chat-theme.choice.foundry2",
+      //   },
+      //   requiresReload: false,
+      //   onChange: refreshChat,
+      // },
       "header-style": {
         name: "pf2e-dorako-ui.settings.theme.header-style.name",
         hint: "pf2e-dorako-ui.settings.theme.header-style.hint",
@@ -102,21 +103,56 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.application-theme.hint",
         scope: "client",
         config: true,
-        default: "light-theme",
+        default: "crb-light",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.no-theme",
-          "light-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.light-theme",
-          "dark-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.dark-theme",
-          "foundry2-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.foundry2-theme",
+          "crb-light": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-light",
+          "crb-dark": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-dark",
+          foundry2: "pf2e-dorako-ui.settings.theme.application-theme.choice.foundry2",
+          bg3: "pf2e-dorako-ui.settings.theme.application-theme.choice.bg3",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {
-          if (choice === "foundry2-theme") {
-            game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
-            // Doesn't work
-          }
+          // if (choice === "foundry2-theme") {
+          //   game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
+          //   // Doesn't work
+          // }
         },
+      },
+      "chat-theme": {
+        name: "pf2e-dorako-ui.settings.theme.chat-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.chat-theme.hint",
+        scope: "client",
+        config: true,
+        default: "crb-light",
+        type: String,
+        choices: {
+          "no-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.no-theme",
+          "crb-light": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-light",
+          "crb-dark": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-dark",
+          foundry2: "pf2e-dorako-ui.settings.theme.application-theme.choice.foundry2",
+          bg3: "pf2e-dorako-ui.settings.theme.application-theme.choice.bg3",
+        },
+        requiresReload: true, // re-render all windows
+        onChange: (choice) => {},
+      },
+      "chat-color-scheme": {
+        name: "pf2e-dorako-ui.settings.theme.chat-color-scheme.name",
+        hint: "pf2e-dorako-ui.settings.theme.chat-color-scheme.hint",
+        scope: "client",
+        config: true,
+        default: "default",
+        type: String,
+        choices: {
+          default: "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.default",
+          "prefer-light": "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.prefer-light",
+          "prefer-dark": "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.prefer-dark",
+          "gm-vs-players": "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.gm-vs-players",
+          alliance: "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.alliance",
+        },
+        requiresReload: true, // re-render all windows
+        onChange: (choice) => {},
       },
       "npc-sheet-theme": {
         name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
