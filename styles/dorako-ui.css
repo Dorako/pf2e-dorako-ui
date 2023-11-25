@@ -1574,11 +1574,6 @@ button#heartbeat-button {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
-[data-dorako-ui-theme]#module-credits-dialog .journal-entry-content {
-  background: unset;
-  box-shadow: unset;
-  border: unset;
-}
 [data-dorako-ui-theme] .package-list .package .tag {
   background: var(--color-cool-4);
   border: 1px solid var(--color-cool-3);
@@ -9765,7 +9760,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 .message[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]) .message-content .damage-application img {
   filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
 }
-.message[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]) .message-content .damage-application:hover img {
+.message[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]) .message-content .damage-application button:hover img {
   filter: invert(1) drop-shadow(0px 1px 1px black);
 }
 

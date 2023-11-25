@@ -96,11 +96,15 @@ function getHeaderColor(html, message) {
   return "#DAC0FB";
 }
 
+function invertColor(color) {
+  return color === "dark" ? "light" : "dark";
+}
+
 function calcHeaderTextColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   const chatTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
   const defaultColorScheme = getDefaultColorScheme(chatTheme);
-  const inverse = inverse(defaultColorScheme);
+  const inverse = invertColor(defaultColorScheme);
   const messageHeader = html.find(".message-header")[0];
   if (headerStyle === "none") {
     return inverse;
@@ -120,8 +124,4 @@ function calcHeaderTextColor(html, message) {
   } else {
     return "light-header-text";
   }
-}
-
-function inverse(color) {
-  return color === "dark" ? "light" : "dark";
 }

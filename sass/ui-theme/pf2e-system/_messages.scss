@@ -147,7 +147,7 @@
       img {
         filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
       }
-      &:hover {
+      button:hover {
         img {
           filter: invert(1) drop-shadow(0px 1px 1px black);
         }

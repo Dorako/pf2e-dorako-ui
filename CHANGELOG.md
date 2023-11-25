@@ -1,3 +1,8 @@
+# 3.1.2
+
+- (Fix) Fixed invalid default window app theme key.
+- (Fix) Fixed color-inversion method for chat message headers.
+
 # 3.1.1
 
 - (New) Added compatibility with ripper's Taskbar module, courtesy of Kali.

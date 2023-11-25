@@ -54,25 +54,12 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           }
         },
       },
-      // "glass-bg": {
-      //   name: "pf2e-dorako-ui.settings.theme.glass-bg.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.glass-bg.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "",
-      //   type: String,
-      //   requiresReload: false,
-      //   onChange: () => {
-      //     const root = document.querySelector(":root").style;
-      //     root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg", "important"));
-      //   },
-      // },
       "window-app-theme": {
         name: "pf2e-dorako-ui.settings.theme.window-app-theme.name",
         hint: "pf2e-dorako-ui.settings.theme.window-app-theme.hint",
         scope: "client",
         config: true,
-        default: "crb-light",
+        default: "crb",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
@@ -148,25 +135,6 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
       },
-      // "npc-sheet-theme": {
-      //   name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "default",
-      //   type: String,
-      //   choices: {
-      //     default: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.default",
-      //     glassy: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.glassy",
-      //   },
-      //   requiresReload: false, // re-render all windows
-      //   onChange: () => {
-      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-      //     for (const app of apps) {
-      //       app.render();
-      //     }
-      //   },
-      // },
       "border-radius": {
         name: "pf2e-dorako-ui.settings.theme.border-radius.name",
         hint: "pf2e-dorako-ui.settings.theme.border-radius.hint",
@@ -185,21 +153,6 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           root.setProperty("--border-radius", `${value}px`);
         },
       },
-      // "enable-dark-theme-journals": {
-      //   name: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: false,
-      //   type: Boolean,
-      //   requiresReload: false, // re-render all windows
-      //   onChange: () => {
-      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-      //     for (const app of apps) {
-      //       app.render();
-      //     }
-      //   },
-      // },
     };
   }
 }
