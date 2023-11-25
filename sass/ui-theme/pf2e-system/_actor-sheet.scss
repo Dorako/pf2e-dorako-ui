@@ -27,14 +27,8 @@
     box-shadow: 0px 0px 0px 1px var(--contrastive-transparent) inset;
   }
 
-  &.spellcasting-entry {
-    --primary: var(--color-warm-2);
-    --secondary: var(--color-cool-3);
-    --text-dark: var(--color-light-2);
-    --color-border-divider: var(--color-cool-3);
-    --sub: var(--color-light-disabled);
-    --alt: var(--color-light-5);
-    --bg: var(--color-cool-5-90);
+  &.spellcasting-entry.preparation ol.spell-list > li .item-summary {
+    border: unset;
   }
 }
 
@@ -50,6 +44,7 @@
 
   &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
   &.actor.sheet .item-image {
+    @include f2-app;
     margin: 1px 2px;
     border: 1px solid;
     border-color: var(--icon-border-color);
@@ -59,11 +54,11 @@
     }
   }
 
-  &.actor.sheet .item-image.framed,
-  &.actor.sheet .item-image.framed i {
-    box-shadow: unset !important;
-    outline: 1px solid var(--color-warm-1);
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .item-image.framed {
     border-radius: 3px;
+    i {
+      text-shadow: none;
+    }
   }
 
   &.actor.sheet .inventory .item-summary {

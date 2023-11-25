@@ -204,7 +204,7 @@
   }
 }
 
-[data-dorako-ui-scope="limited"] {
+[data-dorako-ui-theme] {
   &#pf2e-token-hud {
     // --primary: var(--color-warm-2);
     --rarity-common: #e1d8cf;
@@ -255,7 +255,7 @@
     color: var(--color-level-red-border);
   }
 
-  a:hover {
+  &#pf2e-token-hud a:hover {
     color: var(--color-warm-2);
   }
 
@@ -380,8 +380,7 @@
 /* Symon Custom CSS                          */
 /* ----------------------------------------- */
 
-#pf2e-token-hud[data-dorako-ui-scope="limited"].colorized .inner,
-#pf2e-token-hud.dorako-ui.colorized .inner {
+#pf2e-token-hud[data-dorako-ui-theme].colorized .inner {
   i.fa-solid.fa-circle-h {
     color: darkgoldenrod;
   }

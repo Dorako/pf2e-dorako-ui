@@ -1,4 +1,4 @@
-import { getChatTheme } from "./ui-theme.js";
+import { getChatTheme, getDefaultColorScheme } from "./ui-theme.js";
 
 const rgb2hex = (rgb) =>
   `#${rgb
@@ -8,10 +8,11 @@ const rgb2hex = (rgb) =>
     .join("")}`;
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  const setting = game.settings.get("pf2e-dorako-ui", "theme.chat-color-scheme");
-  const { dorakoUiTheme, defaultColorScheme } = getChatTheme();
+  const chatColorSchemeSetting = game.settings.get("pf2e-dorako-ui", "theme.chat-message-color-scheme");
+  const chatTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
+  const defaultColorScheme = getDefaultColorScheme(chatTheme);
   let colorScheme = null;
-  switch (setting) {
+  switch (chatColorSchemeSetting) {
     case "default":
       colorScheme = defaultColorScheme;
       break;
@@ -21,8 +22,13 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     case "prefer-light":
       colorScheme = "light";
       break;
-    case "alliance": // not implemented yet
-      colorScheme = "dark";
+    case "alliance":
+      colorScheme = defaultColorScheme; // Fallback for GM speaking from non-actors
+      if (!chatMessage?.actor?.alliance) {
+        colorScheme = defaultColorScheme;
+      } else {
+        colorScheme = chatMessage.actor.alliance === "opposition" ? "dark" : "light";
+      }
       break;
     case "gm-vs-players":
       colorScheme = chatMessage.user.isGM ? "dark" : "light";
@@ -57,7 +63,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 function themeHeader(html, message) {
   let messageHeader = html.find(".message-header")[0];
 
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (headerStyle != "none") {
     let bgCol = getHeaderColor(html, message);
     messageHeader.style.setProperty("--header-color", bgCol);
@@ -75,7 +81,7 @@ function themeHeader(html, message) {
 }
 
 function getHeaderColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (headerStyle === "tint") {
     return message?.user?.color ?? "#DAC0FB";
   } else if (headerStyle === "blue") {
@@ -91,7 +97,7 @@ function getHeaderColor(html, message) {
 }
 
 function calcHeaderTextColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.header-style");
+  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   const messageHeader = html.find(".message-header")[0];
   if (headerStyle === "none") {
     if (html[0].classList.contains("dark-theme") || html[0].classList.contains("foundry2")) {

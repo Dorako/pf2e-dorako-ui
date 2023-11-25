@@ -16,6 +16,13 @@
       background: unset;
     }
 
+    .effect-item[data-badge-type="formula"] > .icon:hover::before {
+      border-radius: var(--border-radius);
+      padding: none;
+      background: var(--button-hover-background-color);
+      text-shadow: 0px 1px 2px black;
+    }
+
     .effect-item > .icon {
       border: 1px solid var(--color-cool-4);
       border-radius: var(--border-radius);

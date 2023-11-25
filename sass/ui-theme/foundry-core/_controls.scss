@@ -37,11 +37,9 @@ nav#controls[data-dorako-ui-theme] {
 
 [data-dorako-ui-theme] {
   &#darkness-adjuster {
-    height: 42px !important; // overwrite system's !important
+    // height: 42px !important; // overwrite system's !important
+    outline: none;
     @include f2-app;
-    margin-top: 3px;
-    background-color: var(--color-cool-2);
-    border: 1px solid var(--color-cool-1);
 
     .window-content {
       overflow: hidden;

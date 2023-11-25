@@ -36,4 +36,8 @@
     @include f2-app;
     border-color: var(--color-warm-1);
   }
+
+  .item-piles-player-list-trade-button {
+    @include f2-button-warm;
+  }
 }

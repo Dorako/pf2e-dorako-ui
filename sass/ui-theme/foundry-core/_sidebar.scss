@@ -1,14 +1,35 @@
 /* ----------------------------------------- */
+/* UI-right                                  */
+/* ----------------------------------------- */
+#ui-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
+  padding-left: 10px;
+  // backdrop-filter: blur(5px);
+  // ::before {
+  //   background: linear-gradient(to left, rgba(0, 0, 0, 0.5) calc(100% - 25px), transparent 100%);
+  // }
+  #sidebar {
+    background: none;
+    // background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 25px), transparent 100%);
+    backdrop-filter: blur(5px);
+    box-shadow: none;
+    border: none;
+    margin: 0px;
+    // padding-left: 80px;
+    height: 100%;
+    border-radius: 0px;
+  }
+}
+
+/* ----------------------------------------- */
 /* Sidebar                                   */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-dorako-ui-scope="sidebar"] {
   #sidebar-tabs {
     border: unset;
-    --sidebar-tab-height: 22px;
 
     > .item {
-      @include quick-transition;
       &:hover {
         color: var(--color-light-2);
       }
@@ -23,14 +44,37 @@
     }
   }
 
-  &#sidebar.collapsed #sidebar-tabs > .item.active {
-    border-color: var(--color-warm-1);
-    border-radius: var(--border-radius);
-    &:first-child {
-      border-top-left-radius: var(--border-radius);
-      border-top-right-radius: var(--border-radius);
+  .tab {
+    button {
+      @include f2-button-warm;
+    }
+    input:not([type="range"]) {
+      @include f2-input;
     }
   }
+
+  ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: var(--color-scrollbar);
+    border: 1px solid var(--color-scrollbar-border);
+    transition: outline 0.15s;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: 0 0 1px var(--color-cool-3) inset;
+    box-shadow: unset;
+    border-radius: 4px;
+  }
+
+  // &#sidebar.collapsed #sidebar-tabs > .item.active {
+  //   border-color: var(--color-warm-1);
+  //   border-radius: var(--border-radius);
+  //   &:first-child {
+  //     border-top-left-radius: var(--border-radius);
+  //     border-top-right-radius: var(--border-radius);
+  //   }
+  // }
 
   #settings ul#game-details li.system-buttons {
     gap: 5px;
@@ -65,10 +109,10 @@
     z-index: 1;
     > a {
       @include f2-app;
-      @include quick-transition;
       border-radius: 0px;
       border-left: unset;
       border-right: unset;
+      width: 100%;
       --app-background: var(--color-scrollbar);
       --app-border-color: var(--color-scrollbar-border);
       &:hover {
@@ -78,13 +122,25 @@
     }
   }
 
-  &#sidebar {
-    border: 1px solid var(--app-border-color);
+  // &#sidebar {
+  //   border: 1px solid var(--app-border-color);
 
-    // prettier-ignore
-    --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),
-                         linear-gradient(to bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
-                         var(--app-background);
-    background: var(--warm-background);
+  //   // prettier-ignore
+  //   --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),
+  //                        linear-gradient(to bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
+  //                        var(--app-background);
+  //   background: var(--warm-background);
+  // }
+}
+
+/* ----------------------------------------- */
+/* Foundry2                                  */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="sidebar"],
+[data-dorako-ui-theme] {
+  .combat-sidebar li.combatant .token-name img.token-effect {
+    @include f2-app;
+    border: 1px solid;
+    border-color: var(--icon-border-color);
   }
 }

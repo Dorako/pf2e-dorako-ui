@@ -101,6 +101,7 @@
       }
     }
     button {
+      @include f2-button-warm;
       div.dice {
         background-color: var(--color-light-3);
       }

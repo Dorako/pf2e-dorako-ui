@@ -1,8 +1,13 @@
-# 3.1.0 / WIP
+# 3.1.0
 
-- (New) Massive refactor.
-- (New) New theme settings.
+- (New) Massive refactor. There's a high risk style issues, but once fixed it will apply to all themes.
+- (New) New theme inspired by Baldur's Gate 3's UI.
+- (New) All themes now have dark and light variant color schemes.
+- (New) New setting where chat message color scheme is affected by the actor's Alliance.
+- (New) Added support for the PF2e Exploit Vulnerability module.
 - (Fix) Fixed custom css not working.
+- (Removed) All legacy themes, and thousands upon thousands of lines of scss.
+- (Removed) Several settings interacting with the legacy themes. Their functionality either doesn't make sense, or have been replaced.
 
 # 3.0.6
 

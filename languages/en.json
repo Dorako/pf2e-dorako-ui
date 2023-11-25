@@ -13,7 +13,16 @@
       "light": "Light",
       "disabled": "Disabled",
       "large-chatlog-warning": "Due to large chatlog, some settings will apply on next reload.",
-      "maybe-reload": "Some changes might require a reload."
+      "maybe-reload": "Some changes might require a reload.",
+      "prefer-light": "Prefer light",
+      "prefer-dark": "Prefer dark",
+      "bg3": "Baldur's Gate 3",
+      "foundry2": "Foundry 2",
+      "crb": "Core Rulebook",
+      "no-theme": "No theme",
+      "opaque": "Opaque",
+      "alliance": "Opposition dark",
+      "gm-vs-players": "GM dark"
     },
     "settings": {
       "reset-changes": "Reset Changes",
@@ -21,65 +30,27 @@
         "name": "Theme Settings",
         "label": "Configure Theme Settings",
         "hint": "Change theme settings for various applications and UI elements",
-        "application-theme": {
-          "name": "Application theme",
-          "hint": "Affects rendered application windows",
-          "choice": {
-            "no-theme": "No theme",
-            "light-theme": "CRB inspired (light)",
-            "dark-theme": "CRB inspired (dark)",
-            "foundry2-theme": "Foundry 2 inspired"
-          }
+        "window-app-theme": {
+          "name": "Window app theme",
+          "hint": "Affects rendered application windows"
         },
-        "border-radius": {
-          "name": "Roundedness",
-          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
+        "window-app-color-scheme": {
+          "name": "Window app color scheme",
+          "hint": "Affects rendered application windows"
         },
-        "frosted-glass": {
-          "name": "Use frosted glass",
-          "hint": "WARNING: Very performance intensive. Example: brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
+        "app-theme": {
+          "name": "App theme",
+          "hint": "Affects user interface elements like controls and navigation, as well as modules"
         },
-        "glass-bg": {
-          "name": "Use alternate glass background",
-          "hint": "Any valid CSS color should work"
+        "chat-message-theme": {
+          "name": "Chat message theme",
+          "hint": "Affects rendered chat messages"
         },
-        "npc-sheet-theme": {
-          "name": "Actor sheet theme",
-          "hint": "Adjusts the styling of NPC/Hazard/Familiar sheets",
-          "choice": {
-            "default": "Default Dorako UI",
-            "glassy": "(Experimental) Glassy"
-          }
+        "chat-message-color-scheme": {
+          "name": "Chat message color scheme",
+          "hint": "Rules for making chat messages either light or dark"
         },
-        "chat-theme": {
-          "name": "Chat theme",
-          "hint": "Affects all chat messages",
-          "choice": {
-            "factions": "Players light, GM dark",
-            "foundry2": "Foundry 2 inspired"
-          }
-        },
-        "pc-sheet-theme": {
-          "name": "PC sheet theme",
-          "hint": "Affects sheets for player characters and vehicles",
-          "choice": {
-            "red": "Original Red",
-            "green": "Remaster Green",
-            "blue": "Classic Blue"
-          }
-        },
-        "loot-sheet-theme": {
-          "name": "Loot sheet theme",
-          "hint": "Affects Loot sheets"
-        },
-        "familiar-sheet-theme": {
-          "name": "Familiar sheet theme",
-          "hint": "Affects familiar sheets",
-          "choice": {
-            "dark-red-header": "Dark + Red Header"
-          }
-        },
-        "header-style": {
+        "chat-message-header-style": {
           "name": "Chat message header theme",
           "hint": "Adds a colored header to every chat message",
           "choice": {
@@ -90,9 +61,18 @@
             "none": "Disabled"
           }
         },
-        "enable-dark-theme-journals": {
-          "name": "Enable dark theme for Journals?",
-          "hint": "Does not affect premium modules journals"
+        "border-radius": {
+          "name": "Roundedness",
+          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
+        },
+        "pc-sheet-theme": {
+          "name": "PC sheet theme",
+          "hint": "Affects sheets for player characters and vehicles",
+          "choice": {
+            "red": "Original Red",
+            "green": "Remaster Green",
+            "blue": "Classic Blue"
+          }
         }
       },
       "misc": {

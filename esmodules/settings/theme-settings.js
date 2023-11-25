@@ -5,49 +5,31 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
   static namespace = "theme";
 
   static SETTINGS = [
-    "application-theme",
-    "chat-theme",
-    "chat-color-scheme",
-    "header-style",
+    "window-app-theme",
+    "window-app-color-scheme",
+    "app-theme",
+    "chat-message-theme",
+    "chat-message-color-scheme",
+    "chat-message-header-style",
     "pc-sheet-theme",
-    "npc-sheet-theme",
-    "frosted-glass",
-    "glass-bg",
-    "enable-dark-theme-journals",
     "border-radius",
   ];
 
   static get settings() {
     return {
-      // "chat-theme": {
-      //   name: "pf2e-dorako-ui.settings.theme.chat-theme.name",
-      //   hint: "pf2e-dorako-ui.settings.theme.chat-theme.hint",
-      //   scope: "client",
-      //   config: true,
-      //   default: "light",
-      //   type: String,
-      //   choices: {
-      //     light: "pf2e-dorako-ui.text.light",
-      //     dark: "pf2e-dorako-ui.text.dark",
-      //     factions: "pf2e-dorako-ui.settings.theme.chat-theme.choice.factions",
-      //     foundry2: "pf2e-dorako-ui.settings.theme.chat-theme.choice.foundry2",
-      //   },
-      //   requiresReload: false,
-      //   onChange: refreshChat,
-      // },
-      "header-style": {
-        name: "pf2e-dorako-ui.settings.theme.header-style.name",
-        hint: "pf2e-dorako-ui.settings.theme.header-style.hint",
+      "chat-message-header-style": {
+        name: "pf2e-dorako-ui.settings.theme.chat-message-header-style.name",
+        hint: "pf2e-dorako-ui.settings.theme.chat-message-header-style.hint",
         scope: "client",
         config: true,
         default: "none",
         type: String,
         choices: {
-          red: "pf2e-dorako-ui.settings.theme.header-style.choice.red",
-          blue: "pf2e-dorako-ui.settings.theme.header-style.choice.blue",
-          green: "pf2e-dorako-ui.settings.theme.header-style.choice.green",
-          tint: "pf2e-dorako-ui.settings.theme.header-style.choice.tint",
-          none: "pf2e-dorako-ui.settings.theme.header-style.choice.none",
+          red: "pf2e-dorako-ui.settings.theme.chat-message-header-style.choice.red",
+          blue: "pf2e-dorako-ui.settings.theme.chat-message-header-style.choice.blue",
+          green: "pf2e-dorako-ui.settings.theme.chat-message-header-style.choice.green",
+          tint: "pf2e-dorako-ui.settings.theme.chat-message-header-style.choice.tint",
+          none: "pf2e-dorako-ui.settings.theme.chat-message-header-style.choice.none",
         },
         requiresReload: false,
         onChange: refreshChat,
@@ -72,107 +54,119 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           }
         },
       },
-      "frosted-glass": {
-        name: "pf2e-dorako-ui.settings.theme.frosted-glass.name",
-        hint: "pf2e-dorako-ui.settings.theme.frosted-glass.hint",
-        scope: "client",
-        config: true,
-        default: "",
-        type: String,
-        requiresReload: false,
-        onChange: () => {
-          const root = document.querySelector(":root").style;
-          root.setProperty("--frosted-glass", game.settings.get("pf2e-dorako-ui", "theme.frosted-glass"));
-        },
-      },
-      "glass-bg": {
-        name: "pf2e-dorako-ui.settings.theme.glass-bg.name",
-        hint: "pf2e-dorako-ui.settings.theme.glass-bg.hint",
-        scope: "client",
-        config: true,
-        default: "",
-        type: String,
-        requiresReload: false,
-        onChange: () => {
-          const root = document.querySelector(":root").style;
-          root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg"));
-        },
-      },
-      "application-theme": {
-        name: "pf2e-dorako-ui.settings.theme.application-theme.name",
-        hint: "pf2e-dorako-ui.settings.theme.application-theme.hint",
+      // "glass-bg": {
+      //   name: "pf2e-dorako-ui.settings.theme.glass-bg.name",
+      //   hint: "pf2e-dorako-ui.settings.theme.glass-bg.hint",
+      //   scope: "client",
+      //   config: true,
+      //   default: "",
+      //   type: String,
+      //   requiresReload: false,
+      //   onChange: () => {
+      //     const root = document.querySelector(":root").style;
+      //     root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg", "important"));
+      //   },
+      // },
+      "window-app-theme": {
+        name: "pf2e-dorako-ui.settings.theme.window-app-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.window-app-theme.hint",
         scope: "client",
         config: true,
         default: "crb-light",
         type: String,
         choices: {
-          "no-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.no-theme",
-          "crb-light": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-light",
-          "crb-dark": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-dark",
-          foundry2: "pf2e-dorako-ui.settings.theme.application-theme.choice.foundry2",
-          bg3: "pf2e-dorako-ui.settings.theme.application-theme.choice.bg3",
-        },
-        requiresReload: true, // re-render all windows
-        onChange: (choice) => {
-          // if (choice === "foundry2-theme") {
-          //   game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
-          //   // Doesn't work
-          // }
-        },
-      },
-      "chat-theme": {
-        name: "pf2e-dorako-ui.settings.theme.chat-theme.name",
-        hint: "pf2e-dorako-ui.settings.theme.chat-theme.hint",
-        scope: "client",
-        config: true,
-        default: "crb-light",
-        type: String,
-        choices: {
-          "no-theme": "pf2e-dorako-ui.settings.theme.application-theme.choice.no-theme",
-          "crb-light": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-light",
-          "crb-dark": "pf2e-dorako-ui.settings.theme.application-theme.choice.crb-dark",
-          foundry2: "pf2e-dorako-ui.settings.theme.application-theme.choice.foundry2",
-          bg3: "pf2e-dorako-ui.settings.theme.application-theme.choice.bg3",
+          "no-theme": "pf2e-dorako-ui.text.no-theme",
+          crb: "pf2e-dorako-ui.text.crb",
+          foundry2: "pf2e-dorako-ui.text.foundry2",
+          bg3: "pf2e-dorako-ui.text.bg3",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
       },
-      "chat-color-scheme": {
-        name: "pf2e-dorako-ui.settings.theme.chat-color-scheme.name",
-        hint: "pf2e-dorako-ui.settings.theme.chat-color-scheme.hint",
+      "window-app-color-scheme": {
+        name: "pf2e-dorako-ui.settings.theme.window-app-color-scheme.name",
+        hint: "pf2e-dorako-ui.settings.theme.window-app-color-scheme.hint",
         scope: "client",
         config: true,
         default: "default",
         type: String,
         choices: {
-          default: "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.default",
-          "prefer-light": "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.prefer-light",
-          "prefer-dark": "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.prefer-dark",
-          "gm-vs-players": "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.gm-vs-players",
-          alliance: "pf2e-dorako-ui.settings.theme.chat-color-scheme.choice.alliance",
+          default: "pf2e-dorako-ui.text.default",
+          "prefer-light": "pf2e-dorako-ui.text.prefer-light",
+          "prefer-dark": "pf2e-dorako-ui.text.prefer-dark",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
       },
-      "npc-sheet-theme": {
-        name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
-        hint: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.hint",
+      "app-theme": {
+        name: "pf2e-dorako-ui.settings.theme.app-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.app-theme.hint",
+        scope: "client",
+        config: true,
+        default: "crb",
+        type: String,
+        choices: {
+          "no-theme": "pf2e-dorako-ui.text.no-theme",
+          crb: "pf2e-dorako-ui.text.crb",
+          foundry2: "pf2e-dorako-ui.text.foundry2",
+          bg3: "pf2e-dorako-ui.text.bg3",
+          opaque: "pf2e-dorako-ui.text.opaque",
+        },
+        requiresReload: true, // re-render all windows
+        onChange: (choice) => {},
+      },
+      "chat-message-theme": {
+        name: "pf2e-dorako-ui.settings.theme.chat-message-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.chat-message-theme.hint",
+        scope: "client",
+        config: true,
+        default: "crb",
+        type: String,
+        choices: {
+          "no-theme": "pf2e-dorako-ui.text.no-theme",
+          crb: "pf2e-dorako-ui.text.crb",
+          foundry2: "pf2e-dorako-ui.text.foundry2",
+          bg3: "pf2e-dorako-ui.text.bg3",
+        },
+        requiresReload: true, // re-render all windows
+        onChange: (choice) => {},
+      },
+      "chat-message-color-scheme": {
+        name: "pf2e-dorako-ui.settings.theme.chat-message-color-scheme.name",
+        hint: "pf2e-dorako-ui.settings.theme.chat-message-color-scheme.hint",
         scope: "client",
         config: true,
         default: "default",
         type: String,
         choices: {
-          default: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.default",
-          glassy: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.glassy",
+          default: "pf2e-dorako-ui.text.default",
+          "prefer-light": "pf2e-dorako-ui.text.prefer-light",
+          "prefer-dark": "pf2e-dorako-ui.text.prefer-dark",
+          "gm-vs-players": "pf2e-dorako-ui.text.gm-vs-players",
+          alliance: "pf2e-dorako-ui.text.alliance",
         },
-        requiresReload: false, // re-render all windows
-        onChange: () => {
-          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-          for (const app of apps) {
-            app.render();
-          }
-        },
+        requiresReload: true, // re-render all windows
+        onChange: (choice) => {},
       },
+      // "npc-sheet-theme": {
+      //   name: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.name",
+      //   hint: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.hint",
+      //   scope: "client",
+      //   config: true,
+      //   default: "default",
+      //   type: String,
+      //   choices: {
+      //     default: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.default",
+      //     glassy: "pf2e-dorako-ui.settings.theme.npc-sheet-theme.choice.glassy",
+      //   },
+      //   requiresReload: false, // re-render all windows
+      //   onChange: () => {
+      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+      //     for (const app of apps) {
+      //       app.render();
+      //     }
+      //   },
+      // },
       "border-radius": {
         name: "pf2e-dorako-ui.settings.theme.border-radius.name",
         hint: "pf2e-dorako-ui.settings.theme.border-radius.hint",
@@ -191,21 +185,21 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           root.setProperty("--border-radius", `${value}px`);
         },
       },
-      "enable-dark-theme-journals": {
-        name: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.name",
-        hint: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.hint",
-        scope: "client",
-        config: true,
-        default: false,
-        type: Boolean,
-        requiresReload: false, // re-render all windows
-        onChange: () => {
-          const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
-          for (const app of apps) {
-            app.render();
-          }
-        },
-      },
+      // "enable-dark-theme-journals": {
+      //   name: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.name",
+      //   hint: "pf2e-dorako-ui.settings.theme.enable-dark-theme-journals.hint",
+      //   scope: "client",
+      //   config: true,
+      //   default: false,
+      //   type: Boolean,
+      //   requiresReload: false, // re-render all windows
+      //   onChange: () => {
+      //     const apps = Object.values(ui.windows).filter((w) => w instanceof Application);
+      //     for (const app of apps) {
+      //       app.render();
+      //     }
+      //   },
+      // },
     };
   }
 }

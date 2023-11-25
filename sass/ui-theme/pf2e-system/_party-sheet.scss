@@ -1,4 +1,4 @@
-[data-dorako-ui-scope="limited"] {
+[data-dorako-ui-theme][data-dorako-ui-scope="limited"] {
   &.sheet.party {
     --color-border: var(--color-warm-3);
     --alt-dark: var(--color-light-4);
@@ -34,6 +34,11 @@
   //   height: 48px;
   //   font-size: 48px;
   // }
+
+  &.sheet.kingdom .tab.active[data-tab="activities"] .skills .control-dc .mod,
+  &.sheet.kingdom .tab.active[data-tab="features"] .feat-item .item-name .feat-slot-title {
+    --secondary: var(--accent-color);
+  }
 
   &.sheet.party .sidebar {
     box-shadow: unset;
@@ -110,5 +115,14 @@
     @include f2-app;
     filter: unset;
     border-color: var(--color-warm-2);
+  }
+}
+
+[data-dorako-ui-theme] {
+  &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .time .time-options {
+    @include f2-input;
+  }
+  &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .run-actions button {
+    @include f2-button-warm;
   }
 }

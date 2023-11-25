@@ -29,7 +29,8 @@
     margin-top: unset;
   }
 
-  #tokenizer div.section {
+  #tokenizer div.view-layer-control .section,
+  #tokenizer .section {
     @include f2-app;
     border-color: var(--color-cool-3);
     button {
@@ -40,6 +41,7 @@
 
   #tokenizer button.menu-button {
     @include f2-button-warm;
+    align-items: center;
   }
 
   &.tokenizer .title .box-button {

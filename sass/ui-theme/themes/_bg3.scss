@@ -10,13 +10,69 @@
   --bg3-text-4: #e8dea8;
 }
 
+/* ----------------------------------------- */
+/* Map v1 styling to v2 values               */
+/* ----------------------------------------- */
+
+[data-dorako-ui-theme="bg3"] {
+  // --color-shadow-primary: transparent;
+  // --color-shadow-highlight: transparent;
+  // --color-border-light-highlight: var(--color-cool-3);
+  // --color-border-light-primary: var(--color-cool-4);
+  // --color-border-light-secondary: var(--color-cool-4);
+  // --color-border-light-tertiary: var(--color-cool-4);
+  // --color-border-dark-1: var(--color-cool-4); // darkest
+  // --color-border-dark-2: var(--color-cool-4);
+  // --color-border-dark-3: var(--color-cool-4);
+  // --color-border-dark-4: var(--color-cool-3);
+  // --color-border-dark-5: var(--color-cool-2);
+  // --color-border-dark-primary: var(--color-cool-4);
+  // --color-border-dark-secondary: var(--color-cool-5);
+  // --color-border-light-1: var(--color-cool-3);
+  // --color-border-light-2: var(--color-cool-4);
+  // --color-underline-header: var(--color-warm-2);
+  // --color-underline-active: var(--color-warm-1);
+  --color-text-hyperlink: var(--accent-color);
+  // --color-border-highlight: var(--color-warm-1);
+  // --color-border-highlight-alt: var(--color-warm-2);
+  // --color-border-light-tertiary: var(--color-cool-4);
+  --color-border-divider: var(--bg3-border-color);
+  // --color-bg-btn-minor-inactive: var(--app-background);
+  // --color-bg-btn-minor-active: var(--color-warm-2);
+  --color-text-dark-primary: var(--color-light-3);
+  --color-text-dark-secondary: var(--color-light-5);
+  // --color-bg-option: var(--color-cool-4);
+}
+
+[data-dorako-ui-theme="bg3"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
 [data-dorako-ui-theme="bg3"][data-color-scheme="light"] {
-  --window-app-background: radial-gradient(
-    circle at top,
-    #6c5842 0,
-    var(--bg3-background-2) 50%,
-    var(--bg3-background-3) 100%
-  );
+  --window-app-background: linear-gradient(to top, #533e65ff 0, #533e65ff 3px, #533e6544 30px, #533e6500 100px),
+    radial-gradient(circle at top, #6c5842 0, var(--bg3-background-2) 50%, var(--bg3-background-3) 100%);
+  --window-app-box-shadow: 0px 5px 20px 3px black;
+
+  &.pf2e.item.sheet {
+    --color-text-dark-2: var(--color-light-3);
+    --color-text-dark-4: var(--color-light-3);
+    --color-text-dark-input: var(--color-light-3);
+    --color-border-dark: var(--color-light-2);
+    --color-border-medium: var(--color-cool-3);
+  }
+  // Dark theme
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  /* Degrees of success */
+  --degree-success-critical: rgb(107, 255, 0);
+  --degree-success: rgb(0, 241, 255);
+  --degree-failure: rgb(255, 129, 0);
+  --degree-failure-critical: rgb(255, 0, 0);
+
+  /* Value adjustments (e.g. weak/elite) */
+  --adjusted-higher: #009988;
+  --adjusted-lower: #cc3311;
 }
 
 [data-dorako-ui-theme="bg3"],
@@ -34,8 +90,8 @@
   --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
   --color-cool-4: #26231f;
 
-  --window-app-background: radial-gradient(circle at top, #50453a 0, #2c2824 50%, #1c1814 100%);
-  --window-app-background: radial-gradient(circle at bottom right, transparent 0, #2c2824ff 50%, #0c0804ee 100%),
+  //   --window-app-background: radial-gradient(circle at top, #50453a 0, #2c2824 50%, #1c1814 100%);
+  --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
     radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
   --window-app-border-color: #9d7b53;
   --window-app-border-style: 1px solid;
@@ -47,33 +103,49 @@
   --box-shadow: 0px 1px 2px black;
   --icon-border-color: var(--tertiary);
   --accent-color: var(--bg3-text-2);
+  --accent-color: #ea4a72;
 
-  --visibility-gm-bg: var(--bg3-background-4);
+  --bg: rgba(0, 0, 0, 0.5);
+  --sub: #9d7b53;
+  --text-dark: var(--bg3-text-1);
+  //   --visibility-gm-bg: var(--bg3-background-4);
+
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
   --inline-bg: #21201c;
   --inline-border-color: #403b2d;
-  --inline-text-color: var(--bg3-text-1);
+  --inline-text-color: var(--bg3-text-2);
   --inline-icon-color: var(--bg3-text-1);
 
   --input-border-color: var(--brown-2);
   --input-disabled-background-color: var(--bg3-background-4);
   --input-disabled-border-color: var(--bg3-background-3);
 
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-border-color: var(--color-warm-4);
+
+  --color-border-light-1: var(--color-text-light-highlight);
   --color-border-light-primary: var(--brown-1);
   --color-border-light-highlight: var(--brown-2);
-
-  //   --fieldset-border-color: var(--color-scrollbar-border);
-  //   --fieldset-background-color: var(--bg3-background-4);
-  //   --fieldset-legend-color: var(--bg3-text-1);
+  --color-underline-header: #ecc090;
 
   --fieldset-border-color: transparent;
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
 
+  &.spellcasting-entry.preparation .item-name {
+    --secondary: var(--bg3-text-4);
+  }
+
   &.app.window-app {
-    box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
-      0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 5px var(--color-warm-1-40),
-      0px 0px 5px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: var(--window-app-box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   }
 
   &.pf2e.item.sheet {
@@ -123,6 +195,8 @@
 }
 
 [data-dorako-ui-theme="bg3"] {
+  --color-text-dark-primary: var(--color-light-2);
+
   select,
   input,
   button {

@@ -3,7 +3,7 @@ import { ThemeSettings } from "./theme-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
-import { getUiTheme } from "../ui-theme.js";
+import { getAppThemeAndScheme, getUiTheme } from "../ui-theme.js";
 
 export function refreshChat() {
   if (game.messages.size > 100) {
@@ -46,12 +46,9 @@ Hooks.once("init", async () => {
 
   util.debug("registered settings");
 
-  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
-  if (applicationTheme === "foundry2") {
-    game.settings.set("pf2e-dorako-ui", "theme.chat-theme", "foundry2");
-  }
+  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (applicationTheme !== "no-theme") {
-    const uiTheme = getUiTheme();
+    const uiTheme = getAppThemeAndScheme();
     const { dorakoUiTheme, colorScheme } = uiTheme;
 
     if (uiTheme) {
@@ -63,7 +60,7 @@ Hooks.once("init", async () => {
   const root = document.querySelector(":root").style;
 
   root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
-  root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg").toString());
+  // root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg").toString(), "important");
 
   util.debug("initialized properties");
 });

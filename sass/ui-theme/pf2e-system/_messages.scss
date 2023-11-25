@@ -50,13 +50,12 @@
   }
 
   .table-draw .table-results .table-result img.result-image {
-    background-color: var(--color-light-2);
-    border: 1px solid var(--color-warm-2);
-    text-shadow: 0px 1px 2px black;
-    border-radius: var(--border-radius);
-    --box-shadow: 0px 1px 3px 1px black;
-    box-shadow: var(--box-shadow);
-    color: var(--color-light-3);
+    @include f2-app;
+    border: 1px solid var(--icon-border-color);
+
+    &[src$=".svg"] {
+      background-color: white;
+    }
   }
 
   .message-content .damage-roll .dice-result .dice-tooltip .instance {
@@ -68,6 +67,9 @@
     @include f2-app;
     button {
       @include f2-button-cool;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -127,6 +129,33 @@
   }
 }
 
+.message[data-dorako-ui-theme]:not([data-dorako-ui-theme="crb"][data-color-scheme="light"]) {
+  .message-content {
+    .damage-application {
+      button:hover {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}
+
+.message[data-dorako-ui-theme]:not([data-dorako-ui-theme="crb"][data-color-scheme="light"]) {
+  .message-content {
+    .damage-application {
+      img {
+        filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
+      }
+      &:hover {
+        img {
+          filter: invert(1) drop-shadow(0px 1px 1px black);
+        }
+      }
+    }
+  }
+}
+
 .message[data-dorako-ui-theme] {
   .message-content {
     .damage-application {
@@ -137,10 +166,6 @@
       button {
         margin: 0px;
 
-        img {
-          filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
-        }
-
         &.half-damage {
           .transparent-half {
             display: none;
@@ -148,7 +173,6 @@
           .fa-heart-broken {
             position: relative;
             -webkit-text-fill-color: unset;
-            // clip-path: polygon(45% 0%, 50% 100%, 100% 100%, 100% 4%);
 
             &::before {
               opacity: 0.5;
@@ -157,7 +181,6 @@
             &::after {
               content: "\f7a9";
               font-family: "Font Awesome 5 Free";
-              // color: red;
               display: block;
               z-index: 1;
               opacity: 1;
@@ -169,11 +192,11 @@
           }
         }
 
-        &:hover {
-          img {
-            filter: invert(1) drop-shadow(0px 1px 1px black);
-          }
-        }
+        // &:hover {
+        //   img {
+        //     filter: invert(1) drop-shadow(0px 1px 1px black);
+        //   }
+        // }
 
         &[data-action="shield-block"] {
           &:hover {
@@ -195,7 +218,6 @@
 
         &[data-action="apply-healing"] {
           .fa-stack i.fa-plus {
-            // color: var(--color-cool-5);
             --fa-inverse: white;
             text-shadow: none;
           }

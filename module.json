@@ -121,8 +121,6 @@
   "esmodules": [
     "esmodules/misc-hooks.js",
     "esmodules/settings/settings.js",
-    "esmodules/dark-theme-hooks.js",
-    "esmodules/dorako-theme.js",
     "esmodules/ui-theme.js",
     "esmodules/message-hooks.js",
     "esmodules/premium-module-hooks.js",

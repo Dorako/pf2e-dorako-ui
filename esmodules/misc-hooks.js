@@ -1,4 +1,4 @@
-import { baseThemePf2eSheets, MODULE_NAME } from "./consts.js";
+import { MODULE_NAME, systemSheets } from "./consts.js";
 import migrate from "./settings/migrations.js";
 import { i18n, debug, warn } from "./util.js";
 
@@ -9,6 +9,26 @@ Hooks.once("ready", () => {
 Hooks.once("ready", () => {
   debug("Attempting to migrate...");
   migrate();
+});
+
+Hooks.once("ready", () => {
+  if (!game.modules.get("pf2e-dorako-ux")) return;
+  if (game.modules.get("pf2e-dorako-ux")?.active) return;
+  if (!game.user.isGM) return;
+  new Dialog({
+    title: "Dorako UX is not active!",
+    content: `
+      <p>Dorako UI is dependant on the module Dorako UX.</p>
+      <p>It's probably already installed, but not enabled.</p>
+      <p>Go to Manage Modules and enable it, hit Save Module Settings, and reload.</p>`,
+    buttons: {
+      OK: {
+        label: "OK",
+        callback: () => {},
+      },
+    },
+    default: "OK",
+  }).render(true);
 });
 
 Hooks.once("ready", () => {
@@ -31,10 +51,10 @@ Hooks.once("ready", () => {
         },
       },
       opaque: {
-        label: "Disable MLD setting + use Dorako UI opaque background",
+        label: "Disable MLD setting + use Dorako UI opaque app theme",
         callback: () => {
           game.settings.set("monks-little-details", "window-css-changes", false);
-          game.settings.set("pf2e-dorako-ui", "theme.glass-bg", "rgba(40, 40, 40, 1)");
+          game.settings.set("pf2e-dorako-ui", "theme.app-theme", "opaque");
         },
       },
       "dont-ask": {
@@ -101,7 +121,7 @@ Hooks.on("tokenActionHudCoreReady", () => {
   }).render(true);
 });
 
-for (const application of ["Application", ...baseThemePf2eSheets]) {
+for (const application of ["Application", ...systemSheets]) {
   Hooks.on("render" + application, (app, html, data) => {
     if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
       return;
@@ -166,126 +186,13 @@ for (const application of ["Application", ...baseThemePf2eSheets]) {
   });
 }
 
-// Add debug buttons
-// for (const application of ["Application", ...baseThemePf2eSheets]) {
-//   Hooks.on("render" + application, (app, html, data) => {
-//     if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
-//       return;
-//     }
-//     let isDark = html[0].dataset.colorScheme === "dark";
-//     let symbol = isDark ? "fa-sun" : "fa-moon";
-//     let colorSchemeButton = $(
-//       `<a class="header-button dark-theme-toggle" alt="Toggle dark theme" data-tooltip="Dark theme" data-tooltip-direction="UP"">
-//         <i class="fas fa-fw ${symbol}"></i>
-//      </a>`
-//     );
-//     colorSchemeButton.click((ev) => {
-//       let colorScheme = html[0].dataset.colorScheme;
-//       if (colorScheme === "light") {
-//         html[0].dataset.colorScheme = "dark";
-//       } else {
-//         html[0].dataset.colorScheme = "light";
-//       }
-
-//       colorSchemeButton.find("i").toggleClass("fa-sun");
-//       colorSchemeButton.find("i").toggleClass("fa-moon");
-//     });
-//     html.closest(".app").find(".dark-theme-toggle").remove();
-//     let titleElement = html.closest(".app").find(".window-title");
-//     colorSchemeButton.insertAfter(titleElement);
-//   });
-
-//   Hooks.on("render" + application, (app, html, data) => {
-//     if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
-//       return;
-//     }
-//     let theme = "dorakoUiTheme" in html[0].dataset;
-//     let symbol = theme ? "fa-thin" : "fas";
-
-//     let foundry2Button = $(
-//       `<a class="header-button foundry2-toggle" alt="Toggle Foundry2" data-tooltip="Toggle Foundry2" data-tooltip-direction="UP">
-//         <i class="fa-fw ${symbol} fa-f"></i>
-//     </a>`
-//     );
-//     foundry2Button.click((ev) => {
-//       let theme = "dorakoUiTheme" in html[0].dataset;
-//       if (theme) {
-//         delete html[0].dataset.dorakoUiTheme;
-//       } else {
-//         html[0].dataset.dorakoUiTheme = "foundry2";
-//       }
-//       foundry2Button.find("i").toggleClass("fa-thin");
-//       foundry2Button.find("i").toggleClass("fas");
-//     });
-//     html.closest(".app").find(".foundry2-toggle").remove();
-//     let titleElement = html.closest(".app").find(".window-title");
-//     foundry2Button.insertAfter(titleElement);
-//   });
-
-//   Hooks.on("render" + application, (app, html, data) => {
-//     if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
-//       return;
-//     }
-//     if (!html[0].classList.contains("window-app")) return;
-//     let theme = "dorakoUiTheme" in html[0].dataset;
-//     let symbol = theme ? "fa-thin" : "fas";
-
-//     let crbButton = $(
-//       `<a class="header-button crb-toggle" alt="Toggle CRB" data-tooltip="Toggle CRB" data-tooltip-direction="UP">
-//         <i class="fa-fw ${symbol} fa-c"></i>
-//     </a>`
-//     );
-//     crbButton.click((ev) => {
-//       let theme = "dorakoUiTheme" in html[0].dataset;
-//       if (theme) {
-//         delete html[0].dataset.dorakoUiTheme;
-//       } else {
-//         html[0].dataset.dorakoUiTheme = "crb";
-//       }
-//       crbButton.find("i").toggleClass("fa-thin");
-//       crbButton.find("i").toggleClass("fas");
-//     });
-//     html.closest(".app").find(".crb-toggle").remove();
-//     let titleElement = html.closest(".app").find(".window-title");
-//     crbButton.insertAfter(titleElement);
-//   });
-
-//   Hooks.on("render" + application, (app, html, data) => {
-//     if (!game.settings.get(`${MODULE_NAME}`, "misc.enable-debug-mode")) {
-//       return;
-//     }
-//     if (!html[0].classList.contains("window-app")) return;
-//     let theme = "dorakoUiTheme" in html[0].dataset;
-//     let symbol = theme ? "fa-thin" : "fas";
-
-//     let bg3Button = $(
-//       `<a class="header-button bg3-toggle" alt="Toggle BG3" data-tooltip="Toggle BG3" data-tooltip-direction="UP">
-//         <i class="fa-fw ${symbol} fa-b"></i>
-//     </a>`
-//     );
-//     bg3Button.click((ev) => {
-//       let theme = "dorakoUiTheme" in html[0].dataset;
-//       if (theme) {
-//         delete html[0].dataset.dorakoUiTheme;
-//       } else {
-//         html[0].dataset.dorakoUiTheme = "bg3";
-//       }
-//       bg3Button.find("i").toggleClass("fa-thin");
-//       bg3Button.find("i").toggleClass("fas");
-//     });
-//     html.closest(".app").find(".bg3-toggle").remove();
-//     let titleElement = html.closest(".app").find(".window-title");
-//     bg3Button.insertAfter(titleElement);
-//   });
-// }
-
 Hooks.on("renderSettingsConfig", (app, html, data) => {
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(
       i18n("pf2e-dorako-ui.settings.theme.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.theme.hint")}</p>`
     )
-    .insertBefore($('[name="pf2e-dorako-ui.theme.application-theme"]').parents("div.form-group:first"));
+    .insertBefore($('[name="pf2e-dorako-ui.theme.window-app-theme"]').parents("div.form-group:first"));
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(

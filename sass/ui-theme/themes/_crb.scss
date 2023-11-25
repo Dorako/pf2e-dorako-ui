@@ -1,3 +1,12 @@
+[data-dorako-ui-theme^="crb"]:not([data-color-scheme]) {
+  --color-light-2: var(--color-text-light-highlight);
+  --color-light-3: var(--color-text-light-heading);
+  --button-background-color: var(--glass-bg-light);
+  --app-background: var(--glass-bg);
+  --app-border-color: transparent;
+  --app-border-style: none;
+}
+
 [data-dorako-ui-theme^="crb"] {
   --icon-border-color: var(--tertiary);
   --color-scrollbar: var(--tertiary);
@@ -5,12 +14,31 @@
 
   --window-app-border-color: var(--tertiary);
   --window-app-border-style: 1px solid;
-  --app-background: var(--glass-bg);
-  --app-border-color: transparent;
-  --app-border-style: none;
   --box-shadow: var(--glassy);
   --accent-color: var(--tertiary);
   --inline-box-shadow: none;
+
+  --inline-bg: #ddd;
+  --inline-border-color: black;
+  --inline-text-color: black;
+  --inline-icon-color: var(--color-text-dark-inactive);
+
+  --input-border-color: var(--color-text-light-5);
+  --input-text-color: var(--color-text-dark-input);
+  --input-focus-text-color: var(--color-text-dark-input);
+  --input-background-color: rgba(255, 255, 255, 0.5);
+  --input-focus-outline-color: var(--primary-light);
+  --input-placeholder-color: rgba(0, 0, 0, 0.5);
+
+  --button-background-color: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: var(--color-light-3);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-border-color: var(--color-warm-1);
+  --button-hover-text-color: var(--color-light-1);
+  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-border-color: var(--color-warm-4);
 
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--primary-light);
@@ -22,8 +50,12 @@
   --color-cool-3: var(--secondary-dark);
   --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
 
+  --color-border-light-1: #ddd;
+  --color-border-light-2: #999;
+
   .app,
-  &.app {
+  &.app,
+  button {
     --color-light-1: white;
     --color-light-2: var(--color-text-light-highlight);
     --color-light-3: var(--color-text-light-heading);
@@ -37,6 +69,11 @@
     --window-app-background: var(--glass-bg);
   }
 
+  &#controls,
+  &#navigation {
+    --button-background-color: var(--glass-bg);
+  }
+
   &.sheet.journal-entry .journal-entry-content {
     background-image: var(--sheet);
     background-size: cover;
@@ -46,6 +83,11 @@
     border-bottom: unset;
     border-right: unset;
     margin: unset;
+  }
+
+  &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
+  &.actor.sheet .item-image {
+    --box-shadow: 0px 0px 0px 1px var(--gold-brown);
   }
 
   &.chat-message .message-header.dorako-header {
@@ -73,11 +115,11 @@
     border-bottom: 1px solid var(--blind-bg);
   }
 
-  section.chat-sidebar .jump-to-bottom > a {
-    --app-background: var(--glass-bg-dark);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
+  //   section.chat-sidebar .jump-to-bottom > a {
+  //     --app-background: var(--glass-bg-dark);
+  //     backdrop-filter: blur(5px);
+  //     -webkit-backdrop-filter: blur(5px);
+  //   }
 
   &.chat-message {
     outline: 1px solid var(--gold-brown);
@@ -116,11 +158,6 @@
     border: 1px solid black;
   }
 
-  &#sidebar {
-    background: var(--app-background) !important;
-    box-shadow: var(--box-shadow);
-  }
-
   &.sidebar-popout {
     background: var(--app-background) !important;
   }
@@ -142,7 +179,7 @@
   }
 
   &#effects-panel .effect-item > .icon {
-    border-radius: 50%;
+    --border-radius: 50%;
     border-color: var(--tertiary);
     outline: 1px solid var(--gold-brown);
     &.aura {
@@ -155,10 +192,13 @@
 /* ----------------------------------------- */
 /* Modules                                   */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="crb"] {
+[data-dorako-ui-theme="crb"] {
   &#token-action-hud {
     button {
-      --app-background: var(--glass-bg);
+      --button-background-color: var(--glass-bg);
+    }
+    .hover > button {
+      --button-background-color: var(--button-hover-background-color);
     }
   }
 

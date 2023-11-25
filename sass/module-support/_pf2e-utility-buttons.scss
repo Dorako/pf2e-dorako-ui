@@ -56,12 +56,16 @@
 }
 
 /* ----------------------------------------- */
-/* Foundry2                                  */
+/* UI theme                                  */
 /* ----------------------------------------- */
 
-.foundry2 {
+[data-dorako-ui-theme] {
   #fc-container {
     margin: 0px var(--sidebar-margin);
+
+    button {
+      @include f2-button-warm;
+    }
   }
 
   #initiative-delay,

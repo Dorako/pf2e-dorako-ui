@@ -61,17 +61,6 @@
 @mixin f2-button-warm {
   @include f2-app;
   // @include quick-transition;
-
-  --button-background-color: var(--app-background);
-  --button-border-color: var(--app-border-color);
-  --button-text-color: var(--color-light-3);
-  --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background-color: var(--color-warm-2);
-  --button-hover-border-color: var(--color-warm-1);
-  --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background-color: var(--color-warm-5);
-  --button-disabled-border-color: var(--color-warm-4);
-
   background: var(--button-background-color);
   border: var(--app-border-style);
   border-color: var(--button-border-color);
@@ -80,7 +69,7 @@
   text-decoration: none;
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
-  transition: background-color 0.5s, border-color 0.5s;
+  // transition: background-color 0.15s, border-color 0.15s;
 
   &:not(.disabled, :disabled):hover {
     background: var(--button-hover-background-color);
