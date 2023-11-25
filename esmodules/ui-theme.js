@@ -5,6 +5,7 @@ import {
   MODULE_NAME,
   themedApps,
   systemSheets,
+  excludedApplications,
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 
@@ -144,7 +145,7 @@ Hooks.on("renderApplication", (app, html, data) => {
     ", SmallTimeApp" +
     ", SceneDarknessAdjuster";
   const excludeList = excludeString.split(/[\s,]+/);
-  if (excludeList.includes(app.constructor.name)) {
+  if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
     );
@@ -165,6 +166,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.dorakoUiScope = "unlimited";
   html.find("form button[type='submit']").addClass("bright");
   html.find(".item-controls button[data-action='apply']").addClass("bright");
+  html.find("button[data-action='accept']").addClass("bright");
   html.find("form button[data-action='save']").addClass("bright");
 });
 

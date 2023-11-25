@@ -98,13 +98,12 @@ function getHeaderColor(html, message) {
 
 function calcHeaderTextColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
+  const chatTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
+  const defaultColorScheme = getDefaultColorScheme(chatTheme);
+  const inverse = inverse(defaultColorScheme);
   const messageHeader = html.find(".message-header")[0];
   if (headerStyle === "none") {
-    if (html[0].classList.contains("dark-theme") || html[0].classList.contains("foundry2")) {
-      return "light-header-text";
-    } else {
-      return "dark-header-text";
-    }
+    return inverse;
   }
 
   // let bgCol = messageHeader.style.backgroundColor;
@@ -121,4 +120,8 @@ function calcHeaderTextColor(html, message) {
   } else {
     return "light-header-text";
   }
+}
+
+function inverse(color) {
+  return color === "dark" ? "light" : "dark";
 }

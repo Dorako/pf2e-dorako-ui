@@ -99,8 +99,9 @@
 [data-dorako-ui-theme="foundry2"],
 [data-dorako-ui-theme="foundry2"][data-dorako-ui-scope="unlimited"] {
   --bg: var(--color-warm-3);
-  --visibility-gm-bg: var(--color-warm-3);
-  --blind-roll: var(--color-warm-3);
+  //   --visibility-gm-bg: var(--color-warm-3);
+  //   --blind-roll: var(--color-warm-3);
+  --icon-border-color: var(--color-warm-1);
 
   --input-disabled-background-color: var(--color-cool-5);
   --input-disabled-border-color: var(--color-cool-4);
@@ -121,6 +122,10 @@
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+
+  &.chat-message {
+    border: 1px solid var(--border-tint);
+  }
 
   &.actor.sheet .crb-style .sheet-body {
     --primary: var(--color-warm-2);

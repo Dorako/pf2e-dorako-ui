@@ -32,3 +32,8 @@ export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 /* ----------------------------------------- */
 export const systemSheets = ["CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPf2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet", "KingdomSheetPF2e"
 export const limitedScopeApplications = ["KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "VehicleSheetPF2e", "HUD"];
+
+/* ----------------------------------------- */
+/* Excluded                                  */
+/* ----------------------------------------- */
+export const excludedApplications = ["LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]

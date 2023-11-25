@@ -1,3 +1,13 @@
+# 3.1.1
+
+- (New) Added compatibility with ripper's Taskbar module, courtesy of Kali.
+- (Fix) Fixed the disabled chat message header setting resulting in poor contrast text.
+- (Fix) Fixed the colored chat message header settings being less colorful than desired for CRB chat messages.
+- (Fix) Fixed the foundry 2 theme having illegible text in gm-vis spans.
+- (Fix) Added Levels to exclusion list.
+- (Fix) Added FX Master to exclusion list.
+- (Fix) Fixed button text color in CRB light theme.
+
 # 3.1.0
 
 - (New) Massive refactor. There's a high risk style issues, but once fixed it will apply to all themes.

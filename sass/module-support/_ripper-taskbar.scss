@@ -1,0 +1,3 @@
+#taskbar.taskbar {
+    width: calc((100vw - var(--sidebar-width)) / var(--ft-scale));
+}
