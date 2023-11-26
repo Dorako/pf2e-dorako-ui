@@ -9,6 +9,8 @@
     @include f2-app;
     padding: 5px;
     cursor: pointer;
+    color: var(--input-text-color);
+    margin-left: 2px;
  }
 
   &#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button,
@@ -55,6 +57,7 @@
     --secondary: var(--color-cool-3);
     .window-header {
       background: linear-gradient(90deg, var(--secondary) 0%, var(--color-cool-3) 50%, var(--secondary) 100%);
+      color: var(--color-light-1) !important;
     }
   }
 }

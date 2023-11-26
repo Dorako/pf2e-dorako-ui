@@ -5,8 +5,8 @@
   --app-background: rgb(30, 30, 30);
   --app-border-color: rgb(80, 80, 80);
   --app-border-style: 1px solid;
-  --input-border-color: var(--color-text-light-5);
-  --input-text-color: var(--color-text-dark-input);
+  --input-border-color: var(--button-border-color); // intentional
+  --input-text-color: var(--color-light-2);
   --input-focus-text-color: var(--color-text-dark-input);
   --input-background-color: rgba(255, 255, 255, 0.5);
   --input-focus-outline-color: var(--primary-light);
@@ -15,12 +15,12 @@
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--primary-light);
   --color-warm-3: var(--primary-dark);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
+  --color-warm-3-75: var(--color-warm-3);
+  --color-warm-4-75: var(--color-warm-4);
   --color-cool-1: var(--secondary-light);
   --color-cool-2: var(--secondary);
   --color-cool-3: var(--secondary-dark);
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
+  --color-cool-3-75: var(--color-cool-3); //custom
 
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
@@ -31,4 +31,8 @@
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+
+  &#token-hud .attribute i.fas {
+    color: var(--color-light-2);
+  }
 }

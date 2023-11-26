@@ -1,14 +1,15 @@
 /* ----------------------------------------- */
 /* Code mirror                               */
 /* ----------------------------------------- */
-
-[data-dorako-ui-theme] {
+[data-dorako-ui-theme="foundry2"],
+[data-dorako-ui-theme="bg3"],
+[data-dorako-ui-theme][data-dorako-color-scheme="dark"] {
   &.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
   &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
-    background-color: var(--color-cool-4);
+    background-color: var(--input-background-color);
     border-radius: var(--border-radius);
-    border: 1px solid var(--color-cool-3);
-    color: var(--color-light-2);
+    border: 1px solid var(--input-border-color);
+    color: var(--input-text-color);
   }
 
   .ͼ2 .cm-content {

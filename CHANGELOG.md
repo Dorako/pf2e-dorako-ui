@@ -1,3 +1,9 @@
+# 3.1.7
+
+- (Fix) Fixed BAM button text color.
+- (Fix) Opaque app theme adjustments.
+- (Fix) Various adjustments to CRB light theme.
+
 # 3.1.5 + 3.1.6
 
 - (Refinement) 3.1.4, but actually.

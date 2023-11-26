@@ -91,6 +91,8 @@
 /* Generalized style choices (inclusive of limited scope)        */
 /* ------------------------------------------------------------- */
 
+[data-dorako-ui-theme="bg3"],
+[data-dorako-ui-theme="foundry2"],
 [data-dorako-ui-theme][data-color-scheme="dark"] {
   // Dark theme
   --rarity-common: #e1d8cf;
@@ -108,6 +110,14 @@
   /* Value adjustments (e.g. weak/elite) */
   --adjusted-higher: #009988;
   --adjusted-lower: #cc3311;
+
+  &.pf2e.item.sheet {
+    --color-text-dark-2: var(--color-light-3);
+    --color-text-dark-4: var(--color-light-3);
+    --color-text-dark-input: var(--color-light-3);
+    --color-border-dark: var(--color-light-2);
+    --color-border-medium: var(--input-border-color);
+  }
 }
 
 [data-dorako-ui-theme] {
@@ -314,7 +324,7 @@
   }
 
   textarea {
-    color: var(--color-light-2);
+    color: var(--input-text-color);
     background: var(--input-background-color);
     border: var(--window-app-border-style);
     border-color: var(--input-border-color);
@@ -880,6 +890,7 @@
     --button-background-color: var(--color-warm-3);
     --button-hover-border-color: var(--color-warm-4);
     --button-hover-background-color: var(--color-warm-5);
+    --button-text-color: var(--color-light-2);
     --box-shadow: none;
     border-color: var(--button-border-color);
     z-index: 1;

@@ -1444,26 +1444,18 @@ nav.damage-log-nav.tabs .item.active {
 /* ----------------------------------------- */
 /* Basic Action Macros (BAM)                 */
 /* ----------------------------------------- */
-.dorako-ui.window-app .action-list button.action-btn img {
-  border-radius: 3px;
-  box-shadow: var(--gold-and-glow);
+[data-dorako-ui-theme] .action-list button {
+  --button-text-color: white !important;
 }
-.dorako-ui.window-app .action-list button:hover {
-  filter: brightness(1.3);
-}
-.dorako-ui.window-app .action-list button.glow {
-  box-shadow: var(--gold-and-glow), var(--glassy);
-  animation: unset;
-  filter: brightness(1.1);
-  color: var(--tertiary);
-}
-
-[data-dorako-ui-theme] .action-list button .action-btn img {
-  border: 1px solid var(--color-warm-1);
+[data-dorako-ui-theme] .action-list button img {
+  border: 1px solid var(--icon-border-color);
   border-radius: var(--border-radius);
 }
 [data-dorako-ui-theme] .action-list button:hover {
   text-shadow: 0px 1px 2px black;
+}
+[data-dorako-ui-theme] .action-list button.glow {
+  filter: brightness(1.1);
 }
 
 /* ----------------------------------------- */
@@ -5091,6 +5083,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ------------------------------------------------------------- */
 /* Generalized style choices (inclusive of limited scope)        */
 /* ------------------------------------------------------------- */
+[data-dorako-ui-theme=bg3],
+[data-dorako-ui-theme=foundry2],
 [data-dorako-ui-theme][data-color-scheme=dark] {
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
@@ -5105,6 +5099,15 @@ html .xdy-pf2e-workbench-rarity-unique {
   /* Value adjustments (e.g. weak/elite) */
   --adjusted-higher: #009988;
   --adjusted-lower: #cc3311;
+}
+[data-dorako-ui-theme=bg3].pf2e.item.sheet,
+[data-dorako-ui-theme=foundry2].pf2e.item.sheet,
+[data-dorako-ui-theme][data-color-scheme=dark].pf2e.item.sheet {
+  --color-text-dark-2: var(--color-light-3);
+  --color-text-dark-4: var(--color-light-3);
+  --color-text-dark-input: var(--color-light-3);
+  --color-border-dark: var(--color-light-2);
+  --color-border-medium: var(--input-border-color);
 }
 
 [data-dorako-ui-theme] {
@@ -5523,7 +5526,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: unset !important;
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] textarea {
-  color: var(--color-light-2);
+  color: var(--input-text-color);
   background: var(--input-background-color);
   border: var(--window-app-border-style);
   border-color: var(--input-border-color);
@@ -6966,6 +6969,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-background-color: var(--color-warm-3);
   --button-hover-border-color: var(--color-warm-4);
   --button-hover-background-color: var(--color-warm-5);
+  --button-text-color: var(--color-light-2);
   --box-shadow: none;
   border-color: var(--button-border-color);
   z-index: 1;
@@ -7518,14 +7522,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--color-level-error-border);
 }
 
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form .validation-failures {
-  border: 1px solid transparent;
-  text-shadow: 0px 0px 3px black;
-  box-shadow: 0px 2px 2px black;
-  background: var(--color-level-warning-bg);
-  border-color: var(--color-level-warning-border);
-}
-
 /* ----------------------------------------- */
 /* Placeable HUD                             */
 /* ----------------------------------------- */
@@ -7837,7 +7833,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--color-warm-1);
   color: var(--color-light-2);
 }
-[data-dorako-ui-scope=sidebar] .tab button {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -7854,27 +7850,27 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-dorako-ui-scope=sidebar] .tab button:not(.disabled, :disabled):hover {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
   border-color: var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-scope=sidebar] .tab button.selected, [data-dorako-ui-scope=sidebar] .tab button.active {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.selected, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
   text-decoration: none;
 }
-[data-dorako-ui-scope=sidebar] .tab button.empty, [data-dorako-ui-scope=sidebar] .tab button.disabled, [data-dorako-ui-scope=sidebar] .tab button:disabled {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.empty, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.disabled, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button:disabled {
   --button-background-color: var(--button-disabled-background-color);
   --button-border-color: var(--button-disabled-border-color);
   --button-hover-background-color: var(--button-disabled-background-color);
   --button-text-color: var(--color-light-5);
 }
-[data-dorako-ui-scope=sidebar] .tab button.bright {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright {
   --button-background-color: var(--color-warm-1);
   --button-border-color: var(--color-cool-5);
   --button-text-color: var(--color-cool-5);
@@ -7883,14 +7879,14 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: #000000;
   text-shadow: none;
 }
-[data-dorako-ui-scope=sidebar] .tab button.bright.disabled, [data-dorako-ui-scope=sidebar] .tab button.bright:disabled {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright.disabled, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright:disabled {
   --button-background-color: var(--color-cool-4);
   --button-hover-background-color: var(--color-cool-4);
   --button-text-color: var(--color-light-5);
   --button-hover-text-color: var(--color-light-5);
   --button-hover-border-color: transparent;
 }
-[data-dorako-ui-scope=sidebar] .tab button.bright:not(.disabled, :disabled):hover {
+[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright:not(.disabled, :disabled):hover {
   --button-hover-background-color: #cb7f27;
   --button-hover-border-color: var(--color-warm-1);
 }
@@ -10810,6 +10806,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   padding: 5px;
   cursor: pointer;
+  color: var(--input-text-color);
+  margin-left: 2px;
 }
 [data-dorako-ui-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button, [data-dorako-ui-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
   background: var(--app-background);
@@ -10903,51 +10901,76 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme].roll-modifiers-dialog .window-header {
   background: linear-gradient(90deg, var(--secondary) 0%, var(--color-cool-3) 50%, var(--secondary) 100%);
+  color: var(--color-light-1) !important;
 }
 
 /* ----------------------------------------- */
 /* Code mirror                               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
-  background-color: var(--color-cool-4);
+[data-dorako-ui-theme=foundry2].pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor, [data-dorako-ui-theme=foundry2].pf2e.item.sheet form .item-rules .rule-editing > .cm-editor,
+[data-dorako-ui-theme=bg3].pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
+[data-dorako-ui-theme=bg3].pf2e.item.sheet form .item-rules .rule-editing > .cm-editor,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark].pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark].pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
+  background-color: var(--input-background-color);
   border-radius: var(--border-radius);
-  border: 1px solid var(--color-cool-3);
-  color: var(--color-light-2);
+  border: 1px solid var(--input-border-color);
+  color: var(--input-text-color);
 }
-[data-dorako-ui-theme] .ͼ2 .cm-content {
+[data-dorako-ui-theme=foundry2] .ͼ2 .cm-content,
+[data-dorako-ui-theme=bg3] .ͼ2 .cm-content,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼ2 .cm-content {
   caret-color: white;
 }
-[data-dorako-ui-theme] .ͼ2 .cm-gutters {
+[data-dorako-ui-theme=foundry2] .ͼ2 .cm-gutters,
+[data-dorako-ui-theme=bg3] .ͼ2 .cm-gutters,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼ2 .cm-gutters {
   background-color: var(--application-bg);
   border-right: 1px solid var(--color-warm-2);
   border: unset;
 }
-[data-dorako-ui-theme] .ͼ2 .cm-activeLineGutter {
+[data-dorako-ui-theme=foundry2] .ͼ2 .cm-activeLineGutter,
+[data-dorako-ui-theme=bg3] .ͼ2 .cm-activeLineGutter,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼ2 .cm-activeLineGutter {
   background-color: var(--color-warm-1);
   color: black;
 }
-[data-dorako-ui-theme] .ͼ2 .cm-activeLine {
+[data-dorako-ui-theme=foundry2] .ͼ2 .cm-activeLine,
+[data-dorako-ui-theme=bg3] .ͼ2 .cm-activeLine,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼ2 .cm-activeLine {
   background-color: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
 }
-[data-dorako-ui-theme] .ͼ1.cm-focused .cm-matchingBracket {
+[data-dorako-ui-theme=foundry2] .ͼ1.cm-focused .cm-matchingBracket,
+[data-dorako-ui-theme=bg3] .ͼ1.cm-focused .cm-matchingBracket,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼ1.cm-focused .cm-matchingBracket {
   background-color: yellow;
   color: black;
   border-radius: 3px;
   box-shadow: 0px 2px 3px black;
 }
-[data-dorako-ui-theme] .ͼe {
+[data-dorako-ui-theme=foundry2] .ͼe,
+[data-dorako-ui-theme=bg3] .ͼe,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼe {
   color: red;
 }
-[data-dorako-ui-theme] .ͼd {
+[data-dorako-ui-theme=foundry2] .ͼd,
+[data-dorako-ui-theme=bg3] .ͼd,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼd {
   color: greenyellow;
 }
-[data-dorako-ui-theme] .ͼc {
+[data-dorako-ui-theme=foundry2] .ͼc,
+[data-dorako-ui-theme=bg3] .ͼc,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼc {
   color: var(--color-level-info);
 }
-[data-dorako-ui-theme] .ͼb {
+[data-dorako-ui-theme=foundry2] .ͼb,
+[data-dorako-ui-theme=bg3] .ͼb,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼb {
   color: rgb(217, 31, 217);
 }
-[data-dorako-ui-theme] .ͼ1 .cm-lintPoint:after {
+[data-dorako-ui-theme=foundry2] .ͼ1 .cm-lintPoint:after,
+[data-dorako-ui-theme=bg3] .ͼ1 .cm-lintPoint:after,
+[data-dorako-ui-theme][data-dorako-color-scheme=dark] .ͼ1 .cm-lintPoint:after {
   border-bottom: 4px solid var(--primary-light);
 }
 
@@ -11554,7 +11577,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background-blend-mode: luminosity;
 }
 
+/* ----------------------------------------- */
+/* Theme colors                              */
+/* ----------------------------------------- */
 :root {
+  --bg3-middle-brown: #9d7b53;
   --bg3-border-color: #5f5244;
   --bg3-background-1: #433c36;
   --bg3-background-2: #423c36;
@@ -11564,6 +11591,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --bg3-text-2: #d1c9b9;
   --bg3-text-3: #b0947b;
   --bg3-text-4: #e8dea8;
+  --bg3-accent-light: #fc7e9e;
+  --bg3-accent: #ea4a72;
+  --bg3-accent-dark: #c13155;
+  --bg3-color-scrollbar: #ecc090;
+  --bg3-color-scrollbar-border: #6c5842;
 }
 
 /* ----------------------------------------- */
@@ -11580,74 +11612,59 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-rarity-unique: #e127e1;
 }
 
+/* ----------------------------------------- */
+/* Light color scheme                        */
+/* ----------------------------------------- */
 [data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited][data-color-scheme=light],
 [data-dorako-ui-theme=bg3][data-color-scheme=light] {
   --window-app-background: linear-gradient(to top, #533e65ff 0, #533e65ff 3px, #533e6544 30px, #533e6500 100px),
     radial-gradient(circle at top, #6c5842 0, var(--bg3-background-2) 50%, var(--bg3-background-3) 100%);
   --window-app-box-shadow: 0px 5px 20px 3px black;
-  --rarity-common: #e1d8cf;
-  --rarity-uncommon: #c45500;
-  --rarity-rare: #5362ff;
-  --rarity-unique: #e127e1;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  /* Degrees of success */
-  --degree-success-critical: rgb(107, 255, 0);
-  --degree-success: rgb(0, 241, 255);
-  --degree-failure: rgb(255, 129, 0);
-  --degree-failure-critical: rgb(255, 0, 0);
-  /* Value adjustments (e.g. weak/elite) */
-  --adjusted-higher: #009988;
-  --adjusted-lower: #cc3311;
-}
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited][data-color-scheme=light].pf2e.item.sheet,
-[data-dorako-ui-theme=bg3][data-color-scheme=light].pf2e.item.sheet {
-  --color-text-dark-2: var(--color-light-3);
-  --color-text-dark-4: var(--color-light-3);
-  --color-text-dark-input: var(--color-light-3);
-  --color-border-dark: var(--color-light-2);
-  --color-border-medium: var(--color-cool-3);
 }
 
-[data-dorako-ui-theme=bg3],
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited] {
+/* ----------------------------------------- */
+/* DUI variables                             */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=bg3] {
+  /* Base colors */
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--primary);
-  --color-warm-3: var(--primary-dark);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
+  --color-warm-3: var(--remaster-light);
   --color-warm-4: var(--remaster);
   --color-warm-5: var(--remaster-dark);
-  --color-cool-1: var(--secondary-light);
-  --color-cool-2: var(--secondary);
-  --color-cool-3: var(--secondary-dark);
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
+  --color-cool-1: var(--bg3-accent-light);
+  --color-cool-2: var(--bg3-accent);
+  --color-cool-3: var(--bg3-accent-dark);
   --color-cool-4: #26231f;
-  --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
-    radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
-  --window-app-border-color: #9d7b53;
-  --window-app-border-style: 1px solid;
-  --app-background: var(--glass-bg);
-  --app-border-color: var(--bg3-border-color);
-  --app-border-style: 1px solid;
-  --color-scrollbar: #ecc090;
-  --color-scrollbar-border: #6c5842;
+  /* Misc variables */
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --box-shadow: 0px 1px 2px black;
   --icon-border-color: var(--tertiary);
-  --accent-color: var(--bg3-text-2);
-  --accent-color: #ea4a72;
-  --bg: rgba(0, 0, 0, 0.5);
-  --sub: #9d7b53;
-  --text-dark: var(--bg3-text-1);
-  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* Window app variables */
+  --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
+    radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
+  --window-app-border-color: var(--bg3-middle-brown);
+  --window-app-border-style: 1px solid;
+  /* App variables */
+  --app-background: #161511aa;
+  --app-border-color: var(--bg3-border-color);
+  --app-border-style: 1px solid;
+  /* Inline variables */
   --inline-bg: #21201c;
   --inline-border-color: #403b2d;
   --inline-text-color: var(--bg3-text-2);
   --inline-icon-color: var(--bg3-text-1);
+  /* Input variables */
   --input-border-color: var(--brown-2);
   --input-disabled-background-color: var(--bg3-background-4);
   --input-disabled-border-color: var(--bg3-background-3);
+  --input-border-color: var(--brown-2);
+  --input-background-color: var(--alt-dark);
+  --input-focus-outline-color: var(--tertiary);
+  /* Button variables */
   --button-background-color: var(--app-background);
-  --button-border-color: var(--app-border-color);
+  --button-border-color: #403b2d;
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-1);
   --button-hover-background-color: var(--color-warm-2);
@@ -11655,93 +11672,65 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
-  --color-border-light-1: var(--color-text-light-highlight);
-  --color-border-light-primary: var(--brown-1);
-  --color-border-light-highlight: var(--brown-2);
-  --color-underline-header: #ecc090;
+  /* Fieldset variables */
   --fieldset-border-color: transparent;
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
+  /* Scrollbar and accent variables */
+  --color-scrollbar: var(--bg3-color-scrollbar);
+  --color-scrollbar-border: var(--bg3-color-scrollbar-border);
+  --accent-color: #ea4a72;
 }
-[data-dorako-ui-theme=bg3].spellcasting-entry.preparation .item-name,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].spellcasting-entry.preparation .item-name {
+
+/* ----------------------------------------- */
+/* System variables                          */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=bg3] {
+  --color-text-dark-primary: var(--color-light-2);
+  --bg: rgba(0, 0, 0, 0.5);
+  --sub: var(--bg3-middle-brown);
+  --text-dark: var(--bg3-text-1);
+  --color-border-light-1: var(--color-text-light-highlight);
+  --color-border-light-primary: var(--brown-1);
+  --color-border-light-highlight: var(--brown-2);
+  --color-underline-header: var(--bg3-middle-brown);
+}
+
+/* ----------------------------------------- */
+/* Specifics                                 */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=bg3].spellcasting-entry.preparation .item-name {
   --secondary: var(--bg3-text-4);
 }
-[data-dorako-ui-theme=bg3].app.window-app,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].app.window-app {
+[data-dorako-ui-theme=bg3].app.window-app {
   box-shadow: var(--window-app-box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 }
-[data-dorako-ui-theme=bg3].pf2e.item.sheet,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].pf2e.item.sheet {
+[data-dorako-ui-theme=bg3].pf2e.item.sheet {
   --color-border-medium: var(--bg3-border-color);
 }
-[data-dorako-ui-theme=bg3].pf2e.item.sheet form .sheet-body fieldset:not(.basics),
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].pf2e.item.sheet form .sheet-body fieldset:not(.basics) {
-  background: #21201c;
-}
-[data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body {
+[data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body {
   --color-border-medium: var(--brown-1);
   --color-border-divider: var(--color-scrollbar-border);
   --text-dark: var(--bg3-text-2);
 }
-[data-dorako-ui-theme=bg3].actor.sheet .inventory .list-row .item-controls,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .inventory .list-row .item-controls {
+[data-dorako-ui-theme=bg3].actor.sheet .inventory .list-row .item-controls {
   --secondary: var(--bg3-text-1);
 }
-[data-dorako-ui-theme=bg3].actor.sheet.character,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character {
+[data-dorako-ui-theme=bg3].actor.sheet.character {
   --color-border-light-2: var(--bg3-border-color);
 }
-[data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+[data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
   border-image: linear-gradient(90deg, transparent, var(--bg3-text-2) 20%, transparent) 1 !important;
 }
-[data-dorako-ui-theme=bg3].actor.sheet .inventory .list-row .item-controls, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .inventory .list-row .item-controls,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
+[data-dorako-ui-theme=bg3].actor.sheet .inventory .list-row .item-controls, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
   --secondary: var(--bg3-text-1);
   --fa-inverse: black;
 }
-[data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
+[data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
   --primary: var(--tertiary);
 }
-[data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
-[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+[data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
   border-image: linear-gradient(90deg, transparent, var(--tertiary) 20%, transparent) 1;
-}
-
-[data-dorako-ui-theme=bg3] {
-  --color-text-dark-primary: var(--color-light-2);
-}
-[data-dorako-ui-theme=bg3] select,
-[data-dorako-ui-theme=bg3] input,
-[data-dorako-ui-theme=bg3] button {
-  --button-background-color: #21201c;
-  --button-border-color: #403b2d;
-  --input-border-color: var(--brown-2);
-  --input-background-color: var(--alt-dark);
-  --input-focus-outline-color: var(--tertiary);
-}
-[data-dorako-ui-theme=bg3]#hotbar .macro {
-  border: 1px solid black;
-}
-[data-dorako-ui-theme=bg3]#sidebar {
-  background: var(--app-background) !important;
-  box-shadow: var(--box-shadow);
-}
-[data-dorako-ui-theme=bg3].sidebar-popout {
-  background: var(--app-background) !important;
 }
 [data-dorako-ui-theme=bg3].message.chat-message {
   background: var(--window-app-background);
@@ -11819,6 +11808,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme=crb].app.window-app {
   outline: 1px solid var(--gold-brown);
+}
+[data-dorako-ui-theme=crb].app.window-app.sidebar-popout {
+  outline: none;
 }
 [data-dorako-ui-theme=crb].app.window-app.journal-sheet.journal-entry {
   --window-app-background: var(--glass-bg);
@@ -11945,6 +11937,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   display: none;
 }
 
+/* ----------------------------------------- */
+/* Theme colors                              */
+/* ----------------------------------------- */
 :root {
   --color-warm-1: #ee9b3a;
   --color-warm-1-40: color-mix(in srgb, var(--color-warm-1) 40%, transparent);
@@ -11994,46 +11989,55 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-level-red-border: #d31404;
   --color-scrollbar: #5d142b;
   --color-scrollbar-border: #8d151b;
-  --app-background: var(--color-cool-5-90);
-  --app-border-color: var(--color-cool-4);
-  --window-app-background: var(--color-cool-5-90);
-  --window-app-border-color: var(--color-cool-4);
-  --app-border-style: 1px solid;
-  --font-size: var(--font-size-12);
-  --accent-color: var(--color-warm-2);
-  --inline-bg: var(--color-cool-4);
-  --inline-border-color: var(--color-cool-3);
-  --inline-text-color: var(--color-light-2);
-  --inline-icon-color: var(--color-light-1);
-  --inline-box-shadow: 0px 1px 2px black;
 }
 
+/* ----------------------------------------- */
+/* Map v1 styling to v2 values               */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=foundry2] {
+  --color-shadow-primary: transparent;
+  --color-shadow-highlight: transparent;
+  --color-border-light-highlight: var(--color-cool-3);
+  --color-border-light-primary: var(--color-cool-4);
+  --color-border-light-secondary: var(--color-cool-4);
+  --color-border-light-tertiary: var(--color-cool-4);
+  --color-border-dark-1: var(--color-cool-4);
+  --color-border-dark-2: var(--color-cool-4);
+  --color-border-dark-3: var(--color-cool-4);
+  --color-border-dark-4: var(--color-cool-3);
+  --color-border-dark-5: var(--color-cool-2);
+  --color-border-dark-primary: var(--color-cool-4);
+  --color-border-dark-secondary: var(--color-cool-5);
+  --color-border-light-1: var(--color-cool-3);
+  --color-border-light-2: var(--color-cool-4);
+  --color-underline-header: var(--color-warm-2);
+  --color-underline-active: var(--color-warm-1);
+  --color-text-hyperlink: var(--color-warm-1);
+  --color-border-highlight: var(--color-warm-1);
+  --color-border-highlight-alt: var(--color-warm-2);
+  --color-border-light-tertiary: var(--color-cool-4);
+  --color-bg-btn-minor-inactive: var(--app-background);
+  --color-bg-btn-minor-active: var(--color-warm-2);
+  --color-text-dark-primary: var(--color-light-3);
+  --color-text-dark-secondary: var(--color-light-5);
+}
+
+/* ----------------------------------------- */
+/* Light color scheme                        */
+/* ----------------------------------------- */
 [data-dorako-ui-theme=foundry2][data-color-scheme=light] {
-  --rarity-common: #e1d8cf;
-  --rarity-uncommon: #c45500;
-  --rarity-rare: #5362ff;
-  --rarity-unique: #e127e1;
+  --window-app-background: color-mix(in srgb, var(--color-cool-5-90) 90%, var(--color-warm-1));
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  /* Degrees of success */
-  --degree-success-critical: rgb(107, 255, 0);
-  --degree-success: rgb(0, 241, 255);
-  --degree-failure: rgb(255, 129, 0);
-  --degree-failure-critical: rgb(255, 0, 0);
-  /* Value adjustments (e.g. weak/elite) */
-  --adjusted-higher: #009988;
-  --adjusted-lower: #cc3311;
 }
 [data-dorako-ui-theme=foundry2][data-color-scheme=light].pf2e.item.sheet {
-  --color-text-dark-2: var(--color-light-3);
-  --color-text-dark-4: var(--color-light-3);
-  --color-text-dark-input: var(--color-light-3);
-  --color-border-dark: var(--color-light-2);
   --color-border-medium: var(--color-cool-3);
 }
 
+/* ----------------------------------------- */
+/* DUI variables                             */
+/* ----------------------------------------- */
 [data-dorako-ui-theme=foundry2],
 [data-dorako-ui-theme=foundry2][data-dorako-ui-scope=unlimited] {
-  --bg: var(--color-warm-3);
   --icon-border-color: var(--color-warm-1);
   --input-disabled-background-color: var(--color-cool-5);
   --input-disabled-border-color: var(--color-cool-4);
@@ -12051,11 +12055,29 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
-  --color-rarity-common: #e1d8cf;
-  --color-rarity-uncommon: #c45500;
-  --color-rarity-rare: #5362ff;
-  --color-rarity-unique: #e127e1;
+  --app-background: var(--color-cool-5-90);
+  --app-border-color: var(--color-cool-4);
+  --window-app-background: var(--color-cool-5-90);
+  --window-app-border-color: var(--color-cool-4);
+  --accent-color: var(--color-warm-2);
+  --inline-bg: var(--color-cool-4);
+  --inline-border-color: var(--color-cool-3);
+  --inline-text-color: var(--color-light-2);
+  --inline-icon-color: var(--color-light-1);
+  --inline-box-shadow: 0px 1px 2px black;
 }
+
+/* ----------------------------------------- */
+/* System variables                          */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=foundry2],
+[data-dorako-ui-theme=foundry2][data-dorako-ui-scope=unlimited] {
+  --bg: var(--color-warm-3);
+}
+
+/* ----------------------------------------- */
+/* Specifics                                 */
+/* ----------------------------------------- */
 [data-dorako-ui-theme=foundry2].chat-message,
 [data-dorako-ui-theme=foundry2][data-dorako-ui-scope=unlimited].chat-message {
   border: 1px solid var(--border-tint);
@@ -12110,51 +12132,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --paper-bg: var(--color-cool-4);
 }
 
-/* ----------------------------------------- */
-/* Map v1 styling to v2 values               */
-/* ----------------------------------------- */
-[data-dorako-ui-theme=foundry2] {
-  --color-shadow-primary: transparent;
-  --color-shadow-highlight: transparent;
-  --color-border-light-highlight: var(--color-cool-3);
-  --color-border-light-primary: var(--color-cool-4);
-  --color-border-light-secondary: var(--color-cool-4);
-  --color-border-light-tertiary: var(--color-cool-4);
-  --color-border-dark-1: var(--color-cool-4);
-  --color-border-dark-2: var(--color-cool-4);
-  --color-border-dark-3: var(--color-cool-4);
-  --color-border-dark-4: var(--color-cool-3);
-  --color-border-dark-5: var(--color-cool-2);
-  --color-border-dark-primary: var(--color-cool-4);
-  --color-border-dark-secondary: var(--color-cool-5);
-  --color-border-light-1: var(--color-cool-3);
-  --color-border-light-2: var(--color-cool-4);
-  --color-underline-header: var(--color-warm-2);
-  --color-underline-active: var(--color-warm-1);
-  --color-text-hyperlink: var(--color-warm-1);
-  --color-border-highlight: var(--color-warm-1);
-  --color-border-highlight-alt: var(--color-warm-2);
-  --color-border-light-tertiary: var(--color-cool-4);
-  --color-bg-btn-minor-inactive: var(--app-background);
-  --color-bg-btn-minor-active: var(--color-warm-2);
-  --color-text-dark-primary: var(--color-light-3);
-  --color-text-dark-secondary: var(--color-light-5);
-}
-
-/* ----------------------------------------- */
-/* Light                                     */
-/* ----------------------------------------- */
-[data-dorako-ui-theme=foundry2][data-color-scheme=light] {
-  --window-app-background: color-mix(in srgb, var(--color-cool-5-90) 90%, var(--color-warm-1));
-}
-
 [data-dorako-ui-theme=opaque]:not([data-color-scheme]) {
   --button-background-color: rgb(30, 30, 30);
   --app-background: rgb(30, 30, 30);
   --app-border-color: rgb(80, 80, 80);
   --app-border-style: 1px solid;
-  --input-border-color: var(--color-text-light-5);
-  --input-text-color: var(--color-text-dark-input);
+  --input-border-color: var(--button-border-color);
+  --input-text-color: var(--color-light-2);
   --input-focus-text-color: var(--color-text-dark-input);
   --input-background-color: rgba(255, 255, 255, 0.5);
   --input-focus-outline-color: var(--primary-light);
@@ -12162,12 +12146,12 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--primary-light);
   --color-warm-3: var(--primary-dark);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
+  --color-warm-3-75: var(--color-warm-3);
+  --color-warm-4-75: var(--color-warm-4);
   --color-cool-1: var(--secondary-light);
   --color-cool-2: var(--secondary);
   --color-cool-3: var(--secondary-dark);
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
+  --color-cool-3-75: var(--color-cool-3);
   --button-background-color: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
@@ -12177,6 +12161,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+}
+[data-dorako-ui-theme=opaque]:not([data-color-scheme])#token-hud .attribute i.fas {
+  color: var(--color-light-2);
 }
 
 /* ----------------------------------------- */

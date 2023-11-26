@@ -67,6 +67,9 @@
 
   &.app.window-app {
     outline: 1px solid var(--gold-brown);
+    &.sidebar-popout {
+      outline: none;
+    }
   }
 
   &.app.window-app.journal-sheet.journal-entry {

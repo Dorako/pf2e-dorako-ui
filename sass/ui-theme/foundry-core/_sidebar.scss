@@ -45,7 +45,7 @@
   }
 
   .tab {
-    button {
+    &:not([data-tab="chat"]) button {
       @include f2-button-warm;
     }
     input:not([type="range"]) {
