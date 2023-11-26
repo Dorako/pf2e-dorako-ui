@@ -280,7 +280,7 @@
   //   }
   // }
 
-  &.dark-header-text {
+  &[data-header-text-color-scheme="dark"] {
     color: color-mix(in srgb, var(--header-color) 20%, black);
     text-shadow: none;
     .message-sender:not([data-visibility="gm"]) {

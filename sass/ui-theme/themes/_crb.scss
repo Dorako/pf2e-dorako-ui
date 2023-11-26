@@ -106,14 +106,6 @@
     box-shadow: 0px 1px 0px 0px var(--gold-brown);
     margin-bottom: 5px;
 
-    &.light-header-text {
-      --color-text-dark-secondary: var(--color-light-1);
-      --color-light-1: white;
-      --color-light-2: var(--color-text-light-highlight);
-      --color-light-3: var(--color-text-light-heading);
-      --app-text-shadow: 0px 1px 2px black;
-    }
-
     .message-timestamp,
     .header-meta {
       border: none;
@@ -122,6 +114,23 @@
       --box-shadow: none;
     }
   }
+
+  &.chat-message[data-header-text-color-scheme="dark"] .message-header {
+    --color-text-dark-secondary: var(--color-light-1);
+    --color-light-1: black;
+    --color-light-2: black;
+    --color-light-3: black;
+    --app-text-shadow: 0px 1px 0px white;
+  }
+
+  &.chat-message[data-header-text-color-scheme="light"] .message-header {
+    --color-text-dark-secondary: var(--color-light-1);
+    --color-light-1: var(--color-text-light-highlight);
+    --color-light-2: var(--color-text-light-highlight);
+    --color-light-3: var(--color-text-light-heading);
+    --app-text-shadow: 0px 1px 2px black;
+  }
+
   &.chat-message.whisper .message-header.dorako-header {
     border-bottom: 1px solid var(--whisper-bg);
   }

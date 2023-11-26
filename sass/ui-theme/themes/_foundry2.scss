@@ -105,8 +105,7 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"],
-[data-dorako-ui-theme="foundry2"][data-dorako-ui-scope="unlimited"] {
+[data-dorako-ui-theme="foundry2"] {
   --icon-border-color: var(--color-warm-1);
 
   --input-disabled-background-color: var(--color-cool-5);
@@ -146,8 +145,7 @@
 /* ----------------------------------------- */
 /* System variables                          */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"],
-[data-dorako-ui-theme="foundry2"][data-dorako-ui-scope="unlimited"] {
+[data-dorako-ui-theme="foundry2"] {
   --bg: var(--color-warm-3);
   --text-dark: var(--color-light-2);
 }
@@ -155,10 +153,40 @@
 /* ----------------------------------------- */
 /* Specifics                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"],
-[data-dorako-ui-theme="foundry2"][data-dorako-ui-scope="unlimited"] {
-  &.chat-message {
-    border: 1px solid var(--border-tint);
+[data-dorako-ui-theme="foundry2"] {
+  // &.chat-message {
+  //   border: 1px solid var(--border-tint);
+  // }
+
+  &.message.chat-message {
+    border: 1px solid var(--player-color);
+    background: var(--window-app-background);
+    background-position: top;
+    background-size: cover;
+    &.whisper {
+      background: var(--window-app-background);
+      background-color: var(--whisper-bg);
+      background-blend-mode: luminosity;
+      &.blind {
+        background: var(--window-app-background);
+        background-color: var(--blind-bg);
+        background-blend-mode: luminosity;
+      }
+    }
+  }
+
+  &.chat-message[data-header-text-color-scheme="dark"] .message-header {
+    --color-text-dark-secondary: var(--color-light-1);
+    --color-light-1: black;
+    --color-light-2: black;
+    --color-light-3: black;
+    --app-text-shadow: none;
+    text-shadow: none;
+  }
+
+  &.chat-message[data-header-text-color-scheme="light"] .message-header {
+    --color-text-dark-secondary: var(--color-light-1);
+    --app-text-shadow: none;
   }
 
   &.actor.sheet .crb-style .sheet-body {

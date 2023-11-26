@@ -68,58 +68,58 @@ Hooks.once("ready", () => {
   }).render(true);
 });
 
-Hooks.once("ready", () => {
-  if (!game.modules.get("token-action-hud")?.active) return;
-  if (game.settings.get("token-action-hud", "style") === "dorakoUI") return;
-  if (!game.settings.get("pf2e-dorako-ui", "tah-nag")) return; // if nag has been disabled
-  new Dialog({
-    title: "Dorako UI - Token Action HUD style",
-    content: `
-      <p>Token Action HUD ships with a setting that matches the style of Dorako UI.</p>
-      <p>Dorako UI can turn the setting on for you (recommended).</p>`,
-    buttons: {
-      enable: {
-        label: "Enable Dorako UI style",
-        callback: () => {
-          game.settings.set("token-action-hud", "style", "dorakoUI");
-        },
-      },
-      "dont-ask": {
-        label: "Do nothing, don't ask again",
-        callback: () => {
-          game.settings.set("pf2e-dorako-ui", "tah-nag", false);
-        },
-      },
-    },
-    default: "enable",
-  }).render(true);
-});
+// Hooks.once("ready", () => {
+//   if (!game.modules.get("token-action-hud")?.active) return;
+//   if (game.settings.get("token-action-hud", "style") === "dorakoUI") return;
+//   if (!game.settings.get("pf2e-dorako-ui", "tah-nag")) return; // if nag has been disabled
+//   new Dialog({
+//     title: "Dorako UI - Token Action HUD style",
+//     content: `
+//       <p>Token Action HUD ships with a setting that matches the style of Dorako UI.</p>
+//       <p>Dorako UI can turn the setting on for you (recommended).</p>`,
+//     buttons: {
+//       enable: {
+//         label: "Enable Dorako UI style",
+//         callback: () => {
+//           game.settings.set("token-action-hud", "style", "dorakoUI");
+//         },
+//       },
+//       "dont-ask": {
+//         label: "Do nothing, don't ask again",
+//         callback: () => {
+//           game.settings.set("pf2e-dorako-ui", "tah-nag", false);
+//         },
+//       },
+//     },
+//     default: "enable",
+//   }).render(true);
+// });
 
-Hooks.on("tokenActionHudCoreReady", () => {
-  if (game.settings.get("token-action-hud-core", "style") === "dorakoUI") return;
-  if (!game.settings.get("pf2e-dorako-ui", "tah-nag")) return; // if nag has been disabled
-  new Dialog({
-    title: "Dorako UI - Token Action HUD Core style",
-    content: `
-      <p>Token Action HUD Core ships with a setting that matches the style of Dorako UI.</p>
-      <p>Dorako UI can turn the setting on for you (recommended).</p>`,
-    buttons: {
-      enable: {
-        label: "Enable Dorako UI style",
-        callback: () => {
-          game.settings.set("token-action-hud-core", "style", "dorakoUI");
-        },
-      },
-      "dont-ask": {
-        label: "Do nothing, don't ask again",
-        callback: () => {
-          game.settings.set("pf2e-dorako-ui", "tah-nag", false);
-        },
-      },
-    },
-    default: "enable",
-  }).render(true);
-});
+// Hooks.on("tokenActionHudCoreReady", () => {
+//   if (game.settings.get("token-action-hud-core", "style") === "dorakoUI") return;
+//   if (!game.settings.get("pf2e-dorako-ui", "tah-nag")) return; // if nag has been disabled
+//   new Dialog({
+//     title: "Dorako UI - Token Action HUD Core style",
+//     content: `
+//       <p>Token Action HUD Core ships with a setting that matches the style of Dorako UI.</p>
+//       <p>Dorako UI can turn the setting on for you (recommended).</p>`,
+//     buttons: {
+//       enable: {
+//         label: "Enable Dorako UI style",
+//         callback: () => {
+//           game.settings.set("token-action-hud-core", "style", "dorakoUI");
+//         },
+//       },
+//       "dont-ask": {
+//         label: "Do nothing, don't ask again",
+//         callback: () => {
+//           game.settings.set("pf2e-dorako-ui", "tah-nag", false);
+//         },
+//       },
+//     },
+//     default: "enable",
+//   }).render(true);
+// });
 
 for (const application of ["Application", ...systemSheets]) {
   Hooks.on("render" + application, (app, html, data) => {

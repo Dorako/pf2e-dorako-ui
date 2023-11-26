@@ -8,6 +8,10 @@ const rgb2hex = (rgb) =>
     .join("")}`;
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+  html[0].dataset.colorScheme = getMessageColorScheme(chatMessage, html, messageData);
+});
+
+function getMessageColorScheme(chatMessage, html, messageData) {
   const chatColorSchemeSetting = game.settings.get("pf2e-dorako-ui", "theme.chat-message-color-scheme");
   const chatTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
   const defaultColorScheme = getDefaultColorScheme(chatTheme);
@@ -34,8 +38,8 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
       colorScheme = chatMessage.user.isGM ? "dark" : "light";
       break;
   }
-  html[0].dataset.colorScheme = colorScheme;
-});
+  return colorScheme;
+}
 
 // Chat cards
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
@@ -48,7 +52,8 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   }
 
   let html0 = html[0];
-  html0.style.setProperty("--border-tint", chatMessage?.user?.color ?? "#DAC0FB");
+  html0.style.setProperty("--player-color", chatMessage?.user?.color ?? "#DAC0FB");
+  html0.dataset.headerTextColorScheme = calcHeaderTextColor(html, chatMessage);
 
   const uiTheme = getChatTheme();
   const { dorakoUiTheme, colorScheme } = uiTheme;
@@ -103,11 +108,14 @@ function invertColor(color) {
 function calcHeaderTextColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   const chatTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
-  const defaultColorScheme = getDefaultColorScheme(chatTheme);
-  const inverse = invertColor(defaultColorScheme);
+  // const defaultColorScheme = getDefaultColorScheme(chatTheme);
+  const inverseColorScheme = invertColor(getMessageColorScheme(message, html, null));
+  // const inverse = invertColor(defaultColorScheme);
   const messageHeader = html.find(".message-header")[0];
-  if (headerStyle === "none") {
-    return inverse;
+  if (headerStyle === "none" && chatTheme == "crb") {
+    return inverseColorScheme;
+  } else if (headerStyle === "none") {
+    return "light";
   }
 
   // let bgCol = messageHeader.style.backgroundColor;
@@ -120,8 +128,8 @@ function calcHeaderTextColor(html, message) {
   var yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
   if (yiq >= 128) {
-    return "dark-header-text";
+    return "dark";
   } else {
-    return "light-header-text";
+    return "light";
   }
 }

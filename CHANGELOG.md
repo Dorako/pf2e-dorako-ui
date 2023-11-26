@@ -1,3 +1,8 @@
+# 3.1.9
+
+- (Refinement) Improved system that selects colors for chat message headers (or missing headers).
+- (Refinement) Various small adjustments, including bg3 accent color, and giving opaque app theme an inline button theme which is relevant due to the effect panel.
+
 # 3.1.8
 
 - (Refinement) Bunch of small adjustments.

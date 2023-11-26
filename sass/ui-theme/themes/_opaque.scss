@@ -32,6 +32,13 @@
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
+  /* Inline variables */
+  --inline-bg: #1e1e1e;
+  --inline-border-color: #404040;
+  --inline-text-color: var(--color-light-2);
+  --inline-icon-color: var(--color-light-1);
+  --inline-box-shadow: 0px 1px 2px black;
+
   --accent-color: var(--primary-light);
 
   &#token-hud {

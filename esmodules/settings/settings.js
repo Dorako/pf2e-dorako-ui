@@ -25,12 +25,12 @@ Hooks.once("init", async () => {
     type: Boolean,
   });
 
-  game.settings.register("pf2e-dorako-ui", "tah-nag", {
-    scope: "client",
-    config: false,
-    default: true,
-    type: Boolean,
-  });
+  // game.settings.register("pf2e-dorako-ui", "tah-nag", {
+  //   scope: "client",
+  //   config: false,
+  //   default: true,
+  //   type: Boolean,
+  // });
 
   game.settings.register("pf2e-dorako-ui", "migration-version", {
     scope: "world",
