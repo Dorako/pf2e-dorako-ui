@@ -147,9 +147,9 @@ $adjusted-lower: #cc3311 !default;
   --glassy-sharp-highlight: 0px 0px 0px 1px rgba(245, 222, 179, 0.7) inset, 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
   --sheet-light: url(../img/background-light.webp);
   --sheet-dark: url(../img/background-dark4.webp);
-  --header: url(../img/blue-header.webp);
-  --banner-top: url(../img/blue-sidebar-top.webp);
-  --banner-bottom: url(../img/blue-sidebar-bottom.webp);
+  --header: url(../img/red-header.webp);
+  --banner-top: url(../img/red-sidebar-top.webp);
+  --banner-bottom: url(../img/red-sidebar-bottom.webp);
   // --border-radius: controlled in code
   --hotbar-width: unset;
 
@@ -213,14 +213,14 @@ $adjusted-lower: #cc3311 !default;
   --color-bg-acid: rgba(32, 194, 32, 0.125); // adjusted
   --color-bg-bleed: rgba(207, 28, 58, 0.125); // adjusted
   --color-bg-chaotic: rgba(221, 26, 221, 0.125); // adjusted
-  --color-bg-cold: rgba(72, 72, 198, 0.125); // adjusted
+  --color-bg-cold: rgba(186, 186, 246, 0.125); // adjusted
   --color-bg-electricity: rgba(221, 167, 30, 0.125); // adjusted
-  --color-bg-evil: rgba(133, 45, 195, 0.125); // adjusted
+  --color-bg-evil: rgba(153, 59, 220, 0.125); // adjusted
   --color-bg-fire: rgba(229, 93, 39, 0.125); // adjusted
   --color-bg-force: rgba(177, 77, 249, 0.125); // adjusted
   --color-bg-good: rgba(157, 115, 10, 0.125); // adjusted
   --color-bg-lawful: rgba(123, 85, 28, 0.125); // adjusted
-  --color-bg-mental: rgba(66, 66, 189, 0.125); // adjusted
+  --color-bg-mental: rgba(87, 87, 219, 0.125); // adjusted
   --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
   --color-bg-poison: rgba(147, 178, 93, 0.125); // adjusted
   --color-bg-sonic: rgba(28, 217, 217, 0.125); // adjusted
@@ -230,15 +230,15 @@ $adjusted-lower: #cc3311 !default;
   --color-border-acid: #12a812; // adjusted
   --color-border-bleed: #d11c3b; // adjusted
   --color-border-chaotic: #d311d3; // adjusted
-  --color-border-cold: #2f2fa6;
+  --color-border-cold: #6464dd;
   --color-border-electricity: yellow; // adjusted
-  --color-border-evil: rgb(126, 48, 181); // adjusted
+  --color-border-evil: rgb(145, 63, 203); // adjusted
   --color-border-fire: #cd4a17; // adjusted
   --color-border-force: #9222e2; // adjusted
   --color-border-good: #dcb85f; // adjusted
   --color-border-lawful: #97743f; // adjusted
-  --color-border-mental: rgb(63, 63, 182); // adjusted
-  --color-border-physical: #737272; // adjusted
+  --color-border-mental: rgb(82, 82, 209); // adjusted
+  --color-border-physical: #939292; // adjusted
   --color-border-poison: #9aba64; // adjusted
   --color-border-sonic: rgb(30, 202, 202); // adjusted
   --color-border-spirit: #5a5585;
@@ -247,15 +247,15 @@ $adjusted-lower: #cc3311 !default;
   --color-text-acid: #34aa34; // adjusted
   --color-text-bleed: #b0162f; // adjusted
   --color-text-chaotic: #b71ab7; // adjusted
-  --color-text-cold: #3a3ac5; // adjusted
+  --color-text-cold: #6868e1; // adjusted
   --color-text-electricity: #e7b22b; // adjusted
-  --color-text-evil: #594566; // adjusted
-  --color-text-fire: #882700; // adjusted
+  --color-text-evil: #836d91; // adjusted
+  --color-text-fire: #b64214; // adjusted
   --color-text-force: #8321ca; // adjusted
   --color-text-good: #c79b2b; // adjusted
   --color-text-lawful: white; // adjusted
-  --color-text-mental: #3b3bad; // adjusted
-  --color-text-physical: #a0a0a0; // adjusted
+  --color-text-mental: #4c4cc8; // adjusted
+  --color-text-physical: #bab9b9; // adjusted
   --color-text-poison: #657d3f; // adjusted
   --color-text-sonic: #21c2c2; // adjusted
   --color-text-spirit: #827dac; // adjusted

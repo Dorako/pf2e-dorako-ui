@@ -40,4 +40,8 @@
   .item-piles-player-list-trade-button {
     @include f2-button-warm;
   }
+
+  .item-piles-config-container nav {
+    margin-top: 2px;
+  }
 }

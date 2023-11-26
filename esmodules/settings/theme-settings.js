@@ -39,9 +39,10 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.hint",
         scope: "client",
         config: true,
-        default: "red",
+        default: "default",
         type: String,
         choices: {
+          default: "pf2e-dorako-ui.text.default",
           red: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.choice.red",
           blue: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.choice.blue",
           green: "pf2e-dorako-ui.settings.theme.pc-sheet-theme.choice.green",

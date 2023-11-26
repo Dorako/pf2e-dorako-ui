@@ -1,0 +1,9 @@
+[data-dorako-ui-theme="foundry2"],
+[data-dorako-ui-theme="bg3"],
+[data-dorako-ui-theme][data-color-scheme="dark"] {
+  .dalvyn-journal:not(.premium) {
+    --red: var(--primary-light);
+    --blue: var(--secondary-light);
+    --brown: #ad6f59;
+  }
+}

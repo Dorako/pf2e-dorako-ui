@@ -29,7 +29,24 @@
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
   // --color-bg-option: var(--color-cool-4);
+
+  // System rarities
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
 }
+
+/* ----------------------------------------- */
+/* Unlimited                                 */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="crb"][data-color-scheme="dark"][data-dorako-ui-scope="limited"] {
+  --input-background-color: var(--glass-bg);
+  --color-warm-2: var(--tertiary-dark);
+  --color-cool-5-75: rgba(0, 0, 0, 0.5);
+  --color-border-light-2: black;
+}
+
 /* ----------------------------------------- */
 /* Unlimited                                 */
 /* ----------------------------------------- */
@@ -59,6 +76,7 @@
   --app-border-style: none;
 
   --input-text-color: var(--color-light-3);
+  --input-background-color: var(--glass-bg);
   --input-focus-text-color: var(--color-light-2);
   --input-placeholder-color: var(--color-light-5);
   --color-border-medium: var(--tertiary) !important;
@@ -68,6 +86,10 @@
   --fieldset-border-color: var(--tertiary);
   --fieldset-background-color: transparent;
   --fieldset-legend-color: var(--color-light-2);
+
+  // .spell-button button {
+  //   background: var(--primary);
+  // }
 }
 
 /* ----------------------------------------- */

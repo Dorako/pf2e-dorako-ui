@@ -42,6 +42,12 @@
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
   // --color-bg-option: var(--color-cool-4);
+
+  // System rarities
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
 }
 
 [data-dorako-ui-theme="bg3"][data-dorako-ui-scope="limited"][data-color-scheme="light"],

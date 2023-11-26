@@ -123,6 +123,12 @@
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
+  // System rarities
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
+
   &.chat-message {
     border: 1px solid var(--border-tint);
   }

@@ -317,7 +317,7 @@
     color: var(--color-light-2);
     background: var(--input-background-color);
     border: var(--window-app-border-style);
-    border-color: var(--window-app-border-color);
+    border-color: var(--input-border-color);
   }
 
   hr {
@@ -432,6 +432,10 @@
   &.token-sheet,
   &.dialog {
     height: auto !important;
+  }
+
+  &.token-sheet nav.sheet-tabs.secondary-tabs {
+    margin-top: 2px;
   }
 
   .inline-roll .dice-tooltip {
@@ -888,5 +892,12 @@
 
   .tox .tox-sidebar-wrap {
     background-color: white;
+  }
+  .tox.tox-tinymce .tox-tbtn {
+    --button-background-color: white;
+    --button-hover-background-color: gray;
+    --app-text-shadow: none;
+    --box-shadow: none;
+    color: black;
   }
 }

@@ -21,17 +21,14 @@
   nav.sheet-tabs {
     background: unset;
     box-shadow: unset;
+    display: flex;
+    margin: 2px 2px;
     a.item,
     .tab {
       @include f2-button-warm;
       padding: 5px 10px;
+      flex: 1;
       font-family: var(--font-primary);
-      text-shadow: 0px 1px 2px black;
-
-      &.active {
-        font-weight: unset;
-        text-shadow: 0px 1px 2px black;
-      }
     }
   }
 
@@ -86,7 +83,7 @@
   }
 
   &.actor.npc.sheet form .side-bar-section-header {
-    border: unset;
+    // border: unset;
   }
 
   &.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {

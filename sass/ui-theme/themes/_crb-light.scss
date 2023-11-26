@@ -45,6 +45,10 @@
 
   --color-cool-5-75: rgba(96, 88, 86, 0.25);
 
+  //   --color-light-1: black;
+  //   --color-light-2: var(--color-text-dark-primary);
+  //   --color-light-3: var(--color-text-dark-secondary);
+
   --app-background: rgba(255, 255, 255, 0.5);
   --app-border-color: transparent;
   --app-border-style: none;
@@ -52,7 +56,8 @@
   --button-text-color: black;
   --box-shadow: var(--gold-and-glow);
 
-  --button-focus-outline-color: var(--gold-brown);
+  //   --button-focus-outline-color: var(--gold-brown);
+  --button-focus-outline-color: transparent;
   --input-disabled-background-color: rgba(255, 255, 255, 0.2);
   --input-disabled-border-color: transparent;
 
@@ -75,6 +80,11 @@
 
     --app-border-style: 1px solid;
     --box-shadow: none;
+  }
+
+  &.chat-message #context-menu {
+    --app-background: var(--glass-bg);
+    color: var(--color-text-light-heading);
   }
 
   &.chat-message button,
@@ -158,21 +168,21 @@
     text-shadow: none;
   }
 
-  nav.sheet-tabs {
-    a.item,
-    .tab {
-      --box-shadow: none;
-      --app-border-style: 1px solid;
-      --button-border-color: var(--color-text-light-5);
-      --button-background-color: rgba(255, 255, 255, 0.5);
-      text-shadow: none;
+  // nav.sheet-tabs {
+  //   a.item,
+  //   .tab {
+  //     --box-shadow: none;
+  //     --app-border-style: 1px solid;
+  //     --button-border-color: var(--color-text-light-5);
+  //     --button-background-color: rgba(255, 255, 255, 0.5);
+  //     text-shadow: none;
 
-      &:hover,
-      &.active {
-        text-shadow: 0px 1px 2px black;
-      }
-    }
-  }
+  //     &:hover,
+  //     &.active {
+  //       text-shadow: 0px 1px 2px black;
+  //     }
+  //   }
+  // }
 
   /* ----------------------------------------- */
   /* Familiar sheet                            */
@@ -206,23 +216,28 @@
     --text-dark: black;
     --contrastive-transparent: rgba(0, 0, 0, 0.5);
     --color-light-3: var(--color-text-dark-primary);
+    --app-text-shadow: none;
 
-    nav.sheet-tabs {
-      a.item,
-      .tab {
-        --box-shadow: none;
-        --app-border-style: 1px solid;
-        --button-border-color: var(--color-text-light-5);
-        --button-background-color: rgba(255, 255, 255, 0.5);
-        --button-text-color: black;
-        text-shadow: none;
-
-        &.active {
-          font-weight: unset;
-          text-shadow: 0px 1px 2px black;
-        }
-      }
+    .side-bar-section-header input {
+      --input-focus-outline-color: var(--tertiary);
     }
+
+    // nav.sheet-tabs {
+    //   a.item,
+    //   .tab {
+    //     --box-shadow: none;
+    //     --app-border-style: 1px solid;
+    //     --button-border-color: var(--color-text-light-5);
+    //     --button-background-color: rgba(255, 255, 255, 0.5);
+    //     --button-text-color: black;
+    //     text-shadow: none;
+
+    //     &.active {
+    //         font-weight: unset;
+    //         text-shadow: 0px 1px 2px black;
+    //     }
+    //   }
+    // }
 
     .window-header {
       color: black;

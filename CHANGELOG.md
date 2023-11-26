@@ -1,3 +1,17 @@
+# 3.1.3
+
+- (Fix) Made Vehicle sheets use themes again.
+- (Fix) Fixed inputs being grey rather than black on CRB dark color scheme.
+- (Refinement) Removed the theme-colored backdrop for boxes on the PC sheet due to poor contrast.
+- (Refinement) Made the red headers and blue buttons on the PC sheet theme follow PC sheet theme.
+- (Refinement) Added new 'default' setting for PC sheet theme.
+- (Fix) Fixed tox buttons.
+- (Fix) Fixed contrast issue with unidentified effects on PC sheets.
+- (Refinement) Increased contrast for colored headers on Dalvyn-styled journals.
+- (Refinement) Re-enabled the colored text (rather than just glow) provided by See Simple Statistics Scale on appropriate themes.
+- (Refinement) Adjusted navbar buttons.
+- (Refinement) Further increased contrast of certain damage types on dark themes.
+
 # 3.1.2
 
 - (Fix) Fixed invalid default window app theme key.

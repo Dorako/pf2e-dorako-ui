@@ -5,11 +5,11 @@
   --app-background: var(--glass-bg);
   --app-border-color: transparent;
   --app-border-style: none;
-  --input-text-color: var(--color-light-2);
 
   &#token-hud,
   &#tile-hud {
     --button-background-color: var(--glass-bg);
+    --input-text-color: var(--color-light-2);
   }
 }
 
@@ -59,8 +59,6 @@
   --color-border-light-1: #ddd;
   --color-border-light-2: #999;
 
-  .app,
-  &.app,
   button {
     --color-light-1: white;
     --color-light-2: var(--color-text-light-highlight);
@@ -107,6 +105,10 @@
 
     &.light-header-text {
       --color-text-dark-secondary: var(--color-light-1);
+      --color-light-1: white;
+      --color-light-2: var(--color-text-light-highlight);
+      --color-light-3: var(--color-text-light-heading);
+      --app-text-shadow: 0px 1px 2px black;
     }
 
     .message-timestamp,

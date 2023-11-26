@@ -117,7 +117,12 @@ for (const appName of [...systemSheets]) {
       );
       return;
     }
-    if (theme == "crb" && colorScheme == "light" && app.constructor.name === "PartySheetPF2e") return;
+    if (
+      theme == "crb" &&
+      colorScheme == "light" &&
+      (app.constructor.name === "PartySheetPF2e" || app.constructor.name === "FamiliarSheetPF2e")
+    )
+      return;
 
     app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
     app.element[0].dataset.colorScheme = colorScheme;

@@ -88,6 +88,7 @@
     text-decoration: none;
   }
 
+  &.empty,
   &.disabled,
   &:disabled {
     --button-background-color: var(--button-disabled-background-color);
@@ -157,7 +158,7 @@
 
   &:not(:disabled, .disabled, [type="checkbox"]):hover,
   &:focus {
-    outline: 2px solid var(--input-focus-outline-color);
+    outline: 1px solid var(--input-focus-outline-color);
     border: var(--app-border-style);
     border-color: var(--input-border-color);
     color: var(--input-focus-text-color);
