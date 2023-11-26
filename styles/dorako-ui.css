@@ -2,11 +2,6 @@
 /* --------------------------------------------------------- */
 /* The original styling has been overruled by system changes */
 /* --------------------------------------------------------- */
-.pf2e-av.sheet.journal-entry .journal-entry-content {
-  background: url("../../pf2e-abomination-vaults/styles/assets/parchment-av.jpg") repeat;
-  border-color: var(--av-green-light);
-}
-
 .pf2e-av .journal-page-content a.inline-check > i.icon,
 .pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
 .pf2e-av .journal-page-content [data-pf2-repost] .label,
@@ -882,7 +877,6 @@ nav.damage-log-nav.tabs .item.active {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -1319,6 +1313,7 @@ nav.damage-log-nav.tabs .item.active {
   --item-piles-even-color: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
   --item-piles-border-light-primary: var(--color-cool-3);
 }
+[data-dorako-ui-theme] .item-piles-chat-card li img,
 [data-dorako-ui-theme] .item-piles-img-container {
   background: var(--app-background);
   border: var(--app-border-style);
@@ -1327,7 +1322,8 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
-  border-color: var(--color-warm-1);
+  border: 1px solid;
+  border-color: var(--icon-border-color);
 }
 [data-dorako-ui-theme] .item-piles-player-list-trade-button {
   background: var(--app-background);
@@ -1388,6 +1384,13 @@ nav.damage-log-nav.tabs .item.active {
 }
 [data-dorako-ui-theme] .item-piles-config-container nav {
   margin-top: 2px;
+}
+
+[data-dorako-ui-theme=foundry],
+[data-dorako-ui-theme=bg3],
+[data-dorako-ui-theme][data-color-scheme=dark] {
+  --item-piles-border-light-primary: rgba(255, 255, 255, 0.2);
+  --item-piles-text-light-highlight: rgba(255, 255, 255, 0.3);
 }
 
 /* ----------------------------------------- */
@@ -1689,6 +1692,14 @@ button#heartbeat-button {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
+}
+
+/* ----------------------------------------- */
+/* General??                                 */
+/* ----------------------------------------- */
+[data-dorako-ui-theme].monks-active-tiles.sheet .items-list .item-header {
+  border: none;
+  background: none;
 }
 
 /* ----------------------------------------- */
@@ -2018,7 +2029,6 @@ button#heartbeat-button {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -2427,7 +2437,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -2813,7 +2822,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -2858,7 +2866,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -2905,7 +2912,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -3267,27 +3273,27 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 [data-dorako-ui-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
 [data-dorako-ui-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
 [data-dorako-ui-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary {
-  color: #6cd8ff;
+  color: #6cd8ff !important;
 }
 [data-dorako-ui-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary,
 [data-dorako-ui-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary,
 [data-dorako-ui-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary {
-  color: #3cff00;
+  color: #3cff00 !important;
 }
 [data-dorako-ui-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary,
 [data-dorako-ui-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary,
 [data-dorako-ui-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary {
-  color: #ffff54;
+  color: #ffff54 !important;
 }
 [data-dorako-ui-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary,
 [data-dorako-ui-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary,
 [data-dorako-ui-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary {
-  color: #ff8000;
+  color: #ff8000 !important;
 }
 [data-dorako-ui-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
 [data-dorako-ui-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
 [data-dorako-ui-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary {
-  color: #ff0000;
+  color: #ff0000 !important;
 }
 
 [data-dorako-ui-scope=limited].sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] ol.actions-list.heroActions-list .action .item-controls > button {
@@ -3789,7 +3795,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -3871,7 +3876,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -4294,7 +4298,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -5090,6 +5093,10 @@ html .xdy-pf2e-workbench-rarity-unique {
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
   --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   /* Degrees of success */
   --degree-success-critical: rgb(107, 255, 0);
@@ -5188,14 +5195,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-dorako-ui-theme] a.inline-roll i.icon {
   color: var(--inline-icon-color);
 }
-[data-dorako-ui-theme] a.content-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] [data-pf2-check] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] a.entity-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] [data-pf2-action] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] a.inline-check [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] a.inline-check .label [data-visibility]:not([data-visibility=all])[data-visibility=gm],
-[data-dorako-ui-theme] a.inline-roll [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+[data-dorako-ui-theme] [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   color: black;
 }
 [data-dorako-ui-theme] i[data-pf2-repost] {
@@ -5438,7 +5438,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -5690,7 +5689,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -5881,7 +5879,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -5992,7 +5989,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -6114,7 +6110,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -6301,7 +6296,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -6609,7 +6603,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -6649,7 +6642,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -6691,7 +6683,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -6735,7 +6726,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -7545,7 +7535,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -7897,7 +7886,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8072,6 +8060,127 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--icon-border-color);
 }
 
+[data-dorako-ui-theme].filepicker .display-modes a {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+}
+[data-dorako-ui-theme].filepicker .display-modes a:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-dorako-ui-theme].filepicker .display-modes a.selected, [data-dorako-ui-theme].filepicker .display-modes a.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+[data-dorako-ui-theme].filepicker .display-modes a.empty, [data-dorako-ui-theme].filepicker .display-modes a.disabled, [data-dorako-ui-theme].filepicker .display-modes a:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
+}
+[data-dorako-ui-theme].filepicker .display-modes a.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: none;
+}
+[data-dorako-ui-theme].filepicker .display-modes a.bright.disabled, [data-dorako-ui-theme].filepicker .display-modes a.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+[data-dorako-ui-theme].filepicker .display-modes a.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+[data-dorako-ui-theme].filepicker .private button.privacy {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  --button-background-color: #7331ff;
+}
+[data-dorako-ui-theme].filepicker .private button.privacy:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-dorako-ui-theme].filepicker .private button.privacy.selected, [data-dorako-ui-theme].filepicker .private button.privacy.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+[data-dorako-ui-theme].filepicker .private button.privacy.empty, [data-dorako-ui-theme].filepicker .private button.privacy.disabled, [data-dorako-ui-theme].filepicker .private button.privacy:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
+}
+[data-dorako-ui-theme].filepicker .private button.privacy.bright {
+  --button-background-color: var(--color-warm-1);
+  --button-border-color: var(--color-cool-5);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: #fda948;
+  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-text-color: #000000;
+  text-shadow: none;
+}
+[data-dorako-ui-theme].filepicker .private button.privacy.bright.disabled, [data-dorako-ui-theme].filepicker .private button.privacy.bright:disabled {
+  --button-background-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-4);
+  --button-text-color: var(--color-light-5);
+  --button-hover-text-color: var(--color-light-5);
+  --button-hover-border-color: transparent;
+}
+[data-dorako-ui-theme].filepicker .private button.privacy.bright:not(.disabled, :disabled):hover {
+  --button-hover-background-color: #cb7f27;
+  --button-hover-border-color: var(--color-warm-1);
+}
+[data-dorako-ui-theme].filepicker .filepicker-header .quick-link-input-button {
+  --box-shadow: none;
+  --button-hover-background-color: none;
+  --button-hover-border-color: transparent;
+}
+
 [data-dorako-ui-theme].sheet.hazard {
   --color-text-light: var(--color-light-2);
 }
@@ -8079,89 +8188,55 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background: #19302c;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
+  color: #ffffff !important;
 }
 [data-dorako-ui-theme].sheet.hazard.window-app.minimized .window-header {
   border-radius: var(--border-radius);
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text], [data-dorako-ui-theme].sheet.hazard input[type=text], [data-dorako-ui-theme].sheet.hazard input[type=number] {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text], [data-dorako-ui-theme].sheet.hazard .container input[type=text], [data-dorako-ui-theme].sheet.hazard .container input[type=number], [data-dorako-ui-theme].sheet.hazard .container select {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard input[type=number]:focus {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard .container input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard .container input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard .container input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard .container input[type=number]:focus, [data-dorako-ui-theme].sheet.hazard .container select:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard .container select:focus {
   outline: 1px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled, [data-dorako-ui-theme].sheet.hazard input[type=text].disabled, [data-dorako-ui-theme].sheet.hazard input[type=text]:disabled, [data-dorako-ui-theme].sheet.hazard input[type=number].disabled, [data-dorako-ui-theme].sheet.hazard input[type=number]:disabled {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled, [data-dorako-ui-theme].sheet.hazard .container input[type=text].disabled, [data-dorako-ui-theme].sheet.hazard .container input[type=text]:disabled, [data-dorako-ui-theme].sheet.hazard .container input[type=number].disabled, [data-dorako-ui-theme].sheet.hazard .container input[type=number]:disabled, [data-dorako-ui-theme].sheet.hazard .container select.disabled, [data-dorako-ui-theme].sheet.hazard .container select:disabled {
   --input-text-color: var(--color-light-disabled);
   --input-background-color: var(--input-disabled-background-color);
   --input-border-color: var(--input-disabled-border-color);
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=text]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=number].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=number]:disabled::placeholder {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .container input[type=text].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .container input[type=text]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .container input[type=number].disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .container input[type=number]:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .container select.disabled::placeholder, [data-dorako-ui-theme].sheet.hazard .container select:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=text]::placeholder, [data-dorako-ui-theme].sheet.hazard input[type=number]::placeholder {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]::placeholder, [data-dorako-ui-theme].sheet.hazard .container input[type=text]::placeholder, [data-dorako-ui-theme].sheet.hazard .container input[type=number]::placeholder, [data-dorako-ui-theme].sheet.hazard .container select::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]::selection, [data-dorako-ui-theme].sheet.hazard input[type=text]::selection, [data-dorako-ui-theme].sheet.hazard input[type=number]::selection {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text]::selection, [data-dorako-ui-theme].sheet.hazard .container input[type=text]::selection, [data-dorako-ui-theme].sheet.hazard .container input[type=number]::selection, [data-dorako-ui-theme].sheet.hazard .container select::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text][type=checkbox], [data-dorako-ui-theme].sheet.hazard input[type=text][type=checkbox], [data-dorako-ui-theme].sheet.hazard input[type=number][type=checkbox] {
+[data-dorako-ui-theme].sheet.hazard .section-container.publication .section-body input[type=text][type=checkbox], [data-dorako-ui-theme].sheet.hazard .container input[type=text][type=checkbox], [data-dorako-ui-theme].sheet.hazard .container input[type=number][type=checkbox], [data-dorako-ui-theme].sheet.hazard .container select[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled), [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled), [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus {
-  background: var(--input-background-color);
-  border: var(--app-border-style);
-  border-color: var(--input-border-color) !important;
-  color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
-  align-items: center;
-  padding: 0 0.3rem;
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  user-select: text;
-  transition: outline-color 0.5s;
+[data-dorako-ui-theme].sheet.hazard form > header {
+  --text-dark: black;
 }
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):focus, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:focus {
-  outline: 1px solid var(--input-focus-outline-color);
-  border: var(--app-border-style);
-  border-color: var(--input-border-color);
-  color: var(--input-focus-text-color);
-  box-shadow: var(--box-shadow);
-}
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus.disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus.disabled, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:disabled {
-  --input-text-color: var(--color-light-disabled);
-  --input-background-color: var(--input-disabled-background-color);
-  --input-border-color: var(--input-disabled-border-color);
-}
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus.disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus:disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled).disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled):disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus.disabled::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus:disabled::placeholder {
-  color: color-mix(in srgb, var(--input-placeholder-color) 20%, black);
-}
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled)::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled)::placeholder, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus::placeholder {
-  color: var(--input-placeholder-color);
-}
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled)::selection, [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus::selection, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled)::selection, [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus::selection {
-  color: var(--input-text-color);
-  background: var(--input-focus-outline-color);
-}
-[data-dorako-ui-theme].sheet.hazard form > header input[type=text]:hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].sheet.hazard form > header input[type=text]:focus[type=checkbox], [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:hover:not(:disabled)[type=checkbox], [data-dorako-ui-theme].sheet.hazard form > header input[type=number]:focus[type=checkbox] {
-  outline: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
+[data-dorako-ui-theme].sheet.hazard .section-container, [data-dorako-ui-theme].sheet.hazard form > header {
+  --input-text-color: white;
 }
 [data-dorako-ui-theme].sheet.hazard form > header .details {
   display: flex;
@@ -8188,6 +8263,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   gap: 3px;
   display: flex;
   flex-direction: column;
+}
+[data-dorako-ui-theme].sheet.hazard .section-container .section-header h4 {
+  color: var(--color-light-2);
 }
 [data-dorako-ui-theme].sheet.hazard .section-container {
   background: var(--app-background);
@@ -8244,7 +8322,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8341,10 +8418,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--color-warm-1);
 }
 
-[data-dorako-ui-theme].sheet.actor.loot {
-  --text-dark: var(--color-light-2);
-  --primary: var(--color-warm-2);
-}
 [data-dorako-ui-theme].sheet.actor.loot section.sidebar {
   box-shadow: unset;
   border: unset;
@@ -8373,7 +8446,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8564,7 +8636,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8605,7 +8676,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8646,7 +8716,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8687,7 +8756,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8727,7 +8795,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8767,7 +8834,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8807,7 +8873,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8847,7 +8912,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -8880,6 +8944,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border: unset !important;
   box-shadow: unset !important;
 }
+[data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .ammo select.linked {
+  padding: 3px;
+}
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child), [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
   border-color: var(--section-border-color);
 }
@@ -8893,6 +8960,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background-color: var(--color-warm-1);
   color: black;
   text-shadow: unset;
+}
+[data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name, [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
+  gap: 5px;
 }
 
 [data-dorako-ui-theme].app.npc-skills-editor form ol li.skill:nth-child(even) {
@@ -8915,7 +8985,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -9408,7 +9477,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10135,6 +10203,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Theme                                     */
 /* ----------------------------------------- */
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) {
+  --color-text-dark-4: var(--color-light-5);
+}
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body {
   background: unset;
 }
@@ -10145,7 +10216,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10185,7 +10255,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10400,7 +10469,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10440,7 +10508,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10480,7 +10547,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10537,7 +10603,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10577,7 +10642,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10621,7 +10685,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -10749,7 +10812,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
   align-items: center;
-  padding: 0 0.3rem;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
@@ -11060,16 +11122,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
 [data-dorako-ui-theme=crb][data-color-scheme=dark] {
+  --color-border-light-highlight: black;
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
-  --color-rarity-common: #e1d8cf;
-  --color-rarity-uncommon: #c45500;
-  --color-rarity-rare: #5362ff;
-  --color-rarity-unique: #e127e1;
 }
 
 /* ----------------------------------------- */
-/* Unlimited                                 */
+/* Limited                                   */
 /* ----------------------------------------- */
 [data-dorako-ui-theme=crb][data-color-scheme=dark][data-dorako-ui-scope=limited] {
   --input-background-color: var(--glass-bg);
@@ -11104,12 +11163,21 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --input-background-color: var(--glass-bg);
   --input-focus-text-color: var(--color-light-2);
   --input-placeholder-color: var(--color-light-5);
+  --input-disabled-background-color: black;
+  --input-disabled-border-color: black;
   --color-border-medium: var(--tertiary) !important;
   --color-border-divider: var(--tertiary) !important;
   --bg: rgba(0, 0, 0, 0.5);
   --fieldset-border-color: var(--tertiary);
   --fieldset-background-color: transparent;
   --fieldset-legend-color: var(--color-light-2);
+  --text-dark: var(--color-light-2);
+}
+[data-dorako-ui-theme=crb][data-color-scheme=dark] input[type=range] + .range-value {
+  color: black;
+  text-shadow: none;
+  font-weight: 800;
+  --input-focus-text-color: black;
 }
 
 /* ----------------------------------------- */
@@ -11185,6 +11253,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 
 /* ----------------------------------------- */
+/* Light theme                                  */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
 /* PF2e sheets                               */
 /* ----------------------------------------- */
 [data-dorako-ui-theme=crb][data-color-scheme=light] {
@@ -11248,6 +11319,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --input-background-color: rgba(0, 0, 0, 0.05);
   --input-border-color: transparent;
 }
+[data-dorako-ui-theme=crb][data-color-scheme=light].sheet.hazard .section-container .section-header input, [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.hazard .section-container.publication .section-body input[type=text] {
+  --input-text-color: var(--color-light-2);
+  --input-focus-text-color: var(--color-light-1);
+}
 [data-dorako-ui-theme=crb][data-color-scheme=light] .directory .directory-header .header-search input {
   --input-border-color: var(--color-text-light-5);
   --input-text-color: var(--color-text-dark-input);
@@ -11297,6 +11372,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --app-border-color: var(--color-text-light-6);
 }
 [data-dorako-ui-theme=crb][data-color-scheme=light]:not([data-dorako-ui-scope=limited], .journal-sheet).window-app .window-header {
+  color: black;
+  text-shadow: none;
+}
+[data-dorako-ui-theme=crb][data-color-scheme=light].journal-entry-page.window-app .window-header {
   color: black;
   text-shadow: none;
 }
@@ -11591,9 +11670,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --bg3-text-2: #d1c9b9;
   --bg3-text-3: #b0947b;
   --bg3-text-4: #e8dea8;
-  --bg3-accent-light: #fc7e9e;
-  --bg3-accent: #ea4a72;
-  --bg3-accent-dark: #c13155;
+  --bg3-accent-color-light: #fc7e9e;
+  --bg3-accent-color: #ea4a72;
+  --bg3-accent-color-dark: #c13155;
   --bg3-color-scrollbar: #ecc090;
   --bg3-color-scrollbar-border: #6c5842;
 }
@@ -11606,10 +11685,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-border-divider: var(--bg3-border-color);
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
-  --color-rarity-common: #e1d8cf;
-  --color-rarity-uncommon: #c45500;
-  --color-rarity-rare: #5362ff;
-  --color-rarity-unique: #e127e1;
 }
 
 /* ----------------------------------------- */
@@ -11679,7 +11754,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   /* Scrollbar and accent variables */
   --color-scrollbar: var(--bg3-color-scrollbar);
   --color-scrollbar-border: var(--bg3-color-scrollbar-border);
-  --accent-color: #ea4a72;
+  --accent-color-light: var(--bg3-accent-color-light);
+  --accent-color: var(--bg3-accent-color);
+  --accent-color-dark: #var(--bg3-accent-color-dark);
 }
 
 /* ----------------------------------------- */
@@ -12073,6 +12150,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-theme=foundry2],
 [data-dorako-ui-theme=foundry2][data-dorako-ui-scope=unlimited] {
   --bg: var(--color-warm-3);
+  --text-dark: var(--color-light-2);
 }
 
 /* ----------------------------------------- */
@@ -12138,8 +12216,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --app-border-color: rgb(80, 80, 80);
   --app-border-style: 1px solid;
   --input-border-color: var(--button-border-color);
-  --input-text-color: var(--color-light-2);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --input-text-color: black;
+  --input-focus-text-color: black;
   --input-background-color: rgba(255, 255, 255, 0.5);
   --input-focus-outline-color: var(--primary-light);
   --input-placeholder-color: rgba(0, 0, 0, 0.5);
@@ -12161,9 +12239,18 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+  --accent-color: var(--primary-light);
+}
+[data-dorako-ui-theme=opaque]:not([data-color-scheme])#token-hud {
+  --input-text-color: var(--color-light-2);
 }
 [data-dorako-ui-theme=opaque]:not([data-color-scheme])#token-hud .attribute i.fas {
   color: var(--color-light-2);
+}
+[data-dorako-ui-theme=opaque]:not([data-color-scheme]).sidebar-popout {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
 }
 
 /* ----------------------------------------- */

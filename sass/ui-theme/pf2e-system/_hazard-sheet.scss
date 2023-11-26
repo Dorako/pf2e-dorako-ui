@@ -6,22 +6,27 @@
     background: #19302c;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+    color: #ffffff !important;
   }
+
   &.sheet.hazard.window-app.minimized .window-header {
     border-radius: var(--border-radius);
   }
 
   &.sheet.hazard .section-container.publication .section-body input[type="text"],
-  &.sheet.hazard input[type="text"],
-  &.sheet.hazard input[type="number"] {
+  &.sheet.hazard .container input[type="text"],
+  &.sheet.hazard .container input[type="number"],
+  &.sheet.hazard .container select {
     @include f2-input;
   }
 
-  &.sheet.hazard form > header input[type="text"]:hover:not(:disabled),
-  &.sheet.hazard form > header input[type="text"]:focus,
-  &.sheet.hazard form > header input[type="number"]:hover:not(:disabled),
-  &.sheet.hazard form > header input[type="number"]:focus {
-    @include f2-input;
+  &.sheet.hazard form > header {
+    --text-dark: black;
+  }
+
+  &.sheet.hazard .section-container,
+  &.sheet.hazard form > header {
+    --input-text-color: white;
   }
 
   &.sheet.hazard form > header .details {
@@ -53,6 +58,10 @@
       display: flex;
       flex-direction: column;
     }
+  }
+
+  &.sheet.hazard .section-container .section-header h4 {
+    color: var(--color-light-2);
   }
 
   &.sheet.hazard .section-container {

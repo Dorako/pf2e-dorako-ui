@@ -1,3 +1,8 @@
+# 3.1.8
+
+- (Refinement) Bunch of small adjustments.
+- (Fix) Fixed Opaque app theme's popped out sidebar windows being translucent.
+
 # 3.1.7
 
 - (Fix) Fixed BAM button text color.

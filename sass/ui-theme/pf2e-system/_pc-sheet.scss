@@ -211,6 +211,8 @@
 /* Theme                                     */
 /* ----------------------------------------- */
 [data-dorako-ui-theme][data-dorako-ui-scope="limited"]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
+  --color-text-dark-4: var(--color-light-5);
+
   &.actor.sheet .crb-style .sheet-body {
     background: unset;
 

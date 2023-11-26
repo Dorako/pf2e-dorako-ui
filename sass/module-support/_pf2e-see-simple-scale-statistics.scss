@@ -26,22 +26,22 @@
 [data-dorako-ui-theme][data-color-scheme="dark"] {
   &.dorako-ux.sheet.pf2e.actor.npc {
     .pf2e-see-simple-scale-statistics-Extreme-color-primary {
-      color: #6cd8ff;
+      color: #6cd8ff !important;
     }
     .pf2e-see-simple-scale-statistics-High-color-primary {
-      color: #3cff00;
+      color: #3cff00 !important;
     }
 
     .pf2e-see-simple-scale-statistics-Moderate-color-primary {
-      color: #ffff54;
+      color: #ffff54 !important;
     }
 
     .pf2e-see-simple-scale-statistics-Low-color-primary {
-      color: #ff8000;
+      color: #ff8000 !important;
     }
 
     .pf2e-see-simple-scale-statistics-Terrible-color-primary {
-      color: #ff0000;
+      color: #ff0000 !important;
     }
   }
 }

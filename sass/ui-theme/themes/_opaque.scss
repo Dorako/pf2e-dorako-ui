@@ -6,8 +6,8 @@
   --app-border-color: rgb(80, 80, 80);
   --app-border-style: 1px solid;
   --input-border-color: var(--button-border-color); // intentional
-  --input-text-color: var(--color-light-2);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --input-text-color: black;
+  --input-focus-text-color: black;
   --input-background-color: rgba(255, 255, 255, 0.5);
   --input-focus-outline-color: var(--primary-light);
   --input-placeholder-color: rgba(0, 0, 0, 0.5);
@@ -32,7 +32,18 @@
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
-  &#token-hud .attribute i.fas {
-    color: var(--color-light-2);
+  --accent-color: var(--primary-light);
+
+  &#token-hud {
+    --input-text-color: var(--color-light-2);
+    .attribute i.fas {
+      color: var(--color-light-2);
+    }
+  }
+
+  &.sidebar-popout {
+    background: var(--app-background);
+    border: var(--app-border-style);
+    border-color: var(--app-border-color);
   }
 }

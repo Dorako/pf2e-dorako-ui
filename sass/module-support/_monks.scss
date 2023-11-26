@@ -1,4 +1,14 @@
 /* ----------------------------------------- */
+/* General??                                 */
+/* ----------------------------------------- */
+[data-dorako-ui-theme] {
+  &.monks-active-tiles.sheet .items-list .item-header {
+    border: none;
+    background: none;
+  }
+}
+
+/* ----------------------------------------- */
 /* Monk's Common Display                     */
 /* ----------------------------------------- */
 

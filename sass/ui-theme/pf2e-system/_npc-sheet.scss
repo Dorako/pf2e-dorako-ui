@@ -69,6 +69,11 @@
     @include f2-input;
   }
 
+  // prettier-ignore
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .ammo select.linked {
+    padding: 3px;
+  }
+
   &.actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child),
   &.actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
     border-color: var(--section-border-color);
@@ -90,6 +95,11 @@
     background-color: var(--color-warm-1);
     color: black;
     text-shadow: unset;
+  }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
+    gap: 5px; // aligns buttons
   }
 }
 

@@ -31,6 +31,13 @@
 }
 
 /* ----------------------------------------- */
+/* Light theme                                  */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="crb"][data-color-scheme="light"] {
+  // --text-dark: black;
+}
+
+/* ----------------------------------------- */
 /* PF2e sheets                               */
 /* ----------------------------------------- */
 [data-dorako-ui-theme="crb"][data-color-scheme="light"] {
@@ -109,6 +116,12 @@
     --input-border-color: transparent;
   }
 
+  &.sheet.hazard .section-container .section-header input,
+  &.sheet.hazard .section-container.publication .section-body input[type="text"] {
+    --input-text-color: var(--color-light-2);
+    --input-focus-text-color: var(--color-light-1);
+  }
+
   .directory .directory-header .header-search input {
     --input-border-color: var(--color-text-light-5);
     --input-text-color: var(--color-text-dark-input);
@@ -168,21 +181,10 @@
     text-shadow: none;
   }
 
-  // nav.sheet-tabs {
-  //   a.item,
-  //   .tab {
-  //     --box-shadow: none;
-  //     --app-border-style: 1px solid;
-  //     --button-border-color: var(--color-text-light-5);
-  //     --button-background-color: rgba(255, 255, 255, 0.5);
-  //     text-shadow: none;
-
-  //     &:hover,
-  //     &.active {
-  //       text-shadow: 0px 1px 2px black;
-  //     }
-  //   }
-  // }
+  &.journal-entry-page.window-app .window-header {
+    color: black;
+    text-shadow: none;
+  }
 
   /* ----------------------------------------- */
   /* Familiar sheet                            */
@@ -221,23 +223,6 @@
     .side-bar-section-header input {
       --input-focus-outline-color: var(--tertiary);
     }
-
-    // nav.sheet-tabs {
-    //   a.item,
-    //   .tab {
-    //     --box-shadow: none;
-    //     --app-border-style: 1px solid;
-    //     --button-border-color: var(--color-text-light-5);
-    //     --button-background-color: rgba(255, 255, 255, 0.5);
-    //     --button-text-color: black;
-    //     text-shadow: none;
-
-    //     &.active {
-    //         font-weight: unset;
-    //         text-shadow: 0px 1px 2px black;
-    //     }
-    //   }
-    // }
 
     .window-header {
       color: black;

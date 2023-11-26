@@ -12,9 +12,9 @@
   --bg3-text-2: #d1c9b9;
   --bg3-text-3: #b0947b;
   --bg3-text-4: #e8dea8;
-  --bg3-accent-light: #fc7e9e;
-  --bg3-accent: #ea4a72;
-  --bg3-accent-dark: #c13155;
+  --bg3-accent-color-light: #fc7e9e;
+  --bg3-accent-color: #ea4a72;
+  --bg3-accent-color-dark: #c13155;
   --bg3-color-scrollbar: #ecc090;
   --bg3-color-scrollbar-border: #6c5842;
 }
@@ -50,12 +50,6 @@
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
   // --color-bg-option: var(--color-cool-4);
-
-  // System rarities
-  --color-rarity-common: #e1d8cf;
-  --color-rarity-uncommon: #c45500;
-  --color-rarity-rare: #5362ff;
-  --color-rarity-unique: #e127e1;
 }
 
 /* ----------------------------------------- */
@@ -128,7 +122,9 @@
   /* Scrollbar and accent variables */
   --color-scrollbar: var(--bg3-color-scrollbar);
   --color-scrollbar-border: var(--bg3-color-scrollbar-border);
-  --accent-color: #ea4a72;
+  --accent-color-light: var(--bg3-accent-color-light);
+  --accent-color: var(--bg3-accent-color);
+  --accent-color-dark: #var(--bg3-accent-color-dark);
 }
 
 /* ----------------------------------------- */
