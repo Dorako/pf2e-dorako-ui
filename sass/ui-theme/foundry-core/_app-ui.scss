@@ -645,6 +645,8 @@
 }
 
 [data-dorako-ui-theme] {
+  --visibility-gm-bg: #e8e8efaa;
+  --visibility-owner-bg: #ddebe1aa;
   &.pf2e.item.sheet {
     input {
       @include f2-input;

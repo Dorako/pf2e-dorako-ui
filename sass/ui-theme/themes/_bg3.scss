@@ -171,6 +171,10 @@
     --secondary: var(--bg3-text-1);
   }
 
+  &.actor.sheet.character {
+    --color-border-light-2: var(--bg3-border-color);
+  }
+
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,

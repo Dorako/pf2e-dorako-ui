@@ -1,4 +1,20 @@
 @charset "UTF-8";
+/* --------------------------------------------------------- */
+/* The original styling has been overruled by system changes */
+/* --------------------------------------------------------- */
+.pf2e-av.sheet.journal-entry .journal-entry-content {
+  background: url("../../pf2e-abomination-vaults/styles/assets/parchment-av.jpg") repeat;
+  border-color: var(--av-green-light);
+}
+
+.pf2e-av .journal-page-content a.inline-check > i.icon,
+.pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
+.pf2e-av .journal-page-content [data-pf2-repost] .label,
+.pf2e-av .journal-page-content [data-pf2-check] .label,
+.pf2e-av .journal-page-content [data-pf2-check]:not([data-pf2-show-dc=gm]) .label {
+  color: var(--av-green-light);
+}
+
 .dorako-ui.tab#chat {
   margin: unset;
 }
@@ -6268,6 +6284,10 @@ html .xdy-pf2e-workbench-rarity-unique {
   --color-border-medium: var(--color-cool-3);
 }
 
+[data-dorako-ui-theme] {
+  --visibility-gm-bg: #e8e8efaa;
+  --visibility-owner-bg: #ddebe1aa;
+}
 [data-dorako-ui-theme].pf2e.item.sheet input {
   background: var(--input-background-color);
   border: var(--app-border-style);
@@ -9006,6 +9026,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: black;
   border-radius: var(--border-radius);
 }
+[data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
+  border-top: unset;
+}
 
 [data-dorako-ui-theme] .tags,
 [data-dorako-ui-scope=limited] .tags {
@@ -10110,10 +10133,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill .skill-score, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill .skill-score, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill .skill-score {
   color: var(--accent-color);
 }
-[data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
-  --text-dark: var(--color-light-1);
-}
-
 /* ----------------------------------------- */
 /* Theme                                     */
 /* ----------------------------------------- */
@@ -11070,7 +11089,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* PF2e sheets                               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^=crb][data-color-scheme=dark] {
+[data-dorako-ui-theme=crb][data-color-scheme=dark] {
   /* ----------------------------------------- */
   /* NPC sheet                                 */
   /* ----------------------------------------- */
@@ -11078,7 +11097,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   /* Actor sheet                               */
   /* ----------------------------------------- */
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app {
+[data-dorako-ui-theme=crb][data-color-scheme=dark] .tags .tag.tag_transparent,
+[data-dorako-ui-theme=crb][data-color-scheme=dark] .tags .tag option.tag_transparent {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+[data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app {
   --section-background: var(--sheet-dark);
   --section-header: var(--primary);
   --section-border-color: var(--tertiary);
@@ -11092,13 +11115,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --input-focus-outline-color: var(--tertiary);
   --text-dark: var(--color-light-2);
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section, [data-dorako-ui-theme^=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .section-container {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section, [data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .section-container {
   background-image: var(--sheet);
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app input {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app input {
   --box-shadow: none;
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body {
   --text-dark: var(--color-light-2);
   --color-border-light-primary: var(--tertiary);
   --color-border-light-highlight: var(--tertiary);
@@ -11106,14 +11129,14 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --alt: var(--color-light-5);
   --bg: rgba(0, 0, 0, 0.5);
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet .inventory .list-row .item-controls, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet .inventory .list-row .item-controls, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
   --secondary: var(--tertiary);
   --fa-inverse: black;
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
   --primary: var(--tertiary);
 }
-[data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme^=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
   border-image: linear-gradient(90deg, transparent, var(--tertiary) 20%, transparent) 1;
 }
 
@@ -11662,6 +11685,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-theme=bg3].actor.sheet .inventory .list-row .item-controls,
 [data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet .inventory .list-row .item-controls {
   --secondary: var(--bg3-text-1);
+}
+[data-dorako-ui-theme=bg3].actor.sheet.character,
+[data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character {
+  --color-border-light-2: var(--bg3-border-color);
 }
 [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=bg3].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike, [data-dorako-ui-theme=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
 [data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
@@ -12295,7 +12322,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
-[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]) .damage {
+[data-dorako-ui-theme=foundry2][data-dorako-colour-scheme] .damage,
+[data-dorako-ui-theme=bg3][data-dorako-colour-scheme] .damage,
+[data-dorako-ui-theme=crb][data-dorako-colour-scheme=dark] .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125);
   --color-bg-bleed: rgba(207, 28, 58, 0.125);
   --color-bg-chaotic: rgba(221, 26, 221, 0.125);
@@ -12524,14 +12553,6 @@ i[data-pf2-repost] {
 .dorako-ui.dark-theme a.content-link.broken {
   background: rgba(255, 0, 0, 0.5);
   color: white;
-}
-
-.pf2e-av .journal-page-content a.inline-check > i.icon,
-.pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
-.pf2e-av .journal-page-content [data-pf2-repost] .label,
-.pf2e-av .journal-page-content [data-pf2-check] .label,
-.pf2e-av .journal-page-content [data-pf2-check]:not([data-pf2-show-dc=gm]) .label {
-  color: var(--av-green-light);
 }
 
 .app.sheet.actor p,

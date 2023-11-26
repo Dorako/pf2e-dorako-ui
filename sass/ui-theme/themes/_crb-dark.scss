@@ -95,7 +95,12 @@
 /* ----------------------------------------- */
 /* PF2e sheets                               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="crb"][data-color-scheme="dark"] {
+[data-dorako-ui-theme="crb"][data-color-scheme="dark"] {
+  .tags .tag.tag_transparent,
+  .tags .tag option.tag_transparent {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+
   /* ----------------------------------------- */
   /* NPC sheet                                 */
   /* ----------------------------------------- */

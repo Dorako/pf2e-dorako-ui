@@ -1,3 +1,9 @@
+# 3.1.4
+
+- (Fix) Fixed PC sheet lore input field text color on CRB light theme.
+- (Refinement) Changed the gm vis color to be semi-transparent, so it fits a bit better with dark themes.
+- (Fix) Adjusted selector for colored damage types.
+
 # 3.1.3
 
 - (Fix) Made Vehicle sheets use themes again.

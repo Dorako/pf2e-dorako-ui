@@ -35,6 +35,10 @@
     color: black;
     border-radius: var(--border-radius);
   }
+
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
+    border-top: unset; // system hardcoded color
+  }
 }
 
 [data-dorako-ui-theme],

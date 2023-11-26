@@ -152,15 +152,6 @@ i[data-pf2-repost] {
   }
 }
 
-// ugly hack
-.pf2e-av .journal-page-content a.inline-check > i.icon,
-.pf2e-av .journal-page-content span[data-pf2-check] > i.icon,
-.pf2e-av .journal-page-content [data-pf2-repost] .label,
-.pf2e-av .journal-page-content [data-pf2-check] .label,
-.pf2e-av .journal-page-content [data-pf2-check]:not([data-pf2-show-dc="gm"]) .label {
-  color: var(--av-green-light);
-}
-
 // system uses 500, which makes it hard to tell whether something is bolded
 .app.sheet.actor p,
 .pf2e p {

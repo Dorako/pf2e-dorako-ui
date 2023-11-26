@@ -66,18 +66,6 @@ Hooks.on("renderJournalTextPageSheet", (app, html, data) => {
   isPremiumApplication(app, html, data, "JournalTextPageSheet");
 });
 
-// adds .dorako-ui to AV and BB journals specifically, since those have no special frames
-Hooks.on("renderApplication", (app, html, data) => {
-  const journal = app.document;
-  if (!journal) return;
-  const flags = journal?.flags;
-  // TODO: This also triggers for SceneConfigPF2e
-  if (flags.hasOwnProperty("pf2e-abomination-vaults") || flags.hasOwnProperty("pf2e-beginner-box")) {
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | AV or BB => add .dorako-ui despite .premium`);
-    html[0].classList.add("dorako-ui");
-  }
-});
-
 Hooks.on("renderSWPFCompendiumTOC", (app, html, appName) => {
   console.debug(`${MODULE_NAME} | ${appName} starts with 'SWPF' => add .premium`);
   html[0].classList.add("premium");
