@@ -647,6 +647,11 @@
 [data-dorako-ui-theme] {
   --visibility-gm-bg: #e8e8efaa;
   --visibility-owner-bg: #ddebe1aa;
+
+  [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] [data-visibility="gm"] {
+    background: none;
+  }
+
   &.pf2e.item.sheet {
     input {
       @include f2-input;

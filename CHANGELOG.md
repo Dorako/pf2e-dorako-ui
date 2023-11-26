@@ -1,3 +1,7 @@
+# 3.1.5 + 3.1.6
+
+- (Refinement) 3.1.4, but actually.
+
 # 3.1.4
 
 - (Fix) Fixed PC sheet lore input field text color on CRB light theme.

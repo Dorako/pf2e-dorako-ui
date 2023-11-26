@@ -6288,6 +6288,9 @@ html .xdy-pf2e-workbench-rarity-unique {
   --visibility-gm-bg: #e8e8efaa;
   --visibility-owner-bg: #ddebe1aa;
 }
+[data-dorako-ui-theme] [data-visibility]:not([data-visibility=all])[data-visibility=gm] [data-visibility=gm] {
+  background: none;
+}
 [data-dorako-ui-theme].pf2e.item.sheet input {
   background: var(--input-background-color);
   border: var(--app-border-style);
@@ -12322,9 +12325,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
-[data-dorako-ui-theme=foundry2][data-dorako-colour-scheme] .damage,
-[data-dorako-ui-theme=bg3][data-dorako-colour-scheme] .damage,
-[data-dorako-ui-theme=crb][data-dorako-colour-scheme=dark] .damage {
+[data-dorako-ui-theme=foundry2][data-color-scheme] .damage,
+[data-dorako-ui-theme=bg3][data-color-scheme] .damage,
+[data-dorako-ui-theme=crb][data-color-scheme=dark] .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125);
   --color-bg-bleed: rgba(207, 28, 58, 0.125);
   --color-bg-chaotic: rgba(221, 26, 221, 0.125);
