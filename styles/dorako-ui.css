@@ -429,6 +429,11 @@ nav.damage-log-nav.tabs .item.active {
   --blue: var(--secondary-light);
   --brown: #ad6f59;
 }
+[data-dorako-ui-theme=foundry2].sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4, h5),
+[data-dorako-ui-theme=bg3].sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4, h5),
+[data-dorako-ui-theme][data-color-scheme=dark].sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4, h5) {
+  text-shadow: 0px 1px 1px black;
+}
 
 /* ----------------------------------------- */
 /* DFCE Rolltype Buttons                     */
@@ -495,24 +500,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] #dorako-rt-buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] #dorako-rt-buttons button.bright.disabled, [data-dorako-ui-theme] #dorako-rt-buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] #dorako-rt-buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] #dorako-rt-buttons button.active {
   background-color: var(--color-warm-2);
@@ -557,24 +551,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] #dorako-nonrt-buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] #dorako-nonrt-buttons button.bright.disabled, [data-dorako-ui-theme] #dorako-nonrt-buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] #dorako-nonrt-buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 .dorako-ui #chat-controls .buttons {
@@ -826,24 +809,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .dice-tray button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .dice-tray button.bright.disabled, [data-dorako-ui-theme] .dice-tray button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .dice-tray button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .dice-tray button div.dice {
   background-color: var(--color-light-3);
@@ -983,24 +955,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .implement-button-region button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .implement-button-region button.bright.disabled, [data-dorako-ui-theme] .implement-button-region button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .implement-button-region button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .actions-panel > fieldset {
   border: 1px solid var(--fieldset-border-color) !important;
@@ -1048,24 +1009,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .actions-panel > fieldset button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .actions-panel > fieldset button.bright.disabled, [data-dorako-ui-theme] .actions-panel > fieldset button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .actions-panel > fieldset button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .dropboxes > .dropbox > span {
   border: unset !important;
@@ -1190,24 +1140,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright.disabled, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright:disabled, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright.disabled, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright:disabled, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright.disabled, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#forien-quest-log .editor, [data-dorako-ui-theme].window-app.forien-quest-preview .editor {
   background: var(--color-cool-4);
@@ -1363,24 +1302,13 @@ nav.damage-log-nav.tabs .item.active {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .item-piles-player-list-trade-button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .item-piles-player-list-trade-button.bright.disabled, [data-dorako-ui-theme] .item-piles-player-list-trade-button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .item-piles-player-list-trade-button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .item-piles-config-container nav {
   margin-top: 2px;
@@ -1576,24 +1504,13 @@ button#heartbeat-button {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#module-management .package-list .package .package-overview .tag.expand.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#module-management .package-list .package .package-overview .tag.expand.bright.disabled, [data-dorako-ui-theme]#module-management .package-list .package .package-overview .tag.expand.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#module-management .package-list .package .package-overview .tag.expand.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .package-list .package .tag {
   background: var(--color-cool-4);
@@ -1991,24 +1908,13 @@ button#heartbeat-button {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#requestsavingthrow .request-grid > div.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#requestsavingthrow .request-grid > div.bright.disabled, [data-dorako-ui-theme]#requestsavingthrow .request-grid > div.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#requestsavingthrow .request-grid > div.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#requestsavingthrow .request-grid {
   gap: 6px;
@@ -2190,24 +2096,13 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
   --button-text-color: var(--color-light-5);
 }
 body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-effects .effect-control.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-effects .effect-control.bright.disabled, body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-effects .effect-control.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-effects .effect-control.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 /* ----------------------------------------- */
@@ -2237,43 +2132,22 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
   text-shadow: 0 0 8px var(--color-shadow-primary);
 }
 
-#hotbar[data-dorako-ui-theme] .hotbar-page,
-#hotbar.dorako-ui .hotbar-page {
+#hotbar[data-dorako-ui-theme] .hotbar-page {
   overflow: visible;
   gap: 4px;
   bottom: 56px;
 }
-#hotbar[data-dorako-ui-theme] .hotbar-page .macro-list,
-#hotbar.dorako-ui .hotbar-page .macro-list {
+#hotbar[data-dorako-ui-theme] .hotbar-page .macro-list {
   gap: 7px;
   border: none;
 }
-#hotbar[data-dorako-ui-theme] .hotbar-page .action-bar,
-#hotbar.dorako-ui .hotbar-page .action-bar {
+#hotbar[data-dorako-ui-theme] .hotbar-page .action-bar {
   margin: 0px 5px 0px 3px;
 }
 
 /* ----------------------------------------- */
 /* Monk's Sound Enhancements                 */
 /* ----------------------------------------- */
-.dorako-ui.dark-theme.sheet .sound-sheet .items-list {
-  color: var(--color-light-1);
-}
-.dorako-ui.dark-theme.sheet .sound-sheet .items-list .item {
-  border-bottom: 1px solid var(--tertiary);
-}
-.dorako-ui.dark-theme.sheet .sound-sheet .items-list .item .item-name {
-  color: var(--color-light-2);
-}
-.dorako-ui.dark-theme.sheet .sound-sheet .items-list .items-header {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  background-color: var(--glass-bg-light);
-}
-
 [data-dorako-ui-theme].sheet .sound-sheet .items-list .items-header {
   border: unset;
 }
@@ -2290,123 +2164,155 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
 /* ----------------------------------------- */
 /* Monk's Scene Navigation                   */
 /* ----------------------------------------- */
-body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
+body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-toggle {
   display: unset;
 }
 
-.dorako-ui#navigation .nav-item-container {
-  border: none;
+[data-dorako-ui-theme]#navigation .nav-item-container {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
 }
-.dorako-ui#navigation .nav-item-container #nav-toggle {
+[data-dorako-ui-theme]#navigation .nav-item-container #nav-toggle {
   box-shadow: unset;
   border: unset;
   background: unset;
   height: unset;
   flex: unset;
 }
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li a {
-  border: none;
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  text-shadow: 0px 0px 3px black;
-  color: var(--color-text-light-heading);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
 }
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li a:hover {
-  background-color: var(--primary);
-  color: var(--color-text-light-heading-highlight);
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
 }
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.view a {
-  background-color: var(--primary);
-  color: var(--color-text-light-heading-highlight);
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a.selected, [data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
 }
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.view a:hover {
-  background-color: var(--primary-light);
-  color: white;
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a.empty, [data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a.disabled, [data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
 }
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.gm a {
-  background-color: var(--secondary);
-  color: var(--color-text-light-heading-highlight);
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a.bright {
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: #000000;
+  text-shadow: none;
 }
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.gm a:hover {
-  background-color: var(--secondary-light);
-  color: white;
-}
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.gm.view a {
-  background-color: var(--secondary-light);
-  color: white;
-}
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.view a, .dorako-ui#navigation .monks-scene-navigation .scene-list > li.context a {
-  box-shadow: var(--glassy);
-  border: none;
-}
-.dorako-ui#navigation .monks-scene-navigation .scene-list > li.active a {
-  border: none;
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  box-shadow: var(--gold-and-glow), var(--glassy);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  --button-background-color: var(--color-cool-3-75);
+  --button-border-color: var(--color-cool-2);
+  --button-text-color: var(--color-light-2);
+  --button-focus-outline-color: var(--color-warm-1);
+  --button-hover-background-color: var(--color-cool-2);
+  --button-hover-border-color: var(--color-cool-1);
+  --button-hover-text-color: var(--color-light-1);
 }
-.dorako-ui#navigation.background .monks-scene-navigation .scene-list {
-  border: none;
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.selected, [data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.empty, [data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.disabled, [data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.bright {
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: #000000;
+  text-shadow: none;
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:disabled {
+  --button-background-color: var(--color-cool-5);
+  --button-border-color: var(--color-cool-4);
+  --button-hover-background-color: var(--color-cool-5);
+  --button-text-color: var(--color-light-5);
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li a.folder-name {
+  --app-border-style: 2px solid;
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.view a {
+  --button-background-color: var(--color-warm-2);
+  --button-border-color: var(--color-warm-1);
+}
+[data-dorako-ui-theme]#navigation .monks-scene-navigation .scene-list > li.active a {
+  outline: 1px solid var(--tertiary);
+}
+[data-dorako-ui-theme]#navigation.background .monks-scene-navigation .scene-list {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  --app-border-style: 2px solid;
   gap: 5px;
-}
-
-.frosted-glass .monks-scene-navigation:not(.category-filter) {
-  backdrop-filter: unset;
 }
 
 /* ----------------------------------------- */
 /* Monk's Active Tile Triggers               */
-/* ----------------------------------------- */
-.dorako-ui.dark-theme.action-sheet .display-value {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  color: var(--color-text-light-heading);
-}
-.dorako-ui.dark-theme.monks-active-tiles.sheet .items-list .items-header {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  margin: 0px 2px;
-  background-color: var(--glass-bg-light);
-  box-shadow: var(--glassy);
-}
-.dorako-ui.dark-theme.monks-active-tiles.sheet .items-list .items-header h3 {
-  color: var(--tertiary);
-  text-shadow: 0px 0px 10px var(--tertiary);
-}
-.dorako-ui.dark-theme.monks-active-tiles.sheet .items-list .item .item-name {
-  color: var(--color-text-light-heading);
-}
-.dorako-ui.dark-theme.monks-active-tiles.sheet .items-list .item-control {
-  color: var(--color-text-light-heading);
-}
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .entity-style {
-  color: white;
-}
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .action-style {
-  color: var(--color-text-light-highlight);
-}
-
-/* ----------------------------------------- */
-/* Foundry2                                  */
 /* ----------------------------------------- */
 [data-dorako-ui-theme] .monks-active-tiles.sheet .items-list .items-header, [data-dorako-ui-theme].monks-active-tiles.sheet .items-list .items-header {
   background: unset;
@@ -2507,55 +2413,37 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].monks-active-tiles.sheet .items-list .item-controls a.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].monks-active-tiles.sheet .items-list .item-controls a.bright.disabled, [data-dorako-ui-theme].monks-active-tiles.sheet .items-list .item-controls a.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].monks-active-tiles.sheet .items-list .item-controls a.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].monks-active-tiles.sheet .items-list .item .item-name {
   color: var(--color-light-3);
 }
 
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .action-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .action-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .action-style {
   color: #fafafa;
 }
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .filter-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .filter-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .filter-style {
   color: #f73458;
 }
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .logic-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .logic-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .logic-style {
   color: #2b40f8;
 }
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .entity-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .entity-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .entity-style {
   color: #a9a9a9;
 }
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .details-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .details-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .details-style {
   color: #a326fc;
 }
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .value-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .value-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .value-style {
   color: #515151;
 }
-[data-dorako-ui-theme].monks-active-tiles div[data-tab=triggers] .action-items .tag-style,
-.dorako-ui.dark-theme.monks-active-tiles div[data-tab=triggers] .action-items .tag-style {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .tag-style {
   color: #063d68;
 }
 
@@ -3044,24 +2932,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#pf2e-token-hud .popup .item-buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#pf2e-token-hud .popup .item-buttons button.bright.disabled, [data-dorako-ui-theme]#pf2e-token-hud .popup .item-buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#pf2e-token-hud .popup .item-buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#pf2e-token-hud .inner .group .section input[type=number] {
   background: var(--app-background);
@@ -3157,24 +3034,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][id^=pf2e-perception-] .window-content .buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][id^=pf2e-perception-] .window-content .buttons button.bright.disabled, [data-dorako-ui-theme][id^=pf2e-perception-] .window-content .buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][id^=pf2e-perception-] .window-content .buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][id^=pf2e-perception-] .window-content .tokens section .token.ui-selected .name, [data-dorako-ui-theme][id^=pf2e-perception-] .window-content .tokens section .token.ui-selecting .name {
   color: var(--color-warm-1);
@@ -3254,22 +3120,6 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   background-color: rgba(255, 255, 255, 0.7098039216);
 }
 
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .pf2e-see-simple-scale-statistics-Extreme-color-primary {
-  color: #6cd8ff;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .pf2e-see-simple-scale-statistics-High-color-primary {
-  color: #3cff00;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .pf2e-see-simple-scale-statistics-Moderate-color-primary {
-  color: #ffff54;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .pf2e-see-simple-scale-statistics-Low-color-primary {
-  color: #ff8000;
-}
-.dorako-ux.sheet.pf2e.actor.npc .side-bar-section-header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
-  color: #ff0000;
-}
-
 [data-dorako-ui-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
 [data-dorako-ui-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
 [data-dorako-ui-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary {
@@ -3341,24 +3191,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-scope=limited] .heroActions-list > button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-scope=limited] .heroActions-list > button.bright.disabled, [data-dorako-ui-scope=limited] .heroActions-list > button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-scope=limited] .heroActions-list > button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 [data-dorako-ui-theme].chat-message [data-action=spell-template-clear] {
@@ -3526,24 +3365,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] #fc-container button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] #fc-container button.bright.disabled, [data-dorako-ui-theme] #fc-container button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] #fc-container button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] #initiative-delay,
 [data-dorako-ui-theme] #initiative-return {
@@ -3591,27 +3419,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 }
 [data-dorako-ui-theme] #initiative-delay.bright,
 [data-dorako-ui-theme] #initiative-return.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] #initiative-delay.bright.disabled, [data-dorako-ui-theme] #initiative-delay.bright:disabled,
-[data-dorako-ui-theme] #initiative-return.bright.disabled,
-[data-dorako-ui-theme] #initiative-return.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] #initiative-delay.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme] #initiative-return.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 .pinnedchatlog.tabs {
@@ -4048,24 +3862,13 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#smalltime-app .arrow.bright, [data-dorako-ui-theme]#smalltime-app .arrow-left.bright, [data-dorako-ui-theme]#smalltime-app.arrow-right.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#smalltime-app .arrow.bright.disabled, [data-dorako-ui-theme]#smalltime-app .arrow.bright:disabled, [data-dorako-ui-theme]#smalltime-app .arrow-left.bright.disabled, [data-dorako-ui-theme]#smalltime-app .arrow-left.bright:disabled, [data-dorako-ui-theme]#smalltime-app.arrow-right.bright.disabled, [data-dorako-ui-theme]#smalltime-app.arrow-right.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#smalltime-app .arrow.bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme]#smalltime-app .arrow-left.bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme]#smalltime-app.arrow-right.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 .dorako-ui#smalltime-app {
@@ -4232,24 +4035,13 @@ body.system-swade {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .pf2e-td.small-button.target-button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .pf2e-td.small-button.target-button.bright.disabled, [data-dorako-ui-theme] .pf2e-td.small-button.target-button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .pf2e-td.small-button.target-button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .pf2e-td.small-button.target-button:disabled {
   --button-background-color: var(--color-cool-5);
@@ -4408,33 +4200,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 [data-dorako-ui-theme]#token-action-hud .tah-action-button:focus.bright,
 [data-dorako-ui-theme]#token-action-hud .tah-group-button.bright,
 [data-dorako-ui-theme]#token-action-hud .tah-group-button:focus.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#token-action-hud .tah-action-button.bright.disabled, [data-dorako-ui-theme]#token-action-hud .tah-action-button.bright:disabled,
-[data-dorako-ui-theme]#token-action-hud .tah-action-button:focus.bright.disabled,
-[data-dorako-ui-theme]#token-action-hud .tah-action-button:focus.bright:disabled,
-[data-dorako-ui-theme]#token-action-hud .tah-group-button.bright.disabled,
-[data-dorako-ui-theme]#token-action-hud .tah-group-button.bright:disabled,
-[data-dorako-ui-theme]#token-action-hud .tah-group-button:focus.bright.disabled,
-[data-dorako-ui-theme]#token-action-hud .tah-group-button:focus.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#token-action-hud .tah-action-button.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme]#token-action-hud .tah-action-button:focus.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme]#token-action-hud .tah-group-button.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme]#token-action-hud .tah-group-button:focus.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#token-action-hud .tah-subtitle-text {
   color: var(--color-light-1);
@@ -4513,24 +4285,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#token-action-hud .tah-action-button.toggle.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#token-action-hud .tah-action-button.toggle.bright.disabled, [data-dorako-ui-theme]#token-action-hud .tah-action-button.toggle.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#token-action-hud .tah-action-button.toggle.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#token-action-hud .tah-action-button.toggle:disabled {
   --button-background-color: var(--color-cool-5);
@@ -4661,27 +4422,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 [data-dorako-ui-theme] #tokenizer div.view-layer-control .section button.bright,
 [data-dorako-ui-theme] #tokenizer .section button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] #tokenizer div.view-layer-control .section button.bright.disabled, [data-dorako-ui-theme] #tokenizer div.view-layer-control .section button.bright:disabled,
-[data-dorako-ui-theme] #tokenizer .section button.bright.disabled,
-[data-dorako-ui-theme] #tokenizer .section button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] #tokenizer div.view-layer-control .section button.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme] #tokenizer .section button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] #tokenizer button.menu-button {
   background: var(--app-background);
@@ -4722,24 +4469,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] #tokenizer button.menu-button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] #tokenizer button.menu-button.bright.disabled, [data-dorako-ui-theme] #tokenizer button.menu-button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] #tokenizer button.menu-button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].tokenizer .title .box-button {
   background: var(--app-background);
@@ -4786,24 +4522,13 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].tokenizer .title .box-button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].tokenizer .title .box-button.bright.disabled, [data-dorako-ui-theme].tokenizer .title .box-button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].tokenizer .title .box-button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].tokenizer .title .box-button.deselected {
   --button-background-color: var(--color-cool-3);
@@ -4891,24 +4616,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .roll-app-nav button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .roll-app-nav button.bright.disabled, [data-dorako-ui-theme] .roll-app-nav button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .roll-app-nav button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .roll-app .roll-app-table tbody button {
   background: var(--app-background);
@@ -4948,24 +4662,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .roll-app .roll-app-table tbody button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .roll-app .roll-app-table tbody button.bright.disabled, [data-dorako-ui-theme] .roll-app .roll-app-table tbody button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .roll-app .roll-app-table tbody button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .roll-app .roll-app-table tbody tr.selected {
   background: var(--color-warm-2);
@@ -5346,27 +5049,13 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.bright,
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.bright:disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.bright.disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button {
   background: var(--app-background);
@@ -5406,24 +5095,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] input[type=text],
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] input[type=number],
@@ -5573,24 +5251,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] [data-visibility]:not([data-visibility=all]) {
   outline: 1px dashed var(--color-scrollbar-border);
@@ -5773,24 +5440,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].filepicker .favorites .paths .path.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].filepicker .favorites .paths .path.bright.disabled, [data-dorako-ui-theme].filepicker .favorites .paths .path.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].filepicker .favorites .paths .path.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].filepicker .favorites .paths .path:disabled {
   --button-background-color: var(--color-cool-5);
@@ -5847,24 +5503,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].package-configuration aside.sidebar nav.tabs .category-tab.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].package-configuration aside.sidebar nav.tabs .category-tab.bright.disabled, [data-dorako-ui-theme].package-configuration aside.sidebar nav.tabs .category-tab.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].package-configuration aside.sidebar nav.tabs .category-tab.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].sheet nav.sheet-tabs {
   border: none;
@@ -5957,27 +5602,13 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-dorako-ui-theme] .directory .action-buttons button.bright,
 [data-dorako-ui-theme] .settings-sidebar button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .directory .action-buttons button.bright.disabled, [data-dorako-ui-theme] .directory .action-buttons button.bright:disabled,
-[data-dorako-ui-theme] .settings-sidebar button.bright.disabled,
-[data-dorako-ui-theme] .settings-sidebar button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .directory .action-buttons button.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme] .settings-sidebar button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] #chat-form {
   margin: 0px var(--sidebar-margin);
@@ -6073,24 +5704,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].window-app .tabs .item.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].window-app .tabs .item.bright.disabled, [data-dorako-ui-theme].window-app .tabs .item.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].window-app .tabs .item.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].sheet nav.sheet-tabs {
   gap: 5px;
@@ -6182,24 +5802,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .editor-edit.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .editor-edit.bright.disabled, [data-dorako-ui-theme] .editor-edit.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .editor-edit.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] table:not(.pf2-table) tr:nth-child(even) {
   background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
@@ -6376,24 +5985,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright.disabled, [data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#generate-check-prompt nav h4 a.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#generate-check-prompt .dialog-content tags.tagify {
   --tags-disabled-bg: #f1f1f1;
@@ -6499,24 +6097,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes > i {
   margin-top: 3px;
@@ -6571,24 +6158,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --button-background-color: var(--color-cool-5);
@@ -6824,24 +6400,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form > nav .sheet-tabs > a.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs {
   border: unset;
@@ -6885,24 +6450,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.bright.disabled, [data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .effects-container, [data-dorako-ui-theme].pf2e.item.sheet form .details-container, [data-dorako-ui-theme].pf2e.item.sheet form .dice-data {
   gap: 5px;
@@ -7051,27 +6605,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li:disabled {
 }
 nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.bright,
 nav#controls[data-dorako-ui-theme] ol.control-tools > li.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.bright.disabled, nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.bright:disabled,
-nav#controls[data-dorako-ui-theme] ol.control-tools > li.bright.disabled,
-nav#controls[data-dorako-ui-theme] ol.control-tools > li.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.bright:not(.disabled, :disabled):hover,
-nav#controls[data-dorako-ui-theme] ol.control-tools > li.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool > img,
 nav#controls[data-dorako-ui-theme] ol.control-tools > li > img {
@@ -7134,27 +6674,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.toggle.bright,
 nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.toggle.bright.disabled, nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.toggle.bright:disabled,
-nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle.bright.disabled,
-nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.toggle.bright:not(.disabled, :disabled):hover,
-nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 nav#controls[data-dorako-ui-theme] ol.control-tools li.control-tool.toggle:disabled,
 nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
@@ -7309,24 +6835,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-#navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.bright.disabled, #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-#navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item > a:hover {
   text-shadow: unset;
@@ -7380,24 +6895,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.view.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-#navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.view.bright.disabled, #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.view.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-#navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.view.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.view.active {
   border-color: var(--color-cool-2);
@@ -7447,24 +6951,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.gm.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-#navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.gm.bright.disabled, #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.gm.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-#navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.gm.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 #navigation[data-dorako-ui-theme] ol#scene-list li.nav-item.gm:disabled {
   --button-background-color: var(--color-cool-5);
@@ -7688,24 +7181,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .control-icon.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .control-icon.bright.disabled, [data-dorako-ui-theme] .control-icon.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .control-icon.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .control-icon > img {
   filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
@@ -7758,24 +7240,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme] .control-icon[data-action=visibility].bright, [data-dorako-ui-theme] .control-icon[data-action=effects].bright, [data-dorako-ui-theme] .control-icon[data-action=combat].bright, [data-dorako-ui-theme] .control-icon[data-action=locked].bright, [data-dorako-ui-theme] .control-icon[data-action=target].bright, [data-dorako-ui-theme] .control-icon[data-action=active].bright, [data-dorako-ui-theme] .control-icon[data-action=mystify].bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .control-icon[data-action=visibility].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=visibility].bright:disabled, [data-dorako-ui-theme] .control-icon[data-action=effects].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=effects].bright:disabled, [data-dorako-ui-theme] .control-icon[data-action=combat].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=combat].bright:disabled, [data-dorako-ui-theme] .control-icon[data-action=locked].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=locked].bright:disabled, [data-dorako-ui-theme] .control-icon[data-action=target].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=target].bright:disabled, [data-dorako-ui-theme] .control-icon[data-action=active].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=active].bright:disabled, [data-dorako-ui-theme] .control-icon[data-action=mystify].bright.disabled, [data-dorako-ui-theme] .control-icon[data-action=mystify].bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .control-icon[data-action=visibility].bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme] .control-icon[data-action=effects].bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme] .control-icon[data-action=combat].bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme] .control-icon[data-action=locked].bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme] .control-icon[data-action=target].bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme] .control-icon[data-action=active].bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme] .control-icon[data-action=mystify].bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .control-icon[data-action=visibility]:disabled, [data-dorako-ui-theme] .control-icon[data-action=effects]:disabled, [data-dorako-ui-theme] .control-icon[data-action=combat]:disabled, [data-dorako-ui-theme] .control-icon[data-action=locked]:disabled, [data-dorako-ui-theme] .control-icon[data-action=target]:disabled, [data-dorako-ui-theme] .control-icon[data-action=active]:disabled, [data-dorako-ui-theme] .control-icon[data-action=mystify]:disabled {
   --button-background-color: var(--color-cool-5);
@@ -7861,24 +7332,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright.disabled, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-scope=sidebar] .tab input:not([type=range]) {
   background: var(--input-background-color);
@@ -7972,24 +7432,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.bright.disabled, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-scope=sidebar] .compendium.directory .directory-header .compendium-name,
 [data-dorako-ui-scope=sidebar] .compendium-sidebar .directory-item.compendium .compendium-name,
@@ -8021,28 +7470,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --sidebar-margin: 6px;
   gap: var(--sidebar-gap);
   padding-bottom: var(--sidebar-margin);
-}
-[data-dorako-ui-scope=sidebar] section.chat-sidebar .jump-to-bottom {
-  z-index: 1;
-}
-[data-dorako-ui-scope=sidebar] section.chat-sidebar .jump-to-bottom > a {
-  background: var(--app-background);
-  border: var(--app-border-style);
-  border-color: var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--color-light-3);
-  border-radius: 0px;
-  border-left: unset;
-  border-right: unset;
-  width: 100%;
-  --app-background: var(--color-scrollbar);
-  --app-border-color: var(--color-scrollbar-border);
-}
-[data-dorako-ui-scope=sidebar] section.chat-sidebar .jump-to-bottom > a:hover {
-  --app-background: var(--color-warm-2);
-  --app-border-color: var(--color-warm-1);
 }
 
 /* ----------------------------------------- */
@@ -8099,24 +7526,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].filepicker .display-modes a.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].filepicker .display-modes a.bright.disabled, [data-dorako-ui-theme].filepicker .display-modes a.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].filepicker .display-modes a.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].filepicker .private button.privacy {
   background: var(--app-background);
@@ -8157,24 +7573,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].filepicker .private button.privacy.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].filepicker .private button.privacy.bright.disabled, [data-dorako-ui-theme].filepicker .private button.privacy.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].filepicker .private button.privacy.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].filepicker .filepicker-header .quick-link-input-button {
   --box-shadow: none;
@@ -8399,24 +7804,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright.disabled, [data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].sheet.familiar .skills-content .skills-list .skill-name.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 [data-dorako-ui-theme].sheet.actor.loot section.sidebar {
@@ -8517,24 +7911,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright.disabled, [data-dorako-ui-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app {
@@ -8608,27 +7991,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.bright,
 [data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.bright:disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.bright.disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {
   background: var(--input-background-color);
@@ -9059,24 +8428,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].sheet nav.sheet-tabs .item.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].sheet nav.sheet-tabs .item.bright.disabled, [data-dorako-ui-theme].sheet nav.sheet-tabs .item.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].sheet nav.sheet-tabs .item.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme] .tags.paizo-style .tag.rarity.common,
 [data-dorako-ui-theme] .tags.paizo-style .tag.rarity[value=common],
@@ -9149,27 +8507,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme] .currency li > button.bright,
 [data-dorako-ui-scope=limited] .currency li > button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme] .currency li > button.bright.disabled, [data-dorako-ui-theme] .currency li > button.bright:disabled,
-[data-dorako-ui-scope=limited] .currency li > button.bright.disabled,
-[data-dorako-ui-scope=limited] .currency li > button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme] .currency li > button.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-scope=limited] .currency li > button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image, [data-dorako-ui-theme].actor.sheet .item-image,
 [data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
@@ -9266,27 +8610,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.bright,
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.bright:disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.bright.disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.active,
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.active {
@@ -9352,24 +8682,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .member > .data .main-stats > section {
   background-color: var(--color-warm-4);
@@ -9434,24 +8753,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=aftermath] .activities .member-activity .empty .icon, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=exploration] .activities .member-activity .empty .icon {
   background: var(--color-warm-5);
@@ -9548,24 +8856,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.bright.disabled, [data-dorako-ui-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 
 /* ----------------------------------------- */
@@ -9629,6 +8926,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 .chat-message[data-dorako-ui-theme] .table-draw .table-results .table-result img.result-image[src$=".svg"] {
   background-color: white;
+}
+.chat-message[data-dorako-ui-theme] .dice-tooltip .dice-rolls .roll.d20 {
+  text-shadow: none;
 }
 .chat-message[data-dorako-ui-theme] .message-content .damage-roll .dice-result .dice-tooltip .instance {
   border-radius: var(--border-radius);
@@ -9699,27 +8999,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 .chat-message[data-dorako-ui-theme] .dice-roll .dice-formula button.bright,
 .chat-message[data-dorako-ui-theme] .dice-roll .dice-total button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-.chat-message[data-dorako-ui-theme] .dice-roll .dice-formula button.bright.disabled, .chat-message[data-dorako-ui-theme] .dice-roll .dice-formula button.bright:disabled,
-.chat-message[data-dorako-ui-theme] .dice-roll .dice-total button.bright.disabled,
-.chat-message[data-dorako-ui-theme] .dice-roll .dice-total button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-.chat-message[data-dorako-ui-theme] .dice-roll .dice-formula button.bright:not(.disabled, :disabled):hover,
-.chat-message[data-dorako-ui-theme] .dice-roll .dice-total button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 .chat-message[data-dorako-ui-theme] .dice-roll .dice-formula button:disabled,
 .chat-message[data-dorako-ui-theme] .dice-roll .dice-total button:disabled {
@@ -9992,24 +9278,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme].chat-message .message-content .damage-taken button.revert-damage.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme].chat-message .message-content .damage-taken button.revert-damage.bright.disabled, [data-dorako-ui-theme].chat-message .message-content .damage-taken button.revert-damage.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme].chat-message .message-content .damage-taken button.revert-damage.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme].chat-message.emote > .message-content p.action-content img {
   background: var(--app-background);
@@ -10021,6 +9296,12 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   border: 1px solid;
   border-color: var(--icon-border-color);
+}
+[data-dorako-ui-theme] .dice-roll .dice-total.success {
+  color: var(--degree-success-critical);
+}
+[data-dorako-ui-theme] .dice-roll .dice-total.failure {
+  color: var(--degree-failure-critical);
 }
 
 [data-dorako-ui-theme] .window-content .journal-entry-content .journal-entry-page .journal-page-content .fumble-deck,
@@ -10342,24 +9623,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) button.daily-crafting.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) button.daily-crafting.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) button.daily-crafting.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) button.daily-crafting.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) button.daily-crafting.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]) button.daily-crafting:disabled {
   --button-background-color: var(--color-cool-4);
@@ -10431,27 +9701,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.bright,
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.bright:disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.bright.disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.bright:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.active,
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.active {
@@ -10756,24 +10012,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright:disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style aside .sidebar .tags .tag.edit-btn {
   background: #dad8cc;
@@ -10912,24 +10157,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.bright, [data-dorako-ui-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.bright {
-  --button-background-color: var(--color-warm-1);
-  --button-border-color: var(--color-cool-5);
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
-  --button-hover-background-color: #fda948;
-  --button-hover-border-color: var(--color-warm-2);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
   text-shadow: none;
-}
-[data-dorako-ui-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.bright.disabled, [data-dorako-ui-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.bright:disabled, [data-dorako-ui-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.bright.disabled, [data-dorako-ui-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.bright:disabled {
-  --button-background-color: var(--color-cool-4);
-  --button-hover-background-color: var(--color-cool-4);
-  --button-text-color: var(--color-light-5);
-  --button-hover-text-color: var(--color-light-5);
-  --button-hover-border-color: transparent;
-}
-[data-dorako-ui-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.bright:not(.disabled, :disabled):hover, [data-dorako-ui-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.bright:not(.disabled, :disabled):hover {
-  --button-hover-background-color: #cb7f27;
-  --button-hover-border-color: var(--color-warm-1);
 }
 [data-dorako-ui-theme]#compendium-browser > section.window-content > .content-box .spell-browser .control-area, [data-dorako-ui-theme]#license-viewer > section.window-content > .content-box .spell-browser .control-area {
   display: flex;
@@ -11126,6 +10360,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-border-light-highlight: black;
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
+  --accent-color-light: var(--tertiary);
+  --accent-color: var(--tertiary-dark);
+  --accent-color-dark: var(--gold-brown);
 }
 
 /* ----------------------------------------- */
@@ -11256,6 +10493,16 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Light theme                                  */
 /* ----------------------------------------- */
+[data-dorako-ui-theme=crb][data-color-scheme=light] {
+  --accent-color-light: red;
+  --accent-color: var(--primary-light);
+  --accent-color-dark: var(--primary);
+}
+[data-dorako-ui-theme=crb][data-color-scheme=light] button.bright {
+  --button-text-color: white !important;
+  --button-hover-text-color: white !important;
+}
+
 /* ----------------------------------------- */
 /* PF2e sheets                               */
 /* ----------------------------------------- */
@@ -11278,7 +10525,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --input-disabled-background-color: rgba(255, 255, 255, 0.2);
   --input-disabled-border-color: transparent;
   --window-app-box-shadow: 0px 5px 20px 3px black;
-  --accent-color: var(--primary-light);
   --fieldset-border-color: gray;
   --fieldset-background-color: transparent;
   --fieldset-legend-color: black;
@@ -11335,6 +10581,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: black;
   --ornamentation: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1%7Bstroke:%23231f20;stroke-miterlimit:10%7D.st1,.st2%7Bfill:none%7D%3C/style%3E%3Cg opacity='.25'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cg%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zM3.6 3.6h3.1v3.1H3.6zM6.8 3.6h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zM3.6 6.8H.5V13M13 .5H6.8v3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.4.5h3.1v3.1h-3.1zM26.3 3.6h3.1v3.1h-3.1zM26.3 6.8h3.1v3.1h-3.1zM23.1 3.6h3.1v3.1h-3.1zM26.3 3.6V.5H20'/%3E%3Cpath class='st1' d='M32.5 13V6.8h-3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zM23.1 26.3h3.1v3.1h-3.1zM26.3 23.1h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zM3.6 26.3h3.1v3.1H3.6zM3.6 23.1h3.1v3.1H3.6zM6.8 26.3h3.1v3.1H6.8z'/%3E%3Cpath class='st1' d='M6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --app-background: rgba(255, 255, 255, 0.2);
+  --app-background: rgba(0, 0, 0, 0.1);
   --app-border-style: 1px solid;
   --box-shadow: 0px 0px 0px 1px var(--gold-brown);
   --app-text-shadow: none;
@@ -11422,6 +10669,217 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app input {
   --box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Theme colors                              */
+/* ----------------------------------------- */
+:root {
+  --discord-border-color: transparent;
+  --discord-background-1: #383a3f;
+  --discord-background-2: #313338;
+  --discord-background-3: #2b2d31;
+  --discord-background-4: #1e1f22;
+  --discord-text-1: #ffffff;
+  --discord-text-2: #dcdee1;
+  --discord-text-3: #b6bac0;
+  --discord-text-4: #959ba3;
+  --discord-text-5: #79818a;
+  --discord-accent-color-light: #8e97fe;
+  --discord-accent-color: #5a65ea;
+  --discord-accent-color-dark: #4952bd;
+  --discord-color-scrollbar: #1a1b1e;
+  --discord-color-scrollbar-border: transparent;
+  --discord-green: #417e4c;
+  --discord-attention: #e6b44e;
+}
+
+/* ----------------------------------------- */
+/* Map v1 styling to v2 values               */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord] {
+  --color-border-light-highlight: var(--discord-background-1);
+  --color-border-light-primary: var(--discord-background-2);
+  --color-text-hyperlink: var(--accent-color);
+  --color-text-light-highlight: var(--color-light-2);
+  --color-border-highlight: var(--accent-color);
+  --color-border-highlight-alt: var(--accent-color-dark);
+  --color-border-divider: var(--discord-border-color);
+  --color-text-dark-primary: var(--discord-text-3);
+  --color-text-dark-secondary: var(--discord-text-5);
+}
+
+/* ----------------------------------------- */
+/* Light color scheme                        */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord][data-dorako-ui-scope=limited][data-color-scheme=light],
+[data-dorako-ui-theme=discord][data-color-scheme=light] {
+  --discord-color-scrollbar: #c5c9cd;
+  --window-app-background: #ffffff;
+  --input-background-color: #ebedef;
+  --input-text-color: #4e5057;
+  --button-background-color: #c5c9cd;
+  --button-text-color: black;
+  --fieldset-legend-color: black;
+  --color-light-1: var(--discord-text-5);
+  --color-light-2: var(--discord-text-4);
+  --color-light-2: black;
+  --color-light-3: var(--discord-text-3);
+  --color-light-4: var(--discord-text-2);
+  --color-light-5: var(--discord-text-1);
+  --inline-text-color: black;
+}
+[data-dorako-ui-theme=discord][data-dorako-ui-scope=limited][data-color-scheme=light].chat-message,
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message {
+  --color-light-1: black;
+  --color-light-2: black;
+  --color-light-3: black;
+}
+
+/* ----------------------------------------- */
+/* Dark color scheme                        */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord][data-dorako-ui-scope=limited][data-color-scheme=dark].actor.sheet .crb-style .sheet-body,
+[data-dorako-ui-theme=discord][data-color-scheme=dark].actor.sheet .crb-style .sheet-body {
+  --text-dark: var(--discord-text-2);
+}
+
+/* ----------------------------------------- */
+/* App UI                                    */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord]:not([data-color-scheme]) {
+  --app-border-style: 1px solid;
+  --app-background: var(--discord-background-3);
+  --app-border-color: var(--discord-background-1);
+  --button-background-color: var(--discord-background-4);
+  --button-border-color: var(--discord-background-1);
+  --button-focus-outline-color: var(--accent-color);
+  --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
+}
+
+/* ----------------------------------------- */
+/* DUI variables                             */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord] {
+  /* Base colors */
+  --color-warm-4: var(--accent-color-dark);
+  --color-warm-1: var(--discord-accent-color-light);
+  --color-warm-2: var(--discord-accent-color);
+  --color-warm-3: var(--discord-accent-color-dark);
+  --color-cool-1: color-mix(in srgb, var(--discord-green) 90%, white);
+  --color-cool-2: var(--discord-green);
+  --color-cool-3: color-mix(in srgb, var(--discord-green) 90%, black);
+  --color-cool-3-75: var(--color-cool-3);
+  --color-cool-5-75: #4e5057;
+  --color-light-1: var(--discord-text-1);
+  --color-light-2: var(--discord-text-2);
+  --color-light-3: var(--discord-text-3);
+  --color-light-4: var(--discord-text-4);
+  --color-light-5: var(--discord-text-5);
+  /* Misc variables */
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --box-shadow: none;
+  --icon-border-color: var(--accent-color);
+  /* Window app variables */
+  --window-app-background: var(--discord-background-3);
+  --window-app-border-color: #4b4c4f;
+  --window-app-border-style: 1px solid;
+  --window-app-box-shadow: 0px 5px 20px 3px black, 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
+  /* App variables */
+  --app-background: #161511aa;
+  --app-border-color: var(--discord-border-color);
+  --app-border-style: 0px solid;
+  --app-text-shadow: none;
+  /* Inline variables */
+  --inline-bg: var(--fieldset-background-color);
+  --inline-border-color: var(--discord-attention);
+  --inline-text-color: var(--discord-text-2);
+  --inline-icon-color: var(--discord-attention);
+  --inline-box-shadow: none;
+  /* Input variables */
+  --input-border-color: transparent;
+  --input-disabled-background-color: #494b51;
+  --input-disabled-border-color: transparent;
+  --input-border-color: transparent;
+  --input-background-color: var(--discord-background-1);
+  --input-focus-outline-color: var(--discord-accent-color);
+  --input-placeholder-color: color-mix(in srgb, var(--button-text-color) 50%, transparent);
+  /* Button variables */
+  --button-background-color: var(--app-background);
+  --button-border-color: transparent;
+  --button-text-color: var(--discord-text-2);
+  --button-focus-outline-color: transparent;
+  --button-hover-background-color: var(--discord-background-1);
+  --button-hover-border-color: transparent;
+  --button-hover-text-color: var(--discord-text-1);
+  --button-disabled-background-color: #494b51;
+  --button-disabled-border-color: transparent;
+  /* Fieldset variables */
+  --fieldset-border-color: transparent;
+  --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
+  --fieldset-legend-color: var(--discord-text-4);
+  /* Scrollbar and accent variables */
+  --color-scrollbar: var(--discord-color-scrollbar);
+  --color-scrollbar-border: var(--discord-color-scrollbar-border);
+  --accent-color-light: var(--discord-accent-color-light);
+  --accent-color: var(--discord-accent-color);
+  --accent-color-dark: var(--discord-accent-color-dark);
+}
+
+/* ----------------------------------------- */
+/* System variables                          */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord] {
+  --color-text-dark-primary: var(--color-light-2);
+  --bg: rgba(0, 0, 0, 0.25);
+  --color-underline-header: var(--discord-green);
+}
+
+/* ----------------------------------------- */
+/* Specifics                                 */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord].window-app .window-header {
+  text-shadow: none;
+  color: var(--color-light-2);
+}
+[data-dorako-ui-theme=discord]#effects-panel .effect-item > .icon {
+  --border-radius: 50%;
+  --app-border-color: var(--accent-color-light);
+  outline: 1px solid var(--accent-color);
+}
+[data-dorako-ui-theme=discord]#effects-panel .effect-item > .icon.aura {
+  border-radius: 33%;
+  transform: scale(0.8);
+}
+[data-dorako-ui-theme=discord] section.tab.category.active[data-tab=pf2e-dorako-ux] h2,
+[data-dorako-ui-theme=discord] section.tab.category.active[data-tab=pf2e-dorako-ui] h2,
+[data-dorako-ui-theme=discord] section .form-group.dorako.settings-header {
+  color: white;
+}
+[data-dorako-ui-theme=discord].spellcasting-entry.preparation .item-name {
+  --secondary: var(--discord-text-4);
+}
+[data-dorako-ui-theme=discord].pf2e.item.sheet.app {
+  --color-border-medium: var(--discord-border-color);
+}
+[data-dorako-ui-theme=discord].actor.sheet .inventory .list-row .item-controls {
+  --secondary: var(--discord-text-1);
+}
+[data-dorako-ui-theme=discord].actor.sheet.character {
+  --color-border-light-2: var(--discord-border-color);
+}
+[data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=discord].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=discord].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike, [data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+  border-image: linear-gradient(90deg, transparent, var(--bg3-text-2) 20%, transparent) 1 !important;
+}
+[data-dorako-ui-theme=discord].actor.sheet .inventory .list-row .item-controls, [data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-dorako-ui-theme=discord].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
+  --secondary: var(--discord-green);
+  --fa-inverse: white;
+}
+[data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
+  --primary: var(--accent-color);
+}
+[data-dorako-ui-theme=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme=discord].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme=discord].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+  border-image: linear-gradient(90deg, transparent, var(--discord-green) 20%, transparent) 1;
 }
 
 :root {
@@ -11671,9 +11129,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --bg3-text-2: #d1c9b9;
   --bg3-text-3: #b0947b;
   --bg3-text-4: #e8dea8;
-  --bg3-accent-color-light: #fc7e9e;
+  --bg3-accent-color-light: #ff7ba2;
   --bg3-accent-color: #ea4a72;
-  --bg3-accent-color-dark: #c13155;
+  --bg3-accent-color-dark: #912737;
   --bg3-color-scrollbar: #ecc090;
   --bg3-color-scrollbar-border: #6c5842;
 }
@@ -11683,6 +11141,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 [data-dorako-ui-theme=bg3] {
   --color-text-hyperlink: var(--accent-color);
+  --color-border-highlight: var(--accent-color);
+  --color-border-highlight-alt: var(--accent-color-dark);
   --color-border-divider: var(--bg3-border-color);
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
@@ -11705,7 +11165,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-theme=bg3] {
   /* Base colors */
   --color-warm-1: var(--tertiary);
-  --color-warm-2: var(--primary);
+  --color-warm-2: #ba4521;
   --color-warm-3: var(--remaster-light);
   --color-warm-4: var(--remaster);
   --color-warm-5: var(--remaster-dark);
@@ -11713,7 +11173,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-cool-2: var(--bg3-accent-color);
   --color-cool-3: var(--bg3-accent-color-dark);
   --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
-  --color-cool-4: #26231f;
   /* Misc variables */
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --box-shadow: 0px 1px 2px black;
@@ -11759,7 +11218,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-scrollbar-border: var(--bg3-color-scrollbar-border);
   --accent-color-light: var(--bg3-accent-color-light);
   --accent-color: var(--bg3-accent-color);
-  --accent-color-dark: #var(--bg3-accent-color-dark);
+  --accent-color-dark: var(--bg3-accent-color-dark);
 }
 
 /* ----------------------------------------- */
@@ -12011,7 +11470,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme=crb]#effects-panel .effect-item > .icon {
   --border-radius: 50%;
-  border-color: var(--tertiary);
+  --app-border-color: var(--tertiary);
   outline: 1px solid var(--gold-brown);
 }
 [data-dorako-ui-theme=crb]#effects-panel .effect-item > .icon.aura {
@@ -12157,7 +11616,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --app-border-color: var(--color-cool-4);
   --window-app-background: var(--color-cool-5-90);
   --window-app-border-color: var(--color-cool-4);
+  --accent-color-light: var(--color-warm-1);
   --accent-color: var(--color-warm-2);
+  --accent-color-dark: var(--color-warm-3);
   --inline-bg: var(--color-cool-4);
   --inline-border-color: var(--color-cool-3);
   --inline-text-color: var(--color-light-2);
@@ -12184,12 +11645,12 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme=foundry2].message.chat-message.whisper {
   background: var(--window-app-background);
-  background-color: var(--whisper-bg);
+  background-color: color-mix(in srgb, var(--whisper-bg) 30%, var(--app-background));
   background-blend-mode: luminosity;
 }
 [data-dorako-ui-theme=foundry2].message.chat-message.whisper.blind {
   background: var(--window-app-background);
-  background-color: var(--blind-bg);
+  background-color: color-mix(in srgb, var(--blind-bg) 30%, var(--app-background));
   background-blend-mode: luminosity;
 }
 [data-dorako-ui-theme=foundry2].chat-message[data-header-text-color-scheme=dark] .message-header {
@@ -12519,25 +11980,6 @@ section.readaloud:before, section.readaloud:after {
   background: none;
 }
 
-#fps {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 60px;
-}
-#fps label {
-  display: none;
-}
-
-#ui-bottom.centered {
-  display: flex;
-  justify-content: center;
-}
-
-#players.dorako-ui h3 {
-  border: none;
-}
-
 .dorako-ui.chat-message .message-header.dorako-header {
   padding-bottom: 5px;
   box-shadow: var(--gold-and-glow);
@@ -12692,198 +12134,9 @@ i[data-pf2-repost] {
   padding: 0px;
 }
 
-.chat-message .flavor-text h4.action {
-  font-weight: 700;
-  line-height: 1.5em;
-  margin: 0;
-}
-
-.chat-message .flavor-text .target-dc-result {
-  line-height: 0.75rem;
-  margin-bottom: 4px;
-}
-
-.chat-message .flavor-text .target-dc-result .target-dc,
-.chat-message .flavor-text .target-dc-result .result {
-  display: block;
-  margin: 1px 0;
-  width: fit-content;
-}
-
-.chat-message .flavor-text .target-dc-result .unadjusted {
-  text-decoration: line-through;
-}
-
-.chat-message .flavor-text .target-dc-result .adjusted {
-  text-decoration: underline dotted;
-}
-
-.chat-message .flavor-text .target-dc-result .adjusted.increased {
-  color: var(--adjusted-higher);
-}
-
-.chat-message .flavor-text .target-dc-result .adjusted.decreased {
-  color: var(--adjusted-lower);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
-  color: var(--degree-success-critical);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .success {
-  color: var(--degree-success);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
-  color: var(--degree-failure);
-}
-
-.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
-  color: var(--degree-failure-critical);
-}
-
-.chat-message .flavor-text .effect {
-  display: flex;
-  align-items: center;
-  column-gap: 5px;
-}
-
-.chat-message .flavor-text .effect img {
-  height: 32px;
-  width: 32px;
-}
-
-.chat-message .flavor-text h4.action {
-  font-weight: 700;
-  line-height: 1.5em;
-  margin: 0;
-}
-.chat-message .flavor-text .target-dc-result {
-  line-height: 0.75rem;
-  margin-bottom: 4px;
-}
-.chat-message .flavor-text .target-dc-result .target-dc,
-.chat-message .flavor-text .target-dc-result .result {
-  display: block;
-  margin: 1px 0;
-  width: fit-content;
-}
-.chat-message .flavor-text .target-dc-result .unadjusted {
-  text-decoration: line-through;
-}
-.chat-message .flavor-text .target-dc-result .adjusted {
-  text-decoration: underline dotted;
-}
-.chat-message > .message-content .message-buttons {
-  display: flex;
-  margin: 0.35em 0 2px;
-  gap: 3px;
-}
-
-.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .adjusted.increased {
-  color: #00c000;
-}
-.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .adjusted.decreased {
-  color: #ff4040;
-}
-.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .criticalSuccess {
-  color: #00c000;
-}
-.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .success {
-  color: #4040ff;
-}
-.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .failure {
-  color: #ff7440;
-}
-.dorako-ui.dark-theme.chat-message .flavor-text .target-dc-result .degree-of-success .criticalFailure {
-  color: #ff4040;
-}
-.dorako-ui.dark-theme.chat-message > .message-content .message-buttons {
-  gap: 5px;
-}
-.dorako-ui.dark-theme.chat-message > .message-content .message-buttons button {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  color: var(--color-text-light-heading);
-  text-shadow: 0px 0px 3px black;
-}
-.dorako-ui.dark-theme.chat-message > .message-content .message-buttons button:hover {
-  background-color: var(--primary);
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui.dark-theme.chat-message > .message-content .message-buttons button.critical-success:hover {
-  background-color: var(--primary-light);
-  color: white;
-}
-
-.frosted-glass #hotbar .bar-controls,
-.frosted-glass #hotbar .macro,
-.frosted-glass nav#navigation ol#scene-list li.nav-item,
-.frosted-glass nav#controls ol.control-tools li.control-tool,
-.frosted-glass nav#controls ol.control-tools li.scene-control,
-.frosted-glass #tah-expand-hud,
-.frosted-glass .tah-title-button,
-.frosted-glass .tah-action button,
-.frosted-glass #tokenbar .token,
-.frosted-glass #tokenbar .bar-controls,
-.frosted-glass #players,
-.frosted-glass nav#navigation #nav-toggle,
-.frosted-glass #fps,
-.frosted-glass .app {
-  backdrop-filter: var(--frosted-glass);
-}
-.frosted-glass #navigation,
-.frosted-glass .control-tools {
-  backdrop-filter: unset;
-}
-
 /* ----------------------------------------- */
 /* Settings                                  */
 /* ----------------------------------------- */
-.dorako-ui .tab.category.active[data-tab=pf2e-dorako-ux] h2,
-.dorako-ui .tab.category.active[data-tab=pf2e-dorako-ui] h2,
-.dorako-ui .form-group.dorako.settings-header {
-  font-size: larger;
-  background-color: var(--bg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
-  border: 1px solid var(--color-border-light-primary);
-  border-radius: 3px;
-  margin: 2px;
-  margin-bottom: 10px;
-  padding: 10px;
-  color: var(--secondary-light);
-}
-.dorako-ui .tab.category.active[data-tab=pf2e-dorako-ux] h2,
-.dorako-ui .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
-  font-size: var(--font-size-48);
-  text-align: center;
-  color: var(--primary-light);
-  text-shadow: 0px 1px 0px var(--primary);
-}
-
-.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ux] h2,
-.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2,
-.dorako-ui.dark-theme .form-group.dorako.settings-header {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  background: var(--glass-bg-light);
-  margin-bottom: 10px;
-  padding: 10px;
-  color: var(--tertiary);
-  text-shadow: 0px 0px 3px black;
-}
-.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ux] h2,
-.dorako-ui.dark-theme .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
-  color: var(--tertiary-dark);
-}
-
 [data-dorako-ui-theme] .tab.category.active[data-tab=pf2e-dorako-ux] h2,
 [data-dorako-ui-theme] .tab.category.active[data-tab=pf2e-dorako-ui] h2,
 [data-dorako-ui-theme] .form-group.dorako.settings-header {

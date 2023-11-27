@@ -203,7 +203,7 @@
 
   &#effects-panel .effect-item > .icon {
     --border-radius: 50%;
-    border-color: var(--tertiary);
+    --app-border-color: var(--tertiary);
     outline: 1px solid var(--gold-brown);
     &.aura {
       border-radius: 33%;

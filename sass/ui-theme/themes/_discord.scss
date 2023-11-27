@@ -1,0 +1,314 @@
+/* ----------------------------------------- */
+/* Theme colors                              */
+/* ----------------------------------------- */
+:root {
+  --discord-border-color: transparent;
+  --discord-background-1: #383a3f;
+  --discord-background-2: #313338;
+  --discord-background-3: #2b2d31;
+  --discord-background-4: #1e1f22;
+  --discord-text-1: #ffffff;
+  --discord-text-2: #dcdee1;
+  --discord-text-3: #b6bac0;
+  --discord-text-4: #959ba3;
+  --discord-text-5: #79818a;
+  --discord-accent-color-light: #8e97fe;
+  --discord-accent-color: #5a65ea;
+  --discord-accent-color-dark: #4952bd;
+  --discord-color-scrollbar: #1a1b1e;
+  --discord-color-scrollbar-border: transparent;
+  --discord-green: #417e4c;
+  --discord-attention: #e6b44e;
+}
+
+/* ----------------------------------------- */
+/* Map v1 styling to v2 values               */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"] {
+  // --color-shadow-primary: transparent;
+  // --color-shadow-highlight: transparent;
+  --color-border-light-highlight: var(--discord-background-1);
+  --color-border-light-primary: var(--discord-background-2);
+  // --color-border-light-secondary: var(--color-cool-4);
+  // --color-border-light-tertiary: var(--color-cool-4);
+  // --color-border-dark-1: var(--color-cool-4); // darkest
+  // --color-border-dark-2: var(--color-cool-4);
+  // --color-border-dark-3: var(--color-cool-4);
+  // --color-border-dark-4: var(--color-cool-3);
+  // --color-border-dark-5: var(--color-cool-2);
+  // --color-border-dark-primary: var(--color-cool-4);
+  // --color-border-dark-secondary: var(--color-cool-5);
+  // --color-border-light-1: var(--color-cool-3);
+  // --color-border-light-2: var(--color-cool-4);
+  // --color-underline-header: var(--color-warm-2);
+  // --color-underline-active: var(--color-warm-1);
+  --color-text-hyperlink: var(--accent-color);
+  --color-text-light-highlight: var(--color-light-2);
+  --color-border-highlight: var(--accent-color);
+  --color-border-highlight-alt: var(--accent-color-dark);
+  // --color-border-light-tertiary: var(--color-cool-4);
+  --color-border-divider: var(--discord-border-color);
+  // --color-bg-btn-minor-inactive: var(--app-background);
+  // --color-bg-btn-minor-active: var(--color-warm-2);
+  --color-text-dark-primary: var(--discord-text-3);
+  --color-text-dark-secondary: var(--discord-text-5);
+  // --color-bg-option: var(--color-cool-4);
+}
+
+/* ----------------------------------------- */
+/* Light color scheme                        */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
+[data-dorako-ui-theme="discord"][data-color-scheme="light"] {
+  --discord-color-scrollbar: #c5c9cd;
+  --window-app-background: #ffffff;
+  --input-background-color: #ebedef;
+  --input-text-color: #4e5057;
+  --button-background-color: #c5c9cd;
+  --button-text-color: black;
+  --fieldset-legend-color: black;
+  --color-light-1: var(--discord-text-5);
+  --color-light-2: var(--discord-text-4);
+  --color-light-2: black;
+  --color-light-3: var(--discord-text-3);
+  --color-light-4: var(--discord-text-2);
+  --color-light-5: var(--discord-text-1);
+  --inline-text-color: black;
+
+  &.chat-message {
+    --color-light-1: black;
+    --color-light-2: black;
+    --color-light-3: black;
+  }
+}
+
+/* ----------------------------------------- */
+/* Dark color scheme                        */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
+[data-dorako-ui-theme="discord"][data-color-scheme="dark"] {
+  &.chat-message {
+    // --color-light-1: black;
+    // --color-light-2: black;
+    // --color-light-3: black;
+  }
+
+  &.actor.sheet .crb-style .sheet-body {
+    // --color-border-medium: var(--brown-1);
+    // --color-border-divider: var(--color-scrollbar-border);
+    --text-dark: var(--discord-text-2);
+  }
+}
+
+/* ----------------------------------------- */
+/* App UI                                    */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"]:not([data-color-scheme]) {
+  --app-border-style: 1px solid;
+  --app-background: var(--discord-background-3);
+  --app-border-color: var(--discord-background-1);
+  --button-background-color: var(--discord-background-4);
+  --button-border-color: var(--discord-background-1);
+  --button-focus-outline-color: var(--accent-color);
+  --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
+}
+
+/* ----------------------------------------- */
+/* DUI variables                             */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"] {
+  /* Base colors */
+  // --color-warm-1: var(--tertiary);
+  // --color-warm-2: #ba4521;
+  // --color-warm-3: var(--remaster-light);
+  // --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
+  // --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
+  --color-warm-4: var(--accent-color-dark);
+  // --color-warm-5: var(--remaster-dark);
+  --color-warm-1: var(--discord-accent-color-light);
+  --color-warm-2: var(--discord-accent-color);
+  --color-warm-3: var(--discord-accent-color-dark);
+  --color-cool-1: color-mix(in srgb, var(--discord-green) 90%, white);
+  --color-cool-2: var(--discord-green);
+  --color-cool-3: color-mix(in srgb, var(--discord-green) 90%, black);
+  --color-cool-3-75: var(--color-cool-3);
+  // --color-cool-4: #26231f;
+  --color-cool-5-75: #4e5057;
+  --color-light-1: var(--discord-text-1);
+  --color-light-2: var(--discord-text-2);
+  --color-light-3: var(--discord-text-3);
+  --color-light-4: var(--discord-text-4);
+  --color-light-5: var(--discord-text-5);
+  /* Misc variables */
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --box-shadow: none;
+  --icon-border-color: var(--accent-color);
+  /* Window app variables */
+  --window-app-background: var(--discord-background-3);
+  --window-app-border-color: #4b4c4f;
+  --window-app-border-style: 1px solid;
+  --window-app-box-shadow: 0px 5px 20px 3px black, 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
+  /* App variables */
+  --app-background: #161511aa;
+  --app-border-color: var(--discord-border-color);
+  --app-border-style: 0px solid;
+  --app-text-shadow: none;
+  /* Inline variables */
+  --inline-bg: var(--fieldset-background-color);
+  --inline-border-color: var(--discord-attention);
+  --inline-text-color: var(--discord-text-2);
+  --inline-icon-color: var(--discord-attention);
+  --inline-box-shadow: none;
+  /* Input variables */
+  --input-border-color: transparent;
+  --input-disabled-background-color: #494b51;
+  --input-disabled-border-color: transparent;
+  --input-border-color: transparent;
+  --input-background-color: var(--discord-background-1);
+  --input-focus-outline-color: var(--discord-accent-color);
+  --input-placeholder-color: color-mix(in srgb, var(--button-text-color) 50%, transparent);
+  /* Button variables */
+  --button-background-color: var(--app-background);
+  --button-border-color: transparent;
+  --button-text-color: var(--discord-text-2);
+  --button-focus-outline-color: transparent;
+  --button-hover-background-color: var(--discord-background-1);
+  --button-hover-border-color: transparent;
+  --button-hover-text-color: var(--discord-text-1);
+  --button-disabled-background-color: #494b51;
+  --button-disabled-border-color: transparent;
+  /* Fieldset variables */
+  --fieldset-border-color: transparent;
+  --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
+  --fieldset-legend-color: var(--discord-text-4);
+  /* Scrollbar and accent variables */
+  --color-scrollbar: var(--discord-color-scrollbar);
+  --color-scrollbar-border: var(--discord-color-scrollbar-border);
+  --accent-color-light: var(--discord-accent-color-light);
+  --accent-color: var(--discord-accent-color);
+  --accent-color-dark: var(--discord-accent-color-dark);
+}
+
+/* ----------------------------------------- */
+/* System variables                          */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"] {
+  --color-text-dark-primary: var(--color-light-2);
+  --bg: rgba(0, 0, 0, 0.25);
+  // --sub: var(--bg3-middle-brown);
+  // --text-dark: var(--bg3-text-1);
+  // --color-border-light-1: var(--color-text-light-highlight);
+  // --color-border-light-primary: var(--brown-1);
+  // --color-border-light-highlight: var(--brown-2);
+  --color-underline-header: var(--discord-green);
+}
+
+/* ----------------------------------------- */
+/* Specifics                                 */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"] {
+  &.window-app .window-header {
+    text-shadow: none;
+    color: var(--color-light-2);
+  }
+
+  &#effects-panel .effect-item > .icon {
+    --border-radius: 50%;
+    --app-border-color: var(--accent-color-light);
+    outline: 1px solid var(--accent-color);
+    &.aura {
+      border-radius: 33%;
+      transform: scale(0.8);
+    }
+  }
+
+  section.tab.category.active[data-tab="pf2e-dorako-ux"] h2,
+  section.tab.category.active[data-tab="pf2e-dorako-ui"] h2,
+  section .form-group.dorako.settings-header {
+    color: white;
+  }
+
+  &.spellcasting-entry.preparation .item-name {
+    --secondary: var(--discord-text-4);
+  }
+
+  &.pf2e.item.sheet.app {
+    --color-border-medium: var(--discord-border-color);
+  }
+
+  &.actor.sheet .inventory .list-row .item-controls {
+    --secondary: var(--discord-text-1);
+  }
+
+  &.actor.sheet.character {
+    --color-border-light-2: var(--discord-border-color);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+    border-image: linear-gradient(90deg, transparent, var(--bg3-text-2) 20%, transparent) 1 !important;
+  }
+
+  // prettier-ignore
+  &.actor.sheet .inventory .list-row .item-controls,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title,
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
+      --secondary: var(--discord-green);
+      --fa-inverse: white;
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
+    --primary: var(--accent-color);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+    border-image: linear-gradient(90deg, transparent, var(--discord-green) 20%, transparent) 1;
+  }
+
+  // &.chat-message[data-header-text-color-scheme="dark"] .message-header {
+  //   --color-text-dark-secondary: var(--color-light-1);
+  //   --color-light-1: black;
+  //   --color-light-2: black;
+  //   --color-light-3: black;
+  //   --app-text-shadow: none;
+  //   text-shadow: none;
+  // }
+
+  // &.chat-message[data-header-text-color-scheme="light"] .message-header {
+  //   --color-text-dark-secondary: var(--color-light-1);
+  //   --app-text-shadow: none;
+  // }
+
+  // &.chat-message .message-header.dorako-header {
+  //   background: var(--player-color);
+  // }
+
+  // &.chat-message {
+  //   .message-content {
+  //     text-shadow: none;
+  //   }
+  // }
+
+  // &.message.chat-message {
+  //   background: var(--window-app-background);
+  //   background-position: top;
+  //   background-size: cover;
+  //   &.whisper {
+  //     background: var(--window-app-background);
+  //     background-color: var(--whisper-bg);
+  //     background-blend-mode: luminosity;
+  //     &.blind {
+  //       background: var(--window-app-background);
+  //       background-color: var(--blind-bg);
+  //       background-blend-mode: luminosity;
+  //     }
+  //   }
+  // }
+}

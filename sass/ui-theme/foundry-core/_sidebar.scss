@@ -105,22 +105,22 @@
     padding-bottom: var(--sidebar-margin);
   }
 
-  section.chat-sidebar .jump-to-bottom {
-    z-index: 1;
-    > a {
-      @include f2-app;
-      border-radius: 0px;
-      border-left: unset;
-      border-right: unset;
-      width: 100%;
-      --app-background: var(--color-scrollbar);
-      --app-border-color: var(--color-scrollbar-border);
-      &:hover {
-        --app-background: var(--color-warm-2);
-        --app-border-color: var(--color-warm-1);
-      }
-    }
-  }
+  // section.chat-sidebar .jump-to-bottom {
+  //   z-index: 1;
+  //   > a {
+  //     @include f2-app;
+  //     border-radius: 0px;
+  //     border-left: unset;
+  //     border-right: unset;
+  //     width: 100%;
+  //     --app-background: var(--color-scrollbar);
+  //     --app-border-color: var(--color-scrollbar-border);
+  //     &:hover {
+  //       --app-background: var(--color-warm-2);
+  //       --app-border-color: var(--color-warm-1);
+  //     }
+  //   }
+  // }
 
   // &#sidebar {
   //   border: 1px solid var(--app-border-color);

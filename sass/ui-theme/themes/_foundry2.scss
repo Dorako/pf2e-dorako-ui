@@ -133,7 +133,9 @@
   --window-app-background: var(--color-cool-5-90);
   --window-app-border-color: var(--color-cool-4);
 
+  --accent-color-light: var(--color-warm-1);
   --accent-color: var(--color-warm-2);
+  --accent-color-dark: var(--color-warm-3);
 
   --inline-bg: var(--color-cool-4);
   --inline-border-color: var(--color-cool-3);
@@ -165,11 +167,11 @@
     background-size: cover;
     &.whisper {
       background: var(--window-app-background);
-      background-color: var(--whisper-bg);
+      background-color: color-mix(in srgb, var(--whisper-bg) 30%, var(--app-background));
       background-blend-mode: luminosity;
       &.blind {
         background: var(--window-app-background);
-        background-color: var(--blind-bg);
+        background-color: color-mix(in srgb, var(--blind-bg) 30%, var(--app-background));
         background-blend-mode: luminosity;
       }
     }

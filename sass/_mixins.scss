@@ -98,27 +98,27 @@
   }
 
   &.bright {
-    --button-background-color: var(--color-warm-1);
-    --button-border-color: var(--color-cool-5);
+    --button-background-color: var(--accent-color);
+    --button-border-color: var(--accent-color-dark);
     --button-text-color: var(--color-cool-5);
-    --button-hover-background-color: #fda948;
-    --button-hover-border-color: var(--color-warm-2);
+    --button-hover-background-color: var(--accent-color-light);
+    --button-hover-border-color: var(--accent-color);
     --button-hover-text-color: #000000;
     text-shadow: none;
 
-    &.disabled,
-    &:disabled {
-      --button-background-color: var(--color-cool-4);
-      --button-hover-background-color: var(--color-cool-4);
-      --button-text-color: var(--color-light-5);
-      --button-hover-text-color: var(--color-light-5);
-      --button-hover-border-color: transparent;
-    }
+    // &.disabled,
+    // &:disabled {
+    //   --button-background-color: var(--color-cool-4);
+    //   --button-hover-background-color: var(--color-cool-4);
+    //   --button-text-color: var(--color-light-5);
+    //   --button-hover-text-color: var(--color-light-5);
+    //   --button-hover-border-color: transparent;
+    // }
 
-    &:not(.disabled, :disabled):hover {
-      --button-hover-background-color: #cb7f27;
-      --button-hover-border-color: var(--color-warm-1);
-    }
+    // &:not(.disabled, :disabled):hover {
+    //   --button-hover-background-color: #cb7f27;
+    //   --button-hover-border-color: var(--color-warm-1);
+    // }
   }
 }
 

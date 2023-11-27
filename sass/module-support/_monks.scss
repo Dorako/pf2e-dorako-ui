@@ -394,8 +394,7 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
   }
 }
 
-#hotbar[data-dorako-ui-theme],
-#hotbar.dorako-ui {
+#hotbar[data-dorako-ui-theme] {
   // width: 647px;
 
   .hotbar-page {
@@ -417,24 +416,6 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
 /* ----------------------------------------- */
 /* Monk's Sound Enhancements                 */
 /* ----------------------------------------- */
-
-.dorako-ui.dark-theme {
-  &.sheet .sound-sheet .items-list {
-    color: var(--color-light-1);
-  }
-  &.sheet .sound-sheet .items-list .item {
-    border-bottom: 1px solid var(--tertiary);
-  }
-
-  &.sheet .sound-sheet .items-list .item .item-name {
-    color: var(--color-light-2);
-  }
-  &.sheet .sound-sheet .items-list .items-header {
-    @include glass;
-    background-color: var(--glass-bg-light);
-  }
-}
-
 [data-dorako-ui-theme] {
   &.sheet .sound-sheet .items-list .items-header {
     border: unset;
@@ -839,13 +820,13 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
 /* Monk's Scene Navigation                   */
 /* ----------------------------------------- */
 
-body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
+body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-toggle {
   display: unset;
 }
 
-.dorako-ui {
+[data-dorako-ui-theme] {
   &#navigation .nav-item-container {
-    @include glass;
+    @include f2-app;
     #nav-toggle {
       box-shadow: unset;
       border: unset;
@@ -857,100 +838,37 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
 
   &#navigation .monks-scene-navigation .scene-list > li {
     a {
-      @include glass;
-      @include quick-transition;
-      text-shadow: 0px 0px 3px black;
-      color: var(--color-text-light-heading);
-      &:hover {
-        background-color: var(--primary);
-        color: var(--color-text-light-heading-highlight);
-      }
-    }
-
-    &.view a {
-      background-color: var(--primary);
-      color: var(--color-text-light-heading-highlight);
-
-      &:hover {
-        background-color: var(--primary-light);
-        color: white;
-      }
+      @include f2-button-warm;
     }
 
     &.gm a {
-      background-color: var(--secondary);
-      color: var(--color-text-light-heading-highlight);
+      @include f2-button-cool;
+    }
 
-      &:hover {
-        background-color: var(--secondary-light);
-        color: white;
-      }
+    a.folder-name {
+      --app-border-style: 2px solid;
     }
-    &.gm.view a {
-      background-color: var(--secondary-light);
-      color: white;
+
+    &.view a {
+      --button-background-color: var(--color-warm-2);
+      --button-border-color: var(--color-warm-1);
     }
-  }
-  &#navigation .monks-scene-navigation .scene-list > li.view a,
-  &#navigation .monks-scene-navigation .scene-list > li.context a {
-    box-shadow: var(--glassy);
-    border: none;
   }
 
   &#navigation .monks-scene-navigation .scene-list > li.active a {
-    @include glass;
-    box-shadow: var(--gold-and-glow), var(--glassy);
+    outline: 1px solid var(--tertiary);
   }
 
   &#navigation.background .monks-scene-navigation .scene-list {
-    @include glass;
+    @include f2-app;
+    --app-border-style: 2px solid;
     gap: 5px;
   }
-}
-
-.frosted-glass .monks-scene-navigation:not(.category-filter) {
-  backdrop-filter: unset;
 }
 
 /* ----------------------------------------- */
 /* Monk's Active Tile Triggers               */
 /* ----------------------------------------- */
-
-.dorako-ui.dark-theme {
-  &.action-sheet .display-value {
-    @include glass;
-    color: var(--color-text-light-heading);
-  }
-  &.monks-active-tiles.sheet .items-list {
-    .items-header {
-      @include glass;
-      margin: 0px 2px;
-      background-color: var(--glass-bg-light);
-      box-shadow: var(--glassy);
-      h3 {
-        color: var(--tertiary);
-        text-shadow: 0px 0px 10px var(--tertiary);
-      }
-    }
-    .item .item-name {
-      color: var(--color-text-light-heading);
-    }
-    .item-control {
-      color: var(--color-text-light-heading);
-    }
-  }
-  &.monks-active-tiles div[data-tab="triggers"] .action-items .entity-style {
-    color: white;
-  }
-  &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
-    color: var(--color-text-light-highlight);
-  }
-}
-
-/* ----------------------------------------- */
-/* Foundry2                                  */
-/* ----------------------------------------- */
-
 [data-dorako-ui-theme] {
   .monks-active-tiles.sheet .items-list .items-header,
   &.monks-active-tiles.sheet .items-list .items-header {
@@ -1001,8 +919,7 @@ body.compact-ui #navigation.dorako-ui .monks-scene-navigation #nav-toggle {
   }
 }
 
-[data-dorako-ui-theme],
-.dorako-ui.dark-theme {
+[data-dorako-ui-theme]:not([data-dorako-ui-theme="crb"][data-color-scheme="light"]) {
   &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
     color: #fafafa;
   }

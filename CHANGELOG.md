@@ -1,3 +1,8 @@
+# 3.1.10
+
+- (Refinement) Various improvements and fixes, including restoring nat 20/1 colors, un-styling the jump-to-bottom button, bright buttons.
+- (New) New WIP Discord theme.
+
 # 3.1.9
 
 - (Refinement) Improved system that selects colors for chat message headers (or missing headers).

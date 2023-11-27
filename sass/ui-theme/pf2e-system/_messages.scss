@@ -61,6 +61,22 @@
     }
   }
 
+  // .dice-tooltip .dice-rolls .roll.success,
+  // .dice-tooltip .dice-rolls .roll.max {
+  //   color: var(--degree-success-critical);
+  //   filter: unset;
+  // }
+  // .dice-tooltip .dice-rolls .roll.failure,
+  // .dice-tooltip .dice-rolls .roll.min {
+  //   color: var(--degree-failure-critical);
+  //   filter: sepia(0.5) hue-rotate(-60deg);
+  // }
+
+  .dice-tooltip .dice-rolls .roll.d20 {
+    text-shadow: none;
+    // text-shadow: 0px 1px 2px black;
+  }
+
   .message-content .damage-roll .dice-result .dice-tooltip .instance {
     border-radius: var(--border-radius);
   }
@@ -363,5 +379,12 @@
     @include f2-app;
     border: 1px solid;
     border-color: var(--icon-border-color);
+  }
+
+  .dice-roll .dice-total.success {
+    color: var(--degree-success-critical);
+  }
+  .dice-roll .dice-total.failure {
+    color: var(--degree-failure-critical);
   }
 }

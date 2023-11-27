@@ -17,6 +17,8 @@ export function getDefaultColorScheme(theme) {
       return "dark";
     case "bg3":
       return "dark";
+    case "discord":
+      return "dark";
     default:
       return null;
   }
@@ -47,6 +49,8 @@ export function getAppThemeAndScheme() {
       return { dorakoUiTheme: "foundry2", colorScheme: "light" };
     case "bg3":
       return { dorakoUiTheme: "bg3", colorScheme: "dark" };
+    case "discord":
+      return { dorakoUiTheme: "discord", colorScheme: "dark" };
     case "opaque": {
       return { dorakoUiTheme: "opaque", colorScheme: "dark" };
     }
@@ -64,6 +68,8 @@ export function getChatTheme() {
       return { dorakoUiTheme: "foundry2", colorScheme: "light" };
     case "bg3":
       return { dorakoUiTheme: "bg3", colorScheme: "dark" };
+    case "discord":
+      return { dorakoUiTheme: "discord", colorScheme: "dark" };
     default:
       return "", "";
   }
@@ -148,7 +154,8 @@ Hooks.on("renderApplication", (app, html, data) => {
     ", EnhancedJournal" +
     ", SceneActorsLayer" +
     ", SmallTimeApp" +
-    ", SceneDarknessAdjuster";
+    ", SceneDarknessAdjuster" +
+    ", AutorecMenuApp";
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
     console.debug(
