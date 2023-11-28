@@ -13,7 +13,8 @@
       "large-chatlog-warning": "Ze względu na duży log czatu, niektóre ustawienia zostaną zastosowane przy następnym przeładowaniu.",
       "maybe-reload": "Niektóre zmiany mogą wymagać przeładowania.",
       "self-roll": "Rzuć dla siebie",
-      "gm-only": "Tylko GM"
+      "gm-only": "Tylko GM",
+      "prefer-light": "Preferuj światło"
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
