@@ -138,7 +138,17 @@
       "whisper": "Murmure",
       "send-to-chat": "Envoyé",
       "large-chatlog-warning": "En raison de la taille du journal de la conversation, certains paramètres s'appliqueront lors du prochain rechargement.",
-      "maybe-reload": "Certains changements pourraient nécessiter un rechargement."
+      "maybe-reload": "Certains changements pourraient nécessiter un rechargement.",
+      "prefer-light": "clair",
+      "prefer-dark": "sombre",
+      "bg3": "Baldur's gate 3",
+      "foundry2": "Foundry 2",
+      "discord": "Discord",
+      "crb": "Livre de base",
+      "opaque": "Opaque",
+      "alliance": "Opposition sombre",
+      "gm-vs-players": "MJ sombre",
+      "no-theme": "Pas de thème"
     },
     "settings": {
       "theme": {
@@ -227,6 +237,37 @@
         "border-radius": {
           "name": "Arrondi",
           "hint": "(défaut : 3px) Change le degré de l'arrondi de nombreux éléments de l'IU"
+        },
+        "window-app-theme": {
+          "name": "thème de l'application de la fenêtre",
+          "hint": "Affecte les fenêtres d'application rendues"
+        },
+        "window-app-color-scheme": {
+          "name": "Schéma de couleurs de l'application de la fenêtre",
+          "hint": "Affecte les fenêtres d'application rendues"
+        },
+        "app-theme": {
+          "name": "Thème de l'application",
+          "hint": "Affecte les éléments de l'interface utilisateur tels que les contrôles et la navigation, ainsi que les modules"
+        },
+        "chat-message-theme": {
+          "name": "Thème des messages de conversation",
+          "hint": "Affecte le rendu des messages de conversation"
+        },
+        "chat-message-color-scheme": {
+          "name": "Schéma de couleurs pour les messages de la conversation",
+          "hint": "Règles pour rendre les messages de conversations clairs ou sombres"
+        },
+        "chat-message-header-style": {
+          "name": "Thème de titre de message de conversation",
+          "hint": "Ajoute un titre coloré à chaque message de la conversation",
+          "choice": {
+            "red": "Rouge",
+            "blue": "Bleu",
+            "green": "Vert",
+            "tint": "Couleur du joueur",
+            "none": "Désactivé"
+          }
         }
       },
       "avatar": {
