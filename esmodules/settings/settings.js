@@ -57,6 +57,12 @@ Hooks.once("init", async () => {
     }
   }
 
+  const chatMessageTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
+  const chatMessageHeaderStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
+  if (chatMessageTheme === "bg3" && chatMessageHeaderStyle !== "none") {
+    game.settings.set("pf2e-dorako-ui", "theme.chat-message-header-style", "none");
+  }
+
   const root = document.querySelector(":root").style;
 
   root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");

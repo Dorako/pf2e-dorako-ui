@@ -122,6 +122,7 @@
     "esmodules/misc-hooks.js",
     "esmodules/settings/settings.js",
     "esmodules/ui-theme.js",
+    "esmodules/ui-scope.js",
     "esmodules/message-hooks.js",
     "esmodules/premium-module-hooks.js",
     "esmodules/consts.js"

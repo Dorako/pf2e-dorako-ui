@@ -1,6 +1,9 @@
 [data-dorako-ui-theme="crb"]:not([data-color-scheme]) {
   --color-light-2: var(--color-text-light-highlight);
   --color-light-3: var(--color-text-light-heading);
+  --input-text-color: black;
+  --input-focus-text-color: black;
+  --input-focus-outline-color: var(--tertiary);
   --button-background-color: var(--glass-bg-light);
   --app-background: var(--glass-bg);
   --app-border-color: transparent;
@@ -202,9 +205,8 @@
   }
 
   &#effects-panel .effect-item > .icon {
+    --box-shadow: var(--gold-and-glow);
     --border-radius: 50%;
-    --app-border-color: var(--tertiary);
-    outline: 1px solid var(--gold-brown);
     &.aura {
       border-radius: 33%;
       transform: scale(0.8);

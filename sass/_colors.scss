@@ -264,3 +264,73 @@ $adjusted-lower: #cc3311 !default;
   --color-text-vitality: #ffffa0;
   --color-text-void: rgb(122, 38, 117); // adjusted
 }
+
+:root .damage.color.acid {
+  --damage-color: var(--color-border-acid);
+}
+
+:root .damage.color.bleed {
+  --damage-color: var(--color-border-bleed);
+}
+
+:root .damage.color.bludgeoning,
+:root .damage.color.piercing,
+:root .damage.color.slashing {
+  --damage-color: var(--color-border-physical);
+}
+
+:root .damage.color.chaotic {
+  --damage-color: var(--color-border-chaotic);
+}
+
+:root .damage.color.cold {
+  --damage-color: var(--color-border-cold);
+}
+
+:root .damage.color.electricity {
+  --damage-color: var(--color-border-electricity);
+}
+
+:root .damage.color.evil {
+  --damage-color: var(--color-border-evil);
+}
+
+:root .damage.color.fire {
+  --damage-color: var(--color-border-fire);
+}
+
+:root .damage.color.force {
+  --damage-color: var(--color-border-force);
+}
+
+:root .damage.color.good {
+  --damage-color: var(--color-border-good);
+}
+
+:root .damage.color.lawful {
+  --damage-color: var(--color-border-lawful);
+}
+
+:root .damage.color.mental {
+  --damage-color: var(--color-border-mental);
+}
+
+:root .damage.color.poison {
+  --damage-color: var(--color-border-poison);
+}
+
+:root .damage.color.sonic {
+  --damage-color: var(--color-border-sonic);
+}
+
+:root .damage.color.spirit {
+  --damage-color: var(--color-border-spirit);
+}
+
+:root .damage.color.vitality {
+  --damage-color: var(--color-border-vitality);
+}
+
+:root .damage.color.void {
+  --damage-color: var(--color-border-void);
+}

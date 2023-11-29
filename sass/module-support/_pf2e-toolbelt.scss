@@ -23,8 +23,8 @@
 
 [data-dorako-ui-theme] {
   &.chat-message [data-action="spell-template-clear"] {
-    --button-background-color: var(--color-warm-1);
-    --button-border-color: var(--color-cool-5);
+    --button-background-color: var(--accent-color);
+    --button-border-color: var(--accent-color-light);
     --button-text-color: var(--color-cool-5);
     --button-hover-background-color: #fda948;
     --button-hover-border-color: var(--color-warm-2);
@@ -41,8 +41,8 @@
     }
 
     &:not(.disabled, :disabled):hover {
-      --button-hover-background-color: #cb7f27;
-      --button-hover-border-color: var(--color-warm-1);
+      --button-hover-background-color: var(--accent-color-light);
+      --button-hover-border-color: var(--accent-color);
     }
   }
 

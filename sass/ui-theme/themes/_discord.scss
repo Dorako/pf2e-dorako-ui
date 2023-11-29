@@ -75,6 +75,27 @@
   --color-light-5: var(--discord-text-1);
   --inline-text-color: black;
 
+  &.sheet.pf2e.actor.npc.app {
+    --section-background: var(--window-app-background);
+    --section-header: var(--discord-accent-color);
+    --section-border-color: var(--discord-accent-color-light);
+    --section-outline-color: var(--discord-accent-color-dark);
+    --section-header-text-color: white;
+    --tag-border-color: transparent;
+    --tag-background-color: white;
+    --tag-text-color: black;
+    --color-text-dark-input: black;
+    --input-placeholder-color: var(--discord-text-5);
+    --color-border-light-highlight: var(--discord-background-1);
+    --color-border-light-primary: var(--discord-background-2);
+    --color-border-light-tertiary: var(--discord-green);
+    --text-dark: black;
+  }
+
+  .tagify {
+    --color-light-2: white;
+  }
+
   &.chat-message {
     --color-light-1: black;
     --color-light-2: black;
@@ -87,6 +108,22 @@
 /* ----------------------------------------- */
 [data-dorako-ui-theme="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
 [data-dorako-ui-theme="discord"][data-color-scheme="dark"] {
+  &.sheet.pf2e.actor.npc.app {
+    --section-background: var(--discord-background-4);
+    --section-header: var(--discord-accent-color);
+    --section-border-color: var(--discord-accent-color-light);
+    --section-outline-color: var(--discord-accent-color-dark);
+    --section-header-text-color: var(--color-light-2);
+    --tag-border-color: var(--discord-green);
+    --tag-background-color: var(--discord-background-3);
+    --tag-text-color: var(--discord-text-3);
+    --color-text-dark-input: var(--discord-text-2);
+    --input-placeholder-color: var(--discord-text-5);
+    --color-border-light-highlight: var(--discord-background-1);
+    --color-border-light-primary: var(--discord-background-2);
+    --color-border-light-tertiary: var(--discord-green);
+    --text-dark: var(--color-light-2);
+  }
   &.chat-message {
     // --color-light-1: black;
     // --color-light-2: black;

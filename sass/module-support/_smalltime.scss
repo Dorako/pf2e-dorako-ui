@@ -1,4 +1,3 @@
-.dorako-ui,
 [data-dorako-ui-theme] {
   &#smalltime-app #displayContainer {
     background: unset;
@@ -17,9 +16,7 @@
     background: unset;
     box-shadow: unset;
   }
-}
 
-[data-dorako-ui-theme] {
   &#smalltime-app {
     @include f2-app;
     outline: none;
@@ -29,26 +26,5 @@
   &#smalltime-app .arrow-left,
   &#smalltime-app.arrow-right {
     @include f2-button-warm;
-  }
-}
-
-.dorako-ui {
-  &#smalltime-app {
-    @include glass;
-  }
-
-  &#smalltime-app .arrow,
-  &#smalltime-app .arrow-left,
-  &#smalltime-app.arrow-right {
-    @include glass;
-    @include quick-transition;
-    background-color: var(--glass-bg-light);
-    display: flex;
-    align-items: center;
-    padding: 2px 5px;
-    &:hover {
-      border: unset;
-      background: var(--primary);
-    }
   }
 }

@@ -142,6 +142,10 @@
   --inline-text-color: var(--color-light-2);
   --inline-icon-color: var(--color-light-1);
   --inline-box-shadow: 0px 1px 2px black;
+
+  &.window-app button.bright {
+    --app-text-shadow: none;
+  }
 }
 
 /* ----------------------------------------- */

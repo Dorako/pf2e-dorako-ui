@@ -4,6 +4,7 @@
 #ui-right {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
   padding-left: 10px;
+  padding-top: 5px;
   // backdrop-filter: blur(5px);
   // ::before {
   //   background: linear-gradient(to left, rgba(0, 0, 0, 0.5) calc(100% - 25px), transparent 100%);
@@ -24,6 +25,14 @@
 /* ----------------------------------------- */
 /* Sidebar                                   */
 /* ----------------------------------------- */
+
+#chat,
+[data-dorako-ui-theme] .chat-sidebar {
+  --sidebar-gap: 4px;
+  --sidebar-margin: 6px;
+  gap: var(--sidebar-gap);
+  padding-bottom: var(--sidebar-margin);
+}
 
 [data-dorako-ui-scope="sidebar"] {
   #sidebar-tabs {
@@ -95,14 +104,6 @@
     border-bottom-left-radius: unset;
     border-top-left-radius: unset;
     border-bottom-right-radius: unset;
-  }
-
-  &.chat-sidebar,
-  .chat-sidebar {
-    --sidebar-gap: 4px;
-    --sidebar-margin: 6px;
-    gap: var(--sidebar-gap);
-    padding-bottom: var(--sidebar-margin);
   }
 
   // section.chat-sidebar .jump-to-bottom {

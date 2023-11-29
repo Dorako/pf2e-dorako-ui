@@ -69,8 +69,4 @@
       text-shadow: none;
     }
   }
-
-  &.actor.sheet .inventory .item-summary {
-    background: color-mix(in srgb, var(--theme-color) 50%, transparent);
-  }
 }

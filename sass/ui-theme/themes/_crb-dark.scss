@@ -89,6 +89,10 @@
   //   background: var(--primary);
   // }
 
+  &.window-app button.bright {
+    --app-text-shadow: none;
+  }
+
   input[type="range"] + .range-value {
     color: black;
     text-shadow: none;

@@ -24,7 +24,7 @@ export const premiumModuleSelector = ".pf2e-yom, .pf2e-ii, .pf2e-woii, .seasonof
 /* ----------------------------------------- */
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["EffectsPanel", "SceneDarknessAdjuster"];
-export const moduleApps = ["HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
+export const moduleApps = ["ExtendedSettingsConfig","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */
@@ -36,4 +36,4 @@ export const limitedScopeApplications = ["KingdomSheetPF2e","CreatureSheetPF2e",
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
-export const excludedApplications = ["LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]
+export const excludedApplications = ["ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //"ChatLogPF2e"

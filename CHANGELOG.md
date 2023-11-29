@@ -1,3 +1,7 @@
+# 3.1.11
+
+- (Refinement) Lots of changes, especially to the BG3 theme. Some settings won't apply to the revised version just yet.
+
 # 3.1.10
 
 - (Refinement) Various improvements and fixes, including restoring nat 20/1 colors, un-styling the jump-to-bottom button, bright buttons.

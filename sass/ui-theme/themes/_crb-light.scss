@@ -20,8 +20,8 @@
   // --color-underline-header: var(--color-warm-2);
   // --color-underline-active: var(--color-warm-1);
   // --color-text-hyperlink: var(--color-warm-1);
-  // --color-border-highlight: var(--color-warm-1);
-  // --color-border-highlight-alt: var(--color-warm-2);
+  --color-border-highlight: var(--accent-color);
+  --color-border-highlight-alt: var(--accent-color-dark);
   // --color-border-light-tertiary: var(--color-cool-4);
   // --color-bg-btn-minor-inactive: var(--app-background);
   // --color-bg-btn-minor-active: var(--color-warm-2);
@@ -39,9 +39,16 @@
   --accent-color: var(--primary-light);
   --accent-color-dark: var(--primary);
 
-  button.bright {
+  &.window-app button.bright {
+    --button-background-color: var(--accent-color);
+    --button-border-color: var(--accent-color-dark);
     --button-text-color: white !important;
     --button-hover-text-color: white !important;
+    --app-text-shadow: none;
+  }
+
+  input[type="range"] + .range-value {
+    border: none;
   }
 }
 
@@ -58,6 +65,7 @@
   --color-text-dark-primary: #191813;
   --color-text-dark-secondary: #4b4a44;
 
+  // --color-light-3: black;
   --color-cool-5-75: rgba(96, 88, 86, 0.25);
 
   //   --color-light-1: black;

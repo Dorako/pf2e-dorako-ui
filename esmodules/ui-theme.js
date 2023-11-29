@@ -80,6 +80,12 @@ Hooks.on("renderSvelteApplication", (app, html, data) => {
   if (theme === "no-theme") return;
   const uiTheme = getUiTheme();
   if (uiTheme === null) return;
+  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications`);
+    return;
+  }
   const { dorakoUiTheme, colorScheme } = uiTheme;
   app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
@@ -94,9 +100,8 @@ for (const appName of [...themedApps]) {
     if (uiTheme === null) return;
     const { dorakoUiTheme, colorScheme } = uiTheme;
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
-    //  + ",ChatLogPF2e"
     const excludeList = excludeString.split(/[\s,]+/);
-    if (excludeList.includes(app.constructor.name)) {
+    if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
       );
@@ -176,13 +181,20 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
-  html.find("form button[type='submit']").addClass("bright");
   html.find(".item-controls button[data-action='apply']").addClass("bright");
   html.find("button[data-action='accept']").addClass("bright");
+  html.find("form button[type='submit']").addClass("bright");
   html.find("form button[data-action='save']").addClass("bright");
 });
 
 Hooks.on("renderSidebar", (app, html, data) => {
+  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes(app.constructor.name)) {
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string`);
+    return;
+  }
+
   $("#sidebar-tabs").attr("data-dorako-ui-theme", "");
   app.element[0].dataset.dorakoUiScope = "sidebar";
 });
@@ -226,3 +238,19 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
     html[0].classList.add(`${theme}-theme`);
   });
 }
+
+Hooks.on("render" + "ItemSheetPF2e", (app, html, data) => {
+  const rarity = app?.object?.rarity;
+  if (rarity) app.element[0].dataset.rarity = rarity;
+});
+
+Hooks.on("render" + "NPCSheetPF2e", (app, html, data) => {
+  const rarity = app?.object?.rarity;
+  if (rarity) app.element[0].dataset.rarity = rarity;
+});
+
+Hooks.on("render" + "ChatMessage", (app, html, data) => {
+  const footer = html.find("footer")[0];
+  // debugger;
+  if (footer) html[0].dataset.hasFooter = "";
+});

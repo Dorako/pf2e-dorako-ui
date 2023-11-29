@@ -1,5 +1,5 @@
 /* ----------------------------------------- */
-/* Code mirror                               */
+/* Code Mirror in system                     */
 /* ----------------------------------------- */
 [data-dorako-ui-theme="foundry2"],
 [data-dorako-ui-theme="bg3"],
@@ -61,5 +61,17 @@
   // red triangle
   .ͼ1 .cm-lintPoint:after {
     border-bottom: 4px solid var(--primary-light);
+  }
+}
+
+/* ----------------------------------------- */
+/* Code Mirror module                        */
+/* ----------------------------------------- */
+[data-dorako-ui-theme] {
+  .CodeMirror {
+    cursor: text;
+    background: white;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
   }
 }

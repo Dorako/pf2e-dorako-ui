@@ -49,6 +49,13 @@
 }
 
 [data-dorako-ui-theme] {
+  &.actor.sheet.red-theme,
+  &.actor.sheet.green-theme,
+  &.actor.sheet.blue-theme {
+    .inventory .item-summary {
+      background: color-mix(in srgb, var(--theme-color) 25%, transparent);
+    }
+  }
   &.actor.sheet.red-theme {
     --theme-color-light: var(--primary-light);
     --theme-color: var(--primary);

@@ -32,6 +32,10 @@
     }
   }
 
+  &.actor.npc.sheet form ol.spell-list > li .item-name h4:hover {
+    --secondary: var(--accent-color);
+  }
+
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {
     @include f2-input;
     --input-height: 18px;
