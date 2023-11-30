@@ -42,7 +42,6 @@
 /* ----------------------------------------- */
 /* Token HUD                                 */
 /* ----------------------------------------- */
-
 #token-hud[data-dorako-ui-theme] .status-effects.active {
   gap: 5px;
   background: unset;
@@ -106,7 +105,7 @@
       &[data-action="active"], // From Monk's Active Tiles
       &[data-action="mystify"] // from Workbench
     {
-      @include f2-button-cool;
+      @include f2-button-toggle;
     }
   }
 }

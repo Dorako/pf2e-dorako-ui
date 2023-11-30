@@ -29,7 +29,7 @@ nav#controls[data-dorako-ui-theme] {
       font-size: calc(var(--control-size) - 12px);
 
       &.toggle {
-        @include f2-button-cool;
+        @include f2-button-toggle;
       }
     }
   }

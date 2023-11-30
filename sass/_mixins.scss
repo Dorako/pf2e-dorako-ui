@@ -79,6 +79,7 @@
     box-shadow: var(--box-shadow);
   }
 
+  &.view,
   &.selected,
   &.active {
     background: var(--button-hover-background-color);
@@ -137,6 +138,23 @@
     --button-border-color: var(--color-cool-4);
     --button-hover-background-color: var(--color-cool-5);
     --button-text-color: var(--color-light-5);
+  }
+}
+
+@mixin f2-button-toggle {
+  @include f2-button-warm;
+  --button-background-color: var(--button-toggle-background);
+  --button-border-color: var(--button-toggle-border-color);
+  // --button-text-color: var(--color-light-2);
+  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --button-hover-background-color: var(--button-toggle-hover-background);
+  --button-hover-border-color: var(--button-toggle-hover-border-color);
+  // --button-hover-text-color: var(--color-light-1);
+
+  &:disabled {
+    --button-background-color: color-mix(in srgb, var(--button-background-color) 50%, transparent 50%);
+    --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+    --button-hover-background-color: color-mix(in srgb, var(--button-hover-background-color) 50%, transparent 50%);
   }
 }
 

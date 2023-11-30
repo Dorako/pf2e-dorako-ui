@@ -6,6 +6,7 @@ import {
   themedApps,
   systemSheets,
   excludedApplications,
+  moduleWindowApps,
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 
@@ -113,7 +114,7 @@ for (const appName of [...themedApps]) {
   });
 }
 
-for (const appName of [...systemSheets]) {
+for (const appName of [...systemSheets, ...moduleWindowApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
     if (theme === "no-theme") return;
@@ -185,6 +186,7 @@ Hooks.on("renderApplication", (app, html, data) => {
   html.find("button[data-action='accept']").addClass("bright");
   html.find("form button[type='submit']").addClass("bright");
   html.find("form button[data-action='save']").addClass("bright");
+  html.find("form.check-modifiers-content button.roll").addClass("bright");
 });
 
 Hooks.on("renderSidebar", (app, html, data) => {

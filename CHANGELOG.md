@@ -1,3 +1,8 @@
+# 3.1.12
+
+- (Refinement) Bunch of changes, including restyling of the navigation bar, and changes to toggles.
+- (Fix) Fixed issue where the settings screen in CRB themes would be transparent if the Settings Extender module was activated.
+
 # 3.1.11
 
 - (Refinement) Lots of changes, especially to the BG3 theme. Some settings won't apply to the revised version just yet.

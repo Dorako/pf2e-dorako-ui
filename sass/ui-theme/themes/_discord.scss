@@ -214,6 +214,9 @@
   --button-hover-text-color: var(--discord-text-1);
   --button-disabled-background-color: #494b51;
   --button-disabled-border-color: transparent;
+  --button-toggle-border-color: var(--accent-color-light);
+  --button-toggle-background: var(--discord-green);
+  --button-toggle-hover-background: var(--discord-attention);
   /* Fieldset variables */
   --fieldset-border-color: transparent;
   --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
@@ -224,6 +227,14 @@
   --accent-color-light: var(--discord-accent-color-light);
   --accent-color: var(--discord-accent-color);
   --accent-color-dark: var(--discord-accent-color-dark);
+
+  &.window-app button.bright {
+    --button-background-color: var(--accent-color);
+    --button-border-color: var(--accent-color-dark);
+    --button-text-color: white !important;
+    --button-hover-text-color: white !important;
+    --app-text-shadow: none;
+  }
 }
 
 /* ----------------------------------------- */
@@ -308,44 +319,44 @@
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
     border-image: linear-gradient(90deg, transparent, var(--discord-green) 20%, transparent) 1;
   }
+}
 
-  // &.chat-message[data-header-text-color-scheme="dark"] .message-header {
-  //   --color-text-dark-secondary: var(--color-light-1);
-  //   --color-light-1: black;
-  //   --color-light-2: black;
-  //   --color-light-3: black;
-  //   --app-text-shadow: none;
-  //   text-shadow: none;
-  // }
+/* ----------------------------------------- */
+/* Controls                                  */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="controls"][data-dorako-ui-theme="discord"] {
+  --button-hover-background-color: var(--accent-color);
+  --button-focus-outline-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color-dark);
+  --button-toggle-border-color: var(--discord-green);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+  --button-toggle-background: color-mix(in srgb, var(--discord-green) 50%, black 50%);
+  --button-toggle-hover-background: var(--discord-green);
+}
 
-  // &.chat-message[data-header-text-color-scheme="light"] .message-header {
-  //   --color-text-dark-secondary: var(--color-light-1);
-  //   --app-text-shadow: none;
-  // }
+/* ----------------------------------------- */
+/* Navigation                                */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="discord"] {
+  .scene {
+    --button-toggle-focus-outline-color: var(--discord-attention);
+  }
 
-  // &.chat-message .message-header.dorako-header {
-  //   background: var(--player-color);
-  // }
+  .scene:not(.gm) {
+    --button-toggle-border-color: var(--discord-green);
+    --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+    --button-toggle-background: color-mix(in srgb, var(--discord-green) 50%, black 50%);
+    --button-toggle-hover-background: var(--discord-green);
+  }
 
-  // &.chat-message {
-  //   .message-content {
-  //     text-shadow: none;
-  //   }
-  // }
+  .scene.gm {
+    --button-toggle-border-color: var(--discord-accent-color);
+    --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-accent-color) 50%, white 50%);
+    --button-toggle-background: color-mix(in srgb, var(--discord-accent-color) 50%, black 50%);
+    --button-toggle-hover-background: var(--discord-accent-color);
 
-  // &.message.chat-message {
-  //   background: var(--window-app-background);
-  //   background-position: top;
-  //   background-size: cover;
-  //   &.whisper {
-  //     background: var(--window-app-background);
-  //     background-color: var(--whisper-bg);
-  //     background-blend-mode: luminosity;
-  //     &.blind {
-  //       background: var(--window-app-background);
-  //       background-color: var(--blind-bg);
-  //       background-blend-mode: luminosity;
-  //     }
-  //   }
-  // }
+    &.active:not(.view) {
+      --button-toggle-focus-outline-color: transparent;
+    }
+  }
 }

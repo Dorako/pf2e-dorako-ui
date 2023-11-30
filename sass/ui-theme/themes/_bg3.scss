@@ -23,17 +23,18 @@
   --bg3-blue: #183541;
   --bg3-blue-dark: #1b2a30;
   --bg3-ba-orange: #ab5623;
-  --bg3-action-green: #2f5333;
+  --bg3-action-green: #019740;
   --bg3-pactslot-pink: #f950f9;
   --bg3-spellslot-blue: #79ffff;
   --bg3-bardic-yellow: #cfad00;
   --bg3-icon-green-stroke: #95aaa5;
   --bg3-icon-green-light: #1c4137;
   --bg3-icon-green-dark: #1d3733;
+  --bg3-attention: #fe265d;
 
   --bg3-alliance-ally-yellow: #c09e05;
   --bg3-alliance-opposition-red: #de1847;
-  --bg3-alliance-party-blue: #08c6e4;
+  --bg3-alliance-companion-blue: #08c6e4;
   --bg3-alliance-ally-green: #52fead;
 
   --bg3-rarity-legendary: #dfa633;
@@ -46,11 +47,18 @@
   --bg3-info-overlay-light: rgba(255, 255, 255, 0.25);
   --bg3-info-overlay-dark: rgba(0, 0, 0, 0.25);
 
+  /* Brown variant */
   --bg3-bg-inner: #241d16;
   --bg3-bg-outer: #1b1a19;
   --bg3-border-inner: #ab7743;
   --bg3-border-outer: #7b542e;
   --bg3-ui-purple: #4e3061;
+  /* Blue variant */
+  // --bg3-border-inner: #a16a37;
+  // --bg3-border-outer: #4a2e18;
+  // --bg3-border-internal: #304248;
+  // --bg3-bg-inner: #182830;
+  // --bg3-bg-outer: #151e29;
 
   --bg3-inspect-background: #2a2a2a;
   --bg3-inspect-border-color: #aca493;
@@ -92,8 +100,8 @@
   // --color-border-dark-3: var(--color-cool-4);
   // --color-border-dark-4: var(--color-cool-3);
   // --color-border-dark-5: var(--color-cool-2);
-  // --color-border-dark-primary: var(--color-cool-4);
-  // --color-border-dark-secondary: var(--color-cool-5);
+  --color-border-dark-primary: var(--bg3-border-inner);
+  --color-border-dark-secondary: var(--bg3-border-outer);
   // --color-border-light-1: var(--color-cool-3);
   // --color-border-light-2: var(--color-cool-4);
   // --color-underline-header: var(--color-warm-2);
@@ -263,6 +271,10 @@
 /* Specifics                                 */
 /* ----------------------------------------- */
 [data-dorako-ui-theme="bg3"] {
+  h1 {
+    border-image: linear-gradient(90deg, transparent, var(--color-underline-header) 50%, transparent) 1;
+  }
+
   &.spellcasting-entry.preparation .item-name {
     --secondary: var(--bg3-text-4);
   }
@@ -372,7 +384,7 @@
       linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
         border-box;
     border: 2px solid transparent;
-    box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black;
+    box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
     backdrop-filter: none;
     border-radius: var(--border-radius);
     text-shadow: none;
@@ -395,13 +407,68 @@
 /* ----------------------------------------- */
 [data-dorako-ui-scope="navigation"][data-dorako-ui-theme="bg3"] {
   #nav-toggle {
-    background: var(--bg3-tooltip-window-background) !important;
-    border: 1px solid var(--bg3-border-outer) !important;
-    border-top-color: var(--bg3-border-inner) !important;
-    border-bottom-color: var(--bg3-border-inner) !important;
+    background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
+    border: 2px solid transparent !important;
     box-shadow: var(--box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   }
+
+  .scene {
+    border: 2px solid transparent !important;
+    line-height: calc(var(--control-size) - 4px) !important;
+    position: relative;
+    box-shadow: 0px 0px 5px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+    --button-toggle-focus-outline-color: #d3b87c;
+    &.view::before {
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+      border-radius: var(--border-radius);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+      z-index: 0;
+    }
+  }
+
+  .scene:not(.gm) {
+    --button-toggle-background: var(--bg3-tooltip-window-background) padding-box,
+      var(--bg3-border-background) border-box;
+    --button-toggle-hover-background: var(--bg3-tooltip-window-background) padding-box,
+      var(--bg3-border-background) border-box;
+  }
+
+  .scene.gm {
+    --bg3-border-inner: #a16a37;
+    --bg3-border-outer: #4a2e18;
+    --bg3-border-internal: #304248;
+    --bg3-bg-inner: #182830;
+    --bg3-bg-outer: #151e29;
+
+    --bg3-border-background: linear-gradient(
+      to right,
+      var(--bg3-border-outer) 0%,
+      var(--bg3-border-inner) 50%,
+      var(--bg3-border-outer) 100%
+    );
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    --button-toggle-background: var(--bg3-tooltip-window-background) padding-box,
+      var(--bg3-border-background) border-box;
+    --button-toggle-hover-background: var(--bg3-tooltip-window-background) padding-box,
+      var(--bg3-border-background) border-box;
+    &.active:not(.view) {
+      --button-toggle-focus-outline-color: transparent;
+    }
+  }
 }
+
 /* ----------------------------------------- */
 /* Hotbar                                    */
 /* ----------------------------------------- */
@@ -479,6 +546,19 @@
       border-box;
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+  &.dfce-cm-top {
+    border-bottom-width: 1px !important;
+  }
+  &.dfce-cm-middle,
+  &.dfce-cm-bottom {
+    background: var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+    border-top-width: 1px !important;
+  }
+  &.dfce-cm-middle {
+    border-bottom-width: 1px !important;
+  }
 
   .message-header {
     color: var(--bg3-text-1);
@@ -541,19 +621,29 @@
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
+[data-dorako-ui-scope="placeable-hud"][data-dorako-ui-theme="bg3"] {
+  --button-background-color: radial-gradient(circle, #363534 0, black 100%);
+  --button-border-color: #594537;
+  --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
+  --button-focus-outline-color: #d3b87c;
+  --button-hover-border-color: #9a8860;
+  --button-toggle-border-color: #d3b87c;
+  --button-toggle-background: radial-gradient(circle, #0d3c48 0, black 100%);
+  --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
+}
+
+/* ----------------------------------------- */
+/* Controls                                  */
+/* ----------------------------------------- */
 [data-dorako-ui-scope="controls"][data-dorako-ui-theme="bg3"] {
   --button-background-color: radial-gradient(circle, #363534 0, black 100%);
   --button-border-color: #594537;
   --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
   --button-focus-outline-color: #d3b87c;
   --button-hover-border-color: #9a8860;
-  --color-cool-3-75: radial-gradient(circle, #0d3c48 0, black 100%);
-  --color-cool-2: #9a8860;
-  --color-cool-1: radial-gradient(circle, #0d3c48 0, black 100%);
-  .toggle {
-    --button-border-color: #d3b87c !important;
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%) !important;
-  }
+  --button-toggle-border-color: #d3b87c;
+  --button-toggle-background: radial-gradient(circle, #0d3c48 0, black 100%);
+  --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
 }
 
 [data-dorako-ui-scope="players"][data-dorako-ui-theme="bg3"] {
@@ -562,7 +652,10 @@
       border-box;
   --app-border-color: transparent;
   --app-border-style: 2px solid;
-  box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+  box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+  &#players h3 {
+    margin: 3px 0px;
+  }
 }
 
 /* ----------------------------------------- */
@@ -570,28 +663,95 @@
 /* ----------------------------------------- */
 [data-dorako-ui-theme="bg3"]#pf2e-token-hud {
   --outer-padding: 0px;
+  --bg3-border-inner: #a16a37;
+  --bg3-border-outer: #4a2e18;
+  --bg3-border-internal: #304248;
+  --bg3-bg-inner: #182830;
+  --bg3-bg-outer: #151e29;
+
+  --bg3-border-background: linear-gradient(
+    to right,
+    var(--bg3-border-outer) 0%,
+    var(--bg3-border-inner) 50%,
+    var(--bg3-border-outer) 100%
+  );
+  --bg3-tooltip-window-background: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
   > div {
-    background: var(--bg3-tooltip-window-background) padding-box,
-      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
-        border-box !important;
+    background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
+    box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   }
   --app-border-color: transparent;
   --app-border-style: 2px solid;
-  box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
 
   --color-warm-1: green;
   --color-warm-2: var(--bg3-text-1);
-  --color-cool-4: var(--bg3-background-3);
+  --color-cool-4: var(--bg3-bg-inner);
   --color-cool-5: var(--bg3-border-outer);
 
   .item-img.hover {
     --color-warm-1: var(--bg3-accent-color-light);
     --color-warm-2: var(--bg3-accent-color-dark);
   }
+
+  .inner {
+    .header {
+      z-index: 1;
+      &::before {
+        // background: var(--bg3-ui-purple-background);
+        background: rgba(255, 255, 255, 0.1);
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 29px;
+        // box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black !important;
+        // border-radius: 10px 10px 0px 0px;
+        overflow: hidden;
+        pointer-events: none;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.33), transparent);
+      }
+    }
+    .footer {
+      position: relative;
+      z-index: 1;
+      margin-left: -5px;
+      margin-right: -5px;
+
+      a {
+        z-index: 1;
+      }
+
+      &::before {
+        // background: var(--bg3-ui-purple-background);
+        background: rgba(255, 255, 255, 0.1);
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 26px;
+        // box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black !important;
+        // border-radius: 10px 10px 0px 0px;
+        overflow: hidden;
+        pointer-events: none;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.33), transparent);
+      }
+    }
+  }
   .inner > hr {
     margin-left: -5px;
     margin-right: -5px;
     border-color: var(--bg3-border-outer);
+    border: solid transparent;
+    border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+    border-width: 0 0 2px;
+    border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
     width: auto;
   }
   .sidebar {
@@ -618,7 +778,7 @@
     --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-yellow) 0, black 100%);
   }
   &[data-id="gmroll"] {
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-party-blue) 0, black 100%);
+    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-companion-blue) 0, black 100%);
   }
   &[data-id="blindroll"] {
     --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);

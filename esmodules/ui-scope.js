@@ -30,6 +30,20 @@ for (const appName of ["PlayerList", "SmallTimeApp"]) {
   });
 }
 
+for (const appName of ["TokenHUD", "TileHUD"]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    if (isExcluded(app)) return;
+    app.element[0].dataset.dorakoUiScope = "placeable-hud";
+  });
+}
+
+for (const appName of ["PlaylistDirectory"]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    if (isExcluded(app)) return;
+    app.element[0].dataset.dorakoUiScope = "unlimited";
+  });
+}
+
 function isExcluded(app) {
   const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
   const excludeList = excludeString.split(/[\s,]+/);

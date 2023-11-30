@@ -55,6 +55,7 @@
 
   &.roll-modifiers-dialog {
     --secondary: var(--color-cool-3);
+    border: none;
     .window-header {
       background: linear-gradient(90deg, var(--secondary) 0%, var(--color-cool-3) 50%, var(--secondary) 100%);
       color: var(--color-light-1) !important;

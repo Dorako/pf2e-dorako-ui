@@ -49,6 +49,10 @@
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
+  --button-toggle-border-color: var(--tertiary);
+  --button-toggle-background: var(--secondary-dark);
+  --button-toggle-hover-background: var(--secondary-light);
+
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--primary-light);
   --color-warm-3: var(--primary-dark);
@@ -233,6 +237,26 @@
 
     hr {
       display: none;
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Navigation                                */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="crb"] {
+  .scene {
+    --button-toggle-focus-outline-color: #d3b87c;
+  }
+
+  .scene:not(.gm) {
+    --button-toggle-background: var(--app-background);
+    --button-toggle-hover-background: var(--primary-light);
+  }
+
+  .scene.gm {
+    &.active:not(.view) {
+      --button-toggle-focus-outline-color: transparent;
     }
   }
 }

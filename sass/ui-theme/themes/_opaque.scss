@@ -40,6 +40,7 @@
   --inline-box-shadow: 0px 1px 2px black;
 
   --accent-color: var(--primary-light);
+  --icon-border-color: var(--tertiary);
 
   &#token-hud {
     --input-text-color: var(--color-light-2);
@@ -52,5 +53,42 @@
     background: var(--app-background);
     border: var(--app-border-style);
     border-color: var(--app-border-color);
+  }
+}
+
+/* ----------------------------------------- */
+/* Controls                                  */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="controls"][data-dorako-ui-theme="opaque"] {
+  --button-toggle-border-color: var(--secondary-light);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
+  --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
+  --button-toggle-hover-background: var(--secondary-light);
+}
+
+/* ----------------------------------------- */
+/* Navigation                                */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="opaque"] {
+  .scene {
+    --button-toggle-focus-outline-color: var(--discord-attention);
+  }
+
+  .scene:not(.gm) {
+    --button-toggle-border-color: var(--app-border-color);
+    --button-toggle-hover-border-color: color-mix(in srgb, var(--primary-light) 50%, white 50%);
+    --button-toggle-background: var(--app-background);
+    --button-toggle-hover-background: var(--primary-light);
+  }
+
+  .scene.gm {
+    --button-toggle-border-color: var(--secondary-light);
+    --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
+    --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
+    --button-toggle-hover-background: var(--secondary-light);
+
+    &.active:not(.view) {
+      --button-toggle-focus-outline-color: transparent;
+    }
   }
 }

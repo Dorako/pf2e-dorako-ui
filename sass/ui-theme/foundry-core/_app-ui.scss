@@ -196,12 +196,12 @@
   }
 
   a.content-link,
-  [data-pf2-check],
+  [data-pf2-check]:not([data-pf2-traits*="secret"]),
   a.entity-link,
   [data-pf2-action],
   span[data-pf2-effect-area],
-  a.inline-check,
-  a.inline-check .label,
+  a.inline-check:not([data-pf2-traits*="secret"]),
+  a.inline-check:not([data-pf2-traits*="secret"]) .label,
   a.inline-roll {
     background: var(--inline-bg);
     border: 1px solid var(--inline-border-color);
@@ -214,7 +214,7 @@
       color: var(--inline-icon-color);
     }
   }
-
+  [data-pf2-check][data-pf2-traits*="secret"],
   [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] {
     color: black;
   }
@@ -443,6 +443,7 @@
     }
 
     .window-header {
+      flex: 0 0 27px;
       border: unset;
       text-shadow: 0px 1px 2px black;
     }

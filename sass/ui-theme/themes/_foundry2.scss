@@ -65,27 +65,27 @@
 [data-dorako-ui-theme="foundry2"] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
-  --color-border-light-highlight: var(--color-cool-3);
-  --color-border-light-primary: var(--color-cool-4);
-  --color-border-light-secondary: var(--color-cool-4);
-  --color-border-light-tertiary: var(--color-cool-4);
-  --color-border-dark-1: var(--color-cool-4); // darkest
-  --color-border-dark-2: var(--color-cool-4);
-  --color-border-dark-3: var(--color-cool-4);
-  --color-border-dark-4: var(--color-cool-3);
-  --color-border-dark-5: var(--color-cool-2);
-  --color-border-dark-primary: var(--color-cool-4);
-  --color-border-dark-secondary: var(--color-cool-5);
-  --color-border-light-1: var(--color-cool-3);
-  --color-border-light-2: var(--color-cool-4);
+  // --color-border-light-highlight: var(--color-cool-3);
+  // --color-border-light-primary: var(--color-cool-4);
+  // --color-border-light-secondary: var(--color-cool-4);
+  // --color-border-light-tertiary: var(--color-cool-4);
+  // --color-border-dark-1: var(--color-cool-4); // darkest
+  // --color-border-dark-2: var(--color-cool-4);
+  // --color-border-dark-3: var(--color-cool-4);
+  // --color-border-dark-4: var(--color-cool-3);
+  // --color-border-dark-5: var(--color-cool-2);
+  // --color-border-dark-primary: var(--color-cool-4);
+  // --color-border-dark-secondary: var(--color-cool-5);
+  // --color-border-light-1: var(--color-cool-3);
+  // --color-border-light-2: var(--color-cool-4);
   --color-underline-header: var(--color-warm-2);
   --color-underline-active: var(--color-warm-1);
-  --color-text-hyperlink: var(--color-warm-1);
-  --color-border-highlight: var(--color-warm-1);
-  --color-border-highlight-alt: var(--color-warm-2);
-  --color-border-light-tertiary: var(--color-cool-4);
-  --color-bg-btn-minor-inactive: var(--app-background);
-  --color-bg-btn-minor-active: var(--color-warm-2);
+  // --color-text-hyperlink: var(--color-warm-1);
+  // --color-border-highlight: var(--color-warm-1);
+  // --color-border-highlight-alt: var(--color-warm-2);
+  // --color-border-light-tertiary: var(--color-cool-4);
+  // --color-bg-btn-minor-inactive: var(--app-background);
+  // --color-bg-btn-minor-active: var(--color-warm-2);
   --color-text-dark-primary: var(--color-light-3);
   --color-text-dark-secondary: var(--color-light-5);
 }
@@ -195,6 +195,10 @@
     --app-text-shadow: none;
   }
 
+  &.window-app.sidebar-popout {
+    border: none;
+  }
+
   &.actor.sheet .crb-style .sheet-body {
     --primary: var(--color-warm-2);
     --secondary: var(--color-cool-3);
@@ -241,5 +245,42 @@
     --alt-dark: var(--color-light-4);
     --bg: var(--color-cool-5-90);
     --paper-bg: var(--color-cool-4);
+  }
+}
+
+/* ----------------------------------------- */
+/* Controls                                  */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="controls"][data-dorako-ui-theme="foundry2"] {
+  --button-toggle-border-color: var(--color-cool-2);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--color-cool-2) 50%, white 50%);
+  --button-toggle-background: color-mix(in srgb, var(--color-cool-3) 50%, black 50%);
+  --button-toggle-hover-background: var(--color-cool-3);
+}
+
+/* ----------------------------------------- */
+/* Navigation                                */
+/* ----------------------------------------- */
+[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="foundry2"] {
+  .scene {
+    --button-toggle-focus-outline-color: var(--color-warm-1);
+  }
+
+  .scene:not(.gm) {
+    --button-toggle-background: var(--app-background);
+    --button-toggle-border-color: var(--color-cool-4);
+    --button-toggle-hover-border-color: var(--color-warm-1);
+    --button-toggle-hover-background: var(--color-warm-2);
+  }
+
+  .scene.gm {
+    --button-toggle-background: var(--color-cool-3);
+    --button-toggle-border-color: var(--color-cool-2);
+    --button-toggle-hover-border-color: var(--color-cool-1);
+    --button-toggle-hover-background: var(--color-cool-2);
+
+    &.active:not(.view) {
+      --button-toggle-focus-outline-color: transparent;
+    }
   }
 }

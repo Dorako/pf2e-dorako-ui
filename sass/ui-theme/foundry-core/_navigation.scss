@@ -16,7 +16,7 @@
 
   ol#scene-list {
     li.nav-item {
-      @include f2-button-warm;
+      @include f2-button-toggle;
       line-height: var(--control-size);
 
       > a:hover {
@@ -28,41 +28,41 @@
       }
 
       &:hover {
-        color: var(--color-light-2);
-        background-color: var(--color-warm-2);
-        border-color: var(--color-warm-1);
+        // color: var(--color-light-2);
+        // background-color: var(--color-warm-2);
+        // border-color: var(--color-warm-1);
       }
 
       &.view {
-        @include f2-button-warm;
-        background-color: var(--color-warm-2);
-        color: var(--color-light-2);
-        border-color: var(--color-warm-1);
-        &.active {
-          border-color: var(--color-cool-2);
-        }
+        // @include f2-button-warm;
+        // background-color: var(--color-warm-2);
+        // color: var(--color-light-2);
+        // border-color: var(--color-warm-1);
+        // &.active {
+        //   border-color: var(--color-cool-2);
+        // }
       }
 
       &.gm {
-        @include f2-button-cool;
+        // @include f2-button-cool;
 
         &.active {
-          color: var(--color-light-2);
-          border-color: var(--color-cool-3);
-          background-color: var(--color-cool-3);
+          // color: var(--color-light-2);
+          // border-color: var(--color-cool-3);
+          // background-color: var(--color-cool-3);
           &:hover {
-            color: var(--color-light-1);
-            border-color: var(--color-cool-1);
-            background-color: var(--color-cool-2);
+            // color: var(--color-light-1);
+            // border-color: var(--color-cool-1);
+            // background-color: var(--color-cool-2);
           }
         }
         &.view {
-          background-color: var(--color-cool-2);
-          color: var(--color-light-2);
-          border-color: var(--color-warm-1);
+          // background-color: var(--color-cool-2);
+          // color: var(--color-light-2);
+          // border-color: var(--color-warm-1);
           &:hover {
-            border-color: var(--color-warm-1);
-            background-color: var(--color-cool-2);
+            // border-color: var(--color-warm-1);
+            // background-color: var(--color-cool-2);
           }
         }
       }

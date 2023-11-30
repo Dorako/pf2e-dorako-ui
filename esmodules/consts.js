@@ -24,15 +24,16 @@ export const premiumModuleSelector = ".pf2e-yom, .pf2e-ii, .pf2e-woii, .seasonof
 /* ----------------------------------------- */
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["EffectsPanel", "SceneDarknessAdjuster"];
-export const moduleApps = ["ExtendedSettingsConfig","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
+export const moduleApps = ["HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */
 /* Window apps                               */
 /* ----------------------------------------- */
 export const systemSheets = ["CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPF2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet", "KingdomSheetPF2e"
+export const moduleWindowApps = ["ExtendedSettingsConfig"];
 export const limitedScopeApplications = ["KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "HazardSheetPF2e","VehicleSheetPF2e", "HUD"];
-
+export const unlimitedScopeApplications = ["PlaylistDirectory"];
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
