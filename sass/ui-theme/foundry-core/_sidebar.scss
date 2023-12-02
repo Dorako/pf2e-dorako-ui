@@ -105,6 +105,11 @@
   //   }
   // }
 
+  section.chat-sidebar .jump-to-bottom > a {
+    background: black;
+    z-index: 1;
+  }
+
   // &#sidebar {
   //   border: 1px solid var(--app-border-color);
 

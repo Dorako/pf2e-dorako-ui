@@ -12,6 +12,7 @@
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill,
@@ -52,8 +53,8 @@
   &.actor.sheet[data-theme-color="red"],
   &.actor.sheet[data-theme-color="green"],
   &.actor.sheet[data-theme-color="blue"],
-  &.actor-sheet[data-theme-color="purple"],
-  &.actor-sheet[data-theme-color="black"] {
+  &.actor.sheet[data-theme-color="purple"],
+  &.actor.sheet[data-theme-color="black"] {
     .inventory .item-summary {
       background: color-mix(in srgb, var(--theme-color) 25%, transparent);
     }
@@ -280,11 +281,11 @@
     background-attachment: local !important;
   }
 
+  &:not([data-theme-color]).sheet.actor.window-app.character .window-header,
+  &:not([data-theme-color]).sheet.actor.window-app.vehicle .window-header,
   &[data-theme-color="red"].sheet.actor.window-app.vehicle .window-header,
   &[data-theme-color="red"].sheet.actor.window-app.character .window-header {
     background: #5a0c02;
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
   }
 
   &[data-theme-color="green"].sheet.actor.window-app.vehicle .window-header,
@@ -319,6 +320,7 @@
     color: var(--accent-color);
   }
 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list input,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
     // --text-dark: var(--color-light-1);
@@ -411,6 +413,7 @@
     border-radius: 2px;
   }
 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
     @include f2-input;
@@ -493,11 +496,14 @@
     // Do system PR to fix this constant
   }
 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier {
+    --primary: var(--accent-color);
+  }
+
   //prettier-ignore
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill .button-group h6:hover,
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill .button-group h6:hover,
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill .button-group h6:hover {
-    --primary: var(--color-warm-2);
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover{
+    --primary: var(--accent-color-light);
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,

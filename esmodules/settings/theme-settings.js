@@ -119,7 +119,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           crb: "pf2e-dorako-ui.text.crb",
           foundry2: "pf2e-dorako-ui.text.foundry2",
           bg3: "pf2e-dorako-ui.text.bg3",
-          // discord: "pf2e-dorako-ui.text.discord",
+          discord: "pf2e-dorako-ui.text.discord",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},

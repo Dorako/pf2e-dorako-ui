@@ -1,3 +1,9 @@
+# 3.1.14
+
+- (Maintenance) Kept up to date with system styling for PC sheets.
+- (Maintenance) Updated minimum required versions to be identical to Dorako UX. Running anything besides newest-everything is always unsupported.
+- (New) New Discord chat message theme.
+
 # 3.1.13
 
 - (Refinement) Bunch of tweaks, including tweaks to crb-styled chat message headers.

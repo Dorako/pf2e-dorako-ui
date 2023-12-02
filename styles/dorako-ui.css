@@ -4908,7 +4908,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   font-size: var(--font-size-12);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button {
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown) {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -4926,7 +4926,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-shadow: var(--app-text-shadow);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button:not(.disabled, :disabled):hover,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.disabled, :disabled):hover {
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):not(.disabled, :disabled):hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border: var(--app-border-style);
@@ -4934,9 +4934,9 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--box-shadow);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.view, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.selected, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.active,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.view,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.selected,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.active {
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).view,
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).selected,
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).active {
   background: var(--button-hover-background-color);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -4945,22 +4945,25 @@ html .xdy-pf2e-workbench-rarity-unique {
   font-weight: unset;
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.empty, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button:disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.empty,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.disabled,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:disabled {
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty,
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).disabled,
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):disabled {
   --button-background-color: var(--button-disabled-background-color);
   --button-border-color: var(--button-disabled-border-color);
   --button-hover-background-color: var(--button-disabled-background-color);
   --button-text-color: var(--color-light-5);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited] a.button.bright,
-[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button.bright {
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).bright {
   --button-background-color: var(--accent-color);
   --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--color-cool-5);
   --button-hover-background-color: var(--accent-color-light);
   --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
+}
+[data-dorako-ui-theme][data-dorako-ui-scope=unlimited] .prosemirror menu .pm-dropdown:hover i {
+  color: black;
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button {
   background: var(--app-background);
@@ -7204,6 +7207,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-top-left-radius: unset;
   border-bottom-right-radius: unset;
 }
+[data-dorako-ui-scope=sidebar] section.chat-sidebar .jump-to-bottom > a {
+  background: black;
+  z-index: 1;
+}
 
 /* ----------------------------------------- */
 /* Foundry2                                  */
@@ -9299,7 +9306,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Colorized sidebar                         */
 /* ----------------------------------------- */
-[data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, [data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, [data-dorako-ui-theme].sheet.party [data-tab=overview] .summary, [data-dorako-ui-theme].sheet.party [data-tab=exploration] .activities .member-activity, [data-dorako-ui-theme].sheet.party [data-tab=aftermath] .activities .member-activity, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, [data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, [data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+[data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, [data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, [data-dorako-ui-theme].sheet.party [data-tab=overview] .summary, [data-dorako-ui-theme].sheet.party [data-tab=exploration] .activities .member-activity, [data-dorako-ui-theme].sheet.party [data-tab=aftermath] .activities .member-activity, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, [data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, [data-dorako-ui-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, [data-dorako-ui-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
   border-image-source: var(--ornamentation);
 }
 
@@ -9325,7 +9332,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   fill: none;
 }
 
-[data-dorako-ui-theme].actor.sheet[data-theme-color=red] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=green] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .inventory .item-summary, [data-dorako-ui-theme].actor-sheet[data-theme-color=purple] .inventory .item-summary, [data-dorako-ui-theme].actor-sheet[data-theme-color=black] .inventory .item-summary {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=red] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=green] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=black] .inventory .item-summary {
   background: color-mix(in srgb, var(--theme-color) 25%, transparent);
 }
 [data-dorako-ui-theme].actor.sheet[data-theme-color=red] {
@@ -9497,10 +9504,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background-size: auto 89px, cover !important;
   background-attachment: local !important;
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.character .window-header {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-theme-color]).sheet.actor.window-app.character .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-theme-color]).sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.character .window-header {
   background: #5a0c02;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=green].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=green].sheet.actor.window-app.character .window-header {
   background: #0e2a1a;
@@ -9759,7 +9764,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: 0px 1px 2px black;
   border-radius: 2px;
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -9771,29 +9776,29 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:focus, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:focus {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input:focus, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:focus, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:focus {
   outline: 1px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:disabled {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input:disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input.disabled, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:disabled {
   --input-text-color: var(--color-light-disabled);
   --input-background-color: var(--input-disabled-background-color);
   --input-border-color: var(--input-disabled-border-color);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input.disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input.disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:disabled::placeholder {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input.disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input:disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input.disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input.disabled::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input::placeholder {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input::placeholder, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input::selection, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input::selection {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input::selection, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input::selection, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input[type=checkbox], [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input[type=checkbox] {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input[type=checkbox], [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input[type=checkbox], [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
@@ -10077,8 +10082,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   opacity: unset;
   color: var(--color-light-5);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill .button-group h6:hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill .button-group h6:hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill .button-group h6:hover {
-  --primary: var(--color-warm-2);
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier {
+  --primary: var(--accent-color);
+}
+[data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover {
+  --primary: var(--accent-color-light);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-dorako-ui-theme][data-dorako-ui-scope=limited]:not([data-dorako-ui-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
   border-image: linear-gradient(90deg, transparent, var(--color-warm-2) 20%, transparent) 1;
@@ -11036,6 +11044,93 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 
 /* ----------------------------------------- */
+/* Chat message                              */
+/* ----------------------------------------- */
+[data-dorako-ui-theme=discord].chat-message {
+  background: var(--discord-background-2);
+  --button-background-color: var(--discord-background-2);
+  --button-hover-background-color: #35373b;
+  --app-border-style: 1px solid;
+  --color-text-dark-secondary: rgba(255, 255, 255, 0.66);
+  --button-hover-border-color: rgba(122, 122, 122, 0.66);
+  --button-border-color: rgba(122, 122, 122, 0.33);
+  --button-text-color: var(--discord-text-3);
+  --button-hover-text-color: var(--discord-text-2);
+  --color-level-success: var(--discord-green);
+  --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+}
+[data-dorako-ui-theme=discord].chat-message.whisper {
+  border-color: color-mix(in srgb, var(--discord-background-2) 50%, var(--whisper-bg));
+  background: color-mix(in srgb, var(--discord-background-2) 80%, var(--whisper-bg));
+}
+[data-dorako-ui-theme=discord].chat-message.whisper.blind {
+  border-color: var(--blind-bg);
+  background: color-mix(in srgb, var(--discord-background-2) 80%, var(--blind-bg));
+}
+[data-dorako-ui-theme=discord].chat-message .message-header,
+[data-dorako-ui-theme=discord].chat-message .message-header h4 {
+  color: color-mix(in srgb, var(--player-color) 80%, white 20%) !important;
+  text-shadow: none !important;
+  background: none !important;
+}
+[data-dorako-ui-theme=discord].chat-message .message-content {
+  text-shadow: none;
+}
+[data-dorako-ui-theme=discord].chat-message .dice-roll .dice-formula,
+[data-dorako-ui-theme=discord].chat-message .dice-roll .dice-total {
+  --app-background: rgba(122, 122, 122, 0.33);
+}
+[data-dorako-ui-theme=discord].chat-message .dice-roll .dice-formula button,
+[data-dorako-ui-theme=discord].chat-message .dice-roll .dice-total button {
+  --button-text-color: var(--discord-text-1);
+  --button-hover-text-color: var(--discord-text-1);
+}
+[data-dorako-ui-theme=discord].chat-message .part-total {
+  --app-background: transparent;
+  --app-border-color: var(--color-text-light-6);
+}
+[data-dorako-ui-theme=discord].chat-message .message-buttons button:hover,
+[data-dorako-ui-theme=discord].chat-message .card-buttons button:hover,
+[data-dorako-ui-theme=discord].chat-message .damage-application button:hover {
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+[data-dorako-ui-theme=discord].chat-message button[data-action=shield-block]:hover {
+  --color-cool-2: var(--discord-accent-color);
+  --color-cool-1: var(--accent-color-light);
+}
+
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message {
+  background: #ffffff;
+  --button-background-color: #ffffff;
+  --button-hover-background-color: #ebebed;
+  --app-border-style: 1px solid;
+  --color-text-dark-secondary: rgba(0, 0, 0, 0.66);
+  --button-hover-border-color: rgba(122, 122, 122, 0.66);
+  --button-border-color: rgba(122, 122, 122, 0.33);
+  --button-text-color: #4e5057;
+  --button-hover-text-color: #303237;
+  --color-level-success: var(--discord-green);
+  --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+}
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message.whisper {
+  border-color: var(--whisper-bg);
+  background: color-mix(in srgb, #ffffff 50%, var(--whisper-bg));
+}
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message.whisper.blind {
+  border-color: var(--blind-bg);
+  background: color-mix(in srgb, #ffffff 50%, var(--blind-bg));
+}
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message .message-header h4,
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message .message-header {
+  color: color-mix(in srgb, var(--player-color) 80%, black) !important;
+  text-shadow: none !important;
+  background: none !important;
+}
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message .message-content {
+  text-shadow: none;
+}
+
+/* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-app-theme=discord] {
@@ -11047,6 +11142,18 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-border-color: var(--discord-background-1);
   --app-border-style: 1px solid;
   --button-background-color: var(--discord-background-3);
+}
+
+[data-dorako-ui-theme=discord][data-color-scheme=light] .damage {
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-border-physical: #939292;
+  --color-text-physical: black;
+}
+
+[data-dorako-ui-theme=discord][data-color-scheme=dark] .damage {
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-border-physical: #939292;
+  --color-text-physical: #bab9b9;
 }
 
 :root {

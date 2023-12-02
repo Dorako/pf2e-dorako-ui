@@ -163,6 +163,14 @@ for (const application of ["Application", ...systemSheets]) {
     bg3Button.click((ev) => {
       html[0].dataset.dorakoUiTheme = "bg3";
     });
+    let discordButton = $(
+      `<a class="header-button discord-toggle" alt="Toggle Discord" data-tooltip="Toggle Discord" data-tooltip-direction="UP">
+        <i class="fa-fw fas fa-d"></i>
+    </a>`
+    );
+    discordButton.click((ev) => {
+      html[0].dataset.dorakoUiTheme = "discord";
+    });
     let noThemeButton = $(
       `<a class="header-button no-theme-toggle" alt="No theme" data-tooltip="No theme" data-tooltip-direction="UP">
         <i class="fa-fw fas fa-eraser"></i>
@@ -176,12 +184,14 @@ for (const application of ["Application", ...systemSheets]) {
     html.closest(".app").find(".crb-toggle").remove();
     html.closest(".app").find(".foundry2-toggle").remove();
     html.closest(".app").find(".bg3-toggle").remove();
+    html.closest(".app").find(".discord-toggle").remove();
     html.closest(".app").find(".no-theme-toggle").remove();
     let titleElement = html.closest(".app").find(".window-title");
     colorSchemeButton.insertAfter(titleElement);
     crbButton.insertAfter(titleElement);
     foundry2Button.insertAfter(titleElement);
     bg3Button.insertAfter(titleElement);
+    discordButton.insertAfter(titleElement);
     noThemeButton.insertAfter(titleElement);
   });
 }

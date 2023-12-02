@@ -3,6 +3,7 @@
 /* ----------------------------------------- */
 :root {
   --discord-border-color: transparent;
+
   --discord-background-1: #383a3f;
   --discord-background-2: #313338;
   --discord-background-3: #2b2d31;
@@ -364,6 +365,100 @@
 }
 
 /* ----------------------------------------- */
+/* Chat message                              */
+/* ----------------------------------------- */
+[data-dorako-ui-theme="discord"].chat-message {
+  background: var(--discord-background-2);
+  --button-background-color: var(--discord-background-2);
+  --button-hover-background-color: #35373b;
+  --app-border-style: 1px solid;
+  --color-text-dark-secondary: rgba(255, 255, 255, 0.66);
+  --button-hover-border-color: rgba(122, 122, 122, 0.66);
+  --button-border-color: rgba(122, 122, 122, 0.33);
+  --button-text-color: var(--discord-text-3);
+  --button-hover-text-color: var(--discord-text-2);
+  --color-level-success: var(--discord-green);
+  --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+
+  &.whisper {
+    border-color: color-mix(in srgb, var(--discord-background-2) 50%, var(--whisper-bg));
+    background: color-mix(in srgb, var(--discord-background-2) 80%, var(--whisper-bg));
+    &.blind {
+      border-color: var(--blind-bg);
+      background: color-mix(in srgb, var(--discord-background-2) 80%, var(--blind-bg));
+    }
+  }
+
+  .message-header,
+  .message-header h4 {
+    color: color-mix(in srgb, var(--player-color) 80%, white 20%) !important;
+    text-shadow: none !important;
+    background: none !important;
+  }
+
+  .message-content {
+    text-shadow: none;
+  }
+
+  .dice-roll .dice-formula,
+  .dice-roll .dice-total {
+    --app-background: rgba(122, 122, 122, 0.33);
+    button {
+      --button-text-color: var(--discord-text-1);
+      --button-hover-text-color: var(--discord-text-1);
+    }
+  }
+  .part-total {
+    --app-background: transparent;
+    --app-border-color: var(--color-text-light-6);
+  }
+
+  .message-buttons button:hover,
+  .card-buttons button:hover,
+  .damage-application button:hover {
+    --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  button[data-action="shield-block"]:hover {
+    --color-cool-2: var(--discord-accent-color);
+    --color-cool-1: var(--accent-color-light);
+  }
+}
+
+[data-dorako-ui-theme="discord"][data-color-scheme="light"].chat-message {
+  background: #ffffff;
+  --button-background-color: #ffffff;
+  --button-hover-background-color: #ebebed;
+  --app-border-style: 1px solid;
+  --color-text-dark-secondary: rgba(0, 0, 0, 0.66);
+  --button-hover-border-color: rgba(122, 122, 122, 0.66);
+  --button-border-color: rgba(122, 122, 122, 0.33);
+  --button-text-color: #4e5057;
+  --button-hover-text-color: #303237;
+  --color-level-success: var(--discord-green);
+  --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+
+  &.whisper {
+    border-color: var(--whisper-bg);
+    background: color-mix(in srgb, #ffffff 50%, var(--whisper-bg));
+    &.blind {
+      border-color: var(--blind-bg);
+      background: color-mix(in srgb, #ffffff 50%, var(--blind-bg));
+    }
+  }
+
+  .message-header h4,
+  .message-header {
+    color: color-mix(in srgb, var(--player-color) 80%, black) !important;
+    text-shadow: none !important;
+    background: none !important;
+  }
+  .message-content {
+    text-shadow: none;
+  }
+}
+
+/* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-app-theme="discord"] {
@@ -375,4 +470,16 @@
     --app-border-style: 1px solid;
     --button-background-color: var(--discord-background-3);
   }
+}
+
+[data-dorako-ui-theme="discord"][data-color-scheme="light"] .damage {
+  --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
+  --color-border-physical: #939292; // adjusted
+  --color-text-physical: black; // adjusted
+}
+
+[data-dorako-ui-theme="discord"][data-color-scheme="dark"] .damage {
+  --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
+  --color-border-physical: #939292; // adjusted
+  --color-text-physical: #bab9b9; // adjusted
 }
