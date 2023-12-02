@@ -74,7 +74,9 @@
   --color-light-3: var(--discord-text-3);
   --color-light-4: var(--discord-text-2);
   --color-light-5: var(--discord-text-1);
-  --inline-text-color: black;
+  --inline-bg: color-mix(in srgb, var(--accent-color) 15%, transparent);
+  --inline-text-color: var(--accent-color);
+  --inline-icon-color: var(--accent-color);
 
   &.sheet.pf2e.actor.npc.app {
     --section-background: var(--window-app-background);
@@ -194,11 +196,15 @@
   --app-border-style: 0px solid;
   --app-text-shadow: none;
   /* Inline variables */
-  --inline-bg: var(--fieldset-background-color);
-  --inline-border-color: var(--discord-attention);
-  --inline-text-color: var(--discord-text-2);
-  --inline-icon-color: var(--discord-attention);
+  // --inline-bg: var(--fieldset-background-color);
+  // --inline-border-color: var(--discord-attention);
+  // --inline-text-color: var(--discord-text-2);
+  // --inline-icon-color: var(--discord-attention);
   --inline-box-shadow: none;
+  --inline-bg: color-mix(in srgb, var(--accent-color) 25%, transparent);
+  --inline-border-color: transparent;
+  --inline-text-color: #cacdf7;
+  --inline-icon-color: #cacdf7;
   /* Input variables */
   --input-border-color: transparent;
   --input-disabled-background-color: #494b51;
@@ -389,6 +395,15 @@
     }
   }
 
+  .message-header .header-meta.rolltype {
+    &.blind {
+      color: var(--blind-bg);
+    }
+    &.whisper {
+      color: var(--whisper-bg);
+    }
+  }
+
   .message-header,
   .message-header h4 {
     color: color-mix(in srgb, var(--player-color) 80%, white 20%) !important;
@@ -413,6 +428,7 @@
     --app-border-color: var(--color-text-light-6);
   }
 
+  .chat-card button:hover,
   .message-buttons button:hover,
   .card-buttons button:hover,
   .damage-application button:hover {
@@ -422,6 +438,21 @@
   button[data-action="shield-block"]:hover {
     --color-cool-2: var(--discord-accent-color);
     --color-cool-1: var(--accent-color-light);
+  }
+
+  .message-timestamp,
+  .message-header .header-meta {
+    background: none !important;
+    border: none !important;
+    color: #959ba3;
+    text-shadow: none;
+    padding: 0px;
+  }
+
+  .tags .tag.tag_transparent,
+  .tags .tag option.tag_transparent {
+    background-color: color-mix(in srgb, var(--player-color) 20%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
   }
 }
 
@@ -437,6 +468,11 @@
   --button-hover-text-color: #303237;
   --color-level-success: var(--discord-green);
   --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+
+  .message-timestamp,
+  .message-header .header-meta {
+    color: #313338;
+  }
 
   &.whisper {
     border-color: var(--whisper-bg);
@@ -470,6 +506,11 @@
     --app-border-style: 1px solid;
     --button-background-color: var(--discord-background-3);
   }
+}
+
+[data-chat-app-theme="discord"] #dorako-rt-buttons button {
+  --button-toggle-border-color: color-mix(in srgb, var(--discord-green) 75%, white);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-attention) 50%, white);
 }
 
 [data-dorako-ui-theme="discord"][data-color-scheme="light"] .damage {

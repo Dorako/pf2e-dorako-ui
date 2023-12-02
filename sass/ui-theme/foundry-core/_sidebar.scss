@@ -34,6 +34,11 @@
   padding-bottom: var(--sidebar-margin);
 }
 
+[data-chat-app-theme] section.chat-sidebar .jump-to-bottom > a {
+  background: black;
+  z-index: 1;
+}
+
 [data-dorako-ui-scope="sidebar"] {
   .tab {
     &:not([data-tab="chat"]) button {
@@ -104,11 +109,6 @@
   //     }
   //   }
   // }
-
-  section.chat-sidebar .jump-to-bottom > a {
-    background: black;
-    z-index: 1;
-  }
 
   // &#sidebar {
   //   border: 1px solid var(--app-border-color);

@@ -550,7 +550,7 @@
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 
-  &[data-color-scheme="blue"] {
+  &[data-theme-variant="blue"] {
     --bg3-border-inner: #a16a37;
     --bg3-border-outer: #4a2e18;
     --bg3-border-internal: #304248;
@@ -701,7 +701,6 @@
 /* ITT                                       */
 /* ----------------------------------------- */
 [data-dorako-ui-theme="bg3"]#pf2e-token-hud {
-  --outer-padding: 0px;
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
   --bg3-border-internal: #304248;
@@ -794,7 +793,6 @@
     width: auto;
   }
   .sidebar {
-    margin-left: 10px;
     box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   }
   .distance.free {

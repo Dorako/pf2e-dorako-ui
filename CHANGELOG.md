@@ -1,3 +1,9 @@
+# 3.1.15
+
+- (Fix) Excluded Party Overview module from theming.
+- (Fix) Ecluded KingdomBuilder sheet from theming.
+- (Fix) Fixed an issue where ITT would collapse before you could mouse over it, if it appeared on the left, with the BG3 app theme specifically.
+
 # 3.1.14
 
 - (Maintenance) Kept up to date with system styling for PC sheets.

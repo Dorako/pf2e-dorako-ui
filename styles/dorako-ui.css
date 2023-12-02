@@ -2702,6 +2702,7 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   --color-rank-3: #cf931d;
   --color-rank-4: red;
   --color-disabled: var(--color-light-disabled);
+  padding-bottom: 0px;
 }
 [data-dorako-ui-theme]#pf2e-token-hud .sidebar .sidebar-header input {
   background: var(--input-background-color);
@@ -7037,6 +7038,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   padding-bottom: var(--sidebar-margin);
 }
 
+[data-chat-app-theme] section.chat-sidebar .jump-to-bottom > a {
+  background: black;
+  z-index: 1;
+}
+
 [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button {
   background: var(--app-background);
   border: var(--app-border-style);
@@ -7206,10 +7212,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-bottom-left-radius: unset;
   border-top-left-radius: unset;
   border-bottom-right-radius: unset;
-}
-[data-dorako-ui-scope=sidebar] section.chat-sidebar .jump-to-bottom > a {
-  background: black;
-  z-index: 1;
 }
 
 /* ----------------------------------------- */
@@ -10801,7 +10803,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-light-3: var(--discord-text-3);
   --color-light-4: var(--discord-text-2);
   --color-light-5: var(--discord-text-1);
-  --inline-text-color: black;
+  --inline-bg: color-mix(in srgb, var(--accent-color) 15%, transparent);
+  --inline-text-color: var(--accent-color);
+  --inline-icon-color: var(--accent-color);
 }
 [data-dorako-ui-theme=discord][data-dorako-ui-scope=limited][data-color-scheme=light].sheet.pf2e.actor.npc.app,
 [data-dorako-ui-theme=discord][data-color-scheme=light].sheet.pf2e.actor.npc.app {
@@ -10905,11 +10909,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --app-border-style: 0px solid;
   --app-text-shadow: none;
   /* Inline variables */
-  --inline-bg: var(--fieldset-background-color);
-  --inline-border-color: var(--discord-attention);
-  --inline-text-color: var(--discord-text-2);
-  --inline-icon-color: var(--discord-attention);
   --inline-box-shadow: none;
+  --inline-bg: color-mix(in srgb, var(--accent-color) 25%, transparent);
+  --inline-border-color: transparent;
+  --inline-text-color: #cacdf7;
+  --inline-icon-color: #cacdf7;
   /* Input variables */
   --input-border-color: transparent;
   --input-disabled-background-color: #494b51;
@@ -11067,6 +11071,12 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--blind-bg);
   background: color-mix(in srgb, var(--discord-background-2) 80%, var(--blind-bg));
 }
+[data-dorako-ui-theme=discord].chat-message .message-header .header-meta.rolltype.blind {
+  color: var(--blind-bg);
+}
+[data-dorako-ui-theme=discord].chat-message .message-header .header-meta.rolltype.whisper {
+  color: var(--whisper-bg);
+}
 [data-dorako-ui-theme=discord].chat-message .message-header,
 [data-dorako-ui-theme=discord].chat-message .message-header h4 {
   color: color-mix(in srgb, var(--player-color) 80%, white 20%) !important;
@@ -11089,6 +11099,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --app-background: transparent;
   --app-border-color: var(--color-text-light-6);
 }
+[data-dorako-ui-theme=discord].chat-message .chat-card button:hover,
 [data-dorako-ui-theme=discord].chat-message .message-buttons button:hover,
 [data-dorako-ui-theme=discord].chat-message .card-buttons button:hover,
 [data-dorako-ui-theme=discord].chat-message .damage-application button:hover {
@@ -11097,6 +11108,19 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-theme=discord].chat-message button[data-action=shield-block]:hover {
   --color-cool-2: var(--discord-accent-color);
   --color-cool-1: var(--accent-color-light);
+}
+[data-dorako-ui-theme=discord].chat-message .message-timestamp,
+[data-dorako-ui-theme=discord].chat-message .message-header .header-meta {
+  background: none !important;
+  border: none !important;
+  color: #959ba3;
+  text-shadow: none;
+  padding: 0px;
+}
+[data-dorako-ui-theme=discord].chat-message .tags .tag.tag_transparent,
+[data-dorako-ui-theme=discord].chat-message .tags .tag option.tag_transparent {
+  background-color: color-mix(in srgb, var(--player-color) 20%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
 }
 
 [data-dorako-ui-theme=discord][data-color-scheme=light].chat-message {
@@ -11111,6 +11135,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: #303237;
   --color-level-success: var(--discord-green);
   --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+}
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message .message-timestamp,
+[data-dorako-ui-theme=discord][data-color-scheme=light].chat-message .message-header .header-meta {
+  color: #313338;
 }
 [data-dorako-ui-theme=discord][data-color-scheme=light].chat-message.whisper {
   border-color: var(--whisper-bg);
@@ -11142,6 +11170,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-border-color: var(--discord-background-1);
   --app-border-style: 1px solid;
   --button-background-color: var(--discord-background-3);
+}
+
+[data-chat-app-theme=discord] #dorako-rt-buttons button {
+  --button-toggle-border-color: color-mix(in srgb, var(--discord-green) 75%, white);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-attention) 50%, white);
 }
 
 [data-dorako-ui-theme=discord][data-color-scheme=light] .damage {
@@ -11832,7 +11865,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 }
-[data-dorako-ui-theme=bg3].message.chat-message[data-color-scheme=blue] {
+[data-dorako-ui-theme=bg3].message.chat-message[data-theme-variant=blue] {
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
   --bg3-border-internal: #304248;
@@ -11852,7 +11885,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   );
   background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%) border-box, var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
 }
-[data-dorako-ui-theme=bg3].message.chat-message[data-color-scheme=blue] .card-content hr {
+[data-dorako-ui-theme=bg3].message.chat-message[data-theme-variant=blue] .card-content hr {
   border-color: var(--bg3-border-outer);
   border: solid transparent;
   border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
@@ -11969,7 +12002,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ITT                                       */
 /* ----------------------------------------- */
 [data-dorako-ui-theme=bg3]#pf2e-token-hud {
-  --outer-padding: 0px;
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
   --bg3-border-internal: #304248;
@@ -12049,7 +12081,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   width: auto;
 }
 [data-dorako-ui-theme=bg3]#pf2e-token-hud .sidebar {
-  margin-left: 10px;
   box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
 }
 [data-dorako-ui-theme=bg3]#pf2e-token-hud .distance.free {
