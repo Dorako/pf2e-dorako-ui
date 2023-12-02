@@ -2758,7 +2758,6 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   outline: 1px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
-  --input-height: 14px;
   padding: 1px;
 }
 [data-dorako-ui-theme]#pf2e-token-hud .sidebar .sidebar-content .details input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme]#pf2e-token-hud .sidebar .sidebar-content .details input:focus {
@@ -2954,7 +2953,7 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   filter: invert(1);
   mix-blend-mode: plus-lighter;
 }
-[data-dorako-ui-theme]#pf2e-token-hud .distance.free {
+[data-dorako-ui-theme]#pf2e-token-hud .free {
   background: unset;
   background: var(--app-background);
   border: var(--app-border-style);
@@ -2964,6 +2963,14 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   box-shadow: var(--box-shadow);
   color: var(--color-light-3);
   backdrop-filter: blur(4px);
+}
+[data-dorako-ui-theme]#pf2e-token-hud .free.status {
+  bottom: 0px;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  border-top: unset;
+}
+[data-dorako-ui-theme]#pf2e-token-hud .free.distance {
   border-bottom-left-radius: unset;
   border-bottom-right-radius: unset;
   border-bottom: unset;
@@ -3450,160 +3457,13 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
 /* ----------------------------------------- */
 /* Polyglot                                  */
 /* ----------------------------------------- */
-.dorako-ui .select2-dropdown.polyglot-language {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  backdrop-filter: blur(5px);
-}
-.dorako-ui .select2-dropdown.polyglot-language ::-webkit-scrollbar-thumb {
-  background: var(--tertiary);
-  border: 1px solid var(--gold-brown);
-}
-.dorako-ui .select2-container--default .select2-search--dropdown .select2-search__field {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  background: var(--glass-bg-light);
-}
-.dorako-ui .select2-container--default .select2-search--dropdown .select2-search__field:focus, .dorako-ui .select2-container--default .select2-search--dropdown .select2-search__field:active, .dorako-ui .select2-container--default .select2-search--dropdown .select2-search__field:hover {
-  background: var(--secondary-dark);
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui .select2-container--default .select2-results > .select2-results__options {
-  color: var(--color-text-light-heading);
-  text-shadow: 0px 0px 3px black;
-  padding-top: 1px;
-}
-.dorako-ui .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-  background: var(--secondary-light);
-  box-shadow: 0px 0px 0px 1px var(--tertiary);
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui .select2-container--default .select2-results__option--selected {
-  background: var(--primary-light);
-  box-shadow: 0px 0px 0px 1px var(--tertiary);
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered,
-.dorako-ui .select2-container--default .select2-selection--single .select2-selection__rendered {
-  color: var(--color-text-light-heading);
-}
-.dorako-ui .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered:focus, .dorako-ui .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered:active, .dorako-ui .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered:hover,
-.dorako-ui .select2-container--default .select2-selection--single .select2-selection__rendered:focus,
-.dorako-ui .select2-container--default .select2-selection--single .select2-selection__rendered:active,
-.dorako-ui .select2-container--default .select2-selection--single .select2-selection__rendered:hover {
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border-color: var(--color-text-light-heading) transparent transparent transparent;
-}
-.dorako-ui .polyglot-user-list div {
-  box-shadow: 0px 0px 0px 1px var(--tertiary);
-}
-.dorako-ui #polyglot {
-  flex-basis: 20px;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-.dorako-ui #polyglot label {
+[data-chat-app-theme] #polyglot label {
   display: none;
 }
-.dorako-ui #polyglot.polyglot-lang-select > span.select2-container {
+[data-chat-app-theme] .polyglot-lang-select input {
   margin: unset;
 }
-.dorako-ui #polyglot .select2-selection {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
-  cursor: pointer;
-  background: var(--glass-bg-light);
-  text-shadow: 0px 0px 3px black;
-}
-.dorako-ui #polyglot .select2-selection:focus, .dorako-ui #polyglot .select2-selection:active, .dorako-ui #polyglot .select2-selection:hover {
-  background: var(--secondary-dark);
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui #polyglot select {
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  background: var(--glass-bg-light);
-  color: var(--color-text-light-heading);
-  text-shadow: 0px 0px 3px black;
-  appearance: none;
-  margin: unset;
-  padding-left: 7px;
-  flex: 1 1 70px;
-}
-.dorako-ui #polyglot select option,
-.dorako-ui #polyglot select optgroup {
-  background-color: rgb(37, 37, 37);
-  color: var(--color-text-light-highlight);
-}
-.dorako-ui #polyglot.polyglot-lang-select input {
-  margin: unset;
-  accent-color: var(--color-checkbox-checked);
-  accent-color: var(--secondary-dark);
-}
-.dorako-ui #polyglot.polyglot-lang-select input:checked {
-  accent-color: var(--secondary-light);
-}
-.dorako-ui #polyglot .polyglot-user-list {
-  outline: 1px solid var(--gold-brown);
-  background: var(--gold-brown);
-  margin: 3px;
-  gap: 1px;
-  border-radius: var(--border-radius);
-  flex-grow: 1;
-  flex-direction: row;
-  flex: 1 0 20px;
-  max-width: unset;
-}
-.dorako-ui #polyglot .polyglot-user-list:empty {
-  outline: unset;
-  flex: unset;
-  margin-right: -5px;
-}
-.dorako-ui #polyglot .polyglot-user-list div {
-  display: flex;
-  border-radius: unset;
-  width: unset;
-  height: unset;
-  flex: 1 0;
-  width: 10px;
-  border: 1px solid var(--tertiary);
-  margin: unset;
-}
-.dorako-ui #polyglot .polyglot-user-list div:first-child {
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
-}
-.dorako-ui #polyglot .polyglot-user-list div:last-child {
-  border-top-right-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-}
-
-[data-dorako-ui-theme] #polyglot label {
-  display: none;
-}
-[data-dorako-ui-theme] .polyglot-lang-select input {
-  margin: unset;
-  flex: 0 0 var(--input-height);
-  width: var(--input-height);
-  height: var(--input-height);
-}
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection {
   background: var(--input-background-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
@@ -3615,40 +3475,40 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme] .polyglot-lang-select span.select2-selection:focus {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection:not(:disabled, .disabled, [type=checkbox]):hover, [data-chat-app-theme] .polyglot-lang-select span.select2-selection:focus {
   outline: 1px solid var(--input-focus-outline-color);
   border: var(--app-border-style);
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection.disabled, [data-dorako-ui-theme] .polyglot-lang-select span.select2-selection:disabled {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection.disabled, [data-chat-app-theme] .polyglot-lang-select span.select2-selection:disabled {
   --input-text-color: var(--color-light-disabled);
   --input-background-color: var(--input-disabled-background-color);
   --input-border-color: var(--input-disabled-border-color);
 }
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection.disabled::placeholder, [data-dorako-ui-theme] .polyglot-lang-select span.select2-selection:disabled::placeholder {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection.disabled::placeholder, [data-chat-app-theme] .polyglot-lang-select span.select2-selection:disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
 }
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection::placeholder {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection::selection {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection::selection {
   color: var(--input-text-color);
   background: var(--input-focus-outline-color);
 }
-[data-dorako-ui-theme] .polyglot-lang-select span.select2-selection[type=checkbox] {
+[data-chat-app-theme] .polyglot-lang-select span.select2-selection[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-theme] .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+[data-chat-app-theme] .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--input-text-color);
 }
-[data-dorako-ui-theme] .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+[data-chat-app-theme] .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-color: var(--input-text-color) transparent transparent transparent;
 }
-[data-dorako-ui-theme] .polyglot-user-list div {
+[data-chat-app-theme] .polyglot-user-list div {
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
   width: 14px;
   height: 14px;
@@ -4816,8 +4676,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   --adjusted-lower: #cc3311;
 }
 
+[data-chat-app-theme] #chat-log ~ *,
 [data-dorako-ui-theme] {
-  --input-height: 24px;
   --input-background-color: var(--color-cool-4);
   --input-border-color: transparent;
   --input-border-color: var(--color-cool-3);
@@ -4832,6 +4692,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
     0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 05px var(--color-warm-1-40);
 }
+[data-chat-app-theme] #chat-log ~ * ::-webkit-scrollbar-thumb,
 [data-dorako-ui-theme] ::-webkit-scrollbar-thumb {
   outline: none;
   border-radius: 3px;
@@ -4839,19 +4700,24 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: 1px solid var(--color-scrollbar-border);
   transition: outline 0.15s;
 }
+[data-chat-app-theme] #chat-log ~ * ::-webkit-scrollbar-thumb:hover,
 [data-dorako-ui-theme] ::-webkit-scrollbar-thumb:hover {
   border: 1px solid var(--color-scrollbar);
   background: var(--color-scrollbar-hover);
 }
+[data-chat-app-theme] #chat-log ~ * ::-webkit-scrollbar-track,
 [data-dorako-ui-theme] ::-webkit-scrollbar-track {
   box-shadow: 0 0 1px var(--color-cool-3) inset;
   box-shadow: unset;
   border-radius: 4px;
 }
+[data-chat-app-theme] #chat-log ~ * input[type=checkbox]:checked,
+[data-chat-app-theme] #chat-log ~ * input[type=radio]:checked,
 [data-dorako-ui-theme] input[type=checkbox]:checked,
 [data-dorako-ui-theme] input[type=radio]:checked {
   accent-color: var(--accent-color);
 }
+[data-chat-app-theme] #chat-log ~ * code,
 [data-dorako-ui-theme] code {
   background: var(--color-cool-4);
   border: 1px solid var(--color-cool-3);
@@ -4859,6 +4725,14 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: 3px;
   padding: 0px 2px;
 }
+[data-chat-app-theme] #chat-log ~ * a.content-link,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]),
+[data-chat-app-theme] #chat-log ~ * a.entity-link,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-action],
+[data-chat-app-theme] #chat-log ~ * span[data-pf2-effect-area],
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]),
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label,
+[data-chat-app-theme] #chat-log ~ * a.inline-roll,
 [data-dorako-ui-theme] a.content-link,
 [data-dorako-ui-theme] [data-pf2-check]:not([data-pf2-traits*=secret]),
 [data-dorako-ui-theme] a.entity-link,
@@ -4872,6 +4746,30 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--inline-text-color) !important;
   box-shadow: var(--inline-box-shadow);
 }
+[data-chat-app-theme] #chat-log ~ * a.content-link::before,
+[data-chat-app-theme] #chat-log ~ * a.content-link i,
+[data-chat-app-theme] #chat-log ~ * a.content-link i.icon,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret])::before,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]) i,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]) i.icon,
+[data-chat-app-theme] #chat-log ~ * a.entity-link::before,
+[data-chat-app-theme] #chat-log ~ * a.entity-link i,
+[data-chat-app-theme] #chat-log ~ * a.entity-link i.icon,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-action]::before,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-action] i,
+[data-chat-app-theme] #chat-log ~ * [data-pf2-action] i.icon,
+[data-chat-app-theme] #chat-log ~ * span[data-pf2-effect-area]::before,
+[data-chat-app-theme] #chat-log ~ * span[data-pf2-effect-area] i,
+[data-chat-app-theme] #chat-log ~ * span[data-pf2-effect-area] i.icon,
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret])::before,
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) i,
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) i.icon,
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label::before,
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label i,
+[data-chat-app-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label i.icon,
+[data-chat-app-theme] #chat-log ~ * a.inline-roll::before,
+[data-chat-app-theme] #chat-log ~ * a.inline-roll i,
+[data-chat-app-theme] #chat-log ~ * a.inline-roll i.icon,
 [data-dorako-ui-theme] a.content-link::before,
 [data-dorako-ui-theme] a.content-link i,
 [data-dorako-ui-theme] a.content-link i.icon,
@@ -4898,19 +4796,24 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-dorako-ui-theme] a.inline-roll i.icon {
   color: var(--inline-icon-color);
 }
+[data-chat-app-theme] #chat-log ~ * [data-pf2-check][data-pf2-traits*=secret],
+[data-chat-app-theme] #chat-log ~ * [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-dorako-ui-theme] [data-pf2-check][data-pf2-traits*=secret],
 [data-dorako-ui-theme] [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
   color: black;
 }
+[data-chat-app-theme] #chat-log ~ * i[data-pf2-repost],
 [data-dorako-ui-theme] i[data-pf2-repost] {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
   cursor: pointer;
   background: unset;
   border-left: unset;
 }
+[data-chat-app-theme] #chat-log ~ * i[data-pf2-repost]:hover::before,
 [data-dorako-ui-theme] i[data-pf2-repost]:hover::before {
   color: var(--color-warm-2);
 }
+[data-chat-app-theme] #chat-log ~ *.pf2e.item.sheet form .sheet-body fieldset.basics,
 [data-dorako-ui-theme].pf2e.item.sheet form .sheet-body fieldset.basics {
   background: none !important;
   border: none !important;
@@ -5315,6 +5218,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   flex: 0 0 27px;
   border: unset;
   text-shadow: 0px 1px 2px black;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 }
 [data-dorako-ui-theme].window-app .window-content {
   background: unset !important;
@@ -5612,50 +5516,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-hover-background-color: var(--accent-color-light);
   --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: #000000;
-}
-[data-dorako-ui-theme] #chat-form {
-  margin: 0px var(--sidebar-margin);
-}
-[data-dorako-ui-theme] #chat-form textarea {
-  background: var(--input-background-color);
-  border: var(--app-border-style);
-  border-color: var(--input-border-color) !important;
-  color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
-  align-items: center;
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  user-select: text;
-  transition: outline-color 0.5s;
-  height: 100%;
-  border-radius: var(--border-radius);
-}
-[data-dorako-ui-theme] #chat-form textarea:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme] #chat-form textarea:focus {
-  outline: 1px solid var(--input-focus-outline-color);
-  border: var(--app-border-style);
-  border-color: var(--input-border-color);
-  color: var(--input-focus-text-color);
-  box-shadow: var(--box-shadow);
-}
-[data-dorako-ui-theme] #chat-form textarea.disabled, [data-dorako-ui-theme] #chat-form textarea:disabled {
-  --input-text-color: var(--color-light-disabled);
-  --input-background-color: var(--input-disabled-background-color);
-  --input-border-color: var(--input-disabled-border-color);
-}
-[data-dorako-ui-theme] #chat-form textarea.disabled::placeholder, [data-dorako-ui-theme] #chat-form textarea:disabled::placeholder {
-  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
-}
-[data-dorako-ui-theme] #chat-form textarea::placeholder {
-  color: var(--input-placeholder-color);
-}
-[data-dorako-ui-theme] #chat-form textarea::selection {
-  color: var(--input-text-color);
-  background: var(--input-focus-outline-color);
-}
-[data-dorako-ui-theme] #chat-form textarea[type=checkbox] {
-  outline: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
 }
 
 /* ----------------------------------------- */
@@ -6228,8 +6088,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
-  --input-height: var(--font-size-34);
-  --font-size: var(--font-size-34);
 }
 [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=text]:focus, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme].pf2e.item.sheet .sheet-header input[type=number]:focus {
   outline: 1px solid var(--input-focus-outline-color);
@@ -6543,9 +6401,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   --box-shadow: none;
   border-color: var(--button-border-color);
   z-index: 1;
-}
-[data-dorako-ui-theme].pf2e.item.sheet form .tab.active.rules select {
-  height: var(--input-height);
 }
 [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input input, [data-dorako-ui-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input tags {
   border-left: unset;
@@ -7172,32 +7027,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* Sidebar                                   */
 /* ----------------------------------------- */
 #chat,
-[data-dorako-ui-theme] .chat-sidebar {
+[data-chat-app-theme] .chat-sidebar {
   --sidebar-gap: 4px;
   --sidebar-margin: 6px;
   gap: var(--sidebar-gap);
   padding-bottom: var(--sidebar-margin);
 }
 
-[data-dorako-ui-scope=sidebar] #sidebar-tabs {
-  border: unset;
-}
-[data-dorako-ui-scope=sidebar] #sidebar-tabs > .item:hover {
-  color: var(--color-light-2);
-}
-[data-dorako-ui-scope=sidebar] #sidebar-tabs > .item.active {
-  background: var(--app-background);
-  border: var(--app-border-style);
-  border-color: var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--color-light-3);
-  background-color: var(--color-warm-2);
-  border: var(--window-app-border-style);
-  border-color: var(--color-warm-1);
-  color: var(--color-light-2);
-}
 [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button {
   background: var(--app-background);
   border: var(--app-border-style);
@@ -7385,6 +7221,231 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--icon-border-color);
 }
 
+/* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme] #chat-log {
+  margin-left: calc(var(--sidebar-margin) - 3px);
+}
+[data-chat-app-theme] #chat-log::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: var(--color-scrollbar);
+  border: 1px solid var(--color-scrollbar-border);
+  transition: outline 0.15s;
+}
+[data-chat-app-theme] #chat-log::-webkit-scrollbar-thumb:hover {
+  border: 1px solid var(--color-scrollbar);
+  background: var(--color-scrollbar-hover);
+}
+[data-chat-app-theme] #chat-log::-webkit-scrollbar-track {
+  box-shadow: none;
+  box-shadow: unset;
+  border-radius: 4px;
+}
+
+[data-chat-app-theme] #chat-log ~ * input[type=checkbox]:checked,
+[data-chat-app-theme] #chat-log ~ * input[type=radio]:checked {
+  accent-color: var(--accent-color);
+}
+[data-chat-app-theme] #chat-log ~ * button {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+}
+[data-chat-app-theme] #chat-log ~ * button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-app-theme] #chat-log ~ * button.view, [data-chat-app-theme] #chat-log ~ * button.selected, [data-chat-app-theme] #chat-log ~ * button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+  font-weight: unset;
+}
+[data-chat-app-theme] #chat-log ~ * button.empty, [data-chat-app-theme] #chat-log ~ * button.disabled, [data-chat-app-theme] #chat-log ~ * button:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
+}
+[data-chat-app-theme] #chat-log ~ * button.bright {
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: #000000;
+}
+[data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  --button-background-color: var(--button-toggle-background);
+  --button-border-color: var(--button-toggle-border-color);
+  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --button-hover-background-color: var(--button-toggle-hover-background);
+  --button-hover-border-color: var(--button-toggle-hover-border-color);
+}
+[data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button.view, [data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button.selected, [data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+  font-weight: unset;
+}
+[data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button.empty, [data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button.disabled, [data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
+}
+[data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button.bright {
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: #000000;
+}
+[data-chat-app-theme] #chat-log ~ * #dorako-rt-buttons button:disabled {
+  --button-background-color: color-mix(in srgb, var(--button-background-color) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background-color: color-mix(in srgb, var(--button-hover-background-color) 50%, transparent 50%);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form {
+  margin: 0px var(--sidebar-margin);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea {
+  background: var(--input-background-color);
+  border: var(--app-border-style);
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea:not(:disabled, .disabled, [type=checkbox]):hover, [data-chat-app-theme] #chat-log ~ *#chat-form textarea:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-style);
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea.disabled, [data-chat-app-theme] #chat-log ~ *#chat-form textarea:disabled {
+  --input-text-color: var(--color-light-disabled);
+  --input-background-color: var(--input-disabled-background-color);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea.disabled::placeholder, [data-chat-app-theme] #chat-log ~ *#chat-form textarea:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea::selection {
+  color: var(--input-text-color);
+  background: var(--input-focus-outline-color);
+}
+[data-chat-app-theme] #chat-log ~ *#chat-form textarea[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+
+[data-chat-app-theme] #sidebar-tabs {
+  border: unset;
+}
+[data-chat-app-theme] #sidebar-tabs > .item.active {
+  background: var(--app-background);
+  border: var(--app-border-style);
+  border-color: var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--color-light-3);
+  background: var(--button-background-color);
+  border: var(--app-border-style);
+  border-color: var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  --button-focus-outline-color: transparent;
+}
+[data-chat-app-theme] #sidebar-tabs > .item.active:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-style);
+  border-color: var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-app-theme] #sidebar-tabs > .item.active.view, [data-chat-app-theme] #sidebar-tabs > .item.active.selected, [data-chat-app-theme] #sidebar-tabs > .item.active.active {
+  background: var(--button-hover-background-color);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+  font-weight: unset;
+}
+[data-chat-app-theme] #sidebar-tabs > .item.active.empty, [data-chat-app-theme] #sidebar-tabs > .item.active.disabled, [data-chat-app-theme] #sidebar-tabs > .item.active:disabled {
+  --button-background-color: var(--button-disabled-background-color);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-hover-background-color: var(--button-disabled-background-color);
+  --button-text-color: var(--color-light-5);
+}
+[data-chat-app-theme] #sidebar-tabs > .item.active.bright {
+  --button-background-color: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--color-cool-5);
+  --button-hover-background-color: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: #000000;
+}
+
 [data-dorako-ui-theme].filepicker .display-modes a {
   background: var(--app-background);
   border: var(--app-border-style);
@@ -7548,12 +7609,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme].sheet.hazard form > header .title {
   align-items: center;
-  --input-height: 32px;
-  --font-size: 32px;
-}
-[data-dorako-ui-theme].sheet.hazard form > header .title .name {
-  --input-height: 32px;
-  --font-size: 32px;
 }
 [data-dorako-ui-theme].sheet.hazard .sidebar .sidebar-title {
   border: unset;
@@ -7658,8 +7713,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: unset !important;
 }
 [data-dorako-ui-theme].sheet.familiar .familiar-sheet-header .header-content .charname input {
-  --font-size: inherit;
-  --input-height: auto;
   font-size: 24px;
   margin-right: 100px;
 }
@@ -7911,7 +7964,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
-  --input-height: 18px;
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:focus {
   outline: 1px solid var(--input-focus-outline-color);
@@ -7991,7 +8043,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
-  --input-height: 18px;
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li.spell-level-header input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li.spell-level-header input:focus, [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li .uses input:not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li .uses input:focus {
   outline: 1px solid var(--input-focus-outline-color);
@@ -9069,6 +9120,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   color: var(--color-light-3);
   background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
   border-color: color-mix(in srgb, var(--header-color) 50%, white);
+  color: var(--color-light-2);
 }
 .chat-message[data-dorako-ui-theme] .message-header[data-header-text-color-scheme=dark] {
   color: color-mix(in srgb, var(--header-color) 20%, black);
@@ -9254,109 +9306,187 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* PC Sheet Theme                            */
 /* ----------------------------------------- */
-[data-dorako-ui-theme]:not(.default-theme) {
+[data-dorako-ui-theme][data-theme-color] {
   --ornamentation: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1%7Bstroke:%23231f20;stroke-miterlimit:10%7D.st1,.st2%7Bfill:none%7D%3C/style%3E%3Cg opacity='.25'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cg%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zM3.6 3.6h3.1v3.1H3.6zM6.8 3.6h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zM3.6 6.8H.5V13M13 .5H6.8v3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.4.5h3.1v3.1h-3.1zM26.3 3.6h3.1v3.1h-3.1zM26.3 6.8h3.1v3.1h-3.1zM23.1 3.6h3.1v3.1h-3.1zM26.3 3.6V.5H20'/%3E%3Cpath class='st1' d='M32.5 13V6.8h-3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zM23.1 26.3h3.1v3.1h-3.1zM26.3 23.1h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zM3.6 26.3h3.1v3.1H3.6zM3.6 23.1h3.1v3.1H3.6zM6.8 26.3h3.1v3.1H6.8z'/%3E%3Cpath class='st1' d='M6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-[data-dorako-ui-theme]:not(.default-theme).actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header {
+[data-dorako-ui-theme][data-theme-color].actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header {
   background: var(--theme-color);
 }
-[data-dorako-ui-theme]:not(.default-theme).actor.sheet .inventory .container-metadata .container-capacity .container-capacity-bar, [data-dorako-ui-theme]:not(.default-theme).actor.sheet .inventory .encumbrance .encumbrance-bar {
+[data-dorako-ui-theme][data-theme-color].actor.sheet .inventory .container-metadata .container-capacity .container-capacity-bar, [data-dorako-ui-theme][data-theme-color].actor.sheet .inventory .encumbrance .encumbrance-bar {
   background: var(--theme-color);
 }
-[data-dorako-ui-theme]:not(.default-theme).actor.sheet .inventory .encumbrance.over-limit .encumbrance-bar {
+[data-dorako-ui-theme][data-theme-color].actor.sheet .inventory .encumbrance.over-limit .encumbrance-bar {
   background: var(--theme-color-light) !important;
 }
-[data-dorako-ui-theme]:not(.default-theme).actor.sheet .blue-button {
+[data-dorako-ui-theme][data-theme-color].actor.sheet .blue-button {
   background: var(--theme-color-light) !important;
 }
-[data-dorako-ui-theme]:not(.default-theme).actor.sheet .crb-style .stroke-header svg {
+[data-dorako-ui-theme][data-theme-color].actor.sheet .crb-style .stroke-header svg {
   fill: none;
 }
 
-[data-dorako-ui-theme].actor.sheet.red-theme .inventory .item-summary, [data-dorako-ui-theme].actor.sheet.green-theme .inventory .item-summary, [data-dorako-ui-theme].actor.sheet.blue-theme .inventory .item-summary {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=red] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=green] .inventory .item-summary, [data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .inventory .item-summary, [data-dorako-ui-theme].actor-sheet[data-theme-color=purple] .inventory .item-summary, [data-dorako-ui-theme].actor-sheet[data-theme-color=black] .inventory .item-summary {
   background: color-mix(in srgb, var(--theme-color) 25%, transparent);
 }
-[data-dorako-ui-theme].actor.sheet.red-theme {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=red] {
   --theme-color-light: var(--primary-light);
   --theme-color: var(--primary);
   --theme-color-dark: var(--primary-dark);
 }
-[data-dorako-ui-theme].actor.sheet.red-theme .crb-style {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=red] .crb-style {
   --header: url("../img/red-header.webp");
   background-image: url("../img/red-header.webp"), var(--sheet);
 }
-[data-dorako-ui-theme].actor.sheet.green-theme {
-  --color-scrollbar: var(--remaster-light);
-  --color-scrollbar-border: var(--tertiary);
-  --theme-color-dark: var(--remaster-dark);
-  --theme-color: var(--remaster);
-  --theme-color-light: var(--remaster-light);
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style {
-  --header: url("../img/green-header.webp");
-  background-image: url("../img/green-header.webp"), var(--sheet);
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style aside {
-  background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style aside .logo {
-  filter: grayscale(0.6);
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
-  background-image: linear-gradient(90deg, var(--remaster) 0%, var(--remaster-light) 50%, var(--remaster) 100%);
-  background-color: var(--remaster);
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style aside .sidebar .armor-class .shield.hp {
-  background: url("../img/blue-shield.webp") no-repeat top center;
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style aside .sidebar .initiative-select select {
-  background-color: var(--remaster);
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style header.char-header .char-level .level {
-  background: url("../img/blue-level-badge.webp") no-repeat;
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style nav.sheet-navigation {
-  background: var(--remaster-light);
-}
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style nav.sheet-navigation .item:hover,
-[data-dorako-ui-theme].actor.sheet.green-theme .crb-style nav.sheet-navigation .item.active {
-  background-image: url("../img/green-nav-item.webp");
-}
-[data-dorako-ui-theme].actor.sheet.blue-theme {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] {
   --color-scrollbar: var(--secondary-light);
   --color-scrollbar-border: var(--tertiary);
+  --color-scrollbar-hover: var(--theme-color-light);
   --theme-color-dark: var(--secondary-dark);
   --theme-color: var(--secondary);
   --theme-color-light: var(--secondary-light);
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style {
   --header: url("../img/blue-header.webp");
   background-image: url("../img/blue-header.webp"), var(--sheet);
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style aside {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style aside {
   background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style aside .logo {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style aside .logo {
   filter: grayscale(0.6);
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
-  background-image: linear-gradient(90deg, var(--secondary) 0%, var(--secondary-light) 50%, var(--secondary) 100%);
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-color-light) 50%, var(--theme-color) 100%);
   background-color: var(--secondary);
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style aside .sidebar .armor-class .shield.hp {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style aside .sidebar .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style aside .sidebar .initiative-select select {
-  background-color: var(--secondary);
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style aside .sidebar .initiative-select select {
+  background-color: var(--theme-color);
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style header.char-header .char-level .level {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style nav.sheet-navigation {
-  background: var(--secondary-light);
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style nav.sheet-navigation {
+  background: var(--theme-color-light);
 }
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style nav.sheet-navigation .item:hover,
-[data-dorako-ui-theme].actor.sheet.blue-theme .crb-style nav.sheet-navigation .item.active {
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style nav.sheet-navigation .item:hover,
+[data-dorako-ui-theme].actor.sheet[data-theme-color=blue] .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../img/blue-nav-item.webp");
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] {
+  --color-scrollbar: var(--remaster-light);
+  --color-scrollbar-border: var(--tertiary);
+  --color-scrollbar-hover: var(--theme-color-light);
+  --theme-color-dark: var(--remaster-dark);
+  --theme-color: var(--remaster);
+  --theme-color-light: var(--remaster-light);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style {
+  --header: url("../img/green-header.webp");
+  background-image: url("../img/green-header.webp"), var(--sheet);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style aside {
+  background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style aside .logo {
+  filter: grayscale(0.6);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--remaster) 0%, var(--remaster-light) 50%, var(--remaster) 100%);
+  background-color: var(--theme-color);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style aside .sidebar .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style aside .sidebar .initiative-select select {
+  background-color: var(--theme-color);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style nav.sheet-navigation {
+  background: var(--theme-color-light);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style nav.sheet-navigation .item:hover,
+[data-dorako-ui-theme].actor.sheet[data-theme-color=green] .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../img/green-nav-item.webp");
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] {
+  --theme-color-dark: #3b0062;
+  --theme-color: #520982;
+  --theme-color-light: rgb(107, 29, 137);
+  --color-scrollbar-hover: var(--theme-color-light);
+  --color-scrollbar: var(--theme-color);
+  --color-scrollbar-border: var(--tertiary);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style {
+  --header: url("../img/purple-header.webp");
+  background-image: url("../img/purple-header.webp"), var(--sheet);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style aside {
+  background-image: url("../img/purple-sidebar-top.webp"), url("../img/purple-sidebar-bottom.webp");
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style aside .logo {
+  filter: grayscale(0.6);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-color-light) 50%, var(--theme-color) 100%);
+  background-color: var(--theme-color);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style aside .sidebar .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style aside .sidebar .initiative-select select {
+  background-color: var(--theme-color);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style nav.sheet-navigation {
+  background: var(--theme-color-light);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style nav.sheet-navigation .item:hover,
+[data-dorako-ui-theme].actor.sheet[data-theme-color=purple] .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../img/blue-nav-item.webp");
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] {
+  --theme-color-dark: black;
+  --theme-color: #111;
+  --theme-color-light: #222;
+  --color-scrollbar: var(--theme-color);
+  --color-scrollbar-border: var(--tertiary);
+  --color-scrollbar-hover: var(--theme-color-light);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style {
+  --header: url("../img/black-header.webp");
+  background-image: url("../img/green-header.webp"), var(--sheet);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style aside {
+  background-image: url("../img/black-sidebar-top.webp"), url("../img/black-sidebar-bottom.webp");
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style aside .logo {
+  filter: grayscale(0.6);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+  background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-color-light) 50%, var(--theme-color) 100%);
+  background-color: var(--theme-color);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style aside .sidebar .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style aside .sidebar .initiative-select select {
+  background-color: var(--theme-color);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style nav.sheet-navigation {
+  background: var(--theme-color-light);
+}
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style nav.sheet-navigation .item:hover,
+[data-dorako-ui-theme].actor.sheet[data-theme-color=black] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
 
@@ -9367,16 +9497,22 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   background-size: auto 89px, cover !important;
   background-attachment: local !important;
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.character .window-header {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.character .window-header {
   background: #5a0c02;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.green-theme.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.green-theme.character .window-header {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=green].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=green].sheet.actor.window-app.character .window-header {
   background: #0e2a1a;
 }
-[data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.blue-theme.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.blue-theme.character .window-header {
+[data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=blue].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=blue].sheet.actor.window-app.character .window-header {
   background: #1a1e5f;
+}
+[data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=purple].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=purple].sheet.actor.window-app.character .window-header {
+  background: #340c5b;
+}
+[data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=black].sheet.actor.window-app.vehicle .window-header, [data-dorako-ui-theme][data-dorako-ui-scope=limited][data-theme-color=black].sheet.actor.window-app.character .window-header {
+  background: #151515;
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].sheet.actor.window-app.minimized .window-header {
   border-radius: var(--border-radius);
@@ -10309,6 +10445,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --sheet: var(--sheet-dark);
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --color-cool-4: #26231f;
+  --color-light-1: color-mix(in srgb, var(--color-text-light-highlight), 20% white)
+  --color-light-2: var(--color-text-light-highlight);
+  --color-light-3: var(--color-text-light-heading);
+  --color-light-5: color-mix(in srgb, var(--color-text-light-heading), 20% black);
   --window-app-background: var(--sheet-dark);
   --app-background: var(--glass-bg);
   --app-border-style: none;
@@ -10365,7 +10505,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --input-focus-outline-color: var(--tertiary);
   --text-dark: var(--color-light-2);
 }
-[data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section, [data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .section-container {
+[data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section, [data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .section-container:not(.headerless) {
   background-image: var(--sheet);
 }
 [data-dorako-ui-theme=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app input {
@@ -10580,6 +10720,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-light-3: var(--color-text-dark-primary);
   --app-text-shadow: none;
 }
+[data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section, [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .section-container:not(.headerless) {
+  background-image: var(--sheet);
+}
 [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app .side-bar-section-header input {
   --input-focus-outline-color: var(--tertiary);
 }
@@ -10589,9 +10732,6 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.actor.npc.sheet form .side-bar-section.initiative select {
   --box-shadow: none;
-}
-[data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section, [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.dorako-ux.sheet.pf2e.actor.npc form .section-container {
-  background-image: var(--sheet);
 }
 [data-dorako-ui-theme=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app input {
   --box-shadow: none;
@@ -10724,6 +10864,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
+[data-chat-app-theme=discord] #sidebar-tabs,
+[data-chat-app-theme=discord] #chat-log ~ *,
 [data-dorako-ui-theme=discord] {
   /* Base colors */
   --color-warm-4: var(--accent-color-dark);
@@ -10792,6 +10934,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --accent-color: var(--discord-accent-color);
   --accent-color-dark: var(--discord-accent-color-dark);
 }
+[data-chat-app-theme=discord] #sidebar-tabs.window-app button.bright,
+[data-chat-app-theme=discord] #chat-log ~ *.window-app button.bright,
 [data-dorako-ui-theme=discord].window-app button.bright {
   --button-background-color: var(--accent-color);
   --button-border-color: var(--accent-color-dark);
@@ -10889,6 +11033,20 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-scope=navigation][data-dorako-ui-theme=discord] .scene.gm.active:not(.view) {
   --button-toggle-focus-outline-color: transparent;
+}
+
+/* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme=discord] {
+  --color-scrollbar: var(--discord-color-scrollbar);
+  --color-scrollbar-border: var(--discord-color-scrollbar-border);
+  --color-scrollbar-hover: var(--discord-color-scrollbar-highlight);
+}
+[data-chat-app-theme=discord] #chat-log ~ * {
+  --button-border-color: var(--discord-background-1);
+  --app-border-style: 1px solid;
+  --button-background-color: var(--discord-background-3);
 }
 
 :root {
@@ -11226,6 +11384,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
+[data-chat-app-theme=bg3] #sidebar-tabs,
+[data-chat-app-theme=bg3] #chat-log ~ *,
 [data-dorako-ui-theme=bg3] {
   /* Base colors */
   --color-warm-1: var(--tertiary);
@@ -11264,6 +11424,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --input-disabled-background-color: var(--bg3-background-4);
   --input-disabled-border-color: var(--bg3-background-3);
   --input-focus-outline-color: var(--tertiary);
+  --input-text-color: var(--color-light-2);
   /* Button variables */
   --button-background-color: var(--app-background);
   --button-border-color: #403b2d;
@@ -11300,18 +11461,28 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
     transparent 40%
   );
 }
+[data-chat-app-theme=bg3] #sidebar-tabs[data-rarity=common],
+[data-chat-app-theme=bg3] #chat-log ~ *[data-rarity=common],
 [data-dorako-ui-theme=bg3][data-rarity=common] {
   --rarity: var(--rarity-common);
 }
+[data-chat-app-theme=bg3] #sidebar-tabs[data-rarity=uncommon],
+[data-chat-app-theme=bg3] #chat-log ~ *[data-rarity=uncommon],
 [data-dorako-ui-theme=bg3][data-rarity=uncommon] {
   --rarity: var(--rarity-uncommon);
 }
+[data-chat-app-theme=bg3] #sidebar-tabs[data-rarity=rare],
+[data-chat-app-theme=bg3] #chat-log ~ *[data-rarity=rare],
 [data-dorako-ui-theme=bg3][data-rarity=rare] {
   --rarity: var(--rarity-rare);
 }
+[data-chat-app-theme=bg3] #sidebar-tabs[data-rarity=unique],
+[data-chat-app-theme=bg3] #chat-log ~ *[data-rarity=unique],
 [data-dorako-ui-theme=bg3][data-rarity=unique] {
   --rarity: var(--rarity-unique);
 }
+[data-chat-app-theme=bg3] #sidebar-tabs[data-rarity].window-app,
+[data-chat-app-theme=bg3] #chat-log ~ *[data-rarity].window-app,
 [data-dorako-ui-theme=bg3][data-rarity].window-app {
   --top-color: var(--rarity);
   --accent-color: var(--rarity);
@@ -11319,15 +11490,21 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --window-app-background: var(--bg3-ui-top-background) border-box, var(--bg3-ui-purple-background),
     var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
 }
+[data-chat-app-theme=bg3] #sidebar-tabs tags.tags.paizo-style,
+[data-chat-app-theme=bg3] #chat-log ~ * tags.tags.paizo-style,
 [data-dorako-ui-theme=bg3] tags.tags.paizo-style {
   --tags-border-color: transparent;
 }
+[data-chat-app-theme=bg3] #sidebar-tabs.window-app button.bright,
+[data-chat-app-theme=bg3] #chat-log ~ *.window-app button.bright,
 [data-dorako-ui-theme=bg3].window-app button.bright {
   --button-background-color: var(--accent-color);
   --button-border-color: var(--accent-color-dark);
   --button-text-color: white !important;
   --button-hover-text-color: white !important;
 }
+[data-chat-app-theme=bg3] #sidebar-tabs[data-dorako-ui-scope=limited].dorako-ux.sheet.pf2e.actor.npc,
+[data-chat-app-theme=bg3] #chat-log ~ *[data-dorako-ui-scope=limited].dorako-ux.sheet.pf2e.actor.npc,
 [data-dorako-ui-theme=bg3][data-dorako-ui-scope=limited].dorako-ux.sheet.pf2e.actor.npc {
   --input-placeholder-color: var(--bg3-text-3);
 }
@@ -11454,13 +11631,13 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-scope=navigation][data-dorako-ui-theme=bg3] #nav-toggle {
   background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
   border: 2px solid transparent !important;
-  box-shadow: var(--box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+  box-shadow: 0px 1px 2px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
 }
 [data-dorako-ui-scope=navigation][data-dorako-ui-theme=bg3] .scene {
   border: 2px solid transparent !important;
   line-height: calc(var(--control-size) - 4px) !important;
   position: relative;
-  box-shadow: 0px 0px 5px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+  box-shadow: 0px 1px 2px black, 0px 0px 5px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   --button-toggle-focus-outline-color: #d3b87c;
 }
 [data-dorako-ui-scope=navigation][data-dorako-ui-theme=bg3] .scene.view::before {
@@ -11548,6 +11725,33 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 }
+[data-dorako-ui-theme=bg3].message.chat-message[data-color-scheme=blue] {
+  --bg3-border-inner: #a16a37;
+  --bg3-border-outer: #4a2e18;
+  --bg3-border-internal: #304248;
+  --bg3-bg-inner: #182830;
+  --bg3-bg-outer: #151e29;
+  --bg3-border-background: linear-gradient(
+    to right,
+    var(--bg3-border-outer) 0%,
+    var(--bg3-border-inner) 50%,
+    var(--bg3-border-outer) 100%
+  );
+  --bg3-tooltip-window-background: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%) border-box, var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
+}
+[data-dorako-ui-theme=bg3].message.chat-message[data-color-scheme=blue] .card-content hr {
+  border-color: var(--bg3-border-outer);
+  border: solid transparent;
+  border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+  border-width: 0 0 2px;
+  border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
+}
 [data-dorako-ui-theme=bg3].message.chat-message.dfce-cm-top {
   border-bottom-width: 1px !important;
 }
@@ -11613,7 +11817,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 
 /* ----------------------------------------- */
-/* Controls                                  */
+/* Placeable HUD                             */
 /* ----------------------------------------- */
 [data-dorako-ui-scope=placeable-hud][data-dorako-ui-theme=bg3] {
   --button-background-color: radial-gradient(circle, #363534 0, black 100%);
@@ -11636,8 +11840,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-focus-outline-color: #d3b87c;
   --button-hover-border-color: #9a8860;
   --button-toggle-border-color: #d3b87c;
-  --button-toggle-background: radial-gradient(circle, #0d3c48 0, black 100%);
+  --button-toggle-background: radial-gradient(circle, #175868 0, black 100%);
   --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
+  --button-toggle-hover-border-color: #edd5a2;
+  --box-shadow: 0px 0px 5px black, 0px 1px 2px black;
 }
 
 [data-dorako-ui-scope=players][data-dorako-ui-theme=bg3] {
@@ -11750,44 +11956,42 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-dorako-ui-theme=bg3] #dorako-rt-buttons button {
-  --button-background-color: radial-gradient(circle, #363534 0, black 100%);
-  --button-focus-outline-color: #d3b87c;
-  --button-hover-border-color: #9a8860;
+[data-chat-app-theme=bg3] {
+  --color-scrollbar: var(--bg3-color-scrollbar);
+  --color-scrollbar-border: var(--bg3-color-scrollbar-border);
+  --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
 }
-[data-dorako-ui-theme=bg3] #dorako-rt-buttons button[data-id=publicroll] {
+[data-chat-app-theme=bg3] #sidebar-tabs {
+  --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 50%, black 100%);
+  --button-hover-border-color: #d3b87c;
+}
+
+[data-chat-app-theme=bg3] #chat-log ~ * #dorako-rt-buttons button {
+  --button-toggle-background: radial-gradient(circle, #363534 0, black 100%);
+  --button-focus-outline-color: #d3b87c;
+  --button-toggle-border-color: #9a8860;
+  --button-toggle-hover-border-color: #9a8860;
+}
+[data-chat-app-theme=bg3] #chat-log ~ * #dorako-rt-buttons button[data-id=publicroll] {
   --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-yellow) 0, black 100%);
 }
-[data-dorako-ui-theme=bg3] #dorako-rt-buttons button[data-id=gmroll] {
+[data-chat-app-theme=bg3] #chat-log ~ * #dorako-rt-buttons button[data-id=gmroll] {
   --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-companion-blue) 0, black 100%);
 }
-[data-dorako-ui-theme=bg3] #dorako-rt-buttons button[data-id=blindroll] {
+[data-chat-app-theme=bg3] #chat-log ~ * #dorako-rt-buttons button[data-id=blindroll] {
   --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
 }
-[data-dorako-ui-theme=bg3] #dorako-rt-buttons button[data-id=selfroll] {
+[data-chat-app-theme=bg3] #chat-log ~ * #dorako-rt-buttons button[data-id=selfroll] {
   --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-green) 0, black 100%);
 }
 
-[data-dorako-ui-theme=crb]:not([data-color-scheme]) {
-  --color-light-2: var(--color-text-light-highlight);
-  --color-light-3: var(--color-text-light-heading);
-  --input-text-color: black;
-  --input-focus-text-color: black;
-  --input-focus-outline-color: var(--tertiary);
-  --button-background-color: var(--glass-bg-light);
-  --app-background: var(--glass-bg);
-  --app-border-color: transparent;
-  --app-border-style: none;
-}
-[data-dorako-ui-theme=crb]:not([data-color-scheme])#token-hud, [data-dorako-ui-theme=crb]:not([data-color-scheme])#tile-hud {
-  --button-background-color: var(--glass-bg);
-  --input-text-color: var(--color-light-2);
-}
-
+[data-chat-app-theme=crb] #sidebar-tabs,
+[data-chat-app-theme=crb] #chat-log ~ *,
 [data-dorako-ui-theme=crb] {
   --icon-border-color: var(--tertiary);
   --color-scrollbar: var(--tertiary);
   --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+  --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
   --window-app-border-color: var(--tertiary);
   --window-app-border-style: 1px solid;
   --box-shadow: var(--glassy);
@@ -11812,7 +12016,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
-  --button-toggle-border-color: var(--tertiary);
+  --button-toggle-border-color: var(--secondary-light);
   --button-toggle-background: var(--secondary-dark);
   --button-toggle-hover-background: var(--secondary-light);
   --color-warm-1: var(--tertiary);
@@ -11827,6 +12031,26 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-border-light-1: #ddd;
   --color-border-light-2: #999;
 }
+
+[data-chat-app-theme=crb] #chat-log ~ *,
+[data-dorako-ui-theme=crb]:not([data-color-scheme]) {
+  --color-light-2: var(--color-text-light-highlight);
+  --color-light-3: var(--color-text-light-heading);
+  --input-text-color: black;
+  --input-focus-text-color: black;
+  --input-focus-outline-color: var(--tertiary);
+  --button-background-color: var(--glass-bg-light);
+  --app-background: var(--glass-bg);
+  --app-border-color: transparent;
+  --app-border-style: none;
+}
+[data-chat-app-theme=crb] #chat-log ~ *#token-hud, [data-chat-app-theme=crb] #chat-log ~ *#tile-hud,
+[data-dorako-ui-theme=crb]:not([data-color-scheme])#token-hud,
+[data-dorako-ui-theme=crb]:not([data-color-scheme])#tile-hud {
+  --button-background-color: var(--glass-bg);
+  --input-text-color: var(--color-light-2);
+}
+
 [data-dorako-ui-theme=crb] button {
   --color-light-1: white;
   --color-light-2: var(--color-text-light-highlight);
@@ -11878,14 +12102,16 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-light-1: black;
   --color-light-2: black;
   --color-light-3: black;
-  --app-text-shadow: 0px 1px 0px white;
+  --app-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+  text-shadow: var(--app-text-shadow);
 }
 [data-dorako-ui-theme=crb].chat-message[data-header-text-color-scheme=light] .message-header {
-  --color-text-dark-secondary: var(--color-light-1);
-  --color-light-1: var(--color-text-light-highlight);
-  --color-light-2: var(--color-text-light-highlight);
-  --color-light-3: var(--color-text-light-heading);
-  --app-text-shadow: 0px 1px 2px black;
+  --color-text-dark-secondary: white;
+  --color-light-1: white;
+  --color-light-2: white;
+  --color-light-3: white;
+  --app-text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
+  text-shadow: var(--app-text-shadow);
 }
 [data-dorako-ui-theme=crb].chat-message.whisper .message-header.dorako-header {
   border-bottom: 1px solid var(--whisper-bg);
@@ -11984,6 +12210,15 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 
 /* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme=crb] {
+  --color-scrollbar: var(--tertiary);
+  --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+  --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
+}
+
+/* ----------------------------------------- */
 /* Theme colors                              */
 /* ----------------------------------------- */
 :root {
@@ -12063,6 +12298,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
+[data-chat-app-theme=foundry2] #sidebar-tabs,
+[data-chat-app-theme=foundry2] #chat-log ~ *,
 [data-dorako-ui-theme=foundry2] {
   --icon-border-color: var(--color-warm-1);
   --input-disabled-background-color: var(--color-cool-5);
@@ -12081,6 +12318,11 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+  --button-toggle-border-color: var(--color-cool-2);
+  --button-toggle-background: var(--color-cool-3-75);
+  --button-toggle-hover-background: var(--color-cool-2);
+  --button-toggle-hover-border-color: var(--color-cool-1);
+  --button-toggle-focus-outline-color: var(--color-warm-1);
   --app-background: var(--color-cool-5-90);
   --app-border-color: var(--color-cool-4);
   --window-app-background: var(--color-cool-5-90);
@@ -12094,6 +12336,8 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --inline-icon-color: var(--color-light-1);
   --inline-box-shadow: 0px 1px 2px black;
 }
+[data-chat-app-theme=foundry2] #sidebar-tabs.window-app button.bright,
+[data-chat-app-theme=foundry2] #chat-log ~ *.window-app button.bright,
 [data-dorako-ui-theme=foundry2].window-app button.bright {
   --app-text-shadow: none;
 }
@@ -12186,19 +12430,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
-[data-dorako-ui-scope=controls][data-dorako-ui-theme=foundry2] {
-  --button-toggle-border-color: var(--color-cool-2);
-  --button-toggle-hover-border-color: color-mix(in srgb, var(--color-cool-2) 50%, white 50%);
-  --button-toggle-background: color-mix(in srgb, var(--color-cool-3) 50%, black 50%);
-  --button-toggle-hover-background: var(--color-cool-3);
-}
-
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope=navigation][data-dorako-ui-theme=foundry2] .scene {
-  --button-toggle-focus-outline-color: var(--color-warm-1);
-}
 [data-dorako-ui-scope=navigation][data-dorako-ui-theme=foundry2] .scene:not(.gm) {
   --button-toggle-background: var(--app-background);
   --button-toggle-border-color: var(--color-cool-4);
@@ -12206,7 +12440,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-toggle-hover-background: var(--color-warm-2);
 }
 [data-dorako-ui-scope=navigation][data-dorako-ui-theme=foundry2] .scene.gm {
-  --button-toggle-background: var(--color-cool-3);
+  --button-toggle-background: var(--color-cool-3-75);
   --button-toggle-border-color: var(--color-cool-2);
   --button-toggle-hover-border-color: var(--color-cool-1);
   --button-toggle-hover-background: var(--color-cool-2);
@@ -12244,6 +12478,10 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+  --button-toggle-border-color: var(--secondary-light);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
+  --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
+  --button-toggle-hover-background: var(--secondary-light);
   /* Inline variables */
   --inline-bg: #1e1e1e;
   --inline-border-color: #404040;
@@ -12738,10 +12976,6 @@ i[data-pf2-repost] {
 .chat-message .dmgBtn-container {
   display: flex;
   flex-direction: row;
-}
-
-.chat-message ul.notes {
-  padding: 0px;
 }
 
 /* ----------------------------------------- */

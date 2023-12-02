@@ -286,6 +286,7 @@
     @include f2-app;
     background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
     border-color: color-mix(in srgb, var(--header-color) 50%, white);
+    color: var(--color-light-2);
   }
 
   // &.light-header-text {

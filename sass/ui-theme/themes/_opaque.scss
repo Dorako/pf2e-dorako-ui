@@ -32,6 +32,11 @@
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
+  --button-toggle-border-color: var(--secondary-light);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
+  --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
+  --button-toggle-hover-background: var(--secondary-light);
+
   /* Inline variables */
   --inline-bg: #1e1e1e;
   --inline-border-color: #404040;

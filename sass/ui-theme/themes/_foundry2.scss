@@ -105,6 +105,8 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
+[data-chat-app-theme="foundry2"] #sidebar-tabs,
+[data-chat-app-theme="foundry2"] #chat-log ~ *,
 [data-dorako-ui-theme="foundry2"] {
   --icon-border-color: var(--color-warm-1);
 
@@ -127,6 +129,12 @@
   --button-hover-text-color: var(--color-light-1);
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+
+  --button-toggle-border-color: var(--color-cool-2);
+  --button-toggle-background: var(--color-cool-3-75);
+  --button-toggle-hover-background: var(--color-cool-2);
+  --button-toggle-hover-border-color: var(--color-cool-1);
+  --button-toggle-focus-outline-color: var(--color-warm-1);
 
   --app-background: var(--color-cool-5-90);
   --app-border-color: var(--color-cool-4);
@@ -160,10 +168,6 @@
 /* Specifics                                 */
 /* ----------------------------------------- */
 [data-dorako-ui-theme="foundry2"] {
-  // &.chat-message {
-  //   border: 1px solid var(--border-tint);
-  // }
-
   &.message.chat-message {
     border: 1px solid var(--player-color);
     background: var(--window-app-background);
@@ -252,10 +256,6 @@
 /* Controls                                  */
 /* ----------------------------------------- */
 [data-dorako-ui-scope="controls"][data-dorako-ui-theme="foundry2"] {
-  --button-toggle-border-color: var(--color-cool-2);
-  --button-toggle-hover-border-color: color-mix(in srgb, var(--color-cool-2) 50%, white 50%);
-  --button-toggle-background: color-mix(in srgb, var(--color-cool-3) 50%, black 50%);
-  --button-toggle-hover-background: var(--color-cool-3);
 }
 
 /* ----------------------------------------- */
@@ -263,7 +263,6 @@
 /* ----------------------------------------- */
 [data-dorako-ui-scope="navigation"][data-dorako-ui-theme="foundry2"] {
   .scene {
-    --button-toggle-focus-outline-color: var(--color-warm-1);
   }
 
   .scene:not(.gm) {
@@ -274,7 +273,7 @@
   }
 
   .scene.gm {
-    --button-toggle-background: var(--color-cool-3);
+    --button-toggle-background: var(--color-cool-3-75);
     --button-toggle-border-color: var(--color-cool-2);
     --button-toggle-hover-border-color: var(--color-cool-1);
     --button-toggle-hover-background: var(--color-cool-2);

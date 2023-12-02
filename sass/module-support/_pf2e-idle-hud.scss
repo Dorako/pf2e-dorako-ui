@@ -235,7 +235,6 @@
 
   &#pf2e-token-hud .sidebar .sidebar-content .details input {
     @include f2-input;
-    --input-height: 14px;
     padding: 1px;
   }
 
@@ -330,13 +329,21 @@
     mix-blend-mode: plus-lighter;
   }
 
-  &#pf2e-token-hud .distance.free {
+  &#pf2e-token-hud .free {
     background: unset;
     @include f2-app;
     backdrop-filter: blur(4px);
-    border-bottom-left-radius: unset;
-    border-bottom-right-radius: unset;
-    border-bottom: unset;
+    &.status {
+      bottom: 0px;
+      border-top-left-radius: unset;
+      border-top-right-radius: unset;
+      border-top: unset;
+    }
+    &.distance {
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+      border-bottom: unset;
+    }
   }
 
   &#pf2e-token-hud .popup .header:before {

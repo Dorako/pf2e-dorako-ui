@@ -235,6 +235,11 @@
     --color-light-3: var(--color-text-dark-primary);
     --app-text-shadow: none;
 
+    &.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section,
+    &.dorako-ux.sheet.pf2e.actor.npc form .section-container:not(.headerless) {
+      background-image: var(--sheet);
+    }
+
     .side-bar-section-header input {
       --input-focus-outline-color: var(--tertiary);
     }
@@ -246,11 +251,6 @@
 
     &.actor.npc.sheet form .side-bar-section.initiative select {
       --box-shadow: none;
-    }
-
-    &.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section,
-    &.dorako-ux.sheet.pf2e.actor.npc form .section-container {
-      background-image: var(--sheet);
     }
 
     input {

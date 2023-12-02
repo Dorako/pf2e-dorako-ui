@@ -27,7 +27,7 @@
 /* ----------------------------------------- */
 
 #chat,
-[data-dorako-ui-theme] .chat-sidebar {
+[data-chat-app-theme] .chat-sidebar {
   --sidebar-gap: 4px;
   --sidebar-margin: 6px;
   gap: var(--sidebar-gap);
@@ -35,24 +35,6 @@
 }
 
 [data-dorako-ui-scope="sidebar"] {
-  #sidebar-tabs {
-    border: unset;
-
-    > .item {
-      &:hover {
-        color: var(--color-light-2);
-      }
-
-      &.active {
-        @include f2-app;
-        background-color: var(--color-warm-2);
-        border: var(--window-app-border-style);
-        border-color: var(--color-warm-1);
-        color: var(--color-light-2);
-      }
-    }
-  }
-
   .tab {
     &:not([data-tab="chat"]) button {
       @include f2-button-warm;
@@ -143,5 +125,61 @@
     @include f2-app;
     border: 1px solid;
     border-color: var(--icon-border-color);
+  }
+}
+
+/* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme] #chat-log {
+  margin-left: calc(var(--sidebar-margin) - 3px);
+  &::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 3px;
+    background: var(--color-scrollbar);
+    border: 1px solid var(--color-scrollbar-border);
+    transition: outline 0.15s;
+    &:hover {
+      border: 1px solid var(--color-scrollbar);
+      background: var(--color-scrollbar-hover);
+    }
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: none;
+    box-shadow: unset;
+    border-radius: 4px;
+  }
+}
+
+[data-chat-app-theme] #chat-log ~ * {
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    accent-color: var(--accent-color);
+  }
+
+  button {
+    @include f2-button-warm;
+  }
+  #dorako-rt-buttons button {
+    @include f2-button-toggle;
+  }
+
+  &#chat-form {
+    margin: 0px var(--sidebar-margin);
+    textarea {
+      @include f2-input;
+      height: 100%;
+      border-radius: var(--border-radius);
+    }
+  }
+}
+
+[data-chat-app-theme] {
+  #sidebar-tabs {
+    border: unset;
+    > .item.active {
+      @include f2-button-warm;
+      --button-focus-outline-color: transparent;
+    }
   }
 }

@@ -131,6 +131,8 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
+[data-chat-app-theme="bg3"] #sidebar-tabs,
+[data-chat-app-theme="bg3"] #chat-log ~ *,
 [data-dorako-ui-theme="bg3"] {
   /* Base colors */
   --color-warm-1: var(--tertiary);
@@ -177,6 +179,7 @@
   --input-disabled-background-color: var(--bg3-background-4);
   --input-disabled-border-color: var(--bg3-background-3);
   --input-focus-outline-color: var(--tertiary);
+  --input-text-color: var(--color-light-2);
   /* Button variables */
   --button-background-color: var(--app-background);
   --button-border-color: #403b2d;
@@ -409,14 +412,14 @@
   #nav-toggle {
     background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
     border: 2px solid transparent !important;
-    box-shadow: var(--box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+    box-shadow: 0px 1px 2px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   }
 
   .scene {
     border: 2px solid transparent !important;
     line-height: calc(var(--control-size) - 4px) !important;
     position: relative;
-    box-shadow: 0px 0px 5px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+    box-shadow: 0px 1px 2px black, 0px 0px 5px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
     --button-toggle-focus-outline-color: #d3b87c;
     &.view::before {
       background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
@@ -546,6 +549,40 @@
       border-box;
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+
+  &[data-color-scheme="blue"] {
+    --bg3-border-inner: #a16a37;
+    --bg3-border-outer: #4a2e18;
+    --bg3-border-internal: #304248;
+    --bg3-bg-inner: #182830;
+    --bg3-bg-outer: #151e29;
+
+    --bg3-border-background: linear-gradient(
+      to right,
+      var(--bg3-border-outer) 0%,
+      var(--bg3-border-inner) 50%,
+      var(--bg3-border-outer) 100%
+    );
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%)
+        border-box,
+      var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+
+    .card-content hr {
+      border-color: var(--bg3-border-outer);
+      border: solid transparent;
+      border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+      border-width: 0 0 2px;
+      border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
+    }
+  }
   &.dfce-cm-top {
     border-bottom-width: 1px !important;
   }
@@ -619,7 +656,7 @@
 }
 
 /* ----------------------------------------- */
-/* Controls                                  */
+/* Placeable HUD                             */
 /* ----------------------------------------- */
 [data-dorako-ui-scope="placeable-hud"][data-dorako-ui-theme="bg3"] {
   --button-background-color: radial-gradient(circle, #363534 0, black 100%);
@@ -642,8 +679,10 @@
   --button-focus-outline-color: #d3b87c;
   --button-hover-border-color: #9a8860;
   --button-toggle-border-color: #d3b87c;
-  --button-toggle-background: radial-gradient(circle, #0d3c48 0, black 100%);
+  --button-toggle-background: radial-gradient(circle, #175868 0, black 100%);
   --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
+  --button-toggle-hover-border-color: #edd5a2;
+  --box-shadow: 0px 0px 5px black, 0px 1px 2px black;
 }
 
 [data-dorako-ui-scope="players"][data-dorako-ui-theme="bg3"] {
@@ -770,20 +809,34 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"] #dorako-rt-buttons button {
-  --button-background-color: radial-gradient(circle, #363534 0, black 100%);
-  --button-focus-outline-color: #d3b87c;
-  --button-hover-border-color: #9a8860;
-  &[data-id="publicroll"] {
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-yellow) 0, black 100%);
+[data-chat-app-theme="bg3"] {
+  --color-scrollbar: var(--bg3-color-scrollbar);
+  --color-scrollbar-border: var(--bg3-color-scrollbar-border);
+  --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
+
+  #sidebar-tabs {
+    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 50%, black 100%);
+    --button-hover-border-color: #d3b87c;
   }
-  &[data-id="gmroll"] {
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-companion-blue) 0, black 100%);
-  }
-  &[data-id="blindroll"] {
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
-  }
-  &[data-id="selfroll"] {
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-green) 0, black 100%);
+}
+
+[data-chat-app-theme="bg3"] #chat-log ~ * {
+  #dorako-rt-buttons button {
+    --button-toggle-background: radial-gradient(circle, #363534 0, black 100%);
+    --button-focus-outline-color: #d3b87c;
+    --button-toggle-border-color: #9a8860;
+    --button-toggle-hover-border-color: #9a8860;
+    &[data-id="publicroll"] {
+      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-yellow) 0, black 100%);
+    }
+    &[data-id="gmroll"] {
+      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-companion-blue) 0, black 100%);
+    }
+    &[data-id="blindroll"] {
+      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
+    }
+    &[data-id="selfroll"] {
+      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-green) 0, black 100%);
+    }
   }
 }

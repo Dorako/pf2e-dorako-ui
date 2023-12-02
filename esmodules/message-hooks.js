@@ -9,6 +9,9 @@ const rgb2hex = (rgb) =>
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   html[0].dataset.colorScheme = getMessageColorScheme(chatMessage, html, messageData);
+  if (html[0].hasAttribute("style")) {
+    html.css("border-color", "");
+  }
 });
 
 function getMessageColorScheme(chatMessage, html, messageData) {
@@ -127,7 +130,7 @@ function calcHeaderTextColor(html, message) {
   var b = parseInt(bgCol.substr(5, 2), 16);
   var yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-  if (yiq >= 128) {
+  if (yiq >= 180) {
     return "dark";
   } else {
     return "light";

@@ -23,7 +23,15 @@
       "no-theme": "No theme",
       "opaque": "Opaque",
       "alliance": "Opposition dark",
-      "gm-vs-players": "GM dark"
+      "gm-vs-players": "GM dark",
+      "colors": {
+        "red": "Red",
+        "blue": "Blue",
+        "green": "Green",
+        "purple": "Purple",
+        "black": "Black",
+        "player": "Player color"
+      }
     },
     "settings": {
       "reset-changes": "Reset Changes",
@@ -53,27 +61,15 @@
         },
         "chat-message-header-style": {
           "name": "Chat message header theme",
-          "hint": "Adds a colored header to every chat message",
-          "choice": {
-            "red": "Red",
-            "blue": "Blue",
-            "green": "Green",
-            "tint": "Player color",
-            "none": "Disabled"
-          }
+          "hint": "Adds a colored header to every chat message"
         },
         "border-radius": {
           "name": "Roundedness",
           "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
         },
         "pc-sheet-theme": {
-          "name": "PC sheet theme",
-          "hint": "Affects sheets for player characters and vehicles",
-          "choice": {
-            "red": "Original Red",
-            "green": "Remaster Green",
-            "blue": "Classic Blue"
-          }
+          "name": "PC sheet color theme",
+          "hint": "Affects sheets for player characters and vehicles"
         }
       },
       "misc": {

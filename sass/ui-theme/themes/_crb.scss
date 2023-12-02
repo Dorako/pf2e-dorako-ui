@@ -1,25 +1,10 @@
-[data-dorako-ui-theme="crb"]:not([data-color-scheme]) {
-  --color-light-2: var(--color-text-light-highlight);
-  --color-light-3: var(--color-text-light-heading);
-  --input-text-color: black;
-  --input-focus-text-color: black;
-  --input-focus-outline-color: var(--tertiary);
-  --button-background-color: var(--glass-bg-light);
-  --app-background: var(--glass-bg);
-  --app-border-color: transparent;
-  --app-border-style: none;
-
-  &#token-hud,
-  &#tile-hud {
-    --button-background-color: var(--glass-bg);
-    --input-text-color: var(--color-light-2);
-  }
-}
-
+[data-chat-app-theme="crb"] #sidebar-tabs,
+[data-chat-app-theme="crb"] #chat-log ~ *,
 [data-dorako-ui-theme="crb"] {
   --icon-border-color: var(--tertiary);
   --color-scrollbar: var(--tertiary);
   --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+  --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
 
   --window-app-border-color: var(--tertiary);
   --window-app-border-style: 1px solid;
@@ -49,7 +34,7 @@
   --button-disabled-background-color: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
-  --button-toggle-border-color: var(--tertiary);
+  --button-toggle-border-color: var(--secondary-light);
   --button-toggle-background: var(--secondary-dark);
   --button-toggle-hover-background: var(--secondary-light);
 
@@ -65,7 +50,28 @@
 
   --color-border-light-1: #ddd;
   --color-border-light-2: #999;
+}
 
+[data-chat-app-theme="crb"] #chat-log ~ *,
+[data-dorako-ui-theme="crb"]:not([data-color-scheme]) {
+  --color-light-2: var(--color-text-light-highlight);
+  --color-light-3: var(--color-text-light-heading);
+  --input-text-color: black;
+  --input-focus-text-color: black;
+  --input-focus-outline-color: var(--tertiary);
+  --button-background-color: var(--glass-bg-light);
+  --app-background: var(--glass-bg);
+  --app-border-color: transparent;
+  --app-border-style: none;
+
+  &#token-hud,
+  &#tile-hud {
+    --button-background-color: var(--glass-bg);
+    --input-text-color: var(--color-light-2);
+  }
+}
+
+[data-dorako-ui-theme="crb"] {
   button {
     --color-light-1: white;
     --color-light-2: var(--color-text-light-highlight);
@@ -127,15 +133,21 @@
     --color-light-1: black;
     --color-light-2: black;
     --color-light-3: black;
-    --app-text-shadow: 0px 1px 0px white;
+    --app-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+    text-shadow: var(--app-text-shadow);
   }
 
   &.chat-message[data-header-text-color-scheme="light"] .message-header {
-    --color-text-dark-secondary: var(--color-light-1);
-    --color-light-1: var(--color-text-light-highlight);
-    --color-light-2: var(--color-text-light-highlight);
-    --color-light-3: var(--color-text-light-heading);
-    --app-text-shadow: 0px 1px 2px black;
+    // --color-text-dark-secondary: var(--color-light-1);
+    // --color-light-1: var(--color-text-light-highlight);
+    // --color-light-2: var(--color-text-light-highlight);
+    // --color-light-3: var(--color-text-light-heading);
+    --color-text-dark-secondary: white;
+    --color-light-1: white;
+    --color-light-2: white;
+    --color-light-3: white;
+    --app-text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
+    text-shadow: var(--app-text-shadow);
   }
 
   &.chat-message.whisper .message-header.dorako-header {
@@ -144,12 +156,6 @@
   &.chat-message.whisper.blind .message-header.dorako-header {
     border-bottom: 1px solid var(--blind-bg);
   }
-
-  //   section.chat-sidebar .jump-to-bottom > a {
-  //     --app-background: var(--glass-bg-dark);
-  //     backdrop-filter: blur(5px);
-  //     -webkit-backdrop-filter: blur(5px);
-  //   }
 
   &.chat-message {
     outline: 1px solid var(--gold-brown);
@@ -259,4 +265,13 @@
       --button-toggle-focus-outline-color: transparent;
     }
   }
+}
+
+/* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme="crb"] {
+  --color-scrollbar: var(--tertiary);
+  --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+  --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
 }

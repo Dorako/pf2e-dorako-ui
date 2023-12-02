@@ -66,7 +66,6 @@ Hooks.once("init", async () => {
   const root = document.querySelector(":root").style;
 
   root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
-  // root.setProperty("--glass-bg", game.settings.get("pf2e-dorako-ui", "theme.glass-bg").toString(), "important");
 
   util.debug("initialized properties");
 });

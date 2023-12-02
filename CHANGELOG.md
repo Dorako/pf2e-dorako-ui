@@ -1,3 +1,10 @@
+# 3.1.13
+
+- (Refinement) Bunch of tweaks, including tweaks to crb-styled chat message headers.
+- (Fix) Fixed certain themes not having toggle button variables.
+- (Refinement) Found a way to still style the sidebar, without having styling from the sidebar trickle into the chat messages.
+- (New) Added purple and black PC sheet color themes.
+
 # 3.1.12
 
 - (Refinement) Bunch of changes, including restyling of the navigation bar, and changes to toggles.

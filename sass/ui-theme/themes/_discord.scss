@@ -153,6 +153,8 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
+[data-chat-app-theme="discord"] #sidebar-tabs,
+[data-chat-app-theme="discord"] #chat-log ~ *,
 [data-dorako-ui-theme="discord"] {
   /* Base colors */
   // --color-warm-1: var(--tertiary);
@@ -358,5 +360,19 @@
     &.active:not(.view) {
       --button-toggle-focus-outline-color: transparent;
     }
+  }
+}
+
+/* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme="discord"] {
+  --color-scrollbar: var(--discord-color-scrollbar);
+  --color-scrollbar-border: var(--discord-color-scrollbar-border);
+  --color-scrollbar-hover: var(--discord-color-scrollbar-highlight);
+  #chat-log ~ * {
+    --button-border-color: var(--discord-background-1);
+    --app-border-style: 1px solid;
+    --button-background-color: var(--discord-background-3);
   }
 }

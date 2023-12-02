@@ -237,7 +237,8 @@ for (const appName of [...limitedScopeApplications]) {
 for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
-    html[0].classList.add(`${theme}-theme`);
+    if (theme === "default") return;
+    app.element[0].dataset.themeColor = theme;
   });
 }
 
@@ -253,6 +254,17 @@ Hooks.on("render" + "NPCSheetPF2e", (app, html, data) => {
 
 Hooks.on("render" + "ChatMessage", (app, html, data) => {
   const footer = html.find("footer")[0];
-  // debugger;
   if (footer) html[0].dataset.hasFooter = "";
+});
+
+Hooks.on("render" + "ChatLogPF2e", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+  if (theme === "no-theme") return;
+  app.element[0].dataset.chatAppTheme = theme;
+});
+
+Hooks.on("render" + "Sidebar", (app, html, data) => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+  if (theme === "no-theme") return;
+  app.element[0].dataset.chatAppTheme = theme;
 });
