@@ -1,3 +1,7 @@
+# 3.2.2
+
+- (Fix) Fixed the Sheet theme color setting not applying at all.
+
 # 3.2.1
 
 - (Fix) Fixed an issue where CRB (Dark) sheet theme would be broken.

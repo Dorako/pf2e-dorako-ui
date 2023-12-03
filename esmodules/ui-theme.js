@@ -182,7 +182,7 @@ for (const appName of [...limitedScopeApplications]) {
 
 for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
   Hooks.on("render" + appName, (app, html, data) => {
-    const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme-color");
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.sheet-theme-color");
     if (theme === "default") return;
     app.element[0].dataset.themeColor = theme;
   });
