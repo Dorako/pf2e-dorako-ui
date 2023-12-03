@@ -1,4 +1,4 @@
-import { getChatTheme, getDefaultColorScheme, lookupThemeAndSchemeForKey } from "./ui-theme.js";
+import { lookupThemeAndSchemeForKey } from "./ui-theme.js";
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   if (html[0].hasAttribute("style")) {

@@ -3,7 +3,7 @@ import { ThemeSettings } from "./theme-settings.js";
 import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
-import { getAppThemeAndScheme, getUiTheme } from "../ui-theme.js";
+import { lookupThemeAndSchemeForKey } from "../ui-theme.js";
 import { MODULE_NAME } from "../consts.js";
 
 export function refreshChat() {
@@ -50,7 +50,7 @@ Hooks.once("init", async () => {
 
   const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (applicationTheme !== "no-theme") {
-    const uiTheme = getAppThemeAndScheme();
+    const uiTheme = lookupThemeAndSchemeForKey(applicationTheme);
     const { dorakoUiTheme, colorScheme } = uiTheme;
 
     if (uiTheme) {

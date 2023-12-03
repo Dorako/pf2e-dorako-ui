@@ -1,3 +1,7 @@
+# 3.2.1
+
+- (Fix) Fixed an issue where CRB (Dark) sheet theme would be broken.
+
 # 3.2.0
 
 - (New) Excluded PFS premium module journals from styling.
