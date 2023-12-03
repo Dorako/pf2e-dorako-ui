@@ -49,8 +49,9 @@
 
   &#compendium-browser > section.window-content > .content-box .spell-browser ul.result-list > li:hover,
   &#license-viewer > section.window-content > .content-box .spell-browser ul.result-list > li:hover {
-    background-color: var(--color-warm-2);
+    background-color: var(--accent-color);
     border-radius: var(--border-radius);
+    color: white;
   }
 
   &.roll-modifiers-dialog {

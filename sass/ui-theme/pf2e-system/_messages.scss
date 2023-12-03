@@ -148,7 +148,7 @@
   }
 }
 
-.message[data-dorako-ui-theme]:not([data-dorako-ui-theme="crb"][data-color-scheme="light"]) {
+.message[data-dorako-ui-theme]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
   .message-content {
     .damage-application {
       button:hover {
@@ -160,7 +160,7 @@
   }
 }
 
-.message[data-dorako-ui-theme]:not([data-dorako-ui-theme="crb"][data-color-scheme="light"]) {
+.message[data-dorako-ui-theme]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
   .message-content {
     .damage-application {
       img {
@@ -262,53 +262,6 @@
 
 .chat-message[data-dorako-ui-theme] .message-header {
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-
-  &.dorako-header {
-    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-    background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
-    text-shadow: 0px 1px 1px black;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
-    box-shadow: none;
-
-    a {
-      @include quick-transition;
-
-      &:hover {
-        text-shadow: 0px 1px 1px black;
-        color: var(--color-light-2);
-      }
-    }
-  }
-
-  .message-timestamp,
-  .header-meta {
-    @include f2-app;
-    background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
-    border-color: color-mix(in srgb, var(--header-color) 50%, white);
-    color: var(--color-light-2);
-  }
-
-  // &.light-header-text {
-  //   .header-meta {
-  //     //   @include f2-app;
-  //     //   background-color: var(--color-cool-3);
-  //     //   border-color: var(--color-cool-2);
-  //   }
-  // }
-
-  &[data-header-text-color-scheme="dark"] {
-    color: color-mix(in srgb, var(--header-color) 20%, black);
-    text-shadow: none;
-    .message-sender:not([data-visibility="gm"]) {
-      color: color-mix(in srgb, var(--header-color) 20%, black);
-      text-shadow: none;
-    }
-    .header-meta {
-      color: color-mix(in srgb, var(--header-color) 20%, black);
-      text-shadow: none;
-    }
-  }
 
   .player-name,
   .message-sender {

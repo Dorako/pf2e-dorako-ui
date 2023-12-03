@@ -202,7 +202,7 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
     .html(
       i18n("pf2e-dorako-ui.settings.theme.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.theme.hint")}</p>`
     )
-    .insertBefore($('[name="pf2e-dorako-ui.theme.window-app-theme"]').parents("div.form-group:first"));
+    .insertBefore($('[name="pf2e-dorako-ui.theme.app-theme"]').parents("div.form-group:first"));
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(

@@ -1,3 +1,12 @@
+# 3.2.0
+
+- (New) Excluded PFS premium module journals from styling.
+- (New) Invalid settings from now on should be migrated to default values.
+- (Refinement) Refactored the settings to hopefully increase clarity.
+- (New) The old color-scheme-based-on-speaker setting has been replaced by two settings, one standard, and one for opposition.
+- (New) Added BG3 blue variant chat message theme.
+- (Refinement) Various fixes to various themes.
+
 # 3.1.15
 
 - (Fix) Excluded Party Overview module from theming.

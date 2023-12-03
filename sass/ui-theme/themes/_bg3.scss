@@ -88,7 +88,7 @@
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"] {
+[data-dorako-ui-theme^="bg3"] {
   // --color-shadow-primary: transparent;
   // --color-shadow-highlight: transparent;
   // --color-border-light-highlight: var(--color-cool-3);
@@ -118,11 +118,8 @@
   // --color-bg-option: var(--color-cool-4);
 }
 
-/* ----------------------------------------- */
-/* Light color scheme                        */
-/* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
-[data-dorako-ui-theme="bg3"][data-color-scheme="light"] {
+[data-dorako-ui-theme^="bg3"][data-dorako-ui-scope="limited"],
+[data-dorako-ui-theme^="bg3"] {
   --window-app-background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
   --window-app-border-color: transparent;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -131,9 +128,9 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-chat-app-theme="bg3"] #sidebar-tabs,
-[data-chat-app-theme="bg3"] #chat-log ~ *,
-[data-dorako-ui-theme="bg3"] {
+[data-chat-app-theme^="bg3"] #sidebar-tabs,
+[data-chat-app-theme^="bg3"] #chat-log ~ *,
+[data-dorako-ui-theme^="bg3"] {
   /* Base colors */
   --color-warm-1: var(--tertiary);
   --color-warm-2: #ba4521;
@@ -152,7 +149,8 @@
   --icon-border-color: #ab7743;
   /* Window app variables */
   --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
-    radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
+    radial-gradient(circle at center, transparent 0, #0c0804ee 100%); // Translucent one
+  // --window-app-background: red;
   --window-app-border-color: var(--bg3-middle-brown);
   --window-app-border-style: 2px solid;
   --window-app-box-shadow: 0px 5px 20px 3px black;
@@ -259,7 +257,7 @@
 /* ----------------------------------------- */
 /* System variables                          */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"] {
+[data-dorako-ui-theme^="bg3"] {
   --color-text-dark-primary: var(--color-light-2);
   --bg: rgba(0, 0, 0, 0.5);
   --sub: var(--bg3-middle-brown);
@@ -273,7 +271,16 @@
 /* ----------------------------------------- */
 /* Specifics                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"] {
+[data-dorako-ui-theme^="bg3"] {
+  [data-visibility="gm"],
+  table.pf2-table {
+    --inline-bg: color-mix(in srgb, var(--bg3-accent-color-dark) 75%, transparent);
+    --inline-border-color: var(--bg3-accent-color);
+    --inline-text-color: var(--bg3-text-1);
+    --inline-icon-color: var(--bg3-text-1);
+    --inline-box-shadow: 0px 1px 2px black;
+    --inline-text-shadow: 0px 1px 1px black;
+  }
   h1 {
     border-image: linear-gradient(90deg, transparent, var(--color-underline-header) 50%, transparent) 1;
   }
@@ -355,7 +362,7 @@
 /* ----------------------------------------- */
 /* FPS display                               */
 /* ----------------------------------------- */
-#fps[data-dorako-ui-theme="bg3"] {
+#fps[data-dorako-ui-theme^="bg3"] {
   background: var(--bg3-tooltip-window-background) padding-box,
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
@@ -366,7 +373,7 @@
 /* ----------------------------------------- */
 /* Tooltip                                   */
 /* ----------------------------------------- */
-#tooltip[data-dorako-ui-theme="bg3"] {
+#tooltip[data-dorako-ui-theme^="bg3"] {
   --border-radius: 12px;
   box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   backdrop-filter: none;
@@ -381,7 +388,7 @@
   border: 2px solid transparent;
 }
 
-[data-dorako-ui-theme="bg3"]#effects-panel {
+[data-dorako-ui-theme^="bg3"]#effects-panel {
   .effect-item .effect-info {
     background: var(--bg3-tooltip-window-background) padding-box,
       linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
@@ -408,7 +415,7 @@
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="bg3"] {
+[data-dorako-ui-scope="navigation"][data-dorako-ui-theme^="bg3"] {
   #nav-toggle {
     background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
     border: 2px solid transparent !important;
@@ -475,7 +482,7 @@
 /* ----------------------------------------- */
 /* Hotbar                                    */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="hotbar"][data-dorako-ui-theme="bg3"] {
+[data-dorako-ui-scope="hotbar"][data-dorako-ui-theme^="bg3"] {
   // position: relative;
   // &::before {
   //   // background: var(--bg3-ui-purple-background);
@@ -519,11 +526,11 @@
 /* ----------------------------------------- */
 /* Chat message                              */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"].chat-message
+[data-dorako-ui-theme^="bg3"].chat-message
   .message-content
   .damage-application
   button[data-action="apply-healing"]:hover,
-[data-dorako-ui-theme="bg3"].chat-message
+[data-dorako-ui-theme^="bg3"].chat-message
   .message-content
   + .pf2e-toolbelt-target-damage
   .target-damage-application
@@ -532,7 +539,7 @@
   --color-level-success-border: color-mix(in srgb, var(--bg3-healing) 20%, white) !important;
 }
 
-[data-dorako-ui-theme="bg3"].message
+[data-dorako-ui-theme^="bg3"].message
   .message-content
   .damage-application
   button[data-action="apply-healing"]
@@ -541,16 +548,21 @@
   --fa-inverse: black;
 }
 
-[data-dorako-ui-theme="bg3"].message.chat-message {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%)
+[data-dorako-ui-theme^="bg3"].message.chat-message {
+  --window-app-background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--player-color) 40%, transparent) 0,
+        transparent 40%
+      )
       border-box,
     var(--bg3-tooltip-window-background) padding-box,
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
+  background: var(--window-app-background);
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 
-  &[data-theme-variant="blue"] {
+  &[data-dorako-ui-theme^="bg3-blue"] {
     --bg3-border-inner: #a16a37;
     --bg3-border-outer: #4a2e18;
     --bg3-border-internal: #304248;
@@ -599,6 +611,7 @@
 
   .message-header {
     color: var(--bg3-text-1);
+    background: none;
   }
 
   .card-content hr {
@@ -730,6 +743,10 @@
   --color-warm-2: var(--bg3-text-1);
   --color-cool-4: var(--bg3-bg-inner);
   --color-cool-5: var(--bg3-border-outer);
+
+  a:hover {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  }
 
   .item-img.hover {
     --color-warm-1: var(--bg3-accent-color-light);

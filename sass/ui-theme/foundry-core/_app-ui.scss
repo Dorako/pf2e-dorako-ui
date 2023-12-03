@@ -124,7 +124,7 @@
   }
 }
 
-[data-dorako-ui-theme="crb"][data-color-scheme="light"] {
+[data-dorako-ui-theme^="crb"][data-color-scheme="light"] {
   // Dark theme
   --rarity-common: #323232;
   --rarity-uncommon: #98513d;
@@ -211,6 +211,11 @@
     i,
     i.icon {
       color: var(--inline-icon-color);
+    }
+
+    [data-visibility]:not([data-visibility="all"]) {
+      color: var(--inline-text-color) !important;
+      outline: 1px solid var(--visibility-gm-bg);
     }
   }
   [data-pf2-check][data-pf2-traits*="secret"],

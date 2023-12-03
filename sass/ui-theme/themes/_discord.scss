@@ -20,12 +20,13 @@
   --discord-color-scrollbar-border: transparent;
   --discord-green: #417e4c;
   --discord-attention: #e6b44e;
+  --discord-red: #df4f4a;
 }
 
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"] {
+[data-dorako-ui-theme^="discord"] {
   // --color-shadow-primary: transparent;
   // --color-shadow-highlight: transparent;
   --color-border-light-highlight: var(--discord-background-1);
@@ -59,9 +60,10 @@
 /* ----------------------------------------- */
 /* Light color scheme                        */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
-[data-dorako-ui-theme="discord"][data-color-scheme="light"] {
+[data-dorako-ui-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
+[data-dorako-ui-theme^="discord"][data-color-scheme="light"] {
   --discord-color-scrollbar: #c5c9cd;
+  --app-background: #f2f3f5;
   --window-app-background: #ffffff;
   --input-background-color: #ebedef;
   --input-text-color: #4e5057;
@@ -74,7 +76,8 @@
   --color-light-3: var(--discord-text-3);
   --color-light-4: var(--discord-text-2);
   --color-light-5: var(--discord-text-1);
-  --inline-bg: color-mix(in srgb, var(--accent-color) 15%, transparent);
+  // --inline-bg: color-mix(in srgb, var(--accent-color) 15%, transparent);
+  --inline-bg: #e6e8fc;
   --inline-text-color: var(--accent-color);
   --inline-icon-color: var(--accent-color);
 
@@ -95,6 +98,10 @@
     --text-dark: black;
   }
 
+  &.actor.sheet .crb-style .sheet-body {
+    --color-border-divider: var(--discord-background-1);
+  }
+
   .tagify {
     --color-light-2: white;
   }
@@ -109,8 +116,8 @@
 /* ----------------------------------------- */
 /* Dark color scheme                        */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
-[data-dorako-ui-theme="discord"][data-color-scheme="dark"] {
+[data-dorako-ui-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
+[data-dorako-ui-theme^="discord"][data-color-scheme="dark"] {
   &.sheet.pf2e.actor.npc.app {
     --section-background: var(--discord-background-4);
     --section-header: var(--discord-accent-color);
@@ -135,7 +142,7 @@
 
   &.actor.sheet .crb-style .sheet-body {
     // --color-border-medium: var(--brown-1);
-    // --color-border-divider: var(--color-scrollbar-border);
+    --color-border-divider: var(--discord-background-1);
     --text-dark: var(--discord-text-2);
   }
 }
@@ -143,7 +150,7 @@
 /* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"]:not([data-color-scheme]) {
+[data-dorako-ui-theme^="discord"]:not([data-color-scheme]) {
   --app-border-style: 1px solid;
   --app-background: var(--discord-background-3);
   --app-border-color: var(--discord-background-1);
@@ -156,9 +163,9 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-chat-app-theme="discord"] #sidebar-tabs,
-[data-chat-app-theme="discord"] #chat-log ~ *,
-[data-dorako-ui-theme="discord"] {
+[data-chat-app-theme^="discord"] #sidebar-tabs,
+[data-chat-app-theme^="discord"] #chat-log ~ *,
+[data-dorako-ui-theme^="discord"] {
   /* Base colors */
   // --color-warm-1: var(--tertiary);
   // --color-warm-2: #ba4521;
@@ -201,7 +208,7 @@
   // --inline-text-color: var(--discord-text-2);
   // --inline-icon-color: var(--discord-attention);
   --inline-box-shadow: none;
-  --inline-bg: color-mix(in srgb, var(--accent-color) 25%, transparent);
+  --inline-bg: #3d426e;
   --inline-border-color: transparent;
   --inline-text-color: #cacdf7;
   --inline-icon-color: #cacdf7;
@@ -249,7 +256,7 @@
 /* ----------------------------------------- */
 /* System variables                          */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"] {
+[data-dorako-ui-theme^="discord"] {
   --color-text-dark-primary: var(--color-light-2);
   --bg: rgba(0, 0, 0, 0.25);
   // --sub: var(--bg3-middle-brown);
@@ -263,7 +270,7 @@
 /* ----------------------------------------- */
 /* Specifics                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"] {
+[data-dorako-ui-theme^="discord"] {
   &.window-app .window-header {
     text-shadow: none;
     color: var(--color-light-2);
@@ -333,7 +340,7 @@
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="controls"][data-dorako-ui-theme="discord"] {
+[data-dorako-ui-scope="controls"][data-dorako-ui-theme^="discord"] {
   --button-hover-background-color: var(--accent-color);
   --button-focus-outline-color: var(--accent-color-light);
   --button-hover-border-color: var(--accent-color-dark);
@@ -346,7 +353,7 @@
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="discord"] {
+[data-dorako-ui-scope="navigation"][data-dorako-ui-theme^="discord"] {
   .scene {
     --button-toggle-focus-outline-color: var(--discord-attention);
   }
@@ -373,7 +380,7 @@
 /* ----------------------------------------- */
 /* Chat message                              */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="discord"].chat-message {
+[data-dorako-ui-theme^="discord"].chat-message {
   background: var(--discord-background-2);
   --button-background-color: var(--discord-background-2);
   --button-hover-background-color: #35373b;
@@ -389,9 +396,17 @@
   &.whisper {
     border-color: color-mix(in srgb, var(--discord-background-2) 50%, var(--whisper-bg));
     background: color-mix(in srgb, var(--discord-background-2) 80%, var(--whisper-bg));
+    .message-header .message-sender,
+    .message-header {
+      color: var(--whisper-bg) !important;
+    }
     &.blind {
       border-color: var(--blind-bg);
       background: color-mix(in srgb, var(--discord-background-2) 80%, var(--blind-bg));
+      .message-header .message-sender,
+      .message-header {
+        color: var(--blind-bg) !important;
+      }
     }
   }
 
@@ -456,7 +471,7 @@
   }
 }
 
-[data-dorako-ui-theme="discord"][data-color-scheme="light"].chat-message {
+[data-dorako-ui-theme^="discord"][data-color-scheme="light"].chat-message {
   background: #ffffff;
   --button-background-color: #ffffff;
   --button-hover-background-color: #ebebed;
@@ -497,7 +512,7 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-chat-app-theme="discord"] {
+[data-chat-app-theme^="discord"] {
   --color-scrollbar: var(--discord-color-scrollbar);
   --color-scrollbar-border: var(--discord-color-scrollbar-border);
   --color-scrollbar-hover: var(--discord-color-scrollbar-highlight);
@@ -508,18 +523,18 @@
   }
 }
 
-[data-chat-app-theme="discord"] #dorako-rt-buttons button {
+[data-chat-app-theme^="discord"] #dorako-rt-buttons button {
   --button-toggle-border-color: color-mix(in srgb, var(--discord-green) 75%, white);
   --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-attention) 50%, white);
 }
 
-[data-dorako-ui-theme="discord"][data-color-scheme="light"] .damage {
+[data-dorako-ui-theme^="discord"][data-color-scheme="light"] .damage {
   --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
   --color-border-physical: #939292; // adjusted
   --color-text-physical: black; // adjusted
 }
 
-[data-dorako-ui-theme="discord"][data-color-scheme="dark"] .damage {
+[data-dorako-ui-theme^="discord"][data-color-scheme="dark"] .damage {
   --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
   --color-border-physical: #939292; // adjusted
   --color-text-physical: #bab9b9; // adjusted

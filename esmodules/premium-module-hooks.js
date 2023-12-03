@@ -21,10 +21,10 @@ export function isPremiumApplication(app, html, data, appName) {
   }
   for (var key in app.document?.flags) {
     //prettier-ignore
-    const fvttPremium = new RegExp(/^pf2e-(beginner-box|abomination-vaults|kingmaker|km|mercenary-marketplace-vol1)/);
+    const fvttPremium = new RegExp(/^pf2e-(beginner-box|abomination-vaults|kingmaker|km|mercenary-marketplace-vol1|pfs)/);
     if (fvttPremium.test(key)) {
       console.debug(
-        `${MODULE_NAME} | ${appName} contains key matching '^pf2e-(beginner-box|abomination-vaults|kingmaker)' => add .premium`
+        `${MODULE_NAME} | ${appName} contains key matching '^pf2e-(beginner-box|abomination-vaults|kingmaker|km|mercenary-marketplace-vol1|pfs)' => add .premium`
       );
       html[0].classList.add("premium");
       html.closest(".app").find(".journal-entry-content").addClass("premium");

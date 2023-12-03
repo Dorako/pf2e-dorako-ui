@@ -1,3 +1,4 @@
+[data-chat-app-theme="opaque"] #chat-log ~ *,
 [data-dorako-ui-theme="opaque"]:not([data-color-scheme]) {
   //   --color-light-2: var(--color-text-light-highlight);
   //   --color-light-3: var(--color-text-light-heading);
@@ -5,6 +6,11 @@
   --app-background: rgb(30, 30, 30);
   --app-border-color: rgb(80, 80, 80);
   --app-border-style: 1px solid;
+
+  --window-app-background: rgb(30, 30, 30);
+  --window-app-border-style: 1px solid;
+  --window-app-border-color: rgb(80, 80, 80);
+
   --input-border-color: var(--button-border-color); // intentional
   --input-text-color: black;
   --input-focus-text-color: black;
@@ -37,6 +43,10 @@
   --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
   --button-toggle-hover-background: var(--secondary-light);
 
+  --color-scrollbar: var(--bg3-color-scrollbar);
+  --color-scrollbar-border: var(--bg3-color-scrollbar-border);
+  --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
+
   /* Inline variables */
   --inline-bg: #1e1e1e;
   --inline-border-color: #404040;
@@ -46,6 +56,9 @@
 
   --accent-color: var(--primary-light);
   --icon-border-color: var(--tertiary);
+
+  --color-border-light-primary: var(--app-border-color);
+  --color-border-light-highlight: var(--app-border-color);
 
   &#token-hud {
     --input-text-color: var(--color-light-2);
@@ -69,6 +82,17 @@
   --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
   --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
   --button-toggle-hover-background: var(--secondary-light);
+}
+
+/* ----------------------------------------- */
+/* Chatlog                                   */
+/* ----------------------------------------- */
+[data-chat-app-theme="opaque"] {
+  #sidebar-tabs {
+    --app-border-style: 1px solid;
+    --button-hover-background-color: var(--primary-light);
+    --button-hover-border-color: #d3b87c;
+  }
 }
 
 /* ----------------------------------------- */

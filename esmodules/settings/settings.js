@@ -4,6 +4,7 @@ import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
 import { getAppThemeAndScheme, getUiTheme } from "../ui-theme.js";
+import { MODULE_NAME } from "../consts.js";
 
 export function refreshChat() {
   if (game.messages.size > 100) {
@@ -16,7 +17,7 @@ export function refreshChat() {
 }
 
 Hooks.once("init", async () => {
-  util.debug("init");
+  util.debug("Init...");
 
   game.settings.register("pf2e-dorako-ui", "mld-nag", {
     scope: "world",
@@ -25,26 +26,27 @@ Hooks.once("init", async () => {
     type: Boolean,
   });
 
-  // game.settings.register("pf2e-dorako-ui", "tah-nag", {
-  //   scope: "client",
-  //   config: false,
-  //   default: true,
-  //   type: Boolean,
-  // });
-
-  game.settings.register("pf2e-dorako-ui", "migration-version", {
-    scope: "world",
-    config: false,
-    default: "0.0.0",
-    type: String,
-  });
-
   ThemeSettings.registerSettings();
   MiscSettings.registerSettings();
   CustomizationSettings.registerSettings();
   ExternalModuleSettings.registerSettings();
 
-  util.debug("registered settings");
+  util.debug("Registered settings...");
+
+  util.debug("Migrating invalid settings to default...");
+  const allSettings = [...game.settings.settings].filter(([k, _]) => k.includes(MODULE_NAME));
+  for (const [_, setting] of allSettings) {
+    const key = setting.key;
+    const currentValue = game.settings.get(MODULE_NAME, key);
+    const choices = setting.choices;
+    if (choices) {
+      if (!(currentValue in choices)) {
+        const defaultValue = setting.default;
+        await game.settings.set(MODULE_NAME, key, defaultValue);
+        console.warn(`Set ${key} to '${defaultValue}' since '${currentValue}' is invalid`);
+      }
+    }
+  }
 
   const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (applicationTheme !== "no-theme") {
@@ -57,17 +59,11 @@ Hooks.once("init", async () => {
     }
   }
 
-  const chatMessageTheme = game.settings.get("pf2e-dorako-ui", "theme.chat-message-theme");
-  const chatMessageHeaderStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
-  if (chatMessageTheme === "bg3" && chatMessageHeaderStyle !== "none") {
-    game.settings.set("pf2e-dorako-ui", "theme.chat-message-header-style", "none");
-  }
-
   const root = document.querySelector(":root").style;
 
   root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
 
-  util.debug("initialized properties");
+  util.debug("initialized properties...");
 });
 
 Hooks.once("ready", () => {

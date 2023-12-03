@@ -17,9 +17,16 @@
       "prefer-light": "Prefer light",
       "prefer-dark": "Prefer dark",
       "bg3": "Baldur's Gate 3",
+      "bg3-brown": "Baldur's Gate 3 (Brown)",
+      "bg3-blue": "Baldur's Gate 3 (Blue)",
       "foundry2": "Foundry 2",
       "discord": "Discord",
+      "discord-light": "Discord (Light)",
+      "discord-dark": "Discord (Dark)",
+      "glass": "Glass",
       "crb": "Core Rulebook",
+      "crb-light": "Core Rulebook (Light)",
+      "crb-dark": "Core Rulebook (Dark)",
       "no-theme": "No theme",
       "opaque": "Opaque",
       "alliance": "Opposition dark",
@@ -40,36 +47,32 @@
         "label": "Configure Theme Settings",
         "hint": "Change theme settings for various applications and UI elements",
         "window-app-theme": {
-          "name": "Window app theme",
-          "hint": "Affects rendered application windows"
-        },
-        "window-app-color-scheme": {
-          "name": "Window app color scheme",
-          "hint": "Affects rendered application windows"
+          "name": "Sheet theme",
+          "hint": "Applies to window style applications"
         },
         "app-theme": {
-          "name": "App theme",
-          "hint": "Affects user interface elements like controls and navigation, as well as modules"
+          "name": "Interface theme",
+          "hint": "Applies to user interface elements like controls, navigation, sidebar, as well as floating style modules"
         },
-        "chat-message-theme": {
-          "name": "Chat message theme",
-          "hint": "Affects rendered chat messages"
+        "chat-message-standard-theme": {
+          "name": "Chat message (standard) theme",
+          "hint": "Applies to messages from speakers not from the 'opposition' alliance"
         },
-        "chat-message-color-scheme": {
-          "name": "Chat message color scheme",
-          "hint": "Rules for making chat messages either light or dark"
+        "chat-message-opposition-theme": {
+          "name": "Chat message (opposition) theme",
+          "hint": "Applies to messages with speakers from the 'opposition' alliance"
         },
         "chat-message-header-style": {
           "name": "Chat message header theme",
-          "hint": "Adds a colored header to every chat message"
+          "hint": "Only applies CRB themes"
         },
         "border-radius": {
           "name": "Roundedness",
           "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
         },
-        "pc-sheet-theme": {
-          "name": "PC sheet color theme",
-          "hint": "Affects sheets for player characters and vehicles"
+        "sheet-theme-color": {
+          "name": "Sheet theme color",
+          "hint": "Applies to sheets for player characters and vehicles"
         }
       },
       "misc": {
@@ -78,7 +81,7 @@
         "hint": "Configure settings related to other Dorako UI functionality",
         "enable-debug-mode": {
           "name": "Enable debug mode?",
-          "hint": "Adds buttons to toggle dorako-ui and dark-theme styling for windows"
+          "hint": "Adds buttons to quickly swap Sheet theme"
         }
       },
       "customization": {

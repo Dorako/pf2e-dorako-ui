@@ -1,7 +1,5 @@
 import {
   limitedScopeApplications,
-  baseThemeApplications,
-  baseThemePf2eSheets,
   MODULE_NAME,
   themedApps,
   systemSheets,
@@ -12,13 +10,21 @@ import { isPremiumApplication } from "./premium-module-hooks.js";
 
 export function getDefaultColorScheme(theme) {
   switch (theme) {
-    case "crb":
+    case "crb-light":
       return "light";
     case "foundry2":
+      return "dark";
+    case "bg3-brown":
+      return "dark";
+    case "bg3-blue":
       return "dark";
     case "bg3":
       return "dark";
     case "discord":
+      return "dark";
+    case "discord-light":
+      return "light";
+    case "discord-dark":
       return "dark";
     default:
       return null;
@@ -27,18 +33,19 @@ export function getDefaultColorScheme(theme) {
 
 export function getUiTheme() {
   const windowAppTheme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
-  const colorSchemePref = game.settings.get("pf2e-dorako-ui", "theme.window-app-color-scheme");
-  const colorScheme = (function () {
-    switch (colorSchemePref) {
-      case "default":
-        return getDefaultColorScheme(windowAppTheme);
-      case "prefer-light":
-        return "light";
-      case "prefer-dark":
-        return "dark";
-    }
-  })();
-  return { dorakoUiTheme: windowAppTheme, colorScheme: colorScheme };
+  // const colorSchemePref = game.settings.get("pf2e-dorako-ui", "theme.window-app-color-scheme");
+  // const colorScheme = (function () {
+  //   switch (colorSchemePref) {
+  //     case "default":
+  //       return getDefaultColorScheme(windowAppTheme);
+  //     case "prefer-light":
+  //       return "light";
+  //     case "prefer-dark":
+  //       return "dark";
+  //   }
+  // })();
+  // return { dorakoUiTheme: windowAppTheme, colorScheme: colorScheme };
+  return { dorakoUiTheme: windowAppTheme, colorScheme: getDefaultColorScheme(windowAppTheme) };
 }
 
 export function getAppThemeAndScheme() {
@@ -46,12 +53,20 @@ export function getAppThemeAndScheme() {
   switch (setting) {
     case "crb":
       return { dorakoUiTheme: "crb", colorScheme: null };
+    case "crb-light":
+      return { dorakoUiTheme: "crb-light", colorScheme: "light" };
+    case "crb-dark":
+      return { dorakoUiTheme: "crb-dark", colorScheme: "dark" };
     case "foundry2":
-      return { dorakoUiTheme: "foundry2", colorScheme: "light" };
+      return { dorakoUiTheme: "foundry2", colorScheme: "dark" };
     case "bg3":
       return { dorakoUiTheme: "bg3", colorScheme: "dark" };
     case "discord":
       return { dorakoUiTheme: "discord", colorScheme: "dark" };
+    case "discord-light":
+      return { dorakoUiTheme: "discord-light", colorScheme: "light" };
+    case "discord-dark":
+      return { dorakoUiTheme: "discord-dark", colorScheme: "dark" };
     case "opaque": {
       return { dorakoUiTheme: "opaque", colorScheme: "dark" };
     }
@@ -65,12 +80,51 @@ export function getChatTheme() {
   switch (setting) {
     case "crb":
       return { dorakoUiTheme: "crb", colorScheme: null };
+    case "crb-light":
+      return { dorakoUiTheme: "crb", colorScheme: "light" };
+    case "crb-dark":
+      return { dorakoUiTheme: "crb", colorScheme: "dark" };
     case "foundry2":
-      return { dorakoUiTheme: "foundry2", colorScheme: "light" };
+      return { dorakoUiTheme: "foundry2", colorScheme: "dark" };
     case "bg3":
+      return { dorakoUiTheme: "bg3", colorScheme: "dark" };
+    case "bg3-brown":
+      return { dorakoUiTheme: "bg3", colorScheme: "dark" };
+    case "bg3-blue":
       return { dorakoUiTheme: "bg3", colorScheme: "dark" };
     case "discord":
       return { dorakoUiTheme: "discord", colorScheme: "dark" };
+    case "discord-light":
+      return { dorakoUiTheme: "discord-light", colorScheme: "light" };
+    case "discord-dark":
+      return { dorakoUiTheme: "discord-dark", colorScheme: "dark" };
+    default:
+      return "", "";
+  }
+}
+
+export function lookupThemeAndSchemeForKey(key) {
+  switch (key) {
+    case "crb":
+      return { dorakoUiTheme: "crb", colorScheme: null };
+    case "crb-light":
+      return { dorakoUiTheme: "crb", colorScheme: "light" };
+    case "crb-dark":
+      return { dorakoUiTheme: "crb", colorScheme: "dark" };
+    case "foundry2":
+      return { dorakoUiTheme: "foundry2", colorScheme: "dark" };
+    case "bg3":
+      return { dorakoUiTheme: "bg3", colorScheme: "dark" };
+    case "bg3-brown":
+      return { dorakoUiTheme: "bg3-brown", colorScheme: "dark" };
+    case "bg3-blue":
+      return { dorakoUiTheme: "bg3-blue", colorScheme: "dark" };
+    case "discord":
+      return { dorakoUiTheme: "discord", colorScheme: "dark" };
+    case "discord-light":
+      return { dorakoUiTheme: "discord-light", colorScheme: "light" };
+    case "discord-dark":
+      return { dorakoUiTheme: "discord-dark", colorScheme: "dark" };
     default:
       return "", "";
   }
@@ -130,8 +184,7 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
       return;
     }
     if (
-      theme == "crb" &&
-      colorScheme == "light" &&
+      theme == "crb-light" &&
       (app.constructor.name === "PartySheetPF2e" || app.constructor.name === "FamiliarSheetPF2e")
     )
       return;
@@ -189,18 +242,6 @@ Hooks.on("renderApplication", (app, html, data) => {
   html.find("form.check-modifiers-content button.roll").addClass("bright");
 });
 
-Hooks.on("renderSidebar", (app, html, data) => {
-  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
-  const excludeList = excludeString.split(/[\s,]+/);
-  if (excludeList.includes(app.constructor.name)) {
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string`);
-    return;
-  }
-
-  $("#sidebar-tabs").attr("data-dorako-ui-theme", "");
-  app.element[0].dataset.dorakoUiScope = "sidebar";
-});
-
 // Hooks.on("renderDialog", (app, html, data) => {
 //   const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
 //   if (theme === "no-theme") return;
@@ -236,7 +277,7 @@ for (const appName of [...limitedScopeApplications]) {
 
 for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
   Hooks.on("render" + appName, (app, html, data) => {
-    const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme");
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.pc-sheet-theme-color");
     if (theme === "default") return;
     app.element[0].dataset.themeColor = theme;
   });
@@ -266,5 +307,21 @@ Hooks.on("render" + "ChatLogPF2e", (app, html, data) => {
 Hooks.on("render" + "Sidebar", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (theme === "no-theme") return;
-  app.element[0].dataset.chatAppTheme = theme;
+  if (theme === "bg3") {
+    app.element[0].dataset.chatAppTheme = "bg3-translucent";
+  } else {
+    app.element[0].dataset.chatAppTheme = theme;
+  }
+});
+
+Hooks.on("render" + "Sidebar", (app, html, data) => {
+  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes(app.constructor.name)) {
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string`);
+    return;
+  }
+
+  $("#sidebar-tabs").attr("data-dorako-ui-theme", "");
+  app.element[0].dataset.dorakoUiScope = "sidebar";
 });

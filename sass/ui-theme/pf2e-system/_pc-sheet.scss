@@ -308,6 +308,11 @@
     background: #151515;
   }
 
+  &[data-theme-color].sheet.actor.window-app.vehicle .window-header,
+  &[data-theme-color].sheet.actor.window-app.character .window-header {
+    color: white;
+  }
+
   &.sheet.actor.window-app.minimized .window-header {
     border-radius: var(--border-radius);
   }

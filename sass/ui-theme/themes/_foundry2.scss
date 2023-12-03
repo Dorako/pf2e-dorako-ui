@@ -183,21 +183,33 @@
         background-blend-mode: luminosity;
       }
     }
+
+    background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%),
+      var(--window-app-background);
+
+    .message-timestamp,
+    .header-meta {
+      @include f2-app;
+      background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
+      border: 1px solid color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
+      color: var(--color-light-1);
+      text-shadow: 0px 1px 1px black;
+    }
   }
 
-  &.chat-message[data-header-text-color-scheme="dark"] .message-header {
-    --color-text-dark-secondary: var(--color-light-1);
-    --color-light-1: black;
-    --color-light-2: black;
-    --color-light-3: black;
-    --app-text-shadow: none;
-    text-shadow: none;
-  }
+  // &.chat-message[data-header-text-color-scheme="dark"] .message-header {
+  //   --color-text-dark-secondary: var(--color-light-1);
+  //   --color-light-1: black;
+  //   --color-light-2: black;
+  //   --color-light-3: black;
+  //   --app-text-shadow: none;
+  //   text-shadow: none;
+  // }
 
-  &.chat-message[data-header-text-color-scheme="light"] .message-header {
-    --color-text-dark-secondary: var(--color-light-1);
-    --app-text-shadow: none;
-  }
+  // &.chat-message[data-header-text-color-scheme="light"] .message-header {
+  //   --color-text-dark-secondary: var(--color-light-1);
+  //   --app-text-shadow: none;
+  // }
 
   &.window-app.sidebar-popout {
     border: none;
