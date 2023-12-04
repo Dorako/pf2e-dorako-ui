@@ -14,7 +14,24 @@
       "maybe-reload": "Niektóre zmiany mogą wymagać przeładowania.",
       "self-roll": "Rzuć dla siebie",
       "gm-only": "Tylko GM",
-      "prefer-light": "Preferuj światło"
+      "prefer-light": "Preferuj jaśniejszy",
+      "prefer-dark": "Preferuj ciemniejszy",
+      "bg3": "Baldur's Gate 3",
+      "foundry2": "Foundry 2",
+      "discord": "Discord",
+      "crb": "Core Rulebook",
+      "no-theme": "Brak motywu",
+      "opaque": "Nieprzezroczysty",
+      "alliance": "Odwrotny ciemny",
+      "gm-vs-players": "GM ciemny",
+      "colors": {
+        "red": "Czerwony",
+        "blue": "Niebieski",
+        "green": "Zielony",
+        "purple": "Fioletowy",
+        "black": "Czarny",
+        "player": "Kolor gracza"
+      }
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
@@ -56,7 +73,7 @@
           }
         },
         "pc-sheet-theme": {
-          "name": "Motyw karty PC",
+          "name": "Motyw karty Gracza",
           "hint": "Karty efektów dla postaci graczy i pojazdów",
           "choice": {
             "green": "Poprawiony Zielony",
@@ -94,6 +111,30 @@
         "border-radius": {
           "name": "Zaokrąglenie",
           "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika"
+        },
+        "app-theme": {
+          "name": "Motyw aplikacji",
+          "hint": "Wpływa na elementy interfejsu użytkownika, takie jak kontrolki i nawigacja, a także moduły"
+        },
+        "window-app-theme": {
+          "hint": "Wpływa na renderowane okna aplikacji",
+          "name": "Motyw okienka"
+        },
+        "window-app-color-scheme": {
+          "name": "Schemat kolorów okienka",
+          "hint": "Wpływa na renderowane okna aplikacji"
+        },
+        "chat-message-theme": {
+          "hint": "Wpływa na renderowane wiadomości czatu",
+          "name": "Motyw wiadomości czatu"
+        },
+        "chat-message-color-scheme": {
+          "name": "Schemat kolorów wiadomości czatu",
+          "hint": "Zasady tworzenia jasnych lub ciemnych wiadomości na czacie"
+        },
+        "chat-message-header-style": {
+          "name": "Motyw nagłówka wiadomości czatu",
+          "hint": "Dodaje kolorowy nagłówek do każdej wiadomości czatu"
         }
       },
       "avatar": {
