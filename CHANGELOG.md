@@ -1,3 +1,9 @@
+# 3.2.3
+
+- (Fix) Fixed issue that broke Opaque interface theme.
+- (Fix) Deleted migration code fully, to fix logspam.
+- (Maintenance) Updated styling for Simple NPC sheets.
+
 # 3.2.2
 
 - (Fix) Fixed the Sheet theme color setting not applying at all.

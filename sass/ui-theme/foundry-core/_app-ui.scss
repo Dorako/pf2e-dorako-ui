@@ -215,7 +215,7 @@
 
     [data-visibility]:not([data-visibility="all"]) {
       color: var(--inline-text-color) !important;
-      outline: 1px solid var(--visibility-gm-bg);
+      outline: 1px dashed var(--inline-text-color);
     }
   }
   [data-pf2-check][data-pf2-traits*="secret"],

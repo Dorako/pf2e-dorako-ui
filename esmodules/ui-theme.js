@@ -10,6 +10,8 @@ import { isPremiumApplication } from "./premium-module-hooks.js";
 
 export function lookupThemeAndSchemeForKey(key) {
   switch (key) {
+    case "opaque":
+      return { dorakoUiTheme: "opaque", colorScheme: null };
     case "crb":
       return { dorakoUiTheme: "crb", colorScheme: null };
     case "crb-light":

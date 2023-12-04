@@ -81,6 +81,10 @@
     border-color: var(--section-border-color);
   }
 
+  &.actor.npc.sheet form .notes .notes-section > h4 {
+    color: var(--color-light-2);
+  }
+
   &.actor.npc.sheet form .notes .details-label {
     color: var(--color-light-2);
   }

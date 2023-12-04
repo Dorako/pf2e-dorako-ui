@@ -1,15 +1,5 @@
 import { MODULE_NAME, systemSheets } from "./consts.js";
-import migrate from "./settings/migrations.js";
 import { i18n, debug, warn } from "./util.js";
-
-Hooks.once("ready", () => {
-  debug("ready");
-});
-
-Hooks.once("ready", () => {
-  debug("Attempting to migrate...");
-  migrate();
-});
 
 Hooks.once("ready", () => {
   if (!game.modules.get("pf2e-dorako-ux")) return;

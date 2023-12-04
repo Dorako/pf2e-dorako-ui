@@ -4814,7 +4814,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-dorako-ui-theme] a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all]),
 [data-dorako-ui-theme] a.inline-roll [data-visibility]:not([data-visibility=all]) {
   color: var(--inline-text-color) !important;
-  outline: 1px solid var(--visibility-gm-bg);
+  outline: 1px dashed var(--inline-text-color);
 }
 [data-chat-app-theme] #chat-log ~ * [data-pf2-check][data-pf2-traits*=secret],
 [data-chat-app-theme] #chat-log ~ * [data-visibility]:not([data-visibility=all])[data-visibility=gm],
@@ -8299,6 +8299,9 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child), [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
   border-color: var(--section-border-color);
+}
+[data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .notes .notes-section > h4 {
+  color: var(--color-light-2);
 }
 [data-dorako-ui-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .notes .details-label {
   color: var(--color-light-2);
@@ -12644,7 +12647,7 @@ nav#controls[data-dorako-ui-theme] ol.control-tools > li.toggle:disabled {
   --color-scrollbar-border: var(--bg3-color-scrollbar-border);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
   /* Inline variables */
-  --inline-bg: #1e1e1e;
+  --inline-bg: #303030;
   --inline-border-color: #404040;
   --inline-text-color: var(--color-light-2);
   --inline-icon-color: var(--color-light-1);
