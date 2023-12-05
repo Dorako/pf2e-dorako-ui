@@ -35,7 +35,7 @@
   text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  color: var(--color-light-3);
+  color: var(--text-color-3);
 }
 
 @mixin dui-grayscale {
@@ -84,7 +84,7 @@
     --button-background: var(--button-disabled-background);
     --button-hover-background: var(--button-disabled-background);
     --button-border-color: var(--button-disabled-border-color);
-    --button-text-color: var(--color-light-5);
+    --button-text-color: var(--text-color-5);
   }
 }
 
@@ -95,7 +95,7 @@
   --button-border-color: var(--accent-color-dark);
   --button-text-color: var(--button-bright-text-color);
   --app-text-shadow: none;
-  --button-hover-background: var(--accent-color-light);
+  --button-hover-background: var(--accent-text-color);
   --button-hover-border-color: var(--accent-color);
   --button-hover-text-color: var(--button-bright-text-color);
 
@@ -149,7 +149,7 @@
 
   &.disabled,
   &:disabled {
-    --input-text-color: var(--color-light-disabled);
+    --input-text-color: var(--text-color-disabled);
     --input-background: var(--input-disabled-background);
     --input-border-color: var(--input-disabled-border-color);
     &::placeholder {
@@ -162,8 +162,8 @@
   }
 
   &::selection {
-    color: var(--input-text-color);
-    background: var(--input-focus-outline-color);
+    // color: var(--input-text-color);
+    // background: rgba(122, 122, 122, 0.5);
   }
 
   &[type="checkbox"] {

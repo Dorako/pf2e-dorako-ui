@@ -5,31 +5,31 @@
   // --color-shadow-primary: transparent;
   // --color-shadow-highlight: transparent;
   --color-border-light-highlight: black;
-  // --color-border-light-primary: var(--color-cool-4);
-  // --color-border-light-secondary: var(--color-cool-4);
-  // --color-border-light-tertiary: var(--color-cool-4);
-  // --color-border-dark-1: var(--color-cool-4); // darkest
-  // --color-border-dark-2: var(--color-cool-4);
-  // --color-border-dark-3: var(--color-cool-4);
-  // --color-border-dark-4: var(--color-cool-3);
-  // --color-border-dark-5: var(--color-cool-2);
-  // --color-border-dark-primary: var(--color-cool-4);
-  // --color-border-dark-secondary: var(--color-cool-5);
-  // --color-border-light-1: var(--color-cool-3);
-  // --color-border-light-2: var(--color-cool-4);
-  // --color-underline-header: var(--color-warm-2);
-  // --color-underline-active: var(--color-warm-1);
-  // --color-text-hyperlink: var(--color-warm-1);
-  // --color-border-highlight: var(--color-warm-1);
-  // --color-border-highlight-alt: var(--color-warm-2);
-  // --color-border-light-tertiary: var(--color-cool-4);
+  // --color-border-light-primary: var(--color-secondary-4);
+  // --color-border-light-secondary: var(--color-secondary-4);
+  // --color-border-light-tertiary: var(--color-secondary-4);
+  // --color-border-dark-1: var(--color-secondary-4); // darkest
+  // --color-border-dark-2: var(--color-secondary-4);
+  // --color-border-dark-3: var(--color-secondary-4);
+  // --color-border-dark-4: var(--color-secondary-3);
+  // --color-border-dark-5: var(--color-secondary-2);
+  // --color-border-dark-primary: var(--color-secondary-4);
+  // --color-border-dark-secondary: var(--color-secondary-5);
+  // --color-border-light-1: var(--color-secondary-3);
+  // --color-border-light-2: var(--color-secondary-4);
+  // --color-underline-header: var(--color-primary-2);
+  // --color-underline-active: var(--color-primary-1);
+  // --color-text-hyperlink: var(--color-primary-1);
+  // --color-border-highlight: var(--color-primary-1);
+  // --color-border-highlight-alt: var(--color-primary-2);
+  // --color-border-light-tertiary: var(--color-secondary-4);
   // --color-bg-btn-minor-inactive: var(--app-background);
-  // --color-bg-btn-minor-active: var(--color-warm-2);
-  --color-text-dark-primary: var(--color-light-3);
-  --color-text-dark-secondary: var(--color-light-5);
-  // --color-bg-option: var(--color-cool-4);
+  // --color-bg-btn-minor-active: var(--color-primary-2);
+  --color-text-dark-primary: var(--text-color-3);
+  --color-text-dark-secondary: var(--text-color-5);
+  // --color-bg-option: var(--color-secondary-4);
 
-  --accent-color-light: var(--tertiary);
+  --accent-text-color: var(--tertiary);
   --accent-color: var(--tertiary-dark);
   --accent-color-dark: var(--gold-brown);
 }
@@ -39,8 +39,8 @@
 /* ----------------------------------------- */
 [data-theme^="crb"][data-color-scheme="dark"][data-dorako-ui-scope="limited"] {
   --input-background: var(--glass-bg);
-  --color-warm-2: var(--tertiary-dark);
-  --color-cool-5-75: rgba(0, 0, 0, 0.5);
+  --color-primary-2: var(--tertiary-dark);
+  --color-secondary-5-75: rgba(0, 0, 0, 0.5);
   --color-border-light-2: black;
 }
 
@@ -65,20 +65,20 @@
   --sheet: var(--sheet-dark);
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
-  --color-cool-4: #26231f;
-  --color-light-1: color-mix(in srgb, var(--color-text-light-highlight), 20% white)
-  --color-light-2: var(--color-text-light-highlight);
-  --color-light-3: var(--color-text-light-heading);
-  --color-light-5: color-mix(in srgb, var(--color-text-light-heading), 20% black);
+  --color-secondary-4: #26231f;
+  --text-color-1: color-mix(in srgb, var(--color-text-light-highlight), 20% white)
+  --text-color-2: var(--color-text-light-highlight);
+  --text-color-3: var(--color-text-light-heading);
+  --text-color-5: color-mix(in srgb, var(--color-text-light-heading), 20% black);
 
   --window-app-background: var(--sheet-dark);
   --app-background: var(--glass-bg);
   --app-border-style: none;
 
-  --input-text-color: var(--color-light-3);
+  --input-text-color: var(--text-color-3);
   --input-background: var(--glass-bg);
-  --input-focus-text-color: var(--color-light-2);
-  --input-placeholder-color: var(--color-light-5);
+  --input-focus-text-color: var(--text-color-2);
+  --input-placeholder-color: var(--text-color-5);
   --input-disabled-background: black;
   --input-disabled-border-color: black;
   --button-bright-text-color: black;
@@ -89,15 +89,12 @@
 
   --fieldset-border-color: var(--tertiary);
   --fieldset-background-color: transparent;
-  --fieldset-legend-color: var(--color-light-2);
+  --fieldset-legend-color: var(--text-color-2);
 
   // .spell-button button {
   //   background: var(--primary);
   // }
 
-  &.window-app button.bright {
-    --app-text-shadow: none;
-  }
 
   input[type="range"] + .range-value {
     color: black;
@@ -105,7 +102,7 @@
     font-weight: 800;
     --input-focus-text-color: black;
   }
-  --text-dark: var(--color-light-2);
+  --text-dark: var(--text-color-2);
 }
 
 /* ----------------------------------------- */
@@ -125,14 +122,14 @@
     --section-header: var(--primary);
     --section-border-color: var(--tertiary);
     --section-outline-color: var(--gold-brown);
-    --section-header-text-color: var(--color-light-2);
-    --tag-border-color: var(--color-light-5);
-    --tag-background-color: var(--color-cool-4);
-    --tag-text-color: var(--color-light-4);
-    --color-text-dark-input: var(--color-light-3);
+    --section-header-text-color: var(--text-color-2);
+    --tag-border-color: var(--text-color-5);
+    --tag-background-color: var(--color-secondary-4);
+    --tag-text-color: var(--text-color-4);
+    --color-text-dark-input: var(--text-color-3);
     --input-background: rgba(0, 0, 0, 0.1);
     --input-focus-outline-color: var(--tertiary);
-    --text-dark: var(--color-light-2);
+    --text-dark: var(--text-color-2);
 
     &.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section,
     &.dorako-ux.sheet.pf2e.actor.npc form .section-container:not(.headerless) {
@@ -148,11 +145,11 @@
   /* Actor sheet                               */
   /* ----------------------------------------- */
   &.actor.sheet .crb-style .sheet-body {
-    --text-dark: var(--color-light-2);
+    --text-dark: var(--text-color-2);
     --color-border-light-primary: var(--tertiary);
     --color-border-light-highlight: var(--tertiary);
-    --sub: var(--color-light-disabled);
-    --alt: var(--color-light-5);
+    --sub: var(--text-color-disabled);
+    --alt: var(--text-color-5);
     --bg: rgba(0, 0, 0, 0.5);
   }
 
@@ -189,9 +186,9 @@
   &.chat-message .dice-roll .dice-formula button,
   &.chat-message .dice-roll .dice-total button {
     background: var(--glass-bg-light);
-    --button-bright-text-color: var(--color-light-2);
+    --button-bright-text-color: var(--text-color-2);
     &:hover {
-      --button-bright-text-color: var(--color-light-1);
+      --button-bright-text-color: var(--text-color-1);
       background: var(--glass-bg);
 
     }

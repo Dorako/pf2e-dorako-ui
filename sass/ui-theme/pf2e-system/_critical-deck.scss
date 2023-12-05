@@ -2,14 +2,14 @@
   .window-content .journal-entry-content {
     .journal-entry-page .journal-page-content .fumble-deck,
     .journal-entry-page .journal-page-content .critical-deck {
-      --text-dark: var(--color-light-2);
+      --text-dark: var(--text-color-2);
     }
 
     .journal-entry-page .journal-page-content .fumble-deck blockquote,
     .journal-entry-page .journal-page-content .critical-deck blockquote {
-      color: var(--color-light-3);
+      color: var(--text-color-3);
       box-shadow: 0px 1px 3px 1px black;
-      background: var(--color-warm-4);
+      background: var(--color-primary-4);
     }
 
     .journal-entry-page .journal-page-content .fumble-deck blockquote {
@@ -24,9 +24,9 @@
 
     .journal-entry-page .journal-page-content .fumble-deck h1,
     .journal-entry-page .journal-page-content .critical-deck h1 {
-      background-color: var(--color-warm-2);
-      border: 1px solid var(--color-warm-1);
-      color: var(--color-light-2);
+      background-color: var(--color-primary-2);
+      border: 1px solid var(--color-primary-1);
+      color: var(--text-color-2);
       text-shadow: 0px 1px 2px black;
       box-shadow: 0px 1px 3px 1px black;
       font-family: var(--font-primary); // Dalvyn
@@ -37,9 +37,9 @@
       background: unset;
       box-shadow: unset;
       border-radius: 32px;
-      background-color: var(--color-cool-2);
-      border: 1px solid var(--color-cool-1);
-      color: var(--color-light-2);
+      background-color: var(--color-secondary-2);
+      border: 1px solid var(--color-secondary-1);
+      color: var(--text-color-2);
       text-shadow: 0px 1px 2px black;
       box-shadow: 0px 1px 3px 1px black;
       font-family: var(--font-primary); // Dalvyn

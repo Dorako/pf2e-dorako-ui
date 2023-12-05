@@ -26,27 +26,27 @@
 
   --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
-  --button-text-color: var(--color-light-3);
-  --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background: var(--color-warm-2);
-  --button-hover-border-color: var(--color-warm-1);
-  --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background: var(--color-warm-5);
-  --button-disabled-border-color: var(--color-warm-4);
+  --button-text-color: var(--text-color-3);
+  --button-focus-outline-color: var(--color-primary-1);
+  --button-hover-background: var(--color-primary-2);
+  --button-hover-border-color: var(--color-primary-1);
+  --button-hover-text-color: var(--text-color-1);
+  --button-disabled-background: var(--color-primary-5);
+  --button-disabled-border-color: var(--color-primary-4);
 
   --button-toggle-border-color: var(--secondary-light);
   --button-toggle-background: var(--secondary-dark);
   --button-toggle-hover-background: var(--secondary-light);
 
-  --color-warm-1: var(--tertiary);
-  --color-warm-2: var(--primary-light);
-  --color-warm-3: var(--primary-dark);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
-  --color-cool-1: var(--secondary-light);
-  --color-cool-2: var(--secondary);
-  --color-cool-3: var(--secondary-dark);
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
+  --color-primary-1: var(--tertiary);
+  --color-primary-2: var(--primary-light);
+  --color-primary-3: var(--primary-dark);
+  --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent); //custom
+  --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent); //custom
+  --color-secondary-1: var(--secondary-light);
+  --color-secondary-2: var(--secondary);
+  --color-secondary-3: var(--secondary-dark);
+  --color-secondary-3-75: color-mix(in srgb, var(--color-secondary-3) 75%, transparent); //custom
 
   --color-border-light-1: #ddd;
   --color-border-light-2: #999;
@@ -54,8 +54,8 @@
 
 [data-chat-interface-theme^="crb"] #chat-log ~ *,
 [data-theme^="crb"]:not([data-color-scheme]) {
-  --color-light-2: var(--color-text-light-highlight);
-  --color-light-3: var(--color-text-light-heading);
+  --text-color-2: var(--color-text-light-highlight);
+  --text-color-3: var(--color-text-light-heading);
   --input-text-color: black;
   --input-focus-text-color: black;
   --input-focus-outline-color: var(--tertiary);
@@ -67,15 +67,15 @@
   &#token-hud,
   &#tile-hud {
     --button-background: var(--glass-bg);
-    --input-text-color: var(--color-light-2);
+    --input-text-color: var(--text-color-2);
   }
 }
 
 [data-theme^="crb"] {
   button {
-    --color-light-1: white;
-    --color-light-2: var(--color-text-light-highlight);
-    --color-light-3: var(--color-text-light-heading);
+    --text-color-1: white;
+    --text-color-2: var(--color-text-light-highlight);
+    --text-color-3: var(--color-text-light-heading);
   }
 
   &.app.window-app {
@@ -124,7 +124,7 @@
   //   @include dui-app;
   //   background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
   //   border-color: color-mix(in srgb, var(--header-color) 50%, white);
-  //   color: var(--color-light-2);
+  //   color: var(--text-color-2);
   // }
 
   // &[data-header-text-color-scheme="dark"] {
@@ -159,19 +159,19 @@
   // }
 
   // &.chat-message[data-header-text-color-scheme="dark"] .message-header {
-  //   --color-text-dark-secondary: var(--color-light-1);
-  //   --color-light-1: black;
-  //   --color-light-2: black;
-  //   --color-light-3: black;
+  //   --color-text-dark-secondary: var(--text-color-1);
+  //   --text-color-1: black;
+  //   --text-color-2: black;
+  //   --text-color-3: black;
   //   --app-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
   //   text-shadow: var(--app-text-shadow);
   // }
 
   // &.chat-message[data-header-text-color-scheme="light"] .message-header {
   //   --color-text-dark-secondary: white;
-  //   --color-light-1: white;
-  //   --color-light-2: white;
-  //   --color-light-3: white;
+  //   --text-color-1: white;
+  //   --text-color-2: white;
+  //   --text-color-3: white;
   //   --app-text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
   //   text-shadow: var(--app-text-shadow);
   // }
@@ -300,8 +300,8 @@
   }
 
   &#pf2e-token-hud {
-    --color-warm-2: var(--tertiary);
-    --color-cool-4: var(--glass-bg-light);
+    --color-primary-2: var(--tertiary);
+    --color-secondary-4: var(--glass-bg-light);
 
     hr {
       display: none;

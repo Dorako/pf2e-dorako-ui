@@ -169,35 +169,35 @@ $adjusted-lower: #cc3311 !default;
 /* ----------------------------------------- */
 
 :root {
-  --color-warm-1: #ee9b3a;
-  --color-warm-1-40: color-mix(in srgb, var(--color-warm-1) 40%, transparent);
-  --color-warm-2: #c9593f;
-  --color-warm-2-20: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
-  --color-warm-3: #5d142b;
-  --color-warm-3-10: color-mix(in srgb, var(--color-warm-3) 10%, transparent);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
-  --color-warm-4: #420418;
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
-  --color-warm-5: #26020d;
+  --color-primary-1: #ee9b3a;
+  --color-primary-1-40: color-mix(in srgb, var(--color-primary-1) 40%, transparent);
+  --color-primary-2: #c9593f;
+  --color-primary-2-20: color-mix(in srgb, var(--color-primary-2) 20%, transparent);
+  --color-primary-3: #5d142b;
+  --color-primary-3-10: color-mix(in srgb, var(--color-primary-3) 10%, transparent);
+  --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent);
+  --color-primary-4: #420418;
+  --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent);
+  --color-primary-5: #26020d;
 
-  --color-cool-1: #b1a0d4;
-  --color-cool-2: #79689c;
-  --color-cool-3: #584a75;
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
-  --color-cool-4: #302831;
-  --color-cool-5: #0b0a13;
+  --color-secondary-1: #b1a0d4;
+  --color-secondary-2: #79689c;
+  --color-secondary-3: #584a75;
+  --color-secondary-3-75: color-mix(in srgb, var(--color-secondary-3) 75%, transparent);
+  --color-secondary-4: #302831;
+  --color-secondary-5: #0b0a13;
 
-  --color-cool-5-25: rgba(11, 10, 19, 0.25);
-  --color-cool-5-50: rgba(11, 10, 19, 0.5);
-  --color-cool-5-75: rgba(11, 10, 19, 0.75);
-  --color-cool-5-90: rgba(11, 10, 19, 0.9);
+  --color-secondary-5-25: rgba(11, 10, 19, 0.25);
+  --color-secondary-5-50: rgba(11, 10, 19, 0.5);
+  --color-secondary-5-75: rgba(11, 10, 19, 0.75);
+  --color-secondary-5-90: rgba(11, 10, 19, 0.9);
 
-  --color-light-1: #f7f3e8;
-  --color-light-2: #efe6d8;
-  --color-light-3: #e7d1b1;
-  --color-light-4: #d0b8a3;
-  --color-light-5: #9f8475;
-  --color-light-disabled: #aaa;
+  --text-color-1: #f7f3e8;
+  --text-color-2: #efe6d8;
+  --text-color-3: #e7d1b1;
+  --text-color-4: #d0b8a3;
+  --text-color-5: #9f8475;
+  --text-color-disabled: #aaa;
 
   --color-level-error: #ce0707;
   --color-level-error-bg: rgba(105, 0, 8, 0.8);

@@ -19,9 +19,9 @@
   --trade-exact-price: rgb(163, 141, 109);
   --trade-currency-text: rgb(170, 158, 130);
   --trade-button-text-color: rgb(233, 207, 159);
-  --trade-color-light-1: rgb(255, 248, 225);
-  --trade-color-light-2: rgb(163, 141, 109);
-  --trade-color-light-3: rgb(130, 120, 106);
+  --trade-text-color-1: rgb(255, 248, 225);
+  --trade-text-color-2: rgb(163, 141, 109);
+  --trade-text-color-3: rgb(130, 120, 106);
 
   --poe-color-default: rgb(127, 127, 127);
   --poe-color-valuedefault: rgb(255, 255, 255);
@@ -29,7 +29,7 @@
   --poe-color-dodgerblue: rgb(30, 144, 255);
   --poe-color-fire: rgb(150, 0, 0);
   --poe-color-cold: rgb(54, 100, 146);
-  --poe-color-lightning: rgb(255, 215, 0);
+  --poe-text-colorning: rgb(255, 215, 0);
   --poe-color-chaos: rgb(208, 32, 144);
   --poe-color-augmented: rgb(136, 136, 255);
   --poe-color-crafted: rgb(184, 218, 242);
@@ -166,16 +166,16 @@
 
 [data-theme="poe-wiki"],
 [data-theme="poe-wiki"][data-dorako-ui-scope="limited"] {
-  --color-warm-1: var(--tertiary);
-  --color-warm-2: var(--poe-color-unique);
-  --color-warm-3: var(--primary-dark);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent); //custom
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent); //custom
-  --color-cool-1: var(--secondary-light);
-  --color-cool-2: var(--secondary);
-  --color-cool-3: var(--secondary-dark);
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent); //custom
-  --color-cool-4: #26231f;
+  --color-primary-1: var(--tertiary);
+  --color-primary-2: var(--poe-color-unique);
+  --color-primary-3: var(--primary-dark);
+  --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent); //custom
+  --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent); //custom
+  --color-secondary-1: var(--secondary-light);
+  --color-secondary-2: var(--secondary);
+  --color-secondary-3: var(--secondary-dark);
+  --color-secondary-3-75: color-mix(in srgb, var(--color-secondary-3) 75%, transparent); //custom
+  --color-secondary-4: #26231f;
 
   --window-app-background: var(--dark-15);
   --window-app-border-color: var(--brown-4);

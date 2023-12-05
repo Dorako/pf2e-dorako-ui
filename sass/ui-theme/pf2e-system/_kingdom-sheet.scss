@@ -1,15 +1,15 @@
 // [data-theme] {
 //   &.sheet.kingdom-builder,
 //   &.sheet.kingdom {
-//     --primary: var(--color-warm-2);
-//     --secondary: var(--color-cool-3);
-//     --text-dark: var(--color-light-2);
-//     // --color-border-divider: var(--color-cool-3);
-//     --sub: var(--color-light-disabled);
-//     --alt: var(--color-light-5);
-//     --alt-dark: var(--color-light-4);
-//     --bg: var(--color-cool-5-90);
-//     --paper-bg: var(--color-cool-4);
+//     --primary: var(--color-primary-2);
+//     --secondary: var(--color-secondary-3);
+//     --text-dark: var(--text-color-2);
+//     // --color-border-divider: var(--color-secondary-3);
+//     --sub: var(--text-color-disabled);
+//     --alt: var(--text-color-5);
+//     --alt-dark: var(--text-color-4);
+//     --bg: var(--color-secondary-5-90);
+//     --paper-bg: var(--color-secondary-4);
 
 //     .details-label,
 //     h1,
@@ -18,16 +18,16 @@
 //     h4,
 //     h5,
 //     h6 {
-//       --primary: var(--color-light-2);
+//       --primary: var(--text-color-2);
 //     }
 
 //     .tags {
-//       --primary: var(--color-warm-2);
+//       --primary: var(--color-primary-2);
 //     }
 //   }
 
 //   &.sheet.kingdom-builder {
-//     --alt-dark: var(--color-warm-1);
+//     --alt-dark: var(--color-primary-1);
 //   }
 
 //   &.sheet.kingdom form {

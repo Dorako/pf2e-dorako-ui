@@ -34,10 +34,10 @@
     background: var(--theme-color);
   }
   &.actor.sheet .inventory .encumbrance.over-limit .encumbrance-bar {
-    background: var(--theme-color-light) !important; // system important
+    background: var(--theme-text-color) !important; // system important
   }
   &.actor.sheet .blue-button {
-    background: var(--theme-color-light) !important;
+    background: var(--theme-text-color) !important;
   }
 
   // Vehicle Sheet
@@ -60,7 +60,7 @@
           background-image: linear-gradient(
             90deg,
             var(--theme-color) 0%,
-            var(--theme-color-light) 50%,
+            var(--theme-text-color) 50%,
             var(--theme-color) 100%
           );
           background-color: var(--secondary);
@@ -72,12 +72,12 @@
       }
     }
     nav.sheet-navigation {
-      background: var(--theme-color-light);
+      background: var(--theme-text-color);
     }
   }
 
   &.actor.sheet[data-theme-color="red"] {
-    --theme-color-light: var(--primary-light);
+    --theme-text-color: var(--primary-light);
     --theme-color: var(--primary);
     --theme-color-dark: var(--primary-dark);
 
@@ -90,10 +90,10 @@
   &.actor.sheet[data-theme-color="blue"] {
     --color-scrollbar: var(--secondary-light);
     --color-scrollbar-border: var(--tertiary);
-    --color-scrollbar-hover: var(--theme-color-light);
+    --color-scrollbar-hover: var(--theme-text-color);
     --theme-color-dark: var(--secondary-dark);
     --theme-color: var(--secondary);
-    --theme-color-light: var(--secondary-light);
+    --theme-text-color: var(--secondary-light);
     .crb-style {
       --header: url("../img/blue-header.webp");
       background-image: url("../img/blue-header.webp"), var(--sheet);
@@ -123,10 +123,10 @@
   &.actor.sheet[data-theme-color="green"] {
     --color-scrollbar: var(--remaster-light);
     --color-scrollbar-border: var(--tertiary);
-    --color-scrollbar-hover: var(--theme-color-light);
+    --color-scrollbar-hover: var(--theme-text-color);
     --theme-color-dark: var(--remaster-dark);
     --theme-color: var(--remaster);
-    --theme-color-light: var(--remaster-light);
+    --theme-text-color: var(--remaster-light);
     .crb-style {
       --header: url("../img/green-header.webp");
       background-image: url("../img/green-header.webp"), var(--sheet);
@@ -154,8 +154,8 @@
   &.actor.sheet[data-theme-color="purple"] {
     --theme-color-dark: #3b0062;
     --theme-color: #520982;
-    --theme-color-light: rgb(107, 29, 137);
-    --color-scrollbar-hover: var(--theme-color-light);
+    --theme-text-color: rgb(107, 29, 137);
+    --color-scrollbar-hover: var(--theme-text-color);
     --color-scrollbar: var(--theme-color);
     --color-scrollbar-border: var(--tertiary);
     .crb-style {
@@ -185,10 +185,10 @@
   &.actor.sheet[data-theme-color="black"] {
     --theme-color-dark: black;
     --theme-color: #111;
-    --theme-color-light: #222;
+    --theme-text-color: #222;
     --color-scrollbar: var(--theme-color);
     --color-scrollbar-border: var(--tertiary);
-    --color-scrollbar-hover: var(--theme-color-light);
+    --color-scrollbar-hover: var(--theme-text-color);
     .crb-style {
       --header: url("../img/black-header.webp");
       background-image: url("../img/green-header.webp"), var(--sheet);
@@ -272,7 +272,7 @@
 /* Theme                                     */
 /* ----------------------------------------- */
 [data-theme][data-dorako-ui-scope="limited"]:not([data-theme^="crb"][data-color-scheme="light"]) {
-  --color-text-dark-4: var(--color-light-5);
+  --color-text-dark-4: var(--text-color-5);
 
   &.actor.sheet .crb-style .sheet-body {
     background: unset;
@@ -291,41 +291,20 @@
     h4,
     h5,
     h6 {
-      --primary: var(--color-light-2);
+      --primary: var(--text-color-2);
     }
   }
 
   button.daily-crafting {
-    @include dui-button;
-    --button-background: var(--color-warm-1);
-    --button-border-color: var(--color-cool-5);
-    --button-text-color: var(--color-cool-5);
-    --button-hover-background: #fda948;
-    --button-hover-border-color: var(--color-warm-2);
-    --button-hover-text-color: #000000;
-    text-shadow: none;
-
-    &.disabled,
-    &:disabled {
-      --button-background: var(--color-cool-4);
-      --button-hover-background: var(--color-cool-4);
-      --button-text-color: var(--color-light-5);
-      --button-hover-text-color: var(--color-light-5);
-      --button-hover-border-color: transparent;
-    }
-
-    &:not(.disabled, :disabled):hover {
-      --button-hover-background: #cb7f27;
-      --button-hover-border-color: var(--color-warm-1);
-    }
+    @include dui-button-bright;
   }
 
   // prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd img.deity-emblem,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .pc_deity img.symbol {
-    background: var(--color-warm-4);
-    border: 1px solid var(--color-warm-3);
-    box-shadow: 0px 0px 0px 1px var(--color-warm-3), var(--box-shadow);
+    background: var(--color-primary-4);
+    border: 1px solid var(--color-primary-3);
+    box-shadow: 0px 0px 0px 1px var(--color-primary-3), var(--box-shadow);
   }
 
   &.sheet.actor .crb-style nav.sub-nav {
@@ -343,8 +322,8 @@
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .item-image:hover i {
-    background: var(--color-warm-2);
-    color: var(--color-light-1);
+    background: var(--color-primary-2);
+    color: var(--text-color-1);
     text-shadow: 0px 1px 2px black;
     border-radius: 2px;
   }
@@ -371,8 +350,8 @@
   &.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography {
     section input,
     .editor {
-      --input-text-color: var(--color-light-3);
-      --input-focus-text-color: var(--color-light-3);
+      --input-text-color: var(--text-color-3);
+      --input-focus-text-color: var(--text-color-3);
       --input-background: transparent;
       --input-border-color: transparent;
       --input-focus-outline-color: transparent;
@@ -424,7 +403,7 @@
   }
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .label {
     opacity: unset;
-    color: var(--color-light-5);
+    color: var(--text-color-5);
   }
 
   &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
@@ -439,18 +418,18 @@
   //prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover{
-    --primary: var(--accent-color-light);
+    --primary: var(--accent-text-color);
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
-    border-image: linear-gradient(90deg, transparent, var(--color-warm-2) 20%, transparent) 1;
+    border-image: linear-gradient(90deg, transparent, var(--color-primary-2) 20%, transparent) 1;
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
     --text-dark: black;
-    --primary: var(--color-warm-2);
+    --primary: var(--color-primary-2);
     .button-group {
       button {
         --primary: var(--system-primary);
@@ -481,9 +460,9 @@
 [data-dorako-ui-scope="limited"] {
   &.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
-    background: var(--color-cool-5-75);
+    background: var(--color-secondary-5-75);
   }
   &.spellcasting-entry.preparation {
-    --color-border-light-2: var(--color-cool-4);
+    --color-border-light-2: var(--color-secondary-4);
   }
 }

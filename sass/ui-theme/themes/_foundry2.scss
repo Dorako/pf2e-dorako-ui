@@ -1,7 +1,62 @@
 /* ----------------------------------------- */
 /* Theme colors                              */
 /* ----------------------------------------- */
+:root {
+  --f2-color-warm-1: #ee9b3a;
+  --f2-color-warm-1-40: color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+  --f2-color-warm-2: #c9593f;
+  --f2-color-warm-2-20: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
+  --f2-color-warm-3: #5d142b;
+  --f2-color-warm-3-10: color-mix(in srgb, var(--color-warm-3) 10%, transparent);
+  --f2-color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
+  --f2-color-warm-4: #420418;
+  --f2-color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
+  --f2-color-warm-5: #26020d;
 
+  --f2-color-cool-1: #b1a0d4;
+  --f2-color-cool-2: #79689c;
+  --f2-color-cool-3: #584a75;
+  --f2-color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
+  --f2-color-cool-4: #302831;
+  --f2-color-cool-5: #0b0a13;
+
+  --f2-color-cool-5-25: rgba(11, 10, 19, 0.25);
+  --f2-color-cool-5-50: rgba(11, 10, 19, 0.5);
+  --f2-color-cool-5-75: rgba(11, 10, 19, 0.75);
+  --f2-color-cool-5-90: rgba(11, 10, 19, 0.9);
+
+  --f2-color-light-1: #f7f3e8;
+  --f2-color-light-2: #efe6d8;
+  --f2-color-light-3: #e7d1b1;
+  --f2-color-light-4: #d0b8a3;
+  --f2-color-light-5: #9f8475;
+  --f2-color-light-disabled: #aaa;
+
+  --f2-color-level-error: #ce0707;
+  --f2-color-level-error-bg: rgba(105, 0, 8, 0.8);
+  --f2-color-level-error-border: #750003;
+  --f2-color-level-info: #59a1f6;
+  --f2-color-level-info-bg: rgba(47, 80, 132, 0.8);
+  --f2-color-level-info-border: #5c87b9;
+  --f2-color-level-success: #26b231;
+  --f2-color-level-success-bg: rgba(26, 107, 34, 0.8);
+  --f2-color-level-success-border: #1b8f23;
+  --f2-color-level-warning: #ee9b3a;
+  --f2-color-level-warning-bg: rgba(214, 150, 0, 0.8);
+  --f2-color-level-warning-border: #b18404;
+
+  --f2-color-level-green-bg: rgba(138, 211, 4, 0.4); // custom from website
+  --f2-color-level-green-border: #8ad304; // custom from website
+  --f2-color-level-yellow-bg: rgba(211, 192, 4, 0.4); // custom from website
+  --f2-color-level-yellow-border: #d3c004; // custom from website
+  --f2-color-level-orange-bg: rgba(211, 119, 4, 0.4); // custom from website
+  --f2-color-level-orange-border: #d37704; // custom from website
+  --f2-color-level-red-bg: rgba(211, 20, 4, 0.4); // custom from website
+  --f2-color-level-red-border: #d31404; // custom from website
+
+  --f2-color-scrollbar: #5d142b;
+  --f2-color-scrollbar-border: #8d151b;
+}
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
@@ -9,40 +64,40 @@
 [data-theme="foundry2"] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
-  // --color-border-light-highlight: var(--color-cool-3);
-  // --color-border-light-primary: var(--color-cool-4);
-  // --color-border-light-secondary: var(--color-cool-4);
-  // --color-border-light-tertiary: var(--color-cool-4);
-  // --color-border-dark-1: var(--color-cool-4); // darkest
-  // --color-border-dark-2: var(--color-cool-4);
-  // --color-border-dark-3: var(--color-cool-4);
-  // --color-border-dark-4: var(--color-cool-3);
-  // --color-border-dark-5: var(--color-cool-2);
-  // --color-border-dark-primary: var(--color-cool-4);
-  // --color-border-dark-secondary: var(--color-cool-5);
-  // --color-border-light-1: var(--color-cool-3);
-  // --color-border-light-2: var(--color-cool-4);
-  --color-underline-header: var(--color-warm-2);
-  --color-underline-active: var(--color-warm-1);
-  // --color-text-hyperlink: var(--color-warm-1);
-  // --color-border-highlight: var(--color-warm-1);
-  // --color-border-highlight-alt: var(--color-warm-2);
-  // --color-border-light-tertiary: var(--color-cool-4);
+  --color-border-light-primary: var(--app-border-color);
+  --color-border-light-highlight: var(--app-border-color);
+  // --color-border-light-secondary: var(--color-secondary-4);
+  // --color-border-light-tertiary: var(--color-secondary-4);
+  // --color-border-dark-1: var(--color-secondary-4); // darkest
+  // --color-border-dark-2: var(--color-secondary-4);
+  // --color-border-dark-3: var(--color-secondary-4);
+  // --color-border-dark-4: var(--color-secondary-3);
+  // --color-border-dark-5: var(--color-secondary-2);
+  // --color-border-dark-primary: var(--color-secondary-4);
+  // --color-border-dark-secondary: var(--color-secondary-5);
+  // --color-border-light-1: var(--color-secondary-3);
+  // --color-border-light-2: var(--color-secondary-4);
+  --color-underline-header: var(--color-primary-2);
+  --color-underline-active: var(--color-primary-1);
+  // --color-text-hyperlink: var(--color-primary-1);
+  // --color-border-highlight: var(--color-primary-1);
+  // --color-border-highlight-alt: var(--color-primary-2);
+  // --color-border-light-tertiary: var(--color-secondary-4);
   // --color-bg-btn-minor-inactive: var(--app-background);
-  // --color-bg-btn-minor-active: var(--color-warm-2);
-  --color-text-dark-primary: var(--color-light-3);
-  --color-text-dark-secondary: var(--color-light-5);
+  // --color-bg-btn-minor-active: var(--color-primary-2);
+  --color-text-dark-primary: var(--text-color-3);
+  --color-text-dark-secondary: var(--text-color-5);
 }
 
 /* ----------------------------------------- */
 /* Light color scheme                        */
 /* ----------------------------------------- */
 [data-theme="foundry2"][data-color-scheme="light"] {
-  --window-app-background: color-mix(in srgb, var(--color-cool-5-90) 90%, var(--color-warm-1));
+  --window-app-background: color-mix(in srgb, var(--color-secondary-5-90) 90%, var(--color-primary-1));
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
   &.pf2e.item.sheet {
-    --color-border-medium: var(--color-cool-3);
+    --color-border-medium: var(--color-secondary-3);
   }
 }
 
@@ -52,49 +107,79 @@
 [data-chat-interface-theme="foundry2"] #sidebar-tabs,
 [data-chat-interface-theme="foundry2"] #chat-log ~ *,
 [data-theme="foundry2"] {
-  --icon-border-color: var(--color-warm-1);
+  --color-primary-1: var(--f2-color-warm-1);
+  --color-primary-1-40: color-mix(in srgb, var(--color-primary-1) 40%, transparent);
+  --color-primary-2: var(--f2-color-warm-2);
+  --color-primary-2-20: color-mix(in srgb, var(--color-primary-2) 20%, transparent);
+  --color-primary-3: var(--f2-color-warm-3);
+  --color-primary-3-10: color-mix(in srgb, var(--color-primary-3) 10%, transparent);
+  --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent);
+  --color-primary-4: var(--f2-color-warm-4);
+  --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent);
+  --color-primary-5: var(--f2-color-warm-5);
 
-  --input-disabled-background: var(--color-cool-5);
-  --input-disabled-border-color: var(--color-cool-4);
+  --color-secondary-1: var(--f2-color-cool-1);
+  --color-secondary-2: var(--f2-color-cool-2);
+  --color-secondary-3: var(--f2-color-cool-3);
+  --color-secondary-3-75: color-mix(in srgb, var(--color-secondary-3) 75%, transparent);
+  --color-secondary-4: var(--f2-color-cool-4);
+  --color-secondary-5: var(--f2-color-cool-5);
 
-  --fieldset-border-color: var(--color-cool-3);
+  --color-secondary-5-25: rgba(11, 10, 19, 0.25);
+  --color-secondary-5-50: rgba(11, 10, 19, 0.5);
+  --color-secondary-5-75: rgba(11, 10, 19, 0.75);
+  --color-secondary-5-90: rgba(11, 10, 19, 0.9);
+
+  --text-color-1: var(--f2-color-light-1);
+  --text-color-2: var(--f2-color-light-2);
+  --text-color-3: var(--f2-color-light-3);
+  --text-color-4: var(--f2-color-light-4);
+  --text-color-5: var(--f2-color-light-5);
+  --text-color-disabled: #aaa;
+
+  --icon-border-color: var(--color-primary-1);
+
+  --input-disabled-background: var(--color-secondary-5);
+  --input-disabled-border-color: var(--color-secondary-4);
+
+  --fieldset-border-color: var(--color-secondary-3);
   --fieldset-background-color: transparent;
-  --fieldset-legend-color: var(--color-light-2);
+  --fieldset-legend-color: var(--text-color-2);
 
-  --button-border-color: var(--color-cool-3);
+  --button-border-color: var(--color-secondary-3);
   --app-border-style: 1px solid;
 
   --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
-  --button-text-color: var(--color-light-3);
-  --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background: var(--color-warm-2);
-  --button-hover-border-color: var(--color-warm-1);
-  --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background: var(--color-warm-5);
-  --button-disabled-border-color: var(--color-warm-4);
+  --button-text-color: var(--text-color-3);
+  --button-focus-outline-color: var(--color-primary-1);
+  --button-hover-background: var(--color-primary-2);
+  --button-hover-border-color: var(--color-primary-1);
+  --button-hover-text-color: var(--text-color-1);
+  --button-disabled-background: var(--color-primary-5);
+  --button-disabled-border-color: var(--color-primary-4);
 
-  --button-toggle-border-color: var(--color-cool-2);
-  --button-toggle-background: var(--color-cool-3-75);
-  --button-toggle-hover-background: var(--color-cool-2);
-  --button-toggle-hover-border-color: var(--color-cool-1);
-  --button-toggle-focus-outline-color: var(--color-warm-1);
+  --button-toggle-border-color: var(--color-secondary-2);
+  --button-toggle-background: var(--color-secondary-3-75);
+  --button-toggle-hover-background: var(--color-secondary-2);
+  --button-toggle-hover-border-color: var(--color-secondary-1);
+  --button-toggle-focus-outline-color: var(--color-primary-1);
 
-  --button-bright-text-color: var(--color-light-1);
+  --button-bright-text-color: var(--text-color-1);
 
-  --app-background: var(--color-cool-5-90);
-  --app-border-color: var(--color-cool-4);
-  --window-app-background: var(--color-cool-5-90);
-  --window-app-border-color: var(--color-cool-4);
+  --app-background: var(--color-secondary-5-90);
+  --app-border-color: var(--color-secondary-4);
+  --window-app-background: var(--color-secondary-5-90);
+  --window-app-border-color: var(--color-secondary-4);
 
-  --accent-color-light: var(--color-warm-1);
-  --accent-color: var(--color-warm-2);
-  --accent-color-dark: var(--color-warm-3);
+  --accent-text-color: var(--color-primary-1);
+  --accent-color: var(--color-primary-2);
+  --accent-color-dark: var(--color-primary-3);
 
-  --inline-bg: var(--color-cool-4);
-  --inline-border-color: var(--color-cool-3);
-  --inline-text-color: var(--color-light-2);
-  --inline-icon-color: var(--color-light-1);
+  --inline-bg: var(--color-secondary-4);
+  --inline-border-color: var(--color-secondary-3);
+  --inline-text-color: var(--text-color-2);
+  --inline-icon-color: var(--text-color-1);
   --inline-box-shadow: 0px 1px 2px black;
 }
 
@@ -102,8 +187,8 @@
 /* System variables                          */
 /* ----------------------------------------- */
 [data-theme="foundry2"] {
-  --bg: var(--color-warm-3);
-  --text-dark: var(--color-light-2);
+  --bg: var(--color-primary-3);
+  --text-dark: var(--text-color-2);
 }
 
 /* ----------------------------------------- */
@@ -134,7 +219,7 @@
       @include dui-app;
       background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
       border: 1px solid color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
-      color: var(--color-light-1);
+      color: var(--text-color-1);
       text-shadow: 0px 1px 1px black;
     }
   }
@@ -144,51 +229,51 @@
   }
 
   &.actor.sheet .crb-style .sheet-body {
-    --primary: var(--color-warm-2);
-    --secondary: var(--color-cool-3);
-    --text-dark: var(--color-light-2);
-    --color-border-light-2: var(--color-cool-4);
-    --color-border-light-primary: var(--color-warm-1);
-    --color-border-light-highlight: var(--color-warm-2);
-    --color-border-divider: var(--color-cool-3);
-    --sub: var(--color-light-disabled);
-    --alt: var(--color-light-5);
-    --bg: var(--color-cool-5-90);
+    --primary: var(--color-primary-2);
+    --secondary: var(--color-secondary-3);
+    --text-dark: var(--text-color-2);
+    --color-border-light-2: var(--color-secondary-4);
+    --color-border-light-primary: var(--color-primary-1);
+    --color-border-light-highlight: var(--color-primary-2);
+    --color-border-divider: var(--color-secondary-3);
+    --sub: var(--text-color-disabled);
+    --alt: var(--text-color-5);
+    --bg: var(--color-secondary-5-90);
   }
 
   &.spellcasting-entry {
-    --primary: var(--color-warm-2);
-    --secondary: var(--color-cool-3);
-    --text-dark: var(--color-light-2);
-    --color-border-divider: var(--color-cool-3);
-    --sub: var(--color-light-disabled);
-    --alt: var(--color-light-5);
-    --bg: var(--color-cool-5-90);
+    --primary: var(--color-primary-2);
+    --secondary: var(--color-secondary-3);
+    --text-dark: var(--text-color-2);
+    --color-border-divider: var(--color-secondary-3);
+    --sub: var(--text-color-disabled);
+    --alt: var(--text-color-5);
+    --bg: var(--color-secondary-5-90);
   }
 
   &.actor.sheet .inventory .list-row .item-controls {
-    --secondary: var(--color-cool-2);
+    --secondary: var(--color-secondary-2);
   }
 
   .tags .tag.tag_transparent,
   .tags .tag option.tag_transparent {
     box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
-    background: var(--color-cool-4);
-    color: var(--color-light-3);
+    background: var(--color-secondary-4);
+    color: var(--text-color-3);
     text-shadow: none;
   }
 
   &.sheet.kingdom-builder,
   &.sheet.kingdom {
-    --primary: var(--color-warm-2);
-    --secondary: var(--color-cool-3);
-    --text-dark: var(--color-light-2);
-    --color-border-divider: var(--color-cool-3);
-    --sub: var(--color-light-disabled);
-    --alt: var(--color-light-5);
-    --alt-dark: var(--color-light-4);
-    --bg: var(--color-cool-5-90);
-    --paper-bg: var(--color-cool-4);
+    --primary: var(--color-primary-2);
+    --secondary: var(--color-secondary-3);
+    --text-dark: var(--text-color-2);
+    --color-border-divider: var(--color-secondary-3);
+    --sub: var(--text-color-disabled);
+    --alt: var(--text-color-5);
+    --alt-dark: var(--text-color-4);
+    --bg: var(--color-secondary-5-90);
+    --paper-bg: var(--color-secondary-4);
   }
 }
 
@@ -207,16 +292,16 @@
 
   .scene:not(.gm) {
     --button-toggle-background: var(--app-background);
-    --button-toggle-border-color: var(--color-cool-4);
-    --button-toggle-hover-border-color: var(--color-warm-1);
-    --button-toggle-hover-background: var(--color-warm-2);
+    --button-toggle-border-color: var(--color-secondary-4);
+    --button-toggle-hover-border-color: var(--color-primary-1);
+    --button-toggle-hover-background: var(--color-primary-2);
   }
 
   .scene.gm {
-    --button-toggle-background: var(--color-cool-3-75);
-    --button-toggle-border-color: var(--color-cool-2);
-    --button-toggle-hover-border-color: var(--color-cool-1);
-    --button-toggle-hover-background: var(--color-cool-2);
+    --button-toggle-background: var(--color-secondary-3-75);
+    --button-toggle-border-color: var(--color-secondary-2);
+    --button-toggle-hover-border-color: var(--color-secondary-1);
+    --button-toggle-hover-background: var(--color-secondary-2);
 
     &.active:not(.view) {
       --button-toggle-focus-outline-color: transparent;

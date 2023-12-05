@@ -33,7 +33,7 @@
     button {
       @include dui-button;
       &.active {
-        background-color: var(--color-warm-2);
+        background-color: var(--color-primary-2);
         border: var(--app-border-style);
         border-color: var(--app-border-color);
       }

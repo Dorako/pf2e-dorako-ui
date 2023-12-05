@@ -34,10 +34,10 @@ html {
     @include dui-button;
   }
   .roll-app .roll-app-table tbody tr.selected {
-    background: var(--color-warm-2);
+    background: var(--color-primary-2);
     border-radius: var(--border-radius);
     button.rollable {
-      color: var(--color-light-2);
+      color: var(--text-color-2);
     }
   }
 }

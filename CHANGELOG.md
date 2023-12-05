@@ -1,3 +1,10 @@
+# 3.2.4
+
+- (BG3) Updated styling for BG3 theme NPC sheet and Familiar sheets.
+- (Custom CSS) Breaking change due to rename [data-dorako-ui-theme] -> [data-theme].
+- (Refinement) Removed text-selection colors.
+- (Refinement) Changed :hover style for compendium browser rows.
+
 # 3.2.3
 
 - (Fix) Fixed issue that broke Opaque interface theme.

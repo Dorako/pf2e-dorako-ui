@@ -1,6 +1,6 @@
 [data-theme] {
   &.chat-message.message .pf2e-token-hud .rk {
-    --text-dark: var(--color-light-2);
+    --text-dark: var(--text-color-2);
     --rarity-common: #e1d8cf;
     --rarity-uncommon: #c45500;
     --rarity-rare: #5362ff;
@@ -15,7 +15,7 @@
     --color-rank-3: #cf931d;
     --color-rank-4: red; // Symon recommended
     background: repeating-linear-gradient(
-      color-mix(in srgb, var(--color-cool-3) 20%, transparent) 0 var(--row-height),
+      color-mix(in srgb, var(--color-secondary-3) 20%, transparent) 0 var(--row-height),
       transparent var(--row-height) calc(var(--row-height) * 2)
     );
   }
@@ -23,7 +23,7 @@
 
 [data-theme] {
   &#pf2e-token-hud {
-    // --primary: var(--color-warm-2);
+    // --primary: var(--color-primary-2);
     --rarity-common: #e1d8cf;
     --rarity-uncommon: #c45500;
     --rarity-rare: #5362ff;
@@ -37,7 +37,7 @@
     --color-rank-2: #bf4fdb;
     --color-rank-3: #cf931d;
     --color-rank-4: red; // Symon recommended
-    --color-disabled: var(--color-light-disabled);
+    --color-disabled: var(--text-color-disabled);
     padding-bottom: 0px;
   }
 
@@ -73,23 +73,23 @@
   }
 
   &#pf2e-token-hud a:hover {
-    color: var(--color-warm-2);
+    color: var(--color-primary-2);
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .item-img.hover i {
-    background: var(--color-warm-2);
-    border-color: var(--color-warm-1);
-    color: var(--color-light-1);
+    background: var(--color-primary-2);
+    border-color: var(--color-primary-1);
+    color: var(--text-color-1);
     text-shadow: 0px 1px 2px black;
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .details .extras .actions a i.greyed {
-    color: var(--color-light-disabled);
+    color: var(--text-color-disabled);
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .header {
-    background: var(--color-cool-4);
-    border-color: var(--color-cool-5);
+    background: var(--color-secondary-4);
+    border-color: var(--color-secondary-5);
     margin: 0px -5px;
   }
 
@@ -100,7 +100,7 @@
   &.pf2e-token-hud .no-macro,
   &#pf2e-token-hud .no-macro {
     @include dui-app;
-    background: var(--color-warm-3);
+    background: var(--color-primary-3);
     border: 1px solid var(--color-scrollbar-border);
   }
 
@@ -110,13 +110,13 @@
 
   &#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions {
     a:not(.disabled) {
-      color: var(--color-light-3);
+      color: var(--text-color-3);
       :hover {
-        color: var(--color-warm-2);
+        color: var(--color-primary-2);
       }
     }
     span {
-      color: var(--color-light-4);
+      color: var(--text-color-4);
     }
   }
 
@@ -166,7 +166,7 @@
 
   &#pf2e-token-hud .popup .header:before {
     background: unset;
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 
   &#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select {
@@ -176,7 +176,7 @@
 
   &#pf2e-token-hud .sidebar.skills .sidebar-content .skill .header .modifier,
   &#pf2e-token-hud .sidebar.skills .sidebar-content .lore .modifier {
-    color: var(--color-warm-1);
+    color: var(--color-primary-1);
   }
 }
 
@@ -188,7 +188,7 @@
     }
   }
   &[id^="pf2e-perception-"] .window-content .tokens section .token[data-token-id]:is(:hover, .hover) {
-    background: color-mix(in srgb, var(--color-warm-2) 80%, transparent);
+    background: color-mix(in srgb, var(--color-primary-2) 80%, transparent);
   }
   &[id^="pf2e-perception-"] .window-content .buttons button {
     @include dui-button;
@@ -196,8 +196,8 @@
   }
   &[id^="pf2e-perception-"] .window-content .tokens section .token.ui-selected .name,
   &[id^="pf2e-perception-"] .window-content .tokens section .token.ui-selecting .name {
-    color: var(--color-warm-1);
-    text-shadow: 0px 0px 5px var(--color-warm-2);
+    color: var(--color-primary-1);
+    text-shadow: 0px 0px 5px var(--color-primary-2);
   }
 }
 

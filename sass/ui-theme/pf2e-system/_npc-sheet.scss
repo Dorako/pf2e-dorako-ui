@@ -1,20 +1,20 @@
 [data-theme][data-dorako-ui-scope="limited"] {
   &.sheet.pf2e.actor.npc.app {
-    --section-background: var(--color-warm-5);
-    --section-header: var(--color-warm-4);
+    --section-background: var(--color-primary-5);
+    --section-header: var(--color-primary-4);
     --section-border-color: var(--color-scrollbar-border);
-    --section-outline-color: var(--color-cool-5);
-    --section-header-text-color: var(--color-light-2);
-    --tag-border-color: var(--color-light-5);
-    --tag-background-color: var(--color-cool-4);
-    --tag-text-color: var(--color-light-4);
-    --color-text-dark-input: var(--color-light-3);
+    --section-outline-color: var(--color-secondary-5);
+    --section-header-text-color: var(--text-color-2);
+    --tag-border-color: var(--text-color-5);
+    --tag-background-color: var(--color-secondary-4);
+    --tag-text-color: var(--text-color-4);
+    --color-text-dark-input: var(--text-color-3);
 
-    --text-dark: var(--color-light-2);
+    --text-dark: var(--text-color-2);
   }
 
   &.actor.sheet .item-image:hover i {
-    background: var(--color-warm-2);
+    background: var(--color-primary-2);
     text-shadow: 0px 1px 2px black;
   }
 
@@ -82,19 +82,19 @@
   }
 
   &.actor.npc.sheet form .notes .notes-section > h4 {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 
   &.actor.npc.sheet form .notes .details-label {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 
   &.actor.npc.sheet form .notes .notes-text {
-    color: var(--color-light-3);
+    color: var(--text-color-3);
   }
 
   &.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
-    background-color: var(--color-warm-1);
+    background-color: var(--color-primary-1);
     color: black;
     text-shadow: unset;
   }
@@ -107,12 +107,12 @@
 
 [data-theme] {
   &.app.npc-skills-editor form ol li.skill:nth-child(even) {
-    background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
+    background-color: color-mix(in srgb, var(--color-secondary-4) 20%, transparent);
   }
   &.app.npc-skills-editor form ol li.skill:nth-child(odd) {
-    background-color: color-mix(in srgb, var(--color-cool-4) 40%, transparent);
+    background-color: color-mix(in srgb, var(--color-secondary-4) 40%, transparent);
   }
   &.app.npc-skills-editor form ol li.skill.header {
-    background-color: var(--color-warm-2);
+    background-color: var(--color-primary-2);
   }
 }

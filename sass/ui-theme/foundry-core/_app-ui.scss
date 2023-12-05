@@ -12,8 +12,8 @@
 
 #tooltip[data-theme] {
   background: var(--app-background);
-  border: 1px solid var(--color-warm-1);
-  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+  border: 1px solid var(--color-primary-1);
+  box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(5px);
@@ -33,10 +33,10 @@
   h3 {
     cursor: pointer;
     @include quick-transition;
-    color: var(--color-light-3);
+    color: var(--text-color-3);
 
     &:hover {
-      color: var(--color-light-1);
+      color: var(--text-color-1);
       text-shadow: 0px 0px 8px var(--color-shadow-highlight);
     }
   }
@@ -58,8 +58,8 @@
       border-bottom-right-radius: var(--border-radius);
     }
     &:hover {
-      box-shadow: 0px 0px 0px 1px var(--color-warm-1);
-      background: var(--color-warm-2);
+      box-shadow: 0px 0px 0px 1px var(--color-primary-1);
+      background: var(--color-primary-2);
       text-shadow: 0px 1px 2px black;
     }
   }
@@ -116,10 +116,10 @@
   --adjusted-lower: #cc3311;
 
   &.pf2e.item.sheet {
-    --color-text-dark-2: var(--color-light-3);
-    --color-text-dark-4: var(--color-light-3);
-    --color-text-dark-input: var(--color-light-3);
-    --color-border-dark: var(--color-light-2);
+    --color-text-dark-2: var(--text-color-3);
+    --color-text-dark-4: var(--text-color-3);
+    --color-text-dark-input: var(--text-color-3);
+    --color-border-dark: var(--text-color-2);
     --color-border-medium: var(--input-border-color);
   }
 }
@@ -149,25 +149,26 @@
 
 [data-chat-interface-theme] #chat-log ~ *,
 [data-theme] {
-  --input-background: var(--color-cool-4);
+  --input-background: var(--color-secondary-4);
   --input-border-color: transparent;
-  --input-border-color: var(--color-cool-3);
-  --input-focus-text-color: var(--color-light-2);
-  --input-text-color: var(--color-light-3);
-  --input-placeholder-color: var(--color-light-4);
-  --input-text-selection-color: var(--color-cool-3);
-  --input-focus-outline-color: var(--color-cool-3);
-  --icon-border-color: var(--color-warm-2);
+  --input-border-color: var(--color-secondary-3);
+  --input-focus-text-color: var(--text-color-2);
+  --input-text-color: var(--text-color-3);
+  --input-placeholder-color: var(--text-color-4);
+  --input-text-selection-color: var(--color-secondary-3);
+  --input-focus-outline-color: var(--color-secondary-3);
+  --icon-border-color: var(--color-primary-2);
   --box-shadow: 0px 1px 3px 1px black;
   --app-text-shadow: 0px 1px 2px black;
-  --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
-    0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 05px var(--color-warm-1-40);
+  --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-primary-3-10),
+    0px 0px 30px 20px var(--color-primary-2-20), 0px 0px 10px 05px var(--color-primary-1-40);
 
   .item-controls button[data-action="apply"],
   button[data-action="accept"],
   form button[type="submit"],
   form button[data-action="save"],
-  form.check-modifiers-content button.roll {
+  form.check-modifiers-content button.roll,
+  button.bright {
     @include dui-button-bright;
   }
 
@@ -184,7 +185,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    box-shadow: 0 0 1px var(--color-cool-3) inset;
+    box-shadow: 0 0 1px var(--color-secondary-3) inset;
     box-shadow: unset;
     border-radius: 4px;
   }
@@ -195,20 +196,20 @@
   }
 
   code {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
-    color: var(--color-light-2);
+    background: var(--color-secondary-4);
+    border: 1px solid var(--color-secondary-3);
+    color: var(--text-color-2);
     border-radius: 3px;
     padding: 0px 2px;
   }
 
   a.content-link,
-  [data-pdui-check]:not([data-pdui-traits*="secret"]),
+  [data-pf2-check]:not([data-pf2-traits*="secret"]),
   a.entity-link,
-  [data-pdui-action],
-  span[data-pdui-effect-area],
-  a.inline-check:not([data-pdui-traits*="secret"]),
-  a.inline-check:not([data-pdui-traits*="secret"]) .label,
+  [data-pf2-action],
+  span[data-pf2-effect-area],
+  a.inline-check:not([data-pf2-traits*="secret"]),
+  a.inline-check:not([data-pf2-traits*="secret"]) .label,
   a.inline-roll {
     background: var(--inline-bg);
     border: 1px solid var(--inline-border-color);
@@ -240,18 +241,18 @@
       outline: 1px dashed var(--inline-text-color);
     }
   }
-  [data-pdui-check][data-pdui-traits*="secret"],
+  [data-pf2-check][data-pf2-traits*="secret"],
   [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] {
     color: black;
   }
 
-  i[data-pdui-repost] {
+  i[data-pf2-repost] {
     @include quick-transition;
     cursor: pointer;
     background: unset;
     border-left: unset;
     &:hover::before {
-      color: var(--color-warm-2);
+      color: var(--color-primary-2);
     }
   }
 
@@ -267,27 +268,27 @@
 
 [data-theme][data-dorako-ui-scope="unlimited"][data-color-scheme="dark"] {
   h1 {
-    color: var(--color-light-1);
+    color: var(--text-color-1);
   }
   h2 {
-    color: var(--color-light-1);
+    color: var(--text-color-1);
   }
   h3 {
-    color: var(--color-light-1);
+    color: var(--text-color-1);
   }
   h4 {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
   h5 {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
   h6 {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 }
 
 [data-theme][data-dorako-ui-scope="unlimited"] {
-  color: var(--color-light-3);
+  color: var(--text-color-3);
 
   input[type="text"],
   input[type="number"],
@@ -316,8 +317,8 @@
   input[type="range"]::-webkit-slider-runnable-track {
     box-shadow: unset;
     border-radius: 3px;
-    background: var(--color-cool-5);
-    border: 1px solid var(--color-cool-4);
+    background: var(--color-secondary-5);
+    border: 1px solid var(--color-secondary-4);
   }
 
   input[type="range"]::-webkit-slider-thumb {
@@ -327,12 +328,12 @@
 
   input[type="range"]:disabled::-webkit-slider-thumb {
     background: color-mix(in srgb, var(--accent-color) 50%, black);
-    border: 1px solid color-mix(in srgb, var(--accent-color-light) 50%, black);
+    border: 1px solid color-mix(in srgb, var(--accent-text-color) 50%, black);
   }
 
   input[type="range"]:not(:disabled)::-webkit-slider-thumb {
     background: var(--accent-color);
-    border: 1px solid var(--color-warm-1);
+    border: 1px solid var(--color-primary-1);
   }
 
   input[type="color"][data-edit] {
@@ -341,7 +342,7 @@
   }
 
   input[type="color" i]::-webkit-color-swatch {
-    border-color: var(--color-cool-4);
+    border-color: var(--color-secondary-4);
   }
 
   input[type="range"] + .range-value {
@@ -352,7 +353,7 @@
     align-items: center;
     gap: 0.25rem;
     background: var(--accent-color);
-    border: 1px solid var(--color-warm-1);
+    border: 1px solid var(--color-primary-1);
     color: var(--button-bright-text-color);
     text-shadow: none;
     box-shadow: var(--box-shadow);
@@ -392,7 +393,7 @@
   hr {
     border: none;
     border-top: 1px solid var(--app-border-color);
-    border-bottom: 1px solid var(--color-cool-5);
+    border-bottom: 1px solid var(--color-secondary-5);
   }
 
   &.dialog .dialog-buttons button.default {
@@ -435,11 +436,11 @@
 
     // warm inside
     // prettier-ignore
-    // --warm-background: radial-gradient(circle at top, color-mix(in srgb, var(--color-warm-1) 20%, transparent), transparent),
-    //                    radial-gradient(ellipse at bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
+    // --warm-background: radial-gradient(circle at top, color-mix(in srgb, var(--color-primary-1) 20%, transparent), transparent),
+    //                    radial-gradient(ellipse at bottom, color-mix(in srgb, var(--color-primary-3) 30%, transparent), transparent),
     //                    var(--app-background);
     // background: var(--warm-background);
-    // border: 1px solid var(--color-warm-1);
+    // border: 1px solid var(--color-primary-1);
 
     // cool
     background: var(--app-background);
@@ -450,7 +451,7 @@
 
     // warm borders, no transparency
     // background: linear-gradient(var(--app-background), var(--app-background)) padding-box,
-    //   linear-gradient(to bottom, var(--color-warm-1), var(--color-warm-3)) border-box;
+    //   linear-gradient(to bottom, var(--color-primary-1), var(--color-primary-3)) border-box;
     // border: 1px solid transparent;
   }
 
@@ -462,7 +463,7 @@
     border-color: var(--window-app-border-color);
     backdrop-filter: blur(4px);
     // prettier-ignore
-    // box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px color-mix(in srgb, var(--color-warm-3) 10%, transparent), 0px 0px 30px 20px color-mix(in srgb, var(--color-warm-2) 20%, transparent), 0px 0px 10px 05px color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+    // box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px color-mix(in srgb, var(--color-primary-3) 10%, transparent), 0px 0px 30px 20px color-mix(in srgb, var(--color-primary-2) 20%, transparent), 0px 0px 10px 05px color-mix(in srgb, var(--color-primary-1) 40%, transparent);
     // Electron app bug
     box-shadow: var(--window-app-box-shadow);
 
@@ -484,11 +485,11 @@
     }
 
     .window-resizable-handle {
-      background: var(--color-warm-4);
+      background: var(--color-primary-4);
       border: 1px solid var(--window-app-border-color);
       border-radius: 4px 0px var(--border-radius) 0px;
-      border-bottom-color: var(--color-warm-3);
-      border-right-color: var(--color-warm-3);
+      border-bottom-color: var(--color-primary-3);
+      border-right-color: var(--color-primary-3);
       bottom: -1px;
       right: -1px;
     }
@@ -511,8 +512,8 @@
 
   .inline-roll .dice-tooltip {
     background: var(--app-background);
-    border: 1px solid var(--color-warm-1);
-    box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+    border: 1px solid var(--color-primary-1);
+    box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
     backdrop-filter: blur(5px);
     border-radius: var(--border-radius);
     -webkit-backdrop-filter: blur(5px);
@@ -529,8 +530,8 @@
 
   &.filepicker .favorites .paths {
     box-shadow: unset;
-    border: 1px solid var(--color-cool-3);
-    background: var(--color-cool-5-50);
+    border: 1px solid var(--color-secondary-3);
+    background: var(--color-secondary-5-50);
     .path {
       @include dui-button-toggle;
       border-radius: 3px;
@@ -576,9 +577,9 @@
 /* ----------------------------------------- */
 [data-theme][data-color-scheme="dark"] {
   &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
-    border-color: var(--color-cool-3);
+    border-color: var(--color-secondary-3);
     > legend {
-      color: var(--color-light-2);
+      color: var(--text-color-2);
     }
   }
 }
@@ -594,7 +595,7 @@
   }
   // &.sheet nav.sheet-tabs .item {
   //   // --button-border-color: transparent; // bad foundry default
-  //   --button-border-color: var(--color-cool-4);
+  //   --button-border-color: var(--color-secondary-4);
   // }
 }
 
@@ -610,7 +611,7 @@
 
   &.journal-sheet .journal-header .title {
     @include dui-input;
-    // background: var(--color-cool-4);
+    // background: var(--color-secondary-4);
   }
 
   .editor-edit {
@@ -619,8 +620,8 @@
     padding: 2px 5px;
   }
 
-  table:not(.pdui-table) tr:nth-child(even) {
-    background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
+  table:not(.pf2-table) tr:nth-child(even) {
+    background: color-mix(in srgb, var(--color-secondary-3) 20%, transparent);
   }
 }
 
@@ -653,11 +654,11 @@
     --placeholder-color: rgba(0, 0, 0, 0.4);
     --placeholder-color-focus: rgba(0, 0, 0, 0.25);
 
-    --tag-bg: var(--color-warm-2);
-    --tags-hover-border-color: var(--color-cool-3);
-    --tag-color: var(--color-light-2);
+    --tag-bg: var(--color-primary-2);
+    --tags-hover-border-color: var(--color-secondary-3);
+    --tag-color: var(--text-color-2);
 
-    --tag-bg: var(--color-cool-4);
+    --tag-bg: var(--color-secondary-4);
     --tag-border-color: var(--color-border-medium);
     --tags-border-color: var(--color-border-medium);
 
@@ -665,10 +666,10 @@
     border-radius: 3px;
 
     &.tagify--empty .tagify__input::before {
-      color: var(--color-light-5);
+      color: var(--text-color-5);
     }
 
-    background: var(--color-cool-4);
+    background: var(--color-secondary-4);
     &:hover {
       box-shadow: unset;
     }
@@ -698,11 +699,11 @@
 /* ----------------------------------------- */
 [data-theme][data-color-scheme="dark"] {
   &.pf2e.item.sheet {
-    --color-text-dark-2: var(--color-light-3);
-    --color-text-dark-4: var(--color-light-3);
-    --color-text-dark-input: var(--color-light-3);
-    --color-border-dark: var(--color-light-2);
-    --color-border-medium: var(--color-cool-3);
+    --color-text-dark-2: var(--text-color-3);
+    --color-text-dark-4: var(--text-color-3);
+    --color-text-dark-input: var(--text-color-3);
+    --color-border-dark: var(--text-color-2);
+    --color-border-medium: var(--color-secondary-3);
   }
 }
 
@@ -710,7 +711,7 @@
   --visibility-gm-bg: #e8e8efaa;
   --visibility-owner-bg: #ddebe1aa;
 
-  table.pdui-table {
+  table.pf2-table {
     text-shadow: none;
   }
 
@@ -765,14 +766,14 @@
       --placeholder-color: rgba(0, 0, 0, 0.4);
       --placeholder-color-focus: rgba(0, 0, 0, 0.25);
 
-      --tag-bg: var(--color-warm-2);
-      --tags-border-color: var(--color-cool-4);
-      --tags-hover-border-color: var(--color-cool-3);
-      --tag-color: var(--color-light-2);
+      --tag-bg: var(--color-primary-2);
+      --tags-border-color: var(--color-secondary-4);
+      --tags-hover-border-color: var(--color-secondary-3);
+      --tag-color: var(--text-color-2);
 
-      --tag-bg: var(--color-cool-4);
-      --tag-border-color: var(--color-cool-3);
-      --tags-border-color: var(--color-cool-3);
+      --tag-bg: var(--color-secondary-4);
+      --tag-border-color: var(--color-secondary-3);
+      --tags-border-color: var(--color-secondary-3);
 
       border: 1px solid var(--tag-border-color);
       border-radius: 3px;
@@ -781,9 +782,9 @@
 
   &.pf2e.item.sheet form .form-list,
   &.pf2e.item.sheet form section.sheet-body fieldset {
-    border-color: var(--color-cool-3);
+    border-color: var(--color-secondary-3);
     > legend {
-      color: var(--color-light-2);
+      color: var(--text-color-2);
     }
     &.basics {
       border-color: transparent;
@@ -797,7 +798,7 @@
     }
     &:hover .thumbnail img {
       border: var(--app-border-style);
-      border-color: var(--color-warm-2);
+      border-color: var(--color-primary-2);
     }
   }
 
@@ -813,8 +814,8 @@
     right: 40px;
     height: 28px;
     width: 28px;
-    background-color: var(--color-warm-4);
-    border-color: var(--color-warm-3);
+    background-color: var(--color-primary-4);
+    border-color: var(--color-primary-3);
     > i {
       margin-top: 3px;
     }
@@ -864,7 +865,7 @@
 
   &.pf2e.item.sheet form .tab.active.rules .rule-form .rules-drop-container .rules-drop-zone {
     @include dui-app;
-    --text-dark: var(--color-light-3);
+    --text-dark: var(--text-color-3);
   }
   &.pf2e.item.sheet form .tab.active.rules .rule-form .rules-drop-container .rules-drop-zone i {
     @include dui-app;
@@ -921,16 +922,16 @@
     @include dui-app;
     background-color: var(--visibility-gm-bg);
     border-style: dashed;
-    border-color: var(--color-warm-4);
+    border-color: var(--color-primary-4);
     text-shadow: none;
     color: black;
   }
 
   &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.add-gm-notes,
   &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .editor a.editor-edit {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
-    color: var(--color-light-2);
+    background: var(--color-secondary-4);
+    border: 1px solid var(--color-secondary-3);
+    color: var(--text-color-2);
   }
 
   &.pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
@@ -950,11 +951,11 @@
 
   &.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
-    --button-border-color: var(--color-warm-2);
-    --button-background: var(--color-warm-3);
-    --button-hover-border-color: var(--color-warm-4);
-    --button-hover-background: var(--color-warm-5);
-    --button-text-color: var(--color-light-2);
+    --button-border-color: var(--color-primary-2);
+    --button-background: var(--color-primary-3);
+    --button-hover-border-color: var(--color-primary-4);
+    --button-hover-background: var(--color-primary-5);
+    --button-text-color: var(--text-color-2);
     --box-shadow: none;
     border-color: var(--button-border-color);
     z-index: 1;

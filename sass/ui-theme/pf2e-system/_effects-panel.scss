@@ -1,7 +1,7 @@
 [data-theme] {
   &#effects-panel {
     .effect-item .effect-info .description a,
-    .effect-item .effect-info .description span[data-pdui-effect-area] {
+    .effect-item .effect-info .description span[data-pf2-effect-area] {
       color: var(--inline-text-color);
     }
 
@@ -29,17 +29,17 @@
       border-radius: var(--border-radius);
       --box-shadow: 0px 1px 3px 1px black;
       box-shadow: var(--box-shadow);
-      color: var(--color-light-3);
+      color: var(--text-color-3);
       position: relative;
       &.aura {
         border-radius: 50%;
-        border: 1px solid var(--color-warm-1);
-        box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+        border: 1px solid var(--color-primary-1);
+        box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
       }
       .linked {
-        color: var(--color-light-2);
-        background: var(--color-warm-3);
-        border: 1px solid var(--color-cool-4);
+        color: var(--text-color-2);
+        background: var(--color-primary-3);
+        border: 1px solid var(--color-secondary-4);
         border-radius: 4px 0px var(--border-radius) 0px;
         border-bottom: unset;
         border-right: unset;
@@ -52,10 +52,10 @@
 
         .value {
           padding: 2px;
-          color: var(--color-light-2);
-          background: var(--color-warm-3);
+          color: var(--text-color-2);
+          background: var(--color-primary-3);
           border-radius: 0px 4px 0px var(--border-radius);
-          border: 1px solid var(--color-cool-4);
+          border: 1px solid var(--color-secondary-4);
           border-bottom: unset;
           border-left: unset;
           text-shadow: 0px 1px 2px black;
@@ -67,9 +67,9 @@
         width: 80%;
         width: unset;
         padding: 2px 1px;
-        color: var(--color-light-1);
-        background: var(--color-warm-2);
-        border: 1px solid var(--color-warm-1);
+        color: var(--text-color-1);
+        background: var(--color-primary-2);
+        border: 1px solid var(--color-primary-1);
         text-shadow: 0px 1px 2px black;
         border-radius: 0px 0px 4px 4px;
       }

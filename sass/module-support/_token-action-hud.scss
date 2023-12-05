@@ -50,13 +50,13 @@
     }
 
     .tah-subtitle-text {
-      color: var(--color-light-1);
+      color: var(--text-color-1);
     }
 
     .tah-info1,
     .tah-info2,
     .tah-info3 {
-      color: var(--color-light-4);
+      color: var(--text-color-4);
       font-size: x-small;
     }
 
@@ -69,7 +69,7 @@
       justify-content: center;
       width: 32px;
       > i {
-        color: var(--color-light-3);
+        color: var(--text-color-3);
         text-shadow: 0px 1px 2px black;
       }
     }
@@ -117,7 +117,7 @@
     .tah-action button.tah-pf2e-skill-rank-2,
     .tah-action button.tah-pf2e-skill-rank-3,
     .tah-action button.tah-pf2e-skill-rank-4 {
-      --button-text-color: var(--color-light-2);
+      --button-text-color: var(--text-color-2);
     }
   }
 }

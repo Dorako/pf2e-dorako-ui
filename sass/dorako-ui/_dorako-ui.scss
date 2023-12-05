@@ -15,10 +15,10 @@
 }
 
 a.content-link,
-[data-pdui-check],
+[data-pf2-check],
 a.entity-link,
-[data-pdui-action],
-span[data-pdui-effect-area],
+[data-pf2-action],
+span[data-pf2-effect-area],
 a.inline-check .label,
 a.inline-roll:not(.inline-result) {
   font-weight: 400;
@@ -28,13 +28,13 @@ a.inline-roll:not(.inline-result) {
 
 // Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
 a.inline-check,
-span[data-pdui-check],
-span[data-pdui-effect-area].with-repost {
+span[data-pf2-check],
+span[data-pf2-effect-area].with-repost {
   padding: 0px;
   padding-left: 4px;
 }
 
-i[data-pdui-repost] {
+i[data-pf2-repost] {
   top: 0px;
   cursor: pointer;
 }
@@ -108,13 +108,13 @@ i[data-pdui-repost] {
     margin: 2px;
     margin-bottom: 10px;
     padding: 10px;
-    color: var(--color-light-2);
-    border-color: var(--color-cool-2);
-    background: var(--color-cool-3);
+    color: var(--text-color-2);
+    border-color: var(--color-secondary-1);
+    background: var(--color-secondary-2);
     --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
     .notes {
-      color: var(--color-light-3);
+      color: var(--text-color-3);
     }
   }
 
@@ -122,9 +122,9 @@ i[data-pdui-repost] {
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2 {
     font-size: var(--font-size-48);
     text-align: center;
-    color: var(--color-light-2);
-    background: var(--color-warm-2);
-    border-color: var(--color-warm-1);
-    text-shadow: 0px 1px 0px var(--color-warm-3);
+    color: var(--text-color-2);
+    background: var(--color-primary-2);
+    border-color: var(--color-primary-1);
+    text-shadow: 0px 1px 0px var(--color-primary-3);
   }
 }

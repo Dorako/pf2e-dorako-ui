@@ -95,6 +95,7 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
       (app.constructor.name === "PartySheetPF2e" || app.constructor.name === "FamiliarSheetPF2e")
     )
       return;
+    if (theme == "discord-light" && app.constructor.name === "PartySheetPF2e") return;
 
     app.element[0].dataset.theme = dorakoUiTheme;
     app.element[0].dataset.colorScheme = colorScheme;

@@ -4,30 +4,30 @@
 [data-theme^="crb"][data-color-scheme="light"] {
   // --color-shadow-primary: transparent;
   // --color-shadow-highlight: transparent;
-  // --color-border-light-highlight: var(--color-cool-3);
-  // --color-border-light-primary: var(--color-cool-4);
-  // --color-border-light-secondary: var(--color-cool-4);
-  // --color-border-light-tertiary: var(--color-cool-4);
-  // --color-border-dark-1: var(--color-cool-4); // darkest
-  // --color-border-dark-2: var(--color-cool-4);
-  // --color-border-dark-3: var(--color-cool-4);
-  // --color-border-dark-4: var(--color-cool-3);
-  // --color-border-dark-5: var(--color-cool-2);
-  // --color-border-dark-primary: var(--color-cool-4);
-  // --color-border-dark-secondary: var(--color-cool-5);
-  // --color-border-light-1: var(--color-cool-3);
-  // --color-border-light-2: var(--color-cool-4);
-  // --color-underline-header: var(--color-warm-2);
-  // --color-underline-active: var(--color-warm-1);
-  // --color-text-hyperlink: var(--color-warm-1);
+  // --color-border-light-highlight: var(--color-secondary-3);
+  // --color-border-light-primary: var(--color-secondary-4);
+  // --color-border-light-secondary: var(--color-secondary-4);
+  // --color-border-light-tertiary: var(--color-secondary-4);
+  // --color-border-dark-1: var(--color-secondary-4); // darkest
+  // --color-border-dark-2: var(--color-secondary-4);
+  // --color-border-dark-3: var(--color-secondary-4);
+  // --color-border-dark-4: var(--color-secondary-3);
+  // --color-border-dark-5: var(--color-secondary-2);
+  // --color-border-dark-primary: var(--color-secondary-4);
+  // --color-border-dark-secondary: var(--color-secondary-5);
+  // --color-border-light-1: var(--color-secondary-3);
+  // --color-border-light-2: var(--color-secondary-4);
+  // --color-underline-header: var(--color-primary-2);
+  // --color-underline-active: var(--color-primary-1);
+  // --color-text-hyperlink: var(--color-primary-1);
   --color-border-highlight: var(--accent-color);
   --color-border-highlight-alt: var(--accent-color-dark);
-  // --color-border-light-tertiary: var(--color-cool-4);
+  // --color-border-light-tertiary: var(--color-secondary-4);
   // --color-bg-btn-minor-inactive: var(--app-background);
-  // --color-bg-btn-minor-active: var(--color-warm-2);
-  --color-text-dark-primary: var(--color-light-3);
-  --color-text-dark-secondary: var(--color-light-5);
-  // --color-bg-option: var(--color-cool-4);
+  // --color-bg-btn-minor-active: var(--color-primary-2);
+  --color-text-dark-primary: var(--text-color-3);
+  --color-text-dark-secondary: var(--text-color-5);
+  // --color-bg-option: var(--color-secondary-4);
 }
 
 /* ----------------------------------------- */
@@ -35,7 +35,7 @@
 /* ----------------------------------------- */
 [data-theme^="crb"][data-color-scheme="light"] {
   // --text-dark: black;
-  --accent-color-light: red;
+  --accent-text-color: red;
   --accent-color: var(--primary-light);
   --accent-color-dark: var(--primary);
   --button-bright-text-color: white;
@@ -66,12 +66,12 @@
   --color-text-dark-primary: #191813;
   --color-text-dark-secondary: #4b4a44;
 
-  // --color-light-3: black;
-  --color-cool-5-75: rgba(96, 88, 86, 0.25);
+  // --text-color-3: black;
+  --color-secondary-5-75: rgba(96, 88, 86, 0.25);
 
-  //   --color-light-1: black;
-  //   --color-light-2: var(--color-text-dark-primary);
-  //   --color-light-3: var(--color-text-dark-secondary);
+  //   --text-color-1: black;
+  //   --text-color-2: var(--color-text-dark-primary);
+  //   --text-color-3: var(--color-text-dark-secondary);
 
   --app-background: rgba(255, 255, 255, 0.5);
   --app-border-color: transparent;
@@ -132,8 +132,8 @@
 
   &.sheet.hazard .section-container .section-header input,
   &.sheet.hazard .section-container.publication .section-body input[type="text"] {
-    --input-text-color: var(--color-light-2);
-    --input-focus-text-color: var(--color-light-1);
+    --input-text-color: var(--text-color-2);
+    --input-focus-text-color: var(--text-color-1);
   }
 
   .directory .directory-header .header-search input {
@@ -165,9 +165,9 @@
     }
     .message-content {
       text-shadow: unset;
-      --color-light-1: black;
-      --color-light-2: var(--color-text-dark-primary);
-      --color-light-3: var(--color-text-dark-secondary);
+      --text-color-1: black;
+      --text-color-2: black;
+      --text-color-3: black;
       text-shadow: 0px 1px 0px white;
       color: black;
       .dice-roll {
@@ -221,7 +221,7 @@
     --section-header: var(--primary);
     --section-border-color: var(--tertiary);
     --section-outline-color: var(--gold-brown);
-    --section-header-text-color: var(--color-light-2);
+    --section-header-text-color: var(--text-color-2);
     --tag-border-color: black;
     --tag-background-color: transparent;
     --tag-text-color: black;
@@ -232,7 +232,7 @@
     --input-placeholder-color: rgba(40, 40, 40, 1);
     --text-dark: black;
     --contrastive-transparent: rgba(0, 0, 0, 0.5);
-    --color-light-3: var(--color-text-dark-primary);
+    --text-color-3: var(--color-text-dark-primary);
     --app-text-shadow: none;
 
     &.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section,

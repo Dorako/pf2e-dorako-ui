@@ -16,25 +16,25 @@
   --input-focus-outline-color: var(--primary-light);
   --input-placeholder-color: rgba(0, 0, 0, 0.5);
 
-  --color-warm-1: var(--tertiary);
-  --color-warm-2: var(--primary-light);
-  --color-warm-3: var(--primary-dark);
-  --color-warm-3-75: var(--color-warm-3);
-  --color-warm-4-75: var(--color-warm-4);
-  --color-cool-1: var(--secondary-light);
-  --color-cool-2: var(--secondary);
-  --color-cool-3: var(--secondary-dark);
-  --color-cool-3-75: var(--color-cool-3); //custom
+  --color-primary-1: var(--tertiary);
+  --color-primary-2: var(--primary-light);
+  --color-primary-3: var(--primary-dark);
+  --color-primary-3-75: var(--color-primary-3);
+  --color-primary-4-75: var(--color-primary-4);
+  --color-secondary-1: var(--secondary-light);
+  --color-secondary-2: var(--secondary);
+  --color-secondary-3: var(--secondary-dark);
+  --color-secondary-3-75: var(--color-secondary-3); //custom
 
   --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
-  --button-text-color: var(--color-light-3);
+  --button-text-color: var(--text-color-3);
   --button-focus-outline-color: var(--tertiary);
   --button-hover-background: var(--primary-light);
   --button-hover-border-color: var(--tertiary);
-  --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background: var(--color-warm-5);
-  --button-disabled-border-color: var(--color-warm-4);
+  --button-hover-text-color: var(--text-color-1);
+  --button-disabled-background: var(--color-primary-5);
+  --button-disabled-border-color: var(--color-primary-4);
   --button-bright-text-color: white;
 
   --button-toggle-border-color: var(--secondary-light);
@@ -49,8 +49,8 @@
   /* Inline variables */
   --inline-bg: #303030;
   --inline-border-color: #404040;
-  --inline-text-color: var(--color-light-2);
-  --inline-icon-color: var(--color-light-1);
+  --inline-text-color: var(--text-color-2);
+  --inline-icon-color: var(--text-color-1);
   --inline-box-shadow: 0px 1px 2px black;
 
   --accent-color: var(--primary-light);
@@ -60,9 +60,9 @@
   --color-border-light-highlight: var(--app-border-color);
 
   &#token-hud {
-    --input-text-color: var(--color-light-2);
+    --input-text-color: var(--text-color-2);
     .attribute i.fas {
-      color: var(--color-light-2);
+      color: var(--text-color-2);
     }
   }
 

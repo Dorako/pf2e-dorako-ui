@@ -32,7 +32,7 @@
   #tokenizer div.view-layer-control .section,
   #tokenizer .section {
     @include dui-app;
-    border-color: var(--color-cool-3);
+    border-color: var(--color-secondary-3);
     button {
       @include dui-button;
       align-items: center;
@@ -46,22 +46,22 @@
 
   &.tokenizer .title .box-button {
     @include dui-button;
-    --button-background: var(--color-cool-2);
-    --button-border-color: var(--color-warm-1);
-    --button-text-color: var(--color-light-1);
-    --button-focus-outline-color: var(--color-warm-1);
-    --button-hover-background: var(--color-cool-3);
-    --button-hover-border-color: var(--color-cool-2);
-    --button-hover-text-color: var(--color-light-2);
+    --button-background: var(--color-secondary-2);
+    --button-border-color: var(--color-primary-1);
+    --button-text-color: var(--text-color-1);
+    --button-focus-outline-color: var(--color-primary-1);
+    --button-hover-background: var(--color-secondary-3);
+    --button-hover-border-color: var(--color-secondary-2);
+    --button-hover-text-color: var(--text-color-2);
 
     &.deselected {
-      --button-background: var(--color-cool-3);
-      --button-border-color: var(--color-cool-2);
-      --button-text-color: var(--color-light-2);
-      --button-focus-outline-color: var(--color-warm-1);
-      --button-hover-background: var(--color-cool-2);
-      --button-hover-border-color: var(--color-cool-1);
-      --button-hover-text-color: var(--color-light-1);
+      --button-background: var(--color-secondary-3);
+      --button-border-color: var(--color-secondary-2);
+      --button-text-color: var(--text-color-2);
+      --button-focus-outline-color: var(--color-primary-1);
+      --button-hover-background: var(--color-secondary-2);
+      --button-hover-border-color: var(--color-secondary-1);
+      --button-hover-text-color: var(--text-color-1);
     }
 
     > i:before {

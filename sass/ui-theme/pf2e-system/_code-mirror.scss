@@ -16,17 +16,17 @@
 
   .ͼ2 .cm-gutters {
     background-color: var(--application-bg);
-    border-right: 1px solid var(--color-warm-2);
+    border-right: 1px solid var(--color-primary-2);
     border: unset;
   }
 
   .ͼ2 .cm-activeLineGutter {
-    background-color: var(--color-warm-1);
+    background-color: var(--color-primary-1);
     color: black;
   }
 
   .ͼ2 .cm-activeLine {
-    background-color: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
+    background-color: color-mix(in srgb, var(--color-primary-2) 20%, transparent);
   }
 
   .ͼ1.cm-focused .cm-matchingBracket {

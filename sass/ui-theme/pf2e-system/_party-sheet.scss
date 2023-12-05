@@ -1,14 +1,14 @@
 [data-theme][data-dorako-ui-scope="limited"] {
   &.sheet.party {
-    --color-border: var(--color-warm-3);
-    --alt-dark: var(--color-light-4);
-    --sub: var(--color-cool-3);
-    --text-dark: var(--color-light-2);
+    --color-border: var(--color-primary-3);
+    --alt-dark: var(--text-color-4);
+    --sub: var(--color-secondary-3);
+    --text-dark: var(--text-color-2);
   }
 
   &.sheet.party .tag-light {
     background: var(--tag-color);
-    border-color: var(--color-cool-4);
+    border-color: var(--color-secondary-4);
     color: white;
   }
 
@@ -49,41 +49,41 @@
   }
 
   &.sheet.party [data-tab="overview"] .summary {
-    background: var(--color-warm-4);
+    background: var(--color-primary-4);
     border-image-source: var(--ornamentation);
   }
   &.sheet.party [data-tab="overview"] .summary nav button {
     @include dui-button;
   }
   &.sheet.party [data-tab="overview"] .member > .data .main-stats > section {
-    background-color: var(--color-warm-4);
+    background-color: var(--color-primary-4);
     &.ac {
       background: unset;
       border: unset;
     }
   }
   &.sheet.party [data-tab="overview"] .member > .data .main-stats .ac .value {
-    color: var(--color-warm-1);
+    color: var(--color-primary-1);
   }
 
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .empty .name,
   &.sheet.party [data-tab="exploration"] .activities .member-activity .empty .name {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 
   &.sheet.party [data-tab="aftermath"] .activities .member-activity,
   &.sheet.party [data-tab="exploration"] .activities .member-activity {
-    background-color: var(--color-warm-4);
+    background-color: var(--color-primary-4);
   }
 
   &.sheet.party [data-tab="aftermath"] .member > .data header .hero-points .empty,
   &.sheet.party [data-tab="overview"] .member > .data header .hero-points .empty {
-    border: 2px dashed var(--color-warm-2);
+    border: 2px dashed var(--color-primary-2);
   }
 
   &.sheet.party [data-tab="aftermath"] .member > .data header .name,
   &.sheet.party [data-tab="overview"] .member > .data header .name {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 
   &.sheet.party header.content-header .buttons {
@@ -95,7 +95,7 @@
 
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .empty .icon,
   &.sheet.party [data-tab="exploration"] .activities .member-activity .empty .icon {
-    background: var(--color-warm-5);
+    background: var(--color-primary-5);
   }
 
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .activity-name {
@@ -105,7 +105,7 @@
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .icon img {
     @include dui-app;
     filter: unset;
-    border-color: var(--color-warm-2);
+    border-color: var(--color-primary-2);
   }
 }
 

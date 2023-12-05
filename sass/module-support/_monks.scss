@@ -220,8 +220,8 @@
       @include dui-app;
       .tooltip {
         background: var(--app-background);
-        border: 1px solid var(--color-warm-1);
-        box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
+        border: 1px solid var(--color-primary-1);
+        box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
         backdrop-filter: blur(5px);
         border-radius: var(--border-radius);
         -webkit-backdrop-filter: blur(5px);
@@ -421,10 +421,10 @@ body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .ef
     border: unset;
   }
   &.sheet .sound-sheet .items-list .item {
-    border-bottom: 1px solid var(--color-cool-4);
+    border-bottom: 1px solid var(--color-secondary-4);
   }
   &.sheet .sound-sheet .items-list .item .item-name {
-    color: var(--color-light-3);
+    color: var(--text-color-3);
   }
 }
 
@@ -850,8 +850,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
     }
 
     &.view a {
-      --button-background: var(--color-warm-2);
-      --button-border-color: var(--color-warm-1);
+      --button-background: var(--color-primary-2);
+      --button-border-color: var(--color-primary-1);
     }
   }
 
@@ -875,9 +875,9 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
     background: unset;
     border: unset;
     // @include dui-app;
-    // border-color: var(--color-cool-3);
+    // border-color: var(--color-secondary-3);
     .item-controls {
-      color: var(--color-light-3);
+      color: var(--text-color-3);
     }
   }
 
@@ -889,21 +889,21 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   &#trigger-action .files-list .items-header .item-controls,
   &#trigger-action .buttons-list .items-header .item-controls,
   &.monks-active-tiles .files-list .items-header .item-controls {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
   }
 
   &.monks-active-tiles .file-list {
-    color: var(--color-light-3);
+    color: var(--text-color-3);
   }
 
   &.monks-active-tiles.sheet .items-list,
   &#trigger-action .items-list li a,
   &.monks-active-tiles .file-list li a {
-    color: var(--color-light-3);
+    color: var(--text-color-3);
   }
   &#trigger-action .file-list li,
   &.monks-active-tiles.sheet .file-list li.item {
-    border-color: var(--color-cool-3);
+    border-color: var(--color-secondary-3);
   }
 
   &.action-sheet .display-value {
@@ -915,7 +915,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   }
 
   &.monks-active-tiles.sheet .items-list .item .item-name {
-    color: var(--color-light-3);
+    color: var(--text-color-3);
   }
 }
 

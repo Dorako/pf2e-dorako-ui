@@ -9,7 +9,7 @@
   &.window-app.forien-quest-preview nav.tabs .item.active,
   &.window-app.forien-quest-preview nav.tabs .item.active:hover {
     font-weight: unset;
-    color: var(--color-light-1);
+    color: var(--text-color-1);
     text-shadow: 0px 1px 2px black;
   }
 
@@ -28,9 +28,9 @@
     &.active {
       font-weight: unset;
       border-right: 1px solid transparent;
-      border-color: var(--color-warm-1);
-      background: var(--color-warm-2) !important;
-      color: var(--color-light-1);
+      border-color: var(--color-primary-1);
+      background: var(--color-primary-2) !important;
+      color: var(--text-color-1);
     }
   }
 
@@ -42,10 +42,10 @@
 
   &#forien-quest-log .editor,
   &.window-app.forien-quest-preview .editor {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
+    background: var(--color-secondary-4);
+    border: 1px solid var(--color-secondary-3);
     .editor-content {
-      color: var(--color-light-3);
+      color: var(--text-color-3);
     }
     .tox.tox-tinymce {
       background: white;
@@ -61,14 +61,14 @@
   &.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-tasks ul li {
     @include dui-app;
     border-color: var(--color-scrollbar-border);
-    background: var(--color-warm-3);
+    background: var(--color-primary-3);
   }
 
   &#forien-quest-log .actions i,
   &.window-app.forien-quest-preview .actions i {
-    color: var(--color-light-2);
+    color: var(--text-color-2);
     &:hover {
-      color: var(--color-warm-1);
+      color: var(--color-primary-1);
     }
   }
 }

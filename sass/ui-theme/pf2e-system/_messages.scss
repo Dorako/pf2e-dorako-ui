@@ -5,20 +5,20 @@
   @include dui-app;
   border: 1px solid;
   border-color: var(--window-app-border-color);
-  --color-text-light-6: var(--color-cool-4);
-  --color-text-dark-secondary: var(--color-light-4); // 5 is too dark on colored message backgrounds
+  --color-text-light-6: var(--color-secondary-4);
+  --color-text-dark-secondary: var(--text-color-4); // 5 is too dark on colored message backgrounds
 
   > .message-content .message-buttons button .cue i {
-    --fa-primary-color: var(--color-light-1);
-    --fa-secondary-color: var(--color-light-3);
+    --fa-primary-color: var(--text-color-1);
+    --fa-secondary-color: var(--text-color-3);
   }
 
   &.whisper {
-    border-color: var(--color-cool-1);
-    background: var(--color-cool-3-75);
+    border-color: var(--color-secondary-1);
+    background: var(--color-secondary-3-75);
     &.blind {
       border-color: var(--color-scrollbar-border);
-      background: var(--color-warm-3-75);
+      background: var(--color-primary-3-75);
     }
   }
 
@@ -30,9 +30,9 @@
     font-family: var(--serif);
     font-size: x-large;
     line-height: 1.3rem;
-    color: var(--color-light-2);
+    color: var(--text-color-2);
 
-    &.pdui-icon {
+    &.pf2-icon {
       font-family: "Pathfinder2eActions", sans-serif;
       flex: 0;
       margin-right: 5px;
@@ -43,7 +43,7 @@
   }
 
   .pf2e.chat-card .card-footer span {
-    border-right: 1px solid var(--color-cool-4);
+    border-right: 1px solid var(--color-secondary-4);
     &:last-child {
       border: unset;
     }
@@ -209,18 +209,18 @@
 
         &[data-action="shield-block"] {
           &:hover {
-            background-color: var(--color-cool-2);
+            background-color: var(--color-secondary-2);
             border: var(--app-border-style);
-            border-color: var(--color-cool-1);
+            border-color: var(--color-secondary-1);
           }
           &.shield-activated {
-            background-color: var(--color-cool-1);
+            background-color: var(--color-secondary-1);
             border: var(--app-border-style);
-            border-color: var(--color-cool-2);
+            border-color: var(--color-secondary-2);
             &:hover {
-              background-color: var(--color-cool-2);
+              background-color: var(--color-secondary-2);
               border: var(--app-border-style);
-              border-color: var(--color-cool-1);
+              border-color: var(--color-secondary-1);
             }
           }
         }
