@@ -1,187 +1,4 @@
-#pf2e-token-hud.dorako-ui {
-  --color: white;
-  --rarity-common: #e1d8cf;
-  --rarity-uncommon: #c45500;
-  --rarity-rare: #5362ff;
-  --rarity-unique: #e127e1;
-  --color-rarity-common: #e1d8cf;
-  --color-rarity-uncommon: #c45500;
-  --color-rarity-rare: #5362ff;
-  --color-rarity-unique: #e127e1;
-
-  .sidebar.skills {
-    --color-rank-0: #a6a6a6;
-    --color-rank-1: dodgerblue; // Symon recommended
-    --color-rank-2: #bf4fdb;
-    --color-rank-3: #cf931d;
-    --color-rank-4: red; // Symon recommended
-  }
-
-  .popup .notes-header {
-    border: 1px solid var(--color-border-light-2);
-    color: var(--color);
-    font-size: var(--font-size);
-    border-left: 0;
-    border-right: 0;
-    background: rgba(96, 88, 86, 0.5);
-    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-    margin: 0px -5px;
-  }
-
-  a.content-link,
-  [data-pf2-check],
-  a.entity-link,
-  [data-pf2-action],
-  span[data-pf2-effect-area],
-  a.inline-check .label,
-  a.inline-roll:not(.inline-result) {
-    color: black;
-  }
-
-  .sidebar.actions .sidebar-content .toggles .toggle select {
-    @include glass;
-    background-color: var(--glass-bg-light);
-  }
-
-  .sidebar.skills .skill .header .rank,
-  .sidebar.skills .lore .rank {
-    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-  }
-
-  .sidebar .header {
-    background: rgba(96, 88, 86, 0.5);
-    margin: 0px -5px;
-  }
-
-  .sidebar.skills .sidebar-content .skill .header .modifier,
-  .sidebar.skills .sidebar-content .lore .modifier,
-  .sidebar.skills .skill .header .modifier,
-  .sidebar.skills .lore .modifier {
-    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-    // color: var(--primary-light);
-    // color: var(--tertiary);
-    color: #24ff00; // Symon recommended
-  }
-
-  .sidebar.spells .entry .spell .details .extras .actions {
-    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-    color: #f8f8f8;
-  }
-
-  .distance,
-  .status,
-  .popup,
-  .sidebar,
-  .inner {
-    @include glass;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-
-    hr {
-      border: none;
-    }
-  }
-
-  .popup .header:before {
-    background: unset;
-  }
-
-  .sidebar .details .extras .actions a i.greyed {
-    text-shadow: 0px 1px 15px white;
-  }
-
-  .sidebar .item-img img {
-    border-color: wheat;
-  }
-
-  .rarity {
-    text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-
-    &.common {
-      color: var(--rarity-common);
-    }
-
-    &.uncommon {
-      color: var(--rarity-uncommon);
-    }
-
-    &.rare {
-      color: var(--rarity-rare);
-    }
-
-    &.unique {
-      color: var(--rarity-unique);
-    }
-  }
-}
-
-#pf2e-token-hud.dorako-ui input,
-#pf2e-token-hud.dorako-ui select option {
-  background-color: var(--glass-bg);
-}
-
-// Recall Knowledge
-.chat-message.message.dorako-ui.dark-theme .pf2e-token-hud {
-  --color-rank-0: #a6a6a6;
-  --color-rank-1: #3f4dcd;
-  --color-rank-2: #a828f0;
-  --color-rank-3: #cf931d;
-  --color-rank-4: #bf1c1c;
-  --color: white;
-  --rarity-common: #e1d8cf;
-  --rarity-uncommon: #c45500;
-  --rarity-rare: #5362ff;
-  --rarity-unique: #e127e1;
-  --color-rarity-common: #e1d8cf;
-  --color-rarity-uncommon: #c45500;
-  --color-rarity-rare: #5362ff;
-  --color-rarity-unique: #e127e1;
-
-  .rk,
-  .rk-skills,
-  .rk-lores,
-  .rk-lores-rolls {
-    background: repeating-linear-gradient(
-      #dddddd70 0 var(--row-height),
-      transparent var(--row-height) calc(var(--row-height) * 2)
-    );
-    .header {
-      color: white;
-    }
-
-    .rank {
-      //   text-shadow: 0px 1px 1px black, 0px 1px 15px white;
-      font-weight: bold;
-    }
-  }
-}
-
-.chat-message.message.dorako-ui.light-theme .pf2e-token-hud {
-  --color-rank-0: #a6a6a6;
-  --color-rank-1: #3f4dcd;
-  --color-rank-2: #a828f0;
-  --color-rank-3: #cf931d;
-  --color-rank-4: #bf1c1c;
-
-  .rk,
-  .rk-skills,
-  .rk-lores,
-  .rk-lores-rolls {
-    background: repeating-linear-gradient(
-      #dddddd70 0 var(--row-height),
-      transparent var(--row-height) calc(var(--row-height) * 2)
-    );
-    .rank {
-      font-weight: bold;
-    }
-  }
-}
-
-/* ----------------------------------------- */
-/* Foundry 2                                 */
-/* ----------------------------------------- */
-
-[data-dorako-ui-theme] {
+[data-theme] {
   &.chat-message.message .pf2e-token-hud .rk {
     --text-dark: var(--color-light-2);
     --rarity-common: #e1d8cf;
@@ -204,7 +21,7 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &#pf2e-token-hud {
     // --primary: var(--color-warm-2);
     --rarity-common: #e1d8cf;
@@ -225,7 +42,7 @@
   }
 
   &#pf2e-token-hud .sidebar .sidebar-header input {
-    @include f2-input;
+    @include dui-input;
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .item-img img {
@@ -235,20 +52,20 @@
   }
 
   &#pf2e-token-hud .sidebar .sidebar-content .details input {
-    @include f2-input;
+    @include dui-input;
     padding: 1px;
   }
 
   &#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions .uses {
     input:last-child {
-      --input-background-color: transparent;
+      --input-background: transparent;
       --input-border-color: transparent;
       --box-shadow: transparent;
     }
   }
 
   &#pf2e-token-hud .sidebar.extras .sidebar-content .row select {
-    @include f2-input;
+    @include dui-input;
   }
 
   &#pf2e-token-hud .sidebar.items .sidebar-content .hud-bulk .over-max {
@@ -282,7 +99,7 @@
 
   &.pf2e-token-hud .no-macro,
   &#pf2e-token-hud .no-macro {
-    @include f2-app;
+    @include dui-app;
     background: var(--color-warm-3);
     border: 1px solid var(--color-scrollbar-border);
   }
@@ -307,7 +124,7 @@
   &#pf2e-token-hud .inner,
   &#pf2e-token-hud .popup {
     background: unset;
-    @include f2-app;
+    @include dui-app;
     backdrop-filter: blur(4px);
   }
 
@@ -316,12 +133,12 @@
     flex-direction: column;
     gap: 5px;
     button {
-      @include f2-button-warm;
+      @include dui-button;
     }
   }
 
   &#pf2e-token-hud .inner .group .section input[type="number"] {
-    @include f2-app;
+    @include dui-app;
     border-radius: 3px;
   }
 
@@ -332,7 +149,7 @@
 
   &#pf2e-token-hud .free {
     background: unset;
-    @include f2-app;
+    @include dui-app;
     backdrop-filter: blur(4px);
     &.status {
       bottom: 0px;
@@ -353,7 +170,7 @@
   }
 
   &#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select {
-    @include f2-app;
+    @include dui-app;
     margin: unset;
   }
 
@@ -363,7 +180,7 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &[id^="pf2e-perception-"] {
     height: auto !important;
     .window-content {
@@ -374,7 +191,7 @@
     background: color-mix(in srgb, var(--color-warm-2) 80%, transparent);
   }
   &[id^="pf2e-perception-"] .window-content .buttons button {
-    @include f2-button-warm;
+    @include dui-button;
     box-shadow: unset;
   }
   &[id^="pf2e-perception-"] .window-content .tokens section .token.ui-selected .name,

@@ -1,4 +1,4 @@
-// [data-dorako-ui-theme] {
+// [data-theme] {
 //   &.sheet.kingdom-builder,
 //   &.sheet.kingdom {
 //     --primary: var(--color-warm-2);
@@ -53,7 +53,7 @@
 //     box-shadow: unset;
 //     a,
 //     .tab {
-//       @include f2-button-warm;
+//       @include dui-button;
 //       font-family: var(--font-primary);
 
 //       &.active {
@@ -63,6 +63,6 @@
 //   }
 
 //   &.sheet.kingdom-builder .build-element .selection {
-//     @include f2-app;
+//     @include dui-app;
 //   }
 // }

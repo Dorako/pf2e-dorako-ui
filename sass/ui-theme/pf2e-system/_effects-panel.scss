@@ -1,12 +1,12 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &#effects-panel {
     .effect-item .effect-info .description a,
-    .effect-item .effect-info .description span[data-pf2-effect-area] {
+    .effect-item .effect-info .description span[data-pdui-effect-area] {
       color: var(--inline-text-color);
     }
 
     .effect-item .effect-info {
-      @include f2-tooltip;
+      @include dui-tooltip;
       min-height: 34px;
       font-size: var(--font-size-20);
       line-height: var(--font-size-20);
@@ -19,12 +19,12 @@
     .effect-item[data-badge-type="formula"] > .icon:hover::before {
       border-radius: var(--border-radius);
       padding: none;
-      background: var(--button-hover-background-color);
+      background: var(--button-hover-background);
       text-shadow: 0px 1px 2px black;
     }
 
     .effect-item > .icon {
-      // @include f2-app;
+      // @include dui-app;
       border: var(--app-border-style) var(--icon-border-color);
       border-radius: var(--border-radius);
       --box-shadow: 0px 1px 3px 1px black;

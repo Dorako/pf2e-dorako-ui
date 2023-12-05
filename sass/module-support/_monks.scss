@@ -1,7 +1,7 @@
 /* ----------------------------------------- */
 /* General??                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme] {
+[data-theme] {
   &.monks-active-tiles.sheet .items-list .item-header {
     border: none;
     background: none;
@@ -206,9 +206,9 @@
   }
 }
 
-#tokenbar[data-dorako-ui-theme] {
+#tokenbar[data-theme] {
   .bar-controls {
-    @include f2-app;
+    @include dui-app;
     div#tokenbar-move-handle {
       background: unset;
     }
@@ -217,7 +217,7 @@
     border: unset;
     gap: 5px;
     .token {
-      @include f2-app;
+      @include dui-app;
       .tooltip {
         background: var(--app-background);
         border: 1px solid var(--color-warm-1);
@@ -240,9 +240,9 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &#requestsavingthrow .request-grid > div {
-    @include f2-button-warm;
+    @include dui-button;
     text-align: center;
   }
   &#requestsavingthrow .request-grid {
@@ -258,7 +258,7 @@
   }
   .monks-tokenbar:not(.editstats) .sheet input[type="text"],
   .monks-tokenbar .sheet input[type="number"] {
-    @include f2-input;
+    @include dui-input;
   }
   &#assignexperience .sheet .sheet-navigation {
     margin: unset;
@@ -335,7 +335,7 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &#token-hud.monks-little-details .status-effects {
     gap: 5px;
   }
@@ -360,8 +360,8 @@
   }
 }
 
-body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-effects .effect-control {
-  @include f2-button-warm;
+body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control {
+  @include dui-button;
 }
 
 /* ----------------------------------------- */
@@ -394,7 +394,7 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
   }
 }
 
-#hotbar[data-dorako-ui-theme] {
+#hotbar[data-theme] {
   // width: 647px;
 
   .hotbar-page {
@@ -416,7 +416,7 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
 /* ----------------------------------------- */
 /* Monk's Sound Enhancements                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme] {
+[data-theme] {
   &.sheet .sound-sheet .items-list .items-header {
     border: unset;
   }
@@ -820,13 +820,13 @@ body.system-pf2e #token-hud.monks-little-details[data-dorako-ui-theme] .status-e
 /* Monk's Scene Navigation                   */
 /* ----------------------------------------- */
 
-body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-toggle {
+body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   display: unset;
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &#navigation .nav-item-container {
-    @include f2-app;
+    @include dui-app;
     #nav-toggle {
       box-shadow: unset;
       border: unset;
@@ -838,11 +838,11 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
 
   &#navigation .monks-scene-navigation .scene-list > li {
     a {
-      @include f2-button-warm;
+      @include dui-button;
     }
 
     &.gm a {
-      @include f2-button-cool;
+      @include dui-button-toggle;
     }
 
     a.folder-name {
@@ -850,7 +850,7 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
     }
 
     &.view a {
-      --button-background-color: var(--color-warm-2);
+      --button-background: var(--color-warm-2);
       --button-border-color: var(--color-warm-1);
     }
   }
@@ -860,7 +860,7 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   }
 
   &#navigation.background .monks-scene-navigation .scene-list {
-    @include f2-app;
+    @include dui-app;
     --app-border-style: 2px solid;
     gap: 5px;
   }
@@ -869,12 +869,12 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
 /* ----------------------------------------- */
 /* Monk's Active Tile Triggers               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme] {
+[data-theme] {
   .monks-active-tiles.sheet .items-list .items-header,
   &.monks-active-tiles.sheet .items-list .items-header {
     background: unset;
     border: unset;
-    // @include f2-app;
+    // @include dui-app;
     // border-color: var(--color-cool-3);
     .item-controls {
       color: var(--color-light-3);
@@ -907,11 +907,11 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   }
 
   &.action-sheet .display-value {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.monks-active-tiles.sheet .items-list .item-controls a {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   &.monks-active-tiles.sheet .items-list .item .item-name {
@@ -919,7 +919,7 @@ body.compact-ui #navigation[data-dorako-ui-theme] .monks-scene-navigation #nav-t
   }
 }
 
-[data-dorako-ui-theme]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
+[data-theme]:not([data-theme^="crb"][data-color-scheme="light"]) {
   &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
     color: #fafafa;
   }

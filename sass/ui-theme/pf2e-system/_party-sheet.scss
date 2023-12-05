@@ -1,4 +1,4 @@
-[data-dorako-ui-theme][data-dorako-ui-scope="limited"] {
+[data-theme][data-dorako-ui-scope="limited"] {
   &.sheet.party {
     --color-border: var(--color-warm-3);
     --alt-dark: var(--color-light-4);
@@ -7,8 +7,6 @@
   }
 
   &.sheet.party .tag-light {
-    // @include f2-app;
-    // border-radius: 3px;
     background: var(--tag-color);
     border-color: var(--color-cool-4);
     color: white;
@@ -19,7 +17,7 @@
     box-shadow: unset;
     a,
     .tab {
-      @include f2-button-warm;
+      @include dui-button;
       font-family: var(--font-primary);
 
       &.active {
@@ -27,13 +25,6 @@
       }
     }
   }
-
-  // &.sheet.party form > header input[type="text"],
-  // &.sheet.party form > header input[type="number"] {
-  //   @include f2-input;
-  //   height: 48px;
-  //   font-size: 48px;
-  // }
 
   &.sheet.kingdom .tab.active[data-tab="activities"] .skills .control-dc .mod,
   &.sheet.kingdom .tab.active[data-tab="features"] .feat-item .item-name .feat-slot-title {
@@ -62,7 +53,7 @@
     border-image-source: var(--ornamentation);
   }
   &.sheet.party [data-tab="overview"] .summary nav button {
-    @include f2-button-warm;
+    @include dui-button;
   }
   &.sheet.party [data-tab="overview"] .member > .data .main-stats > section {
     background-color: var(--color-warm-4);
@@ -98,7 +89,7 @@
   &.sheet.party header.content-header .buttons {
     gap: 5px;
     button {
-      @include f2-button-warm;
+      @include dui-button;
     }
   }
 
@@ -112,17 +103,17 @@
   }
 
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .icon img {
-    @include f2-app;
+    @include dui-app;
     filter: unset;
     border-color: var(--color-warm-2);
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .time .time-options {
-    @include f2-input;
+    @include dui-input;
   }
   &.sheet.party [data-tab="aftermath"] .activities .member-activity .activity-entries .activity .run-actions button {
-    @include f2-button-warm;
+    @include dui-button;
   }
 }

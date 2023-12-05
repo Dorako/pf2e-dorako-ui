@@ -22,9 +22,9 @@ div.speaking-as--currentSpeaker + #chat-controls {
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   .speaking-as--currentSpeaker {
-    @include f2-app;
+    @include dui-app;
     margin: 0px var(--sidebar-margin);
   }
 }

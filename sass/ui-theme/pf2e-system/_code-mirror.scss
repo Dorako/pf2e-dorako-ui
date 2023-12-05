@@ -1,12 +1,10 @@
 /* ----------------------------------------- */
 /* Code Mirror in system                     */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"],
-[data-dorako-ui-theme="bg3"],
-[data-dorako-ui-theme][data-dorako-color-scheme="dark"] {
+[data-theme][data-color-scheme="dark"] {
   &.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
   &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
-    background-color: var(--input-background-color);
+    background-color: var(--input-background);
     border-radius: var(--border-radius);
     border: 1px solid var(--input-border-color);
     color: var(--input-text-color);
@@ -67,7 +65,7 @@
 /* ----------------------------------------- */
 /* Code Mirror module                        */
 /* ----------------------------------------- */
-[data-dorako-ui-theme] {
+[data-theme] {
   .CodeMirror {
     cursor: text;
     background: white;

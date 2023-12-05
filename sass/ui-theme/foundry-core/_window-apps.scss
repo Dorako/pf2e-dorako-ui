@@ -1,15 +1,15 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &.filepicker .display-modes a {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   &.filepicker .private button.privacy {
-    @include f2-button-warm;
-    --button-background-color: #7331ff;
+    @include dui-button;
+    --button-background: #7331ff;
   }
   &.filepicker .filepicker-header .quick-link-input-button {
     --box-shadow: none;
-    --button-hover-background-color: none;
+    --button-hover-background: none;
     --button-hover-border-color: transparent;
   }
 }

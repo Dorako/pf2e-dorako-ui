@@ -49,7 +49,7 @@ Hooks.on("renderSvelteApplication", (app, html, data) => {
     return;
   }
   const { dorakoUiTheme, colorScheme } = uiTheme;
-  app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
+  app.element[0].dataset.theme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
 });
@@ -70,8 +70,8 @@ for (const appName of [...themedApps]) {
       return;
     }
 
-    app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-dorako-ui-theme='${dorakoUiTheme}']`);
+    app.element[0].dataset.theme = dorakoUiTheme;
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}']`);
   });
 }
 
@@ -96,11 +96,11 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
     )
       return;
 
-    app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
+    app.element[0].dataset.theme = dorakoUiTheme;
     app.element[0].dataset.colorScheme = colorScheme;
     app.element[0].dataset.dorakoUiScope = "unlimited";
     console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | [data-dorako-ui-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
+      `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
     );
   });
 }
@@ -139,14 +139,9 @@ Hooks.on("renderApplication", (app, html, data) => {
       html.addClass("dialog");
     }
   }
-  app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
+  app.element[0].dataset.theme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
-  html.find(".item-controls button[data-action='apply']").addClass("bright");
-  html.find("button[data-action='accept']").addClass("bright");
-  html.find("form button[type='submit']").addClass("bright");
-  html.find("form button[data-action='save']").addClass("bright");
-  html.find("form.check-modifiers-content button.roll").addClass("bright");
 });
 
 // Hooks.on("renderDialog", (app, html, data) => {
@@ -156,7 +151,7 @@ Hooks.on("renderApplication", (app, html, data) => {
 //   if (uiTheme === null) return;
 //   const { dorakoUiTheme, colorScheme } = uiTheme;
 //   console.debug(`${MODULE_NAME} | render${app.constructor.name} | set dorako-ui-theme to ${dorakoUiTheme}`);
-//   app.element[0].dataset.dorakoUiTheme = dorakoUiTheme;
+//   app.element[0].dataset.theme = dorakoUiTheme;
 //   app.element[0].dataset.colorScheme = colorScheme;
 //   app.element[0].dataset.dorakoUiScope = "unlimited";
 // });
@@ -208,16 +203,16 @@ Hooks.on("render" + "ChatMessage", (app, html, data) => {
 Hooks.on("render" + "ChatLogPF2e", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (theme === "no-theme") return;
-  app.element[0].dataset.chatAppTheme = theme;
+  app.element[0].dataset.chatInterfaceTheme = theme;
 });
 
 Hooks.on("render" + "Sidebar", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (theme === "no-theme") return;
   if (theme === "bg3") {
-    app.element[0].dataset.chatAppTheme = "bg3-translucent";
+    app.element[0].dataset.chatInterfaceTheme = "bg3-translucent";
   } else {
-    app.element[0].dataset.chatAppTheme = theme;
+    app.element[0].dataset.chatInterfaceTheme = theme;
   }
 });
 
@@ -229,6 +224,6 @@ Hooks.on("render" + "Sidebar", (app, html, data) => {
     return;
   }
 
-  $("#sidebar-tabs").attr("data-dorako-ui-theme", "");
+  $("#sidebar-tabs").attr("data-theme", "");
   app.element[0].dataset.dorakoUiScope = "sidebar";
 });

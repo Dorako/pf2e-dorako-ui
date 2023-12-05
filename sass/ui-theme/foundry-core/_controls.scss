@@ -2,7 +2,7 @@
 /* Controls                                  */
 /* ----------------------------------------- */
 
-nav#controls[data-dorako-ui-theme] {
+nav#controls[data-theme] {
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
@@ -21,25 +21,25 @@ nav#controls[data-dorako-ui-theme] {
 
     li.control-tool,
     > li {
-      @include f2-button-warm;
-      @include f2-grayscale;
+      @include dui-button;
+      @include dui-grayscale;
       margin-bottom: var(--controls-margin);
       height: var(--control-size);
       width: var(--control-size);
       font-size: calc(var(--control-size) - 12px);
 
       &.toggle {
-        @include f2-button-toggle;
+        @include dui-button-toggle;
       }
     }
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &#darkness-adjuster {
     // height: 42px !important; // overwrite system's !important
     outline: none;
-    @include f2-app;
+    @include dui-app;
 
     .window-content {
       overflow: hidden;

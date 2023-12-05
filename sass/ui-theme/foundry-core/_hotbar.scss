@@ -2,15 +2,15 @@
 /* Hotbar                                    */
 /* ----------------------------------------- */
 
-#hotbar[data-dorako-ui-theme] {
+#hotbar[data-theme] {
   .bar-controls {
-    @include f2-app;
+    @include dui-app;
   }
 
   .macro {
     height: calc(var(--macro-size) + 2px);
     width: calc(var(--macro-size) + 2px);
-    @include f2-app;
+    @include dui-app;
 
     &.inactive::before,
     &.active::before {

@@ -1,6 +1,6 @@
-[data-chat-app-theme^="crb"] #sidebar-tabs,
-[data-chat-app-theme^="crb"] #chat-log ~ *,
-[data-dorako-ui-theme^="crb"] {
+[data-chat-interface-theme^="crb"] #sidebar-tabs,
+[data-chat-interface-theme^="crb"] #chat-log ~ *,
+[data-theme^="crb"] {
   --icon-border-color: var(--tertiary);
   --color-scrollbar: var(--tertiary);
   --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
@@ -20,18 +20,18 @@
   --input-border-color: var(--color-text-light-5);
   --input-text-color: var(--color-text-dark-input);
   --input-focus-text-color: var(--color-text-dark-input);
-  --input-background-color: rgba(255, 255, 255, 0.5);
+  --input-background: rgba(255, 255, 255, 0.5);
   --input-focus-outline-color: var(--primary-light);
   --input-placeholder-color: rgba(0, 0, 0, 0.5);
 
-  --button-background-color: var(--app-background);
+  --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-background: var(--color-warm-2);
   --button-hover-border-color: var(--color-warm-1);
   --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-background: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
   --button-toggle-border-color: var(--secondary-light);
@@ -52,26 +52,26 @@
   --color-border-light-2: #999;
 }
 
-[data-chat-app-theme^="crb"] #chat-log ~ *,
-[data-dorako-ui-theme^="crb"]:not([data-color-scheme]) {
+[data-chat-interface-theme^="crb"] #chat-log ~ *,
+[data-theme^="crb"]:not([data-color-scheme]) {
   --color-light-2: var(--color-text-light-highlight);
   --color-light-3: var(--color-text-light-heading);
   --input-text-color: black;
   --input-focus-text-color: black;
   --input-focus-outline-color: var(--tertiary);
-  --button-background-color: var(--glass-bg-light);
+  --button-background: var(--glass-bg-light);
   --app-background: var(--glass-bg);
   --app-border-color: transparent;
   --app-border-style: none;
 
   &#token-hud,
   &#tile-hud {
-    --button-background-color: var(--glass-bg);
+    --button-background: var(--glass-bg);
     --input-text-color: var(--color-light-2);
   }
 }
 
-[data-dorako-ui-theme^="crb"] {
+[data-theme^="crb"] {
   button {
     --color-light-1: white;
     --color-light-2: var(--color-text-light-highlight);
@@ -91,7 +91,7 @@
 
   &#controls,
   &#navigation {
-    --button-background-color: var(--glass-bg);
+    --button-background: var(--glass-bg);
   }
 
   &.sheet.journal-entry .journal-entry-content {
@@ -121,7 +121,7 @@
 
   // .message-timestamp,
   // .header-meta {
-  //   @include f2-app;
+  //   @include dui-app;
   //   background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
   //   border-color: color-mix(in srgb, var(--header-color) 50%, white);
   //   color: var(--color-light-2);
@@ -289,13 +289,13 @@
 /* ----------------------------------------- */
 /* Modules                                   */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="crb"] {
+[data-theme^="crb"] {
   &#token-action-hud {
     button {
-      --button-background-color: var(--glass-bg);
+      --button-background: var(--glass-bg);
     }
     .hover > button {
-      --button-background-color: var(--button-hover-background-color);
+      --button-background: var(--button-hover-background);
     }
   }
 
@@ -312,7 +312,7 @@
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme^="crb"] {
+[data-dorako-ui-scope="navigation"][data-theme^="crb"] {
   .scene {
     --button-toggle-focus-outline-color: #d3b87c;
   }
@@ -332,8 +332,16 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-chat-app-theme^="crb"] {
+[data-chat-interface-theme^="crb"] {
   --color-scrollbar: var(--tertiary);
   --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
   --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
+}
+
+/* ----------------------------------------- */
+/* Placeable HUD                             */
+/* ----------------------------------------- */
+[data-theme^="crb"] [data-dorako-ui-scope="placeable-hud"] {
+  // Space is intentional
+  --button-background: var(--glass-bg);
 }

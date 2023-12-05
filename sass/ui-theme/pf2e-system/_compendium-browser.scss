@@ -1,4 +1,4 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   // prettier-ignore
   &#compendium-browser>section.window-content>.content-box .compendium-browser-settings form .setting-section,
   &#license-viewer>section.window-content>.content-box .compendium-browser-settings form .setting-section,
@@ -6,7 +6,7 @@
   &#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer,
   &#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer,
   &#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {
-    @include f2-app;
+    @include dui-app;
     padding: 5px;
     cursor: pointer;
     color: var(--input-text-color);
@@ -15,7 +15,7 @@
 
   &#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button,
   &#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
-    @include f2-button-warm;
+    @include dui-button;
     padding: 5px;
     margin-bottom: 5px;
   }
@@ -32,7 +32,7 @@
   }
 
   &#compendium-browser .spell-browser .item img {
-    @include f2-app;
+    @include dui-app;
   }
 
   &#compendium-browser [data-tab="action"] .spell-browser .item img,

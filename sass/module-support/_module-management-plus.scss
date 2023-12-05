@@ -2,32 +2,9 @@
   background: none !important;
 }
 
-#module-management.dorako-ui.dark-theme .package-list .package .package-overview .tag.expand {
-  color: inherit;
-  background: inherit;
-  border: none;
-  margin-bottom: unset;
-  margin-top: unset;
-  &:hover {
-    background-color: var(--primary);
-  }
-}
-
-#module-credits-dialog.dorako-ui.dark-theme {
-  .journal-entry-content {
-    background: unset;
-    box-shadow: unset;
-    border: unset;
-  }
-}
-
-/* ----------------------------------------- */
-/* Foundry2                                  */
-/* ----------------------------------------- */
-
-[data-dorako-ui-theme] {
+[data-theme] {
   &#module-management .package-list .package .package-overview .tag.expand {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   &#module-credits-dialog {

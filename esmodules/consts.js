@@ -34,7 +34,8 @@ export const systemSheets = ["CreatureSheetPF2e","PartySheetPF2e","SpellPreparat
 export const moduleWindowApps = ["ExtendedSettingsConfig"];
 export const limitedScopeApplications = ["KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "HazardSheetPF2e","VehicleSheetPF2e", "HUD"];
 export const unlimitedScopeApplications = ["PlaylistDirectory"];
+
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
-export const excludedApplications = ["PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
+export const excludedApplications = ["MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //

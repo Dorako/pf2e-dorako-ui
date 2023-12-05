@@ -1,11 +1,8 @@
 @use "sass:color";
 
-/* ----------------------------------------- */
-/* Foundry2                                  */
-/* ----------------------------------------- */
-.chat-message[data-dorako-ui-theme] {
+.chat-message[data-theme] {
   background: unset;
-  @include f2-app;
+  @include dui-app;
   border: 1px solid;
   border-color: var(--window-app-border-color);
   --color-text-light-6: var(--color-cool-4);
@@ -35,7 +32,7 @@
     line-height: 1.3rem;
     color: var(--color-light-2);
 
-    &.pf2-icon {
+    &.pdui-icon {
       font-family: "Pathfinder2eActions", sans-serif;
       flex: 0;
       margin-right: 5px;
@@ -53,7 +50,7 @@
   }
 
   .table-draw .table-results .table-result img.result-image {
-    @include f2-app;
+    @include dui-app;
     border: 1px solid var(--icon-border-color);
 
     &[src$=".svg"] {
@@ -83,9 +80,9 @@
 
   .dice-roll .dice-formula,
   .dice-roll .dice-total {
-    @include f2-app;
+    @include dui-app;
     button {
-      @include f2-button-cool;
+      @include dui-button-bright;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -93,8 +90,7 @@
   }
 
   .dice-tooltip .part-header .part-total {
-    @include f2-app;
-    // Would be cool if the system defined some sort of "--relevant-damage" variables...
+    @include dui-app;
     box-shadow: unset;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -104,7 +100,7 @@
   .pf2e.chat-card .card-header {
     border: unset;
     img {
-      @include f2-app;
+      @include dui-app;
       border: 1px solid;
       border-color: var(--icon-border-color);
     }
@@ -121,7 +117,7 @@
 /* Damage buttons                            */
 /* ----------------------------------------- */
 
-.chat-message[data-dorako-ui-theme] {
+.chat-message[data-theme] {
   .flavor-text {
     hr {
       display: none;
@@ -139,7 +135,7 @@
   }
 }
 
-.chat-message[data-dorako-ui-theme] {
+.chat-message[data-theme] {
   .persistent-damage-recovery {
     margin-top: 4px;
     hr {
@@ -148,19 +144,19 @@
   }
 }
 
-.message[data-dorako-ui-theme]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
-  .message-content {
-    .damage-application {
-      button:hover {
-        img {
-          filter: invert(1);
-        }
-      }
-    }
-  }
-}
+// .message[data-theme]:not([data-theme^="crb"][data-color-scheme="light"]) {
+//   .message-content {
+//     .damage-application {
+//       button:hover {
+//         img {
+//           filter: invert(1);
+//         }
+//       }
+//     }
+//   }
+// }
 
-.message[data-dorako-ui-theme]:not([data-dorako-ui-theme^="crb"][data-color-scheme="light"]) {
+.message[data-theme]:not([data-theme^="crb"][data-color-scheme="light"]) {
   .message-content {
     .damage-application {
       img {
@@ -175,7 +171,7 @@
   }
 }
 
-.message[data-dorako-ui-theme] {
+.message[data-theme] {
   .message-content {
     .damage-application {
       gap: 3px;
@@ -210,12 +206,6 @@
             }
           }
         }
-
-        // &:hover {
-        //   img {
-        //     filter: invert(1) drop-shadow(0px 1px 1px black);
-        //   }
-        // }
 
         &[data-action="shield-block"] {
           &:hover {
@@ -260,7 +250,7 @@
 /* Header                                    */
 /* ----------------------------------------- */
 
-.chat-message[data-dorako-ui-theme] .message-header {
+.chat-message[data-theme] .message-header {
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 
   .player-name,
@@ -316,21 +306,21 @@
 /* System overwrites                         */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.chat-message > .message-content ul.participant-conditions {
     border: unset;
     box-shadow: unset;
     li img {
-      @include f2-app;
+      @include dui-app;
     }
   }
 
   &.chat-message .message-content .damage-taken button.revert-damage {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   &.chat-message.emote > .message-content p.action-content img {
-    @include f2-app;
+    @include dui-app;
     border: 1px solid;
     border-color: var(--icon-border-color);
   }

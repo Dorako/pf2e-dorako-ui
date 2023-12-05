@@ -1,4 +1,4 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &.sheet.hazard {
     --color-text-light: var(--color-light-2);
   }
@@ -17,7 +17,7 @@
   &.sheet.hazard .container input[type="text"],
   &.sheet.hazard .container input[type="number"],
   &.sheet.hazard .container select {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.sheet.hazard form > header {
@@ -59,7 +59,7 @@
   }
 
   &.sheet.hazard .section-container {
-    @include f2-app;
+    @include dui-app;
     padding: unset;
     margin: 4px 6px 0;
     border: 1px solid var(--color-warm-3);

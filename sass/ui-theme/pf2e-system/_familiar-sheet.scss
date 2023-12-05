@@ -1,9 +1,9 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &.sheet.familiar form {
     background: unset;
   }
   &.sheet.familiar .section-container {
-    @include f2-app;
+    @include dui-app;
     --primary: var(--color-light-3);
     padding: unset;
     margin: 4px 6px 0;
@@ -24,7 +24,7 @@
   &.sheet.familiar .familiar-sheet-header .header-content .charname input,
   &.sheet.familiar select,
   &.sheet.familiar .familiar-section .familiar-content input[type="text"] {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.sheet.familiar .familiar-sheet-header .header-content .charname input {
@@ -33,6 +33,6 @@
   }
 
   &.sheet.familiar .skills-content .skills-list .skill-name {
-    @include f2-button-warm;
+    @include dui-button;
   }
 }

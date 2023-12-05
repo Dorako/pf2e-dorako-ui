@@ -2,7 +2,7 @@
 /* Polyglot                                  */
 /* ----------------------------------------- */
 
-[data-chat-app-theme] {
+[data-chat-interface-theme] {
   #polyglot {
     label {
       display: none;
@@ -14,7 +14,7 @@
   }
 
   .polyglot-lang-select span.select2-selection {
-    @include f2-input;
+    @include dui-input;
   }
 
   .polyglot-lang-select .select2-container--default .select2-selection--single .select2-selection__rendered {

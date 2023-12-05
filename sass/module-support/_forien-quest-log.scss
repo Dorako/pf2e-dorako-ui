@@ -1,4 +1,4 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &#forien-quest-log nav.tabs,
   &.window-app.forien-quest-preview nav.tabs {
     background: unset;
@@ -19,7 +19,7 @@
   }
 
   &#forien-quest-log .quest-log.bookmarks nav.log-tabs .item {
-    @include f2-app;
+    @include dui-app;
     background: var(--app-background) !important;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     border-right: 1px solid transparent;
@@ -37,7 +37,7 @@
   &.window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash,
   &.window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos,
   &.window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   &#forien-quest-log .editor,
@@ -59,7 +59,7 @@
   &.window-app.forien-quest-preview .quest-body .management .subquests .subquests-box li,
   &.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-rewards ul li,
   &.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-tasks ul li {
-    @include f2-app;
+    @include dui-app;
     border-color: var(--color-scrollbar-border);
     background: var(--color-warm-3);
   }

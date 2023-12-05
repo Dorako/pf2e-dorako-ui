@@ -16,32 +16,32 @@
     }
   }
   .heroActions-list > button {
-    @include f2-button-warm;
+    @include dui-button;
     margin-top: 5px;
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.chat-message [data-action="spell-template-clear"] {
-    --button-background-color: var(--accent-color);
+    --button-background: var(--accent-color);
     --button-border-color: var(--accent-color-light);
     --button-text-color: var(--color-cool-5);
-    --button-hover-background-color: #fda948;
+    --button-hover-background: #fda948;
     --button-hover-border-color: var(--color-warm-2);
     --button-hover-text-color: #000000;
     text-shadow: none;
 
     &.disabled,
     &:disabled {
-      --button-background-color: var(--color-cool-4);
-      --button-hover-background-color: var(--color-cool-4);
+      --button-background: var(--color-cool-4);
+      --button-hover-background: var(--color-cool-4);
       --button-text-color: var(--color-light-5);
       --button-hover-text-color: var(--color-light-5);
       --button-hover-border-color: transparent;
     }
 
     &:not(.disabled, :disabled):hover {
-      --button-hover-background-color: var(--accent-color-light);
+      --button-hover-background: var(--accent-color-light);
       --button-hover-border-color: var(--accent-color);
     }
   }

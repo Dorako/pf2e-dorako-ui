@@ -165,6 +165,67 @@ $adjusted-lower: #cc3311 !default;
 }
 
 /* ----------------------------------------- */
+/* DUI color variables                       */
+/* ----------------------------------------- */
+
+:root {
+  --color-warm-1: #ee9b3a;
+  --color-warm-1-40: color-mix(in srgb, var(--color-warm-1) 40%, transparent);
+  --color-warm-2: #c9593f;
+  --color-warm-2-20: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
+  --color-warm-3: #5d142b;
+  --color-warm-3-10: color-mix(in srgb, var(--color-warm-3) 10%, transparent);
+  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
+  --color-warm-4: #420418;
+  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
+  --color-warm-5: #26020d;
+
+  --color-cool-1: #b1a0d4;
+  --color-cool-2: #79689c;
+  --color-cool-3: #584a75;
+  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
+  --color-cool-4: #302831;
+  --color-cool-5: #0b0a13;
+
+  --color-cool-5-25: rgba(11, 10, 19, 0.25);
+  --color-cool-5-50: rgba(11, 10, 19, 0.5);
+  --color-cool-5-75: rgba(11, 10, 19, 0.75);
+  --color-cool-5-90: rgba(11, 10, 19, 0.9);
+
+  --color-light-1: #f7f3e8;
+  --color-light-2: #efe6d8;
+  --color-light-3: #e7d1b1;
+  --color-light-4: #d0b8a3;
+  --color-light-5: #9f8475;
+  --color-light-disabled: #aaa;
+
+  --color-level-error: #ce0707;
+  --color-level-error-bg: rgba(105, 0, 8, 0.8);
+  --color-level-error-border: #750003;
+  --color-level-info: #59a1f6;
+  --color-level-info-bg: rgba(47, 80, 132, 0.8);
+  --color-level-info-border: #5c87b9;
+  --color-level-success: #26b231;
+  --color-level-success-bg: rgba(26, 107, 34, 0.8);
+  --color-level-success-border: #1b8f23;
+  --color-level-warning: #ee9b3a;
+  --color-level-warning-bg: rgba(214, 150, 0, 0.8);
+  --color-level-warning-border: #b18404;
+
+  --color-level-green-bg: rgba(138, 211, 4, 0.4); // custom from website
+  --color-level-green-border: #8ad304; // custom from website
+  --color-level-yellow-bg: rgba(211, 192, 4, 0.4); // custom from website
+  --color-level-yellow-border: #d3c004; // custom from website
+  --color-level-orange-bg: rgba(211, 119, 4, 0.4); // custom from website
+  --color-level-orange-border: #d37704; // custom from website
+  --color-level-red-bg: rgba(211, 20, 4, 0.4); // custom from website
+  --color-level-red-border: #d31404; // custom from website
+
+  --color-scrollbar: #5d142b;
+  --color-scrollbar-border: #8d151b;
+}
+
+/* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
 

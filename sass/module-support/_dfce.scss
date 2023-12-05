@@ -28,10 +28,10 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   #dorako-rt-buttons {
     button {
-      @include f2-button-warm;
+      @include dui-button;
       &.active {
         background-color: var(--color-warm-2);
         border: var(--app-border-style);
@@ -40,40 +40,7 @@
     }
   }
   #dorako-nonrt-buttons button {
-    @include f2-button-warm;
-  }
-}
-
-// Dorako Theme
-.dorako-ui {
-  #chat-controls .buttons {
-    gap: 4px;
-
-    button {
-      @include glass;
-      @include quick-transition;
-      color: var(--color-text-light-heading);
-      background-color: var(--glass-bg-light);
-      text-shadow: 0px 0px 3px black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        color: var(--color-text-light-highlight);
-        background-color: var(--primary-light);
-      }
-
-      &.toggle {
-        &:hover {
-          background-color: var(--secondary);
-        }
-        &.active {
-          color: var(--color-text-light-highlight);
-          background-color: var(--secondary-light);
-        }
-      }
-    }
+    @include dui-button;
   }
 }
 
@@ -141,25 +108,6 @@
     margin-top: 0px;
     padding-top: 0px;
     border-radius: 0px 0px 5px 5px;
-  }
-}
-
-.message.chat-message.dorako-ui.dark-theme {
-  &.dfce-cm-middle .message-delete,
-  &.dfce-cm-bottom .message-delete {
-    color: white;
-    top: 5px;
-    text-shadow: 0px 0px 1px black;
-  }
-}
-
-.dorako-ui.light-theme {
-  &.dfce-cm-bottom,
-  &.dfce-cm-middle {
-    .dorako-header {
-      color: black !important;
-      text-shadow: 0px 1px 1px white !important;
-    }
   }
 }
 

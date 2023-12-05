@@ -1,32 +1,52 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &#token-action-hud-core-settings input {
-    @include f2-input;
+    @include dui-input;
   }
 }
 
-#tooltip[data-dorako-ui-theme] {
+#tooltip[data-theme] {
   &.locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll),
   &.tah-tooltip :is(a.content-link, a.inline-roll),
   &.active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
-    background: var(--color-cool-4);
-    border: 1px solid var(--color-cool-3);
-    color: var(--color-light-2);
+    background: var(--inline-bg);
+    border: 1px solid var(--inline-border-color);
+    color: var(--inline-text-color) !important;
+    box-shadow: var(--inline-box-shadow);
+
+    &.broken {
+      border: 1px dashed red;
+      background: rgba(255, 0, 0, 0.05);
+    }
+
+    &.gmroll {
+      background: #e8e8ef;
+      border-color: #545469;
+    }
+    &.blindroll {
+      background: #f5eaf5;
+      border-color: #6b476b;
+    }
 
     &::before,
     i,
     i.icon {
-      color: var(--color-light-1);
+      color: var(--inline-icon-color);
+    }
+
+    [data-visibility]:not([data-visibility="all"]) {
+      color: var(--inline-text-color) !important;
+      outline: 1px dashed var(--inline-text-color);
     }
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &#token-action-hud {
     .tah-action-button,
     .tah-action-button:focus,
     .tah-group-button,
     .tah-group-button:focus {
-      @include f2-button-warm;
+      @include dui-button;
     }
 
     .tah-subtitle-text {
@@ -45,7 +65,7 @@
     }
 
     #tah-expand-hud {
-      @include f2-app;
+      @include dui-app;
       justify-content: center;
       width: 32px;
       > i {
@@ -61,7 +81,7 @@
     }
 
     .tah-action-button.toggle {
-      @include f2-button-cool;
+      @include dui-button-toggle;
     }
 
     .tah-button-image {
@@ -70,26 +90,26 @@
     }
 
     .tah-group[data-level="3"] > .tah-list-image {
-      @include f2-app;
+      @include dui-app;
     }
 
     .tah-action button.tah-pf2e-skill-rank-1 {
-      --button-background-color: #171f69;
+      --button-background: #171f69;
       --button-border-color: #3a47ba;
     }
 
     .tah-action button.tah-pf2e-skill-rank-2 {
-      --button-background-color: #3c005e;
+      --button-background: #3c005e;
       --button-border-color: #630e94;
     }
 
     .tah-action button.tah-pf2e-skill-rank-3 {
-      --button-background-color: #640;
+      --button-background: #640;
       --button-border-color: rgb(153, 107, 14);
     }
 
     .tah-action button.tah-pf2e-skill-rank-4 {
-      --button-background-color: #5e0000;
+      --button-background: #5e0000;
       --button-border-color: #960b0b;
     }
 

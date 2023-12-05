@@ -25,13 +25,13 @@ html {
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   .roll-app-nav button {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   .roll-app .roll-app-table tbody button {
-    @include f2-button-warm;
+    @include dui-button;
   }
   .roll-app .roll-app-table tbody tr.selected {
     background: var(--color-warm-2);

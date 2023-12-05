@@ -5,38 +5,38 @@
   font-size: var(--font-size-9);
 }
 
-[data-dorako-ui-theme] .pf2e-td .damage-application {
+[data-theme] .pf2e-td .damage-application {
   margin-top: unset;
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   .pf2e-td.small-button.target-button {
-    @include f2-button-cool;
+    @include dui-button-toggle;
   }
 }
 
-[data-dorako-ui-theme].message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td {
+[data-theme].message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td {
   &.criticalSuccess {
-    --button-background-color: var(--degree-success-critical);
-    --button-hover-background-color: var(--degree-success-critical);
+    --button-background: var(--degree-success-critical);
+    --button-hover-background: var(--degree-success-critical);
     --button-text-color: white;
   }
 
   &.success {
-    --button-background-color: var(--degree-success);
-    --button-hover-background-color: var(--degree-success);
+    --button-background: var(--degree-success);
+    --button-hover-background: var(--degree-success);
     --button-text-color: white;
   }
 
   &.failure {
-    --button-background-color: var(--degree-failure);
-    --button-hover-background-color: var(--degree-failure);
+    --button-background: var(--degree-failure);
+    --button-hover-background: var(--degree-failure);
     --button-text-color: white;
   }
 
   &.criticalFailure {
-    --button-background-color: var(--degree-failure-critical);
-    --button-hover-background-color: var(--degree-failure-critical);
+    --button-background: var(--degree-failure-critical);
+    --button-hover-background: var(--degree-failure-critical);
     --button-text-color: white;
   }
 }

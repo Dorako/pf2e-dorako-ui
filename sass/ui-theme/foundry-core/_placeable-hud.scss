@@ -2,11 +2,11 @@
 /* Placeable HUD                             */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   #token-hud .attribute.bar1 input {
     --input-border-color: var(--color-level-success-border);
     --input-focus-outline-color: var(--color-level-success-border);
-    --input-background-color: var(--color-level-success-bg);
+    --input-background: var(--color-level-success-bg);
     --input-focus-text-color: var(--color-light-2);
     --input-text-color: var(--color-light-2);
   }
@@ -14,16 +14,16 @@
   #token-hud .attribute.bar2 input {
     --input-border-color: var(--color-level-info-border);
     --input-focus-outline-color: var(--color-level-info-border);
-    --input-background-color: var(--color-level-info-bg);
+    --input-background: var(--color-level-info-bg);
     --input-text-color: var(--color-light-2); // looks disabled otherwise
   }
 
   &.placeable-hud input[type="text"] {
-    @include f2-input;
+    @include dui-input;
     text-shadow: 0px 1px 2px black;
     --input-focus-text-color: var(--color-light-2);
     &[name="elevation"] {
-      --input-background-color: var(--app-background);
+      --input-background: var(--app-background);
       font-size: 18px;
       width: 42px;
     }
@@ -42,7 +42,7 @@
 /* ----------------------------------------- */
 /* Token HUD                                 */
 /* ----------------------------------------- */
-#token-hud[data-dorako-ui-theme] .status-effects.active {
+#token-hud[data-theme] .status-effects.active {
   gap: 5px;
   background: unset;
   border: unset;
@@ -50,7 +50,7 @@
   picture {
     img {
       opacity: unset;
-      @include f2-app;
+      @include dui-app;
     }
 
     &:hover img {
@@ -65,11 +65,11 @@
   }
 }
 
-#token-hud[data-dorako-ui-theme] .status-effects .title-bar {
-  @include f2-tooltip;
+#token-hud[data-theme] .status-effects .title-bar {
+  @include dui-tooltip;
 }
 
-#token-hud[data-dorako-ui-theme] .status-effects .effect-control .badge {
+#token-hud[data-theme] .status-effects .effect-control .badge {
   border-width: 1px;
   border-radius: 0px var(--border-radius) 0px 3px;
   background: var(--color-warm-3);
@@ -87,14 +87,14 @@
   }
 }
 
-#token-hud[data-dorako-ui-theme] .status-effects .effect-control {
+#token-hud[data-theme] .status-effects .effect-control {
   opacity: unset;
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   .control-icon {
-    @include f2-button-warm;
-    @include f2-grayscale;
+    @include dui-button;
+    @include dui-grayscale;
 
     // These are toggles, inactive -> active -> inactive
     &[data-action="visibility"],
@@ -105,7 +105,7 @@
       &[data-action="active"], // From Monk's Active Tiles
       &[data-action="mystify"] // from Workbench
     {
-      @include f2-button-toggle;
+      @include dui-button-toggle;
     }
   }
 }

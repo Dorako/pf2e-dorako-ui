@@ -2,15 +2,15 @@
 /* FPS display                               */
 /* ----------------------------------------- */
 
-#fps[data-dorako-ui-theme] {
-  @include f2-app;
+#fps[data-theme] {
+  @include dui-app;
 }
 
 /* ----------------------------------------- */
 /* Tooltip                                   */
 /* ----------------------------------------- */
 
-#tooltip[data-dorako-ui-theme] {
+#tooltip[data-theme] {
   background: var(--app-background);
   border: 1px solid var(--color-warm-1);
   box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
@@ -27,8 +27,8 @@
 /* Players                                   */
 /* ----------------------------------------- */
 
-#players[data-dorako-ui-theme] {
-  @include f2-app;
+#players[data-theme] {
+  @include dui-app;
 
   h3 {
     cursor: pointer;
@@ -46,8 +46,8 @@
 /* Context menu                              */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] #context-menu {
-  @include f2-tooltip;
+[data-theme] #context-menu {
+  @include dui-tooltip;
   li.context-item {
     &:first-child {
       border-top-left-radius: var(--border-radius);
@@ -69,17 +69,17 @@
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
-  --color-bg-option: var(--input-background-color); // select dropdown
+  --color-bg-option: var(--input-background); // select dropdown
 }
 
 /* ----------------------------------------- */
 /* limited scope specific                    */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme][data-dorako-ui-scope="limited"][data-color-scheme="dark"] {
+[data-theme][data-dorako-ui-scope="limited"][data-color-scheme="dark"] {
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
@@ -91,9 +91,9 @@
 /* Generalized style choices (inclusive of limited scope)        */
 /* ------------------------------------------------------------- */
 
-[data-dorako-ui-theme="bg3"],
-[data-dorako-ui-theme="foundry2"],
-[data-dorako-ui-theme][data-color-scheme="dark"] {
+[data-theme="bg3"],
+[data-theme="foundry2"],
+[data-theme][data-color-scheme="dark"] {
   // Dark theme
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
@@ -124,7 +124,7 @@
   }
 }
 
-[data-dorako-ui-theme^="crb"][data-color-scheme="light"] {
+[data-theme^="crb"][data-color-scheme="light"] {
   // Dark theme
   --rarity-common: #323232;
   --rarity-uncommon: #98513d;
@@ -147,9 +147,9 @@
   --adjusted-lower: #cc3311;
 }
 
-[data-chat-app-theme] #chat-log ~ *,
-[data-dorako-ui-theme] {
-  --input-background-color: var(--color-cool-4);
+[data-chat-interface-theme] #chat-log ~ *,
+[data-theme] {
+  --input-background: var(--color-cool-4);
   --input-border-color: transparent;
   --input-border-color: var(--color-cool-3);
   --input-focus-text-color: var(--color-light-2);
@@ -162,6 +162,14 @@
   --app-text-shadow: 0px 1px 2px black;
   --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-warm-3-10),
     0px 0px 30px 20px var(--color-warm-2-20), 0px 0px 10px 05px var(--color-warm-1-40);
+
+  .item-controls button[data-action="apply"],
+  button[data-action="accept"],
+  form button[type="submit"],
+  form button[data-action="save"],
+  form.check-modifiers-content button.roll {
+    @include dui-button-bright;
+  }
 
   ::-webkit-scrollbar-thumb {
     outline: none;
@@ -195,17 +203,31 @@
   }
 
   a.content-link,
-  [data-pf2-check]:not([data-pf2-traits*="secret"]),
+  [data-pdui-check]:not([data-pdui-traits*="secret"]),
   a.entity-link,
-  [data-pf2-action],
-  span[data-pf2-effect-area],
-  a.inline-check:not([data-pf2-traits*="secret"]),
-  a.inline-check:not([data-pf2-traits*="secret"]) .label,
+  [data-pdui-action],
+  span[data-pdui-effect-area],
+  a.inline-check:not([data-pdui-traits*="secret"]),
+  a.inline-check:not([data-pdui-traits*="secret"]) .label,
   a.inline-roll {
     background: var(--inline-bg);
     border: 1px solid var(--inline-border-color);
     color: var(--inline-text-color) !important;
     box-shadow: var(--inline-box-shadow);
+
+    &.broken {
+      border: 1px dashed red;
+      background: rgba(255, 0, 0, 0.05);
+    }
+
+    &.gmroll {
+      background: #e8e8ef;
+      border-color: #545469;
+    }
+    &.blindroll {
+      background: #f5eaf5;
+      border-color: #6b476b;
+    }
 
     &::before,
     i,
@@ -218,12 +240,12 @@
       outline: 1px dashed var(--inline-text-color);
     }
   }
-  [data-pf2-check][data-pf2-traits*="secret"],
+  [data-pdui-check][data-pdui-traits*="secret"],
   [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] {
     color: black;
   }
 
-  i[data-pf2-repost] {
+  i[data-pdui-repost] {
     @include quick-transition;
     cursor: pointer;
     background: unset;
@@ -243,7 +265,7 @@
 /* Generalized style choices (exlusive of limited scope)        */
 /* ------------------------------------------------------------ */
 
-[data-dorako-ui-theme][data-dorako-ui-scope="unlimited"][data-color-scheme="dark"] {
+[data-theme][data-dorako-ui-scope="unlimited"][data-color-scheme="dark"] {
   h1 {
     color: var(--color-light-1);
   }
@@ -264,7 +286,7 @@
   }
 }
 
-[data-dorako-ui-theme][data-dorako-ui-scope="unlimited"] {
+[data-theme][data-dorako-ui-scope="unlimited"] {
   color: var(--color-light-3);
 
   input[type="text"],
@@ -331,8 +353,8 @@
     gap: 0.25rem;
     background: var(--accent-color);
     border: 1px solid var(--color-warm-1);
-    color: var(--color-light-1);
-    text-shadow: 0px 1px 2px black;
+    color: var(--button-bright-text-color);
+    text-shadow: none;
     box-shadow: var(--box-shadow);
     border-radius: 3px;
     font-size: var(--font-size-12);
@@ -340,14 +362,14 @@
 
   a.button,
   button:not(.pm-dropdown) {
-    @include f2-button-warm;
+    @include dui-button;
   }
   .prosemirror menu .pm-dropdown:hover i {
     color: black;
   }
 
   &.dialog .dialog-buttons button {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   input[type="text"],
@@ -357,12 +379,12 @@
   input[type="time"],
   input[type="search"],
   select:not(.tag) {
-    @include f2-input;
+    @include dui-input;
   }
 
   textarea {
     color: var(--input-text-color);
-    background: var(--input-background-color);
+    background: var(--input-background);
     border: var(--window-app-border-style);
     border-color: var(--input-border-color);
   }
@@ -374,7 +396,7 @@
   }
 
   &.dialog .dialog-buttons button.default {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   [data-visibility]:not([data-visibility="all"]) {
@@ -388,7 +410,7 @@
   }
 
   &.sheet header.sheet-header img {
-    @include f2-app;
+    @include dui-app;
     border: 1px solid var(--icon-border-color);
   }
 
@@ -406,7 +428,7 @@
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.app {
     border-radius: var(--border-radius);
     background: unset;
@@ -477,7 +499,7 @@
 /* Application specific                      */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.token-sheet,
   &.dialog {
     height: auto !important;
@@ -501,7 +523,7 @@
   }
 
   #chat-controls .roll-type-select {
-    @include f2-input;
+    @include dui-input;
     margin: 0px;
   }
 
@@ -510,7 +532,7 @@
     border: 1px solid var(--color-cool-3);
     background: var(--color-cool-5-50);
     .path {
-      @include f2-button-cool;
+      @include dui-button-toggle;
       border-radius: 3px;
     }
   }
@@ -524,7 +546,7 @@
     nav.tabs {
       gap: 5px;
       .category-tab {
-        @include f2-button-warm;
+        @include dui-button;
         padding: 4px 8px;
         margin: 1px 4px;
       }
@@ -540,19 +562,19 @@
   }
 
   .directory .directory-header .header-search input {
-    @include f2-input;
+    @include dui-input;
   }
 
   .directory .action-buttons button,
   .settings-sidebar button {
-    @include f2-button-warm;
+    @include dui-button;
   }
 }
 
 /* ----------------------------------------- */
 /* Core overwrites                           */
 /* ----------------------------------------- */
-[data-dorako-ui-theme][data-color-scheme="dark"] {
+[data-theme][data-color-scheme="dark"] {
   &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
     border-color: var(--color-cool-3);
     > legend {
@@ -561,9 +583,9 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.window-app .tabs .item {
-    @include f2-button-warm;
+    @include dui-button;
     padding: 4px 8px;
   }
 
@@ -580,24 +602,24 @@
 /* Journals                                  */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.sheet.journal-entry .journal-entry-content {
     background: unset;
     border: unset;
   }
 
   &.journal-sheet .journal-header .title {
-    @include f2-input;
+    @include dui-input;
     // background: var(--color-cool-4);
   }
 
   .editor-edit {
-    @include f2-button-warm;
+    @include dui-button;
     border-radius: 3px;
     padding: 2px 5px;
   }
 
-  table:not(.pf2-table) tr:nth-child(even) {
+  table:not(.pdui-table) tr:nth-child(even) {
     background: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
   }
 }
@@ -606,7 +628,7 @@
 /* Tagify and tags                           */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   .tagify,
   tags.tagify.pf2e-tagify {
     --tags-disabled-bg: #f1f1f1;
@@ -674,7 +696,7 @@
 /* ----------------------------------------- */
 /* System overwrites                         */
 /* ----------------------------------------- */
-[data-dorako-ui-theme][data-color-scheme="dark"] {
+[data-theme][data-color-scheme="dark"] {
   &.pf2e.item.sheet {
     --color-text-dark-2: var(--color-light-3);
     --color-text-dark-4: var(--color-light-3);
@@ -684,11 +706,11 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   --visibility-gm-bg: #e8e8efaa;
   --visibility-owner-bg: #ddebe1aa;
 
-  table.pf2-table {
+  table.pdui-table {
     text-shadow: none;
   }
 
@@ -698,7 +720,7 @@
 
   &.pf2e.item.sheet {
     input {
-      @include f2-input;
+      @include dui-input;
     }
   }
   &.pf2e.item.sheet form .tab.active.rules .rule-form .rule-element-header .priority input {
@@ -716,7 +738,7 @@
 
   &#generate-check-prompt {
     nav h4 a {
-      @include f2-button-warm;
+      @include dui-button;
       padding: 4px 8px;
     }
 
@@ -770,7 +792,7 @@
 
   section.compendium-sidebar ol.directory-list ol.document-matches li.match {
     .thumbnail img {
-      @include f2-app;
+      @include dui-app;
       padding: 0px;
     }
     &:hover .thumbnail img {
@@ -784,7 +806,7 @@
   }
 
   &.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes {
-    @include f2-button-warm;
+    @include dui-button;
     border-radius: 3px;
     align-content: center;
     justify-content: center;
@@ -799,7 +821,7 @@
   }
 
   &.pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit {
-    @include f2-button-cool;
+    @include dui-button-toggle;
     border-radius: 3px;
     // display: flex;
     align-content: center;
@@ -813,18 +835,18 @@
   &.pf2e.item.sheet form .sheet-content select,
   &.pf2e.item.sheet form section.sheet-body input[type="text"],
   &.pf2e.item.sheet form section.sheet-body input[type="number"] {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.pf2e.item.sheet .sheet-header input[type="text"],
   &.pf2e.item.sheet .sheet-header input[type="number"] {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.pf2e.item.sheet form .sheet-body .tab.active.details select,
   &.pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select,
   &.pf2e.item.sheet form .sheet-content section.sidebar select {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.pf2e.item.sheet form .sheet-content button:hover:not(:disabled),
@@ -837,25 +859,25 @@
   &.pf2e.item.sheet form .sheet-content input:not([type="range"], [type="checkbox"]):focus,
   &.pf2e.item.sheet form .sheet-content select:hover:not(:disabled),
   &.pf2e.item.sheet form .sheet-content select:focus {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.pf2e.item.sheet form .tab.active.rules .rule-form .rules-drop-container .rules-drop-zone {
-    @include f2-app;
+    @include dui-app;
     --text-dark: var(--color-light-3);
   }
   &.pf2e.item.sheet form .tab.active.rules .rule-form .rules-drop-container .rules-drop-zone i {
-    @include f2-app;
+    @include dui-app;
   }
 
   &.pf2e.item.sheet.action form .drop-zone {
-    @include f2-app;
+    @include dui-app;
   }
 
   &.pf2e.item.sheet.action form .drop-zone a.content-link,
   &.pf2e.item.sheet.action form .drop-zone picture,
   &.pf2e.item.sheet.action form .drop-zone img {
-    @include f2-app;
+    @include dui-app;
   }
 
   &.pf2e.item.sheet .sheet-header {
@@ -868,7 +890,7 @@
       gap: 5px;
       margin: 2px;
       > a {
-        @include f2-button-warm;
+        @include dui-button;
       }
     }
   }
@@ -877,7 +899,7 @@
     border: unset;
     h4 {
       > a {
-        @include f2-button-warm;
+        @include dui-button;
         padding: 5px 10px;
       }
     }
@@ -896,7 +918,7 @@
 
   &.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes,
   &.pf2e.item.sheet form section.sheet-body .item-description .descriptions .gm-notes {
-    @include f2-app;
+    @include dui-app;
     background-color: var(--visibility-gm-bg);
     border-style: dashed;
     border-color: var(--color-warm-4);
@@ -912,13 +934,13 @@
   }
 
   &.pf2e.item.sheet form .sheet-body .tab.mystification.active .unidentified img {
-    @include f2-app;
+    @include dui-app;
     border: 1px solid;
     border-color: var(--icon-border-color);
   }
 
   &.pf2e.item.sheet .sheet-header img {
-    @include f2-app;
+    @include dui-app;
     --app-border-style: 1px solid;
     border-color: var(--icon-border-color);
     border-radius: var(--border-radius);
@@ -929,9 +951,9 @@
   &.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
     --button-border-color: var(--color-warm-2);
-    --button-background-color: var(--color-warm-3);
+    --button-background: var(--color-warm-3);
     --button-hover-border-color: var(--color-warm-4);
-    --button-hover-background-color: var(--color-warm-5);
+    --button-hover-background: var(--color-warm-5);
     --button-text-color: var(--color-light-2);
     --box-shadow: none;
     border-color: var(--button-border-color);
@@ -950,8 +972,8 @@
     background-color: white;
   }
   .tox.tox-tinymce .tox-tbtn {
-    --button-background-color: white;
-    --button-hover-background-color: gray;
+    --button-background: white;
+    --button-hover-background: gray;
     --app-text-shadow: none;
     --box-shadow: none;
     color: black;

@@ -88,7 +88,7 @@
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="bg3"] {
+[data-theme^="bg3"] {
   // --color-shadow-primary: transparent;
   // --color-shadow-highlight: transparent;
   // --color-border-light-highlight: var(--color-cool-3);
@@ -118,8 +118,8 @@
   // --color-bg-option: var(--color-cool-4);
 }
 
-[data-dorako-ui-theme^="bg3"][data-dorako-ui-scope="limited"],
-[data-dorako-ui-theme^="bg3"] {
+[data-theme^="bg3"][data-dorako-ui-scope="limited"],
+[data-theme^="bg3"] {
   --window-app-background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
   --window-app-border-color: transparent;
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -128,9 +128,9 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-chat-app-theme^="bg3"] #sidebar-tabs,
-[data-chat-app-theme^="bg3"] #chat-log ~ *,
-[data-dorako-ui-theme^="bg3"] {
+[data-chat-interface-theme^="bg3"] #sidebar-tabs,
+[data-chat-interface-theme^="bg3"] #chat-log ~ *,
+[data-theme^="bg3"] {
   /* Base colors */
   --color-warm-1: var(--tertiary);
   --color-warm-2: #ba4521;
@@ -173,21 +173,28 @@
   --inline-text-shadow: 0px 1px 1px black;
   /* Input variables */
   --input-border-color: var(--bg3-bg-outer);
-  --input-background-color: color-mix(in srgb, var(--alt) 50%, transparent);
-  --input-disabled-background-color: var(--bg3-background-4);
+  --input-background: color-mix(in srgb, var(--alt) 50%, transparent);
+  --input-disabled-background: var(--bg3-background-4);
   --input-disabled-border-color: var(--bg3-background-3);
   --input-focus-outline-color: var(--tertiary);
   --input-text-color: var(--color-light-2);
   /* Button variables */
-  --button-background-color: var(--app-background);
+  --button-background: var(--app-background);
   --button-border-color: #403b2d;
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-background: var(--color-warm-2);
   --button-hover-border-color: var(--color-warm-1);
   --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-background: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+
+  --button-toggle-border-color: #d3b87c;
+  --button-toggle-background: radial-gradient(circle, #175868 0, black 100%);
+  --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
+  --button-toggle-hover-border-color: #edd5a2;
+
+  --button-bright-text-color: var(--bg3-text-1);
   /* Fieldset variables */
   --fieldset-border-color: transparent;
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
@@ -243,7 +250,7 @@
   }
 
   &.window-app button.bright {
-    --button-background-color: var(--accent-color);
+    --button-background: var(--accent-color);
     --button-border-color: var(--accent-color-dark);
     --button-text-color: white !important;
     --button-hover-text-color: white !important;
@@ -257,7 +264,7 @@
 /* ----------------------------------------- */
 /* System variables                          */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="bg3"] {
+[data-theme^="bg3"] {
   --color-text-dark-primary: var(--color-light-2);
   --bg: rgba(0, 0, 0, 0.5);
   --sub: var(--bg3-middle-brown);
@@ -271,9 +278,9 @@
 /* ----------------------------------------- */
 /* Specifics                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="bg3"] {
+[data-theme^="bg3"] {
   [data-visibility="gm"],
-  table.pf2-table {
+  table.pdui-table {
     --inline-bg: color-mix(in srgb, var(--bg3-accent-color-dark) 75%, transparent);
     --inline-border-color: var(--bg3-accent-color);
     --inline-text-color: var(--bg3-text-1);
@@ -362,7 +369,7 @@
 /* ----------------------------------------- */
 /* FPS display                               */
 /* ----------------------------------------- */
-#fps[data-dorako-ui-theme^="bg3"] {
+#fps[data-theme^="bg3"] {
   background: var(--bg3-tooltip-window-background) padding-box,
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
@@ -373,7 +380,7 @@
 /* ----------------------------------------- */
 /* Tooltip                                   */
 /* ----------------------------------------- */
-#tooltip[data-dorako-ui-theme^="bg3"] {
+#tooltip[data-theme^="bg3"] {
   --border-radius: 12px;
   box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   backdrop-filter: none;
@@ -388,7 +395,7 @@
   border: 2px solid transparent;
 }
 
-[data-dorako-ui-theme^="bg3"]#effects-panel {
+[data-theme^="bg3"]#effects-panel {
   .effect-item .effect-info {
     background: var(--bg3-tooltip-window-background) padding-box,
       linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
@@ -415,7 +422,7 @@
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme^="bg3"] {
+[data-dorako-ui-scope="navigation"][data-theme^="bg3"] {
   #nav-toggle {
     background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
     border: 2px solid transparent !important;
@@ -482,7 +489,7 @@
 /* ----------------------------------------- */
 /* Hotbar                                    */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="hotbar"][data-dorako-ui-theme^="bg3"] {
+[data-dorako-ui-scope="hotbar"][data-theme^="bg3"] {
   // position: relative;
   // &::before {
   //   // background: var(--bg3-ui-purple-background);
@@ -526,11 +533,8 @@
 /* ----------------------------------------- */
 /* Chat message                              */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="bg3"].chat-message
-  .message-content
-  .damage-application
-  button[data-action="apply-healing"]:hover,
-[data-dorako-ui-theme^="bg3"].chat-message
+[data-theme^="bg3"].chat-message .message-content .damage-application button[data-action="apply-healing"]:hover,
+[data-theme^="bg3"].chat-message
   .message-content
   + .pf2e-toolbelt-target-damage
   .target-damage-application
@@ -539,7 +543,7 @@
   --color-level-success-border: color-mix(in srgb, var(--bg3-healing) 20%, white) !important;
 }
 
-[data-dorako-ui-theme^="bg3"].message
+[data-theme^="bg3"].message
   .message-content
   .damage-application
   button[data-action="apply-healing"]
@@ -548,7 +552,7 @@
   --fa-inverse: black;
 }
 
-[data-dorako-ui-theme^="bg3"].message.chat-message {
+[data-theme^="bg3"].message.chat-message {
   --window-app-background: linear-gradient(
         to bottom,
         color-mix(in srgb, var(--player-color) 40%, transparent) 0,
@@ -562,7 +566,7 @@
   border: 2px solid transparent !important;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
 
-  &[data-dorako-ui-theme^="bg3-blue"] {
+  &[data-theme^="bg3-blue"] {
     --bg3-border-inner: #a16a37;
     --bg3-border-outer: #4a2e18;
     --bg3-border-internal: #304248;
@@ -647,7 +651,7 @@
 
   .message-timestamp,
   .header-meta {
-    @include f2-app;
+    @include dui-app;
     background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
     border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
     color: var(--bg3-text-1);
@@ -671,10 +675,11 @@
 /* ----------------------------------------- */
 /* Placeable HUD                             */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="placeable-hud"][data-dorako-ui-theme="bg3"] {
-  --button-background-color: radial-gradient(circle, #363534 0, black 100%);
+[data-theme="bg3"] [data-dorako-ui-scope="placeable-hud"] {
+  // Space is intentional
+  --button-background: radial-gradient(circle, #363534 0, black 100%);
   --button-border-color: #594537;
-  --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
+  --button-hover-background: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
   --button-focus-outline-color: #d3b87c;
   --button-hover-border-color: #9a8860;
   --button-toggle-border-color: #d3b87c;
@@ -685,20 +690,20 @@
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="controls"][data-dorako-ui-theme="bg3"] {
-  --button-background-color: radial-gradient(circle, #363534 0, black 100%);
+[data-dorako-ui-scope="controls"][data-theme="bg3"] {
+  --button-background: radial-gradient(circle, #363534 0, black 100%);
   --button-border-color: #594537;
-  --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
+  --button-hover-background: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
   --button-focus-outline-color: #d3b87c;
   --button-hover-border-color: #9a8860;
-  --button-toggle-border-color: #d3b87c;
-  --button-toggle-background: radial-gradient(circle, #175868 0, black 100%);
-  --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
-  --button-toggle-hover-border-color: #edd5a2;
+  // --button-toggle-border-color: #d3b87c;
+  // --button-toggle-background: radial-gradient(circle, #175868 0, black 100%);
+  // --button-toggle-hover-background: radial-gradient(circle, var(--bg3-blue-light) 0, var(--bg3-blue) 100%);
+  // --button-toggle-hover-border-color: #edd5a2;
   --box-shadow: 0px 0px 5px black, 0px 1px 2px black;
 }
 
-[data-dorako-ui-scope="players"][data-dorako-ui-theme="bg3"] {
+[data-dorako-ui-scope="players"][data-theme="bg3"] {
   --app-background: var(--bg3-tooltip-window-background) padding-box,
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
@@ -711,9 +716,65 @@
 }
 
 /* ----------------------------------------- */
+/* TAH                                       */
+/* ----------------------------------------- */
+[data-theme="bg3"]#token-action-hud {
+  --button-background: radial-gradient(#363534 0, black 100%);
+  --button-border-color: #594537;
+  --button-hover-background: radial-gradient(var(--bg3-alliance-opposition-red) 0, black 100%);
+  --button-focus-outline-color: #d3b87c;
+  --button-hover-border-color: #9a8860;
+}
+
+[data-theme="bg3"].locked-tooltip.tah-tooltip,
+[data-theme="bg3"].tah-tooltip,
+[data-theme="bg3"]#tooltip.active:has(.tah-tooltip-wrapper) {
+  --bg3-border-inner: #a16a37;
+  --bg3-border-outer: #4a2e18;
+  --bg3-border-internal: #304248;
+  --bg3-bg-inner: #182830;
+  --bg3-bg-outer: #151e29;
+
+  --bg3-border-background: linear-gradient(
+    to right,
+    var(--bg3-border-outer) 0%,
+    var(--bg3-border-inner) 50%,
+    var(--bg3-border-outer) 100%
+  );
+  --bg3-tooltip-window-background: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
+
+  background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
+  box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+
+  h3 {
+    color: var(--bg3-text-1);
+  }
+
+  strong {
+    color: var(--bg3-text-2);
+  }
+
+  hr {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-color: var(--bg3-border-outer);
+    border: solid transparent;
+    border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+    border-width: 0 0 2px;
+    border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
+    width: auto;
+  }
+}
+
+/* ----------------------------------------- */
 /* ITT                                       */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="bg3"]#pf2e-token-hud {
+[data-theme="bg3"]#pf2e-token-hud {
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
   --bg3-border-internal: #304248;
@@ -824,34 +885,34 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-chat-app-theme="bg3"] {
+[data-chat-interface-theme="bg3"] {
   --color-scrollbar: var(--bg3-color-scrollbar);
   --color-scrollbar-border: var(--bg3-color-scrollbar-border);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
 
   #sidebar-tabs {
-    --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 50%, black 100%);
+    --button-hover-background: radial-gradient(circle, var(--bg3-alliance-opposition-red) 50%, black 100%);
     --button-hover-border-color: #d3b87c;
   }
 }
 
-[data-chat-app-theme="bg3"] #chat-log ~ * {
+[data-chat-interface-theme="bg3"] #chat-log ~ * {
   #dorako-rt-buttons button {
     --button-toggle-background: radial-gradient(circle, #363534 0, black 100%);
     --button-focus-outline-color: #d3b87c;
     --button-toggle-border-color: #9a8860;
     --button-toggle-hover-border-color: #9a8860;
     &[data-id="publicroll"] {
-      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-yellow) 0, black 100%);
+      --button-hover-background: radial-gradient(circle, var(--bg3-alliance-ally-yellow) 0, black 100%);
     }
     &[data-id="gmroll"] {
-      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-companion-blue) 0, black 100%);
+      --button-hover-background: radial-gradient(circle, var(--bg3-alliance-companion-blue) 0, black 100%);
     }
     &[data-id="blindroll"] {
-      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
+      --button-hover-background: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
     }
     &[data-id="selfroll"] {
-      --button-hover-background-color: radial-gradient(circle, var(--bg3-alliance-ally-green) 0, black 100%);
+      --button-hover-background: radial-gradient(circle, var(--bg3-alliance-ally-green) 0, black 100%);
     }
   }
 }

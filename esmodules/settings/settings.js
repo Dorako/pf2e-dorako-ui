@@ -54,8 +54,8 @@ Hooks.once("init", async () => {
     const { dorakoUiTheme, colorScheme } = uiTheme;
 
     if (uiTheme) {
-      $("#tooltip").attr("data-dorako-ui-theme", dorakoUiTheme);
-      $("#fps").attr("data-dorako-ui-theme", dorakoUiTheme);
+      $("#tooltip").attr("data-theme", dorakoUiTheme);
+      $("#fps").attr("data-theme", dorakoUiTheme);
     }
   }
 

@@ -5,20 +5,13 @@
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
   padding-left: 10px;
   padding-top: 5px;
-  // backdrop-filter: blur(5px);
-  // ::before {
-  //   background: linear-gradient(to left, rgba(0, 0, 0, 0.5) calc(100% - 25px), transparent 100%);
-  // }
+
   #sidebar {
     background: none;
-    // background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 25px), transparent 100%);
-    backdrop-filter: blur(5px);
     box-shadow: none;
     border: none;
     margin: 0px;
-    // padding-left: 80px;
     height: 100%;
-    border-radius: 0px;
   }
 }
 
@@ -27,14 +20,14 @@
 /* ----------------------------------------- */
 
 #chat,
-[data-chat-app-theme] .chat-sidebar {
+[data-chat-interface-theme] .chat-sidebar {
   --sidebar-gap: 4px;
   --sidebar-margin: 6px;
   gap: var(--sidebar-gap);
   padding-bottom: var(--sidebar-margin);
 }
 
-[data-chat-app-theme] section.chat-sidebar .jump-to-bottom > a {
+[data-chat-interface-theme] section.chat-sidebar .jump-to-bottom > a {
   background: black;
   z-index: 1;
 }
@@ -42,10 +35,10 @@
 [data-dorako-ui-scope="sidebar"] {
   .tab {
     &:not([data-tab="chat"]) button {
-      @include f2-button-warm;
+      @include dui-button;
     }
     input:not([type="range"]) {
-      @include f2-input;
+      @include dui-input;
     }
   }
 
@@ -63,71 +56,32 @@
     border-radius: 4px;
   }
 
-  // &#sidebar.collapsed #sidebar-tabs > .item.active {
-  //   border-color: var(--color-warm-1);
-  //   border-radius: var(--border-radius);
-  //   &:first-child {
-  //     border-top-left-radius: var(--border-radius);
-  //     border-top-right-radius: var(--border-radius);
-  //   }
-  // }
-
   #settings ul#game-details li.system-buttons {
     gap: 5px;
     button {
-      @include f2-button-warm;
+      @include dui-button;
     }
   }
 
   .compendium.directory .directory-header .compendium-name,
   .compendium-sidebar .directory-item.compendium .compendium-name,
   .compendium-sidebar .directory-item.compendium.locked .compendium-name {
-    @include f2-app;
+    @include dui-app;
   }
 
   .compendium-sidebar .directory-item.compendium .compendium-footer .source {
-    @include f2-app;
+    @include dui-app;
     border-left: unset;
     border-bottom-left-radius: unset;
     border-top-left-radius: unset;
     border-bottom-right-radius: unset;
   }
-
-  // section.chat-sidebar .jump-to-bottom {
-  //   z-index: 1;
-  //   > a {
-  //     @include f2-app;
-  //     border-radius: 0px;
-  //     border-left: unset;
-  //     border-right: unset;
-  //     width: 100%;
-  //     --app-background: var(--color-scrollbar);
-  //     --app-border-color: var(--color-scrollbar-border);
-  //     &:hover {
-  //       --app-background: var(--color-warm-2);
-  //       --app-border-color: var(--color-warm-1);
-  //     }
-  //   }
-  // }
-
-  // &#sidebar {
-  //   border: 1px solid var(--app-border-color);
-
-  //   // prettier-ignore
-  //   --warm-background: radial-gradient(circle at bottom, color-mix(in srgb, var(--color-warm-1) 10%, transparent), transparent),
-  //                        linear-gradient(to bottom, color-mix(in srgb, var(--color-warm-3) 30%, transparent), transparent),
-  //                        var(--app-background);
-  //   background: var(--warm-background);
-  // }
 }
 
-/* ----------------------------------------- */
-/* Foundry2                                  */
-/* ----------------------------------------- */
 [data-dorako-ui-scope="sidebar"],
-[data-dorako-ui-theme] {
+[data-theme] {
   .combat-sidebar li.combatant .token-name img.token-effect {
-    @include f2-app;
+    @include dui-app;
     border: 1px solid;
     border-color: var(--icon-border-color);
   }
@@ -136,7 +90,7 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-chat-app-theme] #chat-log {
+[data-chat-interface-theme] #chat-log {
   margin-left: calc(var(--sidebar-margin) - 3px);
   &::-webkit-scrollbar-thumb {
     outline: none;
@@ -156,34 +110,34 @@
   }
 }
 
-[data-chat-app-theme] #chat-log ~ * {
+[data-chat-interface-theme] #chat-log ~ * {
   input[type="checkbox"]:checked,
   input[type="radio"]:checked {
     accent-color: var(--accent-color);
   }
 
   button {
-    @include f2-button-warm;
+    @include dui-button;
   }
   #dorako-rt-buttons button {
-    @include f2-button-toggle;
+    @include dui-button-toggle;
   }
 
   &#chat-form {
     margin: 0px var(--sidebar-margin);
     textarea {
-      @include f2-input;
+      @include dui-input;
       height: 100%;
       border-radius: var(--border-radius);
     }
   }
 }
 
-[data-chat-app-theme] {
+[data-chat-interface-theme] {
   #sidebar-tabs {
     border: unset;
     > .item.active {
-      @include f2-button-warm;
+      @include dui-button;
       --button-focus-outline-color: transparent;
     }
   }

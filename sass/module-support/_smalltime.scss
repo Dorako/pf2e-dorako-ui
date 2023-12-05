@@ -1,4 +1,4 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &#smalltime-app #displayContainer {
     background: unset;
     box-shadow: unset;
@@ -18,13 +18,13 @@
   }
 
   &#smalltime-app {
-    @include f2-app;
+    @include dui-app;
     outline: none;
   }
 
   &#smalltime-app .arrow,
   &#smalltime-app .arrow-left,
   &#smalltime-app.arrow-right {
-    @include f2-button-warm;
+    @include dui-button;
   }
 }

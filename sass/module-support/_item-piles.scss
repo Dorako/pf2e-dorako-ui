@@ -27,20 +27,20 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   --item-piles-minor-inactive: var(--color-warm-3);
   --item-piles-even-color: color-mix(in srgb, var(--color-cool-3) 20%, transparent);
   --item-piles-border-light-primary: var(--color-cool-3);
 
   .item-piles-chat-card li img,
   .item-piles-img-container {
-    @include f2-app;
+    @include dui-app;
     border: 1px solid;
     border-color: var(--icon-border-color);
   }
 
   .item-piles-player-list-trade-button {
-    @include f2-button-warm;
+    @include dui-button;
   }
 
   .item-piles-config-container nav {
@@ -48,9 +48,7 @@
   }
 }
 
-[data-dorako-ui-theme="foundry2"],
-[data-dorako-ui-theme="bg3"],
-[data-dorako-ui-theme][data-color-scheme="dark"] {
+[data-theme][data-color-scheme="dark"] {
   --item-piles-border-light-primary: rgba(255, 255, 255, 0.2);
   --item-piles-text-light-highlight: rgba(255, 255, 255, 0.3);
 }

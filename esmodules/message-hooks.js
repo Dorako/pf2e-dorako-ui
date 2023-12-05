@@ -25,7 +25,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     chatMessage?.actor?.alliance === "opposition" && !isSecretDisposition
       ? lookupThemeAndSchemeForKey(game.settings.get("pf2e-dorako-ui", "theme.chat-message-opposition-theme"))
       : lookupThemeAndSchemeForKey(game.settings.get("pf2e-dorako-ui", "theme.chat-message-standard-theme"));
-  html0.dataset.dorakoUiTheme = dorakoUiTheme;
+  html0.dataset.theme = dorakoUiTheme;
   html0.dataset.colorScheme = colorScheme;
   html0.dataset.dorakoUiScope = "unlimited";
 

@@ -1,8 +1,6 @@
-[data-chat-app-theme="opaque"] #chat-log ~ *,
-[data-dorako-ui-theme="opaque"]:not([data-color-scheme]) {
-  //   --color-light-2: var(--color-text-light-highlight);
-  //   --color-light-3: var(--color-text-light-heading);
-  --button-background-color: rgb(30, 30, 30);
+[data-chat-interface-theme="opaque"] #chat-log ~ *,
+[data-theme="opaque"]:not([data-color-scheme]) {
+  --button-background: rgb(30, 30, 30);
   --app-background: rgb(30, 30, 30);
   --app-border-color: rgb(80, 80, 80);
   --app-border-style: 1px solid;
@@ -14,7 +12,7 @@
   --input-border-color: var(--button-border-color); // intentional
   --input-text-color: black;
   --input-focus-text-color: black;
-  --input-background-color: rgba(255, 255, 255, 0.5);
+  --input-background: rgba(255, 255, 255, 0.5);
   --input-focus-outline-color: var(--primary-light);
   --input-placeholder-color: rgba(0, 0, 0, 0.5);
 
@@ -28,15 +26,16 @@
   --color-cool-3: var(--secondary-dark);
   --color-cool-3-75: var(--color-cool-3); //custom
 
-  --button-background-color: var(--app-background);
+  --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--tertiary);
-  --button-hover-background-color: var(--primary-light);
+  --button-hover-background: var(--primary-light);
   --button-hover-border-color: var(--tertiary);
   --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-background: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
+  --button-bright-text-color: white;
 
   --button-toggle-border-color: var(--secondary-light);
   --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
@@ -77,7 +76,7 @@
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="controls"][data-dorako-ui-theme="opaque"] {
+[data-dorako-ui-scope="controls"][data-theme="opaque"] {
   --button-toggle-border-color: var(--secondary-light);
   --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
   --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
@@ -87,10 +86,10 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-chat-app-theme="opaque"] {
+[data-chat-interface-theme="opaque"] {
   #sidebar-tabs {
     --app-border-style: 1px solid;
-    --button-hover-background-color: var(--primary-light);
+    --button-hover-background: var(--primary-light);
     --button-hover-border-color: #d3b87c;
   }
 }
@@ -98,7 +97,7 @@
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="opaque"] {
+[data-dorako-ui-scope="navigation"][data-theme="opaque"] {
   .scene {
     --button-toggle-focus-outline-color: var(--discord-attention);
   }

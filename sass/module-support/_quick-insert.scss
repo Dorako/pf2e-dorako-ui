@@ -1,7 +1,7 @@
-[data-dorako-ui-theme] {
+[data-theme] {
   &.quick-insert-app {
     background: none;
-    @include f2-app;
+    @include dui-app;
     backdrop-filter: blur(5px);
     .quick-insert-result li img {
       border: 1px solid var(--color-warm-1);
@@ -19,7 +19,7 @@
     }
   }
   &.quick-insert-app .search-editable-input {
-    @include f2-input;
+    @include dui-input;
     outline: none !important;
     text-shadow: none;
   }

@@ -1,68 +1,12 @@
 /* ----------------------------------------- */
 /* Theme colors                              */
 /* ----------------------------------------- */
-:root {
-  --color-warm-1: #ee9b3a;
-  --color-warm-1-40: color-mix(in srgb, var(--color-warm-1) 40%, transparent);
-  --color-warm-2: #c9593f;
-  --color-warm-2-20: color-mix(in srgb, var(--color-warm-2) 20%, transparent);
-  --color-warm-3: #5d142b;
-  --color-warm-3-10: color-mix(in srgb, var(--color-warm-3) 10%, transparent);
-  --color-warm-3-75: color-mix(in srgb, var(--color-warm-3) 75%, transparent);
-  --color-warm-4: #420418;
-  --color-warm-4-75: color-mix(in srgb, var(--color-warm-4) 75%, transparent);
-  --color-warm-5: #26020d;
-
-  --color-cool-1: #b1a0d4;
-  --color-cool-2: #79689c;
-  --color-cool-3: #584a75;
-  --color-cool-3-75: color-mix(in srgb, var(--color-cool-3) 75%, transparent);
-  --color-cool-4: #302831;
-  --color-cool-5: #0b0a13;
-
-  --color-cool-5-25: rgba(11, 10, 19, 0.25);
-  --color-cool-5-50: rgba(11, 10, 19, 0.5);
-  --color-cool-5-75: rgba(11, 10, 19, 0.75);
-  --color-cool-5-90: rgba(11, 10, 19, 0.9);
-
-  --color-light-1: #f7f3e8;
-  --color-light-2: #efe6d8;
-  --color-light-3: #e7d1b1;
-  --color-light-4: #d0b8a3;
-  --color-light-5: #9f8475;
-  --color-light-disabled: #aaa;
-
-  --color-level-error: #ce0707;
-  --color-level-error-bg: rgba(105, 0, 8, 0.8);
-  --color-level-error-border: #750003;
-  --color-level-info: #59a1f6;
-  --color-level-info-bg: rgba(47, 80, 132, 0.8);
-  --color-level-info-border: #5c87b9;
-  --color-level-success: #26b231;
-  --color-level-success-bg: rgba(26, 107, 34, 0.8);
-  --color-level-success-border: #1b8f23;
-  --color-level-warning: #ee9b3a;
-  --color-level-warning-bg: rgba(214, 150, 0, 0.8);
-  --color-level-warning-border: #b18404;
-
-  --color-level-green-bg: rgba(138, 211, 4, 0.4); // custom from website
-  --color-level-green-border: #8ad304; // custom from website
-  --color-level-yellow-bg: rgba(211, 192, 4, 0.4); // custom from website
-  --color-level-yellow-border: #d3c004; // custom from website
-  --color-level-orange-bg: rgba(211, 119, 4, 0.4); // custom from website
-  --color-level-orange-border: #d37704; // custom from website
-  --color-level-red-bg: rgba(211, 20, 4, 0.4); // custom from website
-  --color-level-red-border: #d31404; // custom from website
-
-  --color-scrollbar: #5d142b;
-  --color-scrollbar-border: #8d151b;
-}
 
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme="foundry2"] {
+[data-theme="foundry2"] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
   // --color-border-light-highlight: var(--color-cool-3);
@@ -93,7 +37,7 @@
 /* ----------------------------------------- */
 /* Light color scheme                        */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"][data-color-scheme="light"] {
+[data-theme="foundry2"][data-color-scheme="light"] {
   --window-app-background: color-mix(in srgb, var(--color-cool-5-90) 90%, var(--color-warm-1));
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
@@ -105,12 +49,12 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-chat-app-theme="foundry2"] #sidebar-tabs,
-[data-chat-app-theme="foundry2"] #chat-log ~ *,
-[data-dorako-ui-theme="foundry2"] {
+[data-chat-interface-theme="foundry2"] #sidebar-tabs,
+[data-chat-interface-theme="foundry2"] #chat-log ~ *,
+[data-theme="foundry2"] {
   --icon-border-color: var(--color-warm-1);
 
-  --input-disabled-background-color: var(--color-cool-5);
+  --input-disabled-background: var(--color-cool-5);
   --input-disabled-border-color: var(--color-cool-4);
 
   --fieldset-border-color: var(--color-cool-3);
@@ -120,14 +64,14 @@
   --button-border-color: var(--color-cool-3);
   --app-border-style: 1px solid;
 
-  --button-background-color: var(--app-background);
+  --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
   --button-text-color: var(--color-light-3);
   --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-background: var(--color-warm-2);
   --button-hover-border-color: var(--color-warm-1);
   --button-hover-text-color: var(--color-light-1);
-  --button-disabled-background-color: var(--color-warm-5);
+  --button-disabled-background: var(--color-warm-5);
   --button-disabled-border-color: var(--color-warm-4);
 
   --button-toggle-border-color: var(--color-cool-2);
@@ -135,6 +79,8 @@
   --button-toggle-hover-background: var(--color-cool-2);
   --button-toggle-hover-border-color: var(--color-cool-1);
   --button-toggle-focus-outline-color: var(--color-warm-1);
+
+  --button-bright-text-color: var(--color-light-1);
 
   --app-background: var(--color-cool-5-90);
   --app-border-color: var(--color-cool-4);
@@ -150,16 +96,12 @@
   --inline-text-color: var(--color-light-2);
   --inline-icon-color: var(--color-light-1);
   --inline-box-shadow: 0px 1px 2px black;
-
-  &.window-app button.bright {
-    --app-text-shadow: none;
-  }
 }
 
 /* ----------------------------------------- */
 /* System variables                          */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"] {
+[data-theme="foundry2"] {
   --bg: var(--color-warm-3);
   --text-dark: var(--color-light-2);
 }
@@ -167,7 +109,7 @@
 /* ----------------------------------------- */
 /* Specifics                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme="foundry2"] {
+[data-theme="foundry2"] {
   &.message.chat-message {
     border: 1px solid var(--player-color);
     background: var(--window-app-background);
@@ -189,27 +131,13 @@
 
     .message-timestamp,
     .header-meta {
-      @include f2-app;
+      @include dui-app;
       background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
       border: 1px solid color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
       color: var(--color-light-1);
       text-shadow: 0px 1px 1px black;
     }
   }
-
-  // &.chat-message[data-header-text-color-scheme="dark"] .message-header {
-  //   --color-text-dark-secondary: var(--color-light-1);
-  //   --color-light-1: black;
-  //   --color-light-2: black;
-  //   --color-light-3: black;
-  //   --app-text-shadow: none;
-  //   text-shadow: none;
-  // }
-
-  // &.chat-message[data-header-text-color-scheme="light"] .message-header {
-  //   --color-text-dark-secondary: var(--color-light-1);
-  //   --app-text-shadow: none;
-  // }
 
   &.window-app.sidebar-popout {
     border: none;
@@ -267,13 +195,13 @@
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="controls"][data-dorako-ui-theme="foundry2"] {
+[data-dorako-ui-scope="controls"][data-theme="foundry2"] {
 }
 
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme="foundry2"] {
+[data-dorako-ui-scope="navigation"][data-theme="foundry2"] {
   .scene {
   }
 

@@ -135,7 +135,7 @@ for (const application of ["Application", ...systemSheets]) {
     </a>`
     );
     foundry2Button.click((ev) => {
-      html[0].dataset.dorakoUiTheme = "foundry2";
+      html[0].dataset.theme = "foundry2";
     });
     let crbButton = $(
       `<a class="header-button crb-toggle" alt="Toggle CRB" data-tooltip="Toggle CRB" data-tooltip-direction="UP">
@@ -143,7 +143,7 @@ for (const application of ["Application", ...systemSheets]) {
     </a>`
     );
     crbButton.click((ev) => {
-      html[0].dataset.dorakoUiTheme = "crb";
+      html[0].dataset.theme = "crb";
     });
     let bg3Button = $(
       `<a class="header-button bg3-toggle" alt="Toggle BG3" data-tooltip="Toggle BG3" data-tooltip-direction="UP">
@@ -151,7 +151,7 @@ for (const application of ["Application", ...systemSheets]) {
     </a>`
     );
     bg3Button.click((ev) => {
-      html[0].dataset.dorakoUiTheme = "bg3";
+      html[0].dataset.theme = "bg3";
     });
     let discordButton = $(
       `<a class="header-button discord-toggle" alt="Toggle Discord" data-tooltip="Toggle Discord" data-tooltip-direction="UP">
@@ -159,7 +159,7 @@ for (const application of ["Application", ...systemSheets]) {
     </a>`
     );
     discordButton.click((ev) => {
-      html[0].dataset.dorakoUiTheme = "discord";
+      html[0].dataset.theme = "discord";
     });
     let noThemeButton = $(
       `<a class="header-button no-theme-toggle" alt="No theme" data-tooltip="No theme" data-tooltip-direction="UP">
@@ -167,7 +167,7 @@ for (const application of ["Application", ...systemSheets]) {
     </a>`
     );
     noThemeButton.click((ev) => {
-      delete html[0].dataset.dorakoUiTheme;
+      delete html[0].dataset.theme;
       delete html[0].dataset.colorScheme;
     });
     html.closest(".app").find(".dark-theme-toggle").remove();

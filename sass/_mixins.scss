@@ -22,23 +22,13 @@
     0 0 0 2px var(--gold-brown);
 }
 
-@mixin gold-border-shadow {
-  border: none;
-  margin: 2px;
-  /* prettier-ignore */
-  box-shadow: 
-    0 0 0 1px var(--tertiary),
-    0 0 0 2px var(--gold-brown), 
-    0 0 5px rgba(black, 0.8);
-}
-
 @mixin sheet {
   @include gold-border;
   background-image: var(--sheet);
   background-size: cover;
 }
 
-@mixin f2-app {
+@mixin dui-app {
   background: var(--app-background);
   border: var(--app-border-style);
   border-color: var(--app-border-color);
@@ -48,7 +38,7 @@
   color: var(--color-light-3);
 }
 
-@mixin f2-grayscale {
+@mixin dui-grayscale {
   > img {
     filter: sepia() brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
   }
@@ -58,10 +48,9 @@
   }
 }
 
-@mixin f2-button-warm {
-  @include f2-app;
-  // @include quick-transition;
-  background: var(--button-background-color);
+@mixin dui-button {
+  @include dui-app;
+  background: var(--button-background);
   border: var(--app-border-style);
   border-color: var(--button-border-color);
   color: var(--button-text-color);
@@ -69,10 +58,9 @@
   text-decoration: none;
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
-  // transition: background-color 0.15s, border-color 0.15s;
 
   &:not(.disabled, :disabled):hover {
-    background: var(--button-hover-background-color);
+    background: var(--button-hover-background);
     color: var(--button-hover-text-color);
     border: var(--app-border-style);
     border-color: var(--button-hover-border-color);
@@ -82,7 +70,7 @@
   &.view,
   &.selected,
   &.active {
-    background: var(--button-hover-background-color);
+    background: var(--button-hover-background);
     outline: 1px solid var(--button-focus-outline-color);
     border-color: var(--button-hover-border-color);
     color: var(--button-hover-text-color);
@@ -93,73 +81,49 @@
   &.empty,
   &.disabled,
   &:disabled {
-    --button-background-color: var(--button-disabled-background-color);
+    --button-background: var(--button-disabled-background);
+    --button-hover-background: var(--button-disabled-background);
     --button-border-color: var(--button-disabled-border-color);
-    --button-hover-background-color: var(--button-disabled-background-color);
-    --button-text-color: var(--color-light-5);
-  }
-
-  &.bright {
-    --button-background-color: var(--accent-color);
-    --button-border-color: var(--accent-color-dark);
-    --button-text-color: var(--color-cool-5);
-    --button-hover-background-color: var(--accent-color-light);
-    --button-hover-border-color: var(--accent-color);
-    --button-hover-text-color: #000000;
-
-    // &.disabled,
-    // &:disabled {
-    //   --button-background-color: var(--color-cool-4);
-    //   --button-hover-background-color: var(--color-cool-4);
-    //   --button-text-color: var(--color-light-5);
-    //   --button-hover-text-color: var(--color-light-5);
-    //   --button-hover-border-color: transparent;
-    // }
-
-    // &:not(.disabled, :disabled):hover {
-    //   --button-hover-background-color: #cb7f27;
-    //   --button-hover-border-color: var(--color-warm-1);
-    // }
-  }
-}
-
-@mixin f2-button-cool {
-  @include f2-button-warm;
-  --button-background-color: var(--color-cool-3-75);
-  --button-border-color: var(--color-cool-2);
-  --button-text-color: var(--color-light-2);
-  --button-focus-outline-color: var(--color-warm-1);
-  --button-hover-background-color: var(--color-cool-2);
-  --button-hover-border-color: var(--color-cool-1);
-  --button-hover-text-color: var(--color-light-1);
-
-  &:disabled {
-    --button-background-color: var(--color-cool-5);
-    --button-border-color: var(--color-cool-4);
-    --button-hover-background-color: var(--color-cool-5);
     --button-text-color: var(--color-light-5);
   }
 }
 
-@mixin f2-button-toggle {
-  @include f2-button-warm;
-  --button-background-color: var(--button-toggle-background);
-  --button-border-color: var(--button-toggle-border-color);
-  // --button-text-color: var(--color-light-2);
-  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
-  --button-hover-background-color: var(--button-toggle-hover-background);
-  --button-hover-border-color: var(--button-toggle-hover-border-color);
-  // --button-hover-text-color: var(--color-light-1);
+@mixin dui-button-bright {
+  @include dui-button;
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--button-bright-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: var(--button-bright-text-color);
 
   &:disabled {
-    --button-background-color: color-mix(in srgb, var(--button-background-color) 50%, transparent 50%);
+    --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
     --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
-    --button-hover-background-color: color-mix(in srgb, var(--button-hover-background-color) 50%, transparent 50%);
+    --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
   }
 }
 
-@mixin f2-input {
-  background: var(--input-background-color);
+@mixin dui-button-toggle {
+  @include dui-button;
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--button-toggle-background);
+  --button-border-color: var(--button-toggle-border-color);
+  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --button-hover-background: var(--button-toggle-hover-background);
+  --button-hover-border-color: var(--button-toggle-hover-border-color);
+
+  &:disabled {
+    --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+    --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+    --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+  }
+}
+
+@mixin dui-input {
+  background: var(--input-background);
   border: var(--app-border-style);
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
@@ -186,7 +150,7 @@
   &.disabled,
   &:disabled {
     --input-text-color: var(--color-light-disabled);
-    --input-background-color: var(--input-disabled-background-color);
+    --input-background: var(--input-disabled-background);
     --input-border-color: var(--input-disabled-border-color);
     &::placeholder {
       color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
@@ -209,13 +173,13 @@
   }
 }
 
-@mixin f2-tooltip {
-  @include f2-app;
+@mixin dui-tooltip {
+  @include dui-app;
   background: var(--app-background);
-  border: 1px solid var(--color-warm-1);
-  box-shadow: 0px 0px 6px var(--color-warm-2), 0px 2px 8px 1px var(--color-warm-3);
-  backdrop-filter: blur(5px);
+  border: var(--app-border-style) var(--app-border-color);
+  box-shadow: var(--window-app-box-shadow);
   border-radius: var(--border-radius);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   text-shadow: 0px 1px 2px black;
 }

@@ -17,8 +17,8 @@
 
 //     li.control-tool,
 //     > li {
-//       @include f2-button-warm;
-//       @include f2-grayscale;
+//       @include dui-button;
+//       @include dui-grayscale;
 //       margin-bottom: var(--controls-margin);
 //       height: var(--control-size);
 //       width: var(--control-size);
@@ -29,7 +29,7 @@
 //       font-size: calc(var(--control-size) - 12px);
 
 //       &.toggle {
-//         @include f2-button-cool;
+//         @include dui-button-cool;
 //       }
 //     }
 //   }
@@ -41,10 +41,10 @@
 //     box-shadow: var(--box-shadow);
 //     color: var(--color-light-3);
 //     .token-name {
-//       @include f2-app;
+//       @include dui-app;
 //     }
 //   }
 //   .close {
-//     @include f2-button-warm;
+//     @include dui-button;
 //   }
 // }

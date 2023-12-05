@@ -1,9 +1,4 @@
-[data-dorako-ui-theme] {
-  &.sheet.actor.loot {
-    // --text-dark: var(--color-light-2);
-    // --primary: var(--color-warm-2);
-  }
-
+[data-theme] {
   &.sheet.actor.loot section.sidebar {
     box-shadow: unset;
     border: unset;
@@ -32,10 +27,10 @@
 
   &.sheet.actor.loot .sheet-header .tags .tag,
   &.sheet.actor.loot .sheet-header h1 > input {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button {
-    @include f2-button-warm;
+    @include dui-button;
   }
 }

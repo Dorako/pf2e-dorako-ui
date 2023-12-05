@@ -2,36 +2,6 @@
 /* PF2e Dorako UI                            */
 /* ----------------------------------------- */
 
-section.readaloud {
-  border-image-repeat: repeat;
-  border-image-slice: 11;
-  border-image-source: var(--ornamentation);
-  border-image-width: 14px;
-  border-style: double;
-  padding-left: 8px;
-  padding-right: 8px;
-  font-weight: 500;
-  margin: 0px;
-  margin-left: 5px;
-
-  background: none;
-  background-color: var(--bg);
-  &:before,
-  &:after {
-    background: none;
-  }
-}
-
-.dorako-ui.chat-message {
-  .message-header.dorako-header {
-    padding-bottom: 5px;
-    box-shadow: var(--gold-and-glow);
-    background: var(--sheet-light);
-    background-size: cover;
-    background-color: var(--header-color);
-  }
-}
-
 .combat-sidebar li.combatant .token-image {
   z-index: 0;
 }
@@ -45,10 +15,10 @@ section.readaloud {
 }
 
 a.content-link,
-[data-pf2-check],
+[data-pdui-check],
 a.entity-link,
-[data-pf2-action],
-span[data-pf2-effect-area],
+[data-pdui-action],
+span[data-pdui-effect-area],
 a.inline-check .label,
 a.inline-roll:not(.inline-result) {
   font-weight: 400;
@@ -56,43 +26,24 @@ a.inline-roll:not(.inline-result) {
   text-shadow: none !important;
 }
 
-.dorako-ui.dark-theme {
-  a.content-link,
-  [data-pf2-check],
-  a.entity-link,
-  [data-pf2-action],
-  span[data-pf2-effect-area],
-  a.inline-check .label,
-  a.inline-roll:not(.inline-result) {
-    color: black;
-  }
-}
-
 // Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
 a.inline-check,
-span[data-pf2-check],
-span[data-pf2-effect-area].with-repost {
+span[data-pdui-check],
+span[data-pdui-effect-area].with-repost {
   padding: 0px;
   padding-left: 4px;
 }
 
-.dorako-ui.message.chat-message.dark-theme a.inline-roll {
-  color: black;
-}
-
-i[data-pf2-repost] {
+i[data-pdui-repost] {
   top: 0px;
   cursor: pointer;
 }
 
 .tah-tags-wrapper .tags,
-[data-dorako-ui-theme] .tags,
+[data-theme] .tags,
 [data-dorako-ui-scope="limited"] .tags,
-[data-dorako-ui-theme] .tags.paizo-style,
-[data-dorako-ui-scope="limited"] .tags.paizo-style,
-.dorako-ui .message-content .tags,
-.dorako-ui .tags.paizo-style,
-.dorako-ui .tags {
+[data-theme] .tags.paizo-style,
+[data-dorako-ui-scope="limited"] .tags.paizo-style {
   gap: 1px;
 
   .tag {
@@ -125,13 +76,6 @@ i[data-pf2-repost] {
   padding: unset;
 }
 
-.dorako-ui.dark-theme {
-  a.content-link.broken {
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-  }
-}
-
 // system uses 500, which makes it hard to tell whether something is bolded
 .app.sheet.actor p,
 .pf2e p {
@@ -155,11 +99,11 @@ i[data-pf2-repost] {
 /* Settings                                  */
 /* ----------------------------------------- */
 
-[data-dorako-ui-theme] {
+[data-theme] {
   .tab.category.active[data-tab="pf2e-dorako-ux"] h2,
   .tab.category.active[data-tab="pf2e-dorako-ui"] h2,
   .form-group.dorako.settings-header {
-    @include f2-app;
+    @include dui-app;
     font-size: larger;
     margin: 2px;
     margin-bottom: 10px;

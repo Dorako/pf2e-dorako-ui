@@ -1,4 +1,4 @@
-[data-dorako-ui-theme][data-dorako-ui-scope="limited"] {
+[data-theme][data-dorako-ui-scope="limited"] {
   &.sheet.pf2e.actor.npc.app {
     --section-background: var(--color-warm-5);
     --section-header: var(--color-warm-4);
@@ -25,7 +25,7 @@
     margin: 2px 2px;
     a.item,
     .tab {
-      @include f2-button-warm;
+      @include dui-button;
       padding: 5px 10px;
       flex: 1;
       font-family: var(--font-primary);
@@ -37,38 +37,38 @@
   }
 
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select {
-    @include f2-input;
+    @include dui-input;
     max-width: 60px;
   }
 
   &.actor.npc.sheet form ol.spell-list > li.spell-level-header input,
   &.actor.npc.sheet form ol.spell-list > li .uses input {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input,
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.actor.npc.sheet form .notes .notes-section.publication .notes-text .license select {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.actor.npc.sheet form .spellcasting-entry select {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.actor.npc.sheet form .notes .notes-section.publication .notes-text input[type="text"] {
-    @include f2-input;
+    @include dui-input;
   }
 
   &.actor.npc.sheet form .side-bar-section.initiative select {
-    @include f2-input;
+    @include dui-input;
   }
 
   // prettier-ignore
@@ -93,10 +93,6 @@
     color: var(--color-light-3);
   }
 
-  &.actor.npc.sheet form .side-bar-section-header {
-    // border: unset;
-  }
-
   &.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
     background-color: var(--color-warm-1);
     color: black;
@@ -109,7 +105,7 @@
   }
 }
 
-[data-dorako-ui-theme] {
+[data-theme] {
   &.app.npc-skills-editor form ol li.skill:nth-child(even) {
     background-color: color-mix(in srgb, var(--color-cool-4) 20%, transparent);
   }

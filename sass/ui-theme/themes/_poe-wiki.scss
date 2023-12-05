@@ -164,8 +164,8 @@
 }
 
 
-[data-dorako-ui-theme="poe-wiki"],
-[data-dorako-ui-theme="poe-wiki"][data-dorako-ui-scope="limited"] {
+[data-theme="poe-wiki"],
+[data-theme="poe-wiki"][data-dorako-ui-scope="limited"] {
   --color-warm-1: var(--tertiary);
   --color-warm-2: var(--poe-color-unique);
   --color-warm-3: var(--primary-dark);
@@ -207,14 +207,14 @@
   }
 }
 
-[data-dorako-ui-theme="poe-wiki"] {
+[data-theme="poe-wiki"] {
   select,
   input,
   button {
-    --button-background-color: #21201c;
+    --button-background: #21201c;
     --button-border-color: #403b2d;
     --input-border-color: var(--brown-2);
-    --input-background-color: var(--alt-dark);
+    --input-background: var(--alt-dark);
     --input-focus-outline-color: var(--tertiary);
   }
 

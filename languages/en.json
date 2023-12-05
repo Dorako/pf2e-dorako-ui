@@ -64,7 +64,7 @@
         },
         "chat-message-header-style": {
           "name": "Chat message header theme",
-          "hint": "Only applies CRB themes"
+          "hint": "Only applies to CRB themes"
         },
         "border-radius": {
           "name": "Roundedness",

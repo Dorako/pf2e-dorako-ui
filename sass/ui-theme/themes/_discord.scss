@@ -26,7 +26,7 @@
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"] {
+[data-theme^="discord"] {
   // --color-shadow-primary: transparent;
   // --color-shadow-highlight: transparent;
   --color-border-light-highlight: var(--discord-background-1);
@@ -60,14 +60,14 @@
 /* ----------------------------------------- */
 /* Light color scheme                        */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
-[data-dorako-ui-theme^="discord"][data-color-scheme="light"] {
+[data-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
+[data-theme^="discord"][data-color-scheme="light"] {
   --discord-color-scrollbar: #c5c9cd;
   --app-background: #f2f3f5;
   --window-app-background: #ffffff;
-  --input-background-color: #ebedef;
+  --input-background: #ebedef;
   --input-text-color: #4e5057;
-  --button-background-color: #c5c9cd;
+  --button-background: #c5c9cd;
   --button-text-color: black;
   --fieldset-legend-color: black;
   --color-light-1: var(--discord-text-5);
@@ -116,8 +116,8 @@
 /* ----------------------------------------- */
 /* Dark color scheme                        */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
-[data-dorako-ui-theme^="discord"][data-color-scheme="dark"] {
+[data-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
+[data-theme^="discord"][data-color-scheme="dark"] {
   &.sheet.pf2e.actor.npc.app {
     --section-background: var(--discord-background-4);
     --section-header: var(--discord-accent-color);
@@ -150,11 +150,11 @@
 /* ----------------------------------------- */
 /* App UI                                    */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"]:not([data-color-scheme]) {
+[data-theme^="discord"]:not([data-color-scheme]) {
   --app-border-style: 1px solid;
   --app-background: var(--discord-background-3);
   --app-border-color: var(--discord-background-1);
-  --button-background-color: var(--discord-background-4);
+  --button-background: var(--discord-background-4);
   --button-border-color: var(--discord-background-1);
   --button-focus-outline-color: var(--accent-color);
   --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
@@ -163,9 +163,9 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-chat-app-theme^="discord"] #sidebar-tabs,
-[data-chat-app-theme^="discord"] #chat-log ~ *,
-[data-dorako-ui-theme^="discord"] {
+[data-chat-interface-theme^="discord"] #sidebar-tabs,
+[data-chat-interface-theme^="discord"] #chat-log ~ *,
+[data-theme^="discord"] {
   /* Base colors */
   // --color-warm-1: var(--tertiary);
   // --color-warm-2: #ba4521;
@@ -191,7 +191,7 @@
   /* Misc variables */
   --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --box-shadow: none;
-  --icon-border-color: var(--accent-color);
+  --icon-border-color: var(--discord-attention);
   /* Window app variables */
   --window-app-background: var(--discord-background-3);
   --window-app-border-color: #4b4c4f;
@@ -214,25 +214,27 @@
   --inline-icon-color: #cacdf7;
   /* Input variables */
   --input-border-color: transparent;
-  --input-disabled-background-color: #494b51;
+  --input-disabled-background: #494b51;
   --input-disabled-border-color: transparent;
   --input-border-color: transparent;
-  --input-background-color: var(--discord-background-1);
+  --input-background: var(--discord-background-1);
   --input-focus-outline-color: var(--discord-accent-color);
   --input-placeholder-color: color-mix(in srgb, var(--button-text-color) 50%, transparent);
   /* Button variables */
-  --button-background-color: var(--app-background);
+  --button-background: var(--app-background);
   --button-border-color: transparent;
   --button-text-color: var(--discord-text-2);
   --button-focus-outline-color: transparent;
-  --button-hover-background-color: var(--discord-background-1);
+  --button-hover-background: var(--discord-background-1);
   --button-hover-border-color: transparent;
   --button-hover-text-color: var(--discord-text-1);
-  --button-disabled-background-color: #494b51;
+  --button-disabled-background: #494b51;
   --button-disabled-border-color: transparent;
-  --button-toggle-border-color: var(--accent-color-light);
-  --button-toggle-background: var(--discord-green);
-  --button-toggle-hover-background: var(--discord-attention);
+  --button-toggle-border-color: var(--discord-green);
+  --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-green) 50%, white 50%);
+  --button-toggle-background: color-mix(in srgb, var(--discord-green) 50%, black 50%);
+  --button-toggle-hover-background: var(--discord-green);
+  --button-bright-text-color: white;
   /* Fieldset variables */
   --fieldset-border-color: transparent;
   --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
@@ -245,7 +247,7 @@
   --accent-color-dark: var(--discord-accent-color-dark);
 
   &.window-app button.bright {
-    --button-background-color: var(--accent-color);
+    --button-background: var(--accent-color);
     --button-border-color: var(--accent-color-dark);
     --button-text-color: white !important;
     --button-hover-text-color: white !important;
@@ -256,7 +258,7 @@
 /* ----------------------------------------- */
 /* System variables                          */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"] {
+[data-theme^="discord"] {
   --color-text-dark-primary: var(--color-light-2);
   --bg: rgba(0, 0, 0, 0.25);
   // --sub: var(--bg3-middle-brown);
@@ -270,7 +272,7 @@
 /* ----------------------------------------- */
 /* Specifics                                 */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"] {
+[data-theme^="discord"] {
   &.window-app .window-header {
     text-shadow: none;
     color: var(--color-light-2);
@@ -278,8 +280,6 @@
 
   &#effects-panel .effect-item > .icon {
     --border-radius: 50%;
-    --app-border-color: var(--accent-color-light);
-    outline: 1px solid var(--accent-color);
     &.aura {
       border-radius: 33%;
       transform: scale(0.8);
@@ -340,20 +340,16 @@
 /* ----------------------------------------- */
 /* Controls                                  */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="controls"][data-dorako-ui-theme^="discord"] {
-  --button-hover-background-color: var(--accent-color);
-  --button-focus-outline-color: var(--accent-color-light);
-  --button-hover-border-color: var(--accent-color-dark);
-  --button-toggle-border-color: var(--discord-green);
-  --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-green) 50%, white 50%);
-  --button-toggle-background: color-mix(in srgb, var(--discord-green) 50%, black 50%);
-  --button-toggle-hover-background: var(--discord-green);
+[data-dorako-ui-scope="controls"][data-theme^="discord"] {
+  --button-hover-background: var(--accent-color);
+  --button-focus-outline-color: var(--accent-color-dark);
+  --button-hover-border-color: var(--accent-color-light);
 }
 
 /* ----------------------------------------- */
 /* Navigation                                */
 /* ----------------------------------------- */
-[data-dorako-ui-scope="navigation"][data-dorako-ui-theme^="discord"] {
+[data-dorako-ui-scope="navigation"][data-theme^="discord"] {
   .scene {
     --button-toggle-focus-outline-color: var(--discord-attention);
   }
@@ -378,12 +374,22 @@
 }
 
 /* ----------------------------------------- */
+/* Placeable HUD                             */
+/* ----------------------------------------- */
+[data-theme="discord"] [data-dorako-ui-scope="placeable-hud"] {
+  // Space is intentional
+  --button-hover-background: var(--accent-color);
+  --button-focus-outline-color: var(--accent-color-dark);
+  --button-hover-border-color: var(--accent-color-light);
+}
+
+/* ----------------------------------------- */
 /* Chat message                              */
 /* ----------------------------------------- */
-[data-dorako-ui-theme^="discord"].chat-message {
+[data-theme^="discord"].chat-message {
   background: var(--discord-background-2);
-  --button-background-color: var(--discord-background-2);
-  --button-hover-background-color: #35373b;
+  --button-background: var(--discord-background-2);
+  --button-hover-background: #35373b;
   --app-border-style: 1px solid;
   --color-text-dark-secondary: rgba(255, 255, 255, 0.66);
   --button-hover-border-color: rgba(122, 122, 122, 0.66);
@@ -471,10 +477,10 @@
   }
 }
 
-[data-dorako-ui-theme^="discord"][data-color-scheme="light"].chat-message {
+[data-theme^="discord"][data-color-scheme="light"].chat-message {
   background: #ffffff;
-  --button-background-color: #ffffff;
-  --button-hover-background-color: #ebebed;
+  --button-background: #ffffff;
+  --button-hover-background: #ebebed;
   --app-border-style: 1px solid;
   --color-text-dark-secondary: rgba(0, 0, 0, 0.66);
   --button-hover-border-color: rgba(122, 122, 122, 0.66);
@@ -512,30 +518,30 @@
 /* ----------------------------------------- */
 /* Chatlog                                   */
 /* ----------------------------------------- */
-[data-chat-app-theme^="discord"] {
+[data-chat-interface-theme^="discord"] {
   --color-scrollbar: var(--discord-color-scrollbar);
   --color-scrollbar-border: var(--discord-color-scrollbar-border);
   --color-scrollbar-hover: var(--discord-color-scrollbar-highlight);
   #chat-log ~ * {
     --button-border-color: var(--discord-background-1);
     --app-border-style: 1px solid;
-    --button-background-color: var(--discord-background-3);
+    --button-background: var(--discord-background-3);
   }
 }
 
-[data-chat-app-theme^="discord"] #dorako-rt-buttons button {
+[data-chat-interface-theme^="discord"] #dorako-rt-buttons button {
   --button-toggle-border-color: color-mix(in srgb, var(--discord-green) 75%, white);
   --button-toggle-hover-border-color: color-mix(in srgb, var(--discord-attention) 50%, white);
 }
 
-[data-dorako-ui-theme^="discord"][data-color-scheme="light"] .damage {
-  --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
-  --color-border-physical: #939292; // adjusted
-  --color-text-physical: black; // adjusted
+[data-theme^="discord"][data-color-scheme="light"] .damage {
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-border-physical: #939292;
+  --color-text-physical: black;
 }
 
-[data-dorako-ui-theme^="discord"][data-color-scheme="dark"] .damage {
-  --color-bg-physical: rgba(132, 132, 132, 0.125); // adjusted
-  --color-border-physical: #939292; // adjusted
-  --color-text-physical: #bab9b9; // adjusted
+[data-theme^="discord"][data-color-scheme="dark"] .damage {
+  --color-bg-physical: rgba(132, 132, 132, 0.125);
+  --color-border-physical: #939292;
+  --color-text-physical: #bab9b9;
 }
