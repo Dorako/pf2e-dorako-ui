@@ -88,8 +88,8 @@
   }
 
   &.actor.sheet[data-theme-color="blue"] {
-    --color-scrollbar: var(--secondary-light);
-    --color-scrollbar-border: var(--tertiary);
+    --scrollbar-thumb-background: var(--secondary-light);
+    --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
     --theme-color-dark: var(--secondary-dark);
     --theme-color: var(--secondary);
@@ -121,8 +121,8 @@
   }
 
   &.actor.sheet[data-theme-color="green"] {
-    --color-scrollbar: var(--remaster-light);
-    --color-scrollbar-border: var(--tertiary);
+    --scrollbar-thumb-background: var(--remaster-light);
+    --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
     --theme-color-dark: var(--remaster-dark);
     --theme-color: var(--remaster);
@@ -156,8 +156,8 @@
     --theme-color: #520982;
     --theme-text-color: rgb(107, 29, 137);
     --color-scrollbar-hover: var(--theme-text-color);
-    --color-scrollbar: var(--theme-color);
-    --color-scrollbar-border: var(--tertiary);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
     .crb-style {
       --header: url("../img/purple-header.webp");
       background-image: url("../img/purple-header.webp"), var(--sheet);
@@ -186,8 +186,8 @@
     --theme-color-dark: black;
     --theme-color: #111;
     --theme-text-color: #222;
-    --color-scrollbar: var(--theme-color);
-    --color-scrollbar-border: var(--tertiary);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
     .crb-style {
       --header: url("../img/black-header.webp");
@@ -418,7 +418,7 @@
   //prettier-ignore
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover{
-    --primary: var(--accent-text-color);
+    --primary: var(--accent-color-light);
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,

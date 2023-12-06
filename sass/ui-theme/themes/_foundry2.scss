@@ -54,8 +54,8 @@
   --f2-color-level-red-bg: rgba(211, 20, 4, 0.4); // custom from website
   --f2-color-level-red-border: #d31404; // custom from website
 
-  --f2-color-scrollbar: #5d142b;
-  --f2-color-scrollbar-border: #8d151b;
+  --f2-scrollbar-thumb-background: #5d142b;
+  --f2-scrollbar-thumb-border-color: #8d151b;
 }
 /* ----------------------------------------- */
 /* Map v1 styling to v2 values               */
@@ -139,6 +139,14 @@
 
   --icon-border-color: var(--color-primary-1);
 
+  --input-background: var(--color-secondary-4);
+  --input-border-color: var(--color-secondary-3);
+  --input-focus-text-color: var(--text-color-2);
+  --input-text-color: var(--text-color-3);
+  --input-placeholder-color: var(--text-color-4);
+  --input-text-selection-color: var(--color-secondary-3);
+  --input-focus-outline-color: var(--color-secondary-3);
+
   --input-disabled-background: var(--color-secondary-5);
   --input-disabled-border-color: var(--color-secondary-4);
 
@@ -147,7 +155,7 @@
   --fieldset-legend-color: var(--text-color-2);
 
   --button-border-color: var(--color-secondary-3);
-  --app-border-style: 1px solid;
+  --app-border-width: 1px;
 
   --button-background: var(--app-background);
   --button-border-color: var(--app-border-color);
@@ -171,12 +179,15 @@
   --app-border-color: var(--color-secondary-4);
   --window-app-background: var(--color-secondary-5-90);
   --window-app-border-color: var(--color-secondary-4);
+  --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-primary-3-10),
+    0px 0px 30px 20px var(--color-primary-2-20), 0px 0px 10px 05px var(--color-primary-1-40);
 
-  --accent-text-color: var(--color-primary-1);
-  --accent-color: var(--color-primary-2);
-  --accent-color-dark: var(--color-primary-3);
+  --accent-text-color: var(--f2-color-light-1);
+  --accent-color-light: var(--f2-color-warm-1);
+  --accent-color: var(--f2-color-warm-2);
+  --accent-color-dark: var(--f2-color-warm-3);
 
-  --inline-bg: var(--color-secondary-4);
+  --inline-background: var(--color-secondary-4);
   --inline-border-color: var(--color-secondary-3);
   --inline-text-color: var(--text-color-2);
   --inline-icon-color: var(--text-color-1);
@@ -196,23 +207,31 @@
 /* ----------------------------------------- */
 [data-theme="foundry2"] {
   &.message.chat-message {
-    border: 1px solid var(--player-color);
-    background: var(--window-app-background);
+    --window-app-border-width: 1px;
+    --box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    --window-app-border-color: var(--player-color);
+    --window-app-background: color-mix(in srgb, var(--player-color) 30%, var(--app-background));
     background-position: top;
     background-size: cover;
-    &.whisper {
-      background: var(--window-app-background);
-      background-color: color-mix(in srgb, var(--whisper-bg) 30%, var(--app-background));
-      background-blend-mode: luminosity;
-      &.blind {
-        background: var(--window-app-background);
-        background-color: color-mix(in srgb, var(--blind-bg) 30%, var(--app-background));
-        background-blend-mode: luminosity;
-      }
-    }
+    // &.whisper {
+    //   background: var(--window-app-background);
+    //   background-color: color-mix(in srgb, var(--whisper-bg) 30%, var(--app-background));
+    //   background-blend-mode: luminosity;
+    //   &.blind {
+    //     background: var(--window-app-background);
+    //     background-color: color-mix(in srgb, var(--blind-bg) 30%, var(--app-background));
+    //     background-blend-mode: luminosity;
+    //   }
+    // }
 
-    background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%),
-      var(--window-app-background);
+    // background: var(--window-app-background);
+    // background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%),
+    //   var(--window-app-background);
+
+    hr {
+      border-top: 1px solid color-mix(in srgb, var(--player-color) 100%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--player-color) 30%, transparent);
+    }
 
     .message-timestamp,
     .header-meta {
@@ -221,6 +240,14 @@
       border: 1px solid color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
       color: var(--text-color-1);
       text-shadow: 0px 1px 1px black;
+      &.blind {
+        background-color: color-mix(in srgb, var(--blind-bg) 50%, transparent);
+        border: 1px solid color-mix(in srgb, var(--blind-bg) 66%, rgba(255, 255, 255, 0.5));
+      }
+      &.whisper {
+        background-color: color-mix(in srgb, rgb(42, 113, 255) 33%, transparent);
+        border: 1px solid color-mix(in srgb, rgb(42, 113, 255) 50%, rgba(255, 255, 255, 0.5));
+      }
     }
   }
 

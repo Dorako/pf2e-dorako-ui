@@ -3,8 +3,8 @@
 .chat-message[data-theme] {
   background: unset;
   @include dui-app;
-  border: 1px solid;
-  border-color: var(--window-app-border-color);
+  background: var(--window-app-background);
+  border: var(--window-app-border-width) solid var(--window-app-border-color);
   --color-text-light-6: var(--color-secondary-4);
   --color-text-dark-secondary: var(--text-color-4); // 5 is too dark on colored message backgrounds
 
@@ -13,14 +13,14 @@
     --fa-secondary-color: var(--text-color-3);
   }
 
-  &.whisper {
-    border-color: var(--color-secondary-1);
-    background: var(--color-secondary-3-75);
-    &.blind {
-      border-color: var(--color-scrollbar-border);
-      background: var(--color-primary-3-75);
-    }
-  }
+  // &.whisper {
+  //   border-color: var(--color-secondary-1);
+  //   background: var(--color-secondary-3-75);
+  //   &.blind {
+  //     border-color: var(--scrollbar-thumb-border-color);
+  //     background: var(--color-primary-3-75);
+  //   }
+  // }
 
   .message-content {
     text-shadow: 0px 1px 1px black;
@@ -210,16 +210,16 @@
         &[data-action="shield-block"] {
           &:hover {
             background-color: var(--color-secondary-2);
-            border: var(--app-border-style);
+            border: var(--app-border-width) solid;
             border-color: var(--color-secondary-1);
           }
           &.shield-activated {
             background-color: var(--color-secondary-1);
-            border: var(--app-border-style);
+            border: var(--app-border-width) solid;
             border-color: var(--color-secondary-2);
             &:hover {
               background-color: var(--color-secondary-2);
-              border: var(--app-border-style);
+              border: var(--app-border-width) solid;
               border-color: var(--color-secondary-1);
             }
           }

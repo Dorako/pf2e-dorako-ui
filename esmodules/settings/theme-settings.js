@@ -30,6 +30,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           bg3: "pf2e-dorako-ui.text.bg3",
           discord: "pf2e-dorako-ui.text.discord",
           opaque: "pf2e-dorako-ui.text.opaque",
+          custom: "pf2e-dorako-ui.text.custom",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
@@ -49,6 +50,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           bg3: "pf2e-dorako-ui.text.bg3",
           "discord-light": `pf2e-dorako-ui.text.discord-light`,
           "discord-dark": "pf2e-dorako-ui.text.discord-dark",
+          "custom-light": "pf2e-dorako-ui.text.custom-light",
+          "custom-dark": "pf2e-dorako-ui.text.custom-dark",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
@@ -92,6 +95,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "bg3-blue": "pf2e-dorako-ui.text.bg3-blue",
           "discord-light": `pf2e-dorako-ui.text.discord-light`,
           "discord-dark": "pf2e-dorako-ui.text.discord-dark",
+          "custom-light": "pf2e-dorako-ui.text.custom-light",
+          "custom-dark": "pf2e-dorako-ui.text.custom-dark",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
@@ -112,6 +117,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "bg3-blue": "pf2e-dorako-ui.text.bg3-blue",
           "discord-light": `pf2e-dorako-ui.text.discord-light`,
           "discord-dark": "pf2e-dorako-ui.text.discord-dark",
+          "custom-light": "pf2e-dorako-ui.text.custom-light",
+          "custom-dark": "pf2e-dorako-ui.text.custom-dark",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},

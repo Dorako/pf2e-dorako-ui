@@ -34,7 +34,7 @@
       @include dui-button;
       &.active {
         background-color: var(--color-primary-2);
-        border: var(--app-border-style);
+        border: var(--app-border-width) solid;
         border-color: var(--app-border-color);
       }
     }

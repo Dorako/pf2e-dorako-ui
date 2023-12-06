@@ -13,12 +13,12 @@
   --bg3-text-3: #b0947b;
   --bg3-text-4: #e8dea8;
   --bg3-text-5: #e1d48f;
-  --bg3-accent-text-color: #ff7ba2;
+  --bg3-accent-color-light: #ff7ba2;
   --bg3-accent-color: #ea4a72;
   --bg3-accent-color-dark: #912737;
   --bg3-color-scrollbar-highlight: #fff7d3;
-  --bg3-color-scrollbar: #ecc090;
-  --bg3-color-scrollbar-border: #6c5842;
+  --bg3-scrollbar-thumb-background: #ecc090;
+  --bg3-scrollbar-thumb-border-color: #6c5842;
   --bg3-blue-light: #0c93bd;
   --bg3-blue: #183541;
   --bg3-blue-dark: #1b2a30;
@@ -151,14 +151,14 @@
   --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
     radial-gradient(circle at center, transparent 0, #0c0804ee 100%); // Translucent one
   --window-app-border-color: var(--bg3-middle-brown);
-  --window-app-border-style: 2px solid;
+  --window-app-border-width: 2px solid;
   --window-app-box-shadow: 0px 5px 20px 3px black;
   /* App variables */
   --app-background: #161511aa;
   --app-border-color: var(--bg3-border-color);
-  --app-border-style: 1px solid;
+  --app-border-width: 1px;
   /* Inline variables */
-  --inline-bg: transparent;
+  --inline-background: transparent;
   --inline-border-color: transparent;
   --inline-text-color: var(--bg3-text-4);
   --inline-icon-color: var(--bg3-text-5);
@@ -193,10 +193,11 @@
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
   /* Scrollbar and accent variables */
-  --color-scrollbar: var(--bg3-color-scrollbar);
-  --color-scrollbar-border: var(--bg3-color-scrollbar-border);
+  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
-  --accent-text-color: var(--bg3-accent-text-color);
+  --accent-text-color: var(--bg3-text-1);
+  --accent-color-light: var(--bg3-accent-color-light);
   --accent-color: var(--bg3-accent-color);
   --accent-color-dark: var(--bg3-accent-color-dark);
   /* Other */
@@ -334,7 +335,7 @@
 [data-theme^="bg3"] {
   .roll-note[data-visibility="gm"],
   table.pf2-table {
-    --inline-bg: color-mix(in srgb, var(--bg3-accent-color-dark) 75%, transparent);
+    --inline-background: color-mix(in srgb, var(--bg3-accent-color-dark) 75%, transparent);
     --inline-border-color: var(--bg3-accent-color);
     --inline-text-color: var(--bg3-text-1);
     --inline-icon-color: var(--bg3-text-1);
@@ -359,7 +360,7 @@
 
   &.actor.sheet .crb-style .sheet-body {
     --color-border-medium: var(--brown-1);
-    --color-border-divider: var(--color-scrollbar-border);
+    --color-border-divider: var(--scrollbar-thumb-border-color);
     --text-dark: var(--bg3-text-2);
   }
   &.actor.sheet .inventory .list-row .item-controls {
@@ -761,7 +762,7 @@
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
   --app-border-color: transparent;
-  --app-border-style: 2px solid;
+  --app-border-width: 2px;
   box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   &#players h3 {
     margin: 3px 0px;
@@ -851,7 +852,7 @@
     box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   }
   --app-border-color: transparent;
-  --app-border-style: 2px solid;
+  --app-border-width: 2px;
 
   --color-primary-1: green;
   --color-primary-2: var(--bg3-text-1);
@@ -863,7 +864,7 @@
   }
 
   .item-img.hover {
-    --color-primary-1: var(--bg3-accent-text-color);
+    --color-primary-1: var(--bg3-text-1);
     --color-primary-2: var(--bg3-accent-color-dark);
   }
 
@@ -939,8 +940,8 @@
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-interface-theme="bg3"] {
-  --color-scrollbar: var(--bg3-color-scrollbar);
-  --color-scrollbar-border: var(--bg3-color-scrollbar-border);
+  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
 
   #sidebar-tabs {

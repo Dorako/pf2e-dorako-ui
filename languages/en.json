@@ -31,6 +31,9 @@
       "opaque": "Opaque",
       "alliance": "Opposition dark",
       "gm-vs-players": "GM dark",
+      "custom": "⚠️ Do It Yourself 👷",
+      "custom-light": "⚠️ Do It Yourself (Light) 👷",
+      "custom-dark": "⚠️ Do It Yourself (Dark) 👷",
       "colors": {
         "red": "Red",
         "blue": "Blue",

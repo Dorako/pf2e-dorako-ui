@@ -16,8 +16,8 @@
   --discord-accent-text-color: #8e97fe;
   --discord-accent-color: #5a65ea;
   --discord-accent-color-dark: #4952bd;
-  --discord-color-scrollbar: #1a1b1e;
-  --discord-color-scrollbar-border: transparent;
+  --discord-scrollbar-thumb-background: #1a1b1e;
+  --discord-scrollbar-thumb-border-color: transparent;
   --discord-green: #417e4c;
   --discord-attention: #e6b44e;
   --discord-red: #df4f4a;
@@ -62,7 +62,7 @@
 /* ----------------------------------------- */
 [data-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="light"],
 [data-theme^="discord"][data-color-scheme="light"] {
-  --discord-color-scrollbar: #c5c9cd;
+  --discord-scrollbar-thumb-background: #c5c9cd;
   --app-background: #f2f3f5;
   --window-app-background: #ffffff;
   --input-background: #ebedef;
@@ -76,8 +76,8 @@
   --text-color-3: var(--discord-text-3);
   --text-color-4: var(--discord-text-2);
   --text-color-5: var(--discord-text-1);
-  // --inline-bg: color-mix(in srgb, var(--accent-color) 15%, transparent);
-  --inline-bg: #e6e8fc;
+  // --inline-background: color-mix(in srgb, var(--accent-color) 15%, transparent);
+  --inline-background: #e6e8fc;
   --inline-text-color: var(--accent-color);
   --inline-icon-color: var(--accent-color);
 
@@ -155,7 +155,7 @@
 /* App UI                                    */
 /* ----------------------------------------- */
 [data-theme^="discord"]:not([data-color-scheme]) {
-  --app-border-style: 1px solid;
+  --app-border-width: 1px;
   --app-background: var(--discord-background-3);
   --app-border-color: var(--discord-background-1);
   --button-background: var(--discord-background-4);
@@ -199,16 +199,16 @@
   /* Window app variables */
   --window-app-background: var(--discord-background-3);
   --window-app-border-color: #4b4c4f;
-  --window-app-border-style: 1px solid;
+  --window-app-border-width: 1px;
   --window-app-box-shadow: 0px 5px 20px 3px black, 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
   /* App variables */
   --app-background: #161511aa;
   --app-border-color: var(--discord-border-color);
-  --app-border-style: 0px solid;
+  --app-border-width: 0px;
   --app-text-shadow: none;
   /* Inline variables */
   --inline-box-shadow: none;
-  --inline-bg: #3d426e;
+  --inline-background: #3d426e;
   --inline-border-color: transparent;
   --inline-text-color: #cacdf7;
   --inline-icon-color: #cacdf7;
@@ -240,9 +240,10 @@
   --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
   --fieldset-legend-color: var(--discord-text-4);
   /* Scrollbar and accent variables */
-  --color-scrollbar: var(--discord-color-scrollbar);
-  --color-scrollbar-border: var(--discord-color-scrollbar-border);
-  --accent-text-color: var(--discord-accent-text-color);
+  --scrollbar-thumb-background: var(--discord-color-scrollbar);
+  --scrollbar-thumb-border-color: var(--discord-scrollbar-thumb-border-color);
+  --accent-text-color: var(--discord-text-1);
+  --accent-color-light: var(--discord-accent-text-color);
   --accent-color: var(--discord-accent-color);
   --accent-color-dark: var(--discord-accent-color-dark);
 
@@ -391,7 +392,7 @@
   background: var(--discord-background-2);
   --button-background: var(--discord-background-2);
   --button-hover-background: #35373b;
-  --app-border-style: 1px solid;
+  --app-border-width: 1px;
   --color-text-dark-secondary: rgba(255, 255, 255, 0.66);
   --button-hover-border-color: rgba(122, 122, 122, 0.66);
   --button-border-color: rgba(122, 122, 122, 0.33);
@@ -482,7 +483,7 @@
   background: #ffffff;
   --button-background: #ffffff;
   --button-hover-background: #ebebed;
-  --app-border-style: 1px solid;
+  --app-border-width: 1px;
   --color-text-dark-secondary: rgba(0, 0, 0, 0.66);
   --button-hover-border-color: rgba(122, 122, 122, 0.66);
   --button-border-color: rgba(122, 122, 122, 0.33);
@@ -520,12 +521,12 @@
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-interface-theme^="discord"] {
-  --color-scrollbar: var(--discord-color-scrollbar);
-  --color-scrollbar-border: var(--discord-color-scrollbar-border);
+  --scrollbar-thumb-background: var(--discord-color-scrollbar);
+  --scrollbar-thumb-border-color: var(--discord-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--discord-color-scrollbar-highlight);
   #chat-log ~ * {
     --button-border-color: var(--discord-background-1);
-    --app-border-style: 1px solid;
+    --app-border-width: 1px;
     --button-background: var(--discord-background-3);
   }
 }

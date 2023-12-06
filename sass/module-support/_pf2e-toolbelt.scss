@@ -23,27 +23,7 @@
 
 [data-theme] {
   &.chat-message [data-action="spell-template-clear"] {
-    --button-background: var(--accent-color);
-    --button-border-color: var(--accent-text-color);
-    --button-text-color: var(--color-secondary-5);
-    --button-hover-background: #fda948;
-    --button-hover-border-color: var(--color-primary-2);
-    --button-hover-text-color: #000000;
-    text-shadow: none;
-
-    &.disabled,
-    &:disabled {
-      --button-background: var(--color-secondary-4);
-      --button-hover-background: var(--color-secondary-4);
-      --button-text-color: var(--text-color-5);
-      --button-hover-text-color: var(--text-color-5);
-      --button-hover-border-color: transparent;
-    }
-
-    &:not(.disabled, :disabled):hover {
-      --button-hover-background: var(--accent-text-color);
-      --button-hover-border-color: var(--accent-color);
-    }
+    @include dui-button-bright;
   }
 
   &.chat-message .message-content + .pf2e-toolbelt-target-damage .target-damage-application button {
@@ -53,16 +33,16 @@
     &[data-action="target-shield-block"] {
       &:hover {
         background-color: var(--color-secondary-2);
-        border: var(--app-border-style);
+        border: var(--app-border-width) solid;
         border-color: var(--color-secondary-1);
       }
       &.shield-activated {
         background-color: var(--color-secondary-1);
-        border: var(--app-border-style);
+        border: var(--app-border-width) solid;
         border-color: var(--color-secondary-2);
         &:hover {
           background-color: var(--color-secondary-2);
-          border: var(--app-border-style);
+          border: var(--app-border-width) solid;
           border-color: var(--color-secondary-1);
         }
       }

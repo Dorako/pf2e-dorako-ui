@@ -8,7 +8,7 @@
   &.locked-tooltip.tah-tooltip :is(a.content-link, a.inline-roll),
   &.tah-tooltip :is(a.content-link, a.inline-roll),
   &.active:has(.tah-tooltip-wrapper) :is(a.content-link, a.inline-roll) {
-    background: var(--inline-bg);
+    background: var(--inline-background);
     border: 1px solid var(--inline-border-color);
     color: var(--inline-text-color) !important;
     box-shadow: var(--inline-box-shadow);

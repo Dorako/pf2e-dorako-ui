@@ -30,8 +30,7 @@
 
 @mixin dui-app {
   background: var(--app-background);
-  border: var(--app-border-style);
-  border-color: var(--app-border-color);
+  border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -51,8 +50,7 @@
 @mixin dui-button {
   @include dui-app;
   background: var(--button-background);
-  border: var(--app-border-style);
-  border-color: var(--button-border-color);
+  border: var(--app-border-width) solid var(--button-border-color);
   color: var(--button-text-color);
   box-shadow: var(--box-shadow);
   text-decoration: none;
@@ -62,8 +60,7 @@
   &:not(.disabled, :disabled):hover {
     background: var(--button-hover-background);
     color: var(--button-hover-text-color);
-    border: var(--app-border-style);
-    border-color: var(--button-hover-border-color);
+    border: var(--app-border-width) solid var(--button-hover-border-color);
     box-shadow: var(--box-shadow);
   }
 
@@ -93,11 +90,11 @@
   transition: background 0.1s ease-in-out;
   --button-background: var(--accent-color);
   --button-border-color: var(--accent-color-dark);
-  --button-text-color: var(--button-bright-text-color);
+  --button-text-color: var(--accent-text-color);
   --app-text-shadow: none;
-  --button-hover-background: var(--accent-text-color);
+  --button-hover-background: var(--accent-color-light);
   --button-hover-border-color: var(--accent-color);
-  --button-hover-text-color: var(--button-bright-text-color);
+  --button-hover-text-color: var(--accent-text-color);
 
   &:disabled {
     --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
@@ -124,7 +121,7 @@
 
 @mixin dui-input {
   background: var(--input-background);
-  border: var(--app-border-style);
+  border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
   box-shadow: var(--box-shadow) !important;
@@ -141,7 +138,7 @@
   &:not(:disabled, .disabled, [type="checkbox"]):hover,
   &:focus {
     outline: 1px solid var(--input-focus-outline-color);
-    border: var(--app-border-style);
+    border: var(--app-border-width) solid;
     border-color: var(--input-border-color);
     color: var(--input-focus-text-color);
     box-shadow: var(--box-shadow);
@@ -176,7 +173,7 @@
 @mixin dui-tooltip {
   @include dui-app;
   background: var(--app-background);
-  border: var(--app-border-style) var(--app-border-color);
+  border: var(--app-border-width) solid var(--app-border-color);
   box-shadow: var(--window-app-box-shadow);
   border-radius: var(--border-radius);
   backdrop-filter: blur(5px);

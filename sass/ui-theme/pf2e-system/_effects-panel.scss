@@ -25,7 +25,7 @@
 
     .effect-item > .icon {
       // @include dui-app;
-      border: var(--app-border-style) var(--icon-border-color);
+      border: var(--app-border-width) var(--icon-border-color);
       border-radius: var(--border-radius);
       --box-shadow: 0px 1px 3px 1px black;
       box-shadow: var(--box-shadow);

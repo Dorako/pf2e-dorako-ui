@@ -60,7 +60,7 @@
   &.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-rewards ul li,
   &.window-app.forien-quest-preview .quest-body .quest-info .quest-col-right .quest-tasks ul li {
     @include dui-app;
-    border-color: var(--color-scrollbar-border);
+    border-color: var(--scrollbar-thumb-border-color);
     background: var(--color-primary-3);
   }
 

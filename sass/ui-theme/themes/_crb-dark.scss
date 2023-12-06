@@ -29,7 +29,8 @@
   --color-text-dark-secondary: var(--text-color-5);
   // --color-bg-option: var(--color-secondary-4);
 
-  --accent-text-color: var(--tertiary);
+  --accent-text-color: black;
+  --accent-color-light: var(--tertiary);
   --accent-color: var(--tertiary-dark);
   --accent-color-dark: var(--gold-brown);
 }
@@ -73,7 +74,7 @@
 
   --window-app-background: var(--sheet-dark);
   --app-background: var(--glass-bg);
-  --app-border-style: none;
+  --app-border-width: 0px;
 
   --input-text-color: var(--text-color-3);
   --input-background: var(--glass-bg);

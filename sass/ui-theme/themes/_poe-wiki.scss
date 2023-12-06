@@ -179,16 +179,16 @@
 
   --window-app-background: var(--dark-15);
   --window-app-border-color: var(--brown-4);
-  --window-app-border-style: 1px solid;
+  --window-app-border-width: 1px;
   --app-background: var(--glass-bg);
   --app-border-color: var(--alt);
-  --app-border-style: 1px solid;
-  --color-scrollbar: var(--brown-1);
-  --color-scrollbar-border: var(--brown-2);
+  --app-border-width: 1px;
+  --scrollbar-thumb-background: var(--brown-1);
+  --scrollbar-thumb-border-color: var(--brown-2);
   --box-shadow: 0px 1px 2px black;
   --accent-color: var(--tertiary);
 
-  --inline-bg: transparent;
+  --inline-background: transparent;
   --inline-border-color: transparent;
   --inline-text-color: var(--poe-color-magic);
   --inline-icon-color: var(--poe-color-gem);

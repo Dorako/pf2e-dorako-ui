@@ -2,17 +2,17 @@
 [data-chat-interface-theme^="crb"] #chat-log ~ *,
 [data-theme^="crb"] {
   --icon-border-color: var(--tertiary);
-  --color-scrollbar: var(--tertiary);
-  --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+  --scrollbar-thumb-background: var(--tertiary);
+  --scrollbar-thumb-border-color: color-mix(in srgb, var(--tertiary) 50%, black);
   --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
 
   --window-app-border-color: var(--tertiary);
-  --window-app-border-style: 1px solid;
+  --window-app-border-width: 1px;
   --box-shadow: var(--glassy);
   --accent-color: var(--tertiary);
   --inline-box-shadow: none;
 
-  --inline-bg: #ddd;
+  --inline-background: #ddd;
   --inline-border-color: black;
   --inline-text-color: black;
   --inline-icon-color: var(--color-text-dark-inactive);
@@ -62,7 +62,7 @@
   --button-background: var(--glass-bg-light);
   --app-background: var(--glass-bg);
   --app-border-color: transparent;
-  --app-border-style: none;
+  --app-border-width: 0px;
 
   &#token-hud,
   &#tile-hud {
@@ -97,7 +97,7 @@
   &.sheet.journal-entry .journal-entry-content {
     background-image: var(--sheet);
     background-size: cover;
-    border: var(--window-app-border-style);
+    border: var(--window-app-border-width) solid;
     border-color: var(--window-app-border-color);
     box-shadow: 0px 0px 0px 1px var(--gold-brown);
     border-bottom: unset;
@@ -333,8 +333,8 @@
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-interface-theme^="crb"] {
-  --color-scrollbar: var(--tertiary);
-  --color-scrollbar-border: color-mix(in srgb, var(--tertiary) 50%, black);
+  --scrollbar-thumb-background: var(--tertiary);
+  --scrollbar-thumb-border-color: color-mix(in srgb, var(--tertiary) 50%, black);
   --color-scrollbar-hover: color-mix(in srgb, var(--tertiary) 50%, white);
 }
 

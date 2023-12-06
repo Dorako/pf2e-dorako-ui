@@ -32,6 +32,10 @@ export function lookupThemeAndSchemeForKey(key) {
       return { dorakoUiTheme: "discord-light", colorScheme: "light" };
     case "discord-dark":
       return { dorakoUiTheme: "discord-dark", colorScheme: "dark" };
+    case "custom-light":
+      return { dorakoUiTheme: "custom-light", colorScheme: "light" };
+    case "custom-dark":
+      return { dorakoUiTheme: "custom-dark", colorScheme: "dark" };
     default:
       return "", "";
   }

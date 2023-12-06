@@ -846,7 +846,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
     }
 
     a.folder-name {
-      --app-border-style: 2px solid;
+      --app-border-width: 2px;
     }
 
     &.view a {
@@ -861,7 +861,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 
   &#navigation.background .monks-scene-navigation .scene-list {
     @include dui-app;
-    --app-border-style: 2px solid;
+    --app-border-width: 2px;
     gap: 5px;
   }
 }
