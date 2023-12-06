@@ -2,7 +2,7 @@
 
 - (Custom CSS) Renamed some CSS variables for clarity.
 - (Custom CSS) Check the new [Documentation](https://github.com/Dorako/pf2e-dorako-ui/wiki/Theme-Variables).
-- (Refinement) Made the Foundry 2 chat message theme much more reactive to player color. Rolltype no longer influences background color, but instead colors the rolltype indicator in the header.
+- (Foundry 2) Made the Foundry 2 chat message theme much more reactive to player color. Rolltype no longer influences background color, but instead colors the rolltype indicator in the header.
 - (New) Added new "Do it Yourself" themes. These themes contain Dorako UI's theme framework, require you to supply your own custom CSS. Check the [Wiki](https://github.com/Dorako/pf2e-dorako-ui/wiki) for getting started.
 
 # 3.2.4
