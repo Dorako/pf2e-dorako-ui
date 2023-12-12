@@ -51,20 +51,20 @@ function themeHeader(html, message) {
   }
 }
 
+const headerStyleColors = {
+  none: "none",
+  fallback: "#DAC0FB",
+  blue: "#191F65",
+  green: "#002A17",
+  red: "#540C06",
+}
+
 function getHeaderColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (headerStyle === "tint") {
-    return message?.user?.color ?? "#DAC0FB";
-  } else if (headerStyle === "blue") {
-    return "#191F65";
-  } else if (headerStyle === "red") {
-    return "#540C06";
-  } else if (headerStyle === "green") {
-    return "#002A17";
-  } else if (headerStyle === "none") {
-    return null;
+    return message?.user?.color ?? headerStyleColors.fallback;
   }
-  return "#DAC0FB";
+  return headerStyleColors[headerStyle] ?? headerStyleColors.fallback;
 }
 
 function invertColor(color) {
@@ -72,6 +72,10 @@ function invertColor(color) {
 }
 
 function calcHeaderTextColor(headerColor) {
+  if (headerColor === headerStyleColors.none) {
+    return "dark"
+  }
+
   var r = parseInt(headerColor.substr(1, 2), 16);
   var g = parseInt(headerColor.substr(3, 2), 16);
   var b = parseInt(headerColor.substr(5, 2), 16);
