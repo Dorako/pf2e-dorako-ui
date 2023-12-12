@@ -31,7 +31,11 @@
         "purple": "Fioletowy",
         "black": "Czarny",
         "player": "Kolor gracza"
-      }
+      },
+      "bg3-brown": "Baldur's Gate 3 (Brązowy)",
+      "bg3-blue": "Baldur's Gate 3 (Niebieski)",
+      "discord-light": "Discord (Jasny)",
+      "discord-dark": "Discord (Ciemny)"
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
