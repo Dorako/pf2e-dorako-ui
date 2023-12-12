@@ -9,6 +9,7 @@
   --window-app-border-width: 1px;
   --window-app-border-color: rgb(80, 80, 80);
 
+  --input-box-shadow: none;
   --input-border-color: var(--button-border-color); // intentional
   --input-text-color: black;
   --input-focus-text-color: black;
@@ -42,7 +43,7 @@
   --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
   --button-toggle-hover-background: var(--secondary-light);
 
-  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-background: var(--bg3-scrollbar-thumb-background);
   --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
 

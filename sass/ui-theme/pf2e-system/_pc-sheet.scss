@@ -280,9 +280,9 @@
     input[type="number"] {
       @include dui-input;
     }
-    select:not(.pf-rank, .modular) {
-      @include dui-input;
-    }
+    // select:not(.pf-rank, .modular) {
+    //   @include dui-input;
+    // }
 
     .details-label,
     h1,

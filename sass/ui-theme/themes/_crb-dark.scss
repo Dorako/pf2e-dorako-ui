@@ -187,9 +187,9 @@
   &.chat-message .dice-roll .dice-formula button,
   &.chat-message .dice-roll .dice-total button {
     background: var(--glass-bg-light);
-    --button-bright-text-color: var(--text-color-2);
+    --button-text-color: var(--text-color-2);
     &:hover {
-      --button-bright-text-color: var(--text-color-1);
+      --button-hover-text-color: var(--text-color-1);
       background: var(--glass-bg);
 
     }

@@ -1,3 +1,11 @@
+# 3.3.1
+
+- (Fix) Fixed a chat header color issue (Courtesy of RobertBeilich).
+- (Refinement) Various small tweaks to various themes.
+- (BG3) Background is no longer tinted based on rolltype, instead the rolltype indicator is colored accordingly, and shown on hover for chat-merged messages.
+- (Fix) Fixed an issue where RK chat messages from ITT would look bad on darker themes.
+- (Maintenance) Reshuffled the migration code to the bottom of initialization, so if it breaks (due to conflict with FCS for example) the roundedness setting is still applied.
+
 # 3.3.0
 
 - (Custom CSS) Renamed some CSS variables for clarity.

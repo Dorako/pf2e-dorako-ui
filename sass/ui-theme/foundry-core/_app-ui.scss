@@ -219,6 +219,10 @@
     color: var(--inline-text-color) !important;
     box-shadow: var(--inline-box-shadow);
 
+    [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] {
+      background: none;
+    }
+
     &.broken {
       border: 1px dashed red;
       background: rgba(255, 0, 0, 0.05);
@@ -227,10 +231,18 @@
     &.gmroll {
       background: #e8e8ef;
       border-color: #545469;
+      color: black !important;
+      i {
+        color: var(--color-text-dark-inactive) !important;
+      }
     }
     &.blindroll {
       background: #f5eaf5;
       border-color: #6b476b;
+      color: black !important;
+      i {
+        color: var(--color-text-dark-inactive) !important;
+      }
     }
 
     &::before,
@@ -471,7 +483,7 @@
     box-shadow: var(--window-app-box-shadow);
 
     &.sidebar-popout {
-      border: var(--app-border-width) solid;
+      border: var(--app-border-width) solid var(--window-app-border-color);
       box-shadow: var(--box-shadow);
     }
 

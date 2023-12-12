@@ -293,9 +293,8 @@ nav.damage-log-nav.tabs .item.active {
   box-shadow: none;
   margin: 0px;
   padding: 0px;
-  padding-right: 5px;
 }
-.message.chat-message.dfce-cm-middle .header-meta, .message.chat-message.dfce-cm-bottom .header-meta {
+.message.chat-message.dfce-cm-middle:not(:hover).header-meta, .message.chat-message.dfce-cm-bottom:not(:hover).header-meta {
   display: none;
 }
 .message.chat-message.dfce-cm-middle {
@@ -318,7 +317,7 @@ nav.damage-log-nav.tabs .item.active {
 .dfce-cm-bottom:hover .dorako-header {
   display: block;
   position: absolute;
-  right: 5px;
+  right: 0px;
   top: 3px;
   width: fit-content;
   background: none !important;
@@ -417,7 +416,7 @@ nav.damage-log-nav.tabs .item.active {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -1392,7 +1391,7 @@ button#heartbeat-button {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -1758,7 +1757,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -1865,21 +1864,26 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: 0px 0px 1px 1px inset rgba(255, 255, 255, 0.2);
 }
 
-[data-theme].chat-message.message .pf2e-token-hud .rk {
-  --text-dark: var(--text-color-2);
-  --rarity-common: #e1d8cf;
+[data-theme].chat-message.message .pf2e-token-hud .rk-skills, [data-theme].chat-message.message .pf2e-token-hud .rk {
   --rarity-uncommon: #c45500;
   --rarity-rare: #5362ff;
   --rarity-unique: #e127e1;
-  --color-rarity-common: #e1d8cf;
   --color-rarity-uncommon: #c45500;
   --color-rarity-rare: #5362ff;
   --color-rarity-unique: #e127e1;
-  --color-rank-0: #a6a6a6;
   --color-rank-1: dodgerblue;
   --color-rank-2: #bf4fdb;
   --color-rank-3: #cf931d;
   --color-rank-4: red;
+  font-size: unset;
+  background: repeating-linear-gradient(color-mix(in srgb, var(--color-secondary-3) 20%, transparent) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
+
+[data-theme][data-color-scheme=dark].chat-message.message .pf2e-token-hud .rk-skills, [data-theme][data-color-scheme=dark].chat-message.message .pf2e-token-hud .rk {
+  --text-dark: var(--text-color-2);
+  --rarity-common: #e1d8cf;
+  --color-rarity-common: #e1d8cf;
+  --color-rank-0: #a6a6a6;
   background: repeating-linear-gradient(color-mix(in srgb, var(--color-secondary-3) 20%, transparent) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
 }
 
@@ -1905,7 +1909,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -1945,13 +1949,12 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
-  padding: 1px;
 }
 [data-theme]#pf2e-token-hud .sidebar .sidebar-content .details input:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#pf2e-token-hud .sidebar .sidebar-content .details input:focus {
   outline: 1px solid var(--input-focus-outline-color);
@@ -1986,7 +1989,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -2112,13 +2115,40 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --button-text-color: var(--text-color-5);
 }
 [data-theme]#pf2e-token-hud .inner .group .section input[type=number] {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
   border-radius: 3px;
+}
+[data-theme]#pf2e-token-hud .inner .group .section input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#pf2e-token-hud .inner .group .section input[type=number]:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme]#pf2e-token-hud .inner .group .section input[type=number].disabled, [data-theme]#pf2e-token-hud .inner .group .section input[type=number]:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme]#pf2e-token-hud .inner .group .section input[type=number].disabled::placeholder, [data-theme]#pf2e-token-hud .inner .group .section input[type=number]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme]#pf2e-token-hud .inner .group .section input[type=number]::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme]#pf2e-token-hud .inner .group .section input[type=number][type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
 }
 [data-theme]#pf2e-token-hud .sidebar .sidebar-content .action-icon img {
   filter: invert(1);
@@ -2150,13 +2180,40 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--text-color-2);
 }
 [data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
   margin: unset;
+}
+[data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select.disabled, [data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select.disabled::placeholder, [data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
 }
 [data-theme]#pf2e-token-hud .sidebar.skills .sidebar-content .skill .header .modifier, [data-theme]#pf2e-token-hud .sidebar.skills .sidebar-content .lore .modifier {
   color: var(--color-primary-1);
@@ -2547,7 +2604,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -2623,7 +2680,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -2956,7 +3013,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -3832,6 +3889,24 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--inline-text-color) !important;
   box-shadow: var(--inline-box-shadow);
 }
+[data-chat-interface-theme] #chat-log ~ * a.content-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * a.entity-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * [data-pf2-action] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * a.inline-roll [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] a.content-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] a.entity-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] [data-pf2-action] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] a.inline-check:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] a.inline-roll [data-visibility]:not([data-visibility=all])[data-visibility=gm] {
+  background: none;
+}
 [data-chat-interface-theme] #chat-log ~ * a.content-link.broken,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).broken,
 [data-chat-interface-theme] #chat-log ~ * a.entity-link.broken,
@@ -3869,6 +3944,25 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] a.inline-roll.gmroll {
   background: #e8e8ef;
   border-color: #545469;
+  color: black !important;
+}
+[data-chat-interface-theme] #chat-log ~ * a.content-link.gmroll i,
+[data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).gmroll i,
+[data-chat-interface-theme] #chat-log ~ * a.entity-link.gmroll i,
+[data-chat-interface-theme] #chat-log ~ * [data-pf2-action].gmroll i,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].gmroll i,
+[data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).gmroll i,
+[data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.gmroll i,
+[data-chat-interface-theme] #chat-log ~ * a.inline-roll.gmroll i,
+[data-theme] a.content-link.gmroll i,
+[data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).gmroll i,
+[data-theme] a.entity-link.gmroll i,
+[data-theme] [data-pf2-action].gmroll i,
+[data-theme] span[data-pf2-effect-area].gmroll i,
+[data-theme] a.inline-check:not([data-pf2-traits*=secret]).gmroll i,
+[data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.gmroll i,
+[data-theme] a.inline-roll.gmroll i {
+  color: var(--color-text-dark-inactive) !important;
 }
 [data-chat-interface-theme] #chat-log ~ * a.content-link.blindroll,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll,
@@ -3888,6 +3982,25 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] a.inline-roll.blindroll {
   background: #f5eaf5;
   border-color: #6b476b;
+  color: black !important;
+}
+[data-chat-interface-theme] #chat-log ~ * a.content-link.blindroll i,
+[data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll i,
+[data-chat-interface-theme] #chat-log ~ * a.entity-link.blindroll i,
+[data-chat-interface-theme] #chat-log ~ * [data-pf2-action].blindroll i,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].blindroll i,
+[data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).blindroll i,
+[data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.blindroll i,
+[data-chat-interface-theme] #chat-log ~ * a.inline-roll.blindroll i,
+[data-theme] a.content-link.blindroll i,
+[data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll i,
+[data-theme] a.entity-link.blindroll i,
+[data-theme] [data-pf2-action].blindroll i,
+[data-theme] span[data-pf2-effect-area].blindroll i,
+[data-theme] a.inline-check:not([data-pf2-traits*=secret]).blindroll i,
+[data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.blindroll i,
+[data-theme] a.inline-roll.blindroll i {
+  color: var(--color-text-dark-inactive) !important;
 }
 [data-chat-interface-theme] #chat-log ~ * a.content-link::before,
 [data-chat-interface-theme] #chat-log ~ * a.content-link i,
@@ -4161,7 +4274,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -4331,7 +4444,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--window-app-box-shadow);
 }
 [data-theme].window-app.sidebar-popout {
-  border: var(--app-border-width) solid;
+  border: var(--app-border-width) solid var(--window-app-border-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].window-app .window-header {
@@ -4380,7 +4493,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -4520,7 +4633,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -4656,7 +4769,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -4819,7 +4932,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -5053,7 +5166,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -5088,7 +5201,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -5123,7 +5236,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -5162,7 +5275,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -5709,7 +5822,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -5979,7 +6092,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6206,7 +6319,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6373,7 +6486,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6483,7 +6596,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6579,7 +6692,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6721,7 +6834,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6756,7 +6869,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6792,7 +6905,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6827,7 +6940,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6862,7 +6975,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6897,7 +7010,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6932,7 +7045,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -6967,7 +7080,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -7013,9 +7126,52 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: var(--text-color-3);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
-  background-color: var(--color-primary-1);
-  color: black;
-  text-shadow: unset;
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: var(--accent-text-color);
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.view, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.selected, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+  font-weight: unset;
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.empty, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name, [data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
   gap: 5px;
@@ -7039,7 +7195,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -7405,7 +7561,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -7690,6 +7846,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--color-secondary-1);
 }
 .message[data-theme] .message-content .damage-application button[data-action=shield-block].shield-activated {
+  color: var(--button-hover-text-color);
   background-color: var(--color-secondary-1);
   border: var(--app-border-width) solid;
   border-color: var(--color-secondary-2);
@@ -8066,7 +8223,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8092,41 +8249,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: var(--input-placeholder-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body input[type=number][type=checkbox] {
-  outline: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular) {
-  background: var(--input-background);
-  border: var(--app-border-width) solid;
-  border-color: var(--input-border-color) !important;
-  color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
-  align-items: center;
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  user-select: text;
-  transition: outline-color 0.5s;
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular):not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular):focus {
-  outline: 1px solid var(--input-focus-outline-color);
-  border: var(--app-border-width) solid;
-  border-color: var(--input-border-color);
-  color: var(--input-focus-text-color);
-  box-shadow: var(--box-shadow);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular).disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular):disabled {
-  --input-text-color: var(--text-color-disabled);
-  --input-background: var(--input-disabled-background);
-  --input-border-color: var(--input-disabled-border-color);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular).disabled::placeholder, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular):disabled::placeholder {
-  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular)::placeholder {
-  color: var(--input-placeholder-color);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body select:not(.pf-rank, .modular)[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
@@ -8256,7 +8378,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8291,7 +8413,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8326,7 +8448,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8378,7 +8500,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8413,7 +8535,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8452,7 +8574,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8556,7 +8678,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
   color: var(--input-text-color);
-  box-shadow: var(--box-shadow) !important;
+  box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
   outline: 1px solid transparent;
@@ -8958,10 +9080,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=crb][data-color-scheme=dark].chat-message .dice-roll .dice-formula button, [data-theme^=crb][data-color-scheme=dark].chat-message .dice-roll .dice-total button {
   background: var(--glass-bg-light);
-  --button-bright-text-color: var(--text-color-2);
+  --button-text-color: var(--text-color-2);
 }
 [data-theme^=crb][data-color-scheme=dark].chat-message .dice-roll .dice-formula button:hover, [data-theme^=crb][data-color-scheme=dark].chat-message .dice-roll .dice-total button:hover {
-  --button-bright-text-color: var(--text-color-1);
+  --button-hover-text-color: var(--text-color-1);
   background: var(--glass-bg);
 }
 
@@ -9242,6 +9364,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-border-light-tertiary: var(--discord-green);
   --text-dark: black;
 }
+[data-theme^=discord][data-dorako-ui-scope=limited][data-color-scheme=light] ::-webkit-scrollbar-track,
+[data-theme^=discord][data-color-scheme=light] ::-webkit-scrollbar-track {
+  background: #ebedef;
+}
 [data-theme^=discord][data-dorako-ui-scope=limited][data-color-scheme=light].actor.sheet.character,
 [data-theme^=discord][data-color-scheme=light].actor.sheet.character {
   --text-color-5: var(--discord-text-4);
@@ -9293,10 +9419,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=discord]:not([data-color-scheme]) {
   --app-border-width: 1px;
   --app-background: var(--discord-background-3);
-  --app-border-color: var(--discord-background-1);
+  --app-border-color: var(--discord-background-2);
+  --window-app-border-color: #4b4c4f;
   --button-background: var(--discord-background-4);
   --button-border-color: var(--discord-background-1);
   --button-focus-outline-color: var(--accent-color);
+  --input-box-shadow: none;
+  --input-background: var(--discord-background-1);
+  --input-text-color: var(--discord-text-3);
+  --input-focus-text-color: var(--discord-text-2);
   --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
 }
 
@@ -9315,6 +9446,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-secondary-2: var(--discord-green);
   --color-secondary-3: color-mix(in srgb, var(--discord-green) 90%, black);
   --color-secondary-3-75: var(--color-secondary-3);
+  --color-secondary-4: color-mix(in srgb, var(--discord-green) 50%, black);
   --color-secondary-5-75: #4e5057;
   --text-color-1: var(--discord-text-1);
   --text-color-2: var(--discord-text-2);
@@ -9369,7 +9501,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
   --fieldset-legend-color: var(--discord-text-4);
   /* Scrollbar and accent variables */
-  --scrollbar-thumb-background: var(--discord-color-scrollbar);
+  --scrollbar-thumb-background: #1a1b1e;
   --scrollbar-thumb-border-color: var(--discord-scrollbar-thumb-border-color);
   --accent-text-color: var(--discord-text-1);
   --accent-color-light: var(--discord-accent-text-color);
@@ -9384,6 +9516,11 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-text-color: white !important;
   --button-hover-text-color: white !important;
   --app-text-shadow: none;
+}
+[data-chat-interface-theme^=discord] #sidebar-tabs ::-webkit-scrollbar-track,
+[data-chat-interface-theme^=discord] #chat-log ~ * ::-webkit-scrollbar-track,
+[data-theme^=discord] ::-webkit-scrollbar-track {
+  background: #2b2d31;
 }
 
 /* ----------------------------------------- */
@@ -9485,7 +9622,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* Chat message                              */
 /* ----------------------------------------- */
 [data-theme^=discord].chat-message {
-  background: var(--discord-background-2);
+  background: var(--discord-background-3);
   --button-background: var(--discord-background-2);
   --button-hover-background: #35373b;
   --app-border-width: 1px;
@@ -9995,6 +10132,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --inline-box-shadow: none;
   --inline-text-shadow: 0px 1px 1px black;
   /* Input variables */
+  --input-box-shadow: none;
   --input-border-color: var(--bg3-bg-outer);
   --input-background: color-mix(in srgb, var(--alt) 50%, transparent);
   --input-disabled-background: var(--bg3-background-4);
@@ -10021,7 +10159,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
   /* Scrollbar and accent variables */
-  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-background: var(--bg3-scrollbar-thumb-background);
   --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
   --accent-text-color: var(--bg3-text-1);
@@ -10067,7 +10205,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-chat-interface-theme^=bg3] #chat-log ~ *[data-rarity].window-app,
 [data-theme^=bg3][data-rarity].window-app {
   --top-color: var(--rarity);
-  --accent-color: var(--rarity);
   --window-app-border-color: transparent;
   --window-app-background: var(--bg3-ui-top-background) border-box, var(--bg3-ui-purple-background),
     var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
@@ -10230,21 +10367,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=bg3].window-app.sidebar-popout {
   border: none;
-}
-[data-theme^=bg3].message.chat-message {
-  background: var(--window-app-background);
-  background-position: top;
-  background-size: cover;
-}
-[data-theme^=bg3].message.chat-message.whisper {
-  background: var(--window-app-background);
-  background-color: var(--whisper-bg);
-  background-blend-mode: luminosity;
-}
-[data-theme^=bg3].message.chat-message.whisper.blind {
-  background: var(--window-app-background);
-  background-color: var(--blind-bg);
-  background-blend-mode: luminosity;
 }
 
 /* ----------------------------------------- */
@@ -10427,6 +10549,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-width: 0 0 2px;
   border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
 }
+[data-theme^=bg3].message.chat-message[data-theme^=bg3-blue].dfce-cm-middle, [data-theme^=bg3].message.chat-message[data-theme^=bg3-blue].dfce-cm-bottom {
+  background: var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
+  border-top-width: 1px !important;
+}
 [data-theme^=bg3].message.chat-message.dfce-cm-top {
   border-bottom-width: 1px !important;
 }
@@ -10478,6 +10604,16 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
   color: var(--bg3-text-1);
   text-shadow: 0px 1px 1px black;
+}
+[data-theme^=bg3].message.chat-message .message-timestamp.rolltype.whisper,
+[data-theme^=bg3].message.chat-message .header-meta.rolltype.whisper {
+  background-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 50%, transparent);
+  border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5));
+}
+[data-theme^=bg3].message.chat-message .message-timestamp.rolltype.blind,
+[data-theme^=bg3].message.chat-message .header-meta.rolltype.blind {
+  background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
+  border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5));
 }
 [data-theme^=bg3].message.chat-message .tags .tag.tag_transparent,
 [data-theme^=bg3].message.chat-message .tags .tag option.tag_transparent {
@@ -10686,7 +10822,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-interface-theme=bg3] {
-  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-background: var(--bg3-scrollbar-thumb-background);
   --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
 }
@@ -10730,6 +10866,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --inline-border-color: black;
   --inline-text-color: black;
   --inline-icon-color: var(--color-text-dark-inactive);
+  --input-box-shadow: none;
   --input-border-color: var(--color-text-light-5);
   --input-text-color: var(--color-text-dark-input);
   --input-focus-text-color: var(--color-text-dark-input);
@@ -10893,6 +11030,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background-blend-mode: luminosity;
   background-size: cover;
   border-color: var(--tertiary);
+}
+[data-theme^=crb]#effects-panel .effect-item .effect-info {
+  box-shadow: var(--glassy), var(--window-app-box-shadow);
 }
 [data-theme^=crb]#effects-panel .effect-item > .icon {
   --box-shadow: var(--gold-and-glow);
@@ -11062,6 +11202,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --text-color-5: var(--f2-color-light-5);
   --text-color-disabled: #aaa;
   --icon-border-color: var(--color-primary-1);
+  --input-box-shadow: none;
   --input-background: var(--color-secondary-4);
   --input-border-color: var(--color-secondary-3);
   --input-focus-text-color: var(--text-color-2);
@@ -11097,10 +11238,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --window-app-border-color: var(--color-secondary-4);
   --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-primary-3-10),
     0px 0px 30px 20px var(--color-primary-2-20), 0px 0px 10px 05px var(--color-primary-1-40);
-  --accent-text-color: var(--f2-color-light-1);
-  --accent-color-light: var(--f2-color-warm-1);
-  --accent-color: var(--f2-color-warm-2);
-  --accent-color-dark: var(--f2-color-warm-3);
+  --accent-text-color: black;
+  --accent-color-light: color-mix(in srgb, var(--f2-color-warm-1) 80%, white);
+  --accent-color: var(--f2-color-warm-1);
+  --accent-color-dark: color-mix(in srgb, var(--f2-color-warm-1) 80%, black);
   --inline-background: var(--color-secondary-4);
   --inline-border-color: var(--color-secondary-3);
   --inline-text-color: var(--text-color-2);
@@ -11231,6 +11372,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --window-app-background: rgb(30, 30, 30);
   --window-app-border-width: 1px;
   --window-app-border-color: rgb(80, 80, 80);
+  --input-box-shadow: none;
   --input-border-color: var(--button-border-color);
   --input-text-color: black;
   --input-focus-text-color: black;
@@ -11260,7 +11402,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-toggle-hover-border-color: color-mix(in srgb, var(--secondary) 50%, white 50%);
   --button-toggle-background: color-mix(in srgb, var(--secondary) 50%, black 50%);
   --button-toggle-hover-background: var(--secondary-light);
-  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-background: var(--bg3-scrollbar-thumb-background);
   --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
   /* Inline variables */

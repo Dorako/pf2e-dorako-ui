@@ -94,9 +94,7 @@
   }
 
   &.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
-    background-color: var(--color-primary-1);
-    color: black;
-    text-shadow: unset;
+    @include dui-button-bright;
   }
 
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name,

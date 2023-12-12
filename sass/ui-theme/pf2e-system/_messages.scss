@@ -214,6 +214,7 @@
             border-color: var(--color-secondary-1);
           }
           &.shield-activated {
+            color: var(--button-hover-text-color);
             background-color: var(--color-secondary-1);
             border: var(--app-border-width) solid;
             border-color: var(--color-secondary-2);

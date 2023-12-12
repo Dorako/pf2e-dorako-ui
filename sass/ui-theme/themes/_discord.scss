@@ -8,6 +8,10 @@
   --discord-background-2: #313338;
   --discord-background-3: #2b2d31;
   --discord-background-4: #1e1f22;
+  // --discord-background-1: #272732;
+  // --discord-background-2: #262731;
+  // --discord-background-3: #1c1d27;
+  // --discord-background-4: #121318;
   --discord-text-1: #ffffff;
   --discord-text-2: #dcdee1;
   --discord-text-3: #b6bac0;
@@ -98,6 +102,10 @@
     --text-dark: black;
   }
 
+  ::-webkit-scrollbar-track {
+    background: #ebedef;
+  }
+
   &.actor.sheet.character {
     --text-color-5: var(--discord-text-4);
   }
@@ -157,10 +165,15 @@
 [data-theme^="discord"]:not([data-color-scheme]) {
   --app-border-width: 1px;
   --app-background: var(--discord-background-3);
-  --app-border-color: var(--discord-background-1);
+  --app-border-color: var(--discord-background-2);
+  --window-app-border-color: #4b4c4f;
   --button-background: var(--discord-background-4);
   --button-border-color: var(--discord-background-1);
   --button-focus-outline-color: var(--accent-color);
+  --input-box-shadow: none;
+  --input-background: var(--discord-background-1);
+  --input-text-color: var(--discord-text-3);
+  --input-focus-text-color: var(--discord-text-2);
   --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
 }
 
@@ -185,7 +198,7 @@
   --color-secondary-2: var(--discord-green);
   --color-secondary-3: color-mix(in srgb, var(--discord-green) 90%, black);
   --color-secondary-3-75: var(--color-secondary-3);
-  // --color-secondary-4: #26231f;
+  --color-secondary-4: color-mix(in srgb, var(--discord-green) 50%, black);
   --color-secondary-5-75: #4e5057;
   --text-color-1: var(--discord-text-1);
   --text-color-2: var(--discord-text-2);
@@ -198,11 +211,15 @@
   --icon-border-color: var(--discord-attention);
   /* Window app variables */
   --window-app-background: var(--discord-background-3);
+  // --window-app-background: #313338;
+  // --window-app-background: #1c1d27;
   --window-app-border-color: #4b4c4f;
+  // --window-app-border-color: #373847;
   --window-app-border-width: 1px;
   --window-app-box-shadow: 0px 5px 20px 3px black, 0px 3px 10px 3px rgba(0, 0, 0, 0.5);
   /* App variables */
   --app-background: #161511aa;
+  // --app-background: #121318aa;
   --app-border-color: var(--discord-border-color);
   --app-border-width: 0px;
   --app-text-shadow: none;
@@ -240,7 +257,7 @@
   --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
   --fieldset-legend-color: var(--discord-text-4);
   /* Scrollbar and accent variables */
-  --scrollbar-thumb-background: var(--discord-color-scrollbar);
+  --scrollbar-thumb-background: #1a1b1e;
   --scrollbar-thumb-border-color: var(--discord-scrollbar-thumb-border-color);
   --accent-text-color: var(--discord-text-1);
   --accent-color-light: var(--discord-accent-text-color);
@@ -253,6 +270,10 @@
     --button-text-color: white !important;
     --button-hover-text-color: white !important;
     --app-text-shadow: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2b2d31;
   }
 }
 
@@ -389,7 +410,7 @@
 /* Chat message                              */
 /* ----------------------------------------- */
 [data-theme^="discord"].chat-message {
-  background: var(--discord-background-2);
+  background: var(--discord-background-3);
   --button-background: var(--discord-background-2);
   --button-hover-background: #35373b;
   --app-border-width: 1px;

@@ -17,6 +17,7 @@
   --inline-text-color: black;
   --inline-icon-color: var(--color-text-dark-inactive);
 
+  --input-box-shadow: none;
   --input-border-color: var(--color-text-light-5);
   --input-text-color: var(--color-text-dark-input);
   --input-focus-text-color: var(--color-text-dark-input);
@@ -274,6 +275,10 @@
         border-color: var(--tertiary);
       }
     }
+  }
+
+  &#effects-panel .effect-item .effect-info {
+    box-shadow: var(--glassy), var(--window-app-box-shadow);
   }
 
   &#effects-panel .effect-item > .icon {

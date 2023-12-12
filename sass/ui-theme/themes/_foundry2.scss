@@ -139,6 +139,7 @@
 
   --icon-border-color: var(--color-primary-1);
 
+  --input-box-shadow: none;
   --input-background: var(--color-secondary-4);
   --input-border-color: var(--color-secondary-3);
   --input-focus-text-color: var(--text-color-2);
@@ -182,10 +183,10 @@
   --window-app-box-shadow: 0px 5px 20px 3px black, 0px 0px 50px 30px var(--color-primary-3-10),
     0px 0px 30px 20px var(--color-primary-2-20), 0px 0px 10px 05px var(--color-primary-1-40);
 
-  --accent-text-color: var(--f2-color-light-1);
-  --accent-color-light: var(--f2-color-warm-1);
-  --accent-color: var(--f2-color-warm-2);
-  --accent-color-dark: var(--f2-color-warm-3);
+  --accent-text-color: black;
+  --accent-color-light: color-mix(in srgb, var(--f2-color-warm-1) 80%, white);
+  --accent-color: var(--f2-color-warm-1);
+  --accent-color-dark: color-mix(in srgb, var(--f2-color-warm-1) 80%, black);
 
   --inline-background: var(--color-secondary-4);
   --inline-border-color: var(--color-secondary-3);

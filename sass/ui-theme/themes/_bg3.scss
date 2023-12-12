@@ -165,6 +165,7 @@
   --inline-box-shadow: none;
   --inline-text-shadow: 0px 1px 1px black;
   /* Input variables */
+  --input-box-shadow: none;
   --input-border-color: var(--bg3-bg-outer);
   --input-background: color-mix(in srgb, var(--alt) 50%, transparent);
   --input-disabled-background: var(--bg3-background-4);
@@ -193,7 +194,7 @@
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
   /* Scrollbar and accent variables */
-  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-background: var(--bg3-scrollbar-thumb-background);
   --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
   --accent-text-color: var(--bg3-text-1);
@@ -232,7 +233,6 @@
   &[data-rarity] {
     &.window-app {
       --top-color: var(--rarity);
-      --accent-color: var(--rarity);
       --window-app-border-color: transparent;
       --window-app-background: var(--bg3-ui-top-background) border-box, var(--bg3-ui-purple-background),
         var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
@@ -401,22 +401,6 @@
 
   &.window-app.sidebar-popout {
     border: none;
-  }
-
-  &.message.chat-message {
-    background: var(--window-app-background);
-    background-position: top;
-    background-size: cover;
-    &.whisper {
-      background: var(--window-app-background);
-      background-color: var(--whisper-bg);
-      background-blend-mode: luminosity;
-      &.blind {
-        background: var(--window-app-background);
-        background-color: var(--blind-bg);
-        background-blend-mode: luminosity;
-      }
-    }
   }
 }
 
@@ -652,7 +636,16 @@
       border-width: 0 0 2px;
       border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
     }
+
+    &.dfce-cm-middle,
+    &.dfce-cm-bottom {
+      background: var(--bg3-tooltip-window-background) padding-box,
+        linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+          border-box;
+      border-top-width: 1px !important;
+    }
   }
+
   &.dfce-cm-top {
     border-bottom-width: 1px !important;
   }
@@ -710,6 +703,15 @@
     border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
     color: var(--bg3-text-1);
     text-shadow: 0px 1px 1px black;
+
+    &.rolltype.whisper {
+      background-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 50%, transparent);
+      border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5));
+    }
+    &.rolltype.blind {
+      background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
+      border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5));
+    }
   }
 
   .tags .tag.tag_transparent,
@@ -940,7 +942,7 @@
 /* Chatlog                                   */
 /* ----------------------------------------- */
 [data-chat-interface-theme="bg3"] {
-  --scrollbar-thumb-background: var(--bg3-color-scrollbar);
+  --scrollbar-thumb-background: var(--bg3-scrollbar-thumb-background);
   --scrollbar-thumb-border-color: var(--bg3-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--bg3-color-scrollbar-highlight);
 
