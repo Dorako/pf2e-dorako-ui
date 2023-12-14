@@ -13,25 +13,6 @@
     --text-dark: var(--text-color-2);
   }
 
-  &.actor.sheet .item-image:hover i {
-    background: var(--color-primary-2);
-    text-shadow: 0px 1px 2px black;
-  }
-
-  nav.sheet-tabs {
-    background: unset;
-    box-shadow: unset;
-    display: flex;
-    margin: 2px 2px;
-    a.item,
-    .tab {
-      @include dui-button;
-      padding: 5px 10px;
-      flex: 1;
-      font-family: var(--font-primary);
-    }
-  }
-
   &.actor.npc.sheet form ol.spell-list > li .item-name h4:hover {
     --secondary: var(--accent-color);
   }

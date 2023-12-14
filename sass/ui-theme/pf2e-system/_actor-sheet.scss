@@ -3,6 +3,27 @@
     --contrastive-transparent: rgba(255, 255, 255, 0.2);
   }
 
+  &.actor.sheet .item-image:hover i {
+    color: white;
+    background: var(--color-primary-2);
+    text-shadow: 0px 1px 2px black;
+    border-radius: 3px;
+  }
+
+  nav.sheet-tabs {
+    background: unset;
+    box-shadow: unset;
+    display: flex;
+    margin: 2px 2px;
+    a.item,
+    .tab {
+      @include dui-button;
+      padding: 5px 10px;
+      flex: 1;
+      font-family: var(--font-primary);
+    }
+  }
+
   &.pf2e.actor form input[type="text"],
   &.pf2e.actor form input[type="number"] {
     @include dui-input;

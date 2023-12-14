@@ -1,3 +1,7 @@
+# 3.3.2
+
+- (New) Added full theme support for the new Army sheets.
+
 # 3.3.1
 
 - (Fix) Fixed a chat header color issue (Courtesy of RobertBeilich).

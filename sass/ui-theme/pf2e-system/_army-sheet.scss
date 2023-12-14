@@ -1,0 +1,44 @@
+[data-theme] {
+  &.sheet.army {
+    --color-text-light: var(--text-color-2);
+  }
+  &.sheet.army.window-app .window-header {
+    background: #504c45;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    color: #ffffff !important;
+  }
+  &.sheet.army form {
+    background: unset;
+  }
+
+  &.sheet.army form section.army-body fieldset {
+    border: 1px solid var(--fieldset-border-color) !important;
+    background: var(--fieldset-background-color) !important;
+    border-radius: var(--border-radius);
+    > legend {
+      color: var(--fieldset-legend-color);
+      text-shadow: unset;
+    }
+  }
+
+  &.sheet.army form .army-sidebar header {
+    --primary: var(--color-primary-2);
+  }
+  &.sheet.army form ol.item-list li.item .item-icon {
+    border-radius: 3px;
+    border-color: var(--icon-border-color);
+  }
+}
+
+// [data-theme][data-color-scheme="dark"] {
+//   &.sheet.army form .army-sidebar header {
+//     --primary: var(--color-text-light-1);
+//   }
+// }
+
+// [data-theme][data-color-scheme="light"] {
+//   &.sheet.army form .army-sidebar header {
+//     --primary: var(--color-primary-2);
+//   }
+// }

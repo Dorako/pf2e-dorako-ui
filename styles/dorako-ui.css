@@ -6469,6 +6469,35 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: transparent;
 }
 
+[data-theme].sheet.army {
+  --color-text-light: var(--text-color-2);
+}
+[data-theme].sheet.army.window-app .window-header {
+  background: #504c45;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  color: #ffffff !important;
+}
+[data-theme].sheet.army form {
+  background: unset;
+}
+[data-theme].sheet.army form section.army-body fieldset {
+  border: 1px solid var(--fieldset-border-color) !important;
+  background: var(--fieldset-background-color) !important;
+  border-radius: var(--border-radius);
+}
+[data-theme].sheet.army form section.army-body fieldset > legend {
+  color: var(--fieldset-legend-color);
+  text-shadow: unset;
+}
+[data-theme].sheet.army form .army-sidebar header {
+  --primary: var(--color-primary-2);
+}
+[data-theme].sheet.army form ol.item-list li.item .item-icon {
+  border-radius: 3px;
+  border-color: var(--icon-border-color);
+}
+
 [data-theme].sheet.hazard {
   --color-text-light: var(--text-color-2);
 }
@@ -6769,62 +6798,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --tag-text-color: var(--text-color-4);
   --color-text-dark-input: var(--text-color-3);
   --text-dark: var(--text-color-2);
-}
-[data-theme][data-dorako-ui-scope=limited].actor.sheet .item-image:hover i {
-  background: var(--color-primary-2);
-  text-shadow: 0px 1px 2px black;
-}
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs {
-  background: unset;
-  box-shadow: unset;
-  display: flex;
-  margin: 2px 2px;
-}
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: var(--button-background);
-  border: var(--app-border-width) solid var(--button-border-color);
-  color: var(--button-text-color);
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: var(--app-text-shadow);
-  padding: 5px 10px;
-  flex: 1;
-  font-family: var(--font-primary);
-}
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item:not(.disabled, :disabled):hover,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab:not(.disabled, :disabled):hover {
-  background: var(--button-hover-background);
-  color: var(--button-hover-text-color);
-  border: var(--app-border-width) solid var(--button-hover-border-color);
-  box-shadow: var(--box-shadow);
-}
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.view, [data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.selected, [data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.active,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.view,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.selected,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.active {
-  background: var(--button-hover-background);
-  outline: 1px solid var(--button-focus-outline-color);
-  border-color: var(--button-hover-border-color);
-  color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
-}
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.empty, [data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item.disabled, [data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs a.item:disabled,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.empty,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab.disabled,
-[data-theme][data-dorako-ui-scope=limited] nav.sheet-tabs .tab:disabled {
-  --button-background: var(--button-disabled-background);
-  --button-hover-background: var(--button-disabled-background);
-  --button-border-color: var(--button-disabled-border-color);
-  --button-text-color: var(--text-color-5);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li .item-name h4:hover {
   --secondary: var(--accent-color);
@@ -7189,6 +7162,64 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 
 [data-theme].pf2e.actor {
   --contrastive-transparent: rgba(255, 255, 255, 0.2);
+}
+[data-theme].actor.sheet .item-image:hover i {
+  color: white;
+  background: var(--color-primary-2);
+  text-shadow: 0px 1px 2px black;
+  border-radius: 3px;
+}
+[data-theme] nav.sheet-tabs {
+  background: unset;
+  box-shadow: unset;
+  display: flex;
+  margin: 2px 2px;
+}
+[data-theme] nav.sheet-tabs a.item,
+[data-theme] nav.sheet-tabs .tab {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  padding: 5px 10px;
+  flex: 1;
+  font-family: var(--font-primary);
+}
+[data-theme] nav.sheet-tabs a.item:not(.disabled, :disabled):hover,
+[data-theme] nav.sheet-tabs .tab:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme] nav.sheet-tabs a.item.view, [data-theme] nav.sheet-tabs a.item.selected, [data-theme] nav.sheet-tabs a.item.active,
+[data-theme] nav.sheet-tabs .tab.view,
+[data-theme] nav.sheet-tabs .tab.selected,
+[data-theme] nav.sheet-tabs .tab.active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none;
+  font-weight: unset;
+}
+[data-theme] nav.sheet-tabs a.item.empty, [data-theme] nav.sheet-tabs a.item.disabled, [data-theme] nav.sheet-tabs a.item:disabled,
+[data-theme] nav.sheet-tabs .tab.empty,
+[data-theme] nav.sheet-tabs .tab.disabled,
+[data-theme] nav.sheet-tabs .tab:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
 }
 [data-theme].pf2e.actor form input[type=text], [data-theme].pf2e.actor form input[type=number] {
   background: var(--input-background);
@@ -10108,6 +10139,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-chat-interface-theme^=bg3] #chat-log ~ *,
 [data-theme^=bg3] {
   /* Base colors */
+  --color-primary-1: var(--bg3-accent-color-light);
+  --color-primary-2: var(--bg3-accent-color);
   --color-primary-3: var(--bg3-border-outer);
   --color-primary-4: var(--bg3-blue-dark);
   /* Misc variables */

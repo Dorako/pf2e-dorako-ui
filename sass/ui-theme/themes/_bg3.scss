@@ -132,8 +132,8 @@
 [data-chat-interface-theme^="bg3"] #chat-log ~ *,
 [data-theme^="bg3"] {
   /* Base colors */
-  // --color-primary-1: var(--tertiary);
-  // --color-primary-2: #ba4521;
+  --color-primary-1: var(--bg3-accent-color-light);
+  --color-primary-2: var(--bg3-accent-color);
   --color-primary-3: var(--bg3-border-outer);
   // --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent);
   // --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent);
