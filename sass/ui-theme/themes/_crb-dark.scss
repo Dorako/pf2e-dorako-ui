@@ -43,6 +43,7 @@
   --color-primary-2: var(--tertiary-dark);
   --color-secondary-5-75: rgba(0, 0, 0, 0.5);
   --color-border-light-2: black;
+  --button-hover-text-color: black;
 }
 
 /* ----------------------------------------- */
@@ -78,6 +79,7 @@
 
   --input-text-color: var(--text-color-3);
   --input-background: var(--glass-bg);
+  --input-border-color: transparent;
   --input-focus-text-color: var(--text-color-2);
   --input-placeholder-color: var(--text-color-5);
   --input-disabled-background: black;

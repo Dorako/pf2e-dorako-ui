@@ -212,8 +212,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] #dorako-rt-buttons button.empty, [data-theme] #dorako-rt-buttons button.disabled, [data-theme] #dorako-rt-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -252,8 +252,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] #dorako-nonrt-buttons button.empty, [data-theme] #dorako-nonrt-buttons button.disabled, [data-theme] #dorako-nonrt-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -377,8 +377,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .dice-tray button.empty, [data-theme] .dice-tray button.disabled, [data-theme] .dice-tray button:disabled {
   --button-background: var(--button-disabled-background);
@@ -508,8 +508,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .implement-button-region button.empty, [data-theme] .implement-button-region button.disabled, [data-theme] .implement-button-region button:disabled {
   --button-background: var(--button-disabled-background);
@@ -551,8 +551,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .actions-panel > fieldset button.empty, [data-theme] .actions-panel > fieldset button.disabled, [data-theme] .actions-panel > fieldset button:disabled {
   --button-background: var(--button-disabled-background);
@@ -665,8 +665,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.empty, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.disabled, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash:disabled, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.empty, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.disabled, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos:disabled, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.empty, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.disabled, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver:disabled {
   --button-background: var(--button-disabled-background);
@@ -814,8 +814,8 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .item-piles-player-list-trade-button.empty, [data-theme] .item-piles-player-list-trade-button.disabled, [data-theme] .item-piles-player-list-trade-button:disabled {
   --button-background: var(--button-disabled-background);
@@ -975,8 +975,8 @@ button#heartbeat-button {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#module-management .package-list .package .package-overview .tag.expand.empty, [data-theme]#module-management .package-list .package .package-overview .tag.expand.disabled, [data-theme]#module-management .package-list .package .package-overview .tag.expand:disabled {
   --button-background: var(--button-disabled-background);
@@ -1365,8 +1365,8 @@ button#heartbeat-button {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#requestsavingthrow .request-grid > div.empty, [data-theme]#requestsavingthrow .request-grid > div.disabled, [data-theme]#requestsavingthrow .request-grid > div:disabled {
   --button-background: var(--button-disabled-background);
@@ -1537,8 +1537,8 @@ body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .ef
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.empty, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.disabled, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control:disabled {
   --button-background: var(--button-disabled-background);
@@ -1651,8 +1651,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#navigation .monks-scene-navigation .scene-list > li a.empty, [data-theme]#navigation .monks-scene-navigation .scene-list > li a.disabled, [data-theme]#navigation .monks-scene-navigation .scene-list > li a:disabled {
   --button-background: var(--button-disabled-background);
@@ -1692,8 +1692,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.empty, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.disabled, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:disabled {
   --button-background: var(--button-disabled-background);
@@ -1813,8 +1813,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].monks-active-tiles.sheet .items-list .item-controls a.empty, [data-theme].monks-active-tiles.sheet .items-list .item-controls a.disabled, [data-theme].monks-active-tiles.sheet .items-list .item-controls a:disabled {
   --button-background: var(--button-disabled-background);
@@ -2105,8 +2105,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#pf2e-token-hud .popup .item-buttons button.empty, [data-theme]#pf2e-token-hud .popup .item-buttons button.disabled, [data-theme]#pf2e-token-hud .popup .item-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -2255,8 +2255,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][id^=pf2e-perception-] .window-content .buttons button.empty, [data-theme][id^=pf2e-perception-] .window-content .buttons button.disabled, [data-theme][id^=pf2e-perception-] .window-content .buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -2374,6 +2374,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-dorako-ui-scope=limited].sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] ol.actions-list.heroActions-list .action .item-controls > button:hover {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0 0 2px rgba(0, 0, 0, 0.4);
 }
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade],
 [data-dorako-ui-scope=limited] .heroActions-list > button {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -2390,21 +2391,28 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   text-shadow: var(--app-text-shadow);
   margin-top: 5px;
 }
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:not(.disabled, :disabled):hover,
 [data-dorako-ui-scope=limited] .heroActions-list > button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
   color: var(--button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-scope=limited] .heroActions-list > button.view, [data-dorako-ui-scope=limited] .heroActions-list > button.selected, [data-dorako-ui-scope=limited] .heroActions-list > button.active {
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].view, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].selected, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].active,
+[data-dorako-ui-scope=limited] .heroActions-list > button.view,
+[data-dorako-ui-scope=limited] .heroActions-list > button.selected,
+[data-dorako-ui-scope=limited] .heroActions-list > button.active {
   background: var(--button-hover-background);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
-[data-dorako-ui-scope=limited] .heroActions-list > button.empty, [data-dorako-ui-scope=limited] .heroActions-list > button.disabled, [data-dorako-ui-scope=limited] .heroActions-list > button:disabled {
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].empty, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].disabled, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:disabled,
+[data-dorako-ui-scope=limited] .heroActions-list > button.empty,
+[data-dorako-ui-scope=limited] .heroActions-list > button.disabled,
+[data-dorako-ui-scope=limited] .heroActions-list > button:disabled {
   --button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --button-border-color: var(--button-disabled-border-color);
@@ -2445,8 +2453,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].chat-message [data-action=spell-template-clear].empty, [data-theme].chat-message [data-action=spell-template-clear].disabled, [data-theme].chat-message [data-action=spell-template-clear]:disabled {
   --button-background: var(--button-disabled-background);
@@ -2519,8 +2527,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] #fc-container button.empty, [data-theme] #fc-container button.disabled, [data-theme] #fc-container button:disabled {
   --button-background: var(--button-disabled-background);
@@ -2559,8 +2567,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] #initiative-delay.empty, [data-theme] #initiative-delay.disabled, [data-theme] #initiative-delay:disabled,
 [data-theme] #initiative-return.empty,
@@ -2824,8 +2832,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#smalltime-app .arrow.empty, [data-theme]#smalltime-app .arrow.disabled, [data-theme]#smalltime-app .arrow:disabled, [data-theme]#smalltime-app .arrow-left.empty, [data-theme]#smalltime-app .arrow-left.disabled, [data-theme]#smalltime-app .arrow-left:disabled, [data-theme]#smalltime-app.arrow-right.empty, [data-theme]#smalltime-app.arrow-right.disabled, [data-theme]#smalltime-app.arrow-right:disabled {
   --button-background: var(--button-disabled-background);
@@ -2960,8 +2968,8 @@ body.system-swade {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .pf2e-td.small-button.target-button.empty, [data-theme] .pf2e-td.small-button.target-button.disabled, [data-theme] .pf2e-td.small-button.target-button:disabled {
   --button-background: var(--button-disabled-background);
@@ -3117,8 +3125,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#token-action-hud .tah-action-button.empty, [data-theme]#token-action-hud .tah-action-button.disabled, [data-theme]#token-action-hud .tah-action-button:disabled,
 [data-theme]#token-action-hud .tah-action-button:focus.empty,
@@ -3198,8 +3206,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#token-action-hud .tah-action-button.toggle.empty, [data-theme]#token-action-hud .tah-action-button.toggle.disabled, [data-theme]#token-action-hud .tah-action-button.toggle:disabled {
   --button-background: var(--button-disabled-background);
@@ -3317,8 +3325,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] #tokenizer div.view-layer-control .section button.empty, [data-theme] #tokenizer div.view-layer-control .section button.disabled, [data-theme] #tokenizer div.view-layer-control .section button:disabled,
 [data-theme] #tokenizer .section button.empty,
@@ -3356,8 +3364,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] #tokenizer button.menu-button.empty, [data-theme] #tokenizer button.menu-button.disabled, [data-theme] #tokenizer button.menu-button:disabled {
   --button-background: var(--button-disabled-background);
@@ -3398,8 +3406,8 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].tokenizer .title .box-button.empty, [data-theme].tokenizer .title .box-button.disabled, [data-theme].tokenizer .title .box-button:disabled {
   --button-background: var(--button-disabled-background);
@@ -3466,8 +3474,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .roll-app-nav button.empty, [data-theme] .roll-app-nav button.disabled, [data-theme] .roll-app-nav button:disabled {
   --button-background: var(--button-disabled-background);
@@ -3501,8 +3509,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .roll-app .roll-app-table tbody button.empty, [data-theme] .roll-app .roll-app-table tbody button.disabled, [data-theme] .roll-app .roll-app-table tbody button:disabled {
   --button-background: var(--button-disabled-background);
@@ -3653,6 +3661,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   --color-border-medium: var(--input-border-color);
 }
 
+[data-theme][data-color-scheme=dark].chat-message .message-content + .pf2e-toolbelt-target-damage, [data-theme][data-color-scheme=dark].chat-message .message-content + .pf2e-toolbelt-target-spell {
+  --criticalSuccess: var(--degree-success-critical);
+  --success: var(--degree-success);
+  --failure: var(--degree-failure);
+  --criticalFailure: var(--degree-failure-critical);
+}
+
 [data-color-scheme=light] {
   --rarity-common: #323232;
   --rarity-uncommon: #98513d;
@@ -3671,6 +3686,10 @@ html .xdy-pf2e-workbench-rarity-unique {
   /* Value adjustments (e.g. weak/elite) */
   --adjusted-higher: #009988;
   --adjusted-lower: #cc3311;
+}
+[data-color-scheme=light].filepicker .favorites .paths {
+  --color-text-dark-primary: white;
+  --button-text-color: white;
 }
 
 /* ----------------------------------------- */
@@ -3782,8 +3801,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].empty, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].disabled, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply]:disabled,
 [data-chat-interface-theme] #chat-log ~ * button[data-action=accept].empty,
@@ -4213,8 +4232,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=unlimited] a.button.empty, [data-theme][data-dorako-ui-scope=unlimited] a.button.disabled, [data-theme][data-dorako-ui-scope=unlimited] a.button:disabled,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty,
@@ -4254,8 +4273,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.empty, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.disabled, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -4389,8 +4408,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.empty, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.disabled, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default:disabled {
   --button-background: var(--button-disabled-background);
@@ -4465,6 +4484,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-right-color: var(--color-primary-3);
   bottom: -1px;
   right: -1px;
+  z-index: 2;
 }
 
 /* ----------------------------------------- */
@@ -4526,8 +4546,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme].filepicker .favorites .paths {
   box-shadow: unset;
-  border: 1px solid var(--color-secondary-3);
-  background: var(--color-secondary-5-50);
+  border: 1px solid var(--input-border-color);
+  background: var(--input-background);
 }
 [data-theme].filepicker .favorites .paths .path {
   background: var(--app-background);
@@ -4562,8 +4582,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].filepicker .favorites .paths .path.empty, [data-theme].filepicker .favorites .paths .path.disabled, [data-theme].filepicker .favorites .paths .path:disabled {
   --button-background: var(--button-disabled-background);
@@ -4613,8 +4633,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.empty, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.disabled, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab:disabled {
   --button-background: var(--button-disabled-background);
@@ -4694,8 +4714,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .directory .action-buttons button.empty, [data-theme] .directory .action-buttons button.disabled, [data-theme] .directory .action-buttons button:disabled,
 [data-theme] .settings-sidebar button.empty,
@@ -4744,8 +4764,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].window-app .tabs .item.empty, [data-theme].window-app .tabs .item.disabled, [data-theme].window-app .tabs .item:disabled {
   --button-background: var(--button-disabled-background);
@@ -4827,8 +4847,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .editor-edit.empty, [data-theme] .editor-edit.disabled, [data-theme] .editor-edit:disabled {
   --button-background: var(--button-disabled-background);
@@ -4998,8 +5018,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#generate-check-prompt nav h4 a.empty, [data-theme]#generate-check-prompt nav h4 a.disabled, [data-theme]#generate-check-prompt nav h4 a:disabled {
   --button-background: var(--button-disabled-background);
@@ -5098,8 +5118,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.empty, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:disabled {
   --button-background: var(--button-disabled-background);
@@ -5147,8 +5167,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.empty, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --button-background: var(--button-disabled-background);
@@ -5374,8 +5394,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.empty, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.disabled, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a:disabled {
   --button-background: var(--button-disabled-background);
@@ -5413,8 +5433,8 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.empty, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.disabled, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a:disabled {
   --button-background: var(--button-disabled-background);
@@ -5548,8 +5568,8 @@ nav#controls[data-theme] ol.control-tools > li.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 nav#controls[data-theme] ol.control-tools li.control-tool.empty, nav#controls[data-theme] ol.control-tools li.control-tool.disabled, nav#controls[data-theme] ol.control-tools li.control-tool:disabled,
 nav#controls[data-theme] ol.control-tools > li.empty,
@@ -5605,8 +5625,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle.active {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 nav#controls[data-theme] ol.control-tools li.control-tool.toggle.empty, nav#controls[data-theme] ol.control-tools li.control-tool.toggle.disabled, nav#controls[data-theme] ol.control-tools li.control-tool.toggle:disabled,
 nav#controls[data-theme] ol.control-tools > li.toggle.empty,
@@ -5759,8 +5779,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 #navigation[data-theme] ol#scene-list li.nav-item.empty, #navigation[data-theme] ol#scene-list li.nav-item.disabled, #navigation[data-theme] ol#scene-list li.nav-item:disabled {
   --button-background: var(--button-disabled-background);
@@ -5958,8 +5978,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .control-icon.empty, [data-theme] .control-icon.disabled, [data-theme] .control-icon:disabled {
   --button-background: var(--button-disabled-background);
@@ -6005,8 +6025,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .control-icon[data-action=visibility].empty, [data-theme] .control-icon[data-action=visibility].disabled, [data-theme] .control-icon[data-action=visibility]:disabled, [data-theme] .control-icon[data-action=effects].empty, [data-theme] .control-icon[data-action=effects].disabled, [data-theme] .control-icon[data-action=effects]:disabled, [data-theme] .control-icon[data-action=combat].empty, [data-theme] .control-icon[data-action=combat].disabled, [data-theme] .control-icon[data-action=combat]:disabled, [data-theme] .control-icon[data-action=locked].empty, [data-theme] .control-icon[data-action=locked].disabled, [data-theme] .control-icon[data-action=locked]:disabled, [data-theme] .control-icon[data-action=target].empty, [data-theme] .control-icon[data-action=target].disabled, [data-theme] .control-icon[data-action=target]:disabled, [data-theme] .control-icon[data-action=active].empty, [data-theme] .control-icon[data-action=active].disabled, [data-theme] .control-icon[data-action=active]:disabled, [data-theme] .control-icon[data-action=mystify].empty, [data-theme] .control-icon[data-action=mystify].disabled, [data-theme] .control-icon[data-action=mystify]:disabled {
   --button-background: var(--button-disabled-background);
@@ -6078,8 +6098,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.empty, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.disabled, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button:disabled {
   --button-background: var(--button-disabled-background);
@@ -6163,8 +6183,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.empty, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.disabled, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -6256,8 +6276,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-chat-interface-theme] #chat-log ~ * button.empty, [data-chat-interface-theme] #chat-log ~ * button.disabled, [data-chat-interface-theme] #chat-log ~ * button:disabled {
   --button-background: var(--button-disabled-background);
@@ -6297,8 +6317,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.empty, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.disabled, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -6382,8 +6402,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-chat-interface-theme] #sidebar-tabs > .item.active.empty, [data-chat-interface-theme] #sidebar-tabs > .item.active.disabled, [data-chat-interface-theme] #sidebar-tabs > .item.active:disabled {
   --button-background: var(--button-disabled-background);
@@ -6418,8 +6438,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].filepicker .display-modes a.empty, [data-theme].filepicker .display-modes a.disabled, [data-theme].filepicker .display-modes a:disabled {
   --button-background: var(--button-disabled-background);
@@ -6454,8 +6474,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].filepicker .private button.privacy.empty, [data-theme].filepicker .private button.privacy.disabled, [data-theme].filepicker .private button.privacy:disabled {
   --button-background: var(--button-disabled-background);
@@ -6685,8 +6705,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].sheet.familiar .skills-content .skills-list .skill-name.empty, [data-theme].sheet.familiar .skills-content .skills-list .skill-name.disabled, [data-theme].sheet.familiar .skills-content .skills-list .skill-name:disabled {
   --button-background: var(--button-disabled-background);
@@ -6777,8 +6797,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.empty, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.disabled, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:disabled {
   --button-background: var(--button-disabled-background);
@@ -7132,8 +7152,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.empty, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:disabled {
   --button-background: var(--button-disabled-background);
@@ -7174,7 +7194,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: unset;
   display: flex;
   margin: 2px 2px;
+  border: none;
 }
+[data-theme] nav.sheet-tabs .tabs {
+  gap: 4px;
+}
+[data-theme] nav.sheet-tabs .list-row,
 [data-theme] nav.sheet-tabs a.item,
 [data-theme] nav.sheet-tabs .tab {
   background: var(--app-background);
@@ -7194,6 +7219,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   flex: 1;
   font-family: var(--font-primary);
 }
+[data-theme] nav.sheet-tabs .list-row:not(.disabled, :disabled):hover,
 [data-theme] nav.sheet-tabs a.item:not(.disabled, :disabled):hover,
 [data-theme] nav.sheet-tabs .tab:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
@@ -7201,7 +7227,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] nav.sheet-tabs a.item.view, [data-theme] nav.sheet-tabs a.item.selected, [data-theme] nav.sheet-tabs a.item.active,
+[data-theme] nav.sheet-tabs .list-row.view, [data-theme] nav.sheet-tabs .list-row.selected, [data-theme] nav.sheet-tabs .list-row.active,
+[data-theme] nav.sheet-tabs a.item.view,
+[data-theme] nav.sheet-tabs a.item.selected,
+[data-theme] nav.sheet-tabs a.item.active,
 [data-theme] nav.sheet-tabs .tab.view,
 [data-theme] nav.sheet-tabs .tab.selected,
 [data-theme] nav.sheet-tabs .tab.active {
@@ -7209,10 +7238,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
-[data-theme] nav.sheet-tabs a.item.empty, [data-theme] nav.sheet-tabs a.item.disabled, [data-theme] nav.sheet-tabs a.item:disabled,
+[data-theme] nav.sheet-tabs .list-row.empty, [data-theme] nav.sheet-tabs .list-row.disabled, [data-theme] nav.sheet-tabs .list-row:disabled,
+[data-theme] nav.sheet-tabs a.item.empty,
+[data-theme] nav.sheet-tabs a.item.disabled,
+[data-theme] nav.sheet-tabs a.item:disabled,
 [data-theme] nav.sheet-tabs .tab.empty,
 [data-theme] nav.sheet-tabs .tab.disabled,
 [data-theme] nav.sheet-tabs .tab:disabled {
@@ -7220,6 +7252,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-background: var(--button-disabled-background);
   --button-border-color: var(--button-disabled-border-color);
   --button-text-color: var(--text-color-5);
+}
+[data-theme].pf2e.item.sheet form > nav > .tabs > a:last-of-type {
+  padding: 5px 10px;
 }
 [data-theme].pf2e.actor form input[type=text], [data-theme].pf2e.actor form input[type=number] {
   background: var(--input-background);
@@ -7255,44 +7290,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
-}
-[data-theme].sheet nav.sheet-tabs {
-  border: none;
-}
-[data-theme].sheet nav.sheet-tabs .item {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: var(--button-background);
-  border: var(--app-border-width) solid var(--button-border-color);
-  color: var(--button-text-color);
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: var(--app-text-shadow);
-}
-[data-theme].sheet nav.sheet-tabs .item:not(.disabled, :disabled):hover {
-  background: var(--button-hover-background);
-  color: var(--button-hover-text-color);
-  border: var(--app-border-width) solid var(--button-hover-border-color);
-  box-shadow: var(--box-shadow);
-}
-[data-theme].sheet nav.sheet-tabs .item.view, [data-theme].sheet nav.sheet-tabs .item.selected, [data-theme].sheet nav.sheet-tabs .item.active {
-  background: var(--button-hover-background);
-  outline: 1px solid var(--button-focus-outline-color);
-  border-color: var(--button-hover-border-color);
-  color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
-}
-[data-theme].sheet nav.sheet-tabs .item.empty, [data-theme].sheet nav.sheet-tabs .item.disabled, [data-theme].sheet nav.sheet-tabs .item:disabled {
-  --button-background: var(--button-disabled-background);
-  --button-hover-background: var(--button-disabled-background);
-  --button-border-color: var(--button-disabled-border-color);
-  --button-text-color: var(--text-color-5);
 }
 [data-theme] .tags.paizo-style .tag.rarity.common,
 [data-theme] .tags.paizo-style .tag.rarity[value=common],
@@ -7350,8 +7347,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme] .currency li > button.empty, [data-theme] .currency li > button.disabled, [data-theme] .currency li > button:disabled,
 [data-dorako-ui-scope=limited] .currency li > button.empty,
@@ -7437,8 +7434,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.empty, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.disabled, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a:disabled,
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.empty,
@@ -7501,8 +7498,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.empty, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.disabled, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button:disabled {
   --button-background: var(--button-disabled-background);
@@ -7561,8 +7558,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.empty, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.disabled, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -7648,8 +7645,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.empty, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.disabled, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button:disabled {
   --button-background: var(--button-disabled-background);
@@ -7764,8 +7761,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 .chat-message[data-theme] .dice-roll .dice-formula button.empty, .chat-message[data-theme] .dice-roll .dice-formula button.disabled, .chat-message[data-theme] .dice-roll .dice-formula button:disabled,
 .chat-message[data-theme] .dice-roll .dice-total button.empty,
@@ -7989,8 +7986,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme].chat-message .message-content .damage-taken button.revert-damage.empty, [data-theme].chat-message .message-content .damage-taken button.revert-damage.disabled, [data-theme].chat-message .message-content .damage-taken button.revert-damage:disabled {
   --button-background: var(--button-disabled-background);
@@ -8284,6 +8281,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: unset !important;
   box-shadow: unset !important;
 }
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body section.major > header,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .details-label,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body h1,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body h2,
@@ -8327,8 +8325,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting:disabled {
   --button-background: var(--button-disabled-background);
@@ -8382,8 +8380,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a:disabled,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.empty,
@@ -8661,8 +8659,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:disabled {
   --button-background: var(--button-disabled-background);
@@ -8797,8 +8795,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--button-hover-text-color);
-  text-decoration: none;
-  font-weight: unset;
+  text-decoration: none !important;
+  font-weight: unset !important;
 }
 [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.empty, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.disabled, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button:disabled, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.empty, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.disabled, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button:disabled {
   --button-background: var(--button-disabled-background);
@@ -8999,6 +8997,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-primary-2: var(--tertiary-dark);
   --color-secondary-5-75: rgba(0, 0, 0, 0.5);
   --color-border-light-2: black;
+  --button-hover-text-color: black;
 }
 
 /* ----------------------------------------- */
@@ -9029,6 +9028,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --app-border-width: 0px;
   --input-text-color: var(--text-color-3);
   --input-background: var(--glass-bg);
+  --input-border-color: transparent;
   --input-focus-text-color: var(--text-color-2);
   --input-placeholder-color: var(--text-color-5);
   --input-disabled-background: black;
@@ -11503,6 +11503,199 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-dorako-ui-scope=navigation][data-theme=opaque] .scene.gm.active:not(.view) {
   --button-toggle-focus-outline-color: transparent;
+}
+
+:root {
+  --wotr-red-letter: #612e34;
+  --wotr-paper-inner: #fbf9f400;
+  --wotr-paper-outer: #8d8572;
+  --wotr-purple-bg: #5a475a;
+  --wotr-purple-border: #393748;
+  --wotr-blue-bg: #adafb1;
+  --wotr-yellow-bg: #e2d4b8;
+  --wotr-image-border: #343745;
+  --wotr-icon-orange: #8b4224;
+  --wotr-icon-purple: #58505e;
+  --wotr-icon-yellow: #7e5e3e;
+  --wotr-text-dark-blue: #333544;
+  --wotr-text-dark-brown: #3c3834;
+  --wotr-text-orange: #7e4a34;
+  --wotr-text-blue: #505b70;
+  --wotr-text-pale-purple: #4f4e62;
+  --wotr-text-detail: #625f56;
+  --wotr-button-text-disabled: #403a39;
+  --wotr-button-text: #a58975;
+  --wotr-button-background: #180d0f;
+  --wotr-button-active-bg: #4d2b46;
+  --wotr-button-active-text: #d3cace;
+  --wotr-alignment-good-bg: #e2e6ee;
+  --wotr-alignment-good-text: #535f74;
+  --wotr-alignment-neutral-bg: #d5d1c8;
+  --wotr-alignment-neutral-text: #575b5d;
+  --wotr-alignment-evil-bg: #d9ada4;
+  --wotr-alignment-evil-text: #7e4f40;
+  --wotr-experience: #e4dca4;
+  --wotr-health: #75e358;
+  --wotr-green-bg: #51805c;
+  --wotr-green-inner: #cbe9cb;
+  --wotr-brown-bg: #7a4c3e;
+  --wotr-brown-inner: #efc4b8;
+  --wotr-yellow-bg: #827d4b;
+  --wotr-yellow-inner: #f8f3cd;
+}
+
+[data-chat-interface-theme^=wotr] #sidebar-tabs,
+[data-chat-interface-theme^=wotr] #chat-log ~ *,
+[data-theme^=wotr] {
+  --color-border-highlight: transparent;
+  --color-border-dark-3: transparent;
+}
+
+[data-chat-interface-theme^=wotr] #sidebar-tabs,
+[data-chat-interface-theme^=wotr] #chat-log ~ *,
+[data-theme^=wotr] {
+  --icon-border-color: var(--wotr-image-border);
+  --scrollbar-thumb-background: var(--wotr-purple-bg);
+  --scrollbar-thumb-border-color: var(--wotr-purple-border);
+  --color-scrollbar-hover: color-mix(in srgb, var(--wotr-purple-bg) 50%, white);
+  --window-app-background: radial-gradient(
+      circle at top center,
+      #fbf9f444 0%,
+      #fbf9f444 40%,
+      #a8a29544 60%,
+      #a8a295 90%,
+      #8d8572 100%
+    ),
+    var(--sheet-light);
+  --window-app-box-shadow: 0px 4px 30px 8px black;
+  --window-app-border-color: transparent;
+  --window-app-border-width: 0px;
+  --box-shadow: none;
+  --accent-color: #4d2b46;
+  --inline-box-shadow: none;
+  --inline-background: var(--wotr-purple-bg);
+  --inline-border-color: var(--wotr-purple-border);
+  --inline-text-color: var(--wotr-button-active-text);
+  --inline-icon-color: var(--wotr-button-active-text);
+  --input-box-shadow: none;
+  --input-border-color: var(--color-text-light-5);
+  --input-text-color: var(--color-text-dark-input);
+  --input-focus-text-color: var(--color-text-dark-input);
+  --input-background: rgba(255, 255, 255, 0.5);
+  --input-focus-outline-color: var(--primary-light);
+  --input-placeholder-color: rgba(0, 0, 0, 0.5);
+  --button-background: var(--wotr-button-background);
+  --button-border-color: #442d29;
+  --button-text-color: var(--wotr-button-text);
+  --button-focus-outline-color: var(--wotr-purple-border);
+  --button-hover-background: var(--wotr-button-active-bg);
+  --button-hover-border-color: var(--wotr-button-active-bg);
+  --button-hover-text-color: var(--wotr-button-active-text);
+  --button-disabled-background: var(--wotr-button-background);
+  --button-disabled-border-color: #442d29;
+  --button-disabled-text-color: var(--wotr-button-text-disabled);
+  --button-toggle-border-color: var(--secondary-light);
+  --button-toggle-background: var(--secondary-dark);
+  --button-toggle-hover-background: var(--secondary-light);
+  --color-primary-1: #d3cace;
+  --color-primary-2: #4d2b46;
+  --color-primary-3: #442d29;
+  --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent);
+  --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent);
+  --color-secondary-1: var(--secondary-light);
+  --color-secondary-2: var(--secondary);
+  --color-secondary-3: var(--secondary-dark);
+  --color-secondary-3-75: color-mix(in srgb, var(--color-secondary-3) 75%, transparent);
+  --color-border-light-1: #ddd;
+  --color-border-light-2: #999;
+  --text-color-1: var(--wotr-text-dark-blue);
+  --text-color-2: var(--wotr-text-dark-brown);
+  --text-color-3: black;
+  --text-color-4: var(--wotr-text-detail);
+  --text-color-5: #65615a;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.actor.sheet .crb-style section.major > header,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.actor.sheet .crb-style section.major > header,
+[data-theme^=wotr].actor.sheet .crb-style section.major > header {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-size: 150%;
+  color: #3c3833;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.actor.sheet .crb-style section.major > header::first-letter,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.actor.sheet .crb-style section.major > header::first-letter,
+[data-theme^=wotr].actor.sheet .crb-style section.major > header::first-letter {
+  bottom: 15px;
+  font-size: 150%;
+  text-transform: uppercase;
+  color: #612e34;
+  vertical-align: middle;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier,
+[data-theme^=wotr].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier {
+  color: var(--wotr-text-dark-blue);
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .abbreviation,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .abbreviation,
+[data-theme^=wotr].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute .abbreviation {
+  text-transform: uppercase;
+  color: var(--wotr-text-orange);
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.window-app .window-header,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.window-app .window-header,
+[data-theme^=wotr].window-app .window-header {
+  text-shadow: none;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.pf2e.item.sheet .sheet-header img,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.pf2e.item.sheet .sheet-header img,
+[data-theme^=wotr].pf2e.item.sheet .sheet-header img {
+  background: rgba(6, 4, 3, 0.92);
+  border-image-source: url(../img/crayon-border.webp);
+  border-image-slice: 5 20 20 20 fill;
+  border-image-repeat: repeat repeat;
+  border-image-width: auto;
+  border-image-outset: 1px 2px 2px 2px;
+  border-radius: 0;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.sheet.journal-entry .journal-sidebar,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.sheet.journal-entry .journal-sidebar,
+[data-theme^=wotr].sheet.journal-entry .journal-sidebar {
+  color: var(--wotr-text-dark-brown);
+  --color-text-light-7: var(--wotr-text-detail);
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.sheet.journal-entry .pages-list .directory-item:not(.active) + .active,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.sheet.journal-entry .pages-list .directory-item:not(.active) + .active,
+[data-theme^=wotr].sheet.journal-entry .pages-list .directory-item:not(.active) + .active {
+  background: rgba(87, 91, 93, 0.1333333333);
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.sheet,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.sheet,
+[data-theme^=wotr].sheet {
+  padding: 0px 10px;
+  border-radius: 25px;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.sheet::after, [data-chat-interface-theme^=wotr] #sidebar-tabs.sheet::before,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.sheet::after,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.sheet::before,
+[data-theme^=wotr].sheet::after,
+[data-theme^=wotr].sheet::before {
+  background-image: url(../img/wotr/wotr-paper-left.webp);
+  background-size: 100% 100%;
+  content: " ";
+  height: calc(100% + 20px);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 5em;
+  z-index: -1;
+}
+[data-chat-interface-theme^=wotr] #sidebar-tabs.sheet::after,
+[data-chat-interface-theme^=wotr] #chat-log ~ *.sheet::after,
+[data-theme^=wotr].sheet::after {
+  left: unset;
+  right: -10px;
+  transform: scaleX(-1);
 }
 
 /* ----------------------------------------- */

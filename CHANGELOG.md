@@ -1,3 +1,8 @@
+# 3.3.3
+
+- (Maintenance) Update certain selectors to keep in sync with System.
+- (Refinement) Fixed rendering of degrees of success labels in Toolbelt for dark themes.
+
 # 3.3.2
 
 - (New) Added full theme support for the new Army sheets.

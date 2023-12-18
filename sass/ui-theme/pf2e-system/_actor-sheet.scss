@@ -15,6 +15,11 @@
     box-shadow: unset;
     display: flex;
     margin: 2px 2px;
+    border: none;
+    .tabs {
+      gap: 4px;
+    }
+    .list-row,
     a.item,
     .tab {
       @include dui-button;
@@ -24,16 +29,13 @@
     }
   }
 
+  &.pf2e.item.sheet form > nav > .tabs > a:last-of-type {
+    padding: 5px 10px; // unsets ugly system behaviour
+  }
+
   &.pf2e.actor form input[type="text"],
   &.pf2e.actor form input[type="number"] {
     @include dui-input;
-  }
-
-  &.sheet nav.sheet-tabs {
-    border: none;
-    .item {
-      @include dui-button;
-    }
   }
 
   .tags.paizo-style .tag.rarity.common,

@@ -122,6 +122,16 @@
   }
 }
 
+[data-theme][data-color-scheme="dark"] {
+  &.chat-message .message-content + .pf2e-toolbelt-target-damage,
+  &.chat-message .message-content + .pf2e-toolbelt-target-spell {
+    --criticalSuccess: var(--degree-success-critical);
+    --success: var(--degree-success);
+    --failure: var(--degree-failure);
+    --criticalFailure: var(--degree-failure-critical);
+  }
+}
+
 [data-color-scheme="light"] {
   // Dark theme
   --rarity-common: #323232;
@@ -143,6 +153,11 @@
   /* Value adjustments (e.g. weak/elite) */
   --adjusted-higher: #009988;
   --adjusted-lower: #cc3311;
+
+  &.filepicker .favorites .paths {
+    --color-text-dark-primary: white;
+    --button-text-color: white;
+  }
 }
 
 /* ----------------------------------------- */
@@ -507,6 +522,7 @@
       border-right-color: var(--color-primary-3);
       bottom: -1px;
       right: -1px;
+      z-index: 2;
     }
   }
 }
@@ -545,8 +561,8 @@
 
   &.filepicker .favorites .paths {
     box-shadow: unset;
-    border: 1px solid var(--color-secondary-3);
-    background: var(--color-secondary-5-50);
+    border: 1px solid var(--input-border-color);
+    background: var(--input-background);
     .path {
       @include dui-button-toggle;
       border-radius: 3px;
