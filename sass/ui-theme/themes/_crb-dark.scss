@@ -27,8 +27,7 @@
   // --color-bg-btn-minor-active: var(--color-primary-2);
   --color-text-dark-primary: var(--text-color-3);
   --color-text-dark-secondary: var(--text-color-5);
-  // --color-bg-option: var(--color-secondary-4);
-
+  --color-bg-option: black;
   --accent-text-color: black;
   --accent-color-light: var(--tertiary);
   --accent-color: var(--tertiary-dark);
@@ -50,6 +49,7 @@
 /* Unlimited                                 */
 /* ----------------------------------------- */
 [data-theme^="crb"][data-color-scheme="dark"][data-dorako-ui-scope="unlimited"] {
+  .tagify,
   select,
   input,
   button {
@@ -57,6 +57,7 @@
     --input-border-color: transparent;
     --input-background: var(--glass-bg);
     --input-focus-outline-color: var(--tertiary);
+    --input-box-shadow: var(--glassy);
   }
 }
 

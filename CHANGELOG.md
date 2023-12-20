@@ -1,3 +1,8 @@
+# 3.3.4
+
+- (Refinement) Various minor improvements.
+- (Fix) Fixed an issue where the sheet theme would apply to ImagePopout applications.
+
 # 3.3.3
 
 - (Maintenance) Update certain selectors to keep in sync with System.

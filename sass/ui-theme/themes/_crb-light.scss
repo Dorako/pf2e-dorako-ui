@@ -27,7 +27,7 @@
   // --color-bg-btn-minor-active: var(--color-primary-2);
   --color-text-dark-primary: var(--text-color-3);
   --color-text-dark-secondary: var(--text-color-5);
-  // --color-bg-option: var(--color-secondary-4);
+  --color-bg-option: white;
 }
 
 /* ----------------------------------------- */
@@ -89,6 +89,7 @@
   --fieldset-background-color: transparent;
   --fieldset-legend-color: black;
 
+  tagify,
   select,
   input {
     --input-border-color: var(--color-text-light-5);
@@ -124,6 +125,7 @@
     --input-border-color: var(--color-text-light-5);
   }
 
+  .tagify,
   input {
     --input-background: rgba(0, 0, 0, 0.05);
     --input-border-color: transparent;

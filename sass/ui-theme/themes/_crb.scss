@@ -65,6 +65,10 @@
   --app-border-color: transparent;
   --app-border-width: 0px;
 
+  --window-app-background: var(--glass-bg);
+  --window-app-box-shadow: var(--glassy), 0px 5px 30px black;
+  outline: none !important;
+
   &#token-hud,
   &#tile-hud {
     --button-background: var(--glass-bg);
@@ -277,9 +281,9 @@
     }
   }
 
-  &#effects-panel .effect-item .effect-info {
-    box-shadow: var(--glassy), var(--window-app-box-shadow);
-  }
+  // &#effects-panel .effect-item .effect-info {
+  //   box-shadow: var(--glassy), var(--window-app-box-shadow);
+  // }
 
   &#effects-panel .effect-item > .icon {
     --box-shadow: var(--gold-and-glow);

@@ -126,7 +126,8 @@ Hooks.on("renderApplication", (app, html, data) => {
     ", SceneActorsLayer" +
     ", SmallTimeApp" +
     ", SceneDarknessAdjuster" +
-    ", AutorecMenuApp";
+    ", AutorecMenuApp" +
+    ", ImagePopout";
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
     console.debug(

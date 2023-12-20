@@ -48,6 +48,7 @@
 
 [data-theme] {
   &.actor.sheet[data-theme-color] {
+    .window-content .inventory ul.items > li .item-summary,
     .inventory .item-summary {
       background: color-mix(in srgb, var(--theme-color) 25%, transparent);
     }
@@ -273,6 +274,7 @@
 /* ----------------------------------------- */
 [data-theme][data-dorako-ui-scope="limited"]:not([data-theme^="crb"][data-color-scheme="light"]) {
   --color-text-dark-4: var(--text-color-5);
+  --color-pf-primary: var(--color-primary-1);
 
   &.actor.sheet .crb-style .sheet-body {
     background: unset;

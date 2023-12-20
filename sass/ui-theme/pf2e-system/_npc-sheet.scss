@@ -31,6 +31,10 @@
     @include dui-input;
   }
 
+  &.actor.npc.sheet form .actions-options .actions-option select {
+    @include dui-input;
+  }
+
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input,
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
     @include dui-input;
