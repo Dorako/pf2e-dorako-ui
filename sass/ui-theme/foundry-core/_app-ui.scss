@@ -615,14 +615,15 @@
   }
 }
 
+// also affects settings which is vertical
 [data-theme] {
   &.window-app .tabs .item {
     @include dui-button;
-    padding: 4px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    // padding: 4px 8px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
   }
 
   &.sheet nav.sheet-tabs {
@@ -676,6 +677,7 @@
 
 [data-theme] {
   .tagify,
+  .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
   tags.tagify.pf2e-tagify {
     --tags-disabled-bg: #f1f1f1;
     --tags-border-color: #ddd;
@@ -711,6 +713,10 @@
     border: var(--app-border-width) solid var(--input-border-color);
     box-shadow: var(--input-box-shadow);
     border-radius: 3px;
+
+    .tagify__dropdown__item {
+      color: var(--color-text-1);
+    }
 
     &.tagify--empty .tagify__input::before {
       color: var(--text-color-5);

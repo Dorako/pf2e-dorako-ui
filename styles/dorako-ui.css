@@ -4751,11 +4751,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-decoration: none;
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
-  padding: 4px 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 [data-theme].window-app .tabs .item:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
@@ -4876,6 +4871,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* Tagify and tags                           */
 /* ----------------------------------------- */
 [data-theme] .tagify,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
 [data-theme] tags.tagify.pf2e-tagify {
   --tags-disabled-bg: #f1f1f1;
   --tags-border-color: #ddd;
@@ -4909,24 +4905,34 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow);
   border-radius: 3px;
 }
+[data-theme] .tagify .tagify__dropdown__item,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper .tagify__dropdown__item,
+[data-theme] tags.tagify.pf2e-tagify .tagify__dropdown__item {
+  color: var(--color-text-1);
+}
 [data-theme] .tagify.tagify--empty .tagify__input::before,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper.tagify--empty .tagify__input::before,
 [data-theme] tags.tagify.pf2e-tagify.tagify--empty .tagify__input::before {
   color: var(--text-color-5);
 }
 [data-theme] .tagify:hover,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper:hover,
 [data-theme] tags.tagify.pf2e-tagify:hover {
   box-shadow: unset;
 }
 [data-theme] .tagify select.tag,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper select.tag,
 [data-theme] tags.tagify.pf2e-tagify select.tag {
   border-width: 1px 1px 1px 1px;
 }
 [data-theme] .tagify tag,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper tag,
 [data-theme] tags.tagify.pf2e-tagify tag {
   border-radius: 4px;
   border: 1px solid var(--tag-border-color);
 }
 [data-theme] .tagify tag .tagify__tag__removeBtn,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper tag .tagify__tag__removeBtn,
 [data-theme] tags.tagify.pf2e-tagify tag .tagify__tag__removeBtn {
   width: 12px;
   height: 12px;
@@ -4934,6 +4940,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme] .tagify tag .tagify__tag__removeBtn,
 [data-theme] .tagify tag > div .tagify__tag-text,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper tag .tagify__tag__removeBtn,
+[data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper tag > div .tagify__tag-text,
 [data-theme] tags.tagify.pf2e-tagify tag .tagify__tag__removeBtn,
 [data-theme] tags.tagify.pf2e-tagify tag > div .tagify__tag-text {
   color: var(--tag-color);
@@ -7251,70 +7259,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background: var(--color-primary-2);
   text-shadow: 0px 1px 2px black;
   border-radius: 3px;
-}
-[data-theme] nav.sheet-tabs {
-  background: unset;
-  box-shadow: unset;
-  display: flex;
-  margin: 2px 2px;
-  border: none;
-}
-[data-theme] nav.sheet-tabs .tabs {
-  gap: 4px;
-}
-[data-theme] nav.sheet-tabs .list-row,
-[data-theme] nav.sheet-tabs a.item,
-[data-theme] nav.sheet-tabs .tab {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: var(--button-background);
-  border: var(--app-border-width) solid var(--button-border-color);
-  color: var(--button-text-color);
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: var(--app-text-shadow);
-  padding: 5px 10px;
-  flex: 1;
-  font-family: var(--font-primary);
-}
-[data-theme] nav.sheet-tabs .list-row:not(.disabled, :disabled):hover,
-[data-theme] nav.sheet-tabs a.item:not(.disabled, :disabled):hover,
-[data-theme] nav.sheet-tabs .tab:not(.disabled, :disabled):hover {
-  background: var(--button-hover-background);
-  color: var(--button-hover-text-color);
-  border: var(--app-border-width) solid var(--button-hover-border-color);
-  box-shadow: var(--box-shadow);
-}
-[data-theme] nav.sheet-tabs .list-row.view, [data-theme] nav.sheet-tabs .list-row.selected, [data-theme] nav.sheet-tabs .list-row.active,
-[data-theme] nav.sheet-tabs a.item.view,
-[data-theme] nav.sheet-tabs a.item.selected,
-[data-theme] nav.sheet-tabs a.item.active,
-[data-theme] nav.sheet-tabs .tab.view,
-[data-theme] nav.sheet-tabs .tab.selected,
-[data-theme] nav.sheet-tabs .tab.active {
-  background: var(--button-hover-background);
-  outline: 1px solid var(--button-focus-outline-color);
-  border-color: var(--button-hover-border-color);
-  color: var(--button-hover-text-color);
-  text-decoration: none !important;
-  font-weight: unset !important;
-}
-[data-theme] nav.sheet-tabs .list-row.empty, [data-theme] nav.sheet-tabs .list-row.disabled, [data-theme] nav.sheet-tabs .list-row:disabled,
-[data-theme] nav.sheet-tabs a.item.empty,
-[data-theme] nav.sheet-tabs a.item.disabled,
-[data-theme] nav.sheet-tabs a.item:disabled,
-[data-theme] nav.sheet-tabs .tab.empty,
-[data-theme] nav.sheet-tabs .tab.disabled,
-[data-theme] nav.sheet-tabs .tab:disabled {
-  --button-background: var(--button-disabled-background);
-  --button-hover-background: var(--button-disabled-background);
-  --button-border-color: var(--button-disabled-border-color);
-  --button-text-color: var(--text-color-5);
 }
 [data-theme].pf2e.item.sheet form > nav > .tabs > a:last-of-type {
   padding: 5px 10px;
@@ -10223,7 +10167,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
     radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
   --window-app-border-color: var(--bg3-middle-brown);
-  --window-app-border-width: 2px solid;
+  --window-app-border-width: 2px;
   --window-app-box-shadow: 0px 5px 20px 3px black;
   /* App variables */
   --app-background: #161511aa;

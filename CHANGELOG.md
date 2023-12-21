@@ -1,3 +1,9 @@
+# 3.3.5
+
+- (Fix) Fixed logspam conflict with Force Client Settings (Courtesy of @JDCalvert)
+- (Refinement) Improved navbar rendering.
+- (Refinement) Added some styling for certain TAH menus.
+
 # 3.3.4
 
 - (Refinement) Various minor improvements.
