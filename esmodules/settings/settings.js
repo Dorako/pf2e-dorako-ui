@@ -51,7 +51,7 @@ Hooks.once("init", async () => {
   util.debug("initialized properties...");
 
   util.debug("Migrating invalid settings to default...");
-  const allSettings = [...game.settings.settings].filter(([k, _]) => k.includes(MODULE_NAME));
+  const allSettings = [...game.settings.settings].filter(([k, _]) => k.startsWith(MODULE_NAME));
   for (const [_, setting] of allSettings) {
     const key = setting.key;
     const currentValue = game.settings.get(MODULE_NAME, key);
