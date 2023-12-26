@@ -35,7 +35,13 @@
       "bg3-brown": "Baldur's Gate 3 (Brązowy)",
       "bg3-blue": "Baldur's Gate 3 (Niebieski)",
       "discord-light": "Discord (Jasny)",
-      "discord-dark": "Discord (Ciemny)"
+      "discord-dark": "Discord (Ciemny)",
+      "glass": "Szkło",
+      "crb-light": "Core Rulebook (Jasne)",
+      "crb-dark": "Core Rulebook (Ciemne)",
+      "custom": "⚠️ Zrób to sam 👷",
+      "custom-light": "⚠️ Zrób to sam (Jasne) 👷",
+      "custom-dark": "⚠️ Zrób to sam (Ciemne) 👷"
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
