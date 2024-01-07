@@ -21,6 +21,13 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
 
   const isSecretDisposition =
     game?.scenes?.get(chatMessage?.speaker?.scene)?.tokens?.get(chatMessage?.speaker?.token)?.disposition == -2;
+  const isOpposition = chatMessage?.actor?.alliance === "opposition" && !isSecretDisposition;
+  if (isOpposition && game.settings.get("pf2e-dorako-ui", "theme.chat-message-opposition-theme") === "no-theme") {
+    return;
+  }
+  if (!isOpposition && game.settings.get("pf2e-dorako-ui", "theme.chat-message-standard-theme") === "no-theme") {
+    return;
+  }
   const { dorakoUiTheme, colorScheme } =
     chatMessage?.actor?.alliance === "opposition" && !isSecretDisposition
       ? lookupThemeAndSchemeForKey(game.settings.get("pf2e-dorako-ui", "theme.chat-message-opposition-theme"))
@@ -57,7 +64,7 @@ const headerStyleColors = {
   blue: "#191F65",
   green: "#002A17",
   red: "#540C06",
-}
+};
 
 function getHeaderColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
@@ -73,7 +80,7 @@ function invertColor(color) {
 
 function calcHeaderTextColor(headerColor) {
   if (headerColor === headerStyleColors.none) {
-    return "dark"
+    return "dark";
   }
 
   var r = parseInt(headerColor.substr(1, 2), 16);

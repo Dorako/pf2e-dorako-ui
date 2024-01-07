@@ -413,6 +413,11 @@
     @include dui-input;
   }
 
+  &.app.tag-selector form input[type="search"],
+  &.app.tag-selector form input[type="text"] {
+    @include dui-input;
+  }
+
   textarea {
     color: var(--input-text-color);
     background: var(--input-background);

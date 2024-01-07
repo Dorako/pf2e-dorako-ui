@@ -1,5 +1,6 @@
 [data-theme] {
   // prettier-ignore
+  &.actor.sheet .crb-style .sheet-body .sheet-content ul.option-toggles,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary,
   &.sheet.party [data-tab=overview] .summary,
@@ -48,6 +49,10 @@
 
 [data-theme] {
   &.actor.sheet[data-theme-color] {
+    .crb-style aside select {
+      background-color: var(--theme-color);
+    }
+    .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
     .window-content .inventory ul.items > li .item-summary,
     .inventory .item-summary {
       background: color-mix(in srgb, var(--theme-color) 25%, transparent);
@@ -65,10 +70,6 @@
             var(--theme-color) 100%
           );
           background-color: var(--secondary);
-        }
-
-        .initiative-select select {
-          background-color: var(--theme-color);
         }
       }
     }
@@ -273,8 +274,17 @@
 /* Theme                                     */
 /* ----------------------------------------- */
 [data-theme][data-dorako-ui-scope="limited"]:not([data-theme^="crb"][data-color-scheme="light"]) {
-  --color-text-dark-4: var(--text-color-5);
+  --color-text-dark-4: var(--text-color-4);
+  --color-text-dark-3: var(--text-color-5);
+  --color-text-dark-2: var(--text-color-2);
   --color-pf-primary: var(--color-primary-1);
+  --color-pf-alternate: red;
+  --color-pf-alternate-dark: var(--text-color-2);
+
+  .tags.light > .tag,
+  .tags > .tag.light {
+    --tag-color: var(--text-color-2);
+  }
 
   &.actor.sheet .crb-style .sheet-body {
     background: unset;
@@ -366,6 +376,10 @@
     }
   }
 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
+    --color-pf-secondary: var(--accent-color);
+  }
+
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
     @include dui-input;
@@ -409,11 +423,8 @@
     color: var(--text-color-5);
   }
 
-  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
-    // Do system PR to fix this constant
-  }
-
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier,
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .dc,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier {
     --primary: var(--accent-color);
   }
@@ -435,8 +446,8 @@
     --primary: var(--color-primary-2);
     .button-group {
       button {
-        --primary: var(--system-primary);
-        --secondary: var(--system-secondary);
+        --color-pf-primary: var(--system-primary);
+        --color-pf-secondary: var(--system-secondary);
       }
     }
   }
@@ -467,5 +478,14 @@
   }
   &.spellcasting-entry.preparation {
     --color-border-light-2: var(--color-secondary-4);
+  }
+}
+
+[data-theme] {
+  &.attribute-builder .window-content .title {
+    --primary: var(--accent-color);
+  }
+  &.attribute-builder .window-content .summary-row .hint-container h3 {
+    --color-pf-primary: var(--text-color-1);
   }
 }

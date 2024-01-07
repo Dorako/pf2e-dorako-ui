@@ -1,3 +1,8 @@
+# 3.3.6
+
+- (Fix) Fixed an issue where the 'no theme' option for chat message theme didn't work.
+- (Maintenance) Updated PC sheet styling to be compatible with newest System version.
+
 # 3.3.5
 
 - (Fix) Fixed logspam conflict with Force Client Settings (Courtesy of @JDCalvert)

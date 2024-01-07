@@ -10,6 +10,19 @@
     border-radius: 3px;
   }
 
+  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active,
+  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
+    --secondary: var(--accent-color);
+    --fa-inverse: var(--accent-text-color);
+  }
+
+  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested,
+  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
+  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
+    // Do system PR to fix this constant
+  }
+
   // nav.sheet-tabs {
   //   background: unset;
   //   box-shadow: unset;

@@ -390,6 +390,7 @@
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
       --secondary: var(--bg3-text-1);
+      --color-pf-secondary: var(--bg3-text-1);
       --fa-inverse: black;
   }
 

@@ -4371,6 +4371,41 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: unset !important;
   box-shadow: unset !important;
 }
+[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search], [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text] {
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:focus, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search].disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text].disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search].disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text].disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search][type=checkbox], [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text][type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
 [data-theme][data-dorako-ui-scope=unlimited] textarea {
   color: var(--input-text-color);
   background: var(--input-background);
@@ -7174,9 +7209,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .ammo select.linked {
-  padding: 3px;
-}
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child), [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
   border-color: var(--section-border-color);
 }
@@ -7259,6 +7291,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background: var(--color-primary-2);
   text-shadow: 0px 1px 2px black;
   border-radius: 3px;
+}
+[data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
+  --secondary: var(--accent-color);
+  --fa-inverse: var(--accent-text-color);
 }
 [data-theme].pf2e.item.sheet form > nav > .tabs > a:last-of-type {
   padding: 5px 10px;
@@ -8059,7 +8095,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   font-family: var(--font-primary);
 }
 
-[data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, [data-theme].sheet.party [data-tab=overview] .summary, [data-theme].sheet.party [data-tab=exploration] .activities .member-activity, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
+[data-theme].actor.sheet .crb-style .sheet-body .sheet-content ul.option-toggles, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, [data-theme].sheet.party [data-tab=overview] .summary, [data-theme].sheet.party [data-tab=exploration] .activities .member-activity, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
   border-image-source: var(--ornamentation);
 }
 
@@ -8085,6 +8121,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   fill: none;
 }
 
+[data-theme].actor.sheet[data-theme-color] .crb-style aside select {
+  background-color: var(--theme-color);
+}
+[data-theme].actor.sheet[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
 [data-theme].actor.sheet[data-theme-color] .window-content .inventory ul.items > li .item-summary,
 [data-theme].actor.sheet[data-theme-color] .inventory .item-summary {
   background: color-mix(in srgb, var(--theme-color) 25%, transparent);
@@ -8095,9 +8135,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet[data-theme-color] aside .sidebar .hitpoints .hp-big .container.current-hp {
   background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-text-color) 50%, var(--theme-color) 100%);
   background-color: var(--secondary);
-}
-[data-theme].actor.sheet[data-theme-color] aside .sidebar .initiative-select select {
-  background-color: var(--theme-color);
 }
 [data-theme].actor.sheet[data-theme-color] nav.sheet-navigation {
   background: var(--theme-text-color);
@@ -8249,8 +8286,16 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* Theme                                     */
 /* ----------------------------------------- */
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) {
-  --color-text-dark-4: var(--text-color-5);
+  --color-text-dark-4: var(--text-color-4);
+  --color-text-dark-3: var(--text-color-5);
+  --color-text-dark-2: var(--text-color-2);
   --color-pf-primary: var(--color-primary-1);
+  --color-pf-alternate: red;
+  --color-pf-alternate-dark: var(--text-color-2);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .tags.light > .tag,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .tags > .tag.light {
+  --tag-color: var(--text-color-2);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body {
   background: unset;
@@ -8533,6 +8578,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography .editor:hover {
   outline-color: transparent;
 }
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
+  --color-pf-secondary: var(--accent-color);
+}
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
   background: var(--input-background);
   border: var(--app-border-width) solid;
@@ -8694,7 +8742,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   opacity: unset;
   color: var(--text-color-5);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .dc, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier {
   --primary: var(--accent-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover {
@@ -8708,8 +8756,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --primary: var(--color-primary-2);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .button-group button {
-  --primary: var(--system-primary);
-  --secondary: var(--system-secondary);
+  --color-pf-primary: var(--system-primary);
+  --color-pf-secondary: var(--system-secondary);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .attack-popout select {
   background: var(--input-background);
@@ -8762,6 +8810,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].spellcasting-entry.preparation,
 [data-dorako-ui-scope=limited].spellcasting-entry.preparation {
   --color-border-light-2: var(--color-secondary-4);
+}
+
+[data-theme].attribute-builder .window-content .title {
+  --primary: var(--accent-color);
+}
+[data-theme].attribute-builder .window-content .summary-row .hint-container h3 {
+  --color-pf-primary: var(--text-color-1);
 }
 
 [data-theme]#compendium-browser > section.window-content > .content-box .compendium-browser-settings form .setting-section, [data-theme]#license-viewer > section.window-content > .content-box .compendium-browser-settings form .setting-section, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .filtercontainer, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {
@@ -9040,6 +9095,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --app-border-width: 0px;
   --input-text-color: var(--text-color-3);
   --input-background: var(--glass-bg);
+  --input-box-shadow: var(--glassy);
   --input-border-color: transparent;
   --input-focus-text-color: var(--text-color-2);
   --input-placeholder-color: var(--text-color-5);
@@ -9615,6 +9671,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=discord].actor.sheet .inventory .list-row .item-controls, [data-theme^=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-theme^=discord].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-theme^=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
   --secondary: var(--discord-green);
+  --color-pf-secondary: var(--discord-green);
   --fa-inverse: white;
 }
 [data-theme^=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-theme^=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-theme^=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
@@ -10407,6 +10464,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=bg3].actor.sheet .inventory .list-row .item-controls, [data-theme^=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-theme^=bg3].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-theme^=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
   --secondary: var(--bg3-text-1);
+  --color-pf-secondary: var(--bg3-text-1);
   --fa-inverse: black;
 }
 [data-theme^=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill, [data-theme^=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill, [data-theme^=bg3].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .skills-list .skill {
