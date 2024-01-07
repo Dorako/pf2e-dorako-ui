@@ -439,6 +439,7 @@
     // outline: 1px dashed var(--scrollbar-thumb-border-color);
     color: black;
     text-shadow: none;
+    background: var(--visibility-gm-bg);
   }
 
   form .form-group .form-fields button {
@@ -681,6 +682,9 @@
 /* ----------------------------------------- */
 
 [data-theme] {
+  .pf2e.chat-card .tags {
+    border: none;
+  }
   .tagify,
   .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
   tags.tagify.pf2e-tagify {

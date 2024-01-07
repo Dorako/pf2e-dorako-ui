@@ -2389,6 +2389,14 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   text-decoration: none;
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: var(--accent-text-color);
   margin-top: 5px;
 }
 [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:not(.disabled, :disabled):hover,
@@ -2417,6 +2425,12 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --button-hover-background: var(--button-disabled-background);
   --button-border-color: var(--button-disabled-border-color);
   --button-text-color: var(--text-color-5);
+}
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:disabled,
+[data-dorako-ui-scope=limited] .heroActions-list > button:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
 }
 
 [data-theme].chat-message [data-action=spell-template-clear] {
@@ -4455,6 +4469,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme][data-dorako-ui-scope=unlimited] [data-visibility]:not([data-visibility=all]) {
   color: black;
   text-shadow: none;
+  background: var(--visibility-gm-bg);
 }
 [data-theme][data-dorako-ui-scope=unlimited] form .form-group .form-fields button {
   height: var(--form-field-height);
@@ -4905,6 +4920,9 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* Tagify and tags                           */
 /* ----------------------------------------- */
+[data-theme] .pf2e.chat-card .tags {
+  border: none;
+}
 [data-theme] .tagify,
 [data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
 [data-theme] tags.tagify.pf2e-tagify {
@@ -7296,6 +7314,102 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --secondary: var(--accent-color);
   --fa-inverse: var(--accent-text-color);
 }
+[data-theme].actor.sheet .window-content .item-summary .button-group button {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: var(--accent-text-color);
+}
+[data-theme].actor.sheet .window-content .item-summary .button-group button:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme].actor.sheet .window-content .item-summary .button-group button.view, [data-theme].actor.sheet .window-content .item-summary .button-group button.selected, [data-theme].actor.sheet .window-content .item-summary .button-group button.active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme].actor.sheet .window-content .item-summary .button-group button.empty, [data-theme].actor.sheet .window-content .item-summary .button-group button.disabled, [data-theme].actor.sheet .window-content .item-summary .button-group button:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+[data-theme].actor.sheet .window-content .item-summary .button-group button:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
+[data-theme] button[data-action=perform-daily-crafting] {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: var(--accent-text-color);
+}
+[data-theme] button[data-action=perform-daily-crafting]:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme] button[data-action=perform-daily-crafting].view, [data-theme] button[data-action=perform-daily-crafting].selected, [data-theme] button[data-action=perform-daily-crafting].active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme] button[data-action=perform-daily-crafting].empty, [data-theme] button[data-action=perform-daily-crafting].disabled, [data-theme] button[data-action=perform-daily-crafting]:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+[data-theme] button[data-action=perform-daily-crafting]:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
 [data-theme].pf2e.item.sheet form > nav > .tabs > a:last-of-type {
   padding: 5px 10px;
 }
@@ -7752,6 +7866,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 .chat-message[data-theme] .message-content .damage-roll .dice-result .dice-tooltip .instance {
   border-radius: var(--border-radius);
+}
+.chat-message[data-theme] > .message-content .dice-roll .dice-result > [data-visibility=gm] {
+  color: black;
 }
 .chat-message[data-theme] .dice-roll .dice-formula,
 .chat-message[data-theme] .dice-roll .dice-total {
@@ -8344,6 +8461,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body h5,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body h6 {
   --primary: var(--text-color-2);
+  --secondary: var(--accent-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting {
   background: var(--app-background);
@@ -9150,7 +9268,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background-image: var(--sheet);
 }
 [data-theme^=crb][data-color-scheme=dark].sheet.pf2e.actor.npc.app input {
-  --box-shadow: none;
+  --input-box-shadow: none;
 }
 [data-theme^=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body {
   --text-dark: var(--text-color-2);
@@ -9799,8 +9917,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: none;
   padding: 0px;
 }
-[data-theme^=discord].chat-message .tags .tag.tag_transparent,
-[data-theme^=discord].chat-message .tags .tag option.tag_transparent {
+[data-theme^=discord].chat-message .tags .tag.tag_transparent:not([data-visibility]:not([data-visibility=all])),
+[data-theme^=discord].chat-message .tags .tag option.tag_transparent:not([data-visibility]:not([data-visibility=all])) {
   background-color: color-mix(in srgb, var(--player-color) 20%, transparent);
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
 }
@@ -10723,8 +10841,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
   border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5));
 }
-[data-theme^=bg3].message.chat-message .tags .tag.tag_transparent,
-[data-theme^=bg3].message.chat-message .tags .tag option.tag_transparent {
+[data-theme^=bg3].message.chat-message .tags .tag.tag_transparent:not([data-visibility]:not([data-visibility=all])),
+[data-theme^=bg3].message.chat-message .tags .tag option.tag_transparent:not([data-visibility]:not([data-visibility=all])) {
   background-color: color-mix(in srgb, var(--player-color) 20%, transparent);
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
 }
@@ -11430,8 +11548,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme=foundry2].actor.sheet .inventory .list-row .item-controls {
   --secondary: var(--color-secondary-2);
 }
-[data-theme=foundry2] .tags .tag.tag_transparent,
-[data-theme=foundry2] .tags .tag option.tag_transparent {
+[data-theme=foundry2] .tags .tag.tag_transparent:not([data-visibility]:not([data-visibility=all])),
+[data-theme=foundry2] .tags .tag option.tag_transparent:not([data-visibility]:not([data-visibility=all])) {
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
   background: var(--color-secondary-4);
   color: var(--text-color-3);

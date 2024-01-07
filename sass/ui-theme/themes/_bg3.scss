@@ -721,8 +721,8 @@
     }
   }
 
-  .tags .tag.tag_transparent,
-  .tags .tag option.tag_transparent {
+  .tags .tag.tag_transparent:not([data-visibility]:not([data-visibility="all"])),
+  .tags .tag option.tag_transparent:not([data-visibility]:not([data-visibility="all"])) {
     background-color: color-mix(in srgb, var(--player-color) 20%, transparent);
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
   }

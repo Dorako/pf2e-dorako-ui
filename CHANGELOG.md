@@ -1,3 +1,9 @@
+# 3.3.7
+
+- (Maintenance) Updated NPC sheet styling to be compatible with newest System version.
+- (Maintenance) Minor adjustments to PC sheet styling.
+- (New) Adjusted styling to be compatible with new metagame dice roll setting.
+
 # 3.3.6
 
 - (Fix) Fixed an issue where the 'no theme' option for chat message theme didn't work.

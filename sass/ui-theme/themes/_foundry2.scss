@@ -283,8 +283,8 @@
     --secondary: var(--color-secondary-2);
   }
 
-  .tags .tag.tag_transparent,
-  .tags .tag option.tag_transparent {
+  .tags .tag.tag_transparent:not([data-visibility]:not([data-visibility="all"])),
+  .tags .tag option.tag_transparent:not([data-visibility]:not([data-visibility="all"])) {
     box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset;
     background: var(--color-secondary-4);
     color: var(--text-color-3);

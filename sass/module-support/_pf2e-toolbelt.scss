@@ -18,7 +18,7 @@
 
   button[data-action="hero-actions-trade"],
   .heroActions-list > button {
-    @include dui-button;
+    @include dui-button-bright;
     margin-top: 5px;
   }
 }

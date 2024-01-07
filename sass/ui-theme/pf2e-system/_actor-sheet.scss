@@ -23,6 +23,14 @@
     // Do system PR to fix this constant
   }
 
+  &.actor.sheet .window-content .item-summary .button-group button {
+    @include dui-button-bright;
+  }
+
+  button[data-action="perform-daily-crafting"] {
+    @include dui-button-bright;
+  }
+
   // nav.sheet-tabs {
   //   background: unset;
   //   box-shadow: unset;

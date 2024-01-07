@@ -78,6 +78,10 @@
     border-radius: var(--border-radius);
   }
 
+  & > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
+    color: black;
+  }
+
   .dice-roll .dice-formula,
   .dice-roll .dice-total {
     @include dui-app;
