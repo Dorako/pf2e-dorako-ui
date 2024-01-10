@@ -256,6 +256,11 @@
     border: none;
   }
 
+  &.actor.npc .subsection,
+  &.actor.npc .section-container {
+    --input-placeholder-color: var(--text-color-5) !important;
+  }
+
   &.actor.sheet .crb-style .sheet-body {
     --primary: var(--color-primary-2);
     --secondary: var(--color-secondary-3);

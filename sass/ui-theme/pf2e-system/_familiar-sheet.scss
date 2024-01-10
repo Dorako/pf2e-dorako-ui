@@ -21,18 +21,13 @@
   }
 
   &.sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input,
-  &.sheet.familiar .familiar-sheet-header .header-content .charname input,
+  &.sheet.familiar header .header-content .charname input,
   &.sheet.familiar select,
   &.sheet.familiar .familiar-section .familiar-content input[type="text"] {
     @include dui-input;
   }
 
-  &.sheet.familiar .familiar-sheet-header .header-content .charname input {
-    font-size: 24px;
-    margin-right: 100px;
-  }
-
-  &.sheet.familiar .skills-content .skills-list .skill-name {
+  &.sheet.familiar .skills-content .skills-list a {
     @include dui-button;
   }
 }

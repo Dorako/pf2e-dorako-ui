@@ -1,3 +1,9 @@
+# 3.3.8
+
+- (Maintenance) Updated Familiar sheet styling to be compatible with newest System version.
+- (Refinement) More updates to NPC sheet styling to be compatible with newest System version.
+- (Refinement) Adjusted certain gm-visibility styling to be obnoxious, and increased readability for pale/gray-ish damage types.
+
 # 3.3.7
 
 - (Maintenance) Updated NPC sheet styling to be compatible with newest System version.

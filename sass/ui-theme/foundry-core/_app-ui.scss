@@ -272,8 +272,15 @@
     }
   }
   [data-pf2-check][data-pf2-traits*="secret"],
-  [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] {
+  [data-visibility]:not([data-visibility="all"], .tag)[data-visibility="gm"] {
     color: black;
+  }
+
+  [data-visibility]:not([data-visibility="all"], .tag) {
+    // outline: 1px dashed var(--scrollbar-thumb-border-color);
+    color: black;
+    text-shadow: none;
+    background: var(--visibility-gm-bg);
   }
 
   i[data-pf2-repost] {
@@ -433,13 +440,6 @@
 
   &.dialog .dialog-buttons button.default {
     @include dui-button;
-  }
-
-  [data-visibility]:not([data-visibility="all"]) {
-    // outline: 1px dashed var(--scrollbar-thumb-border-color);
-    color: black;
-    text-shadow: none;
-    background: var(--visibility-gm-bg);
   }
 
   form .form-group .form-fields button {
@@ -684,6 +684,10 @@
 [data-theme] {
   .pf2e.chat-card .tags {
     border: none;
+  }
+  .tags > .tag {
+    --tag-color: var(--text-color-2);
+    --color-pf-alternate-dark: var(--text-color-2);
   }
   .tagify,
   .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,

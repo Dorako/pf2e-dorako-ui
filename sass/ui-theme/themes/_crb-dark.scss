@@ -132,11 +132,12 @@
     --tag-background-color: var(--color-secondary-4);
     --tag-text-color: var(--text-color-4);
     --color-text-dark-input: var(--text-color-3);
+    --input-placeholder-color: var(--text-color-5);
     --input-background: rgba(0, 0, 0, 0.1);
     --input-focus-outline-color: var(--tertiary);
     --text-dark: var(--text-color-2);
 
-    &.dorako-ux.sheet.pf2e.actor.npc form .side-bar-section,
+    &.dorako-ux.sheet.pf2e.actor.npc form .sidebar .subsection,
     &.dorako-ux.sheet.pf2e.actor.npc form .section-container:not(.headerless) {
       background-image: var(--sheet);
     }

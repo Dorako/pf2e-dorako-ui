@@ -49,6 +49,9 @@
 
 [data-theme] {
   &.actor.sheet[data-theme-color] {
+    .crb-style aside .sidebar header button {
+      color: var(--theme-color-dark);
+    }
     .crb-style aside select {
       background-color: var(--theme-color);
     }
@@ -274,12 +277,14 @@
 /* Theme                                     */
 /* ----------------------------------------- */
 [data-theme][data-dorako-ui-scope="limited"]:not([data-theme^="crb"][data-color-scheme="light"]) {
-  --color-text-dark-4: var(--text-color-4);
-  --color-text-dark-3: var(--text-color-5);
-  --color-text-dark-2: var(--text-color-2);
-  --color-pf-primary: var(--color-primary-1);
-  --color-pf-alternate: red;
-  --color-pf-alternate-dark: var(--text-color-2);
+  &.actor.sheet.character {
+    --color-text-dark-4: var(--text-color-4);
+    --color-text-dark-3: var(--text-color-5);
+    --color-text-dark-2: var(--text-color-2);
+    --color-pf-primary: var(--color-primary-1);
+    --color-pf-alternate: red;
+    --color-pf-alternate-dark: var(--text-color-2);
+  }
 
   .tags.light > .tag,
   .tags > .tag.light {

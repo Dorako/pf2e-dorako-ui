@@ -79,7 +79,16 @@
   }
 
   & > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
-    color: black;
+    border: 2px dotted var(--visibility-gm-bg);
+    background: transparent;
+  }
+
+  &[data-color-scheme="light"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
+    border: 2px dotted gray;
+  }
+
+  &[data-color-scheme="dark"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
+    border: 2px dotted var(--visibility-gm-bg);
   }
 
   .dice-roll .dice-formula,

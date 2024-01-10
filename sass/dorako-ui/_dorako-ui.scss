@@ -76,6 +76,14 @@ i[data-pf2-repost] {
   padding: unset;
 }
 
+[data-color-scheme="light"] [data-visibility="gm"]:not(.dice-result > *) {
+  outline: 1px dotted black;
+}
+
+[data-color-scheme="dark"] [data-visibility="gm"]:not(.dice-result > *) {
+  outline: 1px dotted var(--visibility-gm-bg);
+}
+
 // system uses 500, which makes it hard to tell whether something is bolded
 .app.sheet.actor p,
 .pf2e p {
