@@ -16,11 +16,9 @@
     --fa-inverse: var(--accent-text-color);
   }
 
-  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested,
-  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type,
-  &.actor.sheet .inventory .list-row .item-controls .item-control.toggle-invested,
-  &.actor.sheet .inventory .list-row .item-controls .item-control.item-carry-type {
-    // Do system PR to fix this constant
+  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active),
+  &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
+    text-shadow: 0px 0px 0px white;
   }
 
   &.actor.sheet .window-content .item-summary .button-group button {

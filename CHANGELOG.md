@@ -1,8 +1,14 @@
+# 3.3.9
+
+- (Fix) Fixed an issue where the sidebar in the default NPC sheet color theme would be affected by the sheet theme.
+- (Refinement) Ensured that inactive icons in inventories are legible in dark themes.
+- (Module compatibility) Changed some styling to play nice with PF2e Mobile Sheet.
+
 # 3.3.8
 
 - (Maintenance) Updated Familiar sheet styling to be compatible with newest System version.
 - (Refinement) More updates to NPC sheet styling to be compatible with newest System version.
-- (Refinement) Adjusted certain gm-visibility styling to be obnoxious, and increased readability for pale/gray-ish damage types.
+- (Refinement) Adjusted certain gm-visibility styling to be less obnoxious, and increased readability for pale/gray-ish damage types.
 
 # 3.3.7
 

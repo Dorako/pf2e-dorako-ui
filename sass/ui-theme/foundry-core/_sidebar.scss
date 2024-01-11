@@ -2,16 +2,18 @@
 /* UI-right                                  */
 /* ----------------------------------------- */
 #ui-right {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
-  padding-left: 10px;
-  padding-top: 5px;
-
-  #sidebar {
-    background: none;
+  & > #sidebar {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
+    padding-left: 10px;
+    padding-top: 5px;
     box-shadow: none;
     border: none;
+    border-radius: 0px;
     margin: 0px;
     height: 100%;
+    &.collapsed {
+      height: auto;
+    }
   }
 }
 
@@ -133,7 +135,8 @@
   }
 }
 
-[data-chat-interface-theme] {
+[data-chat-interface-theme],
+#sidebar[data-chat-interface-theme].collapsed {
   #sidebar-tabs {
     border: unset;
     > .item.active {

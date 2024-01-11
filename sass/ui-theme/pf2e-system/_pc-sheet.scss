@@ -277,7 +277,7 @@
 /* Theme                                     */
 /* ----------------------------------------- */
 [data-theme][data-dorako-ui-scope="limited"]:not([data-theme^="crb"][data-color-scheme="light"]) {
-  &.actor.sheet.character {
+  &.actor.sheet.character .sheet-content {
     --color-text-dark-4: var(--text-color-4);
     --color-text-dark-3: var(--text-color-5);
     --color-text-dark-2: var(--text-color-2);

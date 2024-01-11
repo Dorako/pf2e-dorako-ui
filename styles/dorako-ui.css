@@ -6137,17 +6137,18 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* UI-right                                  */
 /* ----------------------------------------- */
-#ui-right {
+#ui-right > #sidebar {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
   padding-left: 10px;
   padding-top: 5px;
-}
-#ui-right #sidebar {
-  background: none;
   box-shadow: none;
   border: none;
+  border-radius: 0px;
   margin: 0px;
   height: 100%;
+}
+#ui-right > #sidebar.collapsed {
+  height: auto;
 }
 
 /* ----------------------------------------- */
@@ -6466,10 +6467,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: unset !important;
 }
 
-[data-chat-interface-theme] #sidebar-tabs {
+[data-chat-interface-theme] #sidebar-tabs,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs {
   border: unset;
 }
-[data-chat-interface-theme] #sidebar-tabs > .item.active {
+[data-chat-interface-theme] #sidebar-tabs > .item.active,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -6485,13 +6488,17 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: var(--app-text-shadow);
   --button-focus-outline-color: transparent;
 }
-[data-chat-interface-theme] #sidebar-tabs > .item.active:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #sidebar-tabs > .item.active:not(.disabled, :disabled):hover,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
   color: var(--button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] #sidebar-tabs > .item.active.view, [data-chat-interface-theme] #sidebar-tabs > .item.active.selected, [data-chat-interface-theme] #sidebar-tabs > .item.active.active {
+[data-chat-interface-theme] #sidebar-tabs > .item.active.view, [data-chat-interface-theme] #sidebar-tabs > .item.active.selected, [data-chat-interface-theme] #sidebar-tabs > .item.active.active,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.view,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.selected,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.active {
   background: var(--button-hover-background);
   outline: 1px solid var(--button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -6499,7 +6506,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-chat-interface-theme] #sidebar-tabs > .item.active.empty, [data-chat-interface-theme] #sidebar-tabs > .item.active.disabled, [data-chat-interface-theme] #sidebar-tabs > .item.active:disabled {
+[data-chat-interface-theme] #sidebar-tabs > .item.active.empty, [data-chat-interface-theme] #sidebar-tabs > .item.active.disabled, [data-chat-interface-theme] #sidebar-tabs > .item.active:disabled,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.empty,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.disabled,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active:disabled {
   --button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --button-border-color: var(--button-disabled-border-color);
@@ -7317,6 +7327,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
   --secondary: var(--accent-color);
   --fa-inverse: var(--accent-text-color);
+}
+[data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
+  text-shadow: 0px 0px 0px white;
 }
 [data-theme].actor.sheet .window-content .item-summary .button-group button {
   background: var(--app-background);
@@ -8416,7 +8429,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Theme                                     */
 /* ----------------------------------------- */
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content {
   --color-text-dark-4: var(--text-color-4);
   --color-text-dark-3: var(--text-color-5);
   --color-text-dark-2: var(--text-color-2);
