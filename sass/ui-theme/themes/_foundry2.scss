@@ -214,20 +214,6 @@
     --window-app-background: color-mix(in srgb, var(--player-color) 30%, var(--app-background));
     background-position: top;
     background-size: cover;
-    // &.whisper {
-    //   background: var(--window-app-background);
-    //   background-color: color-mix(in srgb, var(--whisper-bg) 30%, var(--app-background));
-    //   background-blend-mode: luminosity;
-    //   &.blind {
-    //     background: var(--window-app-background);
-    //     background-color: color-mix(in srgb, var(--blind-bg) 30%, var(--app-background));
-    //     background-blend-mode: luminosity;
-    //   }
-    // }
-
-    // background: var(--window-app-background);
-    // background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%),
-    //   var(--window-app-background);
 
     hr {
       border-top: 1px solid color-mix(in srgb, var(--player-color) 100%, transparent);

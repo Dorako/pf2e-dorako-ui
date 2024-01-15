@@ -1,3 +1,9 @@
+# 3.3.10
+
+- (Maintenance) Updated Hazard sheet styling for newest System version.
+- (Refinement) Improved gm vis styling for dice rolls.
+- (Refinement) Improvements to PC Sheet color theme.
+
 # 3.3.9
 
 - (Fix) Fixed an issue where the sidebar in the default NPC sheet color theme would be affected by the sheet theme.

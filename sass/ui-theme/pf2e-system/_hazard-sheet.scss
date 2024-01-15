@@ -1,6 +1,8 @@
 [data-theme] {
   &.sheet.hazard {
     --color-text-light: var(--text-color-2);
+    --color-pf-primary-darker: var(--color-text-2);
+    --color-pf-primary-light: var(--color-text-1);
   }
   &.sheet.hazard.window-app .window-header {
     background: #19302c;

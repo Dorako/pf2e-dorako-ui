@@ -478,6 +478,7 @@
 
 [data-theme],
 [data-dorako-ui-scope="limited"] {
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
   &.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
     background: var(--color-secondary-5-75);

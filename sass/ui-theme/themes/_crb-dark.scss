@@ -154,9 +154,9 @@
     --text-dark: var(--text-color-2);
     --color-border-light-primary: var(--tertiary);
     --color-border-light-highlight: var(--tertiary);
-    --sub: var(--text-color-disabled);
-    --alt: var(--text-color-5);
-    --bg: rgba(0, 0, 0, 0.5);
+    // --sub: var(--text-color-disabled);
+    // --alt: var(--text-color-5);
+    // --bg: rgba(0, 0, 0, 0.5);
   }
 
   // prettier-ignore
@@ -196,7 +196,6 @@
     &:hover {
       --button-hover-text-color: var(--text-color-1);
       background: var(--glass-bg);
-
     }
   }
 }

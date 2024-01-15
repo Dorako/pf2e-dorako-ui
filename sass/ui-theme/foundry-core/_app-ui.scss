@@ -271,13 +271,12 @@
       outline: 1px dashed var(--inline-text-color);
     }
   }
-  [data-pf2-check][data-pf2-traits*="secret"],
-  [data-visibility]:not([data-visibility="all"], .tag)[data-visibility="gm"] {
+
+  [data-pf2-check][data-pf2-traits*="secret"] {
     color: black;
   }
 
-  [data-visibility]:not([data-visibility="all"], .tag) {
-    // outline: 1px dashed var(--scrollbar-thumb-border-color);
+  [data-visibility]:not([data-visibility="all"], .tag, .dice-tooltip, .dice-result) {
     color: black;
     text-shadow: none;
     background: var(--visibility-gm-bg);
@@ -345,12 +344,14 @@
       text-shadow: unset;
     }
   }
+
   input[type="range"] {
     background: none !important;
     --input-focus-outline-color: transparent;
     --input-border-color: transparent;
     --box-shadow: none;
   }
+
   input[type="range"]::-webkit-slider-runnable-track {
     box-shadow: unset;
     border-radius: 3px;
@@ -402,6 +403,7 @@
   button:not(.pm-dropdown) {
     @include dui-button;
   }
+
   .prosemirror menu .pm-dropdown:hover i {
     color: black;
   }
@@ -607,22 +609,8 @@
   .settings-sidebar button {
     @include dui-button;
   }
-}
 
-/* ----------------------------------------- */
-/* Core overwrites                           */
-/* ----------------------------------------- */
-[data-theme][data-color-scheme="dark"] {
-  &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
-    border-color: var(--color-secondary-3);
-    > legend {
-      color: var(--text-color-2);
-    }
-  }
-}
-
-// also affects settings which is vertical
-[data-theme] {
+  // also affects settings which is vertical
   &.window-app .tabs .item {
     @include dui-button;
     // padding: 4px 8px;
@@ -635,10 +623,19 @@
   &.sheet nav.sheet-tabs {
     gap: 5px;
   }
-  // &.sheet nav.sheet-tabs .item {
-  //   // --button-border-color: transparent; // bad foundry default
-  //   --button-border-color: var(--color-secondary-4);
-  // }
+}
+
+/* ----------------------------------------- */
+/* Core overwrites                           */
+/* ----------------------------------------- */
+
+[data-theme][data-color-scheme="dark"] {
+  &.app.token-sheet .tab.active[data-tab="appearance"] fieldset {
+    border-color: var(--color-secondary-3);
+    > legend {
+      color: var(--text-color-2);
+    }
+  }
 }
 
 /* ----------------------------------------- */
@@ -662,6 +659,7 @@
     padding: 2px 5px;
   }
 }
+
 /* ----------------------------------------- */
 /* Tables                                    */
 /* ----------------------------------------- */
@@ -762,6 +760,7 @@
 /* ----------------------------------------- */
 /* System overwrites                         */
 /* ----------------------------------------- */
+
 [data-theme][data-color-scheme="dark"] {
   &.pf2e.item.sheet {
     --color-text-dark-2: var(--text-color-3);

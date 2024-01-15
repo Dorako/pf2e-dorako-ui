@@ -29,25 +29,6 @@
     @include dui-button-bright;
   }
 
-  // nav.sheet-tabs {
-  //   background: unset;
-  //   box-shadow: unset;
-  //   display: flex;
-  //   margin: 2px 2px;
-  //   border: none;
-  //   .tabs {
-  //     gap: 4px;
-  //   }
-  //   .list-row,
-  //   a.item,
-  //   .tab {
-  //     @include dui-button;
-  //     padding: 5px 10px;
-  //     flex: 1;
-  //     font-family: var(--font-primary);
-  //   }
-  // }
-
   &.pf2e.item.sheet form > nav > .tabs > a:last-of-type {
     padding: 5px 10px; // unsets ugly system behaviour
   }
@@ -87,10 +68,6 @@
 [data-dorako-ui-scope="limited"] {
   .tags {
     --color-rarity-common: #323232;
-  }
-
-  .currency li > button {
-    @include dui-button;
   }
 
   &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,

@@ -4105,13 +4105,11 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px dashed var(--inline-text-color);
 }
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check][data-pf2-traits*=secret],
-[data-chat-interface-theme] #chat-log ~ * [data-visibility]:not([data-visibility=all], .tag)[data-visibility=gm],
-[data-theme] [data-pf2-check][data-pf2-traits*=secret],
-[data-theme] [data-visibility]:not([data-visibility=all], .tag)[data-visibility=gm] {
+[data-theme] [data-pf2-check][data-pf2-traits*=secret] {
   color: black;
 }
-[data-chat-interface-theme] #chat-log ~ * [data-visibility]:not([data-visibility=all], .tag),
-[data-theme] [data-visibility]:not([data-visibility=all], .tag) {
+[data-chat-interface-theme] #chat-log ~ * [data-visibility]:not([data-visibility=all], .tag, .dice-tooltip, .dice-result),
+[data-theme] [data-visibility]:not([data-visibility=all], .tag, .dice-tooltip, .dice-result) {
   color: black;
   text-shadow: none;
   background: var(--visibility-gm-bg);
@@ -4777,17 +4775,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-border-color: var(--button-disabled-border-color);
   --button-text-color: var(--text-color-5);
 }
-
-/* ----------------------------------------- */
-/* Core overwrites                           */
-/* ----------------------------------------- */
-[data-theme][data-color-scheme=dark].app.token-sheet .tab.active[data-tab=appearance] fieldset {
-  border-color: var(--color-secondary-3);
-}
-[data-theme][data-color-scheme=dark].app.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
-  color: var(--text-color-2);
-}
-
 [data-theme].window-app .tabs .item {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -4825,6 +4812,16 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme].sheet nav.sheet-tabs {
   gap: 5px;
+}
+
+/* ----------------------------------------- */
+/* Core overwrites                           */
+/* ----------------------------------------- */
+[data-theme][data-color-scheme=dark].app.token-sheet .tab.active[data-tab=appearance] fieldset {
+  border-color: var(--color-secondary-3);
+}
+[data-theme][data-color-scheme=dark].app.token-sheet .tab.active[data-tab=appearance] fieldset > legend {
+  color: var(--text-color-2);
 }
 
 /* ----------------------------------------- */
@@ -6624,6 +6621,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 
 [data-theme].sheet.hazard {
   --color-text-light: var(--text-color-2);
+  --color-pf-primary-darker: var(--color-text-2);
+  --color-pf-primary-light: var(--color-text-1);
 }
 [data-theme].sheet.hazard.window-app .window-header {
   background: #19302c;
@@ -7489,49 +7488,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme] .tags,
 [data-dorako-ui-scope=limited] .tags {
   --color-rarity-common: #323232;
-}
-[data-theme] .currency li > button,
-[data-dorako-ui-scope=limited] .currency li > button {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: var(--button-background);
-  border: var(--app-border-width) solid var(--button-border-color);
-  color: var(--button-text-color);
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: var(--app-text-shadow);
-}
-[data-theme] .currency li > button:not(.disabled, :disabled):hover,
-[data-dorako-ui-scope=limited] .currency li > button:not(.disabled, :disabled):hover {
-  background: var(--button-hover-background);
-  color: var(--button-hover-text-color);
-  border: var(--app-border-width) solid var(--button-hover-border-color);
-  box-shadow: var(--box-shadow);
-}
-[data-theme] .currency li > button.view, [data-theme] .currency li > button.selected, [data-theme] .currency li > button.active,
-[data-dorako-ui-scope=limited] .currency li > button.view,
-[data-dorako-ui-scope=limited] .currency li > button.selected,
-[data-dorako-ui-scope=limited] .currency li > button.active {
-  background: var(--button-hover-background);
-  outline: 1px solid var(--button-focus-outline-color);
-  border-color: var(--button-hover-border-color);
-  color: var(--button-hover-text-color);
-  text-decoration: none !important;
-  font-weight: unset !important;
-}
-[data-theme] .currency li > button.empty, [data-theme] .currency li > button.disabled, [data-theme] .currency li > button:disabled,
-[data-dorako-ui-scope=limited] .currency li > button.empty,
-[data-dorako-ui-scope=limited] .currency li > button.disabled,
-[data-dorako-ui-scope=limited] .currency li > button:disabled {
-  --button-background: var(--button-disabled-background);
-  --button-hover-background: var(--button-disabled-background);
-  --button-border-color: var(--button-disabled-border-color);
-  --button-text-color: var(--text-color-5);
 }
 [data-theme].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image, [data-theme].actor.sheet .item-image,
 [data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
@@ -8947,7 +8903,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   filter: invert(1);
 }
 
-[data-theme].spellcasting-entry.preparation ol.spell-list > li.spell-level-header, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header,
+[data-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary, [data-theme].spellcasting-entry.preparation ol.spell-list > li.spell-level-header, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header,
+[data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
 [data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
 [data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
   background: var(--color-secondary-5-75);
@@ -9302,9 +9259,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --text-dark: var(--text-color-2);
   --color-border-light-primary: var(--tertiary);
   --color-border-light-highlight: var(--tertiary);
-  --sub: var(--text-color-disabled);
-  --alt: var(--text-color-5);
-  --bg: rgba(0, 0, 0, 0.5);
 }
 [data-theme^=crb][data-color-scheme=dark].actor.sheet .inventory .list-row .item-controls, [data-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats .feat-item .item-name .feat-slot-title, [data-theme^=crb][data-color-scheme=dark].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-name h4:hover, [data-theme^=crb][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .spell-ability-data .skill-score {
   --secondary: var(--tertiary);
