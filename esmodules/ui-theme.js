@@ -150,18 +150,6 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.dorakoUiScope = "unlimited";
 });
 
-// Hooks.on("renderDialog", (app, html, data) => {
-//   const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
-//   if (theme === "no-theme") return;
-//   const uiTheme = getUiTheme();
-//   if (uiTheme === null) return;
-//   const { dorakoUiTheme, colorScheme } = uiTheme;
-//   console.debug(`${MODULE_NAME} | render${app.constructor.name} | set dorako-ui-theme to ${dorakoUiTheme}`);
-//   app.element[0].dataset.theme = dorakoUiTheme;
-//   app.element[0].dataset.colorScheme = colorScheme;
-//   app.element[0].dataset.dorakoUiScope = "unlimited";
-// });
-
 for (const appName of [...limitedScopeApplications]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
@@ -172,13 +160,11 @@ for (const appName of [...limitedScopeApplications]) {
     const excludeList = excludeString.split(/[\s,]+/);
     if (excludeList.includes(app.constructor.name)) {
       console.debug(
-        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set data-dorako-ui-scope to 'limited'`
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set [data-ui-scope='limited']`
       );
       return;
     }
-    console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | theme: ${theme} => set data-dorako-ui-scope to 'limited'`
-    );
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-ui-scope='limited']`);
     app.element[0].dataset.dorakoUiScope = "limited";
   });
 }
@@ -215,11 +201,7 @@ Hooks.on("render" + "ChatLogPF2e", (app, html, data) => {
 Hooks.on("render" + "Sidebar", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
   if (theme === "no-theme") return;
-  if (theme === "bg3") {
-    app.element[0].dataset.chatInterfaceTheme = "bg3-translucent";
-  } else {
-    app.element[0].dataset.chatInterfaceTheme = theme;
-  }
+  app.element[0].dataset.chatInterfaceTheme = theme;
 });
 
 Hooks.on("render" + "Sidebar", (app, html, data) => {

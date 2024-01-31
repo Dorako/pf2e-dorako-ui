@@ -225,6 +225,7 @@
   [data-pf2-check]:not([data-pf2-traits*="secret"]),
   a.entity-link,
   [data-pf2-action],
+  span[data-pf2-action][data-pf2-glyph],
   span[data-pf2-effect-area],
   a.inline-check:not([data-pf2-traits*="secret"]),
   a.inline-check:not([data-pf2-traits*="secret"]) .label,

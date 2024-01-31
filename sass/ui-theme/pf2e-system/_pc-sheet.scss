@@ -281,14 +281,38 @@
     --color-text-dark-4: var(--text-color-4);
     --color-text-dark-3: var(--text-color-5);
     --color-text-dark-2: var(--text-color-2);
-    --color-pf-primary: var(--color-primary-1);
-    --color-pf-alternate: red;
-    --color-pf-alternate-dark: var(--text-color-2);
+    // .tag,
+    .value,
+    .label,
+    h4:hover,
+    a:hover,
+    a,
+    span:not(.tag),
+    .tab.character .subsection.attributes ul .abbreviation {
+      --color-pf-primary: var(--color-primary-1);
+      --color-pf-alternate-dark: var(--text-color-2);
+      --color-pf-secondary: var(--accent-color);
+    }
+    .tag {
+      --color-pf-primary: var(--accent-color); // unallocated languages
+    }
+
+    header {
+      --color-pf-primary: var(--color-text-1);
+    }
   }
 
   .tags.light > .tag,
   .tags > .tag.light {
     --tag-color: var(--text-color-2);
+  }
+
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3 {
+    @include dui-input;
+    &:hover {
+      outline: 1px solid transparent !important;
+      color: var(--input-text-color) !important;
+    }
   }
 
   &.actor.sheet .crb-style .sheet-body {
@@ -297,9 +321,6 @@
     input[type="number"] {
       @include dui-input;
     }
-    // select:not(.pf-rank, .modular) {
-    //   @include dui-input;
-    // }
 
     section.major > header,
     .details-label,
@@ -329,6 +350,7 @@
   &.sheet.actor .crb-style nav.sub-nav {
     background: unset;
     box-shadow: unset;
+    gap: 5px;
     a,
     .tab {
       @include dui-button;
@@ -474,14 +496,17 @@
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .alt-usage .alt-usage-icon[src$="svg"] {
     filter: invert(1);  
   }
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.d20 {
+    filter: unset;
+  }
 }
 
-[data-theme],
-[data-dorako-ui-scope="limited"] {
+[data-theme][data-dorako-ui-scope="limited"] {
+  &.actor.sheet .window-content .inventory ul.items > li .item-summary,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
   &.spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
-    background: var(--color-secondary-5-75);
+    background: var(--color-secondary-5-25);
   }
   &.spellcasting-entry.preparation {
     --color-border-light-2: var(--color-secondary-4);

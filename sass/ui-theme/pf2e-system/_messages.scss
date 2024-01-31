@@ -110,6 +110,7 @@
     border-bottom: unset;
   }
 
+  .pf2e.chat-card header,
   .pf2e.chat-card .card-header {
     border: unset;
     img {
@@ -119,10 +120,26 @@
     }
   }
 
+  .pf2e.chat-card .addendum {
+    color: var(--text-color-3);
+  }
+
+  .pf2e.chat-card footer,
   .pf2e.chat-card .card-footer {
     border-top: 1px solid var(--app-border-color);
     margin: 0px -5px;
     padding: 0px 5px;
+    span {
+      border-right: 1px solid var(--app-border-color);
+    }
+  }
+}
+
+.chat-message:not([data-theme^="crb"]) {
+  .pf2e.chat-card .addendum {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--fieldset-border-color);
+    background: var(--fieldset-background-color);
   }
 }
 

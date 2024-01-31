@@ -3905,6 +3905,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]),
 [data-chat-interface-theme] #chat-log ~ * a.entity-link,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action],
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph],
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area],
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]),
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label,
@@ -3913,6 +3914,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]),
 [data-theme] a.entity-link,
 [data-theme] [data-pf2-action],
+[data-theme] span[data-pf2-action][data-pf2-glyph],
 [data-theme] span[data-pf2-effect-area],
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]),
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label,
@@ -3926,6 +3928,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-chat-interface-theme] #chat-log ~ * a.entity-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all])[data-visibility=gm],
@@ -3934,6 +3937,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-theme] a.entity-link [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-theme] [data-pf2-action] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
+[data-theme] span[data-pf2-action][data-pf2-glyph] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-theme] span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all])[data-visibility=gm],
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all])[data-visibility=gm],
@@ -3944,6 +3948,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).broken,
 [data-chat-interface-theme] #chat-log ~ * a.entity-link.broken,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action].broken,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph].broken,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].broken,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).broken,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.broken,
@@ -3952,6 +3957,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).broken,
 [data-theme] a.entity-link.broken,
 [data-theme] [data-pf2-action].broken,
+[data-theme] span[data-pf2-action][data-pf2-glyph].broken,
 [data-theme] span[data-pf2-effect-area].broken,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]).broken,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.broken,
@@ -3963,6 +3969,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).gmroll,
 [data-chat-interface-theme] #chat-log ~ * a.entity-link.gmroll,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action].gmroll,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph].gmroll,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].gmroll,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).gmroll,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.gmroll,
@@ -3971,6 +3978,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).gmroll,
 [data-theme] a.entity-link.gmroll,
 [data-theme] [data-pf2-action].gmroll,
+[data-theme] span[data-pf2-action][data-pf2-glyph].gmroll,
 [data-theme] span[data-pf2-effect-area].gmroll,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]).gmroll,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.gmroll,
@@ -3983,6 +3991,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).gmroll i,
 [data-chat-interface-theme] #chat-log ~ * a.entity-link.gmroll i,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action].gmroll i,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph].gmroll i,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].gmroll i,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).gmroll i,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.gmroll i,
@@ -3991,6 +4000,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).gmroll i,
 [data-theme] a.entity-link.gmroll i,
 [data-theme] [data-pf2-action].gmroll i,
+[data-theme] span[data-pf2-action][data-pf2-glyph].gmroll i,
 [data-theme] span[data-pf2-effect-area].gmroll i,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]).gmroll i,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.gmroll i,
@@ -4001,6 +4011,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll,
 [data-chat-interface-theme] #chat-log ~ * a.entity-link.blindroll,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action].blindroll,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph].blindroll,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].blindroll,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).blindroll,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.blindroll,
@@ -4009,6 +4020,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll,
 [data-theme] a.entity-link.blindroll,
 [data-theme] [data-pf2-action].blindroll,
+[data-theme] span[data-pf2-action][data-pf2-glyph].blindroll,
 [data-theme] span[data-pf2-effect-area].blindroll,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]).blindroll,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.blindroll,
@@ -4021,6 +4033,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll i,
 [data-chat-interface-theme] #chat-log ~ * a.entity-link.blindroll i,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action].blindroll i,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph].blindroll i,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area].blindroll i,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]).blindroll i,
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label.blindroll i,
@@ -4029,6 +4042,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]).blindroll i,
 [data-theme] a.entity-link.blindroll i,
 [data-theme] [data-pf2-action].blindroll i,
+[data-theme] span[data-pf2-action][data-pf2-glyph].blindroll i,
 [data-theme] span[data-pf2-effect-area].blindroll i,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]).blindroll i,
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label.blindroll i,
@@ -4047,6 +4061,9 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action]::before,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action] i,
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action] i.icon,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph]::before,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph] i,
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph] i.icon,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area]::before,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area] i,
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area] i.icon,
@@ -4071,6 +4088,9 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-action]::before,
 [data-theme] [data-pf2-action] i,
 [data-theme] [data-pf2-action] i.icon,
+[data-theme] span[data-pf2-action][data-pf2-glyph]::before,
+[data-theme] span[data-pf2-action][data-pf2-glyph] i,
+[data-theme] span[data-pf2-action][data-pf2-glyph] i.icon,
 [data-theme] span[data-pf2-effect-area]::before,
 [data-theme] span[data-pf2-effect-area] i,
 [data-theme] span[data-pf2-effect-area] i.icon,
@@ -4089,6 +4109,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-check]:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all]),
 [data-chat-interface-theme] #chat-log ~ * a.entity-link [data-visibility]:not([data-visibility=all]),
 [data-chat-interface-theme] #chat-log ~ * [data-pf2-action] [data-visibility]:not([data-visibility=all]),
+[data-chat-interface-theme] #chat-log ~ * span[data-pf2-action][data-pf2-glyph] [data-visibility]:not([data-visibility=all]),
 [data-chat-interface-theme] #chat-log ~ * span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all]),
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all]),
 [data-chat-interface-theme] #chat-log ~ * a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all]),
@@ -4097,6 +4118,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-pf2-check]:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all]),
 [data-theme] a.entity-link [data-visibility]:not([data-visibility=all]),
 [data-theme] [data-pf2-action] [data-visibility]:not([data-visibility=all]),
+[data-theme] span[data-pf2-action][data-pf2-glyph] [data-visibility]:not([data-visibility=all]),
 [data-theme] span[data-pf2-effect-area] [data-visibility]:not([data-visibility=all]),
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) [data-visibility]:not([data-visibility=all]),
 [data-theme] a.inline-check:not([data-pf2-traits*=secret]) .label [data-visibility]:not([data-visibility=all]),
@@ -7931,9 +7953,11 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-bottom-right-radius: 0px;
   border-bottom: unset;
 }
+.chat-message[data-theme] .pf2e.chat-card header,
 .chat-message[data-theme] .pf2e.chat-card .card-header {
   border: unset;
 }
+.chat-message[data-theme] .pf2e.chat-card header img,
 .chat-message[data-theme] .pf2e.chat-card .card-header img {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -7944,10 +7968,24 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
+.chat-message[data-theme] .pf2e.chat-card .addendum {
+  color: var(--text-color-3);
+}
+.chat-message[data-theme] .pf2e.chat-card footer,
 .chat-message[data-theme] .pf2e.chat-card .card-footer {
   border-top: 1px solid var(--app-border-color);
   margin: 0px -5px;
   padding: 0px 5px;
+}
+.chat-message[data-theme] .pf2e.chat-card footer span,
+.chat-message[data-theme] .pf2e.chat-card .card-footer span {
+  border-right: 1px solid var(--app-border-color);
+}
+
+.chat-message:not([data-theme^=crb]) .pf2e.chat-card .addendum {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--fieldset-border-color);
+  background: var(--fieldset-background-color);
 }
 
 /* ----------------------------------------- */
@@ -8389,13 +8427,66 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-text-dark-4: var(--text-color-4);
   --color-text-dark-3: var(--text-color-5);
   --color-text-dark-2: var(--text-color-2);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content .value,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content .label,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content h4:hover,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content a:hover,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content a,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content span:not(.tag),
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content .tab.character .subsection.attributes ul .abbreviation {
   --color-pf-primary: var(--color-primary-1);
-  --color-pf-alternate: red;
   --color-pf-alternate-dark: var(--text-color-2);
+  --color-pf-secondary: var(--accent-color);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content .tag {
+  --color-pf-primary: var(--accent-color);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content header {
+  --color-pf-primary: var(--color-text-1);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .tags.light > .tag,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .tags > .tag.light {
   --tag-color: var(--text-color-2);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3 {
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3.disabled::placeholder, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3:hover {
+  outline: 1px solid transparent !important;
+  color: var(--input-text-color) !important;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body {
   background: unset;
@@ -8502,6 +8593,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav {
   background: unset;
   box-shadow: unset;
+  gap: 5px;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab {
@@ -8902,15 +8994,14 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .alt-usage .alt-usage-icon[src$=svg] {
   filter: invert(1);
 }
-
-[data-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary, [data-theme].spellcasting-entry.preparation ol.spell-list > li.spell-level-header, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header,
-[data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
-[data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li.spell-level-header,
-[data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
-  background: var(--color-secondary-5-75);
+[data-theme][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.d20 {
+  filter: unset;
 }
-[data-theme].spellcasting-entry.preparation,
-[data-dorako-ui-scope=limited].spellcasting-entry.preparation {
+
+[data-theme][data-dorako-ui-scope=limited].actor.sheet .window-content .inventory ul.items > li .item-summary, [data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary, [data-theme][data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li.spell-level-header, [data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header {
+  background: var(--color-secondary-5-25);
+}
+[data-theme][data-dorako-ui-scope=limited].spellcasting-entry.preparation {
   --color-border-light-2: var(--color-secondary-4);
 }
 
@@ -9162,7 +9253,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=crb][data-color-scheme=dark][data-dorako-ui-scope=limited] {
   --input-background: var(--glass-bg);
   --color-primary-2: var(--tertiary-dark);
-  --color-secondary-5-75: rgba(0, 0, 0, 0.5);
+  --color-secondary-5-25: rgba(0, 0, 0, 0.25);
   --color-border-light-2: black;
   --button-hover-text-color: black;
 }

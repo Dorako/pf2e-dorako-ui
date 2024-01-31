@@ -1,3 +1,8 @@
+# 3.3.11
+
+- (Refinement) PC Sheet adjustments.
+- (Refinement) Added styling for addendums in spell messages.
+
 # 3.3.10
 
 - (Maintenance) Updated Hazard sheet styling for newest System version.
