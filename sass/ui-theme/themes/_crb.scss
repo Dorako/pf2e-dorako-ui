@@ -115,6 +115,13 @@
     --box-shadow: 0px 0px 0px 1px var(--gold-brown);
   }
 
+  &.actor.sheet section.window-content .item-summary .description .addendum {
+    border-image-source: var(--ornamentation);
+  }
+  &.actor.sheet[data-color-scheme="dark"] section.window-content .item-summary .description .addendum {
+    color: var(--text-color-3);
+  }
+
   // &.dorako-header {
   //   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   //   background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);

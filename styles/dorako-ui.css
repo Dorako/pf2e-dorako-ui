@@ -7507,6 +7507,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-top: unset;
 }
 
+.actor.sheet:not([data-theme^=crb]).actor.sheet section.window-content .item-summary .description .addendum {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--fieldset-border-color);
+  background: var(--fieldset-background-color);
+  color: var(--text-color-3);
+}
+
 [data-theme] .tags,
 [data-dorako-ui-scope=limited] .tags {
   --color-rarity-common: #323232;
@@ -11248,6 +11255,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=crb].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image, [data-theme^=crb].actor.sheet .item-image {
   --box-shadow: 0px 0px 0px 1px var(--gold-brown);
+}
+[data-theme^=crb].actor.sheet section.window-content .item-summary .description .addendum {
+  border-image-source: var(--ornamentation);
+}
+[data-theme^=crb].actor.sheet[data-color-scheme=dark] section.window-content .item-summary .description .addendum {
+  color: var(--text-color-3);
 }
 [data-theme^=crb].chat-message {
   outline: 1px solid var(--gold-brown);

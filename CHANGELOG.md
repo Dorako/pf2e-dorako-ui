@@ -1,3 +1,7 @@
+# 3.3.12
+
+- (Refinement) Added styling for addendums in actor sheets.
+
 # 3.3.11
 
 - (Refinement) PC Sheet adjustments.
