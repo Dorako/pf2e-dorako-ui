@@ -1,3 +1,7 @@
+# 3.3.13
+
+- (New) Exluded the new Rusthenge premium module journals from styling.
+
 # 3.3.12
 
 - (Refinement) Added styling for addendums in actor sheets.
