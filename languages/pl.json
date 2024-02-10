@@ -35,7 +35,13 @@
       "bg3-brown": "Baldur's Gate 3 (Brązowy)",
       "bg3-blue": "Baldur's Gate 3 (Niebieski)",
       "discord-light": "Discord (Jasny)",
-      "discord-dark": "Discord (Ciemny)"
+      "discord-dark": "Discord (Ciemny)",
+      "glass": "Szkło",
+      "crb-light": "Core Rulebook (Jasne)",
+      "crb-dark": "Core Rulebook (Ciemne)",
+      "custom": "⚠️ Zrób to sam 👷",
+      "custom-light": "⚠️ Zrób to sam (Jasne) 👷",
+      "custom-dark": "⚠️ Zrób to sam (Ciemne) 👷"
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
@@ -117,12 +123,12 @@
           "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika"
         },
         "app-theme": {
-          "name": "Motyw aplikacji",
-          "hint": "Wpływa na elementy interfejsu użytkownika, takie jak kontrolki i nawigacja, a także moduły"
+          "name": "Motyw interfejsu",
+          "hint": "Wpływa na elementy interfejsu użytkownika, takie jak kontrolki, nawigacja, pasek boczny, a także ruchome moduły stylów"
         },
         "window-app-theme": {
-          "hint": "Wpływa na renderowane okna aplikacji",
-          "name": "Motyw okienka"
+          "hint": "Wpływa na styl aplikacji okienkowych",
+          "name": "Motyw karty"
         },
         "window-app-color-scheme": {
           "name": "Schemat kolorów okienka",
@@ -138,7 +144,19 @@
         },
         "chat-message-header-style": {
           "name": "Motyw nagłówka wiadomości czatu",
-          "hint": "Dodaje kolorowy nagłówek do każdej wiadomości czatu"
+          "hint": "Dotyczy tylko motywów CRB"
+        },
+        "chat-message-standard-theme": {
+          "name": "Motyw wiadomości czatu (standardowy)",
+          "hint": "Dotyczy wiadomości od rozmówców spoza sojuszu \"opozycji\""
+        },
+        "chat-message-opposition-theme": {
+          "name": "Motyw wiadomości czatu (przeciwny)",
+          "hint": "Dotyczy wiadomości z rozmówcami z sojuszu \"opozycyjnego\""
+        },
+        "sheet-theme-color": {
+          "name": "Kolor motywu karty",
+          "hint": "Dotyczy kart postaci graczy i pojazdów"
         }
       },
       "avatar": {
@@ -273,7 +291,7 @@
         "hint": "Konfiguracja ustawień związanych z innymi funkcjami Dorako UI",
         "enable-debug-mode": {
           "name": "Włączyć tryb debugowania?",
-          "hint": "Dodaje przyciski do przełączania stylu dorako-ui i ciemnego motywu dla okien"
+          "hint": "Dodaje przyciski do szybkiej zmiany motywu karty"
         },
         "skin-crb-journal": {
           "name": "Włączyć stylizację CRB dla dzienników?",

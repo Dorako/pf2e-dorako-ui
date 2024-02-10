@@ -149,7 +149,24 @@
       "alliance": "Opposition sombre",
       "gm-vs-players": "MJ sombre",
       "no-theme": "Pas de thème",
-      "bg3-brown": "Baldur's Gate 3 (marron"
+      "bg3-brown": "Baldur's Gate 3 (marron",
+      "custom-light": "⚠️ Faites-le vous-même (Clair) 👷",
+      "colors": {
+        "red": "Rouge",
+        "blue": "Bleu",
+        "green": "Vert",
+        "purple": "Violet",
+        "black": "Noir",
+        "player": "Couleur du joueur"
+      },
+      "bg3-blue": "Baldur's Gate 3 (Bleu)",
+      "discord-light": "Discord (clair)",
+      "discord-dark": "Discord (sombre)",
+      "glass": "Verre",
+      "crb-light": "Livre de base (clair)",
+      "crb-dark": "Livre de base (sombre)",
+      "custom": "⚠️ Faites-le vous-même 👷",
+      "custom-dark": "⚠️ Faites-le vous-même (sombre) 👷"
     },
     "settings": {
       "theme": {
@@ -240,16 +257,16 @@
           "hint": "(défaut : 3px) Change le degré de l'arrondi de nombreux éléments de l'IU"
         },
         "window-app-theme": {
-          "name": "thème de l'application de la fenêtre",
-          "hint": "Affecte les fenêtres d'application rendues"
+          "name": "Thème de la feuille",
+          "hint": "S'applique aux applications de type fenêtre"
         },
         "window-app-color-scheme": {
           "name": "Schéma de couleurs de l'application de la fenêtre",
           "hint": "Affecte les fenêtres d'application rendues"
         },
         "app-theme": {
-          "name": "Thème de l'application",
-          "hint": "Affecte les éléments de l'interface utilisateur tels que les contrôles et la navigation, ainsi que les modules"
+          "name": "Thème de l'interface",
+          "hint": "S'applique aux éléments de l'interface utilisateur tels que les contrôles, la navigation, la barre latérale, ainsi qu'aux modules au style flottant"
         },
         "chat-message-theme": {
           "name": "Thème des messages de conversation",
@@ -261,7 +278,7 @@
         },
         "chat-message-header-style": {
           "name": "Thème de titre de message de conversation",
-          "hint": "Ajoute un titre coloré à chaque message de la conversation",
+          "hint": "Ne s'applique qu'aux thèmes LdB",
           "choice": {
             "red": "Rouge",
             "blue": "Bleu",
@@ -269,6 +286,18 @@
             "tint": "Couleur du joueur",
             "none": "Désactivé"
           }
+        },
+        "chat-message-opposition-theme": {
+          "hint": "S'applique aux messages dont les orateurs appartiennent à l'alliance \"opposition\"",
+          "name": "Thème du message de conversation (opposition)"
+        },
+        "chat-message-standard-theme": {
+          "name": "Thème du message de conversation (standard)",
+          "hint": "S'applique aux messages des orateurs n'appartenant pas à l'alliance \"opposition\""
+        },
+        "sheet-theme-color": {
+          "name": "Couleur du thème de la feuille",
+          "hint": "S'applique aux fiches des personnages joueurs et aux véhicules"
         }
       },
       "avatar": {
@@ -430,7 +459,7 @@
         },
         "enable-debug-mode": {
           "name": "Activer le mode débogage ?",
-          "hint": "Ajoute des boutons pour activer les styles dorako-ui et sombre pour les fenêtres"
+          "hint": "Ajoute des boutons permettant de changer rapidement de thème de feuille"
         }
       },
       "reset-changes": "Réinitialiser les changements",
