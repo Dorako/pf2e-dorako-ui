@@ -1,0 +1,5 @@
+[data-theme] {
+  &.pin-cushion-hud-tooltip-default {
+    @include dui-tooltip;
+  }
+}

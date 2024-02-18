@@ -5,14 +5,14 @@ export const MODULE_NAME = "pf2e-dorako-ui";
 /* ----------------------------------------- */
 /* Premium module                            */
 /* ----------------------------------------- */
-export const premiumModuleSelector = ".rusthenge, .rusthenge-wrapper, .pfs05Pt1, .pfs05Pt1-wrapper, .pf2e-yom, .pf2e-ii, .pf2e-woii, .seasonofghosts, .seasonofghosts-wrapper, .skykingstomb-wrapper, .skykingstomb, .stolenfate-wrapper, .stolenfate, .harrow-reading, .harrow, .pf2e-km, .kingdom-app, .swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
+export const premiumModuleSelector = ".sevendooms, .sevendooms-wrapper, .rusthenge, .rusthenge-wrapper, .pfs05, .pfs05Pt2 .pfs05Pt1, .pfs05Pt1-wrapper, .pf2e-yom, .pf2e-ii, .pf2e-woii, .seasonofghosts, .seasonofghosts-wrapper, .skykingstomb-wrapper, .skykingstomb, .stolenfate-wrapper, .stolenfate, .harrow-reading, .harrow, .pf2e-km, .kingdom-app, .swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
 
 /* ----------------------------------------- */
 /* Apps                                      */
 /* ----------------------------------------- */
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["EffectsPanel", "SceneDarknessAdjuster"];
-export const moduleApps = ["HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
+export const moduleApps = ["CoreHUD","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */

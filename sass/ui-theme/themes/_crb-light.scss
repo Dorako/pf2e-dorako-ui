@@ -140,6 +140,10 @@
     --input-focus-text-color: var(--text-color-1);
   }
 
+  &[data-dorako-ui-scope="limited"].actor.npc.sheet form .notes.active .notes-section > h4 {
+    color: var(--color-pf-primary);
+  }
+
   .directory .directory-header .header-search input {
     --input-border-color: var(--color-text-light-5);
     --input-text-color: var(--color-text-dark-input);

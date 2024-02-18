@@ -1,0 +1,125 @@
+[data-theme] {
+  --ech-portrait-base-background: var(--app-background);
+  --ech-portrait-base-color: #b4d2dcff;
+  --ech-portrait-base-border: #757f89ff;
+  --ech-mainAction-base-background: var(--app-background);
+  --ech-mainAction-base-color: #b4d2dcff;
+  --ech-mainAction-base-border: #757f89ff;
+  --ech-mainAction-hover-background: #747e88e6;
+  --ech-mainAction-hover-color: #b4d2dcff;
+  --ech-mainAction-hover-border: #757f89ff;
+  --ech-bonusAction-base-background: #453b75e6;
+  --ech-bonusAction-base-color: #b4d2dcff;
+  --ech-bonusAction-base-border: #757f89ff;
+  --ech-bonusAction-hover-background: #9288c2e6;
+  --ech-bonusAction-hover-color: #b4d2dcff;
+  --ech-bonusAction-hover-border: #757f89ff;
+  --ech-freeAction-base-background: #3b5875e6;
+  --ech-freeAction-base-color: #b4d2dcff;
+  --ech-freeAction-base-border: #757f89ff;
+  --ech-freeAction-hover-background: #88a5c2e6;
+  --ech-freeAction-hover-color: #b4d2dcff;
+  --ech-freeAction-hover-border: #757f89ff;
+  --ech-reaction-base-background: #753b3be6;
+  --ech-reaction-base-color: #b4d2dcff;
+  --ech-reaction-base-border: #757f89ff;
+  --ech-reaction-hover-background: #c28888e6;
+  --ech-reaction-hover-color: #b4d2dcff;
+  --ech-reaction-hover-border: #757f89ff;
+  --ech-endTurn-base-background: #374b3ce6;
+  --ech-endTurn-base-color: #b4d2dcff;
+  --ech-endTurn-base-border: #757f89ff;
+  --ech-endTurn-hover-background: #849889e6;
+  --ech-endTurn-hover-color: #b4d2dcff;
+  --ech-endTurn-hover-border: #757f89ff;
+  --ech-abilityMenu-background: var(--glass-bg);
+  --ech-abilityMenu-color: var(--button-text-color);
+  --ech-abilityMenu-border: #757f89ff;
+  --ech-abilityMenu-base-color: var(--button-text-color);
+  --ech-abilityMenu-base-boxShadow: #757f89cc;
+  --ech-abilityMenu-hover-color: var(--tertiary);
+  --ech-abilityMenu-hover-boxShadow: #757f89cc;
+  --ech-buttons-base-background: #5096c3;
+  --ech-buttons-base-color: #ffffff;
+  --ech-buttons-base-border: #5096c3;
+  --ech-buttons-hover-background: #55bef5;
+  --ech-buttons-hover-color: #ffffffff;
+  --ech-buttons-hover-border: #55bef5;
+  --ech-movement-used-background: #7d879180;
+  --ech-movement-used-boxShadow: #00000000;
+  --ech-movement-baseMovement-background: #5abef5ff;
+  --ech-movement-baseMovement-boxShadow: #6ed2ffcc;
+  --ech-movement-dashMovement-background: #c8c85aff;
+  --ech-movement-dashMovement-boxShadow: #dcdc6ecc;
+  --ech-movement-dangerMovement-background: #c85f5aff;
+  --ech-movement-dangerMovement-boxShadow: #dc736ecc;
+  &.extended-combat-hud .action-hud .action-element {
+    // @include dui-app;
+  }
+}
+
+.ech-tooltip {
+  --ech-tooltip-header-background: transparent;
+  --ech-tooltip-header-color: white;
+  --ech-tooltip-header-border: transparent;
+  --ech-tooltip-subtitle-background: transparent;
+  --ech-tooltip-subtitle-color: #ffffff;
+  --ech-tooltip-subtitle-border: transparent;
+  --ech-tooltip-body-background: transparent;
+  --ech-tooltip-body-color: #ffffff;
+  --ech-tooltip-body-border: #757f89ff;
+
+  @include glass;
+  backdrop-filter: blur(5px);
+
+  .ech-tooltip-body .ech-tooltip-properties .ech-tooltip-badge {
+  }
+}
+
+// .extended-combat-hud .action-hud .actions-container {
+//   @include glass;
+// }
+
+.extended-combat-hud .actions-container:before {
+  @include glass;
+}
+
+.ech-blur {
+  backdrop-filter: blur(5px);
+}
+
+.extended-combat-hud .actions-container.has-actions:after,
+.extended-combat-hud .actions-container .action-pip {
+  background-color: var(--secondary-light);
+  outline: 1px solid var(--tertiary);
+  box-shadow: 0px 0px 10px 0px var(--tertiary);
+}
+
+.extended-combat-hud .actions-container.has-actions.actions-used:after,
+.extended-combat-hud .actions-container .action-pip.actions-used {
+  background-color: var(--secondary-dark);
+  box-shadow: none;
+}
+
+:root {
+  --ech-blur-amount: 5px;
+}
+
+.extended-combat-hud .ability-menu:before {
+  @include glass;
+  // background-color: var(--ech-abilityMenu-background);
+  // border-color: var(--ech-abilityMenu-border);
+}
+
+.extended-combat-hud .portrait-hud .portrait-stat-block {
+  @include glass;
+
+  &::before {
+    backdrop-filter: blur(5px);
+  }
+}
+
+.extended-combat-hud .action-element,
+.extended-combat-hud .button-hud-button {
+  border-radius: var(--border-radius);
+}

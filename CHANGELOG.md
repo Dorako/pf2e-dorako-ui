@@ -1,3 +1,10 @@
+# 3.3.14
+
+- (New) Excluded some upcoming premium module journals from styling.
+- (Refinement) Added styling for targeted RK from ITT.
+- (Refinement) Ensured simple NPC sheets are legible in CRB light theme.
+- (Maintenance) Restored input-field style theming for certain PC sheet fields.
+
 # 3.3.13
 
 - (New) Exluded the new Rusthenge premium module journals from styling.

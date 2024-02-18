@@ -1,0 +1,121 @@
+/* ----------------------------------------- */
+/* Theme colors                              */
+/* ----------------------------------------- */
+:root {
+  --dnd5e-color-black: #000;
+  --dnd5e-color-dark: #191813;
+  --dnd5e-color-faint: #c9c7b8;
+  --dnd5e-color-beige: #b5b3a4;
+  --dnd5e-color-tan: #7a7971;
+  --dnd5e-color-olive: #4b4a44;
+  --dnd5e-color-crimson: #44191a;
+  --dnd5e-color-groove: #eeede0;
+  --dnd5e-color-gold: #9f9275;
+  --dnd5e-color-red: #ed1c24;
+  --dnd5e-color-blue: cornflowerblue;
+  --dnd5e-color-green: #205b15;
+  --dnd5e-color-maroon: #741b2b;
+  --dnd5e-color-parchment: #f1ebe8;
+  --dnd5e-color-card: #f8f4f1;
+  --dnd5e-color-hp-1: #1b4b29;
+  --dnd5e-color-hp-2: #3ba55d;
+  --dnd5e-color-hp-3: #276d3c;
+  --dnd5e-color-hd-1: #401f25;
+  --dnd5e-color-hd-2: var(--dnd5e-color-maroon);
+  --dnd5e-color-hd-3: #500000;
+  --dnd5e-color-sc-1: #433754;
+  --dnd5e-color-sc-2: #776493;
+  --dnd5e-color-iron-gray: #313131;
+  --dnd5e-color-light-gray: #3d3d3d;
+  --dnd5e-color-success: #006c00;
+  --dnd5e-color-success-background: #c7d0c0;
+  --dnd5e-color-success-critical: green;
+  --dnd5e-color-failure: #6e0000;
+  --dnd5e-color-failure-background: #ffdddd;
+  --dnd5e-color-failure-critical: red;
+  --dnd5e-background-10: rgba(0, 0, 0, 0.1);
+  --dnd5e-background-5: rgba(0, 0, 0, 0.05);
+  --dnd5e-border-light: 1px solid #ccc;
+  --dnd5e-border-groove: 2px groove var(--dnd5e-color-groove);
+  --dnd5e-border-dotted: 1px dotted #bbb;
+  --dnd5e-font-modesto: "Modesto Condensed", "Palatino Linotype", serif;
+  --dnd5e-font-roboto: Roboto, sans-serif;
+  --dnd5e-font-roboto-condensed: "Roboto Condensed", sans-serif;
+  --dnd5e-font-roboto-slab: "Roboto Slab", serif;
+  --dnd5e-sheet-background: url(ui/parchment.jpg) repeat;
+  --dnd5e-shadow-45: rgba(0, 0, 0, 0.45);
+  --dnd5e-shadow-15: rgba(0, 0, 0, 0.15);
+  --dnd5e-highlight-45: rgba(255, 255, 255, 0.45);
+  --font-size-9: 0.5625rem;
+  --font-size-10: 0.625rem;
+  --font-size-23: 1.4375rem;
+  --font-size-30: 1.875rem;
+  --font-size-36: 2.25rem;
+  --font-size-42: 2.625rem;
+  --font-size-46: 2.875rem;
+  --dnd5e-capacity-container-background-color: oklch(57.5% 0.012 101);
+  --dnd5e-capacity-container-border-color: oklch(20.8% 0.01 98);
+  --dnd5e-capacity-background-color: oklch(62% 0.05 246);
+  --dnd5e-capacity-border-color: oklch(91% 0.044 252.5);
+  --dnd5e-capacity-text-color: oklch(95% 0 0);
+
+  --dnd5e-bg: url("../img/dnd5e2/texture-gray1.webp") no-repeat top left,
+    url("../img/dnd5e2/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+}
+
+.dnd5e2 .pills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+
+  .pill {
+    font-family: var(--dnd5e-font-roboto);
+    font-weight: bold;
+    font-size: var(--font-size-11);
+    text-transform: uppercase;
+    border: 1px solid var(--color-border-dark-5);
+    border-radius: 3px;
+    background: var(--dnd5e-color-card);
+    padding: 0.1875rem 0.375rem;
+    display: flex;
+    gap: 0.25rem;
+
+    &.green,
+    &.maroon {
+      color: var(--color-text-light-0);
+    }
+
+    &.green {
+      background-color: var(--dnd5e-color-green);
+    }
+    &.maroon {
+      background-color: var(--dnd5e-color-maroon);
+    }
+
+    &.pill-sm {
+      color: #4e4e4e;
+      border: 1px dotted var(--color-border-dark-5);
+      background-color: transparent;
+    }
+  }
+}
+
+.dnd5e2 .gold-icon {
+  border: 2px solid var(--dnd5e-color-gold);
+  box-shadow: 0 0 4px var(--dnd5e-shadow-45);
+  border-radius: 0;
+  background-color: var(--dnd5e-color-light-gray);
+}
+
+.dnd5e2.sheet.actor.character::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  border: 1px solid var(--dnd5e-color-gold);
+  box-shadow: 0 0 20px var(--color-shadow-dark);
+  border-radius: 5px;
+}

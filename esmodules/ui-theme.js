@@ -215,3 +215,14 @@ Hooks.on("render" + "Sidebar", (app, html, data) => {
   $("#sidebar-tabs").attr("data-theme", "");
   app.element[0].dataset.dorakoUiScope = "sidebar";
 });
+
+Hooks.once("renderPinCushionHUD", () => {
+  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+  if (applicationTheme !== "no-theme") {
+    const uiTheme = lookupThemeAndSchemeForKey(applicationTheme);
+    const { dorakoUiTheme, colorScheme } = uiTheme;
+    if (uiTheme) {
+      $("#powerTip").attr("data-theme", dorakoUiTheme);
+    }
+  }
+});

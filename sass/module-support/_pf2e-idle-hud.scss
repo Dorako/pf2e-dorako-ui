@@ -1,4 +1,6 @@
 [data-theme] {
+  &.chat-message.message .pf2e-token-hud .rk-lores,
+  &.chat-message.message .pf2e-token-hud .rk-lores-rolls,
   &.chat-message.message .pf2e-token-hud .rk-skills,
   &.chat-message.message .pf2e-token-hud .rk {
     --rarity-uncommon: #c45500;

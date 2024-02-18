@@ -307,6 +307,7 @@
     --tag-color: var(--text-color-2);
   }
 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .subsection.details .abcd .detail h3,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3 {
     @include dui-input;
     &:hover {
