@@ -71,9 +71,10 @@
   // --text-color-3: black;
   --color-secondary-5-75: rgba(96, 88, 86, 0.25);
 
-  //   --text-color-1: black;
-  //   --text-color-2: var(--color-text-dark-primary);
-  //   --text-color-3: var(--color-text-dark-secondary);
+  // --text-color-1: black;
+  // --text-color-2: var(--color-text-dark-primary);
+  // --text-color-3: var(--color-text-dark-secondary);
+  // --button-hover-text-color: white;
 
   --app-background: rgba(255, 255, 255, 0.5);
   --app-border-color: transparent;
@@ -132,6 +133,10 @@
   input {
     --input-background: rgba(0, 0, 0, 0.05);
     --input-border-color: transparent;
+  }
+
+  &#homebrew-settings section.window-content .form-group.setting tags {
+    --tag-color: black;
   }
 
   &.sheet.hazard .section-container .section-header input,

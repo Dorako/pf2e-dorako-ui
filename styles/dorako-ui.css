@@ -701,35 +701,53 @@ nav.damage-log-nav.tabs .item.active {
   color: var(--color-primary-1);
 }
 
-.clock-panel {
+[data-theme].clock-panel {
   z-index: 1;
   right: 5px;
 }
-.clock-panel .clock-entry {
-  border: none;
+[data-theme].clock-panel .clock-entry {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
 }
-.clock-panel .clock-entry .clock {
-  background: conic-gradient(var(--secondary-light) var(--filled-ratio), white var(--filled-ratio) 1turn);
-}
-.clock-panel [data-action=add-clock] {
-  border: none;
+[data-theme].clock-panel [data-action=add-clock] {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
   margin: unset;
 }
-.clock-panel [data-action=add-clock]:hover {
-  background-color: var(--primary);
+[data-theme].clock-panel [data-action=add-clock]:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
 }
-
-.clock-panel.bottom {
-  bottom: 5px;
+[data-theme].clock-panel [data-action=add-clock].view, [data-theme].clock-panel [data-action=add-clock].selected, [data-theme].clock-panel [data-action=add-clock].active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme].clock-panel [data-action=add-clock].empty, [data-theme].clock-panel [data-action=add-clock].disabled, [data-theme].clock-panel [data-action=add-clock]:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
 }
 
 .item-piles-player-list-trade-button {
@@ -9497,6 +9515,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=crb][data-color-scheme=light] input {
   --input-background: rgba(0, 0, 0, 0.05);
   --input-border-color: transparent;
+}
+[data-theme^=crb][data-color-scheme=light]#homebrew-settings section.window-content .form-group.setting tags {
+  --tag-color: black;
 }
 [data-theme^=crb][data-color-scheme=light].sheet.hazard .section-container .section-header input, [data-theme^=crb][data-color-scheme=light].sheet.hazard .section-container.publication .section-body input[type=text] {
   --input-text-color: var(--text-color-2);

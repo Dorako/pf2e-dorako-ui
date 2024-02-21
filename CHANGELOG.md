@@ -1,3 +1,8 @@
+# 3.3.15
+
+- (Fix) Fixed an issue where homebrew tags would be illegible in CRB light theme.
+- (Refinement) Added proper support for Global Progress Clocks.
+
 # 3.3.14
 
 - (New) Excluded some upcoming premium module journals from styling.
