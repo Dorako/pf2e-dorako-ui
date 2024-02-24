@@ -1,3 +1,7 @@
+# 3.3.16
+
+- (Module) Added integration with PF2e Mobile Sheets.
+
 # 3.3.15
 
 - (Fix) Fixed an issue where homebrew tags would be illegible in CRB light theme.
