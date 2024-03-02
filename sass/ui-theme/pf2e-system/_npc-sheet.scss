@@ -15,8 +15,10 @@
     --text-dark: var(--text-color-2);
   }
 
+  &.actor.npc.sheet form ol.spell-list > li .item-name h4 > a:hover,
   &.actor.npc.sheet form ol.spell-list > li .item-name h4:hover {
     --secondary: var(--accent-color);
+    --color-pf-secondary: var(--accent-color);
   }
 
   &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input {

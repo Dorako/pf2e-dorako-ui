@@ -59,6 +59,12 @@
     border-radius: var(--border-radius);
   }
 
+  &.actor.npc.sheet form ol.spell-list > li .item-summary {
+    background: unset; // system hardcoded color
+    border-top: unset;
+    border-bottom: unset;
+  }
+
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
     border-top: unset; // system hardcoded color
   }

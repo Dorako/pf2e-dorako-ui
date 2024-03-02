@@ -684,10 +684,10 @@
   .pf2e.chat-card .tags {
     border: none;
   }
-  .tags > .tag {
-    --tag-color: var(--text-color-2);
-    --color-pf-alternate-dark: var(--text-color-2);
-  }
+  // .tags > .tag {
+  //   --tag-color: var(--text-color-2);
+  //   --color-pf-alternate-dark: var(--text-color-2);
+  // }
   .tagify,
   .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
   tags.tagify.pf2e-tagify {

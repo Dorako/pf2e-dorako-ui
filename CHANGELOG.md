@@ -1,3 +1,8 @@
+# 3.3.17
+
+- (Maintenance) Adjustments to tags.
+- (Maintenance) Removed some hardcoded system backgrounds.
+
 # 3.3.16
 
 - (Module) Added integration with PF2e Mobile Sheets.
