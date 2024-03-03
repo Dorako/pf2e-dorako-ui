@@ -1,1 +1,112 @@
-{}
+{
+  "pf2e-dorako-ui": {
+    "text": {
+      "gm-only": "GM만",
+      "whisper": "귓속말",
+      "from": "보낸 사람",
+      "send-to-chat": "보내기",
+      "default": "기본",
+      "dark": "다크",
+      "disabled": "비활성화",
+      "maybe-reload": "다시 불러와야 적용되는 변화가 있습니다.",
+      "prefer-light": "라이트 선호",
+      "prefer-dark": "다크 선호",
+      "bg3": "발더스 게이트 3",
+      "bg3-brown": "발더스 게이트 3 (갈색)",
+      "bg3-blue": "발더스 게이트 3 (파란색)",
+      "discord-light": "디스코드 (라이트)",
+      "discord-dark": "디스코드 (다크)",
+      "foundry2": "파운드리 2",
+      "crb": "핵심 책자",
+      "crb-dark": "핵심 책자 (다크)",
+      "no-theme": "테마 없음",
+      "opaque": "불투명",
+      "gm-vs-players": "GM 다크",
+      "custom": "⚠️ 알아서 하기 👷",
+      "custom-light": "⚠️ 알아서 하기 (라이트) 👷",
+      "colors": {
+        "red": "빨간색",
+        "purple": "보라색",
+        "black": "검은색",
+        "blue": "파란색",
+        "green": "초록색",
+        "player": "플레이어 색깔"
+      },
+      "discord": "디스코드",
+      "glass": "유리",
+      "crb-light": "핵심 책자 (라이트)",
+      "alliance": "반전 다크",
+      "custom-dark": "⚠️ 알아서 하기 (다크) 👷",
+      "secret": "비밀",
+      "self-roll": "자신만",
+      "to": "받는 사람",
+      "light": "라이트",
+      "large-chatlog-warning": "채팅 로그가 너무 많아 몇몇 설정은 다음 불러오기때 적용됩니다."
+    },
+    "settings": {
+      "theme": {
+        "label": "테마 설정 정하기",
+        "window-app-theme": {
+          "name": "시트 테마",
+          "hint": "창 스타일에 적용됩니다"
+        },
+        "app-theme": {
+          "name": "인터페이스 테마",
+          "hint": "조작, 탐색, 스크롤바, 팝업 등의 유저 인터페이스에 적용됩니다"
+        },
+        "chat-message-header-style": {
+          "hint": "핵심 책자 테마에만 적용됩니다",
+          "name": "채팅 메시지 헤더 테마"
+        },
+        "border-radius": {
+          "name": "둥근 정도",
+          "hint": "(기본: 3px) 많은 UI 요소의 둥근 정도를 바꿉니다"
+        },
+        "name": "테마 설정",
+        "hint": "다양한 앱과 UI 요소의 테마 설정을 바꿉니다",
+        "chat-message-standard-theme": {
+          "name": "채팅 메시지 (일반) 테마",
+          "hint": "\"적대\" 진영이 아닌 화자가 보낸 메시지에 적용됩니다"
+        },
+        "chat-message-opposition-theme": {
+          "name": "채팅 메시지 (적대) 테마",
+          "hint": "\"적대\" 진영의 화자가 보낸 메시지에 적용됩니다"
+        },
+        "sheet-theme-color": {
+          "name": "시트 테마 색깔",
+          "hint": "플레이어 캐릭터와 탈 것 시트에 적용됩니다"
+        }
+      },
+      "misc": {
+        "name": "기타 설정",
+        "hint": "다른 Dorako UI 기능과 관련된 설정을 결정합니다",
+        "enable-debug-mode": {
+          "name": "디버그 모드 활성화?",
+          "hint": "빠르게 시트 테마를 바꿀 수 있는 버튼을 더합니다"
+        },
+        "label": "기타 설정 결정"
+      },
+      "customization": {
+        "name": "사용자 지정",
+        "excluded-applications": {
+          "name": "제외된 앱",
+          "hint": "로그에서 앱의 이름을 찾거나 디스코드에 물어보세요"
+        },
+        "custom-css": {
+          "name": "사용자 정의 CSS",
+          "hint": "외부 편집기에서 CSS를 작성하여 여기에 붙여넣습니다"
+        },
+        "hint": "사용자 지정 CSS를 사용하여 개인화된 변경을 수행하거나 특정 Dorako UI 스타일링을 선택 해제하세요."
+      },
+      "external-module": {
+        "name": "외부 모듈 설정",
+        "colorize-idle-hud": {
+          "name": "PF2e 인터랙티브 토큰 툴팁을 색깔로 표시할까요?",
+          "hint": "주요 설명의 아이콘에 색상 테마를 적용합니다"
+        },
+        "hint": "다른 모듈이 Dorako UI의 영향을 받는 방식을 조정합니다"
+      },
+      "reset-changes": "변경점 리셋"
+    }
+  }
+}
