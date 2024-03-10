@@ -1,3 +1,7 @@
+# 3.3.19
+
+- (Maintenance) Updated styling of certain tags so they should be legible in any theme.
+
 # 3.3.18
 
 - (Maintenance) Updated styling to be compatible with system version 5.14.1.

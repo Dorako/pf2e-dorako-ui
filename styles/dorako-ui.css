@@ -4979,7 +4979,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme] .tags.light > .tag,
 [data-theme] .tags > .tag.light {
-  background: white;
+  --tag-color: var(--input-color);
+  background: var(--input-background);
 }
 [data-theme] .tagify,
 [data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
