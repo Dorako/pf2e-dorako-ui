@@ -10,12 +10,17 @@
     border-radius: 3px;
   }
 
+  &.actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active,
+  &.actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active,
   &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active,
   &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
     --secondary: var(--accent-color);
+    --color-pf-secondary: var(--accent-color);
     --fa-inverse: var(--accent-text-color);
   }
 
+  &.actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active),
+  &.actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active),
   &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active),
   &.actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
     text-shadow: 0px 0px 0px white;
@@ -52,6 +57,7 @@
 
   &.spellcasting-entry.preparation ol.spell-list > li .item-summary {
     border: unset;
+    background: unset;
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.unidentified {

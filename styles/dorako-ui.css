@@ -4199,7 +4199,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h3 {
   color: var(--text-color-1);
 }
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h4 {
+[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h4:not([data-visibility]) {
   color: var(--text-color-2);
 }
 [data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h5 {
@@ -4976,6 +4976,10 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 [data-theme] .pf2e.chat-card .tags {
   border: none;
+}
+[data-theme] .tags.light > .tag,
+[data-theme] .tags > .tag.light {
+  background: white;
 }
 [data-theme] .tagify,
 [data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper,
@@ -7376,11 +7380,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: 0px 1px 2px black;
   border-radius: 3px;
 }
-[data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
+[data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
   --secondary: var(--accent-color);
+  --color-pf-secondary: var(--accent-color);
   --fa-inverse: var(--accent-text-color);
 }
-[data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
+[data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
   text-shadow: 0px 0px 0px white;
 }
 [data-theme].actor.sheet .window-content .item-summary .button-group button {
@@ -7528,6 +7533,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme].spellcasting-entry.preparation ol.spell-list > li .item-summary {
   border: unset;
+  background: unset;
 }
 [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item.unidentified {
   color: black;
@@ -8273,7 +8279,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 
 [data-theme].actor.sheet .crb-style .sheet-body .sheet-content ul.option-toggles, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-summary, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-summary, [data-theme].sheet.party [data-tab=overview] .summary, [data-theme].sheet.party [data-tab=exploration] .activities .member-activity, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attributes .attribute h3.modifier, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels ol.actions-list li.action.expanded .item-summary, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions .actions-container .actions-tabs-wrapper .actions-panels .actions-options, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.crafting .crafting-options, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .skills-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .lores-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .proficiencies-pane .combat-list .skill, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute, [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
-  border-image-source: var(--ornamentation);
+  border-image-source: var(--ornamentation) !important;
 }
 
 /* ----------------------------------------- */
@@ -8298,37 +8304,37 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   fill: none;
 }
 
-[data-theme].actor.sheet[data-theme-color] .crb-style aside .sidebar header button {
+[data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar header button {
   color: var(--theme-color-dark);
 }
-[data-theme].actor.sheet[data-theme-color] .crb-style aside select {
+[data-theme].actor.sheet.character[data-theme-color] .crb-style aside select {
   background-color: var(--theme-color);
 }
-[data-theme].actor.sheet[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
-[data-theme].actor.sheet[data-theme-color] .window-content .inventory ul.items > li .item-summary,
-[data-theme].actor.sheet[data-theme-color] .inventory .item-summary {
+[data-theme].actor.sheet.character[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
+[data-theme].actor.sheet.character[data-theme-color] .window-content .inventory ul.items > li .item-summary,
+[data-theme].actor.sheet.character[data-theme-color] .inventory .item-summary {
   background: color-mix(in srgb, var(--theme-color) 25%, transparent);
 }
-[data-theme].actor.sheet[data-theme-color] aside .logo {
+[data-theme].actor.sheet.character[data-theme-color] .crb-style aside .logo {
   filter: grayscale(0.6);
 }
-[data-theme].actor.sheet[data-theme-color] aside .sidebar .hitpoints .hp-big .container.current-hp {
+[data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
   background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-text-color) 50%, var(--theme-color) 100%);
   background-color: var(--secondary);
 }
-[data-theme].actor.sheet[data-theme-color] nav.sheet-navigation {
+[data-theme].actor.sheet.character[data-theme-color] nav.sheet-navigation {
   background: var(--theme-text-color);
 }
-[data-theme].actor.sheet[data-theme-color=red] {
+[data-theme].actor.sheet.character[data-theme-color=red] {
   --theme-text-color: var(--primary-light);
   --theme-color: var(--primary);
   --theme-color-dark: var(--primary-dark);
 }
-[data-theme].actor.sheet[data-theme-color=red] .crb-style {
+[data-theme].actor.sheet.character[data-theme-color=red] .crb-style {
   --header: url("../img/red-header.webp");
   background-image: url("../img/red-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet[data-theme-color=blue] {
+[data-theme].actor.sheet.character[data-theme-color=blue] {
   --scrollbar-thumb-background: var(--secondary-light);
   --scrollbar-thumb-border-color: var(--tertiary);
   --color-scrollbar-hover: var(--theme-text-color);
@@ -8336,24 +8342,24 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --theme-color: var(--secondary);
   --theme-text-color: var(--secondary-light);
 }
-[data-theme].actor.sheet[data-theme-color=blue] .crb-style {
+[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style {
   --header: url("../img/blue-header.webp");
   background-image: url("../img/blue-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet[data-theme-color=blue] .crb-style aside {
+[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style aside {
   background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet[data-theme-color=blue] .crb-style aside .sidebar .armor-class .shield.hp {
+[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style aside .sidebar .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet[data-theme-color=blue] .crb-style header.char-header .char-level .level {
+[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet[data-theme-color=blue] .crb-style nav.sheet-navigation .item:hover,
-[data-theme].actor.sheet[data-theme-color=blue] .crb-style nav.sheet-navigation .item.active {
+[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
-[data-theme].actor.sheet[data-theme-color=green] {
+[data-theme].actor.sheet.character[data-theme-color=green] {
   --scrollbar-thumb-background: var(--remaster-light);
   --scrollbar-thumb-border-color: var(--tertiary);
   --color-scrollbar-hover: var(--theme-text-color);
@@ -8361,24 +8367,24 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --theme-color: var(--remaster);
   --theme-text-color: var(--remaster-light);
 }
-[data-theme].actor.sheet[data-theme-color=green] .crb-style {
+[data-theme].actor.sheet.character[data-theme-color=green] .crb-style {
   --header: url("../img/green-header.webp");
   background-image: url("../img/green-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet[data-theme-color=green] .crb-style aside {
+[data-theme].actor.sheet.character[data-theme-color=green] .crb-style aside {
   background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet[data-theme-color=green] .crb-style aside .armor-class .shield.hp {
+[data-theme].actor.sheet.character[data-theme-color=green] .crb-style aside .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet[data-theme-color=green] header.char-header .char-level .level {
+[data-theme].actor.sheet.character[data-theme-color=green] header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet[data-theme-color=green] nav.sheet-navigation .item:hover,
-[data-theme].actor.sheet[data-theme-color=green] nav.sheet-navigation .item.active {
+[data-theme].actor.sheet.character[data-theme-color=green] nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.character[data-theme-color=green] nav.sheet-navigation .item.active {
   background-image: url("../img/green-nav-item.webp");
 }
-[data-theme].actor.sheet[data-theme-color=purple] {
+[data-theme].actor.sheet.character[data-theme-color=purple] {
   --theme-color-dark: #3b0062;
   --theme-color: #520982;
   --theme-text-color: rgb(107, 29, 137);
@@ -8386,24 +8392,24 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --scrollbar-thumb-background: var(--theme-color);
   --scrollbar-thumb-border-color: var(--tertiary);
 }
-[data-theme].actor.sheet[data-theme-color=purple] .crb-style {
+[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style {
   --header: url("../img/purple-header.webp");
   background-image: url("../img/purple-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet[data-theme-color=purple] .crb-style aside {
+[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style aside {
   background-image: url("../img/purple-sidebar-top.webp"), url("../img/purple-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet[data-theme-color=purple] .crb-style aside .armor-class .shield.hp {
+[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style aside .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet[data-theme-color=purple] .crb-style header.char-header .char-level .level {
+[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet[data-theme-color=purple] .crb-style nav.sheet-navigation .item:hover,
-[data-theme].actor.sheet[data-theme-color=purple] .crb-style nav.sheet-navigation .item.active {
+[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
-[data-theme].actor.sheet[data-theme-color=black] {
+[data-theme].actor.sheet.character[data-theme-color=black] {
   --theme-color-dark: black;
   --theme-color: #111;
   --theme-text-color: #222;
@@ -8411,25 +8417,25 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --scrollbar-thumb-border-color: var(--tertiary);
   --color-scrollbar-hover: var(--theme-text-color);
 }
-[data-theme].actor.sheet[data-theme-color=black] .crb-style {
+[data-theme].actor.sheet.character[data-theme-color=black] .crb-style {
   --header: url("../img/black-header.webp");
   background-image: url("../img/green-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet[data-theme-color=black] .crb-style aside {
+[data-theme].actor.sheet.character[data-theme-color=black] .crb-style aside {
   background-image: url("../img/black-sidebar-top.webp"), url("../img/black-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet[data-theme-color=black] .crb-style aside .armor-class .shield.hp {
+[data-theme].actor.sheet.character[data-theme-color=black] .crb-style aside .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet[data-theme-color=black] .crb-style header.char-header .char-level .level {
+[data-theme].actor.sheet.character[data-theme-color=black] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet[data-theme-color=black] .crb-style nav.sheet-navigation .item:hover,
-[data-theme].actor.sheet[data-theme-color=black] .crb-style nav.sheet-navigation .item.active {
+[data-theme].actor.sheet.character[data-theme-color=black] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.character[data-theme-color=black] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
 
-[data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style {
+[data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style {
   background: unset;
   background: var(--header), transparent !important;
   background-repeat: repeat-x, no-repeat !important;
@@ -8813,7 +8819,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography .editor:hover {
   outline-color: transparent;
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
   --color-pf-secondary: var(--accent-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input {
@@ -8966,6 +8972,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
   filter: invert(1);
 }
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.proficiencies ul.proficiencies-list li a.d20 {
+  filter: drop-shadow(0 0 1px var(--color-shadow-dark));
+}
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select {
   --input-text-color: black;
   --input-background: transparent;
@@ -8980,8 +8989,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .dc, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li .modifier {
   --primary: var(--accent-color);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.proficiencies ul.proficiencies-list li a.hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover {
   --primary: var(--accent-color-light);
+  --color-pf-primary-dark: var(--accent-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
   border-image: linear-gradient(90deg, transparent, var(--color-primary-2) 20%, transparent) 1;
@@ -9052,6 +9062,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme].attribute-builder .window-content .summary-row .hint-container h3 {
   --color-pf-primary: var(--text-color-1);
+}
+
+[data-theme] h4 a:hover {
+  --color-pf-secondary: var(--accent-color-light);
 }
 
 [data-theme]#compendium-browser > section.window-content > .content-box .compendium-browser-settings form .setting-section, [data-theme]#license-viewer > section.window-content > .content-box .compendium-browser-settings form .setting-section, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .filtercontainer, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .sortcontainer, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .filtercontainer, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .sortcontainer {

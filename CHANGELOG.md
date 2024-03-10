@@ -1,3 +1,7 @@
+# 3.3.18
+
+- (Maintenance) Updated styling to be compatible with system version 5.14.1.
+
 # 3.3.17
 
 - (Maintenance) Adjustments to tags.

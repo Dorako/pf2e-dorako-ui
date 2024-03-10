@@ -313,7 +313,7 @@
   h3 {
     color: var(--text-color-1);
   }
-  h4 {
+  h4:not([data-visibility]) {
     color: var(--text-color-2);
   }
   h5 {
@@ -684,6 +684,12 @@
   .pf2e.chat-card .tags {
     border: none;
   }
+
+  .tags.light > .tag,
+  .tags > .tag.light {
+    background: white;
+  }
+
   // .tags > .tag {
   //   --tag-color: var(--text-color-2);
   //   --color-pf-alternate-dark: var(--text-color-2);

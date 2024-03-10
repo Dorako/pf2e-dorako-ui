@@ -18,7 +18,7 @@
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .ability-scores .ability h3.ability-mod,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .attribute-modifiers .attribute h3.attribute-mod {
-    border-image-source: var(--ornamentation);
+    border-image-source: var(--ornamentation) !important;
   }
 }
 
@@ -48,7 +48,7 @@
 }
 
 [data-theme] {
-  &.actor.sheet[data-theme-color] {
+  &.actor.sheet.character[data-theme-color] {
     .crb-style aside .sidebar header button {
       color: var(--theme-color-dark);
     }
@@ -60,7 +60,7 @@
     .inventory .item-summary {
       background: color-mix(in srgb, var(--theme-color) 25%, transparent);
     }
-    aside {
+    .crb-style aside {
       .logo {
         filter: grayscale(0.6);
       }
@@ -81,7 +81,7 @@
     }
   }
 
-  &.actor.sheet[data-theme-color="red"] {
+  &.actor.sheet.character[data-theme-color="red"] {
     --theme-text-color: var(--primary-light);
     --theme-color: var(--primary);
     --theme-color-dark: var(--primary-dark);
@@ -92,7 +92,7 @@
     }
   }
 
-  &.actor.sheet[data-theme-color="blue"] {
+  &.actor.sheet.character[data-theme-color="blue"] {
     --scrollbar-thumb-background: var(--secondary-light);
     --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
@@ -125,7 +125,7 @@
     }
   }
 
-  &.actor.sheet[data-theme-color="green"] {
+  &.actor.sheet.character[data-theme-color="green"] {
     --scrollbar-thumb-background: var(--remaster-light);
     --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
@@ -156,7 +156,7 @@
     }
   }
 
-  &.actor.sheet[data-theme-color="purple"] {
+  &.actor.sheet.character[data-theme-color="purple"] {
     --theme-color-dark: #3b0062;
     --theme-color: #520982;
     --theme-text-color: rgb(107, 29, 137);
@@ -187,7 +187,7 @@
     }
   }
 
-  &.actor.sheet[data-theme-color="black"] {
+  &.actor.sheet.character[data-theme-color="black"] {
     --theme-color-dark: black;
     --theme-color: #111;
     --theme-text-color: #222;
@@ -220,7 +220,7 @@
 }
 
 [data-theme][data-dorako-ui-scope="limited"] {
-  &.actor.sheet .crb-style {
+  &.actor.sheet.character .crb-style {
     background: unset;
     background: var(--header), transparent !important;
     background-repeat: repeat-x, no-repeat !important;
@@ -405,6 +405,8 @@
     }
   }
 
+  //prettier-ignore
+  &.actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
     --color-pf-secondary: var(--accent-color);
   }
@@ -440,6 +442,11 @@
     filter: invert(1);
   }
 
+  //prettier-ignore
+  &.actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.proficiencies ul.proficiencies-list li a.d20 {
+    filter: drop-shadow(0 0 1px var(--color-shadow-dark));
+  }
+
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select {
     --input-text-color: black;
     --input-background: transparent;
@@ -459,9 +466,11 @@
   }
 
   //prettier-ignore
+  &.actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.proficiencies ul.proficiencies-list li a.hover,
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.skill-name:hover, 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.proficiencies-list li a.modifier:hover{
     --primary: var(--accent-color-light);
+    --color-pf-primary-dark: var(--accent-color);
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item,
@@ -520,5 +529,11 @@
   }
   &.attribute-builder .window-content .summary-row .hint-container h3 {
     --color-pf-primary: var(--text-color-1);
+  }
+}
+
+[data-theme] {
+  h4 a:hover {
+    --color-pf-secondary: var(--accent-color-light);
   }
 }
