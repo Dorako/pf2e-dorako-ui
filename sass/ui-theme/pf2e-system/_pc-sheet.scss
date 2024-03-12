@@ -438,7 +438,7 @@
   }
 
   //prettier-ignore
-  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
+  &.actor.sheet.character:not([data-theme="dnd5e2"][data-color-scheme="light"]) .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
     filter: invert(1);
   }
 

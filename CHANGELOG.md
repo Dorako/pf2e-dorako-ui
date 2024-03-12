@@ -1,3 +1,8 @@
+# 3.4.0
+
+- (Refinement) Colorized rolltype indicators in CRB themes.
+- (New) New "D&D 5e" light/dark sheet and chat message themes, inspired by the recent 3.0 update. Note: You must have the D&D 5e system installed for the assets to load.
+
 # 3.3.19
 
 - (Maintenance) Updated styling of certain tags so they should be legible in any theme.

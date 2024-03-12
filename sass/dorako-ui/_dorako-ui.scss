@@ -46,6 +46,10 @@ i[data-pf2-repost] {
 [data-dorako-ui-scope="limited"] .tags.paizo-style {
   gap: 1px;
 
+  select {
+    height: var(--font-size-27); // fixes system issue
+  }
+
   .tag {
     // height: auto;
   }
@@ -121,6 +125,10 @@ i[data-pf2-repost] {
     background: var(--color-secondary-2);
     --box-shadow: 0px 1px 3px 1px black;
     box-shadow: var(--box-shadow);
+    .name {
+      margin: 0px;
+      font-size: larger;
+    }
     .notes {
       color: var(--text-color-3);
     }

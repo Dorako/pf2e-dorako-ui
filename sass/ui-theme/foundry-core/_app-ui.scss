@@ -400,6 +400,7 @@
     font-size: var(--font-size-12);
   }
 
+  a.list-row,
   a.button,
   button:not(.pm-dropdown) {
     @include dui-button;
@@ -431,14 +432,14 @@
   textarea {
     color: var(--input-text-color);
     background: var(--input-background);
-    border: var(--window-app-border-width);
+    border-width: var(--app-border-width);
     border-color: var(--input-border-color);
   }
 
   hr {
     border: none;
     border-top: 1px solid var(--app-border-color);
-    border-bottom: 1px solid var(--color-secondary-5);
+    border-bottom: 1px solid var(--app-border-color);
   }
 
   &.dialog .dialog-buttons button.default {
@@ -539,7 +540,6 @@
 /* ----------------------------------------- */
 /* Application specific                      */
 /* ----------------------------------------- */
-
 [data-theme] {
   &.token-sheet,
   &.dialog {
@@ -621,8 +621,16 @@
     // flex-direction: column;
   }
 
+  &.pf2e.item.sheet form > nav > .tabs {
+    gap: 5px;
+  }
+
   &.sheet nav.sheet-tabs {
     gap: 5px;
+  }
+
+  .pf2e.chat-card > hr {
+    display: none;
   }
 }
 
@@ -681,6 +689,11 @@
 /* ----------------------------------------- */
 
 [data-theme] {
+  .tags.paizo-style tag,
+  .tags.paizo-style .tag,
+  .tags.paizo-style select.tag {
+    --tag-color: var(--color-text-trait);
+  }
   .pf2e.chat-card .tags {
     border: none;
   }
@@ -792,7 +805,7 @@
   }
 
   &.pf2e.item.sheet {
-    input {
+    input:not([type="range"]) {
       @include dui-input;
     }
   }

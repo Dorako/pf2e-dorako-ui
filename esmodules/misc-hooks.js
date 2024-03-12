@@ -190,14 +190,17 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(
-      i18n("pf2e-dorako-ui.settings.theme.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.theme.hint")}</p>`
+      `<p class="name">` +
+        i18n("pf2e-dorako-ui.settings.theme.name") +
+        `</p> <p class="notes">${i18n("pf2e-dorako-ui.settings.theme.hint")}</p>`
     )
     .insertBefore($('[name="pf2e-dorako-ui.theme.app-theme"]').parents("div.form-group:first"));
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(
-      i18n("pf2e-dorako-ui.settings.avatar.name") +
-        `<p class="notes">${i18n("pf2e-dorako-ui.settings.avatar.hint")}</p>`
+      `<p class="name">` +
+        i18n("pf2e-dorako-ui.settings.avatar.name") +
+        `</p> <p class="notes">${i18n("pf2e-dorako-ui.settings.avatar.hint")}</p>`
     )
     .insertBefore($('[name="pf2e-dorako-ui.avatar.source"]').parents("div.form-group:first"));
   $("<div>")
@@ -207,14 +210,17 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(
-      i18n("pf2e-dorako-ui.settings.misc.name") + `<p class="notes">${i18n("pf2e-dorako-ui.settings.misc.hint")}</p>`
+      `<p class="name">` +
+        i18n("pf2e-dorako-ui.settings.misc.name") +
+        `</p> <p class="notes">${i18n("pf2e-dorako-ui.settings.misc.hint")}</p>`
     )
     .insertBefore($('[name="pf2e-dorako-ui.misc.enable-debug-mode"]').parents("div.form-group:first"));
   $("<div>")
     .addClass("form-group dorako settings-header")
     .html(
-      i18n("pf2e-dorako-ui.settings.customization.name") +
-        `<p class="notes">${i18n("pf2e-dorako-ui.settings.customization.hint")}</p>`
+      `<p class="name">` +
+        i18n("pf2e-dorako-ui.settings.customization.name") +
+        `</p> <p class="notes">${i18n("pf2e-dorako-ui.settings.customization.hint")}</p>`
     )
     .insertBefore($('[name="pf2e-dorako-ui.customization.excluded-applications"]').parents("div.form-group:first"));
 
@@ -224,8 +230,9 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
     $("<div>")
       .addClass("form-group dorako settings-header")
       .html(
-        i18n("pf2e-dorako-ui.settings.external-module.name") +
-          `<p class="notes">${i18n("pf2e-dorako-ui.settings.external-module.hint")}</p>`
+        `<p class="name">` +
+          i18n("pf2e-dorako-ui.settings.external-module.name") +
+          `</p> <p class="notes">${i18n("pf2e-dorako-ui.settings.external-module.hint")}</p>`
       )
       .insertBefore($('[name="pf2e-dorako-ui.external-module.colorize-idle-hud"]').parents("div.form-group:first"));
   } else {

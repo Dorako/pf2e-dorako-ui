@@ -26,6 +26,10 @@ export function lookupThemeAndSchemeForKey(key) {
       return { dorakoUiTheme: "bg3-brown", colorScheme: "dark" };
     case "bg3-blue":
       return { dorakoUiTheme: "bg3-blue", colorScheme: "dark" };
+    case "dnd5e2-light":
+      return { dorakoUiTheme: "dnd5e2", colorScheme: "light" };
+    case "dnd5e2-dark":
+      return { dorakoUiTheme: "dnd5e2", colorScheme: "dark" };
     case "discord":
       return { dorakoUiTheme: "discord", colorScheme: "dark" };
     case "discord-light":

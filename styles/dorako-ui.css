@@ -4275,6 +4275,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: 3px;
   font-size: var(--font-size-12);
 }
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row,
 [data-theme][data-dorako-ui-scope=unlimited] a.button,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown) {
   background: var(--app-background);
@@ -4291,6 +4292,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row:not(.disabled, :disabled):hover,
 [data-theme][data-dorako-ui-scope=unlimited] a.button:not(.disabled, :disabled):hover,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
@@ -4298,7 +4300,10 @@ html .xdy-pf2e-workbench-rarity-unique {
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.button.view, [data-theme][data-dorako-ui-scope=unlimited] a.button.selected, [data-theme][data-dorako-ui-scope=unlimited] a.button.active,
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row.view, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.selected, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.active,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.view,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.selected,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.active,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).view,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).selected,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).active {
@@ -4309,7 +4314,10 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.button.empty, [data-theme][data-dorako-ui-scope=unlimited] a.button.disabled, [data-theme][data-dorako-ui-scope=unlimited] a.button:disabled,
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.disabled, [data-theme][data-dorako-ui-scope=unlimited] a.list-row:disabled,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.empty,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.disabled,
+[data-theme][data-dorako-ui-scope=unlimited] a.button:disabled,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).disabled,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):disabled {
@@ -4483,13 +4491,13 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme][data-dorako-ui-scope=unlimited] textarea {
   color: var(--input-text-color);
   background: var(--input-background);
-  border: var(--window-app-border-width);
+  border-width: var(--app-border-width);
   border-color: var(--input-border-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited] hr {
   border: none;
   border-top: 1px solid var(--app-border-color);
-  border-bottom: 1px solid var(--color-secondary-5);
+  border-bottom: 1px solid var(--app-border-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default {
   background: var(--app-background);
@@ -4866,8 +4874,14 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-border-color: var(--button-disabled-border-color);
   --button-text-color: var(--text-color-5);
 }
+[data-theme].pf2e.item.sheet form > nav > .tabs {
+  gap: 5px;
+}
 [data-theme].sheet nav.sheet-tabs {
   gap: 5px;
+}
+[data-theme] .pf2e.chat-card > hr {
+  display: none;
 }
 
 /* ----------------------------------------- */
@@ -4974,6 +4988,11 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* Tagify and tags                           */
 /* ----------------------------------------- */
+[data-theme] .tags.paizo-style tag,
+[data-theme] .tags.paizo-style .tag,
+[data-theme] .tags.paizo-style select.tag {
+  --tag-color: var(--color-text-trait);
+}
 [data-theme] .pf2e.chat-card .tags {
   border: none;
 }
@@ -5080,7 +5099,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] [data-visibility]:not([data-visibility=all])[data-visibility=gm] [data-visibility=gm] {
   background: none;
 }
-[data-theme].pf2e.item.sheet input {
+[data-theme].pf2e.item.sheet input:not([type=range]) {
   background: var(--input-background);
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color) !important;
@@ -5092,25 +5111,25 @@ html .xdy-pf2e-workbench-rarity-unique {
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-theme].pf2e.item.sheet input:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme].pf2e.item.sheet input:focus {
+[data-theme].pf2e.item.sheet input:not([type=range]):not(:disabled, .disabled, [type=checkbox]):hover, [data-theme].pf2e.item.sheet input:not([type=range]):focus {
   outline: 1px solid var(--input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].pf2e.item.sheet input.disabled, [data-theme].pf2e.item.sheet input:disabled {
+[data-theme].pf2e.item.sheet input:not([type=range]).disabled, [data-theme].pf2e.item.sheet input:not([type=range]):disabled {
   --input-text-color: var(--text-color-disabled);
   --input-background: var(--input-disabled-background);
   --input-border-color: var(--input-disabled-border-color);
 }
-[data-theme].pf2e.item.sheet input.disabled::placeholder, [data-theme].pf2e.item.sheet input:disabled::placeholder {
+[data-theme].pf2e.item.sheet input:not([type=range]).disabled::placeholder, [data-theme].pf2e.item.sheet input:not([type=range]):disabled::placeholder {
   color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
 }
-[data-theme].pf2e.item.sheet input::placeholder {
+[data-theme].pf2e.item.sheet input:not([type=range])::placeholder {
   color: var(--input-placeholder-color);
 }
-[data-theme].pf2e.item.sheet input[type=checkbox] {
+[data-theme].pf2e.item.sheet input:not([type=range])[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
@@ -7485,9 +7504,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
   --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
 }
-[data-theme].pf2e.item.sheet form > nav > .tabs > a:last-of-type {
-  padding: 5px 10px;
-}
 [data-theme].pf2e.actor form input[type=text], [data-theme].pf2e.actor form input[type=number] {
   background: var(--input-background);
   border: var(--app-border-width) solid;
@@ -7921,6 +7937,54 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 .chat-message[data-theme][data-color-scheme=dark] > .message-content .dice-roll .dice-result > [data-visibility=gm] {
   border: 2px dotted var(--visibility-gm-bg);
 }
+.chat-message[data-theme] [data-action=delete-template] {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--accent-color);
+  --button-border-color: var(--accent-color-dark);
+  --button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-text-color: var(--accent-text-color);
+}
+.chat-message[data-theme] [data-action=delete-template]:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+.chat-message[data-theme] [data-action=delete-template].view, .chat-message[data-theme] [data-action=delete-template].selected, .chat-message[data-theme] [data-action=delete-template].active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+.chat-message[data-theme] [data-action=delete-template].empty, .chat-message[data-theme] [data-action=delete-template].disabled, .chat-message[data-theme] [data-action=delete-template]:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+.chat-message[data-theme] [data-action=delete-template]:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
 .chat-message[data-theme] .dice-roll .dice-formula,
 .chat-message[data-theme] .dice-roll .dice-total {
   background: var(--app-background);
@@ -8059,10 +8123,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   display: none;
 }
 
-.message[data-theme]:not([data-theme^=crb][data-color-scheme=light]) .message-content .damage-application img {
+.message[data-theme]:not([data-theme^=crb][data-color-scheme=light],
+[data-theme^=dnd5e2][data-color-scheme=light]) .message-content .damage-application img {
   filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
 }
-.message[data-theme]:not([data-theme^=crb][data-color-scheme=light]) .message-content .damage-application button:hover img {
+.message[data-theme]:not([data-theme^=crb][data-color-scheme=light],
+[data-theme^=dnd5e2][data-color-scheme=light]) .message-content .damage-application button:hover img {
   filter: invert(1) drop-shadow(0px 1px 1px black);
 }
 
@@ -8970,7 +9036,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style aside .sidebar .tags .tag.edit-btn {
   background: #dad8cc;
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character:not([data-theme=dnd5e2][data-color-scheme=light]) .crb-style .sheet-body .sheet-content .tab.spellcasting .spellcasting-entry .rollable .d20-svg {
   filter: invert(1);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.proficiencies ul.proficiencies-list li a.d20 {
@@ -10169,7 +10235,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --dnd5e-font-roboto: Roboto, sans-serif;
   --dnd5e-font-roboto-condensed: "Roboto Condensed", sans-serif;
   --dnd5e-font-roboto-slab: "Roboto Slab", serif;
-  --dnd5e-sheet-background: url(ui/parchment.jpg) repeat;
+  --dnd5e-sheet-background: url("../../../systems/dnd5e/ui/parchment.jpg") repeat;
   --dnd5e-shadow-45: rgba(0, 0, 0, 0.45);
   --dnd5e-shadow-15: rgba(0, 0, 0, 0.15);
   --dnd5e-highlight-45: rgba(255, 255, 255, 0.45);
@@ -10185,8 +10251,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --dnd5e-capacity-background-color: oklch(62% 0.05 246);
   --dnd5e-capacity-border-color: oklch(91% 0.044 252.5);
   --dnd5e-capacity-text-color: oklch(95% 0 0);
-  --dnd5e-bg: url("../img/dnd5e2/texture-gray1.webp") no-repeat top left,
-    url("../img/dnd5e2/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+  --dnd5e-color-scrollbar: var(--dnd5e-color-gold);
+  --dnd5e-bg: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
 }
 
 .dnd5e2 .pills {
@@ -10224,6 +10291,20 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background-color: transparent;
 }
 
+.dnd5e2 .card {
+  border-radius: 4px;
+  background: var(--dnd5e-color-card);
+  box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+  border: 1px solid var(--dnd5e-color-gold);
+}
+
+.dnd5e2 .card .header {
+  background: linear-gradient(to right, var(--dnd5e-color-hd-1), var(--dnd5e-color-hd-2));
+  color: white;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid var(--dnd5e-color-gold);
+}
+
 .dnd5e2 .gold-icon {
   border: 2px solid var(--dnd5e-color-gold);
   box-shadow: 0 0 4px var(--dnd5e-shadow-45);
@@ -10239,6 +10320,346 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: 1px solid var(--dnd5e-color-gold);
   box-shadow: 0 0 20px var(--color-shadow-dark);
   border-radius: 5px;
+}
+
+/* ----------------------------------------- */
+/* Map v1 styling to v2 values               */
+/* ----------------------------------------- */
+[data-theme^=dnd5e2] {
+  --color-border-light-highlight: var(--dnd5e-color-gold);
+}
+
+/* ----------------------------------------- */
+/* DUI variables                             */
+/* ----------------------------------------- */
+[data-chat-interface-theme^=dnd5e2] #sidebar-tabs,
+[data-chat-interface-theme^=dnd5e2] #chat-log ~ *,
+[data-theme^=dnd5e2] {
+  --color-primary-1: var(--dnd5e-color-gold);
+  --color-primary-1-40: color-mix(in srgb, var(--color-primary-1) 40%, transparent);
+  --color-primary-2: var(--dnd5e-color-gold);
+  --color-primary-2-20: color-mix(in srgb, var(--color-primary-2) 20%, transparent);
+  --color-primary-3: var(--dnd5e-color-gold);
+  --color-primary-3-10: color-mix(in srgb, var(--color-primary-3) 10%, transparent);
+  --color-primary-3-75: color-mix(in srgb, var(--color-primary-3) 75%, transparent);
+  --color-primary-4: var(--dnd5e-color-gold);
+  --color-primary-4-75: color-mix(in srgb, var(--color-primary-4) 75%, transparent);
+  --color-primary-5: var(--dnd5e-color-gold);
+  --color-secondary-1: var(--dnd5e-color-groove);
+  --color-secondary-2: var(--dnd5e-color-groove);
+  --color-secondary-3: var(--dnd5e-color-groove);
+  --color-secondary-3-75: color-mix(in srgb, var(--color-secondary-3) 75%, transparent);
+  --color-secondary-4: var(--dnd5e-color-light-gray);
+  --color-secondary-5: var(--dnd5e-color-iron-gray);
+  --color-secondary-5-25: rgba(11, 10, 19, 0.25);
+  --color-secondary-5-50: rgba(11, 10, 19, 0.5);
+  --color-secondary-5-75: rgba(11, 10, 19, 0.75);
+  --color-secondary-5-90: rgba(11, 10, 19, 0.9);
+  --text-color-1: var(--color-text-dark-primary);
+  --text-color-2: var(--color-text-dark-primary);
+  --text-color-3: var(--color-text-dark-primary);
+  --text-color-4: var(--color-text-dark-primary);
+  --text-color-5: var(--color-text-dark-primary);
+  --text-color-disabled: var(--color-text-dark-inactive);
+  --icon-border-color: var(--dnd5e-color-gold);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-15);
+  --scrollbar-thumb-background: var(--dnd5e-color-scrollbar);
+  --scrollbar-thumb-border-color: transparent;
+  --input-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+  --input-background: var(--dnd5e-color-card);
+  --input-border-color: var(--dnd5e-color-gold);
+  --input-focus-text-color: var(--color-text-dark-primary);
+  --input-text-color: var(--color-text-dark-primary);
+  --input-placeholder-color: var(--color-text-dark-5);
+  --input-text-selection-color: var(--color-secondary-3);
+  --input-focus-outline-color: var(--dnd5e-color-gold);
+  --input-disabled-background: color-mix(in srgb, var(--dnd5e-color-card) 50%, transparent);
+  --input-disabled-border-color: color-mix(in srgb, var(--color-border-dark-5) 50%, transparent);
+  --fieldset-border-color: var(--dnd5e-color-gold);
+  --fieldset-background-color: transparent;
+  --fieldset-legend-color: var(--color-text-dark-primary);
+  --button-border-color: var(--color-secondary-3);
+  --app-border-width: 1px;
+  --app-background: var(--dnd5e-color-card);
+  --app-border-color: var(--color-border-light-2);
+  --button-background: var(--app-background);
+  --button-border-color: var(--app-border-color);
+  --button-text-color: black;
+  --button-focus-outline-color: var(--dnd5e-color-gold);
+  --button-hover-background: var(--dnd5e-color-iron-gray);
+  --button-hover-border-color: var(--dnd5e-color-black);
+  --button-hover-text-color: var(--dnd5e-color-gold);
+  --button-disabled-background: var(--color-primary-5);
+  --button-disabled-border-color: var(--color-primary-4);
+  --app-border-color: var(--dnd5e-color-gold);
+  --window-app-background: var(--dnd5e-bg);
+  --window-app-border-width: 2px;
+  --window-app-border-color: var(--dnd5e-color-gold);
+  --window-app-box-shadow: 0 0 30px var(--dnd5e-shadow-15), 0 0 6px var(--dnd5e-shadow-45);
+  --accent-text-color: var(--dnd5e-color-gold);
+  --accent-color-light: color-mix(in srgb, var(--dnd5e-color-iron-gray) 80%, white);
+  --accent-color: var(--dnd5e-color-iron-gray);
+  --accent-color-dark: color-mix(in srgb, var(--dnd5e-color-iron-gray) 80%, black);
+  --inline-background: var(--dnd5e-color-card);
+  --inline-border-color: var(--color-border-dark-5);
+  --inline-text-color: var(--color-text-dark-primary);
+  --inline-icon-color: var(--dnd5e-color-gold);
+  --inline-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+}
+
+[data-theme=dnd5e2] {
+  --color-bg-trait: var(--dnd5e-color-maroon);
+  --color-bg-size: var(--dnd5e-color-green);
+}
+[data-theme=dnd5e2].window-app .window-header {
+  text-shadow: unset;
+}
+[data-theme=dnd5e2].window-app .window-resizable-handle {
+  background: none;
+  border: none;
+  width: 13px;
+  bottom: -2px;
+  cursor: nwse-resize;
+}
+[data-theme=dnd5e2].window-app .window-resizable-handle > i::before {
+  content: "\f7a5";
+}
+[data-theme=dnd5e2] hr {
+  border-top: 1px solid var(--window-app-border-color);
+  border-bottom: 1px solid var(--window-app-border-color);
+}
+[data-theme=dnd5e2] .tab.category.active[data-tab=pf2e-dorako-ux] h2,
+[data-theme=dnd5e2] .tab.category.active[data-tab=pf2e-dorako-ui] h2 {
+  background: none !important;
+  color: var(--dnd5e-color-maroon) !important;
+  box-shadow: none !important;
+  border: none !important;
+  text-shadow: 0px 1px 1px black !important;
+}
+[data-theme=dnd5e2] .form-group.dorako.settings-header {
+  background: var(--app-background) !important;
+  border: 1px solid var(--dnd5e-color-gold) !important;
+  box-shadow: 0 0 6px var(--dnd5e-shadow-45) !important;
+}
+[data-theme=dnd5e2] .form-group.dorako.settings-header .name {
+  color: var(--dnd5e-color-gold) !important;
+}
+[data-theme=dnd5e2] #context-menu {
+  text-shadow: unset;
+}
+[data-theme=dnd5e2].pf2e.item.sheet .sheet-header input[type=text], [data-theme=dnd5e2].pf2e.item.sheet .sheet-header input[type=number] {
+  --input-background: var(--dnd5e-background-10);
+  --input-border-color: transparent;
+  --input-box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Tooltip                                   */
+/* ----------------------------------------- */
+#tooltip[data-theme^=bg3] {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+/* ----------------------------------------- */
+/* Chat message                              */
+/* ----------------------------------------- */
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2] {
+  padding: 0.5rem;
+  border-width: 1px;
+  border-block-end-width: 2px;
+  border-radius: 6px;
+  font-family: var(--dnd5e-font-roboto);
+  font-size: var(--font-size-13);
+  position: relative;
+}
+
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2].whisper::before {
+  filter: grayscale(1);
+}
+
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2].blind::before {
+  mix-blend-mode: luminosity;
+}
+
+[data-theme^=dnd5e2].chat-message {
+  --window-app-background: var(--dnd5e-color-parchment);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-15);
+}
+[data-theme^=dnd5e2].chat-message.whisper[data-color-scheme=light] {
+  --window-app-background: #e8e8ef;
+  border-color: #8f8f9f;
+}
+[data-theme^=dnd5e2].chat-message.blind[data-color-scheme=light] {
+  --window-app-background: #f5eaf5;
+  border-color: #9e8e9e;
+}
+[data-theme^=dnd5e2].chat-message[data-color-scheme=dark] {
+  --window-app-background: var(--dnd5e-color-dark);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-45);
+}
+[data-theme^=dnd5e2].chat-message.whisper[data-color-scheme=dark] {
+  --window-app-background: #2b2b4e;
+  border-color: #7b7b8c;
+}
+[data-theme^=dnd5e2].chat-message.blind[data-color-scheme=dark] {
+  --window-app-background: var(--dnd5e-color-sc-1);
+  border-color: var(--dnd5e-color-sc-2);
+}
+[data-theme^=dnd5e2].chat-message > header {
+  z-index: 1;
+}
+[data-theme^=dnd5e2].chat-message .message-content {
+  text-shadow: unset;
+  z-index: 1;
+}
+[data-theme^=dnd5e2].chat-message .message-header .header-meta.rolltype.blind {
+  background-color: var(--dnd5e-color-sc-2);
+  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
+  color: white;
+}
+[data-theme^=dnd5e2].chat-message .message-header .header-meta.rolltype.whisper {
+  background-color: var(--dnd5e-color-blue);
+  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
+  color: white;
+}
+[data-theme^=dnd5e2].chat-message button[data-action=shield-block]:hover,
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=shield-block].shield-activated,
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=shield-block].shield-activated:hover {
+  background-color: var(--dnd5e-color-gold) !important;
+  border-color: var(--dnd5e-color-groove) !important;
+  color: white !important;
+  text-shadow: 0 0 4px var(--dnd5e-highlight-45);
+}
+[data-theme^=dnd5e2].chat-message button[data-action=shield-block]:hover > i,
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=shield-block].shield-activated > i,
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=shield-block].shield-activated:hover > i {
+  color: white;
+}
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=apply-healing]:hover {
+  background-color: var(--dnd5e-color-hp-2) !important;
+  border-color: var(--dnd5e-color-hp-3) !important;
+  color: white !important;
+  text-shadow: 0px 0px 0px white;
+}
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=apply-healing]:hover > i {
+  color: white;
+}
+[data-theme^=dnd5e2].chat-message .damage-application button[data-action=apply-healing]:hover .fa-plus {
+  color: var(--dnd5e-color-hp-2) !important;
+}
+
+/* ----------------------------------------- */
+/* NPC sheet                                 */
+/* ----------------------------------------- */
+[data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app {
+  --section-background: var(--app-background);
+  --section-header: linear-gradient(to right, var(--dnd5e-color-hd-1), var(--dnd5e-color-hd-2));
+  --section-border-color: var(--tertiary);
+  --section-outline-color: var(--gold-brown);
+  --section-header-text-color: white;
+  --tag-border-color: var(--color-text-dark-primary);
+  --tag-background-color: transparent;
+  --tag-text-color: var(--color-text-dark-primary);
+  --color-text-dark-input: var(--color-text-dark-primary);
+  --input-border-color: transparent;
+  --input-background: rgba(0, 0, 0, 0.1);
+  --input-focus-outline-color: var(--tertiary);
+  --input-placeholder-color: rgba(80, 80, 80, 1);
+  --text-dark: var(--color-text-dark-primary);
+  --contrastive-transparent: rgba(0, 0, 0, 0.5);
+  --text-color-3: var(--color-text-dark-primary);
+  --app-text-shadow: none;
+}
+[data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app.actor.npc.sheet form a.roll:hover {
+  --color-pf-primary-light: var(--primary-light);
+}
+[data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app .window-header {
+  color: var(--color-text-dark-primary);
+  text-shadow: none;
+}
+[data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app.actor.npc.sheet form .side-bar-section.initiative select {
+  --box-shadow: none;
+}
+[data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app input {
+  --box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Dark theme                                */
+/* ----------------------------------------- */
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2][data-color-scheme=dark]::before {
+  background: transparent url(../../../systems/dnd5e/ui/texture-gray1.webp) no-repeat top left;
+  filter: invert(1) grayscale(1) opacity(0.5);
+}
+
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2][data-color-scheme=dark].whisper::before {
+  filter: invert(1) grayscale(1) opacity(0.5);
+}
+
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2][data-color-scheme=dark].blind::before {
+  filter: invert(1) grayscale(1);
+}
+
+[data-theme^=dnd5e2][data-color-scheme=dark] {
+  --color-text-dark-primary: #efe7d4;
+  --color-text-dark-secondary: var(--dnd5e-color-beige);
+  --text-dark: var(--color-text-dark-primary);
+  --secondary: var(--dnd5e-color-blue);
+  --primary: var(--dnd5e-color-maroon);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-45);
+  --app-background: var(--dnd5e-color-dark);
+  --input-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+  --input-background: var(--dnd5e-color-dark);
+  --input-border-color: var(--dnd5e-color-gold);
+  --input-focus-text-color: var(--color-text-dark-primary);
+  --input-text-color: var(--color-text-dark-primary);
+  --input-placeholder-color: var(--color-text-dark-5);
+  --input-text-selection-color: var(--color-secondary-3);
+  --input-focus-outline-color: var(--dnd5e-color-gold);
+  --input-disabled-background: color-mix(in srgb, var(--dnd5e-color-card) 50%, transparent);
+  --input-disabled-border-color: color-mix(in srgb, var(--color-border-dark-5) 50%, transparent);
+  --button-background: var(--dnd5e-color-dark);
+  --button-border-color: var(--dnd5e-color-gold);
+  --button-text-color: var(--dnd5e-color-gold);
+  --button-focus-outline-color: var(--dnd5e-color-gold);
+  --button-hover-background: var(--dnd5e-color-iron-gray);
+  --button-hover-border-color: var(--dnd5e-color-gold);
+  --button-hover-text-color: var(--dnd5e-color-gold);
+  --button-disabled-background: var(--color-primary-5);
+  --button-disabled-border-color: var(--color-primary-4);
+  --accent-text-color: white;
+  --accent-color-light: color-mix(in srgb, var(--dnd5e-color-maroon) 80%, white);
+  --accent-color: var(--dnd5e-color-maroon);
+  --accent-color-dark: color-mix(in srgb, var(--dnd5e-color-maroon) 80%, black);
+  --inline-background: var(--dnd5e-color-dark);
+  --inline-border-color: var(--dnd5e-color-gold);
+  --inline-text-color: var(--color-text-dark-primary);
+  --inline-icon-color: var(--dnd5e-color-gold);
+  --inline-box-shadow: 0 0 3px var(--dnd5e-shadow-45);
+}
+[data-theme^=dnd5e2][data-color-scheme=dark].app.window-app {
+  background: var(--dnd5e-color-dark);
+}
+[data-theme^=dnd5e2][data-color-scheme=dark].app.window-app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: -1;
+  filter: invert(1) grayscale(1) opacity(0.5);
 }
 
 :root {
@@ -11467,6 +11888,16 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background: rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 0, 0, 0.5);
 }
+[data-theme^=crb].chat-message .message-header .header-meta.rolltype.blind {
+  background-color: var(--dnd5e-color-sc-2);
+  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
+  color: white;
+}
+[data-theme^=crb].chat-message .message-header .header-meta.rolltype.whisper {
+  background-color: var(--dnd5e-color-blue);
+  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
+  color: white;
+}
 [data-theme^=crb].chat-message .card-content {
   --app-border-color: var(--tertiary);
   border-image-repeat: repeat;
@@ -12484,6 +12915,13 @@ i[data-pf2-repost] {
 [data-dorako-ui-scope=limited] .tags.paizo-style {
   gap: 1px;
 }
+.tah-tags-wrapper .tags select,
+[data-theme] .tags select,
+[data-dorako-ui-scope=limited] .tags select,
+[data-theme] .tags.paizo-style select,
+[data-dorako-ui-scope=limited] .tags.paizo-style select {
+  height: var(--font-size-27);
+}
 .tah-tags-wrapper .tags tag,
 .tah-tags-wrapper .tags .tag:not(.tag_transparent),
 [data-theme] .tags tag,
@@ -12576,6 +13014,12 @@ i[data-pf2-repost] {
   background: var(--color-secondary-2);
   --box-shadow: 0px 1px 3px 1px black;
   box-shadow: var(--box-shadow);
+}
+[data-theme] .tab.category.active[data-tab=pf2e-dorako-ux] h2 .name,
+[data-theme] .tab.category.active[data-tab=pf2e-dorako-ui] h2 .name,
+[data-theme] .form-group.dorako.settings-header .name {
+  margin: 0px;
+  font-size: larger;
 }
 [data-theme] .tab.category.active[data-tab=pf2e-dorako-ux] h2 .notes,
 [data-theme] .tab.category.active[data-tab=pf2e-dorako-ui] h2 .notes,

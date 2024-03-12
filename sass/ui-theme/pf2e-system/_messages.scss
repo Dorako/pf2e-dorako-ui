@@ -91,6 +91,10 @@
     border: 2px dotted var(--visibility-gm-bg);
   }
 
+  [data-action="delete-template"] {
+    @include dui-button-bright;
+  }
+
   .dice-roll .dice-formula,
   .dice-roll .dice-total {
     @include dui-app;
@@ -186,7 +190,10 @@
 //   }
 // }
 
-.message[data-theme]:not([data-theme^="crb"][data-color-scheme="light"]) {
+.message[data-theme]:not(
+    [data-theme^="crb"][data-color-scheme="light"],
+    [data-theme^="dnd5e2"][data-color-scheme="light"]
+  ) {
   .message-content {
     .damage-application {
       img {

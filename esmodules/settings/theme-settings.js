@@ -17,6 +17,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
   static get settings() {
     return {
       "app-theme": {
+        // Interface theme
         name: "pf2e-dorako-ui.settings.theme.app-theme.name",
         hint: "pf2e-dorako-ui.settings.theme.app-theme.hint",
         scope: "client",
@@ -36,6 +37,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         onChange: (choice) => {},
       },
       "window-app-theme": {
+        // Sheet theme
         name: "pf2e-dorako-ui.settings.theme.window-app-theme.name",
         hint: "pf2e-dorako-ui.settings.theme.window-app-theme.hint",
         scope: "client",
@@ -48,6 +50,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           "crb-dark": "pf2e-dorako-ui.text.crb-dark",
           foundry2: "pf2e-dorako-ui.text.foundry2",
           bg3: "pf2e-dorako-ui.text.bg3",
+          "dnd5e2-light": "pf2e-dorako-ui.text.dnd5e2-light",
+          "dnd5e2-dark": "pf2e-dorako-ui.text.dnd5e2-dark",
           "discord-light": `pf2e-dorako-ui.text.discord-light`,
           "discord-dark": "pf2e-dorako-ui.text.discord-dark",
           "custom-light": "pf2e-dorako-ui.text.custom-light",
@@ -93,6 +97,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           foundry2: "pf2e-dorako-ui.text.foundry2",
           "bg3-brown": "pf2e-dorako-ui.text.bg3-brown",
           "bg3-blue": "pf2e-dorako-ui.text.bg3-blue",
+          "dnd5e2-light": "pf2e-dorako-ui.text.dnd5e2-light",
+          "dnd5e2-dark": "pf2e-dorako-ui.text.dnd5e2-dark",
           "discord-light": `pf2e-dorako-ui.text.discord-light`,
           "discord-dark": "pf2e-dorako-ui.text.discord-dark",
           "custom-light": "pf2e-dorako-ui.text.custom-light",
@@ -115,6 +121,8 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           foundry2: "pf2e-dorako-ui.text.foundry2",
           "bg3-brown": "pf2e-dorako-ui.text.bg3-brown",
           "bg3-blue": "pf2e-dorako-ui.text.bg3-blue",
+          "dnd5e2-light": "pf2e-dorako-ui.text.dnd5e2-light",
+          "dnd5e2-dark": "pf2e-dorako-ui.text.dnd5e2-dark",
           "discord-light": `pf2e-dorako-ui.text.discord-light`,
           "discord-dark": "pf2e-dorako-ui.text.discord-dark",
           "custom-light": "pf2e-dorako-ui.text.custom-light",
