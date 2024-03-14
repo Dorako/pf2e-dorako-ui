@@ -7408,6 +7408,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
   text-shadow: 0px 0px 0px white;
 }
+[data-theme][data-color-scheme=dark] button.double-barrel i.barrels {
+  color: var(--bg-dark) !important;
+}
+[data-theme][data-color-scheme=dark] button.double-barrel i.blast {
+  color: var(--bg-dark) !important;
+}
 [data-theme].actor.sheet .window-content .item-summary .button-group button {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -9204,19 +9210,14 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme]#compendium-browser [data-tab=action] .spell-browser .item img, [data-theme]#compendium-browser [data-tab=spell] .spell-browser .item img {
   background-color: white;
 }
-[data-theme]#compendium-browser > section.window-content > .content-box .compendium-browser-settings > nav, [data-theme]#license-viewer > section.window-content > .content-box .compendium-browser-settings > nav, [data-theme]#compendium-browser > section.window-content > .content-box > nav, [data-theme]#license-viewer > section.window-content > .content-box > nav {
-  --secondary: var(--color-secondary-3);
-}
 [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser ul.result-list > li:hover, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser ul.result-list > li:hover {
   background-color: rgba(122, 122, 122, 0.5);
 }
 [data-theme].roll-modifiers-dialog {
-  --secondary: var(--color-secondary-3);
   border: none;
 }
 [data-theme].roll-modifiers-dialog .window-header {
-  background: linear-gradient(90deg, var(--secondary) 0%, var(--color-secondary-3) 50%, var(--secondary) 100%);
-  color: var(--text-color-1) !important;
+  color: white !important;
 }
 
 /* ----------------------------------------- */
@@ -10408,6 +10409,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 
 [data-theme=dnd5e2] {
+  --color-pf-primary: var(--dnd5e-color-maroon);
   --color-bg-trait: var(--dnd5e-color-maroon);
   --color-bg-size: var(--dnd5e-color-green);
 }
@@ -10465,7 +10467,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* Chat message                              */
 /* ----------------------------------------- */
 :is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2] {
-  padding: 0.5rem;
   border-width: 1px;
   border-block-end-width: 2px;
   border-radius: 6px;
@@ -10647,6 +10648,11 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --inline-text-color: var(--color-text-dark-primary);
   --inline-icon-color: var(--dnd5e-color-gold);
   --inline-box-shadow: 0 0 3px var(--dnd5e-shadow-45);
+  --text-color-disabled: var(--dnd5e-color-dark);
+  --color-disabled: var(--color-text-dark-secondary);
+}
+[data-theme^=dnd5e2][data-color-scheme=dark].actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title, [data-theme^=dnd5e2][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
+  --accent-color: var(--dnd5e-color-card);
 }
 [data-theme^=dnd5e2][data-color-scheme=dark].app.window-app {
   background: var(--dnd5e-color-dark);

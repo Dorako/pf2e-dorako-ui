@@ -1,3 +1,9 @@
+# 3.4.1
+
+- (Refinement) Added styling for new double barrel icon.
+- (Refinement) Added D&D 5e to the debug buttons.
+- (Refinement) Minor adjustments to D&D 5e theme.
+
 # 3.4.0
 
 - (Refinement) Colorized rolltype indicators in CRB themes.

@@ -243,6 +243,8 @@
 }
 
 [data-theme="dnd5e2"] {
+  --color-pf-primary: var(--dnd5e-color-maroon);
+  // --color-pf-alternate: var(--dnd5e-color-gold);
   --color-bg-trait: var(--dnd5e-color-maroon);
   --color-bg-size: var(--dnd5e-color-green);
   &.window-app .window-header {
@@ -306,7 +308,7 @@
 /* Chat message                              */
 /* ----------------------------------------- */
 :is(.chat-popout, #chat-log) .message[data-theme^="dnd5e2"] {
-  padding: 0.5rem;
+  // padding: 0.5rem;
   border-width: 1px;
   border-block-end-width: 2px;
   border-radius: 6px;
@@ -508,6 +510,15 @@
   --inline-text-color: var(--color-text-dark-primary);
   --inline-icon-color: var(--dnd5e-color-gold);
   --inline-box-shadow: 0 0 3px var(--dnd5e-shadow-45);
+
+  --text-color-disabled: var(--dnd5e-color-dark);
+  --color-disabled: var(--color-text-dark-secondary);
+
+  // prettier-ignore
+  &.actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title, 
+  &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
+    --accent-color: var(--dnd5e-color-card);
+  }
 
   &.app.window-app {
     background: var(--dnd5e-color-dark);

@@ -40,12 +40,12 @@
     background-color: white;
   }
 
-  &#compendium-browser > section.window-content > .content-box .compendium-browser-settings > nav,
-  &#license-viewer > section.window-content > .content-box .compendium-browser-settings > nav,
-  &#compendium-browser > section.window-content > .content-box > nav,
-  &#license-viewer > section.window-content > .content-box > nav {
-    --secondary: var(--color-secondary-3);
-  }
+  // &#compendium-browser > section.window-content > .content-box .compendium-browser-settings > nav,
+  // &#license-viewer > section.window-content > .content-box .compendium-browser-settings > nav,
+  // &#compendium-browser > section.window-content > .content-box > nav,
+  // &#license-viewer > section.window-content > .content-box > nav {
+  //   --secondary: var(--color-secondary-3);
+  // }
 
   &#compendium-browser > section.window-content > .content-box .spell-browser ul.result-list > li:hover,
   &#license-viewer > section.window-content > .content-box .spell-browser ul.result-list > li:hover {
@@ -53,11 +53,11 @@
   }
 
   &.roll-modifiers-dialog {
-    --secondary: var(--color-secondary-3);
+    // --secondary: var(--color-secondary-3);
     border: none;
     .window-header {
-      background: linear-gradient(90deg, var(--secondary) 0%, var(--color-secondary-3) 50%, var(--secondary) 100%);
-      color: var(--text-color-1) !important;
+      // background: linear-gradient(90deg, var(--secondary) 0%, var(--color-secondary-3) 50%, var(--secondary) 100%);
+      color: white !important;
     }
   }
 }
