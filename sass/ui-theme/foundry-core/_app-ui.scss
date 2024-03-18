@@ -541,6 +541,10 @@
 /* Application specific                      */
 /* ----------------------------------------- */
 [data-theme] {
+  &.tour .content {
+    color: var(--text-color-2);
+  }
+
   &.token-sheet,
   &.dialog {
     height: auto !important;
@@ -614,6 +618,7 @@
   // also affects settings which is vertical
   &.window-app .tabs .item {
     @include dui-button;
+    padding: 5px 10px;
     // padding: 4px 8px;
     // display: flex;
     // align-items: center;

@@ -85,11 +85,6 @@
   &.actor.npc.sheet form .sheet-body .footer button.spellcasting-create {
     @include dui-button-bright;
   }
-
-  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name,
-  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
-    gap: 5px; // aligns buttons
-  }
 }
 
 [data-theme] {

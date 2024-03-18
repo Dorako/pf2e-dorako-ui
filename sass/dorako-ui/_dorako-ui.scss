@@ -55,7 +55,7 @@ i[data-pf2-repost] {
   }
 
   tag,
-  .tag:not(.tag_transparent) {
+  .tag:not(.tag_transparent, [data-action]) {
     border-radius: 0px;
     box-shadow: unset;
     border: 1px solid var(--tertiary);

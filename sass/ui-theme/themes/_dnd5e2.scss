@@ -454,6 +454,27 @@
 }
 
 /* ----------------------------------------- */
+/* Light theme                               */
+/* ----------------------------------------- */
+[data-theme^="dnd5e2"][data-color-scheme="light"] {
+  &.sheet.journal-entry .journal-sidebar {
+    --color-border-light-highlight: var(--dnd5e-color-black);
+    --color-border-light-primary: var(--discord-background-2);
+    --color-text-hyperlink: var(--dnd5e-color-maroon);
+    --color-text-light-highlight: var(--dnd5e-color-black);
+    --color-border-highlight: var(--accent-color);
+    --color-border-highlight-alt: var(--accent-color-dark);
+    --color-border-divider: var(--dnd5e-color-maroon);
+    --color-text-dark-primary: var(--discord-text-3);
+    --color-text-dark-secondary: var(--discord-text-5);
+  }
+
+  &.sheet.familiar .window-header {
+    color: var(--dnd5e-color-black);
+  }
+}
+
+/* ----------------------------------------- */
 /* Dark theme                                */
 /* ----------------------------------------- */
 :is(.chat-popout, #chat-log) .message[data-theme^="dnd5e2"][data-color-scheme="dark"]::before {

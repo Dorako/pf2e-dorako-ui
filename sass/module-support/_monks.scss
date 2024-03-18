@@ -919,7 +919,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   }
 }
 
-[data-theme]:not([data-theme^="crb"][data-color-scheme="light"]) {
+[data-theme]:not([data-color-scheme="light"]) {
   &.monks-active-tiles div[data-tab="triggers"] .action-items .action-style {
     color: #fafafa;
   }

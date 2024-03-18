@@ -1,3 +1,10 @@
+# 3.4.2
+
+- (Refinement) Excluded Automated Animations' menu from styling.
+- (Refinement) Adjusted styling for PC sheet toggles to make active toggles more easily identifiable, regardless of theme.
+- (Refinement) Fixed legibility of accented buttons in CRB (Dark) chat message theme.
+- (Refinement) Fixed some instances of light text on light background in D&D 5e (Light) sheet theme.
+
 # 3.4.1
 
 - (Refinement) Added styling for new double barrel icon.

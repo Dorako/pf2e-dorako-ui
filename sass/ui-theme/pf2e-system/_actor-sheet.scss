@@ -26,6 +26,15 @@
     text-shadow: 0px 0px 0px white;
   }
 
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name,
+  &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
+    gap: 4px; // aligns buttons
+  }
+
+  &.actor.sheet .tab.active.actions ol.actions-list .toggles button.selected {
+    border: 1px solid var(--accent-color) !important;
+  }
+
   // prettier-ignore
   &[data-color-scheme="dark"] button.double-barrel i.barrels {
     color: var(--bg-dark) !important;

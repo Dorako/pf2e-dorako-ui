@@ -1844,25 +1844,25 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--text-color-3);
 }
 
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .action-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .action-style {
   color: #fafafa;
 }
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .filter-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .filter-style {
   color: #f73458;
 }
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .logic-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .logic-style {
   color: #2b40f8;
 }
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .entity-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .entity-style {
   color: #a9a9a9;
 }
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .details-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .details-style {
   color: #a326fc;
 }
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .value-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .value-style {
   color: #515151;
 }
-[data-theme]:not([data-theme^=crb][data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .tag-style {
+[data-theme]:not([data-color-scheme=light]).monks-active-tiles div[data-tab=triggers] .action-items .tag-style {
   color: #063d68;
 }
 
@@ -4603,6 +4603,9 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* Application specific                      */
 /* ----------------------------------------- */
+[data-theme].tour .content {
+  color: var(--text-color-2);
+}
 [data-theme].token-sheet, [data-theme].dialog {
   height: auto !important;
 }
@@ -4853,6 +4856,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-decoration: none;
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
+  padding: 5px 10px;
 }
 [data-theme].window-app .tabs .item:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
@@ -7377,9 +7381,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
   --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
 }
-[data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name, [data-theme][data-dorako-ui-scope=limited].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
-  gap: 5px;
-}
 
 [data-theme].app.npc-skills-editor form ol li.skill:nth-child(even) {
   background-color: color-mix(in srgb, var(--color-secondary-4) 20%, transparent);
@@ -7407,6 +7408,12 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested:not(.active), [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type:not(.active) {
   text-shadow: 0px 0px 0px white;
+}
+[data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action .item-name, [data-theme].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .item-name {
+  gap: 4px;
+}
+[data-theme].actor.sheet .tab.active.actions ol.actions-list .toggles button.selected {
+  border: 1px solid var(--accent-color) !important;
 }
 [data-theme][data-color-scheme=dark] button.double-barrel i.barrels {
   color: var(--bg-dark) !important;
@@ -9489,9 +9496,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Chat messages                             */
 /* ----------------------------------------- */
-[data-theme^=crb][data-color-scheme=dark].chat-message button {
-  --button-background: var(--glass-bg);
-}
 [data-theme^=crb][data-color-scheme=dark].chat-message .dice-roll .dice-formula button, [data-theme^=crb][data-color-scheme=dark].chat-message .dice-roll .dice-total button {
   background: var(--glass-bg-light);
   --button-text-color: var(--text-color-2);
@@ -10594,6 +10598,24 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app input {
   --box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/* Light theme                               */
+/* ----------------------------------------- */
+[data-theme^=dnd5e2][data-color-scheme=light].sheet.journal-entry .journal-sidebar {
+  --color-border-light-highlight: var(--dnd5e-color-black);
+  --color-border-light-primary: var(--discord-background-2);
+  --color-text-hyperlink: var(--dnd5e-color-maroon);
+  --color-text-light-highlight: var(--dnd5e-color-black);
+  --color-border-highlight: var(--accent-color);
+  --color-border-highlight-alt: var(--accent-color-dark);
+  --color-border-divider: var(--dnd5e-color-maroon);
+  --color-text-dark-primary: var(--discord-text-3);
+  --color-text-dark-secondary: var(--discord-text-5);
+}
+[data-theme^=dnd5e2][data-color-scheme=light].sheet.familiar .window-header {
+  color: var(--dnd5e-color-black);
 }
 
 /* ----------------------------------------- */
@@ -12929,15 +12951,15 @@ i[data-pf2-repost] {
   height: var(--font-size-27);
 }
 .tah-tags-wrapper .tags tag,
-.tah-tags-wrapper .tags .tag:not(.tag_transparent),
+.tah-tags-wrapper .tags .tag:not(.tag_transparent, [data-action]),
 [data-theme] .tags tag,
-[data-theme] .tags .tag:not(.tag_transparent),
+[data-theme] .tags .tag:not(.tag_transparent, [data-action]),
 [data-dorako-ui-scope=limited] .tags tag,
-[data-dorako-ui-scope=limited] .tags .tag:not(.tag_transparent),
+[data-dorako-ui-scope=limited] .tags .tag:not(.tag_transparent, [data-action]),
 [data-theme] .tags.paizo-style tag,
-[data-theme] .tags.paizo-style .tag:not(.tag_transparent),
+[data-theme] .tags.paizo-style .tag:not(.tag_transparent, [data-action]),
 [data-dorako-ui-scope=limited] .tags.paizo-style tag,
-[data-dorako-ui-scope=limited] .tags.paizo-style .tag:not(.tag_transparent) {
+[data-dorako-ui-scope=limited] .tags.paizo-style .tag:not(.tag_transparent, [data-action]) {
   border-radius: 0px;
   box-shadow: unset;
   border: 1px solid var(--tertiary);

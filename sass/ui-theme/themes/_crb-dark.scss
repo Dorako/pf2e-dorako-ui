@@ -185,9 +185,6 @@
 /* Chat messages                             */
 /* ----------------------------------------- */
 [data-theme^="crb"][data-color-scheme="dark"] {
-  &.chat-message button {
-    --button-background: var(--glass-bg);
-  }
 
   &.chat-message .dice-roll .dice-formula button,
   &.chat-message .dice-roll .dice-total button {
