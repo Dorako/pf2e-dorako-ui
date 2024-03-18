@@ -79,8 +79,33 @@
       "self-roll": "Privater Wurf",
       "gm-only": "Nur SL",
       "send-to-chat": "Senden",
-      "maybe-reload": "Manche Änderungen erfordern einen Reload.",
-      "large-chatlog-warning": "Aufgrund größerer Chatlogs werden manche Einstellungen erst beim nächsten Reload übernommen."
+      "maybe-reload": "Manche Änderungen erfordern ein erneutes Laden.",
+      "large-chatlog-warning": "Aufgrund größerer Chatlogs werden manche Einstellungen erst beim nächsten Laden aktiviert.",
+      "prefer-dark": "Dunkel bevorzugen",
+      "bg3": "Baldur's Gate 3",
+      "foundry2": "Foundry 2",
+      "crb": "Grundregelwerk",
+      "no-theme": "Kein Design",
+      "opaque": "Undurchsichtig",
+      "gm-vs-players": "SL dunkel",
+      "alliance": "Gegenseite dunkel",
+      "discord": "Discord",
+      "prefer-light": "Hell bevorzugen",
+      "colors": {
+        "red": "Rot",
+        "blue": "Blau",
+        "green": "Grün",
+        "player": "Spielerfarbe",
+        "purple": "Lila",
+        "black": "Schwarz"
+      },
+      "crb-light": "Grundregelwerk (Hell)",
+      "bg3-brown": "Baldur's Gate 3 (Braun)",
+      "bg3-blue": "Baldur's Gate 3 (Blau)",
+      "glass": "Glas",
+      "crb-dark": "Grundregelwerk (Dunkel)",
+      "discord-light": "Discord (Hell)",
+      "discord-dark": "Discord (Dunkel)"
     },
     "settings": {
       "theme": {
@@ -163,6 +188,29 @@
           },
           "name": "Design der Chatnachrichten-Kopfzeile",
           "hint": "Fügt eine farbige Kopfzeile zu jeder Chat-Nachricht hinzu"
+        },
+        "chat-message-header-style": {
+          "name": "Design der Chatnachrichten-Kopfzeile",
+          "hint": "Gilt nur für CRB-Designs"
+        },
+        "window-app-theme": {
+          "name": "Bogendesign"
+        },
+        "chat-message-standard-theme": {
+          "name": "Chatnachricht (Standard) Design",
+          "hint": "Gilt für Nachrichten von Sprechern, die nicht der \"Gegenseite\" angehören"
+        },
+        "chat-message-opposition-theme": {
+          "name": "Design Chatnachricht (Gegnerseite)",
+          "hint": "Gilt für Nachrichten von Sprechern, die der \"Gegenseite\" angehören"
+        },
+        "border-radius": {
+          "name": "Abrundung",
+          "hint": "(Standard: 3px) Ändert den Grad der Rundung in vielen UI-Elementen"
+        },
+        "sheet-theme-color": {
+          "hint": "Gilt für Bögen für Spielercharaktere und Fahrzeuge",
+          "name": "Design Bogenfarbe"
         }
       },
       "ux": {
@@ -306,7 +354,7 @@
         "hint": "Konfigurieren Sie Einstellungen für andere Funktionen der Dorako UI",
         "enable-debug-mode": {
           "name": "Aktiviere Debug-Modus?",
-          "hint": "Hinzufügen von Schaltflächen zum Umschalten zwischen Hellen- und Dunklen-Design"
+          "hint": "Fügt Schaltflächen zum schnellen Wechseln des Bogendesigns hinzu"
         },
         "send-to-chat": {
           "name": "Schaltfläche \"Senden\" in der Kopfzeile des Fensters hinzufügen?",
@@ -322,9 +370,9 @@
         "name": "Personalisierung",
         "excluded-applications": {
           "name": "Ausgeschlossene Anwendungen",
-          "hint": "Suchen Sie in den Logs nach dem Namen der Anwendung oder fragen Sie auf Discord"
+          "hint": "Suche in den Logs nach dem Namen der Anwendung oder frage auf Discord"
         },
-        "hint": "Nehmen Sie personalisierte Änderungen mit benutzerdefiniertem CSS vor, oder entscheiden Sie sich gegen bestimmte Dorako UI-Stylings",
+        "hint": "Nimm personalisierte Änderungen mit benutzerdefiniertem CSS vor, oder entscheide dich gegen bestimmte Dorako UI-Stylings",
         "custom-css": {
           "name": "Benutzerdefiniertes CSS",
           "hint": "Erstelle den CSS-Code in einem externen Editor und füge ihn hier ein"
@@ -332,7 +380,8 @@
       },
       "external-module": {
         "colorize-idle-hud": {
-          "hint": "Wendet ein farbiges Thema auf die Symbole im Haupt-Tooltip an"
+          "hint": "Wendet ein farbiges Design auf die Symbole im Haupt-Tooltip an",
+          "name": "Einfärben von PF2e Interactive Token Tooltip?"
         },
         "name": "Externe Moduleinstellungen",
         "hint": "Anpassungen, wie andere Module von der Dorako-Benutzeroberfläche betroffen sind"
