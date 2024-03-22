@@ -1,3 +1,7 @@
+# 3.4.3
+
+- (Module) Added support for Vauxs' Archives.
+
 # 3.4.2
 
 - (Refinement) Excluded Automated Animations' menu from styling.

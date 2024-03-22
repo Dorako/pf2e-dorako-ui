@@ -196,11 +196,13 @@ Hooks.on("render" + "ChatMessage", (app, html, data) => {
   if (footer) html[0].dataset.hasFooter = "";
 });
 
-Hooks.on("render" + "ChatLogPF2e", (app, html, data) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
-  if (theme === "no-theme") return;
-  app.element[0].dataset.chatInterfaceTheme = theme;
-});
+for (const appName of ["ChatLogPF2e", "VCEChatLog"]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+    if (theme === "no-theme") return;
+    app.element[0].dataset.chatInterfaceTheme = theme;
+  });
+}
 
 Hooks.on("render" + "Sidebar", (app, html, data) => {
   const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");

@@ -10387,7 +10387,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --app-border-width: 1px;
   --app-background: var(--dnd5e-color-card);
   --app-border-color: var(--color-border-light-2);
-  --button-background: var(--app-background);
+  --button-background: var(--dnd5e-color-card);
   --button-border-color: var(--app-border-color);
   --button-text-color: black;
   --button-focus-outline-color: var(--dnd5e-color-gold);
@@ -10396,6 +10396,11 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-text-color: var(--dnd5e-color-gold);
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
+  --button-toggle-border-color: var(--color-secondary-2);
+  --button-toggle-background: var(--dnd5e-color-gold);
+  --button-toggle-hover-background: var(--dnd5e-color-iron-gray);
+  --button-toggle-hover-border-color: var(--dnd5e-color-light-gray);
+  --button-toggle-focus-outline-color: var(--color-primary-1);
   --app-border-color: var(--dnd5e-color-gold);
   --window-app-background: var(--dnd5e-bg);
   --window-app-border-width: 2px;
