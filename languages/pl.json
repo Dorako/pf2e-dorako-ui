@@ -41,7 +41,9 @@
       "crb-dark": "Core Rulebook (Ciemne)",
       "custom": "⚠️ Zrób to sam 👷",
       "custom-light": "⚠️ Zrób to sam (Jasne) 👷",
-      "custom-dark": "⚠️ Zrób to sam (Ciemne) 👷"
+      "custom-dark": "⚠️ Zrób to sam (Ciemne) 👷",
+      "dnd5e2-light": "D&D 5e (Jasny)",
+      "dnd5e2-dark": "D&D 5e (Ciemny)"
     },
     "settings": {
       "reset-changes": "Zresetuj ustawienia",
