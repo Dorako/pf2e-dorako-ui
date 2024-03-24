@@ -1,3 +1,8 @@
+# 3.4.5
+
+- (Refinement) Updated styling of certain secret labels to keep in track with the system.
+- (Refinement) Added a border around icons in certain messages with small icons.
+
 # 3.4.3
 
 - (Module) Added support for Vauxs' Archives.

@@ -221,14 +221,18 @@
     padding: 0px 2px;
   }
 
+  span[data-pf2-action][data-secret] {
+    color: #191813;
+  }
+
   a.content-link,
-  [data-pf2-check]:not([data-pf2-traits*="secret"]),
+  [data-pf2-check]:not([data-pf2-traits*="secret"], [data-secret]),
   a.entity-link,
-  [data-pf2-action],
+  [data-pf2-action]:not([data-secret]),
   span[data-pf2-action][data-pf2-glyph],
   span[data-pf2-effect-area],
-  a.inline-check:not([data-pf2-traits*="secret"]),
-  a.inline-check:not([data-pf2-traits*="secret"]) .label,
+  a.inline-check:not([data-pf2-traits*="secret"], [data-secret]),
+  a.inline-check:not([data-pf2-traits*="secret"], [data-secret]) .label,
   a.inline-roll {
     background: var(--inline-background);
     border: 1px solid var(--inline-border-color);

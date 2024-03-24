@@ -124,6 +124,13 @@
     }
   }
 
+  > .message-content > div > h4 > img,
+  > .message-content .participant-conditions ul li img {
+    @include dui-app;
+    border: 1px solid;
+    border-color: var(--icon-border-color);
+  }
+
   .pf2e.chat-card .addendum {
     color: var(--text-color-3);
   }
