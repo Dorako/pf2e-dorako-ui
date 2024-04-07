@@ -2,8 +2,15 @@ h3 {
   border-bottom: none;
 }
 
-button > i {
-  margin-right: 0;
+button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+
+  > i {
+    margin-right: 0;
+  }
 }
 
 img {

@@ -1,3 +1,10 @@
+# 3.4.6
+
+- (Refinement) Fixed an issue where nat 1/20's were not colored appropriately in chat messages.
+- (Refinement) Updated styling for Speaking As.
+- (Refinement) Standardized spacing between icons and text in buttons.
+- (Fix) Fixed an issue where certain tags were illegible in the 5e light theme in Module Management+.
+
 # 3.4.5
 
 - (Refinement) Updated styling of certain secret labels to keep in track with the system.

@@ -81,10 +81,11 @@
   & > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
     border: 2px dotted var(--visibility-gm-bg);
     background: transparent;
+    box-shadow: unset;
   }
 
   &[data-color-scheme="light"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
-    border: 2px dotted gray;
+    border: 2px dotted black;
   }
 
   &[data-color-scheme="dark"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
@@ -359,9 +360,9 @@
   }
 
   .dice-roll .dice-total.success {
-    color: var(--degree-success-critical);
+    color: var(--degree-success-critical) !important;
   }
   .dice-roll .dice-total.failure {
-    color: var(--degree-failure-critical);
+    color: var(--degree-failure-critical) !important;
   }
 }

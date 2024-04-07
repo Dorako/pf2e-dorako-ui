@@ -713,6 +713,11 @@
     background: var(--input-background);
   }
 
+  .tags .tag.tag_transparent {
+    margin-top: 1px;
+    margin-right: 2px;
+  }
+
   // .tags > .tag {
   //   --tag-color: var(--text-color-2);
   //   --color-pf-alternate-dark: var(--text-color-2);
