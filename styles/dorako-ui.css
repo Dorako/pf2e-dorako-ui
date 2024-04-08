@@ -13081,12 +13081,6 @@ h3 {
   border-bottom: none;
 }
 
-button {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-}
 button > i {
   margin-right: 0;
 }

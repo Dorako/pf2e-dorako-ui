@@ -1,3 +1,7 @@
+# 3.4.7
+
+- (Fix) Undo standardization of spacing between icosn and text in buttons, as certain buttons (notably in Workbench's heropoint handler) did not like it.
+
 # 3.4.6
 
 - (Refinement) Fixed an issue where nat 1/20's were not colored appropriately in chat messages.
