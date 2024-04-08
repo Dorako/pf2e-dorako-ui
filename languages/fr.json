@@ -166,7 +166,9 @@
       "crb-light": "Livre de base (clair)",
       "crb-dark": "Livre de base (sombre)",
       "custom": "⚠️ Faites-le vous-même 👷",
-      "custom-dark": "⚠️ Faites-le vous-même (sombre) 👷"
+      "custom-dark": "⚠️ Faites-le vous-même (sombre) 👷",
+      "dnd5e2-light": "D&D 5e (clair)",
+      "dnd5e2-dark": "D&D 5e (sombre)"
     },
     "settings": {
       "theme": {
