@@ -1995,8 +1995,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-theme]#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions .uses input:last-child {
-  --input-background: transparent;
+[data-theme]#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions .uses input {
   --input-border-color: transparent;
   --box-shadow: transparent;
 }
@@ -2038,7 +2037,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme]#pf2e-token-hud .sidebar.items .sidebar-content .hud-bulk .over-max {
   color: var(--color-level-red-border);
 }
-[data-theme]#pf2e-token-hud a:hover {
+[data-theme]#pf2e-token-hud a:not(.disabled, :disabled):hover {
   color: var(--color-primary-2);
 }
 [data-theme]#pf2e-token-hud .sidebar .sidebar-content .item-img.hover i {
@@ -11962,6 +11961,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=crb] hr {
   border-top: none;
+  --app-border-color: rgba(125, 125, 125, 0.5);
 }
 [data-theme^=crb]#hotbar .macro {
   border: 1px solid black;

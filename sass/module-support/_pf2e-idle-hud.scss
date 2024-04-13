@@ -77,8 +77,8 @@
   }
 
   &#pf2e-token-hud .sidebar.spells .sidebar-content .entry .spell .details .extras .actions .uses {
-    input:last-child {
-      --input-background: transparent;
+    input {
+      // --input-background: transparent;
       --input-border-color: transparent;
       --box-shadow: transparent;
     }
@@ -92,7 +92,7 @@
     color: var(--color-level-red-border);
   }
 
-  &#pf2e-token-hud a:hover {
+  &#pf2e-token-hud a:not(.disabled, :disabled):hover {
     color: var(--color-primary-2);
   }
 

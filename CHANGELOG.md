@@ -1,3 +1,8 @@
+# 3.4.8
+
+- (Refinement) Added a color for linebreaks in journals for the CRB themes.
+- (Fix) Fixed an issue where spell charges in ITT would be illegible in some themes.
+
 # 3.4.7
 
 - (Fix) Undo standardization of spacing between icosn and text in buttons, as certain buttons (notably in Workbench's heropoint handler) did not like it.
