@@ -41,7 +41,9 @@
       "self-roll": "자신만",
       "to": "받는 사람",
       "light": "라이트",
-      "large-chatlog-warning": "채팅 로그가 너무 많아 몇몇 설정은 다음 불러오기때 적용됩니다."
+      "large-chatlog-warning": "채팅 로그가 너무 많아 몇몇 설정은 다음 불러오기때 적용됩니다.",
+      "dnd5e2-light": "디앤디 5판 (라이트)",
+      "dnd5e2-dark": "디앤디 5판 (다크)"
     },
     "settings": {
       "theme": {
@@ -96,7 +98,7 @@
           "name": "사용자 정의 CSS",
           "hint": "외부 편집기에서 CSS를 작성하여 여기에 붙여넣습니다"
         },
-        "hint": "사용자 지정 CSS를 사용하여 개인화된 변경을 수행하거나 특정 Dorako UI 스타일링을 선택 해제하세요."
+        "hint": "사용자 지정 CSS를 사용하여 개인화된 변경을 수행하거나 특정 Dorako UI 스타일링을 선택 해제하세요"
       },
       "external-module": {
         "name": "외부 모듈 설정",
