@@ -48,6 +48,7 @@
 }
 
 [data-theme] {
+  &.actor.sheet.vehicle[data-theme-color],
   &.actor.sheet.character[data-theme-color] {
     .crb-style aside .sidebar header button {
       color: var(--theme-color-dark);
@@ -81,6 +82,7 @@
     }
   }
 
+  &.actor.sheet.vehicle[data-theme-color="red"],
   &.actor.sheet.character[data-theme-color="red"] {
     --theme-text-color: var(--primary-light);
     --theme-color: var(--primary);
@@ -92,7 +94,7 @@
     }
   }
 
-  &.actor.sheet.character[data-theme-color="blue"] {
+  &.actor.sheet.vehicle[data-theme-color="blue"] &.actor.sheet.character[data-theme-color="blue"] {
     --scrollbar-thumb-background: var(--secondary-light);
     --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
@@ -125,6 +127,7 @@
     }
   }
 
+  &.actor.sheet.vehicle[data-theme-color="green"],
   &.actor.sheet.character[data-theme-color="green"] {
     --scrollbar-thumb-background: var(--remaster-light);
     --scrollbar-thumb-border-color: var(--tertiary);
@@ -156,6 +159,7 @@
     }
   }
 
+  &.actor.sheet.vehicle[data-theme-color="purple"],
   &.actor.sheet.character[data-theme-color="purple"] {
     --theme-color-dark: #3b0062;
     --theme-color: #520982;
@@ -187,6 +191,7 @@
     }
   }
 
+  &.actor.sheet.vehicle[data-theme-color="black"],
   &.actor.sheet.character[data-theme-color="black"] {
     --theme-color-dark: black;
     --theme-color: #111;
@@ -220,6 +225,7 @@
 }
 
 [data-theme][data-dorako-ui-scope="limited"] {
+  &.actor.sheet.vehicle .crb-style,
   &.actor.sheet.character .crb-style {
     background: unset;
     background: var(--header), transparent !important;
@@ -333,6 +339,8 @@
     h6 {
       --primary: var(--text-color-2);
       --secondary: var(--accent-color);
+      --color-pf-primary: var(--text-color-2); // still used by vehicle sheets
+      --color-pf-secondary: var(--accent-color); // still used by vehicle sheets
     }
   }
 

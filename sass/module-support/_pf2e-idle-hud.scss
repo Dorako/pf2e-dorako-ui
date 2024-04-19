@@ -66,6 +66,17 @@
     border-radius: var(--border-radius);
   }
 
+  &#pf2e-token-hud input,
+  &#pf2e-token-hud select,
+  &#pf2e-token-hud .sidebar .sidebar-toggles .toggle select {
+    @include dui-input;
+    --app-border-width: 1px;
+  }
+
+  &#pf2e-token-hud .sidebar .sidebar-toggles {
+    padding: unset;
+  }
+
   &#pf2e-token-hud .sidebar .sidebar-content .details input {
     @include dui-input;
     // padding: 1px;

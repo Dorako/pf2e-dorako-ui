@@ -1,3 +1,9 @@
+# 3.4.9
+
+- (Maintenance) Ensured Vehicle sheets are styled properly again, with respect to sheet theme and PC theme color.
+- (Refinement) Added styling for the in-archive search feature in Vauxs' Archives.
+- (Refinement) Updated styling for inputs and selects in ITT, ensuring that they are legible regardless of theme.
+
 # 3.4.8
 
 - (Refinement) Added a color for linebreaks in journals for the CRB themes.

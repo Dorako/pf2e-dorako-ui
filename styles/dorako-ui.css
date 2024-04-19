@@ -419,7 +419,7 @@ nav.damage-log-nav.tabs .item.active {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   height: auto !important;
@@ -1410,7 +1410,7 @@ button#heartbeat-button {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -1776,7 +1776,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -1928,7 +1928,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -1960,6 +1960,45 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-color: var(--icon-border-color);
   border-radius: var(--border-radius);
 }
+[data-theme]#pf2e-token-hud input, [data-theme]#pf2e-token-hud select, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select {
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 0px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+  --app-border-width: 1px;
+}
+[data-theme]#pf2e-token-hud input:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#pf2e-token-hud input:focus, [data-theme]#pf2e-token-hud select:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#pf2e-token-hud select:focus, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme]#pf2e-token-hud input.disabled, [data-theme]#pf2e-token-hud input:disabled, [data-theme]#pf2e-token-hud select.disabled, [data-theme]#pf2e-token-hud select:disabled, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select.disabled, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme]#pf2e-token-hud input.disabled::placeholder, [data-theme]#pf2e-token-hud input:disabled::placeholder, [data-theme]#pf2e-token-hud select.disabled::placeholder, [data-theme]#pf2e-token-hud select:disabled::placeholder, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select.disabled::placeholder, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme]#pf2e-token-hud input::placeholder, [data-theme]#pf2e-token-hud select::placeholder, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme]#pf2e-token-hud input[type=checkbox], [data-theme]#pf2e-token-hud select[type=checkbox], [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+[data-theme]#pf2e-token-hud .sidebar .sidebar-toggles {
+  padding: unset;
+}
 [data-theme]#pf2e-token-hud .sidebar .sidebar-content .details input {
   background: var(--input-background);
   border: var(--app-border-width) solid;
@@ -1968,7 +2007,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -2007,7 +2046,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -2137,7 +2176,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   border-radius: 3px;
@@ -2202,7 +2241,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   margin: unset;
@@ -2660,7 +2699,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -2736,7 +2775,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   outline: none !important;
@@ -3057,7 +3096,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -3459,6 +3498,42 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
 }
 [data-theme].tokenizer .title .box-button > i:before {
   margin-top: 50% !important;
+}
+
+[data-theme] .vauxs-archive input {
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 0px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme] .vauxs-archive input:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme] .vauxs-archive input:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme] .vauxs-archive input.disabled, [data-theme] .vauxs-archive input:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme] .vauxs-archive input.disabled::placeholder, [data-theme] .vauxs-archive input:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme] .vauxs-archive input::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme] .vauxs-archive input[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
 }
 
 /* ----------------------------------------- */
@@ -4367,7 +4442,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -4450,7 +4525,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -4621,7 +4696,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   margin: 0px;
@@ -4761,7 +4836,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -4902,7 +4977,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -5104,7 +5179,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -5353,7 +5428,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -5388,7 +5463,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -5423,7 +5498,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -5462,7 +5537,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -6009,7 +6084,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   text-shadow: 0px 1px 2px black;
@@ -6280,7 +6355,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -6507,7 +6582,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   height: 100%;
@@ -6714,7 +6789,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -6824,7 +6899,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -6916,7 +6991,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7006,7 +7081,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7041,7 +7116,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   max-width: 60px;
@@ -7077,7 +7152,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7112,7 +7187,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7147,7 +7222,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7182,7 +7257,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7217,7 +7292,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7252,7 +7327,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7287,7 +7362,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7518,7 +7593,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -7815,7 +7890,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -8389,37 +8464,39 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   fill: none;
 }
 
-[data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar header button {
+[data-theme].actor.sheet.vehicle[data-theme-color] .crb-style aside .sidebar header button, [data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar header button {
   color: var(--theme-color-dark);
 }
-[data-theme].actor.sheet.character[data-theme-color] .crb-style aside select {
+[data-theme].actor.sheet.vehicle[data-theme-color] .crb-style aside select, [data-theme].actor.sheet.character[data-theme-color] .crb-style aside select {
   background-color: var(--theme-color);
 }
-[data-theme].actor.sheet.character[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
+[data-theme].actor.sheet.vehicle[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
+[data-theme].actor.sheet.vehicle[data-theme-color] .window-content .inventory ul.items > li .item-summary,
+[data-theme].actor.sheet.vehicle[data-theme-color] .inventory .item-summary, [data-theme].actor.sheet.character[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
 [data-theme].actor.sheet.character[data-theme-color] .window-content .inventory ul.items > li .item-summary,
 [data-theme].actor.sheet.character[data-theme-color] .inventory .item-summary {
   background: color-mix(in srgb, var(--theme-color) 25%, transparent);
 }
-[data-theme].actor.sheet.character[data-theme-color] .crb-style aside .logo {
+[data-theme].actor.sheet.vehicle[data-theme-color] .crb-style aside .logo, [data-theme].actor.sheet.character[data-theme-color] .crb-style aside .logo {
   filter: grayscale(0.6);
 }
-[data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
+[data-theme].actor.sheet.vehicle[data-theme-color] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp, [data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
   background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-text-color) 50%, var(--theme-color) 100%);
   background-color: var(--secondary);
 }
-[data-theme].actor.sheet.character[data-theme-color] nav.sheet-navigation {
+[data-theme].actor.sheet.vehicle[data-theme-color] nav.sheet-navigation, [data-theme].actor.sheet.character[data-theme-color] nav.sheet-navigation {
   background: var(--theme-text-color);
 }
-[data-theme].actor.sheet.character[data-theme-color=red] {
+[data-theme].actor.sheet.vehicle[data-theme-color=red], [data-theme].actor.sheet.character[data-theme-color=red] {
   --theme-text-color: var(--primary-light);
   --theme-color: var(--primary);
   --theme-color-dark: var(--primary-dark);
 }
-[data-theme].actor.sheet.character[data-theme-color=red] .crb-style {
+[data-theme].actor.sheet.vehicle[data-theme-color=red] .crb-style, [data-theme].actor.sheet.character[data-theme-color=red] .crb-style {
   --header: url("../img/red-header.webp");
   background-image: url("../img/red-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet.character[data-theme-color=blue] {
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] {
   --scrollbar-thumb-background: var(--secondary-light);
   --scrollbar-thumb-border-color: var(--tertiary);
   --color-scrollbar-hover: var(--theme-text-color);
@@ -8427,24 +8504,24 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --theme-color: var(--secondary);
   --theme-text-color: var(--secondary-light);
 }
-[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style {
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] .crb-style {
   --header: url("../img/blue-header.webp");
   background-image: url("../img/blue-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style aside {
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] .crb-style aside {
   background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style aside .sidebar .armor-class .shield.hp {
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] .crb-style aside .sidebar .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style header.char-header .char-level .level {
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style nav.sheet-navigation .item:hover,
-[data-theme].actor.sheet.character[data-theme-color=blue] .crb-style nav.sheet-navigation .item.active {
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=blue] [data-theme].actor.sheet.character[data-theme-color=blue] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=green] {
+[data-theme].actor.sheet.vehicle[data-theme-color=green], [data-theme].actor.sheet.character[data-theme-color=green] {
   --scrollbar-thumb-background: var(--remaster-light);
   --scrollbar-thumb-border-color: var(--tertiary);
   --color-scrollbar-hover: var(--theme-text-color);
@@ -8452,24 +8529,25 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --theme-color: var(--remaster);
   --theme-text-color: var(--remaster-light);
 }
-[data-theme].actor.sheet.character[data-theme-color=green] .crb-style {
+[data-theme].actor.sheet.vehicle[data-theme-color=green] .crb-style, [data-theme].actor.sheet.character[data-theme-color=green] .crb-style {
   --header: url("../img/green-header.webp");
   background-image: url("../img/green-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet.character[data-theme-color=green] .crb-style aside {
+[data-theme].actor.sheet.vehicle[data-theme-color=green] .crb-style aside, [data-theme].actor.sheet.character[data-theme-color=green] .crb-style aside {
   background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=green] .crb-style aside .armor-class .shield.hp {
+[data-theme].actor.sheet.vehicle[data-theme-color=green] .crb-style aside .armor-class .shield.hp, [data-theme].actor.sheet.character[data-theme-color=green] .crb-style aside .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet.character[data-theme-color=green] header.char-header .char-level .level {
+[data-theme].actor.sheet.vehicle[data-theme-color=green] header.char-header .char-level .level, [data-theme].actor.sheet.character[data-theme-color=green] header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet.character[data-theme-color=green] nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=green] nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=green] nav.sheet-navigation .item.active, [data-theme].actor.sheet.character[data-theme-color=green] nav.sheet-navigation .item:hover,
 [data-theme].actor.sheet.character[data-theme-color=green] nav.sheet-navigation .item.active {
   background-image: url("../img/green-nav-item.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=purple] {
+[data-theme].actor.sheet.vehicle[data-theme-color=purple], [data-theme].actor.sheet.character[data-theme-color=purple] {
   --theme-color-dark: #3b0062;
   --theme-color: #520982;
   --theme-text-color: rgb(107, 29, 137);
@@ -8477,24 +8555,25 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --scrollbar-thumb-background: var(--theme-color);
   --scrollbar-thumb-border-color: var(--tertiary);
 }
-[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style {
+[data-theme].actor.sheet.vehicle[data-theme-color=purple] .crb-style, [data-theme].actor.sheet.character[data-theme-color=purple] .crb-style {
   --header: url("../img/purple-header.webp");
   background-image: url("../img/purple-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style aside {
+[data-theme].actor.sheet.vehicle[data-theme-color=purple] .crb-style aside, [data-theme].actor.sheet.character[data-theme-color=purple] .crb-style aside {
   background-image: url("../img/purple-sidebar-top.webp"), url("../img/purple-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style aside .armor-class .shield.hp {
+[data-theme].actor.sheet.vehicle[data-theme-color=purple] .crb-style aside .armor-class .shield.hp, [data-theme].actor.sheet.character[data-theme-color=purple] .crb-style aside .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style header.char-header .char-level .level {
+[data-theme].actor.sheet.vehicle[data-theme-color=purple] .crb-style header.char-header .char-level .level, [data-theme].actor.sheet.character[data-theme-color=purple] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet.character[data-theme-color=purple] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=purple] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=purple] .crb-style nav.sheet-navigation .item.active, [data-theme].actor.sheet.character[data-theme-color=purple] .crb-style nav.sheet-navigation .item:hover,
 [data-theme].actor.sheet.character[data-theme-color=purple] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=black] {
+[data-theme].actor.sheet.vehicle[data-theme-color=black], [data-theme].actor.sheet.character[data-theme-color=black] {
   --theme-color-dark: black;
   --theme-color: #111;
   --theme-text-color: #222;
@@ -8502,25 +8581,26 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --scrollbar-thumb-border-color: var(--tertiary);
   --color-scrollbar-hover: var(--theme-text-color);
 }
-[data-theme].actor.sheet.character[data-theme-color=black] .crb-style {
+[data-theme].actor.sheet.vehicle[data-theme-color=black] .crb-style, [data-theme].actor.sheet.character[data-theme-color=black] .crb-style {
   --header: url("../img/black-header.webp");
   background-image: url("../img/green-header.webp"), var(--sheet);
 }
-[data-theme].actor.sheet.character[data-theme-color=black] .crb-style aside {
+[data-theme].actor.sheet.vehicle[data-theme-color=black] .crb-style aside, [data-theme].actor.sheet.character[data-theme-color=black] .crb-style aside {
   background-image: url("../img/black-sidebar-top.webp"), url("../img/black-sidebar-bottom.webp");
 }
-[data-theme].actor.sheet.character[data-theme-color=black] .crb-style aside .armor-class .shield.hp {
+[data-theme].actor.sheet.vehicle[data-theme-color=black] .crb-style aside .armor-class .shield.hp, [data-theme].actor.sheet.character[data-theme-color=black] .crb-style aside .armor-class .shield.hp {
   background: url("../img/blue-shield.webp") no-repeat top center;
 }
-[data-theme].actor.sheet.character[data-theme-color=black] .crb-style header.char-header .char-level .level {
+[data-theme].actor.sheet.vehicle[data-theme-color=black] .crb-style header.char-header .char-level .level, [data-theme].actor.sheet.character[data-theme-color=black] .crb-style header.char-header .char-level .level {
   background: url("../img/blue-level-badge.webp") no-repeat;
 }
-[data-theme].actor.sheet.character[data-theme-color=black] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=black] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=black] .crb-style nav.sheet-navigation .item.active, [data-theme].actor.sheet.character[data-theme-color=black] .crb-style nav.sheet-navigation .item:hover,
 [data-theme].actor.sheet.character[data-theme-color=black] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
 
-[data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style {
+[data-theme][data-dorako-ui-scope=limited].actor.sheet.vehicle .crb-style, [data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style {
   background: unset;
   background: var(--header), transparent !important;
   background-repeat: repeat-x, no-repeat !important;
@@ -8590,7 +8670,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -8632,7 +8712,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -8669,6 +8749,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body h6 {
   --primary: var(--text-color-2);
   --secondary: var(--accent-color);
+  --color-pf-primary: var(--text-color-2);
+  --color-pf-secondary: var(--accent-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting {
   background: var(--app-background);
@@ -8790,7 +8872,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -8825,7 +8907,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -8860,7 +8942,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   height: auto;
@@ -8915,7 +8997,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -8950,7 +9032,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
   padding: 0.5em 0.25em;
@@ -8989,7 +9071,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
@@ -9097,7 +9179,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   border-radius: 4px;
-  outline: 1px solid transparent;
+  outline: 0px solid transparent;
   user-select: text;
   transition: outline-color 0.5s;
 }
