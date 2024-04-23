@@ -1,3 +1,8 @@
+# 3.4.10
+
+- (Maintenance) Added Wardens of Wildwood to the premium module exclusion system.
+- (Meta) Updated the README to more accurately reflect the module as of v3+.
+
 # 3.4.9
 
 - (Maintenance) Ensured Vehicle sheets are styled properly again, with respect to sheet theme and PC theme color.
