@@ -7,6 +7,7 @@
 A UI overhaul for the Pathfinder 2nd Edition System for Foundry VTT.
 
 If you and/or your players enjoy Dorako UI, consider supporting me on Ko-fi (all proceeds go towards pulling Honkai: Star Rail waifus).
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B8X7O6Q)
 
 ## Localization
@@ -63,11 +64,10 @@ Available themes include:
 - **Discord** light and dark theme.
 - **D&D 5e** light and dark theme.
 
-## PC Sheet color theme
+## PC Sheet theme color
 
 Player Character and Vehicle sheets provided by the PF2e system have a red banner. Dorako UI provides options for changing the 'theme color' to suit your preferences:
 
-- **Default**
 - Red
 - Green
 - Blue
