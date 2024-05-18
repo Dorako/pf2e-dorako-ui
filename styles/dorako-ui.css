@@ -702,8 +702,10 @@ nav.damage-log-nav.tabs .item.active {
 }
 
 [data-theme].clock-panel {
-  z-index: 1;
   right: 5px;
+}
+[data-theme].clock-panel .clock-list {
+  overflow: unset;
 }
 [data-theme].clock-panel .clock-entry {
   background: var(--app-background);
@@ -748,6 +750,56 @@ nav.damage-log-nav.tabs .item.active {
   --button-hover-background: var(--button-disabled-background);
   --button-border-color: var(--button-disabled-border-color);
   --button-text-color: var(--text-color-5);
+}
+[data-theme] .add-clock-form .dropdown-wrapper {
+  background: var(--input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color) !important;
+  color: var(--input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 0px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme] .add-clock-form .dropdown-wrapper:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme] .add-clock-form .dropdown-wrapper:focus {
+  outline: 1px solid var(--input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--input-border-color);
+  color: var(--input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme] .add-clock-form .dropdown-wrapper.disabled, [data-theme] .add-clock-form .dropdown-wrapper:disabled {
+  --input-text-color: var(--text-color-disabled);
+  --input-background: var(--input-disabled-background);
+  --input-border-color: var(--input-disabled-border-color);
+}
+[data-theme] .add-clock-form .dropdown-wrapper.disabled::placeholder, [data-theme] .add-clock-form .dropdown-wrapper:disabled::placeholder {
+  color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+}
+[data-theme] .add-clock-form .dropdown-wrapper::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme] .add-clock-form .dropdown-wrapper[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+[data-theme] .add-clock-form .dropdown-wrapper input {
+  --input-box-shadow: none !important;
+  --input-background: none !important;
+  --input-border-color: transparent !important;
+  --input-focus-outline-color: transparent !important;
+}
+[data-theme] .add-clock-form .dropdown-wrapper .dropdown {
+  color: black;
+}
+[data-theme][data-theme^=crb][data-color-scheme=light] .add-clock-form .dropdown-wrapper {
+  --input-background: rgba(0, 0, 0, 0.05);
+}
+[data-theme][data-theme^=crb].clock-panel [data-action=add-clock] {
+  --button-background: var(--app-background);
 }
 
 .item-piles-player-list-trade-button {
@@ -3088,6 +3140,198 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   width: 100%;
 }
 
+[data-chat-interface-theme] .theatre-control-group {
+  display: flex;
+  gap: 5px;
+  margin: 0px var(--sidebar-margin);
+  align-items: center;
+}
+[data-chat-interface-theme] .theatre-control-group .theatre-control-nav-bar {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  display: flex;
+  gap: 5px;
+  align-self: center;
+}
+[data-chat-interface-theme] .theatre-control-btn {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--button-toggle-background);
+  --button-border-color: var(--button-toggle-border-color);
+  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --button-hover-background: var(--button-toggle-hover-background);
+  --button-hover-border-color: var(--button-toggle-hover-border-color);
+}
+[data-chat-interface-theme] .theatre-control-btn:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-interface-theme] .theatre-control-btn.view, [data-chat-interface-theme] .theatre-control-btn.selected, [data-chat-interface-theme] .theatre-control-btn.active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-chat-interface-theme] .theatre-control-btn.empty, [data-chat-interface-theme] .theatre-control-btn.disabled, [data-chat-interface-theme] .theatre-control-btn:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+[data-chat-interface-theme] .theatre-control-btn:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas,
+[data-chat-interface-theme] .theatre-control-btn-down {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--button-toggle-background);
+  --button-border-color: var(--button-toggle-border-color);
+  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --button-hover-background: var(--button-toggle-hover-background);
+  --button-hover-border-color: var(--button-toggle-hover-border-color);
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active:not(.disabled, :disabled):hover,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas:not(.disabled, :disabled):hover,
+[data-chat-interface-theme] .theatre-control-btn-down:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active.view, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.selected, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.active,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.view,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.selected,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.active,
+[data-chat-interface-theme] .theatre-control-btn-down.view,
+[data-chat-interface-theme] .theatre-control-btn-down.selected,
+[data-chat-interface-theme] .theatre-control-btn-down.active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active.empty, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.disabled, [data-chat-interface-theme] .theatre-control-nav-bar-item-active:disabled,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.empty,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.disabled,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas:disabled,
+[data-chat-interface-theme] .theatre-control-btn-down.empty,
+[data-chat-interface-theme] .theatre-control-btn-down.disabled,
+[data-chat-interface-theme] .theatre-control-btn-down:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active:disabled,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas:disabled,
+[data-chat-interface-theme] .theatre-control-btn-down:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--button-background);
+  border: var(--app-border-width) solid var(--button-border-color);
+  color: var(--button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --button-background: var(--button-toggle-background);
+  --button-border-color: var(--button-toggle-border-color);
+  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --button-hover-background: var(--button-toggle-hover-background);
+  --button-hover-border-color: var(--button-toggle-hover-border-color);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item:not(.disabled, :disabled):hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item.view, [data-chat-interface-theme] .theatre-control-nav-bar-item.selected, [data-chat-interface-theme] .theatre-control-nav-bar-item.active {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item.empty, [data-chat-interface-theme] .theatre-control-nav-bar-item.disabled, [data-chat-interface-theme] .theatre-control-nav-bar-item:disabled {
+  --button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --button-border-color: var(--button-disabled-border-color);
+  --button-text-color: var(--text-color-5);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item:disabled {
+  --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
+  --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item:hover {
+  transform: unset;
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas {
+  animation: speakingasitempulse 1s linear 0.2s infinite alternate;
+}
+
+@keyframes speakingasitempulse {
+  0% {
+    border: 1px solid var(--button-hover-background);
+  }
+  100% {
+    border: 1px solid var(--button-hover-text-color);
+  }
+}
 [data-theme]#token-action-hud-core-settings input {
   background: var(--input-background);
   border: var(--app-border-width) solid;
@@ -4944,6 +5188,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme].pf2e.item.sheet form > nav > .tabs {
   gap: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 [data-theme].sheet nav.sheet-tabs {
   gap: 5px;
@@ -7467,7 +7713,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: white;
   background: var(--color-primary-2);
   text-shadow: 0px 1px 2px black;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active, [data-theme].actor.sheet .window-content .inventory ul.items > li > .data .item-controls > a.item-carry-type.active {
   --secondary: var(--accent-color);
@@ -7657,9 +7903,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-dorako-ui-scope=limited] .tags {
   --color-rarity-common: #323232;
 }
-[data-theme].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image, [data-theme].actor.sheet .item-image,
+[data-theme].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image, [data-theme].actor.sheet section.window-content .item-image,
 [data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
-[data-dorako-ui-scope=limited].actor.sheet .item-image {
+[data-dorako-ui-scope=limited].actor.sheet section.window-content .item-image {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -7671,10 +7917,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-color: var(--icon-border-color);
   border-radius: 3px;
 }
-[data-theme].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image img, [data-theme].actor.sheet .item-image img,
+[data-theme].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image img, [data-theme].actor.sheet section.window-content .item-image img,
 [data-dorako-ui-scope=limited].spellcasting-entry.preparation ol.spell-list > li .item-name .item-image img,
-[data-dorako-ui-scope=limited].actor.sheet .item-image img {
-  border-radius: 3px;
+[data-dorako-ui-scope=limited].actor.sheet section.window-content .item-image img {
+  border-radius: 2px;
 }
 [data-theme].actor.sheet.character .crb-style .sheet-body .sheet-content .item-image.framed,
 [data-dorako-ui-scope=limited].actor.sheet.character .crb-style .sheet-body .sheet-content .item-image.framed {
@@ -7699,6 +7945,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav {
   background: unset;
   box-shadow: unset;
+  gap: 5px;
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a,
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab {

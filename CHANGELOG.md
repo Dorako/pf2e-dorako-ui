@@ -1,3 +1,8 @@
+# 3.4.11
+
+- (Maintenance) Styling touchups for the Global Progress Clocks module.
+- (Module) Added support for Theatre Inserts.
+
 # 3.4.10
 
 - (Maintenance) Added Wardens of Wildwood to the premium module exclusion system.
@@ -29,6 +34,10 @@
 
 - (Refinement) Updated styling of certain secret labels to keep in track with the system.
 - (Refinement) Added a border around icons in certain messages with small icons.
+
+# 3.4.4
+
+- Does not exist
 
 # 3.4.3
 

@@ -1,0 +1,47 @@
+[data-chat-interface-theme] {
+  .theatre-control-group {
+    display: flex;
+    gap: 5px;
+    margin: 0px var(--sidebar-margin);
+    align-items: center;
+
+    .theatre-control-nav-bar {
+      @include dui-app;
+      display: flex;
+      gap: 5px;
+      align-self: center;
+    }
+  }
+
+  .theatre-control-btn {
+    @include dui-button-toggle;
+  }
+  .theatre-control-nav-bar-item-active,
+  .theatre-control-nav-bar-item-speakingas,
+  .theatre-control-btn-down {
+    @include dui-button-toggle;
+    background: var(--button-hover-background);
+    outline: 1px solid var(--button-focus-outline-color);
+    border-color: var(--button-hover-border-color);
+    color: var(--button-hover-text-color);
+  }
+  .theatre-control-nav-bar-item {
+    @include dui-button-toggle;
+    &:hover {
+      transform: unset;
+    }
+  }
+
+  .theatre-control-nav-bar-item-speakingas {
+    animation: speakingasitempulse 1s linear 0.2s infinite alternate;
+  }
+}
+
+@keyframes speakingasitempulse {
+  0% {
+    border: 1px solid var(--button-hover-background);
+  }
+  100% {
+    border: 1px solid var(--button-hover-text-color);
+  }
+}

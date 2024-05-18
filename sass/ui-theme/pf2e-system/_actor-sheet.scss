@@ -7,7 +7,7 @@
     color: white;
     background: var(--color-primary-2);
     text-shadow: 0px 1px 2px black;
-    border-radius: 3px;
+    border-radius: 2px;
   }
 
   &.actor.sheet section.window-content .inventory ul.items > li > .data .item-controls > a.toggle-invested.active,
@@ -111,14 +111,14 @@
   }
 
   &.spellcasting-entry.preparation ol.spell-list > li .item-name .item-image,
-  &.actor.sheet .item-image {
+  &.actor.sheet section.window-content .item-image {
     @include dui-app;
     margin: 1px 2px;
     border: 1px solid;
     border-color: var(--icon-border-color);
     border-radius: 3px;
     img {
-      border-radius: 3px;
+      border-radius: 2px;
     }
   }
 
