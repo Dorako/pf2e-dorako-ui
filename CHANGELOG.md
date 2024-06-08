@@ -1,3 +1,12 @@
+# 3.5.0
+
+- (New) Added support for FVTT v12 and ApplicationV2. This is a breaking change and as such only supports V12.
+- (New) Added better support for theming specific macro dialogs, such as the Spellstrike macro.
+- (Fix) Fixed an issue where the theme-coloring of heal and block buttons was not working for buttons provided by PF2e Toolbelt.
+- (Fix) Fixed an issue where PC theme color Blue was not working.
+- (Refinement) Improved styling for AttackPopout applications (when you drag a strike to the hotbar).
+- (Module) Added initial support for PF2e HUD.
+
 # 3.4.11
 
 - (Maintenance) Styling touchups for the Global Progress Clocks module.

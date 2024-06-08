@@ -49,9 +49,9 @@
 
 @mixin dui-button {
   @include dui-app;
-  background: var(--button-background);
-  border: var(--app-border-width) solid var(--button-border-color);
-  color: var(--button-text-color);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
   box-shadow: var(--box-shadow);
   text-decoration: none;
   cursor: pointer;
@@ -59,7 +59,7 @@
 
   &:not(.disabled, :disabled):hover {
     background: var(--button-hover-background);
-    color: var(--button-hover-text-color);
+    color: var(--dui-button-hover-text-color);
     border: var(--app-border-width) solid var(--button-hover-border-color);
     box-shadow: var(--box-shadow);
   }
@@ -68,9 +68,9 @@
   &.selected,
   &.active {
     background: var(--button-hover-background);
-    outline: 1px solid var(--button-focus-outline-color);
+    outline: 1px solid var(--dui-button-focus-outline-color);
     border-color: var(--button-hover-border-color);
-    color: var(--button-hover-text-color);
+    color: var(--dui-button-hover-text-color);
     text-decoration: none !important;
     font-weight: unset !important;
   }
@@ -78,27 +78,27 @@
   &.empty,
   &.disabled,
   &:disabled {
-    --button-background: var(--button-disabled-background);
+    --dui-button-background: var(--button-disabled-background);
     --button-hover-background: var(--button-disabled-background);
-    --button-border-color: var(--button-disabled-border-color);
-    --button-text-color: var(--text-color-5);
+    --dui-button-border-color: var(--button-disabled-border-color);
+    --dui-button-text-color: var(--text-color-5);
   }
 }
 
 @mixin dui-button-bright {
   @include dui-button;
   transition: background 0.1s ease-in-out;
-  --button-background: var(--accent-color);
-  --button-border-color: var(--accent-color-dark);
-  --button-text-color: var(--accent-text-color);
+  --dui-button-background: var(--accent-color);
+  --dui-button-border-color: var(--accent-color-dark);
+  --dui-button-text-color: var(--accent-text-color);
   --app-text-shadow: none;
   --button-hover-background: var(--accent-color-light);
   --button-hover-border-color: var(--accent-color);
-  --button-hover-text-color: var(--accent-text-color);
+  --dui-button-hover-text-color: var(--accent-text-color);
 
   &:disabled {
-    --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
-    --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+    --dui-button-background: color-mix(in srgb, var(--dui-button-background) 50%, transparent 50%);
+    --dui-button-border-color: color-mix(in srgb, var(--dui-button-border-color) 50%, transparent 50%);
     --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
   }
 }
@@ -106,24 +106,24 @@
 @mixin dui-button-toggle {
   @include dui-button;
   transition: background 0.1s ease-in-out;
-  --button-background: var(--button-toggle-background);
-  --button-border-color: var(--button-toggle-border-color);
-  --button-focus-outline-color: var(--button-toggle-focus-outline-color);
+  --dui-button-background: var(--button-toggle-background);
+  --dui-button-border-color: var(--button-toggle-border-color);
+  --dui-button-focus-outline-color: var(--button-toggle-focus-outline-color);
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 
   &:disabled {
-    --button-background: color-mix(in srgb, var(--button-background) 50%, transparent 50%);
-    --button-border-color: color-mix(in srgb, var(--button-border-color) 50%, transparent 50%);
+    --dui-button-background: color-mix(in srgb, var(--dui-button-background) 50%, transparent 50%);
+    --dui-button-border-color: color-mix(in srgb, var(--dui-button-border-color) 50%, transparent 50%);
     --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
   }
 }
 
 @mixin dui-input {
-  background: var(--input-background);
+  background: var(--dui-input-background);
   border: var(--app-border-width) solid;
-  border-color: var(--input-border-color) !important;
-  color: var(--input-text-color);
+  border-color: var(--dui-input-border-color) !important;
+  color: var(--dui-input-text-color);
   box-shadow: var(--input-box-shadow) !important;
   align-items: center;
   // height: var(--input-height);
@@ -137,29 +137,29 @@
 
   &:not(:disabled, .disabled, [type="checkbox"]):hover,
   &:focus {
-    outline: 1px solid var(--input-focus-outline-color);
+    outline: 1px solid var(--dui-input-focus-outline-color);
     border: var(--app-border-width) solid;
-    border-color: var(--input-border-color);
+    border-color: var(--dui-input-border-color);
     color: var(--input-focus-text-color);
     box-shadow: var(--box-shadow);
   }
 
   &.disabled,
   &:disabled {
-    --input-text-color: var(--text-color-disabled);
-    --input-background: var(--input-disabled-background);
-    --input-border-color: var(--input-disabled-border-color);
+    --dui-input-text-color: var(--text-color-disabled);
+    --dui-input-background: var(--input-disabled-background);
+    --dui-input-border-color: var(--input-disabled-border-color);
     &::placeholder {
-      color: color-mix(in srgb, var(--input-placeholder-color) 50%, transparent);
+      color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
     }
   }
 
   &::placeholder {
-    color: var(--input-placeholder-color);
+    color: var(--dui-input-placeholder-color);
   }
 
   &::selection {
-    // color: var(--input-text-color);
+    // color: var(--dui-input-text-color);
     // background: rgba(122, 122, 122, 0.5);
   }
 

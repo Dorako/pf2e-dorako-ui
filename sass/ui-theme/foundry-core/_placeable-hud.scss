@@ -4,18 +4,18 @@
 
 [data-theme] {
   #token-hud .attribute.bar1 input {
-    --input-border-color: var(--color-level-success-border);
-    --input-focus-outline-color: var(--color-level-success-border);
-    --input-background: var(--color-level-success-bg);
+    --dui-input-border-color: var(--color-level-success-border);
+    --dui-input-focus-outline-color: var(--color-level-success-border);
+    --dui-input-background: var(--color-level-success-bg);
     --input-focus-text-color: var(--text-color-2);
-    --input-text-color: var(--text-color-2);
+    --dui-input-text-color: var(--text-color-2);
   }
 
   #token-hud .attribute.bar2 input {
-    --input-border-color: var(--color-level-info-border);
-    --input-focus-outline-color: var(--color-level-info-border);
-    --input-background: var(--color-level-info-bg);
-    --input-text-color: var(--text-color-2); // looks disabled otherwise
+    --dui-input-border-color: var(--color-level-info-border);
+    --dui-input-focus-outline-color: var(--color-level-info-border);
+    --dui-input-background: var(--color-level-info-bg);
+    --dui-input-text-color: var(--text-color-2); // looks disabled otherwise
   }
 
   &.placeable-hud input[type="text"] {
@@ -23,7 +23,7 @@
     text-shadow: 0px 1px 2px black;
     --input-focus-text-color: var(--text-color-2);
     &[name="elevation"] {
-      --input-background: var(--app-background);
+      --dui-input-background: var(--app-background);
       font-size: 18px;
       width: 42px;
     }

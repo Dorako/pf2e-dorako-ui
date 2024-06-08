@@ -69,10 +69,10 @@
   --discord-scrollbar-thumb-background: #c5c9cd;
   --app-background: #f2f3f5;
   --window-app-background: #ffffff;
-  --input-background: #ebedef;
-  --input-text-color: #4e5057;
-  --button-background: #c5c9cd;
-  --button-text-color: black;
+  --dui-input-background: #ebedef;
+  --dui-input-text-color: #4e5057;
+  --dui-button-background: #c5c9cd;
+  --dui-button-text-color: black;
   --fieldset-legend-color: black;
   --text-color-1: var(--discord-text-5);
   --text-color-2: var(--discord-text-4);
@@ -95,7 +95,7 @@
     --tag-background-color: white;
     --tag-text-color: black;
     --color-text-dark-input: black;
-    --input-placeholder-color: var(--discord-text-5);
+    --dui-input-placeholder-color: var(--discord-text-5);
     --color-border-light-highlight: var(--discord-background-1);
     --color-border-light-primary: var(--discord-background-2);
     --color-border-light-tertiary: var(--discord-green);
@@ -140,7 +140,7 @@
     --tag-background-color: var(--discord-background-3);
     --tag-text-color: var(--discord-text-3);
     --color-text-dark-input: var(--discord-text-2);
-    --input-placeholder-color: var(--discord-text-5);
+    --dui-input-placeholder-color: var(--discord-text-5);
     --color-border-light-highlight: var(--discord-background-1);
     --color-border-light-primary: var(--discord-background-2);
     --color-border-light-tertiary: var(--discord-green);
@@ -167,12 +167,12 @@
   --app-background: var(--discord-background-3);
   --app-border-color: var(--discord-background-2);
   --window-app-border-color: #4b4c4f;
-  --button-background: var(--discord-background-4);
-  --button-border-color: var(--discord-background-1);
-  --button-focus-outline-color: var(--accent-color);
+  --dui-button-background: var(--discord-background-4);
+  --dui-button-border-color: var(--discord-background-1);
+  --dui-button-focus-outline-color: var(--accent-color);
   --input-box-shadow: none;
-  --input-background: var(--discord-background-1);
-  --input-text-color: var(--discord-text-3);
+  --dui-input-background: var(--discord-background-1);
+  --dui-input-text-color: var(--discord-text-3);
   --input-focus-text-color: var(--discord-text-2);
   --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
 }
@@ -230,21 +230,21 @@
   --inline-text-color: #cacdf7;
   --inline-icon-color: #cacdf7;
   /* Input variables */
-  --input-border-color: transparent;
+  --dui-input-border-color: transparent;
   --input-disabled-background: #494b51;
   --input-disabled-border-color: transparent;
-  --input-border-color: transparent;
-  --input-background: var(--discord-background-1);
-  --input-focus-outline-color: var(--discord-accent-color);
-  --input-placeholder-color: color-mix(in srgb, var(--button-text-color) 50%, transparent);
+  --dui-input-border-color: transparent;
+  --dui-input-background: var(--discord-background-1);
+  --dui-input-focus-outline-color: var(--discord-accent-color);
+  --dui-input-placeholder-color: color-mix(in srgb, var(--dui-button-text-color) 50%, transparent);
   /* Button variables */
-  --button-background: var(--app-background);
-  --button-border-color: transparent;
-  --button-text-color: var(--discord-text-2);
-  --button-focus-outline-color: transparent;
+  --dui-button-background: var(--app-background);
+  --dui-button-border-color: transparent;
+  --dui-button-text-color: var(--discord-text-2);
+  --dui-button-focus-outline-color: transparent;
   --button-hover-background: var(--discord-background-1);
   --button-hover-border-color: transparent;
-  --button-hover-text-color: var(--discord-text-1);
+  --dui-button-hover-text-color: var(--discord-text-1);
   --button-disabled-background: #494b51;
   --button-disabled-border-color: transparent;
   --button-toggle-border-color: var(--discord-green);
@@ -265,10 +265,10 @@
   --accent-color-dark: var(--discord-accent-color-dark);
 
   &.window-app button.bright {
-    --button-background: var(--accent-color);
-    --button-border-color: var(--accent-color-dark);
-    --button-text-color: white !important;
-    --button-hover-text-color: white !important;
+    --dui-button-background: var(--accent-color);
+    --dui-button-border-color: var(--accent-color-dark);
+    --dui-button-text-color: white !important;
+    --dui-button-hover-text-color: white !important;
     --app-text-shadow: none;
   }
 
@@ -366,7 +366,7 @@
 /* ----------------------------------------- */
 [data-dorako-ui-scope="controls"][data-theme^="discord"] {
   --button-hover-background: var(--accent-color);
-  --button-focus-outline-color: var(--accent-color-dark);
+  --dui-button-focus-outline-color: var(--accent-color-dark);
   --button-hover-border-color: var(--accent-text-color);
 }
 
@@ -403,7 +403,7 @@
 [data-theme="discord"] [data-dorako-ui-scope="placeable-hud"] {
   // Space is intentional
   --button-hover-background: var(--accent-color);
-  --button-focus-outline-color: var(--accent-color-dark);
+  --dui-button-focus-outline-color: var(--accent-color-dark);
   --button-hover-border-color: var(--accent-text-color);
 }
 
@@ -412,14 +412,14 @@
 /* ----------------------------------------- */
 [data-theme^="discord"].chat-message {
   background: var(--discord-background-3);
-  --button-background: var(--discord-background-2);
+  --dui-button-background: var(--discord-background-2);
   --button-hover-background: #35373b;
   --app-border-width: 1px;
   --color-text-dark-secondary: rgba(255, 255, 255, 0.66);
   --button-hover-border-color: rgba(122, 122, 122, 0.66);
-  --button-border-color: rgba(122, 122, 122, 0.33);
-  --button-text-color: var(--discord-text-3);
-  --button-hover-text-color: var(--discord-text-2);
+  --dui-button-border-color: rgba(122, 122, 122, 0.33);
+  --dui-button-text-color: var(--discord-text-3);
+  --dui-button-hover-text-color: var(--discord-text-2);
   --color-level-success: var(--discord-green);
   --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
 
@@ -464,8 +464,8 @@
   .dice-roll .dice-total {
     --app-background: rgba(122, 122, 122, 0.33);
     button {
-      --button-text-color: var(--discord-text-1);
-      --button-hover-text-color: var(--discord-text-1);
+      --dui-button-text-color: var(--discord-text-1);
+      --dui-button-hover-text-color: var(--discord-text-1);
     }
   }
   .part-total {
@@ -503,14 +503,14 @@
 
 [data-theme^="discord"][data-color-scheme="light"].chat-message {
   background: #ffffff;
-  --button-background: #ffffff;
+  --dui-button-background: #ffffff;
   --button-hover-background: #ebebed;
   --app-border-width: 1px;
   --color-text-dark-secondary: rgba(0, 0, 0, 0.66);
   --button-hover-border-color: rgba(122, 122, 122, 0.66);
-  --button-border-color: rgba(122, 122, 122, 0.33);
-  --button-text-color: #4e5057;
-  --button-hover-text-color: #303237;
+  --dui-button-border-color: rgba(122, 122, 122, 0.33);
+  --dui-button-text-color: #4e5057;
+  --dui-button-hover-text-color: #303237;
   --color-level-success: var(--discord-green);
   --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
 
@@ -547,9 +547,9 @@
   --scrollbar-thumb-border-color: var(--discord-scrollbar-thumb-border-color);
   --color-scrollbar-hover: var(--discord-color-scrollbar-highlight);
   #chat-log ~ * {
-    --button-border-color: var(--discord-background-1);
+    --dui-button-border-color: var(--discord-background-1);
     --app-border-width: 1px;
-    --button-background: var(--discord-background-3);
+    --dui-button-background: var(--discord-background-3);
   }
 }
 
@@ -568,4 +568,8 @@
   --color-bg-physical: rgba(132, 132, 132, 0.125);
   --color-border-physical: #939292;
   --color-text-physical: #bab9b9;
+}
+
+[data-theme^="discord"][id^="pf2e-hud"] {
+  --color-disabled: #585858;
 }

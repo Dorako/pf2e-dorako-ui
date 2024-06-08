@@ -21,9 +21,9 @@
   .theatre-control-btn-down {
     @include dui-button-toggle;
     background: var(--button-hover-background);
-    outline: 1px solid var(--button-focus-outline-color);
+    outline: 1px solid var(--dui-button-focus-outline-color);
     border-color: var(--button-hover-border-color);
-    color: var(--button-hover-text-color);
+    color: var(--dui-button-hover-text-color);
   }
   .theatre-control-nav-bar-item {
     @include dui-button-toggle;
@@ -42,6 +42,6 @@
     border: 1px solid var(--button-hover-background);
   }
   100% {
-    border: 1px solid var(--button-hover-text-color);
+    border: 1px solid var(--dui-button-hover-text-color);
   }
 }

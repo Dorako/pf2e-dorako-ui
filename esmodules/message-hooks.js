@@ -69,7 +69,7 @@ const headerStyleColors = {
 function getHeaderColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (headerStyle === "tint") {
-    return message?.user?.color ?? headerStyleColors.fallback;
+    return message?.author?.color ?? headerStyleColors.fallback;
   }
   return headerStyleColors[headerStyle] ?? headerStyleColors.fallback;
 }
@@ -83,9 +83,9 @@ function calcHeaderTextColor(headerColor) {
     return "dark";
   }
 
-  var r = parseInt(headerColor.substr(1, 2), 16);
-  var g = parseInt(headerColor.substr(3, 2), 16);
-  var b = parseInt(headerColor.substr(5, 2), 16);
+  var r = headerColor.r;
+  var g = headerColor.g;
+  var b = headerColor.b;
   var yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
   if (yiq >= 180) {

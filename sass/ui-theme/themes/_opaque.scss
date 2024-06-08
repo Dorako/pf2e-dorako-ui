@@ -1,6 +1,6 @@
 [data-chat-interface-theme="opaque"] #chat-log ~ *,
 [data-theme="opaque"]:not([data-color-scheme]) {
-  --button-background: rgb(30, 30, 30);
+  --dui-button-background: rgb(30, 30, 30);
   --app-background: rgb(30, 30, 30);
   --app-border-color: rgb(80, 80, 80);
   --app-border-width: 1px;
@@ -10,12 +10,12 @@
   --window-app-border-color: rgb(80, 80, 80);
 
   --input-box-shadow: none;
-  --input-border-color: var(--button-border-color); // intentional
-  --input-text-color: black;
+  --dui-input-border-color: var(--dui-button-border-color); // intentional
+  --dui-input-text-color: black;
   --input-focus-text-color: black;
-  --input-background: rgba(255, 255, 255, 0.5);
-  --input-focus-outline-color: var(--primary-light);
-  --input-placeholder-color: rgba(0, 0, 0, 0.5);
+  --dui-input-background: rgba(255, 255, 255, 0.5);
+  --dui-input-focus-outline-color: var(--primary-light);
+  --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);
 
   --color-primary-1: var(--tertiary);
   --color-primary-2: var(--primary-light);
@@ -27,13 +27,13 @@
   --color-secondary-3: var(--secondary-dark);
   --color-secondary-3-75: var(--color-secondary-3); //custom
 
-  --button-background: var(--app-background);
-  --button-border-color: var(--app-border-color);
-  --button-text-color: var(--text-color-3);
-  --button-focus-outline-color: var(--tertiary);
+  --dui-button-background: var(--app-background);
+  --dui-button-border-color: var(--app-border-color);
+  --dui-button-text-color: var(--text-color-3);
+  --dui-button-focus-outline-color: var(--tertiary);
   --button-hover-background: var(--primary-light);
   --button-hover-border-color: var(--tertiary);
-  --button-hover-text-color: var(--text-color-1);
+  --dui-button-hover-text-color: var(--text-color-1);
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
   --button-bright-text-color: white;
@@ -61,7 +61,7 @@
   --color-border-light-highlight: var(--app-border-color);
 
   &#token-hud {
-    --input-text-color: var(--text-color-2);
+    --dui-input-text-color: var(--text-color-2);
     .attribute i.fas {
       color: var(--text-color-2);
     }

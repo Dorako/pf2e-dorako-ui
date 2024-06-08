@@ -1,0 +1,83 @@
+[data-theme] {
+  &[id^="pf2e-hud"] {
+    --color-disabled: var(--text-color-disabled);
+  }
+
+  &[id^="pf2e-hud-persistent"].app,
+  &[id^="pf2e-hud-persistent"] .app {
+    @include dui-app;
+  }
+
+  &#pf2e-hud-tooltip > div {
+    @include dui-app;
+    // &.inner {
+    //   --outer-border-width: 1px;
+    //   max-width: calc(
+    //     var(--inner-padding) * 2 + var(--inner-gap) * 2 + var(--section-width) * 3 + var(--outer-border-width) * 2
+    //   );
+    // }
+  }
+
+  &[id^="pf2e-hud"] {
+    --highlight-color: var(--accent-color-light);
+  }
+
+  &#pf2e-hud-tracker {
+    @include dui-app;
+  }
+
+  &#pf2e-hud-persistent-portrait .top .name {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    // display: none;
+  }
+
+  &#pf2e-hud-persistent-portrait .bottom {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    // display: none;
+  }
+  // &#pf2e-hud-persistent-portrait:hover .top .name,
+  // &#pf2e-hud-persistent-portrait:hover .bottom {
+  //   display: grid;
+  // }
+
+  &#pf2e-hud-persistent + div #hotbar #hotbar-page-controls {
+    @include dui-app;
+  }
+
+  &#pf2e-hud-persistent-left,
+  &#pf2e-hud-persistent {
+    opacity: 50%;
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}
+
+.game #interface:has(#pf2e-hud-tracker) #sidebar {
+  box-shadow: unset;
+  padding-left: 5px; // --panel-gap from PF2e HUD
+}
+
+.game [id^="pf2e-hud-token"] {
+  #pf2e-hud-token-main.exploded .panel {
+    @include dui-app;
+  }
+}
+
+#pf2e-hud-persistent + div #hotbar[data-theme] #macro-list {
+  background: unset;
+  box-shadow: unset;
+  margin-left: 41px;
+  .macro {
+    height: calc(var(--macro-size) + 2px);
+    width: calc(var(--macro-size) + 2px);
+    background: var(--app-background);
+    border: var(--app-border-width) solid var(--app-border-color);
+    text-shadow: var(--app-text-shadow);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color-3);
+  }
+}

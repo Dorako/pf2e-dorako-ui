@@ -94,7 +94,8 @@
     }
   }
 
-  &.actor.sheet.vehicle[data-theme-color="blue"] &.actor.sheet.character[data-theme-color="blue"] {
+  &.actor.sheet.vehicle[data-theme-color="blue"],
+  &.actor.sheet.character[data-theme-color="blue"] {
     --scrollbar-thumb-background: var(--secondary-light);
     --scrollbar-thumb-border-color: var(--tertiary);
     --color-scrollbar-hover: var(--theme-text-color);
@@ -318,7 +319,7 @@
     @include dui-input;
     &:hover {
       outline: 1px solid transparent !important;
-      color: var(--input-text-color) !important;
+      color: var(--dui-input-text-color) !important;
     }
   }
 
@@ -400,11 +401,11 @@
   &.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography {
     section input,
     .editor {
-      --input-text-color: var(--text-color-3);
+      --dui-input-text-color: var(--text-color-3);
       --input-focus-text-color: var(--text-color-3);
-      --input-background: transparent;
-      --input-border-color: transparent;
-      --input-focus-outline-color: transparent;
+      --dui-input-background: transparent;
+      --dui-input-border-color: transparent;
+      --dui-input-focus-outline-color: transparent;
       --box-shadow: transparent;
 
       &:hover {
@@ -456,9 +457,9 @@
   }
 
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .alignment select {
-    --input-text-color: black;
-    --input-background: transparent;
-    --input-border-color: transparent;
+    --dui-input-text-color: black;
+    --dui-input-background: transparent;
+    --dui-input-border-color: transparent;
     --box-shadow: transparent;
     color: black;
   }
@@ -487,6 +488,7 @@
     border-image: linear-gradient(90deg, transparent, var(--color-primary-2) 20%, transparent) 1;
   }
 
+  .tab.actions ol.actions-list li.strike, // AttackPopout
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
     --text-dark: black;
     --primary: var(--color-primary-2);
@@ -495,6 +497,10 @@
         --color-pf-primary: var(--system-primary);
         --color-pf-secondary: var(--system-secondary);
       }
+    }
+    select.modular {
+      --dui-input-border-color: transparent;
+      --input-box-shadow: none;
     }
   }
 
@@ -511,6 +517,7 @@
 
 [data-theme][data-color-scheme="dark"] {
   // prettier-ignore
+  &.actor.sheet.character .tab.actions ol.actions-list li.strike .alt-usage .alt-usage-icon[src$="svg"],
   &.actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike .alt-usage .alt-usage-icon[src$="svg"] {
     filter: invert(1);  
   }

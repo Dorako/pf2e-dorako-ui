@@ -40,10 +40,10 @@
   --accent-color-dark: var(--primary);
 
   &.window-app button.bright {
-    --button-background: var(--accent-color);
-    --button-border-color: var(--accent-color-dark);
-    --button-text-color: white !important;
-    --button-hover-text-color: white !important;
+    --dui-button-background: var(--accent-color);
+    --dui-button-border-color: var(--accent-color-dark);
+    --dui-button-text-color: white !important;
+    --dui-button-hover-text-color: white !important;
     --app-text-shadow: none;
   }
 
@@ -74,16 +74,16 @@
   // --text-color-1: black;
   // --text-color-2: var(--color-text-dark-primary);
   // --text-color-3: var(--color-text-dark-secondary);
-  // --button-hover-text-color: white;
+  // --dui-button-hover-text-color: white;
 
   --app-background: rgba(255, 255, 255, 0.5);
   --app-border-color: transparent;
   --app-border-width: none;
   --app-text-shadow: none;
-  --button-text-color: black;
+  --dui-button-text-color: black;
   --box-shadow: var(--gold-and-glow);
 
-  --button-focus-outline-color: transparent;
+  --dui-button-focus-outline-color: transparent;
   --input-disabled-background: rgba(255, 255, 255, 0.2);
   --input-disabled-border-color: transparent;
 
@@ -96,12 +96,12 @@
   tagify,
   select,
   input {
-    --input-border-color: var(--color-text-light-5);
-    --input-text-color: var(--color-text-dark-input);
+    --dui-input-border-color: var(--color-text-light-5);
+    --dui-input-text-color: var(--color-text-dark-input);
     --input-focus-text-color: var(--color-text-dark-input);
-    --input-background: rgba(255, 255, 255, 0.5);
-    --input-focus-outline-color: var(--primary-light);
-    --input-placeholder-color: var(--color-text-dark-secondary);
+    --dui-input-background: rgba(255, 255, 255, 0.5);
+    --dui-input-focus-outline-color: var(--primary-light);
+    --dui-input-placeholder-color: var(--color-text-dark-secondary);
 
     --app-border-width: 1px;
     --box-shadow: none;
@@ -117,22 +117,22 @@
   &.package-configuration aside.sidebar nav.tabs .category-tab {
     --box-shadow: none;
     --app-border-width: 1px;
-    --button-border-color: var(--color-text-light-5);
-    --button-background: rgba(255, 255, 255, 0.5);
-    --button-text-color: black;
+    --dui-button-border-color: var(--color-text-light-5);
+    --dui-button-background: rgba(255, 255, 255, 0.5);
+    --dui-button-text-color: black;
     text-shadow: none;
   }
 
   &.pf2e.item.sheet form .sheet-body input[type="text"]:not(:disabled),
   &.pf2e.item.sheet form .sheet-body input[type="number"]:not(:disabled) {
-    --input-background: rgba(0, 0, 0, 0.05);
-    --input-border-color: var(--color-text-light-5);
+    --dui-input-background: rgba(0, 0, 0, 0.05);
+    --dui-input-border-color: var(--color-text-light-5);
   }
 
   .tagify,
   input {
-    --input-background: rgba(0, 0, 0, 0.05);
-    --input-border-color: transparent;
+    --dui-input-background: rgba(0, 0, 0, 0.05);
+    --dui-input-border-color: transparent;
   }
 
   &#homebrew-settings section.window-content .form-group.setting tags {
@@ -141,7 +141,7 @@
 
   &.sheet.hazard .section-container .section-header input,
   &.sheet.hazard .section-container.publication .section-body input[type="text"] {
-    --input-text-color: var(--text-color-2);
+    --dui-input-text-color: var(--text-color-2);
     --input-focus-text-color: var(--text-color-1);
   }
 
@@ -150,11 +150,11 @@
   }
 
   .directory .directory-header .header-search input {
-    --input-border-color: var(--color-text-light-5);
-    --input-text-color: var(--color-text-dark-input);
+    --dui-input-border-color: var(--color-text-light-5);
+    --dui-input-text-color: var(--color-text-dark-input);
     --input-focus-text-color: var(--color-text-dark-input);
-    --input-background: rgba(255, 255, 255, 0.5);
-    --input-focus-outline-color: var(--primary-light);
+    --dui-input-background: rgba(255, 255, 255, 0.5);
+    --dui-input-focus-outline-color: var(--primary-light);
   }
 
   &.chat-message {
@@ -171,7 +171,7 @@
     }
 
     button {
-      --button-hover-text-color: white;
+      --dui-button-hover-text-color: white;
       &:hover {
         outline: 1px solid var(--gold-brown);
       }
@@ -188,11 +188,11 @@
         .dice-total,
         .dice-formula {
           button {
-            --button-border-color: var(--alt-dark);
-            --button-background: var(--alt);
-            --button-text-color: white;
+            --dui-button-border-color: var(--alt-dark);
+            --dui-button-background: var(--alt);
+            --dui-button-text-color: white;
             --app-text-shadow: none;
-            --button-focus-outline-color: transparent;
+            --dui-button-focus-outline-color: transparent;
             --button-hover-background: var(--tertiary-dark);
             --button-hover-border-color: var(--gold-brown);
           }
@@ -239,10 +239,10 @@
     --tag-background-color: transparent;
     --tag-text-color: black;
     --color-text-dark-input: black;
-    --input-border-color: transparent;
-    --input-background: rgba(0, 0, 0, 0.1);
-    --input-focus-outline-color: var(--tertiary);
-    --input-placeholder-color: rgba(40, 40, 40, 1);
+    --dui-input-border-color: transparent;
+    --dui-input-background: rgba(0, 0, 0, 0.1);
+    --dui-input-focus-outline-color: var(--tertiary);
+    --dui-input-placeholder-color: rgba(40, 40, 40, 1);
     --text-dark: black;
     --contrastive-transparent: rgba(0, 0, 0, 0.5);
     --text-color-3: var(--color-text-dark-primary);
@@ -254,7 +254,7 @@
     // }
 
     // .side-bar-section-header input {
-    //   --input-focus-outline-color: var(--tertiary);
+    //   --dui-input-focus-outline-color: var(--tertiary);
     // }
 
     &.actor.npc.sheet form a.roll:hover {

@@ -1,23 +1,23 @@
 /* ----------------------------------------- */
 /* Custom Hotbar                             */
 /* ----------------------------------------- */
-:root {
-  --custom-hotbar-chb-macro-size: calc(var(--macro-size) + 2px);
-}
+// :root {
+//   --custom-hotbar-chb-macro-size: calc(var(--macro-size) + 2px);
+// }
 
-// Custom hotbar introduces a 'hotbars' div, and restyles the core hotbar div
-#ui-bottom #hotbars {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+// // Custom hotbar introduces a 'hotbars' div, and restyles the core hotbar div
+// #ui-bottom #hotbars {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 5px;
 
-  #hotbar {
-    position: unset;
-  }
-}
+//   #hotbar {
+//     position: unset;
+//   }
+// }
 
-@media (max-width: 1120px) {
-  #custom-hotbar {
-    width: 354px;
-  }
-}
+// @media (max-width: 1120px) {
+//   #custom-hotbar {
+//     width: 354px;
+//   }
+// }

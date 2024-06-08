@@ -81,20 +81,20 @@
   --inline-icon-color: var(--wotr-button-active-text);
 
   --input-box-shadow: none;
-  --input-border-color: var(--color-text-light-5);
-  --input-text-color: var(--color-text-dark-input);
+  --dui-input-border-color: var(--color-text-light-5);
+  --dui-input-text-color: var(--color-text-dark-input);
   --input-focus-text-color: var(--color-text-dark-input);
-  --input-background: rgba(255, 255, 255, 0.5);
-  --input-focus-outline-color: var(--primary-light);
-  --input-placeholder-color: rgba(0, 0, 0, 0.5);
+  --dui-input-background: rgba(255, 255, 255, 0.5);
+  --dui-input-focus-outline-color: var(--primary-light);
+  --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);
 
-  --button-background: var(--wotr-button-background);
-  --button-border-color: #442d29;
-  --button-text-color: var(--wotr-button-text);
-  --button-focus-outline-color: var(--wotr-purple-border);
+  --dui-button-background: var(--wotr-button-background);
+  --dui-button-border-color: #442d29;
+  --dui-button-text-color: var(--wotr-button-text);
+  --dui-button-focus-outline-color: var(--wotr-purple-border);
   --button-hover-background: var(--wotr-button-active-bg);
   --button-hover-border-color: var(--wotr-button-active-bg);
-  --button-hover-text-color: var(--wotr-button-active-text);
+  --dui-button-hover-text-color: var(--wotr-button-active-text);
   --button-disabled-background: var(--wotr-button-background);
   --button-disabled-border-color: #442d29;
   --button-disabled-text-color: var(--wotr-button-text-disabled);
@@ -160,12 +160,12 @@
   //   // background: rgba(6, 4, 3, 0.92);
   //   // background-image: url(../img/wotr/wotr-purple-button-bg.webp);
   //   // background-size: cover;
-  //   --button-background: transparent;
+  //   --dui-button-background: transparent;
   //   --button-hover-background: transparent;
-  //   --button-border-color: transparent;
+  //   --dui-button-border-color: transparent;
   //   --button-hover-border-color: transparent;
-  //   --button-focus-outline-color: transparent;
-  //   --button-text-color: #d9d3c5;
+  //   --dui-button-focus-outline-color: transparent;
+  //   --dui-button-text-color: #d9d3c5;
   //   --app-border-width: 15px;
   //   --border-radius: 0px;
   //   border-image-source: url(../img/wotr/wotr-purple-button-border.webp);

@@ -38,11 +38,11 @@
 /* Limited                                   */
 /* ----------------------------------------- */
 [data-theme^="crb"][data-color-scheme="dark"][data-dorako-ui-scope="limited"] {
-  --input-background: var(--glass-bg);
+  --dui-input-background: var(--glass-bg);
   --color-primary-2: var(--tertiary-dark);
   --color-secondary-5-25: rgba(0, 0, 0, 0.25);
   --color-border-light-2: black;
-  --button-hover-text-color: black;
+  --dui-button-hover-text-color: black;
 }
 
 /* ----------------------------------------- */
@@ -54,9 +54,9 @@
   input,
   button {
     --app-background: var(--glass-bg-light);
-    --input-border-color: transparent;
-    --input-background: var(--glass-bg);
-    --input-focus-outline-color: var(--tertiary);
+    --dui-input-border-color: transparent;
+    --dui-input-background: var(--glass-bg);
+    --dui-input-focus-outline-color: var(--tertiary);
     --input-box-shadow: var(--glassy);
   }
 }
@@ -78,12 +78,12 @@
   --app-background: var(--glass-bg);
   --app-border-width: 0px;
 
-  --input-text-color: var(--text-color-3);
-  --input-background: var(--glass-bg);
+  --dui-input-text-color: var(--text-color-3);
+  --dui-input-background: var(--glass-bg);
   --input-box-shadow: var(--glassy);
-  --input-border-color: transparent;
+  --dui-input-border-color: transparent;
   --input-focus-text-color: var(--text-color-2);
-  --input-placeholder-color: var(--text-color-5);
+  --dui-input-placeholder-color: var(--text-color-5);
   --input-disabled-background: black;
   --input-disabled-border-color: black;
   --button-bright-text-color: black;
@@ -132,9 +132,9 @@
     --tag-background-color: var(--color-secondary-4);
     --tag-text-color: var(--text-color-4);
     --color-text-dark-input: var(--text-color-3);
-    --input-placeholder-color: var(--text-color-5);
-    --input-background: rgba(0, 0, 0, 0.1);
-    --input-focus-outline-color: var(--tertiary);
+    --dui-input-placeholder-color: var(--text-color-5);
+    --dui-input-background: rgba(0, 0, 0, 0.1);
+    --dui-input-focus-outline-color: var(--tertiary);
     --text-dark: var(--text-color-2);
 
     &.dorako-ux.sheet.pf2e.actor.npc form .sidebar .subsection,
@@ -189,9 +189,9 @@
   &.chat-message .dice-roll .dice-formula button,
   &.chat-message .dice-roll .dice-total button {
     background: var(--glass-bg-light);
-    --button-text-color: var(--text-color-2);
+    --dui-button-text-color: var(--text-color-2);
     &:hover {
-      --button-hover-text-color: var(--text-color-1);
+      --dui-button-hover-text-color: var(--text-color-1);
       background: var(--glass-bg);
     }
   }

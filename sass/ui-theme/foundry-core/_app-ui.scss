@@ -72,7 +72,7 @@
 [data-theme] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
-  --color-bg-option: var(--input-background); // select dropdown, can't contain transparency
+  --color-bg-option: var(--dui-input-background); // select dropdown, can't contain transparency
 }
 
 /* ----------------------------------------- */
@@ -118,7 +118,7 @@
     --color-text-dark-4: var(--text-color-3);
     --color-text-dark-input: var(--text-color-3);
     --color-border-dark: var(--text-color-2);
-    --color-border-medium: var(--input-border-color);
+    --color-border-medium: var(--dui-input-border-color);
   }
 }
 
@@ -156,7 +156,7 @@
 
   &.filepicker .favorites .paths {
     --color-text-dark-primary: white;
-    --button-text-color: white;
+    --dui-button-text-color: white;
   }
 }
 
@@ -352,8 +352,8 @@
 
   input[type="range"] {
     background: none !important;
-    --input-focus-outline-color: transparent;
-    --input-border-color: transparent;
+    --dui-input-focus-outline-color: transparent;
+    --dui-input-border-color: transparent;
     --box-shadow: none;
   }
 
@@ -434,10 +434,10 @@
   }
 
   textarea {
-    color: var(--input-text-color);
-    background: var(--input-background);
+    color: var(--dui-input-text-color);
+    background: var(--dui-input-background);
     border-width: var(--app-border-width);
-    border-color: var(--input-border-color);
+    border-color: var(--dui-input-border-color);
   }
 
   hr {
@@ -473,6 +473,19 @@
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
+body.game [data-theme].window-app,
+[data-theme].application {
+  // --background: url(../ui/parchment.jpg) repeat;
+  --color-text-primary: var(--color-text-1);
+  --color-header-background: var(--color-text-3);
+  --color-fieldset-border: var(--color-text-2);
+  --color-form-label: var(--color-text-2);
+  --color-form-label-hover: var(--color-text-1);
+  --color-form-hint: var(--color-text-4);
+  --color-form-hint-hover: var(--color-text-2);
+  --color-select-option-bg: var(--color-text-1);
+}
+
 [data-theme] {
   &.app {
     border-radius: var(--border-radius);
@@ -499,6 +512,7 @@
     // border: 1px solid transparent;
   }
 
+  &.application,
   &.window-app {
     background: var(--window-app-background);
     background-position: top;
@@ -521,6 +535,9 @@
       border: unset;
       text-shadow: 0px 1px 2px black;
       border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+      --color-header-background: transparent; // v12 header
+      --color-light-1: var(--color-text-1); // v12 header
+      color: var(--color-text-1);
     }
 
     .window-content {
@@ -550,7 +567,7 @@
   }
 
   &.token-sheet,
-  &.dialog {
+  &.dialog:not(.application) {
     height: auto !important;
   }
 
@@ -578,8 +595,8 @@
 
   &.filepicker .favorites .paths {
     box-shadow: unset;
-    border: 1px solid var(--input-border-color);
-    background: var(--input-background);
+    border: 1px solid var(--dui-input-border-color);
+    background: var(--dui-input-background);
     .path {
       @include dui-button-toggle;
       border-radius: 3px;
@@ -616,6 +633,10 @@
 
   .directory .action-buttons button,
   .settings-sidebar button {
+    @include dui-button;
+  }
+
+  nav.sheet-tabs > [data-tab] {
     @include dui-button;
   }
 
@@ -712,7 +733,7 @@
   .tags.light > .tag,
   .tags > .tag.light {
     --tag-color: var(--input-color);
-    background: var(--input-background);
+    background: var(--dui-input-background);
   }
 
   .tags .tag.tag_transparent {
@@ -757,8 +778,8 @@
     --tag-border-color: var(--color-border-medium);
     --tags-border-color: var(--color-border-medium);
 
-    background: var(--input-background);
-    border: var(--app-border-width) solid var(--input-border-color);
+    background: var(--dui-input-background);
+    border: var(--app-border-width) solid var(--dui-input-border-color);
     box-shadow: var(--input-box-shadow);
     border-radius: 3px;
 
@@ -953,7 +974,7 @@
 
   &.pf2e.item.sheet form .sheet-content button:hover:not(:disabled),
   &.pf2e.item.sheet form .sheet-content button:focus {
-    border: 1px solid var(--button-border-color);
+    border: 1px solid var(--dui-button-border-color);
     box-shadow: unset;
   }
 
@@ -1052,13 +1073,13 @@
 
   &.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
-    --button-border-color: var(--color-primary-2);
-    --button-background: var(--color-primary-3);
+    --dui-button-border-color: var(--color-primary-2);
+    --dui-button-background: var(--color-primary-3);
     --button-hover-border-color: var(--color-primary-4);
     --button-hover-background: var(--color-primary-5);
-    --button-text-color: var(--text-color-2);
+    --dui-button-text-color: var(--text-color-2);
     --box-shadow: none;
-    border-color: var(--button-border-color);
+    border-color: var(--dui-button-border-color);
     z-index: 1;
   }
 
@@ -1074,7 +1095,7 @@
     background-color: white;
   }
   .tox.tox-tinymce .tox-tbtn {
-    --button-background: white;
+    --dui-button-background: white;
     --button-hover-background: gray;
     --app-text-shadow: none;
     --box-shadow: none;

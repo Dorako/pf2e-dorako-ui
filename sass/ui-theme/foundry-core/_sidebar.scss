@@ -141,7 +141,7 @@
     border: unset;
     > .item.active {
       @include dui-button;
-      --button-focus-outline-color: transparent;
+      --dui-button-focus-outline-color: transparent;
     }
   }
 }

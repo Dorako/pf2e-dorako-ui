@@ -850,8 +850,8 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
     }
 
     &.view a {
-      --button-background: var(--color-primary-2);
-      --button-border-color: var(--color-primary-1);
+      --dui-button-background: var(--color-primary-2);
+      --dui-button-border-color: var(--color-primary-1);
     }
   }
 

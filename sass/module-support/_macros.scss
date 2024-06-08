@@ -25,7 +25,7 @@
 /* ----------------------------------------- */
 
 [data-theme] .action-list button {
-  --button-text-color: white !important;
+  --dui-button-text-color: white !important;
   // @include dui-button;
   img {
     border: 1px solid var(--icon-border-color);
@@ -36,5 +36,27 @@
   }
   &.glow {
     filter: brightness(1.1);
+  }
+}
+
+/* ----------------------------------------- */
+/* Spelltrike                                */
+/* ----------------------------------------- */
+
+[data-theme][data-dorako-ui-scope="macro-dialog"] {
+  .window-header {
+    color: var(--color-text-dark-primary) !important;
+  }
+}
+
+.spellstrike-macro[data-theme][data-dorako-ui-scope="macro-dialog"] {
+  .dialog-content p select {
+    @include dui-input;
+  }
+  &[data-color-scheme="dark"] {
+    --text-dark: #1c1c1c;
+    li.strike .alt-usage .alt-usage-icon[src$="svg"] {
+      filter: invert(1);
+    }
   }
 }

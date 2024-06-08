@@ -4,10 +4,10 @@
 [data-theme][data-color-scheme="dark"] {
   &.pf2e.item.sheet form .tab.active.rules .rule-editing > .cm-editor,
   &.pf2e.item.sheet form .item-rules .rule-editing > .cm-editor {
-    background-color: var(--input-background);
+    background-color: var(--dui-input-background);
     border-radius: var(--border-radius);
-    border: 1px solid var(--input-border-color);
-    color: var(--input-text-color);
+    border: 1px solid var(--dui-input-border-color);
+    color: var(--dui-input-text-color);
   }
 
   .ͼ2 .cm-content {

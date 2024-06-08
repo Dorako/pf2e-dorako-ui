@@ -140,13 +140,13 @@
   --icon-border-color: var(--color-primary-1);
 
   --input-box-shadow: none;
-  --input-background: var(--color-secondary-4);
-  --input-border-color: var(--color-secondary-3);
+  --dui-input-background: var(--color-secondary-4);
+  --dui-input-border-color: var(--color-secondary-3);
   --input-focus-text-color: var(--text-color-2);
-  --input-text-color: var(--text-color-3);
-  --input-placeholder-color: var(--text-color-4);
+  --dui-input-text-color: var(--text-color-3);
+  --dui-input-placeholder-color: var(--text-color-4);
   --input-text-selection-color: var(--color-secondary-3);
-  --input-focus-outline-color: var(--color-secondary-3);
+  --dui-input-focus-outline-color: var(--color-secondary-3);
 
   --input-disabled-background: var(--color-secondary-5);
   --input-disabled-border-color: var(--color-secondary-4);
@@ -155,16 +155,16 @@
   --fieldset-background-color: transparent;
   --fieldset-legend-color: var(--text-color-2);
 
-  --button-border-color: var(--color-secondary-3);
+  --dui-button-border-color: var(--color-secondary-3);
   --app-border-width: 1px;
 
-  --button-background: var(--app-background);
-  --button-border-color: var(--app-border-color);
-  --button-text-color: var(--text-color-3);
-  --button-focus-outline-color: var(--color-primary-1);
+  --dui-button-background: var(--app-background);
+  --dui-button-border-color: var(--app-border-color);
+  --dui-button-text-color: var(--text-color-3);
+  --dui-button-focus-outline-color: var(--color-primary-1);
   --button-hover-background: var(--color-primary-2);
   --button-hover-border-color: var(--color-primary-1);
-  --button-hover-text-color: var(--text-color-1);
+  --dui-button-hover-text-color: var(--text-color-1);
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
 
@@ -244,7 +244,7 @@
 
   &.actor.npc .subsection,
   &.actor.npc .section-container {
-    --input-placeholder-color: var(--text-color-5) !important;
+    --dui-input-placeholder-color: var(--text-color-5) !important;
   }
 
   &.actor.sheet .crb-style .sheet-body {

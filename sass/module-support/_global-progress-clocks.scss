@@ -21,18 +21,18 @@
     @include dui-input;
     input {
       --input-box-shadow: none !important;
-      --input-background: none !important;
-      --input-border-color: transparent !important;
-      --input-focus-outline-color: transparent !important;
+      --dui-input-background: none !important;
+      --dui-input-border-color: transparent !important;
+      --dui-input-focus-outline-color: transparent !important;
     }
     .dropdown {
       color: black;
     }
   }
   &[data-theme^="crb"][data-color-scheme="light"] .add-clock-form .dropdown-wrapper {
-    --input-background: rgba(0, 0, 0, 0.05);
+    --dui-input-background: rgba(0, 0, 0, 0.05);
   }
   &[data-theme^="crb"].clock-panel [data-action="add-clock"] {
-    --button-background: var(--app-background);
+    --dui-button-background: var(--app-background);
   }
 }

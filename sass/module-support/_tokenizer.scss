@@ -46,22 +46,22 @@
 
   &.tokenizer .title .box-button {
     @include dui-button;
-    --button-background: var(--color-secondary-2);
-    --button-border-color: var(--color-primary-1);
-    --button-text-color: var(--text-color-1);
-    --button-focus-outline-color: var(--color-primary-1);
+    --dui-button-background: var(--color-secondary-2);
+    --dui-button-border-color: var(--color-primary-1);
+    --dui-button-text-color: var(--text-color-1);
+    --dui-button-focus-outline-color: var(--color-primary-1);
     --button-hover-background: var(--color-secondary-3);
     --button-hover-border-color: var(--color-secondary-2);
-    --button-hover-text-color: var(--text-color-2);
+    --dui-button-hover-text-color: var(--text-color-2);
 
     &.deselected {
-      --button-background: var(--color-secondary-3);
-      --button-border-color: var(--color-secondary-2);
-      --button-text-color: var(--text-color-2);
-      --button-focus-outline-color: var(--color-primary-1);
+      --dui-button-background: var(--color-secondary-3);
+      --dui-button-border-color: var(--color-secondary-2);
+      --dui-button-text-color: var(--text-color-2);
+      --dui-button-focus-outline-color: var(--color-primary-1);
       --button-hover-background: var(--color-secondary-2);
       --button-hover-border-color: var(--color-secondary-1);
-      --button-hover-text-color: var(--text-color-1);
+      --dui-button-hover-text-color: var(--text-color-1);
     }
 
     > i:before {

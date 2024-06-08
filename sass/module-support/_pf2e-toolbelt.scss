@@ -28,6 +28,10 @@
     @include dui-button-bright;
   }
 
+  &.chat-message .message-content + .pf2e-toolbelt-target-targetRows .target-damage-application button.half-damage i {
+    -webkit-text-fill-color: unset;
+  }
+
   &.chat-message .message-content + .pf2e-toolbelt-target-damage .target-damage-application button {
     &::after {
       border-radius: var(--border-radius);

@@ -94,30 +94,30 @@
     }
 
     .tah-action button.tah-pf2e-skill-rank-1 {
-      --button-background: #171f69;
-      --button-border-color: #3a47ba;
+      --dui-button-background: #171f69;
+      --dui-button-border-color: #3a47ba;
     }
 
     .tah-action button.tah-pf2e-skill-rank-2 {
-      --button-background: #3c005e;
-      --button-border-color: #630e94;
+      --dui-button-background: #3c005e;
+      --dui-button-border-color: #630e94;
     }
 
     .tah-action button.tah-pf2e-skill-rank-3 {
-      --button-background: #640;
-      --button-border-color: rgb(153, 107, 14);
+      --dui-button-background: #640;
+      --dui-button-border-color: rgb(153, 107, 14);
     }
 
     .tah-action button.tah-pf2e-skill-rank-4 {
-      --button-background: #5e0000;
-      --button-border-color: #960b0b;
+      --dui-button-background: #5e0000;
+      --dui-button-border-color: #960b0b;
     }
 
     .tah-action button.tah-pf2e-skill-rank-1,
     .tah-action button.tah-pf2e-skill-rank-2,
     .tah-action button.tah-pf2e-skill-rank-3,
     .tah-action button.tah-pf2e-skill-rank-4 {
-      --button-text-color: var(--text-color-2);
+      --dui-button-text-color: var(--text-color-2);
     }
   }
 }

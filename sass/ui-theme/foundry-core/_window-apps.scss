@@ -5,7 +5,7 @@
 
   &.filepicker .private button.privacy {
     @include dui-button;
-    --button-background: #7331ff;
+    --dui-button-background: #7331ff;
   }
   &.filepicker .filepicker-header .quick-link-input-button {
     --box-shadow: none;

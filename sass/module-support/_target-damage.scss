@@ -17,27 +17,27 @@
 
 [data-theme].message.chat-message .message-content .pf2e.chat-card .card-buttons .save.pf2e-td {
   &.criticalSuccess {
-    --button-background: var(--degree-success-critical);
+    --dui-button-background: var(--degree-success-critical);
     --button-hover-background: var(--degree-success-critical);
-    --button-text-color: white;
+    --dui-button-text-color: white;
   }
 
   &.success {
-    --button-background: var(--degree-success);
+    --dui-button-background: var(--degree-success);
     --button-hover-background: var(--degree-success);
-    --button-text-color: white;
+    --dui-button-text-color: white;
   }
 
   &.failure {
-    --button-background: var(--degree-failure);
+    --dui-button-background: var(--degree-failure);
     --button-hover-background: var(--degree-failure);
-    --button-text-color: white;
+    --dui-button-text-color: white;
   }
 
   &.criticalFailure {
-    --button-background: var(--degree-failure-critical);
+    --dui-button-background: var(--degree-failure-critical);
     --button-hover-background: var(--degree-failure-critical);
-    --button-text-color: white;
+    --dui-button-text-color: white;
   }
 }
 

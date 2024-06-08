@@ -193,7 +193,7 @@
   --inline-text-color: var(--poe-color-magic);
   --inline-icon-color: var(--poe-color-gem);
 
-  --input-border-color: var(--brown-2);
+  --dui-input-border-color: var(--brown-2);
 
   --color-border-light-primary: var(--brown-1);
   --color-border-light-highlight: var(--brown-2);
@@ -211,11 +211,11 @@
   select,
   input,
   button {
-    --button-background: #21201c;
-    --button-border-color: #403b2d;
-    --input-border-color: var(--brown-2);
-    --input-background: var(--alt-dark);
-    --input-focus-outline-color: var(--tertiary);
+    --dui-button-background: #21201c;
+    --dui-button-border-color: #403b2d;
+    --dui-input-border-color: var(--brown-2);
+    --dui-input-background: var(--alt-dark);
+    --dui-input-focus-outline-color: var(--tertiary);
   }
 
   &#hotbar .macro {

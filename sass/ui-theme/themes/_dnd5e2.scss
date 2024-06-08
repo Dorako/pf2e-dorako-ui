@@ -187,13 +187,13 @@
   --scrollbar-thumb-border-color: transparent;
 
   --input-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
-  --input-background: var(--dnd5e-color-card);
-  --input-border-color: var(--dnd5e-color-gold);
+  --dui-input-background: var(--dnd5e-color-card);
+  --dui-input-border-color: var(--dnd5e-color-gold);
   --input-focus-text-color: var(--color-text-dark-primary);
-  --input-text-color: var(--color-text-dark-primary);
-  --input-placeholder-color: var(--color-text-dark-5);
+  --dui-input-text-color: var(--color-text-dark-primary);
+  --dui-input-placeholder-color: var(--color-text-dark-5);
   --input-text-selection-color: var(--color-secondary-3);
-  --input-focus-outline-color: var(--dnd5e-color-gold);
+  --dui-input-focus-outline-color: var(--dnd5e-color-gold);
 
   --input-disabled-background: color-mix(in srgb, var(--dnd5e-color-card) 50%, transparent);
   --input-disabled-border-color: color-mix(in srgb, var(--color-border-dark-5) 50%, transparent);
@@ -202,18 +202,18 @@
   --fieldset-background-color: transparent;
   --fieldset-legend-color: var(--color-text-dark-primary);
 
-  --button-border-color: var(--color-secondary-3);
+  --dui-button-border-color: var(--color-secondary-3);
   --app-border-width: 1px;
   --app-background: var(--dnd5e-color-card);
   --app-border-color: var(--color-border-light-2);
 
-  --button-background: var(--dnd5e-color-card);
-  --button-border-color: var(--app-border-color);
-  --button-text-color: black;
-  --button-focus-outline-color: var(--dnd5e-color-gold);
+  --dui-button-background: var(--dnd5e-color-card);
+  --dui-button-border-color: var(--app-border-color);
+  --dui-button-text-color: black;
+  --dui-button-focus-outline-color: var(--dnd5e-color-gold);
   --button-hover-background: var(--dnd5e-color-iron-gray);
   --button-hover-border-color: var(--dnd5e-color-black);
-  --button-hover-text-color: var(--dnd5e-color-gold);
+  --dui-button-hover-text-color: var(--dnd5e-color-gold);
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
 
@@ -289,8 +289,8 @@
   }
   &.pf2e.item.sheet .sheet-header input[type="text"],
   &.pf2e.item.sheet .sheet-header input[type="number"] {
-    --input-background: var(--dnd5e-background-10);
-    --input-border-color: transparent;
+    --dui-input-background: var(--dnd5e-background-10);
+    --dui-input-border-color: transparent;
     --input-box-shadow: none;
   }
 }
@@ -424,10 +424,10 @@
     --tag-background-color: transparent;
     --tag-text-color: var(--color-text-dark-primary);
     --color-text-dark-input: var(--color-text-dark-primary);
-    --input-border-color: transparent;
-    --input-background: rgba(0, 0, 0, 0.1);
-    --input-focus-outline-color: var(--tertiary);
-    --input-placeholder-color: rgba(80, 80, 80, 1);
+    --dui-input-border-color: transparent;
+    --dui-input-background: rgba(0, 0, 0, 0.1);
+    --dui-input-focus-outline-color: var(--tertiary);
+    --dui-input-placeholder-color: rgba(80, 80, 80, 1);
     --text-dark: var(--color-text-dark-primary);
     --contrastive-transparent: rgba(0, 0, 0, 0.5);
     --text-color-3: var(--color-text-dark-primary);
@@ -499,24 +499,24 @@
   --app-background: var(--dnd5e-color-dark);
 
   --input-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
-  --input-background: var(--dnd5e-color-dark);
-  --input-border-color: var(--dnd5e-color-gold);
+  --dui-input-background: var(--dnd5e-color-dark);
+  --dui-input-border-color: var(--dnd5e-color-gold);
   --input-focus-text-color: var(--color-text-dark-primary);
-  --input-text-color: var(--color-text-dark-primary);
-  --input-placeholder-color: var(--color-text-dark-5);
+  --dui-input-text-color: var(--color-text-dark-primary);
+  --dui-input-placeholder-color: var(--color-text-dark-5);
   --input-text-selection-color: var(--color-secondary-3);
-  --input-focus-outline-color: var(--dnd5e-color-gold);
+  --dui-input-focus-outline-color: var(--dnd5e-color-gold);
 
   --input-disabled-background: color-mix(in srgb, var(--dnd5e-color-card) 50%, transparent);
   --input-disabled-border-color: color-mix(in srgb, var(--color-border-dark-5) 50%, transparent);
 
-  --button-background: var(--dnd5e-color-dark);
-  --button-border-color: var(--dnd5e-color-gold);
-  --button-text-color: var(--dnd5e-color-gold);
-  --button-focus-outline-color: var(--dnd5e-color-gold);
+  --dui-button-background: var(--dnd5e-color-dark);
+  --dui-button-border-color: var(--dnd5e-color-gold);
+  --dui-button-text-color: var(--dnd5e-color-gold);
+  --dui-button-focus-outline-color: var(--dnd5e-color-gold);
   --button-hover-background: var(--dnd5e-color-iron-gray);
   --button-hover-border-color: var(--dnd5e-color-gold);
-  --button-hover-text-color: var(--dnd5e-color-gold);
+  --dui-button-hover-text-color: var(--dnd5e-color-gold);
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
 

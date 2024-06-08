@@ -65,7 +65,7 @@
   .tags.paizo-style .tag.rarity.common,
   .tags.paizo-style .tag.rarity[value="common"],
   .tags.paizo-style .tag.rarity > option[value="common"] {
-    --input-text-color: black;
+    --dui-input-text-color: black;
   }
 
   &.pf2e.actor form .tag-legacy {

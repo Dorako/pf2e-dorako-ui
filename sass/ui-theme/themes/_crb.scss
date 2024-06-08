@@ -18,20 +18,20 @@
   --inline-icon-color: var(--color-text-dark-inactive);
 
   --input-box-shadow: none;
-  --input-border-color: var(--color-text-light-5);
-  --input-text-color: var(--color-text-dark-input);
+  --dui-input-border-color: var(--color-text-light-5);
+  --dui-input-text-color: var(--color-text-dark-input);
   --input-focus-text-color: var(--color-text-dark-input);
-  --input-background: rgba(255, 255, 255, 0.5);
-  --input-focus-outline-color: var(--primary-light);
-  --input-placeholder-color: rgba(0, 0, 0, 0.5);
+  --dui-input-background: rgba(255, 255, 255, 0.5);
+  --dui-input-focus-outline-color: var(--primary-light);
+  --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);
 
-  --button-background: var(--app-background);
-  --button-border-color: var(--app-border-color);
-  --button-text-color: var(--text-color-3);
-  --button-focus-outline-color: var(--color-primary-1);
+  --dui-button-background: var(--app-background);
+  --dui-button-border-color: var(--app-border-color);
+  --dui-button-text-color: var(--text-color-3);
+  --dui-button-focus-outline-color: var(--color-primary-1);
   --button-hover-background: var(--color-primary-2);
   --button-hover-border-color: var(--color-primary-1);
-  --button-hover-text-color: var(--text-color-1);
+  --dui-button-hover-text-color: var(--text-color-1);
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
 
@@ -57,10 +57,10 @@
 [data-theme^="crb"]:not([data-color-scheme]) {
   --text-color-2: var(--color-text-light-highlight);
   --text-color-3: var(--color-text-light-heading);
-  --input-text-color: black;
+  --dui-input-text-color: black;
   --input-focus-text-color: black;
-  --input-focus-outline-color: var(--tertiary);
-  --button-background: var(--glass-bg-light);
+  --dui-input-focus-outline-color: var(--tertiary);
+  --dui-button-background: var(--glass-bg-light);
   --app-background: var(--glass-bg);
   --app-border-color: transparent;
   --app-border-width: 0px;
@@ -71,8 +71,8 @@
 
   &#token-hud,
   &#tile-hud {
-    --button-background: var(--glass-bg);
-    --input-text-color: var(--text-color-2);
+    --dui-button-background: var(--glass-bg);
+    --dui-input-text-color: var(--text-color-2);
   }
 }
 
@@ -96,7 +96,7 @@
 
   &#controls,
   &#navigation {
-    --button-background: var(--glass-bg);
+    --dui-button-background: var(--glass-bg);
   }
 
   &.sheet.journal-entry .journal-entry-content {
@@ -321,10 +321,10 @@
 [data-theme^="crb"] {
   &#token-action-hud {
     button {
-      --button-background: var(--glass-bg);
+      --dui-button-background: var(--glass-bg);
     }
     .hover > button {
-      --button-background: var(--button-hover-background);
+      --dui-button-background: var(--button-hover-background);
     }
   }
 
@@ -372,5 +372,5 @@
 /* ----------------------------------------- */
 [data-theme^="crb"] [data-dorako-ui-scope="placeable-hud"] {
   // Space is intentional
-  --button-background: var(--glass-bg);
+  --dui-button-background: var(--glass-bg);
 }

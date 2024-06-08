@@ -5,6 +5,7 @@ import {
   systemSheets,
   excludedApplications,
   moduleWindowApps,
+  appV2Apps,
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 
@@ -83,6 +84,31 @@ for (const appName of [...themedApps]) {
   });
 }
 
+for (const appName of [...appV2Apps]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+    if (theme === "no-theme") return;
+    const uiTheme = lookupThemeAndSchemeForKey(theme);
+    if (uiTheme === null) return;
+    const { dorakoUiTheme, colorScheme } = uiTheme;
+    const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+    const excludeList = excludeString.split(/[\s,]+/);
+    if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
+      );
+      return;
+    }
+
+    app.element.dataset.theme = dorakoUiTheme;
+    console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}']`);
+    const subElements = [app.leftElement, app.mainElement, app.menuElement, app.portraitElement];
+    for (const subElement of [...subElements]) {
+      subElement.dataset.theme = dorakoUiTheme;
+    }
+  });
+}
+
 for (const appName of [...systemSheets, ...moduleWindowApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
@@ -152,6 +178,53 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.theme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
+
+  const duiScope = app.data.duiScope;
+  if (duiScope) {
+    app.element[0].dataset.dorakoUiScope = duiScope;
+  }
+  for (const duiClass of app.data.duiClasses) {
+    html.addClass(duiClass);
+  }
+});
+
+Hooks.on("renderApplicationV2", (app, html, data) => {
+  if (html.classList.contains("editable")) return;
+  if (!html.classList.contains("application")) return;
+  // if (isPremiumApplication(app, html, data, app.constructor.name)) return;
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
+  if (theme === "no-theme") return;
+  const uiTheme = lookupThemeAndSchemeForKey(theme);
+  if (uiTheme === null) return;
+  const { dorakoUiTheme, colorScheme } = uiTheme;
+  const excludeString =
+    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") +
+    ", EnhancedJournal" +
+    ", SceneActorsLayer" +
+    ", SmallTimeApp" +
+    ", SceneDarknessAdjuster" +
+    ", AutorecMenuApp" +
+    ", ImagePopout";
+  const excludeList = excludeString.split(/[\s,]+/);
+  if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
+    console.debug(
+      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
+    );
+    return;
+  }
+
+  const fakeDialogPatterns = ["popup", "dialog"];
+  for (const fakeDialogPattern of [...fakeDialogPatterns]) {
+    if (app.constructor.name.toLowerCase().includes(fakeDialogPattern)) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | constructor includes '${fakeDialogPattern}' => add .dialog`
+      );
+      // html.addClass("dialog");
+    }
+  }
+  app.element.dataset.theme = dorakoUiTheme;
+  app.element.dataset.colorScheme = colorScheme;
+  app.element.dataset.dorakoUiScope = "unlimited";
 });
 
 for (const appName of [...limitedScopeApplications]) {
