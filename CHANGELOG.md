@@ -1,3 +1,8 @@
+# 3.5.1
+
+- (Fix) Fixed some console spam.
+- (Fix) Fixed an issue where take-damage buttons were hidden.
+
 # 3.5.0
 
 - (New) Added support for FVTT v12 and ApplicationV2. This is a breaking change and as such only supports V12.

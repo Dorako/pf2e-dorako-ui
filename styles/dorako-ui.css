@@ -2009,12 +2009,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
 }
-[data-theme]#pf2e-hud-persistent-left, [data-theme]#pf2e-hud-persistent {
-  opacity: 50%;
-}
-[data-theme]#pf2e-hud-persistent-left:hover, [data-theme]#pf2e-hud-persistent:hover {
-  opacity: 100%;
-}
 
 .game #interface:has(#pf2e-hud-tracker) #sidebar {
   box-shadow: unset;
@@ -8631,21 +8625,20 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 
 .message[data-theme]:not([data-theme^=crb][data-color-scheme=light],
-[data-theme^=dnd5e2][data-color-scheme=light]) .message-content .target-damage-application img,
+[data-theme^=dnd5e2][data-color-scheme=light]) .target-damage-application img,
 .message[data-theme]:not([data-theme^=crb][data-color-scheme=light],
-[data-theme^=dnd5e2][data-color-scheme=light]) .message-content .damage-application img {
+[data-theme^=dnd5e2][data-color-scheme=light]) .damage-application img {
   filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
 }
 .message[data-theme]:not([data-theme^=crb][data-color-scheme=light],
-[data-theme^=dnd5e2][data-color-scheme=light]) .message-content .target-damage-application button:hover img,
+[data-theme^=dnd5e2][data-color-scheme=light]) .target-damage-application button:hover img,
 .message[data-theme]:not([data-theme^=crb][data-color-scheme=light],
-[data-theme^=dnd5e2][data-color-scheme=light]) .message-content .damage-application button:hover img {
+[data-theme^=dnd5e2][data-color-scheme=light]) .damage-application button:hover img {
   filter: invert(1) drop-shadow(0px 1px 1px black);
 }
 
 .message[data-theme] .target-damage-application,
 .message[data-theme] .damage-application {
-  display: none;
   gap: 3px;
   margin-top: 3px;
   text-rendering: geometricPrecision;
@@ -8661,7 +8654,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 .message[data-theme] .target-damage-application button.half-damage .fa-heart-broken,
 .message[data-theme] .damage-application button.half-damage .fa-heart-broken {
   position: relative;
-  -webkit-text-fill-color: unset;
+  -webkit-text-fill-color: unset !important;
 }
 .message[data-theme] .target-damage-application button.half-damage .fa-heart-broken::before,
 .message[data-theme] .damage-application button.half-damage .fa-heart-broken::before {

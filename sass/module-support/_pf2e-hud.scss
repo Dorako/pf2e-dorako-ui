@@ -46,13 +46,13 @@
     @include dui-app;
   }
 
-  &#pf2e-hud-persistent-left,
-  &#pf2e-hud-persistent {
-    opacity: 50%;
-    &:hover {
-      opacity: 100%;
-    }
-  }
+  // &#pf2e-hud-persistent-left,
+  // &#pf2e-hud-persistent {
+  //   opacity: 50%;
+  //   &:hover {
+  //     opacity: 100%;
+  //   }
+  // }
 }
 
 .game #interface:has(#pf2e-hud-tracker) #sidebar {

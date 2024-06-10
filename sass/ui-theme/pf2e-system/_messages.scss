@@ -190,26 +190,25 @@
     [data-theme^="crb"][data-color-scheme="light"],
     [data-theme^="dnd5e2"][data-color-scheme="light"]
   ) {
-  .message-content {
-    .target-damage-application,
-    .damage-application {
+  // .message-content {
+  .target-damage-application,
+  .damage-application {
+    img {
+      filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
+    }
+    button:hover {
       img {
-        filter: invert(1) brightness(0.7) sepia(1) grayscale(0.7) drop-shadow(0px 1px 1px black);
-      }
-      button:hover {
-        img {
-          filter: invert(1) drop-shadow(0px 1px 1px black);
-        }
+        filter: invert(1) drop-shadow(0px 1px 1px black);
       }
     }
   }
+  // }
 }
 
 .message[data-theme] {
   // .message-content {
   .target-damage-application,
   .damage-application {
-    display: none;
     gap: 3px;
     margin-top: 3px;
     text-rendering: geometricPrecision;
@@ -223,7 +222,7 @@
         }
         .fa-heart-broken {
           position: relative;
-          -webkit-text-fill-color: unset;
+          -webkit-text-fill-color: unset !important;
 
           &::before {
             opacity: 0.5;

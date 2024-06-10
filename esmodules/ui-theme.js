@@ -179,12 +179,14 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
 
-  const duiScope = app.data.duiScope;
+  const duiScope = app.data?.duiScope;
   if (duiScope) {
     app.element[0].dataset.dorakoUiScope = duiScope;
   }
-  for (const duiClass of app.data.duiClasses) {
-    html.addClass(duiClass);
+  if (app.data?.duiClasses) {
+    for (const duiClass of app.data?.duiClasses) {
+      html.addClass(duiClass);
+    }
   }
 });
 
