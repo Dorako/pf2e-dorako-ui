@@ -8052,8 +8052,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
   border-top: unset;
 }
-
-.actor.sheet:not([data-theme^=crb]).actor.sheet section.window-content .item-summary .description .addendum {
+[data-theme].actor.sheet:not([data-theme^=crb]).actor.sheet section.window-content .item-summary .description .addendum {
   border-radius: var(--border-radius);
   border: 1px solid var(--fieldset-border-color);
   background: var(--fieldset-background-color);
@@ -9365,57 +9364,16 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border: unset !important;
   box-shadow: unset !important;
 }
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .prosemirror menu {
+  width: 100%;
+  --menu-background: color-mix(in srgb, var(--color-control-bg) 50%, transparent);
+}
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor {
   background: var(--dui-input-background);
-  border: var(--app-border-width) solid;
-  border-color: var(--dui-input-border-color) !important;
-  color: var(--dui-input-text-color);
-  box-shadow: var(--input-box-shadow) !important;
-  align-items: center;
-  border-radius: 4px;
-  outline: 0px solid transparent;
-  user-select: text;
-  transition: outline-color 0.5s;
-  height: auto;
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:focus {
-  outline: 1px solid var(--dui-input-focus-outline-color);
-  border: var(--app-border-width) solid;
-  border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
-  box-shadow: var(--box-shadow);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:disabled {
-  --dui-input-text-color: var(--text-color-disabled);
-  --dui-input-background: var(--input-disabled-background);
-  --dui-input-border-color: var(--input-disabled-border-color);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor.disabled::placeholder, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor:disabled::placeholder {
-  color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor::placeholder {
-  color: var(--dui-input-placeholder-color);
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor[type=checkbox] {
-  outline: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
+  border-radius: var(--border-radius);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography .editor .tox.tox-tinymce {
   background: white;
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography section input,
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography .editor {
-  --dui-input-text-color: var(--text-color-3);
-  --input-focus-text-color: var(--text-color-3);
-  --dui-input-background: transparent;
-  --dui-input-border-color: transparent;
-  --dui-input-focus-outline-color: transparent;
-  --box-shadow: transparent;
-}
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography section input:hover,
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography .editor:hover {
-  outline-color: transparent;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
   --color-pf-secondary: var(--accent-color);
@@ -10270,7 +10228,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-border-highlight-alt: var(--accent-color-dark);
   --color-border-divider: var(--discord-border-color);
   --color-text-dark-primary: var(--discord-text-3);
-  --color-text-dark-secondary: var(--discord-text-5);
+  --color-text-dark-secondary: var(--discord-text-4);
 }
 
 /* ----------------------------------------- */

@@ -1,3 +1,8 @@
+# 3.5.2
+
+- (Fix) Fixed an issue where a small bit of css was not scoped properly, resulting in illegible text on Psychic spells when using the 'no theme' option.
+- (Fix) Updated styling for prosemirror inputs on character sheets, so they can be edited again.
+
 # 3.5.1
 
 - (Fix) Fixed some console spam.

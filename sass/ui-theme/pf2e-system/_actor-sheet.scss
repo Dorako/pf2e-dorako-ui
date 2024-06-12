@@ -93,14 +93,14 @@
   &.actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary {
     border-top: unset; // system hardcoded color
   }
-}
 
-.actor.sheet:not([data-theme^="crb"]) {
-  &.actor.sheet section.window-content .item-summary .description .addendum {
-    border-radius: var(--border-radius);
-    border: 1px solid var(--fieldset-border-color);
-    background: var(--fieldset-background-color);
-    color: var(--text-color-3);
+  &.actor.sheet:not([data-theme^="crb"]) {
+    &.actor.sheet section.window-content .item-summary .description .addendum {
+      border-radius: var(--border-radius);
+      border: 1px solid var(--fieldset-border-color);
+      background: var(--fieldset-background-color);
+      color: var(--text-color-3);
+    }
   }
 }
 

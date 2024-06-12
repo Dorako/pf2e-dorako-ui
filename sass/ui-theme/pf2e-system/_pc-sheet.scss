@@ -389,30 +389,36 @@
     section input {
       @include dui-input;
     }
+
+    .prosemirror menu {
+      width: 100%;
+      --menu-background: color-mix(in srgb, var(--color-control-bg) 50%, transparent);
+    }
+
     .editor {
-      @include dui-input;
-      height: auto;
+      background: var(--dui-input-background);
+      border-radius: var(--border-radius);
       .tox.tox-tinymce {
         background: white;
       }
     }
   }
 
-  &.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography {
-    section input,
-    .editor {
-      --dui-input-text-color: var(--text-color-3);
-      --input-focus-text-color: var(--text-color-3);
-      --dui-input-background: transparent;
-      --dui-input-border-color: transparent;
-      --dui-input-focus-outline-color: transparent;
-      --box-shadow: transparent;
+  // &.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography {
+  //   section input,
+  //   .editor {
+  //     --dui-input-text-color: var(--text-color-3);
+  //     --input-focus-text-color: var(--text-color-3);
+  //     --dui-input-background: transparent;
+  //     --dui-input-border-color: transparent;
+  //     --dui-input-focus-outline-color: transparent;
+  //     --box-shadow: transparent;
 
-      &:hover {
-        outline-color: transparent;
-      }
-    }
-  }
+  //     &:hover {
+  //       outline-color: transparent;
+  //     }
+  //   }
+  // }
 
   //prettier-ignore
   &.actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title,
