@@ -1,3 +1,8 @@
+# 3.5.3
+
+- (Fix) Fixed an issue where ApplicationV2 dialogs would be illegible using CRB (Light) theme.
+- (Refinement) Updated styling for PF2e HUD.
+
 # 3.5.2
 
 - (Fix) Fixed an issue where a small bit of css was not scoped properly, resulting in illegible text on Psychic spells when using the 'no theme' option.

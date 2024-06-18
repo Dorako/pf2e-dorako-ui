@@ -1,6 +1,12 @@
 [data-theme] {
   &[id^="pf2e-hud"] {
     --color-disabled: var(--text-color-disabled);
+    --highlight-color: var(--accent-color-light);
+    // --color-active: var(--accent-color-light);
+  }
+
+  &[id^="pf2e-hud"] {
+    --color: var(--text-color-1);
   }
 
   &[id^="pf2e-hud-persistent"].app,
@@ -18,8 +24,12 @@
     // }
   }
 
-  &[id^="pf2e-hud"] {
-    --highlight-color: var(--accent-color-light);
+  &#pf2e-hud-sidebar > .inner {
+    @include dui-app;
+  }
+
+  &#pf2e-hud-sidebar .inner.persistent::before {
+    --arrow-color: var(--app-background);
   }
 
   &#pf2e-hud-tracker {
@@ -42,7 +52,20 @@
   //   display: grid;
   // }
 
-  &#pf2e-hud-persistent + div #hotbar #hotbar-page-controls {
+  &#pf2e-hud-persistent-main + div #hotbar #macro-list {
+    background: unset;
+    box-shadow: unset;
+  }
+
+  &#pf2e-hud-persistent-main + div #hotbar #macro-list > li:not(:last-child) {
+    border: unset;
+  }
+
+  &#pf2e-hud-persistent-main + div #hotbar #macro-list > li {
+    @include dui-app;
+  }
+
+  &#pf2e-hud-persistent-main + div #hotbar #hotbar-page-controls {
     @include dui-app;
   }
 

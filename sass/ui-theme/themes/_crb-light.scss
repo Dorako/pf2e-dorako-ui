@@ -71,10 +71,12 @@
   // --text-color-3: black;
   --color-secondary-5-75: rgba(96, 88, 86, 0.25);
 
-  // --text-color-1: black;
-  // --text-color-2: var(--color-text-dark-primary);
-  // --text-color-3: var(--color-text-dark-secondary);
-  // --dui-button-hover-text-color: white;
+  &.application {
+    --text-color-1: black;
+    --text-color-2: var(--color-text-dark-primary);
+    --text-color-3: var(--color-text-dark-primary);
+    --dui-button-hover-text-color: white;
+  }
 
   --app-background: rgba(255, 255, 255, 0.5);
   --app-border-color: transparent;

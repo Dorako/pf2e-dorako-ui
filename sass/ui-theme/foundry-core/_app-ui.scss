@@ -76,6 +76,17 @@
 }
 
 /* ----------------------------------------- */
+/* Map v2 styling to Dorako UI values        */
+/* ----------------------------------------- */
+[data-theme] {
+  input[type="checkbox"] {
+    --checkbox-checked-color: var(--accent-color);
+    // --checkbox-disabled-color: var(--color-cool-4);
+    // --checkbox-background-color: var(--color-cool-4);
+  }
+}
+
+/* ----------------------------------------- */
 /* limited scope specific                    */
 /* ----------------------------------------- */
 
@@ -234,13 +245,13 @@
   a.inline-check:not([data-pf2-traits*="secret"], [data-secret]),
   a.inline-check:not([data-pf2-traits*="secret"], [data-secret]) .label,
   a.inline-roll {
-    background: var(--inline-background);
+    background: var(--inline-background) !important;
     border: 1px solid var(--inline-border-color);
     color: var(--inline-text-color) !important;
     box-shadow: var(--inline-box-shadow);
 
     [data-visibility]:not([data-visibility="all"])[data-visibility="gm"] {
-      background: none;
+      background: none !important;
     }
 
     &.broken {
@@ -249,7 +260,7 @@
     }
 
     &.gmroll {
-      background: #e8e8ef;
+      background: #e8e8ef !important;
       border-color: #545469;
       color: black !important;
       i {
@@ -257,7 +268,7 @@
       }
     }
     &.blindroll {
-      background: #f5eaf5;
+      background: #f5eaf5 !important;
       border-color: #6b476b;
       color: black !important;
       i {

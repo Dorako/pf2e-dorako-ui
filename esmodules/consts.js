@@ -13,7 +13,7 @@ export const premiumModuleSelector = "wardensofwildwood, wardensofwildwood-wrapp
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["EffectsPanel", "SceneDarknessAdjuster"];
 export const moduleApps = ["MobileUI", "MobileMenu", "WindowMenu","ClockPanel","CoreHUD","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
-export const appV2Apps = ["PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
+export const appV2Apps = ["PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */
