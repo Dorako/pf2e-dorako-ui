@@ -93,18 +93,36 @@ for (const appName of [...appV2Apps]) {
     const { dorakoUiTheme, colorScheme } = uiTheme;
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
     const excludeList = excludeString.split(/[\s,]+/);
-    if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
-      console.debug(
-        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
-      );
-      return;
+    if (![""].equals(excludeList)) {
+      for (const excludeElem of excludeList) {
+        const excludeElemAsRegex = new RegExp(excludeElem);
+        if (excludeElemAsRegex.test(app.constructor.name)) {
+          console.debug(
+            `${MODULE_NAME} | render${app.constructor.name} | matches regex in exclude string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
+          );
+          return;
+        }
+      }
+      if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
+        console.debug(
+          `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
+        );
+        return;
+      }
     }
 
     app.element.dataset.theme = dorakoUiTheme;
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}']`);
-    const subElements = [app.leftElement, app.mainElement, app.menuElement, app.portraitElement];
-    for (const subElement of [...subElements]) {
-      subElement.dataset.theme = dorakoUiTheme;
+
+    // PF2eHudPersistent subelements
+    const potentialSubElements = ["leftElement", "mainElement", "menuElement", "portraitElement"];
+    for (const subElementKey of potentialSubElements) {
+      if (subElementKey in app) {
+        app[subElementKey].dataset.theme = dorakoUiTheme;
+        console.debug(
+          `${MODULE_NAME} | render${app.constructor.name + "." + subElementKey} | [data-theme='${dorakoUiTheme}']`
+        );
+      }
     }
   });
 }

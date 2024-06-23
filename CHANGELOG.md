@@ -1,3 +1,8 @@
+# 3.5.4
+
+- (Fix) Fixed some log spam in relation to PF2e HUD.
+- (Refinement) Expanded the exclusion system so App v2 apps can be excluded via regex (e.g. 'PF2eHud\*').
+
 # 3.5.3
 
 - (Fix) Fixed an issue where ApplicationV2 dialogs would be illegible using CRB (Light) theme.
