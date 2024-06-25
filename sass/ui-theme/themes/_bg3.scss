@@ -427,6 +427,24 @@
 /* ----------------------------------------- */
 #tooltip[data-theme^="bg3"] {
   --border-radius: 12px;
+  --bg3-border-inner: #a16a37;
+  --bg3-border-outer: #4a2e18;
+  --bg3-border-internal: #304248;
+  --bg3-bg-inner: #182830;
+  --bg3-bg-outer: #151e29;
+
+  --bg3-border-background: linear-gradient(
+    to right,
+    var(--bg3-border-outer) 0%,
+    var(--bg3-border-inner) 50%,
+    var(--bg3-border-outer) 100%
+  );
+  --bg3-tooltip-window-background: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
   box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   backdrop-filter: none;
   border-radius: var(--border-radius);
@@ -944,9 +962,38 @@
 /* ----------------------------------------- */
 /* ITT PF2e HUD                              */
 /* ----------------------------------------- */
+
+[data-theme="bg3"][id^="pf2e-hud-tooltip"] {
+  --bg3-border-inner: #a16a37;
+  --bg3-border-outer: #4a2e18;
+  --bg3-border-internal: #304248;
+  --bg3-bg-inner: #182830;
+  --bg3-bg-outer: #151e29;
+
+  --bg3-border-background: linear-gradient(
+    to right,
+    var(--bg3-border-outer) 0%,
+    var(--bg3-border-inner) 50%,
+    var(--bg3-border-outer) 100%
+  );
+  --bg3-tooltip-window-background: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
+
+  > div {
+    --app-border-width: 1px; // breaks with 2px
+    border-color: transparent !important;
+    background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
+    box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+  }
+}
+
 [data-theme="bg3"][id^="pf2e-hud-persistent"],
-[data-theme="bg3"][id^="pf2e-hud-tooltip"],
 [data-theme="bg3"][id^="pf2e-hud-tracker"],
+[data-theme="bg3"][id^="pf2e-hud-sidebar"],
 .game [data-theme="bg3"][id^="pf2e-hud-token"] #pf2e-hud-token-main.exploded {
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
@@ -972,9 +1019,21 @@
     --app-border-width: 0px;
   }
 
-  &[id^="pf2e-hud-tooltip"] > div,
+  > .inner,
   > .panel {
+    // #pf2e-hud-token-main.exploded > .panel
+    --bg3-bg-inner: #241d16;
+    --bg3-bg-outer: #1b1a19;
+    --bg3-border-inner: #ab7743;
+    --bg3-border-outer: #7b542e;
     --app-border-width: 1px;
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    --app-border-width: 2px;
     background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
     box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
   }
@@ -993,6 +1052,12 @@
     --bg3-border-inner: #ab7743;
     --bg3-border-outer: #7b542e;
     --app-border-width: 1px;
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
     background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
     border: 1px solid var(--bg3-border-outer) !important;
     border-top-color: var(--bg3-border-inner) !important;

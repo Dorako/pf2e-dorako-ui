@@ -1,3 +1,7 @@
+# 3.5.5
+
+- (Refinement) Styling support for new PF2e HUD functionality.
+
 # 3.5.4
 
 - (Fix) Fixed some log spam in relation to PF2e HUD.

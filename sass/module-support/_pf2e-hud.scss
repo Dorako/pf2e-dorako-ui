@@ -89,6 +89,14 @@
   }
 }
 
+#pf2e-hud-persistent-main[data-theme] .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
+  // border-style: dashed !important;
+  // border: 1px solid transparent !important;
+  outline: 1px dashed rgba(122, 122, 122, 1);
+  outline-offset: -1px;
+  background: rgba(0, 0, 0, 0.37) !important;
+}
+
 #pf2e-hud-persistent + div #hotbar[data-theme] #macro-list {
   background: unset;
   box-shadow: unset;
