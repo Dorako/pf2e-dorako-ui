@@ -16,12 +16,9 @@
 
   &#pf2e-hud-tooltip > div {
     @include dui-app;
-    // &.inner {
-    //   --outer-border-width: 1px;
-    //   max-width: calc(
-    //     var(--inner-padding) * 2 + var(--inner-gap) * 2 + var(--section-width) * 3 + var(--outer-border-width) * 2
-    //   );
-    // }
+    &.status {
+      color: hsl(var(--hue), 75%, 40%);
+    }
   }
 
   &#pf2e-hud-sidebar > .inner {
@@ -45,12 +42,7 @@
   &#pf2e-hud-persistent-portrait .bottom {
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
-    // display: none;
   }
-  // &#pf2e-hud-persistent-portrait:hover .top .name,
-  // &#pf2e-hud-persistent-portrait:hover .bottom {
-  //   display: grid;
-  // }
 
   &#pf2e-hud-persistent-main + div #hotbar #macro-list {
     background: unset;
@@ -68,14 +60,6 @@
   &#pf2e-hud-persistent-main + div #hotbar #hotbar-page-controls {
     @include dui-app;
   }
-
-  // &#pf2e-hud-persistent-left,
-  // &#pf2e-hud-persistent {
-  //   opacity: 50%;
-  //   &:hover {
-  //     opacity: 100%;
-  //   }
-  // }
 }
 
 .game #interface:has(#pf2e-hud-tracker) #sidebar {
@@ -83,7 +67,7 @@
   padding-left: 5px; // --panel-gap from PF2e HUD
 }
 
-.game [id^="pf2e-hud-token"] {
+.game [data-theme][id^="pf2e-hud-token"] {
   #pf2e-hud-token-main.exploded .panel {
     @include dui-app;
   }

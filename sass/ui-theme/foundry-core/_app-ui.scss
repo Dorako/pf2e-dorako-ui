@@ -484,7 +484,7 @@
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
-body.game [data-theme].window-app,
+[data-theme].window-app,
 [data-theme].application {
   // --background: url(../ui/parchment.jpg) repeat;
   --color-text-primary: var(--color-text-1);
@@ -494,7 +494,7 @@ body.game [data-theme].window-app,
   --color-form-label-hover: var(--color-text-1);
   --color-form-hint: var(--color-text-4);
   --color-form-hint-hover: var(--color-text-2);
-  --color-select-option-bg: var(--color-text-1);
+  --color-select-option-bg: var(--dui-input-background);
 }
 
 [data-theme] {

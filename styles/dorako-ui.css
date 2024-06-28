@@ -2012,6 +2012,9 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--text-color-3);
   backdrop-filter: var(--app-backdrop-filter);
 }
+[data-theme]#pf2e-hud-tooltip > div.status {
+  color: hsl(var(--hue), 75%, 40%);
+}
 [data-theme]#pf2e-hud-sidebar > .inner {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -2072,7 +2075,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   padding-left: 5px;
 }
 
-.game [id^=pf2e-hud-token] #pf2e-hud-token-main.exploded .panel {
+.game [data-theme][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded .panel {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5085,7 +5088,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* App and Window-app                        */
 /* ----------------------------------------- */
-body.game [data-theme].window-app,
+[data-theme].window-app,
 [data-theme].application {
   --color-text-primary: var(--color-text-1);
   --color-header-background: var(--color-text-3);
@@ -5094,7 +5097,7 @@ body.game [data-theme].window-app,
   --color-form-label-hover: var(--color-text-1);
   --color-form-hint: var(--color-text-4);
   --color-form-hint-hover: var(--color-text-2);
-  --color-select-option-bg: var(--color-text-1);
+  --color-select-option-bg: var(--dui-input-background);
 }
 
 [data-theme].app {
@@ -12467,15 +12470,39 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
 }
 
-[data-theme=bg3][id^=pf2e-hud-persistent],
-[data-theme=bg3][id^=pf2e-hud-tracker],
-[data-theme=bg3][id^=pf2e-hud-sidebar],
-.game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded {
+[data-theme=bg3][id^=pf2e-hud-persistent] .shortcut.app > .app {
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
   --bg3-border-internal: #304248;
   --bg3-bg-inner: #182830;
   --bg3-bg-outer: #151e29;
+  --bg3-border-background: linear-gradient(
+    to right,
+    var(--bg3-border-outer) 0%,
+    var(--bg3-border-inner) 50%,
+    var(--bg3-border-outer) 100%
+  );
+  --bg3-tooltip-window-background: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
+  --app-border-width: 1px;
+  border-color: transparent !important;
+  background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
+  box-shadow: 0px 0px 10px black, 0px 0px 5px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+}
+
+[data-theme=bg3][id^=pf2e-hud-persistent],
+[data-theme=bg3][id^=pf2e-hud-tracker],
+[data-theme=bg3][id^=pf2e-hud-sidebar],
+.game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded {
+  --bg3-bg-inner: #241d16;
+  --bg3-bg-outer: #1b1a19;
+  --bg3-border-inner: #ab7743;
+  --bg3-border-outer: #7b542e;
+  --app-border-width: 1px;
   --bg3-border-background: linear-gradient(
     to right,
     var(--bg3-border-outer) 0%,
@@ -12495,13 +12522,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-secondary-4: var(--bg3-bg-inner);
   --color-secondary-5: var(--bg3-border-outer);
 }
-[data-theme=bg3][id^=pf2e-hud-persistent][id^=pf2e-hud-tooltip],
-[data-theme=bg3][id^=pf2e-hud-tracker][id^=pf2e-hud-tooltip],
-[data-theme=bg3][id^=pf2e-hud-sidebar][id^=pf2e-hud-tooltip],
-.game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded[id^=pf2e-hud-tooltip] {
-  padding: 12px !important;
-  --app-border-width: 0px;
-}
 [data-theme=bg3][id^=pf2e-hud-persistent] > .inner,
 [data-theme=bg3][id^=pf2e-hud-persistent] > .panel,
 [data-theme=bg3][id^=pf2e-hud-tracker] > .inner,
@@ -12510,10 +12530,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme=bg3][id^=pf2e-hud-sidebar] > .panel,
 .game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded > .inner,
 .game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded > .panel {
-  --bg3-bg-inner: #241d16;
-  --bg3-bg-outer: #1b1a19;
-  --bg3-border-inner: #ab7743;
-  --bg3-border-outer: #7b542e;
   --app-border-width: 1px;
   --bg3-tooltip-window-background: linear-gradient(
     to right,
@@ -12529,8 +12545,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme=bg3][id^=pf2e-hud-tracker][id^=pf2e-hud-tracker],
 [data-theme=bg3][id^=pf2e-hud-sidebar][id^=pf2e-hud-tracker],
 .game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded[id^=pf2e-hud-tracker] {
-  --bg3-bg-inner: #241d16;
-  --bg3-bg-outer: #1b1a19;
   background: var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box !important;
   box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
 }
@@ -12541,10 +12555,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme=bg3][id^=pf2e-hud-sidebar][id^=pf2e-hud-persistent] .app,
 .game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded[id^=pf2e-hud-persistent].app,
 .game [data-theme=bg3][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded[id^=pf2e-hud-persistent] .app {
-  --bg3-bg-inner: #241d16;
-  --bg3-bg-outer: #1b1a19;
-  --bg3-border-inner: #ab7743;
-  --bg3-border-outer: #7b542e;
   --app-border-width: 1px;
   --bg3-tooltip-window-background: linear-gradient(
     to right,

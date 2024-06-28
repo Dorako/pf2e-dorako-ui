@@ -1,3 +1,8 @@
+# 3.5.6
+
+- (Fix) Restored color-coding to approximate health labels in PF2e HUD.
+- (Fix) Fixed an issue where the exploded token HUD from PF2e HUD would look incorrect when excluded from styling.
+
 # 3.5.5
 
 - (Refinement) Styling support for new PF2e HUD functionality.
