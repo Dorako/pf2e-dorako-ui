@@ -1,3 +1,7 @@
+# 3.5.7
+
+- (Fix) Maybe resolve issue with illegible text in dropdowns.
+
 # 3.5.6
 
 - (Fix) Restored color-coding to approximate health labels in PF2e HUD.

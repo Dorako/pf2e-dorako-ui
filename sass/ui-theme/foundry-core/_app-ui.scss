@@ -72,7 +72,7 @@
 [data-theme] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
-  --color-bg-option: var(--dui-input-background); // select dropdown, can't contain transparency
+  // --color-bg-option: var(--dui-input-background); // select dropdown, can't contain transparency
 }
 
 /* ----------------------------------------- */
@@ -494,8 +494,15 @@
   --color-form-label-hover: var(--color-text-1);
   --color-form-hint: var(--color-text-4);
   --color-form-hint-hover: var(--color-text-2);
-  --color-select-option-bg: var(--dui-input-background);
 }
+
+// The background has issues with transparency
+// [data-theme][data-color-scheme="light"] {
+//   --color-select-option-bg: white;
+// }
+// [data-theme][data-color-scheme="dark"] {
+//   --color-select-option-bg: black;
+// }
 
 [data-theme] {
   &.app {
