@@ -17,7 +17,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   }
 
   let html0 = html[0];
-  html0.style.setProperty("--player-color", chatMessage?.user?.color ?? "#DAC0FB");
+  html0.style.setProperty("--player-color", chatMessage?.author?.color ?? "#DAC0FB");
 
   const isSecretDisposition =
     game?.scenes?.get(chatMessage?.speaker?.scene)?.tokens?.get(chatMessage?.speaker?.token)?.disposition == -2;
