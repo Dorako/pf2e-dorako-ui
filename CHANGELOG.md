@@ -1,3 +1,7 @@
+# 3.5.8
+
+- (Refinement) Update use of .user with .author to avoid logspam, thanks to @Chasarooni
+
 # 3.5.7
 
 - (Fix) Maybe resolve issue with illegible text in dropdowns.
