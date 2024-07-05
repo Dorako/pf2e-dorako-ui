@@ -496,13 +496,13 @@
   --color-form-hint-hover: var(--color-text-2);
 }
 
-// The background has issues with transparency
-// [data-theme][data-color-scheme="light"] {
-//   --color-select-option-bg: white;
-// }
-// [data-theme][data-color-scheme="dark"] {
-//   --color-select-option-bg: black;
-// }
+// The background has issues with transparency. This ensures an opaque background is always used. It can be overwritten by more specific !important statements per theme.
+[data-color-scheme="light"] {
+  --color-select-option-bg: white !important;
+}
+[data-color-scheme="dark"] {
+   --color-select-option-bg: black !important;
+ }
 
 [data-theme] {
   &.app {

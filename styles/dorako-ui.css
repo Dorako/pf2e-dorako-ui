@@ -175,7 +175,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -216,7 +215,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -342,7 +340,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -474,7 +471,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -518,7 +514,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -557,7 +552,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid var(--icon-border-color);
 }
 [data-theme] img[src$="chosen-implement.webp"] {
@@ -615,7 +609,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--app-background) !important;
   border-radius: var(--border-radius) 0 0 var(--border-radius);
   border-right: 1px solid transparent;
@@ -635,7 +628,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -681,7 +673,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border-color: var(--scrollbar-thumb-border-color);
   background: var(--color-primary-3);
 }
@@ -705,7 +696,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme].clock-panel [data-action=add-clock] {
   background: var(--app-background);
@@ -714,7 +704,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -848,7 +837,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
@@ -859,7 +847,6 @@ nav.damage-log-nav.tabs .item.active {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -1070,7 +1057,6 @@ button#heartbeat-button {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -1193,7 +1179,6 @@ button#heartbeat-button {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 
 /* ----------------------------------------- */
@@ -1417,7 +1402,6 @@ button#heartbeat-button {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 #tokenbar[data-theme] .bar-controls div#tokenbar-move-handle {
   background: unset;
@@ -1433,7 +1417,6 @@ button#heartbeat-button {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 #tokenbar[data-theme] .token-list .token .tooltip {
   background: var(--app-background);
@@ -1461,7 +1444,6 @@ button#heartbeat-button {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -1635,7 +1617,6 @@ body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .ef
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -1735,7 +1716,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#navigation .nav-item-container #nav-toggle {
   box-shadow: unset;
@@ -1751,7 +1731,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -1787,7 +1766,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -1844,7 +1822,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   --app-border-width: 2px;
   gap: 5px;
 }
@@ -1916,7 +1893,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2001,7 +1977,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#pf2e-hud-tooltip > div {
   background: var(--app-background);
@@ -2010,7 +1985,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#pf2e-hud-tooltip > div.status {
   color: hsl(var(--hue), 75%, 40%);
@@ -2022,7 +1996,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#pf2e-hud-sidebar .inner.persistent::before {
   --arrow-color: var(--app-background);
@@ -2034,7 +2007,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#pf2e-hud-persistent-portrait .top .name {
   border-top-left-radius: var(--border-radius);
@@ -2058,7 +2030,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#pf2e-hud-persistent-main + div #hotbar #hotbar-page-controls {
   background: var(--app-background);
@@ -2067,7 +2038,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 
 .game #interface:has(#pf2e-hud-tracker) #sidebar {
@@ -2082,7 +2052,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 
 #pf2e-hud-persistent-main[data-theme] .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
@@ -2330,7 +2299,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--color-primary-3);
   border: 1px solid var(--scrollbar-thumb-border-color);
 }
@@ -2354,7 +2322,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   backdrop-filter: blur(4px);
 }
 [data-theme]#pf2e-token-hud .popup .item-buttons {
@@ -2369,7 +2336,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2446,7 +2412,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   backdrop-filter: blur(4px);
 }
 [data-theme]#pf2e-token-hud .free.status {
@@ -2520,7 +2485,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2668,7 +2632,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2727,7 +2690,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2813,7 +2775,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2850,7 +2811,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -2894,7 +2854,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   box-shadow: var(--window-app-box-shadow);
@@ -2990,7 +2949,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   backdrop-filter: blur(5px);
 }
 [data-theme].quick-insert-app .quick-insert-result li img {
@@ -3129,7 +3087,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   outline: none;
 }
 [data-theme]#smalltime-app .arrow, [data-theme]#smalltime-app .arrow-left, [data-theme]#smalltime-app.arrow-right {
@@ -3139,7 +3096,6 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3190,7 +3146,6 @@ div.speaking-as--currentSpeaker + #chat-controls {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   padding-left: var(--sidebar-margin);
   margin: 0px var(--sidebar-margin);
 }
@@ -3259,7 +3214,6 @@ body.system-swade {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3346,7 +3300,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   display: flex;
   gap: 5px;
   align-self: center;
@@ -3358,7 +3311,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3407,7 +3359,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3474,7 +3425,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3607,7 +3557,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3676,7 +3625,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   justify-content: center;
   width: 32px;
 }
@@ -3696,7 +3644,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3747,7 +3694,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#token-action-hud .tah-action button.tah-pf2e-skill-rank-1 {
   --dui-button-background: #171f69;
@@ -3780,7 +3726,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
@@ -3809,7 +3754,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border-color: var(--color-secondary-3);
 }
 [data-theme] #tokenizer div.view-layer-control .section button,
@@ -3820,7 +3764,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3864,7 +3807,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -3901,7 +3843,6 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -4013,7 +3954,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -4049,7 +3989,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -4100,7 +4039,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 
 /* ----------------------------------------- */
@@ -4129,7 +4067,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 #players[data-theme] h3 {
   cursor: pointer;
@@ -4151,7 +4088,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   box-shadow: var(--window-app-box-shadow);
@@ -4180,7 +4116,6 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] {
   --color-shadow-primary: transparent;
   --color-shadow-highlight: transparent;
-  --color-bg-option: var(--dui-input-background);
 }
 
 /* ----------------------------------------- */
@@ -4300,7 +4235,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -4811,7 +4745,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -4864,7 +4797,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5035,7 +4967,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5074,7 +5005,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid var(--icon-border-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited].sheet header.sheet-header h1 input {
@@ -5097,7 +5027,14 @@ html .xdy-pf2e-workbench-rarity-unique {
   --color-form-label-hover: var(--color-text-1);
   --color-form-hint: var(--color-text-4);
   --color-form-hint-hover: var(--color-text-2);
-  --color-select-option-bg: var(--dui-input-background);
+}
+
+[data-color-scheme=light] {
+  --color-select-option-bg: white !important;
+}
+
+[data-color-scheme=dark] {
+  --color-select-option-bg: black !important;
 }
 
 [data-theme].app {
@@ -5218,7 +5155,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5275,7 +5211,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5355,7 +5290,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5398,7 +5332,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5434,7 +5367,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5535,7 +5467,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5747,7 +5678,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5825,7 +5755,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   padding: 0px;
 }
 [data-theme] section.compendium-sidebar ol.directory-list ol.document-matches li.match:hover .thumbnail img {
@@ -5842,7 +5771,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -5902,7 +5830,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6100,7 +6027,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   --text-dark: var(--text-color-3);
 }
 [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .rules-drop-container .rules-drop-zone i {
@@ -6110,7 +6036,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme].pf2e.item.sheet.action form .drop-zone {
   background: var(--app-background);
@@ -6119,7 +6044,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme].pf2e.item.sheet.action form .drop-zone a.content-link, [data-theme].pf2e.item.sheet.action form .drop-zone picture, [data-theme].pf2e.item.sheet.action form .drop-zone img {
   background: var(--app-background);
@@ -6128,7 +6052,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme].pf2e.item.sheet .sheet-header {
   border: unset;
@@ -6147,7 +6070,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6186,7 +6108,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6230,7 +6151,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background-color: var(--visibility-gm-bg);
   border-style: dashed;
   border-color: var(--color-primary-4);
@@ -6249,7 +6169,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
@@ -6260,7 +6179,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   --app-border-width: 1px;
   border-color: var(--icon-border-color);
   border-radius: var(--border-radius);
@@ -6318,7 +6236,6 @@ nav#controls[data-theme] ol.control-tools > li {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6374,7 +6291,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6431,7 +6347,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#darkness-adjuster .window-content {
   overflow: hidden;
@@ -6450,7 +6365,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 #hotbar[data-theme] .macro {
   height: calc(var(--macro-size) + 2px);
@@ -6461,7 +6375,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 #hotbar[data-theme] .macro.inactive::before, #hotbar[data-theme] .macro.active::before {
   transition: text-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, backdrop-filter 0.15s ease-in-out, border-radius 0.15s, outline 0.15s;
@@ -6522,7 +6435,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6536,7 +6448,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6688,7 +6599,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 #token-hud[data-theme] .status-effects.active picture:hover img {
   border-color: var(--color-primary-2);
@@ -6706,7 +6616,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   box-shadow: var(--window-app-box-shadow);
@@ -6745,7 +6654,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6787,7 +6695,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6868,7 +6775,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6954,7 +6860,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -6992,7 +6897,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-dorako-ui-scope=sidebar] .compendium-sidebar .directory-item.compendium .compendium-footer .source {
   background: var(--app-background);
@@ -7001,7 +6905,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border-left: unset;
   border-bottom-left-radius: unset;
   border-top-left-radius: unset;
@@ -7016,7 +6919,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
@@ -7051,7 +6953,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7087,7 +6988,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7180,7 +7080,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7225,7 +7124,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7261,7 +7159,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7411,7 +7308,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   padding: unset;
   margin: 4px 6px 0;
   border: 1px solid var(--color-primary-3);
@@ -7436,7 +7332,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   --primary: var(--text-color-3);
   padding: unset;
   margin: 4px 6px 0;
@@ -7494,7 +7389,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7587,7 +7481,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -7971,7 +7864,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8060,7 +7952,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8109,7 +8000,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8231,7 +8121,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   margin: 1px 2px;
   border: 1px solid;
   border-color: var(--icon-border-color);
@@ -8275,7 +8164,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8345,7 +8233,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8406,7 +8293,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8448,7 +8334,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   filter: unset;
   border-color: var(--color-primary-2);
 }
@@ -8495,7 +8380,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8533,7 +8417,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--window-app-background);
   border: var(--window-app-border-width) solid var(--window-app-border-color);
   --color-text-light-6: var(--color-secondary-4);
@@ -8570,7 +8453,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid var(--icon-border-color);
 }
 .chat-message[data-theme] .table-draw .table-results .table-result img.result-image[src$=".svg"] {
@@ -8600,7 +8482,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8650,7 +8531,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 .chat-message[data-theme] .dice-roll .dice-formula button,
 .chat-message[data-theme] .dice-roll .dice-total button {
@@ -8660,7 +8540,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8720,7 +8599,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   box-shadow: unset;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -8738,7 +8616,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
@@ -8750,7 +8627,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
@@ -8947,7 +8823,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme].chat-message .message-content .damage-taken button.revert-damage {
   background: var(--app-background);
@@ -8956,7 +8831,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -8992,7 +8866,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   border: 1px solid;
   border-color: var(--icon-border-color);
 }
@@ -9365,7 +9238,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -9425,7 +9297,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -9672,7 +9543,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -9814,7 +9684,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   padding: 5px;
   cursor: pointer;
   color: var(--dui-input-text-color);
@@ -9827,7 +9696,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--dui-button-background);
   border: var(--app-border-width) solid var(--dui-button-border-color);
   color: var(--dui-button-text-color);
@@ -9874,7 +9742,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
 }
 [data-theme]#compendium-browser [data-tab=action] .spell-browser .item img, [data-theme]#compendium-browser [data-tab=spell] .spell-browser .item img {
   background-color: white;
@@ -9956,7 +9823,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   box-shadow: var(--window-app-box-shadow);
@@ -10418,6 +10284,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-border-divider: var(--discord-border-color);
   --color-text-dark-primary: var(--discord-text-3);
   --color-text-dark-secondary: var(--discord-text-4);
+  --color-select-option-bg: var(--dui-input-background) !important;
 }
 
 /* ----------------------------------------- */
@@ -11693,6 +11560,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-text-dark-primary: var(--text-color-3);
   --color-text-dark-secondary: var(--text-color-5);
   --color-bg-option: var(--alt);
+  --color-select-option-bg: #50443a !important;
 }
 
 [data-theme^=bg3][data-dorako-ui-scope=limited],
@@ -12222,7 +12090,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
   border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
   color: var(--bg3-text-1);
@@ -13053,7 +12920,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
   border: 1px solid color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
   color: var(--text-color-1);
@@ -13866,7 +13732,6 @@ i[data-pf2-repost] {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
-  backdrop-filter: var(--app-backdrop-filter);
   font-size: larger;
   margin: 2px;
   margin-bottom: 10px;
