@@ -1,3 +1,9 @@
+# 3.5.9
+
+- (Maintenance) Ensured gm-note text is legible on dark themes in loot actor sheets.
+- (Refinement) Updated PF2e HUD styling to support the new effects display.
+- (Refinement) Ensured that the resource tracking HUD in PF2e HUD is excluded from styling.
+
 # 3.5.8
 
 - (Refinement) Update use of .user with .author to avoid logspam, thanks to @Chasarooni

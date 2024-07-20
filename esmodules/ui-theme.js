@@ -115,7 +115,7 @@ for (const appName of [...appV2Apps]) {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}']`);
 
     // PF2eHudPersistent subelements
-    const potentialSubElements = ["leftElement", "mainElement", "menuElement", "portraitElement"];
+    const potentialSubElements = ["leftElement", "mainElement", "menuElement", "portraitElement", "effectsElement"];
     for (const subElementKey of potentialSubElements) {
       if (subElementKey in app) {
         app[subElementKey].dataset.theme = dorakoUiTheme;
@@ -224,7 +224,8 @@ Hooks.on("renderApplicationV2", (app, html, data) => {
     ", SmallTimeApp" +
     ", SceneDarknessAdjuster" +
     ", AutorecMenuApp" +
-    ", ImagePopout";
+    ", ImagePopout" +
+    ", PF2eHudResources";
   const excludeList = excludeString.split(/[\s,]+/);
   if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
     console.debug(

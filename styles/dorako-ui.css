@@ -1978,6 +1978,67 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
 }
+[data-theme]#pf2e-hud-persistent-menu {
+  height: 100%;
+  place-items: center;
+}
+[data-theme][data-theme^=bg3]#pf2e-hud-persistent-effects .effect-item .effect-info {
+  background: var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+  backdrop-filter: none;
+  border-radius: var(--border-radius);
+  text-shadow: none;
+  color: var(--bg3-text-3);
+}
+[data-theme][data-theme^=bg3]#pf2e-hud-persistent #hotbar #macro-list > li {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: rgba(0, 0, 0, 0.37) !important;
+  border: 1px solid var(--bg3-border-outer) !important;
+  border-top-color: var(--bg3-border-inner) !important;
+  border-bottom-color: var(--bg3-border-inner) !important;
+  --box-shadow: 0px 1px 2px black;
+  box-shadow: var(--box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
+}
+[data-theme][data-theme^=bg3]#pf2e-hud-persistent #hotbar #macro-list > li.inactive {
+  outline: 1px dashed rgb(122, 122, 122);
+  outline-offset: -1px;
+}
+[data-theme]#pf2e-hud-persistent-effects .effect-item > .icon {
+  --border-radius: 50%;
+  --icon-border-color: #d3b87c;
+  outline: 1px solid #9a8860;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 2px 1px black;
+}
+[data-theme]#pf2e-hud-persistent-effects .effect-item > .icon:hover::before {
+  border-radius: var(--border-radius);
+}
+[data-theme]#pf2e-hud-persistent-effects .effect-item .effect-info {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+}
+[data-theme]#pf2e-hud-persistent-effects .effect-item .effect-info > .description {
+  background: unset;
+}
+[data-theme]#pf2e-hud-persistent #hotbar #macro-list > li:not(:last-child) {
+  border: unset;
+}
+[data-theme]#pf2e-hud-persistent #hotbar #macro-list {
+  background: unset;
+  box-shadow: unset;
+  border: unset;
+  margin-left: 2px;
+}
 [data-theme]#pf2e-hud-tooltip > div {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -2016,14 +2077,14 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
-[data-theme]#pf2e-hud-persistent-main + div #hotbar #macro-list {
+[data-theme]#pf2e-hud-persistent-main #hotbar #macro-list {
   background: unset;
   box-shadow: unset;
 }
-[data-theme]#pf2e-hud-persistent-main + div #hotbar #macro-list > li:not(:last-child) {
+[data-theme]#pf2e-hud-persistent-main #hotbar #macro-list > li:not(:last-child) {
   border: unset;
 }
-[data-theme]#pf2e-hud-persistent-main + div #hotbar #macro-list > li {
+[data-theme]#pf2e-hud-persistent-main #hotbar #macro-list > li {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -2031,7 +2092,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
 }
-[data-theme]#pf2e-hud-persistent-main + div #hotbar #hotbar-page-controls {
+[data-theme]#pf2e-hud-persistent-main #hotbar #hotbar-page-controls {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5664,6 +5725,12 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .rule-element-header .priority input {
   width: 5ch;
+}
+[data-theme].actor.sheet[data-color-scheme=dark] section.window-content .inventory ul.items > li .item-summary {
+  background: rgba(0, 0, 0, 0.33);
+}
+[data-theme].actor.sheet section.window-content .item-summary .gm-notes {
+  color: black;
 }
 [data-theme].pf2e.item.sheet form .sheet-content section.sidebar .item-summary, [data-theme].pf2e.item.sheet form .sheet-content section.sheet-sidebar .item-summary {
   color: var(--color-text-dark-secondary);
@@ -10353,8 +10420,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Dark color scheme                        */
 /* ----------------------------------------- */
-[data-theme^=discord][data-dorako-ui-scope=limited][data-color-scheme=dark].sheet.pf2e.actor.npc.app,
-[data-theme^=discord][data-color-scheme=dark].sheet.pf2e.actor.npc.app {
+[data-theme^=discord][data-dorako-ui-scope=limited][data-color-scheme=dark].sheet.actor.app,
+[data-theme^=discord][data-color-scheme=dark].sheet.actor.app {
   --section-background: var(--discord-background-4);
   --section-header: var(--discord-accent-color);
   --section-border-color: var(--discord-accent-text-color);

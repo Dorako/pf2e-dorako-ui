@@ -131,7 +131,7 @@
 /* ----------------------------------------- */
 [data-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
 [data-theme^="discord"][data-color-scheme="dark"] {
-  &.sheet.pf2e.actor.npc.app {
+  &.sheet.actor.app {
     --section-background: var(--discord-background-4);
     --section-header: var(--discord-accent-color);
     --section-border-color: var(--discord-accent-text-color);

@@ -501,8 +501,8 @@
   --color-select-option-bg: white !important;
 }
 [data-color-scheme="dark"] {
-   --color-select-option-bg: black !important;
- }
+  --color-select-option-bg: black !important;
+}
 
 [data-theme] {
   &.app {
@@ -866,6 +866,15 @@
   }
   &.pf2e.item.sheet form .tab.active.rules .rule-form .rule-element-header .priority input {
     width: 5ch;
+  }
+
+  &.actor.sheet[data-color-scheme="dark"] section.window-content .inventory ul.items > li .item-summary {
+    // color: var(--text-color-2);
+    background: rgba(0, 0, 0, 0.33);
+  }
+
+  &.actor.sheet section.window-content .item-summary .gm-notes {
+    color: black;
   }
 
   &.pf2e.item.sheet form .sheet-content section.sidebar .item-summary,
