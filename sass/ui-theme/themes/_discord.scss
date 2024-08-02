@@ -101,6 +101,10 @@
     --color-border-light-primary: var(--discord-background-2);
     --color-border-light-tertiary: var(--discord-green);
     --text-dark: black;
+
+    .subsection header {
+      --dui-input-background: rgba(255, 255, 255, 0.25);
+    }
   }
 
   ::-webkit-scrollbar-track {
@@ -147,6 +151,28 @@
     --color-border-light-tertiary: var(--discord-green);
     --text-dark: var(--text-color-2);
   }
+
+  &.sheet.pf2e.actor.npc.app {
+    --section-background: var(--window-app-background);
+    // --section-header: var(--discord-accent-color);
+    // --section-border-color: var(--discord-accent-text-color);
+    // --section-outline-color: var(--discord-accent-color-dark);
+    // --section-header-text-color: white;
+    // --tag-border-color: transparent;
+    // --tag-background-color: white;
+    // --tag-text-color: black;
+    // --color-text-dark-input: black;
+    // --dui-input-placeholder-color: var(--discord-text-5);
+    // --color-border-light-highlight: var(--discord-background-1);
+    // --color-border-light-primary: var(--discord-background-2);
+    // --color-border-light-tertiary: var(--discord-green);
+    // --text-dark: black;
+
+    .subsection header {
+      --dui-input-background: rgba(0, 0, 0, 0.25);
+    }
+  }
+
   &.chat-message {
     // --text-color-1: black;
     // --text-color-2: black;

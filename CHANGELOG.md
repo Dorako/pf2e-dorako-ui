@@ -1,3 +1,9 @@
+# 3.5.10
+
+- (Refinement) Includede /sass in releases.
+- (New) Added sf2eplaytest to the premium module selector.
+- (Refinement) Improved legibility of Discord Light theme for NPC sheets.
+
 # 3.5.9
 
 - (Maintenance) Ensured gm-note text is legible on dark themes in loot actor sheets.

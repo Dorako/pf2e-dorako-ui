@@ -42,7 +42,7 @@ export function lookupThemeAndSchemeForKey(key) {
     case "custom-dark":
       return { dorakoUiTheme: "custom-dark", colorScheme: "dark" };
     default:
-      return "", "";
+      return { dorakoUiTheme: "", colorScheme: "" };
   }
 }
 
