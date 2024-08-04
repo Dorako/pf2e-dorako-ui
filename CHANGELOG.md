@@ -1,3 +1,7 @@
+# 3.5.11
+
+- (Fix) Added '.sf2eplaytest' to the premium module selector.
+
 # 3.5.10
 
 - (Refinement) Includede /sass in releases.
