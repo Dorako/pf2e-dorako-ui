@@ -1,3 +1,8 @@
+# 3.5.13
+
+- (Fix) Made the check for sf2e-playtest-deluxe-adventure-pack nullsafe, which should fix rendering.
+- (Fix) Fixed some logspam that happened when app V2 applications besides PF2e HUD rendered.
+
 # 3.5.12
 
 - (New) Added .curtaincall to the premium module selector.

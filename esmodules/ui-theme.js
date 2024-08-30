@@ -68,8 +68,8 @@ for (const appName of [...themedApps]) {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
     if (theme === "no-theme") return;
     if (
-      game.modules.get("sf2e-playtest-deluxe-adventure-pack").active &&
-      app.constructor.name === "CharacterSheetPF2e"
+      app.constructor.name === "CharacterSheetPF2e" &&
+      game.modules.get("sf2e-playtest-deluxe-adventure-pack")?.active
     ) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | sf2e-playtest-deluxe-adventure-pack is active => do not set dorako-ui-theme to ${dorakoUiTheme}`
@@ -124,13 +124,15 @@ for (const appName of [...appV2Apps]) {
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}']`);
 
     // PF2eHudPersistent subelements
-    const potentialSubElements = ["leftElement", "mainElement", "menuElement", "portraitElement", "effectsElement"];
-    for (const subElementKey of potentialSubElements) {
-      if (subElementKey in app) {
-        app[subElementKey].dataset.theme = dorakoUiTheme;
-        console.debug(
-          `${MODULE_NAME} | render${app.constructor.name + "." + subElementKey} | [data-theme='${dorakoUiTheme}']`
-        );
+    if (appName === "PF2eHudPersistent") {
+      const potentialSubElements = ["leftElement", "mainElement", "menuElement", "portraitElement", "effectsElement"];
+      for (const subElementKey of potentialSubElements) {
+        if (subElementKey in app) {
+          app[subElementKey].dataset.theme = dorakoUiTheme;
+          console.debug(
+            `${MODULE_NAME} | render${app.constructor.name + "." + subElementKey} | [data-theme='${dorakoUiTheme}']`
+          );
+        }
       }
     }
   });
