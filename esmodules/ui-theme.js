@@ -63,19 +63,11 @@ Hooks.on("renderSvelteApplication", (app, html, data) => {
   app.element[0].dataset.dorakoUiScope = "unlimited";
 });
 
+// Interface theme
 for (const appName of [...themedApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
     if (theme === "no-theme") return;
-    if (
-      app.constructor.name === "CharacterSheetPF2e" &&
-      game.modules.get("sf2e-playtest-deluxe-adventure-pack")?.active
-    ) {
-      console.debug(
-        `${MODULE_NAME} | render${app.constructor.name} | sf2e-playtest-deluxe-adventure-pack is active => do not set dorako-ui-theme to ${dorakoUiTheme}`
-      );
-      return;
-    }
     const uiTheme = lookupThemeAndSchemeForKey(theme);
     if (uiTheme === null) return;
     const { dorakoUiTheme, colorScheme } = uiTheme;
@@ -93,6 +85,7 @@ for (const appName of [...themedApps]) {
   });
 }
 
+// Interface theme (App V2)
 for (const appName of [...appV2Apps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
@@ -138,12 +131,13 @@ for (const appName of [...appV2Apps]) {
   });
 }
 
+// Sheet theme
 for (const appName of [...systemSheets, ...moduleWindowApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
     if (theme === "no-theme") return;
     if (
-      game.modules.get("sf2e-playtest-deluxe-adventure-pack").active &&
+      game.modules.get("sf2e-playtest-deluxe-adventure-pack")?.active &&
       app.constructor.name === "CharacterSheetPF2e"
     ) {
       console.debug(

@@ -1,3 +1,7 @@
+# 3.5.14
+
+- (Fix) Made the _other_ check for sf2e-playtest-deluxe-adventure-pack nullsafe, which should fix rendering.
+
 # 3.5.13
 
 - (Fix) Made the check for sf2e-playtest-deluxe-adventure-pack nullsafe, which should fix rendering.
