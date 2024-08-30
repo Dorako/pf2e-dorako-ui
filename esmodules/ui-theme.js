@@ -67,6 +67,15 @@ for (const appName of [...themedApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
     if (theme === "no-theme") return;
+    if (
+      game.modules.get("sf2e-playtest-deluxe-adventure-pack").active &&
+      app.constructor.name === "CharacterSheetPF2e"
+    ) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | sf2e-playtest-deluxe-adventure-pack is active => do not set dorako-ui-theme to ${dorakoUiTheme}`
+      );
+      return;
+    }
     const uiTheme = lookupThemeAndSchemeForKey(theme);
     if (uiTheme === null) return;
     const { dorakoUiTheme, colorScheme } = uiTheme;
@@ -131,6 +140,15 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
     if (theme === "no-theme") return;
+    if (
+      game.modules.get("sf2e-playtest-deluxe-adventure-pack").active &&
+      app.constructor.name === "CharacterSheetPF2e"
+    ) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | sf2e-playtest-deluxe-adventure-pack is active => do not set dorako-ui-theme to ${dorakoUiTheme}`
+      );
+      return;
+    }
     const uiTheme = lookupThemeAndSchemeForKey(theme);
     if (uiTheme === null) return;
     const { dorakoUiTheme, colorScheme } = uiTheme;
@@ -196,6 +214,9 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.theme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
+  console.debug(
+    `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
+  );
 
   const duiScope = app.data?.duiScope;
   if (duiScope) {
@@ -246,6 +267,9 @@ Hooks.on("renderApplicationV2", (app, html, data) => {
   app.element.dataset.theme = dorakoUiTheme;
   app.element.dataset.colorScheme = colorScheme;
   app.element.dataset.dorakoUiScope = "unlimited";
+  console.debug(
+    `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
+  );
 });
 
 for (const appName of [...limitedScopeApplications]) {

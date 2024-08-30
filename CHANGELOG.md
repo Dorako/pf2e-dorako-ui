@@ -1,3 +1,10 @@
+# 3.5.12
+
+- (New) Added .curtaincall to the premium module selector.
+- (New) Ensured Sigil adventure importers are categorized as premium.
+- (Module) Ensured that the Character sheet is not affected by the Sheet Theme when sf2e-playtest-deluxe-adventure-pack is active.
+- (Refinement) Used dark glass in Glass UI theme for TAH, similar to how PF2e HUD looks.
+
 # 3.5.11
 
 - (Fix) Added '.sf2eplaytest' to the premium module selector.

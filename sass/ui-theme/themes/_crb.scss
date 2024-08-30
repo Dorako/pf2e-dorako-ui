@@ -322,7 +322,7 @@
 [data-theme^="crb"] {
   &#token-action-hud {
     button {
-      --dui-button-background: var(--glass-bg);
+      --dui-button-background: var(--glass-bg-dark);
     }
     .hover > button {
       --dui-button-background: var(--button-hover-background);

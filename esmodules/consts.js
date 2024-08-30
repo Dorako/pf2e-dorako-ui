@@ -5,7 +5,7 @@ export const MODULE_NAME = "pf2e-dorako-ui";
 /* ----------------------------------------- */
 /* Premium module                            */
 /* ----------------------------------------- */
-export const premiumModuleSelector = ".sf2eplaytest, .sf2eplaytest-wrapper, .wardensofwildwood, .wardensofwildwood-wrapper, .sevendooms, .sevendooms-wrapper, .rusthenge, .rusthenge-wrapper, .pfs05, .pfs05Pt2 .pfs05Pt1, .pfs05Pt1-wrapper, .pf2e-yom, .pf2e-ii, .pf2e-woii, .seasonofghosts, .seasonofghosts-wrapper, .skykingstomb-wrapper, .skykingstomb, .stolenfate-wrapper, .stolenfate, .harrow-reading, .harrow, .pf2e-km, .kingdom-app, .swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
+export const premiumModuleSelector = ".curtaincall-wrapper, .curtaincall, .sf2eplaytest, .sf2eplaytest-wrapper, .wardensofwildwood, .wardensofwildwood-wrapper, .sevendooms, .sevendooms-wrapper, .rusthenge, .rusthenge-wrapper, .pfs05, .pfs05Pt2 .pfs05Pt1, .pfs05Pt1-wrapper, .pf2e-yom, .pf2e-ii, .pf2e-woii, .seasonofghosts, .seasonofghosts-wrapper, .skykingstomb-wrapper, .skykingstomb, .stolenfate-wrapper, .stolenfate, .harrow-reading, .harrow, .pf2e-km, .kingdom-app, .swpf-sheet, .swpf-wrapper, .pf2e-av, .pf2e-bb, .gatewalkers-wrapper, .gatewalkers, .outlaws-wrapper, .outlaws, .bloodlords-wrapper, .bloodlords, .kingmaker-wrapper, .kingmaker"; //
 
 /* ----------------------------------------- */
 /* Apps                                      */
@@ -13,7 +13,7 @@ export const premiumModuleSelector = ".sf2eplaytest, .sf2eplaytest-wrapper, .war
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["EffectsPanel", "SceneDarknessAdjuster"];
 export const moduleApps = ["MobileUI", "MobileMenu", "WindowMenu","ClockPanel","CoreHUD","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
-export const appV2Apps = ["PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
+export const appV2Apps = ["PF2EBestiary","PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */

@@ -8,6 +8,12 @@ export function isPremiumApplication(app, html, data, appName) {
     html.closest(".app").find(".journal-entry-content").addClass(".premium");
     return true;
   }
+  if (app.appName?.startsWith("Sigil")) {
+    console.debug(`${MODULE_NAME} | ${appName} starts with 'Sigil' => add .premium`);
+    html[0].classList.add("premium");
+    html.closest(".app").find(".journal-entry-content").addClass(".premium");
+    return true;
+  }
   for (var key in app.document?.flags) {
     //prettier-ignore
     const sigilPremium = new RegExp(/^pf2e-ap\d{3}-/);
