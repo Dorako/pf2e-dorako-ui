@@ -1,3 +1,7 @@
+# 3.5.15
+
+- (Refinement) Excluded the applications windows from PF2e Graphics from theming.
+
 # 3.5.14
 
 - (Fix) Made the _other_ check for sf2e-playtest-deluxe-adventure-pack nullsafe, which should fix rendering.
