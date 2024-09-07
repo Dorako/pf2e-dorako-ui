@@ -36,5 +36,10 @@
   "dorako-ui.settings.familiar-sheet-theme.choice.dark": "Escuro (@Vesselchuck)",
   "dorako-ui.settings.use-avatars.name": "Estilo do Avatar",
   "dorako-ui.settings.hide-gm-avatar-when-secret.name": "Esconder avatar quando secreto?",
-  "dorako-ui.settings.hide-avatar-when-hidden.hint": "Esconder avatares quando o token falante estiver escondido"
+  "dorako-ui.settings.hide-avatar-when-hidden.hint": "Esconder avatares quando o token falante estiver escondido",
+  "pf2e-dorako-ui": {
+    "text": {
+      "secret": "Secreto"
+    }
+  }
 }
