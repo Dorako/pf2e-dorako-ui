@@ -27,4 +27,4 @@ export const unlimitedScopeApplications = ["PlaylistDirectory"];
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
-export const excludedApplications = ["ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
+export const excludedApplications = ["ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //

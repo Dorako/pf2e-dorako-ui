@@ -1,3 +1,8 @@
+# 3.5.16
+
+- (Refinement) Removed some logspam.
+- (Refinement) Excluded one more PF2e Graphics application from theming.
+
 # 3.5.15
 
 - (Refinement) Excluded the applications windows from PF2e Graphics from theming.

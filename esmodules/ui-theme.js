@@ -136,6 +136,9 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
   Hooks.on("render" + appName, (app, html, data) => {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
     if (theme === "no-theme") return;
+    const uiTheme = lookupThemeAndSchemeForKey(theme);
+    if (uiTheme === null) return;
+    const { dorakoUiTheme, colorScheme } = uiTheme;
     if (
       game.modules.get("sf2e-playtest-deluxe-adventure-pack")?.active &&
       app.constructor.name === "CharacterSheetPF2e"
@@ -145,12 +148,10 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
       );
       return;
     }
-    const uiTheme = lookupThemeAndSchemeForKey(theme);
-    if (uiTheme === null) return;
-    const { dorakoUiTheme, colorScheme } = uiTheme;
+
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
     const excludeList = excludeString.split(/[\s,]+/);
-    if (excludeList.includes(app.constructor.name)) {
+    if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
       console.debug(
         `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
       );
