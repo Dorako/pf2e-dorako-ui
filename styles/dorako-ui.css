@@ -2101,7 +2101,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--text-color-3);
 }
 
-.game #interface:has(#pf2e-hud-tracker) #sidebar {
+.game #interface.has-hud-tracker #sidebar {
   box-shadow: unset;
   padding-left: 5px;
 }
