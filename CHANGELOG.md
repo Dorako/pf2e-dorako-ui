@@ -1,3 +1,8 @@
+# 3.5.17
+
+- (Fix) Fixed an issue where the CRB style colored chat message headers would always use light text.
+- (Refinement) Excluded PF2eHudItemPopup from theming, as it implements custom styling.
+
 # 3.5.16
 
 - (Refinement) Removed some logspam.

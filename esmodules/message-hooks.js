@@ -88,7 +88,7 @@ function calcHeaderTextColor(headerColor) {
   var b = headerColor.b;
   var yiq = (r * 299 + g * 587 + b * 114) / 1000;
 
-  if (yiq >= 180) {
+  if (yiq >= 0.8) {
     return "dark";
   } else {
     return "light";
