@@ -259,6 +259,11 @@
     //   --dui-input-focus-outline-color: var(--tertiary);
     // }
 
+    &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input,
+    &.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
+      --dui-input-text-color: white;
+    }
+
     &.actor.npc.sheet form a.roll:hover {
       --color-pf-primary-light: var(--primary-light);
     }

@@ -122,7 +122,7 @@
   }
 }
 
-.game #interface.has-hud-tracker #sidebar {
+.game #interface.has-hud-tracker #sidebar[data-chat-interface-theme] {
   box-shadow: unset;
   padding-left: 5px; // --panel-gap from PF2e HUD
 }

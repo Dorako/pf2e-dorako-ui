@@ -2,7 +2,7 @@
 /* UI-right                                  */
 /* ----------------------------------------- */
 #ui-right {
-  & > #sidebar {
+  & > #sidebar[data-chat-interface-theme] {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
     padding-left: 10px;
     padding-top: 5px;
@@ -34,7 +34,7 @@
   z-index: 1;
 }
 
-[data-dorako-ui-scope="sidebar"] {
+[data-chat-interface-theme] {
   .tab {
     &:not([data-tab="chat"]) button {
       @include dui-button;

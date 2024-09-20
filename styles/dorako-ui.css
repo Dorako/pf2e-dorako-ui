@@ -2101,7 +2101,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--text-color-3);
 }
 
-.game #interface.has-hud-tracker #sidebar {
+.game #interface.has-hud-tracker #sidebar[data-chat-interface-theme] {
   box-shadow: unset;
   padding-left: 5px;
 }
@@ -6805,7 +6805,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* UI-right                                  */
 /* ----------------------------------------- */
-#ui-right > #sidebar {
+#ui-right > #sidebar[data-chat-interface-theme] {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
   padding-left: 10px;
   padding-top: 5px;
@@ -6815,7 +6815,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   margin: 0px;
   height: 100%;
 }
-#ui-right > #sidebar.collapsed {
+#ui-right > #sidebar[data-chat-interface-theme].collapsed {
   height: auto;
 }
 
@@ -6835,7 +6835,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   z-index: 1;
 }
 
-[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button {
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -6850,13 +6850,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.view, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.selected, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.active {
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button.view, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.selected, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.active {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -6864,13 +6864,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.empty, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button.disabled, [data-dorako-ui-scope=sidebar] .tab:not([data-tab=chat]) button:disabled {
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button.empty, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.disabled, [data-chat-interface-theme] .tab:not([data-tab=chat]) button:disabled {
   --dui-button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
 }
-[data-dorako-ui-scope=sidebar] .tab input:not([type=range]) {
+[data-chat-interface-theme] .tab input:not([type=range]) {
   background: var(--dui-input-background);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color) !important;
@@ -6882,45 +6882,45 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-dorako-ui-scope=sidebar] .tab input:not([type=range]):not(:disabled, .disabled, [type=checkbox]):hover, [data-dorako-ui-scope=sidebar] .tab input:not([type=range]):focus {
+[data-chat-interface-theme] .tab input:not([type=range]):not(:disabled, .disabled, [type=checkbox]):hover, [data-chat-interface-theme] .tab input:not([type=range]):focus {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
   color: var(--input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-scope=sidebar] .tab input:not([type=range]).disabled, [data-dorako-ui-scope=sidebar] .tab input:not([type=range]):disabled {
+[data-chat-interface-theme] .tab input:not([type=range]).disabled, [data-chat-interface-theme] .tab input:not([type=range]):disabled {
   --dui-input-text-color: var(--text-color-disabled);
   --dui-input-background: var(--input-disabled-background);
   --dui-input-border-color: var(--input-disabled-border-color);
 }
-[data-dorako-ui-scope=sidebar] .tab input:not([type=range]).disabled::placeholder, [data-dorako-ui-scope=sidebar] .tab input:not([type=range]):disabled::placeholder {
+[data-chat-interface-theme] .tab input:not([type=range]).disabled::placeholder, [data-chat-interface-theme] .tab input:not([type=range]):disabled::placeholder {
   color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
 }
-[data-dorako-ui-scope=sidebar] .tab input:not([type=range])::placeholder {
+[data-chat-interface-theme] .tab input:not([type=range])::placeholder {
   color: var(--dui-input-placeholder-color);
 }
-[data-dorako-ui-scope=sidebar] .tab input:not([type=range])[type=checkbox] {
+[data-chat-interface-theme] .tab input:not([type=range])[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-dorako-ui-scope=sidebar] ::-webkit-scrollbar-thumb {
+[data-chat-interface-theme] ::-webkit-scrollbar-thumb {
   outline: none;
   border-radius: 3px;
   background: var(--scrollbar-thumb-background);
   border: 1px solid var(--scrollbar-thumb-border-color);
   transition: outline 0.15s;
 }
-[data-dorako-ui-scope=sidebar] ::-webkit-scrollbar-track {
+[data-chat-interface-theme] ::-webkit-scrollbar-track {
   box-shadow: 0 0 1px var(--color-secondary-3) inset;
   box-shadow: unset;
   border-radius: 4px;
 }
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons {
   gap: 5px;
 }
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -6935,13 +6935,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button:not(.disabled, :disabled):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.view, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.selected, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.active {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button.view, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.selected, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.active {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -6949,15 +6949,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.empty, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button.disabled, [data-dorako-ui-scope=sidebar] #settings ul#game-details li.system-buttons button:disabled {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button.empty, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.disabled, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
 }
-[data-dorako-ui-scope=sidebar] .compendium.directory .directory-header .compendium-name,
-[data-dorako-ui-scope=sidebar] .compendium-sidebar .directory-item.compendium .compendium-name,
-[data-dorako-ui-scope=sidebar] .compendium-sidebar .directory-item.compendium.locked .compendium-name {
+[data-chat-interface-theme] .compendium.directory .directory-header .compendium-name,
+[data-chat-interface-theme] .compendium-sidebar .directory-item.compendium .compendium-name,
+[data-chat-interface-theme] .compendium-sidebar .directory-item.compendium.locked .compendium-name {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -6965,7 +6965,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
 }
-[data-dorako-ui-scope=sidebar] .compendium-sidebar .directory-item.compendium .compendium-footer .source {
+[data-chat-interface-theme] .compendium-sidebar .directory-item.compendium .compendium-footer .source {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -7911,6 +7911,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header h4.name input {
+  --dui-input-background: transparent;
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child), [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
   border-color: var(--section-border-color);
@@ -10300,6 +10303,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --text-color-3: var(--color-text-dark-primary);
   --app-text-shadow: none;
 }
+[data-theme^=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input, [data-theme^=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
+  --dui-input-text-color: white;
+}
 [data-theme^=crb][data-color-scheme=light].sheet.pf2e.actor.npc.app.actor.npc.sheet form a.roll:hover {
   --color-pf-primary-light: var(--primary-light);
 }
@@ -11209,6 +11215,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --contrastive-transparent: rgba(0, 0, 0, 0.5);
   --text-color-3: var(--color-text-dark-primary);
   --app-text-shadow: none;
+}
+[data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input, [data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app.actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input {
+  --dui-input-text-color: white;
 }
 [data-theme^=dnd5e2][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app.actor.npc.sheet form a.roll:hover {
   --color-pf-primary-light: var(--primary-light);

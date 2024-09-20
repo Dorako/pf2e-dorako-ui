@@ -1,3 +1,10 @@
+# 3.5.18
+
+- (Fix) Fixed an issue where certain theme styling would still be applied to the sidebar when interface theme was set to 'No theme'.
+- (Refinement) Added Prey For Death to the list of premium modules.
+- (Refinement) Styling improvements for NPC sheets.
+- (Module) Excluded PF2E Bestiary Tracking from theming, as it ships with its own themes.
+
 # 3.5.17
 
 - (Fix) Fixed an issue where the CRB style colored chat message headers would always use light text.
