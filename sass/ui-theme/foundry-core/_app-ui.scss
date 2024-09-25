@@ -487,13 +487,13 @@
 [data-theme].window-app,
 [data-theme].application {
   // --background: url(../ui/parchment.jpg) repeat;
-  --color-text-primary: var(--color-text-1);
-  --color-header-background: var(--color-text-3);
-  --color-fieldset-border: var(--color-text-2);
-  --color-form-label: var(--color-text-2);
-  --color-form-label-hover: var(--color-text-1);
-  --color-form-hint: var(--color-text-4);
-  --color-form-hint-hover: var(--color-text-2);
+  --color-text-primary: var(--text-color-1);
+  --color-header-background: var(--text-color-3);
+  --color-fieldset-border: var(--text-color-2);
+  --color-form-label: var(--text-color-2);
+  --color-form-label-hover: var(--text-color-1);
+  --color-form-hint: var(--text-color-4);
+  --color-form-hint-hover: var(--text-color-2);
 }
 
 // The background has issues with transparency. This ensures an opaque background is always used. It can be overwritten by more specific !important statements per theme.
@@ -502,6 +502,12 @@
 }
 [data-color-scheme="dark"] {
   --color-select-option-bg: black !important;
+}
+
+// Unsets the blurring applied by core Foundry
+.theme-dark .application[data-theme] .window-content {
+  backdrop-filter: unset;
+  -webkit-backdrop-filter: unset;
 }
 
 [data-theme] {
@@ -551,11 +557,11 @@
     .window-header {
       flex: 0 0 27px;
       border: unset;
-      text-shadow: 0px 1px 2px black;
+      // text-shadow: 0px 1px 2px black;
       border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-      --color-header-background: transparent; // v12 header
-      --color-light-1: var(--color-text-1); // v12 header
-      color: var(--color-text-1);
+      --color-header-background: transparent; // App v2 header
+      --color-light-1: var(--text-color-1); // App v2 header
+      color: var(--text-color-1);
     }
 
     .window-content {
@@ -802,7 +808,7 @@
     border-radius: 3px;
 
     .tagify__dropdown__item {
-      color: var(--color-text-1);
+      color: var(--text-color-1);
     }
 
     &.tagify--empty .tagify__input::before {

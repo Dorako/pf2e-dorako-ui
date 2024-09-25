@@ -5081,13 +5081,13 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 [data-theme].window-app,
 [data-theme].application {
-  --color-text-primary: var(--color-text-1);
-  --color-header-background: var(--color-text-3);
-  --color-fieldset-border: var(--color-text-2);
-  --color-form-label: var(--color-text-2);
-  --color-form-label-hover: var(--color-text-1);
-  --color-form-hint: var(--color-text-4);
-  --color-form-hint-hover: var(--color-text-2);
+  --color-text-primary: var(--text-color-1);
+  --color-header-background: var(--text-color-3);
+  --color-fieldset-border: var(--text-color-2);
+  --color-form-label: var(--text-color-2);
+  --color-form-label-hover: var(--text-color-1);
+  --color-form-hint: var(--text-color-4);
+  --color-form-hint-hover: var(--text-color-2);
 }
 
 [data-color-scheme=light] {
@@ -5096,6 +5096,11 @@ html .xdy-pf2e-workbench-rarity-unique {
 
 [data-color-scheme=dark] {
   --color-select-option-bg: black !important;
+}
+
+.theme-dark .application[data-theme] .window-content {
+  backdrop-filter: unset;
+  -webkit-backdrop-filter: unset;
 }
 
 [data-theme].app {
@@ -5123,11 +5128,10 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme].application .window-header, [data-theme].window-app .window-header {
   flex: 0 0 27px;
   border: unset;
-  text-shadow: 0px 1px 2px black;
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
   --color-header-background: transparent;
-  --color-light-1: var(--color-text-1);
-  color: var(--color-text-1);
+  --color-light-1: var(--text-color-1);
+  color: var(--text-color-1);
 }
 [data-theme].application .window-content, [data-theme].window-app .window-content {
   background: unset !important;
@@ -5628,7 +5632,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme] .tagify .tagify__dropdown__item,
 [data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper .tagify__dropdown__item,
 [data-theme] tags.tagify.pf2e-tagify .tagify__dropdown__item {
-  color: var(--color-text-1);
+  color: var(--text-color-1);
 }
 [data-theme] .tagify.tagify--empty .tagify__input::before,
 [data-theme] .tah-dialog-tags-dropdown .tagify__dropdown__wrapper.tagify--empty .tagify__input::before,
@@ -7292,8 +7296,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 
 [data-theme].sheet.hazard {
   --color-text-light: var(--text-color-2);
-  --color-pf-primary-darker: var(--color-text-2);
-  --color-pf-primary-light: var(--color-text-1);
+  --color-pf-primary-darker: var(--text-color-2);
+  --color-pf-primary-light: var(--text-color-1);
 }
 [data-theme].sheet.hazard.window-app .window-header {
   background: #19302c;
@@ -9205,7 +9209,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-pf-primary: var(--accent-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content header {
-  --color-pf-primary: var(--color-text-1);
+  --color-pf-primary: var(--text-color-1);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .tags.light > .tag,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .tags > .tag.light {

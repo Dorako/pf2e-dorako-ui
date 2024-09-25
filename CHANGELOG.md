@@ -1,3 +1,7 @@
+# 3.5.19
+
+- (Fix) Updates to App v2 styling to unclobber some color variables.
+
 # 3.5.18
 
 - (Fix) Fixed an issue where certain theme styling would still be applied to the sidebar when interface theme was set to 'No theme'.
