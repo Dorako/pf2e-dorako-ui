@@ -315,6 +315,9 @@
   font-size: var(--font-size-13);
   position: relative;
   // background: var(--dnd5e-color-parchment);
+  .message-header {
+    color: var(--text-color-1);
+  }
 }
 :is(.chat-popout, #chat-log) .message[data-theme^="dnd5e2"]::before {
   content: "";
@@ -494,34 +497,60 @@
   filter: invert(1) grayscale(1);
 }
 [data-theme^="dnd5e2"][data-color-scheme="dark"] {
-  --color-text-dark-primary: #efe7d4;
-  --color-text-dark-secondary: var(--dnd5e-color-beige);
+  --color-text-dark-primary: #cfd2da;
+  --color-text-dark-secondary: var(--color-text-light-6);
   --text-dark: var(--color-text-dark-primary);
   --secondary: var(--dnd5e-color-blue);
   --primary: var(--dnd5e-color-maroon);
 
-  --box-shadow: 0 0 3px var(--dnd5e-shadow-45);
-  --app-background: var(--dnd5e-color-dark);
+  --fieldset-border-color: #434857;
+  --fieldset-background-color: transparent;
+  --fieldset-legend-color: var(--dnd5e-color-gold);
 
-  --input-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
-  --dui-input-background: var(--dnd5e-color-dark);
-  --dui-input-border-color: var(--dnd5e-color-gold);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-45);
+  --app-background: #262830;
+  --app-border-color: #999;
+
+  // --input-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+  // --dui-input-background: var(--dnd5e-color-dark);
+  // --dui-input-border-color: var(--dnd5e-color-gold);
+  // --input-focus-text-color: var(--color-text-dark-primary);
+  // --dui-input-text-color: var(--color-text-dark-primary);
+  // --dui-input-placeholder-color: var(--color-text-dark-5);
+  // --input-text-selection-color: var(--color-secondary-3);
+  // --dui-input-focus-outline-color: var(--dnd5e-color-gold);
+
+  // --input-box-shadow: unset; No shadow in real theme
+  --input-box-shadow: 0 0 2px var(--dnd5e-shadow-45);
+
+  --dui-input-background: #262830;
+  --dui-input-border-color: #262830;
   --input-focus-text-color: var(--color-text-dark-primary);
   --dui-input-text-color: var(--color-text-dark-primary);
-  --dui-input-placeholder-color: var(--color-text-dark-5);
+  --dui-input-placeholder-color: var(--color-text-light-6);
   --input-text-selection-color: var(--color-secondary-3);
   --dui-input-focus-outline-color: var(--dnd5e-color-gold);
 
   --input-disabled-background: color-mix(in srgb, var(--dnd5e-color-card) 50%, transparent);
   --input-disabled-border-color: color-mix(in srgb, var(--color-border-dark-5) 50%, transparent);
 
-  --dui-button-background: var(--dnd5e-color-dark);
-  --dui-button-border-color: var(--dnd5e-color-gold);
-  --dui-button-text-color: var(--dnd5e-color-gold);
-  --dui-button-focus-outline-color: var(--dnd5e-color-gold);
-  --button-hover-background: var(--dnd5e-color-iron-gray);
-  --button-hover-border-color: var(--dnd5e-color-gold);
-  --dui-button-hover-text-color: var(--dnd5e-color-gold);
+  // --dui-button-background: var(--dnd5e-color-dark);
+  // --dui-button-border-color: var(--dnd5e-color-gold);
+  // --dui-button-text-color: var(--dnd5e-color-gold);
+  // --dui-button-focus-outline-color: var(--dnd5e-color-gold);
+  // --button-hover-background: var(--dnd5e-color-iron-gray);
+  // --button-hover-border-color: var(--dnd5e-color-gold);
+  // --dui-button-hover-text-color: var(--dnd5e-color-gold);
+  // --button-disabled-background: var(--color-primary-5);
+  // --button-disabled-border-color: var(--color-primary-4);
+
+  --dui-button-background: #262830;
+  --dui-button-border-color: #999;
+  --dui-button-text-color: #d0d2da;
+  --dui-button-focus-outline-color: #999;
+  --button-hover-background: #3a3c48;
+  --button-hover-border-color: #a8a8a8;
+  --dui-button-hover-text-color: #d0d2da;
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
 
@@ -545,19 +574,21 @@
     --accent-color: var(--dnd5e-color-card);
   }
 
+  &.application,
   &.app.window-app {
     background: var(--dnd5e-color-dark);
+    background: var(--dnd5e-color-dark) url(../../../ui/denim075.png);
 
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-        url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
-      border-radius: 6px;
-      pointer-events: none;
-      z-index: -1;
-      filter: invert(1) grayscale(1) opacity(0.5);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   inset: 0;
+    //   background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+    //     url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    //   border-radius: 6px;
+    //   pointer-events: none;
+    //   z-index: -1;
+    //   filter: invert(1) grayscale(1) opacity(0.5);
+    // }
   }
 }

@@ -1,0 +1,42 @@
+[data-theme] {
+  &#rolodex {
+    & > .window-content {
+      & > .tab-bar {
+        & > .sheet-navigation {
+          margin-top: 2px;
+          padding-left: 5px;
+          border-bottom: var(--window-app-border-width) solid var(--window-app-border-color);
+          gap: 5px;
+          > a {
+            @include dui-button;
+            margin-bottom: 5px;
+          }
+        }
+        & > .sheet-navigation-controls {
+          @include dui-app;
+          --box-shadow: none !important;
+          --app-border-color: var(--window-app-border-color);
+          --app-border-width: var(--window-app-border-width);
+          border-top-right-radius: unset;
+          border-bottom-right-radius: unset;
+          border-bottom-left-radius: unset;
+          border-right-width: 0px;
+          //   border-bottom-width: 0px;
+        }
+      }
+      & > .sheet-container {
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+      }
+    }
+  }
+
+  &#rolodex {
+    .app,
+    .application {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border: none;
+    }
+  }
+}

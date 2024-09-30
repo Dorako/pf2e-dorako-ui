@@ -183,19 +183,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] #dorako-rt-buttons button:not(.disabled, :disabled):hover {
+[data-theme] #dorako-rt-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] #dorako-rt-buttons button.view, [data-theme] #dorako-rt-buttons button.selected, [data-theme] #dorako-rt-buttons button.active {
+[data-theme] #dorako-rt-buttons button.view, [data-theme] #dorako-rt-buttons button.selected, [data-theme] #dorako-rt-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] #dorako-rt-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] #dorako-rt-buttons button.empty, [data-theme] #dorako-rt-buttons button.disabled, [data-theme] #dorako-rt-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -223,19 +226,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] #dorako-nonrt-buttons button:not(.disabled, :disabled):hover {
+[data-theme] #dorako-nonrt-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] #dorako-nonrt-buttons button.view, [data-theme] #dorako-nonrt-buttons button.selected, [data-theme] #dorako-nonrt-buttons button.active {
+[data-theme] #dorako-nonrt-buttons button.view, [data-theme] #dorako-nonrt-buttons button.selected, [data-theme] #dorako-nonrt-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] #dorako-nonrt-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] #dorako-nonrt-buttons button.empty, [data-theme] #dorako-nonrt-buttons button.disabled, [data-theme] #dorako-nonrt-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -348,19 +354,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .dice-tray button:not(.disabled, :disabled):hover {
+[data-theme] .dice-tray button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .dice-tray button.view, [data-theme] .dice-tray button.selected, [data-theme] .dice-tray button.active {
+[data-theme] .dice-tray button.view, [data-theme] .dice-tray button.selected, [data-theme] .dice-tray button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .dice-tray button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .dice-tray button.empty, [data-theme] .dice-tray button.disabled, [data-theme] .dice-tray button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -479,19 +488,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .implement-button-region button:not(.disabled, :disabled):hover {
+[data-theme] .implement-button-region button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .implement-button-region button.view, [data-theme] .implement-button-region button.selected, [data-theme] .implement-button-region button.active {
+[data-theme] .implement-button-region button.view, [data-theme] .implement-button-region button.selected, [data-theme] .implement-button-region button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .implement-button-region button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .implement-button-region button.empty, [data-theme] .implement-button-region button.disabled, [data-theme] .implement-button-region button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -522,19 +534,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .actions-panel > fieldset button:not(.disabled, :disabled):hover {
+[data-theme] .actions-panel > fieldset button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .actions-panel > fieldset button.view, [data-theme] .actions-panel > fieldset button.selected, [data-theme] .actions-panel > fieldset button.active {
+[data-theme] .actions-panel > fieldset button.view, [data-theme] .actions-panel > fieldset button.selected, [data-theme] .actions-panel > fieldset button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .actions-panel > fieldset button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .actions-panel > fieldset button.empty, [data-theme] .actions-panel > fieldset button.disabled, [data-theme] .actions-panel > fieldset button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -636,19 +651,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash:not(.disabled, :disabled):hover, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos:not(.disabled, :disabled):hover, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver:not(.disabled, :disabled):hover {
+[data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash:not(.disabled, :disabled, .empty):hover, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos:not(.disabled, :disabled, .empty):hover, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.view, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.selected, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.active, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.view, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.selected, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.active, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.view, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.selected, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.active {
+[data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.view, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.selected, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.active:not(.empty), [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.view, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.selected, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.active:not(.empty), [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.view, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.selected, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.empty.active, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.empty.active, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.empty, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash.disabled, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .delete-splash:disabled, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.empty, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos.disabled, [data-theme].window-app.forien-quest-preview .quest-body .management .quest-splash .change-splash-pos:disabled, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.empty, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver.disabled, [data-theme].window-app.forien-quest-preview .quest-body .details-header .quest-giver-gc .deleteQuestGiver:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -713,19 +731,22 @@ nav.damage-log-nav.tabs .item.active {
   text-shadow: var(--app-text-shadow);
   margin: unset;
 }
-[data-theme].clock-panel [data-action=add-clock]:not(.disabled, :disabled):hover {
+[data-theme].clock-panel [data-action=add-clock]:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].clock-panel [data-action=add-clock].view, [data-theme].clock-panel [data-action=add-clock].selected, [data-theme].clock-panel [data-action=add-clock].active {
+[data-theme].clock-panel [data-action=add-clock].view, [data-theme].clock-panel [data-action=add-clock].selected, [data-theme].clock-panel [data-action=add-clock].active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].clock-panel [data-action=add-clock].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].clock-panel [data-action=add-clock].empty, [data-theme].clock-panel [data-action=add-clock].disabled, [data-theme].clock-panel [data-action=add-clock]:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -855,19 +876,22 @@ nav.damage-log-nav.tabs .item.active {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .item-piles-player-list-trade-button:not(.disabled, :disabled):hover {
+[data-theme] .item-piles-player-list-trade-button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .item-piles-player-list-trade-button.view, [data-theme] .item-piles-player-list-trade-button.selected, [data-theme] .item-piles-player-list-trade-button.active {
+[data-theme] .item-piles-player-list-trade-button.view, [data-theme] .item-piles-player-list-trade-button.selected, [data-theme] .item-piles-player-list-trade-button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .item-piles-player-list-trade-button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .item-piles-player-list-trade-button.empty, [data-theme] .item-piles-player-list-trade-button.disabled, [data-theme] .item-piles-player-list-trade-button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -1065,19 +1089,22 @@ button#heartbeat-button {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme]#module-management .package-list .package .package-overview .tag.expand:not(.disabled, :disabled):hover {
+[data-theme]#module-management .package-list .package .package-overview .tag.expand:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#module-management .package-list .package .package-overview .tag.expand.view, [data-theme]#module-management .package-list .package .package-overview .tag.expand.selected, [data-theme]#module-management .package-list .package .package-overview .tag.expand.active {
+[data-theme]#module-management .package-list .package .package-overview .tag.expand.view, [data-theme]#module-management .package-list .package .package-overview .tag.expand.selected, [data-theme]#module-management .package-list .package .package-overview .tag.expand.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#module-management .package-list .package .package-overview .tag.expand.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#module-management .package-list .package .package-overview .tag.expand.empty, [data-theme]#module-management .package-list .package .package-overview .tag.expand.disabled, [data-theme]#module-management .package-list .package .package-overview .tag.expand:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -1453,19 +1480,22 @@ button#heartbeat-button {
   text-shadow: var(--app-text-shadow);
   text-align: center;
 }
-[data-theme]#requestsavingthrow .request-grid > div:not(.disabled, :disabled):hover {
+[data-theme]#requestsavingthrow .request-grid > div:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#requestsavingthrow .request-grid > div.view, [data-theme]#requestsavingthrow .request-grid > div.selected, [data-theme]#requestsavingthrow .request-grid > div.active {
+[data-theme]#requestsavingthrow .request-grid > div.view, [data-theme]#requestsavingthrow .request-grid > div.selected, [data-theme]#requestsavingthrow .request-grid > div.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#requestsavingthrow .request-grid > div.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#requestsavingthrow .request-grid > div.empty, [data-theme]#requestsavingthrow .request-grid > div.disabled, [data-theme]#requestsavingthrow .request-grid > div:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -1625,19 +1655,22 @@ body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .ef
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control:not(.disabled, :disabled):hover {
+body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.view, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.selected, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.active {
+body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.view, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.selected, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.empty, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control.disabled, body.system-pf2e #token-hud.monks-little-details[data-theme] .status-effects .effect-control:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -1739,19 +1772,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme]#navigation .monks-scene-navigation .scene-list > li a:not(.disabled, :disabled):hover {
+[data-theme]#navigation .monks-scene-navigation .scene-list > li a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#navigation .monks-scene-navigation .scene-list > li a.view, [data-theme]#navigation .monks-scene-navigation .scene-list > li a.selected, [data-theme]#navigation .monks-scene-navigation .scene-list > li a.active {
+[data-theme]#navigation .monks-scene-navigation .scene-list > li a.view, [data-theme]#navigation .monks-scene-navigation .scene-list > li a.selected, [data-theme]#navigation .monks-scene-navigation .scene-list > li a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#navigation .monks-scene-navigation .scene-list > li a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#navigation .monks-scene-navigation .scene-list > li a.empty, [data-theme]#navigation .monks-scene-navigation .scene-list > li a.disabled, [data-theme]#navigation .monks-scene-navigation .scene-list > li a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -1780,19 +1816,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:not(.disabled, :disabled):hover {
+[data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.view, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.selected, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.active {
+[data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.view, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.selected, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.empty, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a.disabled, [data-theme]#navigation .monks-scene-navigation .scene-list > li.gm a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -1901,19 +1940,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].monks-active-tiles.sheet .items-list .item-controls a:not(.disabled, :disabled):hover {
+[data-theme].monks-active-tiles.sheet .items-list .item-controls a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].monks-active-tiles.sheet .items-list .item-controls a.view, [data-theme].monks-active-tiles.sheet .items-list .item-controls a.selected, [data-theme].monks-active-tiles.sheet .items-list .item-controls a.active {
+[data-theme].monks-active-tiles.sheet .items-list .item-controls a.view, [data-theme].monks-active-tiles.sheet .items-list .item-controls a.selected, [data-theme].monks-active-tiles.sheet .items-list .item-controls a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].monks-active-tiles.sheet .items-list .item-controls a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].monks-active-tiles.sheet .items-list .item-controls a.empty, [data-theme].monks-active-tiles.sheet .items-list .item-controls a.disabled, [data-theme].monks-active-tiles.sheet .items-list .item-controls a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -2405,19 +2447,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme]#pf2e-token-hud .popup .item-buttons button:not(.disabled, :disabled):hover {
+[data-theme]#pf2e-token-hud .popup .item-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#pf2e-token-hud .popup .item-buttons button.view, [data-theme]#pf2e-token-hud .popup .item-buttons button.selected, [data-theme]#pf2e-token-hud .popup .item-buttons button.active {
+[data-theme]#pf2e-token-hud .popup .item-buttons button.view, [data-theme]#pf2e-token-hud .popup .item-buttons button.selected, [data-theme]#pf2e-token-hud .popup .item-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#pf2e-token-hud .popup .item-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#pf2e-token-hud .popup .item-buttons button.empty, [data-theme]#pf2e-token-hud .popup .item-buttons button.disabled, [data-theme]#pf2e-token-hud .popup .item-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -2555,19 +2600,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   text-shadow: var(--app-text-shadow);
   box-shadow: unset;
 }
-[data-theme][id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled):hover {
+[data-theme][id^=pf2e-perception-] .window-content .buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][id^=pf2e-perception-] .window-content .buttons button.view, [data-theme][id^=pf2e-perception-] .window-content .buttons button.selected, [data-theme][id^=pf2e-perception-] .window-content .buttons button.active {
+[data-theme][id^=pf2e-perception-] .window-content .buttons button.view, [data-theme][id^=pf2e-perception-] .window-content .buttons button.selected, [data-theme][id^=pf2e-perception-] .window-content .buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][id^=pf2e-perception-] .window-content .buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][id^=pf2e-perception-] .window-content .buttons button.empty, [data-theme][id^=pf2e-perception-] .window-content .buttons button.disabled, [data-theme][id^=pf2e-perception-] .window-content .buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -2653,6 +2701,77 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   background-color: rgba(255, 255, 255, 0.7098039216);
 }
 
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation {
+  margin-top: 2px;
+  padding-left: 5px;
+  border-bottom: var(--window-app-border-width) solid var(--window-app-border-color);
+  gap: 5px;
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  margin-bottom: 5px;
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a:not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.view, [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.selected, [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.empty, [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.disabled, [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a:disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation-controls {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  --box-shadow: none !important;
+  --app-border-color: var(--window-app-border-color);
+  --app-border-width: var(--window-app-border-width);
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: unset;
+  border-right-width: 0px;
+}
+[data-theme]#rolodex > .window-content > .sheet-container {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+[data-theme]#rolodex .app,
+[data-theme]#rolodex .application {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border: none;
+}
+
 [data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
 [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
 [data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary {
@@ -2710,23 +2829,27 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --dui-button-hover-text-color: var(--accent-text-color);
   margin-top: 5px;
 }
-[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:not(.disabled, :disabled):hover,
-[data-dorako-ui-scope=limited] .heroActions-list > button:not(.disabled, :disabled):hover {
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:not(.disabled, :disabled, .empty):hover,
+[data-dorako-ui-scope=limited] .heroActions-list > button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].view, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].selected, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].active,
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].view, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].selected, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].active:not(.empty),
 [data-dorako-ui-scope=limited] .heroActions-list > button.view,
 [data-dorako-ui-scope=limited] .heroActions-list > button.selected,
-[data-dorako-ui-scope=limited] .heroActions-list > button.active {
+[data-dorako-ui-scope=limited] .heroActions-list > button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].empty.active,
+[data-dorako-ui-scope=limited] .heroActions-list > button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].empty, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade].disabled, [data-dorako-ui-scope=limited] button[data-action=hero-actions-trade]:disabled,
 [data-dorako-ui-scope=limited] .heroActions-list > button.empty,
@@ -2767,19 +2890,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-[data-theme].chat-message [data-action=spell-template-clear]:not(.disabled, :disabled):hover {
+[data-theme].chat-message [data-action=spell-template-clear]:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].chat-message [data-action=spell-template-clear].view, [data-theme].chat-message [data-action=spell-template-clear].selected, [data-theme].chat-message [data-action=spell-template-clear].active {
+[data-theme].chat-message [data-action=spell-template-clear].view, [data-theme].chat-message [data-action=spell-template-clear].selected, [data-theme].chat-message [data-action=spell-template-clear].active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].chat-message [data-action=spell-template-clear].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].chat-message [data-action=spell-template-clear].empty, [data-theme].chat-message [data-action=spell-template-clear].disabled, [data-theme].chat-message [data-action=spell-template-clear]:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -2844,19 +2970,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] #fc-container button:not(.disabled, :disabled):hover {
+[data-theme] #fc-container button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] #fc-container button.view, [data-theme] #fc-container button.selected, [data-theme] #fc-container button.active {
+[data-theme] #fc-container button.view, [data-theme] #fc-container button.selected, [data-theme] #fc-container button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] #fc-container button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] #fc-container button.empty, [data-theme] #fc-container button.disabled, [data-theme] #fc-container button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -2880,23 +3009,27 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] #initiative-delay:not(.disabled, :disabled):hover,
-[data-theme] #initiative-return:not(.disabled, :disabled):hover {
+[data-theme] #initiative-delay:not(.disabled, :disabled, .empty):hover,
+[data-theme] #initiative-return:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] #initiative-delay.view, [data-theme] #initiative-delay.selected, [data-theme] #initiative-delay.active,
+[data-theme] #initiative-delay.view, [data-theme] #initiative-delay.selected, [data-theme] #initiative-delay.active:not(.empty),
 [data-theme] #initiative-return.view,
 [data-theme] #initiative-return.selected,
-[data-theme] #initiative-return.active {
+[data-theme] #initiative-return.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] #initiative-delay.empty.active,
+[data-theme] #initiative-return.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] #initiative-delay.empty, [data-theme] #initiative-delay.disabled, [data-theme] #initiative-delay:disabled,
 [data-theme] #initiative-return.empty,
@@ -3165,19 +3298,22 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme]#smalltime-app .arrow:not(.disabled, :disabled):hover, [data-theme]#smalltime-app .arrow-left:not(.disabled, :disabled):hover, [data-theme]#smalltime-app.arrow-right:not(.disabled, :disabled):hover {
+[data-theme]#smalltime-app .arrow:not(.disabled, :disabled, .empty):hover, [data-theme]#smalltime-app .arrow-left:not(.disabled, :disabled, .empty):hover, [data-theme]#smalltime-app.arrow-right:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#smalltime-app .arrow.view, [data-theme]#smalltime-app .arrow.selected, [data-theme]#smalltime-app .arrow.active, [data-theme]#smalltime-app .arrow-left.view, [data-theme]#smalltime-app .arrow-left.selected, [data-theme]#smalltime-app .arrow-left.active, [data-theme]#smalltime-app.arrow-right.view, [data-theme]#smalltime-app.arrow-right.selected, [data-theme]#smalltime-app.arrow-right.active {
+[data-theme]#smalltime-app .arrow.view, [data-theme]#smalltime-app .arrow.selected, [data-theme]#smalltime-app .arrow.active:not(.empty), [data-theme]#smalltime-app .arrow-left.view, [data-theme]#smalltime-app .arrow-left.selected, [data-theme]#smalltime-app .arrow-left.active:not(.empty), [data-theme]#smalltime-app.arrow-right.view, [data-theme]#smalltime-app.arrow-right.selected, [data-theme]#smalltime-app.arrow-right.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#smalltime-app .arrow.empty.active, [data-theme]#smalltime-app .arrow-left.empty.active, [data-theme]#smalltime-app.arrow-right.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#smalltime-app .arrow.empty, [data-theme]#smalltime-app .arrow.disabled, [data-theme]#smalltime-app .arrow:disabled, [data-theme]#smalltime-app .arrow-left.empty, [data-theme]#smalltime-app .arrow-left.disabled, [data-theme]#smalltime-app .arrow-left:disabled, [data-theme]#smalltime-app.arrow-right.empty, [data-theme]#smalltime-app.arrow-right.disabled, [data-theme]#smalltime-app.arrow-right:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -3289,19 +3425,22 @@ body.system-swade {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-theme] .pf2e-td.small-button.target-button:not(.disabled, :disabled):hover {
+[data-theme] .pf2e-td.small-button.target-button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .pf2e-td.small-button.target-button.view, [data-theme] .pf2e-td.small-button.target-button.selected, [data-theme] .pf2e-td.small-button.target-button.active {
+[data-theme] .pf2e-td.small-button.target-button.view, [data-theme] .pf2e-td.small-button.target-button.selected, [data-theme] .pf2e-td.small-button.target-button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .pf2e-td.small-button.target-button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .pf2e-td.small-button.target-button.empty, [data-theme] .pf2e-td.small-button.target-button.disabled, [data-theme] .pf2e-td.small-button.target-button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -3386,19 +3525,22 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-chat-interface-theme] .theatre-control-btn:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] .theatre-control-btn:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] .theatre-control-btn.view, [data-chat-interface-theme] .theatre-control-btn.selected, [data-chat-interface-theme] .theatre-control-btn.active {
+[data-chat-interface-theme] .theatre-control-btn.view, [data-chat-interface-theme] .theatre-control-btn.selected, [data-chat-interface-theme] .theatre-control-btn.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] .theatre-control-btn.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] .theatre-control-btn.empty, [data-chat-interface-theme] .theatre-control-btn.disabled, [data-chat-interface-theme] .theatre-control-btn:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -3438,27 +3580,32 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
 }
-[data-chat-interface-theme] .theatre-control-nav-bar-item-active:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] .theatre-control-btn-down:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] .theatre-control-btn-down:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] .theatre-control-nav-bar-item-active.view, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.selected, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.active,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active.view, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.selected, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.active:not(.empty),
 [data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.view,
 [data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.selected,
-[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.active,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.active:not(.empty),
 [data-chat-interface-theme] .theatre-control-btn-down.view,
 [data-chat-interface-theme] .theatre-control-btn-down.selected,
-[data-chat-interface-theme] .theatre-control-btn-down.active {
+[data-chat-interface-theme] .theatre-control-btn-down.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item-active.empty.active,
+[data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.empty.active,
+[data-chat-interface-theme] .theatre-control-btn-down.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] .theatre-control-nav-bar-item-active.empty, [data-chat-interface-theme] .theatre-control-nav-bar-item-active.disabled, [data-chat-interface-theme] .theatre-control-nav-bar-item-active:disabled,
 [data-chat-interface-theme] .theatre-control-nav-bar-item-speakingas.empty,
@@ -3500,19 +3647,22 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-chat-interface-theme] .theatre-control-nav-bar-item:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] .theatre-control-nav-bar-item:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] .theatre-control-nav-bar-item.view, [data-chat-interface-theme] .theatre-control-nav-bar-item.selected, [data-chat-interface-theme] .theatre-control-nav-bar-item.active {
+[data-chat-interface-theme] .theatre-control-nav-bar-item.view, [data-chat-interface-theme] .theatre-control-nav-bar-item.selected, [data-chat-interface-theme] .theatre-control-nav-bar-item.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] .theatre-control-nav-bar-item.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] .theatre-control-nav-bar-item.empty, [data-chat-interface-theme] .theatre-control-nav-bar-item.disabled, [data-chat-interface-theme] .theatre-control-nav-bar-item:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -3626,31 +3776,37 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme]#token-action-hud .tah-action-button:not(.disabled, :disabled):hover,
-[data-theme]#token-action-hud .tah-action-button:focus:not(.disabled, :disabled):hover,
-[data-theme]#token-action-hud .tah-group-button:not(.disabled, :disabled):hover,
-[data-theme]#token-action-hud .tah-group-button:focus:not(.disabled, :disabled):hover {
+[data-theme]#token-action-hud .tah-action-button:not(.disabled, :disabled, .empty):hover,
+[data-theme]#token-action-hud .tah-action-button:focus:not(.disabled, :disabled, .empty):hover,
+[data-theme]#token-action-hud .tah-group-button:not(.disabled, :disabled, .empty):hover,
+[data-theme]#token-action-hud .tah-group-button:focus:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#token-action-hud .tah-action-button.view, [data-theme]#token-action-hud .tah-action-button.selected, [data-theme]#token-action-hud .tah-action-button.active,
+[data-theme]#token-action-hud .tah-action-button.view, [data-theme]#token-action-hud .tah-action-button.selected, [data-theme]#token-action-hud .tah-action-button.active:not(.empty),
 [data-theme]#token-action-hud .tah-action-button:focus.view,
 [data-theme]#token-action-hud .tah-action-button:focus.selected,
-[data-theme]#token-action-hud .tah-action-button:focus.active,
+[data-theme]#token-action-hud .tah-action-button:focus.active:not(.empty),
 [data-theme]#token-action-hud .tah-group-button.view,
 [data-theme]#token-action-hud .tah-group-button.selected,
-[data-theme]#token-action-hud .tah-group-button.active,
+[data-theme]#token-action-hud .tah-group-button.active:not(.empty),
 [data-theme]#token-action-hud .tah-group-button:focus.view,
 [data-theme]#token-action-hud .tah-group-button:focus.selected,
-[data-theme]#token-action-hud .tah-group-button:focus.active {
+[data-theme]#token-action-hud .tah-group-button:focus.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#token-action-hud .tah-action-button.empty.active,
+[data-theme]#token-action-hud .tah-action-button:focus.empty.active,
+[data-theme]#token-action-hud .tah-group-button.empty.active,
+[data-theme]#token-action-hud .tah-group-button:focus.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#token-action-hud .tah-action-button.empty, [data-theme]#token-action-hud .tah-action-button.disabled, [data-theme]#token-action-hud .tah-action-button:disabled,
 [data-theme]#token-action-hud .tah-action-button:focus.empty,
@@ -3719,19 +3875,22 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-theme]#token-action-hud .tah-action-button.toggle:not(.disabled, :disabled):hover {
+[data-theme]#token-action-hud .tah-action-button.toggle:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#token-action-hud .tah-action-button.toggle.view, [data-theme]#token-action-hud .tah-action-button.toggle.selected, [data-theme]#token-action-hud .tah-action-button.toggle.active {
+[data-theme]#token-action-hud .tah-action-button.toggle.view, [data-theme]#token-action-hud .tah-action-button.toggle.selected, [data-theme]#token-action-hud .tah-action-button.toggle.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#token-action-hud .tah-action-button.toggle.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#token-action-hud .tah-action-button.toggle.empty, [data-theme]#token-action-hud .tah-action-button.toggle.disabled, [data-theme]#token-action-hud .tah-action-button.toggle:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -3834,23 +3993,27 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   text-shadow: var(--app-text-shadow);
   align-items: center;
 }
-[data-theme] #tokenizer div.view-layer-control .section button:not(.disabled, :disabled):hover,
-[data-theme] #tokenizer .section button:not(.disabled, :disabled):hover {
+[data-theme] #tokenizer div.view-layer-control .section button:not(.disabled, :disabled, .empty):hover,
+[data-theme] #tokenizer .section button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] #tokenizer div.view-layer-control .section button.view, [data-theme] #tokenizer div.view-layer-control .section button.selected, [data-theme] #tokenizer div.view-layer-control .section button.active,
+[data-theme] #tokenizer div.view-layer-control .section button.view, [data-theme] #tokenizer div.view-layer-control .section button.selected, [data-theme] #tokenizer div.view-layer-control .section button.active:not(.empty),
 [data-theme] #tokenizer .section button.view,
 [data-theme] #tokenizer .section button.selected,
-[data-theme] #tokenizer .section button.active {
+[data-theme] #tokenizer .section button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] #tokenizer div.view-layer-control .section button.empty.active,
+[data-theme] #tokenizer .section button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] #tokenizer div.view-layer-control .section button.empty, [data-theme] #tokenizer div.view-layer-control .section button.disabled, [data-theme] #tokenizer div.view-layer-control .section button:disabled,
 [data-theme] #tokenizer .section button.empty,
@@ -3877,19 +4040,22 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   text-shadow: var(--app-text-shadow);
   align-items: center;
 }
-[data-theme] #tokenizer button.menu-button:not(.disabled, :disabled):hover {
+[data-theme] #tokenizer button.menu-button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] #tokenizer button.menu-button.view, [data-theme] #tokenizer button.menu-button.selected, [data-theme] #tokenizer button.menu-button.active {
+[data-theme] #tokenizer button.menu-button.view, [data-theme] #tokenizer button.menu-button.selected, [data-theme] #tokenizer button.menu-button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] #tokenizer button.menu-button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] #tokenizer button.menu-button.empty, [data-theme] #tokenizer button.menu-button.disabled, [data-theme] #tokenizer button.menu-button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -3919,19 +4085,22 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   --button-hover-border-color: var(--color-secondary-2);
   --dui-button-hover-text-color: var(--text-color-2);
 }
-[data-theme].tokenizer .title .box-button:not(.disabled, :disabled):hover {
+[data-theme].tokenizer .title .box-button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].tokenizer .title .box-button.view, [data-theme].tokenizer .title .box-button.selected, [data-theme].tokenizer .title .box-button.active {
+[data-theme].tokenizer .title .box-button.view, [data-theme].tokenizer .title .box-button.selected, [data-theme].tokenizer .title .box-button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].tokenizer .title .box-button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].tokenizer .title .box-button.empty, [data-theme].tokenizer .title .box-button.disabled, [data-theme].tokenizer .title .box-button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -4023,19 +4192,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .roll-app-nav button:not(.disabled, :disabled):hover {
+[data-theme] .roll-app-nav button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .roll-app-nav button.view, [data-theme] .roll-app-nav button.selected, [data-theme] .roll-app-nav button.active {
+[data-theme] .roll-app-nav button.view, [data-theme] .roll-app-nav button.selected, [data-theme] .roll-app-nav button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .roll-app-nav button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .roll-app-nav button.empty, [data-theme] .roll-app-nav button.disabled, [data-theme] .roll-app-nav button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -4058,19 +4230,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .roll-app .roll-app-table tbody button:not(.disabled, :disabled):hover {
+[data-theme] .roll-app .roll-app-table tbody button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .roll-app .roll-app-table tbody button.view, [data-theme] .roll-app .roll-app-table tbody button.selected, [data-theme] .roll-app .roll-app-table tbody button.active {
+[data-theme] .roll-app .roll-app-table tbody button.view, [data-theme] .roll-app .roll-app-table tbody button.selected, [data-theme] .roll-app .roll-app-table tbody button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .roll-app .roll-app-table tbody button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .roll-app .roll-app-table tbody button.empty, [data-theme] .roll-app .roll-app-table tbody button.disabled, [data-theme] .roll-app .roll-app-table tbody button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -4312,63 +4487,77 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-[data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply]:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] #chat-log ~ * button[data-action=accept]:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] #chat-log ~ * form button[type=submit]:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] #chat-log ~ * form button[data-action=save]:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll:not(.disabled, :disabled):hover,
-[data-chat-interface-theme] #chat-log ~ * button.bright:not(.disabled, :disabled):hover,
-[data-theme] .item-controls button[data-action=apply]:not(.disabled, :disabled):hover,
-[data-theme] button[data-action=accept]:not(.disabled, :disabled):hover,
-[data-theme] form button[type=submit]:not(.disabled, :disabled):hover,
-[data-theme] form button[data-action=save]:not(.disabled, :disabled):hover,
-[data-theme] form.check-modifiers-content button.roll:not(.disabled, :disabled):hover,
-[data-theme] button.bright:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply]:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] #chat-log ~ * button[data-action=accept]:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] #chat-log ~ * form button[type=submit]:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] #chat-log ~ * form button[data-action=save]:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll:not(.disabled, :disabled, .empty):hover,
+[data-chat-interface-theme] #chat-log ~ * button.bright:not(.disabled, :disabled, .empty):hover,
+[data-theme] .item-controls button[data-action=apply]:not(.disabled, :disabled, .empty):hover,
+[data-theme] button[data-action=accept]:not(.disabled, :disabled, .empty):hover,
+[data-theme] form button[type=submit]:not(.disabled, :disabled, .empty):hover,
+[data-theme] form button[data-action=save]:not(.disabled, :disabled, .empty):hover,
+[data-theme] form.check-modifiers-content button.roll:not(.disabled, :disabled, .empty):hover,
+[data-theme] button.bright:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].view, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].selected, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].active,
+[data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].view, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].selected, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].active:not(.empty),
 [data-chat-interface-theme] #chat-log ~ * button[data-action=accept].view,
 [data-chat-interface-theme] #chat-log ~ * button[data-action=accept].selected,
-[data-chat-interface-theme] #chat-log ~ * button[data-action=accept].active,
+[data-chat-interface-theme] #chat-log ~ * button[data-action=accept].active:not(.empty),
 [data-chat-interface-theme] #chat-log ~ * form button[type=submit].view,
 [data-chat-interface-theme] #chat-log ~ * form button[type=submit].selected,
-[data-chat-interface-theme] #chat-log ~ * form button[type=submit].active,
+[data-chat-interface-theme] #chat-log ~ * form button[type=submit].active:not(.empty),
 [data-chat-interface-theme] #chat-log ~ * form button[data-action=save].view,
 [data-chat-interface-theme] #chat-log ~ * form button[data-action=save].selected,
-[data-chat-interface-theme] #chat-log ~ * form button[data-action=save].active,
+[data-chat-interface-theme] #chat-log ~ * form button[data-action=save].active:not(.empty),
 [data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll.view,
 [data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll.selected,
-[data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll.active,
+[data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll.active:not(.empty),
 [data-chat-interface-theme] #chat-log ~ * button.bright.view,
 [data-chat-interface-theme] #chat-log ~ * button.bright.selected,
-[data-chat-interface-theme] #chat-log ~ * button.bright.active,
+[data-chat-interface-theme] #chat-log ~ * button.bright.active:not(.empty),
 [data-theme] .item-controls button[data-action=apply].view,
 [data-theme] .item-controls button[data-action=apply].selected,
-[data-theme] .item-controls button[data-action=apply].active,
+[data-theme] .item-controls button[data-action=apply].active:not(.empty),
 [data-theme] button[data-action=accept].view,
 [data-theme] button[data-action=accept].selected,
-[data-theme] button[data-action=accept].active,
+[data-theme] button[data-action=accept].active:not(.empty),
 [data-theme] form button[type=submit].view,
 [data-theme] form button[type=submit].selected,
-[data-theme] form button[type=submit].active,
+[data-theme] form button[type=submit].active:not(.empty),
 [data-theme] form button[data-action=save].view,
 [data-theme] form button[data-action=save].selected,
-[data-theme] form button[data-action=save].active,
+[data-theme] form button[data-action=save].active:not(.empty),
 [data-theme] form.check-modifiers-content button.roll.view,
 [data-theme] form.check-modifiers-content button.roll.selected,
-[data-theme] form.check-modifiers-content button.roll.active,
+[data-theme] form.check-modifiers-content button.roll.active:not(.empty),
 [data-theme] button.bright.view,
 [data-theme] button.bright.selected,
-[data-theme] button.bright.active {
+[data-theme] button.bright.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].empty.active,
+[data-chat-interface-theme] #chat-log ~ * button[data-action=accept].empty.active,
+[data-chat-interface-theme] #chat-log ~ * form button[type=submit].empty.active,
+[data-chat-interface-theme] #chat-log ~ * form button[data-action=save].empty.active,
+[data-chat-interface-theme] #chat-log ~ * form.check-modifiers-content button.roll.empty.active,
+[data-chat-interface-theme] #chat-log ~ * button.bright.empty.active,
+[data-theme] .item-controls button[data-action=apply].empty.active,
+[data-theme] button[data-action=accept].empty.active,
+[data-theme] form button[type=submit].empty.active,
+[data-theme] form button[data-action=save].empty.active,
+[data-theme] form.check-modifiers-content button.roll.empty.active,
+[data-theme] button.bright.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].empty, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply].disabled, [data-chat-interface-theme] #chat-log ~ * .item-controls button[data-action=apply]:disabled,
 [data-chat-interface-theme] #chat-log ~ * button[data-action=accept].empty,
@@ -4814,27 +5003,32 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row:not(.disabled, :disabled):hover,
-[data-theme][data-dorako-ui-scope=unlimited] a.button:not(.disabled, :disabled):hover,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row:not(.disabled, :disabled, .empty):hover,
+[data-theme][data-dorako-ui-scope=unlimited] a.button:not(.disabled, :disabled, .empty):hover,
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row.view, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.selected, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.active,
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row.view, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.selected, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.active:not(.empty),
 [data-theme][data-dorako-ui-scope=unlimited] a.button.view,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.selected,
-[data-theme][data-dorako-ui-scope=unlimited] a.button.active,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.active:not(.empty),
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).view,
 [data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).selected,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).active {
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty.active,
+[data-theme][data-dorako-ui-scope=unlimited] a.button.empty.active,
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.disabled, [data-theme][data-dorako-ui-scope=unlimited] a.list-row:disabled,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.empty,
@@ -4866,19 +5060,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.view, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.selected, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.active {
+[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.view, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.selected, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.empty, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.disabled, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5036,19 +5233,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.view, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.selected, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.active {
+[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.view, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.selected, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.empty, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.disabled, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5132,6 +5332,11 @@ html .xdy-pf2e-workbench-rarity-unique {
   --color-header-background: transparent;
   --color-light-1: var(--text-color-1);
   color: var(--text-color-1);
+}
+[data-theme].application .window-header .header-control, [data-theme].window-app .window-header .header-control {
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 [data-theme].application .window-content, [data-theme].window-app .window-content {
   background: unset !important;
@@ -5235,19 +5440,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   --button-hover-border-color: var(--button-toggle-hover-border-color);
   border-radius: 3px;
 }
-[data-theme].filepicker .favorites .paths .path:not(.disabled, :disabled):hover {
+[data-theme].filepicker .favorites .paths .path:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].filepicker .favorites .paths .path.view, [data-theme].filepicker .favorites .paths .path.selected, [data-theme].filepicker .favorites .paths .path.active {
+[data-theme].filepicker .favorites .paths .path.view, [data-theme].filepicker .favorites .paths .path.selected, [data-theme].filepicker .favorites .paths .path.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].filepicker .favorites .paths .path.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].filepicker .favorites .paths .path.empty, [data-theme].filepicker .favorites .paths .path.disabled, [data-theme].filepicker .favorites .paths .path:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5286,19 +5494,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   padding: 4px 8px;
   margin: 1px 4px;
 }
-[data-theme].package-configuration aside.sidebar nav.tabs .category-tab:not(.disabled, :disabled):hover {
+[data-theme].package-configuration aside.sidebar nav.tabs .category-tab:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].package-configuration aside.sidebar nav.tabs .category-tab.view, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.selected, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.active {
+[data-theme].package-configuration aside.sidebar nav.tabs .category-tab.view, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.selected, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].package-configuration aside.sidebar nav.tabs .category-tab.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.empty, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab.disabled, [data-theme].package-configuration aside.sidebar nav.tabs .category-tab:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5363,23 +5574,27 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .directory .action-buttons button:not(.disabled, :disabled):hover,
-[data-theme] .settings-sidebar button:not(.disabled, :disabled):hover {
+[data-theme] .directory .action-buttons button:not(.disabled, :disabled, .empty):hover,
+[data-theme] .settings-sidebar button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .directory .action-buttons button.view, [data-theme] .directory .action-buttons button.selected, [data-theme] .directory .action-buttons button.active,
+[data-theme] .directory .action-buttons button.view, [data-theme] .directory .action-buttons button.selected, [data-theme] .directory .action-buttons button.active:not(.empty),
 [data-theme] .settings-sidebar button.view,
 [data-theme] .settings-sidebar button.selected,
-[data-theme] .settings-sidebar button.active {
+[data-theme] .settings-sidebar button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .directory .action-buttons button.empty.active,
+[data-theme] .settings-sidebar button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .directory .action-buttons button.empty, [data-theme] .directory .action-buttons button.disabled, [data-theme] .directory .action-buttons button:disabled,
 [data-theme] .settings-sidebar button.empty,
@@ -5405,19 +5620,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] nav.sheet-tabs > [data-tab]:not(.disabled, :disabled):hover {
+[data-theme] nav.sheet-tabs > [data-tab]:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] nav.sheet-tabs > [data-tab].view, [data-theme] nav.sheet-tabs > [data-tab].selected, [data-theme] nav.sheet-tabs > [data-tab].active {
+[data-theme] nav.sheet-tabs > [data-tab].view, [data-theme] nav.sheet-tabs > [data-tab].selected, [data-theme] nav.sheet-tabs > [data-tab].active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] nav.sheet-tabs > [data-tab].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] nav.sheet-tabs > [data-tab].empty, [data-theme] nav.sheet-tabs > [data-tab].disabled, [data-theme] nav.sheet-tabs > [data-tab]:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5441,19 +5659,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-shadow: var(--app-text-shadow);
   padding: 5px 10px;
 }
-[data-theme].window-app .tabs .item:not(.disabled, :disabled):hover {
+[data-theme].window-app .tabs .item:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].window-app .tabs .item.view, [data-theme].window-app .tabs .item.selected, [data-theme].window-app .tabs .item.active {
+[data-theme].window-app .tabs .item.view, [data-theme].window-app .tabs .item.selected, [data-theme].window-app .tabs .item.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].window-app .tabs .item.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].window-app .tabs .item.empty, [data-theme].window-app .tabs .item.disabled, [data-theme].window-app .tabs .item:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5542,19 +5763,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: 3px;
   padding: 2px 5px;
 }
-[data-theme] .editor-edit:not(.disabled, :disabled):hover {
+[data-theme] .editor-edit:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .editor-edit.view, [data-theme] .editor-edit.selected, [data-theme] .editor-edit.active {
+[data-theme] .editor-edit.view, [data-theme] .editor-edit.selected, [data-theme] .editor-edit.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .editor-edit.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .editor-edit.empty, [data-theme] .editor-edit.disabled, [data-theme] .editor-edit:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5758,19 +5982,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-shadow: var(--app-text-shadow);
   padding: 4px 8px;
 }
-[data-theme]#generate-check-prompt nav h4 a:not(.disabled, :disabled):hover {
+[data-theme]#generate-check-prompt nav h4 a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#generate-check-prompt nav h4 a.view, [data-theme]#generate-check-prompt nav h4 a.selected, [data-theme]#generate-check-prompt nav h4 a.active {
+[data-theme]#generate-check-prompt nav h4 a.view, [data-theme]#generate-check-prompt nav h4 a.selected, [data-theme]#generate-check-prompt nav h4 a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#generate-check-prompt nav h4 a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#generate-check-prompt nav h4 a.empty, [data-theme]#generate-check-prompt nav h4 a.disabled, [data-theme]#generate-check-prompt nav h4 a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5866,19 +6093,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   background-color: var(--color-primary-4);
   border-color: var(--color-primary-3);
 }
-[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:not(.disabled, :disabled):hover {
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.view, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.selected, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active {
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.view, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.selected, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.empty, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes.disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.add-gm-notes:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -5922,19 +6152,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   height: 28px;
   width: 28px;
 }
-[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:not(.disabled, :disabled):hover {
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.view, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.selected, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active {
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.view, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.selected, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.empty, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit.disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.description .editor a.editor-edit:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6149,19 +6382,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].pf2e.item.sheet form > nav .sheet-tabs > a:not(.disabled, :disabled):hover {
+[data-theme].pf2e.item.sheet form > nav .sheet-tabs > a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.view, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.selected, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.active {
+[data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.view, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.selected, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.empty, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a.disabled, [data-theme].pf2e.item.sheet form > nav .sheet-tabs > a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6188,19 +6424,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-shadow: var(--app-text-shadow);
   padding: 5px 10px;
 }
-[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a:not(.disabled, :disabled):hover {
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.view, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.selected, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.active {
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.view, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.selected, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.empty, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a.disabled, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form nav.rule-tabs h4 > a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6319,23 +6558,27 @@ nav#controls[data-theme] ol.control-tools > li {
   width: var(--control-size);
   font-size: calc(var(--control-size) - 12px);
 }
-nav#controls[data-theme] ol.control-tools li.control-tool:not(.disabled, :disabled):hover,
-nav#controls[data-theme] ol.control-tools > li:not(.disabled, :disabled):hover {
+nav#controls[data-theme] ol.control-tools li.control-tool:not(.disabled, :disabled, .empty):hover,
+nav#controls[data-theme] ol.control-tools > li:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-nav#controls[data-theme] ol.control-tools li.control-tool.view, nav#controls[data-theme] ol.control-tools li.control-tool.selected, nav#controls[data-theme] ol.control-tools li.control-tool.active,
+nav#controls[data-theme] ol.control-tools li.control-tool.view, nav#controls[data-theme] ol.control-tools li.control-tool.selected, nav#controls[data-theme] ol.control-tools li.control-tool.active:not(.empty),
 nav#controls[data-theme] ol.control-tools > li.view,
 nav#controls[data-theme] ol.control-tools > li.selected,
-nav#controls[data-theme] ol.control-tools > li.active {
+nav#controls[data-theme] ol.control-tools > li.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+nav#controls[data-theme] ol.control-tools li.control-tool.empty.active,
+nav#controls[data-theme] ol.control-tools > li.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 nav#controls[data-theme] ol.control-tools li.control-tool.empty, nav#controls[data-theme] ol.control-tools li.control-tool.disabled, nav#controls[data-theme] ol.control-tools li.control-tool:disabled,
 nav#controls[data-theme] ol.control-tools > li.empty,
@@ -6376,23 +6619,27 @@ nav#controls[data-theme] ol.control-tools > li.toggle {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-nav#controls[data-theme] ol.control-tools li.control-tool.toggle:not(.disabled, :disabled):hover,
-nav#controls[data-theme] ol.control-tools > li.toggle:not(.disabled, :disabled):hover {
+nav#controls[data-theme] ol.control-tools li.control-tool.toggle:not(.disabled, :disabled, .empty):hover,
+nav#controls[data-theme] ol.control-tools > li.toggle:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-nav#controls[data-theme] ol.control-tools li.control-tool.toggle.view, nav#controls[data-theme] ol.control-tools li.control-tool.toggle.selected, nav#controls[data-theme] ol.control-tools li.control-tool.toggle.active,
+nav#controls[data-theme] ol.control-tools li.control-tool.toggle.view, nav#controls[data-theme] ol.control-tools li.control-tool.toggle.selected, nav#controls[data-theme] ol.control-tools li.control-tool.toggle.active:not(.empty),
 nav#controls[data-theme] ol.control-tools > li.toggle.view,
 nav#controls[data-theme] ol.control-tools > li.toggle.selected,
-nav#controls[data-theme] ol.control-tools > li.toggle.active {
+nav#controls[data-theme] ol.control-tools > li.toggle.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+nav#controls[data-theme] ol.control-tools li.control-tool.toggle.empty.active,
+nav#controls[data-theme] ol.control-tools > li.toggle.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 nav#controls[data-theme] ol.control-tools li.control-tool.toggle.empty, nav#controls[data-theme] ol.control-tools li.control-tool.toggle.disabled, nav#controls[data-theme] ol.control-tools li.control-tool.toggle:disabled,
 nav#controls[data-theme] ol.control-tools > li.toggle.empty,
@@ -6534,19 +6781,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--button-toggle-hover-border-color);
   line-height: var(--control-size);
 }
-#navigation[data-theme] ol#scene-list li.nav-item:not(.disabled, :disabled):hover {
+#navigation[data-theme] ol#scene-list li.nav-item:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-#navigation[data-theme] ol#scene-list li.nav-item.view, #navigation[data-theme] ol#scene-list li.nav-item.selected, #navigation[data-theme] ol#scene-list li.nav-item.active {
+#navigation[data-theme] ol#scene-list li.nav-item.view, #navigation[data-theme] ol#scene-list li.nav-item.selected, #navigation[data-theme] ol#scene-list li.nav-item.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+#navigation[data-theme] ol#scene-list li.nav-item.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 #navigation[data-theme] ol#scene-list li.nav-item.empty, #navigation[data-theme] ol#scene-list li.nav-item.disabled, #navigation[data-theme] ol#scene-list li.nav-item:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6733,19 +6983,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme] .control-icon:not(.disabled, :disabled):hover {
+[data-theme] .control-icon:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .control-icon.view, [data-theme] .control-icon.selected, [data-theme] .control-icon.active {
+[data-theme] .control-icon.view, [data-theme] .control-icon.selected, [data-theme] .control-icon.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .control-icon.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .control-icon.empty, [data-theme] .control-icon.disabled, [data-theme] .control-icon:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6780,19 +7033,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-theme] .control-icon[data-action=visibility]:not(.disabled, :disabled):hover, [data-theme] .control-icon[data-action=effects]:not(.disabled, :disabled):hover, [data-theme] .control-icon[data-action=combat]:not(.disabled, :disabled):hover, [data-theme] .control-icon[data-action=locked]:not(.disabled, :disabled):hover, [data-theme] .control-icon[data-action=target]:not(.disabled, :disabled):hover, [data-theme] .control-icon[data-action=active]:not(.disabled, :disabled):hover, [data-theme] .control-icon[data-action=mystify]:not(.disabled, :disabled):hover {
+[data-theme] .control-icon[data-action=visibility]:not(.disabled, :disabled, .empty):hover, [data-theme] .control-icon[data-action=effects]:not(.disabled, :disabled, .empty):hover, [data-theme] .control-icon[data-action=combat]:not(.disabled, :disabled, .empty):hover, [data-theme] .control-icon[data-action=locked]:not(.disabled, :disabled, .empty):hover, [data-theme] .control-icon[data-action=target]:not(.disabled, :disabled, .empty):hover, [data-theme] .control-icon[data-action=active]:not(.disabled, :disabled, .empty):hover, [data-theme] .control-icon[data-action=mystify]:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] .control-icon[data-action=visibility].view, [data-theme] .control-icon[data-action=visibility].selected, [data-theme] .control-icon[data-action=visibility].active, [data-theme] .control-icon[data-action=effects].view, [data-theme] .control-icon[data-action=effects].selected, [data-theme] .control-icon[data-action=effects].active, [data-theme] .control-icon[data-action=combat].view, [data-theme] .control-icon[data-action=combat].selected, [data-theme] .control-icon[data-action=combat].active, [data-theme] .control-icon[data-action=locked].view, [data-theme] .control-icon[data-action=locked].selected, [data-theme] .control-icon[data-action=locked].active, [data-theme] .control-icon[data-action=target].view, [data-theme] .control-icon[data-action=target].selected, [data-theme] .control-icon[data-action=target].active, [data-theme] .control-icon[data-action=active].view, [data-theme] .control-icon[data-action=active].selected, [data-theme] .control-icon[data-action=active].active, [data-theme] .control-icon[data-action=mystify].view, [data-theme] .control-icon[data-action=mystify].selected, [data-theme] .control-icon[data-action=mystify].active {
+[data-theme] .control-icon[data-action=visibility].view, [data-theme] .control-icon[data-action=visibility].selected, [data-theme] .control-icon[data-action=visibility].active:not(.empty), [data-theme] .control-icon[data-action=effects].view, [data-theme] .control-icon[data-action=effects].selected, [data-theme] .control-icon[data-action=effects].active:not(.empty), [data-theme] .control-icon[data-action=combat].view, [data-theme] .control-icon[data-action=combat].selected, [data-theme] .control-icon[data-action=combat].active:not(.empty), [data-theme] .control-icon[data-action=locked].view, [data-theme] .control-icon[data-action=locked].selected, [data-theme] .control-icon[data-action=locked].active:not(.empty), [data-theme] .control-icon[data-action=target].view, [data-theme] .control-icon[data-action=target].selected, [data-theme] .control-icon[data-action=target].active:not(.empty), [data-theme] .control-icon[data-action=active].view, [data-theme] .control-icon[data-action=active].selected, [data-theme] .control-icon[data-action=active].active:not(.empty), [data-theme] .control-icon[data-action=mystify].view, [data-theme] .control-icon[data-action=mystify].selected, [data-theme] .control-icon[data-action=mystify].active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] .control-icon[data-action=visibility].empty.active, [data-theme] .control-icon[data-action=effects].empty.active, [data-theme] .control-icon[data-action=combat].empty.active, [data-theme] .control-icon[data-action=locked].empty.active, [data-theme] .control-icon[data-action=target].empty.active, [data-theme] .control-icon[data-action=active].empty.active, [data-theme] .control-icon[data-action=mystify].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] .control-icon[data-action=visibility].empty, [data-theme] .control-icon[data-action=visibility].disabled, [data-theme] .control-icon[data-action=visibility]:disabled, [data-theme] .control-icon[data-action=effects].empty, [data-theme] .control-icon[data-action=effects].disabled, [data-theme] .control-icon[data-action=effects]:disabled, [data-theme] .control-icon[data-action=combat].empty, [data-theme] .control-icon[data-action=combat].disabled, [data-theme] .control-icon[data-action=combat]:disabled, [data-theme] .control-icon[data-action=locked].empty, [data-theme] .control-icon[data-action=locked].disabled, [data-theme] .control-icon[data-action=locked]:disabled, [data-theme] .control-icon[data-action=target].empty, [data-theme] .control-icon[data-action=target].disabled, [data-theme] .control-icon[data-action=target]:disabled, [data-theme] .control-icon[data-action=active].empty, [data-theme] .control-icon[data-action=active].disabled, [data-theme] .control-icon[data-action=active]:disabled, [data-theme] .control-icon[data-action=mystify].empty, [data-theme] .control-icon[data-action=mystify].disabled, [data-theme] .control-icon[data-action=mystify]:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6854,19 +7110,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-chat-interface-theme] .tab:not([data-tab=chat]) button:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] .tab:not([data-tab=chat]) button.view, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.selected, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.active {
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button.view, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.selected, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] .tab:not([data-tab=chat]) button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] .tab:not([data-tab=chat]) button.empty, [data-chat-interface-theme] .tab:not([data-tab=chat]) button.disabled, [data-chat-interface-theme] .tab:not([data-tab=chat]) button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -6939,19 +7198,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-chat-interface-theme] #settings ul#game-details li.system-buttons button:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] #settings ul#game-details li.system-buttons button.view, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.selected, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.active {
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button.view, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.selected, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] #settings ul#game-details li.system-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.empty, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button.disabled, [data-chat-interface-theme] #settings ul#game-details li.system-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7032,19 +7294,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-chat-interface-theme] #chat-log ~ * button:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #chat-log ~ * button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] #chat-log ~ * button.view, [data-chat-interface-theme] #chat-log ~ * button.selected, [data-chat-interface-theme] #chat-log ~ * button.active {
+[data-chat-interface-theme] #chat-log ~ * button.view, [data-chat-interface-theme] #chat-log ~ * button.selected, [data-chat-interface-theme] #chat-log ~ * button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] #chat-log ~ * button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] #chat-log ~ * button.empty, [data-chat-interface-theme] #chat-log ~ * button.disabled, [data-chat-interface-theme] #chat-log ~ * button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7073,19 +7338,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-background: var(--button-toggle-hover-background);
   --button-hover-border-color: var(--button-toggle-hover-border-color);
 }
-[data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.view, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.selected, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.active {
+[data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.view, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.selected, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.empty, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button.disabled, [data-chat-interface-theme] #chat-log ~ * #dorako-rt-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7160,23 +7428,27 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: var(--app-text-shadow);
   --dui-button-focus-outline-color: transparent;
 }
-[data-chat-interface-theme] #sidebar-tabs > .item.active:not(.disabled, :disabled):hover,
-#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active:not(.disabled, :disabled):hover {
+[data-chat-interface-theme] #sidebar-tabs > .item.active:not(.disabled, :disabled, .empty):hover,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-chat-interface-theme] #sidebar-tabs > .item.active.view, [data-chat-interface-theme] #sidebar-tabs > .item.active.selected, [data-chat-interface-theme] #sidebar-tabs > .item.active.active,
+[data-chat-interface-theme] #sidebar-tabs > .item.active.view, [data-chat-interface-theme] #sidebar-tabs > .item.active.selected, [data-chat-interface-theme] #sidebar-tabs > .item.active.active:not(.empty),
 #sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.view,
 #sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.selected,
-#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.active {
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-chat-interface-theme] #sidebar-tabs > .item.active.empty.active,
+#sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-chat-interface-theme] #sidebar-tabs > .item.active.empty, [data-chat-interface-theme] #sidebar-tabs > .item.active.disabled, [data-chat-interface-theme] #sidebar-tabs > .item.active:disabled,
 #sidebar[data-chat-interface-theme].collapsed #sidebar-tabs > .item.active.empty,
@@ -7203,19 +7475,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].filepicker .display-modes a:not(.disabled, :disabled):hover {
+[data-theme].filepicker .display-modes a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].filepicker .display-modes a.view, [data-theme].filepicker .display-modes a.selected, [data-theme].filepicker .display-modes a.active {
+[data-theme].filepicker .display-modes a.view, [data-theme].filepicker .display-modes a.selected, [data-theme].filepicker .display-modes a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].filepicker .display-modes a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].filepicker .display-modes a.empty, [data-theme].filepicker .display-modes a.disabled, [data-theme].filepicker .display-modes a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7239,19 +7514,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: var(--app-text-shadow);
   --dui-button-background: #7331ff;
 }
-[data-theme].filepicker .private button.privacy:not(.disabled, :disabled):hover {
+[data-theme].filepicker .private button.privacy:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].filepicker .private button.privacy.view, [data-theme].filepicker .private button.privacy.selected, [data-theme].filepicker .private button.privacy.active {
+[data-theme].filepicker .private button.privacy.view, [data-theme].filepicker .private button.privacy.selected, [data-theme].filepicker .private button.privacy.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].filepicker .private button.privacy.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].filepicker .private button.privacy.empty, [data-theme].filepicker .private button.privacy.disabled, [data-theme].filepicker .private button.privacy:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7468,19 +7746,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].sheet.familiar .skills-content .skills-list a:not(.disabled, :disabled):hover {
+[data-theme].sheet.familiar .skills-content .skills-list a:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].sheet.familiar .skills-content .skills-list a.view, [data-theme].sheet.familiar .skills-content .skills-list a.selected, [data-theme].sheet.familiar .skills-content .skills-list a.active {
+[data-theme].sheet.familiar .skills-content .skills-list a.view, [data-theme].sheet.familiar .skills-content .skills-list a.selected, [data-theme].sheet.familiar .skills-content .skills-list a.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].sheet.familiar .skills-content .skills-list a.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].sheet.familiar .skills-content .skills-list a.empty, [data-theme].sheet.familiar .skills-content .skills-list a.disabled, [data-theme].sheet.familiar .skills-content .skills-list a:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7560,19 +7841,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:not(.disabled, :disabled):hover {
+[data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.view, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.selected, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.active {
+[data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.view, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.selected, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.empty, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button.disabled, [data-theme].sheet.actor.loot form section.sidebar .gm-settings .loot-distribution button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -7954,19 +8238,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.view, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.selected, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.active {
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.view, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.selected, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.empty, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .footer button.spellcasting-create:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8042,19 +8329,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-[data-theme].actor.sheet .window-content .item-summary .button-group button:not(.disabled, :disabled):hover {
+[data-theme].actor.sheet .window-content .item-summary .button-group button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].actor.sheet .window-content .item-summary .button-group button.view, [data-theme].actor.sheet .window-content .item-summary .button-group button.selected, [data-theme].actor.sheet .window-content .item-summary .button-group button.active {
+[data-theme].actor.sheet .window-content .item-summary .button-group button.view, [data-theme].actor.sheet .window-content .item-summary .button-group button.selected, [data-theme].actor.sheet .window-content .item-summary .button-group button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].actor.sheet .window-content .item-summary .button-group button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].actor.sheet .window-content .item-summary .button-group button.empty, [data-theme].actor.sheet .window-content .item-summary .button-group button.disabled, [data-theme].actor.sheet .window-content .item-summary .button-group button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8090,19 +8380,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-[data-theme] button[data-action=perform-daily-crafting]:not(.disabled, :disabled):hover {
+[data-theme] button[data-action=perform-daily-crafting]:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme] button[data-action=perform-daily-crafting].view, [data-theme] button[data-action=perform-daily-crafting].selected, [data-theme] button[data-action=perform-daily-crafting].active {
+[data-theme] button[data-action=perform-daily-crafting].view, [data-theme] button[data-action=perform-daily-crafting].selected, [data-theme] button[data-action=perform-daily-crafting].active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme] button[data-action=perform-daily-crafting].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme] button[data-action=perform-daily-crafting].empty, [data-theme] button[data-action=perform-daily-crafting].disabled, [data-theme] button[data-action=perform-daily-crafting]:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8247,23 +8540,27 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: var(--app-text-shadow);
   font-family: var(--font-primary);
 }
-[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a:not(.disabled, :disabled):hover,
-[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a:not(.disabled, :disabled, .empty):hover,
+[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.view, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.selected, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.active,
+[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.view, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.selected, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.active:not(.empty),
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.view,
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.selected,
-[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.active {
+[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.empty.active,
+[data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.empty, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a.disabled, [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav a:disabled,
 [data-theme][data-dorako-ui-scope=limited].sheet.party nav.sub-nav .tab.empty,
@@ -8315,19 +8612,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.view, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.selected, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.active {
+[data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.view, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.selected, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.empty, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button.disabled, [data-theme][data-dorako-ui-scope=limited].sheet.party [data-tab=overview] .summary nav button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8375,19 +8675,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.view, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.selected, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.active {
+[data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.view, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.selected, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.empty, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button.disabled, [data-theme][data-dorako-ui-scope=limited].sheet.party header.content-header .buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8462,19 +8765,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button:not(.disabled, :disabled):hover {
+[data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.view, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.selected, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.active {
+[data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.view, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.selected, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.empty, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button.disabled, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .run-actions button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8493,8 +8799,6 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: var(--text-color-3);
   background: var(--window-app-background);
   border: var(--window-app-border-width) solid var(--window-app-border-color);
-  --color-text-light-6: var(--color-secondary-4);
-  --color-text-dark-secondary: var(--text-color-4);
 }
 .chat-message[data-theme] > .message-content .message-buttons button .cue i {
   --fa-primary-color: var(--text-color-1);
@@ -8572,19 +8876,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-.chat-message[data-theme] [data-action=delete-template]:not(.disabled, :disabled):hover {
+.chat-message[data-theme] [data-action=delete-template]:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.chat-message[data-theme] [data-action=delete-template].view, .chat-message[data-theme] [data-action=delete-template].selected, .chat-message[data-theme] [data-action=delete-template].active {
+.chat-message[data-theme] [data-action=delete-template].view, .chat-message[data-theme] [data-action=delete-template].selected, .chat-message[data-theme] [data-action=delete-template].active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+.chat-message[data-theme] [data-action=delete-template].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 .chat-message[data-theme] [data-action=delete-template].empty, .chat-message[data-theme] [data-action=delete-template].disabled, .chat-message[data-theme] [data-action=delete-template]:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -8633,23 +8940,27 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   align-items: center;
   justify-content: center;
 }
-.chat-message[data-theme] .dice-roll .dice-formula button:not(.disabled, :disabled):hover,
-.chat-message[data-theme] .dice-roll .dice-total button:not(.disabled, :disabled):hover {
+.chat-message[data-theme] .dice-roll .dice-formula button:not(.disabled, :disabled, .empty):hover,
+.chat-message[data-theme] .dice-roll .dice-total button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-.chat-message[data-theme] .dice-roll .dice-formula button.view, .chat-message[data-theme] .dice-roll .dice-formula button.selected, .chat-message[data-theme] .dice-roll .dice-formula button.active,
+.chat-message[data-theme] .dice-roll .dice-formula button.view, .chat-message[data-theme] .dice-roll .dice-formula button.selected, .chat-message[data-theme] .dice-roll .dice-formula button.active:not(.empty),
 .chat-message[data-theme] .dice-roll .dice-total button.view,
 .chat-message[data-theme] .dice-roll .dice-total button.selected,
-.chat-message[data-theme] .dice-roll .dice-total button.active {
+.chat-message[data-theme] .dice-roll .dice-total button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+.chat-message[data-theme] .dice-roll .dice-formula button.empty.active,
+.chat-message[data-theme] .dice-roll .dice-total button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 .chat-message[data-theme] .dice-roll .dice-formula button.empty, .chat-message[data-theme] .dice-roll .dice-formula button.disabled, .chat-message[data-theme] .dice-roll .dice-formula button:disabled,
 .chat-message[data-theme] .dice-roll .dice-total button.empty,
@@ -8913,19 +9224,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme].chat-message .message-content .damage-taken button.revert-damage:not(.disabled, :disabled):hover {
+[data-theme].chat-message .message-content .damage-taken button.revert-damage:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme].chat-message .message-content .damage-taken button.revert-damage.view, [data-theme].chat-message .message-content .damage-taken button.revert-damage.selected, [data-theme].chat-message .message-content .damage-taken button.revert-damage.active {
+[data-theme].chat-message .message-content .damage-taken button.revert-damage.view, [data-theme].chat-message .message-content .damage-taken button.revert-damage.selected, [data-theme].chat-message .message-content .damage-taken button.revert-damage.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme].chat-message .message-content .damage-taken button.revert-damage.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme].chat-message .message-content .damage-taken button.revert-damage.empty, [data-theme].chat-message .message-content .damage-taken button.revert-damage.disabled, [data-theme].chat-message .message-content .damage-taken button.revert-damage:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -9328,19 +9642,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --button-hover-border-color: var(--accent-color);
   --dui-button-hover-text-color: var(--accent-text-color);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.active {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) button.daily-crafting:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -9380,23 +9697,27 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: var(--app-text-shadow);
   font-family: var(--font-primary);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a:not(.disabled, :disabled):hover,
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a:not(.disabled, :disabled, .empty):hover,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.active,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.active:not(.empty),
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.view,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.selected,
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.active {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.empty.active,
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav a:disabled,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).sheet.actor .crb-style nav.sub-nav .tab.empty,
@@ -9625,19 +9946,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:not(.disabled, :disabled):hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:not(.disabled, :disabled):hover {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:not(.disabled, :disabled, .empty):hover, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active {
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active:not(.empty), [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.view, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.selected, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.empty.active, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.empty, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.actions button.activate:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -9780,19 +10104,22 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   padding: 5px;
   margin-bottom: 5px;
 }
-[data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button:not(.disabled, :disabled):hover, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button:not(.disabled, :disabled):hover {
+[data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button:not(.disabled, :disabled, .empty):hover, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.view, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.selected, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.active, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.view, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.selected, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.active {
+[data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.view, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.selected, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.active:not(.empty), [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.view, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.selected, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
   color: var(--dui-button-hover-text-color);
   text-decoration: none !important;
   font-weight: unset !important;
+}
+[data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.empty.active, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.empty, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button.disabled, [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button:disabled, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.empty, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button.disabled, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
@@ -10271,6 +10598,14 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=crb][data-color-scheme=light].chat-message .message-content .dice-roll .part-total {
   --app-border-color: var(--color-text-light-6);
+}
+[data-theme^=crb][data-color-scheme=light]#rolodex .window-header {
+  color: black;
+  text-shadow: none;
+}
+[data-theme^=crb][data-color-scheme=light]#rolodex .sheet-navigation-controls {
+  margin-top: 2px;
+  --app-background: var(--secondary);
 }
 [data-theme^=crb][data-color-scheme=light]:not([data-dorako-ui-scope=limited], .journal-sheet).window-app .window-header {
   color: black;
@@ -11112,6 +11447,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   font-size: var(--font-size-13);
   position: relative;
 }
+:is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2] .message-header {
+  color: var(--text-color-1);
+}
 
 :is(.chat-popout, #chat-log) .message[data-theme^=dnd5e2]::before {
   content: "";
@@ -11272,30 +11610,34 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 
 [data-theme^=dnd5e2][data-color-scheme=dark] {
-  --color-text-dark-primary: #efe7d4;
-  --color-text-dark-secondary: var(--dnd5e-color-beige);
+  --color-text-dark-primary: #cfd2da;
+  --color-text-dark-secondary: var(--color-text-light-6);
   --text-dark: var(--color-text-dark-primary);
   --secondary: var(--dnd5e-color-blue);
   --primary: var(--dnd5e-color-maroon);
+  --fieldset-border-color: #434857;
+  --fieldset-background-color: transparent;
+  --fieldset-legend-color: var(--dnd5e-color-gold);
   --box-shadow: 0 0 3px var(--dnd5e-shadow-45);
-  --app-background: var(--dnd5e-color-dark);
-  --input-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
-  --dui-input-background: var(--dnd5e-color-dark);
-  --dui-input-border-color: var(--dnd5e-color-gold);
+  --app-background: #262830;
+  --app-border-color: #999;
+  --input-box-shadow: 0 0 2px var(--dnd5e-shadow-45);
+  --dui-input-background: #262830;
+  --dui-input-border-color: #262830;
   --input-focus-text-color: var(--color-text-dark-primary);
   --dui-input-text-color: var(--color-text-dark-primary);
-  --dui-input-placeholder-color: var(--color-text-dark-5);
+  --dui-input-placeholder-color: var(--color-text-light-6);
   --input-text-selection-color: var(--color-secondary-3);
   --dui-input-focus-outline-color: var(--dnd5e-color-gold);
   --input-disabled-background: color-mix(in srgb, var(--dnd5e-color-card) 50%, transparent);
   --input-disabled-border-color: color-mix(in srgb, var(--color-border-dark-5) 50%, transparent);
-  --dui-button-background: var(--dnd5e-color-dark);
-  --dui-button-border-color: var(--dnd5e-color-gold);
-  --dui-button-text-color: var(--dnd5e-color-gold);
-  --dui-button-focus-outline-color: var(--dnd5e-color-gold);
-  --button-hover-background: var(--dnd5e-color-iron-gray);
-  --button-hover-border-color: var(--dnd5e-color-gold);
-  --dui-button-hover-text-color: var(--dnd5e-color-gold);
+  --dui-button-background: #262830;
+  --dui-button-border-color: #999;
+  --dui-button-text-color: #d0d2da;
+  --dui-button-focus-outline-color: #999;
+  --button-hover-background: #3a3c48;
+  --button-hover-border-color: #a8a8a8;
+  --dui-button-hover-text-color: #d0d2da;
   --button-disabled-background: var(--color-primary-5);
   --button-disabled-border-color: var(--color-primary-4);
   --accent-text-color: white;
@@ -11313,18 +11655,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=dnd5e2][data-color-scheme=dark].actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title, [data-theme^=dnd5e2][data-color-scheme=dark].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.feats li.feat-item .item-name .feat-slot-title {
   --accent-color: var(--dnd5e-color-card);
 }
-[data-theme^=dnd5e2][data-color-scheme=dark].app.window-app {
+[data-theme^=dnd5e2][data-color-scheme=dark].application, [data-theme^=dnd5e2][data-color-scheme=dark].app.window-app {
   background: var(--dnd5e-color-dark);
-}
-[data-theme^=dnd5e2][data-color-scheme=dark].app.window-app::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
-  border-radius: 6px;
-  pointer-events: none;
-  z-index: -1;
-  filter: invert(1) grayscale(1) opacity(0.5);
+  background: var(--dnd5e-color-dark) url(../../../ui/denim075.png);
 }
 
 :root {
@@ -12302,6 +12635,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   border-width: 0 0 2px;
   border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
   width: auto;
+}
+
+[data-theme^=bg3][data-dorako-ui-scope=limited]#rolodex {
+  --window-app-border-width: 2px;
+  --window-app-border-color: #7b542e;
+}
+[data-theme^=bg3][data-dorako-ui-scope=limited]#rolodex .sheet-navigation-controls {
+  --app-background: #7b542e;
+  --box-shadow: none;
 }
 
 /* ----------------------------------------- */

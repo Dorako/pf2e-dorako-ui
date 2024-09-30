@@ -58,7 +58,7 @@
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 
-  &:not(.disabled, :disabled):hover {
+  &:not(.disabled, :disabled, .empty):hover {
     background: var(--button-hover-background);
     color: var(--dui-button-hover-text-color);
     border: var(--app-border-width) solid var(--button-hover-border-color);
@@ -67,13 +67,18 @@
 
   &.view,
   &.selected,
-  &.active {
+  &.active:not(.empty) {
     background: var(--button-hover-background);
     outline: 1px solid var(--dui-button-focus-outline-color);
     border-color: var(--button-hover-border-color);
     color: var(--dui-button-hover-text-color);
     text-decoration: none !important;
     font-weight: unset !important;
+  }
+
+  // tabs on NPC sheets
+  &.empty.active {
+    outline: 1px solid var(--dui-button-focus-outline-color);
   }
 
   &.empty,

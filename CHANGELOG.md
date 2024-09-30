@@ -1,3 +1,10 @@
+# 3.6.0
+
+- (Module) Added support for the PF2e Sheet Link ("Rolodex") module.
+- (Refinement) Made the DND5e dark theme more closely resemble the dark theme provided by the 5e system.
+- (Fix) Fixed an issue where the DND5e dark theme would not apply correctly to App v2 applications.
+- (Fix) Fixed an issue where certain buttons on NPC sheets would look bad when active/hovered.
+
 # 3.5.19
 
 - (Fix) Updates to App v2 styling to unclobber some color variables.

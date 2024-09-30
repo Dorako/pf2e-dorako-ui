@@ -562,6 +562,12 @@
       --color-header-background: transparent; // App v2 header
       --color-light-1: var(--text-color-1); // App v2 header
       color: var(--text-color-1);
+
+      .header-control {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
     }
 
     .window-content {

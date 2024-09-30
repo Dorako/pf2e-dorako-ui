@@ -849,6 +849,15 @@
   }
 }
 
+[data-theme^="bg3"][data-dorako-ui-scope="limited"]#rolodex {
+  --window-app-border-width: 2px;
+  --window-app-border-color: #7b542e;
+  .sheet-navigation-controls {
+    --app-background: #7b542e;
+    --box-shadow: none;
+  }
+}
+
 /* ----------------------------------------- */
 /* ITT                                       */
 /* ----------------------------------------- */

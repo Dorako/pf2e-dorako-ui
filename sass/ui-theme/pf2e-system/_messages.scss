@@ -5,8 +5,8 @@
   @include dui-app;
   background: var(--window-app-background);
   border: var(--window-app-border-width) solid var(--window-app-border-color);
-  --color-text-light-6: var(--color-secondary-4);
-  --color-text-dark-secondary: var(--text-color-4); // 5 is too dark on colored message backgrounds
+  // --color-text-light-6: var(--color-secondary-4);
+  // --color-text-dark-secondary: var(--text-color-4); // 5 is too dark on colored message backgrounds
 
   > .message-content .message-buttons button .cue i {
     --fa-primary-color: var(--text-color-1);

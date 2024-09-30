@@ -211,6 +211,9 @@ Hooks.on("renderApplication", (app, html, data) => {
   app.element[0].dataset.theme = dorakoUiTheme;
   app.element[0].dataset.colorScheme = colorScheme;
   app.element[0].dataset.dorakoUiScope = "unlimited";
+  if (limitedScopeApplications.includes(app.constructor.name)) {
+    app.element[0].dataset.dorakoUiScope = "limited";
+  }
   console.debug(
     `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
   );

@@ -205,6 +205,17 @@
       }
     }
   }
+  &#rolodex {
+    .window-header {
+      color: black;
+      text-shadow: none;
+    }
+    .sheet-navigation-controls {
+      margin-top: 2px;
+      --app-background: var(--secondary);
+      // --text-color-3: black;
+    }
+  }
 
   &:not([data-dorako-ui-scope="limited"], .journal-sheet).window-app .window-header {
     color: black;
