@@ -1,3 +1,9 @@
+# 3.6.1
+
+- (Maintenance) Restored some styling to Hazard sheets.
+- (Maintenance) Restored some styling to form labels.
+- (Refinement) Improved contrast for Discord (Light) theme.
+
 # 3.6.0
 
 - (Module) Added support for the PF2e Sheet Link ("Rolodex") module.

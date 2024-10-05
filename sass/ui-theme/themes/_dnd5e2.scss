@@ -189,7 +189,7 @@
   --input-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
   --dui-input-background: var(--dnd5e-color-card);
   --dui-input-border-color: var(--dnd5e-color-gold);
-  --input-focus-text-color: var(--color-text-dark-primary);
+  --dui-input-focus-text-color: var(--color-text-dark-primary);
   --dui-input-text-color: var(--color-text-dark-primary);
   --dui-input-placeholder-color: var(--color-text-dark-5);
   --input-text-selection-color: var(--color-secondary-3);
@@ -514,7 +514,7 @@
   // --input-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
   // --dui-input-background: var(--dnd5e-color-dark);
   // --dui-input-border-color: var(--dnd5e-color-gold);
-  // --input-focus-text-color: var(--color-text-dark-primary);
+  // --dui-input-focus-text-color: var(--color-text-dark-primary);
   // --dui-input-text-color: var(--color-text-dark-primary);
   // --dui-input-placeholder-color: var(--color-text-dark-5);
   // --input-text-selection-color: var(--color-secondary-3);
@@ -525,7 +525,7 @@
 
   --dui-input-background: #262830;
   --dui-input-border-color: #262830;
-  --input-focus-text-color: var(--color-text-dark-primary);
+  --dui-input-focus-text-color: var(--color-text-dark-primary);
   --dui-input-text-color: var(--color-text-dark-primary);
   --dui-input-placeholder-color: var(--color-text-light-6);
   --input-text-selection-color: var(--color-secondary-3);

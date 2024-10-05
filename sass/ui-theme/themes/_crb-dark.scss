@@ -82,7 +82,7 @@
   --dui-input-background: var(--glass-bg);
   --input-box-shadow: var(--glassy);
   --dui-input-border-color: transparent;
-  --input-focus-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
   --dui-input-placeholder-color: var(--text-color-5);
   --input-disabled-background: black;
   --input-disabled-border-color: black;
@@ -105,7 +105,7 @@
     color: black;
     text-shadow: none;
     font-weight: 800;
-    --input-focus-text-color: black;
+    --dui-input-focus-text-color: black;
   }
   --text-dark: var(--text-color-2);
 }

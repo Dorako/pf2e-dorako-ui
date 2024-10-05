@@ -4,6 +4,7 @@
     --color-pf-primary-darker: var(--text-color-2);
     --color-pf-primary-light: var(--text-color-1);
   }
+
   &.sheet.hazard.window-app .window-header {
     background: #19302c;
     border-top-left-radius: var(--border-radius);
@@ -13,6 +14,21 @@
 
   &.sheet.hazard.window-app.minimized .window-header {
     border-radius: var(--border-radius);
+  }
+
+  &.sheet.hazard section.window-content .sidebar .sidebar-title {
+    --color-shadow-dark: var(--color-text-dark-secondary);
+  }
+
+  &.sheet.hazard section.window-content .section-container {
+    border: none;
+    .section-header {
+      background: unset;
+      border: none;
+    }
+    .section-body {
+      border: unset;
+    }
   }
 
   &.sheet.hazard .section-container.publication .section-body input[type="text"],

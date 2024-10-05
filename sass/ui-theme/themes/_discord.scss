@@ -75,7 +75,10 @@
   --dui-button-background: #c5c9cd;
   --dui-button-text-color: black;
   --fieldset-legend-color: black;
-  --text-color-1: var(--discord-text-5);
+  --dui-input-text-color: #5c5e66;
+  --dui-input-focus-text-color: #5c5e66;
+  --color-text-dark-secondary: #51535b;
+  --text-color-1: #313338;
   --text-color-2: var(--discord-text-4);
   --text-color-2: black;
   --text-color-3: var(--discord-text-3);
@@ -89,8 +92,8 @@
   &.sheet.pf2e.actor.npc.app {
     --section-background: var(--window-app-background);
     --section-header: var(--discord-accent-color);
-    --section-border-color: var(--discord-accent-text-color);
-    --section-outline-color: var(--discord-accent-color-dark);
+    --section-border-color: var(--discord-accent-color);
+    --section-outline-color: var(--discord-accent-color);
     --section-header-text-color: white;
     --tag-border-color: transparent;
     --tag-background-color: white;
@@ -135,6 +138,9 @@
 /* ----------------------------------------- */
 [data-theme^="discord"][data-dorako-ui-scope="limited"][data-color-scheme="dark"],
 [data-theme^="discord"][data-color-scheme="dark"] {
+  --dui-input-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
+
   &.sheet.actor.app {
     --section-background: var(--discord-background-4);
     --section-header: var(--discord-accent-color);
@@ -200,7 +206,7 @@
   --input-box-shadow: none;
   --dui-input-background: var(--discord-background-1);
   --dui-input-text-color: var(--discord-text-3);
-  --input-focus-text-color: var(--discord-text-2);
+  --dui-input-focus-text-color: var(--discord-text-2);
   --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
 }
 
@@ -385,6 +391,16 @@
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
   &.actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
     border-image: linear-gradient(90deg, transparent, var(--discord-green) 20%, transparent) 1;
+  }
+
+  &.dorako-ux.sheet.pf2e.actor.npc .sidebar .subsection,
+  &.dorako-ux.sheet.pf2e.actor.npc .section-container {
+    box-shadow: none;
+  }
+
+  &[data-dorako-ui-scope="limited"].sheet.pf2e.actor.npc.app {
+    --section-outline-color: var(--section-header);
+    --section-border-color: var(--section-header);
   }
 }
 

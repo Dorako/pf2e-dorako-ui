@@ -9,6 +9,7 @@
           gap: 5px;
           > a {
             @include dui-button;
+            font-family: var(--sans-serif);
             margin-bottom: 5px;
           }
         }

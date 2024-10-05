@@ -20,7 +20,7 @@
   --input-box-shadow: none;
   --dui-input-border-color: var(--color-text-light-5);
   --dui-input-text-color: var(--color-text-dark-input);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --dui-input-focus-text-color: var(--color-text-dark-input);
   --dui-input-background: rgba(255, 255, 255, 0.5);
   --dui-input-focus-outline-color: var(--primary-light);
   --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);
@@ -58,7 +58,7 @@
   --text-color-2: var(--color-text-light-highlight);
   --text-color-3: var(--color-text-light-heading);
   --dui-input-text-color: black;
-  --input-focus-text-color: black;
+  --dui-input-focus-text-color: black;
   --dui-input-focus-outline-color: var(--tertiary);
   --dui-button-background: var(--glass-bg-light);
   --app-background: var(--glass-bg);

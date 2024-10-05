@@ -420,7 +420,7 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme] .dice-tray input[type=text].disabled, [data-theme] .dice-tray input[type=text]:disabled {
@@ -770,7 +770,7 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme] .add-clock-form .dropdown-wrapper.disabled, [data-theme] .add-clock-form .dropdown-wrapper:disabled {
@@ -995,7 +995,7 @@ nav.damage-log-nav.tabs .item.active {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 .spellstrike-macro[data-theme][data-dorako-ui-scope=macro-dialog] .dialog-content p select.disabled, .spellstrike-macro[data-theme][data-dorako-ui-scope=macro-dialog] .dialog-content p select:disabled {
@@ -1533,7 +1533,7 @@ button#heartbeat-button {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme] .monks-tokenbar:not(.editstats) .sheet input[type=text].disabled, [data-theme] .monks-tokenbar:not(.editstats) .sheet input[type=text]:disabled,
@@ -1906,7 +1906,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].action-sheet .display-value.disabled, [data-theme].action-sheet .display-value:disabled {
@@ -2235,7 +2235,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#pf2e-token-hud .sidebar .sidebar-header input.disabled, [data-theme]#pf2e-token-hud .sidebar .sidebar-header input:disabled {
@@ -2276,7 +2276,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#pf2e-token-hud input.disabled, [data-theme]#pf2e-token-hud input:disabled, [data-theme]#pf2e-token-hud select.disabled, [data-theme]#pf2e-token-hud select:disabled, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select.disabled, [data-theme]#pf2e-token-hud .sidebar .sidebar-toggles .toggle select:disabled {
@@ -2314,7 +2314,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#pf2e-token-hud .sidebar .sidebar-content .details input.disabled, [data-theme]#pf2e-token-hud .sidebar .sidebar-content .details input:disabled {
@@ -2353,7 +2353,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#pf2e-token-hud .sidebar.extras .sidebar-content .row select.disabled, [data-theme]#pf2e-token-hud .sidebar.extras .sidebar-content .row select:disabled {
@@ -2487,7 +2487,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#pf2e-token-hud .inner .group .section input[type=number].disabled, [data-theme]#pf2e-token-hud .inner .group .section input[type=number]:disabled {
@@ -2552,7 +2552,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select.disabled, [data-theme]#pf2e-token-hud .sidebar.actions .sidebar-content .toggles .toggle select:disabled {
@@ -2721,6 +2721,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   text-decoration: none;
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
+  font-family: var(--sans-serif);
   margin-bottom: 5px;
 }
 [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a:not(.disabled, :disabled, .empty):hover {
@@ -3100,7 +3101,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-chat-interface-theme] .polyglot-lang-select span.select2-selection.disabled, [data-chat-interface-theme] .polyglot-lang-select span.select2-selection:disabled {
@@ -3178,7 +3179,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].quick-insert-app .search-editable-input.disabled, [data-theme].quick-insert-app .search-editable-input:disabled {
@@ -3706,7 +3707,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme]#token-action-hud-core-settings input.disabled, [data-theme]#token-action-hud-core-settings input:disabled {
@@ -4137,7 +4138,7 @@ wrapper.pf2e-td.name-top .pf2e-td.name {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme] .vauxs-archive input.disabled, [data-theme] .vauxs-archive input:disabled {
@@ -4920,9 +4921,6 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--text-color-2);
 }
 
-[data-theme][data-dorako-ui-scope=unlimited] {
-  color: var(--text-color-3);
-}
 [data-theme][data-dorako-ui-scope=unlimited] input[type=text],
 [data-theme][data-dorako-ui-scope=unlimited] input[type=number],
 [data-theme][data-dorako-ui-scope=unlimited] input[type=password],
@@ -5117,7 +5115,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=unlimited] input[type=text].disabled, [data-theme][data-dorako-ui-scope=unlimited] input[type=text]:disabled,
@@ -5188,7 +5186,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search].disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text].disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:disabled {
@@ -5279,15 +5277,14 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* App and Window-app                        */
 /* ----------------------------------------- */
-[data-theme].window-app,
-[data-theme].application {
-  --color-text-primary: var(--text-color-1);
+body.game [data-theme].window-app,
+body.game [data-theme].application {
   --color-header-background: var(--text-color-3);
   --color-fieldset-border: var(--text-color-2);
-  --color-form-label: var(--text-color-2);
-  --color-form-label-hover: var(--text-color-1);
-  --color-form-hint: var(--text-color-4);
-  --color-form-hint-hover: var(--text-color-2);
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-label-hover: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
+  --color-form-hint-hover: var(--color-text-dark-secondary);
 }
 
 [data-color-scheme=light] {
@@ -5394,7 +5391,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme] #chat-controls .roll-type-select.disabled, [data-theme] #chat-controls .roll-type-select:disabled {
@@ -5539,7 +5536,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme] .directory .directory-header .header-search input.disabled, [data-theme] .directory .directory-header .header-search input:disabled {
@@ -5727,7 +5724,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].journal-sheet .journal-header .title.disabled, [data-theme].journal-sheet .journal-header .title:disabled {
@@ -5910,6 +5907,9 @@ html .xdy-pf2e-workbench-rarity-unique {
   --visibility-gm-bg: #e8e8efaa;
   --visibility-owner-bg: #ddebe1aa;
 }
+[data-theme].pf2e.item.sheet form .sheet-body .tab.active label {
+  color: var(--color-form-label);
+}
 [data-theme] table.pf2-table {
   text-shadow: none;
 }
@@ -5932,7 +5932,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].pf2e.item.sheet input:not([type=range]).disabled, [data-theme].pf2e.item.sheet input:not([type=range]):disabled {
@@ -6196,7 +6196,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].pf2e.item.sheet form .sheet-content input[type=text].disabled, [data-theme].pf2e.item.sheet form .sheet-content input[type=text]:disabled, [data-theme].pf2e.item.sheet form .sheet-content input[type=number].disabled, [data-theme].pf2e.item.sheet form .sheet-content input[type=number]:disabled, [data-theme].pf2e.item.sheet form .sheet-content select.disabled, [data-theme].pf2e.item.sheet form .sheet-content select:disabled, [data-theme].pf2e.item.sheet form section.sheet-body input[type=text].disabled, [data-theme].pf2e.item.sheet form section.sheet-body input[type=text]:disabled, [data-theme].pf2e.item.sheet form section.sheet-body input[type=number].disabled, [data-theme].pf2e.item.sheet form section.sheet-body input[type=number]:disabled {
@@ -6231,7 +6231,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].pf2e.item.sheet .sheet-header input[type=text].disabled, [data-theme].pf2e.item.sheet .sheet-header input[type=text]:disabled, [data-theme].pf2e.item.sheet .sheet-header input[type=number].disabled, [data-theme].pf2e.item.sheet .sheet-header input[type=number]:disabled {
@@ -6266,7 +6266,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].pf2e.item.sheet form .sheet-body .tab.active.details select.disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.details select:disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select.disabled, [data-theme].pf2e.item.sheet form .sheet-body .tab.active.details fieldset.publication .data .license select:disabled, [data-theme].pf2e.item.sheet form .sheet-content section.sidebar select.disabled, [data-theme].pf2e.item.sheet form .sheet-content section.sidebar select:disabled {
@@ -6305,7 +6305,7 @@ html .xdy-pf2e-workbench-rarity-unique {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled).disabled, [data-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):hover:not(:disabled):disabled, [data-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus.disabled, [data-theme].pf2e.item.sheet form .sheet-content input:not([type=range], [type=checkbox]):focus:disabled, [data-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled).disabled, [data-theme].pf2e.item.sheet form .sheet-content select:hover:not(:disabled):disabled, [data-theme].pf2e.item.sheet form .sheet-content select:focus.disabled, [data-theme].pf2e.item.sheet form .sheet-content select:focus:disabled {
@@ -6496,14 +6496,56 @@ html .xdy-pf2e-workbench-rarity-unique {
   margin-top: 2px;
 }
 [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
-  --dui-button-border-color: var(--color-primary-2);
-  --dui-button-background: var(--color-primary-3);
-  --button-hover-border-color: var(--color-primary-4);
-  --button-hover-background: var(--color-primary-5);
-  --dui-button-text-color: var(--text-color-2);
-  --box-shadow: none;
-  border-color: var(--dui-button-border-color);
-  z-index: 1;
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --dui-button-background: var(--accent-color);
+  --dui-button-border-color: var(--accent-color-dark);
+  --dui-button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --dui-button-hover-text-color: var(--accent-text-color);
+  border-radius: 3px 0px 0px 3px;
+}
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment:not(.disabled, :disabled, .empty):hover, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment:not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment.view, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment.selected, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment.active:not(.empty), [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment.view, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment.selected, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment.active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment.empty.active, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment.empty, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment.disabled, [data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment:disabled, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment.empty, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment.disabled, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment:disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+[data-theme].pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment:disabled, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment:disabled {
+  --dui-button-background: color-mix(in srgb, var(--dui-button-background) 50%, transparent 50%);
+  --dui-button-border-color: color-mix(in srgb, var(--dui-button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
 }
 [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input input, [data-theme].pf2e.item.sheet form .item-rules .rule-form .attached-input tags {
   border-left: unset;
@@ -6844,7 +6886,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --dui-input-border-color: var(--color-level-success-border);
   --dui-input-focus-outline-color: var(--color-level-success-border);
   --dui-input-background: var(--color-level-success-bg);
-  --input-focus-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
   --dui-input-text-color: var(--text-color-2);
 }
 [data-theme] #token-hud .attribute.bar2 input {
@@ -6865,13 +6907,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   user-select: text;
   transition: outline-color 0.5s;
   text-shadow: 0px 1px 2px black;
-  --input-focus-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
 }
 [data-theme].placeable-hud input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme].placeable-hud input[type=text]:focus {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].placeable-hud input[type=text].disabled, [data-theme].placeable-hud input[type=text]:disabled {
@@ -7149,7 +7191,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-chat-interface-theme] .tab input:not([type=range]).disabled, [data-chat-interface-theme] .tab input:not([type=range]):disabled {
@@ -7387,7 +7429,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-chat-interface-theme] #chat-log ~ *#chat-form textarea.disabled, [data-chat-interface-theme] #chat-log ~ *#chat-form textarea:disabled {
@@ -7586,6 +7628,19 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].sheet.hazard.window-app.minimized .window-header {
   border-radius: var(--border-radius);
 }
+[data-theme].sheet.hazard section.window-content .sidebar .sidebar-title {
+  --color-shadow-dark: var(--color-text-dark-secondary);
+}
+[data-theme].sheet.hazard section.window-content .section-container {
+  border: none;
+}
+[data-theme].sheet.hazard section.window-content .section-container .section-header {
+  background: unset;
+  border: none;
+}
+[data-theme].sheet.hazard section.window-content .section-container .section-body {
+  border: unset;
+}
 [data-theme].sheet.hazard .section-container.publication .section-body input[type=text], [data-theme].sheet.hazard .container input[type=text], [data-theme].sheet.hazard .container input[type=number], [data-theme].sheet.hazard .container select {
   background: var(--dui-input-background);
   border: var(--app-border-width) solid;
@@ -7602,7 +7657,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].sheet.hazard .section-container.publication .section-body input[type=text].disabled, [data-theme].sheet.hazard .section-container.publication .section-body input[type=text]:disabled, [data-theme].sheet.hazard .container input[type=text].disabled, [data-theme].sheet.hazard .container input[type=text]:disabled, [data-theme].sheet.hazard .container input[type=number].disabled, [data-theme].sheet.hazard .container input[type=number]:disabled, [data-theme].sheet.hazard .container select.disabled, [data-theme].sheet.hazard .container select:disabled {
@@ -7712,7 +7767,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input.disabled, [data-theme].sheet.familiar .familiar-sheet-header .header-content .details-section .hp-section .value input:disabled, [data-theme].sheet.familiar header .header-content .charname input.disabled, [data-theme].sheet.familiar header .header-content .charname input:disabled, [data-theme].sheet.familiar select.disabled, [data-theme].sheet.familiar select:disabled, [data-theme].sheet.familiar .familiar-section .familiar-content input[type=text].disabled, [data-theme].sheet.familiar .familiar-section .familiar-content input[type=text]:disabled {
@@ -7807,7 +7862,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].sheet.actor.loot .sheet-header .tags .tag.disabled, [data-theme].sheet.actor.loot .sheet-header .tags .tag:disabled, [data-theme].sheet.actor.loot .sheet-header h1 > input.disabled, [data-theme].sheet.actor.loot .sheet-header h1 > input:disabled {
@@ -7900,7 +7955,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .spell-level-header input:disabled {
@@ -7936,7 +7991,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .attribute select:disabled {
@@ -7971,7 +8026,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li.spell-level-header input.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li.spell-level-header input:disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li .uses input.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li .uses input:disabled {
@@ -8006,7 +8061,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .actions-options .actions-option select.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .actions-options .actions-option select:disabled {
@@ -8041,7 +8096,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .attack-input:disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header .inline-field .dc-input:disabled {
@@ -8076,7 +8131,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .notes .notes-section.publication .notes-text .license select.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .notes .notes-section.publication .notes-text .license select:disabled {
@@ -8111,7 +8166,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .spellcasting-entry select.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .spellcasting-entry select:disabled {
@@ -8146,7 +8201,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text].disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .notes .notes-section.publication .notes-text input[type=text]:disabled {
@@ -8181,7 +8236,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .side-bar-section.initiative select.disabled, [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .side-bar-section.initiative select:disabled {
@@ -8202,6 +8257,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .entries-list .spellcasting-entry .header h4.name input {
   --dui-input-background: transparent;
+}
+[data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form ol.spell-list > li.header-row {
+  border: none;
 }
 [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .actions-list li.action:not(:last-child), [data-theme][data-dorako-ui-scope=limited].actor.npc.sheet form .sheet-body .attacks-list li.action:not(:last-child) {
   border-color: var(--section-border-color);
@@ -8424,7 +8482,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].pf2e.actor form input[type=text].disabled, [data-theme].pf2e.actor form input[type=text]:disabled, [data-theme].pf2e.actor form input[type=number].disabled, [data-theme].pf2e.actor form input[type=number]:disabled {
@@ -8731,7 +8789,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .time .time-options.disabled, [data-theme].sheet.party [data-tab=aftermath] .activities .member-activity .activity-entries .activity .time .time-options:disabled {
@@ -9545,7 +9603,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .subsection.details .abcd .detail h3.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .subsection.details .abcd .detail h3:disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .character-details .abcd .detail h3:disabled {
@@ -9587,7 +9645,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body input[type=number].disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body input[type=number]:disabled {
@@ -9754,7 +9812,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies ul.lores-list input:disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .lores-list .skill input:disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.proficiencies .combat-list .skill input:disabled {
@@ -9789,7 +9847,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography section input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.biography section input:disabled {
@@ -9838,7 +9896,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li.spell-level-header input:disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet .crb-style .sheet-body .sheet-content ol.spell-list > li .uses input:disabled {
@@ -9874,7 +9932,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .crb-style .sheet-body .sheet-content .tab.character .pc h3:disabled {
@@ -9912,7 +9970,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .crb-style .details-input.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .crb-style .details-input:disabled {
@@ -10027,7 +10085,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
-  color: var(--input-focus-text-color);
+  color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .attack-popout select.disabled, [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]) .attack-popout select:disabled {
@@ -10351,7 +10409,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --dui-input-background: var(--glass-bg);
   --input-box-shadow: var(--glassy);
   --dui-input-border-color: transparent;
-  --input-focus-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
   --dui-input-placeholder-color: var(--text-color-5);
   --input-disabled-background: black;
   --input-disabled-border-color: black;
@@ -10368,7 +10426,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: black;
   text-shadow: none;
   font-weight: 800;
-  --input-focus-text-color: black;
+  --dui-input-focus-text-color: black;
 }
 
 /* ----------------------------------------- */
@@ -10512,7 +10570,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=crb][data-color-scheme=light] input {
   --dui-input-border-color: var(--color-text-light-5);
   --dui-input-text-color: var(--color-text-dark-input);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --dui-input-focus-text-color: var(--color-text-dark-input);
   --dui-input-background: rgba(255, 255, 255, 0.5);
   --dui-input-focus-outline-color: var(--primary-light);
   --dui-input-placeholder-color: var(--color-text-dark-secondary);
@@ -10545,7 +10603,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=crb][data-color-scheme=light].sheet.hazard .section-container .section-header input, [data-theme^=crb][data-color-scheme=light].sheet.hazard .section-container.publication .section-body input[type=text] {
   --dui-input-text-color: var(--text-color-2);
-  --input-focus-text-color: var(--text-color-1);
+  --dui-input-focus-text-color: var(--text-color-1);
 }
 [data-theme^=crb][data-color-scheme=light][data-dorako-ui-scope=limited].actor.npc.sheet form .notes.active .notes-section > h4 {
   color: var(--color-pf-primary);
@@ -10553,7 +10611,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=crb][data-color-scheme=light] .directory .directory-header .header-search input {
   --dui-input-border-color: var(--color-text-light-5);
   --dui-input-text-color: var(--color-text-dark-input);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --dui-input-focus-text-color: var(--color-text-dark-input);
   --dui-input-background: rgba(255, 255, 255, 0.5);
   --dui-input-focus-outline-color: var(--primary-light);
 }
@@ -10712,7 +10770,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --dui-button-background: #c5c9cd;
   --dui-button-text-color: black;
   --fieldset-legend-color: black;
-  --text-color-1: var(--discord-text-5);
+  --dui-input-text-color: #5c5e66;
+  --dui-input-focus-text-color: #5c5e66;
+  --color-text-dark-secondary: #51535b;
+  --text-color-1: #313338;
   --text-color-2: var(--discord-text-4);
   --text-color-2: black;
   --text-color-3: var(--discord-text-3);
@@ -10726,8 +10787,8 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=discord][data-color-scheme=light].sheet.pf2e.actor.npc.app {
   --section-background: var(--window-app-background);
   --section-header: var(--discord-accent-color);
-  --section-border-color: var(--discord-accent-text-color);
-  --section-outline-color: var(--discord-accent-color-dark);
+  --section-border-color: var(--discord-accent-color);
+  --section-outline-color: var(--discord-accent-color);
   --section-header-text-color: white;
   --tag-border-color: transparent;
   --tag-background-color: white;
@@ -10769,6 +10830,11 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Dark color scheme                        */
 /* ----------------------------------------- */
+[data-theme^=discord][data-dorako-ui-scope=limited][data-color-scheme=dark],
+[data-theme^=discord][data-color-scheme=dark] {
+  --dui-input-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
+}
 [data-theme^=discord][data-dorako-ui-scope=limited][data-color-scheme=dark].sheet.actor.app,
 [data-theme^=discord][data-color-scheme=dark].sheet.actor.app {
   --section-background: var(--discord-background-4);
@@ -10814,7 +10880,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: none;
   --dui-input-background: var(--discord-background-1);
   --dui-input-text-color: var(--discord-text-3);
-  --input-focus-text-color: var(--discord-text-2);
+  --dui-input-focus-text-color: var(--discord-text-2);
   --box-shadow: 0px 0px 10px black, 0px 0px 5px black;
 }
 
@@ -10964,6 +11030,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme^=discord].actor.sheet.character .crb-style .sheet-body .sheet-content .tab.effects .effects-list .item, [data-theme^=discord].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-theme^=discord].actor.sheet .crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
   border-image: linear-gradient(90deg, transparent, var(--discord-green) 20%, transparent) 1;
+}
+[data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .sidebar .subsection, [data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .section-container {
+  box-shadow: none;
+}
+[data-theme^=discord][data-dorako-ui-scope=limited].sheet.pf2e.actor.npc.app {
+  --section-outline-color: var(--section-header);
+  --section-border-color: var(--section-header);
 }
 
 /* ----------------------------------------- */
@@ -11337,7 +11410,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
   --dui-input-background: var(--dnd5e-color-card);
   --dui-input-border-color: var(--dnd5e-color-gold);
-  --input-focus-text-color: var(--color-text-dark-primary);
+  --dui-input-focus-text-color: var(--color-text-dark-primary);
   --dui-input-text-color: var(--color-text-dark-primary);
   --dui-input-placeholder-color: var(--color-text-dark-5);
   --input-text-selection-color: var(--color-secondary-3);
@@ -11624,7 +11697,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: 0 0 2px var(--dnd5e-shadow-45);
   --dui-input-background: #262830;
   --dui-input-border-color: #262830;
-  --input-focus-text-color: var(--color-text-dark-primary);
+  --dui-input-focus-text-color: var(--color-text-dark-primary);
   --dui-input-text-color: var(--color-text-dark-primary);
   --dui-input-placeholder-color: var(--color-text-light-6);
   --input-text-selection-color: var(--color-secondary-3);
@@ -12921,7 +12994,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: none;
   --dui-input-border-color: var(--color-text-light-5);
   --dui-input-text-color: var(--color-text-dark-input);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --dui-input-focus-text-color: var(--color-text-dark-input);
   --dui-input-background: rgba(255, 255, 255, 0.5);
   --dui-input-focus-outline-color: var(--primary-light);
   --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);
@@ -12955,7 +13028,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --text-color-2: var(--color-text-light-highlight);
   --text-color-3: var(--color-text-light-heading);
   --dui-input-text-color: black;
-  --input-focus-text-color: black;
+  --dui-input-focus-text-color: black;
   --dui-input-focus-outline-color: var(--tertiary);
   --dui-button-background: var(--glass-bg-light);
   --app-background: var(--glass-bg);
@@ -13279,7 +13352,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: none;
   --dui-input-background: var(--color-secondary-4);
   --dui-input-border-color: var(--color-secondary-3);
-  --input-focus-text-color: var(--text-color-2);
+  --dui-input-focus-text-color: var(--text-color-2);
   --dui-input-text-color: var(--text-color-3);
   --dui-input-placeholder-color: var(--text-color-4);
   --input-text-selection-color: var(--color-secondary-3);
@@ -13452,7 +13525,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: none;
   --dui-input-border-color: var(--dui-button-border-color);
   --dui-input-text-color: black;
-  --input-focus-text-color: black;
+  --dui-input-focus-text-color: black;
   --dui-input-background: rgba(255, 255, 255, 0.5);
   --dui-input-focus-outline-color: var(--primary-light);
   --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);
@@ -13624,7 +13697,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --input-box-shadow: none;
   --dui-input-border-color: var(--color-text-light-5);
   --dui-input-text-color: var(--color-text-dark-input);
-  --input-focus-text-color: var(--color-text-dark-input);
+  --dui-input-focus-text-color: var(--color-text-dark-input);
   --dui-input-background: rgba(255, 255, 255, 0.5);
   --dui-input-focus-outline-color: var(--primary-light);
   --dui-input-placeholder-color: rgba(0, 0, 0, 0.5);

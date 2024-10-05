@@ -340,7 +340,7 @@
 }
 
 [data-theme][data-dorako-ui-scope="unlimited"] {
-  color: var(--text-color-3);
+  // color: var(--text-color-3);
 
   input[type="text"],
   input[type="number"],
@@ -484,16 +484,18 @@
 /* App and Window-app                        */
 /* ----------------------------------------- */
 
-[data-theme].window-app,
-[data-theme].application {
+body.game [data-theme].window-app,
+body.game [data-theme].application {
   // --background: url(../ui/parchment.jpg) repeat;
-  --color-text-primary: var(--text-color-1);
+  // --color-text-primary: var(--color-text-secondary);
   --color-header-background: var(--text-color-3);
   --color-fieldset-border: var(--text-color-2);
-  --color-form-label: var(--text-color-2);
-  --color-form-label-hover: var(--text-color-1);
-  --color-form-hint: var(--text-color-4);
-  --color-form-hint-hover: var(--text-color-2);
+  // color-text-primary is a core variable
+  // color-text-dark-primary+secondary are system variables
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-label-hover: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
+  --color-form-hint-hover: var(--color-text-dark-secondary);
 }
 
 // The background has issues with transparency. This ensures an opaque background is always used. It can be overwritten by more specific !important statements per theme.
@@ -863,6 +865,10 @@
   --visibility-gm-bg: #e8e8efaa;
   --visibility-owner-bg: #ddebe1aa;
 
+  &.pf2e.item.sheet form .sheet-body .tab.active label {
+    color: var(--color-form-label);
+  }
+
   table.pf2-table {
     text-shadow: none;
   }
@@ -1112,14 +1118,8 @@
 
   &.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input .attachment,
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input .attachment {
-    --dui-button-border-color: var(--color-primary-2);
-    --dui-button-background: var(--color-primary-3);
-    --button-hover-border-color: var(--color-primary-4);
-    --button-hover-background: var(--color-primary-5);
-    --dui-button-text-color: var(--text-color-2);
-    --box-shadow: none;
-    border-color: var(--dui-button-border-color);
-    z-index: 1;
+    @include dui-button-bright;
+    border-radius: 3px 0px 0px 3px;
   }
 
   &.pf2e.item.sheet form .item-rules .rule-form .attached-input input,

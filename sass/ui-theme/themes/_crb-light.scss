@@ -100,7 +100,7 @@
   input {
     --dui-input-border-color: var(--color-text-light-5);
     --dui-input-text-color: var(--color-text-dark-input);
-    --input-focus-text-color: var(--color-text-dark-input);
+    --dui-input-focus-text-color: var(--color-text-dark-input);
     --dui-input-background: rgba(255, 255, 255, 0.5);
     --dui-input-focus-outline-color: var(--primary-light);
     --dui-input-placeholder-color: var(--color-text-dark-secondary);
@@ -144,7 +144,7 @@
   &.sheet.hazard .section-container .section-header input,
   &.sheet.hazard .section-container.publication .section-body input[type="text"] {
     --dui-input-text-color: var(--text-color-2);
-    --input-focus-text-color: var(--text-color-1);
+    --dui-input-focus-text-color: var(--text-color-1);
   }
 
   &[data-dorako-ui-scope="limited"].actor.npc.sheet form .notes.active .notes-section > h4 {
@@ -154,7 +154,7 @@
   .directory .directory-header .header-search input {
     --dui-input-border-color: var(--color-text-light-5);
     --dui-input-text-color: var(--color-text-dark-input);
-    --input-focus-text-color: var(--color-text-dark-input);
+    --dui-input-focus-text-color: var(--color-text-dark-input);
     --dui-input-background: rgba(255, 255, 255, 0.5);
     --dui-input-focus-outline-color: var(--primary-light);
   }

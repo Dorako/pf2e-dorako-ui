@@ -7,7 +7,7 @@
     --dui-input-border-color: var(--color-level-success-border);
     --dui-input-focus-outline-color: var(--color-level-success-border);
     --dui-input-background: var(--color-level-success-bg);
-    --input-focus-text-color: var(--text-color-2);
+    --dui-input-focus-text-color: var(--text-color-2);
     --dui-input-text-color: var(--text-color-2);
   }
 
@@ -21,7 +21,7 @@
   &.placeable-hud input[type="text"] {
     @include dui-input;
     text-shadow: 0px 1px 2px black;
-    --input-focus-text-color: var(--text-color-2);
+    --dui-input-focus-text-color: var(--text-color-2);
     &[name="elevation"] {
       --dui-input-background: var(--app-background);
       font-size: 18px;
