@@ -7,6 +7,20 @@
     }
   }
 
+  .fc-flatcheck-buttons div.fc-check > span:not(:last-child) {
+    border-right: var(--app-border-width) solid var(--app-border-color);
+  }
+
+  .fc-flatcheck-buttons div.fc-check {
+    @include dui-app;
+
+    button[data-action="roll-flatcheck"] {
+      @include dui-button-bright;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
   #initiative-delay,
   #initiative-return {
     @include dui-button;

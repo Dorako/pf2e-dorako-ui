@@ -2994,6 +2994,70 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
 }
+[data-theme] .fc-flatcheck-buttons div.fc-check > span:not(:last-child) {
+  border-right: var(--app-border-width) solid var(--app-border-color);
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck] {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+  transition: background 0.1s ease-in-out;
+  --dui-button-background: var(--accent-color);
+  --dui-button-border-color: var(--accent-color-dark);
+  --dui-button-text-color: var(--accent-text-color);
+  --app-text-shadow: none;
+  --button-hover-background: var(--accent-color-light);
+  --button-hover-border-color: var(--accent-color);
+  --dui-button-hover-text-color: var(--accent-text-color);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck]:not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck].view, [data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck].selected, [data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck].active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck].empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck].empty, [data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck].disabled, [data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck]:disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+[data-theme] .fc-flatcheck-buttons div.fc-check button[data-action=roll-flatcheck]:disabled {
+  --dui-button-background: color-mix(in srgb, var(--dui-button-background) 50%, transparent 50%);
+  --dui-button-border-color: color-mix(in srgb, var(--dui-button-border-color) 50%, transparent 50%);
+  --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
+}
 [data-theme] #initiative-delay,
 [data-theme] #initiative-return {
   background: var(--app-background);
@@ -10564,6 +10628,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --text-color-2: var(--color-text-dark-primary);
   --text-color-3: var(--color-text-dark-primary);
   --dui-button-hover-text-color: white;
+  --color-text-primary: var(--color-text-dark-primary);
 }
 [data-theme^=crb][data-color-scheme=light] tagify,
 [data-theme^=crb][data-color-scheme=light] select,

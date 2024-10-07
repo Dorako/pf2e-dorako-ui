@@ -1,3 +1,8 @@
+# 3.6.2
+
+- (Refinement) Added style support for the new inline flatcheck rolls provided by PF2e Utility Buttons.
+- (Fix) Fixed an issue where CRB light theme would have illegible text in certain dialogs.
+
 # 3.6.1
 
 - (Maintenance) Restored some styling to Hazard sheets.
