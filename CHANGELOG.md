@@ -1,3 +1,9 @@
+# 3.7.0
+
+- (New) Replaced the old 'colorize ITT' setting with 'colorize PF2e HUD'.
+- (Refinement) Made a non-opaque background opaque when the Opaque interface theme is enabled.
+- (Refinement) Several minor CSS adjustments.
+
 # 3.6.2
 
 - (Refinement) Added style support for the new inline flatcheck rolls provided by PF2e Utility Buttons.

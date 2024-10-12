@@ -1,3 +1,7 @@
+#interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
+  background: var(--app-background);
+}
+
 [data-theme] {
   &[id^="pf2e-hud"] {
     --color-disabled: var(--text-color-disabled);
@@ -17,6 +21,14 @@
   &#pf2e-hud-persistent-menu {
     height: 100%;
     place-items: center;
+  }
+
+  &#pf2e-hud-sidebar .item-list {
+    backdrop-filter: blur(4px);
+  }
+
+  &#pf2e-hud-persistent-effects .effect-item:hover .effect-info {
+    backdrop-filter: blur(4px);
   }
 
   &[data-theme^="bg3"]#pf2e-hud-persistent-effects .effect-item .effect-info {
@@ -77,6 +89,7 @@
 
   &#pf2e-hud-tooltip > div {
     @include dui-app;
+    backdrop-filter: blur(4px);
     &.status {
       color: hsl(var(--hue), 75%, 40%);
     }
@@ -157,64 +170,78 @@
   }
 }
 
-// /* ----------------------------------------- */
-// /* Symon Custom CSS                          */
-// /* ----------------------------------------- */
+.pf2e-hud.colorized[data-theme] {
+  &#pf2e-hud-persistent span:not(.expired),
+  &#pf2e-hud-persistent input,
+  &#pf2e-hud-persistent [data-section] i,
+  &#pf2e-hud-tooltip i {
+    text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
+  }
 
-// i.fa-solid.fa-circle-h {
-//   color: darkgoldenrod;
-// }
-// i.fa-solid.fa-user-graduate {
-//   color: rgb(141, 69, 212);
-// }
-// i.fa-solid.fa-heart-half-stroke {
-//   color: orangered;
-// }
-// i.fa-solid.fa-heart {
-//   color: rgb(192, 1, 1);
-// }
-// i.fa-regular.fa-helmet-battle {
-//   color: #cdcdcd;
-// }
-// i.fa-light.fa-block-brick {
-//   color: deepskyblue;
-// }
-// i.fa-solid.fa-shield,
-// i.fa-regular.fa-shield {
-//   color: rgb(103, 235, 213);
-// }
-// i.fa-solid.fa-hand-fist {
-//   color: rgb(201, 4, 201);
-// }
-// i.fa-solid.fa-person-running {
-//   color: blue;
-// }
-// i.fa-solid.fa-brain {
-//   color: deeppink;
-// }
-// i.fa-solid.fa-tombstone {
-//   color: brown;
-// }
-// i.fa-solid.fa-shoe-prints {
-//   color: green;
-// }
-// i.fa-solid.fa-chevrons-down::before {
-//   content: "\f713";
-//   font: (--fa-font-solid);
-//   color: rgb(175, 87, 24);
-// }
-// i.fa-solid.fa-feather {
-//   color: white;
-// }
-// i.fa-solid.fa-person-swimming {
-//   color: dodgerblue;
-// }
-// i.fa-solid.fa-spider {
-//   color: #b7346f;
-// }
-// i.fa-solid.fa-eye {
-//   color: cadetblue;
-// }
-// i.fa-solid.fa-chess-rook {
-//   color: rgb(110, 143, 54);
-// }
+  i.fa-mask {
+    --icon-color: rgb(35, 68, 118);
+  }
+  i.fa-solid.fa-circle-h {
+    --icon-color: rgb(250, 198, 67);
+  }
+  i.fa-solid.fa-user-graduate {
+    --icon-color: rgb(212, 183, 69);
+  }
+  i.fa-solid.fa-heart-half-stroke {
+    --icon-color: rgb(159, 226, 240);
+  }
+  i.fa-notes-medical {
+    --icon-color: rgb(150, 1, 1);
+  }
+  i.fa-solid.fa-heart {
+    --icon-color: rgb(192, 1, 1);
+  }
+  i.fa-helmet-battle {
+    --icon-color: rgb(134, 212, 230);
+  }
+  i.fa-regular.fa-helmet-battle {
+    --icon-color: rgb(162, 230, 245);
+  }
+  i.fa-light.fa-block-brick {
+    --icon-color: deepskyblue;
+  }
+  i.fa-solid.fa-shield,
+  i.fa-regular.fa-shield {
+    --icon-color: rgb(103, 235, 213);
+  }
+  i.fa-solid.fa-hand-fist {
+    --icon-color: rgb(170, 72, 19);
+  }
+  i.fa-solid.fa-person-running {
+    --icon-color: rgb(77, 209, 108);
+  }
+  i.fa-solid.fa-brain {
+    --icon-color: deeppink;
+  }
+  i.fa-solid.fa-tombstone {
+    --icon-color: brown;
+  }
+  i.fa-solid.fa-shoe-prints {
+    --icon-color: rgb(93, 123, 93);
+  }
+  i.fa-solid.fa-chevrons-down::before {
+    content: "\f713";
+    font: (--fa-font-solid);
+    --icon-color: rgb(175, 87, 24);
+  }
+  i.fa-solid.fa-feather {
+    --icon-color: white;
+  }
+  i.fa-solid.fa-person-swimming {
+    --icon-color: dodgerblue;
+  }
+  i.fa-solid.fa-spider {
+    --icon-color: #b7346f;
+  }
+  i.fa-solid.fa-eye {
+    --icon-color: cadetblue;
+  }
+  i.fa-solid.fa-chess-rook {
+    --icon-color: rgb(110, 143, 54);
+  }
+}

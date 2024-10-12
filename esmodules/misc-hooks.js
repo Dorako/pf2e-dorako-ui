@@ -234,7 +234,7 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
     )
     .insertBefore($('[name="pf2e-dorako-ui.customization.excluded-applications"]').parents("div.form-group:first"));
 
-  const isIdleHudEnabled = game.modules.get("pf2e-token-hud")?.active;
+  const isIdleHudEnabled = game.modules.get("pf2e-hud")?.active;
 
   if (isIdleHudEnabled) {
     $("<div>")
@@ -250,9 +250,14 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
   }
 });
 
-Hooks.on("renderHUD", (app, html, data) => {
+Hooks.on("renderPF2eHudPersistent", (app, html, data) => {
   const isColorized = game.settings.get("pf2e-dorako-ui", "external-module.colorize-idle-hud");
   if (!isColorized) return;
-  let html0 = html[0];
-  html0.classList.add("colorized");
+  html.classList.add("colorized");
+});
+
+Hooks.on("renderPF2eHudTooltip", (app, html, data) => {
+  const isColorized = game.settings.get("pf2e-dorako-ui", "external-module.colorize-idle-hud");
+  if (!isColorized) return;
+  html.classList.add("colorized");
 });

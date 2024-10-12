@@ -109,8 +109,8 @@
         "hint": "Adjustments for how other modules are affected by Dorako UI",
 
         "colorize-idle-hud": {
-          "name": "Colorize PF2e Interactive Token Tooltip?",
-          "hint": "Applies a colorized theme to the icons in the main tooltip"
+          "name": "Colorize PF2e HUD?",
+          "hint": "Applies a colorized theme to the icons in the main tooltip and persistent HUD"
         }
       }
     }

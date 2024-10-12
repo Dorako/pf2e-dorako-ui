@@ -123,79 +123,6 @@
     color: var(--text-color-3);
   }
 
-  // &.dorako-header {
-  //   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-  //   background: linear-gradient(to bottom, color-mix(in srgb, var(--header-color) 70%, transparent), transparent);
-  //   text-shadow: 0px 1px 1px black;
-  //   padding-bottom: 5px;
-  //   margin-bottom: 2px;
-  //   box-shadow: none;
-  // }
-
-  // .message-timestamp,
-  // .header-meta {
-  //   @include dui-app;
-  //   background-color: color-mix(in srgb, var(--header-color) 50%, transparent);
-  //   border-color: color-mix(in srgb, var(--header-color) 50%, white);
-  //   color: var(--text-color-2);
-  // }
-
-  // &[data-header-text-color-scheme="dark"] {
-  //   color: color-mix(in srgb, var(--header-color) 20%, black);
-  //   text-shadow: none;
-  //   .message-sender:not([data-visibility="gm"]) {
-  //     color: color-mix(in srgb, var(--header-color) 20%, black);
-  //     text-shadow: none;
-  //   }
-  //   .header-meta {
-  //     color: color-mix(in srgb, var(--header-color) 20%, black);
-  //     text-shadow: none;
-  //   }
-  // }
-
-  // &.chat-message .message-header.dorako-header {
-  //   background-image: var(--sheet-light);
-  //   background-size: cover;
-  //   background-color: var(--header-color);
-  //   background-blend-mode: multiply;
-  //   border-bottom: 1px solid var(--tertiary);
-  //   box-shadow: 0px 1px 0px 0px var(--gold-brown);
-  //   margin-bottom: 5px;
-
-  //   .message-timestamp,
-  //   .header-meta {
-  //     border: none;
-  //     background: none;
-  //     padding: unset;
-  //     --box-shadow: none;
-  //   }
-  // }
-
-  // &.chat-message[data-header-text-color-scheme="dark"] .message-header {
-  //   --color-text-dark-secondary: var(--text-color-1);
-  //   --text-color-1: black;
-  //   --text-color-2: black;
-  //   --text-color-3: black;
-  //   --app-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
-  //   text-shadow: var(--app-text-shadow);
-  // }
-
-  // &.chat-message[data-header-text-color-scheme="light"] .message-header {
-  //   --color-text-dark-secondary: white;
-  //   --text-color-1: white;
-  //   --text-color-2: white;
-  //   --text-color-3: white;
-  //   --app-text-shadow: 0px 1px 0px rgba(0, 0, 0, 1);
-  //   text-shadow: var(--app-text-shadow);
-  // }
-
-  // &.chat-message.whisper .message-header.dorako-header {
-  //   border-bottom: 1px solid var(--whisper-bg);
-  // }
-  // &.chat-message.whisper.blind .message-header.dorako-header {
-  //   border-bottom: 1px solid var(--blind-bg);
-  // }
-
   &.chat-message {
     outline: 1px solid var(--gold-brown);
     &[data-has-header] {
@@ -301,10 +228,6 @@
       }
     }
   }
-
-  // &#effects-panel .effect-item .effect-info {
-  //   box-shadow: var(--glassy), var(--window-app-box-shadow);
-  // }
 
   &#effects-panel .effect-item > .icon {
     --box-shadow: var(--gold-and-glow);

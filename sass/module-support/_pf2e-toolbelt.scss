@@ -28,6 +28,15 @@
     @include dui-button-bright;
   }
 
+  #interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
+    background: var(--app-background);
+  }
+
+  &.chat-message .message-content .card-buttons .pf2e-toolbelt-target-wrapper .pf2e-toolbelt-target-rollSaves,
+  &.chat-message .message-content .card-buttons .pf2e-toolbelt-target-wrapper .pf2e-toolbelt-target-setTargets {
+    // @include dui-button-bright;
+  }
+
   &.chat-message .message-content + .pf2e-toolbelt-target-targetRows .target-damage-application button.half-damage i {
     -webkit-text-fill-color: unset;
   }
@@ -70,5 +79,9 @@
         }
       }
     }
+  }
+
+  &.chat-message .message-content + .pf2e-toolbelt-target-targetRows:not(.pf2e-toolbelt-target-damage) hr:first-child {
+    border-bottom: var(--app-border-width) solid var(--app-border-color);
   }
 }

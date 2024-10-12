@@ -67,6 +67,10 @@
     }
   }
 
+  &#pf2e-hud-persistent-main .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
+    background: rgb(55, 55, 55) !important;
+  }
+
   &.sidebar-popout {
     background: var(--app-background);
     border: var(--app-border-width);

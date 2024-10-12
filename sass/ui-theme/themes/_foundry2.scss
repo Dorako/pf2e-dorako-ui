@@ -238,6 +238,11 @@
     }
   }
 
+  &.window-app,
+  &.application {
+    backdrop-filter: blur(4px);
+  }
+
   &.window-app.sidebar-popout {
     border: none;
   }

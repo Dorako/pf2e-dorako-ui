@@ -2005,6 +2005,10 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: 0px 0px 1px 1px inset rgba(255, 255, 255, 0.2);
 }
 
+#interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
+  background: var(--app-background);
+}
+
 [data-theme][id^=pf2e-hud] {
   --color-disabled: var(--text-color-disabled);
   --highlight-color: var(--accent-color-light);
@@ -2023,6 +2027,12 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme]#pf2e-hud-persistent-menu {
   height: 100%;
   place-items: center;
+}
+[data-theme]#pf2e-hud-sidebar .item-list {
+  backdrop-filter: blur(4px);
+}
+[data-theme]#pf2e-hud-persistent-effects .effect-item:hover .effect-info {
+  backdrop-filter: blur(4px);
 }
 [data-theme][data-theme^=bg3]#pf2e-hud-persistent-effects .effect-item .effect-info {
   background: var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
@@ -2088,6 +2098,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
+  backdrop-filter: blur(4px);
 }
 [data-theme]#pf2e-hud-tooltip > div.status {
   color: hsl(var(--hue), 75%, 40%);
@@ -2177,6 +2188,76 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
+}
+
+.pf2e-hud.colorized[data-theme]#pf2e-hud-persistent span:not(.expired), .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent input, .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent [data-section] i, .pf2e-hud.colorized[data-theme]#pf2e-hud-tooltip i {
+  text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
+}
+.pf2e-hud.colorized[data-theme] i.fa-mask {
+  --icon-color: rgb(35, 68, 118);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-circle-h {
+  --icon-color: rgb(250, 198, 67);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-user-graduate {
+  --icon-color: rgb(212, 183, 69);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-heart-half-stroke {
+  --icon-color: rgb(159, 226, 240);
+}
+.pf2e-hud.colorized[data-theme] i.fa-notes-medical {
+  --icon-color: rgb(150, 1, 1);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-heart {
+  --icon-color: rgb(192, 1, 1);
+}
+.pf2e-hud.colorized[data-theme] i.fa-helmet-battle {
+  --icon-color: rgb(134, 212, 230);
+}
+.pf2e-hud.colorized[data-theme] i.fa-regular.fa-helmet-battle {
+  --icon-color: rgb(162, 230, 245);
+}
+.pf2e-hud.colorized[data-theme] i.fa-light.fa-block-brick {
+  --icon-color: deepskyblue;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-shield,
+.pf2e-hud.colorized[data-theme] i.fa-regular.fa-shield {
+  --icon-color: rgb(103, 235, 213);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-hand-fist {
+  --icon-color: rgb(170, 72, 19);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-person-running {
+  --icon-color: rgb(77, 209, 108);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-brain {
+  --icon-color: deeppink;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-tombstone {
+  --icon-color: brown;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-shoe-prints {
+  --icon-color: rgb(93, 123, 93);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-chevrons-down::before {
+  content: "\f713";
+  font: --fa-font-solid;
+  --icon-color: rgb(175, 87, 24);
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-feather {
+  --icon-color: white;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-person-swimming {
+  --icon-color: dodgerblue;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-spider {
+  --icon-color: #b7346f;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-eye {
+  --icon-color: cadetblue;
+}
+.pf2e-hud.colorized[data-theme] i.fa-solid.fa-chess-rook {
+  --icon-color: rgb(110, 143, 54);
 }
 
 [data-theme].chat-message.message .pf2e-token-hud .rk-lores, [data-theme].chat-message.message .pf2e-token-hud .rk-lores-rolls, [data-theme].chat-message.message .pf2e-token-hud .rk-skills, [data-theme].chat-message.message .pf2e-token-hud .rk {
@@ -2919,6 +3000,9 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --dui-button-border-color: color-mix(in srgb, var(--dui-button-border-color) 50%, transparent 50%);
   --button-hover-background: color-mix(in srgb, var(--button-hover-background) 50%, transparent 50%);
 }
+[data-theme] #interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
+  background: var(--app-background);
+}
 [data-theme].chat-message .message-content + .pf2e-toolbelt-target-targetRows .target-damage-application button.half-damage i {
   -webkit-text-fill-color: unset;
 }
@@ -2951,6 +3035,9 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme].chat-message .message-content + .pf2e-toolbelt-target-damage .target-damage-application button[data-action=target-apply-healing]:hover .fa-stack i.fa-plus {
   color: var(--color-level-success);
   text-shadow: none;
+}
+[data-theme].chat-message .message-content + .pf2e-toolbelt-target-targetRows:not(.pf2e-toolbelt-target-damage) hr:first-child {
+  border-bottom: var(--app-border-width) solid var(--app-border-color);
 }
 
 [data-theme] #fc-container {
@@ -5379,7 +5466,6 @@ body.game [data-theme].application {
   background-size: cover;
   border: var(--window-app-border-width) solid;
   border-color: var(--window-app-border-color);
-  backdrop-filter: blur(4px);
   box-shadow: var(--window-app-box-shadow);
 }
 [data-theme].application.sidebar-popout, [data-theme].window-app.sidebar-popout {
@@ -7679,9 +7765,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 
 [data-theme].sheet.hazard {
-  --color-text-light: var(--text-color-2);
-  --color-pf-primary-darker: var(--text-color-2);
-  --color-pf-primary-light: var(--text-color-1);
+  --color-text-light: var(--color-text-dark-primary);
+  --color-pf-primary-darker: var(--color-text-dark-primary);
+  --color-pf-primary-light: var(--color-text-dark-secondary);
 }
 [data-theme].sheet.hazard.window-app .window-header {
   background: #19302c;
@@ -13507,6 +13593,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background-color: color-mix(in srgb, rgb(42, 113, 255) 33%, transparent);
   border: 1px solid color-mix(in srgb, rgb(42, 113, 255) 50%, rgba(255, 255, 255, 0.5));
 }
+[data-theme=foundry2].window-app, [data-theme=foundry2].application {
+  backdrop-filter: blur(4px);
+}
 [data-theme=foundry2].window-app.sidebar-popout {
   border: none;
 }
@@ -13638,6 +13727,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-chat-interface-theme=opaque] #chat-log ~ *#token-hud .attribute i.fas,
 [data-theme=opaque]:not([data-color-scheme])#token-hud .attribute i.fas {
   color: var(--text-color-2);
+}
+[data-chat-interface-theme=opaque] #chat-log ~ *#pf2e-hud-persistent-main .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty,
+[data-theme=opaque]:not([data-color-scheme])#pf2e-hud-persistent-main .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
+  background: rgb(55, 55, 55) !important;
 }
 [data-chat-interface-theme=opaque] #chat-log ~ *.sidebar-popout,
 [data-theme=opaque]:not([data-color-scheme]).sidebar-popout {
