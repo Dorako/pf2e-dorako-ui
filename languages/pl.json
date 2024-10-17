@@ -321,8 +321,8 @@
         "name": "Ustawienia zewnętrzne modułu",
         "hint": "Dostosowania dotyczące wpływu interfejsu Dorako na inne moduły",
         "colorize-idle-hud": {
-          "name": "Pokolorować PF2e Interactive Token Tooltip?",
-          "hint": "Stosuje kolorowy motyw do ikon w głównym pasku narzędzi"
+          "name": "Pokolorować PF2e HUD?",
+          "hint": "Stosuje kolorowy motyw do ikon w głównym pasku narzędzi i HUD"
         }
       }
     }
