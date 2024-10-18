@@ -13,9 +13,11 @@
     --color: var(--text-color-1);
   }
 
+  #pf2e-hud-token-main:not(.exploded) .joined,
   &[id^="pf2e-hud-persistent"].app,
   &[id^="pf2e-hud-persistent"] .app {
     @include dui-app;
+    backdrop-filter: blur(5px);
   }
 
   &#pf2e-hud-persistent-menu {
@@ -143,6 +145,7 @@
 .game [data-theme][id^="pf2e-hud-token"] {
   #pf2e-hud-token-main.exploded .panel {
     @include dui-app;
+    backdrop-filter: blur(5px);
   }
 }
 
@@ -171,6 +174,7 @@
 }
 
 .pf2e-hud.colorized[data-theme] {
+  &.pf2e-hud [data-section] i,
   &#pf2e-hud-persistent span:not(.expired),
   &#pf2e-hud-persistent input,
   &#pf2e-hud-persistent [data-section] i,

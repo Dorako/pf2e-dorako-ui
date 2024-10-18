@@ -1,3 +1,9 @@
+# 3.7.1
+
+- (Module) Added theme support for PF2e Subsystem Helper.
+- (Refinement) Made the colorize PF2e HUD setting apply to the Token HUD as well.
+- (Refinement) Adjusted the styling for See Simple Scale Statistics.
+
 # 3.7.0
 
 - (New) Replaced the old 'colorize ITT' setting with 'colorize PF2e HUD'.

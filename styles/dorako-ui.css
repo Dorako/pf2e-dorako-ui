@@ -2016,13 +2016,14 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme][id^=pf2e-hud] {
   --color: var(--text-color-1);
 }
-[data-theme][id^=pf2e-hud-persistent].app, [data-theme][id^=pf2e-hud-persistent] .app {
+[data-theme] #pf2e-hud-token-main:not(.exploded) .joined, [data-theme][id^=pf2e-hud-persistent].app, [data-theme][id^=pf2e-hud-persistent] .app {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
+  backdrop-filter: blur(5px);
 }
 [data-theme]#pf2e-hud-persistent-menu {
   height: 100%;
@@ -2166,6 +2167,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   color: var(--text-color-3);
+  backdrop-filter: blur(5px);
 }
 
 #pf2e-hud-persistent-main[data-theme] .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
@@ -2190,7 +2192,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--text-color-3);
 }
 
-.pf2e-hud.colorized[data-theme]#pf2e-hud-persistent span:not(.expired), .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent input, .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent [data-section] i, .pf2e-hud.colorized[data-theme]#pf2e-hud-tooltip i {
+.pf2e-hud.colorized[data-theme].pf2e-hud [data-section] i, .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent span:not(.expired), .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent input, .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent [data-section] i, .pf2e-hud.colorized[data-theme]#pf2e-hud-tooltip i {
   text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
 }
 .pf2e-hud.colorized[data-theme] i.fa-mask {
@@ -2878,6 +2880,107 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
 [data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary {
   color: #ff0000 !important;
+}
+
+[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary,
+[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary,
+[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary {
+  color: #6cd8ff !important;
+}
+[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary,
+[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary,
+[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary {
+  color: #3cff00 !important;
+}
+[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary,
+[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary,
+[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary {
+  color: #ffff54 !important;
+}
+[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary,
+[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary,
+[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary {
+  color: #ff8000 !important;
+}
+[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary,
+[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary,
+[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
+  color: #ff0000 !important;
+}
+
+[data-theme].actor.party [data-tab=subsystems] .folder-header {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  --app-background: var(--color-primary-4);
+  --border-radius: 0px;
+  margin-bottom: 2px;
+}
+[data-theme].actor.party [data-tab=subsystems] .content > .folder {
+  border-left: none;
+  border-right: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+[data-theme].actor.party [data-tab=subsystems] .content > .folder > .folder-header {
+  border-left: none;
+  border-right: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+[data-theme].actor.party [data-tab=subsystems] button:not(.folder-header) {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+}
+[data-theme].actor.party [data-tab=subsystems] button:not(.folder-header):not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme].actor.party [data-tab=subsystems] button:not(.folder-header).view, [data-theme].actor.party [data-tab=subsystems] button:not(.folder-header).selected, [data-theme].actor.party [data-tab=subsystems] button:not(.folder-header).active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme].actor.party [data-tab=subsystems] button:not(.folder-header).empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+[data-theme].actor.party [data-tab=subsystems] button:not(.folder-header).empty, [data-theme].actor.party [data-tab=subsystems] button:not(.folder-header).disabled, [data-theme].actor.party [data-tab=subsystems] button:not(.folder-header):disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+[data-theme].actor.party [data-tab=subsystems] [class*=data] {
+  border: none;
+}
+[data-theme].actor.party [data-tab=subsystems] .folder {
+  color: var(--color-text-dark-primary);
+  padding-bottom: 5px;
+}
+[data-theme].actor.party [data-tab=subsystems] .leftandright {
+  gap: 5px;
+}
+[data-theme].actor.party [data-tab=subsystems] .tjs-editor {
+  --tjs-editor-content-color: var(--color-text-dark-primary);
 }
 
 [data-dorako-ui-scope=limited].sheet.actor.character .sheet-body .sheet-content [data-tab=actions] .tab-content .actions-panels [data-tab=encounter] ol.actions-list.heroActions-list .action .item-controls > button {

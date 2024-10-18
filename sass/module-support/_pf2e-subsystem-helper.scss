@@ -1,0 +1,44 @@
+[data-theme] {
+  &.actor.party [data-tab="subsystems"] {
+    .folder-header {
+      @include dui-app;
+      --app-background: var(--color-primary-4);
+      --border-radius: 0px;
+      margin-bottom: 2px;
+    }
+
+    .content > .folder {
+      border-left: none;
+      border-right: none;
+      margin-left: 0px;
+      margin-right: 0px;
+      > .folder-header {
+        border-left: none;
+        border-right: none;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+
+    button:not(.folder-header) {
+      @include dui-button;
+    }
+
+    [class*="data"] {
+      border: none;
+    }
+
+    .folder {
+      color: var(--color-text-dark-primary);
+      padding-bottom: 5px;
+    }
+
+    .leftandright {
+      gap: 5px;
+    }
+
+    .tjs-editor {
+      --tjs-editor-content-color: var(--color-text-dark-primary);
+    }
+  }
+}
