@@ -1,3 +1,7 @@
+# 3.7.2
+
+- (New) Added a new "Player Color" option for the 'Sheet theme color' setting.
+
 # 3.7.1
 
 - (Module) Added theme support for PF2e Subsystem Helper.

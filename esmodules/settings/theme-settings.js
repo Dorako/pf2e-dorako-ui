@@ -69,6 +69,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         type: String,
         choices: {
           default: "pf2e-dorako-ui.text.default",
+          "player-color": "pf2e-dorako-ui.text.colors.player",
           red: "pf2e-dorako-ui.text.colors.red",
           green: "pf2e-dorako-ui.text.colors.green",
           blue: "pf2e-dorako-ui.text.colors.blue",

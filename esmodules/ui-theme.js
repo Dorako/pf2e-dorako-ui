@@ -296,6 +296,46 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
     const theme = game.settings.get("pf2e-dorako-ui", "theme.sheet-theme-color");
     if (theme === "default") return;
     app.element[0].dataset.themeColor = theme;
+
+    if (theme !== "player-color") return;
+    var black = Color.fromString("000000");
+    var white = Color.fromString("ffffff");
+    var ownership = app.actor.ownership;
+    var userColor = game.user.color;
+    for (const potentialOwner in ownership) {
+      const user = game.users.get(potentialOwner);
+      if (user == null) continue;
+      if (!user.isGM) {
+        userColor = user.color;
+      }
+    }
+    html[0].style.setProperty("--player-color", userColor.css ?? "#DAC0FB");
+    var hsl = userColor.hsl;
+    var [h, s, l] = hsl;
+    if (l > 0.9) {
+      html[0].style.setProperty("--player-tone-light", userColor.mix(black, 1).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2]]) ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-dark", userColor.mix(black, 0.8).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-darker", userColor.mix(black, 0.6).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-darkest", userColor.mix(black, 0.4).css ?? "#DAC0FB");
+      html[0].style.setProperty("--text-color", userColor.mix(black, 1).css ?? "#DAC0FB");
+    } else if (s > 0.8 && h > 0.15 && h < 0.6 && l > 0.5) {
+      html[0].style.setProperty("--player-tone-light", userColor.mix(black, 0.9).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2]]) ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-plain", userColor.mix(black, 0.4).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-dark", userColor.mix(black, 0.3).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-darker", userColor.mix(black, 0.2).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-darkest", userColor.mix(black, 0.1).css ?? "#DAC0FB");
+      html[0].style.setProperty("--text-color", userColor.mix(black, 0.8).css ?? "#DAC0FB");
+    } else {
+      html[0].style.setProperty("--player-tone-light", userColor.mix(white, 0.8).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2]]) ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-plain", userColor.mix(white, 0.6).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-dark", userColor.mix(white, 0.5).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-darker", userColor.mix(white, 0.4).css ?? "#DAC0FB");
+      html[0].style.setProperty("--player-tone-darkest", userColor.mix(white, 0.3).css ?? "#DAC0FB");
+      html[0].style.setProperty("--text-color", userColor.mix(white, 0.8).css ?? "#DAC0FB");
+    }
   });
 }
 

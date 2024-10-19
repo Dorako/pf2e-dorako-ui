@@ -9645,7 +9645,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: var(--theme-color-dark);
 }
 [data-theme].actor.sheet.vehicle[data-theme-color] .crb-style aside select, [data-theme].actor.sheet.character[data-theme-color] .crb-style aside select {
-  background-color: var(--theme-color);
+  background: rgb(from var(--theme-color) r g b/50%);
 }
 [data-theme].actor.sheet.vehicle[data-theme-color] .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
 [data-theme].actor.sheet.vehicle[data-theme-color] .window-content .inventory ul.items > li .item-summary,
@@ -9658,11 +9658,91 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   filter: grayscale(0.6);
 }
 [data-theme].actor.sheet.vehicle[data-theme-color] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp, [data-theme].actor.sheet.character[data-theme-color] .crb-style aside .sidebar .hitpoints .hp-big .container.current-hp {
-  background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-text-color) 50%, var(--theme-color) 100%);
-  background-color: var(--secondary);
+  background-image: linear-gradient(90deg, rgb(from var(--theme-color) r g b/25%) 0%, rgb(from var(--theme-color) r g b/50%) 40%, rgb(from var(--theme-color) r g b/50%) 60%, rgb(from var(--theme-color) r g b/25%) 100%);
+  background-color: transparent;
 }
 [data-theme].actor.sheet.vehicle[data-theme-color] nav.sheet-navigation, [data-theme].actor.sheet.character[data-theme-color] nav.sheet-navigation {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--theme-text-color);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color], [data-theme].actor.sheet.character[data-theme-color=player-color] {
+  --theme-color-dark: var(--player-tone-light);
+  --theme-color: var(--player-color);
+  --theme-text-color: var(--player-tone);
+  --color-scrollbar-hover: var(--theme-text-color);
+  --scrollbar-thumb-background: var(--theme-color);
+  --scrollbar-thumb-border-color: var(--tertiary);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside, [data-theme].actor.sheet.character[data-theme-color=player-color] aside {
+  --sidebar-label: var(--text-color);
+  --sidebar-title: var(--player-tone-light);
+  --text-light: var(--text-color);
+  --color-pf-primary-dark: var(--player-tone);
+  --color-pf-tertiary-light: var(--player-tone-light);
+  --color-pf-tertiary: var(--player-tone-plain);
+  --color-pf-tertiary-dark: var(--player-tone-dark);
+  --color-pf-tertiary-darker: var(--player-tone-darker);
+  --color-pf-tertiary-darkest: var(--player-tone-darkest);
+  margin-left: unset !important;
+  padding-left: 8px;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .sidebar, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .sidebar {
+  margin-bottom: 0.5rem !important;
+  padding-left: 0 !important;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .char-header,
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .sheet-navigation, [data-theme].actor.sheet.character[data-theme-color=player-color] .char-header,
+[data-theme].actor.sheet.character[data-theme-color=player-color] .sheet-navigation {
+  --text-light: var(--text-color);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .sidebar .armor-class .ac,
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .sidebar .armor-class .shield.hp,
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] section.window-content .crb-style .pf-rank, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .sidebar .armor-class .ac,
+[data-theme].actor.sheet.character[data-theme-color=player-color] aside .sidebar .armor-class .shield.hp,
+[data-theme].actor.sheet.character[data-theme-color=player-color] section.window-content .crb-style .pf-rank {
+  color: var(--color-text-trait);
+  --text-light: var(--color-text-trait);
+  --color-pf-tertiary: var(--color-text-trait);
+  --sidebar-label: var(--color-text-trait);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] header.char-header .dots .label, [data-theme].actor.sheet.character[data-theme-color=player-color] header.char-header .dots .label {
+  --sidebar-label: var(--sidebar-label);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] header.char-header .level, [data-theme].actor.sheet.character[data-theme-color=player-color] header.char-header .level {
+  --text-light: var(--color-text-trait);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .crb-style aside .sidebar header button, [data-theme].actor.sheet.character[data-theme-color=player-color] .crb-style aside .sidebar header button {
+  background: rgb(from var(--sidebar-title) r g b/20%);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] section.window-content .crb-style aside .sidebar .armor-class .shield-stats ul li .data-value,
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] section.window-content .crb-style aside select, [data-theme].actor.sheet.character[data-theme-color=player-color] section.window-content .crb-style aside .sidebar .armor-class .shield-stats ul li .data-value,
+[data-theme].actor.sheet.character[data-theme-color=player-color] section.window-content .crb-style aside select {
+  border: 1px solid var(--player-tone-darkest);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.vehicle .crb-style, [data-theme].actor.sheet.vehicle[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style, [data-theme].actor.sheet.character[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.vehicle .crb-style, [data-theme].actor.sheet.character[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style {
+  background: linear-gradient(to bottom, var(--player-color) calc(100% + 50px), transparent 100%) !important;
+  background-repeat: repeat-x, no-repeat !important;
+  background-size: auto 89px, cover !important;
+  background-attachment: local !important;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .crb-style aside, [data-theme].actor.sheet.character[data-theme-color=player-color] .crb-style aside {
+  background-image: url("../img/bw-sidebar-top.webp");
+  background-position: center 100%;
+  background-size: 14.3rem 100%;
+  background-blend-mode: overlay !important;
+  background-color: var(--player-color) !important;
+  border-bottom-left-radius: var(--border-radius);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .crb-style aside .armor-class .shield.hp, [data-theme].actor.sheet.character[data-theme-color=player-color] .crb-style aside .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .crb-style header.char-header .char-level .level, [data-theme].actor.sheet.character[data-theme-color=player-color] .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] .crb-style nav.sheet-navigation .item.active, [data-theme].actor.sheet.character[data-theme-color=player-color] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.character[data-theme-color=player-color] .crb-style nav.sheet-navigation .item.active {
+  background: var(--player-color);
 }
 [data-theme].actor.sheet.vehicle[data-theme-color=red], [data-theme].actor.sheet.character[data-theme-color=red] {
   --theme-text-color: var(--primary-light);
@@ -9784,9 +9864,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background-repeat: repeat-x, no-repeat !important;
   background-size: auto 89px, cover !important;
   background-attachment: local !important;
+  background-blend-mode: overlay !important;
+  background-color: var(--player-color) !important;
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme-color]).sheet.actor.window-app.character .window-header, [data-theme][data-dorako-ui-scope=limited]:not([data-theme-color]).sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color=red].sheet.actor.window-app.character .window-header {
   background: #5a0c02;
+}
+[data-theme][data-dorako-ui-scope=limited][data-theme-color=player-color].sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color=player-color].sheet.actor.window-app.character .window-header {
+  background: var(--player-color);
+  color: var(--player-tone-light) !important;
 }
 [data-theme][data-dorako-ui-scope=limited][data-theme-color=green].sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color=green].sheet.actor.window-app.character .window-header {
   background: #0e2a1a;

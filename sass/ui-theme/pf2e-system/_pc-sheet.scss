@@ -52,9 +52,10 @@
   &.actor.sheet.character[data-theme-color] {
     .crb-style aside .sidebar header button {
       color: var(--theme-color-dark);
+      // border-bottom: none;
     }
     .crb-style aside select {
-      background-color: var(--theme-color);
+      background: rgb(from var(--theme-color) (r g b) / 50%);
     }
     .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
     .window-content .inventory ul.items > li .item-summary,
@@ -69,16 +70,126 @@
         .hitpoints .hp-big .container.current-hp {
           background-image: linear-gradient(
             90deg,
-            var(--theme-color) 0%,
-            var(--theme-text-color) 50%,
-            var(--theme-color) 100%
+            rgb(from var(--theme-color) (r g b) / 25%) 0%,
+            rgb(from var(--theme-color) (r g b) / 50%) 40%,
+            rgb(from var(--theme-color) (r g b) / 50%) 60%,
+            rgb(from var(--theme-color) (r g b) / 25%) 100%
           );
-          background-color: var(--secondary);
+          background-color: transparent;
         }
       }
     }
     nav.sheet-navigation {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
       background: var(--theme-text-color);
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="player-color"],
+  &.actor.sheet.character[data-theme-color="player-color"] {
+    --theme-color-dark: var(--player-tone-light);
+    --theme-color: var(--player-color);
+    --theme-text-color: var(--player-tone);
+    --color-scrollbar-hover: var(--theme-text-color);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
+
+    aside {
+      --sidebar-label: var(--text-color);
+      --sidebar-title: var(--player-tone-light);
+      --text-light: var(--text-color);
+      --color-pf-primary-dark: var(--player-tone); // Shield text color
+
+      --color-pf-tertiary-light: var(--player-tone-light);
+      --color-pf-tertiary: var(--player-tone-plain);
+      --color-pf-tertiary-dark: var(--player-tone-dark);
+      --color-pf-tertiary-darker: var(--player-tone-darker);
+      --color-pf-tertiary-darkest: var(--player-tone-darkest);
+      margin-left: unset !important;
+      padding-left: 8px;
+      .sidebar {
+        margin-bottom: 0.5rem !important;
+        padding-left: 0 !important;
+      }
+    }
+
+    .char-header,
+    .sheet-navigation {
+      --text-light: var(--text-color);
+    }
+
+    aside .sidebar .armor-class .ac,
+    aside .sidebar .armor-class .shield.hp,
+    section.window-content .crb-style .pf-rank {
+      color: var(--color-text-trait);
+      --text-light: var(--color-text-trait);
+      --color-pf-tertiary: var(--color-text-trait);
+      --sidebar-label: var(--color-text-trait);
+    }
+
+    header.char-header .dots .label {
+      --sidebar-label: var(--sidebar-label);
+    }
+
+    header.char-header .level {
+      --text-light: var(--color-text-trait);
+    }
+
+    .crb-style aside .sidebar header button {
+      background: rgb(from var(--sidebar-title) (r g b) / 20%);
+    }
+
+    section.window-content .crb-style aside .sidebar .armor-class .shield-stats ul li .data-value,
+    section.window-content .crb-style aside select {
+      border: 1px solid var(--player-tone-darkest);
+    }
+
+    &[data-theme][data-dorako-ui-scope="limited"].actor.sheet.vehicle .crb-style,
+    &[data-theme][data-dorako-ui-scope="limited"].actor.sheet.character .crb-style {
+      // this is crap
+      background: linear-gradient(to bottom, var(--player-color) calc(100% + 50px), transparent 100%) !important;
+      background-repeat: repeat-x, no-repeat !important;
+      background-size: auto 89px, cover !important;
+      background-attachment: local !important;
+    }
+
+    .crb-style {
+      // --header: url("../img/purple-header.webp");
+      // background-image: url("../img/purple-header.webp"), var(--sheet);
+      // header needs to be set
+      // background: var(--player-color);
+      // background: none;
+      // --header: none;
+      // --header: url("../../../systems/pf2e/assets/sheet/header-bw.webp");
+      // background-blend-mode: overlay !important;
+      // background-color: var(--player-color) !important;
+
+      aside {
+        background-image: url("../img/bw-sidebar-top.webp");
+        background-position: center 100%;
+        background-size: 14.3rem 100%;
+        background-blend-mode: overlay !important;
+        background-color: var(--player-color) !important;
+        border-bottom-left-radius: var(--border-radius);
+
+        // background: var(--player-color);
+        // background: none;
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          // background-image: url("../img/blue-nav-item.webp");
+          background: var(--player-color);
+        }
+      }
     }
   }
 
@@ -233,6 +344,8 @@
     background-repeat: repeat-x, no-repeat !important;
     background-size: auto 89px, cover !important;
     background-attachment: local !important;
+    background-blend-mode: overlay !important;
+    background-color: var(--player-color) !important;
   }
 
   &:not([data-theme-color]).sheet.actor.window-app.character .window-header,
@@ -240,6 +353,12 @@
   &[data-theme-color="red"].sheet.actor.window-app.vehicle .window-header,
   &[data-theme-color="red"].sheet.actor.window-app.character .window-header {
     background: #5a0c02;
+  }
+
+  &[data-theme-color="player-color"].sheet.actor.window-app.vehicle .window-header,
+  &[data-theme-color="player-color"].sheet.actor.window-app.character .window-header {
+    background: var(--player-color);
+    color: var(--player-tone-light) !important;
   }
 
   &[data-theme-color="green"].sheet.actor.window-app.vehicle .window-header,
@@ -403,22 +522,6 @@
       }
     }
   }
-
-  // &.actor.sheet.character .crb-style.locked.limited .sheet-body .sheet-content .tab.biography {
-  //   section input,
-  //   .editor {
-  //     --dui-input-text-color: var(--text-color-3);
-  //     --dui-input-focus-text-color: var(--text-color-3);
-  //     --dui-input-background: transparent;
-  //     --dui-input-border-color: transparent;
-  //     --dui-input-focus-outline-color: transparent;
-  //     --box-shadow: transparent;
-
-  //     &:hover {
-  //       outline-color: transparent;
-  //     }
-  //   }
-  // }
 
   //prettier-ignore
   &.actor.sheet.character section.window-content .crb-style .sheet-body .sheet-content > .tab.active.feats ol.feats-list li.slot .item-name .feat-slot-title,
