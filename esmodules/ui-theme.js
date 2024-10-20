@@ -300,15 +300,11 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
     if (theme !== "player-color") return;
     var black = Color.fromString("000000");
     var white = Color.fromString("ffffff");
-    var ownership = app.actor.ownership;
-    var userColor = game.user.color;
-    for (const potentialOwner in ownership) {
-      const user = game.users.get(potentialOwner);
-      if (user == null) continue;
-      if (!user.isGM) {
-        userColor = user.color;
-      }
-    }
+    const owners = getPlayerOwners(app.actor);
+    const user = owners[0];
+    var userColor = user.getFlag("pf2e-dorako-ui", "player-sheet-color-override")
+      ? Color.fromString(user.getFlag("pf2e-dorako-ui", "player-sheet-color-override"))
+      : user.color;
     var hsl = userColor.hsl;
     var [h, s, l] = hsl;
     const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
@@ -317,7 +313,7 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
       return Math.min(Math.max(num, lower), upper);
     }
     const sSoftLimit = 0.5;
-    const sHardLimit = 0.5;
+    const sHardLimit = 0.7;
     const lSoftLimit = 0.3;
     const lHardLimit = 0.8;
     var remappedColor = Color.fromHSL([
@@ -326,19 +322,60 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
       l > lSoftLimit ? mapNumRange(l, 0, 1, lSoftLimit, lHardLimit) : l,
     ]);
     html[0].style.setProperty("--player-color", remappedColor.css ?? "#DAC0FB");
-    [h, s, l] = remappedColor.hsl;
+    // [h, s, l] = remappedColor.hsl;
 
     html[0].style.setProperty("--player-tone-light", userColor.mix(white, 0.9).css ?? "#DAC0FB");
     html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2] / 2]) ?? "#DAC0FB");
+    // html[0].style.setProperty(
+    //   "--player-tone-plain",
+    //   Color.fromHSL([h, s < 0.1 ? 0 : 1, clamp(game.user.color.hsl[2] + 0.3, 0, 1)]) ?? "#DAC0FB"
+    // );
     html[0].style.setProperty(
       "--player-tone-plain",
-      Color.fromHSL([h, s < 0.1 ? 0 : 1, clamp(game.user.color.hsl[2] + 0.3, 0, 1)]) ?? "#DAC0FB"
+      Color.fromHSL([h, s > 0.1 ? 0.35 : 0, l > 0.8 ? 1.0 : 0.8]) ?? "#DAC0FB"
     );
     html[0].style.setProperty("--player-tone-dark", userColor.mix(white, 0.4).css ?? "#DAC0FB");
     html[0].style.setProperty("--player-tone-darker", userColor.mix(white, 0.3).css ?? "#DAC0FB");
     html[0].style.setProperty("--player-tone-darkest", userColor.mix(white, 0.2).css ?? "#DAC0FB");
     html[0].style.setProperty("--text-color", userColor.mix(white, 0.9).css ?? "#DAC0FB");
   });
+}
+
+export function nonNullable(value) {
+  return value !== null && value !== undefined;
+}
+
+export function getPlayerOwners(actor) {
+  const assigned = game.users.contents.find((user) => user.character?.id === actor.id);
+  if (assigned) return [assigned];
+
+  // If everyone owns it, nobody does.
+  if (actor.ownership.default === 3) {
+    return game.users.contents;
+  }
+
+  // Check the ownership IDs, check if there is a player owner, yes, ignore GMs, no, count only GMs.
+  const owners = Object.keys(actor.ownership)
+    .filter((x) => x !== "default")
+    .filter((x) =>
+      actor.hasPlayerOwner ? !game.users.get(x)?.hasRole("GAMEMASTER") : game.users.get(x)?.hasRole("GAMEMASTER")
+    )
+    .map((x) => game.users.get(x))
+    .filter(nonNullable);
+
+  if (owners.length) {
+    return owners;
+  } else {
+    // If "nobody" owns it, whoever is the primaryUpdater (read: GM) does.
+    // This should handle weirdos like { ownership: { default: 0 } }
+    if (actor.primaryUpdater) {
+      log("Could not determine owner, defaulting to primaryUpdater.");
+      return [actor.primaryUpdater];
+    } else {
+      log("Could not determine owner nor found the primaryUpdater, defaulting to all GMs.");
+      return game.users.filter((x) => x.isGM);
+    }
+  }
 }
 
 Hooks.on("render" + "ItemSheetPF2e", (app, html, data) => {

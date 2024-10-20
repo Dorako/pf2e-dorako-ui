@@ -1,3 +1,9 @@
+# 3.7.4
+
+- (Refinement) Tweaked the color generation for the new 'Player Sheet Theme Color' feature again.
+- (Refinement) Added override flag to force a certain sheet color despite the player color being different. Example: `game.users.get("qUNuApJti2nIgA6V").setFlag("pf2e-dorako-ui", "player-sheet-color-override", "#0000FF")`
+- (Fix) Changed the way the primary owner of an actor is determined, snippet supplied by @MrVauxs
+
 # 3.7.3
 
 - (Refinement) Tweaked the color generation for the new 'Player Sheet Theme Color' feature.

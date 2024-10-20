@@ -9676,7 +9676,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside, [data-theme].actor.sheet.character[data-theme-color=player-color] aside {
   --sidebar-label: var(--text-color);
   --sidebar-title: var(--player-tone-light);
-  --text-light: var(--text-color);
+  --text-light: white;
   --color-pf-primary-dark: black;
   --color-pf-tertiary-light: var(--player-tone-light);
   --color-pf-tertiary: var(--player-tone-plain);
@@ -9687,11 +9687,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   padding-left: 8px;
 }
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .logo, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .logo {
-  width: 13.2rem !important;
-  width: 15.5rem !important;
+  width: 16rem !important;
   position: absolute;
-  top: 8px;
-  left: -5px;
+  top: 10px;
+  left: -8px;
 }
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .sidebar, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .sidebar {
   margin-top: 35px;
@@ -9726,6 +9725,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color] section.window-content .crb-style aside select, [data-theme].actor.sheet.character[data-theme-color=player-color] section.window-content .crb-style aside .sidebar .armor-class .shield-stats ul li .data-value,
 [data-theme].actor.sheet.character[data-theme-color=player-color] section.window-content .crb-style aside select {
   border: 1px solid var(--player-tone-darkest);
+  border-radius: var(--border-radius);
 }
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.vehicle .crb-style, [data-theme].actor.sheet.vehicle[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style, [data-theme].actor.sheet.character[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.vehicle .crb-style, [data-theme].actor.sheet.character[data-theme-color=player-color][data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style {
   background: linear-gradient(to bottom, var(--player-color) calc(100% + 50px), transparent 100%) !important;

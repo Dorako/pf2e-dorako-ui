@@ -97,7 +97,7 @@
     aside {
       --sidebar-label: var(--text-color);
       --sidebar-title: var(--player-tone-light);
-      --text-light: var(--text-color);
+      --text-light: white;
       --color-pf-primary-dark: black; // Shield text color
 
       --color-pf-tertiary-light: var(--player-tone-light);
@@ -108,12 +108,10 @@
       margin-left: unset !important;
       padding-left: 8px;
       .logo {
-        width: 13.2rem !important;
-        // margin-left: unset !important;
-        width: 15.5rem !important;
+        width: 16rem !important;
         position: absolute;
-        top: 8px;
-        left: -5px;
+        top: 10px;
+        left: -8px;
       }
       .sidebar {
         margin-top: 35px;
@@ -154,6 +152,7 @@
     section.window-content .crb-style aside .sidebar .armor-class .shield-stats ul li .data-value,
     section.window-content .crb-style aside select {
       border: 1px solid var(--player-tone-darkest);
+      border-radius: var(--border-radius);
     }
 
     &[data-theme][data-dorako-ui-scope="limited"].actor.sheet.vehicle .crb-style,
