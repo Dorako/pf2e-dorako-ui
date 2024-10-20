@@ -89,7 +89,7 @@
   &.actor.sheet.character[data-theme-color="player-color"] {
     --theme-color-dark: var(--player-tone-light);
     --theme-color: var(--player-color);
-    --theme-text-color: var(--player-tone);
+    --theme-text-color: var(--player-color);
     --color-scrollbar-hover: var(--theme-text-color);
     --scrollbar-thumb-background: var(--theme-color);
     --scrollbar-thumb-border-color: var(--tertiary);
@@ -98,7 +98,7 @@
       --sidebar-label: var(--text-color);
       --sidebar-title: var(--player-tone-light);
       --text-light: var(--text-color);
-      --color-pf-primary-dark: var(--player-tone); // Shield text color
+      --color-pf-primary-dark: black; // Shield text color
 
       --color-pf-tertiary-light: var(--player-tone-light);
       --color-pf-tertiary: var(--player-tone-plain);
@@ -107,7 +107,16 @@
       --color-pf-tertiary-darkest: var(--player-tone-darkest);
       margin-left: unset !important;
       padding-left: 8px;
+      .logo {
+        width: 13.2rem !important;
+        // margin-left: unset !important;
+        width: 15.5rem !important;
+        position: absolute;
+        top: 8px;
+        left: -5px;
+      }
       .sidebar {
+        margin-top: 35px;
         margin-bottom: 0.5rem !important;
         padding-left: 0 !important;
       }
@@ -116,6 +125,9 @@
     .char-header,
     .sheet-navigation {
       --text-light: var(--text-color);
+      .panel-title {
+        // --text-light: var(--player-tone-plain);
+      }
     }
 
     aside .sidebar .armor-class .ac,

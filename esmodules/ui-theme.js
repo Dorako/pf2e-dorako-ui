@@ -309,33 +309,35 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
         userColor = user.color;
       }
     }
-    html[0].style.setProperty("--player-color", userColor.css ?? "#DAC0FB");
     var hsl = userColor.hsl;
     var [h, s, l] = hsl;
-    if (l > 0.9) {
-      html[0].style.setProperty("--player-tone-light", userColor.mix(black, 1).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2]]) ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-dark", userColor.mix(black, 0.8).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-darker", userColor.mix(black, 0.6).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-darkest", userColor.mix(black, 0.4).css ?? "#DAC0FB");
-      html[0].style.setProperty("--text-color", userColor.mix(black, 1).css ?? "#DAC0FB");
-    } else if (s > 0.8 && h > 0.15 && h < 0.6 && l > 0.5) {
-      html[0].style.setProperty("--player-tone-light", userColor.mix(black, 0.9).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2]]) ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-plain", userColor.mix(black, 0.4).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-dark", userColor.mix(black, 0.3).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-darker", userColor.mix(black, 0.2).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-darkest", userColor.mix(black, 0.1).css ?? "#DAC0FB");
-      html[0].style.setProperty("--text-color", userColor.mix(black, 0.8).css ?? "#DAC0FB");
-    } else {
-      html[0].style.setProperty("--player-tone-light", userColor.mix(white, 0.8).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2]]) ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-plain", userColor.mix(white, 0.6).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-dark", userColor.mix(white, 0.5).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-darker", userColor.mix(white, 0.4).css ?? "#DAC0FB");
-      html[0].style.setProperty("--player-tone-darkest", userColor.mix(white, 0.3).css ?? "#DAC0FB");
-      html[0].style.setProperty("--text-color", userColor.mix(white, 0.8).css ?? "#DAC0FB");
+    const mapNumRange = (num, inMin, inMax, outMin, outMax) =>
+      ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+    function clamp(num, lower, upper) {
+      return Math.min(Math.max(num, lower), upper);
     }
+    const sSoftLimit = 0.5;
+    const sHardLimit = 0.5;
+    const lSoftLimit = 0.3;
+    const lHardLimit = 0.8;
+    var remappedColor = Color.fromHSL([
+      h,
+      s > sSoftLimit ? mapNumRange(s, 0, 1, sSoftLimit, sHardLimit) : s,
+      l > lSoftLimit ? mapNumRange(l, 0, 1, lSoftLimit, lHardLimit) : l,
+    ]);
+    html[0].style.setProperty("--player-color", remappedColor.css ?? "#DAC0FB");
+    [h, s, l] = remappedColor.hsl;
+
+    html[0].style.setProperty("--player-tone-light", userColor.mix(white, 0.9).css ?? "#DAC0FB");
+    html[0].style.setProperty("--player-tone", Color.fromHSL([userColor.hsl[0], 1, userColor.hsl[2] / 2]) ?? "#DAC0FB");
+    html[0].style.setProperty(
+      "--player-tone-plain",
+      Color.fromHSL([h, s < 0.1 ? 0 : 1, clamp(game.user.color.hsl[2] + 0.3, 0, 1)]) ?? "#DAC0FB"
+    );
+    html[0].style.setProperty("--player-tone-dark", userColor.mix(white, 0.4).css ?? "#DAC0FB");
+    html[0].style.setProperty("--player-tone-darker", userColor.mix(white, 0.3).css ?? "#DAC0FB");
+    html[0].style.setProperty("--player-tone-darkest", userColor.mix(white, 0.2).css ?? "#DAC0FB");
+    html[0].style.setProperty("--text-color", userColor.mix(white, 0.9).css ?? "#DAC0FB");
   });
 }
 

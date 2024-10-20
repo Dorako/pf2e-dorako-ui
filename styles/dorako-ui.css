@@ -9668,7 +9668,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color], [data-theme].actor.sheet.character[data-theme-color=player-color] {
   --theme-color-dark: var(--player-tone-light);
   --theme-color: var(--player-color);
-  --theme-text-color: var(--player-tone);
+  --theme-text-color: var(--player-color);
   --color-scrollbar-hover: var(--theme-text-color);
   --scrollbar-thumb-background: var(--theme-color);
   --scrollbar-thumb-border-color: var(--tertiary);
@@ -9677,7 +9677,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --sidebar-label: var(--text-color);
   --sidebar-title: var(--player-tone-light);
   --text-light: var(--text-color);
-  --color-pf-primary-dark: var(--player-tone);
+  --color-pf-primary-dark: black;
   --color-pf-tertiary-light: var(--player-tone-light);
   --color-pf-tertiary: var(--player-tone-plain);
   --color-pf-tertiary-dark: var(--player-tone-dark);
@@ -9686,7 +9686,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   margin-left: unset !important;
   padding-left: 8px;
 }
+[data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .logo, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .logo {
+  width: 13.2rem !important;
+  width: 15.5rem !important;
+  position: absolute;
+  top: 8px;
+  left: -5px;
+}
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .sidebar, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .sidebar {
+  margin-top: 35px;
   margin-bottom: 0.5rem !important;
   padding-left: 0 !important;
 }

@@ -1,3 +1,7 @@
+# 3.7.3
+
+- (Refinement) Tweaked the color generation for the new 'Player Sheet Theme Color' feature.
+
 # 3.7.2
 
 - (New) Added a new "Player Color" option for the 'Sheet theme color' setting.
