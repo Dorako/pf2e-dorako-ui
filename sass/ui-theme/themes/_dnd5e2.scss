@@ -374,14 +374,14 @@
       z-index: 1;
     }
 
-    .message-header .header-meta.rolltype {
-      &.blind {
-        background-color: var(--dnd5e-color-sc-2);
+    .message-header .header-meta {
+      &.whisper {
+        background-color: var(--dnd5e-color-blue);
         border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
         color: white;
       }
-      &.whisper {
-        background-color: var(--dnd5e-color-blue);
+      &.blind {
+        background-color: var(--dnd5e-color-sc-2);
         border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
         color: white;
       }

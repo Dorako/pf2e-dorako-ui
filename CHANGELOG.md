@@ -1,3 +1,9 @@
+# 3.7.5
+
+- (Refinement) Adjusted the way the chat message header color is computed - it will now prefer the color of the user associated with the actor, rather than the user who is the author of the message.
+- (Refinement) Updated whisper styling to be compatible with Dorako UX 1.5.7.
+- (Refinement) Exclude whisper tags from 'damage-taken' style messages.
+
 # 3.7.4
 
 - (Refinement) Tweaked the color generation for the new 'Player Sheet Theme Color' feature again.

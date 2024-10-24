@@ -13,9 +13,12 @@
     --color: var(--text-color-1);
   }
 
-  #pf2e-hud-token-main:not(.exploded) .joined,
   &[id^="pf2e-hud-persistent"].app,
   &[id^="pf2e-hud-persistent"] .app {
+    @include dui-app;
+  }
+
+  #pf2e-hud-token-main:not(.exploded) .joined {
     @include dui-app;
     backdrop-filter: blur(5px);
   }
@@ -26,11 +29,11 @@
   }
 
   &#pf2e-hud-sidebar .item-list {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
   }
 
   &#pf2e-hud-persistent-effects .effect-item:hover .effect-info {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
   }
 
   &[data-theme^="bg3"]#pf2e-hud-persistent-effects .effect-item .effect-info {

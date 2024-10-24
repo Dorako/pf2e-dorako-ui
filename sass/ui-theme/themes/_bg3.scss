@@ -730,11 +730,11 @@
     color: var(--bg3-text-1);
     text-shadow: 0px 1px 1px black;
 
-    &.rolltype.whisper {
+    &.whisper {
       background-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 50%, transparent);
       border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5));
     }
-    &.rolltype.blind {
+    &.blind {
       background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
       border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5));
     }

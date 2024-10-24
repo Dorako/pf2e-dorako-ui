@@ -483,12 +483,12 @@
     }
   }
 
-  .message-header .header-meta.rolltype {
-    &.blind {
-      color: var(--blind-bg);
-    }
+  .message-header .header-meta {
     &.whisper {
       color: var(--whisper-bg);
+    }
+    &.blind {
+      color: var(--blind-bg);
     }
   }
 

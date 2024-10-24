@@ -1,4 +1,5 @@
 import { lookupThemeAndSchemeForKey } from "./ui-theme.js";
+import { getPlayerOwners } from "./util.js";
 
 Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   if (html[0].hasAttribute("style")) {
@@ -69,13 +70,9 @@ const headerStyleColors = {
 function getHeaderColor(html, message) {
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (headerStyle === "tint") {
-    return message?.author?.color ?? headerStyleColors.fallback;
+    return getPlayerOwners(message.actor)[0].color.css ?? message?.author?.color ?? headerStyleColors.fallback;
   }
   return headerStyleColors[headerStyle] ?? headerStyleColors.fallback;
-}
-
-function invertColor(color) {
-  return color === "dark" ? "light" : "dark";
 }
 
 function calcHeaderTextColor(headerColor) {

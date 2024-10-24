@@ -2016,7 +2016,15 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme][id^=pf2e-hud] {
   --color: var(--text-color-1);
 }
-[data-theme] #pf2e-hud-token-main:not(.exploded) .joined, [data-theme][id^=pf2e-hud-persistent].app, [data-theme][id^=pf2e-hud-persistent] .app {
+[data-theme][id^=pf2e-hud-persistent].app, [data-theme][id^=pf2e-hud-persistent] .app {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+}
+[data-theme] #pf2e-hud-token-main:not(.exploded) .joined {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -2030,10 +2038,10 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   place-items: center;
 }
 [data-theme]#pf2e-hud-sidebar .item-list {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
 }
 [data-theme]#pf2e-hud-persistent-effects .effect-item:hover .effect-info {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
 }
 [data-theme][data-theme^=bg3]#pf2e-hud-persistent-effects .effect-item .effect-info {
   background: var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
@@ -11459,11 +11467,11 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=discord].chat-message.whisper.blind .message-header {
   color: var(--blind-bg) !important;
 }
-[data-theme^=discord].chat-message .message-header .header-meta.rolltype.blind {
-  color: var(--blind-bg);
-}
-[data-theme^=discord].chat-message .message-header .header-meta.rolltype.whisper {
+[data-theme^=discord].chat-message .message-header .header-meta.whisper {
   color: var(--whisper-bg);
+}
+[data-theme^=discord].chat-message .message-header .header-meta.blind {
+  color: var(--blind-bg);
 }
 [data-theme^=discord].chat-message .message-header,
 [data-theme^=discord].chat-message .message-header h4 {
@@ -11921,13 +11929,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: unset;
   z-index: 1;
 }
-[data-theme^=dnd5e2].chat-message .message-header .header-meta.rolltype.blind {
-  background-color: var(--dnd5e-color-sc-2);
+[data-theme^=dnd5e2].chat-message .message-header .header-meta.whisper {
+  background-color: var(--dnd5e-color-blue);
   border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
   color: white;
 }
-[data-theme^=dnd5e2].chat-message .message-header .header-meta.rolltype.whisper {
-  background-color: var(--dnd5e-color-blue);
+[data-theme^=dnd5e2].chat-message .message-header .header-meta.blind {
+  background-color: var(--dnd5e-color-sc-2);
   border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
   color: white;
 }
@@ -12941,13 +12949,13 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: var(--bg3-text-1);
   text-shadow: 0px 1px 1px black;
 }
-[data-theme^=bg3].message.chat-message .message-timestamp.rolltype.whisper,
-[data-theme^=bg3].message.chat-message .header-meta.rolltype.whisper {
+[data-theme^=bg3].message.chat-message .message-timestamp.whisper,
+[data-theme^=bg3].message.chat-message .header-meta.whisper {
   background-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 50%, transparent);
   border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5));
 }
-[data-theme^=bg3].message.chat-message .message-timestamp.rolltype.blind,
-[data-theme^=bg3].message.chat-message .header-meta.rolltype.blind {
+[data-theme^=bg3].message.chat-message .message-timestamp.blind,
+[data-theme^=bg3].message.chat-message .header-meta.blind {
   background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
   border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5));
 }
@@ -13463,15 +13471,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   background: rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 0, 0, 0.5);
 }
-[data-theme^=crb].chat-message .message-header .header-meta.rolltype.blind {
-  background-color: var(--dnd5e-color-sc-2);
-  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
-  color: white;
+[data-theme^=crb].chat-message .message-header .header-meta.whisper {
+  background-color: var(--dnd5e-color-blue) !important;
+  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5)) !important;
+  color: white !important;
 }
-[data-theme^=crb].chat-message .message-header .header-meta.rolltype.whisper {
-  background-color: var(--dnd5e-color-blue);
-  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
-  color: white;
+[data-theme^=crb].chat-message .message-header .header-meta.blind {
+  background-color: var(--dnd5e-color-sc-2) !important;
+  border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5)) !important;
+  color: white !important;
 }
 [data-theme^=crb].chat-message .card-content {
   --app-border-color: var(--tertiary);
@@ -13780,15 +13788,15 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   color: var(--text-color-1);
   text-shadow: 0px 1px 1px black;
 }
-[data-theme=foundry2].message.chat-message .message-timestamp.blind,
-[data-theme=foundry2].message.chat-message .header-meta.blind {
-  background-color: color-mix(in srgb, var(--blind-bg) 50%, transparent);
-  border: 1px solid color-mix(in srgb, var(--blind-bg) 66%, rgba(255, 255, 255, 0.5));
-}
 [data-theme=foundry2].message.chat-message .message-timestamp.whisper,
 [data-theme=foundry2].message.chat-message .header-meta.whisper {
   background-color: color-mix(in srgb, rgb(42, 113, 255) 33%, transparent);
   border: 1px solid color-mix(in srgb, rgb(42, 113, 255) 50%, rgba(255, 255, 255, 0.5));
+}
+[data-theme=foundry2].message.chat-message .message-timestamp.blind,
+[data-theme=foundry2].message.chat-message .header-meta.blind {
+  background-color: color-mix(in srgb, var(--blind-bg) 50%, transparent);
+  border: 1px solid color-mix(in srgb, var(--blind-bg) 66%, rgba(255, 255, 255, 0.5));
 }
 [data-theme=foundry2].window-app, [data-theme=foundry2].application {
   backdrop-filter: blur(4px);

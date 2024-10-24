@@ -8,6 +8,7 @@ import {
   appV2Apps,
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
+import { getPlayerOwners } from "./util.js";
 
 export function lookupThemeAndSchemeForKey(key) {
   switch (key) {
@@ -339,43 +340,6 @@ for (const appName of ["CharacterSheetPF2e", "VehicleSheetPF2e"]) {
     html[0].style.setProperty("--player-tone-darkest", userColor.mix(white, 0.2).css ?? "#DAC0FB");
     html[0].style.setProperty("--text-color", userColor.mix(white, 0.9).css ?? "#DAC0FB");
   });
-}
-
-export function nonNullable(value) {
-  return value !== null && value !== undefined;
-}
-
-export function getPlayerOwners(actor) {
-  const assigned = game.users.contents.find((user) => user.character?.id === actor.id);
-  if (assigned) return [assigned];
-
-  // If everyone owns it, nobody does.
-  if (actor.ownership.default === 3) {
-    return game.users.contents;
-  }
-
-  // Check the ownership IDs, check if there is a player owner, yes, ignore GMs, no, count only GMs.
-  const owners = Object.keys(actor.ownership)
-    .filter((x) => x !== "default")
-    .filter((x) =>
-      actor.hasPlayerOwner ? !game.users.get(x)?.hasRole("GAMEMASTER") : game.users.get(x)?.hasRole("GAMEMASTER")
-    )
-    .map((x) => game.users.get(x))
-    .filter(nonNullable);
-
-  if (owners.length) {
-    return owners;
-  } else {
-    // If "nobody" owns it, whoever is the primaryUpdater (read: GM) does.
-    // This should handle weirdos like { ownership: { default: 0 } }
-    if (actor.primaryUpdater) {
-      log("Could not determine owner, defaulting to primaryUpdater.");
-      return [actor.primaryUpdater];
-    } else {
-      log("Could not determine owner nor found the primaryUpdater, defaulting to all GMs.");
-      return game.users.filter((x) => x.isGM);
-    }
-  }
 }
 
 Hooks.on("render" + "ItemSheetPF2e", (app, html, data) => {

@@ -227,13 +227,13 @@
       border: 1px solid color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
       color: var(--text-color-1);
       text-shadow: 0px 1px 1px black;
-      &.blind {
-        background-color: color-mix(in srgb, var(--blind-bg) 50%, transparent);
-        border: 1px solid color-mix(in srgb, var(--blind-bg) 66%, rgba(255, 255, 255, 0.5));
-      }
       &.whisper {
         background-color: color-mix(in srgb, rgb(42, 113, 255) 33%, transparent);
         border: 1px solid color-mix(in srgb, rgb(42, 113, 255) 50%, rgba(255, 255, 255, 0.5));
+      }
+      &.blind {
+        background-color: color-mix(in srgb, var(--blind-bg) 50%, transparent);
+        border: 1px solid color-mix(in srgb, var(--blind-bg) 66%, rgba(255, 255, 255, 0.5));
       }
     }
   }

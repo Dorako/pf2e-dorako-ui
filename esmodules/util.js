@@ -51,3 +51,42 @@ export function i18nFormat(key, data) {
 export function titleCase(string) {
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
+
+export function nonNullable(value) {
+  return value !== null && value !== undefined;
+}
+
+// Stolen from MrVauxs
+export function getPlayerOwners(actor) {
+  if (actor == null) return game.users.filter((x) => x.isGM);
+  const assigned = game.users.contents.find((user) => user.character?.id === actor.id);
+  if (assigned) return [assigned];
+
+  // If everyone owns it, nobody does.
+  if (actor.ownership.default === 3) {
+    return game.users.contents;
+  }
+
+  // Check the ownership IDs, check if there is a player owner, yes, ignore GMs, no, count only GMs.
+  const owners = Object.keys(actor.ownership)
+    .filter((x) => x !== "default")
+    .filter((x) =>
+      actor.hasPlayerOwner ? !game.users.get(x)?.hasRole("GAMEMASTER") : game.users.get(x)?.hasRole("GAMEMASTER")
+    )
+    .map((x) => game.users.get(x))
+    .filter(nonNullable);
+
+  if (owners.length) {
+    return owners;
+  } else {
+    // If "nobody" owns it, whoever is the primaryUpdater (read: GM) does.
+    // This should handle weirdos like { ownership: { default: 0 } }
+    if (actor.primaryUpdater) {
+      log("Could not determine owner, defaulting to primaryUpdater.");
+      return [actor.primaryUpdater];
+    } else {
+      log("Could not determine owner nor found the primaryUpdater, defaulting to all GMs.");
+      return game.users.filter((x) => x.isGM);
+    }
+  }
+}
