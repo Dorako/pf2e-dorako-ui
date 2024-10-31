@@ -2005,6 +2005,24 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: 0px 0px 1px 1px inset rgba(255, 255, 255, 0.2);
 }
 
+[data-theme] .pf2e-chances-chatcard-container {
+  background: none !important;
+  outline: none !important;
+}
+
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.critical-failure {
+  color: var(--degree-failure-critical);
+}
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.failure {
+  color: var(--degree-failure);
+}
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.success {
+  color: var(--degree-success);
+}
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.critical-success {
+  color: var(--degree-success-critical);
+}
+
 #interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
   background: var(--app-background);
 }
@@ -2837,6 +2855,10 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
+}
+[data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation > a.activeCombatant::after {
+  bottom: auto !important;
+  left: 10% !important;
 }
 [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation-controls {
   background: var(--app-background);
@@ -9699,6 +9721,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   position: absolute;
   top: 10px;
   left: -8px;
+  z-index: 1;
 }
 [data-theme].actor.sheet.vehicle[data-theme-color=player-color] aside .sidebar, [data-theme].actor.sheet.character[data-theme-color=player-color] aside .sidebar {
   margin-top: 35px;

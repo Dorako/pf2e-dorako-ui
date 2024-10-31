@@ -1,3 +1,8 @@
+# 3.7.6
+
+- (Module) Added theme support for PF2e Chances.
+- (Refinement) Adjusted the calculation for the selection of player for the Player Colored sheet theme so it should be correct for cases where multiple players have different ownership values for an actor.
+
 # 3.7.5
 
 - (Refinement) Adjusted the way the chat message header color is computed - it will now prefer the color of the user associated with the actor, rather than the user who is the author of the message.

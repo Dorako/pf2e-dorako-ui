@@ -11,6 +11,12 @@
             @include dui-button;
             font-family: var(--sans-serif);
             margin-bottom: 5px;
+            &.activeCombatant {
+              &::after {
+                bottom: auto !important;
+                left: 10% !important;
+              }
+            }
           }
         }
         & > .sheet-navigation-controls {
@@ -38,6 +44,15 @@
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       border: none;
+    }
+  }
+}
+
+#rolodex {
+  & > .window-content {
+    & > .tab-bar {
+      & > .sheet-navigation {
+      }
     }
   }
 }

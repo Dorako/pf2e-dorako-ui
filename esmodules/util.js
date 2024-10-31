@@ -67,8 +67,10 @@ export function getPlayerOwners(actor) {
     return game.users.contents;
   }
 
+  const sortedActorOwnership = Object.fromEntries(Object.entries(actor.ownership).sort((a, b) => b[1] - a[1]));
+
   // Check the ownership IDs, check if there is a player owner, yes, ignore GMs, no, count only GMs.
-  const owners = Object.keys(actor.ownership)
+  const owners = Object.keys(sortedActorOwnership)
     .filter((x) => x !== "default")
     .filter((x) =>
       actor.hasPlayerOwner ? !game.users.get(x)?.hasRole("GAMEMASTER") : game.users.get(x)?.hasRole("GAMEMASTER")
