@@ -9901,6 +9901,32 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme].actor.sheet.character[data-theme-color=black] .crb-style nav.sheet-navigation .item.active {
   background-image: url("../img/blue-nav-item.webp");
 }
+[data-theme].actor.sheet.vehicle[data-theme-color=brown], [data-theme].actor.sheet.character[data-theme-color=brown] {
+  --theme-color-dark: #5F2F0D;
+  --theme-color: #8B4513;
+  --theme-text-color: #8B4513;
+  --color-scrollbar-hover: var(--theme-text-color);
+  --scrollbar-thumb-background: var(--theme-color);
+  --scrollbar-thumb-border-color: var(--tertiary);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=brown] .crb-style, [data-theme].actor.sheet.character[data-theme-color=brown] .crb-style {
+  --header: url("../img/brown-header.webp");
+  background-image: url("../img/brown-header.webp"), var(--sheet);
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=brown] .crb-style aside, [data-theme].actor.sheet.character[data-theme-color=brown] .crb-style aside {
+  background-image: url("../img/brown-sidebar-top.webp"), url("../img/brown-sidebar-bottom.webp");
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=brown] .crb-style aside .armor-class .shield.hp, [data-theme].actor.sheet.character[data-theme-color=brown] .crb-style aside .armor-class .shield.hp {
+  background: url("../img/blue-shield.webp") no-repeat top center;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=brown] .crb-style header.char-header .char-level .level, [data-theme].actor.sheet.character[data-theme-color=brown] .crb-style header.char-header .char-level .level {
+  background: url("../img/blue-level-badge.webp") no-repeat;
+}
+[data-theme].actor.sheet.vehicle[data-theme-color=brown] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.vehicle[data-theme-color=brown] .crb-style nav.sheet-navigation .item.active, [data-theme].actor.sheet.character[data-theme-color=brown] .crb-style nav.sheet-navigation .item:hover,
+[data-theme].actor.sheet.character[data-theme-color=brown] .crb-style nav.sheet-navigation .item.active {
+  background-image: url("../img/brown-nav-item.webp");
+}
 
 [data-theme][data-dorako-ui-scope=limited].actor.sheet.vehicle .crb-style, [data-theme][data-dorako-ui-scope=limited].actor.sheet.character .crb-style {
   background: unset;
@@ -9929,6 +9955,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 }
 [data-theme][data-dorako-ui-scope=limited][data-theme-color=black].sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color=black].sheet.actor.window-app.character .window-header {
   background: #151515;
+}
+[data-theme][data-dorako-ui-scope=limited][data-theme-color=brown].sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color=brown].sheet.actor.window-app.character .window-header {
+  background: #522505;
 }
 [data-theme][data-dorako-ui-scope=limited][data-theme-color].sheet.actor.window-app.vehicle .window-header, [data-theme][data-dorako-ui-scope=limited][data-theme-color].sheet.actor.window-app.character .window-header {
   color: white;

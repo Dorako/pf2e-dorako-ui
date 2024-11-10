@@ -75,6 +75,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           blue: "pf2e-dorako-ui.text.colors.blue",
           purple: "pf2e-dorako-ui.text.colors.purple",
           black: "pf2e-dorako-ui.text.colors.black",
+          brown: "pf2e-dorako-ui.text.colors.brown"
         },
         requiresReload: false,
         onChange: () => {
