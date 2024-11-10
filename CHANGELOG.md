@@ -1,3 +1,10 @@
+# 3.7.7
+
+- (Maintenance) Updated selectors for PF2e Chances.
+- (Maintenance) Applies either core Foundry .dark-theme or .light-theme classes depending on sheet theme.
+- (Refinement) Excluded the PF2e HUD 'note' dialog from styling.
+- (New) Added support for the new ABCPicker dialogs.
+
 # 3.7.6
 
 - (Module) Added theme support for PF2e Chances.

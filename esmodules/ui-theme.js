@@ -48,7 +48,9 @@ export function lookupThemeAndSchemeForKey(key) {
 }
 
 Hooks.on("renderSvelteApplication", (app, html, data) => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
+  const theme = themedApps.includes(app.constructor.name)
+    ? game.settings.get("pf2e-dorako-ui", "theme.app-theme")
+    : game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
   if (theme === "no-theme") return;
   const uiTheme = lookupThemeAndSchemeForKey(theme);
   if (uiTheme === null) return;
@@ -59,9 +61,10 @@ Hooks.on("renderSvelteApplication", (app, html, data) => {
     return;
   }
   const { dorakoUiTheme, colorScheme } = uiTheme;
-  app.element[0].dataset.theme = dorakoUiTheme;
-  app.element[0].dataset.colorScheme = colorScheme;
-  app.element[0].dataset.dorakoUiScope = "unlimited";
+  const elem = app.element instanceof jQuery ? app.element[0] : app.element;
+  elem.dataset.theme = dorakoUiTheme;
+  if (colorScheme != null) elem.dataset.colorScheme = colorScheme;
+  // elem.dataset.dorakoUiScope = "unlimited";
 });
 
 // Interface theme
@@ -80,8 +83,8 @@ for (const appName of [...themedApps]) {
       );
       return;
     }
-
-    app.element[0].dataset.theme = dorakoUiTheme;
+    const elem = app.element instanceof jQuery ? app.element[0] : app.element;
+    elem.dataset.theme = dorakoUiTheme;
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}']`);
   });
 }
@@ -121,7 +124,7 @@ for (const appName of [...appV2Apps]) {
     if (appName === "PF2eHudPersistent") {
       const potentialSubElements = ["leftElement", "mainElement", "menuElement", "portraitElement", "effectsElement"];
       for (const subElementKey of potentialSubElements) {
-        if (subElementKey in app) {
+        if (subElementKey in app && app[subElementKey] != null) {
           app[subElementKey].dataset.theme = dorakoUiTheme;
           console.debug(
             `${MODULE_NAME} | render${app.constructor.name + "." + subElementKey} | [data-theme='${dorakoUiTheme}']`
@@ -230,48 +233,49 @@ Hooks.on("renderApplication", (app, html, data) => {
   }
 });
 
-Hooks.on("renderApplicationV2", (app, html, data) => {
-  if (html.classList.contains("editable")) return;
-  if (!html.classList.contains("application")) return;
-  // if (isPremiumApplication(app, html, data, app.constructor.name)) return;
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
-  if (theme === "no-theme") return;
-  const uiTheme = lookupThemeAndSchemeForKey(theme);
-  if (uiTheme === null) return;
-  const { dorakoUiTheme, colorScheme } = uiTheme;
-  const excludeString =
-    game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") +
-    ", EnhancedJournal" +
-    ", SceneActorsLayer" +
-    ", SmallTimeApp" +
-    ", SceneDarknessAdjuster" +
-    ", AutorecMenuApp" +
-    ", ImagePopout" +
-    ", PF2eHudResources";
-  const excludeList = excludeString.split(/[\s,]+/);
-  if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
-    console.debug(
-      `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
-    );
-    return;
-  }
+// Hooks.on("renderApplicationV2", (app, html, data) => {
+//   if (html.classList.contains("editable")) return;
+//   if (!html.classList.contains("application")) return;
+//   // if (isPremiumApplication(app, html, data, app.constructor.name)) return;
+//   const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
+//   if (theme === "no-theme") return;
+//   const uiTheme = lookupThemeAndSchemeForKey(theme);
+//   if (uiTheme === null) return;
+//   const { dorakoUiTheme, colorScheme } = uiTheme;
+//   const excludeString =
+//     game.settings.get("pf2e-dorako-ui", "customization.excluded-applications") +
+//     ", EnhancedJournal" +
+//     ", SceneActorsLayer" +
+//     ", SmallTimeApp" +
+//     ", SceneDarknessAdjuster" +
+//     ", AutorecMenuApp" +
+//     ", ImagePopout" +
+//     ", PF2eHudResources";
+//   const excludeList = excludeString.split(/[\s,]+/);
+//   if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
+//     console.debug(
+//       `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
+//     );
+//     return;
+//   }
 
-  const fakeDialogPatterns = ["popup", "dialog"];
-  for (const fakeDialogPattern of [...fakeDialogPatterns]) {
-    if (app.constructor.name.toLowerCase().includes(fakeDialogPattern)) {
-      console.debug(
-        `${MODULE_NAME} | render${app.constructor.name} | constructor includes '${fakeDialogPattern}' => add .dialog`
-      );
-      // html.addClass("dialog");
-    }
-  }
-  app.element.dataset.theme = dorakoUiTheme;
-  app.element.dataset.colorScheme = colorScheme;
-  app.element.dataset.dorakoUiScope = "unlimited";
-  console.debug(
-    `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
-  );
-});
+//   const fakeDialogPatterns = ["popup", "dialog"];
+//   for (const fakeDialogPattern of [...fakeDialogPatterns]) {
+//     if (app.constructor.name.toLowerCase().includes(fakeDialogPattern)) {
+//       console.debug(
+//         `${MODULE_NAME} | render${app.constructor.name} | constructor includes '${fakeDialogPattern}' => add .dialog`
+//       );
+//       // html.addClass("dialog");
+//     }
+//   }
+//   const elem = app.element instanceof jQuery ? app.element[0] : app.element;
+//   elem.dataset.theme = dorakoUiTheme;
+//   elem.dataset.colorScheme = colorScheme;
+//   // elem.dataset.dorakoUiScope = "unlimited";
+//   console.debug(
+//     `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
+//   );
+// });
 
 for (const appName of [...limitedScopeApplications]) {
   Hooks.on("render" + appName, (app, html, data) => {
@@ -288,7 +292,8 @@ for (const appName of [...limitedScopeApplications]) {
       return;
     }
     console.debug(`${MODULE_NAME} | render${app.constructor.name} | [data-ui-scope='limited']`);
-    app.element[0].dataset.dorakoUiScope = "limited";
+    const elem = app.element instanceof jQuery ? app.element[0] : app.element;
+    elem.dataset.dorakoUiScope = "limited";
   });
 }
 

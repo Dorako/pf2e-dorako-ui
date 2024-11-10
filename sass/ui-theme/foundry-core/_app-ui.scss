@@ -318,28 +318,28 @@
 /* Generalized style choices (exlusive of limited scope)        */
 /* ------------------------------------------------------------ */
 
-[data-theme][data-dorako-ui-scope="unlimited"][data-color-scheme="dark"] {
+[data-theme][data-color-scheme="dark"]:not([data-dorako-ui-scope="limited"]) {
   h1 {
-    color: var(--text-color-1);
+    color: var(--color-text-primary);
   }
   h2 {
-    color: var(--text-color-1);
+    color: var(--color-text-primary);
   }
   h3 {
-    color: var(--text-color-1);
+    color: var(--color-text-primary);
   }
   h4:not([data-visibility]) {
-    color: var(--text-color-2);
+    color: var(--color-text-secondary);
   }
   h5 {
-    color: var(--text-color-2);
+    color: var(--color-text-secondary);
   }
   h6 {
-    color: var(--text-color-2);
+    color: var(--color-text-secondary);
   }
 }
 
-[data-theme][data-dorako-ui-scope="unlimited"] {
+[data-theme]:not([data-dorako-ui-scope="limited"]) {
   // color: var(--text-color-3);
 
   input[type="text"],
@@ -487,7 +487,7 @@
 body.game [data-theme].window-app,
 body.game [data-theme].application {
   // --background: url(../ui/parchment.jpg) repeat;
-  // --color-text-primary: var(--color-text-secondary);
+  --color-text-primary: var(--text-color-2);
   --color-header-background: var(--text-color-3);
   --color-fieldset-border: var(--text-color-2);
   // color-text-primary is a core variable
@@ -551,9 +551,12 @@ body.game [data-theme].application {
     // Electron app bug
     box-shadow: var(--window-app-box-shadow);
 
+    &.abc-picker,
     &.sidebar-popout {
       border: var(--app-border-width) solid var(--window-app-border-color);
       box-shadow: var(--box-shadow);
+      backdrop-filter: blur(5px);
+      --color-text-dark-secondary: #a89d8b;
     }
 
     .window-header {

@@ -419,6 +419,7 @@
     --color-text-dark-4: var(--text-color-4);
     --color-text-dark-3: var(--text-color-5);
     --color-text-dark-2: var(--text-color-2);
+    --color-text-dark-inactive: var(--text-color-disabled);
     // .tag,
     .value,
     .label,
@@ -656,6 +657,12 @@
   }
   &.spellcasting-entry.preparation {
     --color-border-light-2: var(--color-secondary-4);
+  }
+}
+
+[data-theme] {
+  &.abc-picker input[type="search"] {
+    @include dui-input;
   }
 }
 

@@ -1,5 +1,17 @@
 import { MODULE_NAME, systemSheets } from "./consts.js";
+import { lookupThemeAndSchemeForKey } from "./ui-theme.js";
 import { i18n, debug, warn } from "./util.js";
+
+Hooks.once("ready", () => {
+  const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
+  if (theme === "no-theme") return;
+  document.body.classList.remove("theme-light");
+  document.body.classList.remove("theme-dark");
+
+  const uiTheme = lookupThemeAndSchemeForKey(theme);
+  const { dorakoUiTheme, colorScheme } = uiTheme;
+  document.body.classList.add("theme-" + colorScheme);
+});
 
 Hooks.once("ready", () => {
   if (!game.modules.get("pf2e-dorako-ux")) return;

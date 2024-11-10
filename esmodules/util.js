@@ -84,10 +84,10 @@ export function getPlayerOwners(actor) {
     // If "nobody" owns it, whoever is the primaryUpdater (read: GM) does.
     // This should handle weirdos like { ownership: { default: 0 } }
     if (actor.primaryUpdater) {
-      log("Could not determine owner, defaulting to primaryUpdater.");
+      // log("Could not determine owner, defaulting to primaryUpdater.");
       return [actor.primaryUpdater];
     } else {
-      log("Could not determine owner nor found the primaryUpdater, defaulting to all GMs.");
+      // log("Could not determine owner nor found the primaryUpdater, defaulting to all GMs.");
       return game.users.filter((x) => x.isGM);
     }
   }

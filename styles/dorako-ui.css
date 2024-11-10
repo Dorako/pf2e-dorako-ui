@@ -2007,19 +2007,18 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 
 [data-theme] .pf2e-chances-chatcard-container {
   background: none !important;
-  outline: none !important;
 }
 
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.critical-failure {
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.critical-failure {
   color: var(--degree-failure-critical);
 }
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.failure {
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.failure {
   color: var(--degree-failure);
 }
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.success {
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.success {
   color: var(--degree-success);
 }
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-line.critical-success {
+[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.critical-success {
   color: var(--degree-success-critical);
 }
 
@@ -5186,74 +5185,74 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ------------------------------------------------------------ */
 /* Generalized style choices (exlusive of limited scope)        */
 /* ------------------------------------------------------------ */
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h1 {
-  color: var(--text-color-1);
+[data-theme][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) h1 {
+  color: var(--color-text-primary);
 }
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h2 {
-  color: var(--text-color-1);
+[data-theme][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) h2 {
+  color: var(--color-text-primary);
 }
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h3 {
-  color: var(--text-color-1);
+[data-theme][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) h3 {
+  color: var(--color-text-primary);
 }
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h4:not([data-visibility]) {
-  color: var(--text-color-2);
+[data-theme][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) h4:not([data-visibility]) {
+  color: var(--color-text-secondary);
 }
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h5 {
-  color: var(--text-color-2);
+[data-theme][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) h5 {
+  color: var(--color-text-secondary);
 }
-[data-theme][data-dorako-ui-scope=unlimited][data-color-scheme=dark] h6 {
-  color: var(--text-color-2);
+[data-theme][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) h6 {
+  color: var(--color-text-secondary);
 }
 
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search] {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search] {
   min-width: 24px;
 }
-[data-theme][data-dorako-ui-scope=unlimited] fieldset {
+[data-theme]:not([data-dorako-ui-scope=limited]) fieldset {
   border: 1px solid var(--fieldset-border-color) !important;
   background: var(--fieldset-background-color) !important;
   border-radius: var(--border-radius);
 }
-[data-theme][data-dorako-ui-scope=unlimited] fieldset > legend {
+[data-theme]:not([data-dorako-ui-scope=limited]) fieldset > legend {
   color: var(--fieldset-legend-color);
   text-shadow: unset;
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=range] {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=range] {
   background: none !important;
   --dui-input-focus-outline-color: transparent;
   --dui-input-border-color: transparent;
   --box-shadow: none;
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=range]::-webkit-slider-runnable-track {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=range]::-webkit-slider-runnable-track {
   box-shadow: unset;
   border-radius: 3px;
   background: var(--color-secondary-5);
   border: 1px solid var(--color-secondary-4);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=range]::-webkit-slider-thumb {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   box-shadow: unset;
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=range]:disabled::-webkit-slider-thumb {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=range]:disabled::-webkit-slider-thumb {
   background: color-mix(in srgb, var(--accent-color) 50%, black);
   border: 1px solid color-mix(in srgb, var(--accent-text-color) 50%, black);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=range]:not(:disabled)::-webkit-slider-thumb {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=range]:not(:disabled)::-webkit-slider-thumb {
   background: var(--accent-color);
   border: 1px solid var(--color-primary-1);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=color][data-edit] {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=color][data-edit] {
   border: 1px solid var(--color-border-light-highlight);
   border-radius: var(--border-radius);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=color i]::-webkit-color-swatch {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=color i]::-webkit-color-swatch {
   border-color: var(--color-secondary-4);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=range] + .range-value {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=range] + .range-value {
   flex: none;
   height: 24px;
   padding: 0 0.5rem;
@@ -5268,9 +5267,9 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: 3px;
   font-size: var(--font-size-12);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row,
-[data-theme][data-dorako-ui-scope=unlimited] a.button,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown) {
+[data-theme]:not([data-dorako-ui-scope=limited]) a.list-row,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown) {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5285,21 +5284,21 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row:not(.disabled, :disabled, .empty):hover,
-[data-theme][data-dorako-ui-scope=unlimited] a.button:not(.disabled, :disabled, .empty):hover,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):not(.disabled, :disabled, .empty):hover {
+[data-theme]:not([data-dorako-ui-scope=limited]) a.list-row:not(.disabled, :disabled, .empty):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button:not(.disabled, :disabled, .empty):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown):not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row.view, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.selected, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.active:not(.empty),
-[data-theme][data-dorako-ui-scope=unlimited] a.button.view,
-[data-theme][data-dorako-ui-scope=unlimited] a.button.selected,
-[data-theme][data-dorako-ui-scope=unlimited] a.button.active:not(.empty),
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).view,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).selected,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).active:not(.empty) {
+[data-theme]:not([data-dorako-ui-scope=limited]) a.list-row.view, [data-theme]:not([data-dorako-ui-scope=limited]) a.list-row.selected, [data-theme]:not([data-dorako-ui-scope=limited]) a.list-row.active:not(.empty),
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button.view,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button.selected,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button.active:not(.empty),
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown).view,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown).selected,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown).active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -5307,27 +5306,27 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty.active,
-[data-theme][data-dorako-ui-scope=unlimited] a.button.empty.active,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty.active {
+[data-theme]:not([data-dorako-ui-scope=limited]) a.list-row.empty.active,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button.empty.active,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown).empty.active {
   outline: 1px solid var(--dui-button-focus-outline-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.disabled, [data-theme][data-dorako-ui-scope=unlimited] a.list-row:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] a.button.empty,
-[data-theme][data-dorako-ui-scope=unlimited] a.button.disabled,
-[data-theme][data-dorako-ui-scope=unlimited] a.button:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).disabled,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):disabled {
+[data-theme]:not([data-dorako-ui-scope=limited]) a.list-row.empty, [data-theme]:not([data-dorako-ui-scope=limited]) a.list-row.disabled, [data-theme]:not([data-dorako-ui-scope=limited]) a.list-row:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button.empty,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button.disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) a.button:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown).empty,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown).disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) button:not(.pm-dropdown):disabled {
   --dui-button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
 }
-[data-theme][data-dorako-ui-scope=unlimited] .prosemirror menu .pm-dropdown:hover i {
+[data-theme]:not([data-dorako-ui-scope=limited]) .prosemirror menu .pm-dropdown:hover i {
   color: black;
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5342,13 +5341,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button:not(.disabled, :disabled, .empty):hover {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.view, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.selected, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.active:not(.empty) {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.view, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.selected, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -5356,22 +5355,22 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.empty.active {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.empty.active {
   outline: 1px solid var(--dui-button-focus-outline-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.empty, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.disabled, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button:disabled {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.empty, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.disabled, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button:disabled {
   --dui-button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search],
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag) {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search],
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag) {
   background: var(--dui-input-background);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color) !important;
@@ -5383,78 +5382,78 @@ html .xdy-pf2e-workbench-rarity-unique {
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=unlimited] input[type=text]:focus,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number]:focus,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password]:not(:disabled, .disabled, [type=checkbox]):hover,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password]:focus,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date]:not(:disabled, .disabled, [type=checkbox]):hover,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date]:focus,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time]:not(:disabled, .disabled, [type=checkbox]):hover,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time]:focus,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search]:focus,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag):not(:disabled, .disabled, [type=checkbox]):hover,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag):focus {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]:not([data-dorako-ui-scope=limited]) input[type=text]:focus,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number]:not(:disabled, .disabled, [type=checkbox]):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number]:focus,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password]:not(:disabled, .disabled, [type=checkbox]):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password]:focus,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date]:not(:disabled, .disabled, [type=checkbox]):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date]:focus,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time]:not(:disabled, .disabled, [type=checkbox]):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time]:focus,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search]:focus,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag):not(:disabled, .disabled, [type=checkbox]):hover,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag):focus {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
   color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text].disabled, [data-theme][data-dorako-ui-scope=unlimited] input[type=text]:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number].disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number]:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password].disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password]:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date].disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date]:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time].disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time]:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search].disabled,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search]:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag).disabled,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag):disabled {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text].disabled, [data-theme]:not([data-dorako-ui-scope=limited]) input[type=text]:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number].disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number]:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password].disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password]:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date].disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date]:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time].disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time]:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search].disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search]:disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag).disabled,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag):disabled {
   --dui-input-text-color: var(--text-color-disabled);
   --dui-input-background: var(--input-disabled-background);
   --dui-input-border-color: var(--input-disabled-border-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text].disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited] input[type=text]:disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number].disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number]:disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password].disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password]:disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date].disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date]:disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time].disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time]:disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search].disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search]:disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag).disabled::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag):disabled::placeholder {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text].disabled::placeholder, [data-theme]:not([data-dorako-ui-scope=limited]) input[type=text]:disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number].disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number]:disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password].disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password]:disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date].disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date]:disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time].disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time]:disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search].disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search]:disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag).disabled::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag):disabled::placeholder {
   color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text]::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number]::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password]::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date]::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time]::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search]::placeholder,
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag)::placeholder {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text]::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number]::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password]::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date]::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time]::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search]::placeholder,
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag)::placeholder {
   color: var(--dui-input-placeholder-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited] input[type=text][type=checkbox],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=number][type=checkbox],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=password][type=checkbox],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=date][type=checkbox],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=time][type=checkbox],
-[data-theme][data-dorako-ui-scope=unlimited] input[type=search][type=checkbox],
-[data-theme][data-dorako-ui-scope=unlimited] select:not(.tag)[type=checkbox] {
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=text][type=checkbox],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=number][type=checkbox],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=password][type=checkbox],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=date][type=checkbox],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=time][type=checkbox],
+[data-theme]:not([data-dorako-ui-scope=limited]) input[type=search][type=checkbox],
+[data-theme]:not([data-dorako-ui-scope=limited]) select:not(.tag)[type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search], [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text] {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search], [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text] {
   background: var(--dui-input-background);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color) !important;
@@ -5466,41 +5465,41 @@ html .xdy-pf2e-workbench-rarity-unique {
   user-select: text;
   transition: outline-color 0.5s;
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:focus, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:focus {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search]:focus, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text]:focus {
   outline: 1px solid var(--dui-input-focus-outline-color);
   border: var(--app-border-width) solid;
   border-color: var(--dui-input-border-color);
   color: var(--dui-input-focus-text-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search].disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text].disabled, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:disabled {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search].disabled, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search]:disabled, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text].disabled, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text]:disabled {
   --dui-input-text-color: var(--text-color-disabled);
   --dui-input-background: var(--input-disabled-background);
   --dui-input-border-color: var(--input-disabled-border-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search].disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]:disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text].disabled::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]:disabled::placeholder {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search].disabled::placeholder, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search]:disabled::placeholder, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text].disabled::placeholder, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text]:disabled::placeholder {
   color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search]::placeholder, [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text]::placeholder {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search]::placeholder, [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text]::placeholder {
   color: var(--dui-input-placeholder-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=search][type=checkbox], [data-theme][data-dorako-ui-scope=unlimited].app.tag-selector form input[type=text][type=checkbox] {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=search][type=checkbox], [data-theme]:not([data-dorako-ui-scope=limited]).app.tag-selector form input[type=text][type=checkbox] {
   outline: unset !important;
   border: unset !important;
   box-shadow: unset !important;
 }
-[data-theme][data-dorako-ui-scope=unlimited] textarea {
+[data-theme]:not([data-dorako-ui-scope=limited]) textarea {
   color: var(--dui-input-text-color);
   background: var(--dui-input-background);
   border-width: var(--app-border-width);
   border-color: var(--dui-input-border-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited] hr {
+[data-theme]:not([data-dorako-ui-scope=limited]) hr {
   border: none;
   border-top: 1px solid var(--app-border-color);
   border-bottom: 1px solid var(--app-border-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5515,13 +5514,13 @@ html .xdy-pf2e-workbench-rarity-unique {
   cursor: pointer;
   text-shadow: var(--app-text-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default:not(.disabled, :disabled, .empty):hover {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default:not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
   box-shadow: var(--box-shadow);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.view, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.selected, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.active:not(.empty) {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default.view, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default.selected, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default.active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -5529,19 +5528,19 @@ html .xdy-pf2e-workbench-rarity-unique {
   text-decoration: none !important;
   font-weight: unset !important;
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.empty.active {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default.empty.active {
   outline: 1px solid var(--dui-button-focus-outline-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.empty, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default.disabled, [data-theme][data-dorako-ui-scope=unlimited].dialog .dialog-buttons button.default:disabled {
+[data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default.empty, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default.disabled, [data-theme]:not([data-dorako-ui-scope=limited]).dialog .dialog-buttons button.default:disabled {
   --dui-button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
   --dui-button-text-color: var(--text-color-5);
 }
-[data-theme][data-dorako-ui-scope=unlimited] form .form-group .form-fields button {
+[data-theme]:not([data-dorako-ui-scope=limited]) form .form-group .form-fields button {
   height: var(--form-field-height);
 }
-[data-theme][data-dorako-ui-scope=unlimited].sheet header.sheet-header img {
+[data-theme]:not([data-dorako-ui-scope=limited]).sheet header.sheet-header img {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5550,11 +5549,11 @@ html .xdy-pf2e-workbench-rarity-unique {
   color: var(--text-color-3);
   border: 1px solid var(--icon-border-color);
 }
-[data-theme][data-dorako-ui-scope=unlimited].sheet header.sheet-header h1 input {
+[data-theme]:not([data-dorako-ui-scope=limited]).sheet header.sheet-header h1 input {
   --font-size: inherit;
   font-size: 28px;
 }
-[data-theme][data-dorako-ui-scope=unlimited].app.sidebar-popout .window-content {
+[data-theme]:not([data-dorako-ui-scope=limited]).app.sidebar-popout .window-content {
   color: inherit;
 }
 
@@ -5563,6 +5562,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 body.game [data-theme].window-app,
 body.game [data-theme].application {
+  --color-text-primary: var(--text-color-2);
   --color-header-background: var(--text-color-3);
   --color-fieldset-border: var(--text-color-2);
   --color-form-label: var(--color-text-dark-primary);
@@ -5601,9 +5601,11 @@ body.game [data-theme].application {
   border-color: var(--window-app-border-color);
   box-shadow: var(--window-app-box-shadow);
 }
-[data-theme].application.sidebar-popout, [data-theme].window-app.sidebar-popout {
+[data-theme].application.abc-picker, [data-theme].application.sidebar-popout, [data-theme].window-app.abc-picker, [data-theme].window-app.sidebar-popout {
   border: var(--app-border-width) solid var(--window-app-border-color);
   box-shadow: var(--box-shadow);
+  backdrop-filter: blur(5px);
+  --color-text-dark-secondary: #a89d8b;
 }
 [data-theme].application .window-header, [data-theme].window-app .window-header {
   flex: 0 0 27px;
@@ -8848,6 +8850,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   text-shadow: none;
 }
 
+[data-theme][data-dorako-ui-scope=limited][data-color-scheme=dark].sheet.party [data-tab=overview] .member > .data header .resource .empty {
+  border-color: #b9ae78;
+}
 [data-theme][data-dorako-ui-scope=limited].sheet.party {
   --color-border: var(--color-primary-3);
   --alt-dark: var(--text-color-4);
@@ -9943,6 +9948,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-text-dark-4: var(--text-color-4);
   --color-text-dark-3: var(--text-color-5);
   --color-text-dark-2: var(--text-color-2);
+  --color-text-dark-inactive: var(--text-color-disabled);
 }
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content .value,
 [data-theme][data-dorako-ui-scope=limited]:not([data-theme^=crb][data-color-scheme=light]).actor.sheet.character .sheet-content .label,
@@ -10500,6 +10506,42 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --color-border-light-2: var(--color-secondary-4);
 }
 
+[data-theme].abc-picker input[type=search] {
+  background: var(--dui-input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--dui-input-border-color) !important;
+  color: var(--dui-input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 0px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme].abc-picker input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme].abc-picker input[type=search]:focus {
+  outline: 1px solid var(--dui-input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--dui-input-border-color);
+  color: var(--dui-input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme].abc-picker input[type=search].disabled, [data-theme].abc-picker input[type=search]:disabled {
+  --dui-input-text-color: var(--text-color-disabled);
+  --dui-input-background: var(--input-disabled-background);
+  --dui-input-border-color: var(--input-disabled-border-color);
+}
+[data-theme].abc-picker input[type=search].disabled::placeholder, [data-theme].abc-picker input[type=search]:disabled::placeholder {
+  color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
+}
+[data-theme].abc-picker input[type=search]::placeholder {
+  color: var(--dui-input-placeholder-color);
+}
+[data-theme].abc-picker input[type=search][type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+}
+
 [data-theme].attribute-builder .window-content .title {
   --primary: var(--accent-color);
 }
@@ -10758,10 +10800,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 /* ----------------------------------------- */
 /* Unlimited                                 */
 /* ----------------------------------------- */
-[data-theme^=crb][data-color-scheme=dark][data-dorako-ui-scope=unlimited] .tagify,
-[data-theme^=crb][data-color-scheme=dark][data-dorako-ui-scope=unlimited] select,
-[data-theme^=crb][data-color-scheme=dark][data-dorako-ui-scope=unlimited] input,
-[data-theme^=crb][data-color-scheme=dark][data-dorako-ui-scope=unlimited] button {
+[data-theme^=crb][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) .tagify,
+[data-theme^=crb][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) select,
+[data-theme^=crb][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) input,
+[data-theme^=crb][data-color-scheme=dark]:not([data-dorako-ui-scope=limited]) button {
   --app-background: var(--glass-bg-light);
   --dui-input-border-color: transparent;
   --dui-input-background: var(--glass-bg);

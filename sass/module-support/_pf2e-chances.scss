@@ -1,24 +1,23 @@
 [data-theme] {
   .pf2e-chances-chatcard-container {
     background: none !important;
-    outline: none !important;
   }
 }
 
 [data-theme][data-color-scheme="dark"] {
-  .pf2e-chances-chatcard-line.critical-failure {
+  .pf2e-chances-chatcard-bar.critical-failure {
     color: var(--degree-failure-critical);
   }
 
-  .pf2e-chances-chatcard-line.failure {
+  .pf2e-chances-chatcard-bar.failure {
     color: var(--degree-failure);
   }
 
-  .pf2e-chances-chatcard-line.success {
+  .pf2e-chances-chatcard-bar.success {
     color: var(--degree-success);
   }
 
-  .pf2e-chances-chatcard-line.critical-success {
+  .pf2e-chances-chatcard-bar.critical-success {
     color: var(--degree-success-critical);
   }
 }

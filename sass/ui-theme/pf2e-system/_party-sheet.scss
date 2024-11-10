@@ -1,4 +1,10 @@
 [data-theme][data-dorako-ui-scope="limited"] {
+  &[data-color-scheme="dark"] {
+    &.sheet.party [data-tab="overview"] .member > .data header .resource .empty {
+      border-color: #b9ae78;
+    }
+  }
+
   &.sheet.party {
     --color-border: var(--color-primary-3);
     --alt-dark: var(--text-color-4);
