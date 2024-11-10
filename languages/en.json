@@ -42,7 +42,8 @@
         "green": "Green",
         "purple": "Purple",
         "black": "Black",
-        "player": "Player color"
+        "player": "Player color",
+        "brown": "Brown"
       }
     },
     "settings": {

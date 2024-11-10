@@ -157,7 +157,8 @@
         "green": "Vert",
         "purple": "Violet",
         "black": "Noir",
-        "player": "Couleur du joueur"
+        "player": "Couleur du joueur",
+        "brown": "Marron"
       },
       "bg3-blue": "Baldur's Gate 3 (Bleu)",
       "discord-light": "Discord (clair)",

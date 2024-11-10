@@ -346,6 +346,38 @@
       }
     }
   }
+
+  &.actor.sheet.vehicle[data-theme-color="brown"],
+  &.actor.sheet.character[data-theme-color="brown"] {
+    --theme-color-dark: #5F2F0D;
+    --theme-color: #8B4513;
+    --theme-text-color: #8B4513;
+    --color-scrollbar-hover: var(--theme-text-color);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
+    .crb-style {
+      --header: url("../img/brown-header.webp");
+      background-image: url("../img/brown-header.webp"), var(--sheet);
+
+      aside {
+        background-image: url("../img/brown-sidebar-top.webp"), url("../img/brown-sidebar-bottom.webp");
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          background-image: url("../img/brown-nav-item.webp");
+        }
+      }
+    }
+  }  
 }
 
 [data-theme][data-dorako-ui-scope="limited"] {
