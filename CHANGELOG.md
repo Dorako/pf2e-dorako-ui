@@ -1,3 +1,8 @@
+# 3.7.8
+
+- (New) New 'Brown' player sheet theme color contributed by @pinkflumph
+- (Maintenance) Updated selectors for TAH.
+
 # 3.7.7
 
 - (Maintenance) Updated selectors for PF2e Chances.

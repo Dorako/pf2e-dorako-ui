@@ -48,7 +48,7 @@
 /* ----------------------------------------- */
 /* Unlimited                                 */
 /* ----------------------------------------- */
-[data-theme^="crb"][data-color-scheme="dark"]:not([data-dorako-ui-scope="limited"]) {
+[data-theme^="crb"][data-color-scheme="dark"][data-dorako-ui-scope="unlimited"] {
   .tagify,
   select,
   input,

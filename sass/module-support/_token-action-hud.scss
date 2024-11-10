@@ -40,13 +40,27 @@
   }
 }
 
+// [data-theme] {
+//   &#token-action-hud-app #token-action-hud {
+//     .tah-button-box.tah-group-button {
+//       @include dui-button;
+//     }
+//     button {
+//       background: red;
+//       @include dui-button;
+//     }
+//   }
+// }
+
 [data-theme] {
-  &#token-action-hud {
+  &#token-action-hud-app #token-action-hud {
     .tah-action-button,
     .tah-action-button:focus,
     .tah-group-button,
-    .tah-group-button:focus {
+    .tah-group-button:focus,
+    .tah-button-box.tah-group-button {
       @include dui-button;
+      --tah-button-background: var(--dui-button-background);
     }
 
     .tah-subtitle-text {
@@ -95,21 +109,25 @@
 
     .tah-action button.tah-pf2e-skill-rank-1 {
       --dui-button-background: #171f69;
+      --button-hover-background: #3a47ba;
       --dui-button-border-color: #3a47ba;
     }
 
     .tah-action button.tah-pf2e-skill-rank-2 {
       --dui-button-background: #3c005e;
+      --button-hover-background: #630e94;
       --dui-button-border-color: #630e94;
     }
 
     .tah-action button.tah-pf2e-skill-rank-3 {
       --dui-button-background: #640;
+      --button-hover-background: rgb(153, 107, 14);
       --dui-button-border-color: rgb(153, 107, 14);
     }
 
     .tah-action button.tah-pf2e-skill-rank-4 {
       --dui-button-background: #5e0000;
+      --button-hover-background: #960b0b;
       --dui-button-border-color: #960b0b;
     }
 

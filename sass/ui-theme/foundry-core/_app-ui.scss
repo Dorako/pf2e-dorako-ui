@@ -318,7 +318,7 @@
 /* Generalized style choices (exlusive of limited scope)        */
 /* ------------------------------------------------------------ */
 
-[data-theme][data-color-scheme="dark"]:not([data-dorako-ui-scope="limited"]) {
+[data-theme][data-color-scheme="dark"][data-dorako-ui-scope="unlimited"] {
   h1 {
     color: var(--color-text-primary);
   }
@@ -339,7 +339,7 @@
   }
 }
 
-[data-theme]:not([data-dorako-ui-scope="limited"]) {
+[data-theme][data-dorako-ui-scope="unlimited"] {
   // color: var(--text-color-3);
 
   input[type="text"],

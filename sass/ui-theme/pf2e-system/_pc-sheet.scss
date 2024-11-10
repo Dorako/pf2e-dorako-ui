@@ -349,9 +349,9 @@
 
   &.actor.sheet.vehicle[data-theme-color="brown"],
   &.actor.sheet.character[data-theme-color="brown"] {
-    --theme-color-dark: #5F2F0D;
-    --theme-color: #8B4513;
-    --theme-text-color: #8B4513;
+    --theme-color-dark: #5f2f0d;
+    --theme-color: #8b4513;
+    --theme-text-color: #8b4513;
     --color-scrollbar-hover: var(--theme-text-color);
     --scrollbar-thumb-background: var(--theme-color);
     --scrollbar-thumb-border-color: var(--tertiary);
@@ -377,7 +377,7 @@
         }
       }
     }
-  }  
+  }
 }
 
 [data-theme][data-dorako-ui-scope="limited"] {
@@ -428,6 +428,11 @@
   &[data-theme-color].sheet.actor.window-app.vehicle .window-header,
   &[data-theme-color].sheet.actor.window-app.character .window-header {
     color: white;
+  }
+
+  &[data-theme-color="brown"].sheet.actor.window-app.vehicle .window-header,
+  &[data-theme-color="brown"].sheet.actor.window-app.character .window-header {
+    background: #602700;
   }
 
   &.sheet.actor.window-app.minimized .window-header {
