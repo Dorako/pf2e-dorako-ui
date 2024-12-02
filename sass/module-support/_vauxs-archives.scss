@@ -1,8 +1,8 @@
-[data-theme] .vauxs-archive {
+[data-theme].sidebar-popout .vauxs-archive {
   // Would be cool, but does not include an "active" class when depressed
-  //   button {
-  //     @include dui-button-toggle;
-  //   }
+  // button {
+  //   @include dui-button-toggle;
+  // }
   input {
     @include dui-input;
   }

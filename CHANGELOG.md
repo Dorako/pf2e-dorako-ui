@@ -1,3 +1,7 @@
+# 3.7.9
+
+- (Refinement) Added style support for the new dice tray provided by PF2e HUD.
+
 # 3.7.8
 
 - (New) New 'Brown' player sheet theme color contributed by @pinkflumph

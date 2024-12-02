@@ -320,22 +320,22 @@
 
 [data-theme][data-color-scheme="dark"][data-dorako-ui-scope="unlimited"] {
   h1 {
-    color: var(--color-text-primary);
+    color: var(--color-text-dark-primary);
   }
   h2 {
-    color: var(--color-text-primary);
+    color: var(--color-text-dark-primary);
   }
   h3 {
-    color: var(--color-text-primary);
+    color: var(--color-text-dark-primary);
   }
   h4:not([data-visibility]) {
-    color: var(--color-text-secondary);
+    color: var(--color-text-dark-secondary);
   }
   h5 {
-    color: var(--color-text-secondary);
+    color: var(--color-text-dark-secondary);
   }
   h6 {
-    color: var(--color-text-secondary);
+    color: var(--color-text-dark-secondary);
   }
 }
 
@@ -572,6 +572,10 @@ body.game [data-theme].application {
         background: none;
         border: none;
         box-shadow: none;
+      }
+
+      .window-title {
+        --color-text-dark-secondary: var(--color-text-dark-primary);
       }
     }
 

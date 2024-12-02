@@ -176,6 +176,62 @@
   }
 }
 
+[data-chat-interface-theme] #pf2e-hud-dice {
+  border: unset;
+  margin: 0 6px;
+  width: calc(100% - 12px) !important;
+  display: flex;
+  justify-content: space-between;
+
+  --die-fill: var(--dui-button-text-color);
+  --die-grey-fill: var(--text-color-3);
+  --die-grey-highlight-fill: var(--text-color-2);
+  --die-highlight-fill: var(--dui-button-hover-text-color);
+
+  .flat {
+    @include dui-button;
+  }
+
+  .die {
+    @include dui-button;
+    &[data-face="4"] {
+      svg {
+        height: 1.2rem;
+      }
+    }
+    &[data-face="6"] {
+      svg {
+        height: 1.2rem;
+      }
+    }
+    &[data-face="8"] {
+      svg {
+        height: 1.5rem;
+      }
+    }
+    &[data-face="10"] {
+      svg {
+        height: 1.5rem;
+      }
+    }
+    &[data-face="12"] {
+      svg {
+        height: 1.5rem;
+      }
+    }
+    &[data-face="20"] {
+      svg {
+        height: 1.5rem;
+      }
+    }
+    // &[data-face="100"] {
+    //   svg {
+    //     height: 1.3rem;
+    //   }
+    // }
+  }
+}
+
 .pf2e-hud.colorized[data-theme] {
   &.pf2e-hud [data-section] i,
   &#pf2e-hud-persistent span:not(.expired),
