@@ -2,6 +2,7 @@
 
 - (Fix) Restore styling of applicationV2 apps.
 - (Maintenance) Updated styling of Quick Insert for the app v2 rewrite.
+- (New) Vue application support contributed by cuyima (@cuyeet).
 
 # 3.7.10
 
