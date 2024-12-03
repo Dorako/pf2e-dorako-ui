@@ -13,7 +13,7 @@ export const premiumModuleSelector = ".preyfordeath, .preyfordeath-wrapper, .cur
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["ABCPicker","EffectsPanel", "SceneDarknessAdjuster"];
 export const moduleApps = ["MobileUI", "MobileMenu", "WindowMenu","ClockPanel","CoreHUD","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
-export const appV2Apps = ["PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
+export const appV2Apps = ["ABCPicker","SearchAppV2","PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */
@@ -22,7 +22,6 @@ export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 export const systemSheets = ["ArmySheetPF2e","CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPF2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet", "KingdomSheetPF2e"
 export const moduleWindowApps = ["ExtendedSettingsConfig"];
 export const limitedScopeApplications = ["PF2eHudPersistent","ABCPicker","RolodexApplication","ArmySheetPF2e","KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "HazardSheetPF2e","VehicleSheetPF2e", "HUD"];
-export const unlimitedScopeApplications = ["PlaylistDirectory"];
 
 /* ----------------------------------------- */
 /* Excluded                                  */

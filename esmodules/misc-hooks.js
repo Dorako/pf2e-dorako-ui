@@ -3,8 +3,9 @@ import { lookupThemeAndSchemeForKey } from "./ui-theme.js";
 import { i18n, debug, warn } from "./util.js";
 
 Hooks.once("ready", () => {
-  const theme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
-  if (theme === "no-theme") return;
+  const sheetTheme = game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
+  const interfaceTheme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+  if (sheetTheme === "no-theme" || interfaceTheme === "no-theme") return;
   document.body.classList.remove("theme-light");
   document.body.classList.remove("theme-dark");
 

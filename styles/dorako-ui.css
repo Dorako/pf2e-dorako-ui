@@ -3445,6 +3445,9 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: unset !important;
   box-shadow: unset !important;
 }
+[data-theme].quick-insert-app .search-editable-input > input::placeholder {
+  color: var(--dui-input-placeholder-color);
+}
 [data-theme] .quick-insert-hint {
   background: none;
 }
@@ -5570,6 +5573,41 @@ body.game [data-theme].application {
   background-size: cover;
   border: var(--app-border-width) solid;
   border-color: var(--app-border-color);
+}
+[data-theme].application select {
+  background: var(--dui-input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--dui-input-border-color) !important;
+  color: var(--dui-input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 0px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme].application select:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme].application select:focus {
+  outline: 1px solid var(--dui-input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--dui-input-border-color);
+  color: var(--dui-input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme].application select.disabled, [data-theme].application select:disabled {
+  --dui-input-text-color: var(--text-color-disabled);
+  --dui-input-background: var(--input-disabled-background);
+  --dui-input-border-color: var(--input-disabled-border-color);
+}
+[data-theme].application select.disabled::placeholder, [data-theme].application select:disabled::placeholder {
+  color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
+}
+[data-theme].application select::placeholder {
+  color: var(--dui-input-placeholder-color);
+}
+[data-theme].application select[type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
 }
 [data-theme].application, [data-theme].window-app {
   background: var(--window-app-background);

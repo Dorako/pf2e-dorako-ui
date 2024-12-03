@@ -538,6 +538,12 @@ body.game [data-theme].application {
     // border: 1px solid transparent;
   }
 
+  &.application {
+    select {
+      @include dui-input;
+    }
+  }
+
   &.application,
   &.window-app {
     background: var(--window-app-background);

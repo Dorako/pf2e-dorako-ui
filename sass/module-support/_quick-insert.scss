@@ -22,7 +22,11 @@
     @include dui-input;
     outline: none !important;
     text-shadow: none;
+    > input::placeholder {
+      color: var(--dui-input-placeholder-color);
+    }
   }
+
   .quick-insert-hint {
     background: none;
   }

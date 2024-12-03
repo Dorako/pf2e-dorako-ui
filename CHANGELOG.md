@@ -1,3 +1,8 @@
+# 3.7.11
+
+- (Fix) Restore styling of applicationV2 apps.
+- (Maintenance) Updated styling of Quick Insert for the app v2 rewrite.
+
 # 3.7.10
 
 - (Fix) Fixed an issue where the glass interface theme was too translucent.
