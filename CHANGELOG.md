@@ -1,3 +1,7 @@
+# 3.7.10
+
+- (Fix) Fixed an issue where the glass interface theme was too translucent.
+
 # 3.7.9
 
 - (Refinement) Added style support for the new dice tray provided by PF2e HUD.

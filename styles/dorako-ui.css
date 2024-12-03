@@ -13462,7 +13462,7 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --dui-input-focus-text-color: black;
   --dui-input-focus-outline-color: var(--tertiary);
   --dui-button-background: var(--glass-bg-light);
-  --app-background: var(--glass-bg-light);
+  --app-background: var(--glass-bg);
   --app-border-color: transparent;
   --app-border-width: 0px;
   --app-backdrop-filter: blur(5px);
@@ -13475,6 +13475,10 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
 [data-theme^=crb]:not([data-color-scheme])#tile-hud {
   --dui-button-background: var(--glass-bg);
   --dui-input-text-color: var(--text-color-2);
+}
+
+[data-chat-interface-theme^=crb] #chat-log ~ * {
+  --app-background: var(--glass-bg-light);
 }
 
 [data-theme^=crb] button {
