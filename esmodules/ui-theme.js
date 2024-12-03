@@ -6,6 +6,7 @@ import {
   excludedApplications,
   moduleWindowApps,
   appV2Apps,
+  frameworks
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 import { getPlayerOwners } from "./util.js";
@@ -47,29 +48,34 @@ export function lookupThemeAndSchemeForKey(key) {
   }
 }
 
-Hooks.on("renderSvelteApplication", (app, html, data) => {
-  const theme = themedApps.includes(app.constructor.name)
-    ? game.settings.get("pf2e-dorako-ui", "theme.app-theme")
-    : game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
-  if (theme === "no-theme") return;
-  const uiTheme = lookupThemeAndSchemeForKey(theme);
-  if (uiTheme === null) return;
-  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
-  const excludeList = excludeString.split(/[\s,]+/);
-  if (
-    excludeList.includes(app.constructor.name) ||
-    excludedApplications.includes(app.constructor.name) ||
-    appV2Apps.includes(app.constructor.name)
-  ) {
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications`);
-    return;
-  }
-  const { dorakoUiTheme, colorScheme } = uiTheme;
-  const elem = app.element instanceof jQuery ? app.element[0] : app.element;
-  elem.dataset.theme = dorakoUiTheme;
-  if (colorScheme != null) elem.dataset.colorScheme = colorScheme;
-  elem.dataset.dorakoUiScope = "unlimited";
-});
+for (const framework of frameworks) {
+  Hooks.on(`render${framework}Application`, (app, html, data) => {
+    const appName = app.constructor.name;
+    const theme = themedApps.includes(appName)
+      ? game.settings.get("pf2e-dorako-ui", "theme.app-theme")
+      : game.settings.get("pf2e-dorako-ui", "theme.window-app-theme");
+    if (theme === "no-theme") return;
+    const uiTheme = lookupThemeAndSchemeForKey(theme);
+    if (uiTheme === null) return;
+    const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+    const excludeList = excludeString.split(/[\s,]+/);
+    if (
+       excludeList.includes(app.constructor.name) ||
+       excludedApplications.includes(app.constructor.name) ||
+       appV2Apps.includes(app.constructor.name)
+    ) {
+      console.debug(`${MODULE_NAME} | render${appName} | is included in excluded applications`);
+      return;
+    }
+    const { dorakoUiTheme, colorScheme } = uiTheme;
+    const elem = app.element instanceof jQuery ? app.element[0] : app.element;
+    elem.dataset.theme = dorakoUiTheme;
+    if (colorScheme != null) elem.dataset.colorScheme = colorScheme;
+    if (!limitedScopeApplications.includes(appName)) {
+      elem.dataset.dorakoUiScope = "unlimited";
+    }
+  });
+}
 
 // Interface theme
 for (const appName of [...themedApps]) {
