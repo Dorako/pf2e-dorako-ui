@@ -13,7 +13,7 @@ export const premiumModuleSelector = ".preyfordeath, .preyfordeath-wrapper, .cur
 export const coreApps = ["ImagePopout","SceneControls", "SidebarTab", "PlayerList", "HeadsUpDisplay", "Notifications", "TokenHUD","SceneNavigation", "Hotbar"]; // "Sidebar"
 export const systemApps = ["ABCPicker","EffectsPanel", "SceneDarknessAdjuster"];
 export const moduleApps = ["MobileUI", "MobileMenu", "WindowMenu","ClockPanel","CoreHUD","HUD","TokenBar", "TokenActionHud","SmallTimeApp","SearchApp","ControlManager","HUD","ItemPileConfig","PinCushionHUD","CommonToolbar","MonksHotbarExpansion","CustomHotbar"];
-export const appV2Apps = ["PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
+export const appV2Apps = ["ABCPicker","SearchAppV2","PF2eHudSidebar","PF2eHudToken","PF2eHudTooltip","PF2eHudPersistent","PF2eHudTracker"];
 export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 
 /* ----------------------------------------- */
