@@ -22,7 +22,6 @@ export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 export const systemSheets = ["ArmySheetPF2e","CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPF2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet", "KingdomSheetPF2e"
 export const moduleWindowApps = ["ExtendedSettingsConfig"];
 export const limitedScopeApplications = ["PF2eHudPersistent","ABCPicker","RolodexApplication","ArmySheetPF2e","KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "HazardSheetPF2e","VehicleSheetPF2e", "HUD"];
-export const unlimitedScopeApplications = ["PlaylistDirectory", "SkillManager"];
 
 /* ----------------------------------------- */
 /* Excluded                                  */

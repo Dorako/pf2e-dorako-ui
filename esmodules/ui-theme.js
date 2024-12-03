@@ -6,7 +6,6 @@ import {
   excludedApplications,
   moduleWindowApps,
   appV2Apps,
-  unlimitedScopeApplications,
   frameworks
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
@@ -68,7 +67,7 @@ for(const framework of frameworks) {
     const elem = app.element instanceof jQuery ? app.element[0] : app.element;
     elem.dataset.theme = dorakoUiTheme;
     if (colorScheme != null) elem.dataset.colorScheme = colorScheme;
-    if (unlimitedScopeApplications.includes(appName)) {
+    if (!limitedScopeApplications.includes(appName)) {
       elem.dataset.dorakoUiScope = "unlimited";
     }
   });
