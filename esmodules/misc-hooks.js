@@ -9,8 +9,8 @@ Hooks.once("ready", () => {
   document.body.classList.remove("theme-light");
   document.body.classList.remove("theme-dark");
 
-  const uiTheme = lookupThemeAndSchemeForKey(theme);
-  const { dorakoUiTheme, colorScheme } = uiTheme;
+  // const uiTheme = lookupThemeAndSchemeForKey(theme);
+  // const { dorakoUiTheme, colorScheme } = uiTheme;
   // document.body.classList.add("theme-" + colorScheme);
   // This doesn't make sense, because there can be interface theme elements that are influenced, which do not use the UI theme
 });

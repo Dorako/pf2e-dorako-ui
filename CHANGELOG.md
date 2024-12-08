@@ -1,3 +1,7 @@
+# 3.7.12
+
+- (Fix) Removed some logspam.
+
 # 3.7.11
 
 - (Fix) Restore styling of applicationV2 apps.
