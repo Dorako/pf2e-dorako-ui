@@ -13,6 +13,34 @@
     margin-left: 2px;
  }
 
+  &#compendium-browser fieldset,
+  &#compendium-browser .headercontainer,
+  .compendium-browser-settings .outer-container .setting-section {
+    border: 1px solid var(--fieldset-border-color) !important;
+    background: var(--fieldset-background-color) !important;
+    border-radius: var(--border-radius);
+    > legend {
+      color: var(--fieldset-legend-color);
+      text-shadow: unset;
+    }
+  }
+  .compendium-browser-settings .outer-container .setting-section {
+    button {
+      @include dui-button;
+    }
+  }
+  &#compendium-browser {
+    .sv-control {
+      border: var(--dui-input-border-color);
+    }
+    .clear-filters {
+      @include dui-button;
+    }
+    input[type="search"] {
+      @include dui-input;
+    }
+  }
+
   &#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button,
   &#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
     @include dui-button;

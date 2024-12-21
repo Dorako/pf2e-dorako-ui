@@ -188,6 +188,13 @@
   --die-grey-highlight-fill: var(--text-color-2);
   --die-highlight-fill: var(--dui-button-hover-text-color);
 
+  .spacer .separator {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+
   .flat {
     @include dui-button;
   }

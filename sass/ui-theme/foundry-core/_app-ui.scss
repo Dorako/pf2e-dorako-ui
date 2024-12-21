@@ -417,7 +417,7 @@
 
   a.list-row,
   a.button,
-  button:not(.pm-dropdown) {
+  button:not(.pm-dropdown, .flat) {
     @include dui-button;
   }
 

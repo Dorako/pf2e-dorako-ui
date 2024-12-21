@@ -2086,6 +2086,12 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --die-grey-highlight-fill: var(--text-color-2);
   --die-highlight-fill: var(--dui-button-hover-text-color);
 }
+[data-chat-interface-theme] #pf2e-hud-dice .spacer .separator {
+  display: none;
+}
+[data-chat-interface-theme] #pf2e-hud-dice::after {
+  display: none;
+}
 [data-chat-interface-theme] #pf2e-hud-dice .flat {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -5250,7 +5256,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme][data-dorako-ui-scope=unlimited] a.list-row,
 [data-theme][data-dorako-ui-scope=unlimited] a.button,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown) {
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat) {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
   text-shadow: var(--app-text-shadow);
@@ -5267,7 +5273,7 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme][data-dorako-ui-scope=unlimited] a.list-row:not(.disabled, :disabled, .empty):hover,
 [data-theme][data-dorako-ui-scope=unlimited] a.button:not(.disabled, :disabled, .empty):hover,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):not(.disabled, :disabled, .empty):hover {
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat):not(.disabled, :disabled, .empty):hover {
   background: var(--button-hover-background);
   color: var(--dui-button-hover-text-color);
   border: var(--app-border-width) solid var(--button-hover-border-color);
@@ -5277,9 +5283,9 @@ html .xdy-pf2e-workbench-rarity-unique {
 [data-theme][data-dorako-ui-scope=unlimited] a.button.view,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.selected,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.active:not(.empty),
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).view,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).selected,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).active:not(.empty) {
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat).view,
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat).selected,
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat).active:not(.empty) {
   background: var(--button-hover-background);
   outline: 1px solid var(--dui-button-focus-outline-color);
   border-color: var(--button-hover-border-color);
@@ -5289,16 +5295,16 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty.active,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.empty.active,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty.active {
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat).empty.active {
   outline: 1px solid var(--dui-button-focus-outline-color);
 }
 [data-theme][data-dorako-ui-scope=unlimited] a.list-row.empty, [data-theme][data-dorako-ui-scope=unlimited] a.list-row.disabled, [data-theme][data-dorako-ui-scope=unlimited] a.list-row:disabled,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.empty,
 [data-theme][data-dorako-ui-scope=unlimited] a.button.disabled,
 [data-theme][data-dorako-ui-scope=unlimited] a.button:disabled,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).empty,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown).disabled,
-[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown):disabled {
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat).empty,
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat).disabled,
+[data-theme][data-dorako-ui-scope=unlimited] button:not(.pm-dropdown, .flat):disabled {
   --dui-button-background: var(--button-disabled-background);
   --button-hover-background: var(--button-disabled-background);
   --dui-button-border-color: var(--button-disabled-border-color);
@@ -10612,6 +10618,131 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   cursor: pointer;
   color: var(--dui-input-text-color);
   margin-left: 2px;
+}
+[data-theme]#compendium-browser fieldset, [data-theme]#compendium-browser .headercontainer,
+[data-theme] .compendium-browser-settings .outer-container .setting-section {
+  border: 1px solid var(--fieldset-border-color) !important;
+  background: var(--fieldset-background-color) !important;
+  border-radius: var(--border-radius);
+}
+[data-theme]#compendium-browser fieldset > legend, [data-theme]#compendium-browser .headercontainer > legend,
+[data-theme] .compendium-browser-settings .outer-container .setting-section > legend {
+  color: var(--fieldset-legend-color);
+  text-shadow: unset;
+}
+[data-theme] .compendium-browser-settings .outer-container .setting-section button {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+}
+[data-theme] .compendium-browser-settings .outer-container .setting-section button:not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme] .compendium-browser-settings .outer-container .setting-section button.view, [data-theme] .compendium-browser-settings .outer-container .setting-section button.selected, [data-theme] .compendium-browser-settings .outer-container .setting-section button.active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme] .compendium-browser-settings .outer-container .setting-section button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+[data-theme] .compendium-browser-settings .outer-container .setting-section button.empty, [data-theme] .compendium-browser-settings .outer-container .setting-section button.disabled, [data-theme] .compendium-browser-settings .outer-container .setting-section button:disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+[data-theme]#compendium-browser .sv-control {
+  border: var(--dui-input-border-color);
+}
+[data-theme]#compendium-browser .clear-filters {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+}
+[data-theme]#compendium-browser .clear-filters:not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme]#compendium-browser .clear-filters.view, [data-theme]#compendium-browser .clear-filters.selected, [data-theme]#compendium-browser .clear-filters.active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+[data-theme]#compendium-browser .clear-filters.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+[data-theme]#compendium-browser .clear-filters.empty, [data-theme]#compendium-browser .clear-filters.disabled, [data-theme]#compendium-browser .clear-filters:disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+[data-theme]#compendium-browser input[type=search] {
+  background: var(--dui-input-background);
+  border: var(--app-border-width) solid;
+  border-color: var(--dui-input-border-color) !important;
+  color: var(--dui-input-text-color);
+  box-shadow: var(--input-box-shadow) !important;
+  align-items: center;
+  border-radius: 4px;
+  outline: 0px solid transparent;
+  user-select: text;
+  transition: outline-color 0.5s;
+}
+[data-theme]#compendium-browser input[type=search]:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme]#compendium-browser input[type=search]:focus {
+  outline: 1px solid var(--dui-input-focus-outline-color);
+  border: var(--app-border-width) solid;
+  border-color: var(--dui-input-border-color);
+  color: var(--dui-input-focus-text-color);
+  box-shadow: var(--box-shadow);
+}
+[data-theme]#compendium-browser input[type=search].disabled, [data-theme]#compendium-browser input[type=search]:disabled {
+  --dui-input-text-color: var(--text-color-disabled);
+  --dui-input-background: var(--input-disabled-background);
+  --dui-input-border-color: var(--input-disabled-border-color);
+}
+[data-theme]#compendium-browser input[type=search].disabled::placeholder, [data-theme]#compendium-browser input[type=search]:disabled::placeholder {
+  color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
+}
+[data-theme]#compendium-browser input[type=search]::placeholder {
+  color: var(--dui-input-placeholder-color);
+}
+[data-theme]#compendium-browser input[type=search][type=checkbox] {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
 }
 [data-theme]#compendium-browser > section.window-content > .content-box .spell-browser .list-buttons button, [data-theme]#license-viewer > section.window-content > .content-box .spell-browser .list-buttons button {
   background: var(--app-background);

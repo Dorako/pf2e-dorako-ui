@@ -1,3 +1,8 @@
+# 3.7.13
+
+- (Fix) Added the module 'Terminal' to the exclusion list.
+- (Maintenance) Adjusted the styling for the new system Compendium Browser.
+
 # 3.7.12
 
 - (Fix) Removed some logspam.

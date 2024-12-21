@@ -6,7 +6,7 @@ import {
   excludedApplications,
   moduleWindowApps,
   appV2Apps,
-  frameworks
+  frameworks,
 } from "./consts.js";
 import { isPremiumApplication } from "./premium-module-hooks.js";
 import { getPlayerOwners } from "./util.js";
@@ -60,9 +60,9 @@ for (const framework of frameworks) {
     const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
     const excludeList = excludeString.split(/[\s,]+/);
     if (
-       excludeList.includes(app.constructor.name) ||
-       excludedApplications.includes(app.constructor.name) ||
-       appV2Apps.includes(app.constructor.name)
+      excludeList.includes(app.constructor.name) ||
+      excludedApplications.includes(app.constructor.name) ||
+      appV2Apps.includes(app.constructor.name)
     ) {
       console.debug(`${MODULE_NAME} | render${appName} | is included in excluded applications`);
       return;
