@@ -1,3 +1,7 @@
+# 3.7.14
+
+- (Maintenance) Various minor tweaks mostly related to chat mesages.
+
 # 3.7.13
 
 - (Fix) Added the module 'Terminal' to the exclusion list.

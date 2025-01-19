@@ -726,17 +726,17 @@
   .header-meta {
     @include dui-app;
     background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
-    border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
+    border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5)) !important;
     color: var(--bg3-text-1);
     text-shadow: 0px 1px 1px black;
 
     &.whisper {
       background-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 50%, transparent);
-      border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5));
+      border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5)) !important;
     }
     &.blind {
       background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
-      border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5));
+      border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5)) !important;
     }
   }
 

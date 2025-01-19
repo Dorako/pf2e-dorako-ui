@@ -467,14 +467,14 @@
   --color-level-success-border: color-mix(in srgb, var(--discord-green) 50%, white 50%);
 
   &.whisper {
-    border-color: color-mix(in srgb, var(--discord-background-2) 50%, var(--whisper-bg));
+    border-color: color-mix(in srgb, var(--discord-background-2) 50%, var(--whisper-bg)) !important;
     background: color-mix(in srgb, var(--discord-background-2) 80%, var(--whisper-bg));
     .message-header .message-sender,
     .message-header {
       color: var(--whisper-bg) !important;
     }
     &.blind {
-      border-color: var(--blind-bg);
+      border-color: var(--blind-bg) !important;
       background: color-mix(in srgb, var(--discord-background-2) 80%, var(--blind-bg));
       .message-header .message-sender,
       .message-header {
