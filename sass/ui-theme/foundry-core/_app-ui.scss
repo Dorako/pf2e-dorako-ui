@@ -534,6 +534,15 @@ body.game [data-theme].application {
   }
 }
 
+.chat-popout.window-app {
+  .window-header {
+    border: none;
+  }
+  .window-content {
+    background: none;
+  }
+}
+
 [data-theme] {
   &.app {
     border-radius: var(--border-radius);

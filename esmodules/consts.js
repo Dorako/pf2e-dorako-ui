@@ -26,7 +26,7 @@ export const limitedScopeApplications = ["CompendiumBrowser","PF2eHudPersistent"
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
-export const excludedApplications = ["Terminal","PF2EBestiary","SigilPF2EAdventureImporter","PreyJournalSheet","PF2eHudTextPopup","PF2eHudItemPopup","ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
+export const excludedApplications = ["ChatPopout","Terminal","PF2EBestiary","SigilPF2EAdventureImporter","PreyJournalSheet","PF2eHudTextPopup","PF2eHudItemPopup","ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
 
 /* ----------------------------------------- */
 /* Frameworks                                */

@@ -1,3 +1,8 @@
+# 3.7.15
+
+- (Refinement) Improved legibility of 'disabled' keybinds in the keybind manager.
+- (Refinement) Improved legibility of PF2e HUD's Recall Knowledge chat messages using dark themes.
+
 # 3.7.14
 
 - (Maintenance) Various minor tweaks mostly related to chat mesages.

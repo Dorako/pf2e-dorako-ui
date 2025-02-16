@@ -73,6 +73,27 @@
     }
   }
 
+  &.chat-message.message[data-color-scheme="dark"] .pf2e-hud-rk {
+    .rk-skills {
+      background: repeating-linear-gradient(
+        #ddd5 0 var(--row-height),
+        transparent var(--row-height) calc(var(--row-height) * 2)
+      );
+    }
+    .rk-lores {
+      background: repeating-linear-gradient(
+        #ddd4 0 var(--row-height),
+        transparent var(--row-height) calc(var(--row-height) * 2)
+      );
+    }
+    .rk-lores-rolls {
+      background: repeating-linear-gradient(
+        #ddd4 0 var(--row-height),
+        transparent var(--row-height) calc(var(--row-height) * 2)
+      );
+    }
+  }
+
   &#pf2e-hud-persistent-effects .effect-item .effect-info {
     @include dui-app;
 

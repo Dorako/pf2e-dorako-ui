@@ -1955,6 +1955,15 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 [data-theme]#pf2e-hud-persistent-effects .effect-item > .icon:hover::before {
   border-radius: var(--border-radius);
 }
+[data-theme].chat-message.message[data-color-scheme=dark] .pf2e-hud-rk .rk-skills {
+  background: repeating-linear-gradient(rgba(221, 221, 221, 0.3333333333) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
+[data-theme].chat-message.message[data-color-scheme=dark] .pf2e-hud-rk .rk-lores {
+  background: repeating-linear-gradient(rgba(221, 221, 221, 0.2666666667) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
+[data-theme].chat-message.message[data-color-scheme=dark] .pf2e-hud-rk .rk-lores-rolls {
+  background: repeating-linear-gradient(rgba(221, 221, 221, 0.2666666667) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
+}
 [data-theme]#pf2e-hud-persistent-effects .effect-item .effect-info {
   background: var(--app-background);
   border: var(--app-border-width) solid var(--app-border-color);
@@ -5686,6 +5695,13 @@ body.game [data-theme].application {
   --dui-button-text-color: var(--text-color-5);
 }
 
+.chat-popout.window-app .window-header {
+  border: none;
+}
+.chat-popout.window-app .window-content {
+  background: none;
+}
+
 [data-theme].app {
   border-radius: var(--border-radius);
   background: unset;
@@ -7973,6 +7989,9 @@ nav#controls[data-theme] ol.control-tools > li.toggle:disabled {
   --box-shadow: none;
   --button-hover-background: none;
   --button-hover-border-color: transparent;
+}
+[data-theme]#keybindings .binding .key.uneditable {
+  color: black;
 }
 
 [data-theme].sheet.army {
