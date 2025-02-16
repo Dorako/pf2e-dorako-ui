@@ -482,8 +482,8 @@
         "name": "Réglages du module externe",
         "hint": "Ajustements concernant la manière dont les autres modules sont affectés par Dorako UI",
         "colorize-idle-hud": {
-          "name": "Coloriser PF2e Interactive Token Tooltip ?",
-          "hint": "Applique un thème coloré aux icônes de l'infobulle principale"
+          "name": "Coloriser PF2e HUD ?",
+          "hint": "Applique un thème coloré aux icônes de l'infobulle principale et du HUD persistant"
         }
       }
     }
