@@ -62,8 +62,8 @@
 
   &.dfce-cm-top {
     border-bottom-style: none;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
     margin-bottom: 0px;
     padding-bottom: 5px;
   }
@@ -71,7 +71,6 @@
   &.dfce-cm-middle,
   &.dfce-cm-bottom {
     position: relative;
-    border-radius: 0px;
     margin-top: 0px !important;
 
     .message-content {
@@ -80,24 +79,22 @@
 
     .sender-wrapper,
     .portrait-and-name {
-      display: none;
+      display: none !important;
     }
 
     .message-header {
       background: transparent !important;
       box-shadow: none;
-      // text-shadow: 0px 0px 1px white;
       margin: 0px;
       padding: 0px;
-      // padding-right: 5px;
-      // color: var(--color-text-dark-primary);
     }
-    &:not(:hover).header-meta {
+    .message-metadata {
       display: none;
     }
   }
 
   &.dfce-cm-middle {
+    border-radius: 0px !important;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
@@ -107,7 +104,7 @@
   &.dfce-cm-bottom {
     margin-top: 0px;
     padding-top: 0px;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px var(--border-radius) var(--border-radius) !important;
   }
 }
 

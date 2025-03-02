@@ -258,14 +258,13 @@ nav.damage-log-nav.tabs .item.active {
 }
 .message.chat-message.dfce-cm-top {
   border-bottom-style: none;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
   margin-bottom: 0px;
   padding-bottom: 5px;
 }
 .message.chat-message.dfce-cm-middle, .message.chat-message.dfce-cm-bottom {
   position: relative;
-  border-radius: 0px;
   margin-top: 0px !important;
 }
 .message.chat-message.dfce-cm-middle .message-content, .message.chat-message.dfce-cm-bottom .message-content {
@@ -274,7 +273,7 @@ nav.damage-log-nav.tabs .item.active {
 .message.chat-message.dfce-cm-middle .sender-wrapper,
 .message.chat-message.dfce-cm-middle .portrait-and-name, .message.chat-message.dfce-cm-bottom .sender-wrapper,
 .message.chat-message.dfce-cm-bottom .portrait-and-name {
-  display: none;
+  display: none !important;
 }
 .message.chat-message.dfce-cm-middle .message-header, .message.chat-message.dfce-cm-bottom .message-header {
   background: transparent !important;
@@ -282,10 +281,11 @@ nav.damage-log-nav.tabs .item.active {
   margin: 0px;
   padding: 0px;
 }
-.message.chat-message.dfce-cm-middle:not(:hover).header-meta, .message.chat-message.dfce-cm-bottom:not(:hover).header-meta {
+.message.chat-message.dfce-cm-middle .message-metadata, .message.chat-message.dfce-cm-bottom .message-metadata {
   display: none;
 }
 .message.chat-message.dfce-cm-middle {
+  border-radius: 0px !important;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -294,7 +294,7 @@ nav.damage-log-nav.tabs .item.active {
 .message.chat-message.dfce-cm-bottom {
   margin-top: 0px;
   padding-top: 0px;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px var(--border-radius) var(--border-radius) !important;
 }
 
 .dfce-cm-middle .dorako-header,
@@ -3398,128 +3398,88 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   width: calc((100vw - var(--sidebar-width)) / var(--ft-scale));
 }
 
-[data-theme].quick-insert-app {
-  background: none;
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  backdrop-filter: blur(5px);
+.quick-insert-app {
+  --color-text-selection: var(--color-light-1);
+  --color-text-selection-bg: var(--color-dark-6);
 }
-[data-theme].quick-insert-app .quick-insert-result li img {
-  border: 1px solid var(--color-primary-1);
-  border-radius: var(--border-radius);
-  background-color: var(--color-secondary-2);
+.quick-insert-app.application {
+  --background: url("../ui/parchment.jpg") repeat;
+  --color-text-primary: var(--color-dark-1);
+  --color-header-background: var(--color-dark-3);
+  --color-fieldset-border: var(--color-light-2);
+  --color-form-label: var(--color-dark-2);
+  --color-form-label-hover: var(--color-dark-1);
+  --color-form-hint: var(--color-dark-4);
+  --color-form-hint-hover: var(--color-dark-2);
+  --color-select-option-bg: var(--color-light-1);
 }
-[data-theme].quick-insert-app .search-selected a,
-[data-theme] .quick-insert-result li a:hover {
-  background: var(--color-primary-2);
-  text-shadow: 0px 1px 2px black !important;
-  border-radius: var(--border-radius);
+.quick-insert-app input,
+.quick-insert-app select {
+  --input-background-color: rgba(0, 0, 0, 0.1);
+  --input-border-color: var(--color-dark-6);
+  --input-text-color: var(--color-dark-2);
+  --input-placeholder-color: var(--color-dark-3);
+  --input-focus-outline-color: var(--color-warm-2);
 }
-[data-theme].quick-insert-app .search-selected a span.sub,
-[data-theme] .quick-insert-result li a:hover span.sub {
-  color: var(--text-color-4);
+.quick-insert-app input:focus,
+.quick-insert-app select:focus {
+  --input-text-color: var(--color-dark-1);
 }
-[data-theme].quick-insert-app .search-editable-input {
-  background: var(--dui-input-background);
-  border: var(--app-border-width) solid;
-  border-color: var(--dui-input-border-color) !important;
-  color: var(--dui-input-text-color);
-  box-shadow: var(--input-box-shadow) !important;
-  align-items: center;
-  border-radius: 4px;
-  outline: 0px solid transparent;
-  user-select: text;
-  transition: outline-color 0.5s;
-  outline: none !important;
-  text-shadow: none;
+.quick-insert-app input:disabled,
+.quick-insert-app select:disabled {
+  --input-background-color: rgba(0, 0, 0, 0.2);
+  --input-border-color: transparent;
+  --input-text-color: var(--color-dark-3);
 }
-[data-theme].quick-insert-app .search-editable-input:not(:disabled, .disabled, [type=checkbox]):hover, [data-theme].quick-insert-app .search-editable-input:focus {
-  outline: 1px solid var(--dui-input-focus-outline-color);
-  border: var(--app-border-width) solid;
-  border-color: var(--dui-input-border-color);
-  color: var(--dui-input-focus-text-color);
-  box-shadow: var(--box-shadow);
+.quick-insert-app input[type=checkbox] {
+  --checkbox-font-weight: unset;
+  --checkbox-background-color: var(--color-dark-6);
+  --checkbox-checked-color: var(--color-warm-1);
+  --checkbox-checkmark-color: var(--color-dark-1);
 }
-[data-theme].quick-insert-app .search-editable-input.disabled, [data-theme].quick-insert-app .search-editable-input:disabled {
-  --dui-input-text-color: var(--text-color-disabled);
-  --dui-input-background: var(--input-disabled-background);
-  --dui-input-border-color: var(--input-disabled-border-color);
+.quick-insert-app input[type=checkbox]:disabled,
+.quick-insert-app input[type=checkbox][readonly] {
+  --checkbox-font-weight: bold;
+  --checkbox-disabled-color: var(--color-dark-6);
+  --checkbox-checked-color: var(--color-dark-6);
 }
-[data-theme].quick-insert-app .search-editable-input.disabled::placeholder, [data-theme].quick-insert-app .search-editable-input:disabled::placeholder {
-  color: color-mix(in srgb, var(--dui-input-placeholder-color) 50%, transparent);
+.quick-insert-app input[type=checkbox]:disabled:checked,
+.quick-insert-app input[type=checkbox][readonly]:checked {
+  --checkbox-disabled-color: transparent;
 }
-[data-theme].quick-insert-app .search-editable-input::placeholder {
-  color: var(--dui-input-placeholder-color);
+.quick-insert-app label.icon {
+  --input-background-color: rgba(0, 0, 0, 0.1);
+  --input-border-color: var(--color-dark-6);
+  --input-text-color: var(--color-dark-2);
+  --input-focus-outline-color: var(--color-warm-2);
 }
-[data-theme].quick-insert-app .search-editable-input[type=checkbox] {
-  outline: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
+.quick-insert-app label.icon:focus-within {
+  --input-text-color: var(--color-dark-1);
 }
-[data-theme].quick-insert-app .search-editable-input > input::placeholder {
-  color: var(--dui-input-placeholder-color);
+.quick-insert-app label.icon:has(> input:disabled) {
+  --input-background-color: rgba(0, 0, 0, 0.2);
+  --input-border-color: transparent;
+  --input-text-color: var(--color-dark-3);
 }
-[data-theme] .quick-insert-hint {
-  background: none;
+.quick-insert-app input[readonly] {
+  --input-background-color: rgba(0, 0, 0, 0.2);
+  --input-border-color: transparent;
+  --input-text-color: var(--color-dark-3);
 }
-[data-theme] .quick-insert-result {
-  background: none;
+.quick-insert-app a.button,
+.quick-insert-app button {
+  --button-background-color: rgba(0 0 0 / 10%);
+  --button-border-color: var(--color-dark-5);
+  --button-text-color: var(--color-dark-1);
+  --button-focus-outline-color: var(--color-warm-2);
+  --button-hover-background-color: var(--color-warm-2);
+  --button-hover-text-color: var(--color-light-1);
 }
-[data-theme] .quick-insert-result li a i.action-icon {
-  opacity: 1;
-  color: var(--text-color-3);
-  background: rgba(255, 255, 255, 0.1333333333);
-}
-[data-theme] .quick-insert-result li span.sub {
-  color: var(--text-color-5);
-}
-
-.dorako-ui.quick-insert-app {
-  background: none;
-  border: none;
-  border-radius: var(--border-radius);
-  background: none;
-  background-color: var(--glass-bg);
-  box-shadow: var(--glassy);
-  backdrop-filter: blur(5px);
-  color: var(--text-color-1);
-  text-shadow: 0px 1px 2px black;
-}
-.dorako-ui.quick-insert-app .quick-insert-result li img {
-  border: 1px solid var(--tertiary);
-  border-radius: var(--border-radius);
-  background-color: var(--alt);
-}
-.dorako-ui.quick-insert-app .search-selected a,
-.dorako-ui .quick-insert-result li a:hover {
-  background: var(--primary);
-  text-shadow: 0px 1px 2px black !important;
-  border-radius: var(--border-radius);
-}
-.dorako-ui.quick-insert-app .search-selected a span.sub,
-.dorako-ui .quick-insert-result li a:hover span.sub {
-  color: var(--text-color-4);
-}
-.dorako-ui.quick-insert-app .search-editable-input {
-  background: none;
-}
-.dorako-ui .quick-insert-hint {
-  background: none;
-}
-.dorako-ui .quick-insert-result {
-  background: none;
-}
-.dorako-ui .quick-insert-result li a i.action-icon {
-  opacity: 1;
-  color: var(--text-color-3);
-  background: rgba(255, 255, 255, 0.1333333333);
-}
-.dorako-ui .quick-insert-result li span.sub {
-  color: var(--text-color-5);
+.quick-insert-app a.button:disabled,
+.quick-insert-app button:disabled {
+  --button-background-color: rgba(0 0 0 / 20%);
+  --button-border-color: transparent;
+  --button-text-color: var(--color-dark-3);
 }
 
 /* ----------------------------------------- */

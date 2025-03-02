@@ -1,3 +1,7 @@
+# 3.7.16
+
+- (Maintenance) Updated styling of Quick Insert for the "app v3" rewrite...
+
 # 3.7.15
 
 - (Refinement) Improved legibility of 'disabled' keybinds in the keybind manager.
