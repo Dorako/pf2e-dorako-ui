@@ -1,0 +1,23 @@
+.km-kingdom-sheet {
+  .km-kingdom-sheet-sub-nav,
+  .km-kingdom-sheet-sub-content,
+  .km-kingdom-sheet-sidebar,
+  .km-choose-leaders li {
+    background-color: rgba(11, 10, 19, 0.95);
+    border-radius: 5px;
+    border: 1px solid;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.empty-activity,
+.km-recipe-cost,
+.km-camping-eating-total,
+.km-recipe-actors li,
+.km-camping-tile-check {
+  background: var(--background);
+}
+
+.km-camping-tile-result {
+  border-top: 1px solid;
+}

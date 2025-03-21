@@ -1,19 +1,16 @@
-h3 {
-  border-bottom: none;
-}
-
-button {
-  // display: flex;
-  // gap: 5px;
-  // align-items: center;
-  // justify-content: center;
-
-  > i {
-    margin-right: 0;
+[data-theme] {
+  h3 {
+    border-bottom: none;
   }
-}
 
-img {
-  border: none;
-  border-radius: 0px;
+  button {
+    > i {
+      margin-right: 0;
+    }
+  }
+
+  img {
+    border: none;
+    border-radius: 0px;
+  }
 }

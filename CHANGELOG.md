@@ -1,3 +1,9 @@
+# 3.7.17
+
+- (Maintenance) Exclude PF2e Kingmaker Tools' applications from theming (though it's visually stuck in core dark theme).
+- (Fix) Ensure PF2e Toolbelt's roll tracker is legible in light themes.
+- (Refinement) Ensure `_reset.scss` is scoped to `[data-theme]`.
+
 # 3.7.16
 
 - (Maintenance) Updated styling of Quick Insert for the "app v3" rewrite...

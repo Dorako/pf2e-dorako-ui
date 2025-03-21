@@ -2788,6 +2788,28 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   background-color: rgba(255, 255, 255, 0.7098039216);
 }
 
+.km-kingdom-sheet .km-kingdom-sheet-sub-nav,
+.km-kingdom-sheet .km-kingdom-sheet-sub-content,
+.km-kingdom-sheet .km-kingdom-sheet-sidebar,
+.km-kingdom-sheet .km-choose-leaders li {
+  background-color: rgba(11, 10, 19, 0.95);
+  border-radius: 5px;
+  border: 1px solid;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.empty-activity,
+.km-recipe-cost,
+.km-camping-eating-total,
+.km-recipe-actors li,
+.km-camping-tile-check {
+  background: var(--background);
+}
+
+.km-camping-tile-result {
+  border-top: 1px solid;
+}
+
 [data-theme]#rolodex > .window-content > .tab-bar > .sheet-navigation {
   margin-top: 2px;
   padding-left: 5px;
@@ -3149,6 +3171,63 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 }
 [data-theme].chat-message .message-content + .pf2e-toolbelt-target-targetRows:not(.pf2e-toolbelt-target-damage) hr:first-child {
   border-bottom: var(--app-border-width) solid var(--app-border-color);
+}
+
+#pf2e-toolbelt-rolls-tracker[data-theme] .controls button {
+  background: var(--app-background);
+  border: var(--app-border-width) solid var(--app-border-color);
+  text-shadow: var(--app-text-shadow);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color-3);
+  background: var(--dui-button-background);
+  border: var(--app-border-width) solid var(--dui-button-border-color);
+  color: var(--dui-button-text-color);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: var(--app-text-shadow);
+}
+#pf2e-toolbelt-rolls-tracker[data-theme] .controls button:not(.disabled, :disabled, .empty):hover {
+  background: var(--button-hover-background);
+  color: var(--dui-button-hover-text-color);
+  border: var(--app-border-width) solid var(--button-hover-border-color);
+  box-shadow: var(--box-shadow);
+}
+#pf2e-toolbelt-rolls-tracker[data-theme] .controls button.view, #pf2e-toolbelt-rolls-tracker[data-theme] .controls button.selected, #pf2e-toolbelt-rolls-tracker[data-theme] .controls button.active:not(.empty) {
+  background: var(--button-hover-background);
+  outline: 1px solid var(--dui-button-focus-outline-color);
+  border-color: var(--button-hover-border-color);
+  color: var(--dui-button-hover-text-color);
+  text-decoration: none !important;
+  font-weight: unset !important;
+}
+#pf2e-toolbelt-rolls-tracker[data-theme] .controls button.empty.active {
+  outline: 1px solid var(--dui-button-focus-outline-color);
+}
+#pf2e-toolbelt-rolls-tracker[data-theme] .controls button.empty, #pf2e-toolbelt-rolls-tracker[data-theme] .controls button.disabled, #pf2e-toolbelt-rolls-tracker[data-theme] .controls button:disabled {
+  --dui-button-background: var(--button-disabled-background);
+  --button-hover-background: var(--button-disabled-background);
+  --dui-button-border-color: var(--button-disabled-border-color);
+  --dui-button-text-color: var(--text-color-5);
+}
+
+[data-theme][data-color-scheme=light] #pf2e-toolbelt-rolls-tracker input[type=date]::-webkit-calendar-picker-indicator,
+[data-theme][data-color-scheme=light] [id="pf2e-toolbelt.rollsTracker.clear.dialog"] input[type=date]::-webkit-calendar-picker-indicator {
+  filter: revert;
+}
+[data-theme][data-color-scheme=light] #pf2e-toolbelt-rolls-tracker {
+  --select-0: #d94141;
+  --select-1: #2192d5;
+  --select-2: #1b9b1a;
+  --select-3: #c99a44;
+  --select-4: #d040d0;
+  --list-highlight: #00000029;
+  --columns-background: #0000000a;
+  --column-highlight: #0000001c;
+}
+[data-theme][data-color-scheme=light] #pf2e-toolbelt-rolls-tracker .body .graph .center .section .value:hover {
+  filter: brightness(0.7);
 }
 
 [data-theme] #fc-container {
@@ -14940,15 +15019,13 @@ i[data-pf2-repost] {
   text-shadow: 0px 1px 0px var(--color-primary-3);
 }
 
-h3 {
+[data-theme] h3 {
   border-bottom: none;
 }
-
-button > i {
+[data-theme] button > i {
   margin-right: 0;
 }
-
-img {
+[data-theme] img {
   border: none;
   border-radius: 0px;
 }

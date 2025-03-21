@@ -85,3 +85,36 @@
     border-bottom: var(--app-border-width) solid var(--app-border-color);
   }
 }
+
+#pf2e-toolbelt-rolls-tracker[data-theme] {
+  .controls button {
+    @include dui-button;
+  }
+}
+
+[data-theme][data-color-scheme="light"] {
+  #pf2e-toolbelt-rolls-tracker,
+  [id="pf2e-toolbelt.rollsTracker.clear.dialog"] {
+    input[type="date"] {
+      &::-webkit-calendar-picker-indicator {
+        filter: revert;
+      }
+    }
+  }
+
+  #pf2e-toolbelt-rolls-tracker {
+    --select-0: #d94141;
+    --select-1: #2192d5;
+    --select-2: #1b9b1a;
+    --select-3: #c99a44;
+    --select-4: #d040d0;
+
+    --list-highlight: #00000029;
+    --columns-background: #0000000a;
+    --column-highlight: #0000001c;
+
+    .body .graph .center .section .value:hover {
+      filter: brightness(0.7);
+    }
+  }
+}
