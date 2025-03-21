@@ -1,3 +1,7 @@
+# 3.7.18
+
+- (Fix) _Actually_ ensure PF2e Toolbelt's roll tracker is legible in light themes.
+
 # 3.7.17
 
 - (Maintenance) Exclude PF2e Kingmaker Tools' applications from theming (though it's visually stuck in core dark theme).

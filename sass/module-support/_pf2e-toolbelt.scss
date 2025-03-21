@@ -93,8 +93,8 @@
 }
 
 [data-theme][data-color-scheme="light"] {
-  #pf2e-toolbelt-rolls-tracker,
-  [id="pf2e-toolbelt.rollsTracker.clear.dialog"] {
+  &#pf2e-toolbelt-rolls-tracker,
+  &[id="pf2e-toolbelt.rollsTracker.clear.dialog"] {
     input[type="date"] {
       &::-webkit-calendar-picker-indicator {
         filter: revert;
@@ -102,7 +102,7 @@
     }
   }
 
-  #pf2e-toolbelt-rolls-tracker {
+  &#pf2e-toolbelt-rolls-tracker {
     --select-0: #d94141;
     --select-1: #2192d5;
     --select-2: #1b9b1a;

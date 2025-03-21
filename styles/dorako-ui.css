@@ -3212,11 +3212,10 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --dui-button-text-color: var(--text-color-5);
 }
 
-[data-theme][data-color-scheme=light] #pf2e-toolbelt-rolls-tracker input[type=date]::-webkit-calendar-picker-indicator,
-[data-theme][data-color-scheme=light] [id="pf2e-toolbelt.rollsTracker.clear.dialog"] input[type=date]::-webkit-calendar-picker-indicator {
+[data-theme][data-color-scheme=light]#pf2e-toolbelt-rolls-tracker input[type=date]::-webkit-calendar-picker-indicator, [data-theme][data-color-scheme=light][id="pf2e-toolbelt.rollsTracker.clear.dialog"] input[type=date]::-webkit-calendar-picker-indicator {
   filter: revert;
 }
-[data-theme][data-color-scheme=light] #pf2e-toolbelt-rolls-tracker {
+[data-theme][data-color-scheme=light]#pf2e-toolbelt-rolls-tracker {
   --select-0: #d94141;
   --select-1: #2192d5;
   --select-2: #1b9b1a;
@@ -3226,7 +3225,7 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   --columns-background: #0000000a;
   --column-highlight: #0000001c;
 }
-[data-theme][data-color-scheme=light] #pf2e-toolbelt-rolls-tracker .body .graph .center .section .value:hover {
+[data-theme][data-color-scheme=light]#pf2e-toolbelt-rolls-tracker .body .graph .center .section .value:hover {
   filter: brightness(0.7);
 }
 
