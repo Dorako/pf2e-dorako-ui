@@ -1,3 +1,7 @@
+# 3.7.19
+
+- (Maintenance) Updated styling for Quick Insert.
+
 # 3.7.18
 
 - (Fix) _Actually_ ensure PF2e Toolbelt's roll tracker is legible in light themes.

@@ -1,172 +1,26 @@
-// Forced 'theme-light'
+// forced 'theme-dark'
 .quick-insert-app {
-  --color-text-selection: var(--color-light-1);
-  --color-text-selection-bg: var(--color-dark-6);
+  --qiItemHoverColor: #9979b924;
+  --qiItemSelectedColor: #b3a0c624;
+  --qiItemSelectedHoverColor: #9979b924;
+  --qiActionColor: var(--color-text-light-highlight);
+  --qiActionBgEmphasis: #fff4;
+  --qiActionBgEmphasisStrong: #fff6;
+  --qiBackground: #302831e3;
 
   &.application {
-    --background: url("../ui/parchment.jpg") repeat;
-    --color-text-primary: var(--color-dark-1);
-    --color-header-background: var(--color-dark-3);
-    --color-fieldset-border: var(--color-light-2);
-    --color-form-label: var(--color-dark-2);
-    --color-form-label-hover: var(--color-dark-1);
-    --color-form-hint: var(--color-dark-4);
-    --color-form-hint-hover: var(--color-dark-2);
-    --color-select-option-bg: var(--color-light-1);
+    --background: var(--color-cool-5-90);
+    --color-text-primary: var(--color-light-2);
+    --color-header-background: rgba(0, 0, 0, 0.5);
+    --color-border: var(--color-cool-4);
+    --color-fieldset-border: var(--color-light-6);
+    --color-form-hint: var(--color-light-5);
+    --color-form-hint-hover: var(--color-light-4);
+    --color-form-label: var(--color-light-4);
+    --color-form-label-hover: var(--color-light-2);
+    --color-select-option-bg: transparent;
   }
-  input,
-  select {
-    --input-background-color: rgba(0, 0, 0, 0.1);
-    --input-border-color: var(--color-dark-6);
-    --input-text-color: var(--color-dark-2);
-    --input-placeholder-color: var(--color-dark-3);
-    --input-focus-outline-color: var(--color-warm-2);
-  }
-  input:focus,
-  select:focus {
-    --input-text-color: var(--color-dark-1);
-  }
-  input:disabled,
-  select:disabled {
-    --input-background-color: rgba(0, 0, 0, 0.2);
-    --input-border-color: transparent;
-    --input-text-color: var(--color-dark-3);
-  }
-  input[type="checkbox"] {
-    --checkbox-font-weight: unset;
-    --checkbox-background-color: var(--color-dark-6);
-    --checkbox-checked-color: var(--color-warm-1);
-    --checkbox-checkmark-color: var(--color-dark-1);
-  }
-  input[type="checkbox"]:disabled,
-  input[type="checkbox"][readonly] {
-    --checkbox-font-weight: bold;
-    --checkbox-disabled-color: var(--color-dark-6);
-    --checkbox-checked-color: var(--color-dark-6);
-  }
-  input[type="checkbox"]:disabled:checked,
-  input[type="checkbox"][readonly]:checked {
-    --checkbox-disabled-color: transparent;
-  }
-  label.icon {
-    --input-background-color: rgba(0, 0, 0, 0.1);
-    --input-border-color: var(--color-dark-6);
-    --input-text-color: var(--color-dark-2);
-    --input-focus-outline-color: var(--color-warm-2);
-  }
-  label.icon:focus-within {
-    --input-text-color: var(--color-dark-1);
-  }
-  label.icon:has(> input:disabled) {
-    --input-background-color: rgba(0, 0, 0, 0.2);
-    --input-border-color: transparent;
-    --input-text-color: var(--color-dark-3);
-  }
-  input[readonly] {
-    --input-background-color: rgba(0, 0, 0, 0.2);
-    --input-border-color: transparent;
-    --input-text-color: var(--color-dark-3);
-  }
-  a.button,
-  button {
-    --button-background-color: rgba(0 0 0 / 10%);
-    --button-border-color: var(--color-dark-5);
-    --button-text-color: var(--color-dark-1);
-    --button-focus-outline-color: var(--color-warm-2);
-    --button-hover-background-color: var(--color-warm-2);
-    --button-hover-text-color: var(--color-light-1);
-  }
-  a.button:disabled,
-  button:disabled {
-    --button-background-color: rgba(0 0 0 / 20%);
-    --button-border-color: transparent;
-    --button-text-color: var(--color-dark-3);
+  .quick-insert-result li span.sub {
+    color: rgba(255, 255, 255, 0.4);
   }
 }
-// [data-theme] {
-//   &.quick-insert-app {
-//     background: none;
-//     @include dui-app;
-//     backdrop-filter: blur(5px);
-//     .quick-insert-result li img {
-//       border: 1px solid var(--color-primary-1);
-//       border-radius: var(--border-radius);
-//       background-color: var(--color-secondary-2);
-//     }
-//   }
-//   &.quick-insert-app .search-selected a,
-//   .quick-insert-result li a:hover {
-//     background: var(--color-primary-2);
-//     text-shadow: 0px 1px 2px black !important;
-//     border-radius: var(--border-radius);
-//     span.sub {
-//       color: var(--text-color-4);
-//     }
-//   }
-//   &.quick-insert-app .search-editable-input {
-//     @include dui-input;
-//     outline: none !important;
-//     text-shadow: none;
-//     > input::placeholder {
-//       color: var(--dui-input-placeholder-color);
-//     }
-//   }
-
-//   .quick-insert-hint {
-//     background: none;
-//   }
-
-//   .quick-insert-result {
-//     background: none;
-//   }
-//   .quick-insert-result li a i.action-icon {
-//     opacity: 1;
-//     color: var(--text-color-3);
-//     background: #fff2;
-//   }
-//   .quick-insert-result li span.sub {
-//     color: var(--text-color-5);
-//   }
-// }
-
-// .dorako-ui {
-//   &.quick-insert-app {
-//     background: none;
-//     @include glass;
-//     backdrop-filter: blur(5px);
-//     color: var(--text-color-1);
-//     text-shadow: 0px 1px 2px black;
-//     .quick-insert-result li img {
-//       border: 1px solid var(--tertiary);
-//       border-radius: var(--border-radius);
-//       background-color: var(--alt);
-//     }
-//   }
-//   &.quick-insert-app .search-selected a,
-//   .quick-insert-result li a:hover {
-//     background: var(--primary);
-//     text-shadow: 0px 1px 2px black !important;
-//     border-radius: var(--border-radius);
-//     span.sub {
-//       color: var(--text-color-4);
-//     }
-//   }
-//   &.quick-insert-app .search-editable-input {
-//     background: none;
-//   }
-//   .quick-insert-hint {
-//     background: none;
-//   }
-
-//   .quick-insert-result {
-//     background: none;
-//   }
-//   .quick-insert-result li a i.action-icon {
-//     opacity: 1;
-//     color: var(--text-color-3);
-//     background: #fff2;
-//   }
-//   .quick-insert-result li span.sub {
-//     color: var(--text-color-5);
-//   }
-// }

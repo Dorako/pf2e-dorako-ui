@@ -3477,87 +3477,28 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 }
 
 .quick-insert-app {
-  --color-text-selection: var(--color-light-1);
-  --color-text-selection-bg: var(--color-dark-6);
+  --qiItemHoverColor: #9979b924;
+  --qiItemSelectedColor: #b3a0c624;
+  --qiItemSelectedHoverColor: #9979b924;
+  --qiActionColor: var(--color-text-light-highlight);
+  --qiActionBgEmphasis: #fff4;
+  --qiActionBgEmphasisStrong: #fff6;
+  --qiBackground: #302831e3;
 }
 .quick-insert-app.application {
-  --background: url("../ui/parchment.jpg") repeat;
-  --color-text-primary: var(--color-dark-1);
-  --color-header-background: var(--color-dark-3);
-  --color-fieldset-border: var(--color-light-2);
-  --color-form-label: var(--color-dark-2);
-  --color-form-label-hover: var(--color-dark-1);
-  --color-form-hint: var(--color-dark-4);
-  --color-form-hint-hover: var(--color-dark-2);
-  --color-select-option-bg: var(--color-light-1);
+  --background: var(--color-cool-5-90);
+  --color-text-primary: var(--color-light-2);
+  --color-header-background: rgba(0, 0, 0, 0.5);
+  --color-border: var(--color-cool-4);
+  --color-fieldset-border: var(--color-light-6);
+  --color-form-hint: var(--color-light-5);
+  --color-form-hint-hover: var(--color-light-4);
+  --color-form-label: var(--color-light-4);
+  --color-form-label-hover: var(--color-light-2);
+  --color-select-option-bg: transparent;
 }
-.quick-insert-app input,
-.quick-insert-app select {
-  --input-background-color: rgba(0, 0, 0, 0.1);
-  --input-border-color: var(--color-dark-6);
-  --input-text-color: var(--color-dark-2);
-  --input-placeholder-color: var(--color-dark-3);
-  --input-focus-outline-color: var(--color-warm-2);
-}
-.quick-insert-app input:focus,
-.quick-insert-app select:focus {
-  --input-text-color: var(--color-dark-1);
-}
-.quick-insert-app input:disabled,
-.quick-insert-app select:disabled {
-  --input-background-color: rgba(0, 0, 0, 0.2);
-  --input-border-color: transparent;
-  --input-text-color: var(--color-dark-3);
-}
-.quick-insert-app input[type=checkbox] {
-  --checkbox-font-weight: unset;
-  --checkbox-background-color: var(--color-dark-6);
-  --checkbox-checked-color: var(--color-warm-1);
-  --checkbox-checkmark-color: var(--color-dark-1);
-}
-.quick-insert-app input[type=checkbox]:disabled,
-.quick-insert-app input[type=checkbox][readonly] {
-  --checkbox-font-weight: bold;
-  --checkbox-disabled-color: var(--color-dark-6);
-  --checkbox-checked-color: var(--color-dark-6);
-}
-.quick-insert-app input[type=checkbox]:disabled:checked,
-.quick-insert-app input[type=checkbox][readonly]:checked {
-  --checkbox-disabled-color: transparent;
-}
-.quick-insert-app label.icon {
-  --input-background-color: rgba(0, 0, 0, 0.1);
-  --input-border-color: var(--color-dark-6);
-  --input-text-color: var(--color-dark-2);
-  --input-focus-outline-color: var(--color-warm-2);
-}
-.quick-insert-app label.icon:focus-within {
-  --input-text-color: var(--color-dark-1);
-}
-.quick-insert-app label.icon:has(> input:disabled) {
-  --input-background-color: rgba(0, 0, 0, 0.2);
-  --input-border-color: transparent;
-  --input-text-color: var(--color-dark-3);
-}
-.quick-insert-app input[readonly] {
-  --input-background-color: rgba(0, 0, 0, 0.2);
-  --input-border-color: transparent;
-  --input-text-color: var(--color-dark-3);
-}
-.quick-insert-app a.button,
-.quick-insert-app button {
-  --button-background-color: rgba(0 0 0 / 10%);
-  --button-border-color: var(--color-dark-5);
-  --button-text-color: var(--color-dark-1);
-  --button-focus-outline-color: var(--color-warm-2);
-  --button-hover-background-color: var(--color-warm-2);
-  --button-hover-text-color: var(--color-light-1);
-}
-.quick-insert-app a.button:disabled,
-.quick-insert-app button:disabled {
-  --button-background-color: rgba(0 0 0 / 20%);
-  --button-border-color: transparent;
-  --button-text-color: var(--color-dark-3);
+.quick-insert-app .quick-insert-result li span.sub {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* ----------------------------------------- */
