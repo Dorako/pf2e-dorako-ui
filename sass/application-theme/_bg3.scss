@@ -1,0 +1,50 @@
+[data-theme="bg3"] {
+  --color-text-dark-primary: var(--color-text-light-1);
+  --color-text-dark-secondary: var(--color-text-light-6);
+  --color-text-dark-5: var(--color-text-light-6);
+
+  --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
+    radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
+  --window-app-border-width: 2px;
+  --window-app-border-color: var(--bg3-middle-brown);
+
+  --color-scrollbar: var(--bg3-scrollbar-thumb-background);
+
+  /* Fieldset variables */
+  --fieldset-border-color: transparent;
+  --fieldset-background-color: rgba(0, 0, 0, 0.2);
+  --fieldset-legend-color: var(--bg3-text-4);
+
+  input {
+    --range-thumb-background-color: var(--bg3-accent-color);
+    --range-thumb-border-color: var(--bg3-accent-color-light);
+  }
+
+  input,
+  select,
+  textarea,
+  code-mirror {
+    --input-background-color: color-mix(in srgb, var(--alt) 50%, transparent);
+    --input-border-color: transparent;
+    --input-text-color: var(--color-light-2);
+    --input-focus-outline-color: var(--tertiary);
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    --checkbox-checked-color: var(--bg3-accent-color);
+    --checkbox-disabled-color: dimgray;
+    --checkbox-background-color: white;
+    --checkbox-checkmark-color: white;
+    --checkbox-font-weight: bold;
+  }
+}
+
+[data-theme="bg3"].themed {
+  [nav-item],
+  a.button,
+  button {
+    --button-border-color: #403b2d;
+    --button-background-color: #161511aa;
+  }
+}

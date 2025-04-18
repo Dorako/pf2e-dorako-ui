@@ -1,0 +1,102 @@
+@layer blocks.base {
+  [data-interface-theme="glass"] {
+    --control-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.8);
+    --control-button-bg-color: var(--remaster);
+
+    --control-active-bg-color: rgb(206 0 0 / 85%);
+    --control-active-border-color: var(--color-warm-2);
+    --control-active-icon-color: white;
+    --control-button-border-color: var(--remaster-light);
+    --control-button-hover-bg-color: var(--remaster-dark);
+    --toggle-bg-color: var(--secondary-dark);
+    --toggle-border-color: var(--secondary-light);
+    --toggle-active-bg-color: var(--secondary-light);
+    --toggle-active-border-color: var(--secondary);
+    --toggle-icon-color: white;
+
+    .ui-control {
+      --control-active-bg-color: rgb(206 0 0 / 85%);
+      --control-active-border-color: var(--color-warm-2);
+      --control-active-icon-color: white;
+      --control-button-border-color: var(--remaster-light);
+      --control-button-hover-bg-color: var(--remaster-dark);
+      --toggle-bg-color: var(--secondary-dark);
+      --toggle-border-color: var(--secondary-light);
+      --toggle-active-bg-color: var(--secondary-light);
+      --toggle-active-border-color: var(--secondary);
+      --toggle-icon-color: white;
+
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+
+      &.toggle {
+        --hover-border-color: #8790f5;
+      }
+
+      &.button {
+        --hover-border-color: green;
+      }
+    }
+  }
+
+  [data-interface-theme="glass"][data-interface-color-scheme="dark"] {
+    --control-text-shadow: 0px 1px 1px black;
+    --control-bg-color: var(--glass-bg);
+    --control-border-color: rgba(255, 255, 255, 0.15);
+
+    .ui-control {
+      --control-bg-color: var(--glass-bg);
+      --control-border-color: rgba(255, 255, 255, 0.15);
+      --control-icon-color: var(--color-light-2);
+      --control-button-hover-border-color: rgb(77, 77, 77);
+      --control-hover-bg-color: var(--glass-bg-dark);
+      --control-hover-border-color: rgba(0, 0, 0, 0.9);
+      --control-hover-icon-color: var(--color-light-1);
+
+      &:hover,
+      &:focus {
+        --control-text-shadow: 0px 1px 1px black;
+      }
+
+      &[aria-pressed="true"],
+      &.toggle,
+      &.button {
+        --control-text-shadow: 0px 1px 1px rgba(0, 0, 0, 50%);
+        --control-icon-color: var(--toggle-icon-color) !important;
+      }
+    }
+  }
+
+  [data-interface-theme="glass"][data-interface-color-scheme="light"] {
+    --control-text-shadow: 0px 1px 1px rgba(255, 255, 255, 50%);
+
+    --control-bg-color: rgba(255, 255, 255, 0.4);
+    --control-border-color: rgba(255, 255, 255, 0.8);
+    --control-icon-color: var(--color-dark-1);
+    --control-button-hover-border-color: rgba(255, 255, 255, 0.8);
+    --control-hover-bg-color: rgba(255, 255, 255, 0.85);
+    --control-hover-border-color: rgba(255, 255, 255, 0.9);
+    --control-hover-icon-color: var(--color-dark-1);
+
+    .ui-control {
+      --control-bg-color: rgba(255, 255, 255, 0.4);
+      --control-border-color: rgba(255, 255, 255, 0.8);
+      --control-icon-color: var(--color-dark-1);
+      --control-button-hover-border-color: rgba(255, 255, 255, 0.8);
+      --control-hover-bg-color: rgba(255, 255, 255, 0.85);
+      --control-hover-border-color: rgba(255, 255, 255, 0.9);
+      --control-hover-icon-color: var(--color-dark-1);
+
+      &:focus {
+        --control-text-shadow: 0px 1px 1px rgba(0, 0, 0, 50%);
+      }
+
+      &[aria-pressed="true"],
+      &.toggle,
+      &.button {
+        --control-text-shadow: 0px 1px 1px rgba(0, 0, 0, 50%);
+        --control-icon-color: var(--toggle-icon-color) !important;
+      }
+    }
+  }
+}

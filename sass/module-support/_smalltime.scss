@@ -18,13 +18,15 @@
   }
 
   &#smalltime-app {
-    @include dui-app;
+    // @include dui-app;
+    @include ui-control;
     outline: none;
   }
 
   &#smalltime-app .arrow,
   &#smalltime-app .arrow-left,
   &#smalltime-app.arrow-right {
-    @include dui-button;
+    @include button;
+    // @include dui-button;
   }
 }

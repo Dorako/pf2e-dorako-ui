@@ -1,0 +1,28 @@
+/* ----------------------------------------- */
+/* Filepicker                                */
+/* ----------------------------------------- */
+
+#file-picker[data-theme] ul.directory > li {
+  border-bottom: 1px solid var(--color-border);
+}
+
+#file-picker[data-theme] ul.tiles li {
+  border-right: 1px solid var(--color-border);
+}
+
+/* ----------------------------------------- */
+/* Settings                                  */
+/* ----------------------------------------- */
+
+.category-browser aside nav.tabs > a {
+  border-bottom-color: var(--button-border-color);
+  &:hover,
+  &.active {
+    border-bottom-color: var(--button-hover-border-color);
+  }
+}
+
+.category-browser aside nav.tabs > a .count {
+  color: color-mix(in srgb, var(--button-text-color) 66%, transparent);
+  text-shadow: none;
+}

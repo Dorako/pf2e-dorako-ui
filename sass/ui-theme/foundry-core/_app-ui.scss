@@ -27,20 +27,20 @@
 /* Players                                   */
 /* ----------------------------------------- */
 
-#players[data-theme] {
-  @include dui-app;
+// #players[data-theme] {
+//   @include dui-app;
 
-  h3 {
-    cursor: pointer;
-    @include quick-transition;
-    color: var(--text-color-3);
+//   h3 {
+//     cursor: pointer;
+//     @include quick-transition;
+//     color: var(--text-color-3);
 
-    &:hover {
-      color: var(--text-color-1);
-      text-shadow: 0px 0px 8px var(--color-shadow-highlight);
-    }
-  }
-}
+//     &:hover {
+//       color: var(--text-color-1);
+//       text-shadow: 0px 0px 8px var(--color-shadow-highlight);
+//     }
+//   }
+// }
 
 /* ----------------------------------------- */
 /* Context menu                              */
@@ -694,6 +694,7 @@ body.game [data-theme].application {
 
   nav.sheet-tabs > [data-tab] {
     @include dui-button;
+    padding-inline: 10px;
   }
 
   // also affects settings which is vertical

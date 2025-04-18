@@ -1,147 +1,147 @@
-/* ----------------------------------------- */
-/* UI-right                                  */
-/* ----------------------------------------- */
-#ui-right {
-  & > #sidebar[data-chat-interface-theme] {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
-    padding-left: 10px;
-    padding-top: 5px;
-    box-shadow: none;
-    border: none;
-    border-radius: 0px;
-    margin: 0px;
-    height: 100%;
-    &.collapsed {
-      height: auto;
-    }
-  }
-}
+// /* ----------------------------------------- */
+// /* UI-right                                  */
+// /* ----------------------------------------- */
+// #ui-right {
+//   & > #sidebar[data-chat-interface-theme] {
+//     background: linear-gradient(to left, rgba(0, 0, 0, 0.8) calc(100% - 10px), transparent 100%);
+//     padding-left: 10px;
+//     padding-top: 5px;
+//     box-shadow: none;
+//     border: none;
+//     border-radius: 0px;
+//     margin: 0px;
+//     height: 100%;
+//     &.collapsed {
+//       height: auto;
+//     }
+//   }
+// }
 
-/* ----------------------------------------- */
-/* Sidebar                                   */
-/* ----------------------------------------- */
+// /* ----------------------------------------- */
+// /* Sidebar                                   */
+// /* ----------------------------------------- */
 
-#chat,
-[data-chat-interface-theme] .chat-sidebar {
-  --sidebar-gap: 4px;
-  --sidebar-margin: 6px;
-  gap: var(--sidebar-gap);
-  padding-bottom: var(--sidebar-margin);
-}
+// #chat,
+// [data-chat-interface-theme] .chat-sidebar {
+//   --sidebar-gap: 4px;
+//   --sidebar-margin: 6px;
+//   gap: var(--sidebar-gap);
+//   padding-bottom: var(--sidebar-margin);
+// }
 
-[data-chat-interface-theme] section.chat-sidebar .jump-to-bottom > a {
-  background: black;
-  z-index: 1;
-}
+// [data-chat-interface-theme] section.chat-sidebar .jump-to-bottom > a {
+//   background: black;
+//   z-index: 1;
+// }
 
-[data-chat-interface-theme] {
-  .tab {
-    &:not([data-tab="chat"]) button {
-      @include dui-button;
-    }
-    input:not([type="range"]) {
-      @include dui-input;
-    }
-  }
+// [data-chat-interface-theme] {
+//   .tab {
+//     &:not([data-tab="chat"]) button {
+//       @include dui-button;
+//     }
+//     input:not([type="range"]) {
+//       @include dui-input;
+//     }
+//   }
 
-  ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: var(--scrollbar-thumb-background);
-    border: 1px solid var(--scrollbar-thumb-border-color);
-    transition: outline 0.15s;
-  }
+//   ::-webkit-scrollbar-thumb {
+//     outline: none;
+//     border-radius: 3px;
+//     background: var(--scrollbar-thumb-background);
+//     border: 1px solid var(--scrollbar-thumb-border-color);
+//     transition: outline 0.15s;
+//   }
 
-  ::-webkit-scrollbar-track {
-    box-shadow: 0 0 1px var(--color-secondary-3) inset;
-    box-shadow: unset;
-    border-radius: 4px;
-  }
+//   ::-webkit-scrollbar-track {
+//     box-shadow: 0 0 1px var(--color-secondary-3) inset;
+//     box-shadow: unset;
+//     border-radius: 4px;
+//   }
 
-  #settings ul#game-details li.system-buttons {
-    gap: 5px;
-    button {
-      @include dui-button;
-    }
-  }
+//   #settings ul#game-details li.system-buttons {
+//     gap: 5px;
+//     button {
+//       @include dui-button;
+//     }
+//   }
 
-  .compendium.directory .directory-header .compendium-name,
-  .compendium-sidebar .directory-item.compendium .compendium-name,
-  .compendium-sidebar .directory-item.compendium.locked .compendium-name {
-    @include dui-app;
-  }
+//   .compendium.directory .directory-header .compendium-name,
+//   .compendium-sidebar .directory-item.compendium .compendium-name,
+//   .compendium-sidebar .directory-item.compendium.locked .compendium-name {
+//     @include dui-app;
+//   }
 
-  .compendium-sidebar .directory-item.compendium .compendium-footer .source {
-    @include dui-app;
-    border-left: unset;
-    border-bottom-left-radius: unset;
-    border-top-left-radius: unset;
-    border-bottom-right-radius: unset;
-  }
-}
+//   .compendium-sidebar .directory-item.compendium .compendium-footer .source {
+//     @include dui-app;
+//     border-left: unset;
+//     border-bottom-left-radius: unset;
+//     border-top-left-radius: unset;
+//     border-bottom-right-radius: unset;
+//   }
+// }
 
-[data-dorako-ui-scope="sidebar"],
-[data-theme] {
-  .combat-sidebar li.combatant .token-name img.token-effect {
-    @include dui-app;
-    border: 1px solid;
-    border-color: var(--icon-border-color);
-  }
-}
+// [data-dorako-ui-scope="sidebar"],
+// [data-theme] {
+//   .combat-sidebar li.combatant .token-name img.token-effect {
+//     @include dui-app;
+//     border: 1px solid;
+//     border-color: var(--icon-border-color);
+//   }
+// }
 
-/* ----------------------------------------- */
-/* Chatlog                                   */
-/* ----------------------------------------- */
-[data-chat-interface-theme] #chat-log {
-  margin-left: calc(var(--sidebar-margin) - 3px);
-  &::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: var(--scrollbar-thumb-background);
-    border: 1px solid var(--scrollbar-thumb-border-color);
-    transition: outline 0.15s;
-    // &:hover {
-    //   border: 1px solid var(--color-scrollbar);
-    //   background: var(--color-scrollbar-hover);
-    // }
-  }
-  &::-webkit-scrollbar-track {
-    box-shadow: none;
-    box-shadow: unset;
-    border-radius: 4px;
-  }
-}
+// /* ----------------------------------------- */
+// /* Chatlog                                   */
+// /* ----------------------------------------- */
+// [data-chat-interface-theme] #chat-log {
+//   margin-left: calc(var(--sidebar-margin) - 3px);
+//   &::-webkit-scrollbar-thumb {
+//     outline: none;
+//     border-radius: 3px;
+//     background: var(--scrollbar-thumb-background);
+//     border: 1px solid var(--scrollbar-thumb-border-color);
+//     transition: outline 0.15s;
+//     // &:hover {
+//     //   border: 1px solid var(--color-scrollbar);
+//     //   background: var(--color-scrollbar-hover);
+//     // }
+//   }
+//   &::-webkit-scrollbar-track {
+//     box-shadow: none;
+//     box-shadow: unset;
+//     border-radius: 4px;
+//   }
+// }
 
-[data-chat-interface-theme] #chat-log ~ * {
-  input[type="checkbox"]:checked,
-  input[type="radio"]:checked {
-    accent-color: var(--accent-color);
-  }
+// [data-chat-interface-theme] #chat-log ~ * {
+//   input[type="checkbox"]:checked,
+//   input[type="radio"]:checked {
+//     accent-color: var(--accent-color);
+//   }
 
-  button {
-    @include dui-button;
-  }
-  #dorako-rt-buttons button {
-    @include dui-button-toggle;
-  }
+//   button {
+//     @include dui-button;
+//   }
+//   #dorako-rt-buttons button {
+//     @include dui-button-toggle;
+//   }
 
-  &#chat-form {
-    margin: 0px var(--sidebar-margin);
-    textarea {
-      @include dui-input;
-      height: 100%;
-      border-radius: var(--border-radius);
-    }
-  }
-}
+//   &#chat-form {
+//     margin: 0px var(--sidebar-margin);
+//     textarea {
+//       @include dui-input;
+//       height: 100%;
+//       border-radius: var(--border-radius);
+//     }
+//   }
+// }
 
-[data-chat-interface-theme],
-#sidebar[data-chat-interface-theme].collapsed {
-  #sidebar-tabs {
-    border: unset;
-    > .item.active {
-      @include dui-button;
-      --dui-button-focus-outline-color: transparent;
-    }
-  }
-}
+// [data-chat-interface-theme],
+// #sidebar[data-chat-interface-theme].collapsed {
+//   #sidebar-tabs {
+//     border: unset;
+//     > .item.active {
+//       @include dui-button;
+//       --dui-button-focus-outline-color: transparent;
+//     }
+//   }
+// }

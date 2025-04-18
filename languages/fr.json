@@ -259,7 +259,7 @@
           "name": "Arrondi",
           "hint": "(défaut : 3px) Change le degré de l'arrondi de nombreux éléments de l'IU"
         },
-        "window-app-theme": {
+        "application-theme": {
           "name": "Thème de la feuille",
           "hint": "S'applique aux applications de type fenêtre"
         },
@@ -267,7 +267,7 @@
           "name": "Schéma de couleurs de l'application de la fenêtre",
           "hint": "Affecte les fenêtres d'application rendues"
         },
-        "app-theme": {
+        "interface-theme": {
           "name": "Thème de l'interface",
           "hint": "S'applique aux éléments de l'interface utilisateur tels que les contrôles, la navigation, la barre latérale, ainsi qu'aux modules au style flottant"
         },

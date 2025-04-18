@@ -1,88 +1,90 @@
 /* ----------------------------------------- */
 /* Theme colors                              */
 /* ----------------------------------------- */
-:root {
-  --bg3-middle-brown: #9d7b53;
-  --bg3-border-color: #5f5244;
-  --bg3-background-1: #433c36;
-  --bg3-background-2: #423c36;
-  --bg3-background-3: #2a2522;
-  --bg3-background-4: #292421;
-  --bg3-text-1: #fafafa;
-  --bg3-text-2: #d1c9b9;
-  --bg3-text-3: #b0947b;
-  --bg3-text-4: #e8dea8;
-  --bg3-text-5: #e1d48f;
-  --bg3-accent-color-light: #ff7ba2;
-  --bg3-accent-color: #ea4a72;
-  --bg3-accent-color-dark: #912737;
-  --bg3-color-scrollbar-highlight: #fff7d3;
-  --bg3-scrollbar-thumb-background: #ecc090;
-  --bg3-scrollbar-thumb-border-color: #6c5842;
-  --bg3-blue-light: #0c93bd;
-  --bg3-blue: #183541;
-  --bg3-blue-dark: #1b2a30;
-  --bg3-ba-orange: #ab5623;
-  --bg3-action-green: #019740;
-  --bg3-pactslot-pink: #f950f9;
-  --bg3-spellslot-blue: #79ffff;
-  --bg3-bardic-yellow: #cfad00;
-  --bg3-icon-green-stroke: #95aaa5;
-  --bg3-icon-green-light: #1c4137;
-  --bg3-icon-green-dark: #1d3733;
-  --bg3-attention: #fe265d;
+@layer variables.themes.specific {
+  :root {
+    --bg3-middle-brown: #9d7b53;
+    --bg3-border-color: #5f5244;
+    --bg3-background-1: #433c36;
+    --bg3-background-2: #423c36;
+    --bg3-background-3: #2a2522;
+    --bg3-background-4: #292421;
+    --bg3-text-1: #fafafa;
+    --bg3-text-2: #d1c9b9;
+    --bg3-text-3: #b0947b;
+    --bg3-text-4: #e8dea8;
+    --bg3-text-5: #e1d48f;
+    --bg3-accent-color-light: #ff7ba2;
+    --bg3-accent-color: #ea4a72;
+    --bg3-accent-color-dark: #912737;
+    --bg3-color-scrollbar-highlight: #fff7d3;
+    --bg3-scrollbar-thumb-background: #ecc090;
+    --bg3-scrollbar-thumb-border-color: #6c5842;
+    --bg3-blue-light: #0c93bd;
+    --bg3-blue: #183541;
+    --bg3-blue-dark: #1b2a30;
+    --bg3-ba-orange: #ab5623;
+    --bg3-action-green: #019740;
+    --bg3-pactslot-pink: #f950f9;
+    --bg3-spellslot-blue: #79ffff;
+    --bg3-bardic-yellow: #cfad00;
+    --bg3-icon-green-stroke: #95aaa5;
+    --bg3-icon-green-light: #1c4137;
+    --bg3-icon-green-dark: #1d3733;
+    --bg3-attention: #fe265d;
 
-  --bg3-alliance-ally-yellow: #c09e05;
-  --bg3-alliance-opposition-red: #de1847;
-  --bg3-alliance-companion-blue: #08c6e4;
-  --bg3-alliance-ally-green: #52fead;
+    --bg3-alliance-ally-yellow: #c09e05;
+    --bg3-alliance-opposition-red: #de1847;
+    --bg3-alliance-companion-blue: #08c6e4;
+    --bg3-alliance-ally-green: #52fead;
 
-  --bg3-rarity-legendary: #dfa633;
-  --bg3-rarity-very-rare: #d1017b;
-  --bg3-rarity-quest: #cd5f21;
-  --bg3-rarity-rare: #00bffd;
-  --bg3-rarity-uncommon: #01b638;
-  --bg3-rarity-common: #ffe6cb;
+    --bg3-rarity-legendary: #dfa633;
+    --bg3-rarity-very-rare: #d1017b;
+    --bg3-rarity-quest: #cd5f21;
+    --bg3-rarity-rare: #00bffd;
+    --bg3-rarity-uncommon: #01b638;
+    --bg3-rarity-common: #ffe6cb;
 
-  --bg3-info-overlay-light: rgba(255, 255, 255, 0.25);
-  --bg3-info-overlay-dark: rgba(0, 0, 0, 0.25);
+    --bg3-info-overlay-light: rgba(255, 255, 255, 0.25);
+    --bg3-info-overlay-dark: rgba(0, 0, 0, 0.25);
 
-  /* Brown variant */
-  --bg3-bg-inner: #241d16;
-  --bg3-bg-outer: #1b1a19;
-  --bg3-border-inner: #ab7743;
-  --bg3-border-outer: #7b542e;
-  --bg3-ui-purple: #4e3061;
-  /* Blue variant */
-  // --bg3-border-inner: #a16a37;
-  // --bg3-border-outer: #4a2e18;
-  // --bg3-border-internal: #304248;
-  // --bg3-bg-inner: #182830;
-  // --bg3-bg-outer: #151e29;
+    /* Brown variant */
+    --bg3-bg-inner: #241d16;
+    --bg3-bg-outer: #1b1a19;
+    --bg3-border-inner: #ab7743;
+    --bg3-border-outer: #7b542e;
+    --bg3-ui-purple: #4e3061;
+    /* Blue variant */
+    // --bg3-border-inner: #a16a37;
+    // --bg3-border-outer: #4a2e18;
+    // --bg3-border-internal: #304248;
+    // --bg3-bg-inner: #182830;
+    // --bg3-bg-outer: #151e29;
 
-  --bg3-inspect-background: #2a2a2a;
-  --bg3-inspect-border-color: #aca493;
+    --bg3-inspect-background: #2a2a2a;
+    --bg3-inspect-border-color: #aca493;
 
-  --bg3-healing: #49cbc1;
+    --bg3-healing: #49cbc1;
 
-  --bg3-border-background: linear-gradient(
-    to right,
-    var(--bg3-border-outer) 0%,
-    var(--bg3-border-inner) 50%,
-    var(--bg3-border-outer) 100%
-  );
-  --bg3-tooltip-window-background: linear-gradient(
-    to right,
-    var(--bg3-bg-outer) 0,
-    var(--bg3-bg-inner) 50%,
-    var(--bg3-bg-outer) 100%
-  );
-  --bg3-ui-purple-background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--bg3-ui-purple) 50%, transparent) 0,
-    transparent 15%
-  );
-  --top-color: transparent;
+    --bg3-border-background: linear-gradient(
+      to right,
+      var(--bg3-border-outer) 0%,
+      var(--bg3-border-inner) 50%,
+      var(--bg3-border-outer) 100%
+    );
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    --bg3-ui-purple-background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--bg3-ui-purple) 50%, transparent) 0,
+      transparent 15%
+    );
+    --top-color: transparent;
+  }
 }
 
 /* ----------------------------------------- */
@@ -129,9 +131,11 @@
 /* ----------------------------------------- */
 /* DUI variables                             */
 /* ----------------------------------------- */
-[data-chat-interface-theme^="bg3"] #sidebar-tabs,
+[data-chat-interface-theme^="bg3"],
 [data-chat-interface-theme^="bg3"] #chat-log ~ *,
 [data-theme^="bg3"] {
+  --color-text-subtle: #efe6d87f;
+  --color-text-secondary: #efe6d87f;
   /* Base colors */
   --color-primary-1: var(--bg3-accent-color-light);
   --color-primary-2: var(--bg3-accent-color);

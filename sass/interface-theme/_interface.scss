@@ -1,0 +1,395 @@
+/* ----------------------------------------- */
+/* Tooltip                                   */
+/* ----------------------------------------- */
+
+[data-interface-theme] #tooltip {
+  background: var(--glass-bg);
+  border: 1px solid var(--color-primary-1);
+  box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(5px);
+  font-size: var(--font-size-16);
+  line-height: var(--font-size-16);
+  text-shadow: 0px 1px 2px black;
+  padding: 0.4em 0.6em;
+}
+
+/* ----------------------------------------- */
+/* Context Menu                              */
+/* ----------------------------------------- */
+
+@layer blocks.ui {
+  [data-interface-theme] #context-menu {
+    background: var(--glass-bg);
+    border: 1px solid var(--color-primary-1);
+    box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(5px);
+    text-shadow: 0px 1px 2px black;
+    --text-color: var(--color-light-1);
+    --hover-text-color: var(--color-light-2);
+    --hover-entry-border: var(--color-cool-4);
+    --hover-entry-background: var(--color-dark-1);
+
+    border-radius: 4px;
+    li.context-item {
+      border-inline: 1px;
+      &:first-child {
+        border-top: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+      &:last-child {
+        border-bottom: none;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+      &:hover {
+        border-color: var(--color-primary-1);
+        border-inline: 0px;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* UI Controls                               */
+/* ----------------------------------------- */
+
+@layer applications {
+  [data-interface-theme] {
+    #ui-left-column-1 .ui-control {
+      font-size: calc(var(--control-size) - 12px);
+    }
+    .ui-control {
+      box-shadow: var(--control-box-shadow);
+      text-shadow: var(--control-text-shadow);
+      cursor: var(--cursor-pointer); // lots of 'active' stuff is clickable
+      transition: box-shadow 0.25s, background 0.25s, border 0.25s, color 0.25s;
+
+      &.button {
+        --control-bg-color: var(--control-button-bg-color);
+        &:hover {
+          --control-bg-color: var(--control-button-hover-bg-color);
+        }
+      }
+
+      &:not([aria-pressed="true"]):hover,
+      &.toggle:hover {
+        --control-border-color: var(--hover-border-color, var(--control-button-hover-border-color));
+      }
+
+      &:focus {
+        box-shadow: var(--control-box-shadow);
+      }
+
+      &:hover {
+        text-shadow: var(--control-text-shadow);
+      }
+    }
+
+    .split-button {
+      box-shadow: var(--control-box-shadow);
+      border-start-start-radius: 4px;
+      border-end-start-radius: 4px;
+      border-start-end-radius: 4px;
+      border-end-end-radius: 4px;
+      // background: var(--control-bg-color);
+
+      .ui-control {
+        box-shadow: unset;
+        // background: transparent;
+        // border-inline-end-width: 1px;
+
+        &[aria-pressed="true"] {
+          z-index: 1;
+          background: var(--control-active-bg-color);
+        }
+
+        &:first-child {
+          border-start-start-radius: 4px;
+          border-end-start-radius: 4px;
+        }
+
+        &:last-child {
+          border-start-end-radius: 4px;
+          border-end-end-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+[data-interface-theme] {
+  // visually centering and sizing font-awesome icons
+  .ui-control {
+    &.fa-music::before {
+      scale: 0.9;
+      margin-right: 2px;
+    }
+    &.fa-folder::before,
+    &.fa-cubes::before,
+    &.fa-ruler-combined::before,
+    &.fa-gears::before,
+    &.fa-comments::before,
+    &.fa-book-open::before {
+      scale: 0.9;
+    }
+    &.fa-house::before,
+    &.fa-cloud::before,
+    &.fa-code::before {
+      scale: 0.8;
+    }
+    &.fa-cards::before {
+      scale: 0.8;
+      margin-right: 3px;
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Navigation                                */
+/* ----------------------------------------- */
+
+/* ----------------------------------------- */
+/* Scene Controls                            */
+/* ----------------------------------------- */
+
+[data-interface-theme] {
+  #ui-left #ui-left-column-1 {
+    --control-size: 40px;
+
+    .ui-control {
+      --control-size: 40px;
+    }
+  }
+
+  #scene-controls {
+    overflow: visible;
+  }
+}
+
+/* ----------------------------------------- */
+/* Players                                   */
+/* ----------------------------------------- */
+
+[data-interface-theme] {
+  #players #players-active,
+  #players #players-inactive {
+    // --background-color: var(--control-bg-color);
+    border-radius: 4px;
+    box-shadow: var(--control-box-shadow);
+    border: 1px solid var(--control-border-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+/* ----------------------------------------- */
+/* Hotbar                                    */
+/* ----------------------------------------- */
+
+[data-interface-theme] {
+  #hotbar {
+    --slot-color: var(--control-bg-color);
+    .slot {
+      border-radius: 100%;
+      box-shadow: var(--control-box-shadow);
+      border: 2px solid var(--control-border-color);
+      transition: box-shadow 0.25s, background 0.25s, border 0.25s, color 0.25s;
+      cursor: var(--cursor-pointer);
+      &:hover {
+        --slot-color: var(--control-active-bg-color);
+      }
+      img {
+        border-radius: 100%;
+      }
+      .key {
+        border-radius: 100% 0 8px 0;
+        width: 25px;
+        text-align: end;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Effects Panel                             */
+/* ----------------------------------------- */
+
+[data-interface-theme] {
+  #effects-panel .effect-item > .icon {
+    border: var(--app-border-width) var(--icon-border-color);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 1px black;
+    color: var(--text-color-3);
+    position: relative;
+    &.aura {
+      border-radius: 50%;
+      border: 1px solid var(--color-primary-1);
+      box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
+    }
+    .linked {
+      color: var(--text-color-2);
+      background: var(--color-primary-3);
+      border: 1px solid var(--color-secondary-4);
+      border-radius: 4px 0px var(--border-radius) 0px;
+      border-bottom: unset;
+      border-right: unset;
+      text-shadow: 0px 1px 2px black;
+    }
+    .value-wrapper {
+      background: none;
+      bottom: -1px;
+      left: -3px;
+
+      .value {
+        padding: 2px;
+        color: var(--text-color-2);
+        background: var(--color-primary-3);
+        border-radius: 0px 4px 0px var(--border-radius);
+        border: 1px solid var(--color-secondary-4);
+        border-bottom: unset;
+        border-left: unset;
+        text-shadow: 0px 1px 2px black;
+      }
+    }
+    .expired {
+      position: absolute;
+      left: auto;
+      width: 80%;
+      width: unset;
+      padding: 2px 1px;
+      color: var(--text-color-1);
+      background: var(--color-primary-2);
+      border: 1px solid var(--color-primary-1);
+      text-shadow: 0px 1px 2px black;
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Sidebar                                   */
+/* ----------------------------------------- */
+
+// #sidebar {
+//   flex-direction: column;
+// }
+// #sidebar-tabs {
+//   position: fixed;
+//   z-index: 1;
+//   padding: unset;
+//   > menu {
+//     scale: 0.5;
+//   }
+// }
+
+@layer compatibility {
+  [data-interface-theme] {
+    .sidebar-tab {
+      border-radius: unset;
+      box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      // background: linear-gradient(to left, rgba(255, 255, 255, 0.4) calc(100% - 10px), transparent 100%);
+      // background: var(--color-warm-3, var(--color-cool-5-90));
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    #chat-message {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    .chat-sidebar:not(.sidebar-popout) {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: none;
+    }
+  }
+}
+
+[data-interface-theme] {
+  --sidebar-separator: 1px solid transparent;
+}
+[data-interface-theme][data-interface-color-scheme="light"] {
+  .sidebar-tab {
+    --sidebar-background: rgba(255, 255, 255, 0.4);
+  }
+}
+[data-interface-theme][data-interface-color-scheme="dark"] {
+  .sidebar-tab {
+    --sidebar-background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer elements.forms {
+  a.button,
+  button {
+    box-shadow: var(--button-box-shadow);
+  }
+}
+
+@layer blocks.base {
+  #sidebar-content {
+    :is(section.sidebar:not(#chat), section.sidebar-tab:not(#chat)) :is(a.button, button) {
+      --button-text-color: var(--color-light-2);
+      --button-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.9);
+      --button-border-color: #353535aa;
+      --button-hover-border-color: #252525aa;
+      --button-background-color: #252525cc;
+      --button-hover-background-color: #101010ff;
+    }
+  }
+}
+
+@layer blocks.ui {
+  .inline-control {
+    --button-box-shadow: unset;
+    --button-hover-background-color: rgb(86, 86, 86);
+    --button-hover-border-color: #252525cc;
+  }
+  li.folder > .folder-header .create-button {
+    --button-box-shadow: unset;
+  }
+}
+
+/* ----------------------------------------- */
+/* Other                                     */
+/* ----------------------------------------- */
+
+// unsure why this is --color-form-label in Core
+@layer blocks.base {
+  .standard-form .form-fields > button {
+    color: var(--button-text-color);
+  }
+  .scrollable {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+
+@layer blocks.base {
+  .standard-form fieldset {
+    border: 1px solid var(--fieldset-border-color);
+    background: var(--fieldset-background-color);
+    border-radius: 4px;
+    legend {
+      color: var(--fieldset-legend-color);
+    }
+  }
+}
+
+// add data-interface-theme to body, because some 'applications' still need the interface theme
+// add data-interface-scheme="dark/light" because the foundry theme-dark/light refers to application theme on body...
+// add data-application-theme to body, to allow specific themes to overwrite
+// do no apply data-theme=X
+// instead add data-themed, and use interface/application theme from body
+// if application breaks:
+// either unbreak it by adding explicit support where needed
+// or add data-minimally-themed and add explicit support
+// or exclude it

@@ -1,0 +1,189 @@
+@layer variables.themes.specific {
+  [data-interface-theme="dnd5e2"],
+  [data-application-theme="dnd5e2"],
+  [data-theme="dnd5e2"] {
+    --dnd5e-color-black: #000;
+    --dnd5e-color-dark: #191813;
+    --dnd5e-color-faint: #c9c7b8;
+    --dnd5e-color-beige: #b5b3a4;
+    --dnd5e-color-tan: #7a7971;
+    --dnd5e-color-olive: #4b4a44;
+    --dnd5e-color-crimson: #44191a;
+    --dnd5e-color-groove: #eeede0;
+    --dnd5e-color-gold: #9f9275;
+    --dnd5e-color-red: #ed1c24;
+    --dnd5e-color-blue: cornflowerblue;
+    --dnd5e-color-green: #205b15;
+    --dnd5e-color-maroon: #741b2b;
+    --dnd5e-color-parchment: #f1ebe8;
+    --dnd5e-color-purple: #c44dff;
+    --dnd5e-color-scrollbar: var(--dnd5e-color-gold);
+    --dnd5e-color-card: #f8f4f1;
+    --dnd5e-color-hp-1: #1b4b29;
+    --dnd5e-color-hp-2: #3ba55d;
+    --dnd5e-color-hp-3: #276d3c;
+    --dnd5e-color-hd-1: #401f25;
+    --dnd5e-color-hd-2: var(--dnd5e-color-maroon);
+    --dnd5e-color-hd-3: #500000;
+    --dnd5e-color-sc-1: #433754;
+    --dnd5e-color-sc-2: #776493;
+    --dnd5e-color-blue-white: #cfd2da;
+    --dnd5e-color-blue-gray-1: #242731;
+    --dnd5e-color-blue-gray-2: #252830;
+    --dnd5e-color-blue-gray-3: #434857;
+    --dnd5e-color-blue-gray-4: #333742;
+    --dnd5e-color-iron-gray: #313131;
+    --dnd5e-color-light-gray: #3d3d3d;
+    --dnd5e-color-dark-gray: #0d0b0b;
+    --dnd5e-color-success: #006c00;
+    --dnd5e-color-success-background: #c7d0c0;
+    --dnd5e-color-success-critical: green;
+    --dnd5e-color-failure: #6e0000;
+    --dnd5e-color-failure-background: #ffdddd;
+    --dnd5e-color-failure-critical: red;
+    --dnd5e-color-note-info: #5c87b9;
+    --dnd5e-color-note-warn: #9b6903;
+    --dnd5e-color-application-damage: #9c5b47;
+    --dnd5e-color-application-healing: #3c7f58;
+    --dnd5e-color-application-temp: #007f7f;
+    --dnd5e-color-table-row-even: var(--dnd5e-color-parchment);
+    --dnd5e-color-table-row-odd: var(--dnd5e-color-card);
+    --dnd5e-background-25: rgba(0, 0, 0, 0.25);
+    --dnd5e-background-10: rgba(0, 0, 0, 0.1);
+    --dnd5e-background-5: rgba(0, 0, 0, 0.05);
+    --dnd5e-background-card: var(--dnd5e-color-card);
+    --dnd5e-background-parchment: var(--dnd5e-color-parchment);
+    --dnd5e-border-dark: 1px solid #999;
+    --dnd5e-border-light: 1px solid #ccc;
+    --dnd5e-border-groove: 2px groove var(--dnd5e-color-groove);
+    --dnd5e-border-dotted: 1px dotted #bbb;
+    --dnd5e-border-gold: 1px solid var(--dnd5e-color-gold);
+    --dnd5e-font-modesto: "Modesto Condensed", "Palatino Linotype", serif;
+    --dnd5e-font-roboto: Roboto, sans-serif;
+    --dnd5e-font-roboto-condensed: "Roboto Condensed", sans-serif;
+    --dnd5e-font-roboto-slab: "Roboto Slab", serif;
+    --dnd5e-sheet-background: url("ui/parchment.jpg") repeat;
+    --dnd5e-shadow-45: rgba(0, 0, 0, 0.45);
+    --dnd5e-shadow-15: rgba(0, 0, 0, 0.15);
+    --dnd5e-highlight-10: rgba(255, 255, 255, 0.1);
+    --dnd5e-highlight-45: rgba(255, 255, 255, 0.45);
+  }
+}
+
+@layer blocks.base {
+  [data-interface-theme="dnd5e2"] {
+    --control-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+    --control-text-shadow: none;
+    --control-bg-color: black;
+    --control-button-bg-color: #3c3737;
+    --control-bg-color: black;
+    --control-border-color: black;
+    --control-icon-color: #9f9275;
+    --control-hover-bg-color: black;
+    --control-hover-border-color: black;
+    --control-hover-icon-color: white;
+    --control-active-bg-color: #792a25;
+    --control-active-border-color: #0d0d0d;
+    --control-active-icon-color: white;
+    --control-button-border-color: #ce9c5c;
+    --control-button-hover-bg-color: #5e554a;
+    --control-button-hover-border-color: #9f9275;
+    --toggle-bg-color: var(--toggle-bg);
+    --toggle-border-color: black;
+    --toggle-active-bg-color: #9f9275;
+    --toggle-active-border-color: #9f9275;
+    --toggle-icon-color: #9f9275;
+
+    #ui-left-column-1 .ui-control {
+      position: sticky;
+
+      &:hover {
+        --control-box-shadow: 0 0 6px var(--dnd5e-color-gold);
+      }
+      &::before {
+        scale: 0.8 !important;
+      }
+      &:not(.toggle, .button, [aria-pressed="true"])::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border: 1px solid var(--dnd5e-color-gold);
+        border-radius: 3px;
+      }
+      &[aria-pressed="true"]:not(.toggle, .button)::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border: 1px solid #2c161a;
+        border-radius: 3px;
+      }
+
+      &.toggle {
+        border-radius: 100% !important;
+        border-color: var(--dnd5e-color-gold) !important;
+        &[aria-pressed="true"] {
+          border-color: black !important;
+        }
+      }
+
+      &.toggle::before {
+        position: absolute;
+        background: white;
+        border-radius: 100%;
+        color: var(--toggle-bg-color);
+        width: 100%;
+        height: 100%;
+        padding-top: 5px;
+      }
+      &.toggle[aria-pressed="true"]::before {
+        position: absolute;
+        background: white;
+        color: var(--toggle-active-bg-color);
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        padding-top: 5px;
+      }
+    }
+
+    .ui-control {
+      --control-bg-color: black;
+      --control-border-color: black;
+      --control-icon-color: #9f9275;
+      --control-hover-bg-color: black;
+      --control-hover-border-color: black;
+      --control-hover-icon-color: white;
+      --control-active-bg-color: #792a25;
+      --control-active-border-color: #0d0d0d;
+      --control-active-icon-color: white;
+      --control-button-border-color: #ce9c5c;
+      --control-button-hover-bg-color: #5e554a;
+      --control-button-hover-border-color: #9f9275;
+      --toggle-bg-color: var(--toggle-bg);
+      --toggle-border-color: black;
+      --toggle-active-bg-color: #9f9275;
+      --toggle-active-border-color: #9f9275;
+      --toggle-icon-color: #9f9275;
+
+      &.toggle {
+        --hover-border-color: #9f9275;
+      }
+
+      &.button {
+        --hover-border-color: orange;
+      }
+
+      &[aria-pressed="true"],
+      &.toggle,
+      &.button {
+        --control-icon-color: white !important;
+      }
+    }
+  }
+  [data-interface-theme="dnd5e2"][data-interface-color-scheme="light"] {
+    --toggle-bg: #313131;
+  }
+  [data-interface-theme="dnd5e2"][data-interface-color-scheme="dark"] {
+    --toggle-bg: black;
+  }
+}

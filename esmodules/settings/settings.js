@@ -1,6 +1,6 @@
 import * as util from "../util.js";
 import { ThemeSettings } from "./theme-settings.js";
-import { MiscSettings } from "./misc-settings.js";
+// import { MiscSettings } from "./misc-settings.js";
 import { CustomizationSettings } from "./customization-settings.js";
 import { ExternalModuleSettings } from "./external-module-settings.js";
 import { lookupThemeAndSchemeForKey } from "../ui-theme.js";
@@ -27,26 +27,26 @@ Hooks.once("init", async () => {
   });
 
   ThemeSettings.registerSettings();
-  MiscSettings.registerSettings();
+  // MiscSettings.registerSettings();
   CustomizationSettings.registerSettings();
   ExternalModuleSettings.registerSettings();
 
   util.debug("Registered settings...");
 
-  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.app-theme");
+  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
   if (applicationTheme !== "no-theme") {
     const uiTheme = lookupThemeAndSchemeForKey(applicationTheme);
     const { dorakoUiTheme, colorScheme } = uiTheme;
 
     if (uiTheme) {
-      $("#tooltip").attr("data-theme", dorakoUiTheme);
-      $("#fps").attr("data-theme", dorakoUiTheme);
+      $("#tooltip").attr("data-interface-theme", dorakoUiTheme);
+      $("#fps").attr("data-interface-theme", dorakoUiTheme);
     }
   }
 
   const root = document.querySelector(":root").style;
 
-  root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
+  // root.setProperty("--border-radius", game.settings.get("pf2e-dorako-ui", "theme.border-radius").toString() + "px");
 
   util.debug("initialized properties...");
 

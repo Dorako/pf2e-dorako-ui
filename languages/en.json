@@ -19,6 +19,7 @@
       "bg3": "Baldur's Gate 3",
       "bg3-brown": "Baldur's Gate 3 (Brown)",
       "bg3-blue": "Baldur's Gate 3 (Blue)",
+      "dnd5e2": "D&D 5e",
       "dnd5e2-light": "D&D 5e (Light)",
       "dnd5e2-dark": "D&D 5e (Dark)",
       "foundry2": "Foundry 2",
@@ -51,40 +52,40 @@
       "theme": {
         "name": "Theme Settings",
         "label": "Configure Theme Settings",
-        "hint": "Change theme settings for various applications and UI elements",
-        "window-app-theme": {
-          "name": "Sheet theme",
-          "hint": "Applies to window style applications"
+        "hint": "Change theme settings for various applications and UI elements. The D&D 5e theme relies on assets from the D&D 5e system, so it should be installed as well.",
+        "application-theme": {
+          "name": "Application theme",
+          "hint": "Affected by 'Core → User Interface Configuration → Application' color scheme."
         },
-        "app-theme": {
+        "interface-theme": {
           "name": "Interface theme",
-          "hint": "Applies to user interface elements like controls, navigation, sidebar, as well as floating style modules"
+          "hint": "Affected by 'Core → User Interface Configuration → Interface' color scheme."
         },
         "chat-message-standard-theme": {
           "name": "Chat message (standard) theme",
-          "hint": "Applies to messages from speakers not from the 'opposition' alliance"
+          "hint": "Applies to messages from speakers not from the 'opposition' alliance."
         },
         "chat-message-opposition-theme": {
           "name": "Chat message (opposition) theme",
-          "hint": "Applies to messages with speakers from the 'opposition' alliance"
+          "hint": "Applies to messages with speakers from the 'opposition' alliance."
         },
         "chat-message-header-style": {
           "name": "Chat message header theme",
-          "hint": "Only applies to CRB themes"
+          "hint": "Only applies to CRB themes."
         },
         "border-radius": {
           "name": "Roundedness",
-          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements"
+          "hint": "(default: 3px) Changes the degree of roundedness in many UI elements."
         },
         "sheet-theme-color": {
           "name": "Sheet theme color",
-          "hint": "Applies to sheets for player characters and vehicles"
+          "hint": "Applies to sheets for player characters and vehicles."
         }
       },
       "misc": {
         "name": "Miscellaneous Settings",
         "label": "Configure Misc. Settings",
-        "hint": "Configure settings related to other Dorako UI functionality",
+        "hint": "Configure settings related to other Dorako UI functionality.",
         "enable-debug-mode": {
           "name": "Enable debug mode?",
           "hint": "Adds buttons to quickly swap Sheet theme"
@@ -92,24 +93,24 @@
       },
       "customization": {
         "name": "Customization",
-        "hint": "Make personalized changes using custom CSS, or opt out of certain Dorako UI styling",
+        "hint": "Make personalized changes using custom CSS, or opt out of certain Dorako UI styling.",
 
         "excluded-applications": {
           "name": "Excluded applications",
-          "hint": "Look in logs for the name of the Application, or ask on Discord"
+          "hint": "Look in logs for the name of the Application, or ask on Discord."
         },
         "custom-css": {
           "name": "Custom CSS",
-          "hint": "Write CSS in an external editor and paste it in here"
+          "hint": "Write CSS in an external editor and paste it in here."
         }
       },
       "external-module": {
         "name": "External Module Settings",
-        "hint": "Adjustments for how other modules are affected by Dorako UI",
+        "hint": "Adjustments for how other modules are affected by Dorako UI.",
 
         "colorize-idle-hud": {
           "name": "Colorize PF2e HUD?",
-          "hint": "Applies a colorized theme to the icons in the main tooltip and persistent HUD"
+          "hint": "Applies a colorized theme to the icons in the main tooltip and persistent HUD."
         }
       }
     }

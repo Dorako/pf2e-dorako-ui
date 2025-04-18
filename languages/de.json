@@ -194,7 +194,7 @@
           "name": "Design der Chatnachrichten-Kopfzeile",
           "hint": "Gilt nur für CRB-Designs"
         },
-        "window-app-theme": {
+        "application-theme": {
           "name": "Bogendesign"
         },
         "chat-message-standard-theme": {

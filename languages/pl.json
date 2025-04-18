@@ -125,11 +125,11 @@
           "name": "Zaokrąglenie",
           "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika"
         },
-        "app-theme": {
+        "interface-theme": {
           "name": "Motyw interfejsu",
           "hint": "Wpływa na elementy interfejsu użytkownika, takie jak kontrolki, nawigacja, pasek boczny, a także ruchome moduły stylów"
         },
-        "window-app-theme": {
+        "application-theme": {
           "hint": "Wpływa na styl aplikacji okienkowych",
           "name": "Motyw karty"
         },

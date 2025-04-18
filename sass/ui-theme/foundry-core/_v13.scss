@@ -1,0 +1,93 @@
+// .ui-control {
+//   @include dui-button;
+// }
+
+// @layer modules {
+//   .ui-control.toggle {
+//     @include dui-button-toggle;
+//   }
+// }
+
+// #players #players-active,
+// #players #players-inactive {
+//   @include dui-app;
+// }
+
+// #hotbar #action-bar .slot {
+//   @include dui-app;
+// }
+
+// @layer blocks {
+//   a.button,
+//   button {
+//     @include dui-button;
+//     // &.plain {
+//     //   --dui-button-background: transparent;
+//     //   --dui-button-border-color: transparent;
+//     //   --dui-button-hover-background-color: transparent;
+//     //   --dui-button-focus-outline-color: transparent;
+//     //   --box-shadow: 0px;
+//     // }
+//   }
+// }
+
+// .standard-form fieldset {
+//   border: 1px solid var(--fieldset-border-color) !important;
+//   background: var(--fieldset-background-color) !important;
+//   border-radius: var(--border-radius);
+//   > legend {
+//     color: var(--fieldset-legend-color);
+//     text-shadow: unset;
+//   }
+// }
+
+// .sidebar-tab {
+//   border-radius: unset;
+//   //   background: var(--app-background);
+//   background: linear-gradient(to left, var(--app-background) calc(100% - 10px), transparent 100%);
+// }
+
+// .split-button {
+//   background: var(--app-background);
+//   box-shadow: var(--box-shadow);
+//   border-start-start-radius: 4px;
+//   border-end-start-radius: 4px;
+//   border-start-end-radius: 4px;
+//   border-end-end-radius: 4px;
+
+//   .ui-control {
+//     border-radius: 0;
+//     border-inline-end-width: 0;
+//     border-width: 0px;
+//     box-shadow: unset;
+//     background: transparent;
+//     --box-shadow: 0px;
+//     &[aria-pressed="true"] {
+//       z-index: 1;
+//       background: var(--button-hover-background);
+//     }
+//     &:first-child {
+//       border-start-start-radius: 4px;
+//       border-end-start-radius: 4px;
+//     }
+//     &:last-child {
+//       border-start-end-radius: 4px;
+//       border-end-end-radius: 4px;
+//     }
+//   }
+// }
+
+// @layer blocks.base {
+//   .standard-form .tab {
+//     padding-top: 1px;
+//   }
+// }
+
+// .category-browser aside nav.tabs > a {
+//   @include dui-button;
+//   padding-inline: 10px;
+// }
+
+// #scene-controls {
+//   overflow: visible;
+// }

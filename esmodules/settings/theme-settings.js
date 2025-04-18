@@ -5,57 +5,58 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
   static namespace = "theme";
 
   static SETTINGS = [
-    "app-theme",
-    "window-app-theme",
+    "interface-theme",
+    "application-theme",
     "sheet-theme-color",
     "chat-message-standard-theme",
     "chat-message-opposition-theme",
     "chat-message-header-style",
-    "border-radius",
+    // "border-radius",
   ];
 
   static get settings() {
     return {
-      "app-theme": {
+      "interface-theme": {
         // Interface theme
-        name: "pf2e-dorako-ui.settings.theme.app-theme.name",
-        hint: "pf2e-dorako-ui.settings.theme.app-theme.hint",
+        name: "pf2e-dorako-ui.settings.theme.interface-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.interface-theme.hint",
         scope: "client",
         config: true,
-        default: "crb",
+        default: "glass",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
-          crb: "pf2e-dorako-ui.text.glass",
-          foundry2: "pf2e-dorako-ui.text.foundry2",
+          glass: "pf2e-dorako-ui.text.glass",
+          // foundry2: "pf2e-dorako-ui.text.foundry2",
           bg3: "pf2e-dorako-ui.text.bg3",
+          dnd5e2: "pf2e-dorako-ui.text.dnd5e2",
           discord: "pf2e-dorako-ui.text.discord",
-          opaque: "pf2e-dorako-ui.text.opaque",
+          // opaque: "pf2e-dorako-ui.text.opaque",
           custom: "pf2e-dorako-ui.text.custom",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
       },
-      "window-app-theme": {
+      "application-theme": {
         // Sheet theme
-        name: "pf2e-dorako-ui.settings.theme.window-app-theme.name",
-        hint: "pf2e-dorako-ui.settings.theme.window-app-theme.hint",
+        name: "pf2e-dorako-ui.settings.theme.application-theme.name",
+        hint: "pf2e-dorako-ui.settings.theme.application-theme.hint",
         scope: "client",
         config: true,
-        default: "crb-light",
+        default: "bg3",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
-          "crb-light": "pf2e-dorako-ui.text.crb-light",
-          "crb-dark": "pf2e-dorako-ui.text.crb-dark",
-          foundry2: "pf2e-dorako-ui.text.foundry2",
+          // "crb-light": "pf2e-dorako-ui.text.crb-light",
+          // "crb-dark": "pf2e-dorako-ui.text.crb-dark",
+          // foundry2: "pf2e-dorako-ui.text.foundry2",
           bg3: "pf2e-dorako-ui.text.bg3",
-          "dnd5e2-light": "pf2e-dorako-ui.text.dnd5e2-light",
-          "dnd5e2-dark": "pf2e-dorako-ui.text.dnd5e2-dark",
-          "discord-light": `pf2e-dorako-ui.text.discord-light`,
-          "discord-dark": "pf2e-dorako-ui.text.discord-dark",
-          "custom-light": "pf2e-dorako-ui.text.custom-light",
-          "custom-dark": "pf2e-dorako-ui.text.custom-dark",
+          // "dnd5e2-light": "pf2e-dorako-ui.text.dnd5e2-light",
+          dnd5e2: "pf2e-dorako-ui.text.dnd5e2",
+          discord: `pf2e-dorako-ui.text.discord`,
+          // "discord-dark": "pf2e-dorako-ui.text.discord-dark",
+          custom: "pf2e-dorako-ui.text.custom",
+          // "custom-dark": "pf2e-dorako-ui.text.custom-dark",
         },
         requiresReload: true, // re-render all windows
         onChange: (choice) => {},
@@ -75,7 +76,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           blue: "pf2e-dorako-ui.text.colors.blue",
           purple: "pf2e-dorako-ui.text.colors.purple",
           black: "pf2e-dorako-ui.text.colors.black",
-          brown: "pf2e-dorako-ui.text.colors.brown"
+          brown: "pf2e-dorako-ui.text.colors.brown",
         },
         requiresReload: false,
         onChange: () => {
@@ -150,24 +151,24 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         requiresReload: false,
         onChange: refreshChat,
       },
-      "border-radius": {
-        name: "pf2e-dorako-ui.settings.theme.border-radius.name",
-        hint: "pf2e-dorako-ui.settings.theme.border-radius.hint",
-        scope: "client",
-        type: Number,
-        default: 3,
-        range: {
-          min: 0,
-          max: 48,
-          step: 1,
-        },
-        config: true,
-        requiresReload: false,
-        onChange: (value) => {
-          const root = document.querySelector(":root").style;
-          root.setProperty("--border-radius", `${value}px`);
-        },
-      },
+      // "border-radius": {
+      //   name: "pf2e-dorako-ui.settings.theme.border-radius.name",
+      //   hint: "pf2e-dorako-ui.settings.theme.border-radius.hint",
+      //   scope: "client",
+      //   type: Number,
+      //   default: 3,
+      //   range: {
+      //     min: 0,
+      //     max: 48,
+      //     step: 1,
+      //   },
+      //   config: true,
+      //   requiresReload: false,
+      //   onChange: (value) => {
+      //     const root = document.querySelector(":root").style;
+      //     root.setProperty("--border-radius", `${value}px`);
+      //   },
+      // },
     };
   }
 }

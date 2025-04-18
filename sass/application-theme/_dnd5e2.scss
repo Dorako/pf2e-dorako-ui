@@ -1,0 +1,208 @@
+[data-theme="dnd5e2"] {
+  --color-form-label: var(--color-text-dark-primary) !important;
+  --color-form-hint: var(--color-text-dark-5) !important;
+  --color-text-secondary: var(--color-text-dark-5);
+  --color-text-subtle: var(--color-text-dark-5);
+  --color-scrollbar: var(--dnd5e-color-gold);
+  input {
+    --range-track-color: var(--dnd5e-background-25);
+    --range-track-border-color: var(--dnd5e-border-gold);
+    --range-thumb-background-color: var(--dnd5e-color-gold);
+    --range-thumb-border-color: var(--dnd5e-border-gold);
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    --checkbox-checked-color: var(--dnd5e-color-gold);
+    --checkbox-disabled-color: var(--color-cool-3);
+    --checkbox-background-color: white;
+    // --checkbox-checkmark-color: black;
+    --checkbox-font-weight: bold;
+  }
+}
+
+.theme-dark [data-theme="dnd5e2"] {
+  --checkbox-checkmark-color: black;
+  input[type="checkbox"],
+  input[type="radio"] {
+    --checkbox-checkmark-color: black;
+  }
+}
+
+.theme-light [data-theme="dnd5e2"] {
+  --checkbox-checkmark-color: white;
+  input[type="checkbox"],
+  input[type="radio"] {
+    --checkbox-checkmark-color: white;
+  }
+  --fieldset-legend-color: var(--color-text-dark-5);
+}
+
+[data-theme="dnd5e2"] fieldset {
+  border-radius: 4px;
+  background: var(--dnd5e-background-card);
+  box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+  border: var(--dnd5e-border-gold);
+  --color-fieldset-border: var(--dnd5e-color-gold);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--color-fieldset-border);
+  margin: 0;
+  > legend {
+    background: var(--dnd5e-background-card);
+    position: relative;
+    border-radius: 2px;
+    padding: 2px 6px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: var(--font-size-11);
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 2px;
+      box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+      outline: 1px solid var(--color-fieldset-border);
+      z-index: -1;
+    }
+  }
+}
+
+[data-theme="dnd5e2"] {
+  --window-app-background: var(--dnd5e-bg);
+  --window-app-border-width: 1px;
+  --window-app-box-shadow: 0 0 30px var(--dnd5e-shadow-15), 0 0 6px var(--dnd5e-shadow-45);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-15);
+}
+
+.theme-light [data-theme="dnd5e2"] {
+  --window-app-background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+  --window-app-border-color: var(--dnd5e-color-gold);
+  --icon-border-color: var(--dnd5e-color-gold);
+}
+
+.theme-dark [data-theme="dnd5e2"] {
+  --color-text-dark-primary: var(--dnd5e-color-blue-white);
+  --color-text-dark-secondary: var(--color-text-light-6);
+  --color-text-dark-5: var(--color-text-light-6);
+  --dnd5e-border-dotted: 1px dotted var(--dnd5e-color-blue-gray-3);
+  --dnd5e-border-dark: 1px solid var(--dnd5e-color-blue-gray-3);
+  --color-border-light-1: var(--dnd5e-color-blue-gray-1);
+  --color-border-light-tertiary: var(--color-border-light-2);
+  --dnd5e-color-light-gray: var(--dnd5e-color-dark-gray);
+  --dnd5e-color-iron-gray: var(--dnd5e-color-blue-gray-2);
+  --dnd5e-background-card: var(--dnd5e-color-blue-gray-2);
+  --dnd5e-background-parchment: var(--dnd5e-color-blue-gray-2);
+  --dnd5e-border-gold: 1px solid var(--dnd5e-color-blue-gray-1);
+  --filigree-background-color: var(--dnd5e-color-blue-gray-2);
+  --filigree-border-color: var(--dnd5e-color-blue-gray-3);
+  --dnd5e-background-5: var(--dnd5e-highlight-10);
+
+  --window-app-background: var(--dnd5e-color-dark-gray) url(../../../ui/denim075.png);
+  --window-app-border-color: var(--dnd5e-color-blue-gray-1);
+  --icon-border-color: var(--dnd5e-color-blue-gray-1);
+
+  fieldset {
+    --color-fieldset-border: var(--dnd5e-color-blue-gray-3);
+    > legend {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: var(--font-size-11);
+
+      color: var(--dnd5e-color-gold);
+    }
+  }
+
+  :is(input) {
+    --input-placeholder-color: var(--color-text-dark-secondary);
+  }
+
+  :is(.form-group, fieldset) :is(select, input):not([type="range"]) {
+    color: var(--color-text-dark-primary);
+  }
+  :is(input[type="search"]) {
+    --input-background-color: var(--dnd5e-background-parchment);
+    border: var(--dnd5e-border-gold);
+  }
+
+  :is(input, select):not([type="range"], [type="search"]) {
+    --input-background-color: var(--dnd5e-background-25);
+  }
+  :is(input, select):not([type="range"]):disabled {
+    background: var(--dnd5e-color-dark-gray);
+  }
+
+  nav.tabs.sheet-tabs [data-tab]:not([disabled], .disabled) {
+    --button-background-color: black;
+    --button-hover-background-color: var(--dnd5e-color-crimson);
+    box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+    color: var(--dnd5e-color-gold);
+    border: unset;
+    &.active {
+      color: white;
+      box-shadow: 0 0 6px var(--dnd5e-color-gold);
+    }
+  }
+  .form-group button:not([disabled], .disabled),
+  .form-footer button:not([disabled], .disabled) {
+    --button-background-color: var(--dnd5e-background-card);
+    --button-border-color: var(--dnd5e-color-blue-gray-3);
+    box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+    color: var(--color-text-dark-primary);
+    // border: unset;
+  }
+
+  nav.tabs [data-tab] {
+    position: sticky;
+    &:not(.toggle, .button, [aria-pressed="true"])::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border: 1px solid var(--dnd5e-color-gold);
+      border-radius: 3px;
+    }
+  }
+}
+
+// .item.sheet
+[data-application-theme="dnd5e2"].theme-dark :is(.app, .application) .window-content::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 150px;
+  border-radius: 5px 5px 0 0;
+  opacity: 0.2;
+  background: url(/systems/dnd5e/ui/official/banner-item-dark.webp) no-repeat top center / cover;
+  mask-image: linear-gradient(to bottom, black, transparent);
+  pointer-events: none;
+}
+
+@layer blocks.base {
+  [data-theme="dnd5e2"] button:not(.control) {
+    --button-focus-outline-color: none;
+    --button-border-color: var(--color-border-light-2);
+    --button-hover-background-color: var(--dnd5e-background-card);
+    --button-text-color: var(--color-text-dark-primary);
+    --button-hover-text-color: var(--color-text-dark-primary);
+    --button-hover-border-color: var(--dnd5e-color-gold);
+    background: var(--dnd5e-background-card);
+    font-size: var(--font-size-13);
+    font-weight: bold;
+    // text-transform: uppercase; // messes too much with expected line width
+    padding: 3px;
+    // border: 1px solid var(--color-border-light-2);
+    box-shadow: 0 0 8px var(--dnd5e-shadow-15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 12px;
+    gap: 0.25rem;
+
+    &:not(disabled, .disabled):hover {
+      // box-shadow: 0 0 8px var(--dnd5e-shadow-15), 0 0 3px 1px var(--dnd5e-shadow-45) inset;
+      box-shadow: 0 0 5px var(--color-shadow-primary);
+    }
+  }
+}

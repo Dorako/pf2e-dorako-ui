@@ -1,0 +1,76 @@
+@layer variables.themes.specific {
+  [data-interface-theme="discord"] {
+    --control-box-shadow: 0px 0px 5px black, 0px 1px 2px black;
+    --control-text-shadow: none;
+    --control-bg-color: var(--discord-background);
+    --control-button-bg-color: #3c3737;
+    --control-button-border-color: #ce9c5c;
+    --control-active-bg-color: #3aa55c;
+
+    .ui-control {
+      --control-bg-color: var(--discord-background);
+      --control-border-color: var(--discord-background);
+      --control-icon-color: white;
+      --control-hover-bg-color: #36363b;
+      --control-hover-border-color: #36363b;
+      --control-hover-icon-color: white;
+      --control-active-bg-color: #3aa55c;
+      --control-active-border-color: #3aa55c;
+      --control-active-icon-color: white;
+      --control-button-border-color: #ce9c5c;
+      --control-button-hover-bg-color: #5e554a;
+      --control-button-hover-border-color: gray;
+      --toggle-bg-color: #4e5058;
+      --toggle-border-color: #646fe2;
+      --toggle-active-bg-color: #5765f2;
+      --toggle-active-border-color: #646fe2;
+      --toggle-icon-color: white;
+
+      &.toggle {
+        --hover-border-color: #8790f5;
+      }
+
+      &.button {
+        --hover-border-color: orange;
+      }
+
+      &[aria-pressed="true"],
+      &.toggle,
+      &.button {
+        --control-icon-color: white !important;
+      }
+    }
+  }
+
+  [data-interface-theme="discord"][data-interface-color-scheme="dark"] {
+    --discord-background: #2e2e33;
+    .ui-control {
+      --control-icon-color: white;
+    }
+  }
+
+  [data-interface-theme="discord"][data-interface-color-scheme="light"] {
+    --discord-background: #fbfbfb;
+    .ui-control {
+      --control-icon-color: #303035;
+      --control-hover-icon-color: #303035;
+      --control-hover-bg-color: #efeff0;
+      --control-hover-border-color: #efeff0;
+      --toggle-bg-color: #c4c9cd;
+      --toggle-icon-color: #5765f2;
+      --control-button-bg-color: #f4efe9;
+      --control-button-hover-bg-color: #d5ccc1;
+      --control-button-border-color: #ad7322;
+      &.button[aria-pressed="false"] {
+        color: #ad7322 !important;
+        &:hover {
+          background: orange !important;
+          color: white !important;
+        }
+      }
+      &.toggle[aria-pressed="false"] {
+        color: #5765f2 !important;
+      }
+    }
+  }
+}

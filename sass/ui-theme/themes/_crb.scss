@@ -1,4 +1,4 @@
-[data-chat-interface-theme^="crb"] #sidebar-tabs,
+[data-chat-interface-theme^="crb"],
 [data-chat-interface-theme^="crb"] #chat-log ~ *,
 [data-theme^="crb"] {
   --icon-border-color: var(--tertiary);
@@ -51,16 +51,19 @@
 
   --color-border-light-1: #ddd;
   --color-border-light-2: #999;
+  // .ui-control {
+  //   --dui-button-background: var(--glass-bg);
+  // }
 }
 
-[data-chat-interface-theme^="crb"] #chat-log ~ *,
+[data-chat-interface-theme^="crb"],
 [data-theme^="crb"]:not([data-color-scheme]) {
   --text-color-2: var(--color-text-light-highlight);
   --text-color-3: var(--color-text-light-heading);
   --dui-input-text-color: black;
   --dui-input-focus-text-color: black;
   --dui-input-focus-outline-color: var(--tertiary);
-  --dui-button-background: var(--glass-bg-light);
+  --dui-button-background: var(--glass-bg);
   --app-background: var(--glass-bg);
   --app-border-color: transparent;
   --app-border-width: 0px;

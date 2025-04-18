@@ -1,0 +1,321 @@
+/* ----------------------------------------- */
+/* Application                               */
+/* ----------------------------------------- */
+
+[data-theme]:is(.app, .application) {
+  background: var(--window-app-background);
+  border: var(--window-app-border-width) solid;
+  border-color: var(--window-app-border-color);
+  --color-form-hint: var(--color-light-3);
+  --color-form-label: var(--color-light-2);
+  .window-content {
+    background: none;
+  }
+}
+
+[data-theme] {
+  input:disabled,
+  select:disabled,
+  textarea:disabled,
+  code-mirror:disabled {
+    // --input-background-color: rgba(128, 128, 128, 0.507);
+    // --input-border-color: var(--color-cool-4);
+    // --input-text-color: black;
+    // --input-placeholder-color: black;
+  }
+}
+
+[data-theme].app .window-header {
+  border: unset;
+}
+
+[data-theme].application .window-header {
+  background: unset;
+  color: var(--color-text-primary);
+  border-bottom: unset;
+  .window-title {
+    color: var(--color-text-primary);
+  }
+  button.header-control {
+    --button-text-color: var(--color-text-primary);
+  }
+}
+
+body.theme-light [data-theme].application {
+  // --background: url(/modules/pf2e-dorako-ui/img/background-light.webp) repeat;
+  --background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+    url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f1ebe8; //url("/ui/parchment.jpg")
+  background-size: cover;
+}
+
+@layer variables.theme.general {
+  body.theme-light [data-theme] a.button:not([disabled], .disabled),
+  body.theme-light [data-theme] button:not([disabled], .disabled),
+  body.theme-light [data-theme] nav.tabs:not([disabled], .disabled) {
+    --button-background-color: var(--color-cool-5-50);
+    --button-background-color: #3d3d3d;
+    --button-border-color: var(--color-cool-4);
+    --button-text-color: #f0f0e0;
+    --button-focus-outline-color: var(--color-warm-2);
+    --button-hover-background-color: #9f9275;
+    --button-hover-border-color: var(--color-light-3);
+    --button-hover-text-color: var(--color-light-1);
+  }
+  body.theme-dark [data-theme] a.button:not([disabled], .disabled),
+  body.theme-dark [data-theme] button:not([disabled], .disabled),
+  body.theme-dark [data-theme] nav.tabs:not([disabled], .disabled) {
+    --button-background-color: var(--color-cool-5-50);
+    --button-border-color: var(--color-light-5);
+    --button-text-color: var(--color-light-3);
+    --button-focus-outline-color: var(--color-warm-2);
+    --button-hover-background-color: var(--color-warm-2);
+    --button-hover-border-color: var(--color-light-3);
+    --button-hover-text-color: var(--color-light-1);
+  }
+}
+
+// add styling from buttons to nav.tabs
+@layer elements.forms {
+  .application[data-theme] {
+    nav.tabs [data-tab] {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0 0.5rem;
+      background: var(--button-background-color);
+      border: 1px solid var(--button-border-color);
+      border-radius: 4px;
+      color: var(--button-text-color);
+      font-family: var(--font-sans);
+      font-size: var(--font-size-14);
+      text-decoration: none;
+      cursor: var(--cursor-pointer);
+      transition: box-shadow 0.25s, background 0.25s, border 0.25s, color 0.25s;
+
+      &.active,
+      &:hover {
+        background: var(--button-hover-background-color);
+        color: var(--button-hover-text-color);
+        border-color: var(--button-hover-border-color);
+      }
+    }
+  }
+}
+
+@layer modules {
+  .application[data-theme] {
+    nav.tabs {
+      border: unset;
+      [data-tab] {
+        padding: 4px 8px;
+        margin: 1px 4px;
+
+        &.active,
+        &:hover {
+          text-shadow: 0px 1px 1px black;
+        }
+      }
+    }
+  }
+}
+
+@layer variables.themes.general {
+  body.theme-light .application,
+  body.theme-light.application,
+  body.theme-dark .application,
+  body.theme-dark.application {
+    // weird decision to highlight hovered text
+    --color-form-hint-hover: var(--color-form-hint);
+    --color-form-label-hover: var(--color-form-label);
+  }
+  body.theme-dark .application .window-content,
+  body.theme-dark.application .window-content {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  body.theme-dark .application,
+  body.theme-dark.application {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+@layer elements.forms {
+  input[type="range"]::-webkit-slider-thumb {
+    border-radius: 100%;
+  }
+}
+
+range-picker > input[type="number"] {
+  background: var(--range-thumb-background-color);
+  border: 1px solid var(--range-thumb-border-color);
+  color: var(--checkbox-checkmark-color) !important;
+}
+
+[data-theme].application .window-content {
+  // background: transparent;
+  margin-block-start: -8px;
+  padding-block-start: 8px;
+  padding-block-end: 14px;
+  padding-inline: 14px;
+  // overflow-y: auto;
+}
+
+[data-theme].application:not(.minimized) .window-header {
+  position: relative;
+  overflow: visible;
+  justify-content: flex-end;
+  margin-block-end: calc(var(--font-size-24) + 6px);
+  // margin-block-end: calc(var(--font-size-12) + 6px);
+  background: none;
+}
+[data-theme].application:not(.minimized) .window-header:has(h2:not(:empty)) {
+  margin-block-end: calc(var(--font-size-24) + 12px);
+  // margin-block-end: calc(var(--font-size-12) + 12px);
+}
+[data-theme].application:not(.minimized) .window-header h1,
+[data-theme].application:not(.minimized) .window-header h2 {
+  position: absolute;
+  inset-inline: 0;
+  color: var(--color-text-dark-primary);
+  font-family: var(--dnd5e-font-roboto-slab); // 5e
+  font-family: var(--serif); // pf2e
+  font-weight: bold;
+  text-align: center;
+  z-index: -1;
+}
+[data-theme].application:not(.minimized) .window-header h1 {
+  inset-block-start: calc(var(--header-height) - 20px);
+  font-size: var(--font-size-24);
+}
+[data-theme].application:not(.minimized) .window-header h2 {
+  inset-block-start: calc(var(--header-height) + var(--font-size-16));
+  margin: 0;
+  font-size: var(--font-size-16);
+  text-shadow: none;
+}
+[data-theme].application:not(.minimized) .window-header .header-control {
+  background: var(--dnd5e-background-25); // FIXME
+}
+[data-theme].application:not(.minimized) .window-header .window-icon {
+  --icon-size: 20px;
+  --icon-fill: var(--color-text-dark-5);
+  margin-right: auto;
+  color: var(--icon-fill);
+  font-size: calc(var(--icon-size) * 0.75);
+}
+[data-theme].application:not(.minimized) .window-header dnd5e-icon.window-icon {
+  margin-block-start: 2px;
+}
+[data-theme].application:not(.minimized) .window-header img.window-icon {
+  block-size: calc(var(--icon-size) + 2px);
+  inline-size: calc(var(--icon-size) + 2px);
+  border: var(--dnd5e-border-gold); // FIXME
+  border-radius: 4px;
+}
+[data-theme].application.minimized .window-header h2 {
+  display: none;
+}
+[data-theme].application.minimized .window-header .header-control:hover,
+[data-theme].application.minimized .window-header .header-control:focus {
+  background: transparent;
+}
+[data-theme].application .window-header {
+  --button-size: 20px;
+}
+[data-theme].application .window-header button.header-control {
+  --color-light-text-heading: var(--color-light-1);
+  --button-text-color: var(--color-light-text-heading);
+  font-size: var(--font-size-12);
+  border: 1px solid var(--dnd5e-color-blue-gray-1); // FIXME
+  &:hover:not(.disabled, disabled) {
+    box-shadow: 0 0 5px var(--dnd5e-color-gold); // FIXME
+  }
+}
+[data-theme].application .window-header button.header-control:hover {
+  color: var(--color-light-text-heading);
+}
+[data-theme].application .window-header dnd5e-icon.window-icon {
+  display: block;
+}
+
+[data-theme]:is(.app, .application) hr {
+  height: 1px;
+  margin-block: 5px;
+  border: none;
+  background: linear-gradient(to right, transparent, var(--dnd5e-color-gold), transparent); // FIXME
+}
+
+/* ----------------------------------------- */
+/* Colors                                    */
+/* ----------------------------------------- */
+
+.theme-dark [data-theme] {
+  // Dark theme
+  --rarity-common: #e1d8cf;
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+  --color-rarity-common: #e1d8cf;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
+  --ornamentation: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1{stroke:wheat;stroke-miterlimit:10}.st1,.st2{fill:none}%3C/style%3E%3Cg opacity='1'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zm3.1 3.1h3.1v3.1H3.6zm3.2 0h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zm0 0H.5V13M13 .5H6.8v3.1M29.4.5h3.1v3.1h-3.1zm-3.1 3.1h3.1v3.1h-3.1zm0 3.2h3.1v3.1h-3.1zm-3.2-3.2h3.1v3.1h-3.1zm3.2 0V.5H20M32.5 13V6.8h-3.1M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zm-3.2 0h3.1v3.1h-3.1zm3.2-3.2h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zm3.1-3.1h3.1v3.1H3.6zm0-3.2h3.1v3.1H3.6zm3.2 3.2h3.1v3.1H6.8zM6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  /* Degrees of success */
+  --degree-success-critical: rgb(107, 255, 0);
+  --degree-success: rgb(0, 241, 255);
+  --degree-failure: rgb(255, 129, 0);
+  --degree-failure-critical: rgb(255, 0, 0);
+
+  /* Value adjustments (e.g. weak/elite) */
+  --adjusted-higher: #009988;
+  --adjusted-lower: #cc3311;
+}
+
+/* ----------------------------------------- */
+/* Prose Mirror                              */
+/* ----------------------------------------- */
+
+.prosemirror menu button,
+prose-mirror menu button {
+  color: var(--color-text-primary);
+}
+
+:is([data-theme]) .prosemirror menu {
+  .pm-dropdown {
+    background: none;
+  }
+  button {
+    display: unset;
+    text-transform: unset;
+    box-shadow: none;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-14);
+    font-weight: normal;
+    height: var(--menu-height);
+    line-height: var(--menu-height);
+    background: transparent;
+    border: none;
+    padding: 0 5px;
+    margin: 0;
+  }
+}
+
+[data-theme] {
+  // some applications like settings use this
+  --sidebar-separator: 1px solid transparent;
+}
+
+@layer dorako-ui {
+  body.game .sheet.app nav.sheet-tabs {
+    border: unset;
+  }
+}
+
+@layer system {
+  .theme-dark .application {
+    --visibility-gm-bg: #e8e8ef;
+  }
+}

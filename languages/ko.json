@@ -48,11 +48,11 @@
     "settings": {
       "theme": {
         "label": "테마 설정 정하기",
-        "window-app-theme": {
+        "application-theme": {
           "name": "시트 테마",
           "hint": "창 스타일에 적용됩니다"
         },
-        "app-theme": {
+        "interface-theme": {
           "name": "인터페이스 테마",
           "hint": "조작, 탐색, 스크롤바, 팝업 등의 유저 인터페이스에 적용됩니다"
         },

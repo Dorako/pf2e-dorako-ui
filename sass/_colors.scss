@@ -225,6 +225,33 @@ $adjusted-lower: #cc3311 !default;
   --scrollbar-thumb-border-color: #8d151b;
 }
 
+[data-theme="discord"],
+[data-interface-theme="discord"] {
+  --discord-border-color: transparent;
+
+  --discord-background-1: #383a3f;
+  --discord-background-2: #313338;
+  --discord-background-3: #2b2d31;
+  --discord-background-4: #1e1f22;
+  // --discord-background-1: #272732;
+  // --discord-background-2: #262731;
+  // --discord-background-3: #1c1d27;
+  // --discord-background-4: #121318;
+  --discord-text-1: #ffffff;
+  --discord-text-2: #dcdee1;
+  --discord-text-3: #b6bac0;
+  --discord-text-4: #959ba3;
+  --discord-text-5: #79818a;
+  --discord-accent-text-color: #8e97fe;
+  --discord-accent-color: #5a65ea;
+  --discord-accent-color-dark: #4952bd;
+  --discord-scrollbar-thumb-background: #1a1b1e;
+  --discord-scrollbar-thumb-border-color: transparent;
+  --discord-green: #417e4c;
+  --discord-attention: #e6b44e;
+  --discord-red: #df4f4a;
+}
+
 /* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
