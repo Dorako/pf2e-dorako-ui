@@ -1,12 +1,15 @@
-[data-theme="bg3"] {
-  --color-text-dark-primary: var(--color-text-light-1);
-  --color-text-dark-secondary: var(--color-text-light-6);
+[data-application-theme="bg3"] [data-theme] {
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
+  --color-text-dark-primary: var(--bg3-text-1);
+  --color-text-dark-secondary: var(--bg3-text-2);
   --color-text-dark-5: var(--color-text-light-6);
 
   --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
     radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
   --window-app-border-width: 2px;
   --window-app-border-color: var(--bg3-middle-brown);
+  --icon-border-color: var(--bg3-middle-brown);
 
   --color-scrollbar: var(--bg3-scrollbar-thumb-background);
 
@@ -15,13 +18,19 @@
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
 
+  &:is(.app, .application) {
+    :is(input, select):not([type="range"]):disabled {
+      background: var(--bg3-bg-outer);
+    }
+  }
+
   input {
     --range-thumb-background-color: var(--bg3-accent-color);
     --range-thumb-border-color: var(--bg3-accent-color-light);
   }
 
   input,
-  select,
+  select:not(.tag),
   textarea,
   code-mirror {
     --input-background-color: color-mix(in srgb, var(--alt) 50%, transparent);
@@ -40,11 +49,40 @@
   }
 }
 
-[data-theme="bg3"].themed {
+[data-application-theme="bg3"] [data-theme].themed {
   [nav-item],
   a.button,
   button {
     --button-border-color: #403b2d;
     --button-background-color: #161511aa;
+  }
+}
+
+@layer blocks.base {
+  [data-application-theme="bg3"] [data-theme] button:not(.control) {
+    @include button;
+    // --button-focus-outline-color: none;
+    // --button-border-color: var(--color-border-light-2);
+    // --button-hover-background-color: var(--dnd5e-background-card);
+    // --button-text-color: var(--color-text-dark-primary);
+    // --button-hover-text-color: var(--color-text-dark-primary);
+    // --button-hover-border-color: var(--dnd5e-color-gold);
+    // background: var(--dnd5e-background-card);
+    // font-size: var(--font-size-13);
+    // font-weight: bold;
+    // // text-transform: uppercase; // messes too much with expected line width
+    // padding: 3px;
+    // // border: 1px solid var(--color-border-light-2);
+    // box-shadow: 0 0 8px var(--dnd5e-shadow-15);
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // line-height: 12px;
+    // gap: 0.25rem;
+
+    // &:not(disabled, .disabled):hover {
+    //   // box-shadow: 0 0 8px var(--dnd5e-shadow-15), 0 0 3px 1px var(--dnd5e-shadow-45) inset;
+    //   box-shadow: 0 0 5px var(--color-shadow-primary);
+    // }
   }
 }

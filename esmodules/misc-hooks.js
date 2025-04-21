@@ -35,6 +35,15 @@ Hooks.once("ready", () => {
   // also needs to be done for popped out chat log on render
 });
 
+// remove core theme from supported v1 applications
+for (const appName of [...systemSheets]) {
+  Hooks.on("render" + appName, (app, html, data) => {
+    html[0].classList.remove("themed");
+    html[0].classList.remove("theme-light");
+    html[0].classList.remove("theme-dark");
+  });
+}
+
 Hooks.once("ready", () => {
   if (!game.modules.get("pf2e-dorako-ux")) return;
   if (game.modules.get("pf2e-dorako-ux")?.active) return;

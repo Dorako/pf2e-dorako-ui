@@ -1,0 +1,38 @@
+.theme-dark [data-theme].app {
+  --color-text-dark-2: var(--color-text-dark-primary);
+  --color-text-dark-3: var(--color-text-dark-secondary);
+}
+
+.theme-light [data-theme].app:not(.actor) .window-header {
+  color: black;
+  a.control:hover {
+    color: black;
+  }
+}
+
+.pf2e.item.sheet {
+  header img {
+    border: 2px solid var(--icon-border-color);
+    // height: calc(100% - 4px);
+  }
+  .tab.active.rules .rule-form {
+    border-bottom: unset;
+  }
+  select:not(.tag) {
+    @include input;
+  }
+  input[type="number"],
+  input[type="text"] {
+    @include input;
+  }
+  fieldset {
+    margin-top: 1rem;
+  }
+  sheet-tabs .tabs {
+    gap: 5px;
+    margin-inline: 5px;
+    [data-tab] {
+      @include button;
+    }
+  }
+}

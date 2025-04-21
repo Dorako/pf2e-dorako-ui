@@ -217,62 +217,6 @@
 }
 
 /* ----------------------------------------- */
-/* Effects Panel                             */
-/* ----------------------------------------- */
-
-[data-interface-theme] {
-  #effects-panel .effect-item > .icon {
-    border: var(--app-border-width) var(--icon-border-color);
-    border-radius: 4px;
-    box-shadow: 0px 1px 3px 1px black;
-    color: var(--text-color-3);
-    position: relative;
-    &.aura {
-      border-radius: 50%;
-      border: 1px solid var(--color-primary-1);
-      box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
-    }
-    .linked {
-      color: var(--text-color-2);
-      background: var(--color-primary-3);
-      border: 1px solid var(--color-secondary-4);
-      border-radius: 4px 0px var(--border-radius) 0px;
-      border-bottom: unset;
-      border-right: unset;
-      text-shadow: 0px 1px 2px black;
-    }
-    .value-wrapper {
-      background: none;
-      bottom: -1px;
-      left: -3px;
-
-      .value {
-        padding: 2px;
-        color: var(--text-color-2);
-        background: var(--color-primary-3);
-        border-radius: 0px 4px 0px var(--border-radius);
-        border: 1px solid var(--color-secondary-4);
-        border-bottom: unset;
-        border-left: unset;
-        text-shadow: 0px 1px 2px black;
-      }
-    }
-    .expired {
-      position: absolute;
-      left: auto;
-      width: 80%;
-      width: unset;
-      padding: 2px 1px;
-      color: var(--text-color-1);
-      background: var(--color-primary-2);
-      border: 1px solid var(--color-primary-1);
-      text-shadow: 0px 1px 2px black;
-      border-radius: 0px 0px 4px 4px;
-    }
-  }
-}
-
-/* ----------------------------------------- */
 /* Sidebar                                   */
 /* ----------------------------------------- */
 
@@ -334,6 +278,10 @@
   }
 }
 
+#sidebar-content #chat {
+  padding-top: 0px;
+}
+
 @layer blocks.base {
   #sidebar-content {
     :is(section.sidebar:not(#chat), section.sidebar-tab:not(#chat)) :is(a.button, button) {
@@ -357,39 +305,3 @@
     --button-box-shadow: unset;
   }
 }
-
-/* ----------------------------------------- */
-/* Other                                     */
-/* ----------------------------------------- */
-
-// unsure why this is --color-form-label in Core
-@layer blocks.base {
-  .standard-form .form-fields > button {
-    color: var(--button-text-color);
-  }
-  .scrollable {
-    padding-top: 2px;
-    padding-bottom: 2px;
-  }
-}
-
-@layer blocks.base {
-  .standard-form fieldset {
-    border: 1px solid var(--fieldset-border-color);
-    background: var(--fieldset-background-color);
-    border-radius: 4px;
-    legend {
-      color: var(--fieldset-legend-color);
-    }
-  }
-}
-
-// add data-interface-theme to body, because some 'applications' still need the interface theme
-// add data-interface-scheme="dark/light" because the foundry theme-dark/light refers to application theme on body...
-// add data-application-theme to body, to allow specific themes to overwrite
-// do no apply data-theme=X
-// instead add data-themed, and use interface/application theme from body
-// if application breaks:
-// either unbreak it by adding explicit support where needed
-// or add data-minimally-themed and add explicit support
-// or exclude it

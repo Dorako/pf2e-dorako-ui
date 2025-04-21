@@ -196,6 +196,39 @@
   box-shadow: var(--control-box-shadow);
 }
 
+@mixin input {
+  // width: 100%;
+  // height: var(--input-height);
+  // line-height: var(--input-height);
+  // padding: 0 0.5rem;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  // font-family: inherit;
+  // font-size: inherit;
+  color: var(--input-text-color);
+  // user-select: text;
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+  &:focus {
+    outline: 2px solid var(--input-focus-outline-color);
+  }
+  &:disabled {
+    opacity: 1;
+    pointer-events: none;
+  }
+  &[readonly] {
+    pointer-events: none;
+  }
+  :is(option, optgroup) {
+    background: var(--color-select-option-bg);
+  }
+  ::placeholder {
+    color: var(--input-placeholder-color);
+  }
+}
+
 @mixin button {
   background: var(--button-background-color);
   border: 1px solid var(--button-border-color);

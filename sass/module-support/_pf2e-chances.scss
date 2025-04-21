@@ -1,10 +1,4 @@
-[data-theme] {
-  .pf2e-chances-chatcard-container {
-    background: none !important;
-  }
-}
-
-[data-theme][data-color-scheme="dark"] {
+[data-chat-message-color-scheme="dark"] {
   .pf2e-chances-chatcard-bar.critical-failure {
     color: var(--degree-failure-critical);
   }

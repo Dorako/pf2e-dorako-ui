@@ -22,7 +22,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.interface-theme.hint",
         scope: "client",
         config: true,
-        default: "glass",
+        default: "no-theme",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
@@ -43,7 +43,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.application-theme.hint",
         scope: "client",
         config: true,
-        default: "bg3",
+        default: "no-theme",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
@@ -91,7 +91,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.chat-message-standard-theme.hint",
         scope: "client",
         config: true,
-        default: "crb-light",
+        default: "no-theme",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
@@ -115,7 +115,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.chat-message-opposition-theme.hint",
         scope: "client",
         config: true,
-        default: "bg3-brown",
+        default: "no-theme",
         type: String,
         choices: {
           "no-theme": "pf2e-dorako-ui.text.no-theme",
@@ -139,7 +139,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
         hint: "pf2e-dorako-ui.settings.theme.chat-message-header-style.hint",
         scope: "client",
         config: true,
-        default: "none",
+        default: "tint",
         type: String,
         choices: {
           tint: "pf2e-dorako-ui.text.colors.player",

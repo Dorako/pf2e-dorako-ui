@@ -39,56 +39,56 @@ i[data-pf2-repost] {
   cursor: pointer;
 }
 
-.tah-tags-wrapper .tags,
-[data-theme] .tags,
-[data-dorako-ui-scope="limited"] .tags,
-[data-theme] .tags.paizo-style,
-[data-dorako-ui-scope="limited"] .tags.paizo-style {
-  gap: 1px;
+// .tah-tags-wrapper .tags,
+// [data-theme] .tags,
+// [data-dorako-ui-scope="limited"] .tags,
+// [data-theme] .tags.paizo-style,
+// [data-dorako-ui-scope="limited"] .tags.paizo-style {
+//   gap: 1px;
 
-  select {
-    height: var(--font-size-27); // fixes system issue
-  }
+//   select {
+//     height: var(--font-size-27); // fixes system issue
+//   }
 
-  .tag {
-    // height: auto;
-  }
+//   .tag {
+//     // height: auto;
+//   }
 
-  tag,
-  .tag:not(.tag_transparent, [data-action]) {
-    border-radius: 0px;
-    box-shadow: unset;
-    border: 1px solid var(--tertiary);
-    outline: 1px solid var(--gold-brown);
-    padding: 0.33em 0.33em;
-    text-shadow: none;
-  }
+//   tag,
+//   .tag:not(.tag_transparent, [data-action]) {
+//     border-radius: 0px;
+//     box-shadow: unset;
+//     border: 1px solid var(--tertiary);
+//     outline: 1px solid var(--gold-brown);
+//     padding: 0.33em 0.33em;
+//     text-shadow: none;
+//   }
 
-  tag:first-of-type,
-  .tag:first-child {
-    border-left-width: 1px;
-  }
+//   tag:first-of-type,
+//   .tag:first-child {
+//     border-left-width: 1px;
+//   }
 
-  tag:last-of-type,
-  .tag:last-child {
-    border-right-width: 1px;
-  }
-}
+//   tag:last-of-type,
+//   .tag:last-child {
+//     border-right-width: 1px;
+//   }
+// }
 
-// Fixes issue where hidden DC is too 'tall'
-[data-visibility]:not([data-visibility="all"]) {
-  padding: unset;
-}
+// // Fixes issue where hidden DC is too 'tall'
+// [data-visibility]:not([data-visibility="all"]) {
+//   padding: unset;
+// }
 
-[data-color-scheme="light"] [data-visibility="gm"]:not(.dice-result > *) {
-  outline: 1px dotted black;
-  box-shadow: unset;
-}
+// [data-color-scheme="light"] [data-visibility="gm"]:not(.dice-result > *) {
+//   outline: 1px dotted black;
+//   box-shadow: unset;
+// }
 
-[data-color-scheme="dark"] [data-visibility="gm"]:not(.dice-result > *) {
-  outline: 1px dotted var(--visibility-gm-bg);
-  box-shadow: unset;
-}
+// [data-color-scheme="dark"] [data-visibility="gm"]:not(.dice-result > *) {
+//   outline: 1px dotted var(--visibility-gm-bg);
+//   box-shadow: unset;
+// }
 
 // system uses 500, which makes it hard to tell whether something is bolded
 .app.sheet.actor p,

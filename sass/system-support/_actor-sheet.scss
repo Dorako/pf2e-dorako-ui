@@ -1,0 +1,118 @@
+.actor.sheet.character aside .sidebar input:disabled {
+  background: transparent !important;
+}
+
+.actor.sheet section.window-content form.crb-style {
+  background: url("/systems/pf2e/assets/sheet/header.webp"), transparent;
+  background-repeat: repeat-x, no-repeat;
+  background-size: auto 5.625rem, cover;
+  background-attachment: local;
+}
+
+.actor.sheet.character :is(li, ol) {
+  > div {
+    border-color: transparent;
+  }
+}
+
+button.use-action:not(:disabled) {
+  color: black;
+}
+
+.actor.sheet.character {
+  .d20-svg path {
+    fill: white;
+  }
+  .item-carry-type {
+    text-shadow: 0px 0px 0px gray;
+  }
+
+  ul.option-toggles,
+  .attributes .modifier,
+  .proficiencies-list li {
+    border-image-repeat: repeat;
+    border-image-slice: 11;
+    border-image-source: var(--ornamentation);
+    border-image-width: 14px;
+    border-style: double;
+
+    a.d20 {
+      filter: drop-shadow(0 0 1px var(--color-shadow-dark)) drop-shadow(0 0 3px var(--color-text-dark-4));
+    }
+  }
+}
+
+// Also affects vehicle sheet
+.theme-dark .crb-style .sheet-body {
+  --primary: var(--dnd5e-color-red);
+  --color-pf-primary: var(--dnd5e-color-red);
+  --color-pf-primary-dark: darkred; // underlines
+  --color-pf-secondary: var(--dnd5e-color-blue);
+  --secondary: var(--dnd5e-color-blue);
+  --text-dark: white;
+  --color-text-primary: white;
+  --color-text-dark-4: gray; // disabled
+  --color-pf-alternate-dark: brown; //speeds
+
+  // reset
+  .sub-nav,
+  .spellcasting .action-header {
+    --primary: var(--system-primary);
+    --color-pf-primary: var(--system-primary);
+  }
+
+  // reset
+  .tags:not(.form-fields) .tag.tag_secondary,
+  .tags:not(.form-fields) .tag option.tag_secondary,
+  .blue {
+    --secondary: var(--system-secondary);
+    --color-pf-secondary: var(--system-secondary);
+  }
+}
+
+.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) {
+  .window-header {
+    background: var(--header-bg-color);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: var(--header-text-color);
+    a:hover {
+      color: var(--header-text-color);
+    }
+  }
+  &.minimized .window-header {
+    border-radius: 4px;
+  }
+}
+
+.hazard.sheet {
+  --header-bg-color: #19302c;
+  --header-text-color: white;
+}
+.character.sheet {
+  --header-bg-color: #5a0c02;
+  --header-text-color: white;
+}
+
+.vehicle.sheet {
+  --header-bg-color: #5a0c02;
+  --header-text-color: white;
+}
+
+.army.sheet {
+  --header-bg-color: #504c45;
+  --header-text-color: white;
+  form {
+    background: none;
+  }
+}
+
+.party.sheet {
+  --header-bg-color: #153b1b;
+  --header-text-color: white;
+}
+
+.kingdom.sheet {
+  --header-bg-color: #504c45;
+  --header-text-color: white;
+}

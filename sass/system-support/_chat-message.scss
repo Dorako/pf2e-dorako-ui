@@ -1,0 +1,163 @@
+.chat-message[data-chat-message-color-scheme="light"] {
+  --content-link-background: #ddd !important;
+  --content-link-border-color: var(--color-dark-4) !important;
+  --content-link-icon-color: var(--color-dark-6) !important;
+  --content-link-text-color: var(--color-dark-2) !important;
+}
+
+.chat-message[data-chat-message-theme] {
+  hr:not(.vr) {
+    margin: 0.2rem 0;
+    background-image: unset;
+    border-top: 1px solid var(--window-app-border-color);
+    margin-inline: -8px;
+  }
+  hr.vr {
+    border: unset;
+    border-left: 1px solid var(--window-app-border-color);
+  }
+  //   .card-header {
+  //     padding-top: 8px;
+  //   }
+  .card-header img {
+    border: 1px solid var(--icon-border-color);
+    height: 100%;
+  }
+
+  h4.message-sender {
+    line-height: 20px;
+    font-family: var(--serif);
+  }
+
+  .tags:empty {
+    display: none;
+  }
+
+  .message-header:not(.with-image) {
+    padding-bottom: 5px;
+  }
+
+  .message-content:not(:has(.chat-card, .flavor-text)) {
+    margin-top: 8px;
+  }
+  .message-content .chat-card {
+    margin-top: 5px;
+  }
+
+  .message-header {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: auto;
+    background: url(/systems/dnd5e/ui/texture-gray1.webp) no-repeat top left, var(--header-color);
+    background-color: var(--header-color);
+    background-blend-mode: overlay;
+    border-bottom: 1px solid var(--window-app-border-color);
+  }
+  .message-content footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    span {
+      font-family: var(--dnd5e-font-roboto);
+      font-weight: bold;
+      font-size: var(--font-size-11); // 11
+      text-transform: uppercase;
+      border: 1px solid gray;
+      border-radius: 3px;
+      color: black;
+      background: var(--dnd5e-color-card);
+      display: flex;
+      gap: 0.25rem;
+      padding: 0.09375rem 0.1875rem;
+      font-size: var(--font-size-8);
+    }
+  }
+  .spell-attack-buttons {
+    gap: 5px;
+    button {
+      @include button;
+    }
+  }
+  .card-buttons {
+    margin: unset;
+  }
+}
+
+.chat-message[data-chat-message-theme] {
+  --chat-message-background: var(--window-app-background);
+  border: var(--window-app-border-width) solid var(--window-app-border-color);
+  color: var(--color-text-dark-primary);
+  // margin: var(--chat-message-spacing);
+  // padding: 8px;
+  // font-size: var(--font-size-14);
+  // color: var(--color-dark-1);
+  // background: var(--chat-message-background);
+  // border: 2px solid var(--chat-message-border-color);
+  // border-radius: 6px;
+  // pointer-events: all;
+  .message-header {
+    color: var(--color-text-dark-secondary);
+    grid-template:
+      "img name details" 1.375rem
+      "img user rolltype" 1.125rem
+      "gap gap gap" var(--space-4)
+      "whisper whisper whisper" min-content
+      "flavor flavor flavor" 1fr/2.75rem 1fr min-content;
+    .rolltype {
+      grid-area: rolltype;
+      font-size: var(--font-size-12);
+      line-height: 1.2;
+      padding-top: var(--space-2);
+      text-align: right;
+      border-radius: 4px;
+      color: black;
+      width: fit-content;
+      justify-self: self-end;
+      padding-inline: 4px;
+      box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+      &.whisper {
+        background: var(--whisper-bg);
+      }
+      &.secret {
+        background: rgb(254, 192, 255);
+      }
+    }
+  }
+  &[data-chat-message-color-scheme="dark"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
+    background: #e8e8ef16;
+    border-color: var(--visibility-gm-bg);
+  }
+  &[data-chat-message-color-scheme="light"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
+    border-color: var(--visibility-gm-bg);
+  }
+  h3 {
+    color: var(--color-text-dark-primary);
+    font-family: var(--serif);
+  }
+
+  // system will probably fix this before stable
+  h4.rank,
+  h4.action {
+    font-size: var(--font-size-12); // h3 is 16 in system
+  }
+  h4.action {
+    margin-top: 4px;
+  }
+}
+
+@layer blocks.base {
+  [data-chat-message-color-scheme="dark"] .dice-roll :is(.dice-formula, .dice-total) {
+    border-color: rgba(122, 122, 122, 0.5);
+    box-shadow: unset;
+  }
+}

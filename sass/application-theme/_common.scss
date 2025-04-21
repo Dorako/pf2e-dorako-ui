@@ -6,8 +6,8 @@
   background: var(--window-app-background);
   border: var(--window-app-border-width) solid;
   border-color: var(--window-app-border-color);
-  --color-form-hint: var(--color-light-3);
-  --color-form-label: var(--color-light-2);
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
   .window-content {
     background: none;
   }
@@ -27,6 +27,10 @@
 
 [data-theme].app .window-header {
   border: unset;
+  color: var(--color-text-dark-primary);
+  a.control:hover {
+    color: var(--color-text-dark-primary);
+  }
 }
 
 [data-theme].application .window-header {
@@ -117,6 +121,19 @@ body.theme-light [data-theme].application {
         }
       }
     }
+  }
+}
+
+@layer variables.themes.general {
+  .themed.theme-light,
+  body.theme-light {
+    --same-text-color: white;
+    --opposite-text-color: black;
+  }
+  .themed.theme-dark,
+  body.theme-dark {
+    --same-text-color: black;
+    --opposite-text-color: white;
   }
 }
 
@@ -248,9 +265,58 @@ range-picker > input[type="number"] {
 }
 
 /* ----------------------------------------- */
+/* Forms                                     */
+/* ----------------------------------------- */
+
+// unsure why this is --color-form-label in Core
+@layer blocks.base {
+  .standard-form .form-fields > button {
+    color: var(--button-text-color);
+  }
+  .scrollable {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+
+@layer dorako-ui {
+  .app form fieldset:not(.basics),
+  .standard-form fieldset {
+    border: 1px solid var(--fieldset-border-color);
+    background: var(--fieldset-background-color);
+    border-radius: 4px;
+    legend {
+      color: var(--fieldset-legend-color);
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Tagify                                    */
+/* ----------------------------------------- */
+
+.theme-dark [data-theme] .tagify {
+  --placeholder-color: var(--color-text-dark-secondary);
+}
+.tagify {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  align-items: center;
+}
+tagify-tags {
+  margin: unset;
+}
+
+.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input :is(input, tagify-tags, tags) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* ----------------------------------------- */
 /* Colors                                    */
 /* ----------------------------------------- */
 
+[data-chat-message-color-scheme="dark"],
 .theme-dark [data-theme] {
   // Dark theme
   --rarity-common: #e1d8cf;

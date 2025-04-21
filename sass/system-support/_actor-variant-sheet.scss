@@ -1,0 +1,23 @@
+:is(.familiar, .army, .party).sheet form {
+  background: none;
+}
+
+.party.sheet [data-tab="overview"] .summary {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+}
+
+.theme-dark [data-theme].actor.npc.sheet form .sheet-body .effects .effects-list .item.unidentified {
+  background: var(--visibility-gm-bg);
+  color: black;
+}
+
+.theme-dark [data-theme].army.sheet {
+  --text-dark: var(--color-text-dark-primary);
+  .army-sidebar header {
+    --primary: var(--color-text-dark-primary);
+  }
+}

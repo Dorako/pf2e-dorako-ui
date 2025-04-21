@@ -33,9 +33,12 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     chatMessage?.actor?.alliance === "opposition" && !isSecretDisposition
       ? lookupThemeAndSchemeForKey(game.settings.get("pf2e-dorako-ui", "theme.chat-message-opposition-theme"))
       : lookupThemeAndSchemeForKey(game.settings.get("pf2e-dorako-ui", "theme.chat-message-standard-theme"));
-  html0.dataset.theme = dorakoUiTheme;
-  html0.dataset.colorScheme = colorScheme;
-  html0.dataset.dorakoUiScope = "unlimited";
+  // html0.dataset.theme = dorakoUiTheme;
+  // html0.dataset.colorScheme = colorScheme;
+  // html0.dataset.dorakoUiScope = "unlimited";
+  // html0.dataset.theme = ""; // don't set this
+  html0.dataset.chatMessageTheme = dorakoUiTheme;
+  html0.dataset.chatMessageColorScheme = colorScheme;
 
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (dorakoUiTheme === "crb" && headerStyle !== "none") {

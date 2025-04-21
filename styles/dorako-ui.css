@@ -1860,20 +1860,16 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   box-shadow: 0px 0px 1px 1px inset rgba(255, 255, 255, 0.2);
 }
 
-[data-theme] .pf2e-chances-chatcard-container {
-  background: none !important;
-}
-
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.critical-failure {
+[data-chat-message-color-scheme=dark] .pf2e-chances-chatcard-bar.critical-failure {
   color: var(--degree-failure-critical);
 }
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.failure {
+[data-chat-message-color-scheme=dark] .pf2e-chances-chatcard-bar.failure {
   color: var(--degree-failure);
 }
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.success {
+[data-chat-message-color-scheme=dark] .pf2e-chances-chatcard-bar.success {
   color: var(--degree-success);
 }
-[data-theme][data-color-scheme=dark] .pf2e-chances-chatcard-bar.critical-success {
+[data-chat-message-color-scheme=dark] .pf2e-chances-chatcard-bar.critical-success {
   color: var(--degree-success-critical);
 }
 
@@ -3471,6 +3467,10 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   height: 14px;
 }
 
+a.polyglot-message-language.unclickable > i {
+  text-shadow: 0px 1px black;
+}
+
 #taskbar.taskbar {
   width: calc((100vw - var(--sidebar-width)) / var(--ft-scale));
 }
@@ -4504,7 +4504,524 @@ html .xdy-pf2e-workbench-rarity-unique {
 
 .scene_actors_selector .window-content {
   border-radius: var(--border-radius);
-} /* ----------------------------------------- */
+}
+
+.actor.sheet.character aside .sidebar input:disabled {
+  background: transparent !important;
+}
+
+.actor.sheet section.window-content form.crb-style {
+  background: url("/systems/pf2e/assets/sheet/header.webp"), transparent;
+  background-repeat: repeat-x, no-repeat;
+  background-size: auto 5.625rem, cover;
+  background-attachment: local;
+}
+
+.actor.sheet.character :is(li, ol) > div {
+  border-color: transparent;
+}
+
+button.use-action:not(:disabled) {
+  color: black;
+}
+
+.actor.sheet.character .d20-svg path {
+  fill: white;
+}
+.actor.sheet.character .item-carry-type {
+  text-shadow: 0px 0px 0px gray;
+}
+.actor.sheet.character ul.option-toggles,
+.actor.sheet.character .attributes .modifier,
+.actor.sheet.character .proficiencies-list li {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+}
+.actor.sheet.character ul.option-toggles a.d20,
+.actor.sheet.character .attributes .modifier a.d20,
+.actor.sheet.character .proficiencies-list li a.d20 {
+  filter: drop-shadow(0 0 1px var(--color-shadow-dark)) drop-shadow(0 0 3px var(--color-text-dark-4));
+}
+
+.theme-dark .crb-style .sheet-body {
+  --primary: var(--dnd5e-color-red);
+  --color-pf-primary: var(--dnd5e-color-red);
+  --color-pf-primary-dark: darkred;
+  --color-pf-secondary: var(--dnd5e-color-blue);
+  --secondary: var(--dnd5e-color-blue);
+  --text-dark: white;
+  --color-text-primary: white;
+  --color-text-dark-4: gray;
+  --color-pf-alternate-dark: brown;
+}
+.theme-dark .crb-style .sheet-body .sub-nav,
+.theme-dark .crb-style .sheet-body .spellcasting .action-header {
+  --primary: var(--system-primary);
+  --color-pf-primary: var(--system-primary);
+}
+.theme-dark .crb-style .sheet-body .tags:not(.form-fields) .tag.tag_secondary,
+.theme-dark .crb-style .sheet-body .tags:not(.form-fields) .tag option.tag_secondary,
+.theme-dark .crb-style .sheet-body .blue {
+  --secondary: var(--system-secondary);
+  --color-pf-secondary: var(--system-secondary);
+}
+
+.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) .window-header {
+  background: var(--header-bg-color);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: var(--header-text-color);
+}
+.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) .window-header a:hover {
+  color: var(--header-text-color);
+}
+.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom).minimized .window-header {
+  border-radius: 4px;
+}
+
+.hazard.sheet {
+  --header-bg-color: #19302c;
+  --header-text-color: white;
+}
+
+.character.sheet {
+  --header-bg-color: #5a0c02;
+  --header-text-color: white;
+}
+
+.vehicle.sheet {
+  --header-bg-color: #5a0c02;
+  --header-text-color: white;
+}
+
+.army.sheet {
+  --header-bg-color: #504c45;
+  --header-text-color: white;
+}
+.army.sheet form {
+  background: none;
+}
+
+.party.sheet {
+  --header-bg-color: #153b1b;
+  --header-text-color: white;
+}
+
+.kingdom.sheet {
+  --header-bg-color: #504c45;
+  --header-text-color: white;
+}
+
+:is(.familiar, .army, .party).sheet form {
+  background: none;
+}
+
+.party.sheet [data-tab=overview] .summary {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+}
+
+.theme-dark [data-theme].actor.npc.sheet form .sheet-body .effects .effects-list .item.unidentified {
+  background: var(--visibility-gm-bg);
+  color: black;
+}
+
+.theme-dark [data-theme].army.sheet {
+  --text-dark: var(--color-text-dark-primary);
+}
+.theme-dark [data-theme].army.sheet .army-sidebar header {
+  --primary: var(--color-text-dark-primary);
+}
+
+/* ----------------------------------------- */
+/* Effects Panel                             */
+/* ----------------------------------------- */
+[data-interface-theme] #effects-panel .effect-item > .icon {
+  border: var(--app-border-width) var(--icon-border-color);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 1px black;
+  color: var(--text-color-3);
+  position: relative;
+}
+[data-interface-theme] #effects-panel .effect-item > .icon.aura {
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-1);
+  box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
+}
+[data-interface-theme] #effects-panel .effect-item > .icon .linked {
+  color: var(--text-color-2);
+  background: var(--color-primary-3);
+  border: 1px solid var(--color-secondary-4);
+  border-radius: 4px 0px var(--border-radius) 0px;
+  border-bottom: unset;
+  border-right: unset;
+  text-shadow: 0px 1px 2px black;
+}
+[data-interface-theme] #effects-panel .effect-item > .icon .value-wrapper {
+  background: none;
+  bottom: -1px;
+  left: -3px;
+}
+[data-interface-theme] #effects-panel .effect-item > .icon .value-wrapper .value {
+  padding: 2px;
+  color: var(--text-color-2);
+  background: var(--color-primary-3);
+  border-radius: 0px 4px 0px var(--border-radius);
+  border: 1px solid var(--color-secondary-4);
+  border-bottom: unset;
+  border-left: unset;
+  text-shadow: 0px 1px 2px black;
+}
+[data-interface-theme] #effects-panel .effect-item > .icon .expired {
+  position: absolute;
+  left: auto;
+  width: 80%;
+  width: unset;
+  padding: 2px 1px;
+  color: var(--text-color-1);
+  background: var(--color-primary-2);
+  border: 1px solid var(--color-primary-1);
+  text-shadow: 0px 1px 2px black;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.theme-dark [data-theme].app {
+  --color-text-dark-2: var(--color-text-dark-primary);
+  --color-text-dark-3: var(--color-text-dark-secondary);
+}
+
+.theme-light [data-theme].app:not(.actor) .window-header {
+  color: black;
+}
+.theme-light [data-theme].app:not(.actor) .window-header a.control:hover {
+  color: black;
+}
+
+.pf2e.item.sheet header img {
+  border: 2px solid var(--icon-border-color);
+}
+.pf2e.item.sheet .tab.active.rules .rule-form {
+  border-bottom: unset;
+}
+.pf2e.item.sheet select:not(.tag) {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+.pf2e.item.sheet select:not(.tag):focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+.pf2e.item.sheet select:not(.tag):disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+.pf2e.item.sheet select:not(.tag)[readonly] {
+  pointer-events: none;
+}
+.pf2e.item.sheet select:not(.tag) :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+.pf2e.item.sheet select:not(.tag) ::placeholder {
+  color: var(--input-placeholder-color);
+}
+.pf2e.item.sheet input[type=number],
+.pf2e.item.sheet input[type=text] {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+.pf2e.item.sheet input[type=number]:focus,
+.pf2e.item.sheet input[type=text]:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+.pf2e.item.sheet input[type=number]:disabled,
+.pf2e.item.sheet input[type=text]:disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+.pf2e.item.sheet input[type=number][readonly],
+.pf2e.item.sheet input[type=text][readonly] {
+  pointer-events: none;
+}
+.pf2e.item.sheet input[type=number] :is(option, optgroup),
+.pf2e.item.sheet input[type=text] :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+.pf2e.item.sheet input[type=number] ::placeholder,
+.pf2e.item.sheet input[type=text] ::placeholder {
+  color: var(--input-placeholder-color);
+}
+.pf2e.item.sheet fieldset {
+  margin-top: 1rem;
+}
+.pf2e.item.sheet sheet-tabs .tabs {
+  gap: 5px;
+  margin-inline: 5px;
+}
+.pf2e.item.sheet sheet-tabs .tabs [data-tab] {
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  box-shadow: var(--button-box-shadow);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  text-decoration: none;
+  cursor: var(--cursor-pointer);
+  transition: 0.5s;
+}
+.pf2e.item.sheet sheet-tabs .tabs [data-tab]:hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+
+.chat-message[data-chat-message-color-scheme=light] {
+  --content-link-background: #ddd !important;
+  --content-link-border-color: var(--color-dark-4) !important;
+  --content-link-icon-color: var(--color-dark-6) !important;
+  --content-link-text-color: var(--color-dark-2) !important;
+}
+
+.chat-message[data-chat-message-theme] hr:not(.vr) {
+  margin: 0.2rem 0;
+  background-image: unset;
+  border-top: 1px solid var(--window-app-border-color);
+  margin-inline: -8px;
+}
+.chat-message[data-chat-message-theme] hr.vr {
+  border: unset;
+  border-left: 1px solid var(--window-app-border-color);
+}
+.chat-message[data-chat-message-theme] .card-header img {
+  border: 1px solid var(--icon-border-color);
+  height: 100%;
+}
+.chat-message[data-chat-message-theme] h4.message-sender {
+  line-height: 20px;
+  font-family: var(--serif);
+}
+.chat-message[data-chat-message-theme] .tags:empty {
+  display: none;
+}
+.chat-message[data-chat-message-theme] .message-header:not(.with-image) {
+  padding-bottom: 5px;
+}
+.chat-message[data-chat-message-theme] .message-content:not(:has(.chat-card, .flavor-text)) {
+  margin-top: 8px;
+}
+.chat-message[data-chat-message-theme] .message-content .chat-card {
+  margin-top: 5px;
+}
+.chat-message[data-chat-message-theme] .message-header {
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: auto;
+  background: url(/systems/dnd5e/ui/texture-gray1.webp) no-repeat top left, var(--header-color);
+  background-color: var(--header-color);
+  background-blend-mode: overlay;
+  border-bottom: 1px solid var(--window-app-border-color);
+}
+.chat-message[data-chat-message-theme] .message-content footer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.chat-message[data-chat-message-theme] .message-content footer span {
+  font-family: var(--dnd5e-font-roboto);
+  font-weight: bold;
+  font-size: var(--font-size-11);
+  text-transform: uppercase;
+  border: 1px solid gray;
+  border-radius: 3px;
+  color: black;
+  background: var(--dnd5e-color-card);
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.09375rem 0.1875rem;
+  font-size: var(--font-size-8);
+}
+.chat-message[data-chat-message-theme] .spell-attack-buttons {
+  gap: 5px;
+}
+.chat-message[data-chat-message-theme] .spell-attack-buttons button {
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  box-shadow: var(--button-box-shadow);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  text-decoration: none;
+  cursor: var(--cursor-pointer);
+  transition: 0.5s;
+}
+.chat-message[data-chat-message-theme] .spell-attack-buttons button:hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+.chat-message[data-chat-message-theme] .card-buttons {
+  margin: unset;
+}
+
+.chat-message[data-chat-message-theme] {
+  --chat-message-background: var(--window-app-background);
+  border: var(--window-app-border-width) solid var(--window-app-border-color);
+  color: var(--color-text-dark-primary);
+}
+.chat-message[data-chat-message-theme] .message-header {
+  color: var(--color-text-dark-secondary);
+  grid-template: "img name details" 1.375rem "img user rolltype" 1.125rem "gap gap gap" var(--space-4) "whisper whisper whisper" min-content "flavor flavor flavor" 1fr/2.75rem 1fr min-content;
+}
+.chat-message[data-chat-message-theme] .message-header .rolltype {
+  grid-area: rolltype;
+  font-size: var(--font-size-12);
+  line-height: 1.2;
+  padding-top: var(--space-2);
+  text-align: right;
+  border-radius: 4px;
+  color: black;
+  width: fit-content;
+  justify-self: self-end;
+  padding-inline: 4px;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+}
+.chat-message[data-chat-message-theme] .message-header .rolltype.whisper {
+  background: var(--whisper-bg);
+}
+.chat-message[data-chat-message-theme] .message-header .rolltype.secret {
+  background: rgb(254, 192, 255);
+}
+.chat-message[data-chat-message-theme][data-chat-message-color-scheme=dark] > .message-content .dice-roll .dice-result > [data-visibility=gm] {
+  background: rgba(232, 232, 239, 0.0862745098);
+  border-color: var(--visibility-gm-bg);
+}
+.chat-message[data-chat-message-theme][data-chat-message-color-scheme=light] > .message-content .dice-roll .dice-result > [data-visibility=gm] {
+  border-color: var(--visibility-gm-bg);
+}
+.chat-message[data-chat-message-theme] h3 {
+  color: var(--color-text-dark-primary);
+  font-family: var(--serif);
+}
+.chat-message[data-chat-message-theme] h4.rank,
+.chat-message[data-chat-message-theme] h4.action {
+  font-size: var(--font-size-12);
+}
+.chat-message[data-chat-message-theme] h4.action {
+  margin-top: 4px;
+}
+
+@layer blocks.base {
+  [data-chat-message-color-scheme=dark] .dice-roll :is(.dice-formula, .dice-total) {
+    border-color: rgba(122, 122, 122, 0.5);
+    box-shadow: unset;
+  }
+}
+@layer dorako-ui {
+  [data-theme] .tags:not(.form-fields) .tag.rarity.common,
+  [data-theme] .tags:not(.form-fields) .tag.rarity[value=common],
+  [data-theme] .tags:not(.form-fields) .tag.rarity > option[value=common],
+  [data-theme] .tags:not(.form-fields) .tag option.rarity.common,
+  [data-theme] .tags:not(.form-fields) .tag option.rarity[value=common],
+  [data-theme] .tags:not(.form-fields) .tag option.rarity > option[value=common],
+  [data-theme] .rarity-select.common {
+    color: var(--same-text-color);
+    background-color: var(--color-rarity-common);
+  }
+}
+.tags:not(.form-fields, .paizo-style) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+.tags:not(.form-fields, .paizo-style) .tag,
+.tags:not(.form-fields, .paizo-style) .tag option {
+  font-family: var(--dnd5e-font-roboto);
+  font-weight: bold;
+  font-size: var(--font-size-8);
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0.1875rem 0.375rem;
+  display: flex;
+}
+.tags:not(.form-fields, .paizo-style) .tag.tag_transparent,
+.tags:not(.form-fields, .paizo-style) .tag option.tag_transparent {
+  color: var(--color-text-dark-primary);
+  border-color: var(--color-text-dark-primary);
+  outline-color: var(--color-text-dark-primary);
+  box-shadow: inset 0 0 0 1px var(--color-text-dark-primary);
+  background-color: transparent;
+  padding: 0.09375rem 0.1875rem;
+  font-size: var(--font-size-8);
+}
+.tags:not(.form-fields, .paizo-style) .tag[data-visibility=gm],
+.tags:not(.form-fields, .paizo-style) .tag option[data-visibility=gm] {
+  background-color: rgba(232, 232, 239, 0.0862745098);
+}
+
+[data-visibility=gm]:not(.dice-result > *) {
+  border: unset !important;
+  box-shadow: unset !important;
+  outline-color: var(--visibility-gm-bg);
+  background-color: rgba(232, 232, 239, 0.0862745098);
+}
+
+.theme-dark [data-theme] :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]),
+[data-chat-message-theme][data-chat-message-color-scheme=dark] :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]) {
+  background: var(--content-link-background);
+  border: 1px solid var(--content-link-border-color);
+  color: var(--content-link-text-color);
+  --visibility-gm-bg: #e8e8efac;
+}
+.theme-dark [data-theme] :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]) > i,
+[data-chat-message-theme][data-chat-message-color-scheme=dark] :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]) > i {
+  color: var(--content-link-icon-color);
+}
+.theme-dark [data-theme] :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]).altered,
+[data-chat-message-theme][data-chat-message-color-scheme=dark] :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]).altered {
+  color: limegreen;
+}
+
+span[data-pf2-effect-area]::before,
+span[data-pf2-action][data-pf2-glyph]::before {
+  color: var(--content-link-icon-color);
+}
+
+:is(.theme-dark, .theme-dark.themed) i[data-pf2-repost] {
+  background: rgba(122, 122, 122, 0.6);
+  border-left-color: var(--content-link-border-color);
+}
+
+.sheet a:is(.add-gm-notes, .editor-edit) {
+  background: var(--content-link-background);
+  border: 1px solid var(--content-link-border-color);
+  color: var(--content-link-text-color);
+}
+
+/* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
 /* Colors */
@@ -4688,7 +5205,8 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
-[data-color-scheme=dark] .damage {
+[data-chat-message-color-scheme=dark][data-theme] .damage,
+.theme-dark .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125);
   --color-bg-bleed: rgba(207, 28, 58, 0.125);
   --color-bg-chaotic: rgba(221, 26, 221, 0.125);
@@ -4851,76 +5369,6 @@ i[data-pf2-repost] {
   cursor: pointer;
 }
 
-.tah-tags-wrapper .tags,
-[data-theme] .tags,
-[data-dorako-ui-scope=limited] .tags,
-[data-theme] .tags.paizo-style,
-[data-dorako-ui-scope=limited] .tags.paizo-style {
-  gap: 1px;
-}
-.tah-tags-wrapper .tags select,
-[data-theme] .tags select,
-[data-dorako-ui-scope=limited] .tags select,
-[data-theme] .tags.paizo-style select,
-[data-dorako-ui-scope=limited] .tags.paizo-style select {
-  height: var(--font-size-27);
-}
-.tah-tags-wrapper .tags tag,
-.tah-tags-wrapper .tags .tag:not(.tag_transparent, [data-action]),
-[data-theme] .tags tag,
-[data-theme] .tags .tag:not(.tag_transparent, [data-action]),
-[data-dorako-ui-scope=limited] .tags tag,
-[data-dorako-ui-scope=limited] .tags .tag:not(.tag_transparent, [data-action]),
-[data-theme] .tags.paizo-style tag,
-[data-theme] .tags.paizo-style .tag:not(.tag_transparent, [data-action]),
-[data-dorako-ui-scope=limited] .tags.paizo-style tag,
-[data-dorako-ui-scope=limited] .tags.paizo-style .tag:not(.tag_transparent, [data-action]) {
-  border-radius: 0px;
-  box-shadow: unset;
-  border: 1px solid var(--tertiary);
-  outline: 1px solid var(--gold-brown);
-  padding: 0.33em 0.33em;
-  text-shadow: none;
-}
-.tah-tags-wrapper .tags tag:first-of-type,
-.tah-tags-wrapper .tags .tag:first-child,
-[data-theme] .tags tag:first-of-type,
-[data-theme] .tags .tag:first-child,
-[data-dorako-ui-scope=limited] .tags tag:first-of-type,
-[data-dorako-ui-scope=limited] .tags .tag:first-child,
-[data-theme] .tags.paizo-style tag:first-of-type,
-[data-theme] .tags.paizo-style .tag:first-child,
-[data-dorako-ui-scope=limited] .tags.paizo-style tag:first-of-type,
-[data-dorako-ui-scope=limited] .tags.paizo-style .tag:first-child {
-  border-left-width: 1px;
-}
-.tah-tags-wrapper .tags tag:last-of-type,
-.tah-tags-wrapper .tags .tag:last-child,
-[data-theme] .tags tag:last-of-type,
-[data-theme] .tags .tag:last-child,
-[data-dorako-ui-scope=limited] .tags tag:last-of-type,
-[data-dorako-ui-scope=limited] .tags .tag:last-child,
-[data-theme] .tags.paizo-style tag:last-of-type,
-[data-theme] .tags.paizo-style .tag:last-child,
-[data-dorako-ui-scope=limited] .tags.paizo-style tag:last-of-type,
-[data-dorako-ui-scope=limited] .tags.paizo-style .tag:last-child {
-  border-right-width: 1px;
-}
-
-[data-visibility]:not([data-visibility=all]) {
-  padding: unset;
-}
-
-[data-color-scheme=light] [data-visibility=gm]:not(.dice-result > *) {
-  outline: 1px dotted black;
-  box-shadow: unset;
-}
-
-[data-color-scheme=dark] [data-visibility=gm]:not(.dice-result > *) {
-  outline: 1px dotted var(--visibility-gm-bg);
-  box-shadow: unset;
-}
-
 .app.sheet.actor p,
 .pf2e p {
   font-weight: 400;
@@ -4993,7 +5441,6 @@ i[data-pf2-repost] {
 }
 [data-theme] img {
   border: none;
-  border-radius: 0px;
 }
 
 /* ----------------------------------------- */
@@ -5169,58 +5616,6 @@ i[data-pf2-repost] {
 }
 
 /* ----------------------------------------- */
-/* Effects Panel                             */
-/* ----------------------------------------- */
-[data-interface-theme] #effects-panel .effect-item > .icon {
-  border: var(--app-border-width) var(--icon-border-color);
-  border-radius: 4px;
-  box-shadow: 0px 1px 3px 1px black;
-  color: var(--text-color-3);
-  position: relative;
-}
-[data-interface-theme] #effects-panel .effect-item > .icon.aura {
-  border-radius: 50%;
-  border: 1px solid var(--color-primary-1);
-  box-shadow: 0px 0px 6px var(--color-primary-2), 0px 2px 8px 1px var(--color-primary-3);
-}
-[data-interface-theme] #effects-panel .effect-item > .icon .linked {
-  color: var(--text-color-2);
-  background: var(--color-primary-3);
-  border: 1px solid var(--color-secondary-4);
-  border-radius: 4px 0px var(--border-radius) 0px;
-  border-bottom: unset;
-  border-right: unset;
-  text-shadow: 0px 1px 2px black;
-}
-[data-interface-theme] #effects-panel .effect-item > .icon .value-wrapper {
-  background: none;
-  bottom: -1px;
-  left: -3px;
-}
-[data-interface-theme] #effects-panel .effect-item > .icon .value-wrapper .value {
-  padding: 2px;
-  color: var(--text-color-2);
-  background: var(--color-primary-3);
-  border-radius: 0px 4px 0px var(--border-radius);
-  border: 1px solid var(--color-secondary-4);
-  border-bottom: unset;
-  border-left: unset;
-  text-shadow: 0px 1px 2px black;
-}
-[data-interface-theme] #effects-panel .effect-item > .icon .expired {
-  position: absolute;
-  left: auto;
-  width: 80%;
-  width: unset;
-  padding: 2px 1px;
-  color: var(--text-color-1);
-  background: var(--color-primary-2);
-  border: 1px solid var(--color-primary-1);
-  text-shadow: 0px 1px 2px black;
-  border-radius: 0px 0px 4px 4px;
-}
-
-/* ----------------------------------------- */
 /* Sidebar                                   */
 /* ----------------------------------------- */
 @layer compatibility {
@@ -5259,6 +5654,10 @@ i[data-pf2-repost] {
     box-shadow: var(--button-box-shadow);
   }
 }
+#sidebar-content #chat {
+  padding-top: 0px;
+}
+
 @layer blocks.base {
   #sidebar-content :is(section.sidebar:not(#chat), section.sidebar-tab:not(#chat)) :is(a.button, button) {
     --button-text-color: var(--color-light-2);
@@ -5277,28 +5676,6 @@ i[data-pf2-repost] {
   }
   li.folder > .folder-header .create-button {
     --button-box-shadow: unset;
-  }
-}
-/* ----------------------------------------- */
-/* Other                                     */
-/* ----------------------------------------- */
-@layer blocks.base {
-  .standard-form .form-fields > button {
-    color: var(--button-text-color);
-  }
-  .scrollable {
-    padding-top: 2px;
-    padding-bottom: 2px;
-  }
-}
-@layer blocks.base {
-  .standard-form fieldset {
-    border: 1px solid var(--fieldset-border-color);
-    background: var(--fieldset-background-color);
-    border-radius: 4px;
-  }
-  .standard-form fieldset legend {
-    color: var(--fieldset-legend-color);
   }
 }
 @layer blocks.base {
@@ -5453,9 +5830,7 @@ i[data-pf2-repost] {
   }
 }
 @layer variables.themes.specific {
-  [data-interface-theme=dnd5e2],
-  [data-application-theme=dnd5e2],
-  [data-theme=dnd5e2] {
+  :root {
     --dnd5e-color-black: #000;
     --dnd5e-color-dark: #191813;
     --dnd5e-color-faint: #c9c7b8;
@@ -5523,6 +5898,12 @@ i[data-pf2-repost] {
     --dnd5e-highlight-45: rgba(255, 255, 255, 0.45);
   }
 }
+[data-chat-message-theme=dnd5e2] .tags:not(.paizo-style),
+:is([data-application-theme=dnd5e2]) [data-theme] .tags:not(.paizo-style) {
+  --color-bg-trait: var(--dnd5e-color-red);
+  --color-bg-size: var(--dnd5e-color-green);
+}
+
 @layer blocks.base {
   [data-interface-theme=dnd5e2] {
     --control-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
@@ -5635,7 +6016,7 @@ i[data-pf2-repost] {
 /* ----------------------------------------- */
 @layer variables.themes.specific {
   [data-interface-theme=bg3],
-  [data-theme=bg3] {
+  [data-application-theme=bg3] {
     --bg3-middle-brown: #9d7b53;
     --bg3-border-color: #5f5244;
     --bg3-background-1: #433c36;
@@ -5788,8 +6169,8 @@ i[data-pf2-repost] {
   background: var(--window-app-background);
   border: var(--window-app-border-width) solid;
   border-color: var(--window-app-border-color);
-  --color-form-hint: var(--color-light-3);
-  --color-form-label: var(--color-light-2);
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
 }
 [data-theme]:is(.app, .application) .window-content {
   background: none;
@@ -5797,6 +6178,10 @@ i[data-pf2-repost] {
 
 [data-theme].app .window-header {
   border: unset;
+  color: var(--color-text-dark-primary);
+}
+[data-theme].app .window-header a.control:hover {
+  color: var(--color-text-dark-primary);
 }
 
 [data-theme].application .window-header {
@@ -5875,6 +6260,18 @@ body.theme-light [data-theme].application {
   }
   .application[data-theme] nav.tabs [data-tab].active, .application[data-theme] nav.tabs [data-tab]:hover {
     text-shadow: 0px 1px 1px black;
+  }
+}
+@layer variables.themes.general {
+  .themed.theme-light,
+  body.theme-light {
+    --same-text-color: white;
+    --opposite-text-color: black;
+  }
+  .themed.theme-dark,
+  body.theme-dark {
+    --same-text-color: black;
+    --opposite-text-color: white;
   }
 }
 @layer variables.themes.general {
@@ -6012,8 +6409,55 @@ range-picker > input[type=number] {
 }
 
 /* ----------------------------------------- */
+/* Forms                                     */
+/* ----------------------------------------- */
+@layer blocks.base {
+  .standard-form .form-fields > button {
+    color: var(--button-text-color);
+  }
+  .scrollable {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+}
+@layer dorako-ui {
+  .app form fieldset:not(.basics),
+  .standard-form fieldset {
+    border: 1px solid var(--fieldset-border-color);
+    background: var(--fieldset-background-color);
+    border-radius: 4px;
+  }
+  .app form fieldset:not(.basics) legend,
+  .standard-form fieldset legend {
+    color: var(--fieldset-legend-color);
+  }
+}
+/* ----------------------------------------- */
+/* Tagify                                    */
+/* ----------------------------------------- */
+.theme-dark [data-theme] .tagify {
+  --placeholder-color: var(--color-text-dark-secondary);
+}
+
+.tagify {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  align-items: center;
+}
+
+tagify-tags {
+  margin: unset;
+}
+
+.pf2e.item.sheet form .tab.active.rules .rule-form .attached-input :is(input, tagify-tags, tags) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* ----------------------------------------- */
 /* Colors                                    */
 /* ----------------------------------------- */
+[data-chat-message-color-scheme=dark],
 .theme-dark [data-theme] {
   --rarity-common: #e1d8cf;
   --rarity-uncommon: #c45500;
@@ -6100,35 +6544,41 @@ prose-mirror menu button {
   text-shadow: none;
 }
 
-[data-theme=bg3] {
-  --color-text-dark-primary: var(--color-text-light-1);
-  --color-text-dark-secondary: var(--color-text-light-6);
+[data-application-theme=bg3] [data-theme] {
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
+  --color-text-dark-primary: var(--bg3-text-1);
+  --color-text-dark-secondary: var(--bg3-text-2);
   --color-text-dark-5: var(--color-text-light-6);
   --window-app-background: radial-gradient(circle at bottom right, #2c282433 0%, #2c2824ff 50%, #0c0804ee 100%),
     radial-gradient(circle at center, transparent 0, #0c0804ee 100%);
   --window-app-border-width: 2px;
   --window-app-border-color: var(--bg3-middle-brown);
+  --icon-border-color: var(--bg3-middle-brown);
   --color-scrollbar: var(--bg3-scrollbar-thumb-background);
   /* Fieldset variables */
   --fieldset-border-color: transparent;
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
 }
-[data-theme=bg3] input {
+[data-application-theme=bg3] [data-theme]:is(.app, .application) :is(input, select):not([type=range]):disabled {
+  background: var(--bg3-bg-outer);
+}
+[data-application-theme=bg3] [data-theme] input {
   --range-thumb-background-color: var(--bg3-accent-color);
   --range-thumb-border-color: var(--bg3-accent-color-light);
 }
-[data-theme=bg3] input,
-[data-theme=bg3] select,
-[data-theme=bg3] textarea,
-[data-theme=bg3] code-mirror {
+[data-application-theme=bg3] [data-theme] input,
+[data-application-theme=bg3] [data-theme] select:not(.tag),
+[data-application-theme=bg3] [data-theme] textarea,
+[data-application-theme=bg3] [data-theme] code-mirror {
   --input-background-color: color-mix(in srgb, var(--alt) 50%, transparent);
   --input-border-color: transparent;
   --input-text-color: var(--color-light-2);
   --input-focus-outline-color: var(--tertiary);
 }
-[data-theme=bg3] input[type=checkbox],
-[data-theme=bg3] input[type=radio] {
+[data-application-theme=bg3] [data-theme] input[type=checkbox],
+[data-application-theme=bg3] [data-theme] input[type=radio] {
   --checkbox-checked-color: var(--bg3-accent-color);
   --checkbox-disabled-color: dimgray;
   --checkbox-background-color: white;
@@ -6136,13 +6586,30 @@ prose-mirror menu button {
   --checkbox-font-weight: bold;
 }
 
-[data-theme=bg3].themed [nav-item],
-[data-theme=bg3].themed a.button,
-[data-theme=bg3].themed button {
+[data-application-theme=bg3] [data-theme].themed [nav-item],
+[data-application-theme=bg3] [data-theme].themed a.button,
+[data-application-theme=bg3] [data-theme].themed button {
   --button-border-color: #403b2d;
   --button-background-color: #161511aa;
 }
 
+@layer blocks.base {
+  [data-application-theme=bg3] [data-theme] button:not(.control) {
+    background: var(--button-background-color);
+    border: 1px solid var(--button-border-color);
+    box-shadow: var(--button-box-shadow);
+    border-radius: 4px;
+    color: var(--button-text-color);
+    text-decoration: none;
+    cursor: var(--cursor-pointer);
+    transition: 0.5s;
+  }
+  [data-application-theme=bg3] [data-theme] button:not(.control):hover {
+    background: var(--button-hover-background-color);
+    color: var(--button-hover-text-color);
+    border-color: var(--button-hover-border-color);
+  }
+}
 /* ----------------------------------------- */
 /* Light color scheme                        */
 /* ----------------------------------------- */
@@ -6394,45 +6861,27 @@ prose-mirror menu button {
   --section-border-color: var(--section-header);
 }
 
-[data-theme=dnd5e2] {
-  --color-form-label: var(--color-text-dark-primary) !important;
-  --color-form-hint: var(--color-text-dark-5) !important;
+[data-application-theme=dnd5e2] [data-theme] {
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
   --color-text-secondary: var(--color-text-dark-5);
   --color-text-subtle: var(--color-text-dark-5);
   --color-scrollbar: var(--dnd5e-color-gold);
 }
-[data-theme=dnd5e2] input {
+[data-application-theme=dnd5e2] [data-theme] input {
   --range-track-color: var(--dnd5e-background-25);
   --range-track-border-color: var(--dnd5e-border-gold);
   --range-thumb-background-color: var(--dnd5e-color-gold);
   --range-thumb-border-color: var(--dnd5e-border-gold);
 }
-[data-theme=dnd5e2] input[type=checkbox],
-[data-theme=dnd5e2] input[type=radio] {
+[data-application-theme=dnd5e2] [data-theme] input[type=checkbox],
+[data-application-theme=dnd5e2] [data-theme] input[type=radio] {
   --checkbox-checked-color: var(--dnd5e-color-gold);
   --checkbox-disabled-color: var(--color-cool-3);
   --checkbox-background-color: white;
   --checkbox-font-weight: bold;
 }
-
-.theme-dark [data-theme=dnd5e2] {
-  --checkbox-checkmark-color: black;
-}
-.theme-dark [data-theme=dnd5e2] input[type=checkbox],
-.theme-dark [data-theme=dnd5e2] input[type=radio] {
-  --checkbox-checkmark-color: black;
-}
-
-.theme-light [data-theme=dnd5e2] {
-  --checkbox-checkmark-color: white;
-  --fieldset-legend-color: var(--color-text-dark-5);
-}
-.theme-light [data-theme=dnd5e2] input[type=checkbox],
-.theme-light [data-theme=dnd5e2] input[type=radio] {
-  --checkbox-checkmark-color: white;
-}
-
-[data-theme=dnd5e2] fieldset {
+[data-application-theme=dnd5e2] [data-theme] fieldset:not(.basics) {
   border-radius: 4px;
   background: var(--dnd5e-background-card);
   box-shadow: 0 0 6px var(--dnd5e-shadow-45);
@@ -6443,9 +6892,8 @@ prose-mirror menu button {
   gap: 4px;
   border-radius: 4px;
   border: 1px solid var(--color-fieldset-border);
-  margin: 0;
 }
-[data-theme=dnd5e2] fieldset > legend {
+[data-application-theme=dnd5e2] [data-theme] fieldset:not(.basics) > legend {
   background: var(--dnd5e-background-card);
   position: relative;
   border-radius: 2px;
@@ -6454,7 +6902,7 @@ prose-mirror menu button {
   font-weight: bold;
   font-size: var(--font-size-11);
 }
-[data-theme=dnd5e2] fieldset > legend::before {
+[data-application-theme=dnd5e2] [data-theme] fieldset:not(.basics) > legend::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -6464,23 +6912,50 @@ prose-mirror menu button {
   z-index: -1;
 }
 
-[data-theme=dnd5e2] {
-  --window-app-background: var(--dnd5e-bg);
+[data-application-theme=dnd5e2].theme-dark [data-theme] {
+  --checkbox-checkmark-color: black;
+}
+[data-application-theme=dnd5e2].theme-dark [data-theme] input[type=checkbox],
+[data-application-theme=dnd5e2].theme-dark [data-theme] input[type=radio] {
+  --checkbox-checkmark-color: black;
+}
+
+[data-application-theme=dnd5e2].theme-light [data-theme] {
+  --checkbox-checkmark-color: white;
+  --fieldset-legend-color: var(--color-text-dark-5);
+}
+[data-application-theme=dnd5e2].theme-light [data-theme] input[type=checkbox],
+[data-application-theme=dnd5e2].theme-light [data-theme] input[type=radio] {
+  --checkbox-checkmark-color: white;
+}
+
+[data-application-theme=dnd5e2] [data-theme] {
   --window-app-border-width: 1px;
   --window-app-box-shadow: 0 0 30px var(--dnd5e-shadow-15), 0 0 6px var(--dnd5e-shadow-45);
   --box-shadow: 0 0 3px var(--dnd5e-shadow-15);
 }
 
-.theme-light [data-theme=dnd5e2] {
+[data-application-theme=dnd5e2].theme-light [data-theme] {
   --window-app-background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
     url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
   --window-app-border-color: var(--dnd5e-color-gold);
   --icon-border-color: var(--dnd5e-color-gold);
 }
 
-.theme-dark [data-theme=dnd5e2] {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=light][data-theme],
+[data-application-theme=dnd5e2].theme-light [data-theme],
+[data-application-theme=dnd5e2] [data-theme].themed.theme-light {
+  --color-text-dark-primary: black;
+  --color-text-dark-secondary: dimgray;
+  --window-app-background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+}
+
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme],
+[data-application-theme=dnd5e2].theme-dark [data-theme],
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark {
   --color-text-dark-primary: var(--dnd5e-color-blue-white);
-  --color-text-dark-secondary: var(--color-text-light-6);
+  --color-text-dark-secondary: darkgray;
   --color-text-dark-5: var(--color-text-light-6);
   --dnd5e-border-dotted: 1px dotted var(--dnd5e-color-blue-gray-3);
   --dnd5e-border-dark: 1px solid var(--dnd5e-color-blue-gray-3);
@@ -6494,57 +6969,86 @@ prose-mirror menu button {
   --filigree-background-color: var(--dnd5e-color-blue-gray-2);
   --filigree-border-color: var(--dnd5e-color-blue-gray-3);
   --dnd5e-background-5: var(--dnd5e-highlight-10);
+  --input-text-color: var(--color-text-dark-primary);
+  --input-placeholder-color: var(--color-text-dark-secondary);
   --window-app-background: var(--dnd5e-color-dark-gray) url(../../../ui/denim075.png);
   --window-app-border-color: var(--dnd5e-color-blue-gray-1);
-  --icon-border-color: var(--dnd5e-color-blue-gray-1);
+  --icon-border-color: var(--dnd5e-color-gold);
 }
-.theme-dark [data-theme=dnd5e2] fieldset {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) fieldset,
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) fieldset,
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) fieldset {
   --color-fieldset-border: var(--dnd5e-color-blue-gray-3);
 }
-.theme-dark [data-theme=dnd5e2] fieldset > legend {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) fieldset > legend,
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) fieldset > legend,
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) fieldset > legend {
   text-transform: uppercase;
   font-weight: bold;
   font-size: var(--font-size-11);
   color: var(--dnd5e-color-gold);
 }
-.theme-dark [data-theme=dnd5e2] :is(input) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select) {
+  --input-text-color: var(--color-text-dark-primary);
   --input-placeholder-color: var(--color-text-dark-secondary);
 }
-.theme-dark [data-theme=dnd5e2] :is(.form-group, fieldset) :is(select, input):not([type=range]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(.form-group, fieldset) :is(select, input):not([type=range]),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(.form-group, fieldset) :is(select, input):not([type=range]),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(.form-group, fieldset) :is(select, input):not([type=range]) {
   color: var(--color-text-dark-primary);
 }
-.theme-dark [data-theme=dnd5e2] :is(input[type=search]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input[type=search]),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input[type=search]),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input[type=search]) {
   --input-background-color: var(--dnd5e-background-parchment);
   border: var(--dnd5e-border-gold);
 }
-.theme-dark [data-theme=dnd5e2] :is(input, select):not([type=range], [type=search]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select):not([type=range], [type=search]),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select):not([type=range], [type=search]),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select):not([type=range], [type=search]) {
   --input-background-color: var(--dnd5e-background-25);
 }
-.theme-dark [data-theme=dnd5e2] :is(input, select):not([type=range]):disabled {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select):not([type=range]):disabled,
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select):not([type=range]):disabled,
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select):not([type=range]):disabled {
   background: var(--dnd5e-color-dark-gray);
 }
-.theme-dark [data-theme=dnd5e2] nav.tabs.sheet-tabs [data-tab]:not([disabled], .disabled) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) nav.sheet-tabs [data-tab]:not([disabled], .disabled),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) nav.sheet-tabs [data-tab]:not([disabled], .disabled),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) nav.sheet-tabs [data-tab]:not([disabled], .disabled) {
   --button-background-color: black;
   --button-hover-background-color: var(--dnd5e-color-crimson);
   box-shadow: 0 0 6px var(--dnd5e-shadow-45);
   color: var(--dnd5e-color-gold);
   border: unset;
 }
-.theme-dark [data-theme=dnd5e2] nav.tabs.sheet-tabs [data-tab]:not([disabled], .disabled).active {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) nav.sheet-tabs [data-tab]:not([disabled], .disabled).active,
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) nav.sheet-tabs [data-tab]:not([disabled], .disabled).active,
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) nav.sheet-tabs [data-tab]:not([disabled], .disabled).active {
   color: white;
   box-shadow: 0 0 6px var(--dnd5e-color-gold);
 }
-.theme-dark [data-theme=dnd5e2] .form-group button:not([disabled], .disabled),
-.theme-dark [data-theme=dnd5e2] .form-footer button:not([disabled], .disabled) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) .form-group button:not([disabled], .disabled),
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) .form-footer button:not([disabled], .disabled),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) .form-group button:not([disabled], .disabled),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) .form-footer button:not([disabled], .disabled),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) .form-group button:not([disabled], .disabled),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) .form-footer button:not([disabled], .disabled) {
   --button-background-color: var(--dnd5e-background-card);
   --button-border-color: var(--dnd5e-color-blue-gray-3);
   box-shadow: 0 0 6px var(--dnd5e-shadow-15);
   color: var(--color-text-dark-primary);
 }
-.theme-dark [data-theme=dnd5e2] nav.tabs [data-tab] {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) nav.tabs [data-tab],
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) nav.tabs [data-tab],
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) nav.tabs [data-tab] {
   position: sticky;
 }
-.theme-dark [data-theme=dnd5e2] nav.tabs [data-tab]:not(.toggle, .button, [aria-pressed=true])::after {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) nav.tabs [data-tab]:not(.toggle, .button, [aria-pressed=true])::after,
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) nav.tabs [data-tab]:not(.toggle, .button, [aria-pressed=true])::after,
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) nav.tabs [data-tab]:not(.toggle, .button, [aria-pressed=true])::after {
   content: "";
   position: absolute;
   inset: 3px;
@@ -6552,7 +7056,7 @@ prose-mirror menu button {
   border-radius: 3px;
 }
 
-[data-application-theme=dnd5e2].theme-dark :is(.app, .application) .window-content::before {
+[data-application-theme=dnd5e2].theme-dark :is(.app, .application)[data-theme] .window-content::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
@@ -6565,7 +7069,7 @@ prose-mirror menu button {
 }
 
 @layer blocks.base {
-  [data-theme=dnd5e2] button:not(.control) {
+  [data-application-theme=dnd5e2] [data-theme]:is(.app, .application) button:not(.control) {
     --button-focus-outline-color: none;
     --button-border-color: var(--color-border-light-2);
     --button-hover-background-color: var(--dnd5e-background-card);
@@ -6583,81 +7087,102 @@ prose-mirror menu button {
     line-height: 12px;
     gap: 0.25rem;
   }
-  [data-theme=dnd5e2] button:not(.control):not(disabled, .disabled):hover {
+  [data-application-theme=dnd5e2] [data-theme]:is(.app, .application) button:not(.control):not(disabled, .disabled):hover {
     box-shadow: 0 0 5px var(--color-shadow-primary);
   }
 }
-.actor.sheet.character aside .sidebar input:disabled {
-  background: transparent;
+.character.sheet .sheet-content .tags:not(.form-fields) .tag.tag_secondary,
+.character.sheet .sheet-content .tags:not(.form-fields) .tag option.tag_secondary {
+  --secondary: var(--dnd5e-color-blue);
+  --color-pf-secondary: var(--dnd5e-color-blue);
 }
 
-.actor.sheet section.window-content form.crb-style {
-  background: url("/systems/pf2e/assets/sheet/header.webp"), transparent;
-  background-repeat: repeat-x, no-repeat;
-  background-size: auto 5.625rem, cover;
-  background-attachment: local;
+.chat-message[data-chat-message-theme=dnd5e2] {
+  --window-app-background: var(--dnd5e-color-parchment);
+  --window-app-border-width: 1px;
+  --window-app-border-color: var(--dnd5e-color-gold);
+  --box-shadow: 0 0 3px var(--dnd5e-shadow-15);
+  --icon-border-color: var(--dnd5e-color-gold);
+  box-shadow: 0 0 6px 1px var(--dnd5e-shadow-45);
 }
-
-.actor.sheet.character :is(li, ol) {
-  border-color: transparent;
+.chat-message[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=light] {
+  background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f1ebe8;
+  --color-text-dark-primary: black;
+  --color-text-dark-secondary: color-mix(in srgb, var(--color-text-dark-primary) 70%, transparent);
 }
-.actor.sheet.character :is(li, ol) > div {
-  border-color: transparent;
+.chat-message[data-chat-message-theme=dnd5e2].whisper[data-chat-message-color-scheme=light] {
+  background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #c7c7f4;
+  border-color: #e3e3ff;
 }
-
-.actor.sheet.character .d20-svg path {
-  fill: white;
+.chat-message[data-chat-message-theme=dnd5e2].blind[data-chat-message-color-scheme=light] {
+  background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f4c2f4;
+  border-color: #a57aa5;
 }
-.actor.sheet.character .item-carry-type {
-  text-shadow: 0px 0px 0px gray;
+.chat-message[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark] {
+  background: var(--dnd5e-color-dark) url(../../../ui/denim075.png);
+  --color-text-dark-primary: var(--dnd5e-color-blue-white);
+  --color-text-dark-secondary: color-mix(in srgb, var(--color-text-dark-primary) 70%, transparent);
 }
-.actor.sheet.character .proficiencies-list li {
-  border-image-source: var(--ornamentation);
+.chat-message[data-chat-message-theme=dnd5e2].whisper[data-chat-message-color-scheme=dark] {
+  background: #2b2b4e url(../../../ui/denim075.png);
+  border-color: #7b7b8c;
 }
-.actor.sheet.character .proficiencies-list li a.d20 {
-  filter: drop-shadow(0 0 1px var(--color-shadow-dark)) drop-shadow(0 0 3px var(--color-text-dark-4));
+.chat-message[data-chat-message-theme=dnd5e2].blind[data-chat-message-color-scheme=dark] {
+  background: var(--dnd5e-color-sc-1) url(../../../ui/denim075.png);
+  border-color: var(--dnd5e-color-sc-2);
 }
-
-.theme-dark .actor.sheet.character .sheet-body {
-  --primary: red;
-  --color-pf-primary: red;
-  --color-pf-primary-dark: darkred;
-  --color-pf-secondary: blue;
-  --secondary: blue;
-  --text-dark: white;
-  --color-text-primary: white;
-  --color-text-dark-4: gray;
-  --color-pf-alternate-dark: brown;
+.chat-message[data-chat-message-theme=dnd5e2] > header {
+  z-index: 1;
 }
-.theme-dark .actor.sheet.character .sheet-body .sub-nav,
-.theme-dark .actor.sheet.character .sheet-body .action-header {
-  --primary: var(--system-primary);
-  --color-pf-primary: var(--system-primary);
+.chat-message[data-chat-message-theme=dnd5e2] .message-content {
+  text-shadow: unset;
+  z-index: 1;
 }
-.theme-dark .actor.sheet.character .sheet-body .tags:not(.form-fields) .tag.tag_secondary,
-.theme-dark .actor.sheet.character .sheet-body .tags:not(.form-fields) .tag option.tag_secondary,
-.theme-dark .actor.sheet.character .sheet-body .blue {
-  --secondary: var(--system-secondary);
-  --color-pf-secondary: var(--system-secondary);
+.chat-message[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark] button {
+  --button-background-color: var(--dnd5e-color-blue-gray-2);
+  --button-border-color: var(--dnd5e-color-blue-gray-3);
+  --button-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+  --button-focus-outline-color: none;
+  --button-hover-background-color: var(--dnd5e-color-blue-gray-2);
+  --button-text-color: var(--color-text-dark-primary);
+  --button-hover-text-color: vvar(--dnd5e-color-blue-white);
+  --button-hover-border-color: var(--dnd5e-color-gold);
 }
-
-.theme-dark [data-theme].app {
-  --color-text-dark-2: white;
-  --color-text-dark-3: darkgray;
+.chat-message[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=light] button {
+  --button-background-color: var(--dnd5e-background-card);
+  --button-hover-background-color: var(--dnd5e-background-card);
+  --button-border-color: gray;
+  --button-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+  --button-focus-outline-color: none;
+  --button-hover-background-color: var(--dnd5e-background-card);
+  --button-text-color: var(--color-text-dark-primary);
+  --button-hover-text-color: var(--color-text-dark-primary);
+  --button-hover-border-color: var(--dnd5e-color-gold);
 }
-
-.theme-light [data-theme].app .window-header {
-  color: black !important;
+.chat-message[data-chat-message-theme=dnd5e2] button[data-action=shield-block]:hover,
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=shield-block].shield-activated,
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=shield-block].shield-activated:hover {
+  background-color: var(--dnd5e-color-gold) !important;
+  border-color: var(--dnd5e-color-groove) !important;
+  color: white !important;
+  text-shadow: 0 0 4px var(--dnd5e-highlight-45);
 }
-
-.pf2e.item.sheet form > header img {
-  border: 2px solid var(--icon-border-color);
-  box-shadow: 0px 1px 3px black;
-  margin-left: 3px;
+.chat-message[data-chat-message-theme=dnd5e2] button[data-action=shield-block]:hover > i,
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=shield-block].shield-activated > i,
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=shield-block].shield-activated:hover > i {
+  color: white;
 }
-
-.pf2e.item.sheet form .tab.active.rules .rule-form {
-  border-bottom: unset;
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=apply-healing]:hover {
+  background-color: var(--dnd5e-color-hp-2) !important;
+  border-color: var(--dnd5e-color-hp-3) !important;
+  color: white !important;
+  text-shadow: 0px 0px 0px white;
+}
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=apply-healing]:hover > i {
+  color: white;
+}
+.chat-message[data-chat-message-theme=dnd5e2] .damage-application button[data-action=apply-healing]:hover .fa-plus {
+  color: var(--dnd5e-color-hp-2) !important;
 }
 
 /*# sourceMappingURL=dorako-ui.css.map */

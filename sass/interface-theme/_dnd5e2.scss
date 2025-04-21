@@ -1,7 +1,5 @@
 @layer variables.themes.specific {
-  [data-interface-theme="dnd5e2"],
-  [data-application-theme="dnd5e2"],
-  [data-theme="dnd5e2"] {
+  :root {
     --dnd5e-color-black: #000;
     --dnd5e-color-dark: #191813;
     --dnd5e-color-faint: #c9c7b8;
@@ -68,6 +66,13 @@
     --dnd5e-highlight-10: rgba(255, 255, 255, 0.1);
     --dnd5e-highlight-45: rgba(255, 255, 255, 0.45);
   }
+}
+
+// System remapping
+[data-chat-message-theme="dnd5e2"] .tags:not(.paizo-style),
+:is([data-application-theme="dnd5e2"]) [data-theme] .tags:not(.paizo-style) {
+  --color-bg-trait: var(--dnd5e-color-red);
+  --color-bg-size: var(--dnd5e-color-green);
 }
 
 @layer blocks.base {
