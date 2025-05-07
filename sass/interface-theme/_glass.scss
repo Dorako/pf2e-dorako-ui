@@ -77,6 +77,7 @@
     --control-hover-bg-color: rgba(255, 255, 255, 0.85);
     --control-hover-border-color: rgba(255, 255, 255, 0.9);
     --control-hover-icon-color: var(--color-dark-1);
+    --control-button-hover-bg-color: lime;
 
     .ui-control {
       --control-bg-color: rgba(255, 255, 255, 0.4);
@@ -86,6 +87,7 @@
       --control-hover-bg-color: rgba(255, 255, 255, 0.85);
       --control-hover-border-color: rgba(255, 255, 255, 0.9);
       --control-hover-icon-color: var(--color-dark-1);
+      --control-button-hover-bg-color: lime;
 
       &:focus {
         --control-text-shadow: 0px 1px 1px rgba(0, 0, 0, 50%);

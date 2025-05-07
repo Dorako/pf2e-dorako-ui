@@ -1,27 +1,169 @@
+:root {
+  --dynamic-token-inner-ring-top-left-color: #563a1d;
+  --dynamic-token-outer-ring-top-left-color: #724a3a;
+  --dynamic-token-inner-ring-color: #fff8ee;
+  --dynamic-token-outer-ring-color: #191215;
+  --dynamic-token-background-outer-color: #000000;
+  --dynamic-token-background-color: #282423;
+  --dynamic-token-dynamic-color: #390a07;
+}
+
+/* ----------------------------------------- */
+/* Relocated .flavor-text                    */
+/* ----------------------------------------- */
+
+.chat-message .flavor-text .target-dc-result .unadjusted {
+  text-decoration: line-through;
+}
+
+.chat-message .flavor-text .target-dc-result .adjusted {
+  text-decoration: underline dotted;
+}
+
+.chat-message .flavor-text .effect {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.chat-message .flavor-text .effect img {
+  height: 32px;
+  width: 32px;
+}
+
+.chat-message {
+  .flavor-text {
+    h4.action {
+      font-weight: 700;
+      line-height: 1.5em;
+      margin: 0;
+    }
+
+    .target-dc-result {
+      line-height: 0.75rem;
+      margin-bottom: 4px;
+
+      .target-dc,
+      .result {
+        display: block;
+        margin: 1px 0;
+        width: fit-content;
+      }
+
+      .unadjusted {
+        text-decoration: line-through;
+      }
+
+      .adjusted {
+        text-decoration: underline dotted;
+      }
+    }
+  }
+
+  > .message-content .message-buttons {
+    display: flex;
+    margin: 0.35em 0 2px;
+    gap: 3px;
+  }
+}
+
+.chat-message .target-dc-result {
+  .adjusted.increased {
+    color: var(--adjusted-higher);
+  }
+
+  .adjusted.decreased {
+    color: var(--adjusted-lower);
+  }
+
+  .degree-of-success .criticalSuccess {
+    color: var(--degree-success-critical);
+  }
+
+  .degree-of-success .success {
+    color: var(--degree-success);
+  }
+
+  .degree-of-success .failure {
+    color: var(--degree-failure);
+  }
+
+  .degree-of-success .criticalFailure {
+    color: var(--degree-failure-critical);
+  }
+}
+
 .chat-message[data-chat-message-color-scheme="light"] {
   --content-link-background: #ddd !important;
   --content-link-border-color: var(--color-dark-4) !important;
   --content-link-icon-color: var(--color-dark-6) !important;
   --content-link-text-color: var(--color-dark-2) !important;
+
+  --color-scheme: light;
+  --color-text-emphatic: var(--color-dark-1);
+  --color-text-primary: var(--color-dark-2);
+  --color-text-secondary: var(--color-dark-3);
+  --color-text-subtle: var(--color-dark-4);
+  --color-text-selection: var(--color-light-1);
+  --color-text-selection-bg: var(--color-dark-6);
+  --content-link-background: #ddd;
+  --content-link-border-color: var(--color-dark-4);
+  --content-link-icon-color: var(--color-dark-6);
+  --content-link-text-color: var(--color-dark-2);
+  --sidebar-background: url(../ui/parchment.jpg);
+  --sidebar-separator: 2px groove var(--color-light-2);
+  --sidebar-entry-hover-bg: rgba(255, 255, 255, 0.25);
+  --table-background-color: none;
+  --table-header-bg-color: rgba(0, 0, 0, 0.1);
+  --table-header-border-color: var(--color-dark-1);
+  --table-header-text-color: inherit;
+  --table-row-color-even: rgba(255, 255, 255, 0.2);
+  --table-row-color-odd: transparent;
+  --table-disabled-row-bg-color: var(--color-cool-5-25);
+}
+
+.chat-message[data-chat-message-color-sceheme="dark"] {
+  --color-scheme: dark;
+  --color-text-emphatic: var(--color-light-1);
+  --color-text-primary: var(--color-light-2);
+  --color-text-secondary: var(--color-light-3);
+  --color-text-subtle: var(--color-light-5);
+  --color-text-selection: var(--color-light-1);
+  --color-text-selection-bg: var(--color-cool-3);
+  --table-background-color: var(--color-cool-5-50);
+  --table-header-bg-color: var(--color-cool-4);
+  --table-header-border-color: var(--color-cool-4);
+  --table-header-text-color: inherit;
+  --table-row-color-even: rgba(255, 255, 255, 0.2);
+  --table-row-color-odd: transparent;
+  --table-disabled-row-bg-color: var(--color-cool-5-25);
+  --content-link-background: var(--color-cool-5-90);
+  --content-link-border-color: var(--color-light-6);
+  --content-link-icon-color: var(--color-light-4);
+  --content-link-text-color: var(--color-light-2);
+  --sidebar-background: var(--color-cool-5-90);
+  --sidebar-separator: 1px solid var(--color-dark-1);
+  --sidebar-entry-hover-bg: rgba(255, 255, 255, 0.1);
 }
 
 .chat-message[data-chat-message-theme] {
   hr:not(.vr) {
-    margin: 0.2rem 0;
-    background-image: unset;
-    border-top: 1px solid var(--window-app-border-color);
-    margin-inline: -8px;
+    margin-inline: -1px;
+    height: 1px;
+    margin-block: 5px;
+    border: none;
+    background: linear-gradient(to right, transparent, var(--window-app-border-color), transparent);
   }
   hr.vr {
     border: unset;
     border-left: 1px solid var(--window-app-border-color);
   }
-  //   .card-header {
-  //     padding-top: 8px;
-  //   }
+
   .card-header img {
     border: 1px solid var(--icon-border-color);
     height: 100%;
+    height: 2.33em;
+    width: 2.33em;
   }
 
   h4.message-sender {
@@ -33,9 +175,9 @@
     display: none;
   }
 
-  .message-header:not(.with-image) {
-    padding-bottom: 5px;
-  }
+  //   .message-header:not(.with-image) {
+  //     padding-bottom: 5px;
+  //   }
 
   .message-content:not(:has(.chat-card, .flavor-text)) {
     margin-top: 8px;
@@ -91,9 +233,7 @@
   .card-buttons {
     margin: unset;
   }
-}
 
-.chat-message[data-chat-message-theme] {
   --chat-message-background: var(--window-app-background);
   border: var(--window-app-border-width) solid var(--window-app-border-color);
   color: var(--color-text-dark-primary);
@@ -105,40 +245,141 @@
   // border: 2px solid var(--chat-message-border-color);
   // border-radius: 6px;
   // pointer-events: all;
+
+  &.chat-message.emote > .message-content p.action-content img {
+    border: 1px solid var(--icon-border-color);
+  }
+
+  .pf2e.chat-card .card-header h3 {
+    font-size: var(--font-size-20);
+  }
+
+  .pf2e.chat-card .tags,
+  .pf2e.chat-card .card-header {
+    border: unset;
+  }
+  .message-header h4.message-sender {
+    color: var(--color-text-dark-primary);
+    font-size: var(--font-size-15);
+    font-weight: 500;
+    z-index: 1;
+  }
+  &[data-header-text-color-scheme="dark"] .message-header {
+    --color-text-dark-primary: black !important;
+    --color-text-dark-secondary: rgba(0, 0, 0, 0.6) !important;
+    :is(.user, time) {
+      color: black !important;
+    }
+    .message-sender {
+      text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+  &[data-header-text-color-scheme="light"] .message-header {
+    --color-text-dark-primary: white !important;
+    --color-text-dark-secondary: rgba(255, 255, 255, 0.6) !important;
+    :is(.user, time) {
+      color: white !important;
+    }
+    .message-sender {
+      text-shadow: 0px 1px 1px black;
+    }
+  }
   .message-header {
     color: var(--color-text-dark-secondary);
     grid-template:
-      "img name details" 1.375rem
-      "img user rolltype" 1.125rem
-      "gap gap gap" var(--space-4)
-      "whisper whisper whisper" min-content
-      "flavor flavor flavor" 1fr/2.75rem 1fr min-content;
-    .rolltype {
-      grid-area: rolltype;
+      "img gapp name details" 1.375rem
+      "img gapp user rolltype" min-content
+      "whisper whisper whisper whisper" min-content
+      "gap gap gap gap" var(--space-8)
+      / 2.5rem var(--space-8) 1fr min-content;
+    .portrait img {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+    &.no-image {
+      display: grid;
+      grid-template:
+        "name details" 1.375rem
+        "user user" min-content
+        "gap gap" var(--space-8)
+        / 2fr 1fr;
+    }
+
+    &.with-rolltype {
+      display: grid;
+      grid-template:
+        "name details" 1.375rem
+        "whisper rolltype" min-content
+        "gap gap" var(--space-4);
+      &.with-image {
+        grid-template:
+          "img gapp name details" 1.375rem
+          "img gapp user rolltype" min-content
+          "gap1 gap1 gap1 gap1" var(--space-6)
+          "whisper whisper whisper whisper" min-content
+          "gap2 gap2 gap2 gap2" var(--space-4)
+          / 2.5rem var(--space-8) 1fr min-content;
+      }
+    }
+
+    .portrait {
+      padding: unset;
+      display: none;
+      &.dorako {
+        display: block;
+        position: relative;
+        svg {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
+    :is(.user, .rolltype, time, .whisper.tag) {
+      align-self: center;
       font-size: var(--font-size-12);
       line-height: 1.2;
+      padding-inline: 4px;
       padding-top: var(--space-2);
+      padding-bottom: var(--space-2);
       text-align: right;
       border-radius: 4px;
       color: black;
       width: fit-content;
-      justify-self: self-end;
-      padding-inline: 4px;
-      box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+      height: fit-content;
+      word-break: keep-all;
+      background: var(--header-color);
+      box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset, 0px 1px 2px 0px black;
+      z-index: 1;
+
       &.whisper {
         background: var(--whisper-bg);
+        // outline: 1px dotted var(--whisper-bg);
+        // box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
+        &.tag {
+          margin-left: 2px;
+        }
       }
-      &.secret {
+      &.blind {
+        // box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5) inset;
         background: rgb(254, 192, 255);
+        // outline: 1px dotted var(--whisper-bg);
       }
+    }
+    .rolltype {
+      grid-area: rolltype;
+      justify-self: self-end;
+    }
+    &:has(.whisper-to) {
+      padding-bottom: 3px;
     }
   }
   &[data-chat-message-color-scheme="dark"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
     background: #e8e8ef16;
-    border-color: var(--visibility-gm-bg);
+    border-color: rgba(75, 74, 68, 0.5);
   }
   &[data-chat-message-color-scheme="light"] > .message-content .dice-roll .dice-result > [data-visibility="gm"] {
-    border-color: var(--visibility-gm-bg);
+    border-color: rgba(75, 74, 68, 0.5);
   }
   h3 {
     color: var(--color-text-dark-primary);
@@ -152,6 +393,10 @@
   }
   h4.action {
     margin-top: 4px;
+  }
+  .tags.modifiers {
+    margin-bottom: 4px;
+    gap: 3px;
   }
 }
 

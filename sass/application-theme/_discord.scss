@@ -159,7 +159,7 @@
   --box-shadow: none;
   --icon-border-color: var(--discord-attention);
   /* Window app variables */
-  --window-app-background: var(--discord-background-3);
+  --window-app-background: color-mix(in oklab, hsl(231.429 calc(1 * 6.542%) 20.98%/1) 100%, #000 0%);
   // --window-app-background: #313338;
   // --window-app-background: #1c1d27;
   --window-app-border-color: #4b4c4f;
@@ -182,8 +182,12 @@
   --dui-input-border-color: transparent;
   --input-disabled-background: #494b51;
   --input-disabled-border-color: transparent;
-  --dui-input-border-color: transparent;
-  --dui-input-background: var(--discord-background-1);
+  --input-border-color: color-mix(
+    in oklab,
+    hsl(240 calc(1 * 4%) 60.784%/0.0392156862745098) 100%,
+    hsl(0 0% 0%/0.0392156862745098) 0%
+  );
+  --input-background: color-mix(in oklab, hsl(232.5 calc(1 * 6.557%) 23.922%/1) 100%, #000 0%);
   --dui-input-focus-outline-color: var(--discord-accent-color);
   --dui-input-placeholder-color: color-mix(in srgb, var(--dui-button-text-color) 50%, transparent);
   /* Button variables */
@@ -202,8 +206,12 @@
   --button-toggle-hover-background: var(--discord-green);
   --button-bright-text-color: white;
   /* Fieldset variables */
-  --fieldset-border-color: transparent;
-  --fieldset-background-color: color-mix(in srgb, var(--discord-attention) 15%, transparent);
+  --fieldset-border-color: color-mix(in oklab, hsl(240 calc(1 * 4%) 60.784%/0.2) 100%, hsl(0 0% 0%/0.2) 0%);
+  --fieldset-background-color: color-mix(
+    in oklab,
+    hsl(234.935 calc(1 * 85.556%) 64.706%/0.0784313725490196) 100%,
+    hsl(0 0% 0%/0.0784313725490196) 0%
+  );
   --fieldset-legend-color: var(--discord-text-4);
   /* Scrollbar and accent variables */
   --scrollbar-thumb-background: #1a1b1e;
@@ -257,7 +265,7 @@
     }
   }
 
-  section.tab.category.active[data-tab="pf2e-dorako-ux"] h2,
+  section.tab.category.active[data-tab="pf2e-dorako-ui"] h2,
   section.tab.category.active[data-tab="pf2e-dorako-ui"] h2,
   section .form-group.dorako.settings-header {
     color: white;
@@ -317,5 +325,19 @@
   &[data-dorako-ui-scope="limited"].sheet.pf2e.actor.npc.app {
     --section-outline-color: var(--section-header);
     --section-border-color: var(--section-header);
+  }
+}
+
+[data-application-theme="discord"].theme-dark [data-theme],
+[data-application-theme="discord"] [data-theme].themed.theme-dark {
+  :is(input, select, textarea):not([type="range"], [type="search"]) {
+    --input-border-color: color-mix(
+      in oklab,
+      hsl(240 calc(1 * 4%) 60.784%/0.0392156862745098) 100%,
+      hsl(0 0% 0%/0.0392156862745098) 0%
+    );
+    --input-background-color: color-mix(in oklab, hsl(232.5 calc(1 * 6.557%) 23.922%/1) 100%, #000 0%);
+    --input-text-color: color-mix(in oklab, hsl(220 calc(1 * 4.918%) 88.039%/1) 100%, #000 0%);
+    --input-placeholder-color: #6d6e77;
   }
 }

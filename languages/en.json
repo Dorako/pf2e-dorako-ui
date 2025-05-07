@@ -82,6 +82,36 @@
           "hint": "Applies to sheets for player characters and vehicles."
         }
       },
+      "avatar": {
+        "name": "Avatar Settings",
+        "label": "Configure Avatar Settings",
+        "hint": "Tweaks for chat-message avatars.",
+        "hide-gm-avatar-when-secret": {
+          "hint": "Hides avatars whenever GM rolls secret/private rolls.",
+          "name": "Hide avatar when secret?"
+        },
+        "hide-avatar-when-token-hidden": {
+          "hint": "Hides avatars when the speaker token is hidden.",
+          "name": "Hide avatar when token is hidden?"
+        },
+        "avatar-reacts-to-degree-of-success": {
+          "hint": "A critical success will glow green, and a critical failure becomes muted and dark.",
+          "name": "Avatar reacts to critical rolls?"
+        },
+        "avatar-source": {
+          "choice": {
+            "actor": "Prefer actor image",
+            "token": "Prefer token image",
+            "system": "System implementation (fallback)"
+          },
+          "hint": "Adds an avatar to chat messages.",
+          "name": "Chat avatars"
+        },
+        "use-user-avatar": {
+          "hint": "Configure user avatars by right-clicking users in the lower left area of Foundry.",
+          "name": "Use user avatar as fallback?"
+        }
+      },
       "misc": {
         "name": "Miscellaneous Settings",
         "label": "Configure Misc. Settings",
@@ -102,6 +132,10 @@
         "custom-css": {
           "name": "Custom CSS",
           "hint": "Write CSS in an external editor and paste it in here."
+        },
+        "chatlog-notify-seconds": {
+          "name": "Chat notification duration",
+          "hint": "Amount of seconds to show new chat messages."
         }
       },
       "external-module": {

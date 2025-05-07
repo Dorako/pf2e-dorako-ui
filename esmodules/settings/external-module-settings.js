@@ -12,7 +12,7 @@ export class ExternalModuleSettings extends SettingsMenuDorakoUI {
       "colorize-idle-hud": {
         name: "pf2e-dorako-ui.settings.external-module.colorize-idle-hud.name",
         hint: "pf2e-dorako-ui.settings.external-module.colorize-idle-hud.hint",
-        scope: "client",
+        scope: "user",
         type: Boolean,
         default: false,
         config: true,

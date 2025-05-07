@@ -2,8 +2,7 @@
 /* Theme colors                              */
 /* ----------------------------------------- */
 @layer variables.themes.specific {
-  [data-interface-theme="bg3"],
-  [data-application-theme="bg3"] {
+  :root {
     --bg3-middle-brown: #9d7b53;
     --bg3-border-color: #5f5244;
     --bg3-background-1: #433c36;
@@ -168,5 +167,37 @@
     --app-border-color: transparent;
     --app-border-width: 2px;
     box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+  }
+}
+
+[data-interface-theme="bg3"] {
+  #tooltip.pf2e.themed,
+  aside.locked-tooltip.pf2e.themed {
+    --color-text-primary: var(--bg3-text-3);
+    --color-text-emphatic: var(--bg3-text-2);
+    background: var(--app-background);
+    border: var(--app-border-width) solid var(--app-border-color);
+    --app-background: var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+    --app-border-color: transparent;
+    --app-border-width: 2px;
+    box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+    margin: 5px;
+  }
+}
+
+[data-interface-theme="dnd5e2"] {
+  #tooltip.pf2e.themed,
+  aside.locked-tooltip.pf2e.themed {
+    background: var(--dnd5e-background-card);
+    // --color-text-primary: darkgray;
+    // --color-text-emphatic: var(--bg3-text-2);
+  }
+  #tooltip.pf2e.themed.theme-dark,
+  aside.locked-tooltip.pf2e.themed.theme-dark {
+    --color-text-primary: darkgray;
+    --color-text-emphatic: var(--dnd5e-color-blue-white);
+    --dnd5e-background-card: var(--dnd5e-color-blue-gray-2);
   }
 }

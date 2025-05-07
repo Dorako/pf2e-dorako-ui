@@ -237,8 +237,9 @@
   color: var(--button-text-color);
   text-decoration: none;
   cursor: var(--cursor-pointer);
-  transition: 0.5s;
-  &:hover {
+  transition: 0.2s; // core foundry is 0.5s
+  &:active,
+  &.active &:hover {
     background: var(--button-hover-background-color);
     color: var(--button-hover-text-color);
     border-color: var(--button-hover-border-color);

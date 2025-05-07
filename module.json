@@ -13,8 +13,8 @@
   ],
   "version": "1.11.3",
   "compatibility": {
-    "minimum": "12",
-    "verified": "12"
+    "minimum": "13",
+    "verified": "13"
   },
   "relationships": {
     "systems": [
@@ -22,31 +22,9 @@
         "id": "pf2e",
         "type": "system",
         "compatibility": {
-          "minimum": "6.0.0",
-          "verified": "6.0.0"
+          "minimum": "7.0.0",
+          "verified": "7.0.0"
         }
-      },
-      {
-        "id": "swade",
-        "type": "system",
-        "compatibility": {
-          "minimum": "2.2.5",
-          "verified": "2.2.5"
-        }
-      },
-      {
-        "id": "dnd5e",
-        "type": "system",
-        "compatibility": {
-          "minimum": "2.2.5",
-          "verified": "9.9.9"
-        }
-      }
-    ],
-    "requires": [
-      {
-        "id": "pf2e-dorako-ux",
-        "type": "module"
       }
     ]
   },

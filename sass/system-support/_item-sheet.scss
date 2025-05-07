@@ -18,9 +18,12 @@
   .tab.active.rules .rule-form {
     border-bottom: unset;
   }
+
   select:not(.tag) {
     @include input;
   }
+
+  textarea,
   input[type="number"],
   input[type="text"] {
     @include input;
@@ -34,5 +37,45 @@
     [data-tab] {
       @include button;
     }
+  }
+
+  .attached-input {
+    .attachment {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    input {
+      border-left: unset;
+    }
+  }
+
+  &.pf2e.item.sheet.spell form .tab.details.active fieldset.heightening .add {
+    gap: 5px;
+  }
+
+  .drop-zone {
+    background: var(--fieldset-background-color);
+    border-color: var(--fieldset-border-color);
+    border-radius: 4px;
+    --color-border-dark: var(--icon-border-color);
+  }
+
+  form > nav > .tabs {
+    gap: 5px;
+    margin: 5px;
+    margin-bottom: 0px;
+    > a {
+      @include button;
+    }
+  }
+
+  .sheet-content button:hover:not(:disabled),
+  .sheet-content button:focus,
+  .sheet-content input:not([type="range"]):hover:not(:disabled),
+  .sheet-content input:not([type="range"]):focus,
+  .sheet-content select:hover:not(:disabled),
+  .sheet-content select:focus {
+    --color-pf-secondary: var(--input-focus-outline-color);
+    transition: box-shadow 0.25s;
   }
 }

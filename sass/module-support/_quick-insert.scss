@@ -1,26 +1,32 @@
-// forced 'theme-dark'
-.quick-insert-app {
-  --qiItemHoverColor: #9979b924;
-  --qiItemSelectedColor: #b3a0c624;
-  --qiItemSelectedHoverColor: #9979b924;
-  --qiActionColor: var(--color-text-light-highlight);
-  --qiActionBgEmphasis: #fff4;
-  --qiActionBgEmphasisStrong: #fff6;
-  --qiBackground: #302831e3;
+// // forced 'theme-dark'
+// .quick-insert-app {
+//   --qiItemHoverColor: #9979b924;
+//   --qiItemSelectedColor: #b3a0c624;
+//   --qiItemSelectedHoverColor: #9979b924;
+//   --qiActionColor: var(--color-text-light-highlight);
+//   --qiActionBgEmphasis: #fff4;
+//   --qiActionBgEmphasisStrong: #fff6;
+//   --qiBackground: #302831e3;
 
-  &.application {
-    --background: var(--color-cool-5-90);
-    --color-text-primary: var(--color-light-2);
-    --color-header-background: rgba(0, 0, 0, 0.5);
-    --color-border: var(--color-cool-4);
-    --color-fieldset-border: var(--color-light-6);
-    --color-form-hint: var(--color-light-5);
-    --color-form-hint-hover: var(--color-light-4);
-    --color-form-label: var(--color-light-4);
-    --color-form-label-hover: var(--color-light-2);
-    --color-select-option-bg: transparent;
-  }
-  .quick-insert-result li span.sub {
-    color: rgba(255, 255, 255, 0.4);
-  }
+//   &.application {
+//     --background: var(--color-cool-5-90);
+//     --color-text-primary: var(--color-light-2);
+//     --color-header-background: rgba(0, 0, 0, 0.5);
+//     --color-border: var(--color-cool-4);
+//     --color-fieldset-border: var(--color-light-6);
+//     --color-form-hint: var(--color-light-5);
+//     --color-form-hint-hover: var(--color-light-4);
+//     --color-form-label: var(--color-light-4);
+//     --color-form-label-hover: var(--color-light-2);
+//     --color-select-option-bg: transparent;
+//   }
+//   .quick-insert-result li span.sub {
+//     color: rgba(255, 255, 255, 0.4);
+//   }
+// }
+
+.quick-insert-result li {
+  border-radius: 0px;
+  border-left: unset;
+  border-right: unset;
 }

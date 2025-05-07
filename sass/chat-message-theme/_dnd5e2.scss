@@ -8,21 +8,29 @@
 
   &[data-chat-message-color-scheme="light"] {
     background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f1ebe8;
+      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    background-color: #f1ebe8;
+    // background-blend-mode: multiply;
     --color-text-dark-primary: black;
     --color-text-dark-secondary: color-mix(in srgb, var(--color-text-dark-primary) 70%, transparent);
   }
 
   &.whisper[data-chat-message-color-scheme="light"] {
     background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #c7c7f4;
-    border-color: #e3e3ff;
+      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    background-color: #e1e1fe;
+    background-blend-mode: screen;
+
+    --window-app-border-color: #e3e3ff;
   }
 
   &.blind[data-chat-message-color-scheme="light"] {
     background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f4c2f4;
-    border-color: #a57aa5;
+      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    background-color: #f4c2f4;
+    background-blend-mode: screen;
+
+    --window-app-border-color: #a57aa5;
   }
 
   &[data-chat-message-color-scheme="dark"] {
@@ -33,12 +41,13 @@
 
   &.whisper[data-chat-message-color-scheme="dark"] {
     background: #2b2b4e url(../../../ui/denim075.png);
-    border-color: #7b7b8c;
+    --window-app-border-color: #7b7b8c;
+    // border-color: #7b7b8c;
   }
 
   &.blind[data-chat-message-color-scheme="dark"] {
     background: var(--dnd5e-color-sc-1) url(../../../ui/denim075.png);
-    border-color: var(--dnd5e-color-sc-2);
+    --window-app-border-color: var(--dnd5e-color-sc-2);
   }
 
   > header {
@@ -72,19 +81,6 @@
     --button-hover-text-color: var(--color-text-dark-primary);
     --button-hover-border-color: var(--dnd5e-color-gold);
   }
-
-  //   .message-header .header-meta {
-  //     &.whisper {
-  //       background-color: var(--dnd5e-color-blue);
-  //       border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
-  //       color: white;
-  //     }
-  //     &.blind {
-  //       background-color: var(--dnd5e-color-sc-2);
-  //       border-color: color-mix(in srgb, var(--dnd5e-color-groove) 100%, rgba(255, 255, 255, 0.5));
-  //       color: white;
-  //     }
-  //   }
 
   button[data-action="shield-block"]:hover,
   .damage-application button[data-action="shield-block"].shield-activated,

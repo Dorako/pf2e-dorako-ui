@@ -96,7 +96,7 @@
       border-end-start-radius: 4px;
       border-start-end-radius: 4px;
       border-end-end-radius: 4px;
-      // background: var(--control-bg-color);
+      flex: unset; // avoids shadow stretching
 
       .ui-control {
         box-shadow: unset;
@@ -153,6 +153,20 @@
 /* Navigation                                */
 /* ----------------------------------------- */
 
+#scene-navigation .scene-navigation-menu .scene:hover .scene-name {
+  text-shadow: inherit;
+}
+
+#scene-navigation .scene-navigation-menu .scene.gm {
+  border-color: purple;
+  // background: #1b17229c;
+  &::after {
+    border-color: rgb(194, 3, 194);
+    color: purple;
+    opacity: 1;
+  }
+}
+
 /* ----------------------------------------- */
 /* Scene Controls                            */
 /* ----------------------------------------- */
@@ -178,12 +192,37 @@
 [data-interface-theme] {
   #players #players-active,
   #players #players-inactive {
-    // --background-color: var(--control-bg-color);
+    background: var(--control-bg-color);
     border-radius: 4px;
     box-shadow: var(--control-box-shadow);
     border: 1px solid var(--control-border-color);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+  }
+  #players .player {
+    --player-name-color: var(--control-icon-color);
+  }
+  #players .player .player-name {
+    color: var(--player-name-color);
+  }
+  #players .player::before {
+    background: var(--player-color);
+    border: 1px solid var(--player-border);
+    border-radius: 100%;
+  }
+  #players #performance-stats {
+    color: var(--control-icon-color);
+  }
+  #players #performance-stats button {
+    color: var(--control-icon-color);
+  }
+  &[data-interface-color-scheme="light"] {
+    #players {
+      text-shadow: var(--control-text-shadow);
+    }
+    #players #performance-stats .average,
+    #players .player.active .player-name {
+      text-shadow: 0px 1px 1px rgba(255, 255, 255, 50%);
+    }
   }
 }
 
@@ -195,7 +234,7 @@
   #hotbar {
     --slot-color: var(--control-bg-color);
     .slot {
-      border-radius: 100%;
+      // border-radius: 100%;
       box-shadow: var(--control-box-shadow);
       border: 2px solid var(--control-border-color);
       transition: box-shadow 0.25s, background 0.25s, border 0.25s, color 0.25s;
@@ -204,13 +243,13 @@
         --slot-color: var(--control-active-bg-color);
       }
       img {
-        border-radius: 100%;
+        // border-radius: 100%;
       }
       .key {
-        border-radius: 100% 0 8px 0;
-        width: 25px;
-        text-align: end;
-        padding-right: 5px;
+        // border-radius: 100% 0 8px 0;
+        // width: 25px;
+        // text-align: end;
+        // padding-right: 5px;
       }
     }
   }
@@ -219,18 +258,6 @@
 /* ----------------------------------------- */
 /* Sidebar                                   */
 /* ----------------------------------------- */
-
-// #sidebar {
-//   flex-direction: column;
-// }
-// #sidebar-tabs {
-//   position: fixed;
-//   z-index: 1;
-//   padding: unset;
-//   > menu {
-//     scale: 0.5;
-//   }
-// }
 
 @layer compatibility {
   [data-interface-theme] {
@@ -262,11 +289,13 @@
 }
 [data-interface-theme][data-interface-color-scheme="light"] {
   .sidebar-tab {
+    --sidebar-separator: 1px solid transparent;
     --sidebar-background: rgba(255, 255, 255, 0.4);
   }
 }
 [data-interface-theme][data-interface-color-scheme="dark"] {
   .sidebar-tab {
+    --sidebar-separator: 1px solid transparent;
     --sidebar-background: rgba(0, 0, 0, 0.5);
   }
 }
@@ -283,15 +312,15 @@
 }
 
 @layer blocks.base {
-  #sidebar-content {
-    :is(section.sidebar:not(#chat), section.sidebar-tab:not(#chat)) :is(a.button, button) {
-      --button-text-color: var(--color-light-2);
-      --button-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.9);
-      --button-border-color: #353535aa;
-      --button-hover-border-color: #252525aa;
-      --button-background-color: #252525cc;
-      --button-hover-background-color: #101010ff;
-    }
+  :is(.app):not(.sheet),
+  #sidebar-content :is(section.sidebar:not(#chat), section.sidebar-tab:not(#chat)) :is(a.button, button) {
+    --button-text-color: var(--color-light-2);
+    --button-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.9);
+    --button-border-color: #353535aa;
+    --button-hover-border-color: #252525aa;
+    --button-background-color: #252525cc;
+    --button-hover-background-color: #101010ff;
+    --button-hover-text-color: var(--color-light-1);
   }
 }
 
@@ -300,6 +329,7 @@
     --button-box-shadow: unset;
     --button-hover-background-color: rgb(86, 86, 86);
     --button-hover-border-color: #252525cc;
+    --button-text-color: var(--color-text-subtle);
   }
   li.folder > .folder-header .create-button {
     --button-box-shadow: unset;

@@ -3,6 +3,7 @@
 @import "effects-panel";
 @import "item-sheet";
 @import "chat-message";
+@import "pc-sheet-theme";
 
 @layer dorako-ui {
   [data-theme] {
@@ -59,27 +60,45 @@
       border-color: var(--color-text-dark-primary);
       outline-color: var(--color-text-dark-primary);
       box-shadow: inset 0 0 0 1px var(--color-text-dark-primary);
-      background-color: transparent;
+      //   background-color: transparent;
       padding: 0.09375rem 0.1875rem;
       font-size: var(--font-size-8);
     }
-    &[data-visibility="gm"] {
-      background-color: #e8e8ef16;
-    }
   }
+}
+
+[data-chat-message-color-scheme="light"] [data-visibility="gm"]:not(.dice-result > *),
+[data-chat-message-color-scheme="light"] .tag_transparent[data-visibility="gm"] {
+  background: var(--visibility-gm-bg);
+  background: #e8e8ef92;
 }
 
 [data-visibility="gm"]:not(.dice-result > *) {
   border: unset !important;
   box-shadow: unset !important;
-  outline-color: var(--visibility-gm-bg);
+  outline: 1px dotted rgba(75, 74, 68, 0.5) !important;
   background-color: #e8e8ef16;
   //   color: black;
+}
+.theme-light [data-theme],
+[data-chat-message-theme][data-chat-message-color-scheme="light"] {
+  :is(a.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]) {
+    background: var(--content-link-background);
+    border: 1px solid var(--content-link-border-color);
+    color: var(--content-link-text-color);
+    > i {
+      color: var(--content-link-icon-color);
+    }
+  }
 }
 
 .theme-dark [data-theme],
 [data-chat-message-theme][data-chat-message-color-scheme="dark"] {
-  :is(.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]) {
+  --content-link-background: var(--color-cool-5-90);
+  --content-link-border-color: var(--color-light-6);
+  --content-link-icon-color: var(--color-light-4);
+  --content-link-text-color: var(--color-light-2);
+  :is(a.inline-check, .content-link, .inline-roll, [data-pf2-action], [data-pf2-effect-area], [data-pf2-check]) {
     background: var(--content-link-background);
     border: 1px solid var(--content-link-border-color);
     color: var(--content-link-text-color);
@@ -98,13 +117,40 @@ span[data-pf2-action][data-pf2-glyph]::before {
   color: var(--content-link-icon-color);
 }
 
-:is(.theme-dark, .theme-dark.themed) i[data-pf2-repost] {
+:is(.theme-dark, .theme-dark.themed, [data-chat-message-color-scheme="dark"]) i[data-pf2-repost] {
   background: rgba(122, 122, 122, 0.6);
-  border-left-color: var(--content-link-border-color);
+  border-left: 1px solid var(--content-link-border-color);
+  &:hover {
+    background: var(--content-link-border-color);
+  }
 }
 
 .sheet a:is(.add-gm-notes, .editor-edit) {
   background: var(--content-link-background);
   border: 1px solid var(--content-link-border-color);
   color: var(--content-link-text-color);
+}
+
+.compendium-browser .headercontainer {
+  border: unset;
+}
+
+#world-clock {
+  select,
+  input {
+    @include input;
+  }
+  button {
+    @include button;
+  }
+}
+
+.theme-dark #world-clock {
+  button img {
+    filter: invert(1);
+  }
+}
+
+.themed.theme-dark .chat-message {
+  --visibility-gm-bg: #e8e8ef;
 }

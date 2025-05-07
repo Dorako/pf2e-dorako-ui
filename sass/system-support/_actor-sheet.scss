@@ -27,6 +27,7 @@ button.use-action:not(:disabled) {
     text-shadow: 0px 0px 0px gray;
   }
 
+  .item-summary,
   ul.option-toggles,
   .attributes .modifier,
   .proficiencies-list li {
@@ -43,18 +44,19 @@ button.use-action:not(:disabled) {
 }
 
 // Also affects vehicle sheet
-.theme-dark .crb-style .sheet-body {
-  --primary: var(--dnd5e-color-red);
-  --color-pf-primary: var(--dnd5e-color-red);
-  --color-pf-primary-dark: darkred; // underlines
+.theme-dark :is(.sheet-content, .container) {
+  --primary: wheat;
+  --color-pf-primary: wheat;
+  --color-pf-primary-dark: var(--dnd5e-color-gold); // underlines
   --color-pf-secondary: var(--dnd5e-color-blue);
   --secondary: var(--dnd5e-color-blue);
-  --text-dark: white;
+  --text-dark: var(--color-text-primary);
   --color-text-primary: white;
   --color-text-dark-4: gray; // disabled
-  --color-pf-alternate-dark: brown; //speeds
+  --color-pf-alternate-dark: var(--color-text-secondary); //speeds
 
   // reset
+  .health-bar .bar,
   .sub-nav,
   .spellcasting .action-header {
     --primary: var(--system-primary);
@@ -70,9 +72,27 @@ button.use-action:not(:disabled) {
   }
 }
 
+.actor.sheet.character button.activate,
+.actor.sheet.character button.activate:hover {
+  @include button;
+}
+
+.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+  border-image: linear-gradient(90deg, transparent, wheat) 1;
+}
+
+.theme-dark [data-theme].actor.sheet.character .toggles button.selected {
+  --bg-dark: black;
+}
+
+.theme-dark [data-theme].actor.sheet.character .alt-usage-icon[src$="svg"] {
+  filter: invert(1);
+}
+
 .sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) {
   .window-header {
-    background: var(--header-bg-color);
+    background: var(--theme-color, var(--header-bg-color, transparent));
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     color: var(--header-text-color);

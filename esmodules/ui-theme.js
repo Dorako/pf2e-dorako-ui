@@ -8,7 +8,7 @@ import {
   appV2Apps,
   frameworks,
 } from "./consts.js";
-import { isPremiumApplication } from "./premium-module-hooks.js";
+// import { isPremiumApplication } from "./premium-module-hooks.js";
 import { getPlayerOwners } from "./util.js";
 
 export function lookupThemeAndSchemeForKey(key) {
@@ -391,33 +391,33 @@ Hooks.on("render" + "ChatMessage", (app, html, data) => {
   if (footer) html[0].dataset.hasFooter = "";
 });
 
-for (const appName of ["ChatLogPF2e", "VCEChatLog"]) {
-  Hooks.on("render" + appName, (app, html, data) => {
-    const theme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
-    if (theme === "no-theme") return;
-    app.element[0].dataset.chatInterfaceTheme = theme;
-  });
-}
+// for (const appName of ["ChatLogPF2e", "VCEChatLog"]) {
+//   Hooks.on("render" + appName, (app, html, data) => {
+//     const theme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
+//     if (theme === "no-theme") return;
+//     app.element[0].dataset.chatInterfaceTheme = theme;
+//   });
+// }
 
-Hooks.on("render" + "Sidebar", (app, html, data) => {
-  const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
-  const excludeList = excludeString.split(/[\s,]+/);
-  if (excludeList.includes(app.constructor.name)) {
-    console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string`);
-    return;
-  }
+// Hooks.on("render" + "Sidebar", (app, html, data) => {
+//   const excludeString = game.settings.get("pf2e-dorako-ui", "customization.excluded-applications");
+//   const excludeList = excludeString.split(/[\s,]+/);
+//   if (excludeList.includes(app.constructor.name)) {
+//     console.debug(`${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string`);
+//     return;
+//   }
 
-  // $("#sidebar-tabs").attr("data-theme", "");
-  app.element[0].dataset.dorakoUiScope = "sidebar";
-});
+//   // $("#sidebar-tabs").attr("data-theme", "");
+//   app.element[0].dataset.dorakoUiScope = "sidebar";
+// });
 
-Hooks.once("renderPinCushionHUD", () => {
-  const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
-  if (applicationTheme !== "no-theme") {
-    const uiTheme = lookupThemeAndSchemeForKey(applicationTheme);
-    const { dorakoUiTheme, colorScheme } = uiTheme;
-    if (uiTheme) {
-      $("#powerTip").attr("data-theme", dorakoUiTheme);
-    }
-  }
-});
+// Hooks.once("renderPinCushionHUD", () => {
+//   const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
+//   if (applicationTheme !== "no-theme") {
+//     const uiTheme = lookupThemeAndSchemeForKey(applicationTheme);
+//     const { dorakoUiTheme, colorScheme } = uiTheme;
+//     if (uiTheme) {
+//       $("#powerTip").attr("data-theme", dorakoUiTheme);
+//     }
+//   }
+// });

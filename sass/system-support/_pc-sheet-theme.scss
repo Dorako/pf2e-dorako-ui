@@ -1,0 +1,347 @@
+/* ----------------------------------------- */
+/* PC Sheet Theme                            */
+/* ----------------------------------------- */
+[data-theme][data-theme-color] {
+  --ornamentation: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='33' overflow='scroll'%3E%3Cstyle%3E.st1%7Bstroke:%23231f20;stroke-miterlimit:10%7D.st1,.st2%7Bfill:none%7D%3C/style%3E%3Cg opacity='.25'%3E%3Cpath class='st1' d='M.5 20v-7'/%3E%3Cpath class='st2' d='M13 20v-7'/%3E%3Cpath class='st1' d='M13 .5h7'/%3E%3Cpath class='st2' d='M13 13h7'/%3E%3Cpath class='st1' d='M32.5 13v7'/%3E%3Cpath class='st2' d='M20 13v7'/%3E%3Cpath class='st1' d='M20 32.5h-7'/%3E%3Cpath class='st2' d='M20 20h-7'/%3E%3Cg%3E%3Cpath class='st1' d='M.5.5h3.1v3.1H.5zM3.6 3.6h3.1v3.1H3.6zM6.8 3.6h3.1v3.1H6.8zM3.6 6.8h3.1v3.1H3.6zM3.6 6.8H.5V13M13 .5H6.8v3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.4.5h3.1v3.1h-3.1zM26.3 3.6h3.1v3.1h-3.1zM26.3 6.8h3.1v3.1h-3.1zM23.1 3.6h3.1v3.1h-3.1zM26.3 3.6V.5H20'/%3E%3Cpath class='st1' d='M32.5 13V6.8h-3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M29.4 29.4h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M26.3 26.3h3.1v3.1h-3.1zM23.1 26.3h3.1v3.1h-3.1zM26.3 23.1h3.1v3.1h-3.1z'/%3E%3Cpath class='st1' d='M29.4 26.3h3.1V20M20 32.5h6.3v-3.1'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st1' d='M.5 29.4h3.1v3.1H.5zM3.6 26.3h3.1v3.1H3.6zM3.6 23.1h3.1v3.1H3.6zM6.8 26.3h3.1v3.1H6.8z'/%3E%3Cpath class='st1' d='M6.8 29.4v3.1H13M.5 20v6.3h3.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  &.actor.sheet .crb-style .sheet-body .sheet-content ol.directory-list .action-header {
+    background: var(--theme-color);
+  }
+  &.actor.sheet .inventory .container-metadata .container-capacity .container-capacity-bar,
+  &.actor.sheet .inventory .encumbrance .encumbrance-bar {
+    background: var(--theme-color);
+  }
+  &.actor.sheet .inventory .encumbrance.over-limit .encumbrance-bar {
+    background: var(--theme-text-color) !important; // system important
+  }
+  &.actor.sheet .blue-button {
+    background: var(--theme-text-color) !important;
+  }
+
+  // Vehicle Sheet
+  &.actor.sheet .crb-style .stroke-header svg {
+    fill: none;
+  }
+}
+
+[data-theme] {
+  &.actor.sheet.vehicle[data-theme-color],
+  &.actor.sheet.character[data-theme-color] {
+    .crb-style aside .sidebar header button {
+      color: var(--theme-color-dark);
+      // border-bottom: none;
+    }
+    .crb-style aside select {
+      background: rgb(from var(--theme-color) (r g b) / 50%);
+    }
+    .crb-style .sheet-body .sheet-content ol.spell-list > li .item-summary,
+    .window-content .inventory ul.items > li .item-summary,
+    .inventory .item-summary {
+      background: color-mix(in srgb, var(--theme-color) 25%, transparent);
+    }
+    .crb-style aside {
+      .logo {
+        filter: grayscale(0.6);
+      }
+      .sidebar {
+        .hitpoints .hp-big .container.current-hp {
+          background-image: linear-gradient(
+            90deg,
+            rgb(from var(--theme-color) (r g b) / 25%) 0%,
+            rgb(from var(--theme-color) (r g b) / 50%) 40%,
+            rgb(from var(--theme-color) (r g b) / 50%) 60%,
+            rgb(from var(--theme-color) (r g b) / 25%) 100%
+          );
+          background-color: transparent;
+        }
+      }
+    }
+    nav.sheet-navigation {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--theme-text-color);
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="player-color"],
+  &.actor.sheet.character[data-theme-color="player-color"] {
+    --theme-color-dark: var(--player-tone-light);
+    --theme-color: var(--player-color);
+    --theme-text-color: var(--player-color);
+    --color-scrollbar-hover: var(--theme-text-color);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
+
+    aside {
+      --sidebar-label: var(--text-color);
+      --sidebar-title: var(--player-tone-light);
+      --text-light: white;
+      --color-pf-primary-dark: black; // Shield text color
+
+      --color-pf-tertiary-light: var(--player-tone-light);
+      --color-pf-tertiary: var(--player-tone-plain);
+      --color-pf-tertiary-dark: var(--player-tone-dark);
+      --color-pf-tertiary-darker: var(--player-tone-darker);
+      --color-pf-tertiary-darkest: var(--player-tone-darkest);
+      margin-left: unset !important;
+      padding-left: 8px;
+      .logo {
+        width: 16rem !important;
+        position: absolute;
+        top: 10px;
+        left: -8px;
+        z-index: 1;
+      }
+      .sidebar {
+        margin-top: 35px;
+        margin-bottom: 0.5rem !important;
+        padding-left: 0 !important;
+      }
+    }
+
+    .char-header,
+    .sheet-navigation {
+      --text-light: var(--text-color);
+      .panel-title {
+        // --text-light: var(--player-tone-plain);
+      }
+    }
+
+    aside .sidebar .armor-class .ac,
+    aside .sidebar .armor-class .shield.hp,
+    section.window-content .crb-style .pf-rank {
+      color: var(--color-text-trait);
+      --text-light: var(--color-text-trait);
+      --color-pf-tertiary: var(--color-text-trait);
+      --sidebar-label: var(--color-text-trait);
+    }
+
+    header.char-header .dots .label {
+      --sidebar-label: var(--sidebar-label);
+    }
+
+    header.char-header .level {
+      --text-light: var(--color-text-trait);
+    }
+
+    .crb-style aside .sidebar header button {
+      background: rgb(from var(--sidebar-title) (r g b) / 20%);
+    }
+
+    section.window-content .crb-style aside .sidebar .armor-class .shield-stats ul li .data-value,
+    section.window-content .crb-style aside select {
+      border: 1px solid var(--player-tone-darkest);
+      border-radius: var(--border-radius);
+    }
+
+    &[data-theme][data-dorako-ui-scope="limited"].actor.sheet.vehicle .crb-style,
+    &[data-theme][data-dorako-ui-scope="limited"].actor.sheet.character .crb-style {
+      // this is crap
+      background: linear-gradient(to bottom, var(--player-color) calc(100% + 50px), transparent 100%) !important;
+      background-repeat: repeat-x, no-repeat !important;
+      background-size: auto 89px, cover !important;
+      background-attachment: local !important;
+    }
+
+    .crb-style {
+      aside {
+        background-image: url("../img/bw-sidebar-top.webp");
+        background-position: center 100%;
+        background-size: 14.3rem 100%;
+        background-blend-mode: overlay !important;
+        background-color: var(--player-color) !important;
+        border-bottom-left-radius: var(--border-radius);
+
+        // background: var(--player-color);
+        // background: none;
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          // background-image: url("../img/blue-nav-item.webp");
+          background: var(--player-color);
+        }
+      }
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="red"],
+  &.actor.sheet.character[data-theme-color="red"] {
+    --theme-text-color: var(--primary-light);
+    --theme-color: var(--primary);
+    --theme-color-dark: var(--primary-dark);
+
+    .crb-style {
+      --header: url("../img/red-header.webp");
+      background-image: url("../img/red-header.webp");
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="blue"],
+  &.actor.sheet.character[data-theme-color="blue"] {
+    --scrollbar-thumb-background: var(--secondary-light);
+    --scrollbar-thumb-border-color: var(--tertiary);
+    --color-scrollbar-hover: var(--theme-text-color);
+    --theme-color-dark: var(--secondary-dark);
+    --theme-color: var(--secondary);
+    --theme-text-color: var(--secondary-light);
+    .crb-style {
+      --header: url("../img/blue-header.webp");
+      background-image: url("../img/blue-header.webp");
+
+      aside {
+        background-image: url("../img/blue-sidebar-top.webp"), url("../img/blue-sidebar-bottom.webp");
+        .sidebar {
+          .armor-class .shield.hp {
+            background: url("../img/blue-shield.webp") no-repeat top center;
+          }
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          background-image: url("../img/blue-nav-item.webp");
+        }
+      }
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="green"],
+  &.actor.sheet.character[data-theme-color="green"] {
+    --scrollbar-thumb-background: var(--remaster-light);
+    --scrollbar-thumb-border-color: var(--tertiary);
+    --color-scrollbar-hover: var(--theme-text-color);
+    --theme-color-dark: var(--remaster-dark);
+    --theme-color: var(--remaster);
+    --theme-text-color: var(--remaster-light);
+    .crb-style {
+      --header: url("../img/green-header.webp");
+      background-image: url("../img/green-header.webp");
+
+      aside {
+        background-image: url("../img/green-sidebar-top.webp"), url("../img/green-sidebar-bottom.webp");
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+    }
+
+    header.char-header .char-level .level {
+      background: url("../img/blue-level-badge.webp") no-repeat;
+    }
+
+    nav.sheet-navigation {
+      .item:hover,
+      .item.active {
+        background-image: url("../img/green-nav-item.webp");
+      }
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="purple"],
+  &.actor.sheet.character[data-theme-color="purple"] {
+    --theme-color-dark: #3b0062;
+    --theme-color: #520982;
+    --theme-text-color: rgb(107, 29, 137);
+    --color-scrollbar-hover: var(--theme-text-color);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
+    .crb-style {
+      --header: url("../img/purple-header.webp");
+      background-image: url("../img/purple-header.webp");
+
+      aside {
+        background-image: url("../img/purple-sidebar-top.webp"), url("../img/purple-sidebar-bottom.webp");
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          background-image: url("../img/blue-nav-item.webp");
+        }
+      }
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="black"],
+  &.actor.sheet.character[data-theme-color="black"] {
+    --theme-color-dark: black;
+    --theme-color: #111;
+    --theme-text-color: #222;
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
+    --color-scrollbar-hover: var(--theme-text-color);
+    .crb-style {
+      --header: url("../img/black-header.webp");
+      background-image: url("../img/black-header.webp");
+
+      aside {
+        background-image: url("../img/black-sidebar-top.webp"), url("../img/black-sidebar-bottom.webp");
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          background-image: url("../img/blue-nav-item.webp");
+        }
+      }
+    }
+  }
+
+  &.actor.sheet.vehicle[data-theme-color="brown"],
+  &.actor.sheet.character[data-theme-color="brown"] {
+    --theme-color-dark: #5f2f0d;
+    --theme-color: #8b4513;
+    --theme-text-color: #8b4513;
+    --color-scrollbar-hover: var(--theme-text-color);
+    --scrollbar-thumb-background: var(--theme-color);
+    --scrollbar-thumb-border-color: var(--tertiary);
+    .crb-style {
+      --header: url("../img/brown-header.webp");
+      background-image: url("../img/brown-header.webp");
+
+      aside {
+        background-image: url("../img/brown-sidebar-top.webp"), url("../img/brown-sidebar-bottom.webp");
+        .armor-class .shield.hp {
+          background: url("../img/blue-shield.webp") no-repeat top center;
+        }
+      }
+
+      header.char-header .char-level .level {
+        background: url("../img/blue-level-badge.webp") no-repeat;
+      }
+
+      nav.sheet-navigation {
+        .item:hover,
+        .item.active {
+          background-image: url("../img/brown-nav-item.webp");
+        }
+      }
+    }
+  }
+}

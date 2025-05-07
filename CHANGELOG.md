@@ -1,3 +1,7 @@
+# 4.0.0
+
+- (Overhaul) Initial support for FVTT v13.
+
 # 3.7.19
 
 - (Maintenance) Updated styling for Quick Insert.

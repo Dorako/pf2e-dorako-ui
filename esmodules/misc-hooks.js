@@ -3,6 +3,7 @@ import { lookupThemeAndSchemeForKey } from "./ui-theme.js";
 import { i18n, debug, warn } from "./util.js";
 
 Hooks.once("ready", () => {
+  ChatLog.NOTIFY_DURATION = game.settings.get("pf2e-dorako-ui", "customization.chatlog-notify-seconds") * 1000;
   const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   const interfaceTheme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
   const coreColorScheme = game.settings.get("core", "uiConfig")?.colorScheme;
@@ -45,23 +46,22 @@ for (const appName of [...systemSheets]) {
 }
 
 Hooks.once("ready", () => {
-  if (!game.modules.get("pf2e-dorako-ux")) return;
-  if (game.modules.get("pf2e-dorako-ux")?.active) return;
-  if (!game.user.isGM) return;
-  new Dialog({
-    title: "Dorako UX is not active!",
-    content: `
-      <p>Dorako UI is dependant on the module Dorako UX.</p>
-      <p>It's probably already installed, but not enabled.</p>
-      <p>Go to Manage Modules and enable it, hit Save Module Settings, and reload.</p>`,
-    buttons: {
-      OK: {
-        label: "OK",
-        callback: () => {},
+  if (game.user.isGM && game.modules.get("pf2e-dorako-ux")?.active) {
+    new Dialog({
+      title: "Dorako UX is active!",
+      content: `
+        <p>Dorako UX is not supported for FVTT v13+.</p>
+        <p>Go ahead and uninstall it.</p>
+        <p>For radial effects HUD, use PF2e Effects Halo.</p>`,
+      buttons: {
+        OK: {
+          label: "OK",
+          callback: () => {},
+        },
       },
-    },
-    default: "OK",
-  }).render(true);
+      default: "OK",
+    }).render(true);
+  }
 });
 
 Hooks.once("ready", () => {
@@ -215,6 +215,18 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
         `</legend>` +
         `<p class="hint">` +
         i18n("pf2e-dorako-ui.settings.theme.hint") +
+        `</p>` +
+        `</fieldset>`
+    );
+  document
+    .querySelector(`[for="settings-config-pf2e-dorako-ui.avatar.source"]`)
+    .parentElement.parentElement.insertAdjacentHTML(
+      "beforebegin",
+      `<hr/><fieldset><legend>` +
+        i18n("pf2e-dorako-ui.settings.avatar.name") +
+        `</legend>` +
+        `<p class="hint">` +
+        i18n("pf2e-dorako-ui.settings.avatar.hint") +
         `</p>` +
         `</fieldset>`
     );

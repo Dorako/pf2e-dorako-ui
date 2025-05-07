@@ -71,8 +71,8 @@
 // System remapping
 [data-chat-message-theme="dnd5e2"] .tags:not(.paizo-style),
 :is([data-application-theme="dnd5e2"]) [data-theme] .tags:not(.paizo-style) {
-  --color-bg-trait: var(--dnd5e-color-red);
-  --color-bg-size: var(--dnd5e-color-green);
+  // --color-bg-trait: var(--dnd5e-color-red);
+  // --color-bg-size: var(--dnd5e-color-green);
 }
 
 @layer blocks.base {
