@@ -2867,55 +2867,55 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   border: none;
 }
 
-[data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
-[data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
-[data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary {
+.theme-dark [data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
+.theme-dark [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary,
+.theme-dark [data-theme].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Extreme-color-primary {
   color: #6cd8ff !important;
 }
-[data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary,
-[data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary,
-[data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary {
+.theme-dark [data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary,
+.theme-dark [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary,
+.theme-dark [data-theme].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-High-color-primary {
   color: #3cff00 !important;
 }
-[data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary,
-[data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary,
-[data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary {
+.theme-dark [data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary,
+.theme-dark [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary,
+.theme-dark [data-theme].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Moderate-color-primary {
   color: #ffff54 !important;
 }
-[data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary,
-[data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary,
-[data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary {
+.theme-dark [data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary,
+.theme-dark [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary,
+.theme-dark [data-theme].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Low-color-primary {
   color: #ff8000 !important;
 }
-[data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
-[data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
-[data-theme][data-color-scheme=dark].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary {
+.theme-dark [data-theme=bg3].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
+.theme-dark [data-theme=foundry2].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary,
+.theme-dark [data-theme].dorako-ux.sheet.pf2e.actor.npc .pf2e-see-simple-scale-statistics-Terrible-color-primary {
   color: #ff0000 !important;
 }
 
-[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary,
-[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary,
-[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary {
+.theme-light [data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary,
+.theme-light [data-theme^=dnd5e2].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary,
+.theme-light [data-theme^=crb].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Extreme-color-primary {
   color: #6cd8ff !important;
 }
-[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary,
-[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary,
-[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary {
+.theme-light [data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary,
+.theme-light [data-theme^=dnd5e2].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary,
+.theme-light [data-theme^=crb].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-High-color-primary {
   color: #3cff00 !important;
 }
-[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary,
-[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary,
-[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary {
+.theme-light [data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary,
+.theme-light [data-theme^=dnd5e2].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary,
+.theme-light [data-theme^=crb].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Moderate-color-primary {
   color: #ffff54 !important;
 }
-[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary,
-[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary,
-[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary {
+.theme-light [data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary,
+.theme-light [data-theme^=dnd5e2].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary,
+.theme-light [data-theme^=crb].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Low-color-primary {
   color: #ff8000 !important;
 }
-[data-theme^=discord][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary,
-[data-theme^=dnd5e2][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary,
-[data-theme^=crb][data-color-scheme=light].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
+.theme-light [data-theme^=discord].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary,
+.theme-light [data-theme^=dnd5e2].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary,
+.theme-light [data-theme^=crb].dorako-ux.sheet.pf2e.actor.npc .sidebar header .pf2e-see-simple-scale-statistics-Terrible-color-primary {
   color: #ff0000 !important;
 }
 
@@ -4475,49 +4475,104 @@ html .xdy-pf2e-workbench-rarity-unique {
   border-radius: var(--border-radius);
 }
 
-.actor.sheet.character aside .sidebar input:disabled {
+[data-theme].actor.sheet.character aside .sidebar input:disabled {
   background: transparent !important;
 }
-
-.actor.sheet section.window-content form.crb-style {
+[data-theme].actor.sheet section.window-content form.crb-style {
   background: url("/systems/pf2e/assets/sheet/header.webp"), transparent;
   background-repeat: repeat-x, no-repeat;
   background-size: auto 5.625rem, cover;
   background-attachment: local;
 }
-
-.actor.sheet.character :is(li, ol) > div {
+[data-theme].actor.sheet.character :is(li, ol) > div {
   border-color: transparent;
 }
-
-button.use-action:not(:disabled) {
+[data-theme].actor.sheet ol.actions-list li.action button.use-action:not(:disabled), [data-theme].actor.sheet ol.actions-list li.strike button.use-action:not(:disabled) {
   color: black;
 }
-
-.actor.sheet.character .d20-svg path {
+[data-theme].actor.sheet.character .d20-svg path {
   fill: white;
 }
-.actor.sheet.character .item-carry-type {
+[data-theme].actor.sheet.character .item-carry-type {
   text-shadow: 0px 0px 0px gray;
 }
-.actor.sheet.character .item-summary,
-.actor.sheet.character ul.option-toggles,
-.actor.sheet.character .attributes .modifier,
-.actor.sheet.character .proficiencies-list li {
+[data-theme].actor.sheet.character .crafting-options,
+[data-theme].actor.sheet.character .item-summary,
+[data-theme].actor.sheet.character ul.option-toggles,
+[data-theme].actor.sheet.character .attributes .modifier,
+[data-theme].actor.sheet.character .proficiencies-list li {
   border-image-repeat: repeat;
   border-image-slice: 11;
   border-image-source: var(--ornamentation);
   border-image-width: 14px;
   border-style: double;
 }
-.actor.sheet.character .item-summary a.d20,
-.actor.sheet.character ul.option-toggles a.d20,
-.actor.sheet.character .attributes .modifier a.d20,
-.actor.sheet.character .proficiencies-list li a.d20 {
+[data-theme].actor.sheet.character .crafting-options a.d20,
+[data-theme].actor.sheet.character .item-summary a.d20,
+[data-theme].actor.sheet.character ul.option-toggles a.d20,
+[data-theme].actor.sheet.character .attributes .modifier a.d20,
+[data-theme].actor.sheet.character .proficiencies-list li a.d20 {
   filter: drop-shadow(0 0 1px var(--color-shadow-dark)) drop-shadow(0 0 3px var(--color-text-dark-4));
 }
+[data-theme].actor.sheet.character button.activate, [data-theme].actor.sheet.character button.activate:hover {
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  box-shadow: var(--button-box-shadow);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  text-decoration: none;
+  cursor: var(--cursor-pointer);
+  transition: 0.2s;
+}
+[data-theme].actor.sheet.character button.activate:active, [data-theme].actor.sheet.character button.activate.active [data-theme].actor.sheet.character button.activate:hover, [data-theme].actor.sheet.character button.activate:hover:active, [data-theme].actor.sheet.character button.activate.active [data-theme].actor.sheet.character button.activate:hover:hover, [data-theme].actor.sheet.character button.activate:hover.active [data-theme].actor.sheet.character button.activate:hover, [data-theme].actor.sheet.character button.activate:hover.active [data-theme].actor.sheet.character button.activate:hover:hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+[data-theme].actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action, [data-theme].actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
+  border-image: linear-gradient(90deg, transparent, wheat) 1;
+}
+[data-theme].sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) .window-header {
+  background: var(--theme-color, var(--header-bg-color, transparent));
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: var(--header-text-color);
+}
+[data-theme].sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) .window-header a:hover {
+  color: var(--header-text-color);
+}
+[data-theme].sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom).minimized .window-header {
+  border-radius: 4px;
+}
+[data-theme].hazard.sheet {
+  --header-bg-color: #19302c;
+  --header-text-color: white;
+}
+[data-theme].character.sheet {
+  --header-bg-color: #5a0c02;
+  --header-text-color: white;
+}
+[data-theme].vehicle.sheet {
+  --header-bg-color: #5a0c02;
+  --header-text-color: white;
+}
+[data-theme].army.sheet {
+  --header-bg-color: #504c45;
+  --header-text-color: white;
+}
+[data-theme].army.sheet form {
+  background: none;
+}
+[data-theme].party.sheet {
+  --header-bg-color: #153b1b;
+  --header-text-color: white;
+}
+[data-theme].kingdom.sheet {
+  --header-bg-color: #504c45;
+  --header-text-color: white;
+}
 
-.theme-dark :is(.sheet-content, .container) {
+.theme-dark [data-theme] :is(.sheet-content, .container) {
   --primary: wheat;
   --color-pf-primary: wheat;
   --color-pf-primary-dark: var(--dnd5e-color-gold);
@@ -4528,43 +4583,17 @@ button.use-action:not(:disabled) {
   --color-text-dark-4: gray;
   --color-pf-alternate-dark: var(--color-text-secondary);
 }
-.theme-dark :is(.sheet-content, .container) .health-bar .bar,
-.theme-dark :is(.sheet-content, .container) .sub-nav,
-.theme-dark :is(.sheet-content, .container) .spellcasting .action-header {
+.theme-dark [data-theme] :is(.sheet-content, .container) .health-bar .bar,
+.theme-dark [data-theme] :is(.sheet-content, .container) .sub-nav,
+.theme-dark [data-theme] :is(.sheet-content, .container) .spellcasting .action-header {
   --primary: var(--system-primary);
   --color-pf-primary: var(--system-primary);
 }
-.theme-dark :is(.sheet-content, .container) .tags:not(.form-fields) .tag.tag_secondary,
-.theme-dark :is(.sheet-content, .container) .tags:not(.form-fields) .tag option.tag_secondary,
-.theme-dark :is(.sheet-content, .container) .blue {
+.theme-dark [data-theme] :is(.sheet-content, .container) .tags:not(.form-fields) .tag.tag_secondary,
+.theme-dark [data-theme] :is(.sheet-content, .container) .tags:not(.form-fields) .tag option.tag_secondary,
+.theme-dark [data-theme] :is(.sheet-content, .container) .blue {
   --secondary: var(--system-secondary);
   --color-pf-secondary: var(--system-secondary);
-}
-
-.actor.sheet.character button.activate,
-.actor.sheet.character button.activate:hover {
-  background: var(--button-background-color);
-  border: 1px solid var(--button-border-color);
-  box-shadow: var(--button-box-shadow);
-  border-radius: 4px;
-  color: var(--button-text-color);
-  text-decoration: none;
-  cursor: var(--cursor-pointer);
-  transition: 0.2s;
-}
-.actor.sheet.character button.activate:active, .actor.sheet.character button.activate.active .actor.sheet.character button.activate:hover,
-.actor.sheet.character button.activate:hover:active,
-.actor.sheet.character button.activate.active .actor.sheet.character button.activate:hover:hover,
-.actor.sheet.character button.activate:hover.active .actor.sheet.character button.activate:hover,
-.actor.sheet.character button.activate:hover.active .actor.sheet.character button.activate:hover:hover {
-  background: var(--button-hover-background-color);
-  color: var(--button-hover-text-color);
-  border-color: var(--button-hover-border-color);
-}
-
-.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
-.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
-  border-image: linear-gradient(90deg, transparent, wheat) 1;
 }
 
 .theme-dark [data-theme].actor.sheet.character .toggles button.selected {
@@ -4575,65 +4604,321 @@ button.use-action:not(:disabled) {
   filter: invert(1);
 }
 
-.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) .window-header {
-  background: var(--theme-color, var(--header-bg-color, transparent));
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  color: var(--header-text-color);
-}
-.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) .window-header a:hover {
-  color: var(--header-text-color);
-}
-.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom).minimized .window-header {
-  border-radius: 4px;
-}
-
-.hazard.sheet {
-  --header-bg-color: #19302c;
-  --header-text-color: white;
-}
-
-.character.sheet {
-  --header-bg-color: #5a0c02;
-  --header-text-color: white;
-}
-
-.vehicle.sheet {
-  --header-bg-color: #5a0c02;
-  --header-text-color: white;
-}
-
-.army.sheet {
-  --header-bg-color: #504c45;
-  --header-text-color: white;
-}
-.army.sheet form {
+[data-theme]:is(.familiar, .army, .party).sheet form {
   background: none;
 }
-
-.party.sheet {
-  --header-bg-color: #153b1b;
-  --header-text-color: white;
-}
-
-.kingdom.sheet {
-  --header-bg-color: #504c45;
-  --header-text-color: white;
-}
-
-:is(.familiar, .army, .party).sheet form {
-  background: none;
-}
-
-.sheet.party [data-tab=exploration] .activities .member-activity,
-.party.sheet [data-tab=overview] .summary {
+[data-theme].sheet.party [data-tab=exploration] .activities .member-activity, [data-theme].party.sheet [data-tab=overview] .summary {
   border-image-repeat: repeat;
   border-image-slice: 11;
   border-image-source: var(--ornamentation);
   border-image-width: 14px;
   border-style: double;
 }
+[data-theme].actor .effects-list .item, [data-theme].actor ol.spell-list {
+  border-bottom: unset;
+}
+[data-theme] .item-image:hover i {
+  --text-dark: black;
+}
+[data-theme].actor.sheet .item-controls {
+  --text-dark: var(--color-text-dark-secondary);
+}
+[data-theme].actor.sheet .item-summary {
+  background: var(--fieldset-background-color);
+}
+[data-theme].sheet.party {
+  --color-border: var(--fieldset-border-color);
+}
+[data-theme].sheet.party .blurb {
+  --alt-dark: var(--color-text-dark-secondary);
+}
+[data-theme].sheet.party .resource .empty {
+  border-color: #d8c88b;
+  background: var(--fieldset-background-color);
+}
+[data-theme].sheet.party [data-tab=overview] .member > .data .main-stats > section:not(.ac) {
+  background: var(--fieldset-background-color);
+}
+[data-theme].sheet.party .sidebar {
+  border-right: unset;
+  box-shadow: unset;
+}
+[data-theme].sheet.party .sidebar .box-list {
+  --alt-dark: var(--color-text-dark-secondary);
+}
+[data-theme].sheet.party .sidebar .box-list .box {
+  background: var(--fieldset-background-color);
+  border: 1px solid var(--fieldset-border-color);
+}
+[data-theme].sheet.party .sidebar .box-list .box header {
+  color: var(--color-text-dark-primary);
+  border: 1px solid var(--fieldset-border-color);
+  border-bottom: unset;
+  --sub: var(--fieldset-background-color);
+}
+[data-theme].sheet.familiar .header-content input,
+[data-theme].sheet.familiar .header-content select {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+[data-theme].sheet.familiar .header-content input:focus,
+[data-theme].sheet.familiar .header-content select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+[data-theme].sheet.familiar .header-content input:disabled,
+[data-theme].sheet.familiar .header-content select:disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+[data-theme].sheet.familiar .header-content input[readonly],
+[data-theme].sheet.familiar .header-content select[readonly] {
+  pointer-events: none;
+}
+[data-theme].sheet.familiar .header-content input :is(option, optgroup),
+[data-theme].sheet.familiar .header-content select :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+[data-theme].sheet.familiar .header-content input ::placeholder,
+[data-theme].sheet.familiar .header-content select ::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme].sheet.hazard section.window-content .sidebar {
+  --color-shadow-dark: var(--color-text-dark-secondary);
+  --primary: var(--color-text-dark-primary);
+  --color-pf-primary-light: var(--color-text-dark-primary);
+  --color-pf-primary: var(--color-text-dark-primary);
+  --color-pf-primary-darker: var(--color-text-dark-secondary);
+  border-right: unset;
+  box-shadow: unset;
+}
+[data-theme].sheet.hazard section.window-content .sidebar select {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+[data-theme].sheet.hazard section.window-content .sidebar select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+[data-theme].sheet.hazard section.window-content .sidebar select:disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+[data-theme].sheet.hazard section.window-content .sidebar select[readonly] {
+  pointer-events: none;
+}
+[data-theme].sheet.hazard section.window-content .sidebar select :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+[data-theme].sheet.hazard section.window-content .sidebar select ::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme].sheet.npc {
+  --color-pf-primary-lighter: var(--color-text-dark-primary);
+  --color-pf-primary-light: var(--color-text-dark-primary);
+  --color-pf-primary: var(--color-text-dark-primary);
+  --color-pf-primary-dark: var(--color-text-dark-secondary);
+  --color-pf-primary-darker: var(--color-text-dark-secondary);
+}
+[data-theme].sheet.npc :is(select, input):not(.tag, [data-item-id=rituals]) {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+[data-theme].sheet.npc :is(select, input):not(.tag, [data-item-id=rituals]):focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+[data-theme].sheet.npc :is(select, input):not(.tag, [data-item-id=rituals]):disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+[data-theme].sheet.npc :is(select, input):not(.tag, [data-item-id=rituals])[readonly] {
+  pointer-events: none;
+}
+[data-theme].sheet.npc :is(select, input):not(.tag, [data-item-id=rituals]) :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+[data-theme].sheet.npc :is(select, input):not(.tag, [data-item-id=rituals]) ::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme].sheet.npc button.use-action:not(.disabled) {
+  background: var(--bg-dark);
+  align-items: center;
+  border-radius: 2px;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex: 0;
+  font: 500 var(--font-size-10) var(--sans-serif);
+  gap: 0.25em;
+  height: 2em;
+  justify-content: space-evenly;
+  letter-spacing: 0.05em;
+  margin: 0;
+  max-width: fit-content;
+  padding: 0.5em;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+[data-theme].sheet.npc .sidebar .subsection {
+  margin-left: 4px;
+  padding: var(--space-4) var(--space-6);
+  background: var(--fieldset-background-color);
+  border: 1px solid var(--fieldset-border-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+  border-radius: 4px;
+}
+[data-theme].sheet.npc .sidebar .subsection header {
+  padding: unset;
+  border: none;
+}
+[data-theme].actor.npc.sheet form .sheet-body .actions-list li.action {
+  border-color: var(--fieldset-border-color);
+}
+[data-theme].actor.npc.sheet form .notes.active .notes-section > h4 {
+  --color-pf-primary: var(--color-text-dark-primary);
+}
+[data-theme].actor.npc.sheet form .notes.active .notes-section > .notes-text {
+  --text-dark: var(--color-text-dark-secondary);
+}
+[data-theme] .section-container.headerless .section-body {
+  border-image-repeat: repeat;
+  border-image-slice: 11;
+  border-image-source: var(--ornamentation);
+  border-image-width: 14px;
+  border-style: double;
+  padding-left: 15px;
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless), [data-theme].sheet.familiar section.window-content .section-container, [data-theme].sheet.hazard section.window-content .section-container {
+  padding: unset;
+  margin: var(--space-4) var(--space-6) 0;
+  background: var(--fieldset-background-color);
+  border: 1px solid var(--fieldset-border-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+  border-radius: 4px;
+  --primary: var(--color-text-dark-primary);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) .section-header, [data-theme].sheet.familiar section.window-content .section-container .section-header, [data-theme].sheet.hazard section.window-content .section-container .section-header {
+  background: unset;
+  border: unset;
+  color: var(--color-text-dark-primary);
+  border-bottom: unset;
+  --sub: var(--dnd5e-background-card);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) .section-body, [data-theme].sheet.familiar section.window-content .section-container .section-body, [data-theme].sheet.hazard section.window-content .section-container .section-body {
+  border: unset;
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a, [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a, [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a {
+  background: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  box-shadow: var(--button-box-shadow);
+  border-radius: 4px;
+  color: var(--button-text-color);
+  text-decoration: none;
+  cursor: var(--cursor-pointer);
+  transition: 0.2s;
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a:active, [data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a.active [data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a:hover, [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a:active, [data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a.active [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a:hover, [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a:active, [data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a.active [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a:hover, [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a.active [data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a:hover, [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a.active [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a:hover, [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a.active [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a:hover, [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a.active [data-theme].sheet.npc section.window-content .section-container:not(.headerless) .skills-content .skills-list a:hover, [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a.active [data-theme].sheet.familiar section.window-content .section-container .skills-content .skills-list a:hover, [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a.active [data-theme].sheet.hazard section.window-content .section-container .skills-content .skills-list a:hover {
+  background: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  border-color: var(--button-hover-border-color);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) input,
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) select, [data-theme].sheet.familiar section.window-content .section-container input,
+[data-theme].sheet.familiar section.window-content .section-container select, [data-theme].sheet.hazard section.window-content .section-container input,
+[data-theme].sheet.hazard section.window-content .section-container select {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) input:focus,
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) select:focus, [data-theme].sheet.familiar section.window-content .section-container input:focus,
+[data-theme].sheet.familiar section.window-content .section-container select:focus, [data-theme].sheet.hazard section.window-content .section-container input:focus,
+[data-theme].sheet.hazard section.window-content .section-container select:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) input:disabled,
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) select:disabled, [data-theme].sheet.familiar section.window-content .section-container input:disabled,
+[data-theme].sheet.familiar section.window-content .section-container select:disabled, [data-theme].sheet.hazard section.window-content .section-container input:disabled,
+[data-theme].sheet.hazard section.window-content .section-container select:disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) input[readonly],
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) select[readonly], [data-theme].sheet.familiar section.window-content .section-container input[readonly],
+[data-theme].sheet.familiar section.window-content .section-container select[readonly], [data-theme].sheet.hazard section.window-content .section-container input[readonly],
+[data-theme].sheet.hazard section.window-content .section-container select[readonly] {
+  pointer-events: none;
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) input :is(option, optgroup),
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) select :is(option, optgroup), [data-theme].sheet.familiar section.window-content .section-container input :is(option, optgroup),
+[data-theme].sheet.familiar section.window-content .section-container select :is(option, optgroup), [data-theme].sheet.hazard section.window-content .section-container input :is(option, optgroup),
+[data-theme].sheet.hazard section.window-content .section-container select :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) input ::placeholder,
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) select ::placeholder, [data-theme].sheet.familiar section.window-content .section-container input ::placeholder,
+[data-theme].sheet.familiar section.window-content .section-container select ::placeholder, [data-theme].sheet.hazard section.window-content .section-container input ::placeholder,
+[data-theme].sheet.hazard section.window-content .section-container select ::placeholder {
+  color: var(--input-placeholder-color);
+}
+[data-theme].sheet.npc section.window-content .section-container:not(.headerless) .button .mod, [data-theme].sheet.familiar section.window-content .section-container .button .mod, [data-theme].sheet.hazard section.window-content .section-container .button .mod {
+  --primary: var(--button-hover-text-color);
+}
+[data-theme] .spellcasting-entry .header,
+[data-theme] .subsection.damage button {
+  --color-pf-primary: var(--system-primary);
+}
+[data-theme] .crb-style .details-input {
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: 1px solid transparent;
+  color: var(--input-text-color);
+  transition: outline-color 0.5s;
+  cursor: var(--cursor-text);
+}
+[data-theme] .crb-style .details-input:focus {
+  outline: 2px solid var(--input-focus-outline-color);
+}
+[data-theme] .crb-style .details-input:disabled {
+  opacity: 1;
+  pointer-events: none;
+}
+[data-theme] .crb-style .details-input[readonly] {
+  pointer-events: none;
+}
+[data-theme] .crb-style .details-input :is(option, optgroup) {
+  background: var(--color-select-option-bg);
+}
+[data-theme] .crb-style .details-input ::placeholder {
+  color: var(--input-placeholder-color);
+}
 
+@layer compatibility.base {
+  .theme-dark [data-theme].sheet.party button {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
 .theme-dark [data-theme].actor.npc.sheet form .sheet-body .effects .effects-list .item.unidentified {
   background: var(--visibility-gm-bg);
   color: black;
@@ -4646,257 +4931,20 @@ button.use-action:not(:disabled) {
   --primary: var(--color-text-dark-primary);
 }
 
-.actor .effects-list .item,
-.actor ol.spell-list {
-  border-bottom: unset;
-}
-
-.item-image:hover i {
-  --text-dark: black;
-}
-
-@layer compatibility.base {
-  .theme-dark .sheet.party button {
-    background: rgba(255, 255, 255, 0.1);
-  }
-}
-.theme-dark .sheet.party {
+.theme-dark [data-theme].sheet.party {
   --color-proficiency-untrained: #777777;
   --color-proficiency-trained: #3b4bd3;
   --color-proficiency-expert: #6000a0;
   --color-proficiency-master: #9c6800;
   --color-proficiency-legendary: #9e0000;
 }
-.theme-dark .sheet.party .tag-light {
+.theme-dark [data-theme].sheet.party .tag-light {
   color: color-mix(in srgb, var(--tag-color) 25%, white);
   background: color-mix(in srgb, var(--tag-color) 25%, transparent);
 }
-.theme-dark .sheet.party .tag-light.perception {
+.theme-dark [data-theme].sheet.party .tag-light.perception {
   color: white;
   background: var(--tag-color);
-}
-
-.actor.sheet .item-controls {
-  --text-dark: var(--color-text-dark-secondary);
-}
-
-.actor.sheet .item-summary {
-  background: var(--fieldset-background-color);
-}
-
-.sheet.party {
-  --color-border: var(--fieldset-border-color);
-}
-.sheet.party .blurb {
-  --alt-dark: var(--color-text-dark-secondary);
-}
-.sheet.party .resource .empty {
-  border-color: #d8c88b;
-  background: var(--fieldset-background-color);
-}
-.sheet.party [data-tab=overview] .member > .data .main-stats > section:not(.ac) {
-  background: var(--fieldset-background-color);
-}
-.sheet.party .sidebar {
-  border-right: unset;
-  box-shadow: unset;
-}
-.sheet.party .sidebar .box-list {
-  --alt-dark: var(--color-text-dark-secondary);
-}
-.sheet.party .sidebar .box-list .box {
-  background: var(--fieldset-background-color);
-  border: 1px solid var(--fieldset-border-color);
-}
-.sheet.party .sidebar .box-list .box header {
-  color: var(--color-text-dark-primary);
-  border: 1px solid var(--fieldset-border-color);
-  border-bottom: unset;
-  --sub: var(--fieldset-background-color);
-}
-
-.sheet.familiar .header-content input,
-.sheet.familiar .header-content select {
-  background: var(--input-background-color);
-  border: 1px solid var(--input-border-color);
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  color: var(--input-text-color);
-  transition: outline-color 0.5s;
-  cursor: var(--cursor-text);
-}
-.sheet.familiar .header-content input:focus,
-.sheet.familiar .header-content select:focus {
-  outline: 2px solid var(--input-focus-outline-color);
-}
-.sheet.familiar .header-content input:disabled,
-.sheet.familiar .header-content select:disabled {
-  opacity: 1;
-  pointer-events: none;
-}
-.sheet.familiar .header-content input[readonly],
-.sheet.familiar .header-content select[readonly] {
-  pointer-events: none;
-}
-.sheet.familiar .header-content input :is(option, optgroup),
-.sheet.familiar .header-content select :is(option, optgroup) {
-  background: var(--color-select-option-bg);
-}
-.sheet.familiar .header-content input ::placeholder,
-.sheet.familiar .header-content select ::placeholder {
-  color: var(--input-placeholder-color);
-}
-
-.sheet.hazard section.window-content .sidebar {
-  --color-shadow-dark: var(--color-text-dark-secondary);
-  --primary: var(--color-text-dark-primary);
-  --color-pf-primary-light: var(--color-text-dark-primary);
-  --color-pf-primary: var(--color-text-dark-primary);
-  --color-pf-primary-darker: var(--color-text-dark-secondary);
-  border-right: unset;
-  box-shadow: unset;
-}
-.sheet.hazard section.window-content .sidebar select {
-  background: var(--input-background-color);
-  border: 1px solid var(--input-border-color);
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  color: var(--input-text-color);
-  transition: outline-color 0.5s;
-  cursor: var(--cursor-text);
-}
-.sheet.hazard section.window-content .sidebar select:focus {
-  outline: 2px solid var(--input-focus-outline-color);
-}
-.sheet.hazard section.window-content .sidebar select:disabled {
-  opacity: 1;
-  pointer-events: none;
-}
-.sheet.hazard section.window-content .sidebar select[readonly] {
-  pointer-events: none;
-}
-.sheet.hazard section.window-content .sidebar select :is(option, optgroup) {
-  background: var(--color-select-option-bg);
-}
-.sheet.hazard section.window-content .sidebar select ::placeholder {
-  color: var(--input-placeholder-color);
-}
-
-.sheet.familiar section.window-content .section-container,
-.sheet.hazard section.window-content .section-container {
-  padding: unset;
-  margin: var(--space-4) var(--space-6) 0;
-  background: var(--fieldset-background-color);
-  border: 1px solid var(--fieldset-border-color);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-  box-shadow: 0 0 6px var(--dnd5e-shadow-45);
-  border-radius: 4px;
-  --primary: var(--color-text-dark-primary);
-}
-.sheet.familiar section.window-content .section-container .section-header,
-.sheet.hazard section.window-content .section-container .section-header {
-  background: unset;
-  border: unset;
-  color: var(--color-text-dark-primary);
-  border-bottom: unset;
-  --sub: var(--dnd5e-background-card);
-}
-.sheet.familiar section.window-content .section-container .section-body,
-.sheet.hazard section.window-content .section-container .section-body {
-  border: unset;
-}
-.sheet.familiar section.window-content .section-container .skills-content .skills-list a,
-.sheet.hazard section.window-content .section-container .skills-content .skills-list a {
-  background: var(--button-background-color);
-  border: 1px solid var(--button-border-color);
-  box-shadow: var(--button-box-shadow);
-  border-radius: 4px;
-  color: var(--button-text-color);
-  text-decoration: none;
-  cursor: var(--cursor-pointer);
-  transition: 0.2s;
-}
-.sheet.familiar section.window-content .section-container .skills-content .skills-list a:active, .sheet.familiar section.window-content .section-container .skills-content .skills-list a.active .sheet.familiar section.window-content .section-container .skills-content .skills-list a:hover,
-.sheet.hazard section.window-content .section-container .skills-content .skills-list a:active,
-.sheet.familiar section.window-content .section-container .skills-content .skills-list a.active .sheet.hazard section.window-content .section-container .skills-content .skills-list a:hover,
-.sheet.hazard section.window-content .section-container .skills-content .skills-list a.active .sheet.familiar section.window-content .section-container .skills-content .skills-list a:hover,
-.sheet.hazard section.window-content .section-container .skills-content .skills-list a.active .sheet.hazard section.window-content .section-container .skills-content .skills-list a:hover {
-  background: var(--button-hover-background-color);
-  color: var(--button-hover-text-color);
-  border-color: var(--button-hover-border-color);
-}
-.sheet.familiar section.window-content .section-container input,
-.sheet.familiar section.window-content .section-container select,
-.sheet.hazard section.window-content .section-container input,
-.sheet.hazard section.window-content .section-container select {
-  background: var(--input-background-color);
-  border: 1px solid var(--input-border-color);
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  color: var(--input-text-color);
-  transition: outline-color 0.5s;
-  cursor: var(--cursor-text);
-}
-.sheet.familiar section.window-content .section-container input:focus,
-.sheet.familiar section.window-content .section-container select:focus,
-.sheet.hazard section.window-content .section-container input:focus,
-.sheet.hazard section.window-content .section-container select:focus {
-  outline: 2px solid var(--input-focus-outline-color);
-}
-.sheet.familiar section.window-content .section-container input:disabled,
-.sheet.familiar section.window-content .section-container select:disabled,
-.sheet.hazard section.window-content .section-container input:disabled,
-.sheet.hazard section.window-content .section-container select:disabled {
-  opacity: 1;
-  pointer-events: none;
-}
-.sheet.familiar section.window-content .section-container input[readonly],
-.sheet.familiar section.window-content .section-container select[readonly],
-.sheet.hazard section.window-content .section-container input[readonly],
-.sheet.hazard section.window-content .section-container select[readonly] {
-  pointer-events: none;
-}
-.sheet.familiar section.window-content .section-container input :is(option, optgroup),
-.sheet.familiar section.window-content .section-container select :is(option, optgroup),
-.sheet.hazard section.window-content .section-container input :is(option, optgroup),
-.sheet.hazard section.window-content .section-container select :is(option, optgroup) {
-  background: var(--color-select-option-bg);
-}
-.sheet.familiar section.window-content .section-container input ::placeholder,
-.sheet.familiar section.window-content .section-container select ::placeholder,
-.sheet.hazard section.window-content .section-container input ::placeholder,
-.sheet.hazard section.window-content .section-container select ::placeholder {
-  color: var(--input-placeholder-color);
-}
-.sheet.familiar section.window-content .section-container .button .mod,
-.sheet.hazard section.window-content .section-container .button .mod {
-  --primary: var(--button-hover-text-color);
-}
-
-.crb-style .details-input {
-  background: var(--input-background-color);
-  border: 1px solid var(--input-border-color);
-  border-radius: 4px;
-  outline: 1px solid transparent;
-  color: var(--input-text-color);
-  transition: outline-color 0.5s;
-  cursor: var(--cursor-text);
-}
-.crb-style .details-input:focus {
-  outline: 2px solid var(--input-focus-outline-color);
-}
-.crb-style .details-input:disabled {
-  opacity: 1;
-  pointer-events: none;
-}
-.crb-style .details-input[readonly] {
-  pointer-events: none;
-}
-.crb-style .details-input :is(option, optgroup) {
-  background: var(--color-select-option-bg);
-}
-.crb-style .details-input ::placeholder {
-  color: var(--input-placeholder-color);
 }
 
 /* ----------------------------------------- */
@@ -5382,6 +5430,9 @@ aside.locked-tooltip.pf2e.themed {
 .chat-message[data-chat-message-theme] .message-header.with-rolltype.with-image {
   grid-template: "img gapp name details" 1.375rem "img gapp user rolltype" min-content "gap1 gap1 gap1 gap1" var(--space-6) "whisper whisper whisper whisper" min-content "gap2 gap2 gap2 gap2" var(--space-4)/2.5rem var(--space-8) 1fr min-content;
 }
+.chat-message[data-chat-message-theme] .message-header.with-rolltype.with-image.no-image {
+  grid-template: "name details" 1.375rem "user rolltype" min-content "gap1 gap1" var(--space-6) "whisper whisper" min-content "gap2 gap2" var(--space-4)/1fr min-content;
+}
 .chat-message[data-chat-message-theme] .message-header .portrait {
   padding: unset;
   display: none;
@@ -5595,7 +5646,6 @@ aside.locked-tooltip.pf2e.themed {
   --theme-text-color: var(--primary-light);
   --theme-color: var(--primary);
   --theme-color-dark: var(--primary-dark);
-  --header-bg-color: var(--theme-color);
 }
 [data-theme].actor.sheet.vehicle[data-theme-color=red] .crb-style, [data-theme].actor.sheet.character[data-theme-color=red] .crb-style {
   --header: url("../img/red-header.webp");
@@ -6254,15 +6304,21 @@ i[data-pf2-repost] {
   display: none;
 }
 .tah-tags-wrapper .tags tag,
-.tah-tags-wrapper .tags .tag:not(.tag_transparent, [data-action]),
+.tah-tags-wrapper .tags .tag:not(.tag_transparent, [data-action], .light),
 :is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) tag,
-:is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) .tag:not(.tag_transparent, [data-action]) {
+:is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) .tag:not(.tag_transparent, [data-action], .light) {
   border-radius: 0px;
   box-shadow: unset;
   border: 1px solid var(--tertiary);
   outline: 1px solid var(--gold-brown);
   padding: 0.33em 0.33em;
   text-shadow: none;
+}
+.tah-tags-wrapper .tags tag,
+.tah-tags-wrapper .tags .tag,
+:is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) tag,
+:is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) .tag {
+  --color-text-tertiary: var(--color-text-dark-secondary);
 }
 .tah-tags-wrapper .tags tag:first-of-type,
 .tah-tags-wrapper .tags .tag:first-child,
@@ -6352,6 +6408,11 @@ i[data-pf2-repost] {
   border: none;
 }
 
+@layer compatibility.base {
+  body.game .app button {
+    color: unset;
+  }
+}
 /* ----------------------------------------- */
 /* Tooltip                                   */
 /* ----------------------------------------- */
@@ -8035,19 +8096,19 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   font-size: var(--font-size-11);
   color: var(--dnd5e-color-gold);
 }
-[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) fieldset :is(input, select, textarea):not([type=range], [type=search]),
-[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) fieldset :is(input, select, textarea):not([type=range], [type=search]),
-[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) fieldset :is(input, select, textarea):not([type=range], [type=search]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) fieldset :is(input, select, textarea):not([type=range], [type=search], .tag),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) fieldset :is(input, select, textarea):not([type=range], [type=search], .tag),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) fieldset :is(input, select, textarea):not([type=range], [type=search], .tag) {
   --input-border-color: var(--dnd5e-color-blue-gray-3);
 }
-[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) fieldset.basics :is(input, select, textarea):not([type=range], [type=search]),
-[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) fieldset.basics :is(input, select, textarea):not([type=range], [type=search]),
-[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) fieldset.basics :is(input, select, textarea):not([type=range], [type=search]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) fieldset.basics :is(input, select, textarea):not([type=range], [type=search], .tag),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) fieldset.basics :is(input, select, textarea):not([type=range], [type=search], .tag),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) fieldset.basics :is(input, select, textarea):not([type=range], [type=search], .tag) {
   --input-border-color: var(--dnd5e-color-blue-gray-2);
 }
-[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select, textarea),
-[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select, textarea),
-[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select, textarea) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select, textarea):not(.tag),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select, textarea):not(.tag),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select, textarea):not(.tag) {
   --input-focus-outline-color: var(--dnd5e-color-gold);
   --input-text-color: var(--color-text-dark-primary);
   --input-placeholder-color: var(--color-text-dark-secondary);
@@ -8063,15 +8124,15 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   --input-background-color: var(--dnd5e-background-parchment);
   border: var(--dnd5e-border-gold);
 }
-[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search]),
-[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search]),
-[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search], .tag),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search], .tag),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search], .tag) {
   --input-background-color: var(--dnd5e-background-25);
   --input-border-color: var(--dnd5e-color-blue-gray-1);
 }
-[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search]):is(:disabled, [readonly]),
-[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search]):is(:disabled, [readonly]),
-[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search]):is(:disabled, [readonly]) {
+[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search], .tag):is(:disabled, [readonly]),
+[data-application-theme=dnd5e2].theme-dark [data-theme]:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search], .tag):is(:disabled, [readonly]),
+[data-application-theme=dnd5e2] [data-theme].themed.theme-dark:is(.app, .application) :is(input, select, textarea):not([type=range], [type=search], .tag):is(:disabled, [readonly]) {
   color: var(--text-color-disabled);
   background: var(--dnd5e-color-dark-gray);
 }

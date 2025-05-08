@@ -1,3 +1,9 @@
+# 4.0.1
+
+- (Feature) Re-integrated chat merge from UX.
+- (Fix) Mostly fixed NPC sheets.
+- (Fix) Fixed some bad CSS-scoping such that PC sheets look normal when themes are disabled.
+
 # 4.0.0
 
 - (Overhaul) Initial support for FVTT v13.

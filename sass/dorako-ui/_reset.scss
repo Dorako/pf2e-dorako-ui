@@ -14,3 +14,9 @@
     // border-radius: 0px;
   }
 }
+
+@layer compatibility.base {
+  body.game .app button {
+    color: unset;
+  }
+}

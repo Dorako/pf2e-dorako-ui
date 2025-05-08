@@ -48,13 +48,18 @@ i[data-pf2-repost] {
   }
 
   tag,
-  .tag:not(.tag_transparent, [data-action]) {
+  .tag:not(.tag_transparent, [data-action], .light) {
     border-radius: 0px;
     box-shadow: unset;
     border: 1px solid var(--tertiary);
     outline: 1px solid var(--gold-brown);
     padding: 0.33em 0.33em;
     text-shadow: none;
+  }
+
+  tag,
+  .tag {
+    --color-text-tertiary: var(--color-text-dark-secondary);
   }
 
   tag:first-of-type,

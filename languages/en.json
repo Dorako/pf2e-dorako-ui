@@ -136,6 +136,10 @@
         "chatlog-notify-seconds": {
           "name": "Chat notification duration",
           "hint": "Amount of seconds to show new chat messages."
+        },
+        "chat-merge": {
+          "hint": "Merges messages sent in a rapid sequence together to save space.",
+          "name": "Enable chat merge?"
         }
       },
       "external-module": {

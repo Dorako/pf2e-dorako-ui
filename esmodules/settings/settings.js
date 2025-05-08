@@ -6,6 +6,7 @@ import { ExternalModuleSettings } from "./external-module-settings.js";
 import { AvatarSettings } from "./avatar-settings.js";
 import { lookupThemeAndSchemeForKey } from "../ui-theme.js";
 import { MODULE_NAME } from "../consts.js";
+import ChatMerge from "../chat-merge.js";
 
 export function refreshChat() {
   if (game.messages.size > 100) {
@@ -33,6 +34,10 @@ Hooks.once("init", async () => {
   ExternalModuleSettings.registerSettings();
 
   util.debug("Registered settings...");
+
+  if (game.settings.get("pf2e-dorako-ui", "customization.chat-merge")) {
+    ChatMerge.init();
+  }
 
   const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
   if (applicationTheme !== "no-theme") {

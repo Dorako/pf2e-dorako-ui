@@ -138,17 +138,17 @@
 
         color: var(--dnd5e-color-gold);
       }
-      :is(input, select, textarea):not([type="range"], [type="search"]) {
+      :is(input, select, textarea):not([type="range"], [type="search"], .tag) {
         --input-border-color: var(--dnd5e-color-blue-gray-3);
       }
     }
     fieldset.basics {
-      :is(input, select, textarea):not([type="range"], [type="search"]) {
+      :is(input, select, textarea):not([type="range"], [type="search"], .tag) {
         --input-border-color: var(--dnd5e-color-blue-gray-2);
       }
     }
 
-    :is(input, select, textarea) {
+    :is(input, select, textarea):not(.tag) {
       --input-focus-outline-color: var(--dnd5e-color-gold);
       --input-text-color: var(--color-text-dark-primary);
       --input-placeholder-color: var(--color-text-dark-secondary);
@@ -162,7 +162,7 @@
       border: var(--dnd5e-border-gold);
     }
 
-    :is(input, select, textarea):not([type="range"], [type="search"]) {
+    :is(input, select, textarea):not([type="range"], [type="search"], .tag) {
       --input-background-color: var(--dnd5e-background-25);
       --input-border-color: var(--dnd5e-color-blue-gray-1);
       &:is(:disabled, [readonly]) {

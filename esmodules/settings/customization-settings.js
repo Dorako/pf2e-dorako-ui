@@ -3,7 +3,7 @@ import { SettingsMenuDorakoUI } from "./menu.js";
 export class CustomizationSettings extends SettingsMenuDorakoUI {
   static namespace = "customization";
 
-  static SETTINGS = ["excluded-applications", "custom-css", "chatlog-notify-seconds"];
+  static SETTINGS = ["excluded-applications", "custom-css", "chatlog-notify-seconds", "chat-merge"];
 
   static get settings() {
     return {
@@ -48,6 +48,16 @@ export class CustomizationSettings extends SettingsMenuDorakoUI {
         onChange: (value) => {
           ChatLog.NOTIFY_DURATION = value * 1000;
         },
+      },
+      "chat-merge": {
+        name: "pf2e-dorako-ui.settings.customization.chat-merge.name",
+        hint: "pf2e-dorako-ui.settings.customization.chat-merge.hint",
+        scope: "client",
+        type: Boolean,
+        default: false,
+        config: true,
+        requiresReload: true,
+        onChange: (value) => {},
       },
     };
   }

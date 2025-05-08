@@ -319,6 +319,15 @@
           "whisper whisper whisper whisper" min-content
           "gap2 gap2 gap2 gap2" var(--space-4)
           / 2.5rem var(--space-8) 1fr min-content;
+        &.no-image {
+          grid-template:
+            "name details" 1.375rem
+            "user rolltype" min-content
+            "gap1 gap1" var(--space-6)
+            "whisper whisper" min-content
+            "gap2 gap2" var(--space-4)
+            / 1fr min-content;
+        }
       }
     }
 

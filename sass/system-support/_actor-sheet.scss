@@ -1,50 +1,119 @@
-.actor.sheet.character aside .sidebar input:disabled {
-  background: transparent !important;
-}
-
-.actor.sheet section.window-content form.crb-style {
-  background: url("/systems/pf2e/assets/sheet/header.webp"), transparent;
-  background-repeat: repeat-x, no-repeat;
-  background-size: auto 5.625rem, cover;
-  background-attachment: local;
-}
-
-.actor.sheet.character :is(li, ol) {
-  > div {
-    border-color: transparent;
-  }
-}
-
-button.use-action:not(:disabled) {
-  color: black;
-}
-
-.actor.sheet.character {
-  .d20-svg path {
-    fill: white;
-  }
-  .item-carry-type {
-    text-shadow: 0px 0px 0px gray;
+[data-theme] {
+  &.actor.sheet.character aside .sidebar input:disabled {
+    background: transparent !important;
   }
 
-  .item-summary,
-  ul.option-toggles,
-  .attributes .modifier,
-  .proficiencies-list li {
-    border-image-repeat: repeat;
-    border-image-slice: 11;
-    border-image-source: var(--ornamentation);
-    border-image-width: 14px;
-    border-style: double;
+  &.actor.sheet section.window-content form.crb-style {
+    background: url("/systems/pf2e/assets/sheet/header.webp"), transparent;
+    background-repeat: repeat-x, no-repeat;
+    background-size: auto 5.625rem, cover;
+    background-attachment: local;
+  }
 
-    a.d20 {
-      filter: drop-shadow(0 0 1px var(--color-shadow-dark)) drop-shadow(0 0 3px var(--color-text-dark-4));
+  &.actor.sheet.character :is(li, ol) {
+    > div {
+      border-color: transparent;
     }
+  }
+
+  &.actor.sheet ol.actions-list li.action button.use-action:not(:disabled),
+  &.actor.sheet ol.actions-list li.strike button.use-action:not(:disabled) {
+    color: black;
+  }
+
+  &.actor.sheet.character {
+    .d20-svg path {
+      fill: white;
+    }
+    .item-carry-type {
+      text-shadow: 0px 0px 0px gray;
+    }
+
+    .crafting-options,
+    .item-summary,
+    ul.option-toggles,
+    .attributes .modifier,
+    .proficiencies-list li {
+      border-image-repeat: repeat;
+      border-image-slice: 11;
+      border-image-source: var(--ornamentation);
+      border-image-width: 14px;
+      border-style: double;
+
+      a.d20 {
+        filter: drop-shadow(0 0 1px var(--color-shadow-dark)) drop-shadow(0 0 3px var(--color-text-dark-4));
+      }
+    }
+  }
+
+  &.actor.sheet.character button.activate,
+  &.actor.sheet.character button.activate:hover {
+    @include button;
+  }
+
+  &.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
+  &.actor.sheet
+    section.window-content
+    form.crb-style
+    .sheet-body
+    .sheet-content
+    .tab.actions
+    ol.actions-list
+    li.strike {
+    border-image: linear-gradient(90deg, transparent, wheat) 1;
+  }
+
+  &.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) {
+    .window-header {
+      background: var(--theme-color, var(--header-bg-color, transparent));
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      color: var(--header-text-color);
+      a:hover {
+        color: var(--header-text-color);
+      }
+    }
+    &.minimized .window-header {
+      border-radius: 4px;
+    }
+  }
+
+  &.hazard.sheet {
+    --header-bg-color: #19302c;
+    --header-text-color: white;
+  }
+
+  &.character.sheet {
+    --header-bg-color: #5a0c02;
+    --header-text-color: white;
+  }
+
+  &.vehicle.sheet {
+    --header-bg-color: #5a0c02;
+    --header-text-color: white;
+  }
+
+  &.army.sheet {
+    --header-bg-color: #504c45;
+    --header-text-color: white;
+    form {
+      background: none;
+    }
+  }
+
+  &.party.sheet {
+    --header-bg-color: #153b1b;
+    --header-text-color: white;
+  }
+
+  &.kingdom.sheet {
+    --header-bg-color: #504c45;
+    --header-text-color: white;
   }
 }
 
 // Also affects vehicle sheet
-.theme-dark :is(.sheet-content, .container) {
+.theme-dark [data-theme] :is(.sheet-content, .container) {
   --primary: wheat;
   --color-pf-primary: wheat;
   --color-pf-primary-dark: var(--dnd5e-color-gold); // underlines
@@ -72,67 +141,10 @@ button.use-action:not(:disabled) {
   }
 }
 
-.actor.sheet.character button.activate,
-.actor.sheet.character button.activate:hover {
-  @include button;
-}
-
-.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.action,
-.actor.sheet section.window-content form.crb-style .sheet-body .sheet-content .tab.actions ol.actions-list li.strike {
-  border-image: linear-gradient(90deg, transparent, wheat) 1;
-}
-
 .theme-dark [data-theme].actor.sheet.character .toggles button.selected {
   --bg-dark: black;
 }
 
 .theme-dark [data-theme].actor.sheet.character .alt-usage-icon[src$="svg"] {
   filter: invert(1);
-}
-
-.sheet.actor:is(.character, .hazard, .vehicle, .army, .party, .kingdom) {
-  .window-header {
-    background: var(--theme-color, var(--header-bg-color, transparent));
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    color: var(--header-text-color);
-    a:hover {
-      color: var(--header-text-color);
-    }
-  }
-  &.minimized .window-header {
-    border-radius: 4px;
-  }
-}
-
-.hazard.sheet {
-  --header-bg-color: #19302c;
-  --header-text-color: white;
-}
-.character.sheet {
-  --header-bg-color: #5a0c02;
-  --header-text-color: white;
-}
-
-.vehicle.sheet {
-  --header-bg-color: #5a0c02;
-  --header-text-color: white;
-}
-
-.army.sheet {
-  --header-bg-color: #504c45;
-  --header-text-color: white;
-  form {
-    background: none;
-  }
-}
-
-.party.sheet {
-  --header-bg-color: #153b1b;
-  --header-text-color: white;
-}
-
-.kingdom.sheet {
-  --header-bg-color: #504c45;
-  --header-text-color: white;
 }
