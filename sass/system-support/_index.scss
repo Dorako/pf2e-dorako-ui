@@ -135,6 +135,15 @@ span[data-pf2-action][data-pf2-glyph]::before {
   border: unset;
 }
 
+.compendium-browser fieldset {
+  border: 1px solid var(--fieldset-border-color);
+  background: var(--fieldset-background-color);
+  border-radius: 4px;
+  legend {
+    color: var(--fieldset-legend-color);
+  }
+}
+
 #world-clock {
   select,
   input {

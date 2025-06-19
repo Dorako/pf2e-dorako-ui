@@ -395,6 +395,11 @@ prose-mirror menu button {
   }
 }
 
+.addendum {
+  border-image-source: var(--ornamentation);
+  --color-pf-alternate-darker: var(--color-text-dark-secondary);
+}
+
 body.game .app[data-theme]:not(.actor) form button {
   @include button;
 }

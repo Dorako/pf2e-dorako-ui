@@ -133,27 +133,27 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   moveFlavorTextToContents(html);
 });
 
-// Is damage roll
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
+// // Is damage roll
+// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+//   // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
 
-  if (chatMessage?.isDamageRoll && chatMessage?.item?.type !== "spell") {
-    html[0].classList.add("dorako-damage-roll");
-    let flavor = html.find(".flavor-text");
-    flavor.each(function () {
-      $(this).contents().eq(1).wrap("<span/>");
-    });
-  }
-});
+//   if (chatMessage?.isDamageRoll && chatMessage?.item?.type !== "spell") {
+//     html[0].classList.add("dorako-damage-roll");
+//     let flavor = html.find(".flavor-text");
+//     flavor.each(function () {
+//       $(this).contents().eq(1).wrap("<span/>");
+//     });
+//   }
+// });
 
-// Is check roll
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
+// // Is check roll
+// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+//   // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
 
-  if (chatMessage?.isCheckRoll) {
-    html.addClass("dorako-check-roll");
-  }
-});
+//   if (chatMessage?.isCheckRoll) {
+//     html.addClass("dorako-check-roll");
+//   }
+// });
 
 // "Be last" magic trick. Should ensure that any other modules that modify, say, who spoke the message, have done so before you add the flags.
 Hooks.once("ready", () => {
@@ -168,17 +168,17 @@ Hooks.once("ready", () => {
     addAvatarsToFlags(message, false);
   });
 
-  Hooks.on("renderChatMessage", (app, html, data) => {
-    const isKoboldWorksTurnAnnouncerMessage = app.flags["koboldworks-turn-announcer"];
-    if (!isKoboldWorksTurnAnnouncerMessage) return;
+  // Hooks.on("renderChatMessage", (app, html, data) => {
+  //   const isKoboldWorksTurnAnnouncerMessage = app.flags["koboldworks-turn-announcer"];
+  //   if (!isKoboldWorksTurnAnnouncerMessage) return;
 
-    const avatar = html.find(".portrait.dorako");
-    avatar.css("transform", `scale(${app.flags["pf2e-dorako-ui"]?.tokenAvatar.scale})`);
-    avatar.css("mask-image", `radial-gradient(circle, black 56%, rgba(0, 0, 0, 0.2) 92%)`);
-    avatar.css("flex", `0px 0px var(--avatar-size)`);
-    avatar.css("height", `var(--avatar-size)`);
-    avatar.css("width", `var(--avatar-size)`);
-  });
+  //   const avatar = html.find(".portrait.dorako");
+  //   avatar.css("transform", `scale(${app.flags["pf2e-dorako-ui"]?.tokenAvatar.scale})`);
+  //   avatar.css("mask-image", `radial-gradient(circle, black 56%, rgba(0, 0, 0, 0.2) 92%)`);
+  //   avatar.css("flex", `0px 0px var(--avatar-size)`);
+  //   avatar.css("height", `var(--avatar-size)`);
+  //   avatar.css("width", `var(--avatar-size)`);
+  // });
 });
 
 function moveFlavorTextToContents(html) {
@@ -356,7 +356,7 @@ function addAvatarsToFlags(message, local = true) {
   let speaker = message.speaker;
   const actor = game.actors.get(speaker.actor);
   let actorImg = actor?.img;
-  const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token) ?? actor.prototypeToken;
+  const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token) ?? actor?.prototypeToken;
   let tokenImg = token?.texture.src;
   let userImg = message.author?.avatar;
   let subjectImg = token?.ring?.subject;
@@ -434,6 +434,8 @@ Hooks.on("renderChatMessage", (message, b) => {
     return;
   }
   let html = b[0];
+  let messageHeader = b[0].getElementsByClassName("message-header")[0];
+  messageHeader.classList.add("with-image");
 
   let avatarElem = html.getElementsByClassName("portrait dorako")[0];
   if (!avatarElem) return;
@@ -467,16 +469,16 @@ Hooks.on("renderChatMessage", (message, b) => {
         </radialGradient>
         <radialGradient id="inner-ring" cx="0.4" cy="0.33" r="0.8">
           <stop offset="0%" stop-color="var(--dynamic-token-inner-ring-top-left-color)" />
-          <stop offset="20%" stop-color="var(--dynamic-token-inner-ring-top-left-color)" /> 
-          <stop offset="100%" stop-color="var(--dynamic-token-inner-ring-color)" /> 
+          <stop offset="20%" stop-color="var(--dynamic-token-inner-ring-top-left-color)" />
+          <stop offset="100%" stop-color="var(--dynamic-token-inner-ring-color)" />
         </radialGradient>
          <radialGradient id="bg">
           <stop offset="0%" stop-color="var(--dynamic-token-background-color)" />
           <stop offset="80%" stop-color="var(--dynamic-token-background-color)" />
           <stop offset="100%" stop-color="var(--dynamic-token-background-outer-color)" />
         </radialGradient>
-      </defs>  
-      <circle cx="50%" cy="50%" r="19.75" fill="url(#outer-ring)"></circle> 
+      </defs>
+      <circle cx="50%" cy="50%" r="19.75" fill="url(#outer-ring)"></circle>
       <circle cx="50%" cy="50%" r="18.75" fill="url(#inner-ring)"></circle>
       <circle cx="50%" cy="50%" r="17.75" fill="var(--dynamic-token-dynamic-color)"></circle>
       <circle cx="50%" cy="50%" r="16.75" fill="url(#bg)"></circle>`;

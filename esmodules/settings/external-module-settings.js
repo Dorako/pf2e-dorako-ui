@@ -5,8 +5,6 @@ export class ExternalModuleSettings extends SettingsMenuDorakoUI {
 
   static SETTINGS = ["colorize-idle-hud"];
 
-  rerenderChatMessages() {}
-
   static get settings() {
     return {
       "colorize-idle-hud": {

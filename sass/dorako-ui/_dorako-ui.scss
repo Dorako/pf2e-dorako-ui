@@ -24,6 +24,9 @@ a.inline-roll:not(.inline-result) {
   font-weight: 400;
   padding: 0px 4px;
   text-shadow: none !important;
+  &.with-repost {
+    padding-right: 0px;
+  }
 }
 
 // Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px

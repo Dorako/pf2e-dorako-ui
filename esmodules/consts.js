@@ -31,7 +31,7 @@ export const interfaceApp = ["Players", "Hotbar"]
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
-export const excludedApplications = ["JournalSheet","CampingSheet","KingdomSheet","ChatPopout","Terminal","PF2EBestiary","SigilPF2EAdventureImporter","PreyJournalSheet","PF2eHudTextPopup","PF2eHudItemPopup","ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
+export const excludedApplications = ["TokenActionHud","JournalSheet","CampingSheet","KingdomSheet","ChatPopout","Terminal","PF2EBestiary","SigilPF2EAdventureImporter","PreyJournalSheet","PF2eHudTextPopup","PF2eHudItemPopup","ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
 
 /* ----------------------------------------- */
 /* Frameworks                                */

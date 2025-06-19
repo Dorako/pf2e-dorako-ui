@@ -1,0 +1,73 @@
+@layer variables.themes.specific {
+  :root {
+    --github-color-blue: #1f6feb;
+    --github-color-green: rgb(46, 154, 64);
+  }
+}
+
+@layer blocks.base {
+  [data-interface-theme="github"] {
+    --control-box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+    --control-text-shadow: none;
+    --control-button-bg-color: #3c3737;
+    --control-bg-color: #202830;
+    --control-border-color: #3d444d;
+    --control-icon-color: #9198a1;
+    --control-hover-bg-color: #262c36;
+    --control-hover-border-color: #3d444d;
+    --control-hover-icon-color: white;
+    --control-active-bg-color: #1f6feb;
+    --control-active-border-color: rgba(255, 255, 255, 0.1);
+    --control-active-icon-color: white;
+    --control-button-border-color: #ce9c5c;
+    --control-button-hover-bg-color: #5e554a;
+    --control-button-hover-border-color: #9f9275;
+    --toggle-bg-color: rgb(12, 67, 21);
+    --toggle-border-color: rgba(255, 255, 255, 0.1);
+    --toggle-active-bg-color: rgb(46, 154, 64);
+    --toggle-active-border-color: rgba(255, 255, 255, 0.1);
+    --toggle-icon-color: white;
+
+    #ui-left-column-1 .ui-control {
+      position: sticky;
+
+      // &:hover {
+      //   --control-box-shadow: 0 0 6px var(--dnd5e-color-gold);
+      // }
+    }
+
+    .ui-control {
+      --control-bg-color: #202830;
+      --control-border-color: #3d444d;
+      --control-icon-color: #9198a1;
+      --control-hover-bg-color: #262c36;
+      --control-hover-border-color: #3d444d;
+      --control-hover-icon-color: white;
+      --control-active-bg-color: #1f6feb;
+      --control-active-border-color: rgba(255, 255, 255, 0.1);
+      --control-active-icon-color: white;
+      --control-button-border-color: #ce9c5c;
+      --control-button-hover-bg-color: #5e554a;
+      --control-button-hover-border-color: #9f9275;
+      --toggle-bg-color: rgb(12, 67, 21);
+      --toggle-border-color: rgba(255, 255, 255, 0.1);
+      --toggle-active-bg-color: rgb(46, 154, 64);
+      --toggle-active-border-color: rgba(255, 255, 255, 0.1);
+      --toggle-icon-color: white;
+
+      &.toggle {
+        --hover-border-color: #9f9275;
+      }
+
+      &.button {
+        --hover-border-color: orange;
+      }
+
+      &[aria-pressed="true"],
+      &.toggle,
+      &.button {
+        --control-icon-color: white !important;
+      }
+    }
+  }
+}

@@ -180,9 +180,9 @@ for (const appName of [...systemSheets, ...moduleWindowApps]) {
       return;
     if (theme == "discord-light" && app.constructor.name === "PartySheetPF2e") return;
 
-    app.element[0].dataset.theme = dorakoUiTheme;
-    app.element[0].dataset.colorScheme = colorScheme;
-    app.element[0].dataset.dorakoUiScope = "unlimited";
+    app.element[0].dataset.theme = "";
+    // app.element[0].dataset.colorScheme = colorScheme;
+    // app.element[0].dataset.dorakoUiScope = "unlimited";
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | [data-theme='${dorakoUiTheme}'] [data-color-scheme='${colorScheme}'] [data-dorako-ui-scope='unlimited']`
     );

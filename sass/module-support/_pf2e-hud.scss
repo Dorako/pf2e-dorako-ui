@@ -336,3 +336,47 @@
     --icon-color: rgb(110, 143, 54);
   }
 }
+
+/**
+v13
+**/
+
+[data-interface-color-scheme] {
+  &[data-interface-color-scheme="light"] {
+    #pf2e-hud-persistent {
+      --icon-color: var(--control-icon-color);
+      --color: black;
+    }
+    #pf2e-hud-sidebar {
+      --color: black;
+    }
+
+    [data-panel="name"],
+    [data-panel="stats"],
+    .encumbrance {
+      --icon-color: white;
+      --color: white;
+      color: white;
+    }
+  }
+
+  #pf2e-hud-persistent {
+    --panel-background: var(--control-bg-color);
+    --outer-border: 1px solid var(--control-border-color);
+    --sidebar-arrow-color: var(--control-bg-color);
+  }
+
+  #pf2e-hud-persistent
+    [data-panel]:not([data-panel="shortcuts"], [data-panel="menu"], [data-panel="name"], [data-panel="stats"]),
+  #pf2e-hud-persistent [data-panel="menu"] .group {
+    box-shadow: var(--control-box-shadow);
+    backdrop-filter: blur(4px);
+  }
+
+  #pf2e-hud-sidebar .inner,
+  #pf2e-hud-token[data-mode="exploded"] [data-panel] {
+    --outer-background: var(--control-bg-color);
+    --outer-border: 1px solid var(--control-border-color);
+    backdrop-filter: blur(4px);
+  }
+}

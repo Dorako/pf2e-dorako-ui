@@ -1,3 +1,10 @@
+# 4.0.2
+
+- (Maintenance) Ensured .addendum styling is legible on dark backgrounds.
+- (Fix) Ensured TAH is excluded from styling.
+- (Maintenance) Preliminary support for PF2e HUD v13 edition.
+- (Fix) Fixed an issue where the backplate would not be attached to dynamic token avatars.
+
 # 4.0.1
 
 - (Feature) Re-integrated chat merge from UX.
