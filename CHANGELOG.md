@@ -1,3 +1,9 @@
+# 4.0.3
+
+- (Fix) Improved the first-launch experience by disabling some interactions when a theme has yet to be applied.
+- (Fix) Excluded Quick Insert from styling.
+- (Fix) Fixed an issue where themes with semi-opaque inputs would have illegible dropdowns.
+
 # 4.0.2
 
 - (Maintenance) Ensured .addendum styling is legible on dark backgrounds.

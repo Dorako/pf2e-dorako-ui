@@ -22,7 +22,6 @@
         "label": "Configura Impostazioni Tema",
         "application-theme": {
           "name": "Tema applicazione",
-          "hint": "Influisce sulle finestre delle applicazioni renderizzate",
           "choice": {
             "no-theme": "Nessun tema",
             "light-theme": "Interfaccia Dorako Chiara",

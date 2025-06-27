@@ -163,3 +163,30 @@ span[data-pf2-action][data-pf2-glyph]::before {
 .themed.theme-dark .chat-message {
   --visibility-gm-bg: #e8e8ef;
 }
+
+#tooltip.pf2e.themed,
+aside.locked-tooltip.pf2e.themed {
+  background: var(--control-bg-color);
+  backdrop-filter: blur(4px);
+
+  --color-text-primary: var(--control-icon-color);
+  --color-text-emphatic: var(--control-icon-color);
+  &.pf2e.carry-type-menu li a {
+    color: var(--control-icon-color);
+    opacity: 50%;
+    &.selected {
+      color: var(--control-icon-color);
+      opacity: revert;
+    }
+  }
+}
+
+@layer system {
+  #scene-controls li button.gm-vision {
+    --control-bg-color: revert-layer;
+    --control-icon-color: revert-layer;
+    &:not([aria-pressed="true"]) {
+      --control-border-color: revert-layer;
+    }
+  }
+}

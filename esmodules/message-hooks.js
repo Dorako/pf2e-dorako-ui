@@ -112,6 +112,20 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     return;
   }
 
+  const isSecretDisposition =
+    game?.scenes?.get(chatMessage?.speaker?.scene)?.tokens?.get(chatMessage?.speaker?.token)?.disposition == -2;
+  const isOpposition = chatMessage?.actor?.alliance === "opposition" && !isSecretDisposition;
+  if (isOpposition && game.settings.get("pf2e-dorako-ui", "theme.chat-message-opposition-theme") === "no-theme") {
+    html[0].classList.add("themed");
+    html[0].classList.add("theme-light");
+    return;
+  }
+  if (!isOpposition && game.settings.get("pf2e-dorako-ui", "theme.chat-message-standard-theme") === "no-theme") {
+    html[0].classList.add("themed");
+    html[0].classList.add("theme-light");
+    return;
+  }
+
   // if (game.settings.get("pf2e-dorako-ui", "avatar.source") !== "system") {
   //   html[0].querySelector(".message-header").classList.add("dorako-ux");
   //   injectSenderWrapper(html, messageData);
@@ -450,7 +464,7 @@ Hooks.on("renderChatMessage", (message, b) => {
   let smallCorrection = avatar.isSmall ? 1.25 * smallScale : 1;
   const newScale = Math.abs(avatar.scale) * smallCorrection;
   if (avatar.scale > 2) {
-    avatarImgElement.style.maskImage = `radial-gradient(circle, black 24%, rgba(0, 0, 0, 0.2) 30%)`;
+    avatarImgElement.style.maskImage = `radial-gradient(circle, black 34%, rgba(0, 0, 0, 0.2) 30%)`;
   }
 
   if (avatar.type == "token") {

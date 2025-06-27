@@ -2250,6 +2250,25 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
 /**
 v13
 **/
+[data-interface-color-scheme][data-interface-color-scheme=light] .pf2e-hud-element {
+  --color-disabled: #00000085;
+  --color-rank-0: #3f3f3f;
+  --color-rank-1: #0016df;
+  --color-rank-2: #7d00c5;
+  --color-rank-3: #a56e00;
+  --color-rank-4: #af0101;
+  --color-rarity-uncommon: #a55641;
+  --color-rarity-rare: #2c65c1;
+  --color-rarity-unique: #942dc0;
+}
+[data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-persistent [data-panel=name],
+[data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-persistent [data-panel=stats] {
+  background: rgba(0, 0, 0, 0.374);
+  border-radius: unset;
+}
+[data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-persistent [data-panel=shortcuts] .shortcut {
+  background: rgba(255, 255, 255, 0.169);
+}
 [data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-persistent {
   --icon-color: var(--control-icon-color);
   --color: black;
@@ -2263,6 +2282,15 @@ v13
   --icon-color: white;
   --color: white;
   color: white;
+}
+[data-interface-color-scheme] #pf2e-hud-persistent #hotbar #action-bar li .slot-icon {
+  border-radius: var(--outer-border-radius);
+}
+[data-interface-color-scheme] #pf2e-hud-persistent #hotbar #action-bar li .key {
+  border-top-left-radius: var(--outer-border-radius);
+}
+[data-interface-color-scheme] #pf2e-hud-persistent {
+  --icon-color: var(--control-icon-color);
 }
 [data-interface-color-scheme] #pf2e-hud-persistent {
   --panel-background: var(--control-bg-color);
@@ -4989,11 +5017,6 @@ html .xdy-pf2e-workbench-rarity-unique {
 /* ----------------------------------------- */
 /* Effects Panel                             */
 /* ----------------------------------------- */
-#tooltip.pf2e.themed,
-aside.locked-tooltip.pf2e.themed {
-  background: var(--control-bg-color);
-}
-
 [data-interface-theme] #effects-panel .effect-item > .icon {
   border: var(--app-border-width) var(--icon-border-color);
   border-radius: 4px;
@@ -5541,6 +5564,9 @@ aside.locked-tooltip.pf2e.themed {
   margin-bottom: 4px;
   gap: 3px;
 }
+.chat-message[data-chat-message-theme] .message-content {
+  overflow: visible;
+}
 
 @layer blocks.base {
   [data-chat-message-color-scheme=dark] .dice-roll :is(.dice-formula, .dice-total) {
@@ -5996,6 +6022,33 @@ span[data-pf2-action][data-pf2-glyph]::before {
   --visibility-gm-bg: #e8e8ef;
 }
 
+#tooltip.pf2e.themed,
+aside.locked-tooltip.pf2e.themed {
+  background: var(--control-bg-color);
+  backdrop-filter: blur(4px);
+  --color-text-primary: var(--control-icon-color);
+  --color-text-emphatic: var(--control-icon-color);
+}
+#tooltip.pf2e.themed.pf2e.carry-type-menu li a,
+aside.locked-tooltip.pf2e.themed.pf2e.carry-type-menu li a {
+  color: var(--control-icon-color);
+  opacity: 50%;
+}
+#tooltip.pf2e.themed.pf2e.carry-type-menu li a.selected,
+aside.locked-tooltip.pf2e.themed.pf2e.carry-type-menu li a.selected {
+  color: var(--control-icon-color);
+  opacity: revert;
+}
+
+@layer system {
+  #scene-controls li button.gm-vision {
+    --control-bg-color: revert-layer;
+    --control-icon-color: revert-layer;
+  }
+  #scene-controls li button.gm-vision:not([aria-pressed=true]) {
+    --control-border-color: revert-layer;
+  }
+}
 /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
@@ -7447,6 +7500,10 @@ body.theme-light [data-theme].application {
     --same-text-color: black;
     --opposite-text-color: white;
   }
+  .themed.theme-dark .application,
+  body.theme-dark .application {
+    --color-select-option-bg: #1c1e23;
+  }
 }
 @layer variables.themes.general {
   body.theme-light .application,
@@ -8301,7 +8358,8 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   border-radius: 3px;
 }
 
-[data-application-theme=dnd5e2].theme-dark > :is(.application, .app):not(.actor, .journal-sheet) .window-content::before {
+[data-application-theme=dnd5e2].theme-dark > :is(.application, .app):not(.actor, .journal-sheet) .window-content::before,
+[data-application-theme=dnd5e2].theme-dark > .npc .window-content::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;

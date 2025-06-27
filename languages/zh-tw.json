@@ -78,7 +78,6 @@
             "dark-theme": "黑暗Dorako UI"
           }
         },
-        "hint": "為多個程序及UI元素更改主題設定",
         "frosted-glass": {
           "name": "使用霜降玻璃",
           "hint": "警告：非常影響效能。例：brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"

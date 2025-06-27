@@ -55,7 +55,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
           // "dnd5e2-light": "pf2e-dorako-ui.text.dnd5e2-light",
           dnd5e2: "pf2e-dorako-ui.text.dnd5e2",
           discord: "pf2e-dorako-ui.text.discord",
-          github: "pf2e-dorako-ui.text.github",
+          // github: "pf2e-dorako-ui.text.github",
           // "discord-dark": "pf2e-dorako-ui.text.discord-dark",
           // custom: "pf2e-dorako-ui.text.custom",
           // "custom-dark": "pf2e-dorako-ui.text.custom-dark",

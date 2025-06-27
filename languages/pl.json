@@ -50,7 +50,6 @@
       "reset-changes": "Zresetuj ustawienia",
       "theme": {
         "label": "Skonfiguruj ustawienia motywu",
-        "hint": "Zmiana ustawień motywów dla różnych aplikacji i elementów interfejsu użytkownika",
         "application-theme": {
           "name": "Motyw aplikacji",
           "hint": "Wpływa na renderowane okna aplikacji",

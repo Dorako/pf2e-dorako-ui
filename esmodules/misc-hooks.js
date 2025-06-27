@@ -39,6 +39,10 @@ Hooks.once("ready", () => {
 // remove core theme from supported v1 applications
 for (const appName of [...systemSheets]) {
   Hooks.on("render" + appName, (app, html, data) => {
+    const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
+    if (applicationTheme == "no-theme") {
+      return;
+    }
     html[0].classList.remove("themed");
     html[0].classList.remove("theme-light");
     html[0].classList.remove("theme-dark");

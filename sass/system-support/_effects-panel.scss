@@ -2,11 +2,6 @@
 /* Effects Panel                             */
 /* ----------------------------------------- */
 
-#tooltip.pf2e.themed,
-aside.locked-tooltip.pf2e.themed {
-  background: var(--control-bg-color);
-}
-
 [data-interface-theme] {
   #effects-panel .effect-item > .icon {
     border: var(--app-border-width) var(--icon-border-color);

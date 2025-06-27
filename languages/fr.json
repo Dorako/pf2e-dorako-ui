@@ -181,8 +181,7 @@
             "extended": "Toutes les bonnes applications connues et toutes les boîtes de dialogue",
             "maximum": "Tout, même les choses potentiellement problématiques"
           },
-          "name": "Utilisez le thème sombre pour…",
-          "hint": "Diminuez le degré du thème sombre si vous rencontrez des problèmes d'interface utilisateur"
+          "name": "Utilisez le thème sombre pour…"
         },
         "glass-bg": {
           "name": "Utiliser une alternative de fond en verre",

@@ -205,7 +205,8 @@
 
 [data-application-theme="dnd5e2"].theme-dark
   > :is(.application, .app):not(.actor, .journal-sheet)
-  .window-content::before {
+  .window-content::before,
+[data-application-theme="dnd5e2"].theme-dark > .npc .window-content::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;

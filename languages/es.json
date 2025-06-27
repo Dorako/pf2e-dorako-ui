@@ -51,7 +51,6 @@
       "theme": {
         "name": "Ajustes del tema",
         "label": "Configurar ajustes de tema",
-        "hint": "Cambiar los ajustes del tema de varias aplicaciones y elementos de la interfaz",
         "application-theme": {
           "name": "Tema de aplicación",
           "choice": {

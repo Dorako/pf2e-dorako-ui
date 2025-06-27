@@ -121,12 +121,12 @@ for (const appName of [...appV2Apps]) {
           return;
         }
       }
-      if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
-        console.debug(
-          `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
-        );
-        return;
-      }
+    }
+    if (excludeList.includes(app.constructor.name) || excludedApplications.includes(app.constructor.name)) {
+      console.debug(
+        `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`
+      );
+      return;
     }
 
     app.element.dataset.theme = dorakoUiTheme;

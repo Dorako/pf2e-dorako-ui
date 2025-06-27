@@ -117,8 +117,7 @@
             "supported": "Alle guten bekannten Anwendungen",
             "maximum": "Alles, selbst Dinge die vielleicht kaputt aussehen",
             "extended": "Alle guten bekannten Anwendungen und alle Dialoge"
-          },
-          "hint": "Verringere den Grad der dunklen Darstellung wenn du Fehler im UI hast"
+          }
         },
         "name": "Design-Einstellungen",
         "label": "Design-Einstellungen konfigurieren",

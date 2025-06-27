@@ -408,6 +408,9 @@
     margin-bottom: 4px;
     gap: 3px;
   }
+  .message-content {
+    overflow: visible;
+  }
 }
 
 @layer blocks.base {

@@ -343,6 +343,25 @@ v13
 
 [data-interface-color-scheme] {
   &[data-interface-color-scheme="light"] {
+    .pf2e-hud-element {
+      --color-disabled: #00000085;
+      --color-rank-0: #3f3f3f;
+      --color-rank-1: #0016df;
+      --color-rank-2: #7d00c5;
+      --color-rank-3: #a56e00;
+      --color-rank-4: #af0101;
+      --color-rarity-uncommon: #a55641;
+      --color-rarity-rare: #2c65c1;
+      --color-rarity-unique: #942dc0;
+    }
+    #pf2e-hud-persistent [data-panel="name"],
+    #pf2e-hud-persistent [data-panel="stats"] {
+      background: rgba(0, 0, 0, 0.374);
+      border-radius: unset;
+    }
+    #pf2e-hud-persistent [data-panel="shortcuts"] .shortcut {
+      background: rgba(255, 255, 255, 0.169);
+    }
     #pf2e-hud-persistent {
       --icon-color: var(--control-icon-color);
       --color: black;
@@ -358,6 +377,19 @@ v13
       --color: white;
       color: white;
     }
+  }
+
+  #pf2e-hud-persistent #hotbar #action-bar li {
+    .slot-icon {
+      border-radius: var(--outer-border-radius);
+    }
+    .key {
+      border-top-left-radius: var(--outer-border-radius);
+    }
+  }
+
+  #pf2e-hud-persistent {
+    --icon-color: var(--control-icon-color);
   }
 
   #pf2e-hud-persistent {

@@ -99,7 +99,6 @@
             "foundry2-theme": "Foundry 2主题"
           }
         },
-        "hint": "为多个进程及UI元素更改主题设置",
         "frosted-glass": {
           "name": "使用霜降玻璃",
           "hint": "警告：非常影响性能。例：brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
