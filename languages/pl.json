@@ -1,7 +1,9 @@
 {
   "pf2e-dorako-ui": {
     "text": {
-      "secret": "Sekret",
+      "secret": "Ukryty",
+      "self-roll": "Rzuć dla siebie",
+      "gm-only": "Tylko MG",
       "whisper": "Szept",
       "from": "Od",
       "to": "do",
@@ -9,21 +11,33 @@
       "default": "Domyślne",
       "dark": "Ciemny",
       "light": "Jasny",
-      "disabled": "Wyłączony",
+      "disabled": "Wyłączone",
       "large-chatlog-warning": "Ze względu na duży log czatu, niektóre ustawienia zostaną zastosowane przy następnym przeładowaniu.",
       "maybe-reload": "Niektóre zmiany mogą wymagać przeładowania.",
-      "self-roll": "Rzuć dla siebie",
-      "gm-only": "Tylko MG",
-      "prefer-light": "Preferuj jaśniejszy",
-      "prefer-dark": "Preferuj ciemniejszy",
+      "prefer-light": "Preferuj jasny",
+      "prefer-dark": "Preferuj ciemny",
       "bg3": "Baldur's Gate 3",
+      "bg3-brown": "Baldur's Gate 3 (Brązowy)",
+      "bg3-blue": "Baldur's Gate 3 (Niebieski)",
+      "dnd5e2": "D&D 5e",
+      "dnd5e2-light": "D&D 5e (Jasny)",
+      "dnd5e2-dark": "D&D 5e (Ciemny)",
       "foundry2": "Foundry 2",
+      "github": "Github",
       "discord": "Discord",
+      "discord-light": "Discord (Jasny)",
+      "discord-dark": "Discord (Ciemny)",
+      "glass": "Szkło",
       "crb": "Core Rulebook",
+      "crb-light": "Core Rulebook (Jasny)",
+      "crb-dark": "Core Rulebook (Ciemny)",
       "no-theme": "Brak motywu",
-      "opaque": "Nieprzezroczysty",
-      "alliance": "Odwrotny ciemny",
-      "gm-vs-players": "GM ciemny",
+      "opaque": "Nieprzezroczystość",
+      "alliance": "Przeciwna ciemność",
+      "gm-vs-players": "Ciemność MG",
+      "custom": "⚠️ Zrób to sam 👷",
+      "custom-light": "⚠️ Zrób to sam (Jasne) 👷",
+      "custom-dark": "⚠️ Zrób to sam (Ciemne) 👷",
       "colors": {
         "red": "Czerwony",
         "blue": "Niebieski",
@@ -32,297 +46,110 @@
         "black": "Czarny",
         "player": "Kolor gracza",
         "brown": "Brązowy"
-      },
-      "bg3-brown": "Baldur's Gate 3 (Brązowy)",
-      "bg3-blue": "Baldur's Gate 3 (Niebieski)",
-      "discord-light": "Discord (Jasny)",
-      "discord-dark": "Discord (Ciemny)",
-      "glass": "Szkło",
-      "crb-light": "Core Rulebook (Jasne)",
-      "crb-dark": "Core Rulebook (Ciemne)",
-      "custom": "⚠️ Zrób to sam 👷",
-      "custom-light": "⚠️ Zrób to sam (Jasne) 👷",
-      "custom-dark": "⚠️ Zrób to sam (Ciemne) 👷",
-      "dnd5e2-light": "D&D 5e (Jasny)",
-      "dnd5e2-dark": "D&D 5e (Ciemny)"
+      }
     },
     "settings": {
-      "reset-changes": "Zresetuj ustawienia",
+      "reset-changes": "Resetowanie zmian",
       "theme": {
-        "label": "Skonfiguruj ustawienia motywu",
+        "name": "Ustawienia motywu",
+        "label": "Konfiguracja ustawień motywu",
+        "hint": "Zmiana ustawień motywu dla różnych aplikacji i elementów interfejsu użytkownika. Motyw D&D 5e opiera się na zasobach z systemu D&D 5e, więc należy go również zainstalować.",
         "application-theme": {
           "name": "Motyw aplikacji",
-          "hint": "Wpływa na renderowane okna aplikacji",
-          "choice": {
-            "no-theme": "Brak motywu",
-            "light-theme": "Jasny Dorako UI",
-            "dark-theme": "Ciemny Dorako UI",
-            "foundry2-theme": "Inspirowany Foundry 2"
-          }
-        },
-        "frosted-glass": {
-          "name": "Używaj matowego szkła",
-          "hint": "OSTRZEŻENIE: Bardzo wysoka zasobożerność. Przykład: jasność(1.5) kontrast(1.2) nasycenie(1.5) rozmycie(5px)"
-        },
-        "glass-bg": {
-          "name": "Użyj alternatywnego szklanego tła",
-          "hint": "Każdy prawidłowy kolor CSS powinien działać"
-        },
-        "npc-sheet-theme": {
-          "hint": "Dostosowuje styl arkuszy postaci niezależnych, zagrożeń i chowańców",
-          "name": "Motyw karty aktora",
-          "choice": {
-            "default": "Domyślny interfejs Dorako",
-            "glassy": "(Eksperymentalne) Szklany"
-          }
-        },
-        "chat-theme": {
-          "name": "Motyw czatu",
-          "hint": "Wpływa na wszystkie wiadomości czatu",
-          "choice": {
-            "factions": "Gracze jasny, GM ciemny",
-            "foundry2": "Inspirowany Foundry 2"
-          }
-        },
-        "pc-sheet-theme": {
-          "name": "Motyw karty Gracza",
-          "hint": "Karty efektów dla postaci graczy i pojazdów",
-          "choice": {
-            "green": "Poprawiony Zielony",
-            "blue": "Klasyczny niebieski",
-            "red": "Oryginalny czerwony"
-          }
-        },
-        "name": "Ustawienia motywu",
-        "loot-sheet-theme": {
-          "hint": "Wpływa na kartę Łupu",
-          "name": "Motyw karty łupu"
-        },
-        "header-style": {
-          "choice": {
-            "none": "Wyłączony",
-            "tint": "Kolor gracza",
-            "red": "Czerwony",
-            "blue": "Niebieski",
-            "green": "Zielony"
-          },
-          "name": "Motyw nagłówka wiadomości czatu",
-          "hint": "Dodaje kolorowy nagłówek do każdej wiadomości czatu"
-        },
-        "enable-dark-theme-journals": {
-          "hint": "Nie ma wpływu na dzienniki modułów premium",
-          "name": "Włączyć ciemny motyw dla Dzienników?"
-        },
-        "familiar-sheet-theme": {
-          "name": "Motyw karty towarzysza",
-          "hint": "Wpływa na znane arkusze",
-          "choice": {
-            "dark-red-header": "Ciemny + czerwony nagłówek"
-          }
-        },
-        "border-radius": {
-          "name": "Zaokrąglenie",
-          "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika"
+          "hint": "Dotyczy schematu kolorów „Podstawowe → Konfiguracja interfejsu użytkownika → Aplikacja”."
         },
         "interface-theme": {
           "name": "Motyw interfejsu",
-          "hint": "Wpływa na elementy interfejsu użytkownika, takie jak kontrolki, nawigacja, pasek boczny, a także ruchome moduły stylów"
-        },
-        "application-theme": {
-          "hint": "Wpływa na styl aplikacji okienkowych",
-          "name": "Motyw karty"
-        },
-        "window-app-color-scheme": {
-          "name": "Schemat kolorów okienka",
-          "hint": "Wpływa na renderowane okna aplikacji"
-        },
-        "chat-message-theme": {
-          "hint": "Wpływa na renderowane wiadomości czatu",
-          "name": "Motyw wiadomości czatu"
-        },
-        "chat-message-color-scheme": {
-          "name": "Schemat kolorów wiadomości czatu",
-          "hint": "Zasady tworzenia jasnych lub ciemnych wiadomości na czacie"
-        },
-        "chat-message-header-style": {
-          "name": "Motyw nagłówka wiadomości czatu",
-          "hint": "Dotyczy tylko motywów CRB"
+          "hint": "Dotyczy schematu kolorów „Podstawowe → Konfiguracja interfejsu użytkownika → Interfejs”."
         },
         "chat-message-standard-theme": {
           "name": "Motyw wiadomości czatu (standardowy)",
-          "hint": "Dotyczy wiadomości od rozmówców spoza sojuszu \"opozycji\""
+          "hint": "Dotyczy wiadomości od użytkowników drużyny."
         },
         "chat-message-opposition-theme": {
           "name": "Motyw wiadomości czatu (przeciwny)",
-          "hint": "Dotyczy wiadomości z rozmówcami z sojuszu \"opozycyjnego\""
+          "hint": "Dotyczy wiadomości od pozostałych użytkowników."
+        },
+        "chat-message-header-style": {
+          "name": "Motyw nagłówka wiadomości czatu",
+          "hint": "Dotyczy tylko tematów CRB."
+        },
+        "border-radius": {
+          "name": "Zaokrąglenie",
+          "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika."
         },
         "sheet-theme-color": {
           "name": "Kolor motywu karty",
-          "hint": "Dotyczy kart postaci graczy i pojazdów"
+          "hint": "Dotyczy kart postaci graczy i pojazdów."
         }
       },
       "avatar": {
         "name": "Ustawienia awatara",
-        "source": {
-          "name": "Awatary czatu",
-          "hint": "Dodaje awatar do wiadomości czatu",
-          "choice": {
-            "token": "Preferowany obraz tokena",
-            "actor": "Preferowany wizerunek aktora"
-          }
-        },
-        "size": {
-          "name": "Rozmiar",
-          "hint": "Domyślnie 40px"
-        },
         "label": "Konfiguracja ustawień awatara",
-        "hint": "Konfiguracja ustawień związanych z awatarami w wiadomościach czatu",
+        "hint": "Poprawki dla awatarów wiadomości czatu.",
         "hide-gm-avatar-when-secret": {
-          "name": "Ukryć awatar, gdy jest tajny?",
-          "hint": "Ukrywa awatary za każdym razem, gdy GM rzuca tajne/prywatne rzuty"
+          "hint": "Ukrywa awatary, gdy MG wykonuje ukryte/prywatne rzuty.",
+          "name": "Ukrywanie awatara, gdy jest ukryty?"
         },
-        "hide-when-token-hidden": {
-          "hint": "Ukrywa awatary, gdy token mówcy jest ukryty",
-          "name": "Ukryć awatar, gdy token jest ukryty?"
+        "hide-avatar-when-token-hidden": {
+          "hint": "Ukrywa awatary, gdy token mówcy jest ukryty.",
+          "name": "Ukrywanie awatara, gdy token jest ukryty?"
         },
-        "popout-support": {
-          "hint": "Skaluje rozmiar awatarów tokenów zgodnie ze skalą tokena",
-          "name": "Włączyć wyskakujący token awatara?"
+        "avatar-reacts-to-degree-of-success": {
+          "hint": "Krytyczny sukces będzie świecił na zielono, a krytyczna porażka stanie się przyciemniona.",
+          "name": "Awatar reaguje na rzuty krytyczne?"
+        },
+        "avatar-source": {
+          "choice": {
+            "actor": "Preferowany obraz aktora",
+            "token": "Preferowany obraz tokena",
+            "system": "Wdrożenie systemu (rezerwowy)"
+          },
+          "hint": "Dodaje awatar do wiadomości czatu.",
+          "name": "Awatary czatu"
         },
         "use-user-avatar": {
-          "name": "Używać awatara użytkownika jako rezerwowego?",
-          "hint": "Skonfiguruj awatary użytkowników, klikając prawym przyciskiem myszy użytkowników w lewym dolnym obszarze Foundry"
-        },
-        "reacts-to-degree-of-success": {
-          "name": "Awatar reaguje na rzuty krytyczne?",
-          "hint": "Krytyczny sukces będzie świecił na zielono, a krytyczna porażka stanie się wyciszona i ciemna"
-        },
-        "small-creature-token-avatar-size": {
-          "name": "Rozmiar awatara małej istoty",
-          "hint": "Domyślnie 0,8"
-        }
-      },
-      "ux": {
-        "animate-messages": {
-          "hint": "Sprawia, że szepty graczy do GM przyciągają więcej uwagi",
-          "name": "Animować wiadomości, aby zwrócić uwagę na określone wydarzenia?"
-        },
-        "compact-ui": {
-          "name": "Włączyć Compact UI?",
-          "hint": "Zmienia rozmiar elementów sterujących i ukrywa nieaktywne elementy sterujące i nawigacyjne, chyba że zostaną najechane"
-        },
-        "start-sidebar-collapsed": {
-          "name": "Zwiń domyślnie pasek boczny?",
-          "hint": "Używa stanu zwiniętego jako stanu początkowego"
-        },
-        "start-navigation-collapsed": {
-          "name": "Domyślnie zwinąć nawigację?",
-          "hint": "Używa stanu zwiniętego jako stanu początkowego"
-        },
-        "no-compendium-banner-images": {
-          "name": "Ukryć banery kompendium?",
-          "hint": "Usuwa banery kompendium na pasku bocznym"
-        },
-        "no-logo": {
-          "name": "Ukryć logo Foundry?",
-          "hint": "Usuwa logo Foundry w lewym górnym rogu"
-        },
-        "no-cards": {
-          "hint": "Całkowicie usuwa zakładkę Karty na pasku bocznym",
-          "name": "Ukryć zakładkę Karty?"
-        },
-        "no-chat-control-icon": {
-          "name": "Ukryć ikonę sterowania czatem?",
-          "hint": "Jest to ikona kości obok opcji rzutu, ma skłonność do zapychania interfejsu użytkownika"
-        },
-        "enable-rolltype-indication": {
-          "name": "Włączyć tag typ rzutu?",
-          "hint": "Dodaje znacznik zawierający typ rzutu do wiadomości czatu"
-        },
-        "enable-player-tags": {
-          "hint": "Dodaje znacznik zawierający nazwę gracza obok głośnika",
-          "name": "Włączyć tagi graczy?"
-        },
-        "hint": "Skonfiguruj ustawienia związane z pokazywaniem, ukrywaniem, zmniejszaniem lub zwiększaniem przejrzystości interfejsu użytkownika, przenoszeniem elementów do różnych lokalizacji",
-        "restructure-card-info": {
-          "name": "Restrukturyzacja informacji o karcie czatu?",
-          "hint": "Zwiększono widoczność kosztu akcji dla cech i przeniesiono informacje o zaklęciach ze stopki"
-        },
-        "name": "Ustawienia UX",
-        "adjust-token-effects-hud": {
-          "name": "Dostosować HUD efektów tokenów?",
-          "hint": "Sprawia, że efekty są okrągłe i układa je poza żetonem lub na pierścieniu żetonu w przypadku większych żetonów"
-        },
-        "label": "Konfiguracja ustawień UX",
-        "center-hotbar": {
-          "name": "Włączyć wyśrodkowany pasek skrótów?",
-          "hint": "Znany również jako pasek z makrami"
-        },
-        "remove-attack-info-from-damage-roll-messages": {
-          "name": "Usunąć informacje o ataku z komunikatów o obrażeniach?",
-          "hint": "Sprawia, że rzuty obrażeń zajmują mniej miejsca, usuwając zbędne informacje o trafieniach. Przeznaczony do użytku z funkcją chat-merge"
-        },
-        "chat-merge": {
-          "name": "Włączyć scalanie czatu?",
-          "hint": "(Eksperymentalne) Łączy wiadomości wysłane w szybkiej sekwencji w celu zaoszczędzenia miejsca"
-        },
-        "adjust-chat-controls": {
-          "name": "Dostosować sterowanie czatem?",
-          "hint": "(Eksperymentalne) Przekształca tryb rolltype w przyciski i konwertuje inne kontrolki czatu na przyciski"
-        },
-        "border-radius": {
-          "hint": "(domyślnie: 3px) Zmienia stopień zaokrąglenia wielu elementów interfejsu użytkownika",
-          "name": "Zaokrąglenie"
-        },
-        "control-size": {
-          "name": "Kontrola rozmiaru",
-          "hint": "(domyślnie: 36px) Zmienia rozmiar elementów sterujących i nawigacyjnych"
-        },
-        "controls-alignment": {
-          "name": "Kontrola rozmieszczenia",
-          "hint": "Zmienia położenie elementów sterujących",
-          "choice": {
-            "start": "Góra",
-            "center": "Środek",
-            "end": "Dół"
-          }
+          "hint": "Skonfiguruj awatary użytkowników, klikając prawym przyciskiem myszy użytkowników w lewym dolnym obszarze Foundry.",
+          "name": "Używać awatara użytkownika jako alternatywy?"
         }
       },
       "misc": {
-        "label": "Skonfiguruj różne ustawienia",
-        "hint": "Konfiguracja ustawień związanych z innymi funkcjami Dorako UI",
+        "name": "Inne ustawienia",
+        "label": "Skonfiguruj inne ustawienia",
+        "hint": "Konfiguracja ustawień związanych z innymi funkcjami interfejsu Dorako.",
         "enable-debug-mode": {
           "name": "Włączyć tryb debugowania?",
           "hint": "Dodaje przyciski do szybkiej zmiany motywu karty"
-        },
-        "skin-crb-journal": {
-          "name": "Włączyć stylizację CRB dla dzienników?",
-          "hint": "Instrukcje na stronie www.shorturl.at/mrzN1"
-        },
-        "send-to-chat": {
-          "name": "Dodać przycisk \"Wyślij\" do nagłówka okna?",
-          "hint": "Wysyła zawartość do czatu tak, jakby była wysyłana przez kartę"
-        },
-        "name": "Różne ustawienia"
+        }
       },
       "customization": {
         "name": "Personalizacja",
+        "hint": "Wprowadź spersonalizowane zmiany za pomocą niestandardowego CSS lub zrezygnuj z niektórych stylów interfejsu Dorako.",
+
         "excluded-applications": {
-          "name": "Wyłączone aplikacje",
-          "hint": "Poszukaj nazwy aplikacji w logach lub zapytaj na Discordzie"
+          "name": "Wykluczone aplikacje",
+          "hint": "Poszukaj nazwy aplikacji w logach lub zapytaj na Discordzie."
         },
-        "hint": "Wprowadź spersonalizowane zmiany za pomocą niestandardowego CSS lub zrezygnuj z niektórych stylów interfejsu Dorako",
         "custom-css": {
           "name": "Niestandardowy CSS",
-          "hint": "Napisz CSS w zewnętrznym edytorze i wklej go tutaj"
+          "hint": "Napisz CSS w zewnętrznym edytorze i wklej go tutaj."
+        },
+        "chatlog-notify-seconds": {
+          "name": "Czas trwania powiadomienia czatu",
+          "hint": "Liczba sekund wyświetlania nowych wiadomości czatu."
+        },
+        "chat-merge": {
+          "hint": "Łączy wysłane wiadomości w szybkiej sekwencji w celu zaoszczędzenia miejsca.",
+          "name": "Włączyć scalanie czatu?"
         }
       },
       "external-module": {
-        "name": "Ustawienia zewnętrzne modułu",
-        "hint": "Dostosowania dotyczące wpływu interfejsu Dorako na inne moduły",
+        "name": "Ustawienia modułów zewnętrznych",
+        "hint": "Dostosowania dotyczące wpływu interfejsu Dorako na inne moduły.",
+
         "colorize-idle-hud": {
-          "name": "Pokolorować PF2e HUD?",
-          "hint": "Stosuje kolorowy motyw do ikon w głównym pasku narzędzi i HUD"
+          "name": "Pokolorować HUD PF2e?",
+          "hint": "Stosuje kolorowy motyw do ikon w głównym pasku narzędzi i trwałym HUD."
         }
       }
     }
