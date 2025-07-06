@@ -2275,6 +2275,13 @@ v13
 }
 [data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-sidebar {
   --color: black;
+  --header-background: rgba(255, 255, 255, 0.5);
+}
+[data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-sidebar .item .variants .variant,
+[data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-sidebar .item + .variants .variant,
+[data-interface-color-scheme][data-interface-color-scheme=light] #pf2e-hud-sidebar select {
+  color: white;
+  --color: white;
 }
 [data-interface-color-scheme][data-interface-color-scheme=light] [data-panel=name],
 [data-interface-color-scheme][data-interface-color-scheme=light] [data-panel=stats],
@@ -2297,16 +2304,31 @@ v13
   --outer-border: 1px solid var(--control-border-color);
   --sidebar-arrow-color: var(--control-bg-color);
 }
-[data-interface-color-scheme] #pf2e-hud-persistent [data-panel]:not([data-panel=shortcuts], [data-panel=menu], [data-panel=name], [data-panel=stats]),
-[data-interface-color-scheme] #pf2e-hud-persistent [data-panel=menu] .group {
+[data-interface-color-scheme] #pf2e-hud-persistent [data-panel]:not([data-panel=shortcuts],
+[data-panel=menu],
+[data-panel=name],
+[data-panel=stats],
+[data-panel=effects]),
+[data-interface-color-scheme] #pf2e-hud-persistent [data-panel=menu] .group,
+[data-interface-color-scheme] #hotbar-page-controls {
   box-shadow: var(--control-box-shadow);
   backdrop-filter: blur(4px);
+  padding: var(--panel-gap);
+  background: var(--panel-background);
+  border: var(--outer-border);
+  border-radius: var(--outer-border-radius);
+}
+[data-interface-color-scheme] [data-panel=effects] {
+  --icon-color: var(--text-light);
 }
 [data-interface-color-scheme] #pf2e-hud-sidebar .inner,
 [data-interface-color-scheme] #pf2e-hud-token[data-mode=exploded] [data-panel] {
   --outer-background: var(--control-bg-color);
   --outer-border: 1px solid var(--control-border-color);
   backdrop-filter: blur(4px);
+}
+[data-interface-color-scheme] .pf2e-hud-shortcut-tooltip {
+  padding: 0 !important;
 }
 
 [data-theme].chat-message.message .pf2e-token-hud .rk-lores, [data-theme].chat-message.message .pf2e-token-hud .rk-lores-rolls, [data-theme].chat-message.message .pf2e-token-hud .rk-skills, [data-theme].chat-message.message .pf2e-token-hud .rk {
@@ -6026,6 +6048,8 @@ span[data-pf2-action][data-pf2-glyph]::before {
 aside.locked-tooltip.pf2e.themed {
   background: var(--control-bg-color);
   backdrop-filter: blur(4px);
+  text-shadow: 0px 1px 2px var(--control-text-shadow);
+  color: var(--control-icon-color);
   --color-text-primary: var(--control-icon-color);
   --color-text-emphatic: var(--control-icon-color);
 }
@@ -6233,7 +6257,8 @@ aside.locked-tooltip.pf2e.themed.pf2e.carry-type-menu li a.selected {
 /* ----------------------------------------- */
 /* Damage colors                             */
 /* ----------------------------------------- */
-[data-chat-message-color-scheme=dark][data-theme] .damage,
+[data-chat-message-color-scheme=dark][data-chat-message-theme] .damage,
+.themed.theme-dark .damage,
 .theme-dark .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125);
   --color-bg-bleed: rgba(207, 28, 58, 0.125);
@@ -6716,7 +6741,7 @@ i[data-pf2-repost] {
 }
 [data-interface-theme] #hotbar .slot {
   box-shadow: var(--control-box-shadow);
-  border: 2px solid var(--control-border-color);
+  border: 1px solid var(--control-border-color);
   transition: box-shadow 0.25s, background 0.25s, border 0.25s, color 0.25s;
   cursor: var(--cursor-pointer);
 }

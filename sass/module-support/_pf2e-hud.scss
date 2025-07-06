@@ -368,6 +368,14 @@ v13
     }
     #pf2e-hud-sidebar {
       --color: black;
+      --header-background: rgba(255, 255, 255, 0.5);
+    }
+
+    #pf2e-hud-sidebar .item .variants .variant,
+    #pf2e-hud-sidebar .item + .variants .variant,
+    #pf2e-hud-sidebar select {
+      color: white;
+      --color: white;
     }
 
     [data-panel="name"],
@@ -399,10 +407,25 @@ v13
   }
 
   #pf2e-hud-persistent
-    [data-panel]:not([data-panel="shortcuts"], [data-panel="menu"], [data-panel="name"], [data-panel="stats"]),
-  #pf2e-hud-persistent [data-panel="menu"] .group {
+    [data-panel]:not(
+      [data-panel="shortcuts"],
+      [data-panel="menu"],
+      [data-panel="name"],
+      [data-panel="stats"],
+      [data-panel="effects"]
+    ),
+  #pf2e-hud-persistent [data-panel="menu"] .group,
+  #hotbar-page-controls {
     box-shadow: var(--control-box-shadow);
     backdrop-filter: blur(4px);
+    padding: var(--panel-gap);
+    background: var(--panel-background);
+    border: var(--outer-border);
+    border-radius: var(--outer-border-radius);
+  }
+
+  [data-panel="effects"] {
+    --icon-color: var(--text-light);
   }
 
   #pf2e-hud-sidebar .inner,
@@ -410,5 +433,9 @@ v13
     --outer-background: var(--control-bg-color);
     --outer-border: 1px solid var(--control-border-color);
     backdrop-filter: blur(4px);
+  }
+
+  .pf2e-hud-shortcut-tooltip {
+    padding: 0 !important;
   }
 }

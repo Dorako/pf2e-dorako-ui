@@ -168,7 +168,9 @@ span[data-pf2-action][data-pf2-glyph]::before {
 aside.locked-tooltip.pf2e.themed {
   background: var(--control-bg-color);
   backdrop-filter: blur(4px);
+  text-shadow: 0px 1px 2px var(--control-text-shadow);
 
+  color: var(--control-icon-color);
   --color-text-primary: var(--control-icon-color);
   --color-text-emphatic: var(--control-icon-color);
   &.pf2e.carry-type-menu li a {

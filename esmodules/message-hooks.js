@@ -3,14 +3,14 @@ import { getPlayerOwners } from "./util.js";
 import { i18n, titleCase } from "./util.js";
 import { Avatar, ActorAvatar, TokenAvatar, CombatantAvatar, SubjectAvatar } from "./consts.js";
 
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-  if (html[0].hasAttribute("style")) {
+Hooks.on("renderChatMessageHTML", (chatMessage, html, messageData) => {
+  if (html.hasAttribute("style")) {
     html.css("border-color", "");
   }
 });
 
 // Chat cards
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+Hooks.on("renderChatMessageHTML", (chatMessage, html, messageData) => {
   const isNarratorToolsMessage = chatMessage.flags["narrator-tools"];
   const isMLDRoundMarker = chatMessage.flags["monks-little-details"]?.roundmarker;
   const isMCDRoundMarker = chatMessage.flags["monks-combat-details"]?.roundmarker;
@@ -19,8 +19,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     return;
   }
 
-  let html0 = html[0];
-  html0.style.setProperty("--player-color", chatMessage?.author?.color ?? "#DAC0FB");
+  html.style.setProperty("--player-color", chatMessage?.author?.color ?? "#DAC0FB");
 
   const isSecretDisposition =
     game?.scenes?.get(chatMessage?.speaker?.scene)?.tokens?.get(chatMessage?.speaker?.token)?.disposition == -2;
@@ -39,30 +38,24 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   // html0.dataset.colorScheme = colorScheme;
   // html0.dataset.dorakoUiScope = "unlimited";
   // html0.dataset.theme = ""; // don't set this
-  html0.dataset.chatMessageTheme = dorakoUiTheme;
-  html0.dataset.chatMessageColorScheme = colorScheme;
+  html.dataset.chatMessageTheme = dorakoUiTheme;
+  html.dataset.chatMessageColorScheme = colorScheme;
 
   const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
   if (dorakoUiTheme === "crb" && headerStyle !== "none") {
-    html0.dataset.hasHeader = "";
+    html.dataset.hasHeader = "";
   }
   themeHeader(html, chatMessage);
 });
 
 function themeHeader(html, message) {
-  let messageHeader = html.find(".message-header")[0];
+  let messageHeader = html.querySelector(".message-header");
   const headerColor = getHeaderColor(html, message);
   messageHeader.style.setProperty("--header-color", headerColor);
 
   if (headerColor !== headerStyleColors.none) {
     let textColTheme = calcHeaderTextColor(headerColor);
-    html[0].dataset.headerTextColorScheme = textColTheme;
-  }
-
-  // some modules add different timestamps and hide the original, like dfce-simple-timestamp
-  let time = html.find("time")[0];
-  if (time) {
-    // time.classList.add("header-meta");
+    html.dataset.headerTextColorScheme = textColTheme;
   }
 }
 
@@ -95,15 +88,15 @@ function calcHeaderTextColor(headerColor) {
   }
 }
 
-const rgb2hex = (rgb) =>
-  `#${rgb
-    .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
-    .slice(1)
-    .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
-    .join("")}`;
+// const rgb2hex = (rgb) =>
+//   `#${rgb
+//     .match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/)
+//     .slice(1)
+//     .map((n) => parseInt(n, 10).toString(16).padStart(2, "0"))
+//     .join("")}`;
 
 // Chat cards
-Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+Hooks.on("renderChatMessageHTML", (chatMessage, html, messageData) => {
   const isNarratorToolsMessage = chatMessage.flags["narrator-tools"];
   const isMLDRoundMarker = chatMessage.flags["monks-little-details"]?.roundmarker;
   const isMCDRoundMarker = chatMessage.flags["monks-combat-details"]?.roundmarker;
@@ -116,15 +109,17 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
     game?.scenes?.get(chatMessage?.speaker?.scene)?.tokens?.get(chatMessage?.speaker?.token)?.disposition == -2;
   const isOpposition = chatMessage?.actor?.alliance === "opposition" && !isSecretDisposition;
   if (isOpposition && game.settings.get("pf2e-dorako-ui", "theme.chat-message-opposition-theme") === "no-theme") {
-    html[0].classList.add("themed");
-    html[0].classList.add("theme-light");
+    html.classList.add("themed");
+    html.classList.add("theme-light");
     return;
   }
   if (!isOpposition && game.settings.get("pf2e-dorako-ui", "theme.chat-message-standard-theme") === "no-theme") {
-    html[0].classList.add("themed");
-    html[0].classList.add("theme-light");
+    html.classList.add("themed");
+    html.classList.add("theme-light");
     return;
   }
+
+  moveFlavorTextToContents(html);
 
   // if (game.settings.get("pf2e-dorako-ui", "avatar.source") !== "system") {
   //   html[0].querySelector(".message-header").classList.add("dorako-ux");
@@ -132,7 +127,7 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   //   injectAuthorName(html, messageData);
   // }
   adjustWhisperParticipants(html, messageData);
-  injectMessageTag(html, messageData);
+  // injectMessageTag(html, messageData);
   injectAvatar(html, getAvatar(chatMessage));
 
   // if (
@@ -144,30 +139,29 @@ Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
   // } else {
   //   // injectAvatar(html, getAvatar(chatMessage));
   // }
-  moveFlavorTextToContents(html);
 });
 
-// // Is damage roll
-// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-//   // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
+// // // Is damage roll
+// // Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+// //   // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
 
-//   if (chatMessage?.isDamageRoll && chatMessage?.item?.type !== "spell") {
-//     html[0].classList.add("dorako-damage-roll");
-//     let flavor = html.find(".flavor-text");
-//     flavor.each(function () {
-//       $(this).contents().eq(1).wrap("<span/>");
-//     });
-//   }
-// });
+// //   if (chatMessage?.isDamageRoll && chatMessage?.item?.type !== "spell") {
+// //     html[0].classList.add("dorako-damage-roll");
+// //     let flavor = html.find(".flavor-text");
+// //     flavor.each(function () {
+// //       $(this).contents().eq(1).wrap("<span/>");
+// //     });
+// //   }
+// // });
 
-// // Is check roll
-// Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
-//   // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
+// // // Is check roll
+// // Hooks.on("renderChatMessage", (chatMessage, html, messageData) => {
+// //   // if (!game.settings.get("pf2e-dorako-ui", "hiding.remove-attack-info-from-damage-roll-messages")) return;
 
-//   if (chatMessage?.isCheckRoll) {
-//     html.addClass("dorako-check-roll");
-//   }
-// });
+// //   if (chatMessage?.isCheckRoll) {
+// //     html.addClass("dorako-check-roll");
+// //   }
+// // });
 
 // "Be last" magic trick. Should ensure that any other modules that modify, say, who spoke the message, have done so before you add the flags.
 Hooks.once("ready", () => {
@@ -178,9 +172,9 @@ Hooks.once("ready", () => {
     });
   });
 
-  Hooks.on("updateChatMessage", (message) => {
-    addAvatarsToFlags(message, false);
-  });
+  // Hooks.on("updateChatMessage", (message) => {
+  //   addAvatarsToFlags(message, false);
+  // });
 
   // Hooks.on("renderChatMessage", (app, html, data) => {
   //   const isKoboldWorksTurnAnnouncerMessage = app.flags["koboldworks-turn-announcer"];
@@ -196,14 +190,14 @@ Hooks.once("ready", () => {
 });
 
 function moveFlavorTextToContents(html) {
-  let flavor = html.find(".flavor-text")[0];
-  let contents = html.find(".message-content")[0];
+  let flavor = html.querySelector(".flavor-text");
+  let contents = html.querySelector(".message-content");
   if (flavor) contents.prepend(flavor);
 }
 
 function injectSenderWrapper(html, messageData) {
   if (messageData.author === undefined) return;
-  var target = html.find(".message-sender")[0];
+  var target = html.querySelector(".message-sender");
   var wrapper = document.createElement("div");
   wrapper.classList.add("sender-wrapper");
   target.parentNode.insertBefore(wrapper, target);
@@ -212,7 +206,7 @@ function injectSenderWrapper(html, messageData) {
 
 function injectAvatar(html, avatar) {
   if (!avatar) return;
-  let messageHeader = html.find(".message-header")[0];
+  let messageHeader = html.querySelector(".message-header");
   let dorakoPortraitElem = document.createElement("div");
   dorakoPortraitElem.setAttribute("class", "portrait token dorako");
   // let portraitAndName = document.createElement("div");
@@ -238,28 +232,28 @@ function injectAvatar(html, avatar) {
   // portraitAndName.prepend(wrapper);
 }
 
-function injectAuthorName(html, messageData) {
-  if (messageData.author === undefined) return;
-  if (game.settings.get("pf2e-dorako-ui", "other.enable-player-tags")) {
-    const messageSenderElem = html.find(".sender-wrapper");
-    const playerName = messageData.author.name;
-    const playerNameElem = document.createElement("span");
-    playerNameElem.appendChild(document.createTextNode(playerName));
-    playerNameElem.classList.add("player-name");
-    playerNameElem.classList.add("header-meta");
-    if (playerName === messageData.alias) {
-      html.find(".message-sender").addClass("dorako-display-none");
-    }
-    messageSenderElem.append(playerNameElem);
-  }
-}
+// function injectAuthorName(html, messageData) {
+//   if (messageData.author === undefined) return;
+//   if (game.settings.get("pf2e-dorako-ui", "other.enable-player-tags")) {
+//     const messageSenderElem = html.querySelector(".sender-wrapper");
+//     const playerName = messageData.author.name;
+//     const playerNameElem = document.createElement("span");
+//     playerNameElem.appendChild(document.createTextNode(playerName));
+//     playerNameElem.classList.add("player-name");
+//     playerNameElem.classList.add("header-meta");
+//     if (playerName === messageData.alias) {
+//       html.querySelector(".message-sender").addClass("dorako-display-none");
+//     }
+//     messageSenderElem.append(playerNameElem);
+//   }
+// }
 
 function injectMessageTag(html, messageData) {
   // const setting = game.settings.get("pf2e-dorako-ui", "other.enable-rolltype-indication");
   // if (setting == false) {
   //   return;
   // }
-  const messageMetadata = html.find(".message-header");
+  const messageMetadata = html.querySelector(".message-header");
 
   const rolltype = $("<span>");
   rolltype.addClass("rolltype");
@@ -320,14 +314,14 @@ function adjustWhisperParticipants(html, messageData) {
   if (userId !== authorId && !whisperTargetIds.includes(userId)) return;
 
   // remove the old whisper to content, if it exists
-  html.find(".whisper-to").detach();
+  html.querySelector(".whisper-to").detach();
 
   if (messageData.message?.flags?.pf2e?.context?.type == "damage-taken") return;
 
   // if this is a roll
   if (isRoll) return;
 
-  const messageHeader = html.find(".message-header");
+  const messageHeader = html.querySelector(".message-header");
 
   const whisperParticipants = $("<span>");
   whisperParticipants.addClass("dux");
@@ -439,19 +433,18 @@ function getAvatar(message) {
 }
 
 // Add avatar if message contains avatar data
-Hooks.on("renderChatMessage", (message, b) => {
+Hooks.on("renderChatMessageHTML", (message, html) => {
   let avatar = getAvatar(message);
   if (!avatar) {
-    let messageHeader = b[0].getElementsByClassName("message-header")[0];
+    let messageHeader = html.querySelector(".message-header");
     // messageHeader.classList.add("with-image");
     messageHeader.classList.add("no-image");
     return;
   }
-  let html = b[0];
-  let messageHeader = b[0].getElementsByClassName("message-header")[0];
+  let messageHeader = html.querySelector(".message-header");
   messageHeader.classList.add("with-image");
 
-  let avatarElem = html.getElementsByClassName("portrait dorako")[0];
+  let avatarElem = html.querySelector(".portrait.dorako");
   if (!avatarElem) return;
 
   let avatarImgElement = document.createElement("img");
@@ -527,9 +520,9 @@ Hooks.on("renderChatMessage", (message, b) => {
 });
 
 // Add .spell to spells
-Hooks.on("renderChatMessage", (app, html, data) => {
+Hooks.on("renderChatMessageHTML", (app, html, data) => {
   const item = app?.item;
   if (!item) return;
   if (!item.constructor.name.includes("SpellPF2e")) return;
-  html[0].classList.add("spell");
+  html.classList.add("spell");
 });

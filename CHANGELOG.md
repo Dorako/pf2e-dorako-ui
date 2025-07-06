@@ -1,3 +1,7 @@
+# 4.0.4
+
+- (Fix) Potentially fixed a performance issue by migrating to renderChatMessageHTML and removing an updateChatMessage hook.
+
 # 4.0.3
 
 - (Fix) Improved the first-launch experience by disabling some interactions when a theme has yet to be applied.
