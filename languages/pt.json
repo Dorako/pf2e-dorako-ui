@@ -39,7 +39,113 @@
   "dorako-ui.settings.hide-avatar-when-hidden.hint": "Esconder avatares quando o token falante estiver escondido",
   "pf2e-dorako-ui": {
     "text": {
-      "secret": "Secreto"
+      "secret": "Secreto",
+      "large-chatlog-warning": "Devido ao grande histórico do chat, algumas configurações serão aplicadas no próximo recarregamento.",
+      "colors": {
+        "brown": "Marrom",
+        "blue": "Azul",
+        "red": "Vermelho",
+        "green": "Verde",
+        "purple": "Roxo",
+        "black": "Preto",
+        "player": "Cor do Jogador"
+      },
+      "prefer-light": "Preferir Claro",
+      "prefer-dark": "Preferir escuro",
+      "bg3": "",
+      "crb": "Livro Básico de Regras",
+      "no-theme": "Sem tema",
+      "opaque": "Opaco",
+      "alliance": "Oposição escuro",
+      "gm-vs-players": "GM escuro",
+      "self-roll": "Privado",
+      "gm-only": "GM apenas",
+      "whisper": "Sussurrar",
+      "from": "De",
+      "to": "para",
+      "send-to-chat": "Enviar",
+      "default": "Padrão",
+      "dark": "Escuro",
+      "light": "Claro",
+      "disabled": "Desabilitado",
+      "maybe-reload": "Algumas mudanças podem precisar de um recarregamento.",
+      "bg3-brown": "Baldur's Gate 3 (Marrom)",
+      "bg3-blue": "Baldur's Gate 3 (Azul)",
+      "discord-dark": "Discord (Escuro)",
+      "glass": "Vítreo",
+      "crb-light": "Livro Básico de Regras (Claro)",
+      "crb-dark": "Livro Básico de Regras (Escuro)",
+      "discord-light": "Discord (Claro)",
+      "dnd5e2-light": "D&D 5e (Claro)",
+      "dnd5e2-dark": "D&D 5e (Escuro)",
+      "custom": "⚠️ Faça Você Mesmo 👷",
+      "custom-light": "⚠️ Faça Você Mesmo (Claro) 👷",
+      "custom-dark": "⚠️ Faça Você Mesmo (Escuro) 👷"
+    },
+    "settings": {
+      "theme": {
+        "window-app-theme": {
+          "hint": "Aplicável a aplicações em modo janela",
+          "name": "Tema da Ficha"
+        },
+        "border-radius": {
+          "hint": "(padrão: 3px) Altera o nível de arredondamento das bordas de vários elementos de UI",
+          "name": "Arredondamento das Bordas"
+        },
+        "app-theme": {
+          "hint": "Aplica-se a elementos da interface com o usuário como controles, navegação, barra lateral assim como módulos no modo flutuante",
+          "name": "Tema da Interface"
+        },
+        "chat-message-opposition-theme": {
+          "hint": "Aplica-se a mensagens que são de criaturas de \"oposição\" aos personagens",
+          "name": "Tema (oposição) de mensagem no Chat"
+        },
+        "sheet-theme-color": {
+          "hint": "Aplica-se às fichas dos personagens dos jogadores e veículos",
+          "name": "Cor da Ficha"
+        },
+        "chat-message-header-style": {
+          "name": "Tema do cabeçalho das mensagens no Chat",
+          "hint": "Aplica-se apenas a temas do Livro Básico"
+        },
+        "name": "Propriedades do Tema",
+        "hint": "Mudar as propriedades do tema para várias aplicações e elementos de UI",
+        "label": "Configurar Propriedades do Tema",
+        "chat-message-standard-theme": {
+          "hint": "Aplica-se a mensagens que não são de criaturas de \"oposição\" aos personagens",
+          "name": "Tema (Padrão) de mensagem no Chat"
+        }
+      },
+      "misc": {
+        "hint": "Configurar propriedades relacionadas a outra funcionalidade do Dorako UI",
+        "enable-debug-mode": {
+          "hint": "Adicionar botões para rapidamente trocar tema da Ficha",
+          "name": "Habilitar modo debug?"
+        },
+        "name": "Propriedades Diversas",
+        "label": "Configurar Propriedades Diversas"
+      },
+      "customization": {
+        "hint": "Fazer alterações personalizadas usando CSS customizado, ou remover certos estilos do Dorako UI",
+        "excluded-applications": {
+          "hint": "Procure nos logs pelo nome da Aplicação, ou pergunte no Discord",
+          "name": "Aplicações excluídas"
+        },
+        "custom-css": {
+          "name": "Customizar CSS",
+          "hint": "Escreva CSS em um editor externo e cole-o aqui"
+        },
+        "name": "Customização"
+      },
+      "external-module": {
+        "name": "Configurações de Módulo Externo",
+        "colorize-idle-hud": {
+          "hint": "Aplicar um tema colorido aos ícones de dicas principais e no HUD persistente",
+          "name": "Colorir PF2e HUD?"
+        },
+        "hint": "Ajustes para como outros módulos são afetados pelo Dorako UI"
+      },
+      "reset-changes": "Resetar Mudanças"
     }
   }
 }
