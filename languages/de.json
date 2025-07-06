@@ -165,14 +165,7 @@
           }
         },
         "application-theme": {
-          "name": "Design der Anwendung",
-          "choice": {
-            "no-theme": "Kein Design",
-            "light-theme": "Helles Dorako UI",
-            "dark-theme": "Dunkles Dorako UI",
-            "foundry2-theme": "Foundry 2 inspiriert"
-          },
-          "hint": "Beeinflusst gerenderte Anwendungfenster"
+          "name": "Bogendesign"
         },
         "enable-dark-theme-journals": {
           "name": "Dunkles Design für Notizbücher aktivieren?",
@@ -192,9 +185,6 @@
         "chat-message-header-style": {
           "name": "Design der Chatnachrichten-Kopfzeile",
           "hint": "Gilt nur für CRB-Designs"
-        },
-        "application-theme": {
-          "name": "Bogendesign"
         },
         "chat-message-standard-theme": {
           "name": "Chatnachricht (Standard) Design",
