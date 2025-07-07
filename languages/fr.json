@@ -169,7 +169,9 @@
       "custom": "⚠️ Faites-le vous-même 👷",
       "custom-dark": "⚠️ Faites-le vous-même (sombre) 👷",
       "dnd5e2-light": "D&D 5e (clair)",
-      "dnd5e2-dark": "D&D 5e (sombre)"
+      "dnd5e2-dark": "D&D 5e (sombre)",
+      "dnd5e2": "D&D 5e",
+      "github": "Github"
     },
     "settings": {
       "theme": {
@@ -235,7 +237,7 @@
           }
         },
         "name": "Réglages du thème",
-        "hint": "Modifier les paramètres du thème pour diverses applications et éléments de l'interface utilisateur",
+        "hint": "Modifier les paramètres du thème pour diverses applications et éléments de l'interface utilisateur. Le thème D&D 5e se base sur des éléments du système D&D 5e, de sorte qu'il doit également être installé.",
         "frosted-glass": {
           "name": "Utilisez le verre dépoli",
           "hint": "AVERTISSEMENT : Très gourmand en performances. Exemple : brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
@@ -270,7 +272,7 @@
         },
         "chat-message-header-style": {
           "name": "Thème de titre de message de conversation",
-          "hint": "Ne s'applique qu'aux thèmes LdB",
+          "hint": "Ne s'applique qu'aux thèmes du Livre des Joueurs.",
           "choice": {
             "red": "Rouge",
             "blue": "Bleu",
@@ -280,12 +282,12 @@
           }
         },
         "chat-message-opposition-theme": {
-          "hint": "S'applique aux messages dont les orateurs appartiennent à l'alliance \"opposition\"",
+          "hint": "S'applique aux messages dont les orateurs appartiennent à l'alliance 'opposition'.",
           "name": "Thème du message de conversation (opposition)"
         },
         "chat-message-standard-theme": {
           "name": "Thème du message de conversation (standard)",
-          "hint": "S'applique aux messages des orateurs n'appartenant pas à l'alliance \"opposition\""
+          "hint": "S'applique aux messages des orateurs n'appartenant pas à l'alliance 'opposition'."
         },
         "sheet-theme-color": {
           "name": "Couleur du thème de la feuille",
@@ -472,7 +474,7 @@
         "hint": "Ajustements concernant la manière dont les autres modules sont affectés par Dorako UI",
         "colorize-idle-hud": {
           "name": "Coloriser PF2e HUD ?",
-          "hint": "Applique un thème coloré aux icônes de l'infobulle principale et du HUD persistant"
+          "hint": "Applique un thème coloré aux icônes de l'infobulle principale et du HUD persistant."
         }
       }
     }
