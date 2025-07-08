@@ -52,14 +52,8 @@
         "name": "Ajustes del tema",
         "label": "Configurar ajustes de tema",
         "application-theme": {
-          "name": "Tema de aplicación",
-          "choice": {
-            "no-theme": "Sin tema",
-            "dark-theme": "Modo oscuro Dorako UI",
-            "light-theme": "Modo claro Dorako UI",
-            "foundry2-theme": "Inspirado en Foundry 2"
-          },
-          "hint": "Afecta a las ventanas de aplicación renderizadas"
+          "name": "Tema de la hoja",
+          "hint": "Se pone a aplicaciones de estilo de ventana"
         },
         "frosted-glass": {
           "name": "Usar cristal desgastado",
@@ -123,10 +117,6 @@
         "interface-theme": {
           "name": "Tema del interfaz",
           "hint": "Se aplica a elementos de la interfaz de usuario como controles, navegación, barra lateral y módulos de estilo flotante"
-        },
-        "application-theme": {
-          "name": "Tema de la hoja",
-          "hint": "Se pone a aplicaciones de estilo de ventana"
         },
         "chat-message-header-style": {
           "hint": "Sólo se aplica a temas Pf2e reglas básicas",
