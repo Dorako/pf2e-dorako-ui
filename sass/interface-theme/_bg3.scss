@@ -122,7 +122,7 @@
 /* Tooltip                                   */
 /* ----------------------------------------- */
 
-[data-interface-theme^="bg3"] #tooltip {
+[data-interface-theme^="bg3"] :is(#tooltip.pf2e.themed, aside.locked-tooltip.pf2e.themed, #tooltip) {
   --border-radius: 12px;
   --bg3-border-inner: #a16a37;
   --bg3-border-outer: #4a2e18;
@@ -144,18 +144,27 @@
   );
   box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   backdrop-filter: none;
-  border-radius: var(--border-radius);
   text-shadow: none;
-  padding: 1em 1em;
-  font-family: var(--serif);
+  border-radius: var(--border-radius);
   color: var(--bg3-text-3);
   background: var(--bg3-tooltip-window-background) padding-box,
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
   border: 2px solid transparent;
+  --color-text-primary: var(--bg3-text-3);
+  --color-text-emphatic: var(--bg3-text-2);
+
+  &:not(.pf2e) {
+    padding: 1em 1em;
+    font-family: var(--serif);
+  }
+  &.pf2e {
+    padding: 0.5em 1em;
+  }
 }
 
 [data-interface-theme="bg3"] {
+  #smalltime-app,
   #players #players-active,
   #players #players-inactive {
     background: var(--app-background);
@@ -170,34 +179,19 @@
   }
 }
 
-[data-interface-theme="bg3"] {
-  #tooltip.pf2e.themed,
-  aside.locked-tooltip.pf2e.themed {
-    --color-text-primary: var(--bg3-text-3);
-    --color-text-emphatic: var(--bg3-text-2);
-    background: var(--app-background);
-    border: var(--app-border-width) solid var(--app-border-color);
-    --app-background: var(--bg3-tooltip-window-background) padding-box,
-      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
-        border-box;
-    --app-border-color: transparent;
-    --app-border-width: 2px;
-    box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
-    margin: 5px;
-  }
-}
-
-[data-interface-theme="dnd5e2"] {
-  #tooltip.pf2e.themed,
-  aside.locked-tooltip.pf2e.themed {
-    background: var(--dnd5e-background-card);
-    // --color-text-primary: darkgray;
-    // --color-text-emphatic: var(--bg3-text-2);
-  }
-  #tooltip.pf2e.themed.theme-dark,
-  aside.locked-tooltip.pf2e.themed.theme-dark {
-    --color-text-primary: darkgray;
-    --color-text-emphatic: var(--dnd5e-color-blue-white);
-    --dnd5e-background-card: var(--dnd5e-color-blue-gray-2);
-  }
-}
+// [data-interface-theme="bg3"] {
+//   #tooltip.pf2e.themed,
+//   aside.locked-tooltip.pf2e.themed {
+//     --color-text-primary: var(--bg3-text-3);
+//     --color-text-emphatic: var(--bg3-text-2);
+//     background: var(--app-background);
+//     border: var(--app-border-width) solid var(--app-border-color);
+//     --app-background: var(--bg3-tooltip-window-background) padding-box,
+//       linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+//         border-box;
+//     --app-border-color: transparent;
+//     --app-border-width: 2px;
+//     box-shadow: 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+//     margin: 5px;
+//   }
+// }

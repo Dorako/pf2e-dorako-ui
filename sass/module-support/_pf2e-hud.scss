@@ -438,4 +438,65 @@ v13
   .pf2e-hud-shortcut-tooltip {
     padding: 0 !important;
   }
+
+  #tooltip.pf2e-hud-element {
+    --tooltip-color: var(--control-icon-color);
+  }
+}
+
+[data-interface-theme="bg3"] {
+  #pf2e-hud-persistent {
+    --outer-border: 1px solid transparent;
+    background: var(--app-background);
+    --panel-background: var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+  }
+
+  #pf2e-hud-persistent
+    [data-panel]:not(
+      [data-panel="shortcuts"],
+      [data-panel="menu"],
+      [data-panel="name"],
+      [data-panel="stats"],
+      [data-panel="effects"]
+    ),
+  #pf2e-hud-persistent [data-panel="menu"] .group,
+  #hotbar-page-controls {
+    box-shadow: var(--control-box-shadow);
+    backdrop-filter: blur(4px);
+    padding: var(--panel-gap);
+    background: var(--panel-background);
+    border: var(--outer-border);
+    border-radius: var(--outer-border-radius);
+  }
+  #pf2e-hud-sidebar .inner,
+  #pf2e-hud-token[data-mode="exploded"] [data-panel] {
+    --outer-background: blue;
+    --outer-border: 1px solid var(--control-border-color);
+    background: var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+    border: 2px solid transparent;
+    --border-radius: 12px;
+    --bg3-border-inner: #a16a37;
+    --bg3-border-outer: #4a2e18;
+    --bg3-border-internal: #304248;
+    --bg3-bg-inner: #182830;
+    --bg3-bg-outer: #151e29;
+
+    --bg3-border-background: linear-gradient(
+      to right,
+      var(--bg3-border-outer) 0%,
+      var(--bg3-border-inner) 50%,
+      var(--bg3-border-outer) 100%
+    );
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+  }
 }

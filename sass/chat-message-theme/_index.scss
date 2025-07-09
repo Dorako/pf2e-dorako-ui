@@ -1,1 +1,13 @@
+@import "bg3";
 @import "dnd5e2";
+
+[data-chat-message-theme][data-chat-message-color-scheme="dark"].chat-message
+  > .message-content
+  .message-buttons
+  button
+  .cue
+  i {
+  --fa-primary-color: white;
+  --fa-secondary-color: red;
+  --fa-secondary-opacity: 0.6;
+}

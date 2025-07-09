@@ -41,8 +41,14 @@
 
   [data-interface-theme="glass"][data-interface-color-scheme="dark"] {
     --control-text-shadow: 0px 1px 1px black;
+
     --control-bg-color: var(--glass-bg);
     --control-border-color: rgba(255, 255, 255, 0.15);
+    --control-icon-color: var(--color-light-2);
+    --control-button-hover-border-color: rgb(77, 77, 77);
+    --control-hover-bg-color: var(--glass-bg-dark);
+    --control-hover-border-color: rgba(0, 0, 0, 0.9);
+    --control-hover-icon-color: var(--color-light-1);
 
     .ui-control {
       --control-bg-color: var(--glass-bg);

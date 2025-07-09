@@ -1,156 +1,158 @@
-/* ----------------------------------------- */
-/* PF2e Dorako UI                            */
-/* ----------------------------------------- */
+@layer dorako-ui {
+  /* ----------------------------------------- */
+  /* PF2e Dorako UI                            */
+  /* ----------------------------------------- */
 
-.combat-sidebar li.combatant .token-image {
-  z-index: 0;
-}
-
-.combat-sidebar li.combatant .token-name {
-  z-index: 1;
-}
-
-.chat-message .message-content .damage-roll:not(:first-child) {
-  margin-top: 5px;
-}
-
-a.content-link,
-[data-pf2-check],
-a.entity-link,
-[data-pf2-action],
-span[data-pf2-effect-area],
-a.inline-check .label,
-a.inline-roll:not(.inline-result) {
-  font-weight: 400;
-  padding: 0px 4px;
-  text-shadow: none !important;
-  &.with-repost {
-    padding-right: 0px;
-  }
-}
-
-// Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
-a.inline-check,
-span[data-pf2-check],
-span[data-pf2-effect-area].with-repost {
-  padding: 0px;
-  padding-left: 4px;
-}
-
-i[data-pf2-repost] {
-  top: 0px;
-  cursor: pointer;
-}
-
-.tah-tags-wrapper .tags,
-:is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) {
-  gap: 1px;
-
-  hr.vr {
-    display: none;
+  .combat-sidebar li.combatant .token-image {
+    z-index: 0;
   }
 
-  tag,
-  .tag:not(.tag_transparent, [data-action], .light) {
-    border-radius: 0px;
-    box-shadow: unset;
-    border: 1px solid var(--tertiary);
-    outline: 1px solid var(--gold-brown);
-    padding: 0.33em 0.33em;
-    text-shadow: none;
+  .combat-sidebar li.combatant .token-name {
+    z-index: 1;
   }
 
-  tag,
-  .tag {
-    --color-text-tertiary: var(--color-text-dark-secondary);
+  .chat-message .message-content .damage-roll:not(:first-child) {
+    margin-top: 5px;
   }
 
-  tag:first-of-type,
-  .tag:first-child {
-    border-left-width: 1px;
+  a.content-link,
+  [data-pf2-check],
+  a.entity-link,
+  [data-pf2-action],
+  span[data-pf2-effect-area],
+  a.inline-check .label,
+  a.inline-roll:not(.inline-result) {
+    font-weight: 400;
+    padding: 0px 4px;
+    text-shadow: none !important;
+    &.with-repost {
+      padding-right: 0px;
+    }
   }
 
-  tag:last-of-type,
-  .tag:last-child {
-    border-right-width: 1px;
+  // Undoes padding 1px 4px by system, which adds whitespace to the right of the repost button, and causes it to hover 1px
+  a.inline-check,
+  span[data-pf2-check],
+  span[data-pf2-effect-area].with-repost {
+    padding: 0px;
+    padding-left: 4px;
   }
-}
 
-// // Fixes issue where hidden DC is too 'tall'
-// [data-visibility]:not([data-visibility="all"]) {
-//   padding: unset;
-// }
+  i[data-pf2-repost] {
+    top: 0px;
+    cursor: pointer;
+  }
 
-// [data-color-scheme="light"] [data-visibility="gm"]:not(.dice-result > *) {
-//   outline: 1px dotted black;
-//   box-shadow: unset;
-// }
+  .tah-tags-wrapper .tags,
+  :is([data-theme], [data-chat-message-theme]) :is(.tags, .tags.paizo-style) {
+    gap: 1px;
 
-// [data-color-scheme="dark"] [data-visibility="gm"]:not(.dice-result > *) {
-//   outline: 1px dotted var(--visibility-gm-bg);
-//   box-shadow: unset;
-// }
+    hr.vr {
+      display: none;
+    }
 
-// system uses 500, which makes it hard to tell whether something is bolded
-.app.sheet.actor p,
-.pf2e p {
-  font-weight: 400;
-}
+    tag,
+    .tag:not(.tag_transparent, [data-action], .light) {
+      border-radius: 0px;
+      box-shadow: unset;
+      border: 1px solid var(--tertiary);
+      outline: 1px solid var(--gold-brown);
+      padding: 0.33em 0.33em;
+      text-shadow: none;
+    }
 
-/* ----------------------------------------- */
-/* .message-header fixes (all themes)        */
-/* ----------------------------------------- */
+    tag,
+    .tag {
+      --color-text-tertiary: var(--color-text-dark-secondary);
+    }
 
-.chat-message .dmgBtn-container {
-  display: flex;
-  flex-direction: row;
-}
+    tag:first-of-type,
+    .tag:first-child {
+      border-left-width: 1px;
+    }
 
-.chat-message ul.notes {
-  padding-left: 0px;
-  margin-bottom: 4px;
-}
+    tag:last-of-type,
+    .tag:last-child {
+      border-right-width: 1px;
+    }
+  }
 
-/* ----------------------------------------- */
-/* Settings                                  */
-/* ----------------------------------------- */
+  // // Fixes issue where hidden DC is too 'tall'
+  // [data-visibility]:not([data-visibility="all"]) {
+  //   padding: unset;
+  // }
 
-[data-theme] {
-  .tab.active[data-tab="pf2e-dorako-ui"] h3,
-  .tab.active[data-tab="pf2e-dorako-ui"] h3,
-  .form-group.dorako.settings-header {
-    @include dui-app;
-    font-size: larger;
-    margin: 2px;
-    margin-bottom: 10px;
-    padding: 10px;
-    // color: var(--text-color-2);
-    border-color: var(--color-secondary-1);
-    background: var(--color-secondary-2);
-    --box-shadow: 0px 1px 3px 1px black;
-    box-shadow: var(--box-shadow);
-    flex-direction: column;
-    align-items: baseline;
-    gap: 0px;
-    .name {
-      margin: 0px;
+  // [data-color-scheme="light"] [data-visibility="gm"]:not(.dice-result > *) {
+  //   outline: 1px dotted black;
+  //   box-shadow: unset;
+  // }
+
+  // [data-color-scheme="dark"] [data-visibility="gm"]:not(.dice-result > *) {
+  //   outline: 1px dotted var(--visibility-gm-bg);
+  //   box-shadow: unset;
+  // }
+
+  // system uses 500, which makes it hard to tell whether something is bolded
+  .app.sheet.actor p,
+  .pf2e p {
+    font-weight: 400;
+  }
+
+  /* ----------------------------------------- */
+  /* .message-header fixes (all themes)        */
+  /* ----------------------------------------- */
+
+  .chat-message .dmgBtn-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .chat-message ul.notes {
+    padding-left: 0px;
+    margin-bottom: 4px;
+  }
+
+  /* ----------------------------------------- */
+  /* Settings                                  */
+  /* ----------------------------------------- */
+
+  [data-theme] {
+    .tab.active[data-tab="pf2e-dorako-ui"] h3,
+    .tab.active[data-tab="pf2e-dorako-ui"] h3,
+    .form-group.dorako.settings-header {
+      @include dui-app;
       font-size: larger;
+      margin: 2px;
+      margin-bottom: 10px;
+      padding: 10px;
+      // color: var(--text-color-2);
+      border-color: var(--color-secondary-1);
+      background: var(--color-secondary-2);
+      --box-shadow: 0px 1px 3px 1px black;
+      box-shadow: var(--box-shadow);
+      flex-direction: column;
+      align-items: baseline;
+      gap: 0px;
+      .name {
+        margin: 0px;
+        font-size: larger;
+      }
+      .notes {
+        font-size: var(--font-size-12);
+        // color: var(--text-color-3);
+        margin: 0px;
+      }
     }
-    .notes {
-      font-size: var(--font-size-12);
-      // color: var(--text-color-3);
-      margin: 0px;
-    }
-  }
 
-  .tab.active[data-tab="pf2e-dorako-ui"] h3,
-  .tab.active[data-tab="pf2e-dorako-ui"] h3 {
-    font-size: var(--font-size-48);
-    text-align: center;
-    color: var(--text-color-2);
-    background: var(--color-primary-2);
-    border-color: var(--color-primary-1);
-    text-shadow: 0px 1px 0px var(--color-primary-3);
-    margin-bottom: 0px;
+    .tab.active[data-tab="pf2e-dorako-ui"] h3,
+    .tab.active[data-tab="pf2e-dorako-ui"] h3 {
+      font-size: var(--font-size-48);
+      text-align: center;
+      color: var(--text-color-2);
+      background: var(--color-primary-2);
+      border-color: var(--color-primary-1);
+      text-shadow: 0px 1px 0px var(--color-primary-3);
+      margin-bottom: 0px;
+    }
   }
 }

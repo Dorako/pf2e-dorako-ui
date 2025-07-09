@@ -1,3 +1,8 @@
+# 4.0.5
+
+- (Maintenance) Improved various stylings.
+- (New) Re-added BG3 chat message themes.
+
 # 4.0.4
 
 - (Fix) Potentially fixed a performance issue by migrating to renderChatMessageHTML and removing an updateChatMessage hook.

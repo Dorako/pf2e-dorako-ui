@@ -386,9 +386,9 @@ Hooks.on("render" + "NPCSheetPF2e", (app, html, data) => {
   if (rarity) app.element[0].dataset.rarity = rarity;
 });
 
-Hooks.on("render" + "ChatMessage", (app, html, data) => {
-  const footer = html.find("footer")[0];
-  if (footer) html[0].dataset.hasFooter = "";
+Hooks.on("renderChatMessageHTML", (app, html, data) => {
+  const footer = html.querySelector("footer");
+  if (footer) html.dataset.hasFooter = "";
 });
 
 // for (const appName of ["ChatLogPF2e", "VCEChatLog"]) {

@@ -20,49 +20,51 @@
   }
 }
 
-.tags:not(.form-fields, .paizo-style) {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.15rem;
-
-  .tag,
-  .tag option {
-    font-family: var(--dnd5e-font-roboto);
-    font-weight: bold;
-    font-size: var(--font-size-8); // 11
-    text-transform: uppercase;
-    // border: 1px solid var(--color-border-dark-5);
-    border-radius: 3px;
-    // color: black;
-    // background: var(--dnd5e-color-card);
-    padding: 0.1875rem 0.375rem;
+@layer dorako-ui {
+  .tags:not(.form-fields, .paizo-style) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem;
 
-    // &.green,
-    // &.maroon {
-    //   color: var(--color-text-light-0);
-    // }
+    .tag,
+    .tag option {
+      font-family: var(--dnd5e-font-roboto);
+      font-weight: bold;
+      font-size: var(--font-size-8); // 11
+      text-transform: uppercase;
+      // border: 1px solid var(--color-border-dark-5);
+      border-radius: 3px;
+      // color: black;
+      // background: var(--dnd5e-color-card);
+      padding: 0.1875rem 0.375rem;
+      display: flex;
 
-    // &.green {
-    //   background-color: var(--dnd5e-color-green);
-    // }
-    // &.maroon {
-    //   background-color: var(--dnd5e-color-maroon);
-    // }
+      // &.green,
+      // &.maroon {
+      //   color: var(--color-text-light-0);
+      // }
 
-    &.tag_transparent {
-      //   color: #4e4e4e;
-      //   border: 1px dotted var(--color-border-dark-5);
-      color: var(--color-text-dark-primary);
-      border-color: var(--color-text-dark-primary);
-      outline-color: var(--color-text-dark-primary);
-      box-shadow: inset 0 0 0 1px var(--color-text-dark-primary);
-      //   background-color: transparent;
-      padding: 0.09375rem 0.1875rem;
-      font-size: var(--font-size-8);
+      // &.green {
+      //   background-color: var(--dnd5e-color-green);
+      // }
+      // &.maroon {
+      //   background-color: var(--dnd5e-color-maroon);
+      // }
+
+      &.tag_transparent {
+        //   color: #4e4e4e;
+        //   border: 1px dotted var(--color-border-dark-5);
+        color: var(--color-text-dark-primary);
+        border-color: var(--color-text-dark-primary);
+        outline-color: var(--color-text-dark-primary);
+        box-shadow: inset 0 0 0 1px var(--color-text-dark-primary);
+        //   background-color: transparent;
+        padding: 0.09375rem 0.1875rem;
+        font-size: var(--font-size-8);
+      }
     }
   }
 }
@@ -164,31 +166,43 @@ span[data-pf2-action][data-pf2-glyph]::before {
   --visibility-gm-bg: #e8e8ef;
 }
 
-#tooltip.pf2e.themed,
-aside.locked-tooltip.pf2e.themed {
-  background: var(--control-bg-color);
-  backdrop-filter: blur(4px);
-  text-shadow: 0px 1px 2px var(--control-text-shadow);
+[data-interface-theme] {
+  #tooltip.pf2e.themed,
+  aside.locked-tooltip.pf2e.themed {
+    background: var(--control-bg-color);
+    backdrop-filter: blur(4px);
+    text-shadow: 0px 1px 2px var(--control-text-shadow);
 
-  color: var(--control-icon-color);
-  --color-text-primary: var(--control-icon-color);
-  --color-text-emphatic: var(--control-icon-color);
-  &.pf2e.carry-type-menu li a {
     color: var(--control-icon-color);
-    opacity: 50%;
-    &.selected {
+    --color-text-primary: var(--control-icon-color);
+    --color-text-emphatic: var(--control-icon-color);
+    &.pf2e.carry-type-menu li a {
       color: var(--control-icon-color);
-      opacity: revert;
+      opacity: 50%;
+      &.selected {
+        color: var(--control-icon-color);
+        opacity: revert;
+      }
     }
   }
 }
 
 @layer system {
-  #scene-controls li button.gm-vision {
+  [data-interface-theme] #scene-controls li button.gm-vision {
     --control-bg-color: revert-layer;
     --control-icon-color: revert-layer;
     &:not([aria-pressed="true"]) {
       --control-border-color: revert-layer;
     }
   }
+}
+
+@layer dorako-ui {
+  .languages .tags .tag {
+    all: revert-layer !important;
+  }
+}
+
+.cm-editor {
+  color: black;
 }

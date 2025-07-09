@@ -134,9 +134,13 @@ body.theme-light [data-theme].application {
   body.theme-dark {
     --same-text-color: black;
     --opposite-text-color: white;
-    .application {
-      --color-select-option-bg: #1c1e23;
-    }
+  }
+}
+
+.themed.theme-dark,
+body.theme-dark {
+  .application {
+    --color-select-option-bg: #1c1e23;
   }
 }
 

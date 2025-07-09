@@ -1,0 +1,162 @@
+[data-chat-message-theme^="bg3"].message.chat-message {
+  --icon-border-color: var(--bg3-middle-brown);
+
+  --window-app-background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--player-color) 40%, transparent) 0,
+        transparent 40%
+      )
+      padding-box,
+    var(--bg3-tooltip-window-background) padding-box,
+    linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+      border-box;
+  background: var(--window-app-background);
+  border: 2px solid transparent !important;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+
+  &[data-chat-message-theme^="bg3-blue"] {
+    --bg3-border-inner: #a16a37;
+    --bg3-border-outer: #4a2e18;
+    --bg3-border-internal: #304248;
+    --bg3-bg-inner: #182830;
+    --bg3-bg-outer: #151e29;
+
+    --bg3-border-background: linear-gradient(
+      to right,
+      var(--bg3-border-outer) 0%,
+      var(--bg3-border-inner) 50%,
+      var(--bg3-border-outer) 100%
+    );
+    --bg3-tooltip-window-background: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    background: linear-gradient(to bottom, color-mix(in srgb, var(--player-color) 40%, transparent) 0, transparent 40%)
+        padding-box,
+      var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+
+    .card-content hr {
+      border-color: var(--bg3-border-outer);
+      border: solid transparent;
+      border-image: linear-gradient(90deg, #f1edea, #d5cac1) 1 repeat;
+      border-width: 0 0 2px;
+      border-image: linear-gradient(90deg, transparent, var(--bg3-border-internal) 50%, transparent) 1 repeat;
+    }
+
+    &.dfce-cm-middle,
+    &.dfce-cm-bottom {
+      background: var(--bg3-tooltip-window-background) padding-box,
+        linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+          border-box;
+      border-top-width: 1px !important;
+    }
+  }
+
+  &.dfce-cm-top {
+    border-bottom-width: 1px !important;
+  }
+  &.dfce-cm-middle,
+  &.dfce-cm-bottom {
+    background: var(--bg3-tooltip-window-background) padding-box,
+      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
+        border-box;
+    border-top-width: 1px !important;
+  }
+  &.dfce-cm-middle {
+    border-bottom-width: 1px !important;
+  }
+
+  .message-header {
+    color: var(--bg3-text-1);
+    background: none;
+    --bottom-gap: 0px;
+  }
+
+  .card-header {
+    text-shadow: 0px 1px 1px black;
+  }
+
+  .card-content > hr {
+    border: 1px solid var(--bg3-border-outer);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &[data-has-footer] {
+    padding-bottom: 0px;
+    .pf2e.chat-card footer {
+      position: relative;
+      padding: 0px 8px;
+      margin-left: -8px;
+      margin-right: -8px;
+      border-radius: 0px 0px 3px 3px;
+      border: none;
+
+      span {
+        z-index: 1;
+      }
+
+      &::before {
+        border-radius: 0px 0px 3px 3px;
+
+        background: linear-gradient(
+          to top,
+          color-mix(in srgb, var(--bg3-ui-purple) 80%, transparent) 0,
+          transparent 100%
+        );
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        overflow: visible;
+        pointer-events: none;
+        // z-index: 0;
+      }
+    }
+  }
+
+  .message-timestamp,
+  .user,
+  .header-meta {
+    @include dui-app;
+    background-color: color-mix(in srgb, var(--player-color) 33%, transparent);
+    border-color: color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5)) !important;
+    color: var(--bg3-text-1);
+    text-shadow: 0px 1px 1px black;
+
+    &.whisper {
+      background-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 50%, transparent);
+      border-color: color-mix(in srgb, var(--bg3-alliance-companion-blue) 100%, rgba(255, 255, 255, 0.5)) !important;
+    }
+    &.blind {
+      background-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 50%, transparent);
+      border-color: color-mix(in srgb, var(--bg3-alliance-opposition-red) 100%, rgba(255, 255, 255, 0.5)) !important;
+    }
+  }
+
+  .tags .tag.tag_transparent:not([data-visibility]:not([data-visibility="all"])),
+  .tags .tag option.tag_transparent:not([data-visibility]:not([data-visibility="all"])) {
+    background-color: color-mix(in srgb, var(--player-color) 20%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--player-color) 50%, rgba(255, 255, 255, 0.5));
+  }
+
+  .dice-tooltip .part-header {
+    border-color: var(--damage-color);
+    .part-total {
+      border-color: var(--damage-color);
+    }
+  }
+}
+
+[data-chat-message-theme^="bg3"] {
+  --color-form-label: var(--color-text-dark-primary);
+  --color-form-hint: var(--color-text-dark-secondary);
+  --color-text-dark-primary: #efe6d8;
+  --color-text-dark-secondary: var(--bg3-text-2);
+}

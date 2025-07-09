@@ -59,6 +59,38 @@
     z-index: 1;
   }
 
+  .message-header {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: auto;
+    background: url(/systems/dnd5e/ui/texture-gray1.webp) no-repeat top left, var(--header-color);
+    background-color: var(--header-color);
+    background-blend-mode: overlay;
+    border-bottom: 1px solid var(--window-app-border-color);
+  }
+  .message-content footer {
+    span {
+      font-family: var(--dnd5e-font-roboto);
+      font-weight: bold;
+      font-size: var(--font-size-11); // 11
+      text-transform: uppercase;
+      border: 1px solid gray;
+      border-radius: 3px;
+      color: black;
+      background: var(--dnd5e-color-card);
+      display: flex;
+      gap: 0.25rem;
+      padding: 0.09375rem 0.1875rem;
+      font-size: var(--font-size-8);
+    }
+  }
+
   &[data-chat-message-color-scheme="dark"] button {
     --button-background-color: var(--dnd5e-color-blue-gray-2);
     --button-border-color: var(--dnd5e-color-blue-gray-3);

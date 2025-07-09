@@ -1,0 +1,51 @@
+.tag_alt.pf2emm-is-ESSENTIAL {
+  background-color: var(--pf2emm-color-essential) !important;
+}
+
+.tag_alt.pf2emm-is-HELPFUL {
+  background-color: var(--pf2emm-color-helpful) !important;
+}
+
+.tag_alt.pf2emm-is-HARMFUL {
+  background-color: var(--pf2emm-color-harmful) !important;
+}
+
+.tag_alt.pf2emm-is-DETRIMENTAL {
+  background-color: var(--pf2emm-color-detrimental) !important;
+}
+
+.tag_transparent.pf2emm-is-ESSENTIAL {
+  color: var(--pf2emm-color-essential) !important;
+  box-shadow: inset 0 0 0 1px var(--pf2emm-color-essential-outline) !important;
+}
+
+.tag_transparent.pf2emm-is-HELPFUL {
+  color: var(--pf2emm-color-helpful) !important;
+  box-shadow: inset 0 0 0 1px var(--pf2emm-color-helpful-outline) !important;
+}
+
+.tag_transparent.pf2emm-is-HARMFUL {
+  color: var(--pf2emm-color-harmful) !important;
+  box-shadow: inset 0 0 0 1px var(--pf2emm-color-harmful-outline) !important;
+}
+
+.tag_transparent.pf2emm-is-DETRIMENTAL {
+  color: var(--pf2emm-color-detrimental) !important;
+  box-shadow: inset 0 0 0 1px var(--pf2emm-color-detrimental-outline) !important;
+}
+
+.pf2emm-suffix.pf2emm-is-ESSENTIAL {
+  color: var(--pf2emm-color-essential) !important;
+}
+
+.pf2emm-suffix.pf2emm-is-HELPFUL {
+  color: var(--pf2emm-color-helpful) !important;
+}
+
+.pf2emm-suffix.pf2emm-is-HARMFUL {
+  color: var(--pf2emm-color-harmful) !important;
+}
+
+.pf2emm-suffix.pf2emm-is-DETRIMENTAL {
+  color: var(--pf2emm-color-detrimental) !important;
+}

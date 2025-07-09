@@ -186,21 +186,6 @@
     margin-top: 5px;
   }
 
-  .message-header {
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-top: -8px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 8px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: auto;
-    background: url(/systems/dnd5e/ui/texture-gray1.webp) no-repeat top left, var(--header-color);
-    background-color: var(--header-color);
-    background-blend-mode: overlay;
-    border-bottom: 1px solid var(--window-app-border-color);
-  }
   .message-content footer {
     list-style: none;
     padding: 0;
@@ -209,22 +194,11 @@
     flex-wrap: wrap;
     gap: 0.25rem;
     border: unset;
-
     span {
-      font-family: var(--dnd5e-font-roboto);
-      font-weight: bold;
-      font-size: var(--font-size-11); // 11
-      text-transform: uppercase;
-      border: 1px solid gray;
-      border-radius: 3px;
-      color: black;
-      background: var(--dnd5e-color-card);
-      display: flex;
-      gap: 0.25rem;
-      padding: 0.09375rem 0.1875rem;
-      font-size: var(--font-size-8);
+      border-right: unset;
     }
   }
+
   .spell-attack-buttons {
     gap: 5px;
     button {
@@ -287,11 +261,12 @@
   }
   .message-header {
     color: var(--color-text-dark-secondary);
+    --bottom-gap: 8px;
     grid-template:
       "img gapp name details" 1.375rem
       "img gapp user rolltype" min-content
       "whisper whisper whisper whisper" min-content
-      "gap gap gap gap" var(--space-8)
+      "gap gap gap gap" var(--bottom-gap)
       / 2.5rem var(--space-8) 1fr min-content;
     .portrait img {
       height: 2.5rem;
@@ -302,23 +277,24 @@
       grid-template:
         "name details" 1.375rem
         "user user" min-content
-        "gap gap" var(--space-8)
+        "gap gap" var(--bottom-gap)
         / 2fr 1fr;
     }
 
     &.with-rolltype {
       display: grid;
+      --bottom-gap: 4px;
       grid-template:
         "name details" 1.375rem
         "whisper rolltype" min-content
-        "gap gap" var(--space-4);
+        "gap gap" var(--bottom-gap);
       &.with-image {
         grid-template:
           "img gapp name details" 1.375rem
           "img gapp user rolltype" min-content
           "gap1 gap1 gap1 gap1" var(--space-6)
           "whisper whisper whisper whisper" min-content
-          "gap2 gap2 gap2 gap2" var(--space-4)
+          "gap2 gap2 gap2 gap2" var(--bottom-gap)
           / 2.5rem var(--space-8) 1fr min-content;
         &.no-image {
           grid-template:
@@ -326,7 +302,7 @@
             "user rolltype" min-content
             "gap1 gap1" var(--space-6)
             "whisper whisper" min-content
-            "gap2 gap2" var(--space-4)
+            "gap2 gap2" var(--bottom-gap)
             / 1fr min-content;
         }
       }
@@ -417,5 +393,16 @@
   [data-chat-message-color-scheme="dark"] .dice-roll :is(.dice-formula, .dice-total) {
     border-color: rgba(122, 122, 122, 0.5);
     box-shadow: unset;
+  }
+}
+
+[id^="app-chat-popout"] {
+  background: unset;
+  box-shadow: unset;
+  border: unset;
+  header {
+    border-radius: 6px;
+    border: unset;
+    margin-bottom: 5px;
   }
 }
