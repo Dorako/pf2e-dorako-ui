@@ -169,7 +169,9 @@
       "custom": "⚠️ Faites-le vous-même 👷",
       "custom-dark": "⚠️ Faites-le vous-même (sombre) 👷",
       "dnd5e2-light": "D&D 5e (clair)",
-      "dnd5e2-dark": "D&D 5e (sombre)"
+      "dnd5e2-dark": "D&D 5e (sombre)",
+      "dnd5e2": "D&D 5e",
+      "github": "Github"
     },
     "settings": {
       "theme": {
@@ -235,20 +237,14 @@
           }
         },
         "name": "Réglages du thème",
-        "hint": "Modifier les paramètres du thème pour diverses applications et éléments de l'interface utilisateur",
+        "hint": "Modifier les paramètres du thème pour diverses applications et éléments de l'interface utilisateur. Le thème D&D 5e se base sur des éléments du système D&D 5e, de sorte qu'il doit également être installé.",
         "frosted-glass": {
           "name": "Utilisez le verre dépoli",
           "hint": "AVERTISSEMENT : Très gourmand en performances. Exemple : brightness(1.5) contrast(1.2) saturate(1.5) blur(5px)"
         },
         "application-theme": {
-          "hint": "Affecte les fenêtres d'application rendues",
-          "choice": {
-            "no-theme": "Pas de thème",
-            "light-theme": "Inspiré du LdB (clair)",
-            "dark-theme": "Inspiré du LdB (sombre)",
-            "foundry2-theme": "Inspiré de Foundry 2"
-          },
-          "name": "Thème de l'application"
+          "name": "Thème de la feuille",
+          "hint": "Affecté par le schéma de couleurs du 'Core → Configuration de l'interface utilisateur → Application'."
         },
         "enable-dark-theme-journals": {
           "name": "Activer le thème sombre dans les journaux ?",
@@ -256,11 +252,7 @@
         },
         "border-radius": {
           "name": "Arrondi",
-          "hint": "(défaut : 3px) Change le degré de l'arrondi de nombreux éléments de l'IU"
-        },
-        "application-theme": {
-          "name": "Thème de la feuille",
-          "hint": "S'applique aux applications de type fenêtre"
+          "hint": "(défaut : 3px) Change le degré de l'arrondi de nombreux éléments de l'IU."
         },
         "window-app-color-scheme": {
           "name": "Schéma de couleurs de l'application de la fenêtre",
@@ -268,7 +260,7 @@
         },
         "interface-theme": {
           "name": "Thème de l'interface",
-          "hint": "S'applique aux éléments de l'interface utilisateur tels que les contrôles, la navigation, la barre latérale, ainsi qu'aux modules au style flottant"
+          "hint": "Affecté par le schéma de couleurs du 'Core → Configuration de l'interface utilisateur → Application'."
         },
         "chat-message-theme": {
           "name": "Thème des messages de conversation",
@@ -280,7 +272,7 @@
         },
         "chat-message-header-style": {
           "name": "Thème de titre de message de conversation",
-          "hint": "Ne s'applique qu'aux thèmes LdB",
+          "hint": "Ne s'applique qu'aux thèmes du Livre des Joueurs.",
           "choice": {
             "red": "Rouge",
             "blue": "Bleu",
@@ -290,21 +282,21 @@
           }
         },
         "chat-message-opposition-theme": {
-          "hint": "S'applique aux messages dont les orateurs appartiennent à l'alliance \"opposition\"",
+          "hint": "S'applique aux messages dont les orateurs appartiennent à l'alliance 'opposition'.",
           "name": "Thème du message de conversation (opposition)"
         },
         "chat-message-standard-theme": {
           "name": "Thème du message de conversation (standard)",
-          "hint": "S'applique aux messages des orateurs n'appartenant pas à l'alliance \"opposition\""
+          "hint": "S'applique aux messages des orateurs n'appartenant pas à l'alliance 'opposition'."
         },
         "sheet-theme-color": {
           "name": "Couleur du thème de la feuille",
-          "hint": "S'applique aux fiches des personnages joueurs et aux véhicules"
+          "hint": "S'applique aux fiches des personnages joueurs et aux véhicules."
         }
       },
       "avatar": {
         "name": "Paramètres de l'avatar",
-        "hint": "Configurer les paramètres relatifs aux avatars dans les messages de la conversation",
+        "hint": "Configurer les paramètres relatifs aux avatars dans les messages de la conversation.",
         "source": {
           "name": "Avatars de conversation",
           "choice": {
@@ -319,7 +311,7 @@
         },
         "hide-gm-avatar-when-secret": {
           "name": "Cacher l'avatar sur jet secret ?",
-          "hint": "Cache les avatars lorsque le MJ effectue des jets secrets/privés"
+          "hint": "Cache les avatars lorsque le MJ effectue des jets secrets/privés."
         },
         "size": {
           "name": "Taille",
@@ -339,9 +331,26 @@
         },
         "use-user-avatar": {
           "name": "Utiliser l'avatar de l'utilisateur comme solution de repli ?",
-          "hint": "Configurez les avatars de l'utilisateur en cliquant avec le bouton droit sur les utilisateurs dans la zone inférieure gauche de Foundry"
+          "hint": "Configurez les avatars de l'utilisateur en cliquant avec le bouton droit sur les utilisateurs dans la zone inférieure gauche de Foundry."
         },
-        "label": "Configurer les paramètres de l'avatar"
+        "label": "Configurer les paramètres de l'avatar",
+        "hide-avatar-when-token-hidden": {
+          "hint": "Cacher les avatars lorsque le jeton de l'orateur est caché.",
+          "name": "Cacher l'avatar lorsque le jeton est caché ?"
+        },
+        "avatar-reacts-to-degree-of-success": {
+          "name": "L'avatar réagit en cas de critiques ?",
+          "hint": "Un succès critique brillera en vert et un échec critique sera assombri."
+        },
+        "avatar-source": {
+          "choice": {
+            "actor": "Préférer l'image de l'acteur",
+            "token": "Préférer l'image du jeton",
+            "system": "Mise en œuvre du système (repli)"
+          },
+          "hint": "Ajoute un avatar aux messages de la conversation.",
+          "name": "Avatars de conversation"
+        }
       },
       "ux": {
         "name": "Paramètres UX",
@@ -455,7 +464,7 @@
           "name": "Activer le style du LdB dans les journaux ?",
           "hint": "Instructions sur www.shorturl.at/mrzN1"
         },
-        "hint": "Configurer les paramètres liés à d'autres fonctionnalités de l'interface utilisateur Dorako",
+        "hint": "Configurer les paramètres liés à d'autres fonctionnalités de Dorako UI.",
         "skin-combat-carousel": {
           "name": "Activer le style pour le carrousel de combat ?"
         },
@@ -469,20 +478,28 @@
         "name": "Personnalisation",
         "excluded-applications": {
           "name": "Applications exclues",
-          "hint": "Regardez dans les journaux pour le nom de l'application ou demandez sur Discord"
+          "hint": "Regardez dans les journaux pour le nom de l'application ou demandez sur Discord."
         },
         "custom-css": {
           "name": "CSS personnalisé",
-          "hint": "Écrivez du CSS dans un éditeur extérieur et copiez le ici"
+          "hint": "Écrivez du CSS dans un éditeur extérieur et copiez le ici."
         },
-        "hint": "Faites des changements personnalisés en utilisant un CSS personnalisé ou en retirant certains styles de Dorako UI"
+        "hint": "Faites des changements personnalisés en utilisant un CSS personnalisé ou en retirant certains styles de Dorako UI.",
+        "chatlog-notify-seconds": {
+          "name": "Durée de la notification de la conversation",
+          "hint": "Nombre de secondes d'affichage des nouveaux messages de conversation."
+        },
+        "chat-merge": {
+          "name": "Activer la fusion de la conversation ?",
+          "hint": "Fusionne les messages envoyés en séquence rapide pour économiser de l'espace."
+        }
       },
       "external-module": {
         "name": "Réglages du module externe",
-        "hint": "Ajustements concernant la manière dont les autres modules sont affectés par Dorako UI",
+        "hint": "Ajustements concernant la manière dont les autres modules sont affectés par Dorako UI.",
         "colorize-idle-hud": {
           "name": "Coloriser PF2e HUD ?",
-          "hint": "Applique un thème coloré aux icônes de l'infobulle principale et du HUD persistant"
+          "hint": "Applique un thème coloré aux icônes de l'infobulle principale et du HUD persistant."
         }
       }
     }
