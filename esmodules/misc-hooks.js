@@ -335,13 +335,11 @@ Hooks.on("renderSettingsConfig", (app, html, data) => {
 //   }
 // });
 
-for (const application of ["PF2eHudPersistent", "PF2eHudTooltip", "PF2eHudToken"]) {
-  Hooks.on("render" + application, (app, html, data) => {
-    const isColorized = game.settings.get("pf2e-dorako-ui", "external-module.colorize-idle-hud");
-    if (!isColorized) return;
-    html.classList.add("colorized");
-  });
-}
+Hooks.once("ready", () => {
+  const isColorized = game.settings.get("pf2e-dorako-ui", "external-module.colorize-idle-hud");
+  if (!isColorized) return;
+  document.body.classList.add("pf2e-hud-colorized");
+});
 
 Hooks.on("renderNPCSheetPF2e", (app, html, data) => {
   if (html[0].tagName === "FORM") return;

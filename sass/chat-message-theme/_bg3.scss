@@ -54,6 +54,10 @@
           border-box;
       border-top-width: 1px !important;
     }
+    button {
+      --bg3-border-inner: #d69b64;
+      --bg3-border-outer: #304248;
+    }
   }
 
   &.dfce-cm-top {
@@ -151,6 +155,27 @@
     .part-total {
       border-color: var(--damage-color);
     }
+  }
+
+  &[data-chat-message-color-scheme="dark"] button {
+    --button-background-color: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    --button-border-color: var(--bg3-border-outer);
+    --button-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+    --button-focus-outline-color: none;
+    --button-hover-background-color: linear-gradient(
+      to right,
+      var(--bg3-bg-inner) 0,
+      var(--bg3-bg-outer) 50%,
+      var(--bg3-bg-inner) 100%
+    );
+    --button-text-color: var(--color-text-dark-primary);
+    --button-hover-text-color: var(--bg3-text-1);
+    --button-hover-border-color: var(--bg3-border-inner);
   }
 }
 

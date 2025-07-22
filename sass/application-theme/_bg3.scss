@@ -47,6 +47,40 @@
     --checkbox-checkmark-color: white;
     --checkbox-font-weight: bold;
   }
+
+  --bg3-ui-top-background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--top-color) 40%, transparent) 0,
+    transparent 40%
+  );
+
+  &[data-rarity="common"] {
+    --rarity: var(--rarity-common);
+  }
+  &[data-rarity="uncommon"] {
+    --rarity: var(--rarity-uncommon);
+  }
+  &[data-rarity="rare"] {
+    --rarity: var(--rarity-rare);
+  }
+  &[data-rarity="unique"] {
+    --rarity: var(--rarity-unique);
+  }
+  &[data-rarity] {
+    &.window-app {
+      --top-color: var(--rarity);
+      --icon-border-color: color-mix(in srgb, var(--top-color) 60%, transparent);
+      --window-app-border-color: transparent;
+      --window-app-background: var(--bg3-ui-top-background) padding-box, var(--bg3-ui-purple-background),
+        var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
+      box-shadow: 0 0 20px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+
+      .sheet-header input {
+        margin-right: 2px;
+        box-shadow: 0px 0px 0px 2px color-mix(in srgb, var(--top-color) 60%, transparent);
+      }
+    }
+  }
 }
 
 [data-application-theme="bg3"] [data-theme].themed {
@@ -59,30 +93,29 @@
 }
 
 @layer blocks.base {
-  [data-application-theme="bg3"] [data-theme] button:not(.control) {
-    @include button;
-    // --button-focus-outline-color: none;
-    // --button-border-color: var(--color-border-light-2);
-    // --button-hover-background-color: var(--dnd5e-background-card);
-    // --button-text-color: var(--color-text-dark-primary);
-    // --button-hover-text-color: var(--color-text-dark-primary);
-    // --button-hover-border-color: var(--dnd5e-color-gold);
-    // background: var(--dnd5e-background-card);
-    // font-size: var(--font-size-13);
-    // font-weight: bold;
-    // // text-transform: uppercase; // messes too much with expected line width
-    // padding: 3px;
-    // // border: 1px solid var(--color-border-light-2);
-    // box-shadow: 0 0 8px var(--dnd5e-shadow-15);
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // line-height: 12px;
-    // gap: 0.25rem;
+  [data-application-theme="bg3"] [data-theme]:is(.app, .application) button:not(.control, .plain) {
+    --button-background-color: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    --button-border-color: var(--bg3-border-outer);
+    --button-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+    --button-focus-outline-color: none;
+    --button-hover-background-color: linear-gradient(
+      to right,
+      var(--bg3-bg-inner) 0,
+      var(--bg3-bg-outer) 50%,
+      var(--bg3-bg-inner) 100%
+    );
+    --button-text-color: var(--color-text-dark-primary);
+    --button-hover-text-color: var(--bg3-text-1);
+    --button-hover-border-color: var(--bg3-border-inner);
 
-    // &:not(disabled, .disabled):hover {
-    //   // box-shadow: 0 0 8px var(--dnd5e-shadow-15), 0 0 3px 1px var(--dnd5e-shadow-45) inset;
-    //   box-shadow: 0 0 5px var(--color-shadow-primary);
-    // }
+    &:not(disabled, .disabled):hover {
+      // box-shadow: 0 0 8px var(--dnd5e-shadow-15), 0 0 3px 1px var(--dnd5e-shadow-45) inset;
+      box-shadow: 0 0 5px var(--color-shadow-primary);
+    }
   }
 }

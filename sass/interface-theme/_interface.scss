@@ -175,13 +175,13 @@
   #ui-left #ui-left-column-1 {
     --control-size: 40px;
 
+    width: calc(
+      calc((var(--control-columns) * var(--control-size)) + ((var(--control-columns) - 1) * 8px)) + 3px
+    ); // add 3px to avoid clipping
+
     .ui-control {
       --control-size: 40px;
     }
-  }
-
-  #scene-controls {
-    overflow: visible;
   }
 }
 
@@ -263,7 +263,7 @@
   [data-interface-theme] {
     .sidebar-tab {
       border-radius: unset;
-      box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+      // box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
       border-left: 1px solid rgba(255, 255, 255, 0.15);
       // background: linear-gradient(to left, rgba(255, 255, 255, 0.4) calc(100% - 10px), transparent 100%);
       // background: var(--color-warm-3, var(--color-cool-5-90));

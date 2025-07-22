@@ -1,3 +1,10 @@
+# 4.1.0
+
+- (Feature) Re-added PF2e HUD colorization setting.
+- (Feature) Re-added BG3 rarity coloration for item sheets.
+- (Refinement) Adjusted BG3 chat message theme buttons.
+- (Feature) Re-added rolltype indicators for chat messages.
+
 # 4.0.5
 
 - (Maintenance) Improved various stylings.

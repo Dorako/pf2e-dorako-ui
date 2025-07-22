@@ -113,6 +113,7 @@
 }
 
 // Also affects vehicle sheet
+
 .theme-dark [data-theme] :is(.sheet-content, .container) {
   --primary: wheat;
   --color-pf-primary: wheat;
@@ -139,6 +140,11 @@
     --secondary: var(--system-secondary);
     --color-pf-secondary: var(--system-secondary);
   }
+}
+table.pf2e,
+table.pf2-table {
+  --text-light: white;
+  --text-dark: black;
 }
 
 .theme-dark [data-theme].actor.sheet.character .toggles button.selected {

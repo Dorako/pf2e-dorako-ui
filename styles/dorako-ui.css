@@ -255,9 +255,6 @@ nav.damage-log-nav.tabs .item.active {
 .message.chat-message .message-delete {
   z-index: 1;
 }
-.message.chat-message:is(.dfce-cm-top, .dfce-cm-middle, .dfce-cm-bottom) {
-  box-shadow: unset !important;
-}
 .message.chat-message.dfce-cm-top {
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
@@ -1861,389 +1858,95 @@ body.compact-ui #navigation[data-theme] .monks-scene-navigation #nav-toggle {
   color: var(--degree-success-critical);
 }
 
-#interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
-  background: var(--app-background);
-}
-
-[data-theme][id^=pf2e-hud] {
-  --color-disabled: var(--text-color-disabled);
-  --highlight-color: var(--accent-color-light);
-}
-[data-theme][id^=pf2e-hud] {
-  --color: var(--text-color-1);
-}
-[data-theme][id^=pf2e-hud-persistent].app, [data-theme][id^=pf2e-hud-persistent] .app {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-[data-theme] #pf2e-hud-token-main:not(.exploded) .joined {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  backdrop-filter: blur(5px);
-}
-[data-theme]#pf2e-hud-persistent-menu {
-  height: 100%;
-  place-items: center;
-}
-[data-theme]#pf2e-hud-sidebar .item-list {
-  backdrop-filter: blur(5px);
-}
-[data-theme]#pf2e-hud-persistent-effects .effect-item:hover .effect-info {
-  backdrop-filter: blur(5px);
-}
-[data-theme][data-theme^=bg3]#pf2e-hud-persistent-effects .effect-item .effect-info {
-  background: var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
-  border: 2px solid transparent;
-  box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
-  backdrop-filter: none;
-  border-radius: var(--border-radius);
-  text-shadow: none;
-  color: var(--bg3-text-3);
-}
-[data-theme][data-theme^=bg3]#pf2e-hud-persistent #hotbar #macro-list > li {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: rgba(0, 0, 0, 0.37) !important;
-  border: 1px solid var(--bg3-border-outer) !important;
-  border-top-color: var(--bg3-border-inner) !important;
-  border-bottom-color: var(--bg3-border-inner) !important;
-  --box-shadow: 0px 1px 2px black;
-  box-shadow: var(--box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
-}
-[data-theme][data-theme^=bg3]#pf2e-hud-persistent #hotbar #macro-list > li.inactive {
-  outline: 1px dashed rgb(122, 122, 122);
-  outline-offset: -1px;
-}
-[data-theme]#pf2e-hud-persistent-effects .effect-item > .icon {
-  --border-radius: 50%;
-  --icon-border-color: #d3b87c;
-  outline: 1px solid #9a8860;
-  border-radius: var(--border-radius);
-  box-shadow: 0px 0px 2px 1px black;
-}
-[data-theme]#pf2e-hud-persistent-effects .effect-item > .icon:hover::before {
-  border-radius: var(--border-radius);
-}
-[data-theme].chat-message.message[data-color-scheme=dark] .pf2e-hud-rk .rk-skills {
-  background: repeating-linear-gradient(rgba(221, 221, 221, 0.3333333333) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
-}
-[data-theme].chat-message.message[data-color-scheme=dark] .pf2e-hud-rk .rk-lores {
-  background: repeating-linear-gradient(rgba(221, 221, 221, 0.2666666667) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
-}
-[data-theme].chat-message.message[data-color-scheme=dark] .pf2e-hud-rk .rk-lores-rolls {
-  background: repeating-linear-gradient(rgba(221, 221, 221, 0.2666666667) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
-}
-[data-theme]#pf2e-hud-persistent-effects .effect-item .effect-info {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-[data-theme]#pf2e-hud-persistent-effects .effect-item .effect-info > .description {
-  background: unset;
-}
-[data-theme]#pf2e-hud-persistent #hotbar #macro-list > li:not(:last-child) {
-  border: unset;
-}
-[data-theme]#pf2e-hud-persistent #hotbar #macro-list {
-  background: unset;
-  box-shadow: unset;
-  border: unset;
-  margin-left: 2px;
-}
-[data-theme]#pf2e-hud-tooltip > div {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  backdrop-filter: blur(4px);
-}
-[data-theme]#pf2e-hud-tooltip > div.status {
-  color: hsl(var(--hue), 75%, 40%);
-}
-[data-theme]#pf2e-hud-sidebar > .inner {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-[data-theme]#pf2e-hud-sidebar .inner.persistent::before {
-  --arrow-color: var(--app-background);
-}
-[data-theme]#pf2e-hud-tracker {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-[data-theme]#pf2e-hud-persistent-portrait .top .name {
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-}
-[data-theme]#pf2e-hud-persistent-portrait .bottom {
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-}
-[data-theme]#pf2e-hud-persistent-main #hotbar #macro-list {
-  background: unset;
-  box-shadow: unset;
-}
-[data-theme]#pf2e-hud-persistent-main #hotbar #macro-list > li:not(:last-child) {
-  border: unset;
-}
-[data-theme]#pf2e-hud-persistent-main #hotbar #macro-list > li {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-[data-theme]#pf2e-hud-persistent-main #hotbar #hotbar-page-controls {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-
-.game #interface.has-hud-tracker #sidebar[data-chat-interface-theme] {
-  box-shadow: unset;
-  padding-left: 5px;
-}
-
-.game [data-theme][id^=pf2e-hud-token] #pf2e-hud-token-main.exploded .panel {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  backdrop-filter: blur(5px);
-}
-
-#pf2e-hud-persistent-main[data-theme] .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
-  outline: 1px dashed rgb(122, 122, 122);
-  outline-offset: -1px;
-  background: rgba(0, 0, 0, 0.37) !important;
-}
-
-#pf2e-hud-persistent + div #hotbar[data-theme] #macro-list {
-  background: unset;
-  box-shadow: unset;
-  margin-left: 41px;
-}
-#pf2e-hud-persistent + div #hotbar[data-theme] #macro-list .macro {
-  height: calc(var(--macro-size) + 2px);
-  width: calc(var(--macro-size) + 2px);
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-}
-
-[data-chat-interface-theme] #pf2e-hud-dice {
-  border: unset;
-  margin: 0 6px;
-  width: calc(100% - 12px) !important;
-  display: flex;
-  justify-content: space-between;
-  --die-fill: var(--dui-button-text-color);
-  --die-grey-fill: var(--text-color-3);
-  --die-grey-highlight-fill: var(--text-color-2);
-  --die-highlight-fill: var(--dui-button-hover-text-color);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .spacer .separator {
-  display: none;
-}
-[data-chat-interface-theme] #pf2e-hud-dice::after {
-  display: none;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .flat {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: var(--dui-button-background);
-  border: var(--app-border-width) solid var(--dui-button-border-color);
-  color: var(--dui-button-text-color);
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: var(--app-text-shadow);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .flat:not(.disabled, :disabled, .empty):hover {
-  background: var(--button-hover-background);
-  color: var(--dui-button-hover-text-color);
-  border: var(--app-border-width) solid var(--button-hover-border-color);
-  box-shadow: var(--box-shadow);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .flat[aria-pressed=true], [data-chat-interface-theme] #pf2e-hud-dice .flat.view, [data-chat-interface-theme] #pf2e-hud-dice .flat.selected, [data-chat-interface-theme] #pf2e-hud-dice .flat.active:not(.empty) {
-  background: var(--button-hover-background);
-  outline: 1px solid var(--dui-button-focus-outline-color);
-  border-color: var(--button-hover-border-color);
-  color: var(--dui-button-hover-text-color);
-  text-decoration: none !important;
-  font-weight: unset !important;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .flat.empty.active {
-  outline: 1px solid var(--dui-button-focus-outline-color);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .flat.empty, [data-chat-interface-theme] #pf2e-hud-dice .flat.disabled, [data-chat-interface-theme] #pf2e-hud-dice .flat:disabled {
-  --dui-button-background: var(--button-disabled-background);
-  --button-hover-background: var(--button-disabled-background);
-  --dui-button-border-color: var(--button-disabled-border-color);
-  --dui-button-text-color: var(--text-color-5);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die {
-  background: var(--app-background);
-  border: var(--app-border-width) solid var(--app-border-color);
-  text-shadow: var(--app-text-shadow);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  color: var(--text-color-3);
-  background: var(--dui-button-background);
-  border: var(--app-border-width) solid var(--dui-button-border-color);
-  color: var(--dui-button-text-color);
-  box-shadow: var(--box-shadow);
-  text-decoration: none;
-  cursor: pointer;
-  text-shadow: var(--app-text-shadow);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die:not(.disabled, :disabled, .empty):hover {
-  background: var(--button-hover-background);
-  color: var(--dui-button-hover-text-color);
-  border: var(--app-border-width) solid var(--button-hover-border-color);
-  box-shadow: var(--box-shadow);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[aria-pressed=true], [data-chat-interface-theme] #pf2e-hud-dice .die.view, [data-chat-interface-theme] #pf2e-hud-dice .die.selected, [data-chat-interface-theme] #pf2e-hud-dice .die.active:not(.empty) {
-  background: var(--button-hover-background);
-  outline: 1px solid var(--dui-button-focus-outline-color);
-  border-color: var(--button-hover-border-color);
-  color: var(--dui-button-hover-text-color);
-  text-decoration: none !important;
-  font-weight: unset !important;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die.empty.active {
-  outline: 1px solid var(--dui-button-focus-outline-color);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die.empty, [data-chat-interface-theme] #pf2e-hud-dice .die.disabled, [data-chat-interface-theme] #pf2e-hud-dice .die:disabled {
-  --dui-button-background: var(--button-disabled-background);
-  --button-hover-background: var(--button-disabled-background);
-  --dui-button-border-color: var(--button-disabled-border-color);
-  --dui-button-text-color: var(--text-color-5);
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[data-face="4"] svg {
-  height: 1.2rem;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[data-face="6"] svg {
-  height: 1.2rem;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[data-face="8"] svg {
-  height: 1.5rem;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[data-face="10"] svg {
-  height: 1.5rem;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[data-face="12"] svg {
-  height: 1.5rem;
-}
-[data-chat-interface-theme] #pf2e-hud-dice .die[data-face="20"] svg {
-  height: 1.5rem;
-}
-
-.pf2e-hud.colorized[data-theme].pf2e-hud [data-section] i, .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent span:not(.expired), .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent input, .pf2e-hud.colorized[data-theme]#pf2e-hud-persistent [data-section] i, .pf2e-hud.colorized[data-theme]#pf2e-hud-tooltip i {
+body.pf2e-hud-colorized .pf2e-hud [data-section] i,
+body.pf2e-hud-colorized #pf2e-hud-persistent span:not(.expired),
+body.pf2e-hud-colorized #pf2e-hud-persistent input,
+body.pf2e-hud-colorized #pf2e-hud-persistent [data-section] i,
+body.pf2e-hud-colorized #pf2e-hud-tooltip i {
   text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
 }
-.pf2e-hud.colorized[data-theme] i.fa-mask {
+body.pf2e-hud-colorized i.fa-mask {
   --icon-color: rgb(35, 68, 118);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-circle-h {
+body.pf2e-hud-colorized i.fa-solid.fa-circle-h {
   --icon-color: rgb(250, 198, 67);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-user-graduate {
+body.pf2e-hud-colorized i.fa-solid.fa-user-graduate {
   --icon-color: rgb(212, 183, 69);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-heart-half-stroke {
+body.pf2e-hud-colorized i.fa-solid.fa-heart-half-stroke {
   --icon-color: rgb(159, 226, 240);
 }
-.pf2e-hud.colorized[data-theme] i.fa-notes-medical {
-  --icon-color: rgb(150, 1, 1);
+body.pf2e-hud-colorized i.fa-notes-medical {
+  --icon-color: rgb(155, 39, 39);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-heart {
+body.pf2e-hud-colorized i.fa-solid.fa-heart {
   --icon-color: rgb(192, 1, 1);
 }
-.pf2e-hud.colorized[data-theme] i.fa-helmet-battle {
+body.pf2e-hud-colorized i.fa-helmet-battle {
   --icon-color: rgb(134, 212, 230);
 }
-.pf2e-hud.colorized[data-theme] i.fa-regular.fa-helmet-battle {
+body.pf2e-hud-colorized i.fa-regular.fa-helmet-battle {
   --icon-color: rgb(162, 230, 245);
 }
-.pf2e-hud.colorized[data-theme] i.fa-light.fa-block-brick {
+body.pf2e-hud-colorized i.fa-light.fa-block-brick {
   --icon-color: deepskyblue;
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-shield,
-.pf2e-hud.colorized[data-theme] i.fa-regular.fa-shield {
+body.pf2e-hud-colorized i.fa-solid.fa-shield,
+body.pf2e-hud-colorized i.fa-regular.fa-shield {
   --icon-color: rgb(103, 235, 213);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-hand-fist {
+body.pf2e-hud-colorized i.fa-solid.fa-hand-fist {
   --icon-color: rgb(170, 72, 19);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-person-running {
+body.pf2e-hud-colorized i.fa-solid.fa-person-running {
   --icon-color: rgb(77, 209, 108);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-brain {
+body.pf2e-hud-colorized i.fa-solid.fa-brain {
   --icon-color: deeppink;
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-tombstone {
-  --icon-color: brown;
+body.pf2e-hud-colorized i.fa-solid.fa-tombstone {
+  --icon-color: rgb(83, 68, 68);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-shoe-prints {
+body.pf2e-hud-colorized i.fa-solid.fa-shoe-prints {
   --icon-color: rgb(93, 123, 93);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-chevrons-down::before {
+body.pf2e-hud-colorized i.fa-solid.fa-chevrons-down::before {
   content: "\f713";
   font: --fa-font-solid;
   --icon-color: rgb(175, 87, 24);
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-feather {
+body.pf2e-hud-colorized i.fa-solid.fa-feather {
   --icon-color: white;
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-person-swimming {
+body.pf2e-hud-colorized i.fa-solid.fa-person-swimming {
   --icon-color: dodgerblue;
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-spider {
+body.pf2e-hud-colorized i.fa-solid.fa-spider {
   --icon-color: #b7346f;
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-eye {
+body.pf2e-hud-colorized i.fa-duotone.fa-clipboard {
+  --icon-color: rgb(234, 193, 150);
+}
+body.pf2e-hud-colorized i.fa-solid.fa-tag {
+  --icon-color: rgb(255, 188, 117);
+}
+body.pf2e-hud-colorized i.fa-solid.fa-book {
+  --icon-color: rgb(187, 22, 195);
+}
+body.pf2e-hud-colorized i.fa-solid.fa-face-meh {
+  --icon-color: gray;
+}
+body.pf2e-hud-colorized i.fa-solid.fa-face-smile-halo {
+  --icon-color: rgb(163, 209, 255);
+}
+body.pf2e-hud-colorized i.fa-solid.fa-face-angry-horns {
+  --icon-color: rgb(202, 0, 0);
+}
+body.pf2e-hud-colorized i.fa-solid.fa-eye {
   --icon-color: cadetblue;
 }
-.pf2e-hud.colorized[data-theme] i.fa-solid.fa-chess-rook {
+body.pf2e-hud-colorized i.fa-solid.fa-chess-rook {
   --icon-color: rgb(110, 143, 54);
 }
 
@@ -2321,6 +2024,18 @@ v13
 [data-interface-color-scheme] [data-panel=effects] {
   --icon-color: var(--text-light);
 }
+[data-interface-color-scheme] #pf2e-hud-time,
+[data-interface-color-scheme] #pf2e-hud-dice {
+  box-shadow: var(--control-box-shadow);
+  border: 1px solid var(--control-border-color);
+  background: var(--control-bg-color);
+}
+[data-interface-color-scheme] #pf2e-hud-time#pf2e-hud-time,
+[data-interface-color-scheme] #pf2e-hud-dice#pf2e-hud-time {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+[data-interface-color-scheme] #pf2e-hud-tracker,
 [data-interface-color-scheme] #pf2e-hud-sidebar .inner,
 [data-interface-color-scheme] #pf2e-hud-token[data-mode=exploded] [data-panel] {
   --outer-background: var(--control-bg-color);
@@ -2334,6 +2049,7 @@ v13
   --tooltip-color: var(--control-icon-color);
 }
 
+[data-interface-theme=bg3] #pf2e-hud-tracker,
 [data-interface-theme=bg3] #pf2e-hud-persistent {
   --outer-border: 1px solid transparent;
   background: var(--app-background);
@@ -4788,6 +4504,12 @@ html .xdy-pf2e-workbench-rarity-unique {
   --color-pf-secondary: var(--system-secondary);
 }
 
+table.pf2e,
+table.pf2-table {
+  --text-light: white;
+  --text-dark: black;
+}
+
 .theme-dark [data-theme].actor.sheet.character .toggles button.selected {
   --bg-dark: black;
 }
@@ -5337,6 +5059,12 @@ html .xdy-pf2e-workbench-rarity-unique {
 .pf2e.item.sheet .sheet-content select:focus {
   --color-pf-secondary: var(--input-focus-outline-color);
   transition: box-shadow 0.25s;
+}
+
+.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes {
+  border: unset;
+  --visibility-gm-bg: rgba(232, 232, 239, 0.0862745098);
+  outline: 1px dotted rgba(75, 74, 68, 0.5) inset !important;
 }
 
 :root {
@@ -6635,11 +6363,6 @@ span[data-pf2-action][data-pf2-glyph]::before {
   border: none;
 }
 
-@layer compatibility.base {
-  body.game .app button {
-    color: unset;
-  }
-}
 /* ----------------------------------------- */
 /* Tooltip                                   */
 /* ----------------------------------------- */
@@ -6780,12 +6503,10 @@ span[data-pf2-action][data-pf2-glyph]::before {
 /* ----------------------------------------- */
 [data-interface-theme] #ui-left #ui-left-column-1 {
   --control-size: 40px;
+  width: calc(var(--control-columns) * var(--control-size) + (var(--control-columns) - 1) * 8px + 3px);
 }
 [data-interface-theme] #ui-left #ui-left-column-1 .ui-control {
   --control-size: 40px;
-}
-[data-interface-theme] #scene-controls {
-  overflow: visible;
 }
 
 /* ----------------------------------------- */
@@ -6845,7 +6566,6 @@ span[data-pf2-action][data-pf2-glyph]::before {
 @layer compatibility {
   [data-interface-theme] .sidebar-tab {
     border-radius: unset;
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -7472,6 +7192,7 @@ span[data-pf2-action][data-pf2-glyph]::before {
   padding: 0.5em 1em;
 }
 
+[data-interface-theme=bg3] #pf2e-hud-tracker,
 [data-interface-theme=bg3] #smalltime-app,
 [data-interface-theme=bg3] #players #players-active,
 [data-interface-theme=bg3] #players #players-inactive {
@@ -7926,6 +7647,11 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   --fieldset-border-color: transparent;
   --fieldset-background-color: rgba(0, 0, 0, 0.2);
   --fieldset-legend-color: var(--bg3-text-4);
+  --bg3-ui-top-background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--top-color) 40%, transparent) 0,
+    transparent 40%
+  );
 }
 [data-application-theme=bg3] [data-theme]:is(.app, .application) :is(input, select):not([type=range]):disabled {
   background: var(--bg3-bg-outer);
@@ -7951,6 +7677,30 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   --checkbox-checkmark-color: white;
   --checkbox-font-weight: bold;
 }
+[data-application-theme=bg3] [data-theme][data-rarity=common] {
+  --rarity: var(--rarity-common);
+}
+[data-application-theme=bg3] [data-theme][data-rarity=uncommon] {
+  --rarity: var(--rarity-uncommon);
+}
+[data-application-theme=bg3] [data-theme][data-rarity=rare] {
+  --rarity: var(--rarity-rare);
+}
+[data-application-theme=bg3] [data-theme][data-rarity=unique] {
+  --rarity: var(--rarity-unique);
+}
+[data-application-theme=bg3] [data-theme][data-rarity].window-app {
+  --top-color: var(--rarity);
+  --icon-border-color: color-mix(in srgb, var(--top-color) 60%, transparent);
+  --window-app-border-color: transparent;
+  --window-app-background: var(--bg3-ui-top-background) padding-box, var(--bg3-ui-purple-background),
+    var(--bg3-tooltip-window-background) padding-box, var(--bg3-border-background) border-box;
+  box-shadow: 0 0 20px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+}
+[data-application-theme=bg3] [data-theme][data-rarity].window-app .sheet-header input {
+  margin-right: 2px;
+  box-shadow: 0px 0px 0px 2px color-mix(in srgb, var(--top-color) 60%, transparent);
+}
 
 [data-application-theme=bg3] [data-theme].themed [nav-item],
 [data-application-theme=bg3] [data-theme].themed a.button,
@@ -7960,20 +7710,28 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
 }
 
 @layer blocks.base {
-  [data-application-theme=bg3] [data-theme] button:not(.control) {
-    background: var(--button-background-color);
-    border: 1px solid var(--button-border-color);
-    box-shadow: var(--button-box-shadow);
-    border-radius: 4px;
-    color: var(--button-text-color);
-    text-decoration: none;
-    cursor: var(--cursor-pointer);
-    transition: 0.2s;
+  [data-application-theme=bg3] [data-theme]:is(.app, .application) button:not(.control, .plain) {
+    --button-background-color: linear-gradient(
+      to right,
+      var(--bg3-bg-outer) 0,
+      var(--bg3-bg-inner) 50%,
+      var(--bg3-bg-outer) 100%
+    );
+    --button-border-color: var(--bg3-border-outer);
+    --button-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+    --button-focus-outline-color: none;
+    --button-hover-background-color: linear-gradient(
+      to right,
+      var(--bg3-bg-inner) 0,
+      var(--bg3-bg-outer) 50%,
+      var(--bg3-bg-inner) 100%
+    );
+    --button-text-color: var(--color-text-dark-primary);
+    --button-hover-text-color: var(--bg3-text-1);
+    --button-hover-border-color: var(--bg3-border-inner);
   }
-  [data-application-theme=bg3] [data-theme] button:not(.control):active, [data-application-theme=bg3] [data-theme] button:not(.control).active [data-application-theme=bg3] [data-theme] button:not(.control):hover {
-    background: var(--button-hover-background-color);
-    color: var(--button-hover-text-color);
-    border-color: var(--button-hover-border-color);
+  [data-application-theme=bg3] [data-theme]:is(.app, .application) button:not(.control, .plain):not(disabled, .disabled):hover {
+    box-shadow: 0 0 5px var(--color-shadow-primary);
   }
 }
 /* ----------------------------------------- */
@@ -8781,6 +8539,10 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   background: var(--bg3-tooltip-window-background) padding-box, linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%) border-box;
   border-top-width: 1px !important;
 }
+[data-chat-message-theme^=bg3].message.chat-message[data-chat-message-theme^=bg3-blue] button {
+  --bg3-border-inner: #d69b64;
+  --bg3-border-outer: #304248;
+}
 [data-chat-message-theme^=bg3].message.chat-message.dfce-cm-top {
   border-bottom-width: 1px !important;
 }
@@ -8866,6 +8628,26 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
 }
 [data-chat-message-theme^=bg3].message.chat-message .dice-tooltip .part-header .part-total {
   border-color: var(--damage-color);
+}
+[data-chat-message-theme^=bg3].message.chat-message[data-chat-message-color-scheme=dark] button {
+  --button-background-color: linear-gradient(
+    to right,
+    var(--bg3-bg-outer) 0,
+    var(--bg3-bg-inner) 50%,
+    var(--bg3-bg-outer) 100%
+  );
+  --button-border-color: var(--bg3-border-outer);
+  --button-box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+  --button-focus-outline-color: none;
+  --button-hover-background-color: linear-gradient(
+    to right,
+    var(--bg3-bg-inner) 0,
+    var(--bg3-bg-outer) 50%,
+    var(--bg3-bg-inner) 100%
+  );
+  --button-text-color: var(--color-text-dark-primary);
+  --button-hover-text-color: var(--bg3-text-1);
+  --button-hover-border-color: var(--bg3-border-inner);
 }
 
 [data-chat-message-theme^=bg3] {
@@ -9001,6 +8783,22 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   --fa-primary-color: white;
   --fa-secondary-color: red;
   --fa-secondary-opacity: 0.6;
+}
+
+[data-chat-message-theme][data-chat-message-color-scheme=dark].chat-message .message-content .damage-application button.apply-healing .fa-stack i.fa-plus {
+  --fa-inverse: black !important;
+}
+
+@layer system {
+  [data-chat-message-theme].chat-message .message-content .damage-taken button.revert-damage {
+    background: revert-layer;
+  }
+}
+[data-chat-message-theme][data-chat-message-color-scheme=dark].chat-message {
+  --visibility-gm-bg: rgba(232, 232, 239, 0.0862745098);
+}
+[data-chat-message-theme][data-chat-message-color-scheme=dark].chat-message img[src="systems/pf2e/icons/damage/double.svg"] {
+  filter: invert(94%) sepia(18%) saturate(166%) hue-rotate(344deg) brightness(99%) contrast(88%);
 }
 
 /*# sourceMappingURL=dorako-ui.css.map */

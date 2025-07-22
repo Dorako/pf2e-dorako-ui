@@ -11,3 +11,26 @@
   --fa-secondary-color: red;
   --fa-secondary-opacity: 0.6;
 }
+
+[data-chat-message-theme][data-chat-message-color-scheme="dark"].chat-message
+  .message-content
+  .damage-application
+  button.apply-healing
+  .fa-stack
+  i.fa-plus {
+  --fa-inverse: black !important;
+}
+
+@layer system {
+  [data-chat-message-theme].chat-message .message-content .damage-taken button.revert-damage {
+    background: revert-layer;
+  }
+}
+
+[data-chat-message-theme][data-chat-message-color-scheme="dark"].chat-message {
+  --visibility-gm-bg: rgba(232, 232, 239, 0.0862745098);
+
+  img[src="systems/pf2e/icons/damage/double.svg"] {
+    filter: invert(94%) sepia(18%) saturate(166%) hue-rotate(344deg) brightness(99%) contrast(88%);
+  }
+}

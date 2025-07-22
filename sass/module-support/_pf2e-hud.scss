@@ -1,271 +1,9 @@
-#interface.has-hud-tracker #effects-panel[data-theme] .effect-item .effect-info {
-  background: var(--app-background);
-}
-
-[data-theme] {
-  &[id^="pf2e-hud"] {
-    --color-disabled: var(--text-color-disabled);
-    --highlight-color: var(--accent-color-light);
-    // --color-active: var(--accent-color-light);
-  }
-
-  &[id^="pf2e-hud"] {
-    --color: var(--text-color-1);
-  }
-
-  &[id^="pf2e-hud-persistent"].app,
-  &[id^="pf2e-hud-persistent"] .app {
-    @include dui-app;
-  }
-
-  #pf2e-hud-token-main:not(.exploded) .joined {
-    @include dui-app;
-    backdrop-filter: blur(5px);
-  }
-
-  &#pf2e-hud-persistent-menu {
-    height: 100%;
-    place-items: center;
-  }
-
-  &#pf2e-hud-sidebar .item-list {
-    backdrop-filter: blur(5px);
-  }
-
-  &#pf2e-hud-persistent-effects .effect-item:hover .effect-info {
-    backdrop-filter: blur(5px);
-  }
-
-  &[data-theme^="bg3"]#pf2e-hud-persistent-effects .effect-item .effect-info {
-    background: var(--bg3-tooltip-window-background) padding-box,
-      linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
-        border-box;
-    border: 2px solid transparent;
-    box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
-    backdrop-filter: none;
-    border-radius: var(--border-radius);
-    text-shadow: none;
-    color: var(--bg3-text-3);
-  }
-
-  &[data-theme^="bg3"]#pf2e-hud-persistent #hotbar #macro-list > li {
-    @include dui-app;
-    background: rgba(0, 0, 0, 0.37) !important;
-    border: 1px solid var(--bg3-border-outer) !important;
-    border-top-color: var(--bg3-border-inner) !important;
-    border-bottom-color: var(--bg3-border-inner) !important;
-    --box-shadow: 0px 1px 2px black;
-    box-shadow: var(--box-shadow), 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset !important;
-    &.inactive {
-      outline: 1px dashed rgb(122, 122, 122);
-      outline-offset: -1px;
-    }
-  }
-
-  &#pf2e-hud-persistent-effects .effect-item > .icon {
-    --border-radius: 50%;
-    --icon-border-color: #d3b87c;
-    outline: 1px solid #9a8860;
-    border-radius: var(--border-radius);
-    box-shadow: 0px 0px 2px 1px black;
-    &:hover::before {
-      border-radius: var(--border-radius);
-    }
-  }
-
-  &.chat-message.message[data-color-scheme="dark"] .pf2e-hud-rk {
-    .rk-skills {
-      background: repeating-linear-gradient(
-        #ddd5 0 var(--row-height),
-        transparent var(--row-height) calc(var(--row-height) * 2)
-      );
-    }
-    .rk-lores {
-      background: repeating-linear-gradient(
-        #ddd4 0 var(--row-height),
-        transparent var(--row-height) calc(var(--row-height) * 2)
-      );
-    }
-    .rk-lores-rolls {
-      background: repeating-linear-gradient(
-        #ddd4 0 var(--row-height),
-        transparent var(--row-height) calc(var(--row-height) * 2)
-      );
-    }
-  }
-
-  &#pf2e-hud-persistent-effects .effect-item .effect-info {
-    @include dui-app;
-
-    > .description {
-      background: unset;
-    }
-  }
-
-  &#pf2e-hud-persistent #hotbar #macro-list > li:not(:last-child) {
-    border: unset;
-  }
-
-  &#pf2e-hud-persistent #hotbar #macro-list {
-    background: unset;
-    box-shadow: unset;
-    border: unset;
-    margin-left: 2px;
-  }
-
-  &#pf2e-hud-tooltip > div {
-    @include dui-app;
-    backdrop-filter: blur(4px);
-    &.status {
-      color: hsl(var(--hue), 75%, 40%);
-    }
-  }
-
-  &#pf2e-hud-sidebar > .inner {
-    @include dui-app;
-  }
-
-  &#pf2e-hud-sidebar .inner.persistent::before {
-    --arrow-color: var(--app-background);
-  }
-
-  &#pf2e-hud-tracker {
-    @include dui-app;
-  }
-
-  &#pf2e-hud-persistent-portrait .top .name {
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-  }
-
-  &#pf2e-hud-persistent-portrait .bottom {
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-  }
-
-  &#pf2e-hud-persistent-main #hotbar #macro-list {
-    background: unset;
-    box-shadow: unset;
-  }
-
-  &#pf2e-hud-persistent-main #hotbar #macro-list > li:not(:last-child) {
-    border: unset;
-  }
-
-  &#pf2e-hud-persistent-main #hotbar #macro-list > li {
-    @include dui-app;
-  }
-
-  &#pf2e-hud-persistent-main #hotbar #hotbar-page-controls {
-    @include dui-app;
-  }
-}
-
-.game #interface.has-hud-tracker #sidebar[data-chat-interface-theme] {
-  box-shadow: unset;
-  padding-left: 5px; // --panel-gap from PF2e HUD
-}
-
-.game [data-theme][id^="pf2e-hud-token"] {
-  #pf2e-hud-token-main.exploded .panel {
-    @include dui-app;
-    backdrop-filter: blur(5px);
-  }
-}
-
-#pf2e-hud-persistent-main[data-theme] .group.stretch .bottom .shortcuts .shortcut-group .shortcut.empty {
-  // border-style: dashed !important;
-  // border: 1px solid transparent !important;
-  outline: 1px dashed rgba(122, 122, 122, 1);
-  outline-offset: -1px;
-  background: rgba(0, 0, 0, 0.37) !important;
-}
-
-#pf2e-hud-persistent + div #hotbar[data-theme] #macro-list {
-  background: unset;
-  box-shadow: unset;
-  margin-left: 41px;
-  .macro {
-    height: calc(var(--macro-size) + 2px);
-    width: calc(var(--macro-size) + 2px);
-    background: var(--app-background);
-    border: var(--app-border-width) solid var(--app-border-color);
-    text-shadow: var(--app-text-shadow);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    color: var(--text-color-3);
-  }
-}
-
-[data-chat-interface-theme] #pf2e-hud-dice {
-  border: unset;
-  margin: 0 6px;
-  width: calc(100% - 12px) !important;
-  display: flex;
-  justify-content: space-between;
-
-  --die-fill: var(--dui-button-text-color);
-  --die-grey-fill: var(--text-color-3);
-  --die-grey-highlight-fill: var(--text-color-2);
-  --die-highlight-fill: var(--dui-button-hover-text-color);
-
-  .spacer .separator {
-    display: none;
-  }
-  &::after {
-    display: none;
-  }
-
-  .flat {
-    @include dui-button;
-  }
-
-  .die {
-    @include dui-button;
-    &[data-face="4"] {
-      svg {
-        height: 1.2rem;
-      }
-    }
-    &[data-face="6"] {
-      svg {
-        height: 1.2rem;
-      }
-    }
-    &[data-face="8"] {
-      svg {
-        height: 1.5rem;
-      }
-    }
-    &[data-face="10"] {
-      svg {
-        height: 1.5rem;
-      }
-    }
-    &[data-face="12"] {
-      svg {
-        height: 1.5rem;
-      }
-    }
-    &[data-face="20"] {
-      svg {
-        height: 1.5rem;
-      }
-    }
-    // &[data-face="100"] {
-    //   svg {
-    //     height: 1.3rem;
-    //   }
-    // }
-  }
-}
-
-.pf2e-hud.colorized[data-theme] {
-  &.pf2e-hud [data-section] i,
-  &#pf2e-hud-persistent span:not(.expired),
-  &#pf2e-hud-persistent input,
-  &#pf2e-hud-persistent [data-section] i,
-  &#pf2e-hud-tooltip i {
+body.pf2e-hud-colorized {
+  .pf2e-hud [data-section] i,
+  #pf2e-hud-persistent span:not(.expired),
+  #pf2e-hud-persistent input,
+  #pf2e-hud-persistent [data-section] i,
+  #pf2e-hud-tooltip i {
     text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
   }
 
@@ -282,7 +20,7 @@
     --icon-color: rgb(159, 226, 240);
   }
   i.fa-notes-medical {
-    --icon-color: rgb(150, 1, 1);
+    --icon-color: rgb(155, 39, 39);
   }
   i.fa-solid.fa-heart {
     --icon-color: rgb(192, 1, 1);
@@ -310,7 +48,7 @@
     --icon-color: deeppink;
   }
   i.fa-solid.fa-tombstone {
-    --icon-color: brown;
+    --icon-color: rgb(83, 68, 68);
   }
   i.fa-solid.fa-shoe-prints {
     --icon-color: rgb(93, 123, 93);
@@ -328,6 +66,24 @@
   }
   i.fa-solid.fa-spider {
     --icon-color: #b7346f;
+  }
+  i.fa-duotone.fa-clipboard {
+    --icon-color: rgb(234, 193, 150);
+  }
+  i.fa-solid.fa-tag {
+    --icon-color: rgb(255, 188, 117);
+  }
+  i.fa-solid.fa-book {
+    --icon-color: rgb(187, 22, 195);
+  }
+  i.fa-solid.fa-face-meh {
+    --icon-color: gray;
+  }
+  i.fa-solid.fa-face-smile-halo {
+    --icon-color: rgb(163, 209, 255);
+  }
+  i.fa-solid.fa-face-angry-horns {
+    --icon-color: rgb(202, 0, 0);
   }
   i.fa-solid.fa-eye {
     --icon-color: cadetblue;
@@ -428,6 +184,18 @@ v13
     --icon-color: var(--text-light);
   }
 
+  #pf2e-hud-time,
+  #pf2e-hud-dice {
+    box-shadow: var(--control-box-shadow);
+    border: 1px solid var(--control-border-color);
+    background: var(--control-bg-color);
+    &#pf2e-hud-time {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  }
+
+  #pf2e-hud-tracker,
   #pf2e-hud-sidebar .inner,
   #pf2e-hud-token[data-mode="exploded"] [data-panel] {
     --outer-background: var(--control-bg-color);
@@ -445,6 +213,7 @@ v13
 }
 
 [data-interface-theme="bg3"] {
+  #pf2e-hud-tracker,
   #pf2e-hud-persistent {
     --outer-border: 1px solid transparent;
     background: var(--app-background);
@@ -470,6 +239,7 @@ v13
     border: var(--outer-border);
     border-radius: var(--outer-border-radius);
   }
+
   #pf2e-hud-sidebar .inner,
   #pf2e-hud-token[data-mode="exploded"] [data-panel] {
     --outer-background: blue;

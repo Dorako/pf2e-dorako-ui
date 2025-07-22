@@ -79,3 +79,9 @@
     transition: box-shadow 0.25s;
   }
 }
+
+.pf2e.item.sheet form .sheet-body .tab.active.description .gm-notes {
+  border: unset;
+  --visibility-gm-bg: rgba(232, 232, 239, 0.0862745098);
+  outline: 1px dotted rgba(75, 74, 68, 0.5) inset !important;
+}

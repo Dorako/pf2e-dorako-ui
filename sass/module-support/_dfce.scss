@@ -60,9 +60,9 @@
     z-index: 1;
   }
 
-  &:is(.dfce-cm-top, .dfce-cm-middle, .dfce-cm-bottom) {
-    box-shadow: unset !important;
-  }
+  // &:is(.dfce-cm-top, .dfce-cm-middle, .dfce-cm-bottom) {
+  //   box-shadow: unset !important;
+  // }
 
   &.dfce-cm-top {
     // border-bottom-style: none;
