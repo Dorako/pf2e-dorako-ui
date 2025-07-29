@@ -2032,6 +2032,7 @@ v13
 }
 [data-interface-color-scheme] #pf2e-hud-time#pf2e-hud-time,
 [data-interface-color-scheme] #pf2e-hud-dice#pf2e-hud-time {
+  backdrop-filter: blur(4px);
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -2045,8 +2046,46 @@ v13
 [data-interface-color-scheme] .pf2e-hud-shortcut-tooltip {
   padding: 0 !important;
 }
+[data-interface-color-scheme] .pf2e-hud-shortcut-tooltip .content .header {
+  border-radius: var(--border-radius);
+}
 [data-interface-color-scheme] #tooltip.pf2e-hud-element {
   --tooltip-color: var(--control-icon-color);
+}
+[data-interface-color-scheme] #pf2e-hud-persistent [data-panel=portrait] {
+  box-shadow: inset 0 0 8px 1px var(--outer-border-color);
+}
+[data-interface-color-scheme] #pf2e-hud-persistent [data-panel=portrait] .avatar[data-action] {
+  border-radius: 4px;
+}
+[data-interface-color-scheme] #pf2e-hud-persistent [data-panel=name] {
+  border: 1px solid transparent;
+  margin: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: unset;
+}
+[data-interface-color-scheme] #pf2e-hud-persistent [data-panel=stats] {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  margin: 1px;
+}
+
+[data-chat-message-theme].chat-message.message .pf2e-hud-rk div[class^=rk] {
+  --rarity-uncommon: #c45500;
+  --rarity-rare: #5362ff;
+  --rarity-unique: #e127e1;
+  --color-rarity-uncommon: #c45500;
+  --color-rarity-rare: #5362ff;
+  --color-rarity-unique: #e127e1;
+  --color-rank-1: dodgerblue;
+  --color-rank-2: #bf4fdb;
+  --color-rank-3: #cf931d;
+  --color-rank-4: red;
+  --text-dark: var(--color-text-dark-primary);
+  background: repeating-linear-gradient(color-mix(in srgb, var(--color-secondary-3) 20%, transparent) 0 var(--row-height), transparent var(--row-height) calc(var(--row-height) * 2));
 }
 
 [data-interface-theme=bg3] #pf2e-hud-tracker,
@@ -2070,6 +2109,9 @@ v13
   background: var(--panel-background);
   border: var(--outer-border);
   border-radius: var(--outer-border-radius);
+}
+[data-interface-theme=bg3] #pf2e-hud-persistent [data-panel=stats] {
+  border-top: 1px solid #986433;
 }
 [data-interface-theme=bg3] #pf2e-hud-sidebar .inner,
 [data-interface-theme=bg3] #pf2e-hud-token[data-mode=exploded] [data-panel] {
@@ -3117,6 +3159,9 @@ v13
 #pf2e-toolbelt-resource-tracker {
   background: unset;
   border: unset;
+}
+#pf2e-toolbelt-resource-tracker .window-content::before {
+  background: unset;
 }
 
 [data-theme] #fc-container {
@@ -4397,6 +4442,10 @@ html .xdy-pf2e-workbench-rarity-unique {
 }
 [data-theme].actor.sheet ol.actions-list li.action button.use-action:not(:disabled), [data-theme].actor.sheet ol.actions-list li.strike button.use-action:not(:disabled) {
   color: black;
+}
+[data-theme].actor.sheet select.modular {
+  color: black;
+  border: unset;
 }
 [data-theme].actor.sheet.character .d20-svg path {
   fill: white;
@@ -5893,8 +5942,18 @@ span[data-pf2-action][data-pf2-glyph]::before {
   }
 }
 @layer dorako-ui {
-  .languages .tags .tag {
-    all: revert-layer !important;
+  [data-theme] .languages .tags .tag {
+    all: revert-layer;
+  }
+  [data-theme] .languages .tags .tag {
+    color: var(--color-text-trait);
+    background: var(--color-bg-size);
+  }
+  [data-theme] .languages .tags .tag.over-limit {
+    background: var(--color-bg-trait);
+  }
+  [data-theme] .languages .tags .tag.unallocated {
+    background: #786452;
   }
 }
 .cm-editor {
@@ -6086,8 +6145,8 @@ span[data-pf2-action][data-pf2-glyph]::before {
 /* Damage colors                             */
 /* ----------------------------------------- */
 [data-chat-message-color-scheme=dark][data-chat-message-theme] .damage,
-.themed.theme-dark .damage,
-.theme-dark .damage {
+.themed.theme-dark .sheet .damage,
+.theme-dark .sheet .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125);
   --color-bg-bleed: rgba(207, 28, 58, 0.125);
   --color-bg-chaotic: rgba(221, 26, 221, 0.125);
@@ -6503,7 +6562,12 @@ span[data-pf2-action][data-pf2-glyph]::before {
 /* ----------------------------------------- */
 [data-interface-theme] #ui-left #ui-left-column-1 {
   --control-size: 40px;
-  width: calc(var(--control-columns) * var(--control-size) + (var(--control-columns) - 1) * 8px + 3px);
+  width: calc(var(--control-columns) * var(--control-size) + (var(--control-columns) - 1) * 8px + 7px);
+}
+[data-interface-theme] #ui-left #ui-left-column-1:has(> #pf2e-hud-persistent) #scene-controls {
+  padding-left: 4px;
+  padding-top: 4px;
+  transform: translate(-4px, -4px);
 }
 [data-interface-theme] #ui-left #ui-left-column-1 .ui-control {
   --control-size: 40px;
@@ -7325,9 +7389,10 @@ body.theme-light [data-theme].application {
     --opposite-text-color: white;
   }
 }
-.themed.theme-dark .application,
-body.theme-dark .application {
+.themed.theme-dark [data-theme]:is(.application, .app),
+body.theme-dark [data-theme]:is(.application, .app) {
   --color-select-option-bg: #1c1e23;
+  backdrop-filter: blur(4px);
 }
 
 @layer variables.themes.general {

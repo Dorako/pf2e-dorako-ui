@@ -257,8 +257,8 @@ $adjusted-lower: #cc3311 !default;
 /* ----------------------------------------- */
 
 [data-chat-message-color-scheme="dark"][data-chat-message-theme] .damage,
-.themed.theme-dark .damage,
-.theme-dark .damage {
+.themed.theme-dark .sheet .damage,
+.theme-dark .sheet .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125); // adjusted
   --color-bg-bleed: rgba(207, 28, 58, 0.125); // adjusted
   --color-bg-chaotic: rgba(221, 26, 221, 0.125); // adjusted

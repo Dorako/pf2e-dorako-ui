@@ -1,3 +1,7 @@
+# 4.1.1
+
+- (Refinement) Various improvements.
+
 # 4.1.0
 
 - (Feature) Re-added PF2e HUD colorization setting.

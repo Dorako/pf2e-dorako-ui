@@ -198,8 +198,20 @@ span[data-pf2-action][data-pf2-glyph]::before {
 }
 
 @layer dorako-ui {
-  .languages .tags .tag {
-    all: revert-layer !important;
+  [data-theme] {
+    .languages .tags .tag {
+      all: revert-layer;
+    }
+    .languages .tags .tag {
+      color: var(--color-text-trait);
+      background: var(--color-bg-size);
+      &.over-limit {
+        background: var(--color-bg-trait);
+      }
+      &.unallocated {
+        background: #786452;
+      }
+    }
   }
 }
 

@@ -176,13 +176,22 @@
     --control-size: 40px;
 
     width: calc(
-      calc((var(--control-columns) * var(--control-size)) + ((var(--control-columns) - 1) * 8px)) + 3px
-    ); // add 3px to avoid clipping
+      var(--control-columns) * var(--control-size) + (var(--control-columns) - 1) * 8px + 7px
+    ); // add 7px to avoid clipping
+
+    &:has(> #pf2e-hud-persistent) #scene-controls {
+      padding-left: 4px;
+      padding-top: 4px;
+      transform: translate(-4px, -4px);
+    }
 
     .ui-control {
       --control-size: 40px;
     }
   }
+}
+
+[data-interface-theme] #ui-left #ui-left-column-1 {
 }
 
 /* ----------------------------------------- */

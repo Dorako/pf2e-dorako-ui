@@ -139,8 +139,9 @@ body.theme-light [data-theme].application {
 
 .themed.theme-dark,
 body.theme-dark {
-  .application {
+  [data-theme]:is(.application, .app) {
     --color-select-option-bg: #1c1e23;
+    backdrop-filter: blur(4px);
   }
 }
 

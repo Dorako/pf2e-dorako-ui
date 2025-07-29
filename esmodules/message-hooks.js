@@ -5,7 +5,7 @@ import { Avatar, ActorAvatar, TokenAvatar, CombatantAvatar, SubjectAvatar } from
 
 Hooks.on("renderChatMessageHTML", (chatMessage, html, messageData) => {
   if (html.hasAttribute("style")) {
-    html.css("border-color", "");
+    html.style.borderColor = "";
   }
 });
 
@@ -278,12 +278,12 @@ function injectMessageTag(html, messageData) {
     messageMetadata.classList.add("with-rolltype");
   } else if (isRoll && whisperTargets.length > 0) {
     rolltype.textContent = i18n("pf2e-dorako-ui.text.gm-only");
-    rolltype.addClass("whisper");
+    rolltype.classList.add("whisper");
     messageMetadata.prepend(rolltype);
     messageMetadata.classList.add("with-rolltype");
   } else if (isWhisper && whisperTargets.length > 0) {
     rolltype.textContent = i18n("pf2e-dorako-ui.text.whisper");
-    rolltype.addClass("whisper");
+    rolltype.classList.add("whisper");
     messageMetadata.prepend(rolltype);
     messageMetadata.classList.add("with-rolltype");
   } else if (isWhisper) {

@@ -21,6 +21,11 @@
     color: black;
   }
 
+  &.actor.sheet select.modular {
+    color: black;
+    border: unset;
+  }
+
   &.actor.sheet.character {
     .d20-svg path {
       fill: white;

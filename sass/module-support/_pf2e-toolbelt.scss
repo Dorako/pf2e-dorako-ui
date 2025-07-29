@@ -122,4 +122,7 @@
 #pf2e-toolbelt-resource-tracker {
   background: unset;
   border: unset;
+  .window-content::before {
+    background: unset;
+  }
 }
