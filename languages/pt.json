@@ -52,7 +52,7 @@
       },
       "prefer-light": "Preferir Claro",
       "prefer-dark": "Preferir escuro",
-      "bg3": "",
+      "bg3": "Baldur's Gate 3",
       "crb": "Livro Básico de Regras",
       "no-theme": "Sem tema",
       "opaque": "Opaco",
@@ -80,7 +80,11 @@
       "dnd5e2-dark": "D&D 5e (Escuro)",
       "custom": "⚠️ Faça Você Mesmo 👷",
       "custom-light": "⚠️ Faça Você Mesmo (Claro) 👷",
-      "custom-dark": "⚠️ Faça Você Mesmo (Escuro) 👷"
+      "custom-dark": "⚠️ Faça Você Mesmo (Escuro) 👷",
+      "github": "Github",
+      "dnd5e2": "D&D 5e",
+      "discord": "Discord",
+      "foundry2": "Foundry 2"
     },
     "settings": {
       "theme": {
@@ -89,7 +93,7 @@
           "name": "Tema da Ficha"
         },
         "border-radius": {
-          "hint": "(padrão: 3px) Altera o nível de arredondamento das bordas de vários elementos de UI",
+          "hint": "(padrão: 3px) Altera o nível de arredondamento das bordas de vários elementos de UI.",
           "name": "Arredondamento das Bordas"
         },
         "app-theme": {
@@ -97,27 +101,35 @@
           "name": "Tema da Interface"
         },
         "chat-message-opposition-theme": {
-          "hint": "Aplica-se a mensagens que são de criaturas de \"oposição\" aos personagens",
+          "hint": "Aplica-se a mensagens que são de criaturas de \"oposição\" aos personagens.",
           "name": "Tema (oposição) de mensagem no Chat"
         },
         "sheet-theme-color": {
-          "hint": "Aplica-se às fichas dos personagens dos jogadores e veículos",
+          "hint": "Aplica-se às fichas dos personagens dos jogadores e veículos.",
           "name": "Cor da Ficha"
         },
         "chat-message-header-style": {
           "name": "Tema do cabeçalho das mensagens no Chat",
-          "hint": "Aplica-se apenas a temas do Livro Básico"
+          "hint": "Aplica-se apenas a temas do Livro Básico."
         },
         "name": "Propriedades do Tema",
-        "hint": "Mudar as propriedades do tema para várias aplicações e elementos de UI",
+        "hint": "Muda as propriedades do tema para várias aplicações e elementos de UI. O tema D&D 5e depende de recursos do sistema D&D 5e, então ele também precisa estar instalado.",
         "label": "Configurar Propriedades do Tema",
         "chat-message-standard-theme": {
-          "hint": "Aplica-se a mensagens que não são de criaturas de \"oposição\" aos personagens",
+          "hint": "Aplica-se a mensagens que não são de criaturas de \"oposição\" aos personagens.",
           "name": "Tema (Padrão) de mensagem no Chat"
+        },
+        "application-theme": {
+          "hint": "Afetado pelo esquema de cores 'Core → Configuração da Interface do Usuário → Aplicativos'.",
+          "name": "Tema de Aplicativo"
+        },
+        "interface-theme": {
+          "name": "Tema da interface",
+          "hint": "Afetado pelo esquema de cores 'Core → Configuração da Interface do Usuário → Interface'."
         }
       },
       "misc": {
-        "hint": "Configurar propriedades relacionadas a outra funcionalidade do Dorako UI",
+        "hint": "Configurar propriedades relacionadas a outra funcionalidade do Dorako UI.",
         "enable-debug-mode": {
           "hint": "Adicionar botões para rapidamente trocar tema da Ficha",
           "name": "Habilitar modo debug?"
@@ -126,26 +138,64 @@
         "label": "Configurar Propriedades Diversas"
       },
       "customization": {
-        "hint": "Fazer alterações personalizadas usando CSS customizado, ou remover certos estilos do Dorako UI",
+        "hint": "Fazer alterações personalizadas usando CSS customizado, ou remover certos estilos do Dorako UI.",
         "excluded-applications": {
-          "hint": "Procure nos logs pelo nome da Aplicação, ou pergunte no Discord",
+          "hint": "Procure nos logs pelo nome da Aplicação, ou pergunte no Discord.",
           "name": "Aplicações excluídas"
         },
         "custom-css": {
           "name": "Customizar CSS",
-          "hint": "Escreva CSS em um editor externo e cole-o aqui"
+          "hint": "Escreva CSS em um editor externo e cole-o aqui."
         },
-        "name": "Customização"
+        "name": "Customização",
+        "chatlog-notify-seconds": {
+          "name": "Duração da notificação do chat",
+          "hint": "Quantidade de segundos para mostrar novas mensagens de chat."
+        },
+        "chat-merge": {
+          "hint": "Combina mensagens enviadas numa sequência rápida para poupar espaço.",
+          "name": "Ativar a fusão de mensagens?"
+        }
       },
       "external-module": {
         "name": "Configurações de Módulo Externo",
         "colorize-idle-hud": {
-          "hint": "Aplicar um tema colorido aos ícones de dicas principais e no HUD persistente",
+          "hint": "Aplicar um tema colorido aos ícones de dicas principais e no HUD persistente.",
           "name": "Colorir PF2e HUD?"
         },
-        "hint": "Ajustes para como outros módulos são afetados pelo Dorako UI"
+        "hint": "Ajustes para como outros módulos são afetados pelo Dorako UI."
       },
-      "reset-changes": "Resetar Mudanças"
+      "reset-changes": "Resetar Mudanças",
+      "avatar": {
+        "hint": "Ajustes para avatares de mensagens do chat.",
+        "hide-gm-avatar-when-secret": {
+          "hint": "Esconde avatares sempre que o GM faz rolagens secretas/privadas.",
+          "name": "Ocultar avatar quando é secreta?"
+        },
+        "hide-avatar-when-token-hidden": {
+          "hint": "Oculta avatares quando o token falante está oculto.",
+          "name": "Ocultar avatar quando o token está oculto?"
+        },
+        "avatar-reacts-to-degree-of-success": {
+          "hint": "Um sucesso crítico brilha verde e uma falha crítica fica escuro.",
+          "name": "Avatar reage a rolagens críticas?"
+        },
+        "avatar-source": {
+          "choice": {
+            "actor": "Preferir imagem do ator",
+            "token": "Preferir imagem do token",
+            "system": "Implementação do sistema (fallback)"
+          },
+          "hint": "Adiciona um avatar às mensagens de chat.",
+          "name": "Avatares de chat"
+        },
+        "name": "Configurações de Avatar",
+        "label": "Configurações de Avatar",
+        "use-user-avatar": {
+          "name": "Usar avatar do usuário como alternativa?",
+          "hint": "Configure avatares dos usuários clicando com o botão direito nos usuários na área inferior esquerda do Foundry."
+        }
+      }
     }
   }
 }
