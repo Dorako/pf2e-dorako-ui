@@ -1,3 +1,7 @@
+# 4.1.2
+
+- (Refinement) Adjusted navbar styling to better support situations where modules add extra navbar tabs.
+
 # 4.1.1
 
 - (Refinement) Various improvements.

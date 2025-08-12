@@ -41,10 +41,6 @@ Hooks.on("renderChatMessageHTML", (chatMessage, html, messageData) => {
   html.dataset.chatMessageTheme = dorakoUiTheme;
   html.dataset.chatMessageColorScheme = colorScheme;
 
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
-  if (dorakoUiTheme === "crb" && headerStyle !== "none") {
-    html.dataset.hasHeader = "";
-  }
   themeHeader(html, chatMessage);
 });
 
@@ -52,27 +48,12 @@ function themeHeader(html, message) {
   let messageHeader = html.querySelector(".message-header");
   const headerColor = getHeaderColor(html, message);
   messageHeader.style.setProperty("--header-color", headerColor);
-
-  if (headerColor !== headerStyleColors.none) {
-    let textColTheme = calcHeaderTextColor(headerColor);
-    html.dataset.headerTextColorScheme = textColTheme;
-  }
+  let textColTheme = calcHeaderTextColor(headerColor);
+  html.dataset.headerTextColorScheme = textColTheme;
 }
 
-const headerStyleColors = {
-  none: "none",
-  fallback: "#DAC0FB",
-  blue: "#191F65",
-  green: "#002A17",
-  red: "#540C06",
-};
-
 function getHeaderColor(html, message) {
-  const headerStyle = game.settings.get("pf2e-dorako-ui", "theme.chat-message-header-style");
-  if (headerStyle === "tint") {
-    return getPlayerOwners(message.actor)[0].color.css ?? message?.author?.color ?? headerStyleColors.fallback;
-  }
-  return headerStyleColors[headerStyle] ?? headerStyleColors.fallback;
+  return getPlayerOwners(message.actor)[0].color.css ?? message?.author?.color ?? "#DAC0FB";
 }
 
 function calcHeaderTextColor(headerColor) {
@@ -314,46 +295,46 @@ function adjustWhisperParticipants(html, messageData) {
   if (userId !== authorId && !whisperTargetIds.includes(userId)) return;
 
   // remove the old whisper to content, if it exists
-  html.querySelector(".whisper-to").detach();
+  // html.querySelector(".whisper-to").detach();
 
-  if (messageData.message?.flags?.pf2e?.context?.type == "damage-taken") return;
+  // if (messageData.message?.flags?.pf2e?.context?.type == "damage-taken") return;
 
-  // if this is a roll
-  if (isRoll) return;
+  // // if this is a roll
+  // if (isRoll) return;
 
-  const messageHeader = html.querySelector(".message-header");
+  // const messageHeader = html.querySelector(".message-header");
 
-  const whisperParticipants = $("<span>");
-  whisperParticipants.addClass("dux");
-  whisperParticipants.addClass("whisper-to");
+  // const whisperParticipants = $("<span>");
+  // whisperParticipants.addClass("dux");
+  // whisperParticipants.addClass("whisper-to");
 
-  const whisperFrom = $("<span>");
-  const fromText = titleCase(i18n("pf2e-dorako-ui.text.from"));
-  whisperFrom.text(`${fromText}: ${messageData.author.name}`);
-  whisperFrom.addClass("tag");
+  // const whisperFrom = $("<span>");
+  // const fromText = titleCase(i18n("pf2e-dorako-ui.text.from"));
+  // whisperFrom.text(`${fromText}: ${messageData.author.name}`);
+  // whisperFrom.addClass("tag");
 
-  const whisperTo = $("<span>");
+  // const whisperTo = $("<span>");
 
-  const whisperToLabel = $("<span>");
-  const toText = titleCase(i18n("pf2e-dorako-ui.text.to"));
-  whisperToLabel.text(`${toText}: `);
-  // whisperToLabel.addClass("tag");
-  whisperTo.append(whisperToLabel);
-  whisperParticipants.append(whisperTo);
+  // const whisperToLabel = $("<span>");
+  // const toText = titleCase(i18n("pf2e-dorako-ui.text.to"));
+  // whisperToLabel.text(`${toText}: `);
+  // // whisperToLabel.addClass("tag");
+  // whisperTo.append(whisperToLabel);
+  // whisperParticipants.append(whisperTo);
 
-  const recipients = $("<span>");
-  whisperParticipants.append(recipients);
+  // const recipients = $("<span>");
+  // whisperParticipants.append(recipients);
 
-  for (const whisperId of whisperTargetIds) {
-    const recipient = $("<span>");
-    recipient.text(game.users.get(whisperId)?.name);
-    recipient.addClass("tag");
-    recipient.addClass("whisper");
+  // for (const whisperId of whisperTargetIds) {
+  //   const recipient = $("<span>");
+  //   recipient.text(game.users.get(whisperId)?.name);
+  //   recipient.addClass("tag");
+  //   recipient.addClass("whisper");
 
-    recipients.append(recipient);
-  }
+  //   recipients.append(recipient);
+  // }
 
-  messageHeader.append(whisperParticipants);
+  // messageHeader.append(whisperParticipants);
 }
 
 function addAvatarsToFlags(message, local = true) {

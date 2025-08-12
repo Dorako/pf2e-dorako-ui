@@ -85,11 +85,14 @@
   }
 
   &.sheet.npc {
-    --color-pf-primary-lighter: var(--color-text-dark-primary);
-    --color-pf-primary-light: var(--color-text-dark-primary);
-    --color-pf-primary: var(--color-text-dark-primary);
-    --color-pf-primary-dark: var(--color-text-dark-secondary);
-    --color-pf-primary-darker: var(--color-text-dark-secondary);
+    .sidebar,
+    .sheet-body {
+      --color-pf-primary-lighter: var(--color-text-dark-primary);
+      --color-pf-primary-light: var(--color-text-dark-primary);
+      --color-pf-primary: var(--color-text-dark-primary);
+      --color-pf-primary-dark: var(--color-text-dark-secondary);
+      --color-pf-primary-darker: var(--color-text-dark-secondary);
+    }
 
     :is(select, input):not(.tag, [data-item-id="rituals"]) {
       @include input;
