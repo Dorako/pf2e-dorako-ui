@@ -10,7 +10,7 @@ export class ThemeSettings extends SettingsMenuDorakoUI {
     "sheet-theme-color",
     "chat-message-standard-theme",
     "chat-message-opposition-theme",
-    "chat-message-header-style",
+    // "chat-message-header-style",
     // "border-radius",
   ];
 

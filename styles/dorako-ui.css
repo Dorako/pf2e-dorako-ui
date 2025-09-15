@@ -2100,7 +2100,8 @@ v13
 [data-panel=menu],
 [data-panel=name],
 [data-panel=stats],
-[data-panel=effects]),
+[data-panel=effects],
+[data-panel=owned-actors]),
 [data-interface-theme=bg3] #pf2e-hud-persistent [data-panel=menu] .group,
 [data-interface-theme=bg3] #hotbar-page-controls {
   box-shadow: var(--control-box-shadow);
@@ -5961,6 +5962,27 @@ span[data-pf2-action][data-pf2-glyph]::before {
   color: black;
 }
 
+@layer dorako-ui {
+  .roll-modifiers-dialog {
+    background: unset !important;
+    border: unset !important;
+  }
+  .roll-modifiers-dialog .window-header {
+    color: var(--color-text-light-highlight) !important;
+  }
+  .roll-modifiers-dialog .window-content {
+    background: var(--window-app-background) !important;
+    border: unset;
+    box-shadow: inset 0 0 0 1px #9f725b, inset 0 0 0 2px var(--tertiary), inset 0 0 0 3px #956d58, 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  .roll-modifiers-dialog .window-content .roll {
+    color: var(--text-light) !important;
+    background: linear-gradient(90deg, var(--color-pf-secondary) 0%, var(--color-pf-secondary-light) 50%, var(--color-pf-secondary) 100%) !important;
+  }
+  .roll-modifiers-dialog .window-content .roll:hover {
+    background: linear-gradient(90deg, var(--color-pf-secondary) 0%, var(--color-pf-secondary-light) 20%, var(--color-pf-secondary-light) 50%, var(--color-pf-secondary-light) 80%, var(--color-pf-secondary) 100%) !important;
+  }
+}
 /* ----------------------------------------- */
 /* Color definitions                         */
 /* ----------------------------------------- */
@@ -6146,6 +6168,7 @@ span[data-pf2-action][data-pf2-glyph]::before {
 /* Damage colors                             */
 /* ----------------------------------------- */
 [data-chat-message-color-scheme=dark][data-chat-message-theme] .damage,
+.theme-dark .roll-modifiers-dialog .damage,
 .themed.theme-dark .sheet .damage,
 .theme-dark .sheet .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125);
@@ -6199,6 +6222,10 @@ span[data-pf2-action][data-pf2-glyph]::before {
   --color-text-spirit: #827dac;
   --color-text-vitality: #ffffa0;
   --color-text-void: rgb(122, 38, 117);
+}
+
+.roll-modifiers-dialog .dialog-row.off > * i {
+  color: var(--color-text-dark-primary);
 }
 
 :root .damage.color.acid {
@@ -7196,6 +7223,7 @@ span[data-pf2-action][data-pf2-glyph]::before {
     --control-bg-color: radial-gradient(circle, #363534 0, black 100%);
     --control-border-color: #594537;
     --control-active-bg-color: radial-gradient(circle, var(--bg3-alliance-opposition-red) 0, black 100%);
+    --control-icon-color: var(--color-light-2);
   }
   [data-interface-theme=bg3] .ui-control {
     --control-bg-color: radial-gradient(circle, #363534 0, black 100%);
@@ -8295,7 +8323,7 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   border-radius: 3px;
 }
 
-[data-application-theme=dnd5e2].theme-dark > :is(.application, .app):not(.actor, .journal-sheet) .window-content::before,
+[data-application-theme=dnd5e2].theme-dark > :is(.application, .app):not(.actor, .journal-sheet, .roll-modifiers-dialog) .window-content::before,
 [data-application-theme=dnd5e2].theme-dark > .npc .window-content::before {
   content: "";
   position: absolute;

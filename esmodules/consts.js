@@ -19,7 +19,7 @@ export const themedApps = [...coreApps, ...systemApps, ...moduleApps];
 /* ----------------------------------------- */
 /* Window apps                               */
 /* ----------------------------------------- */
-export const systemSheets = ["WorldClock", "ArmySheetPF2e","CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPF2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet", "KingdomSheetPF2e"
+export const systemSheets = ["DamageModifierDialog","CheckModifiersDialog","ArmySheetPF2e","CreatureSheetPF2e","PartySheetPF2e","SpellPreparationSheet","ItemSheet","NPCSheetPF2e","VehicleSheetPF2e","FamiliarSheetPF2e","HazardSheetPF2e", "CharacterSheetPF2e","LootSheetPF2e"]; //|| "ItemSheet","ActorSheet", "KingdomSheetPF2e"
 export const moduleWindowApps = ["ExtendedSettingsConfig"];
 export const limitedScopeApplications = ["CompendiumBrowser","PF2eHudPersistent","ABCPicker","RolodexApplication","ArmySheetPF2e","KingdomSheetPF2e","CreatureSheetPF2e", "CharacterSheetPF2e", "PartySheetPF2e", "NPCSheetPF2e", "HazardSheetPF2e","VehicleSheetPF2e", "HUD"];
 

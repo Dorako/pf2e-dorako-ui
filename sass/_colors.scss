@@ -257,6 +257,7 @@ $adjusted-lower: #cc3311 !default;
 /* ----------------------------------------- */
 
 [data-chat-message-color-scheme="dark"][data-chat-message-theme] .damage,
+.theme-dark .roll-modifiers-dialog .damage,
 .themed.theme-dark .sheet .damage,
 .theme-dark .sheet .damage {
   --color-bg-acid: rgba(32, 194, 32, 0.125); // adjusted
@@ -310,6 +311,10 @@ $adjusted-lower: #cc3311 !default;
   --color-text-spirit: #827dac; // adjusted
   --color-text-vitality: #ffffa0;
   --color-text-void: rgb(122, 38, 117); // adjusted
+}
+
+.roll-modifiers-dialog .dialog-row.off > * i {
+  color: var(--color-text-dark-primary);
 }
 
 :root .damage.color.acid {
