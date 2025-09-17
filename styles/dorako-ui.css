@@ -5963,23 +5963,23 @@ span[data-pf2-action][data-pf2-glyph]::before {
 }
 
 @layer dorako-ui {
-  .roll-modifiers-dialog {
+  [data-theme].roll-modifiers-dialog {
     background: unset !important;
     border: unset !important;
   }
-  .roll-modifiers-dialog .window-header {
+  [data-theme].roll-modifiers-dialog .window-header {
     color: var(--color-text-light-highlight) !important;
   }
-  .roll-modifiers-dialog .window-content {
+  [data-theme].roll-modifiers-dialog .window-content {
     background: var(--window-app-background) !important;
     border: unset;
     box-shadow: inset 0 0 0 1px #9f725b, inset 0 0 0 2px var(--tertiary), inset 0 0 0 3px #956d58, 0 0 20px rgba(0, 0, 0, 0.8);
   }
-  .roll-modifiers-dialog .window-content .roll {
+  [data-theme].roll-modifiers-dialog .window-content .roll {
     color: var(--text-light) !important;
     background: linear-gradient(90deg, var(--color-pf-secondary) 0%, var(--color-pf-secondary-light) 50%, var(--color-pf-secondary) 100%) !important;
   }
-  .roll-modifiers-dialog .window-content .roll:hover {
+  [data-theme].roll-modifiers-dialog .window-content .roll:hover {
     background: linear-gradient(90deg, var(--color-pf-secondary) 0%, var(--color-pf-secondary-light) 20%, var(--color-pf-secondary-light) 50%, var(--color-pf-secondary-light) 80%, var(--color-pf-secondary) 100%) !important;
   }
 }

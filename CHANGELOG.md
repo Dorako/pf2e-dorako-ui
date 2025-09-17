@@ -1,3 +1,7 @@
+# 4.1.4
+
+- (Fix) Fixed an issue where Roll Modifier dialogs would have transparent background if no application theme was selected.
+
 # 4.1.3
 
 - (New) Added support for Roll Modifier dialogs.

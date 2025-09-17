@@ -220,7 +220,7 @@ span[data-pf2-action][data-pf2-glyph]::before {
 }
 
 @layer dorako-ui {
-  .roll-modifiers-dialog {
+  [data-theme].roll-modifiers-dialog {
     background: unset !important;
     border: unset !important;
     .window-header {
