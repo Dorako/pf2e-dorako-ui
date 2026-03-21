@@ -1,3 +1,8 @@
+# 4.1.5
+
+- (Maintenance) Removed explicit styling related to AV journals, since the newest release has fixed the original issues.
+- (Fix) Fixed an issue where Share Media's dialog would have vertical buttons in certain themes.
+
 # 4.1.4
 
 - (Fix) Fixed an issue where Roll Modifier dialogs would have transparent background if no application theme was selected.

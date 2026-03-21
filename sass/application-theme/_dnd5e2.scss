@@ -27,7 +27,7 @@
     border: var(--dnd5e-border-gold);
     --color-fieldset-border: var(--dnd5e-color-gold);
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     gap: 4px;
     border-radius: 4px;
     border: 1px solid var(--color-fieldset-border);
@@ -77,7 +77,8 @@
 }
 
 [data-application-theme="dnd5e2"].theme-light [data-theme] {
-  --window-app-background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+  --window-app-background:
+    url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
     url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
   --window-app-border-color: var(--dnd5e-color-gold);
   --icon-border-color: var(--dnd5e-color-gold);
@@ -93,7 +94,8 @@
   --fieldset-border-color: var(--dnd5e-color-gold);
   --fieldset-background-color: var(--dnd5e-color-card);
 
-  --window-app-background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
+  --window-app-background:
+    url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
     url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
 }
 
