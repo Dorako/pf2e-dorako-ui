@@ -1,3 +1,7 @@
+# 4.1.6
+
+- (Fix) Fixed a regression in item sheet fieldset styling.
+
 # 4.1.5
 
 - (Maintenance) Removed explicit styling related to AV journals, since the newest release has fixed the original issues.

@@ -10,7 +10,7 @@
   }
 }
 
-.pf2e.item.sheet {
+[data-application-theme] [data-theme].pf2e.item.sheet {
   header img {
     border: 2px solid var(--icon-border-color);
     // height: calc(100% - 4px);
@@ -30,6 +30,9 @@
   }
   fieldset {
     margin-top: 1rem;
+    &:not(.basics) {
+      flex-direction: column;
+    }
   }
   sheet-tabs .tabs {
     gap: 5px;

@@ -4962,13 +4962,13 @@ table.pf2-table {
   color: black;
 }
 
-.pf2e.item.sheet header img {
+[data-application-theme] [data-theme].pf2e.item.sheet header img {
   border: 2px solid var(--icon-border-color);
 }
-.pf2e.item.sheet .tab.active.rules .rule-form {
+[data-application-theme] [data-theme].pf2e.item.sheet .tab.active.rules .rule-form {
   border-bottom: unset;
 }
-.pf2e.item.sheet select:not(.tag) {
+[data-application-theme] [data-theme].pf2e.item.sheet select:not(.tag) {
   background: var(--input-background-color);
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
@@ -4977,25 +4977,25 @@ table.pf2-table {
   transition: outline-color 0.5s;
   cursor: var(--cursor-text);
 }
-.pf2e.item.sheet select:not(.tag):focus {
+[data-application-theme] [data-theme].pf2e.item.sheet select:not(.tag):focus {
   outline: 2px solid var(--input-focus-outline-color);
 }
-.pf2e.item.sheet select:not(.tag):disabled {
+[data-application-theme] [data-theme].pf2e.item.sheet select:not(.tag):disabled {
   opacity: 1;
   pointer-events: none;
 }
-.pf2e.item.sheet select:not(.tag)[readonly] {
+[data-application-theme] [data-theme].pf2e.item.sheet select:not(.tag)[readonly] {
   pointer-events: none;
 }
-.pf2e.item.sheet select:not(.tag) :is(option, optgroup) {
+[data-application-theme] [data-theme].pf2e.item.sheet select:not(.tag) :is(option, optgroup) {
   background: var(--color-select-option-bg);
 }
-.pf2e.item.sheet select:not(.tag) ::placeholder {
+[data-application-theme] [data-theme].pf2e.item.sheet select:not(.tag) ::placeholder {
   color: var(--input-placeholder-color);
 }
-.pf2e.item.sheet textarea,
-.pf2e.item.sheet input[type=number],
-.pf2e.item.sheet input[type=text] {
+[data-application-theme] [data-theme].pf2e.item.sheet textarea,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=number],
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=text] {
   background: var(--input-background-color);
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
@@ -5004,40 +5004,43 @@ table.pf2-table {
   transition: outline-color 0.5s;
   cursor: var(--cursor-text);
 }
-.pf2e.item.sheet textarea:focus,
-.pf2e.item.sheet input[type=number]:focus,
-.pf2e.item.sheet input[type=text]:focus {
+[data-application-theme] [data-theme].pf2e.item.sheet textarea:focus,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=number]:focus,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=text]:focus {
   outline: 2px solid var(--input-focus-outline-color);
 }
-.pf2e.item.sheet textarea:disabled,
-.pf2e.item.sheet input[type=number]:disabled,
-.pf2e.item.sheet input[type=text]:disabled {
+[data-application-theme] [data-theme].pf2e.item.sheet textarea:disabled,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=number]:disabled,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=text]:disabled {
   opacity: 1;
   pointer-events: none;
 }
-.pf2e.item.sheet textarea[readonly],
-.pf2e.item.sheet input[type=number][readonly],
-.pf2e.item.sheet input[type=text][readonly] {
+[data-application-theme] [data-theme].pf2e.item.sheet textarea[readonly],
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=number][readonly],
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=text][readonly] {
   pointer-events: none;
 }
-.pf2e.item.sheet textarea :is(option, optgroup),
-.pf2e.item.sheet input[type=number] :is(option, optgroup),
-.pf2e.item.sheet input[type=text] :is(option, optgroup) {
+[data-application-theme] [data-theme].pf2e.item.sheet textarea :is(option, optgroup),
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=number] :is(option, optgroup),
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=text] :is(option, optgroup) {
   background: var(--color-select-option-bg);
 }
-.pf2e.item.sheet textarea ::placeholder,
-.pf2e.item.sheet input[type=number] ::placeholder,
-.pf2e.item.sheet input[type=text] ::placeholder {
+[data-application-theme] [data-theme].pf2e.item.sheet textarea ::placeholder,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=number] ::placeholder,
+[data-application-theme] [data-theme].pf2e.item.sheet input[type=text] ::placeholder {
   color: var(--input-placeholder-color);
 }
-.pf2e.item.sheet fieldset {
+[data-application-theme] [data-theme].pf2e.item.sheet fieldset {
   margin-top: 1rem;
 }
-.pf2e.item.sheet sheet-tabs .tabs {
+[data-application-theme] [data-theme].pf2e.item.sheet fieldset:not(.basics) {
+  flex-direction: column;
+}
+[data-application-theme] [data-theme].pf2e.item.sheet sheet-tabs .tabs {
   gap: 5px;
   margin-inline: 5px;
 }
-.pf2e.item.sheet sheet-tabs .tabs [data-tab] {
+[data-application-theme] [data-theme].pf2e.item.sheet sheet-tabs .tabs [data-tab] {
   background: var(--button-background-color);
   border: 1px solid var(--button-border-color);
   box-shadow: var(--button-box-shadow);
@@ -5047,33 +5050,33 @@ table.pf2-table {
   cursor: var(--cursor-pointer);
   transition: 0.2s;
 }
-.pf2e.item.sheet sheet-tabs .tabs [data-tab]:active, .pf2e.item.sheet sheet-tabs .tabs [data-tab].active .pf2e.item.sheet sheet-tabs .tabs [data-tab]:hover {
+[data-application-theme] [data-theme].pf2e.item.sheet sheet-tabs .tabs [data-tab]:active, [data-application-theme] [data-theme].pf2e.item.sheet sheet-tabs .tabs [data-tab].active [data-application-theme] [data-theme].pf2e.item.sheet sheet-tabs .tabs [data-tab]:hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border-color: var(--button-hover-border-color);
 }
-.pf2e.item.sheet .attached-input .attachment {
+[data-application-theme] [data-theme].pf2e.item.sheet .attached-input .attachment {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.pf2e.item.sheet .attached-input input {
+[data-application-theme] [data-theme].pf2e.item.sheet .attached-input input {
   border-left: unset;
 }
-.pf2e.item.sheet.pf2e.item.sheet.spell form .tab.details.active fieldset.heightening .add {
+[data-application-theme] [data-theme].pf2e.item.sheet.pf2e.item.sheet.spell form .tab.details.active fieldset.heightening .add {
   gap: 5px;
 }
-.pf2e.item.sheet .drop-zone {
+[data-application-theme] [data-theme].pf2e.item.sheet .drop-zone {
   background: var(--fieldset-background-color);
   border-color: var(--fieldset-border-color);
   border-radius: 4px;
   --color-border-dark: var(--icon-border-color);
 }
-.pf2e.item.sheet form > nav > .tabs {
+[data-application-theme] [data-theme].pf2e.item.sheet form > nav > .tabs {
   gap: 5px;
   margin: 5px;
   margin-bottom: 0px;
 }
-.pf2e.item.sheet form > nav > .tabs > a {
+[data-application-theme] [data-theme].pf2e.item.sheet form > nav > .tabs > a {
   background: var(--button-background-color);
   border: 1px solid var(--button-border-color);
   box-shadow: var(--button-box-shadow);
@@ -5083,17 +5086,17 @@ table.pf2-table {
   cursor: var(--cursor-pointer);
   transition: 0.2s;
 }
-.pf2e.item.sheet form > nav > .tabs > a:active, .pf2e.item.sheet form > nav > .tabs > a.active .pf2e.item.sheet form > nav > .tabs > a:hover {
+[data-application-theme] [data-theme].pf2e.item.sheet form > nav > .tabs > a:active, [data-application-theme] [data-theme].pf2e.item.sheet form > nav > .tabs > a.active [data-application-theme] [data-theme].pf2e.item.sheet form > nav > .tabs > a:hover {
   background: var(--button-hover-background-color);
   color: var(--button-hover-text-color);
   border-color: var(--button-hover-border-color);
 }
-.pf2e.item.sheet .sheet-content button:hover:not(:disabled),
-.pf2e.item.sheet .sheet-content button:focus,
-.pf2e.item.sheet .sheet-content input:not([type=range]):hover:not(:disabled),
-.pf2e.item.sheet .sheet-content input:not([type=range]):focus,
-.pf2e.item.sheet .sheet-content select:hover:not(:disabled),
-.pf2e.item.sheet .sheet-content select:focus {
+[data-application-theme] [data-theme].pf2e.item.sheet .sheet-content button:hover:not(:disabled),
+[data-application-theme] [data-theme].pf2e.item.sheet .sheet-content button:focus,
+[data-application-theme] [data-theme].pf2e.item.sheet .sheet-content input:not([type=range]):hover:not(:disabled),
+[data-application-theme] [data-theme].pf2e.item.sheet .sheet-content input:not([type=range]):focus,
+[data-application-theme] [data-theme].pf2e.item.sheet .sheet-content select:hover:not(:disabled),
+[data-application-theme] [data-theme].pf2e.item.sheet .sheet-content select:focus {
   --color-pf-secondary: var(--input-focus-outline-color);
   transition: box-shadow 0.25s;
 }
