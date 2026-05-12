@@ -1,3 +1,7 @@
+# 4.1.7
+
+- (Maintenance) Updated manifest to declare v14 compatibility.
+
 # 4.1.6
 
 - (Fix) Fixed a regression in item sheet fieldset styling.

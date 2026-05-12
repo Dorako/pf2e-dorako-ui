@@ -3,8 +3,12 @@ body.pf2e-hud-colorized {
   #pf2e-hud-persistent span:not(.expired),
   #pf2e-hud-persistent input,
   #pf2e-hud-persistent [data-section] i,
+  #pf2e-hud-token [data-panel] i,
   #pf2e-hud-tooltip i {
-    text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
+    text-shadow:
+      0 0 3px #000,
+      0 0 2px #000,
+      0 0 1px #000;
   }
 
   i.fa-mask {
@@ -266,7 +270,8 @@ v13
   #pf2e-hud-persistent {
     --outer-border: 1px solid transparent;
     background: var(--app-background);
-    --panel-background: var(--bg3-tooltip-window-background) padding-box,
+    --panel-background:
+      var(--bg3-tooltip-window-background) padding-box,
       linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
         border-box;
   }
@@ -298,7 +303,8 @@ v13
   #pf2e-hud-token[data-mode="exploded"] [data-panel] {
     --outer-background: blue;
     --outer-border: 1px solid var(--control-border-color);
-    background: var(--bg3-tooltip-window-background) padding-box,
+    background:
+      var(--bg3-tooltip-window-background) padding-box,
       linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
         border-box;
     border: 2px solid transparent;
@@ -321,6 +327,10 @@ v13
       var(--bg3-bg-inner) 50%,
       var(--bg3-bg-outer) 100%
     );
-    box-shadow: 0px 0px 30px black, 0px 0px 20px black, 0px 0px 10px black, 0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
+    box-shadow:
+      0px 0px 30px black,
+      0px 0px 20px black,
+      0px 0px 10px black,
+      0px 0px 5px 1px rgba(0, 0, 0, 0.8) inset;
   }
 }

@@ -1851,6 +1851,7 @@ body.pf2e-hud-colorized .pf2e-hud [data-section] i,
 body.pf2e-hud-colorized #pf2e-hud-persistent span:not(.expired),
 body.pf2e-hud-colorized #pf2e-hud-persistent input,
 body.pf2e-hud-colorized #pf2e-hud-persistent [data-section] i,
+body.pf2e-hud-colorized #pf2e-hud-token [data-panel] i,
 body.pf2e-hud-colorized #pf2e-hud-tooltip i {
   text-shadow: 0 0 3px #000, 0 0 2px #000, 0 0 1px #000;
 }
@@ -2081,7 +2082,8 @@ v13
 [data-interface-theme=bg3] #pf2e-hud-persistent {
   --outer-border: 1px solid transparent;
   background: var(--app-background);
-  --panel-background: var(--bg3-tooltip-window-background) padding-box,
+  --panel-background:
+    var(--bg3-tooltip-window-background) padding-box,
     linear-gradient(to right, var(--bg3-border-outer) 0%, var(--bg3-border-inner) 50%, var(--bg3-border-outer) 100%)
       border-box;
 }
