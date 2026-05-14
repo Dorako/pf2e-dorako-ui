@@ -346,9 +346,10 @@ function addAvatarsToFlags(message, local = true) {
   const actor = game.actors.get(speaker.actor);
   let actorImg = actor?.img;
   const token = game.scenes.get(speaker.scene)?.tokens.get(speaker.token) ?? actor?.prototypeToken;
-  let tokenImg = token?.texture.src;
+  let tokenImg = token?.texture?.src;
   let userImg = message.author?.avatar;
-  let subjectImg = token?.ring?.subject;
+  let subject = token?.ring?.subject;
+  let subjectImg = subject?.texture;
 
   let userAvatar = new Avatar(message.speaker.alias, userImg);
 
@@ -361,8 +362,8 @@ function addAvatarsToFlags(message, local = true) {
     : null;
 
   let subjectAvatar =
-    token?.ring?.enabled && subjectImg.texture
-      ? new SubjectAvatar(message.speaker.alias, subjectImg.texture, subjectImg.scale * 1.25, actor.size == "sm")
+    token?.ring?.enabled && subjectImg
+      ? new SubjectAvatar(message.speaker.alias, subjectImg, subject.scale * 1.25, actor.size == "sm")
       : null;
 
   if (local) {

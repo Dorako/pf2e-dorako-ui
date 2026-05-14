@@ -5953,6 +5953,11 @@ span[data-pf2-action][data-pf2-glyph]::before {
   color: black;
 }
 
+@layer system {
+  .application button:where(.flat) {
+    box-shadow: unset;
+  }
+}
 @layer dorako-ui {
   [data-theme].roll-modifiers-dialog {
     background: unset !important;
@@ -8127,6 +8132,7 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   border: var(--dnd5e-border-gold);
   --color-fieldset-border: var(--dnd5e-color-gold);
   display: flex;
+  flex-direction: column;
   gap: 4px;
   border-radius: 4px;
   border: 1px solid var(--color-fieldset-border);
@@ -8386,6 +8392,7 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   border: 1px solid;
   --color-fieldset-border: var(--fieldset-border-color);
   display: flex;
+  flex-direction: column;
   gap: 4px;
   border-radius: 4px;
   border: 1px solid var(--color-fieldset-border);

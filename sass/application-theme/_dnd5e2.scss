@@ -27,7 +27,7 @@
     border: var(--dnd5e-border-gold);
     --color-fieldset-border: var(--dnd5e-color-gold);
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     gap: 4px;
     border-radius: 4px;
     border: 1px solid var(--color-fieldset-border);

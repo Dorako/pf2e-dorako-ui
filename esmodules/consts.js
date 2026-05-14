@@ -31,7 +31,7 @@ export const interfaceApp = ["Players", "Hotbar"]
 /* ----------------------------------------- */
 /* Excluded                                  */
 /* ----------------------------------------- */
-export const excludedApplications = ["TerrainStackViewer","SearchAppShell","TokenActionHud","JournalSheet","CampingSheet","KingdomSheet","ChatPopout","Terminal","PF2EBestiary","SigilPF2EAdventureImporter","PreyJournalSheet","PF2eHudTextPopup","PF2eHudItemPopup","ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
+export const excludedApplications = ["ShareSelector","DamageModifierDialog","CheckModifiersDialog","TerrainStackViewer","SearchAppShell","TokenActionHud","JournalSheet","CampingSheet","KingdomSheet","ChatPopout","Terminal","PF2EBestiary","SigilPF2EAdventureImporter","PreyJournalSheet","PF2eHudTextPopup","PF2eHudItemPopup","ItemAnimationsApp","ActorAnimationsApp","AnimationHistoryApp", "UserAnimationsApp", "WorldAnimationsApp","JSONEditorApp", "VCEChatLog", "AutorecMenuApp","GmScreenApplicationDrawer","MixerApp","EnhancedJournal","PartyOverviewApp","KingdomBuilder","ChatLogPF2e","ItemMenuApp","LevelsUI", "SpecialEffectsManagement", "ParticleEffectsManagement", "FilterEffectsManagementConfig"]; //
 
 /* ----------------------------------------- */
 /* Frameworks                                */
@@ -48,6 +48,9 @@ export class Avatar {
     this.image = image;
     this.type = "avatar";
   }
+  toObject() {
+  return Object.assign({}, this);
+  }
 }
 
 export class CombatantAvatar extends Avatar {
@@ -55,12 +58,18 @@ export class CombatantAvatar extends Avatar {
     super(name, image);
     this.type = "combatant";
   }
+    toObject() {
+  return Object.assign({}, this);
+  }
 }
 
 export class ActorAvatar extends Avatar {
   constructor(name, image) {
     super(name, image);
     this.type = "actor";
+  }
+    toObject() {
+  return Object.assign({}, this);
   }
 }
 
@@ -71,6 +80,9 @@ export class TokenAvatar extends Avatar {
     this.scale = scale;
     this.isSmall = isSmall;
   }
+    toObject() {
+  return Object.assign({}, this);
+  }
 }
 
 export class SubjectAvatar extends Avatar {
@@ -79,5 +91,8 @@ export class SubjectAvatar extends Avatar {
     this.type = "subject-texture";
     this.scale = scale;
     this.isSmall = isSmall;
+  }
+    toObject() {
+  return Object.assign({}, this);
   }
 }

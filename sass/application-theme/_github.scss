@@ -27,7 +27,7 @@
     border: 1px solid;
     --color-fieldset-border: var(--fieldset-border-color);
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     gap: 4px;
     border-radius: 4px;
     border: 1px solid var(--color-fieldset-border);

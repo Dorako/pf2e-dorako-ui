@@ -1,3 +1,8 @@
+# 4.1.8
+
+- (Fix) Fixed an issue where new avatar data would not get saved in v14.
+- (Maintenance) General housecleaning, including excluding some applicaations.
+
 # 4.1.7
 
 - (Maintenance) Updated manifest to declare v14 compatibility.
