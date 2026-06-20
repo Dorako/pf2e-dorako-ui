@@ -47,8 +47,8 @@
 
 body.theme-light [data-theme].application {
   // --background: url(/modules/pf2e-dorako-ui/img/background-light.webp) repeat;
-  --background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f1ebe8; //url("/ui/parchment.jpg")
+  --background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right, #f1ebe8; //url("/ui/parchment.jpg")
   background-size: cover;
 }
 

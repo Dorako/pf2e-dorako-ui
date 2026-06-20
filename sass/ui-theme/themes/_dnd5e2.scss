@@ -42,7 +42,7 @@
   --dnd5e-font-roboto: Roboto, sans-serif;
   --dnd5e-font-roboto-condensed: "Roboto Condensed", sans-serif;
   --dnd5e-font-roboto-slab: "Roboto Slab", serif;
-  --dnd5e-sheet-background: url("../../../systems/dnd5e/ui/parchment.jpg") repeat;
+  --dnd5e-sheet-background: url("../../img/dnd5e_parchment.jpg") repeat;
   --dnd5e-shadow-45: rgba(0, 0, 0, 0.45);
   --dnd5e-shadow-15: rgba(0, 0, 0, 0.15);
   --dnd5e-highlight-45: rgba(255, 255, 255, 0.45);
@@ -62,8 +62,8 @@
 
   // --dnd5e-bg: url("../img/dnd5e2/texture-gray1.webp") no-repeat top left,
   //   url("../img/dnd5e2/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
-  --dnd5e-bg: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+  --dnd5e-bg: url("../../img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("../../img/dnd5e_texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
 }
 
 .dnd5e2 .pills {
@@ -323,7 +323,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: transparent url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left;
+  background: transparent url("../../img/dnd5e_texture-gray1.webp") no-repeat top left;
   border-radius: 6px;
   pointer-events: none;
   z-index: 0;
@@ -485,15 +485,15 @@
 /* Dark theme                                */
 /* ----------------------------------------- */
 :is(.chat-popout, #chat-log) .message[data-theme^="dnd5e2"][data-color-scheme="dark"]::before {
-  background: transparent url(../../../systems/dnd5e/ui/texture-gray1.webp) no-repeat top left;
+  background: transparent url(../../img/dnd5e_texture-gray1.webp) no-repeat top left;
   filter: invert(1) grayscale(1) opacity(0.5);
 }
 :is(.chat-popout, #chat-log) .message[data-theme^="dnd5e2"][data-color-scheme="dark"].whisper::before {
-  // background: transparent url(../../../systems/dnd5e/ui/texture-gray1.webp) no-repeat top left;
+  // background: transparent url(../../img/dnd5e_texture-gray1.webp) no-repeat top left;
   filter: invert(1) grayscale(1) opacity(0.5);
 }
 :is(.chat-popout, #chat-log) .message[data-theme^="dnd5e2"][data-color-scheme="dark"].blind::before {
-  // background: transparent url(../../../systems/dnd5e/ui/texture-gray1.webp) no-repeat top left;
+  // background: transparent url(../../img/dnd5e_texture-gray1.webp) no-repeat top left;
   filter: invert(1) grayscale(1);
 }
 [data-theme^="dnd5e2"][data-color-scheme="dark"] {
@@ -583,8 +583,8 @@
     //   content: "";
     //   position: absolute;
     //   inset: 0;
-    //   background: url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    //     url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    //   background: url("../../img/dnd5e_texture-gray1.webp") no-repeat top left,
+    //     url("../../img/dnd5e_texture-gray2.webp") no-repeat bottom right;
     //   border-radius: 6px;
     //   pointer-events: none;
     //   z-index: -1;
