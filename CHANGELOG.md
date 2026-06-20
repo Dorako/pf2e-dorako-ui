@@ -1,3 +1,7 @@
+# 4.1.9
+
+- (Refinement) Refactored dnd5e theme to rely on local assets rather than 5e system installation. [@Truncated]
+
 # 4.1.8
 
 - (Fix) Fixed an issue where new avatar data would not get saved in v14.

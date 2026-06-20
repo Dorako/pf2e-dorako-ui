@@ -22,3 +22,5 @@ This code is available under the MIT license, see LICENSE.
 The green PC sheet theme is contributed by Vesselchuck.
 
 The chat merge functionality has been adapted from [DFCE](https://github.com/flamewave000/dragonflagon-fvtt/tree/master/df-chat-enhance) available under the BSD 3-Clause license.
+
+The dnd5e UI assets are from [dnd5e Foundry system](https://github.com/foundryvtt/dnd5e) under the MIT license.

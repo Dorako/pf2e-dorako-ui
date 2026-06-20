@@ -53,7 +53,7 @@
       "theme": {
         "name": "Theme Settings",
         "label": "Configure Theme Settings",
-        "hint": "Change theme settings for various applications and UI elements. The D&D 5e theme relies on assets from the D&D 5e system, so it should be installed as well.",
+        "hint": "Change theme settings for various applications and UI elements.",
         "application-theme": {
           "name": "Application theme",
           "hint": "Affected by 'Core → User Interface Configuration → Application' color scheme."
