@@ -7337,8 +7337,8 @@ span[data-pf2-action][data-pf2-glyph]::before {
 }
 
 body.theme-light [data-theme].application {
-  --background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, #f1ebe8;
+  --background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right, #f1ebe8;
   background-size: cover;
 }
 
@@ -8181,8 +8181,8 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
 
 [data-application-theme=dnd5e2].theme-light [data-theme] {
   --window-app-background:
-    url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+    url("../../img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("../../img/dnd5e_texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
   --window-app-border-color: var(--dnd5e-color-gold);
   --icon-border-color: var(--dnd5e-color-gold);
 }
@@ -8196,8 +8196,8 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   --fieldset-border-color: var(--dnd5e-color-gold);
   --fieldset-background-color: var(--dnd5e-color-card);
   --window-app-background:
-    url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+    url("../../img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("../../img/dnd5e_texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
 }
 
 [data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=dark][data-theme],
@@ -8441,8 +8441,8 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
 
 [data-application-theme=github].theme-light [data-theme] {
   --window-app-background:
-    url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+    url("../../img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("../../img/dnd5e_texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
   --window-app-border-color: var(--dnd5e-color-gold);
   --icon-border-color: var(--dnd5e-color-gold);
 }
@@ -8456,8 +8456,8 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   --fieldset-border-color: var(--dnd5e-color-gold);
   --fieldset-background-color: var(--dnd5e-color-card);
   --window-app-background:
-    url("../../../systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-    url("../../../systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
+    url("../../img/dnd5e_texture-gray1.webp") no-repeat top left,
+    url("../../img/dnd5e_texture-gray2.webp") no-repeat bottom right, var(--dnd5e-color-parchment);
 }
 
 [data-chat-message-theme=github][data-chat-message-color-scheme=dark][data-theme],
@@ -8621,7 +8621,7 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
     to right,
     var(--bg3-border-outer) 0%,
     var(--bg3-border-inner) 50%,
-    var(--bg3-border-outer) 100%
+    var(--bg3-border-outer) 100% 
   );
   --bg3-tooltip-window-background: linear-gradient(
     to right,
@@ -8769,19 +8769,19 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   box-shadow: 0 0 6px 1px var(--dnd5e-shadow-45);
 }
 .chat-message[data-chat-message-theme=dnd5e2][data-chat-message-color-scheme=light] {
-  background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+  background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left, url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right;
   background-color: #f1ebe8;
   --color-text-dark-primary: black;
   --color-text-dark-secondary: color-mix(in srgb, var(--color-text-dark-primary) 70%, transparent);
 }
 .chat-message[data-chat-message-theme=dnd5e2].whisper[data-chat-message-color-scheme=light] {
-  background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+  background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left, url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right;
   background-color: #e1e1fe;
   background-blend-mode: screen;
   --window-app-border-color: #e3e3ff;
 }
 .chat-message[data-chat-message-theme=dnd5e2].blind[data-chat-message-color-scheme=light] {
-  background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left, url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+  background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left, url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right;
   background-color: #f4c2f4;
   background-blend-mode: screen;
   --window-app-border-color: #a57aa5;
@@ -8816,7 +8816,7 @@ body.game .app[data-theme]:not(.actor) form button:active, body.game .app[data-t
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: auto;
-  background: url(/systems/dnd5e/ui/texture-gray1.webp) no-repeat top left, var(--header-color);
+  background: url(/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp) no-repeat top left, var(--header-color);
   background-color: var(--header-color);
   background-blend-mode: overlay;
   border-bottom: 1px solid var(--window-app-border-color);

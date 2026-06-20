@@ -7,8 +7,8 @@
   box-shadow: 0 0 6px 1px var(--dnd5e-shadow-45);
 
   &[data-chat-message-color-scheme="light"] {
-    background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left,
+      url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right;
     background-color: #f1ebe8;
     // background-blend-mode: multiply;
     --color-text-dark-primary: black;
@@ -16,8 +16,8 @@
   }
 
   &.whisper[data-chat-message-color-scheme="light"] {
-    background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left,
+      url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right;
     background-color: #e1e1fe;
     background-blend-mode: screen;
 
@@ -25,8 +25,8 @@
   }
 
   &.blind[data-chat-message-color-scheme="light"] {
-    background: url("/systems/dnd5e/ui/texture-gray1.webp") no-repeat top left,
-      url("/systems/dnd5e/ui/texture-gray2.webp") no-repeat bottom right;
+    background: url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp") no-repeat top left,
+      url("/modules/pf2e-dorako-ui/img/dnd5e_texture-gray2.webp") no-repeat bottom right;
     background-color: #f4c2f4;
     background-blend-mode: screen;
 
@@ -69,7 +69,7 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: auto;
-    background: url(/systems/dnd5e/ui/texture-gray1.webp) no-repeat top left, var(--header-color);
+    background: url(/modules/pf2e-dorako-ui/img/dnd5e_texture-gray1.webp) no-repeat top left, var(--header-color);
     background-color: var(--header-color);
     background-blend-mode: overlay;
     border-bottom: 1px solid var(--window-app-border-color);
