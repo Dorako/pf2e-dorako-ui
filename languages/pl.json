@@ -53,7 +53,7 @@
       "theme": {
         "name": "Ustawienia motywu",
         "label": "Konfiguracja ustawień motywu",
-        "hint": "Zmiana ustawień motywu dla różnych aplikacji i elementów interfejsu użytkownika. Motyw D&D 5e opiera się na zasobach z systemu D&D 5e, więc należy go również zainstalować.",
+        "hint": "Zmień ustawienia motywu dla różnych aplikacji i elementów interfejsu użytkownika.",
         "application-theme": {
           "name": "Motyw aplikacji",
           "hint": "Dotyczy schematu kolorów „Podstawowe → Konfiguracja interfejsu użytkownika → Aplikacja”."
