@@ -86,5 +86,20 @@
   "dorako-ui.settings.avatar-border.hint": "コマベースプレートから飛び出すコマアバターを使用している場合は、この設定を無効にします",
   "dorako-ui.settings.rolltype-indication.hint": "秘匿ロールはピンクに、秘話は青くに染まる",
   "dorako-ui.settings.rolltype-indication.choice.bg-color": "背景色の色合い",
-  "dorako-ui.settings.compact-ui.hint": "コントロールのサイズを変更し、カーソルを合わせない限り、アクティブでないコントロールとナビゲーションバーを隠します"
+  "dorako-ui.settings.compact-ui.hint": "コントロールのサイズを変更し、カーソルを合わせない限り、アクティブでないコントロールとナビゲーションバーを隠します",
+  "pf2e-dorako-ui": {
+    "text": {
+      "self-roll": "セルフ・ロール",
+      "gm-only": "GMのみ",
+      "secret": "秘密",
+      "whisper": "ウィスパー",
+      "from": "から",
+      "to": "から",
+      "send-to-chat": "送る",
+      "default": "デフォルト",
+      "dark": "ダーク",
+      "light": "ライト",
+      "disabled": "無効"
+    }
+  }
 }
