@@ -46,7 +46,7 @@ export class CustomizationSettings extends SettingsMenuDorakoUI {
         },
         requiresReload: false,
         onChange: (value) => {
-          ChatLog.NOTIFY_DURATION = value * 1000;
+          foundry.applications.sidebar.tabs.ChatLog.NOTIFY_DURATION = value * 1000;
         },
       },
       "chat-merge": {

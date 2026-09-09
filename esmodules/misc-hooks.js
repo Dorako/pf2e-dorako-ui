@@ -3,7 +3,7 @@ import { lookupThemeAndSchemeForKey } from "./ui-theme.js";
 import { i18n, debug, warn } from "./util.js";
 
 Hooks.once("ready", () => {
-  ChatLog.NOTIFY_DURATION = game.settings.get("pf2e-dorako-ui", "customization.chatlog-notify-seconds") * 1000;
+  foundry.applications.sidebar.tabs.ChatLog.NOTIFY_DURATION = game.settings.get("pf2e-dorako-ui", "customization.chatlog-notify-seconds") * 1000;
   const applicationTheme = game.settings.get("pf2e-dorako-ui", "theme.application-theme");
   const interfaceTheme = game.settings.get("pf2e-dorako-ui", "theme.interface-theme");
   const coreColorScheme = game.settings.get("core", "uiConfig")?.colorScheme;
