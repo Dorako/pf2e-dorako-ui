@@ -278,9 +278,9 @@ Hooks.on("renderApplicationV2", (app, html, data) => {
     excludedApplications.includes(app.constructor.name) ||
     appV2Apps.includes(app.constructor.name) ||
     app.constructor.name == "JournalEntrySheet" ||
-    app.__proto__ instanceof ChatLog ||
+    app.__proto__ instanceof foundry.applications.sidebar.tabs.ChatLog ||
     app?.isPopout ||
-    app instanceof Compendium
+    app instanceof foundry.applications.sidebar.apps.Compendium
   ) {
     console.debug(
       `${MODULE_NAME} | render${app.constructor.name} | is included in excluded applications string ${excludeString} => do not set dorako-ui-theme to ${dorakoUiTheme}`

@@ -22,7 +22,7 @@ export default class ChatMerge {
 
   static init() {
     // libWrapperShared.register("ChatLog.prototype.deleteMessage", this._deleteMessage.bind(this));
-    Hooks.on("renderChatMessage", this._renderChatMessage);
+    Hooks.on("renderChatMessageHTML", this._renderChatMessage);
     Hooks.on("deleteChatMessage", this.deleteMessage);
   }
 
@@ -128,17 +128,19 @@ export default class ChatMerge {
     }
   }
 
-  static _renderChatMessage(message, html, _cmd) {
+  static _renderChatMessage(message, html, _context) {
     if (!ChatMerge._enabled) return;
     // Find the most recent message in the chat log
-    const partnerElem = $(`li.chat-message`).last()[0];
+    const rendered = document.querySelectorAll("li.chat-message");
+    const partnerElem = rendered[rendered.length - 1];
     // If there is no message, return
     if (partnerElem === null || partnerElem === undefined) return;
     // get the ChatMessage document associated with the html
     const partner = game.messages.get(partnerElem.getAttribute("data-message-id"));
     if (!message || !partner) return;
-    // Update styling of the chat messages
-    ChatMerge._styleChatMessages(message, html[0], partner, partnerElem);
+    // Update styling of the chat messages. `html` is the message element
+    // itself on renderChatMessageHTML, where the jQuery hook handed a wrapper.
+    ChatMerge._styleChatMessages(message, html, partner, partnerElem);
   }
 
   static _inTimeFrame(current, previous) {
